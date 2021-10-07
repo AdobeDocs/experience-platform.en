@@ -37,13 +37,13 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Source XDM schema (1)**: This refers to the schema that customers use in Experience Platform. In Experience Platform, in the [mapping step](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) of the activate destination workflow, customers would map fields from their source schema to your destination's target schema (2).
+**Source XDM schema (1)**: This item refers to the schema that customers use in Experience Platform. In Experience Platform, in the [mapping step](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) of the activate destination workflow, customers would map fields from their source schema to your destination's target schema (2).
 
-**Target XDM schema (2)**: Based on the JSON standard schema (3) of your destination's expected format, you can define profile attributes and identities in your target XDM schema in the destinations configuration, in the [schemaConfig](./destination-configuration.md#schema-configuration) and [identityNamespaces](./destination-configuration.md#identities-and-attributes) objects.
+**Target XDM schema (2)**: Based on the JSON standard schema (3) of your destination's expected format, you can define profile attributes and identities in your target XDM schema. You can do this in the destinations configuration, in the [schemaConfig](./destination-configuration.md#schema-configuration) and [identityNamespaces](./destination-configuration.md#identities-and-attributes) objects.
 
-**JSON standard schema of your destination profile attributes (3)**: This  a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on. You need a [message transformation template](./message-format.md#using-templating) to tailor the data exported out of Experience Platform to your expected format.
+**JSON standard schema of your destination profile attributes (3)**: This item represents a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on. You need a [message transformation template](./message-format.md#using-templating) to tailor the data exported out of Experience Platform to your expected format.
 
-Based on the schema transformations described above, here is how the structure of a message changes between the source XDM schema and the sample schema on the partner side:
+Based on the schema transformations described above, here is how the structure of a message changes between the source XDM schema and a sample schema on the partner side:
 
 ![Transformations message example](./assets/transformations-with-examples.png)
 
@@ -56,7 +56,7 @@ To demonstrate the transformation process, the example below uses three common p
 
 >[!NOTE]
 >
->The customer maps the attributes from the source XDM schema to the partner XDM schema in the Adobe Experience Platform UI, in the **Mapping** step of the [activate destination workflow](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html#mapping).
+>The customer maps the attributes from the source XDM schema to the partner XDM schema in the Adobe Experience Platform UI, in the **Mapping** step of the [activate destination workflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 Let's say your platform can receive a message format like:
 
@@ -93,7 +93,7 @@ This section provides several examples of how these transformations are made, fr
 
 1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](./message-format.md#attributes), [Segment membership](./message-format.md#segment-membership), and [Identity](./message-format.md#identities) fields.
 2. Increased complexity examples of templates that combine the fields above: [Create a template that sends segments and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](./message-format.md#segments-identities-attributes).
-3. Templates the include the aggregation key. When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as segment ID, segment status, or identity namespaces.
+3. Templates that include the aggregation key. When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as segment ID, segment status, or identity namespaces.
 
 ### Profile Attributes {#attributes}
 
@@ -138,7 +138,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -236,7 +236,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -340,7 +340,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -478,7 +478,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -661,7 +661,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -779,7 +779,7 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 
 When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as segment ID, segment alias, segment membership, or identity namespaces.
 
-In the message transformation template, you can access the aggregation keys mentioned above, as shown in the examples in the following sections. This helps you format the HTTP message exported out of Experience Platform to match the format expected by your destination.
+In the message transformation template, you can access the aggregation keys mentioned above, as shown in the examples in the following sections. Use aggregation keys to structure the HTTP message exported out of Experience Platform to match the format and rate limits expected by your destination.
 
 #### Use segment ID aggregation key in the template {#aggregation-key-segment-id}
 
@@ -880,9 +880,9 @@ Profile 4:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Notice below how `audienceId` is used in the template to access segment IDs. This assumes that you use `audienceId` for segment membership in your destination taxonomy. You can use any other field name instead, depending on your own taxonomy.
+Notice below how `audienceId` is used in the template to access segment IDs. This example assumes that you use `audienceId` for segment membership in your destination taxonomy. You can use any other field name instead, depending on your own taxonomy.
 
 ```python
 {
@@ -944,7 +944,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### Use segment status aggregation key in the template {#aggregation-key-segment-status}
 
-If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can access the segment status in the template to group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can access the segment status in the template. This way, you can group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
 
 Possible values are:
 
@@ -960,7 +960,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Use identity namespace aggregation key in the template {#aggregation-key-identity}
 
-Below is an example where the [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration is set to aggregate exported profiles by identity namespaces, in the form `"namespaces": ["email", "phone"]` and `"namespaces": ["GAID", "IDFA"]`. Refer to the `groups` parameter in the [destination configuration API reference](./destination-configuration-api.md) to see how this is done.
+Below is an example where the [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration is set to aggregate exported profiles by identity namespaces, in the form `"namespaces": ["email", "phone"]` and `"namespaces": ["GAID", "IDFA"]`. Refer to the `groups` parameter in the [destination configuration API reference](./destination-configuration-api.md) for more information about this grouping.
 
 **Input**
 
@@ -1032,7 +1032,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 Notice that `input.aggregationKey.identityNamespaces` is used in the template below
 
@@ -1056,7 +1056,7 @@ Notice that `input.aggregationKey.identityNamespaces` is used in the template be
 
 **Result**
 
-When exported to your destination, the profiles are split into two groups, based on their identity namespaces (email and phone in one group, GAID and IDFA in another).
+When exported to your destination, the profiles are split into two groups, based on their identity namespaces. Email and phone are in one group, while GAID and IDFA are in another.
 
 ```json
 {
@@ -1108,7 +1108,7 @@ When exported to your destination, the profiles are split into two groups, based
 
 #### Use the aggregation key in a URL template {#aggregation-key-url-template}
 
-Note that depending on your use case, you can also use the aggregation keys described here in a URL, as shown below:
+Depending on your use case, you can also use the aggregation keys described here in a URL, as shown below:
 
 ```python
 https://api.example.com/audience/{{input.aggregationKey.segmentId}}
