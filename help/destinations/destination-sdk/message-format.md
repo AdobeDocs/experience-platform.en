@@ -13,7 +13,6 @@ To understand the process on the Adobe side, please familiarize yourself with th
 
 * **Experience Data Model (XDM)**. [XDM overview](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en) and  [How to create an XDM schema in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
 * **Class**. [Create and edit classes in the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
-* **Field group**. [Field group definition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#field-group) and [more information about field groups](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en#field-group).
 * **IdentityMap**. The identity map represents a map of all end-user identities in Adobe Experience Platform. Refer to `xdm:identityMap` in the [XDM field dictionary](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 * **SegmentMembership**. The [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) XDM attribute informs which segments a profile is a member of. For the three different values in the `status` field, read the documentation on [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
@@ -25,20 +24,24 @@ Adobe Experience Platform exports data to a significant number of destinations, 
 
 Experience Platform can adjust the exported message format to match the expected format on your side. To understand this customization, the following concepts are important:
 * The source (1) and target (2) XDM schema in Adobe Experience Platform
-* The message format on the partner side (3), and 
-* The transformation layer between the two, which you can define by creating a [message transformation template](./message-format.md#using-templating).
+* The expected message format on the partner side (3), and 
+* The transformation layer between XDM schema and expected message format, which you can define by creating a [message transformation template](./message-format.md#using-templating).
 
 ![Schema to JSON transformation](./assets/transformations-3-steps.png)
 
-Experience Platform uses schemas to describe the structure of data in a consistent and reusable way.
+Experience Platform uses XDM schemas to describe the structure of data in a consistent and reusable way.
 
-Users who want to activate data to your destination need to map the fields that they use for their datasets in Experience Platform to a schema that translates to your destination's expected format. Adobe will create a custom field group for your company to add to the target schema. The fields in the field group depend on the profile attribute fields that you can receive.
+<!--
 
-**Source XDM schema (1)**: This refers to the schema that a customer uses in Experience Platform. In Experience Platform, in the [mapping step](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) of the activate destination workflow, customers would map fields from their source schema to your destination's target schema (2).
+Users who want to activate data to your destination need to map the fields in their Experience Platform datasets to a schema that translates to your destination's expected format. Adobe will create a custom field group for your company to add to the target schema. The fields in the field group depend on the profile attribute fields that you can receive.
 
-**Target XDM schema (2)**: Based on the JSON standard schema (3) that you share with Adobe, the team at Adobe will create a custom schema for your destination. Note that in a [future phase of the project](./overview.md#phased-approach), you will be able to create the custom schema for your destination on your own.
+-->
 
-**JSON standard schema of your destination profile attributes (3)**: Please share with us a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on.
+**Source XDM schema (1)**: This refers to the schema that customers use in Experience Platform. In Experience Platform, in the [mapping step](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) of the activate destination workflow, customers would map fields from their source schema to your destination's target schema (2).
+
+**Target XDM schema (2)**: Based on the JSON standard schema (3) of your destination's expected format, you can define profile attributes and identities in your target XDM schema in the destinations configuration, in the [schemaConfig](./destination-configuration.md#schema-configuration) and [identityNamespaces](./destination-configuration.md#identities-and-attributes) objects.
+
+**JSON standard schema of your destination profile attributes (3)**: This  a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on. You need a [message transformation template](./message-format.md#using-templating) to tailor the data exported out of Experience Platform to your expected format.
 
 Based on the schema transformations described above, here is how the structure of a message changes between the source XDM schema and the sample schema on the partner side:
 
