@@ -1,6 +1,7 @@
 ---
 title: Impressions Data Type
 description: This document provides an overview of the Impressions XDM data type.
+exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
 ---
 # [!UICONTROL Impressions] data type
 
