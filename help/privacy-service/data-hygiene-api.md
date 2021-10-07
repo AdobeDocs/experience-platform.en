@@ -13,6 +13,8 @@ exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 
 The Data Hygiene API allows you to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform. Unlike the Privacy Service API, these operations do not need to be associated with legal privacy regulations and can be used purely for keeping your data clean and accurate.
 
+You can access the API through the following root path: `https://platform.adobe.io/data/core/hygiene/`
+
 ## Getting started
 
 This section provides an introduction to the core concepts you need to know before attempting to make calls to the Data Hygiene API.
