@@ -127,8 +127,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
-   ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed"
+   ]
 }
 
 ```
