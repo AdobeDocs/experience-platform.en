@@ -6,7 +6,7 @@ description: The incremental load feature uses both anonymous block and snapshot
 
 The incremental load method is an ideal solution for near real-time movement of data from relational databases to data warehouses, data lakes or other databases. 
 
-Using other features such as anonymous block and the snapshot clause, the process only transfers data that has been newly created or modified since the previous data load. This increases efficiency of xxxx as matching data already available at the destination is ignored. 
+Using other features such as anonymous block and the snapshot clause, the process only transfers data that has been newly created or modified since the previous data load. This increases processing efficiency as the matching data already available at the destination is ignored. 
 
 This method can be used with both streaming and batch data.
 
