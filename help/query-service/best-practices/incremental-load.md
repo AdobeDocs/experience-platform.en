@@ -4,11 +4,11 @@ description: The incremental load feature uses both anonymous block and snapshot
 ---
 # Sample incremental data load queries
 
-The incremental load method is an ideal solution for near real-time movement of data from relational databases to data warehouses, data lakes, or other databases. 
+The incremental load design pattern is a solution for managing data. The pattern only processes information in the dataset that has been created or modified since the last load execution. 
 
-Using other features such as anonymous block and the snapshot clause, the process only transfers data that has been newly created or modified since the previous data load. This increases processing efficiency as the matching data already available at the destination is ignored. The incremental load method can be used with both streaming and batch data processing.
+Incremental load uses various features provided by Experience Platform Query Service such as anonymous block and snapshots among others. This design pattern increases processing efficiency as any data already processed from the source is skipped. It can be used with both streaming and batch data processing.
 
-This document provides a series of examples that can be used as a template to create your own incremental data load queries.
+This document provides a series of instructions to build a design pattern for incremental processing. These steps can be used as a template to create your own incremental data load queries.
 
 ## Getting Started
 
@@ -20,11 +20,11 @@ For guidance on any terminology used within this guide please refer to the [SQL 
 
 The steps below demonstrate how to create an incremental data load process using SNAPSHOTS and the anonymous block feature. The design pattern can be used as a template for your own sequence of queries.
 
-1. Create a delta log table. A delta log table is responsible for keeping a record of the changes made to the dataset. It also supports a number of utility commands.
+1. Create a checkpoint_log table. A checkpoint log table is responsible for keeping a record of the changes made to the dataset.
 
 ```SQL
-DROP TABLE IF EXISTS lookup_delta_log;
-CREATE TABLE  lookup_delta_log AS
+DROP TABLE IF EXISTS checkpoint_log;
+CREATE TABLE  checkpoint_log AS
 SELECT
    cast(null as string) process_name,
    cast(null as string) process_status,
@@ -37,7 +37,7 @@ SELECT
 
 ```SQL
 Insert Into
-   lookup_delta_log
+   checkpoint_log
    SELECT
        'DIM_TABLE_ABC' process_name,
        'SUCCESSFUL' process_status,
@@ -54,8 +54,8 @@ Insert Into
 ```SQL
 $$
 BEGIN
-    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') from lookup_delta_log a join
-                            (SELECT MAX(process_timestamp)process_timestamp FROM lookup_delta_log
+    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') from checkpoint_log a join
+                            (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
                                 on a.process_timestamp=b.process_timestamp;
     SET @to_snapshot_id = SELECT snapshot_id from (SELECT history_meta('Source Table Name')) WHERE  is_current = true;
@@ -64,7 +64,7 @@ BEGIN
      select  *  from Live SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id ;
  
 Insert Into
-   lookup_delta_log
+   checkpoint_log
    SELECT
        'DIM_TABLE_ABC' process_name,
        'SUCCESSFUL' process_status,
@@ -86,8 +86,8 @@ EXCEPTION
 ```SQL
 $$
 BEGIN
-    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') from lookup_delta_log a join
-                            (SELECT MAX(process_timestamp)process_timestamp FROM lookup_delta_log
+    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') from checkpoint_log a join
+                            (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
                                 on a.process_timestamp=b.process_timestamp;
     SET @to_snapshot_id = SELECT snapshot_id from (SELECT history_meta('Source Table Name')) WHERE  is_current = true;
@@ -96,7 +96,7 @@ BEGIN
      select  *  from Live SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a where _id=a._id);
  
 Insert Into
-   lookup_delta_log
+   checkpoint_log
    SELECT
        'DIM_TABLE_ABC' process_name,
        'SUCCESSFUL' process_status,
@@ -126,8 +126,8 @@ The entire code block would look as follows.
 ```SQL
 $$
 BEGIN
-    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') from lookup_delta_log a join
-                            (SELECT MAX(process_timestamp)process_timestamp FROM lookup_delta_log
+    SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') from checkpoint_log a join
+                            (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
                                 on a.process_timestamp=b.process_timestamp;
     SET @to_snapshot_id = SELECT snapshot_id from (SELECT history_meta('Source Table Name')) WHERE  is_current = true;
@@ -137,7 +137,7 @@ BEGIN
      select  *  from Live SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a where _id=a._id);
  
 Insert Into
-   lookup_delta_log
+   checkpoint_log
    SELECT
        'DIM_TABLE_ABC' process_name,
        'SUCCESSFUL' process_status,
