@@ -93,7 +93,7 @@ Next, configure Edge Network to send data to event forwarding, and to other Adob
 
 After configuring, make note of the Environment IDs for the new property.
 
-## Configure the tag Web SDK extension to send data to the datastream created previously
+## Configure the Platform Web SDK extension to send data to the datastream created previously
 
 Create your property in the Data Collection UI, then use the Adobe Experience Platform Web SDK extension to configure it.
 
