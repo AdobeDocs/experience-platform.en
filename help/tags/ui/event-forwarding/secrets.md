@@ -4,7 +4,7 @@ description: Learn how to configure secrets in the Data Collection UI to authent
 ---
 # Event forwarding secrets
 
-In event forwarding, a secret is a resource that represents an authentication credential for another system in order to securely exchange data. Therefore, secrets can only be created within event forwarding properties.
+In event forwarding, a secret is a resource that represents an authentication credential for another system , allowing for the secure exchange of data. Secrets can only be created within event forwarding properties.
 
 There are currently three supported secret types:
 
