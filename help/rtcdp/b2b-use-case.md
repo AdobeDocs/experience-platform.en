@@ -96,5 +96,5 @@ The following documentation is recommended to improve your understanding of B2B 
 - [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
 - [B2B Segmentation examples](./segmentation/b2b.md)
 - [Account Profiles Overview](./accounts/account-profile-overview.md)
-- [Destinations in Real-time Customer Data Platform B2B Edition](./destinations/b2b)
-- [Configure a LinkedIn Matched Audiences destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/social/linkedin.html#connect)
+- [Destinations in Real-time Customer Data Platform B2B Edition](./destinations/b2b.md)
+- [Configure a LinkedIn Matched Audiences destination](../destinations/catalog/social/linkedin.md)
