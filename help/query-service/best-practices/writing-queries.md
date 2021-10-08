@@ -47,6 +47,7 @@ To access a field within an object in your query, you can use either dot notatio
 SELECT endUserIds._experience.mcid
 FROM {ANALYTICS_TABLE_NAME}
 WHERE endUserIds._experience.mcid IS NOT NULL
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 1
 ```
 
@@ -60,6 +61,7 @@ The following SQL statement uses bracket notation to traverse the `endUserIds` o
 SELECT endUserIds['_experience']['mcid']
 FROM {ANALYTICS_TABLE_NAME}
 WHERE endUserIds._experience.mcid IS NOT NULL
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 1
 ```
 
@@ -92,6 +94,7 @@ When the column is only declared down to the object, it returns the entire objec
 SELECT endUserIds._experience.mcid.id
 FROM {ANALYTICS_TABLE_NAME}
 WHERE endUserIds._experience.mcid IS NOT NULL
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 1
 ```
 
@@ -118,6 +121,7 @@ SELECT
   timestamp,
   web.webPageDetails.name
 FROM {ANALYTICS_TABLE_NAME}
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -129,6 +133,7 @@ SELECT
   endUserIds._experience.mcid.id
 FROM {ANALYTICS_TABLE_NAME}
 WHERE web.webPageDetails.name = 'homepage'
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -147,6 +152,7 @@ FROM
     'column1' as no_space_column,
     'column2' as "space column"
 )
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 ```
 
 >[!NOTE]
@@ -161,6 +167,7 @@ The back quote `` ` `` is used to escape reserved column names **only** when usi
 SELECT 
   commerce.`order`
 FROM {ANALYTICS_TABLE_NAME}
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -170,6 +177,7 @@ Back quotes are also used to access a field that starts with a number. For examp
 SELECT
     commerce.`30_day_value`
 FROM {ANALYTICS_TABLE_NAME}
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -179,6 +187,7 @@ Back quotes are **not** needed if you are using bracket-notation.
  SELECT
   commerce['order']
  FROM {ANALYTICS_TABLE_NAME}
+ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
  LIMIT 10
 ```
 
