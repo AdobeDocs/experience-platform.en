@@ -24,7 +24,7 @@ For detailed guidance on how to manage secrets in the Reactor API, including exa
 
 ## Prerequisites
 
-This guide assumes that you are already familiar with how to manage resources for tags and event forwarding in the Data Collection UI, including how to create a data element and add it to a library. See the guide on [managing resources](../managing-resources/overview.md) if you require an introduction.
+This guide assumes that you are already familiar with how to manage resources for tags and event forwarding in the Data Collection UI, including how to create a data element and an event forwarding rule. See the guide on [managing resources](../managing-resources/overview.md) if you require an introduction.
 
 You should also have a working understanding of the publishing flow for tags and event forwarding, including how to add resources to a library and install a build onto your website for testing. See the [publishing overview](../publishing/overview.md) for more details.
 
