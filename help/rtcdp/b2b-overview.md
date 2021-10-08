@@ -63,17 +63,13 @@ Platform allows data to be ingested from external sources while providing you wi
 >
 >The [!DNL Marketo] source is **not** required to use Real-time CDP B2B Edition. 
 
-See the sources in Real-time CDP B2B Edition documentation for more information on Marketo and bringing B2B data into Platform.
-
-<!-- PLACEHOLDER [sources in Real-time CDP B2B Edition](./sources/b2b) -->
+See the [sources in Real-time CDP B2B Edition](./sources/b2b.md) documentation for more information on Marketo and bringing B2B data into Platform.
 
 ## B2B destinations
 
-All Experience Platform destinations such as [!DNL Google], [!DNL Linkedin], or [!DNL Facebook], are available and fully supported by Real-time CDP B2B Edition. There is also a [!DNL Marketo Engage] destination which streams data out of [!DNL Marketo] or out of Platform and makes it available as audiences.
+Experience Platform destinations such as Google, Linkedin, and Facebook, are available and fully supported by Real-time CDP B2B Edition. There is also a Marketo Engage destination that streams segment membership data out of Platform and makes it available as lists in Marketo.
 
-The [!DNL Marketo] destination provides a seamless and quick way to pull information from Experience Platform into [!DNL Marketo]. The destination enables marketers to push segments created in Adobe Experience Platform to [!DNL Marketo]. In [!DNL Marketo], these audiences are then available as static lists.
-
-For companies with more than one CRM, Real-time CDP B2B Edition provides the option to configure destination connectors to separate instances of [!DNL Marketo] or CRM. If required, you can configure destination connectors to each instance and send audiences to each of the CRM instances independently. 
+For companies with more than one CRM, Real-time CDP B2B Edition provides the option to configure destination connectors to separate instances of Marketo or CRM. If required, you can configure destination connectors to each instance and send audiences to each of the CRM instances independently.
 
 ## Next steps
 

@@ -4,7 +4,7 @@ description: An overview of the role of destinations in Real-time Customer Data 
 ---
 # An overview of destinations in Real-time Customer Data Platform B2B Edition
 
-All Experience Platform destinations such as Google, Linkedin, or Facebook, are available and fully supported by Real-time CDP B2B Edition.
+Experience Platform destinations including Marketo, Google, Linkedin, and Facebook, are available and fully supported by Real-time CDP B2B Edition.
 
 Real-time Customer Data Platform B2B Edition allows you to export your B2B data through the Marketo Engage destination connector. By using the Marketo Engage destination, you can push segments created in Adobe Experience Platform to Marketo, where they will appear as static lists.
 
