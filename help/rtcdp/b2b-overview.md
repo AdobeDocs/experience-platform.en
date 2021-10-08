@@ -77,4 +77,4 @@ Now that you better understand the benefits for marketers offered by Real-time C
 
 <!-- PLACEHOLDER [example use case for Real-time CDP B2B Edition]() -->
 
-To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the example use case for Real-time CDP B2B Edition. Alternatively you can refer to the [schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentation for more specific guidance on creating schemas, and defining relationships for essential B2B data entities.
+To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the [example use case for Real-time CDP B2B Edition](./b2b-use-case.md). Alternatively you can refer to the [schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentation for more specific guidance on creating schemas, and defining relationships for essential B2B data entities.
