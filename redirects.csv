@@ -1,7 +1,7 @@
 source,dest
 https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html,https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension-configuration.html
-https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/home-page-dashboards.html?lang=en,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/home-page-dashboards.html?lang=en
-https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/get-started.html?lang=en,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/get-started.html?lang=en
+https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/home-page-dashboards.html,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/home-page-dashboards.html
+https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/get-started.html,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/get-started.html
 https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/sdk.html
 https://experienceleague.adobe.com/docs/experience-platform/observability/notifications/(*),https://experienceleague.adobe.com/docs/experience-platform/observability/alerts/
 https://experienceleague.adobe.com/docs/launch/using/reference/upgrade/(*),https://experienceleague.adobe.com/docs/experience-platform/tags/home.html
@@ -302,4 +302,4 @@ https://experienceleague.adobe.com/docs/destination-sdk/document-destination/sel
 https://experienceleague.adobe.com/docs/destination-sdk/release-notes.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/profile/merge-policies.html,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/merge-policies/merge-policies-overview.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/profile/identities-overview.html,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/identity/identities-overview.html
-https://experienceleague.adobe.com/docs/experience-platform/rtcdp/profile/profile-viewer.html,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/profile/profile-viewer.html?lang=en
+https://experienceleague.adobe.com/docs/experience-platform/rtcdp/profile/profile-viewer.html,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/profile/profile-browse.html
