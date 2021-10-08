@@ -13,8 +13,7 @@ exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 Real-time Customer Data Platform B2B Edition expands the existing Real-time CDP and Adobe Experience Platform offerings to support B2B data and workflows. This document provides an example use case that demonstrates the additional benefits provided by the B2B Edition. They include:
 
 - Combine person and account data from different siloed data sources to produce a comprehensive view that enables a better understanding of the customers and more accurate segmentation. See the documentation on [creating XDM schema relationships](./schemas/b2b.md) for use with varied B2B sources for more information. 
-- Segment an audience based on attributes of related entities. This includes Accounts, Opportunities, Campaigns, and Marketing Lists. Segments are no longer limited to just Person attributes and Experience Events. See the B2B segmentation documentation for more examples of creating B2B-specific audiences.
-  <!-- PLACEHOLDER [B2B segmentation documentation]()  -->
+- Segment an audience based on attributes of related entities. This includes Accounts, Opportunities, Campaigns, and Marketing Lists. Segments are no longer limited to just Person attributes and Experience Events. See the [B2B segmentation documentation](./segmentation/b2b.md) for more examples of creating B2B-specific audiences.
 - Natively support the use case of one person related to multiple accounts.
 
 ## Use case
@@ -92,11 +91,10 @@ By reading this document you have now been introduced to the types of objectives
 
 The following documentation is recommended to improve your understanding of B2B specific features: 
 
-<!-- - [Marketo connector]() -->
+<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Sources in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
 - [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
-- [Marketo Engage destination documentation](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html)
+- [B2B Segmentation examples](./segmentation/b2b.md)
+- [Account Profiles Overview](./accounts/account-profile-overview.md)
+- [Destinations in Real-time Customer Data Platform B2B Edition](./destinations/b2b)
 - [Configure a LinkedIn Matched Audiences destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/social/linkedin.html#connect)
-<!-- PLACEHOLDER -->
-<!-- - [Account Profiles]() -->
-<!-- - [B2B Segmentation examples]() -->
-<!-- PLACEHOLDERS to tutorial / account profiles / B2B connectors / segmentation examples -->

@@ -75,6 +75,4 @@ For companies with more than one CRM, Real-time CDP B2B Edition provides the opt
 
 Now that you better understand the benefits for marketers offered by Real-time CDP B2B Edition, and differences between it and Real-time CDP, you can learn about how to apply these features to your own IMS Organization.
 
-<!-- PLACEHOLDER [example use case for Real-time CDP B2B Edition]() -->
-
 To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the [example use case for Real-time CDP B2B Edition](./b2b-use-case.md). Alternatively you can refer to the [schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentation for more specific guidance on creating schemas, and defining relationships for essential B2B data entities.
