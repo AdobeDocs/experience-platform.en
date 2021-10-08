@@ -4,7 +4,7 @@ description: The incremental load feature uses both anonymous block and snapshot
 ---
 # Sample incremental data load queries
 
-The incremental load method is an ideal solution for near real-time movement of data from relational databases to data warehouses, data lakes or other databases. 
+The incremental load method is an ideal solution for near real-time movement of data from relational databases to data warehouses, data lakes, or other databases. 
 
 Using other features such as anonymous block and the snapshot clause, the process only transfers data that has been newly created or modified since the previous data load. This increases processing efficiency as the matching data already available at the destination is ignored. The incremental load method can be used with both streaming and batch data processing.
 
@@ -14,7 +14,7 @@ This document provides a series of examples that can be used as a template to cr
 
 The SQL examples throughout this document require you to have an understanding of anonymous block and snapshot capabilities. Before using the incremental data load capability it is recommended that you read the [Sample anonymous block queries](./anonymous-block.md) documentation and also the [SNAPSHOT clause](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=en#snapshot-clause) documentation.
 
-For guidance on any terminolgy used within this guide please refer to the [SQL syntax guide](../sql/syntax.md).
+For guidance on any terminology used within this guide please refer to the [SQL syntax guide](../sql/syntax.md).
 
 ## Steps
 
@@ -45,7 +45,7 @@ Insert Into
        CURRENT_TIMESTAMP process_timestamp;
 ```
 
-1. Build an anonymous block and create an initial dataset using logic provided below.
+1. Build an anonymous block and create an initial dataset using the logic provided below.
 
 >[!NOTE]
 >
@@ -111,13 +111,11 @@ EXCEPTION
 
 This logic can be applied to any table to perform incremental loads.
 
-<!-- select  *  from Live SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a where _id=a._id); -->
-
 >[!IMPORTANT]
 >
 >Snapshot metadata expires after 7 days. This would invalidate the logic of the script provided above. 
 
-To resolve the issue of an expired SNAPHOT ID the following command must be placed at the beginning of the anonymous block. The following line of code overrides the `@from_snapshot_id` with the earliest available `Snapshot_id` from metadata.
+To resolve the issue of an expired SNAPHOT ID, insert the following command at the beginning of the anonymous block. The following line of code overrides the `@from_snapshot_id` with the earliest available `Snapshot_id` from metadata.
 
 ```SQL
 SET resolve_fallback_snapshot_on_failure=true;
