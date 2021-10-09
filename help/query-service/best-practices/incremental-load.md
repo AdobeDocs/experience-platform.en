@@ -33,7 +33,7 @@ SELECT
    where false;
 ```
 
-1. Populate the delta log table with one empty record. This provides an initial timestamp as a baseline for the snapshot feature to compare against future changes to the dataset.
+1. Populate the `checkpoint_log` table with one empty record for the table or dataset that needs incremental processing. This is demonstrated with `DIM_TABLE_ABC` in the example below. The empty record provides an initial timestamp as a baseline for the snapshot feature to compare against future changes to the dataset.
 
 ```SQL
 Insert Into
@@ -45,7 +45,7 @@ Insert Into
        CURRENT_TIMESTAMP process_timestamp;
 ```
 
-1. Build an anonymous block and create an initial dataset using the logic provided below.
+1. Create a destination dataset within the execution section of an anonymous block. `DIM_TABLE_ABC_Incremental` is the destination table in the example below. Next, using the `DIM_TABLE_ABC` source table you can begin processing on the source table and append it to destination table. If any one of the queries fails then the exception block is executed which returns an error and ends the process.
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ BEGIN
     SET @to_snapshot_id = SELECT snapshot_id from (SELECT history_meta('Source Table Name')) WHERE  is_current = true;
     SET @last_updated_timestamp= Select CURRENT_TIMESTAMP;
     Create Table DIM_TABLE_ABC_Incremental as
-     select  *  from Live SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id ;
+     select  *  from DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id ;
  
 Insert Into
    checkpoint_log
@@ -77,7 +77,7 @@ EXCEPTION
  END$$;
 ```
 
-1. Build another anonymous block and insert data into the dataset using the incremental data load logic.
+1. Use the incremental data load logic in the anonymous block example below to allow any new data from the source dataset (since the most recent timestamp), to be processed and appended to the destination table at a regular cadence. In the example, data changes to `DIM_TABLE_ABC` will be processed and appended to `DIM_TABLE_ABC_incremental`.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ BEGIN
     SET @to_snapshot_id = SELECT snapshot_id from (SELECT history_meta('Source Table Name')) WHERE  is_current = true;
     SET @last_updated_timestamp= Select CURRENT_TIMESTAMP;
     Insert Into DIM_TABLE_ABC_Incremental
-     select  *  from Live SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a where _id=a._id);
+     select  *  from DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a where _id=a._id);
  
 Insert Into
    checkpoint_log
@@ -113,7 +113,7 @@ This logic can be applied to any table to perform incremental loads.
 
 >[!IMPORTANT]
 >
->Snapshot metadata expires after 7 days. This would invalidate the logic of the script provided above. 
+>Snapshot metadata expires after **two** days. This would invalidate the logic of the script provided above. 
 
 To resolve the issue of an expired SNAPHOT ID, insert the following command at the beginning of the anonymous block. The following line of code overrides the `@from_snapshot_id` with the earliest available `Snapshot_id` from metadata.
 
@@ -134,7 +134,7 @@ BEGIN
     SET @last_updated_timestamp= Select CURRENT_TIMESTAMP;
     SET resolve_fallback_snapshot_on_failure=true;
     Insert Into DIM_TABLE_ABC_Incremental
-     select  *  from Live SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a where _id=a._id);
+     select  *  from DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a where _id=a._id);
  
 Insert Into
    checkpoint_log
