@@ -52,7 +52,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
 
-Shown below is an example configuration for a destination template, created by using the `/destinations` API endpoint. For more information about this template, refer to [Destination configuration](./destination-configuration.md). 
+Shown below is an example configuration for a destination template, created by using the `/destinations` API endpoint. For more information about this template, refer to [Destination configuration](./destination-configuration.md).
+
+To connect the server and template configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
 
 ```json
 
@@ -106,6 +108,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
+   "segmentMappingConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   },   
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -136,20 +144,24 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 Based on the payloads that your destination supports, you must create a template that transforms the format of the exported data from Adobe XDM format into a format supported by your destination. See template examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](./message-format.md#using-templating) and use the [template authoring tool](./create-template.md) provided by Adobe.
 
+Once you have crafted a message transformation template that works for you, add it to the server and template configuration you created in step 1.
+
 ## Step 4: Create audience metadata configuration {#create-audience-metadata-configuration}
 
-For some destinations, Destination SDK requires that you configure an audience metadata template to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](./audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
+For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](./audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
+
+If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
 
 ## Step 5: Create credentials configuration / Set up authentication {#set-up-authentication}
 
-Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint. 
+Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
 
-* **Most common case**: If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` and your destination supports the OAuth 2 authentication method, read [OAuth 2 authentication](./oauth2-authentication.md).
+* **Most common case**: If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration and your destination supports the OAuth 2 authentication method, read [OAuth 2 authentication](./oauth2-authentication.md).
 * If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to [Credentials configuration](./credentials-configuration.md) in the reference documentation.
 
 ## Step 6: Test your destination {#test-destination}
 
-After setting up your destination using the templates in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
 
 As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
 

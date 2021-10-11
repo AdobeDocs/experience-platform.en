@@ -9,7 +9,7 @@ exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
 
 >[!IMPORTANT]
 >
->The workflows described in this document are currently in beta. The functionality and documentation are subject to change.
+>The workflows described in this document are currently in beta and your organization may not have access to them yet. The functionality described in this documentation is subject to change.
 
 Adobe Experience Platform provides a robust set of standardized [field groups](../schema/composition.md#field-group) for use in Experience Data Model (XDM) schemas. The structure and semantics behind these field groups are carefully tailored to meet a wide variety of segmentation use cases and other downstream applications in Platform. You can also define your own custom field groups to address unique business needs.
 
@@ -37,7 +37,7 @@ If there are multiple fields you wish to remove, you can manage the field group 
 
 ![Manage related fields](../images/ui/field-based-workflows/manage-related-fields.png)
 
-A dialog appears showing the structure of the field group in question. From here you can use the provided checkboxes to select or deselect the fields that you require. When you are satisfied, select **[!UICONTROL Add fields]**.
+A dialog appears showing the structure of the field group in question. From here you can use the provided checkboxes to select or deselect the fields that you require. When you are satisfied, select **[!UICONTROL Confirm]**.
 
 ![Select fields from field group](../images/ui/field-based-workflows/select-fields.png)
 
@@ -67,23 +67,23 @@ The canvas updates to show the standard field added to the schema, including any
 
 ## Add custom fields directly to a schema
 
-If you have previously [created custom field groups](./resources/field-groups.md#create), you can add custom fields directly to the schema without needing to separately add them to a custom field group beforehand.
-
->[!WARNING]
->
->When you add a custom field to a schema, you must still select an existing custom field group for it to be associated with. This means that in order to add custom fields directly to a schema, you must have at least one custom field group previously defined in the sandbox you are working in. In addition, any other schemas that employ that custom field group will also inherit the newly added field after you save your changes.
+Similar to the workflow for standard fields, you can also add your own custom fields directly to a schema. 
 
 To add fields to the root level of a schema, select the plus (**+**) icon next to the schema's name in the canvas. An **[!UICONTROL Untitled Field]** placeholder appears in the schema structure and the right rail updates to reveal controls to configure the field.
 
 ![Root custom field](../images/ui/field-based-workflows/root-custom-field.png)
 
-Start typing in the name of the custom field you wish to add, and the system automatically starts searching for matching standard fields. To create a new custom field instead, select the top option appended with **([!UICONTROL New Field])**.
+Start typing in the name of the field you wish to add, and the system automatically starts searching for matching standard fields. To create a new custom field instead, select the top option appended with **([!UICONTROL New Field])**.
 
 ![New field](../images/ui/field-based-workflows/custom-field-search.png)
 
-From here, provide a display name and data type for the field. Under **[!UICONTROL Assign field group]**, select the custom field group that you want the new field to be associated with.
+From here, provide a display name and data type for the field. Under **[!UICONTROL Assign field group]**, you must select a field group for the new field to be associated with. Start typing in the name of the field group, and if you have previously [created custom field groups](./resources/field-groups.md#create) they will appear in the dropdown list. Alternatively, you can type a unique name into the field to create a new field group instead.
 
 ![Select field group](../images/ui/field-based-workflows/select-field-group.png)
+
+>[!WARNING]
+>
+>If you select an existing custom field group, any other schemas that employ that field group will also inherit the newly added field after you save your changes. For this reason, only select an existing field group if you want this type of propagation. Otherwise, you should opt to create a new custom field group instead.
 
 When finished, select **[!UICONTROL Apply]**.
 
@@ -104,6 +104,8 @@ If the schema you are working on has an object-type field provided by a standard
 ![Add field to standard object](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
 After applying your changes, the new field appears under your tenant ID namespace within the standard object. This nested namespace prevents field-name conflicts within the field group itself in order to avoid breaking changes in other schemas that use the same field group.
+
+![Field added to standard object](../images/ui/field-based-workflows/added-to-standard-object.png)
 
 ## Next steps
 
