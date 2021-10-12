@@ -15,7 +15,7 @@ hidefromtoc: true
 
 Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
-[!DNL Shared Device] refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks. Through the [!DNL Shared Device Detection] feature, different users of the same device can be prevented from being merged into a single Identity, allowing for more accurate representation.
+[!DNL Shared Device] refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks. Through the [!DNL Shared Device Detection] feature, different users of the same device can be prevented from being merged into a single identity, allowing for more accurate representation of an individual.
 
 With [!DNL Shared Device Detection] you can:
 
@@ -25,7 +25,7 @@ With [!DNL Shared Device Detection] you can:
 
 >[!TIP]
 >
->Configurations for [!DNL Shared Device Detection] must be completed prior to enabling [!DNL Profile] for dataset because you an no longer revise settings, once graphs are generated in [!DNL Identity Service].
+>Configurations for [!DNL Shared Device Detection] must be completed prior to enabling Profile for dataset because you can no longer revise settings once graphs are generated in [!DNL Identity Service].
 
 ## Getting started
 
