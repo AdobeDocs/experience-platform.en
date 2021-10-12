@@ -9,6 +9,13 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## October 8, 2021
+
+v3.2.2
+
+* Fix the conditional value data element JSON schema for all the available operators.
+* Fix https://github.com/adobe/reactor-extension-core/issues/64.
+
 ## September 23, 2021
 
 v3.2.1
