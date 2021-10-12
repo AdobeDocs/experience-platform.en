@@ -1,6 +1,6 @@
 ---
 title: Event Forwarding Secrets
-description: Learn how to configure secrets in the Data Collection UI to authenticate to your event forwarding properties.
+description: Learn how to configure secrets in the Data Collection UI to authenticate to endpoints used in event forwarding properties.
 ---
 # Event forwarding secrets
 
@@ -34,7 +34,7 @@ To create a secret, log in to the Data Collection UI and open the event forwardi
 
 ![Create new secret](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
-The next screen allows you to configure the details of the secret. In order for a secret to be useable by event forwarding, it must be assigned to an existing environment. If you do not have any environments created for your event forwarding property, see the guide on [environments](../publishing/environments.md) to guidance on how to configure them before continuing.
+The next screen allows you to configure the details of the secret. In order for a secret to be useable by event forwarding, it must be assigned to an existing environment. If you do not have any environments created for your event forwarding property, see the guide on [environments](../publishing/environments.md) for guidance on how to configure them before continuing.
 
 >[!NOTE]
 >
@@ -68,21 +68,21 @@ To create a token secret, select **[!UICONTROL Token]** from the **[!UICONTROL T
 
 ### [!UICONTROL HTTP] {#http}
 
-To create a simple HTTP secret, select **[!UICONTROL HTTP]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide a username and password for the credential before selecting **[!UICONTROL Create Secret]** to save the secret.
+To create an HTTP secret, select **[!UICONTROL HTTP]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide a username and password for the credential before selecting **[!UICONTROL Create Secret]** to save the secret.
 
 ![HTTP secret](../../images/ui/event-forwarding/secrets/http-secret.png)
 
 ### [!UICONTROL OAuth2] {#oauth2}
 
-To create a simple OAuth2 secret, select **[!UICONTROL OAuth2]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide your [[!UICONTROL Client ID] and [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), as well as your [[!UICONTROL Authorization URL]](https://www.oauth.com/oauth2-servers/authorization/the-authorization-request/) for your OAuth integration.
+To create an OAuth2 secret, select **[!UICONTROL OAuth2]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide your [[!UICONTROL Client ID] and [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), as well as your [[!UICONTROL Authorization URL]](https://www.oauth.com/oauth2-servers/authorization/the-authorization-request/) for your OAuth integration.
 
 ![OAuth2 secret](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
-Under **[!UICONTROL Credential Options]**, you can provide other credential options such as `scope` and `audience` in the form of key-value pairs. To add more rows, select **[!UICONTROL Add another]**.
+Under **[!UICONTROL Credential Options]**, you can provide other credential options such as `scope` and `audience` in the form of key-value pairs. To add more key-value pairs, select **[!UICONTROL Add another]**.
 
 ![Credential options](../../images/ui/event-forwarding/secrets/oauth-secret-2.png)
 
-Finally, provide a **[!UICONTROL Refresh Offset]** value in seconds. This represents the amount of time before the OAuth Token is set to expire, after which the system will perform an automatic refresh.
+Finally, provide a **[!UICONTROL Refresh Offset]** value in seconds. This represents the number of seconds before the token expires and the system performs an automatic refresh. To set the token so that it refreshes every 24 hours, for example, set the value to 86400.
 
 >[!NOTE]
 >
@@ -114,13 +114,15 @@ To delete an existing secret in the  **[!UICONTROL Secrets]** workspace, select 
 
 ## Using secrets in event forwarding
 
-In order to make use of a secret in event forwarding, you must first create a [data element](../managing-resources/data-elements.md) that references the secret itself.
+In order to make use of a secret in event forwarding, you must first create a [data element](../managing-resources/data-elements.md) that references the secret itself. After saving the data element, you can include it in event forwarding [rules](../managing-resources/rules.md) and add those rules to a [library](../publishing/libraries.md), which in turn can be deployed to Adobe's servers as a [build](../publishing/builds.md).
 
-When creating the data element, select the **[!UICONTROL Core]** extension, then select **[!UICONTROL Secret]** for the data element type. The right panel updates and provides dropdown controls to assign up to three secret credentials to the data element: one for [!UICONTROL Development], [!UICONTROL Staging], and [!UICONTROL Production] respectively.
+When creating the data element, select the **[!UICONTROL Core]** extension, then select **[!UICONTROL Secret]** for the data element type. The right panel updates and provides dropdown controls to assign up to three secrets to the data element: one for [!UICONTROL Development], [!UICONTROL Staging], and [!UICONTROL Production] respectively.
 
 ![Data element](../../images/ui/event-forwarding/secrets/data-element.png)
 
-After saving the data element, you can include it in event-forwarding [rules](../managing-resources/rules.md) and add those rules to a [library](../publishing/libraries.md), which in turn can be deployed on your site as a [build](../publishing/builds.md).
+By assigning multiple secrets to a single data element and including it a rule, you can have the value of the data element change depending on where the containing library is in the [publishing flow](../publishing/publishing-flow.md).
+
+![Data element with multiple secrets](../../images/ui/event-forwarding/secrets/multi-secret-data-element.png)
 
 <!-- (Add once API docs are published)
 ## Next steps
