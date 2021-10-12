@@ -1,6 +1,7 @@
 ---
 title: Getting Started With Event Forwarding
 description: Follow this step-by-step tutorial to get started using event forwarding in Adobe Experience Platform.
+feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 ---
 # Getting started with event forwarding
