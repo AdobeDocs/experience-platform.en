@@ -30,7 +30,7 @@ The following Experience Platform services are involved with modeling Real-time 
 
 There are two types of default limits within this document:
 
-* **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended maximum for optimal system performance. 
+* **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance. 
 
 * **Hard limit:** A hard limit provides an absolute maximum.
 
@@ -46,7 +46,8 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Profile-enabled datasets | 20 | Soft | A maximum of 20 datasets contributing to the Profile union schema is recommended. To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled. The 20 dataset limit includes datasets from other Adobe solutions (for example, Adobe Analytics). *Note: Due to the nature of Experience Platform's denormalized hybrid data model, most customers do not exceed this limit. For questions about how to model your data, or if you would like to learn more about custom limits, please contact your customer care representative.*|
+|XDM Individual Profile class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended. *Note: Due to the nature of Experience Platform's denormalized hybrid data model, most customers do not exceed this limit. For questions about how to model your data, or if you would like to learn more about custom limits, please contact your customer care representative.*|
+|XDM ExperienceEvent class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended.|
 |Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix.|
 | Multi-entity relationships| 5 | Soft | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | JSON depth for ID field used in multi-entity relationship| 4 | Soft | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
@@ -78,9 +79,9 @@ The following guardrails refer to data size and provide recommended limits for d
 
 | Guardrail | Limit| Limit Type | Description|
 | --- | --- | --- | --- |
-| ExperienceEvent size | 10KB | Hard | **The maximum size of an event is 10KB.** Ingestion will continue, however any events larger than 10KB will be dropped.|
-| Profile record size | 100KB | Hard | **The maximum size of a profile record is 100KB.** Ingestion will continue, however profile records larger than 100KB will be dropped.|
-| Profile fragment size | 50MB | Hard | **The maximum size of a single profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
+| XDM ExperienceEvent class record size | 10KB | Hard | **The maximum size of an event is 10KB.** Ingestion will continue, however any events larger than 10KB will be dropped.|
+| XDM Individual Profile class record size | 100KB | Hard | **The maximum size of a profile record is 100KB.** Ingestion will continue, however profile records larger than 100KB will be dropped.|
+| Common identity size | 50MB | Hard | **The maximum size of all profile records AND events across a given dataset for a unique primary ID is 50MB.** (Primary ID + all records + all events)|
 | Profile storage size | 50MB | Soft | Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB may affect system performance. For example, a profile could contain a single fragment that is 50MB or it could contain multiple fragments across multiple datasets with a combined total size of 50MB. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, may affect system performance.|
 | Profile or ExperienceEvent batches per day | 90 | Soft | The combined total of Profile and ExperienceEvent batches ingested each day should not exceed 90. Ingesting additional batches may prevent optimal performance.|
 
