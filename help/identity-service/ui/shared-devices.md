@@ -6,6 +6,7 @@ topic-legacy: tutorial
 description: Shared Device Detection identifies different authenticated users of the same device, allowing for a more accurate representation of customer data in identity graphs
 hide: true
 hidefromtoc: true
+exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
 ---
 # Shared Device Detection overview (Beta) 
 
