@@ -1,11 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;identity service;Identity Service;shared devices;Shared Devices
 solution: Experience Platform
-title: Shared Devices Overview
+title: Shared Devices Overview (Beta)
 topic-legacy: tutorial
 description: Shared Device Detection identifies different authenticated users of the same device, allowing for a more accurate representation of customer data in identity graphs
+hide: true
+hidefromtoc: true
 ---
-# (Beta) Shared Device Detection overview
+# Shared Device Detection overview (Beta) 
 
 >[!IMPORTANT]
 >
@@ -62,7 +64,7 @@ The [!UICONTROL Shared Identity Namespace] and [!UICONTROL User Identity Namespa
 
 ![set-namespaces](../images/shared-device/set-namespaces.png)
 
-[!UICONTROL Shared Identity Namespace] represents a single device that is used by multiple different users. This namespace is always set to **[!UICONTROL ECID]**.
+[!UICONTROL Shared Identity Namespace] represents a single device that is used by multiple different users. This namespace is always set to **[!UICONTROL ECID]** because all Platform users use **[!UICONTROL ECID]** as the web browser identifier.
 
 ![shared-identity-namespace](../images/shared-device/shared-identity-namespace.png)
 
