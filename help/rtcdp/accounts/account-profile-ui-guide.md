@@ -2,8 +2,8 @@
 keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: Account Profile UI Guide
 description: Through the use of account profiles, Real-time Customer Data Platform B2B Edition enables you to unify account information from multiple sources. This guide provides details for interacting with account profiles in the Adobe Experience Platform user interface.
+exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 ---
-
 # Account profile UI guide
 
 >[!IMPORTANT]
