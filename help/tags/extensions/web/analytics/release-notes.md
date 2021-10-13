@@ -15,6 +15,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 ### Adobe Analytics Extension 1.8.7
 
 #### Bug Fixes
+
 * Upgraded AppMeasurement to v2.22.2.
 * Removed deprecated buildInfo.environment
 
