@@ -38,38 +38,38 @@ The following request creates a base connection for [!DNL MailChimp] :
 ```shell
 curl -X POST \
 'https://platform.adobe.io/data/foundation/flowservice/connections' \
--H 'Authorization: Bearer {ACCESS_TOKEN}' \
--H 'x-api-key: {API_KEY}' \
--H 'x-gw-ims-org-id: {IMS_ORG}' \
--H 'x-sandbox-name: {SANDBOX_NAME}' \
--H 'Content-Type: application/json' \
--d '{
-    "name": "MailChimp base connection with basic authentication",
-    "description": "MailChimp Members base connection with basic authentication",
-    "connectionSpec": {
-        "id": "2e8580db-6489-4726-96de-e33f5f60295f",
-        "version": "1.0"
-    },
-    "auth": {
-        "specName": "Basic Authentication",
-        "params": {
-            "host": "{HOST}",
-            "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
-            "username": "{USERNAME}",
-            "password": "{PASSWORD}"
-        }
-    }
-}'
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -d '{
+      "name": "MailChimp base connection with basic authentication",
+      "description": "MailChimp Members base connection with basic authentication",
+      "connectionSpec": {
+          "id": "2e8580db-6489-4726-96de-e33f5f60295f",
+          "version": "1.0"
+      },
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "host": "{HOST}",
+              "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}"
+          }
+      }
+  }'
 ```
 
 | Property | Description |
 | --- | --- |
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
-| `description` | An optional value that you can include to provide more information on your base connection. |
+| `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to connect your source to Platform. |
 | `auth.params.host` | The root URL used to connect to [!DNL MailChimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
-| `auth.params.authorizationTestUrl` | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
+| `auth.params.authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.username` | The username that corresponds with your [!DNL MailChimp] account. This is required for basic authentication. |
 | `auth.params.password` | The password that corresponds with your [!DNL MailChimp] account. This is required for basic authentication |
 
@@ -100,38 +100,38 @@ The following request creates a base connection for [!DNL MailChimp] :
 
 ```shell
 curl -X POST \
-'https://platform.adobe.io/data/foundation/flowservice/connections' \
--H 'Authorization: Bearer {ACCESS_TOKEN}' \
--H 'x-api-key: {API_KEY}' \
--H 'x-gw-ims-org-id: {IMS_ORG}' \
--H 'x-sandbox-name: {SANDBOX_NAME}' \
--H 'Content-Type: application/json' \
--d '{
-    "name": "MailChimp base connection with OAuth 2 refresh code",
-    "description": "MailChimp Members base connection with OAuth 2 refresh code",
-    "connectionSpec": {
-        "id": "2e8580db-6489-4726-96de-e33f5f60295f",
-        "version": "1.0"
-    },
-    "auth": {
-        "specName": "oAuth2RefreshCode",
-        "params": {
-            "host": "{HOST}",
-            "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
-            "accessToken": "{ACCESS_TOKEN}"
-        }
-    }
-}'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -d '{
+      "name": "MailChimp base connection with OAuth 2 refresh code",
+      "description": "MailChimp Members base connection with OAuth 2 refresh code",
+      "connectionSpec": {
+          "id": "2e8580db-6489-4726-96de-e33f5f60295f",
+          "version": "1.0"
+      },
+      "auth": {
+          "specName": "oAuth2RefreshCode",
+          "params": {
+              "host": "{HOST}",
+              "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
+              "accessToken": "{ACCESS_TOKEN}"
+          }
+      }
+  }'
 ```
 
 | Property | Description |
 | --- | --- |
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
-| `description` | An optional value that you can include to provide more information on your base connection. |
-| `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after registering your source using the Authoring Service API. |
+| `description` | (Optional) A property that you can include to provide more information on your base connection. |
+| `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after registering your source using the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
 | `auth.params.host` | The root URL used to connect to [!DNL MailChimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
-| `auth.params.authorizationTestUrl` | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
+| `auth.params.authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
 **Response**
@@ -147,16 +147,7 @@ A successful response returns the newly created base connection, including its u
 
 ## Explore your source {#explore}
 
-Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests. When performing GET requests to explore your source's file structure and contents, you must include the query parameters that are listed in the table below:
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
-| `{OBJECT_TYPE}` | The type of the object you wish to explore. For REST sources, this value defaults to `rest`. |
-| `{OBJECT}` | The object that you wish to explore. |
-| `{FILE_TYPE}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
-| `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | A base64-encoded string of your `list_id`. |
+Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests. 
 
 >[!TIP]
 >
@@ -167,6 +158,17 @@ Using the base connection ID you generated in the previous step, you can explore
 ```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
+
+When performing GET requests to explore your source's file structure and contents, you must include the query parameters that are listed in the table below:
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
+| `{OBJECT_TYPE}` | The type of the object you wish to explore. For REST sources, this value defaults to `rest`. |
+| `{OBJECT}` | The object that you wish to explore. |
+| `{FILE_TYPE}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
+| `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
+| `{SOURCE_PARAMS}` | A base64-encoded string of your `list_id`. |
 
 **Request**
 
@@ -184,7 +186,7 @@ curl -X GET \
 A successful response returns the structure of the queried file.
 
 ```json
-{
+{ 
 "data": [
     {
         "list_id": "10c097ca71",
@@ -247,71 +249,73 @@ A successful response returns the structure of the queried file.
                 "tags_count": 0,
                 "list_id": "10c097ca71",
                 "_links": [
-                    {
-                        "rel": "self",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
-                        "method": "GET",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json"
-                    },
-                    {
-                        "rel": "parent",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
-                        "method": "GET",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/CollectionResponse.json",
-                        "schema": "https://us6.api.mailchimp.com/schema/3.0/Paths/Lists/Members/Collection.json"
-                    },
-                    {
-                        "rel": "update",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
-                        "method": "PATCH",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
-                        "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/PATCH.json"
-                    },
-                    {
-                        "rel": "upsert",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
-                        "method": "PUT",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
-                        "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/PUT.json"
-                    },
-                    {
-                        "rel": "delete",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
-                        "method": "DELETE"
-                    },
-                    {
-                        "rel": "activity",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/activity",
-                        "method": "GET",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Activity/Response.json"
-                    },
-                    {
-                        "rel": "goals",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/goals",
-                        "method": "GET",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Goals/Response.json"
-                    },
-                    {
-                        "rel": "notes",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/notes",
-                        "method": "GET",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Notes/CollectionResponse.json"
-                    },
-                    {
-                        "rel": "events",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/events",
-                        "method": "POST",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Events/POST.json"
-                    },
-                    {
-                        "rel": "delete_permanent",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/actions/delete-permanent",
-                        "method": "POST"
-                    }
-                ]
-            },
-        ]
-    }
+                        {
+                            "rel": "self",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json"
+                        },
+                        {
+                            "rel": "parent",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/CollectionResponse.json",
+                            "schema": "https://us6.api.mailchimp.com/schema/3.0/Paths/Lists/Members/Collection.json"
+                        },
+                        {
+                            "rel": "update",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
+                            "method": "PATCH",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
+                            "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/PATCH.json"
+                        },
+                        {
+                            "rel": "upsert",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
+                            "method": "PUT",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
+                            "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/PUT.json"
+                        },
+                        {
+                            "rel": "delete",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
+                            "method": "DELETE"
+                        },
+                        {
+                            "rel": "activity",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/activity",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Activity/Response.json"
+                        },
+                        {
+                            "rel": "goals",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/goals",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Goals/Response.json"
+                        },
+                        {
+                            "rel": "notes",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/notes",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Notes/CollectionResponse.json"
+                        },
+                        {
+                            "rel": "events",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/events",
+                            "method": "POST",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Events/POST.json"
+                        },
+                        {
+                            "rel": "delete_permanent",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/actions/delete-permanent",
+                            "method": "POST"
+                        }
+                    ]
+                }
+            ]  
+        }
+    ]
+}
 ```
 
 ## Create a source connection {#source-connection}
@@ -344,10 +348,10 @@ The following request creates a source connection for [!DNL MailChimp] :
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp source connection to ingest listId",
       "description": "MailChimp Members source connection to ingest listId",
@@ -368,7 +372,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
-| `description` | An optional value that you can include to provide more information on your source connection. |
+| `description` | (Optional) A property that you can include to provide more information on your source connection. |
 | `baseConnectionId` | The base connection ID of [!DNL MailChimp]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | The format of the [!DNL MailChimp] data that you want to ingest. |
@@ -389,15 +393,15 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
 ### Create a target dataset {#target-dataset}
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
-For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../../catalog/api/create-dataset.md).
 
 ## Create a target connection {#target-connection}
 
@@ -419,10 +423,10 @@ The following request creates a target connection for [!DNL MailChimp] :
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp target connection",
       "description": "MailChimp Members target connection",
@@ -446,7 +450,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
-| `description` | An optional value that you can include to provide more information on your target connection. |
+| `description` | (Optional) A property that you can include to provide more information on your target connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | The format of the [!DNL MailChimp] data that you want to bring to Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
@@ -479,10 +483,10 @@ POST /conversion/mappingSets
 curl -X POST \
   'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "version": 0,
       "xdmSchema": "_{TENANT_ID}.schemas.570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
@@ -550,10 +554,11 @@ POST /flows
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp Members dataflow",
       "description": "MailChimp Members dataflow",
@@ -587,7 +592,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `name` | The name of your dataflow. Ensure that the name of your dataflow is descriptive as you can use this to look up information on your dataflow. |
-| `description` | An optional value that you can include to provide more information on your dataflow. |
+| `description` | (Optional) A property that you can include to provide more information on your dataflow. |
 | `flowSpec.id` | The flow specification ID required to create a dataflow. This fixed ID is: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | The corresponding version of the flow specification ID. This value defaults to `1.0`. |
 | `sourceConnectionIds` | The [source connection ID](#source-connection) generated in an earlier step. |
