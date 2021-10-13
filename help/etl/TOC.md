@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Adobe Experience Platform ETL Guide
 breadcrumb-title: ETL Guide
 user-guide-description: Learn the general steps for creating secure, high-performance connectors for ingesting data into Platform.
-feature: Data Management, Data Ingestion
+feature: Data Ingestion
 ---
 
 # Extract, transform, and load procedures in Experience Platform {#etl}
