@@ -26,6 +26,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Data quality on Platform](datasets/data-quality.md)
 * Destinations {#destinations}
   * [Destinations overview](destinations/overview.md)
+  * [Destinations in Real-time CDP B2B Edition](destinations/b2b.md)
 * Identities {#identity}  
   * [Identities & identity namespaces](profile/identities-overview.md)
 * Privacy and data governance {#privacy}
@@ -39,7 +40,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Segments {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
-  * [B2B Segmentation](segmentation/b2b.md)
+  * [Segmentation in Real-time CDP B2B Edition](segmentation/b2b.md)
   * [Customer AI](segmentation/customer-ai.md)
 * Schemas {#schemas}
   * [Schemas overview](schemas/overview.md)
