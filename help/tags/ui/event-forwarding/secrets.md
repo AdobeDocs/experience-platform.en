@@ -86,15 +86,21 @@ Under **[!UICONTROL Credential Options]**, you can provide other credential opti
 
 ![Credential options](../../images/ui/event-forwarding/secrets/oauth-secret-2.png)
 
-Finally, provide a **[!UICONTROL Refresh Offset]** value in seconds. This represents the number of seconds before the token expiry that the system will perform an automatic refresh. For example, setting the refresh offset to `10800` causes the token to refresh three hours before it is set to expire.
+Finally, you can configure the **[!UICONTROL Refresh Offset]** value for the secret. This represents the number of seconds before the token expiry that the system will perform an automatic refresh. The equivalent time in hours and minutes is displayed to the right of the field and updates automatically as you type.
 
->[!NOTE]
+![Refresh Offset](../../images/ui/event-forwarding/secrets/oauth-secret-3.png)
+
+For example, if the refresh offset is set to the default value of `14400` (four hours) and the access token has an `expires_in` value of `86400` (24 hours), the system will automatically refresh the secret in 20 hours.
+
+>[!IMPORTANT]
 >
->An OAuth Token requires at least four hours between refreshes, and must also be valid for a minimum of eight hours.
+>An OAuth secret requires at least four hours between refreshes and must also be valid for a minimum of eight hours. This restriction gives you a minimum of four hours to intervene if problems arise with the generated token.
+>
+>For example, if the offset is set to `28800` (eight hours) and the access token has an `expires_in` of `36000` (ten hours), the exchange would fail due to the resulting difference being less than four hours.
 
 When finished, select **[!UICONTROL Create Secret]** to save the secret.
 
-![Refresh Offset](../../images/ui/event-forwarding/secrets/oauth-secret-3.png)
+![Save OAuth2 Offset](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
 ## Edit a secret
 
