@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 solution: Experience Platform
 title: Create a dataflow for MailChimp Campaign using the Flow Service API
 topic-legacy: tutorial
-description: Learn how to connect Adobe Experience Platform to MailChimp using the Flow Service API.
+description: Learn how to connect Adobe Experience Platform to MailChimp Campaign using the Flow Service API.
 ---
 # Create a dataflow for [!DNL MailChimp Campaign] using the Flow Service API
 
@@ -160,7 +160,7 @@ Using the base connection ID you generated in the previous step, you can explore
 
 >[!TIP]
 >
->To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `campaign_id` string in base64. For example, `{"campaignId": "c66a200cda"}` encoded in base64 equates to `eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9`.
+>To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `campaignId` string in base64. For example, `{"campaignId": "c66a200cda"}` encoded in base64 equates to `eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9`.
 
 **API format**
 

@@ -111,6 +111,8 @@ Experience Platform provides support for ingesting data from your local system. 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL HubSpot] connector](connectors/marketing-automation/hubspot.md)
+- [[!DNL MailChimp Campaign]](./tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+- [[!DNL MailChimp Members]](./tutorials/api/create/marketing-automation/mailchimp-members.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Payments
