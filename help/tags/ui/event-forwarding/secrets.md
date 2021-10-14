@@ -12,11 +12,11 @@ There are currently three supported secret types:
 | --- | --- |
 | [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
-| [!UICONTROL OAuth2] | Contains several attributes to support the [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| [!UICONTROL OAuth2] | Contains several attributes to support the [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. Currently only the [Client Credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) version of OAuth2 is supported. |
 
 {style="table-layout:auto"}
 
-This guide provides a high-level overview of how to configure secrets for an event forwarding property in the Data Collection UI.
+This guide provides a high-level overview of how to configure secrets for an event forwarding ([!UICONTROL Edge]) property in the Data Collection UI.
 
 <!-- (Add once API docs are published)
 For detailed guidance on how to manage secrets in the Reactor API, including example JSON of a secret's structure, refer to the [secrets endpoint guide].
@@ -34,7 +34,7 @@ To create a secret, log in to the Data Collection UI and open the event forwardi
 
 ![Create new secret](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
-The next screen allows you to configure the details of the secret. In order for a secret to be useable by event forwarding, it must be assigned to an existing environment. If you do not have any environments created for your event forwarding property, see the guide on [environments](../publishing/environments.md) for guidance on how to configure them before continuing.
+The next screen allows you to configure the details of the secret. In order for a secret to be usable by event forwarding, it must be assigned to an existing environment. If you do not have any environments created for your event forwarding property, see the guide on [environments](../publishing/environments.md) for guidance on how to configure them before continuing.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ The next screen allows you to configure the details of the secret. In order for 
 >
 >![Disable environment](../../images/ui/event-forwarding/secrets/env-disabled.png)
 
-Under **[!UICONTROL Target Environment]**, use the dropdown menu to select the environment you want to assign the secret to. Under **[!UICONTROL Secret Name]**, provide a unique name for the secret in the context of the environment.
+Under **[!UICONTROL Target Environment]**, use the dropdown menu to select the environment you want to assign the secret to. Under **[!UICONTROL Secret Name]**, provide a name for the secret in the context of the environment. This name must be unique across all secrets under the event forwarding property.
 
 ![Environment and name](../../images/ui/event-forwarding/secrets/env-and-name.png)
 
@@ -62,7 +62,7 @@ From here, the steps to create the secret differ depending on the type of secret
 
 ### [!UICONTROL Token] {#token}
 
-To create a token secret, select **[!UICONTROL Token]** from the **[!UICONTROL Type]** dropdown. In the **[!UICONTROL Token]** field that appears, provide the authentication string that is recognized by both systems. Select **[!UICONTROL Create Secret]** to save the secret.
+To create a token secret, select **[!UICONTROL Token]** from the **[!UICONTROL Type]** dropdown. In the **[!UICONTROL Token]** field that appears, provide the credential string that is recognized by the system you are authenticating to. Select **[!UICONTROL Create Secret]** to save the secret.
 
 ![Token secret](../../images/ui/event-forwarding/secrets/token-secret.png)
 
@@ -70,11 +70,15 @@ To create a token secret, select **[!UICONTROL Token]** from the **[!UICONTROL T
 
 To create an HTTP secret, select **[!UICONTROL HTTP]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide a username and password for the credential before selecting **[!UICONTROL Create Secret]** to save the secret.
 
+>[!NOTE]
+>
+>Upon being saved, the credential is encoded using the ["Basic" HTTP authentication scheme](https://www.rfc-editor.org/rfc/rfc7617.html).
+
 ![HTTP secret](../../images/ui/event-forwarding/secrets/http-secret.png)
 
 ### [!UICONTROL OAuth2] {#oauth2}
 
-To create an OAuth2 secret, select **[!UICONTROL OAuth2]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide your [[!UICONTROL Client ID] and [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), as well as your [[!UICONTROL Authorization URL]](https://www.oauth.com/oauth2-servers/authorization/the-authorization-request/) for your OAuth integration.
+To create an OAuth2 secret, select **[!UICONTROL OAuth2]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide your [[!UICONTROL Client ID] and [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), as well as your [Authorization URL](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for your OAuth integration. The [!UICONTROL Authorization URL] field in the Data Collection UI is a concatenation between the authorization server host and the token path.
 
 ![OAuth2 secret](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
@@ -82,7 +86,7 @@ Under **[!UICONTROL Credential Options]**, you can provide other credential opti
 
 ![Credential options](../../images/ui/event-forwarding/secrets/oauth-secret-2.png)
 
-Finally, provide a **[!UICONTROL Refresh Offset]** value in seconds. This represents the number of seconds before the token expires and the system performs an automatic refresh. To set the token so that it refreshes every 24 hours, for example, set the value to 86400.
+Finally, provide a **[!UICONTROL Refresh Offset]** value in seconds. This represents the number of seconds before the token expiry that the system will perform an automatic refresh. For example, setting the refresh offset to `10800` causes the token to refresh three hours before it is set to expire.
 
 >[!NOTE]
 >
@@ -104,11 +108,21 @@ The next screen allows you to change the name and credentials for the secret.
 
 >[!NOTE]
 >
->While the assigned environment is listed on this screen, you cannot reassign the secret to another environment. If you wish to use the same credentials on another environment, you must [create a new secret](#create) instead.
+>If the secret is associated with an existing environment, you cannot reassign the secret to another environment. If you wish to use the same credentials on a different environment, you must [create a new secret](#create) instead. The only way to reassign the environment from this screen is if you never assigned the secret to an environment beforehand or if you deleted the environment that the secret was attached to.
+
+### Retry a secret exchange
+
+You can retry or refresh a secret exchange from the editing screen. This process varies depending on the type of secret being edited:
+
+| Secret type | Retry protocol |
+| --- | --- |
+| [!UICONTROL Token] | Select **[!UICONTROL Exchange Secret]** to retry the secret exchange. This control is only available when there is an environment attached to the secret. |
+| [!UICONTROL HTTP] | If there is no environment attached to the secret, select **[!UICONTROL Exchange Secret]** to exchange the credential to base64. If an environment is attached, select elect **[!UICONTROL Exchange and Deploy Secret]** to exchange to base64 and deploy the secret to Cloudfare. |
+| [!UICONTROL OAuth2] | Select **[!UICONTROL Generate Token]** to exchange the credentials and return an access token from the authentication provider. |
 
 ## Delete a secret
 
-To delete an existing secret in the  **[!UICONTROL Secrets]** workspace, select the checkbox next to its name before selecting **[!UICONTROL Delete]**. You can also select multiple secrets to delete them simultaneously.
+To delete an existing secret in the  **[!UICONTROL Secrets]** workspace, select the checkbox next to its name before selecting **[!UICONTROL Delete]**.
 
 ![Delete secret](../../images/ui/event-forwarding/secrets/delete.png)
 
@@ -120,9 +134,17 @@ When creating the data element, select the **[!UICONTROL Core]** extension, then
 
 ![Data element](../../images/ui/event-forwarding/secrets/data-element.png)
 
+>[!NOTE]
+>
+>Only secrets attached to the development, staging, and production environments appear for their respective dropdowns.
+
 By assigning multiple secrets to a single data element and including it a rule, you can have the value of the data element change depending on where the containing library is in the [publishing flow](../publishing/publishing-flow.md).
 
 ![Data element with multiple secrets](../../images/ui/event-forwarding/secrets/multi-secret-data-element.png)
+
+>[!NOTE]
+>
+>When creating the data element, a development environment must be assigned. Secrets for the staging and production environments are not required, but builds that try to transition to those environments will fail if their secret-type data elements do not have a secret selected for the environment in question.
 
 <!-- (Add once API docs are published)
 ## Next steps
