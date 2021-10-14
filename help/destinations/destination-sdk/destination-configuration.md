@@ -7,13 +7,15 @@ exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
 
 ## Overview {#overview}
 
-This configuration allows you to indicate basic information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
+This configuration allows you to indicate essential information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
+
+This configuration also connects the other configurations required for your destination to work - destination server and audience metadata - to this one. Read how you can reference the two configurations in a [section further below](./destination-configuration.md#connecting-all-configurations).
 
 You can configure the functionality described in this document by using the `/authoring/destinations` API endpoint. Read [Destinations API endpoint operations](./destination-configuration-api.md) for a complete list of operations you can perform on the endpoint.
 
 ## Example configuration {#example-configuration}
 
-Below is an example configuration for a fictional destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category. The sections further below break down how this configuration is constructed.
+Below is an example configuration of a fictional destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category. The sections further below break down how this configuration is constructed.
 
 ```json
 
@@ -87,7 +89,6 @@ Below is an example configuration for a fictional destination, Moviestar, which 
       "mapUserInput":false,
       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -114,7 +115,8 @@ Below is an example configuration for a fictional destination, Moviestar, which 
             ]
          }
       }
-   }
+   },
+   "backfillHistoricalProfileData":true
 }
 
 ```
@@ -122,7 +124,7 @@ Below is an example configuration for a fictional destination, Moviestar, which 
 |Parameter | Type | Description|
 |---------|----------|------|
 |`name` | String | Indicates the title of your destination in the Experience Platform catalog. |
-|`description` | String | Provide a description that Adobe will use in the Experience Platform destinations catalog for your destination card. Aim for no more than 4-5 sentences. |
+|`description` | String | Provide a description for your destination card in the Experience Platform destinations catalog. Aim for no more than 4-5 sentences. |
 |`status` | String | Indicates the lifecycle status of the destination card. Accepted values are `TEST`, `PUBLISHED`, and `DELETED`. Use `TEST` when you first configure your destination. |
 
 {style="table-layout:auto"}
@@ -190,7 +192,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`profileFields` | Array | *Not shown in example configuration above.* When you add predefined `profileFields`, users will have the option of mapping Experience Platform attributes to the predefined attributes on your destination's side. |
+|`profileFields` | Array | *Not shown in example configuration above.* When you add predefined `profileFields`, Experience Platform users have the option of mapping Platform attributes to the predefined attributes on your destination's side. |
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
@@ -201,7 +203,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 The parameters in this section determine how the target identities and attributes are populated in the mapping step of the Experience Platform user interface, where users map their XDM schemas to the schema in your destination.
 
-Adobe needs to know which [!DNL Platform] identities customers will be able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Platform] identity namespaces that customers can map to identity namespaces from your destination.
+You must indicate which [!DNL Platform] identities customers are able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Platform] identity namespaces that customers can map to identity namespaces from your destination.
 
 Identity namespaces do not require a 1-to-1 correspondence between [!DNL Platform] and your destination.
 For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or they can map the same [!DNL Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
@@ -212,9 +214,9 @@ Read more in the [Identity Namespace overview](https://experienceleague.adobe.co
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`acceptsAttributes` | Boolean | Indicates if your destination accepts standard profile attributes. Usually, these attributes are highlighted in our partners' documentation. |
+|`acceptsAttributes` | Boolean | Indicates if your destination accepts standard profile attributes. Usually, these attributes are highlighted in partners' documentation. |
 |`acceptsCustomNamespaces` | Boolean | Indicates if customers can set up custom namespaces in your destination. |
-|`allowedAttributesTransformation` | String | *Not shown in example configuration*. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
+|`allowedAttributesTransformation` | String | *Not shown in example configuration*. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. In this object, you can the transformation that needs to be applied (for example, transform the email to lowercase, then hash). For an example, see `requiredTransformation` in the [destination configuration API reference](./destination-configuration-api.md#update). |
 |`acceptedGlobalNamespaces` | - | Used for cases when your platform accepts [standard identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (for example, IDFA), so you can restrict Platform users to only selecting these identity namespaces. |
 
 {style="table-layout:auto"}
@@ -239,13 +241,21 @@ Through the `audienceTemplateId`, this section also ties together this configura
 
 The parameters shown in the configuration above are described in the [destinations endpoint API reference](./destination-configuration-api.md).
 
+## How this configuration connects all necessary information for your destination {#connecting-all-configurations}
+
+Some settings for your destination can be configured through the destination server or the audience metadata endpoint. The destination configuration endpoint connects all these settings by referencing the configurations as follows:
+
+* Use the `destinationServerId` to reference the destination server and template configuration set up for your destination.
+* Use the `audienceMetadataId` to reference the audience metadata configuration set up for your destination.
+
+
 ## Aggregation policy {#aggregation}
 
 ![Aggregation policy in the configuration template](./assets/aggregation-configuration.png)
 
-This section allows you to set the aggregation policies that Experience Platform will use when exporting data to your destination.
+This section allows you to set the aggregation policies that Experience Platform should use when exporting data to your destination.
 
-An aggregation policy determines how the exported profiles are combined together in the data exports. Available options are:
+An aggregation policy determines how the exported profiles are combined in the data exports. Available options are:
 * Best effort aggregation
 * Configurable aggregation (shown in the configuration above)
 
@@ -255,9 +265,9 @@ Read the section on [using templating](./message-format.md#using-templating) and
 
 >[!TIP]
 >
->Use this option if your API endpoint accepts less than 100 profiles per API call. 
+>Use this option if your API endpoint accepts fewer than 100 profiles per API call. 
 
-This option works best for destinations which prefer less profiles per request and would rather take more requests with less data than less requests with more data.
+This option works best for destinations which prefer fewer profiles per request and would rather take more requests with less data than fewer requests with more data.
 
 Use the `maxUsersPerRequest` parameter to specify the maximum number of profiles that your destination can take in a request.
 
@@ -274,10 +284,10 @@ This option allows you to:
 
 For detailed explanations of the aggregation parameters, refer to the [Destinations API endpoint operations](./destination-configuration-api.md) reference page, where each parameter is described.
 
-<!--
+## Historical profile qualifications
 
-commenting out the `backfillHistoricalProfileData` parameter, which will only be used after an April release
+You can use the `backfillHistoricalProfileData` parameter in the destinations configuration to determine if historical profile qualifications should be exported to your destination.
 
+|Parameter | Type | Description|
+|---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-
--->
