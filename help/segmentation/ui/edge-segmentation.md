@@ -28,20 +28,17 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
-| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
-| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| Incoming hit with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours | |
-| Incoming hit that refers to a profile with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours, and one or more profile attributes | |
-
-### Query types not currently supported
-
-The following query types are **not** currently supported for edge segmentation:
-
-| Query type | Details |
-| ---------- | ------- |
-| Multiple events | If a query contains more than one event, it cannot be evaluated using edge segmentation. |
-| Frequency query | Any segment definition that refers to an event happening at least a certain number of times. | |
-| Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. | |
+| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | People who have added an item to their cart. |
+| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | People who live in the USA that visited the homepage. |
+| Negated incoming hit that refers to a profile | Any segment definition that refers to a negated single incoming event and one or more profile attributes | People who live in the USA and have **not** visited the homepage. | 
+| Incoming hit within a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours | People who visited the homepage in the last 24 hours. |
+| Incoming hit that refers to a profile within a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours and has one or more profile attributes. | People who live in the USA that visited the homepage in the last 24 hours. |
+| Negated incoming hit that refers to a profile within a time window of 24 hours | Any segment definition that refers to a negated single incoming event within 24 hours and has one or more profile attributes. | 
+| Frequency event within a time window of 24 hours | Any segment definition that refers to an event that takes place a certain number of times within a time window of 24 hours | People who visited the homepage **at least** 5 times in the last 24 hours. |
+| Frequency event that refers to a profile within a time window of 24 hours | Any segment definition that refers to an event that refers to a profile, takes place a certain number of times, and occurs within a time window of 24 hours. | People from the USA who visited the homepage **at least** 5 times in the last 24 hours. |
+| Negated frequency event that refers to a profile within a time window of 24 hours | Any segment definition that refers to a negated event that refers to a profile, takes place a certain number of times, and occurs within a time window of 24 hours. | People who have not visited the homepage **more** than 5 times in the last 24 hours. |
+| Multiple incoming hits that refer to a profile with a time profile of 24 hours | Any segment definition that refers to multiple events, refer to profiles, and occur within a time window of 24 hours. | People from the USA that visited the homepage **AND** visited the checkout page within the last 24 hours. |
+| Multiple incoming hits within a time profile of 24 hours | Any segment definition that refers to multiple events and occur within a time window of 24 hours. | People that visited the homepage **OR** visited the checkout page within the last 24 hours. |
 
 ## Next steps
 
