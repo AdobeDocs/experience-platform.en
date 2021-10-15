@@ -1,6 +1,7 @@
 ---
 title: Sorting Responses in the Reactor API
 description: Learn how to filter results when listing resources in the Reactor API.
+exl-id: 49dcf0b6-4ce8-41d9-9e3a-e44f5c0ff905
 ---
 # Sorting responses in the Reactor API
 

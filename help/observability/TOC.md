@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Observability Insights Guide
 user-guide-description: Monitor Platform activities through the use of statistical metrics and event notifications.
-feature: Data Management
+feature: Observability
 ---
 
 # Observability Insights {#observability}
@@ -17,5 +17,5 @@ feature: Data Management
   * [Standard alert rules](./alerts/rules.md)
   * [UI guide](./alerts/ui.md)
   * [Subscribe to I/O Event notifications](./alerts/subscribe.md)
-* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
+* [API reference](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

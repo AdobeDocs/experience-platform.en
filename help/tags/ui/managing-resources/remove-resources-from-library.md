@@ -1,6 +1,7 @@
 ---
 title: Remove Resources from a Library
 description: Learn how to remove resources from a tag library.
+exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
 ---
 # Remove resources from a library
 

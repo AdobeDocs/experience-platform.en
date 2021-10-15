@@ -8,15 +8,23 @@ exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 ---
 # Edge segmentation UI guide (beta)
 
->[!NOTE] 
+>[!IMPORTANT] 
 >
 >Edge segmentation is currently in beta. The documentation and the functionality are subject to change.
 
-Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
+Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously [on the edge](../../edge/home.md), enabling same page and next page personalization use cases. 
 
 ## Edge segmentation query types
 
-A query can be evaluated with edge segmentation if it meets any of the following criteria:
+Currently only select query types can be evaluated with edge segmentation. The following sections provide a list of query types that can be evaluated with edge segmentation and those that are not currently supported.
+
+### Supported query types
+
+A query can be evaluated with edge segmentation if it meets any of the criteria outlined in the following table.
+
+>[!NOTE]
+>
+>If the query matches any of the query types in the following table, it will automatically be evaluated using edge segmentation. The system determines this ability automatically based on the query expression.
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
@@ -25,7 +33,7 @@ A query can be evaluated with edge segmentation if it meets any of the following
 | Incoming hit with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours | |
 | Incoming hit that refers to a profile with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours, and one or more profile attributes | |
 
-If the query matches any of the above query types, it will automatically be evaluated using edge segmentation.
+### Query types not currently supported
 
 The following query types are **not** currently supported for edge segmentation:
 
@@ -37,6 +45,4 @@ The following query types are **not** currently supported for edge segmentation:
 
 ## Next steps
 
-This user guide explains how to evaluate segments with edge segmentation on Adobe Experience Platform. 
-
-To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md). To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [edge segmentation API guide](../api/edge-segmentation.md).
+This guide explains how to evaluate segments with edge segmentation on Adobe Experience Platform. To learn more about using the Experience Platform user interface, please read the [Segmentation user guide](./overview.md). To learn how to perform similar actions and work with segments using Experience Platform APIs, please visit the [edge segmentation API guide](../api/edge-segmentation.md).

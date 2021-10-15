@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Telecom Subscription Schema Field Group
 topic-legacy: overview
 description: This document provides an overview of the Telecom Subscription schema field group.
+exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 ---
 # [!UICONTROL Telecom Subscription] schema field group
 
@@ -103,4 +104,3 @@ For more details on the field group, refer to the public XDM repository:
 | `portedNumber` | Boolean | Indicates whether the customer ports their number from another carrier. |
 
 {style="table-layout:auto"}
-

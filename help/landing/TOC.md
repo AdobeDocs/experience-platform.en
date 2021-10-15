@@ -9,6 +9,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 
 * [Platform overview](home.md)
 * [Platform overview (Video)](video/platform-overview.md)
+* [Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [A customer experience powered by Platform (Video)](video/customer-experience.md)
 * [Behind the scenes of a customer experience powered by Platform (Video)](video/customer-experience-bts.md)
 * Getting started {#getting-started}
@@ -26,7 +27,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Authenticate and access Platform APIs](api-authentication.md)
   * [API fundamentals](api-fundamentals.md)
   * [Using Postman with Platform APIs](postman.md)
-  * [API reference documents](http://www.adobe.com/go/platform-api-reference-en)
+  * [API reference documents](https://www.adobe.com/go/platform-api-reference-en)
 * Platform documentation {#documentation}
   * [Overview](documentation/overview.md)
   * [Language support](documentation/language-support.md)
@@ -40,10 +41,10 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
     * Adobe standard {#adobe}
       * [Overview](./governance-privacy-security/consent/adobe/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/adobe/dataset.md)
-      * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/adobe/sdk.md) 
     * IAB TCF 2.0 {#iab}
       * [Overview](./governance-privacy-security/consent/iab/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
+    * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
   * Audit logs (Beta) {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
 * [License usage dashboard](license-usage-dashboard.md)

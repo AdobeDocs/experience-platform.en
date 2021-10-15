@@ -11,9 +11,9 @@ exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 
 >[!IMPORTANT]
 >
->The [!DNL Marketo Engage] source is currently in beta. The feature and documentation are subject change. Furthermore, you must ensure that you are using a non-production sandbox when using the connector during the beta program. For more information on sandboxes, please refer to the [Sandboxes documentation](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=en#understanding-sandboxes).
+>The [!DNL Marketo Engage] source in Adobe Experience Platform is currently in beta. The documentation and functionality are subject to change.
 
-This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector in the UI to bring consumer data into Adobe Experience Platform.
+This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector in the UI to bring B2B data into Adobe Experience Platform.
 
 ## Getting started
 

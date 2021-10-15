@@ -1,6 +1,7 @@
 ---
 title: App configurations endpoint
 description: Learn how to make calls to the /app_configurations endpoint in the Reactor API.
+exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 ---
 # App configurations endpoint
 
@@ -12,7 +13,7 @@ App configurations allow credentials to be stored and retrieved for later use. T
 
 ## Getting started
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
+The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
 ## Retrieve a list of app configurations {#list}
 

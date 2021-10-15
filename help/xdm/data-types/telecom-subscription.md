@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Telecom Subscription Data Type
 topic-legacy: overview
 description: This document provides an overview of the Telecom Subscription Experience Data Model (XDM) data type.
+exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 ---
 # [!UICONTROL Telecom Subscription] data type
 

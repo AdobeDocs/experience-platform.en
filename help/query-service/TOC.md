@@ -20,6 +20,7 @@ feature: Queries
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
   - [Query Editor user guide](ui/user-guide.md)
+  - [Using Query Service credentials](ui/credentials.md)
   - [Generating datasets from query results](ui/create-datasets.md)
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
@@ -27,6 +28,7 @@ feature: Queries
   - [Sample Experience Event queries](best-practices/experience-event-queries.md)
   - [Sample Adobe Analytics queries](best-practices/adobe-analytics.md)
   - [Sample Adobe Target queries](best-practices/adobe-target.md)
+  - [Sample anonymous block queries](best-practices/anonymous-block.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
@@ -44,5 +46,5 @@ feature: Queries
   - [RStudio](clients/rstudio.md)
   - [Tableau](clients/tableau.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
-- [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
+- [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

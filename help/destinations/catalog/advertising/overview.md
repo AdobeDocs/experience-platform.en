@@ -27,7 +27,9 @@ To understand the difference between connections and extensions, see [Connection
 * [Google Ad Manager connection](google-ad-manager.md)
 * [Google Customer Match connection](google-customer-match.md)
 * [Microsoft Bing connection](bing.md)
+* [Pinterest Customer List connection](pinterest.md)
 * [The Trade Desk connection](tradedesk.md)
+* [Yahoo/Verizon DataX](datax.md)
 
 ### Extensions
 

@@ -1,6 +1,7 @@
 ---
 title: Action Types for Edge Extensions
 description: Learn how to define an action-type library module for a tag extension in an edge property.
+exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
 ---
 # Action types for edge extensions
 

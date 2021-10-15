@@ -10,7 +10,7 @@ exl-id: 3dee20e2-0551-43db-ba89-bc049b56af08
 
 The [!DNL Observability Insights] API provides an endpoint that allows you to programmatically retrieve and monitor metric data for various Adobe Experience Platform features. This endpoint is outlined below. Please visit the endpoint guide for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To view all available endpoints and CRUD operations, visit the [[!DNL Observability Insights] API swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml).
+To view all available endpoints and CRUD operations, visit the [[!DNL Observability Insights] API swagger](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
 
 ## Metrics
 
