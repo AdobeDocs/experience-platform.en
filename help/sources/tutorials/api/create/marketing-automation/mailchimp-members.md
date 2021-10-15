@@ -71,7 +71,7 @@ curl -X POST \
 | `auth.params.host` | The root URL used to connect to [!DNL MailChimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
 | `auth.params.authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.username` | The username that corresponds with your [!DNL MailChimp] account. This is required for basic authentication. |
-| `auth.params.password` | The password that corresponds with your [!DNL MailChimp] account. This is required for basic authentication |
+| `auth.params.password` | The password that corresponds with your [!DNL MailChimp] account. This is required for basic authentication. |
 
 **Response**
 
@@ -469,7 +469,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ## Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to Conversion Service with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to the [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
 
 **API format**
 

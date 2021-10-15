@@ -69,7 +69,7 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to connect your source to Platform. |
 | `auth.params.host` | The root URL used to connect to [!DNL MailChimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
-| `auth.params.authorizationTestUrl` | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
+| `auth.params.authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.username` | The username that corresponds with your [!DNL MailChimp] account. This is required for basic authentication. |
 | `auth.params.password` | The password that corresponds with your [!DNL MailChimp] account. This is required for basic authentication. |
 
