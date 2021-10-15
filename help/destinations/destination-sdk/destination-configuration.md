@@ -7,7 +7,7 @@ exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
 
 ## Overview {#overview}
 
-This configuration allows you to indicate essential information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
+This configuration allows you to indicate essential information like your destination name, category, description, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
 
 This configuration also connects the other configurations required for your destination to work - destination server and audience metadata - to this one. Read how you can reference the two configurations in a [section further below](./destination-configuration.md#connecting-all-configurations).
 
@@ -131,17 +131,17 @@ Below is an example configuration of a fictional destination, Moviestar, which h
 
 ## Customer authentication configurations {#customer-authentication-configurations}
 
-This section generates the account page in Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination. Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as follows:
+This section in the destinations configuration generates the [Configure new destination](/help/destinations/ui/connect-destination.md) page in the Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination. Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as follows:
 
 **Bearer authentication**
 
-Users are required to input the bearer token that they obtain from your destination.
+When you configure the bearer authentication type, users are required to input the bearer token that they obtain from your destination.
 
 ![UI render with bearer authentication](./assets/bearer-authentication-ui.png)
 
 **OAuth 2 authentication**
 
-Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination.
+Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Tailored Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md).
 
 ![UI render with OAuth 2 authentication](./assets/oauth2-authentication-ui.png)
 
@@ -149,7 +149,7 @@ Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 auth
 |Parameter | Type | Description|
 |---------|----------|------|
 |`customerAuthenticationConfigurations` | String | Indicates the configuration used to authenticate Experience Platform customers to your server. See `authType` below for accepted values. |
-|`authType` | String | Accepted values are `OAUTH2, BEARER`. <br><ul><li> If your destination supports OAuth 2 authentication, select the `OAUTH2` value and add the required fields for OAuth 2, as shown in the Destination SDK OAuth 2 authentication page. Additionally, you should select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md). </li><li>For bearer authentication, select `BEARER` and select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md).</li></ul> |
+|`authType` | String | Accepted values are `OAUTH2, BEARER`. <br><ul><li> If your destination supports OAuth 2 authentication, select the `OAUTH2` value and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md). Additionally, you should select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md). </li><li>For bearer authentication, select `BEARER` and select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -284,7 +284,7 @@ This option allows you to:
 
 For detailed explanations of the aggregation parameters, refer to the [Destinations API endpoint operations](./destination-configuration-api.md) reference page, where each parameter is described.
 
-## Historical profile qualifications
+## Historical profile qualifications {profile-backfill}
 
 You can use the `backfillHistoricalProfileData` parameter in the destinations configuration to determine if historical profile qualifications should be exported to your destination.
 
