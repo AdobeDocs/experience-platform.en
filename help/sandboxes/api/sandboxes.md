@@ -186,6 +186,10 @@ A successful response returns the details of the sandbox, including its `name`, 
 
 ## Create a sandbox {#create}
 
+>[!NOTE]
+>
+>When a new sandbox is created, you must first add that new sandbox to your product profile in [Adobe Admin Console](https://adminconsole.adobe.com/) before you can start using the new sandbox. See the documentation on [managing permissions for a product profile](../../access-control/ui/permissions.md) for information on how to provision a sandbox to a product profile.
+
 You can create a new development or production sandbox by making a POST request to the `/sandboxes` endpoint.
 
 ### Create a development sandbox
