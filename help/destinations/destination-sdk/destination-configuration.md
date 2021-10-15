@@ -284,7 +284,7 @@ This option allows you to:
 
 For detailed explanations of the aggregation parameters, refer to the [Destinations API endpoint operations](./destination-configuration-api.md) reference page, where each parameter is described.
 
-## Historical profile qualifications {profile-backfill}
+## Historical profile qualifications {#profile-backfill}
 
 You can use the `backfillHistoricalProfileData` parameter in the destinations configuration to determine if historical profile qualifications should be exported to your destination.
 
