@@ -128,6 +128,8 @@ feature: Sources
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+      - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+      - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
