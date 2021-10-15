@@ -72,7 +72,7 @@ When an `oauth2` secret is created or updated, the `client_id` and `client_secre
 A credentials exchange is considered successful under the following conditions:
 
 * `expires_in` is greater than `28800` (eight hours).
-* `refresh_offset` is less than the value of `expires_in` minus `14400` (four hours). For example, if `expires_in` is `36000` (ten hours), and the `refresh_offset` is `28800` (eight hours), the exchange is considered failed because `28800` is less than `36000` - `14400` (`21600`).
+* `refresh_offset` is less than the value of `expires_in` minus `14400` (four hours). For example, if `expires_in` is `36000` (ten hours), and the `refresh_offset` is `28800` (eight hours), the exchange is considered failed because `28800` is greater than `36000` - `14400` (`21600`).
 
 If the exchange is successful, the secret's status attribute is set to `succeeded` and values for `expires_at` and `refresh_at` are set:
 
