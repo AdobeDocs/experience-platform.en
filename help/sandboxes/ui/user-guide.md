@@ -38,6 +38,10 @@ You can navigate through the list of sandboxes available to you by using the sea
 
 ## Create a new sandbox
 
+>[!NOTE]
+>
+>When a new sandbox is created, you must first add that new sandbox to your product profile in [Adobe Admin Console](https://adminconsole.adobe.com/) before you can start using the new sandbox. See the documentation on [managing permissions for a product profile](../../access-control/ui/permissions.md) for information on how to provision a sandbox to a product profile.
+
 Use the following video for a quick overview on how to use Sandboxes in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)

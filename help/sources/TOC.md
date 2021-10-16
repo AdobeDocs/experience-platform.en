@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
 user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
-feature: Data Ingestion, Sources
+feature: Sources
 ---
 
 # Source connectors {#sources}
@@ -128,6 +128,8 @@ feature: Data Ingestion, Sources
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+      - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+      - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)

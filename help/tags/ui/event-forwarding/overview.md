@@ -1,6 +1,7 @@
 ---
 title: Event Forwarding Overview
 description: Learn about event forwarding in Adobe Experience Platform, which allows you to use the Platform Edge Network to execute tasks without changing your tag implementation.
+feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 ---
 # Event forwarding overview
