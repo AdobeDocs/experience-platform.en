@@ -15,4 +15,4 @@ The following is a list of end-to-end implementation guides for tags and event f
 * [Implement tags for an Android application](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-android-apps/overview.html)
 * [Implement tags for an iOS Objective-C application](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-objective-c-apps/overview.html)
 * [Implement tags for an iOS Swift application](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-swift-apps/overview.html)
-* [Implement event forwarding (formerly Adobe Experience Platform Launch Server Side)](https://aep-sdks.gitbook.io/docs/)
+* [Implement event forwarding (formerly Adobe Experience Platform Launch Server Side)](https://experienceleague.adobe.com/docs/platform-learn/data-collection/event-forwarding/overview.html)
