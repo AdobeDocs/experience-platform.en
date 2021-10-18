@@ -54,7 +54,9 @@ Under **[!UICONTROL Basic information]**, provide a name and optional descriptio
 
 ![naming an instance](./images/user-guide/naming_instance.png)
 
-## Select data
+## Select data {#select-data}
+
+<!-- https://www.adobe.com/go/aai-select-data -->
 
 After filling out the basic information, select the dropdown labeled **Select Dataset** to select your dataset. The dataset is used to train the model and score the subsequent data it produces. When selecting a dataset from the dropdown selector, only ones that are compatible with Attribution AI and conform to the Experience Data Model (XDM) schema are listed. Once a dataset is chosen, select **Next** in the top-right corner to proceed to the define events page.
 
@@ -64,7 +66,17 @@ After filling out the basic information, select the dropdown labeled **Select Da
 
 ![setup page](./images/user-guide/dataset_selector.png)
 
-## Defining events
+### Dataset completeness {#dataset-completeness}
+
+<!-- https://www.adobe.com/go/aai-dataset-completeness -->
+
+## Mapping media channel and campaign fields {#aai-mapping}
+
+<!-- https://www.adobe.com/go/aai-mapping -->
+
+## Defining events {#define-events}
+
+<!-- https://www.adobe.com/go/aai-define-events -->
 
 There are three different types of input data used for defining events:
 
