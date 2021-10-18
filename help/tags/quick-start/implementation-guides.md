@@ -1,6 +1,6 @@
 ---
 title: Implementation Guides for Tags and Event Forwarding
-description: Learn how to implement Adobe Experience Cloud products in your websites and mobile applications with tags and event forwarding.
+description: Learn how to use tags and event forwarding to implement Adobe Experience Cloud products in your websites and mobile applications.
 exl-id: fe39cff2-2b0a-405b-aa89-0a3330f40ca1
 ---
 # Implementation guides for tags and event forwarding
