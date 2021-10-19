@@ -40,21 +40,31 @@ To create a new instance, select **[!UICONTROL Create instance]**.
 
 ![](../images/user-guide/dashboard.png)
 
+## Setup
+
 The instance creation workflow appears, starting on the **[!UICONTROL Setup]** step.
 
 Below is important information on values that you must provide the instance with:
 
--   The instance's name is used in all places where Customer AI scores are displayed. Hence, names should describe what the prediction scores represent, for example, "Likelihood to cancel magazine subscription".
+-   **Name:** The instance's name is used in all places where Customer AI scores are displayed. Hence, names should describe what the prediction scores represent, for example, "Likelihood to cancel magazine subscription".
 
--   The propensity type determines the intent of the score and metric polarity. You can either choose **[!UICONTROL Churn]** or **[!UICONTROL Conversion]**. Please see the note under [scoring summary](./discover-insights.md#scoring-summary) in the discovering insights document for more information on how the propensity type affects your instance.
+-   **Description:** A description indicating what you are trying to predict.
+
+-   **Propensity type:** The propensity type determines the intent of the score and metric polarity. You can either choose **[!UICONTROL Churn]** or **[!UICONTROL Conversion]**. Please see the note under [scoring summary](./discover-insights.md#scoring-summary) in the discovering insights document for more information on how the propensity type affects your instance.
+
+![Setup screen]()
+
+## Select data {#select-data}
 
 -   Data source is where the data is located. Dataset is the input dataset which is used to predict scores. By design, Customer AI uses Consumer Experience Event, Adobe Analytics, and Adobe Audience Manager data to calculate propensity scores. When selecting a dataset from the dropdown selector, only ones that are compatible with Customer AI are listed.
 
+![Select and search for dataset]()
+
 -   By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
 
-Provide the required values and then select **[!UICONTROL Next]**.
+![Select and search for dataset]()
 
-![](../images/user-guide/setup.png)
+Provide the required values and then select **[!UICONTROL Next]**.
 
 ### Define a goal {#define-a-goal}
 
