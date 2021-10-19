@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
 user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
-feature: Data Ingestion, Sources
+feature: Sources
 ---
 
 # Source connectors {#sources}
@@ -15,15 +15,15 @@ feature: Data Ingestion, Sources
     - [Analytics source connector](connectors/adobe-applications/analytics.md)
     - [Audience Manager source connector](connectors/adobe-applications/audience-manager.md)
     - [Customer attributes source connector](connectors/adobe-applications/customer-attributes.md)
-    - Adobe application field mappings {#mapping}
+    - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target field mappings](connectors/adobe-applications/mapping/target.md)
       - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
-    - Marketo Engage {#marketo}
+    - Marketo {#marketo}
       - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
       - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
-      - [Marketo Engage namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
+      - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
     - [Google AdWords connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
@@ -128,6 +128,8 @@ feature: Data Ingestion, Sources
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+      - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+      - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -156,8 +158,6 @@ feature: Data Ingestion, Sources
     - [Collect payment data](tutorials/api/collect/payments.md)
     - [Collect protocol data](tutorials/api/collect/protocols.md)
     - [Collect streaming data](tutorials/api/collect/streaming.md)
-  - [Ingest Parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
-  - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
   - [Monitor dataflows](tutorials/api/monitor.md)
   - [Update accounts](tutorials/api/update.md)
   - [Update dataflows](tutorials/api/update-dataflows.md)

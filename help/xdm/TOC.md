@@ -59,6 +59,8 @@ feature: Schemas
     * [IAB TCF 2.0 Consent](./field-groups/event/iab.md)
     * [Lodging Reservation](./field-groups/event/lodging-reservation.md)
     * [Reservation Details](./field-groups/event/reservation-details.md)
+    * [Upgrade Details](./field-groups/event/upgrade-details.md)
+    * [Upsell Details](./field-groups/event/upsell-details.md)
     * [Web Details](./field-groups/event/web-details.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
@@ -85,6 +87,7 @@ feature: Schemas
   * [Geo interaction details](./data-types/geo-interaction-details.md)
   * [Geo Shape](./data-types/geo-shape.md)
   * [Identity](./data-types/identity.md)
+  * [Impressions](./data-types/impressions.md)
   * [Marketing](./data-types/marketing.md)
   * [Measure](./data-types/measure.md)
   * [Order](./data-types/order.md)
@@ -120,6 +123,7 @@ feature: Schemas
     * [Enum fields](./ui/fields/enum.md)
     * [Identity fields](./ui/fields/identity.md)
     * [Relationship fields](./ui/fields/relationship.md)
+  * [Field-based workflows](./ui/field-based-workflows.md)
   * [Generate sample XDM data](./ui/sample.md)
   * [Export XDM schemas](./ui/export.md)
 * Schema Registry API {#api}
