@@ -1,13 +1,13 @@
 ---
-description: This configuration determines how Adobe Experience Platform users authenticate to your destination endpoint to activate data.
-title: Configuration options for credentials in Destination SDK
+description: Use the supported authentication configurations in Adobe Experience Platform Destination SDK to authenticate users and activate data to your destination endpoint.
+title: Authentication configuration
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
 ---
 # Authentication configuration {#credentials}
 
 ## Supported authentication types {#supported-authentication-types}
 
-Adobe Experience Platform supports several authentication types:
+Adobe Experience Platform Destination SDK supports several authentication types:
 
 * Bearer authentication
 * OAuth 2 with authorization code
