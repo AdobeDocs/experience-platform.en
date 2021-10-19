@@ -42,6 +42,8 @@ To create a new instance, select **[!UICONTROL Create instance]**.
 
 ## Setup
 
+<!-- Get new Go URLs for CAI UI -->
+
 The instance creation workflow appears, starting on the **[!UICONTROL Setup]** step.
 
 Below is important information on values that you must provide the instance with:
@@ -54,19 +56,38 @@ Below is important information on values that you must provide the instance with
 
 ![Setup screen]()
 
+Provide the required values and then select **[!UICONTROL Next]** to continue.
+
 ## Select data {#select-data}
 
--   Data source is where the data is located. Dataset is the input dataset which is used to predict scores. By design, Customer AI uses Consumer Experience Event, Adobe Analytics, and Adobe Audience Manager data to calculate propensity scores. When selecting a dataset from the dropdown selector, only ones that are compatible with Customer AI are listed.
+By design, Customer AI uses Consumer Experience Event, Adobe Analytics, and Adobe Audience Manager data to calculate propensity scores. When selecting a dataset only ones that are compatible with Customer AI are listed. To select a dataset select the (**+**) symbol next to the dataset name. Use the search option to quickly find the datasets you're interested in.
 
 ![Select and search for dataset]()
 
--   By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
+Selecting the info icon next to the dataset opens the dataset preview popover.
 
 ![Select and search for dataset]()
 
-Provide the required values and then select **[!UICONTROL Next]**.
+The dataset preview contains data such as the last update time, source schema, and a preview of the data.
 
-### Define a goal {#define-a-goal}
+### Dataset completeness {#dataset-completeness}
+
+<!-- Go URL here -->
+
+In the dataset preview is a dataset completeness percentage value. This value provides a quick snapshot of how many columns in your dataset are empty/null. It is recommended that you try to use datasets with a value above 80%.
+
+>[!NOTE]
+>
+>Dataset completeness is calculated using the maximum lookback window for Customer AI (one year). This means data that is more than one year old is not taken into account when displaying your dataset completeness value.
+
+![Dataset completeness]()
+
+### Dataset Key {#dataset-key}
+
+<!-- Go URL here -->
+
+
+## Define a goal {#define-a-goal}
 
 The **[!UICONTROL Define goal]** step appears and it provides an interactive environment for you to visually define a prediction goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame.
 
@@ -74,7 +95,7 @@ To create a goal, select **[!UICONTROL Enter Field Name]** and select a field fr
 
 ![](../images/user-guide/goal.png)
 
-#### Will occur and will not occur
+### Will occur and will not occur
 
 While defining your goal, you have the option to select **[!UICONTROL Will occur]** or **[!UICONTROL Will not occur]**. Selecting **[!UICONTROL Will occur]** means that the event conditions you define need to be met for a customer's event data to be included in the insights UI. 
 
@@ -122,6 +143,10 @@ Lastly, enter the field value(s) if the operator selected requires one. In this 
 
 Once complete, select **[!UICONTROL Next]** in the top-right to continue.
 
+### Eligible population
+
+By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
+
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
 The **[!UICONTROL Advanced]** step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed. 
@@ -142,13 +167,23 @@ Exclude events as needed and then select **[!UICONTROL Finish]** to create the i
 
 ![](../images/user-guide/advanced.png)
 
+### Profile toggle
+
+The Profile toggle allows Customer AI to export the scoring results into Real-time Customer Profile. Disabling this toggle prevents the models scoring results from being added to Profile. Customer AI scoring results will still be available with this feature disabled.
+
+When using Customer AI for the first time ,it is recommended that you toggle this feature off until you are happy with the model output results. This prevents you from uploading multiple scoring datasets to Real-time Customer Profile while fine tuning your model.
+
+![Profile toggle]()
+
+Select **[!UICONTROL Finish]** in the top-right to create your Customer AI instance.
+
 If the instance is created successfully, a prediction run is immediately triggered and subsequent runs execute according to your defined schedule.
 
 >[!NOTE]
 >
 >Depending on the size of the input data, prediction runs can take up to 24 hours to complete.
 
-By following this section, you have configured an instance of Customer AI and a prediction run was executed. Upon the run's successful completion, scored insights automatically populate profiles with predicted scores. Please wait up to 24 hours before continuing to the next section of this tutorial.
+By following this section, you have configured an instance of Customer AI and a prediction run was executed. Upon the run's successful completion, scored insights automatically populate profiles with predicted scores if the profile toggle is enabled. Please wait up to 24 hours before continuing to the next section of this tutorial.
 
 ## Next steps {#next-steps}
 
@@ -157,5 +192,9 @@ By following this tutorial, you have successfully configured an instance of Cust
 ## Additional resources
 
 The following video is designed to support your understanding of the configuration workflow for Customer AI. Additionally, best practices and use case examples are provided.
+
+>[!IMPORTANT]
+>
+> The following video is out of date. For the most up-to-date information refer to the documentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
