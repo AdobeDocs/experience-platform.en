@@ -67,7 +67,7 @@ The first item on the right side of the top navigation bar is the **IMS Organiza
 ![](./images/user-guide/homepage-ims-org.png)
 
 Selecting the switcher opens a dropdown menu of IMS Organizations you have access to, if any are available. To switch to another IMS Organization, select a listed option.
-to
+
 ### Switch applications
 
 The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Adobe applications that your IMS Org has access to, such as Experience Platform, Analytics, Assets, and others.
