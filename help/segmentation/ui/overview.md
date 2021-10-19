@@ -47,7 +47,7 @@ Select the **[!UICONTROL Browse]** tab to see a list of all the segment definiti
 
 This view lists information about the segment definition including the breakdown, churn, profile count, evaluation method, created date, and last modified date.
 
-The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the browse tab is the most accurate breakdown of the segment status. If this number differs with what is stated on the overview tab, you should use the numbers on the browse tab as the correct breakdowns.
+The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment status. If this number differs with what is stated on the overview tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct breakdowns.
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
