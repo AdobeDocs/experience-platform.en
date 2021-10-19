@@ -28,20 +28,17 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
-| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
-| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| Incoming hit with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours | |
-| Incoming hit that refers to a profile with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours, and one or more profile attributes | |
-
-### Query types not currently supported
-
-The following query types are **not** currently supported for edge segmentation:
-
-| Query type | Details |
-| ---------- | ------- |
-| Multiple events | If a query contains more than one event, it cannot be evaluated using edge segmentation. |
-| Frequency query | Any segment definition that refers to an event happening at least a certain number of times. | |
-| Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. | |
+| Single event | Any segment definition that refers to a single incoming event with no time restriction. | People who have added an item to their cart. |
+| Single event that refers to a profile | Any segment definition that refers to one or more profile attributes and a single incoming event with no time restriction. | People who live in the USA that visited the homepage. |
+| Negated single event with a profile attribute | Any segment definition that refers to a negated single incoming event and one or more profile attributes | People who live in the USA and have **not** visited the homepage. | 
+| Single event within a 24 hour time window | Any segment definition that refers to a single incoming event within 24 hours. | People who visited the homepage in the last 24 hours. |
+| Single event with a profile attribute a 24 hour time window | Any segment definition that refers to one or more profile attributes and a negated single incoming event within 24 hours. | People who live in the USA that visited the homepage in the last 24 hours. |
+| Negated single event with a profile attribute within a 24 hour time window | Any segment definition that refers to one or more profile attributes and a negated single incoming event within 24 hours. | People who live in the USA and have **not** visited the homepage in the last 24 hours. |
+| Frequency event within a 24 hour time window | Any segment definition that refers to an event that takes place a certain number of times within a time window of 24 hours. | People who visited the homepage **at least** five times in the last 24 hours. |
+| Frequency event with a profile attribute within a 24 hour time window | Any segment definition that refers to one or more profile attributes and an event that takes place a certain number of times within a time window of 24 hours. | People from the USA who visited the homepage **at least** five times in the last 24 hours. |
+| Negated frequency event with a profile within a 24 hour time window | Any segment definition that refers to one or more profile attributes and a negated event that takes place a certain number of times within a time window of 24 hours. | People who have not visited the homepage **more** than five times in the last 24 hours. |
+| Multiple incoming hits within a time profile of 24 hours | Any segment definition that refers to multiple events that occur within a time window of 24 hours. | People that visited the homepage **or** visited the checkout page within the last 24 hours. |
+| Multiple events with a profile within a 24 hour time window | Any segment definition that refers to one or more profile attributes and multiple events that occur within a time window of 24 hours. | People from the USA that visited the homepage **and** visited the checkout page within the last 24 hours. |
 
 ## Next steps
 
