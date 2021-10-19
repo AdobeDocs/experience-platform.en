@@ -17,15 +17,29 @@ hide: yes
 
 ## Overview {#overview}
 
-Read this tutorial to understand how to use the segment create job to programmatically create audience segments, export them, and activate them to batch destinations using the ad-hoc activation API endpoint.
+The ad-hoc activation API allows marketers to programmatically activate audience segments to destinations, in a fast and efficient manner, for situations where immediate activation is required.
+
+This article illustrates the end-to-end workflow for activating segments via the ad-hoc activation API, including the segmentation jobs that take place before activation.
+
+![ad-hoc-activation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
+
+In practice, most users only need to [run the ad-hoc activation job](#activation-job), unless they need a more up-to-date segmentation.
 
 >[!NOTE]
 >
 >Ad-hoc audience activation is only supported by batch destinations.
 
+## Guardrails {#guardrails}
+
+Keep in mind the following guardrails when using the ad-hoc activation API.
+
+* Each ad-hoc activation job can activate up to 50 segments. Attempting to activate more than 50 segments per job will cause the job to fail.
+* You can run up to 20 ad-hoc activation jobs per day.
+* Ad-hoc activation jobs cannot run in parallel with scheduled export jobs. Before running an ad-hoc activation job, make sure the scheduled export job has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) to keep an eye on each activation flow status. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
+
 ## Getting started {#getting-started}
 
-### Prerequisites {#prerequisites}
+### Step 1: Prerequisites {#prerequisites}
 
 Before you can make calls to the Adobe Experience Platform APIs, make sure you meet the following prerequisites:
 
@@ -33,7 +47,7 @@ Before you can make calls to the Adobe Experience Platform APIs, make sure you m
 * Your Experience Platform account has the `developer` and `user` roles enabled for the Adobe Experience Platform API product profile. Contact your [Admin Console](../../access-control/home.md) administrator to enable these roles for your account.
 * You have an Adobe ID. If you do not have an Adobe ID, go to the [Adobe Developer Console](https://developer.adobe.com/console) and create a new account.
 
-### Gather required credentials {#credentials}
+### Step 2: Gather credentials {#credentials}
 
 In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
@@ -60,19 +74,31 @@ You can find accompanying reference documentation for the segmentation and segme
 * [`getSegmentJobs`](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/getSegmentJobs)
 * [`postExportJob`](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/getSegmentJobs)
 
-### Create activation flow in the Platform UI {#activation-flow}
+### Step 3: Create activation flow in the Platform UI {#activation-flow}
 
-To activate segments ad-hoc to a destination, you must first have an activation flow configured for the chosen destination.
+To activate segments ad-hoc to a destination, you must first have an activation flow configured in the Platform UI, for the chosen destination.
+
+This includes going into the activation workflow, selecting your segments, configuring a schedule, and activating them.
 
 See the following tutorial for detailed instructions on how to configure an activation flow for your batch destinations: [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md).
 
-## Run the segment creation job {#segmentation-job}
+## Step 4: Run segmentation jobs (optional) {#segmentation-jobs}
+
+### Run the segment creation job {#segmentation-job}
+
+>[!NOTE]
+>
+>Platform runs segmentation jobs periodically. You should only run this job manually if you need a more up-to-date segmentation result. Otherwise, skip to [running the ad-hoc activation job](#activation-job).
 
 You can create a new segment job by making a POST request to the `/segment/jobs` endpoint and including in the body the ID of the segment definition from which you would like to create a new audience.
 
 Refer to [Create a new segment job](../../segmentation/api/segment-jobs.md#create) for detailed instructions on how to make this API call.
 
-## Run the segment export job {#export-job}
+### Run the segment export job {#export-job}
+
+>[!NOTE]
+>
+>Platform runs segmentation jobs periodically. You should only run this job manually if you need a more up-to-date segmentation result. Otherwise, skip to [running the ad-hoc activation job](#activation-job).
 
 Once the segmentation job has completed successfully, run the segment export job.
 
@@ -80,15 +106,13 @@ You can create a new export job by making a POST request to the `/export/jobs` e
 
 Refer to [Create a new export job](../../segmentation/api/export-jobs.md#create) for detailed instructions on how to make this API call.
 
-## Run the ad-hoc activation job {#activation-job}
+## Step 5: Run the ad-hoc activation job {#activation-job}
 
 Once the segment export job has completed, you can trigger the activation.
 
-You can activate any number of segments in a single activation job.
-
->[!NOTE]
+>[!WARNING]
 >
->You can run up to 20 activation jobs per day.
+>You can run up to 20 activation jobs per day, and each activation job can include a maximum of 50 segments. Attempting to activate more than 50 segments per job will cause the job to fail.
 
 ### Request
 
