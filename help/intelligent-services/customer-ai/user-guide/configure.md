@@ -72,7 +72,7 @@ The dataset preview contains data such as the last update time, source schema, a
 
 ### Dataset completeness {#dataset-completeness}
 
-<!-- Go URL here -->
+<!-- https://www.adobe.com/go/cai-dataset-completeness -->
 
 In the dataset preview is a dataset completeness percentage value. This value provides a quick snapshot of how many columns in your dataset are empty/null. It is recommended that you try to use datasets with a value above 80%.
 
@@ -84,10 +84,12 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 ### Dataset Key {#dataset-key}
 
-<!-- Go URL here -->
+<!-- https://www.adobe.com/go/cai-dataset-key -->
 
 
 ## Define a goal {#define-a-goal}
+
+<!-- https://www.adobe.com/go/cai-define-a-goal -->
 
 The **[!UICONTROL Define goal]** step appears and it provides an interactive environment for you to visually define a prediction goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame.
 
