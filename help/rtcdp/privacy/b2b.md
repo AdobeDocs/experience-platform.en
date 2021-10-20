@@ -1,6 +1,6 @@
 ---
 title: Privacy in Real-Time CDP B2B Edition
-description:
+description: Privacy Service technologies supported by Real-time CDP B2B Edition allow you to facilitate automated compliance with legal privacy regulations.
 ---
 # Privacy in Real-Time CDP B2B Edition
 
