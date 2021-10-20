@@ -4,7 +4,7 @@ title: Identities in Real-time Customer Data Platform
 description: Adobe Experience Platform Identity Service helps you to gain a better view of your customers and their behavior by bridging together identities across devices and systems.
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
 ---
-# Identities in Real-time Customer Data Platform
+# Identities overview
 
 Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customers and their behavior by bridging together identities across devices and systems. Typically, your customers interact with your brand across multiple channels, this could include browsing your website online, making a purchase in-store, joining your loyalty program, or calling a help desk for support, to name a few. Across these multiple systems, there is an identity created for that customer, and [!DNL Identity Service] makes it possible to bring those identities together to see the complete picture.
 
@@ -12,7 +12,7 @@ Now, instead of five separate customers interacting with your brand across five 
 
 ## Identity namespaces
 
-Identity namespaces are a component of [!DNL Identity Service] and serve as indicators providing additional context to customer identities. An example of a commonly used ID namespace would be "Email", where the use of the same email address across multiple websites allows you to stitch together several different identities, each with a unique customer ID, as actually belonging to the same customer. [!DNL Experience Platform] allows you to use ID namespaces to search for individual profiles within the user interface. For more information on viewing profiles, please see the [profile viewer overview](/help/rtcdp/profile/profile-viewer.md). To learn more about identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md).
+Identity namespaces are a component of [!DNL Identity Service] and serve as indicators providing additional context to customer identities. An example of a commonly used ID namespace would be "Email", where the use of the same email address across multiple websites allows you to stitch together several different identities, each with a unique customer ID, as actually belonging to the same customer. [!DNL Experience Platform] allows you to use ID namespaces to search for individual profiles within the user interface. For more information on viewing profiles, please see the [profile browse overview](profile-browse.md). To learn more about identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md).
 
 ## Identity graphs
 

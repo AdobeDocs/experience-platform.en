@@ -165,7 +165,7 @@ feature: Destinations
         * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
         * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
     * Guides {#guides}
-      * [Use Destination SDK to configure your destination](./destination-sdk/configure-destination-instructions.md)
+      * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
     * Document your destination {#document-destination}
       * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)

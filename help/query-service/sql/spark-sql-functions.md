@@ -147,8 +147,8 @@ For more detailed information about the functions, including their syntax, usage
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | Returns the first day later than the input |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | Returns the quarter of the input |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Returns the second of the string |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converts the string to a date |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converts the string to a timestamp |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converts the string to a date. **Note:** The string **must** be in the format `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converts the string to a timestamp. **Note:** The string **must** be in the format `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converts the string to a Unix timestamp |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Converts the string to a UTC timestamp |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Truncates the date |
