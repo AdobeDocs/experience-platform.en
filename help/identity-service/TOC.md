@@ -21,6 +21,7 @@ feature: Identities
   - [List the native ID for an identity](api/list-native-id.md)
 - Identity Service UI {#ui}
   - [Identity graph viewer](ui/identity-graph-viewer.md)
+  - [Shared device detection](ui/shared-devices.md)
 - [ECID overview](ecid.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)

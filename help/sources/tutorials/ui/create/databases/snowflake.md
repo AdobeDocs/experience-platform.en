@@ -27,9 +27,9 @@ In order to access your Snowflake account on [!DNL Platform], you must provide t
 
 | Credential | Description |
 | ---------- | ----------- |
-| Account | The [!DNL Snowflake] account you want to connect to Platform. |
+| Account | The full account name associated with your [!DNL Snowflake] account. A fully qualified [!DNL Snowflake] account name includes your account name, region, and cloud platform. For example, `cj12345.east-us-2.azure`. For more information on account names, refer to this [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
 | Warehouse | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
-| Database | The [!DNL Snowflake] contains the data you want to bring the Platform. |
+| Database | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
 | Username | The username for the [!DNL Snowflake] account. |
 | Password | The password for the [!DNL Snowflake] user account. |
 | Connection string | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
