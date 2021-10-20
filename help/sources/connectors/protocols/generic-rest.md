@@ -15,6 +15,8 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Platform provides support for ingesting data from protocols applications, including [!DNL Generic REST API].
 
+The [!DNL Generic REST API] source allows you to bring data from REST-based applications into Platform. [!DNL Generic REST API] supports both basic authentication and OAuth 2 refresh code-based authentication.
+
 ## IP address allow list
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
