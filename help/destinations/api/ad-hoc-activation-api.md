@@ -83,7 +83,7 @@ Once the segment export job has completed, you can trigger the activation.
 
 >[!WARNING]
 >
->You can run up to 20 activation jobs per day, and each activation job can include a maximum of 50 segments. Attempting to activate more than 50 segments per job will cause the job to fail.
+>You can activate a maximum of 50 segments per ad-hoc activation job. Attempting to activate more segments will cause the job to fail.
 
 ### Request
 
