@@ -31,6 +31,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Identities & identity namespaces](profile/identities-overview.md)
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
+  * [Privacy in Real-Time CDP B2B Edition](privacy/b2b.md)
   * [Data Governance overview](privacy/data-governance-overview.md)
 * Merge policies {#merge-policies}
   * [Merge policies overview](profile/merge-policies.md)
