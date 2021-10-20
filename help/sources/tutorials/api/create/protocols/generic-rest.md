@@ -35,13 +35,13 @@ In order for [!DNL Flow Service] to connect with [!DNL Generic REST API], you mu
 | --- | --- |
 | `host` | The host URL of the source that you are making your request to. This value is required and cannot be bypassed using `requestParameterOverride`. |
 | `authorizationTestUrl` | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
-| `clientId` | The client ID associated with your user account. |
-| `clientSecret` | The client secret associated with your user account. |
+| `clientId` | (Optional) The client ID associated with your user account. |
+| `clientSecret` | (Optional) The client secret associated with your user account. |
 | `accessToken` | The primary authentication credential used to access your application. The access token represents the authorization of your application, to access particular aspects of a user's data. This value is required and cannot be bypassed using `requestParameterOverride`. |
-| `refreshToken` | A token that's used to generate a new access token, when the access token has expired. |
+| `refreshToken` | (Optional) A token that's used to generate a new access token, when the access token has expired. |
 | `expirationDate` | (Optional) A hidden value that defines the expiration date of your access token. |
-| `accessTokenUrl` | The URL endpoint used to fetch your access token. |
-| `requestParameterOverride` | A property that allows you to specify which credential parameters to override. |
+| `accessTokenUrl` | (Optional) The URL endpoint used to fetch your access token. |
+| `requestParameterOverride` | (Optional) A property that allows you to specify which credential parameters to override. |
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Generic REST API] is: `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 
 #### Basic authentication

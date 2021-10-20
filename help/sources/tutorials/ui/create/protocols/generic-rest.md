@@ -29,23 +29,23 @@ In order to access your [!DNL Generic REST API] account on Platform, you must pr
 
 | Credential | Description |
 | --- | --- |
-| Host |
-| Authorization test URL |
-| Client ID |
-| Client secret |
-| Access token |
-| Refresh token |
-| Access token URL |
-| Request parameter override |
+| Host | The host URL of the source that you are making your request to. This value is required and cannot be bypassed using request parameter override. |
+| Authorization test URL | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
+| Client ID | (Optional) The client ID associated with your user account. |
+| Client secret | (Optional) The client secret associated with your user account. |
+| Access token | The primary authentication credential used to access your application. The access token represents the authorization of your application, to access particular aspects of a user's data. This value is required and cannot be bypassed using request parameter override. |
+| Refresh token | (Optional) A token that's used to generate a new access token, when the access token has expired. |
+| Access token URL | (Optional) The URL endpoint used to fetch your access token. |
+| Request parameter override | (Optional) A property that allows you to specify which credential parameters to override. |
 
 
 #### Basic authentication
 
 | Credential | Description |
 | --- | --- |
-| Host |
-| Username |
-| Password |
+| Host | The host URL of the source that you are making your request to. |
+| Username | The username that corresponds with your user account. |
+| Password | The password that corresponds with your user account. |
 
 ## Connect your  Generic REST API account
 
@@ -85,4 +85,4 @@ To use basic authentication, select **[!UICONTROL Basic authentication]**, provi
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your Generic REST API account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your Generic REST API account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/protocols.md).
