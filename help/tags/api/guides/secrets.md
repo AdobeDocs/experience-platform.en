@@ -1,8 +1,8 @@
 ---
-title: Secrets
-description: Learn the fundamentals of how to configure secrets for use in event forwarding.
+title: Secrets in the Reactor API
+description: Learn the fundamentals of how to configure secrets in the Reactor API for use in event forwarding.
 ---
-# Secrets
+# Secrets in the Reactor API
 
 In the Reactor API, a secret is a resource that represents an authentication credential. Secrets are used in event forwarding to authenticate to another system for secure data exchange. Therefore, secrets can only be created within event forwarding properties (properties whose `platform` attribute is set to `edge`).
 
@@ -63,11 +63,13 @@ Secrets with a `type_of` value of `oauth2` require the following attributes unde
 | `refresh_offset` | Integer | *(Optional)* The value, in seconds, to offset the refresh operation by. If this attribute is omitted when creating the secret, the value is set to `14400` (four hours) by default. |
 | `options` | Object | *(Optional)* Specifies additional options for the OAuth integration:<ul><li>`scope`: A string that represents the [OAuth 2.0 scope](https://oauth.net/2/scope/) for the credentials.</li><li>`audience`: A string that represents an [Auth0 access token](https://auth0.com/docs/protocols/protocol-oauth2).</li></ul> |
 
-When an `oauth2` secret is created or updated, the `client_id` and `client_secret` (and possibly `options`) are exchanged in a POST request to the `authorization_url`, according to the Client Credentials flow of the OAuth protocol. If the authorization service responds with `200 OK` and a JSON response body, the body is parsed and `access_token` and `expires_in` are included in the Reactor API response.
+When an `oauth2` secret is created or updated, the `client_id` and `client_secret` (and possibly `options`) are exchanged in a POST request to the `authorization_url`, according to the Client Credentials flow of the OAuth protocol.
 
 >[!NOTE]
 >
 >It is expected that the authorization service response body is compatible with the OAuth protocol.
+
+If the authorization service responds with `200 OK` and a JSON response body, the body is parsed and the `access_token` is pushed to the edge environment and `expires_in` is used to calculate the `expires_at` and `refresh_at` attributes for the secret. If there is no environment association on the secret, `access_token` is discarded.
 
 A credentials exchange is considered successful under the following conditions:
 
@@ -77,7 +79,7 @@ A credentials exchange is considered successful under the following conditions:
 If the exchange is successful, the secret's status attribute is set to `succeeded` and values for `expires_at` and `refresh_at` are set:
 
 * `expires_at` is the current UTC time plus the value of `expires_in`.
-* `refresh_at` is the current UTC time plus the value of `expires_in`, minus the value of `refresh_offset`. For example, if `expires_in` is `36000` (ten hours) and the `refresh_offset` is `3600` (one hour), the `refresh_at` property would be set to `32400` (nine hours) after the current UTC time.
+* `refresh_at` is the current UTC time plus the value of `expires_in`, minus the value of `refresh_offset`. For example, if `expires_in` is `43200` (twelve hours) and the `refresh_offset` is `14400` (four hours), the `refresh_at` property would be set to `28800` (eight hours) after the current UTC time.
 
 If the exchange fails for any reason, the `status_details` attribute in the `meta` object updates with relevant information.
 
@@ -101,17 +103,11 @@ A secret can only be associated with one environment. Once the relationship betw
 
 After a secret's credentials have been successfully exchanged, for a secret to be associated with an environment, the exchange artifact (the token string for `token`, the Base64 encoded string for `simple-http`, or the access token for `oauth2`) is securely saved on the environment.
 
-After the exchange artifact is successfully saved on the environment, the secret's `activated_at` attribute is set to the current UTC time, and can now be referenced using a data element.
+After the exchange artifact is successfully saved on the environment, the secret's `activated_at` attribute is set to the current UTC time, and can now be referenced using a data element. See the [next section](#referencing-secrets) for more information on referencing secrets.
 
-## Referencing secrets
+## Referencing secrets {#referencing-secrets}
 
-In order to reference a secret, you must create a data element of type "[!UICONTROL Secret]" (provided by the [[!UICONTROL Core] extension](../../extensions/web/core/overview.md)). When configuring this data element, you are prompted to indicate which secret to use for each environment. You can then create rules that reference a secret data element, such as within the header for an HTTP call.
-
-Event forwarding makes a best attempt to prevent you from referencing secrets that do not exist in a given environment.
-
-## Secret data element
-
-A secret can be used in a library only through a data element of type "[!UICONTROL Secret]", available in the [!UICONTROL Core] extension for event forwarding properties. This data element type can configure secrets for each environment: [!UICONTROL Development], [!UICONTROL Staging], and [!UICONTROL Production].
+In order to reference a secret, you must create a data element of type "[!UICONTROL Secret]" (provided by the [[!UICONTROL Core] extension](../../extensions/web/core/overview.md)) on an event forwarding property. When configuring this data element, you are prompted to indicate which secret to use for each environment. You can then create rules that reference a secret data element, such as within the header for an HTTP call.
 
 ![Secret data element](../../images/api/guides/secrets/data-element.png)
 
