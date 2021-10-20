@@ -9,6 +9,18 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 >
 >Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
+## October 21, 2021
+
+**Send data to authenticated endpoints in event forwarding** – Using secrets, users can send data to endpoints that require the following authentication protocols:
+
+* **Token**: A single string of characters representing an authentication token value.
+* **Simple HTTP**: Contains two string attributes for a username and password.
+* **OAuth2**: Contains several attributes to support the [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) spec.
+
+<!-- (Add w/ crosslinks once docs are merged)
+For more information, see the guides on [managing secrets in the Data Collection UI] or [managing secrets in the Reactor API].]
+-->
+
 ## July 19, 2021
 
 **Adjustments to "Manage Properties" right** - The Manage Properties right encountered an issue where a user had the permission to create a new property but could not see it after it was created (as outlined in the community thread [here](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). A fix is now live with permissions being enforced as described in the article.
