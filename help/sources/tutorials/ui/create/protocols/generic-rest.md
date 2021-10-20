@@ -10,7 +10,7 @@ exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 
 >[!NOTE]
 >
-> The [!DNL Generic REST API] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+> The [!DNL Generic REST API] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 This tutorial provides steps for creating a [!DNL Generic REST API] source connector using the Adobe Experience Platform user interface.
 
@@ -23,7 +23,7 @@ This tutorial requires a working understanding of the following components of Pl
 
 ### Gather required credentials
 
-In order to access your Generic REST API account on Platform, you must provide valid credentials for the authentication type of your choice. Generic REST API supports both OAuth 2 refresh code and basic authentication. See the following tables for information on the credentials for the two supported authentication types.
+In order to access your [!DNL Generic REST API] account on Platform, you must provide valid credentials for the authentication type of your choice. Generic REST API supports both OAuth 2 refresh code and basic authentication. See the following tables for information on the credentials for the two supported authentication types.
 
 #### OAuth 2 refresh code
 
@@ -67,9 +67,21 @@ To connect an existing account, select the Generic REST API account you want to 
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your Generic REST API credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
+If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an option description for your new [!DNL Generic REST API] account.
 
-![](../../../../images/tutorials/create/generic-rest/new.png)
+![new](../../../../images/tutorials/create/generic-rest/new.png)
+
+#### Authenticate using OAuth 2 refresh code
+
+[!DNL Generic REST API] supports both OAuth 2 refresh code and basic authentication. To authenticate using an OAuth2 authentication, select **[!UICONTROL OAuth2RefreshCode]** , provide your OAuth 2 credentials and then select **[!UICONTROL Connect to source]**.
+
+![](../../../../images/tutorials/create/generic-rest/oauth2.png)
+
+#### Authenticate using basic authentication
+
+To use basic authentication, select **[!UICONTROL Basic authentication]**, provide your host, username, and password, and then select **[!UICONTROL Connect to source]**. 
+
+![](../../../../images/tutorials/create/generic-rest/basic-authentication.png)
 
 ## Next steps
 
