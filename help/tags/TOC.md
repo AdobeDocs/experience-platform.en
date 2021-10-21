@@ -48,6 +48,7 @@ feature: Tags
 * Event forwarding {#event-forwarding}
   * [Overview](./ui/event-forwarding/overview.md)
   * [Getting started](./ui/event-forwarding/getting-started.md)
+  * [Secrets](./ui/event-forwarding/secrets.md)
 * Administration {#admin}
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
