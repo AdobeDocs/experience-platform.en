@@ -1,15 +1,17 @@
 ---
-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
-seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
-seo-title: How to use Destination SDK to configure your destination
-title: How to use Destination SDK to configure your destination
+description: This page lists and describes the steps to configure a streaming destination using Destination SDK.
+title: How to use Destination SDK to configure a streaming destination
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 ---
-# How to use Destination SDK to configure your destination
+# How to use Destination SDK to configure a streaming destination
 
 ## Overview {#overview}
 
-This page describes how to use the reference information in [Configuration options in Destinations SDK](./configuration-options.md) to configure your destination. The steps are laid out in sequential order below.
+This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [streaming destination](/help/destinations/destination-types.md#streaming-destinations). The steps are laid out in sequential order below.
+
+>[!NOTE]
+>
+>Configuring a batch destination through Destination SDK is currently not supported.
 
 ## Prerequisites {#prerequisites}
 
@@ -167,7 +169,6 @@ As part of the process to test your destination, you must use the Experience Pla
 
 * [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
-
 
 ## Step 7: Publish your destination {#publish-destination}
 
