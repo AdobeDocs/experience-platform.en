@@ -25,12 +25,6 @@ If you already have a valid [!DNL Zoho CRM] account, you may skip the remainder 
 
 | Credential | Description |
 | ---------- | ----------- |
-| `environmentUrl` | The URL of the [!DNL Zoho CRM] source instance. |
-| `username` | The username for the [!DNL Zoho CRM] user account. |
-| `password` | The password for the [!DNL Zoho CRM] user account. |
-| `securityToken` | The security token for the [!DNL Zoho CRM] user account. |
-
-For more information on getting started, refer to [this Zoho CRM document]
 
 ## Connect your [!DNL Zoho CRM] account
 
@@ -42,7 +36,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the [!UICONTROL CRM] category, select **[!UICONTROL Zoho CRM]**, and then select **[!UICONTROL Add data]**.
 
-![catalog](../../../../images/tutorials/create/Zoho/catalog.png)
+![catalog](../../../../images/tutorials/create/zoho/catalog.png)
 
 The **[!UICONTROL Connect Zoho CRM account]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -50,13 +44,17 @@ The **[!UICONTROL Connect Zoho CRM account]** page appears. On this page, you ca
 
 To use an existing account, select the [!DNL Zoho CRM] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![existing](../../../../images/tutorials/create/Zoho/existing.png)
+![existing](../../../../images/tutorials/create/zoho/existing.png)
 
 ### New account
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your [!DNL Zoho CRM] credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![new](../../../../images/tutorials/create/Zoho/new.png)
+>[!TIP]
+>
+>The [!UICONTROL AccountsUrl] domain defaults to the US, as seen in the screenshot below `https://accounts.zoho.com`. However, you must change the domain to the appropriate domain that corresponds with your location. For example, if you are in India, then your [!UICONTROL AccountsUrl] would be `https://accounts.zoho.in`.
+
+![new](../../../../images/tutorials/create/zoho/new.png)
 
 ## Next steps
 
