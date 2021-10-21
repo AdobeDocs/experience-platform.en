@@ -19,7 +19,6 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 
 For more information, see the guides on [managing secrets in the Data Collection UI](../ui/event-forwarding/secrets.md) or [managing secrets in the Reactor API](../api/guides/secrets.md).
 
-
 ## July 19, 2021
 
 **Adjustments to "Manage Properties" right** - The Manage Properties right encountered an issue where a user had the permission to create a new property but could not see it after it was created (as outlined in the community thread [here](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). A fix is now live with permissions being enforced as described in the article.
