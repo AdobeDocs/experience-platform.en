@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Tags Help
 breadcrumb-title: Tags
 user-guide-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
-feature: Data Collection
+feature: Tags
 ---
 
 # Tags {#tags}
@@ -170,6 +170,7 @@ feature: Data Collection
     * [Notes](./api/endpoints/notes.md)
     * [Profile](./api/endpoints/profile.md)
     * [Search](./api/endpoints/search.md)
+    * [Secrets](./api/endpoints/secrets.md)
   * Guides {#guides}
     * [Delegate descriptor IDs](./api/guides/delegate-descriptor-ids.md)
     * [Encrypting values](./api/guides/encrypting-values.md)
@@ -179,6 +180,7 @@ feature: Data Collection
     * [Sorting responses](./api/guides/sorting.md)
     * [Relationships](./api/guides/relationships.md)
     * [Searching resources](./api/guides/search.md)
+    * [Secrets](./api/guides/secrets.md)
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * Release notes {#release-notes}
