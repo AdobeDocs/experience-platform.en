@@ -9,7 +9,7 @@ exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 ---
 # Default Guardrails for [!DNL Real-time Customer Profile] data
 
-Adobe Experience Platform enables you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes in the form of Real-time Customer Profiles. To support this new approach to profiles, Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model. Use of this hybrid data model makes it important that the data being collected is modeled correctly.
+Adobe Experience Platform enables you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes in the form of Real-time Customer Profiles. To support this new approach to profiles, Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model.
 
 This document provides default use and rate limits to help you model your Profile data for optimal system performance. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
@@ -81,7 +81,7 @@ The following guardrails refer to data size and provide recommended limits for d
 | --- | --- | --- | --- |
 | ExperienceEvent fragment size | 10KB | Hard | **The maximum size of an event fragment is 10KB.** A fragment is defined as a singular record within a dataset that is referencing an XDM ExperienceEvent class-based schema. Ingestion will continue, however any events larger than 10KB will be dropped.|
 | Individual Profile fragment size | 100KB | Hard | **The maximum size of a profile fragment is 100KB.** A fragment is defined as a singular record within a dataset that is referencing an XDM Individual Profile class-based schema. Ingestion will continue, however profile records larger than 100KB will be dropped.|
-| Real-time Customer Profile size | 50MB | Soft | Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB may affect system performance. For example, a profile could contain a single fragment that is 50MB or it could contain multiple fragments across multiple datasets with a combined total size of 50MB. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, may affect system performance.|
+| Real-time Customer Profile size | 50MB | Soft | **Note: If two or more of the same Profile identities merge exceeding 50MB, then the data for that identity is deleted from the system.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB may affect system performance. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, may affect system performance.|
 | Profile or ExperienceEvent batches per day | 90 | Soft | The combined total of Profile and ExperienceEvent batches ingested each day should not exceed 90. Ingesting additional batches may prevent optimal performance.|
 
 {style="table-layout:auto"}
