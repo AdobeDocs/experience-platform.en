@@ -18,9 +18,9 @@ There are currently three supported secret types:
 
 This guide provides a high-level overview of how to configure secrets for an event forwarding ([!UICONTROL Edge]) property in the Data Collection UI.
 
-<!-- (Add once API docs are published)
-For detailed guidance on how to manage secrets in the Reactor API, including example JSON of a secret's structure, refer to the [secrets endpoint guide].
--->
+>[!NOTE]
+>
+>For detailed guidance on how to manage secrets in the Reactor API, including example JSON of a secret's structure, refer to the [secrets API guide](../../api/guides/secrets.md).
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ To create a token secret, select **[!UICONTROL Token]** from the **[!UICONTROL T
 
 ### [!UICONTROL HTTP] {#http}
 
-To create an HTTP secret, select **[!UICONTROL HTTP]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide a username and password for the credential before selecting **[!UICONTROL Create Secret]** to save the secret.
+To create an HTTP secret, select **[!UICONTROL Simple HTTP]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide a username and password for the credential before selecting **[!UICONTROL Create Secret]** to save the secret.
 
 >[!NOTE]
 >
@@ -152,8 +152,6 @@ By assigning multiple secrets to a single data element and including it a rule, 
 >
 >When creating the data element, a development environment must be assigned. Secrets for the staging and production environments are not required, but builds that try to transition to those environments will fail if their secret-type data elements do not have a secret selected for the environment in question.
 
-<!-- (Add once API docs are published)
 ## Next steps
 
-This guide covered how to manage secrets in the Data Collection UI. For information on how to interact with secrets using the Reactor API, see the [secrets endpoint guide].
--->
+This guide covered how to manage secrets in the Data Collection UI. For information on how to interact with secrets using the Reactor API, see the [secrets endpoint guide](../../api/endpoints/secrets.md).
