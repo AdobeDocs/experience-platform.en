@@ -30,7 +30,13 @@ The following sections provide additional information that you need to know in o
 In order for [!DNL Flow Service] to connect with [!DNL Zoho CRM], you must provide values for the following connection properties:
 
 | Credential | Description |
-| ---------- | ----------- |
+| --- | --- |
+| `endpoint` |
+| `accountsUrl` |
+| `clientId` |
+| `clientSecret` |
+| `accessToken` |
+| `refreshToken` |
 
 ### Using Platform APIs
 
@@ -66,10 +72,7 @@ curl -X POST \
         "auth": {
             "specName": "Basic Authentication",
             "params": {
-                "environmentUrl": "{ENVIRONMENT_URL}",
-                "username": "{USERNAME}",
-                "password": "{PASSWORD}",
-                "securityToken": "{SECURITY_TOKEN}"
+                "
             }
         },
         "connectionSpec": {

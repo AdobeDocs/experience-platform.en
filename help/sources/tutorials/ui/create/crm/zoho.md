@@ -24,7 +24,13 @@ If you already have a valid [!DNL Zoho CRM] account, you may skip the remainder 
 ### Gather required credentials
 
 | Credential | Description |
-| ---------- | ----------- |
+| --- | --- |
+| Endpoint |
+| Accounts URL |
+| Client ID |
+| Client Secret |
+| Access Token |
+| Refresh Token |
 
 ## Connect your [!DNL Zoho CRM] account
 
