@@ -32,14 +32,12 @@ The diagram below illustrates the end-to-end workflow for activating segments vi
 Keep in mind the following guardrails when using the ad-hoc activation API.
 
 * Each ad-hoc activation job can activate up to 50 segments. Attempting to activate more than 50 segments per job will cause the job to fail.
-* Ad-hoc activation jobs cannot run in parallel with scheduled export jobs. Before running an ad-hoc activation job, make sure the scheduled export job has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
+* Ad-hoc activation jobs cannot run in parallel with scheduled [segment export jobs](../../segmentation/api/export-jobs.md). Before running an ad-hoc activation job, make sure the scheduled segment export job has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
 * Do not run more than one concurrrent ad-hoc activation job per segment.
 
 ## Segmentation considerations {#segmentation-considerations}
 
-By default, Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
-
-If you want to run segmentation jobs more frequently, and use their result for the ad-hoc activation API, please contact your Adobe representative.
+Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
 
 ## Step 1: Prerequisites {#prerequisites}
 
@@ -77,7 +75,30 @@ This includes going into the activation workflow, selecting your segments, confi
 
 See the following tutorial for detailed instructions on how to configure an activation flow for your batch destinations: [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md).
 
-## Step 4: Run the ad-hoc activation job {#activation-job}
+## Step 4: Obtain the latest segment export job ID {#segment-export-id}
+
+Before you can run the ad-hoc activation job, you must obtain the ID of the latest segment export job. You must pass this ID in the ad-hoc activation job request.
+
+Follow the instructions described [here](../../segmentation/api/export-jobs.md#retrieve-list) to retrieve a list of all the segment export jobs.
+
+In the response, look for the first record that includes the schema property below.
+
+```
+"schema":{
+   "name":"_xdm.context.profile"
+}
+```
+
+The segment export job ID is in the `id` property, as shown below.
+
+![segment export job ID](../assets/api/ad-hoc-activation/segment-export-job-id.png)
+
+
+## Step 5: Run the ad-hoc activation job {#activation-job}
+
+Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
+
+Before running an ad-hoc activation job, make sure the scheduled segment export job for your segments has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
 
 Once the segment export job has completed, you can trigger the activation.
 
@@ -117,7 +138,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audience segments. |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audience segments that you want to activate to the selected destination. |
-| <ul><li>`exportid11`</li><li>`exportid12`</li></ul> | The IDs returned in the response of the [segment export](../../segmentation/api/export-jobs.md#create) job. |
+| <ul><li>`exportid11`</li><li>`exportid12`</li></ul> | The IDs returned in the response of the [segment export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest segment export job ID](#segment-export-id) for instructions on how to find this ID. |
 
 ### Response
 
@@ -136,7 +157,7 @@ A successful response returns HTTP status 200.
 
 | Property | Description |
 | -------- | ----------- |
-| `code` | The API response code. A successful call returns `DEST-ADH-200` (status code 200), while an incorrect one returns `DEST-ADH-400` (status code 400). |
+| `code` | The API response code. A successful call returns `DEST-ADH-200` (status code 200), while an incorrectly formatted one returns `DEST-ADH-400` (status code 400). |
 | `message` | The success or error message returned by the API. |
 | `statusURLs` | The status URL of the activation flow. You can track the flow progress using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
 
