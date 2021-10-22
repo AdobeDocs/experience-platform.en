@@ -64,7 +64,7 @@ On the left side of the navigation bar is the Adobe Experience Platform logo. Se
 
 The first item on the right side of the top navigation bar is the **IMS Organization switcher**. 
 
-![](./images/user-guide/homepage-ims-org.png)
+![](./images/user-guide/homepage-ims-org-switcher.png)
 
 Selecting the switcher opens a dropdown menu of IMS Organizations you have access to, if any are available. To switch to another IMS Organization, select a listed option.
 
@@ -98,15 +98,15 @@ Immediately below the top navigation bar is the sandbox bar. This bar shows whic
 
 The navigation on the left side of the screen lists all the different services supported in the Platform UI.
 
-You can hide or show the navigation by clicking Open/Close menu.
+Click the menu icon to show or hide the left navigation panel.
 
 ![](images/user-guide/hidemenu.png)
 
-You can lock the navigation in the open position by clicking again after showing the menu.
+You can lock the navigation in the open position by clicking again after showing the panel.
 
 >[!IMPORTANT]
 >
->The left navigation bar shows only the features that you are able to access. In previous version of Adobe Experience Platform, unavailable items were grayed out. If you believe you should have access to a section that does not appear, please contact your system administrator.
+>The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were grayed out. If you believe you should have access to a section that does not appear, please contact your system administrator.
 
 ![](images/user-guide/homepage-left.png)
 
