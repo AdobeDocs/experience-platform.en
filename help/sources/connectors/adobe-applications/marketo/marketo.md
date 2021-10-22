@@ -36,6 +36,10 @@ To learn more about XDM and its role in Platform, please see the [XDM System ove
 
 ## Field mapping from [!DNL Marketo] to XDM
 
+>[!TIP]
+>
+>Before you can establish mapping sets for [!DNL Marketo], you must first set up Adobe Experience Cloud Audience Sharing. For detailed steps on how to complete this, see the guide on [setting up Adobe Experience Cloud Audience Sharing for [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
+
 To establish a source connection between [!DNL Marketo] and Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
 
 See the following for detailed information on the field mapping rules between [!DNL Marketo] datasets and Platform:
