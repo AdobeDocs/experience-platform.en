@@ -1,28 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics
-solution: Experience Platform
-title: Privacy Service API Guide
-description: The Privacy Service API allows developers to create and manage customer requests to access or delete their personal data across Experience Cloud applications, in compliance with legal privacy regulations. Follow this guide to learn how to perform key operations using the API.
+title: Getting Started with the Privacy Service API
+description: Learn how to authenticate to the Privacy Service API and how to interpret example API calls in the documentation.
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 ---
-# [!DNL Privacy Service] API guide
+# Getting started with the [!DNL Privacy Service] API
 
-Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to manage (access and delete) the personal data of your data subjects (customers) across Adobe Experience Cloud applications. [!DNL Privacy Service] also provides a central audit and logging mechanism that allows you to access the status and results of jobs involving [!DNL Experience Cloud] applications.
+This guide provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Privacy Service] API.
 
-This guide covers how to use the [!DNL Privacy Service] API. For details on how to use the UI, see the [Privacy Service UI overview](../ui/overview.md). For a comprehensive list of all available endpoints in the [!DNL Privacy Service] API, please see the [API reference](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
+## Prerequisites
 
-## Getting started {#getting-started}
-
-This guide requires a working understanding the following [!DNL Experience Platform] features:
+This guide requires a working understanding the following features:
 
 * [[!DNL Privacy Service]](../home.md): Provides a RESTful API and user interface that allow you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
-
-The following sections provide additional information that you will need to know in order to successfully make calls to the Privacy Service API.
-
-### Reading sample API calls
-
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the [!DNL Experience Platform] troubleshooting guide.
 
 ## Gather values for required headers
 
@@ -32,9 +22,9 @@ In order to make calls to the [!DNL Privacy Service] API, you must first gather 
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-This involves obtaining developer permissions for [!DNL Experience Platform] in the Adobe Admin Console, and then generating the credentials in Adobe Developer Console.
+This involves obtaining developer permissions for Adobe Experience Platform in Adobe Admin Console, and then generating the credentials in Adobe Developer Console.
 
-### Gain developer access to [!DNL Experience Platform]
+### Gain developer access to Experience Platform
 
 To gain developer access to [!DNL Platform], follow the beginning steps in the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Once you arrive at the step "Generate access credentials in Adobe Developer Console", return to this tutorial to generate the credentials specific to [!DNL Privacy Service].
 
@@ -89,6 +79,13 @@ A new access token is generated, and a button to copy the token to your clipboar
 
 ![](../images/api/getting-started/generated-access-token.png)
 
+## Reading sample API calls
+
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/api-guide.md#sample-api) in the getting started guide for Platform APIs.
+
 ## Next steps
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Privacy Service] API. The document on [privacy jobs](privacy-jobs.md) walks through the various API calls you can make using the [!DNL Privacy Service] API. Each example call includes the general API format, a sample request showing required headers, and a sample response.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Privacy Service] API. Select one of the endpoint guides to get started:
+
+* [Privacy jobs](./privacy-jobs.md)
+* [Consent](./consent.md)
