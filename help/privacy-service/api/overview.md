@@ -24,4 +24,4 @@ Certain regulations require explicit customer consent before their personal data
 
 ## Next steps
 
-To begin making calls using the Schema Registry API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
+To begin making calls using the Privacy Service API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
