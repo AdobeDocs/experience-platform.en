@@ -75,4 +75,14 @@ For companies with more than one CRM, Real-time CDP B2B Edition provides the opt
 
 Now that you better understand the benefits for marketers offered by Real-time CDP B2B Edition, and differences between it and Real-time CDP, you can learn about how to apply these features to your own IMS Organization.
 
-To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the [example use case for Real-time CDP B2B Edition](./b2b-use-case.md). Alternatively you can refer to the [schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentation for more specific guidance on creating schemas, and defining relationships for essential B2B data entities.
+To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the following documentation to help you get started with Real-time Customer Data Platform B2B Edition:
+
+* [An example use case for Real-time CDP B2B Edition](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdpb2b-intro/b2b-use-case.html?lang=en)
+* [How to ingest data](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/sources/b2b.html?lang=en)
+* [How to access profiles](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/profile/profile-overview.html?lang=en)
+* [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+* [How to build segments](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/segmentation/b2b.html?lang=en)
+* [How to activate segments to destinations](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/b2b.html?lang=en)
+* [How to define and enforce data governance policies](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en)
+<!-- PLACEHOLDER - page under construction -->
+<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->
