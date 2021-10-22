@@ -4,19 +4,19 @@ description: Learn how to authenticate to the Privacy Service API and how to int
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 ---
-# Getting started with the [!DNL Privacy Service] API
+# Getting started with the Privacy Service API
 
-This guide provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Privacy Service] API.
+This guide provides an introduction to the core concepts you need to know before attempting to make calls to the Privacy Service API.
 
 ## Prerequisites
 
 This guide requires a working understanding the following features:
 
-* [[!DNL Privacy Service]](../home.md): Provides a RESTful API and user interface that allow you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
+* [Adobe Experience Platform Privacy Service](../home.md): Provides a RESTful API and user interface that allow you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
 
 ## Gather values for required headers
 
-In order to make calls to the [!DNL Privacy Service] API, you must first gather your access credentials to be used in required headers:
+In order to make calls to the Privacy Service API, you must first gather your access credentials to be used in required headers:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -26,7 +26,7 @@ This involves obtaining developer permissions for Adobe Experience Platform in A
 
 ### Gain developer access to Experience Platform
 
-To gain developer access to [!DNL Platform], follow the beginning steps in the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Once you arrive at the step "Generate access credentials in Adobe Developer Console", return to this tutorial to generate the credentials specific to [!DNL Privacy Service].
+To gain developer access to [!DNL Platform], follow the beginning steps in the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Once you arrive at the step "Generate access credentials in Adobe Developer Console", return to this tutorial to generate the credentials specific to Privacy Service.
 
 ### Generate access credentials
 
@@ -60,7 +60,7 @@ The key pair is automatically generated, and a ZIP file containing a private key
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Once the API has been added to the project, the project page reappears on the **Privacy Service API overview** page. From here, scroll down to the **[!UICONTROL Service Account (JWT)]** section, which provides the following access credentials that are required in all calls to the [!DNL Privacy Service] API:
+Once the API has been added to the project, the project page reappears on the **Privacy Service API overview** page. From here, scroll down to the **[!UICONTROL Service Account (JWT)]** section, which provides the following access credentials that are required in all calls to the Privacy Service API:
 
 * **[!UICONTROL CLIENT ID]**: The Client ID is the required `{API_KEY}` for that must be provided in the x-api-key header.
 * **[!UICONTROL ORGANIZATION ID]**: The Organization ID is the `{IMS_ORG}` value that must be used in the x-gw-ims-org-id header.
@@ -85,7 +85,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ## Next steps
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Privacy Service] API. Select one of the endpoint guides to get started:
+Now that you understand what headers to use, you are ready to begin making calls to the Privacy Service API. Select one of the endpoint guides to get started:
 
 * [Privacy jobs](./privacy-jobs.md)
 * [Consent](./consent.md)
