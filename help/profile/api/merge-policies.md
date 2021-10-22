@@ -30,6 +30,8 @@ While each organization can potentially have multiple merge policies per schema 
 >
 >When you set a new merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
 
+Additionally, each IMS Organization can only have **one** merge policy that is active on edge. If a merge policy is active on edge, it can be used for other systems on edge, such as Edge Profile, Edge Segmentation, and Destinations on Edge. 
+
 ### Complete merge policy object
 
 The complete merge policy object represents a set of preferences controlling aspects of merging profile fragments. 
