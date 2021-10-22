@@ -106,7 +106,7 @@ You can lock the navigation in the open position by clicking again after showing
 
 >[!IMPORTANT]
 >
->The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were grayed out. If you believe you should have access to a section that does not appear, please contact your system administrator.
+>The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were disabled. If you believe you should have access to a section that does not appear, please contact your system administrator.
 
 ![](images/user-guide/homepage-left.png)
 
