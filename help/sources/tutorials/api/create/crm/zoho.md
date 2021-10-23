@@ -31,12 +31,14 @@ In order for [!DNL Flow Service] to connect with [!DNL Zoho CRM], you must provi
 
 | Credential | Description |
 | --- | --- |
-| `endpoint` |
-| `accountsUrl` |
-| `clientId` |
-| `clientSecret` |
-| `accessToken` |
-| `refreshToken` |
+| `endpoint` | The endpoint of the [!DNL Zoho CRM] server you are making your request to. |
+| `accountsUrl` | The accounts URL is used to generated your access and refresh tokens. The URL must be domain-specific. |
+| `clientId` | The client ID that corresponds with your [!DNL Zoho CRM] user account. |
+| `clientSecret` | The client secret that corresponds with your [!DNL Zoho CRM] user account. |
+| `accessToken` | The access token authorizes your secure and temporary access to your [!DNL Zoho CRM] account. |
+| `refreshToken` | A refresh token is a token used to generate a new access token, once your access token has expired. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Zoho CRM] is: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
+
 
 ### Using Platform APIs
 
@@ -72,11 +74,16 @@ curl -X POST \
         "auth": {
             "specName": "Basic Authentication",
             "params": {
-                "
+                "endpoint": "{ENDPOINT}",
+                "accountsUrl": "{ACCOUNTS_URL}",
+                "clientId": "{CLIENT_ID}",
+                "clientSecret": "{CLIENT_SECRET}",
+                "accessToken": "{ACCESS_TOKEN}",
+                "refreshToken": "{REFRESH_TOKEN}"
             }
         },
         "connectionSpec": {
-            "id": "fcad62f3-09b0-41d3-be11-449d5a621b69",
+            "id": "929e4450-0237-4ed2-9404-b7e1e0a00309",
             "version": "1.0"
         }
     }'
@@ -87,7 +94,13 @@ curl -X POST \
 | `name` | The name of your [!DNL Zoho CRM] base connection. You can use this name to lookup your [!DNL Zoho CRM] base connection. |
 | `description` | An optional description for your [!DNL Zoho CRM] base connection. |
 | `auth.specName` | The authentication type used for the connection. |
-| `connectionSpec.id` | The connection specification ID for [!DNL Zoho CRM]: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
+| `auth.params.endpoint` | The endpoint of the [!DNL Zoho CRM] server you are making your request to. |
+| `auth.params.accountsUrl` | The accounts URL is used to generated your access and refresh tokens. The URL must be domain-specific. |
+| `auth.params.clientId` | The client ID that corresponds with your [!DNL Zoho CRM] user account. |
+| `auth.params.clientSecret` | The client secret that corresponds with your [!DNL Zoho CRM] user account. |
+| `auth.params.accessToken` |  The access token authorizes your secure and temporary access to your [!DNL Zoho CRM] account. |
+| `auth.params.refreshToken` | A refresh token is a token used to generate a new access token, once your access token has expired. |
+| `connectionSpec.id` | The connection specification ID for [!DNL Zoho CRM]: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
 **Response**
 

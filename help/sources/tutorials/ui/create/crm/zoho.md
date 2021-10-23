@@ -25,12 +25,12 @@ If you already have a valid [!DNL Zoho CRM] account, you may skip the remainder 
 
 | Credential | Description |
 | --- | --- |
-| Endpoint |
-| Accounts URL |
-| Client ID |
-| Client Secret |
-| Access Token |
-| Refresh Token |
+| Endpoint | The endpoint of the [!DNL Zoho CRM] server you are making your request to. |
+| Accounts URL | The accounts URL is used to generated your access and refresh tokens. The URL must be domain-specific. |
+| Client ID | The client ID that corresponds with your [!DNL Zoho CRM] user account. |
+| Client Secret | The client secret that corresponds with your [!DNL Zoho CRM] user account. |
+| Access Token | The access token authorizes your secure and temporary access to your [!DNL Zoho CRM] account. |
+| Refresh Token | A refresh token is a token used to generate a new access token, once your access token has expired. |
 
 ## Connect your [!DNL Zoho CRM] account
 
@@ -58,7 +58,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 >[!TIP]
 >
->The [!UICONTROL AccountsUrl] domain defaults to the US, as seen in the screenshot below `https://accounts.zoho.com`. However, you must change the domain to the appropriate domain that corresponds with your location. For example, if you are in India, then your [!UICONTROL AccountsUrl] would be `https://accounts.zoho.in`.
+>Your Accounts URL domain must correspond with your appropriate domain location. The following are the various domains and their corresponding accounts URLs:<ul><li>For US: https://accounts.zoho.com</li><li>For AU: https://accounts.zoho.com.au</li><li>For EU: https://accounts.zoho.eu</li><li>For IN: https://accounts.zoho.in</li><li>For CN: https://accounts.zoho.com.cn</li></ul>.
 
 ![new](../../../../images/tutorials/create/zoho/new.png)
 
