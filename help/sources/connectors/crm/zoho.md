@@ -22,7 +22,11 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 ## Retrieve your authentication credentials for [!DNL Zoho CRM]
 
-Before you can bring data from your [!DNL Zoho CRM] account to Platform, you must first retrieve your credentials to authenticate your [!DNL Zoho CRM] source.
+Before you can bring data from your [!DNL Zoho CRM] account to Platform, you must first retrieve your credentials to authenticate your [!DNL Zoho CRM] source. Follow the steps below to retrieve your authentication credentials for [!DNL Zoho CRM]:
+
+1. Register your application using the [[!DNL Zoho CRM] developer console](https://accounts.zoho.com/). Once you successfully register your application, you will receive your client ID and client secret.
+2. Complete an [authorization request](https://www.zoho.com/crm/developer/docs/api/v2/auth-request.html) using either a web-based application or a self-client. The authorization request allows you to retrieve your grant token, which in turn allows you to retrieve your access token. When creating an authorization request, you must fill in values for both **scopes** and **access type**. Refer to this [[!DNL Zoho CRM] document](https://www.zoho.com/crm/developer/docs/api/v2/scopes.html) to retrieve your scope, while your **access type** should always be set to `offline`.
+3. Generate your [access and refresh tokens](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html).
 
 The documentation below provides information on how to connect [!DNL Zoho CRM] to Platform using APIs or the user interface:
 
