@@ -22,21 +22,36 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 ## Retrieve your authentication credentials for [!DNL Zoho CRM]
 
-Before you can bring data from your [!DNL Zoho CRM] account to Platform, you must first retrieve your credentials to authenticate your [!DNL Zoho CRM] source. Follow the steps below to retrieve your authentication credentials for [!DNL Zoho CRM]:
+Before you can bring data from your [!DNL Zoho CRM] account to Platform, you must first retrieve your credentials to authenticate your [!DNL Zoho CRM] source. Follow the steps below to retrieve your client ID, client secret, access token, and refresh token.
 
-1. Register your application using the [[!DNL Zoho CRM] developer console](https://accounts.zoho.com/). Once you successfully register your application, you will receive your client ID and client secret.
-2. Complete an [authorization request](https://www.zoho.com/crm/developer/docs/api/v2/auth-request.html) using either a web-based application or a self-client. The authorization request allows you to retrieve your grant token, which in turn allows you to retrieve your access token. When creating an authorization request, you must fill in values for both **scopes** and **access type**. Refer to this [[!DNL Zoho CRM] document](https://www.zoho.com/crm/developer/docs/api/v2/scopes.html) to retrieve your scope, while your **access type** should always be set to `offline`.
-3. Generate your [access and refresh tokens](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html).
+### Register your application
 
-The documentation below provides information on how to connect [!DNL Zoho CRM] to Platform using APIs or the user interface:
+The first step in retrieving your authentication credentials is to register your application using the the [[!DNL Zoho CRM] developer console](https://accounts.zoho.com/). To register your application, you must select your **client type** from: Java Script, web-based, mobile, non-browser mobile applications, or self-client. Next, provide values for the name of your application, the URL of your webpage, and an authorized redirect URI that [!DNL Zoho CRM] can then use to redirect you with a grant token.
+
+Once you successfully register your application, you will receive your client ID and client secret.
+
+### Create an authorization request
+
+Next, you must create an [authorization request](https://www.zoho.com/crm/developer/docs/api/v2/auth-request.html) using either a web-based application or a self-client. The authorization request returns your grant token, which in turn allows you to retrieve your access token.
+
+When creating an authorization request, you must fill in values for both **scopes** and **access type**. Refer to this [[!DNL Zoho CRM] document](https://www.zoho.com/crm/developer/docs/api/v2/scopes.html) for more information on scopes, while your **access type** should always be set to `offline`.
+
+### Generate your access and refresh tokens
+
+Once you have retrieved your grant token, you can generate your [access and refresh tokens](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html) by making a POST request to `{ACCOUNTS_URL}/oauth/v2/token` while providing your client ID, client secret, grant token, and redirect URI. During this step, you must also include `grant_type` as a parameter, and set the value as `"authorization_code"`.
+
+A successful request returns your access and refresh tokens, which you can then use to authenticate.
 
 ## Connect [!DNL Zoho CRM] to [!DNL Platform] using APIs
 
-- [Create a Zoho CRM base connection using the Flow Service API](../../tutorials/api/create/crm/zoho.md)
+
+The documentation below provides information on how to connect [!DNL Zoho CRM] to Platform using APIs or the user interface:
+
+- [Create a [!DNL Zoho CRM] base connection using the Flow Service API](../../tutorials/api/create/crm/zoho.md)
 - [Explore the data structure and contents of a CRM source using the Flow Service API](../../tutorials/api/explore/crm.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Zoho CRM] to [!DNL Platform] using the UI
 
-- [Create a Microsoft Dynamics source connection in the UI](../../tutorials/ui/create/crm/zoho.md)
+- [Create a [!DNL Zoho CRM] source connection in the UI](../../tutorials/ui/create/crm/zoho.md)
 - [Create a dataflow for a CRM source connection in the UI](../../tutorials/ui/dataflow/crm.md)
