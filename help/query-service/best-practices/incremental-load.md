@@ -12,15 +12,15 @@ This document provides a series of instructions to build a design pattern for in
 
 ## Getting started
 
-The SQL examples throughout this document require you to have an understanding of anonymous block and snapshot capabilities. Before using the incremental data load capability it is recommended that you read the [sample anonymous block queries](./anonymous-block.md) documentation and also the [SNAPSHOT clause](../sql/syntax.md#snapshot-clause) documentation.
+The SQL examples throughout this document require you to have an understanding of anonymous block and snapshot capabilities. Before using the incremental data load capability it is recommended that you read the [sample anonymous block queries](./anonymous-block.md) documentation and also the [snapshot clause](../sql/syntax.md#snapshot-clause) documentation.
 
 For guidance on any terminology used within this guide please refer to the [SQL syntax guide](../sql/syntax.md).
 
 ## Steps
 
-The steps below demonstrate how to create an incremental data load process using SNAPSHOTS and the anonymous block feature. The design pattern can be used as a template for your own sequence of queries.
+The steps below demonstrate how to create an incremental data load process using snapshots and the anonymous block feature. The design pattern can be used as a template for your own sequence of queries.
 
-1. Create a checkpoint_log table. A checkpoint log table is responsible for keeping a record of the changes made to the dataset.
+1. Create a `checkpoint_log` table. A checkpoint log table is responsible for keeping a record of the changes made to the dataset.
 
 ```SQL
 DROP TABLE IF EXISTS checkpoint_log;
@@ -45,11 +45,18 @@ INSERT INTO
        CURRENT_TIMESTAMP process_timestamp;
 ```
 
-1. Create a destination dataset within the execution section of an anonymous block. `DIM_TABLE_ABC_Incremental` is the destination table in the example below. Next, using the `DIM_TABLE_ABC` source table you can begin processing on the source table and append it to destination table. If any one of the queries fails then the exception block is executed which returns an error and ends the process.
+1. Next, any new or modified data from `DIM_TABLE_ABC` will be added to `DIM_TABLE_ABC_Incremental`. The anonymous block feature is used in the following steps to complete this process, as demonstrated in the SQL example below. 
+
+   1. Get the latest snapshot ID from the `checkpoint_log` table. On the initial run this will be `null`.
+   2. Get the latest snapshot ID from `DIM_TABLE_ABC`. `DIM_TABLE_ABC` is the source table as it contains the data to be processed.
+   3. Create a dataset table for the additional data to be appended to after the incremental processing. In the example SQL block this table is `DIM_TABLE_ABC_Incremental`.
+   4. Select the data from `DIM_TABLE_ABC` up to the current snapshot using the snapshot IDs created in step one and two. This encompassed data will be added to the newly created dataset `DIM_TABLE_ABC_Incremental`.
+   5. Update the `checkpoint_log` table with the latest snapshot ID for `DIM_TABLE_ABC` that was just processed.
+   6. If any of the queries fails, the exception block is executed which returns an error and ends the process.
 
 >[!NOTE]
 >
->`SELECT history_meta('Source Table Name')`
+>`SELECT history_meta('DIM_TABLE_ABC')`
 
 ```SQL
 $$
@@ -58,7 +65,7 @@ BEGIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
                                 ON a.process_timestamp=b.process_timestamp;
-    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('Source Table Name')) WHERE  is_current = true;
+    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
     SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
     CREATE TABLE DIM_TABLE_ABC_Incremental AS
      SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id ;
@@ -81,7 +88,7 @@ EXCEPTION
 
 >[!NOTE]
 >
-> `_ID` is the Primary Key in both `DIM_TABLE_ABC_Incremental` and `SELECT history_meta('Source Table Name')`.
+> `_ID` is the Primary Key in both `DIM_TABLE_ABC_Incremental` and `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
 $$
@@ -90,7 +97,7 @@ BEGIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
                                 ON a.process_timestamp=b.process_timestamp;
-    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('Source Table Name')) WHERE  is_current = true;
+    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
     SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
     INSERT INTO DIM_TABLE_ABC_Incremental
      SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a WHERE _id=a._id);
@@ -130,7 +137,7 @@ BEGIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
                                 on a.process_timestamp=b.process_timestamp;
-    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('Source Table Name')) WHERE  is_current = true;
+    SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
     SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
     SET resolve_fallback_snapshot_on_failure=true;
     INSERT INTO DIM_TABLE_ABC_Incremental
