@@ -107,7 +107,7 @@ The **[!UICONTROL Define goal]** step appears and it provides an interactive env
 
 To create a goal, select **[!UICONTROL Enter Field Name]** and select a field from the dropdown list. Select the second input and select a clause for the event's condition, then provide the target value to complete the event. Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
 
-![](../images/user-guide/goal.png)
+![](../images/user-guide/define-a-goal.png)
 
 ### Will occur and will not occur
 
@@ -123,7 +123,7 @@ For example, if you are interested in predicting which customers become less eng
 
 ![will not occur](../images/user-guide/not-occur.png)
 
-#### All of and any of
+### All of and any of
 
 In some cases, you may want to predict whether a combination of events will occur and in other cases, you may want to predict the occurrence of any event from a pre-defined set. In order to predict whether a customer will have a combination of events, select the **[!UICONTROL All of]** option from the second-level drop-down on the **[!UICONTROL Define Goal]** page.
 
@@ -157,7 +157,7 @@ Lastly, enter the field value(s) if the operator selected requires one. In this 
 
 Once complete, select **[!UICONTROL Next]** in the top-right to continue.
 
-### Eligible population
+### Eligible population *(optional)*
 
 By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
 
