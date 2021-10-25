@@ -26,6 +26,10 @@ In order to connect [!DNL Marketo] to Platform, you must first retrieve values f
 
 See the steps outlined in the [Authenticate your Marketo source connector](./marketo-auth.md) document to retrieve your credentials.
 
+## Set up Adobe Experience Cloud Audience Sharing
+
+Before you can establish mapping sets for [!DNL Marketo], you must first set up Adobe Experience Cloud Audience Sharing. For detailed steps on how to complete this, see the guide on [setting up Adobe Experience Cloud Audience Sharing for [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
+
 ## Experience Data Model (XDM)
 
 XDM is a publicly documented specification that provides common structures and definitions that allow you to ingest data from third-party sources for use in downstream Platform services.

@@ -34,13 +34,13 @@ Streaming profile export destinations receive segment and profile data as Experi
 
 File-based destinations receive `.csv` files containing profiles and/or attributes. [Amazon S3](catalog/cloud-storage/amazon-s3.md) is an example of destination where you can deposit files containing profile exports.
 
-## Streaming segment export destinations
+## Streaming segment export destinations {#streaming-destinations}
 
-Segment export destinations receive Experience Platform segment data. These destinations use segment IDs or user IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) and [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) are examples of such destinations.
+Segment export destinations receive Experience Platform segment data. These destinations use segment IDs or user IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), and  are examples of such destinations.
 
-## Profile export and segment export destinations - video overview
+## Profile export and segment export destinations - video overview {#video}
 
-The video below runs you through the particularities of the two types of destinations: 
+The video below runs you through the particularities of the two types of destinations:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
@@ -56,7 +56,7 @@ Tag extensions forward raw event data to several types of destinations. Think of
 
 ![Tag extensions compared to other destinations](./assets/common/launch-and-other-destinations.png)
 
-## When to use connections and extensions
+## When to use connections and extensions {#when-to-use}
 
 As a marketer, you could use a combination of connections and extensions to address your use cases.
 
@@ -64,7 +64,7 @@ Connections are useful when it’s necessary to leverage a complete centralized 
 
 Extensions are helpful when event data is used to trigger an action, or to conduct segmentation in an external environment. For example, if behavioral data needs to be forwarded to an external system without being joined to other data sources on file for a given user.
 
-## Destination categories
+## Destination categories {#categories}
 
 The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing action that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
 
