@@ -18,7 +18,7 @@ Multi-entity segmentation requires a working understanding of the various Adobe 
   * [Profile guardrails](../profile/guardrails.md): Best practices for creating data models supported by [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build segments from [!DNL Real-time Customer Profile] data.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-  * [Basics of schema composition](../xdm/schema/composition.md#union): Learn best practices for composing schemas to be used in Experience Platform.
+  * [Basics of schema composition](../xdm/schema/composition.md#union): Learn best practices for composing schemas to be used in Experience Platform. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../xdm/schema/best-practices.md).
 
 ## Use cases
 
