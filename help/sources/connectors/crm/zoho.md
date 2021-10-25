@@ -26,9 +26,9 @@ Before you can bring data from your [!DNL Zoho CRM] account to Platform, you mus
 
 ### Register your application
 
-The first step in retrieving your authentication credentials is to register your application using the the [[!DNL Zoho CRM] developer console](https://accounts.zoho.com/). To register your application, you must select your **client type** from: Java Script, web-based, mobile, non-browser mobile applications, or self-client. Next, provide values for the name of your application, the URL of your webpage, and an authorized redirect URI that [!DNL Zoho CRM] can then use to redirect you with a grant token.
+The first step in retrieving your authentication credentials is to register your application using the the [[!DNL Zoho CRM] developer console](https://accounts.zoho.com/). To register your application, you must select your client type from: Java Script, web-based, mobile, non-browser mobile applications, or self-client. Next, provide values for the name of your application, the URL of your webpage, and an authorized redirect URI that [!DNL Zoho CRM] can then use to redirect you with a grant token.
 
-Once you successfully register your application, you will receive your client ID and client secret.
+A successful registration returns your client ID and client secret.
 
 ### Create an authorization request
 
@@ -41,6 +41,8 @@ When creating an authorization request, you must fill in values for both **scope
 Once you have retrieved your grant token, you can generate your [access and refresh tokens](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html) by making a POST request to `{ACCOUNTS_URL}/oauth/v2/token` while providing your client ID, client secret, grant token, and redirect URI. During this step, you must also include `grant_type` as a parameter, and set the value as `"authorization_code"`.
 
 A successful request returns your access and refresh tokens, which you can then use to authenticate.
+
+For details steps on acquiring your credentials, see the [[!DNL Zoho CRM] authentication guide](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
 ## Connect [!DNL Zoho CRM] to [!DNL Platform] using APIs
 

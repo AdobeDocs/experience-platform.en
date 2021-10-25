@@ -39,6 +39,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Zoho CRM], you must provi
 | `refreshToken` | A refresh token is a token used to generate a new access token, once your access token has expired. |
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Zoho CRM] is: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
+For more information on these credentials, see the documentation on [[!DNL Zoho CRM] authentication](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
 ### Using Platform APIs
 
@@ -57,6 +58,10 @@ POST /connections
 ```
 
 **Request**
+
+>[!TIP]
+>
+>Your Accounts URL domain must correspond with your appropriate domain location. The following are the various domains and their corresponding accounts URLs:<ul><li>United States: https://accounts.zoho.com</li><li>Australia: https://accounts.zoho.com.au</li><li>Europe: https://accounts.zoho.eu</li><li>India: https://accounts.zoho.in</li><li>China: https://accounts.zoho.com.cn</li></ul>
 
 The following request creates a base connection for [!DNL Zoho CRM]:
 

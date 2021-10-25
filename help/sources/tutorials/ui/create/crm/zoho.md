@@ -32,6 +32,8 @@ If you already have a valid [!DNL Zoho CRM] account, you may skip the remainder 
 | Access Token | The access token authorizes your secure and temporary access to your [!DNL Zoho CRM] account. |
 | Refresh Token | A refresh token is a token used to generate a new access token, once your access token has expired. |
 
+For more information on these credentials, see the documentation on [[!DNL Zoho CRM] authentication](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
+
 ## Connect your [!DNL Zoho CRM] account
 
 Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Zoho CRM] account to [!DNL Platform].
@@ -58,7 +60,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 >[!TIP]
 >
->Your Accounts URL domain must correspond with your appropriate domain location. The following are the various domains and their corresponding accounts URLs:<ul><li>For US: https://accounts.zoho.com</li><li>For AU: https://accounts.zoho.com.au</li><li>For EU: https://accounts.zoho.eu</li><li>For IN: https://accounts.zoho.in</li><li>For CN: https://accounts.zoho.com.cn</li></ul>.
+>Your Accounts URL domain must correspond with your appropriate domain location. The following are the various domains and their corresponding accounts URLs:<ul><li>United States: https://accounts.zoho.com</li><li>Australia: https://accounts.zoho.com.au</li><li>Europe: https://accounts.zoho.eu</li><li>India: https://accounts.zoho.in</li><li>China: https://accounts.zoho.com.cn</li></ul>
 
 ![new](../../../../images/tutorials/create/zoho/new.png)
 
