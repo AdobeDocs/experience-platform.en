@@ -57,6 +57,28 @@ Read [Activate profiles and segments to profile request destinations](../../ui/a
 
 If you are using [Adobe Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](../../../edge/extension/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
 
+Here is a sample value for the `event.destinations` variable:
+
+```
+[
+   {
+      "type":"profileLookup",
+      "destinationId":"7bb4cb8d-8c2e-4450-871d-b7824f547111",
+      "alias":"personalizationAlias",
+      "segments":[
+         {
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         },
+         {
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         }
+      ]
+   }
+]
+```
+
 If you are not using [Adobe Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality to see the exported data.
 
 The JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias of the application you are integrating with Adobe Experience Platform. The segment IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.

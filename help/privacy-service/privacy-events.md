@@ -26,7 +26,7 @@ This document provides steps for setting up an event registration for [!DNL Priv
 Please review the following Privacy Service documentation before starting this tutorial:
 
 * [Privacy Service overview](./home.md)
-* [Privacy Service API developer guide](./api/getting-started.md)
+* [Privacy Service API guide](./api/overview.md)
 
 ## Register a webhook to [!DNL Privacy Service Events]
 

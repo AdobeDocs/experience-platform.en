@@ -9,6 +9,9 @@ exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 
 Below is a list of variables that Adobe Experience Platform Edge Network automatically maps into Adobe Analytics. Detailed information about Adobe Analytics data collection query parameters can be found in the [Analytics Implementation Guide](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
 
+>[!NOTE]
+>The information on this page also applies to Adobe Mobile SDK.
+
 | XDM Field Path  | [!DNL Analytics Query String] / HTTP Header | Description |
 | ---------- | ------------------------- | ----------------------------------------- |
 | application.id | c.a.appid | AppMeasurement context data `c.a.appid` mapping. |

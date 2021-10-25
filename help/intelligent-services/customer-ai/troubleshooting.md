@@ -1,6 +1,7 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output;customer ai troubleshooting;customer ai errors
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Customer AI error troubleshooting
 topic-legacy: Getting started
 description: Find answers to common errors in Customer AI.
