@@ -35,8 +35,8 @@ Your template might look similar to any of the two examples below:
 ## Test results after using the test destination API
 
 Provide test results after using the [test destination API](./test-destination.md) endpoint to perform an HTTP call to your destination. This includes:
-  * The API payload of a request made out of Experience Platform
-  * The API response received from your destination endpoint.
+* The API payload of a request made out of Experience Platform
+* The API response received from your destination endpoint.
 
 For example:
 
@@ -64,8 +64,8 @@ Example PRs from existing integration partners are:
 The destinations catalog includes a logo for each destination card. In your submission email, include an image with the logo for your destination.
 
 The image requirements are:
-  * **Format**: `SVG`
-  * **Size**: less than 2MB
+* **Format**: `SVG`
+* **Size**: less than 2MB
 
 ## Sample email
 
