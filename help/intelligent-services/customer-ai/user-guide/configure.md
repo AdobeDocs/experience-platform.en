@@ -30,7 +30,7 @@ Service instances can be edited, cloned, and deleted by using the controls on th
 - **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service instance. You can edit the name, description, and scoring frequency of the instance.
 - **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the currently selected service instance setup. You can then modify the workflow to make minor tweaks and rename it as a new instance.
 - **[!UICONTROL Delete]**: You can delete a service instance including any historical runs.
-- **[!UICONTROL Data source]**: A link to the dataset used by this instance.
+- **[!UICONTROL Data source]**: A link to the dataset used by this instance. If multiple datasets are being used, selecting the hyperlink text opens the dataset preview popover.
 - **[!UICONTROL Last run details]**: This is only displayed when a run fails. Information on why the run failed, such as error codes are displayed here.
 - **[!UICONTROL Score definition]**: A quick overview of the goal you configured for this instance.
 
@@ -148,6 +148,8 @@ Once complete, select **[!UICONTROL Next]** in the top-right to continue.
 ### Eligible population
 
 By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
+
+![eligible population]()
 
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
