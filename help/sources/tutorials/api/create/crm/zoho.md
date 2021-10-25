@@ -32,7 +32,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Zoho CRM], you must provi
 | Credential | Description |
 | --- | --- |
 | `endpoint` | The endpoint of the [!DNL Zoho CRM] server you are making your request to. |
-| `accountsUrl` | The accounts URL is used to generated your access and refresh tokens. The URL must be domain-specific. |
+| `accountsUrl` | The accounts URL is used to generate your access and refresh tokens. The URL must be domain-specific. |
 | `clientId` | The client ID that corresponds with your [!DNL Zoho CRM] user account. |
 | `clientSecret` | The client secret that corresponds with your [!DNL Zoho CRM] user account. |
 | `accessToken` | The access token authorizes your secure and temporary access to your [!DNL Zoho CRM] account. |

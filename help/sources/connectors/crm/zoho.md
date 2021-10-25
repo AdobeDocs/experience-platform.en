@@ -26,7 +26,7 @@ Before you can bring data from your [!DNL Zoho CRM] account to Platform, you mus
 
 ### Register your application
 
-The first step in retrieving your authentication credentials is to register your application using the the [[!DNL Zoho CRM] developer console](https://accounts.zoho.com/). To register your application, you must select your client type from: Java Script, web-based, mobile, non-browser mobile applications, or self-client. Next, provide values for the name of your application, the URL of your webpage, and an authorized redirect URI that [!DNL Zoho CRM] can then use to redirect you with a grant token.
+The first step in retrieving your authentication credentials is to register your application using the [[!DNL Zoho CRM] developer console](https://accounts.zoho.com/). To register your application, you must select your client type from: Java Script, web-based, mobile, non-browser mobile applications, or self-client. Next, provide values for the name of your application, the URL of your webpage, and an authorized redirect URI that [!DNL Zoho CRM] can then use to redirect you with a grant token.
 
 A successful registration returns your client ID and client secret.
 
@@ -42,10 +42,9 @@ Once you have retrieved your grant token, you can generate your [access and refr
 
 A successful request returns your access and refresh tokens, which you can then use to authenticate.
 
-For details steps on acquiring your credentials, see the [[!DNL Zoho CRM] authentication guide](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
+For detailed steps on acquiring your credentials, see the [[!DNL Zoho CRM] authentication guide](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
 ## Connect [!DNL Zoho CRM] to [!DNL Platform] using APIs
-
 
 The documentation below provides information on how to connect [!DNL Zoho CRM] to Platform using APIs or the user interface:
 

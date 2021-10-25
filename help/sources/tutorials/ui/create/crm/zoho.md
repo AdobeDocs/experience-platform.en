@@ -23,10 +23,12 @@ If you already have a valid [!DNL Zoho CRM] account, you may skip the remainder 
 
 ### Gather required credentials
 
+In order to connect [!DNL Zoho CRM] to Platform, you must provide values for the following connection properties:
+
 | Credential | Description |
 | --- | --- |
 | Endpoint | The endpoint of the [!DNL Zoho CRM] server you are making your request to. |
-| Accounts URL | The accounts URL is used to generated your access and refresh tokens. The URL must be domain-specific. |
+| Accounts URL | The accounts URL is used to generate your access and refresh tokens. The URL must be domain-specific. |
 | Client ID | The client ID that corresponds with your [!DNL Zoho CRM] user account. |
 | Client Secret | The client secret that corresponds with your [!DNL Zoho CRM] user account. |
 | Access Token | The access token authorizes your secure and temporary access to your [!DNL Zoho CRM] account. |
@@ -38,7 +40,7 @@ For more information on these credentials, see the documentation on [[!DNL Zoho 
 
 Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Zoho CRM] account to [!DNL Platform].
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
