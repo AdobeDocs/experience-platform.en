@@ -6,6 +6,10 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
 # Release notes
 
+## Version 2.7.0 - October 26, 2021
+
+* Expose additional information from Experience Edge in the return value from `sendEvent` including `inferences` and `destinations.` The format of these properties may change as these features are currently rolling out as part of a Beta. For more information see [Tracking Events.](fundamentals/tracking-events.md)
+
 ## Version 2.6.4 - September 7, 2021
 
 * Fixed an issue where set HTML Adobe Target actions applied to the `head` element were replacing the entire `head` content. Now set HTML actions applied to the `head` element are changed to append HTML.
