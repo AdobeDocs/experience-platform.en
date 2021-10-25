@@ -54,37 +54,49 @@ Below is important information on values that you must provide the instance with
 
 -   **Propensity type:** The propensity type determines the intent of the score and metric polarity. You can either choose **[!UICONTROL Churn]** or **[!UICONTROL Conversion]**. Please see the note under [scoring summary](./discover-insights.md#scoring-summary) in the discovering insights document for more information on how the propensity type affects your instance.
 
-![Setup screen]()
+![Setup screen](../images/user-guide/create-instance.png)
 
 Provide the required values and then select **[!UICONTROL Next]** to continue.
 
 ## Select data {#select-data}
 
-By design, Customer AI uses Consumer Experience Event, Adobe Analytics, and Adobe Audience Manager data to calculate propensity scores. When selecting a dataset only ones that are compatible with Customer AI are listed. To select a dataset select the (**+**) symbol next to the dataset name. Use the search option to quickly find the datasets you're interested in.
+By design, Customer AI uses Consumer Experience Event, Adobe Analytics, and Adobe Audience Manager data to calculate propensity scores. When selecting a dataset only ones that are compatible with Customer AI are listed. To select a dataset select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
 
-![Select and search for dataset]()
+![Select and search for dataset](../images/user-guide/configure-dataset-page.png)
 
-Selecting the info icon next to the dataset opens the dataset preview popover.
+After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
 
-![Select and search for dataset]()
+![Select datasets](../images/user-guide/select-datasets.png)
 
-The dataset preview contains data such as the last update time, source schema, and a preview of the data.
+Selecting the info icon ![info icon]() next to the dataset opens the dataset preview popover.
+
+![Select and search for dataset](../images/user-guide/dataset-info-2.png)
+
+The dataset preview contains data such as the last update time, source schema, and a preview of the first ten columns.
 
 ### Dataset completeness {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/cai-dataset-completeness -->
 
-In the dataset preview is a dataset completeness percentage value. This value provides a quick snapshot of how many columns in your dataset are empty/null. It is recommended that you try to use datasets with a value above 80%.
+In the dataset preview is a dataset completeness percentage value. This value provides a quick snapshot of how many columns in your dataset are empty/null. If a dataset contains a lot of missing values and these values are captured elsewhere, it is highly recommended you include the dataset containing the missing values. In this example Person ID is empty, however, Person ID is captured in a separate dataset that we can include.
 
 >[!NOTE]
 >
 >Dataset completeness is calculated using the maximum lookback window for Customer AI (one year). This means data that is more than one year old is not taken into account when displaying your dataset completeness value.
 
-![Dataset completeness]()
+![Dataset completeness](../images/user-guide/dataset-info.png)
 
 ### Dataset Key {#dataset-key}
 
 <!-- https://www.adobe.com/go/cai-dataset-key -->
+
+Datasets need to be aligned and contain the same Primary Identity in order to use a union schema that represents all the combined datasets. If more than one Identity is available, you are required to select the identity you wish to use from the **[!UICONTROL Primary Identity]** dropdown.
+
+![Dataset key not selected](../images/user-guide/dataset-selected-no-key.png)
+
+>[!NOTE] You must select the same Identity for every dataset key in order to use multiple datasets.
+
+![Dataset key](../images/user-guide/select-primary-identity.png)
 
 
 ## Define a goal {#define-a-goal}
@@ -149,7 +161,7 @@ Once complete, select **[!UICONTROL Next]** in the top-right to continue.
 
 By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
 
-![eligible population]()
+![eligible population](../images/user-guide/eligible-population.png)
 
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
@@ -167,19 +179,15 @@ To exclude an event, select **[!UICONTROL Add exclusion]** and define the event.
 
 ![](../images/user-guide/exclusion.png)
 
-Exclude events as needed and then select **[!UICONTROL Finish]** to create the instance.
-
-![](../images/user-guide/advanced.png)
-
 ### Profile toggle
 
-The Profile toggle allows Customer AI to export the scoring results into Real-time Customer Profile. Disabling this toggle prevents the models scoring results from being added to Profile. Customer AI scoring results will still be available with this feature disabled.
+The Profile toggle allows Customer AI to export the scoring results into Real-time Customer Profile. Disabling this toggle prevents the models scoring results from being added to Profile. Customer AI scoring results are still available with this feature disabled.
 
 When using Customer AI for the first time ,it is recommended that you toggle this feature off until you are happy with the model output results. This prevents you from uploading multiple scoring datasets to Real-time Customer Profile while fine tuning your model.
 
-![Profile toggle]()
+![Profile toggle](../images/user-guide/advanced-workflow.png)
 
-Select **[!UICONTROL Finish]** in the top-right to create your Customer AI instance.
+Once you have your scoring schedule set, prediction exclusions included, and the profile toggle where you want it to be, select **[!UICONTROL Finish]** in the top-right to create your Customer AI instance.
 
 If the instance is created successfully, a prediction run is immediately triggered and subsequent runs execute according to your defined schedule.
 
