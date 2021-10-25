@@ -94,7 +94,7 @@ Datasets need to be aligned and contain the same Primary Identity in order to us
 
 ![Dataset key not selected](../images/user-guide/dataset-selected-no-key.png)
 
->[!NOTE] 
+>[!NOTE]
 >
 > You must select the same Identity for every dataset key in order to use multiple datasets.
 
