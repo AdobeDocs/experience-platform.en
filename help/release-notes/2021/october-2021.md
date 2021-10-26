@@ -19,10 +19,10 @@ Updates to existing features in Adobe Experience Platform:
 
 | Feature | Description |
 | --- | --- |
-| `contains_key` function | The `contains_key` function has been introduced, which lets you check if the object exists within the source. This function replaces the old deprecated `is_set` function. |
-| Error messages | Error messages returned within data preview are now consistent with the error messages that are generated during runtime. |
+| `contains_key` function | The `contains_key` function has been introduced, which lets you check if the object exists within the source. This function replaces the `is_set` function, which is now deprecated. |
+| Error messages | Error messages returned by the `/mappingSets/preview` endpoint in the Data Prep API are now consistent with the error messages that are generated during runtime. |
 
-To learn more about [!DNL Data Prep] see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+See the [[!DNL Data Prep] overview](../../data-prep/home.md) to learn more about this service.
 
 ## Sources {#sources}
 
