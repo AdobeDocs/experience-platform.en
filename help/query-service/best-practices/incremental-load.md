@@ -12,9 +12,9 @@ This document provides a series of instructions to build a design pattern for in
 
 ## Getting started
 
-The SQL examples throughout this document require you to have an understanding of anonymous block and snapshot capabilities. Before using the incremental data load capability it is recommended that you read the [sample anonymous block queries](./anonymous-block.md) documentation and also the [snapshot clause](../sql/syntax.md#snapshot-clause) documentation.
+The SQL examples throughout this document require you to have an understanding of anonymous block and snapshot capability, it is recommended that you read the [sample anonymous block queries](./anonymous-block.md) documentation and also the [snapshot clause](../sql/syntax.md#snapshot-clause) documentation.
 
-For guidance on any terminology used within this guide please refer to the [SQL syntax guide](../sql/syntax.md).
+For guidance on any terminology used within this guide, refer to the [SQL syntax guide](../sql/syntax.md).
 
 ## Steps
 
@@ -45,14 +45,14 @@ INSERT INTO
        CURRENT_TIMESTAMP process_timestamp;
 ```
 
-1. Next, any new or modified data from `DIM_TABLE_ABC` will be added to `DIM_TABLE_ABC_Incremental`. The anonymous block feature is used in the following steps to complete this process, as demonstrated in the SQL example below. 
+1. Next, any new or modified data from `DIM_TABLE_ABC` is added to `DIM_TABLE_ABC_Incremental`. The anonymous block feature is used in the following steps to complete this process, as demonstrated in the SQL example below. 
 
    1. Set the `from_snapshot_id` which indicates where the processing starts from. The `from_snapshot_id` in the example is queried from the `checkpoint_log` table for use with `DIM_TABLE_ABC`. On the initial run, the snapshot ID will be `null` meaning that the entire dataset will be processed.
    1. Set the latest snapshot ID from `DIM_TABLE_ABC`. In the example provided this is `to_snapshot_id`. `DIM_TABLE_ABC` is the source table as it contains the data to be processed. 
-   1. Create a dataset table for the additional data to be appended to after the incremental processing. In the example SQL block this table is `DIM_TABLE_ABC_Incremental`.
-   1. Select the data from `DIM_TABLE_ABC` up to the current snapshot using the snapshot IDs created in steps one and two. This encompassed data will be added to the newly created dataset `DIM_TABLE_ABC_Incremental`.
+   1. Create a dataset table to append additional data after the incremental processing. In the example SQL block this table is `DIM_TABLE_ABC_Incremental`.
+   1. Select the data from `DIM_TABLE_ABC` up to the current snapshot using the snapshot IDs created in steps one and two. This encompassed data is added to the newly created dataset `DIM_TABLE_ABC_Incremental`.
    1. Update the `checkpoint_log` table with the latest snapshot ID for `DIM_TABLE_ABC` that was just processed.
-   1. If any of the queries fails, the exception block is executed which returns an error and ends the process.
+   1. If any of the queries fail, the exception block is executed which returns an error and ends the process.
 
 ```SQL
 $$
@@ -124,7 +124,7 @@ To resolve the issue of an expired SNAPHOT ID, insert the following command at t
 SET resolve_fallback_snapshot_on_failure=true;
 ```
 
-The entire code block would look as follows.
+The entire code block would look as follows:
 
 ```SQL
 $$
@@ -154,4 +154,4 @@ EXCEPTION
 
 ## Next steps
 
-By reading this document you better understand how to use anonymous block and snapshot features to perform incremental loads and can apply this logic to your own specific queries. For general guidance on query execution, please read the [guide on query execution in Query Service](./writing-queries.md).
+By reading this document you should have a better understanding on how to use anonymous block and snapshot features to perform incremental loads and can apply this logic to your own specific queries. For general guidance on query execution, please read the [guide on query execution in Query Service](./writing-queries.md).
