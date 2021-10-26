@@ -45,6 +45,7 @@ feature: Sources
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
+    - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
@@ -102,6 +103,7 @@ feature: Sources
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
+      - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -192,6 +194,7 @@ feature: Sources
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
+      - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)

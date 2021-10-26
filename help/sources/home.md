@@ -63,6 +63,7 @@ CRM systems provide data that can help build customer relationships, which in tu
 - [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
 ### Customer Success
 
