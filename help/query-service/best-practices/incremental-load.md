@@ -47,10 +47,10 @@ INSERT INTO
 
 1. Next, any new or modified data from `DIM_TABLE_ABC` will be added to `DIM_TABLE_ABC_Incremental`. The anonymous block feature is used in the following steps to complete this process, as demonstrated in the SQL example below. 
 
-   1. Set the `from_snapshot_id` which indicates where the processing starts from. The `from_snapshot_id` in the example is queried from the `checkpoint_log` table for use with `DIM_TABLE_ABC`. On the initial run the snapshot ID will be `null` meaning that the entire dataset will be processed.
+   1. Set the `from_snapshot_id` which indicates where the processing starts from. The `from_snapshot_id` in the example is queried from the `checkpoint_log` table for use with `DIM_TABLE_ABC`. On the initial run, the snapshot ID will be `null` meaning that the entire dataset will be processed.
    1. Set the latest snapshot ID from `DIM_TABLE_ABC`. In the example provided this is `to_snapshot_id`. `DIM_TABLE_ABC` is the source table as it contains the data to be processed. 
    1. Create a dataset table for the additional data to be appended to after the incremental processing. In the example SQL block this table is `DIM_TABLE_ABC_Incremental`.
-   1. Select the data from `DIM_TABLE_ABC` up to the current snapshot using the snapshot IDs created in step one and two. This encompassed data will be added to the newly created dataset `DIM_TABLE_ABC_Incremental`.
+   1. Select the data from `DIM_TABLE_ABC` up to the current snapshot using the snapshot IDs created in steps one and two. This encompassed data will be added to the newly created dataset `DIM_TABLE_ABC_Incremental`.
    1. Update the `checkpoint_log` table with the latest snapshot ID for `DIM_TABLE_ABC` that was just processed.
    1. If any of the queries fails, the exception block is executed which returns an error and ends the process.
 
