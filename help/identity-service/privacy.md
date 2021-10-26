@@ -95,8 +95,12 @@ When creating job requests in the UI, be sure to select **[!UICONTROL Identity]*
 
 ## Delete request processing
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given IMS Organization.
 
-* The deletion of individual identity (nodes) is based on provided namespace and/or ID value
-* The deletion takes place for all sandboxes associated with a given IMS Organization.
-* When the request job is complete, a prevent-ingestion flag is assigned to block any attempt to ingest the identity for 15 days. After the 15-day period, a clean up job is executed to ensure that the deleted identities and their flags are removed from the routing collection. If the same identity is seen again, then [!DNL Identity Service] will cross reference the event timestamp of the identity with the deleted timestamp of the deleted identity. If the event timestamp is newer, then the identity will be ingested as a brand new identity.
+When the request job is complete, a prevent-ingestion flag is assigned to block any attempt to ingest the identity for 15 days. After the 15-day period, a clean up job is executed to ensure that the deleted identities and their flags are removed from the routing collection. If the same identity is seen again, then [!DNL Identity Service] will cross reference the event timestamp of the identity with the deleted timestamp of the deleted identity. If the event timestamp is newer, then the identity will be ingested as a brand new identity.
+
+## Next steps
+
+By reading this document, you have been introduced to the important concepts involved with processing privacy requests in Experience Platform. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
+
+For information on processing privacy requests for other [!DNL Experience Cloud] applications, see the document on [[!DNL Privacy Service] and [!Expereince Cloud] applications](../privacy-service/experience-cloud-apps.md).
