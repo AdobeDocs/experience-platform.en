@@ -149,4 +149,4 @@ When finished, select **[!UICONTROL Create]**. The dialog disappears, and the ne
 
 By reading this document, you have learned how to use the [!DNL Privacy Service] UI to create a privacy job, view a job's details and monitor its processing status, and download the results once it has completed.
 
-For steps on how to perform these operations programmatically using the [!DNL Privacy Service] API, please refer to the [developer guide](../api/getting-started.md).
+For steps on how to perform these operations programmatically using the [!DNL Privacy Service] API, please refer to the [API guide](../api/overview.md).

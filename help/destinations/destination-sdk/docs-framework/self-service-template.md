@@ -151,7 +151,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 ```
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {
