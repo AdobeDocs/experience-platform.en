@@ -8,6 +8,10 @@ description: Learn how to create a Zoho CRM source connection using the Adobe Ex
 ---
 # Create a [!DNL Zoho CRM] source connection in the UI
 
+>[!NOTE]
+>
+> The [!DNL Zoho CRM] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced CRM data on a scheduled basis. This tutorial provides steps for creating a [!DNL Zoho CRM] source connector using the [!DNL Platform] user interface.
 
 ## Getting started

@@ -79,6 +79,7 @@ feature: Sources
     - [PayPal connector](connectors/payments/paypal.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
+    - [Generic REST API connector](connectors/protocols/generic-rest.md)
   - Streaming {#streaming}
     - [HTTP API connector](connectors/streaming/http.md)
 - API tutorials {#api-tutorials}
@@ -137,6 +138,7 @@ feature: Sources
       - [PayPal](tutorials/api/create/payments/paypal.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
+      - [Generic REST API](tutorials/api/create/protocols/generic-rest.md)
     - Streaming {#streaming}
       - [HTTP API](tutorials/api/create/streaming/http.md)
   - Explore data {#explore}
@@ -228,6 +230,7 @@ feature: Sources
       - [PayPal](tutorials/ui/create/payments/paypal.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
+      - [Generic REST API](tutorials/ui/create/protocols/generic-rest.md)
     - Streaming {#streaming}
       - [HTTP API](tutorials/ui/create/streaming/http.md)
   - Configure a dataflow {#dataflow}
