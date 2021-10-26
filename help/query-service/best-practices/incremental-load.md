@@ -20,7 +20,7 @@ For guidance on any terminology used within this guide please refer to the [SQL 
 
 The steps below demonstrate how to create an incremental data load process using snapshots and the anonymous block feature. The design pattern can be used as a template for your own sequence of queries.
 
-1. Create a `checkpoint_log` table. A checkpoint log table is responsible for keeping a record of the changes made to the dataset.
+1. Create a `checkpoint_log` table to track the most recent snapshot used to process data successfully. The tracking table (`checkpoint_log` in this example) must first be initialized to `null` in order to incrementally process a dataset.
 
 ```SQL
 DROP TABLE IF EXISTS checkpoint_log;
@@ -33,7 +33,7 @@ SELECT
    WHERE false;
 ```
 
-1. Populate the `checkpoint_log` table with one empty record for the table or dataset that needs incremental processing. This is demonstrated with `DIM_TABLE_ABC` in the example below. The empty record provides an initial timestamp as a baseline for the snapshot feature to compare against future changes to the dataset.
+1. Populate the `checkpoint_log` table with one empty record for the dataset that needs incremental processing. `DIM_TABLE_ABC` is the dataset to be processed in the example below. On the first occasion of processing `DIM_TABLE_ABC`, the `last_snapshot_id` is initialized as `null`. This allows you to process the entire dataset on the first occasion and incrementally thereafter.
 
 ```SQL
 INSERT INTO
@@ -47,16 +47,12 @@ INSERT INTO
 
 1. Next, any new or modified data from `DIM_TABLE_ABC` will be added to `DIM_TABLE_ABC_Incremental`. The anonymous block feature is used in the following steps to complete this process, as demonstrated in the SQL example below. 
 
-   1. Get the latest snapshot ID from the `checkpoint_log` table. On the initial run this will be `null`.
-   2. Get the latest snapshot ID from `DIM_TABLE_ABC`. `DIM_TABLE_ABC` is the source table as it contains the data to be processed.
-   3. Create a dataset table for the additional data to be appended to after the incremental processing. In the example SQL block this table is `DIM_TABLE_ABC_Incremental`.
-   4. Select the data from `DIM_TABLE_ABC` up to the current snapshot using the snapshot IDs created in step one and two. This encompassed data will be added to the newly created dataset `DIM_TABLE_ABC_Incremental`.
-   5. Update the `checkpoint_log` table with the latest snapshot ID for `DIM_TABLE_ABC` that was just processed.
-   6. If any of the queries fails, the exception block is executed which returns an error and ends the process.
-
->[!NOTE]
->
->`SELECT history_meta('DIM_TABLE_ABC')`
+   1. Set the `from_snapshot_id` which indicates where the processing starts from. The `from_snapshot_id` in the example is queried from the `checkpoint_log` table for use with `DIM_TABLE_ABC`. On the initial run the snapshot ID will be `null` meaning that the entire dataset will be processed.
+   1. Set the latest snapshot ID from `DIM_TABLE_ABC`. In the example provided this is `to_snapshot_id`. `DIM_TABLE_ABC` is the source table as it contains the data to be processed. 
+   1. Create a dataset table for the additional data to be appended to after the incremental processing. In the example SQL block this table is `DIM_TABLE_ABC_Incremental`.
+   1. Select the data from `DIM_TABLE_ABC` up to the current snapshot using the snapshot IDs created in step one and two. This encompassed data will be added to the newly created dataset `DIM_TABLE_ABC_Incremental`.
+   1. Update the `checkpoint_log` table with the latest snapshot ID for `DIM_TABLE_ABC` that was just processed.
+   1. If any of the queries fails, the exception block is executed which returns an error and ends the process.
 
 ```SQL
 $$
@@ -122,7 +118,7 @@ This logic can be applied to any table to perform incremental loads.
 >
 >Snapshot metadata expires after **two** days. This would invalidate the logic of the script provided above. 
 
-To resolve the issue of an expired SNAPHOT ID, insert the following command at the beginning of the anonymous block. The following line of code overrides the `@from_snapshot_id` with the earliest available `Snapshot_id` from metadata.
+To resolve the issue of an expired SNAPHOT ID, insert the following command at the beginning of the anonymous block. The following line of code overrides the `@from_snapshot_id` with the earliest available `snapshot_id` from metadata.
 
 ```SQL
 SET resolve_fallback_snapshot_on_failure=true;
