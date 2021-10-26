@@ -132,7 +132,8 @@ Experience Platform provides support for ingesting data from streaming sources. 
 
 Experience Platform provides support for ingesting data from a third-party protocols system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Generic OData] connector](connectors/protocols/odata.md)
+- [[!DNL Generic OData]](connectors/protocols/odata.md)
+- [[!DNL Genereic REST API]](connectors/protocols/generic-rest.md)
 
 ## Access control for sources in data ingestion
 
