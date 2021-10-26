@@ -103,4 +103,4 @@ When the request job is complete, a prevent-ingestion flag is assigned to block 
 
 By reading this document, you have been introduced to the important concepts involved with processing privacy requests in Experience Platform. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
 
-For information on processing privacy requests for other [!DNL Experience Cloud] applications, see the document on [[!DNL Privacy Service] and [!Expereince Cloud] applications](../privacy-service/experience-cloud-apps.md).
+For information on processing privacy requests for other [!DNL Experience Cloud] applications, see the document on [[!DNL Privacy Service] and [!DNL Experience Cloud] applications](../privacy-service/experience-cloud-apps.md).
