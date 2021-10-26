@@ -30,7 +30,7 @@ In order to access your [!DNL Generic REST API] account on Platform, you must pr
 | Credential | Description |
 | --- | --- |
 | Host | The host URL of the source that you are making your request to. This value is required and cannot be bypassed using request parameter override. |
-| Authorization test URL | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
+| Authorization test URL | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | Client ID | (Optional) The client ID associated with your user account. |
 | Client secret | (Optional) The client secret associated with your user account. |
 | Access token | The primary authentication credential used to access your application. The access token represents the authorization of your application, to access particular aspects of a user's data. This value is required and cannot be bypassed using request parameter override. |
@@ -73,7 +73,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 #### Authenticate using OAuth 2 refresh code
 
-[!DNL Generic REST API] supports both OAuth 2 refresh code and basic authentication. To authenticate using an OAuth2 authentication, select **[!UICONTROL OAuth2RefreshCode]** , provide your OAuth 2 credentials and then select **[!UICONTROL Connect to source]**.
+[!DNL Generic REST API] supports both OAuth 2 refresh code and basic authentication. To authenticate using an OAuth2 authentication, select **[!UICONTROL OAuth2RefreshCode]**, provide your OAuth 2 credentials and then select **[!UICONTROL Connect to source]**.
 
 ![](../../../../images/tutorials/create/generic-rest/oauth2.png)
 

@@ -34,7 +34,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Generic REST API], you mu
 | Credential | Description |
 | --- | --- |
 | `host` | The host URL of the source that you are making your request to. This value is required and cannot be bypassed using `requestParameterOverride`. |
-| `authorizationTestUrl` | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
+| `authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `clientId` | (Optional) The client ID associated with your user account. |
 | `clientSecret` | (Optional) The client secret associated with your user account. |
 | `accessToken` | The primary authentication credential used to access your application. The access token represents the authorization of your application, to access particular aspects of a user's data. This value is required and cannot be bypassed using `requestParameterOverride`. |
