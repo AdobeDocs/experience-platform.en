@@ -5,7 +5,7 @@ exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
 ---
 # An overview of destinations in Real-time Customer Data Platform B2B Edition
 
-Experience Platform destinations including Marketo, Google, Linkedin, and Facebook, are available and fully supported by Real-time CDP B2B Edition.
+Experience Platform destinations fully supported by Real-time CDP B2B Edition include: Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display & Video 360, Google Ads, and Google Ad Manager.
 
 Real-time Customer Data Platform B2B Edition allows you to export your B2B data through the Marketo Engage destination connector. By using the Marketo Engage destination, you can push segments created in Adobe Experience Platform to Marketo, where they will appear as static lists.
 
