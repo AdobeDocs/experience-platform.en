@@ -228,6 +228,8 @@ A successful response returns the details of the queried flow specification.
 }
 ```
 
+
+<!--
 ## Create a flow specification {#create}
 
 You can create a new flow specification by making a POST request to the `/flowSpecs` endpoint of the [!DNL Flow Service] API. Similar to [creating connection specifications](./connection-specs.md#create), you must first retrieve an existing flow specification and update its values before submitting to [!DNL Flow Service].
@@ -596,6 +598,7 @@ A successful response returns the newly created flow specification, including it
     }
 }
 ```
+-->
 
 ## Update a flow specification {#update}
 
