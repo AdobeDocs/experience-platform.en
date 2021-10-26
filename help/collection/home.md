@@ -58,4 +58,4 @@ Platform Edge Network is a globally distributed, fast, and reliable network of s
 
 This document provided a high-level overview of how Platform's data collection technologies work to automate the process of sending your collected customer experience data to Adobe products and third-party destinations.
 
-For more information on the general workflow involved in sending event data through the Edge Network, refer to the [end-to-end overview for data collection](.e2e.md).
+For more information on the general workflow involved in sending event data through the Edge Network, refer to the [end-to-end overview for data collection](./e2e.md).
