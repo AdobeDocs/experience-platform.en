@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output;customer ai troubleshooting;customer ai errors
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Customer AI error troubleshooting
 topic-legacy: Getting started
 description: Find answers to common errors in Customer AI.
 type: Documentation
+exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
 ---
-
 # Customer AI error troubleshooting
 
 Customer AI displays errors when model training, scoring, and configuration fails. In the **[!UICONTROL Service instances]** section, a column for **[!UICONTROL LAST RUN STATUS]** displays one of the following messages: **[!UICONTROL Success]**, **[!UICONTROL Training issue]**, and **[!UICONTROL Failed]**.
@@ -38,4 +39,3 @@ If your data does not seem to be the problem, try changing the eligibility popul
 If restricting the eligibility population did not work or is not possible, change your prediction window.
 
 - Try changing your prediction window to 7 days and see if the error continues to occur. If the error no longer occurs, this indicates that you may not have enough data for your defined prediction window.
-

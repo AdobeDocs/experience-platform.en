@@ -13,7 +13,7 @@ For an overview of destinations, as well as a catalog of all available destinati
 
 ## [!UICONTROL Destinations] dashboard data {#destinations-dashboard-data}
 
-The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations that your organization has enabled within Experience Profile. The data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the destinations dashboard is not updating in real time.
+The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. The data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the destinations dashboard is not updating in real time.
 
 >[!NOTE]
 >

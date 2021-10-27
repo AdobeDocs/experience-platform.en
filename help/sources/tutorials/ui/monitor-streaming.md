@@ -5,8 +5,8 @@ solution: Experience Platform
 title: Monitor Dataflows for Streaming Sources in the UI
 topic-legacy: overview
 type: Tutorial
+exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 ---
-
 # Monitor Dataflows for Streaming Sources in the UI
 
 This tutorial covers the steps for monitoring dataflows for streaming sources using the [!UICONTROL Sources] workspace.

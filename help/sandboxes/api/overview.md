@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Sandbox API Guide
 topic-legacy: developer guide
 description: Sandboxes in Adobe Experience Platform provide isolated development environments that allow you to test features, run experiments, and make custom configurations without impacting your production environment.
+exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
 ---
 # [!DNL Sandbox] API guide
 

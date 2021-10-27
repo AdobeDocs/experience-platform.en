@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Channel Details Schema Field Group
 topic-legacy: overview
 description: This document provides an overview of the Channel Details schema field group.
+exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
 ---
-
 # [!UICONTROL Channel Details] schema field group
 
 >[!NOTE]

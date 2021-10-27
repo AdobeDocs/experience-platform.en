@@ -104,7 +104,7 @@ Your exported [!DNL Experience Platform] data lands in [!DNL Amazon Kinesis] in 
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {

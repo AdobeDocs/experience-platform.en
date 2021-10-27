@@ -2,8 +2,8 @@
 title: Accessing response tokens using the Adobe Experience Platform Web SDK
 description: Learn how to access response tokens with the Adobe Experience Platform Web SDK.
 keywords: personalization;target;adobe target;renderDecisions;sendEvent;decisionScopes;result.decisions,response tokens;
+exl-id: fc9d552a-29ba-4693-9ee2-599c7bc76cdf
 ---
-
 # Accessing response tokens
 
 Personalization content returned from Adobe Target includes [response tokens](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), which are details about the activity, offer, experience, user profile, geo information, and more. These details can be shared with third-party tools or used for debugging. Response tokens can be configured in the Adobe Target user interface.
@@ -60,5 +60,3 @@ alloy("sendEvent", {
     // them in some other way.
   });
 ```
-
-

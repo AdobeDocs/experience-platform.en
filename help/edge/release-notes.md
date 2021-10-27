@@ -6,6 +6,14 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
 # Release notes
 
+## Version 2.7.0 - October 26, 2021
+
+* Expose additional information from Experience Edge in the return value from `sendEvent`, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](fundamentals/tracking-events.md)
+
+## Version 2.6.4 - September 7, 2021
+
+* Fixed an issue where set HTML Adobe Target actions applied to the `head` element were replacing the entire `head` content. Now set HTML actions applied to the `head` element are changed to append HTML.
+
 ## Version 2.6.3 - August 16, 2021
 
 * Fixed an issue where objects not intended for public use were exposed through the resolved promise from the `configure` command.
@@ -32,16 +40,16 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ## Version 2.4.0 - March 2021
 
 * The SDK can now be [installed as an npm package](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).
-* Added support for an `out` option when [configuring default consent](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received). 
+* Added support for an `out` option when [configuring default consent](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
 * The [onBeforeEventSend callback](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) can now be used to prevent an event from being sent.
 * Now uses an XDM schema field group instead of `meta.personalization` when sending events about personalized content being rendered or clicked.
 * The [getIdentity command](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) now returns the edge region ID alongside the identity.
-* Warnings and errors received from the server have been improved and are handled in a more appropriate fashion. 
+* Warnings and errors received from the server have been improved and are handled in a more appropriate fashion.
 * Added support for [Adobe's Consent 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
 * Consent preferences, when received, are hashed and stored in local storage for an optimized integration among CMPs, Platform Web SDK, and Platform Edge Network. If you are collecting consent preferences, we now encourage you to call `setConsent` on every page load.
 * Two [monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` and `onCommandRejected`, have been added.
 * Bug Fix: Personalization interaction notification events would contain duplicate information about the same activity when a user navigated to a new single-page app view, back to the original view, and clicked an element qualifying for conversion.
-* Bug Fix: If the first event sent by the SDK had `documentUnloading` set to `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) would be used to send the event, resulting in an error regarding an identity not being established.  
+* Bug Fix: If the first event sent by the SDK had `documentUnloading` set to `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) would be used to send the event, resulting in an error regarding an identity not being established.
 
 ## Version 2.3.0 - November 2020
 
@@ -51,7 +59,7 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 * Bug Fix: `sendBeacon` was not being used when `documentUnloading` was set to `true` or when link clicks were automatically tracked.
 * Bug Fix: A link wouldn't be automatically tracked if the anchor element contained HTML content.
 * Bug Fix: Certain browser errors containing a read-only `message` property were not handled appropriately, resulting in a different error being exposed to the customer.
-* Bug Fix: Running the SDK within an iframe would result in an error if the iframe's HTML page was from a different subdomain than the parent window's HTML page. 
+* Bug Fix: Running the SDK within an iframe would result in an error if the iframe's HTML page was from a different subdomain than the parent window's HTML page.
 
 ## Version 2.2.0 - October 2020
 

@@ -67,7 +67,7 @@ Once you have determined your business' privacy needs, and decided which identit
 
 #### Using the API
 
-The [[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) provides several endpoints for creating and managing privacy jobs using RESTful API calls, allowing you to programmatically approach privacy regulation compliance for your [!DNL Experience Cloud] applications. For detailed steps on how to use the API, see the [Privacy Service API developer guide](api/getting-started.md).
+The [[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) provides several endpoints for creating and managing privacy jobs using RESTful API calls, allowing you to programmatically approach privacy regulation compliance for your [!DNL Experience Cloud] applications. For detailed steps on how to use the API, see the [Privacy Service API guide](api/overview.md).
 
 #### Using the UI
 
@@ -84,7 +84,7 @@ Once you have made privacy jobs, you have several options for monitoring their s
 | Monitoring method | Description |
 | --- | --- |
 | [!DNL Privacy Service] UI | The [!DNL Privacy Service] UI provides a monitoring dashboard that allows you to view a visual representation of the status of all active requests. See the [Privacy Service user guide](ui/overview.md) for more information. |
-| [!DNL Privacy Service] API | You can programmatically monitor the status of Privacy jobs by using the lookup endpoints provided by the [!DNL Privacy Service] API. See the [Privacy Service developer guide](./api/getting-started.md) for detailed steps on how to use the API. |
+| [!DNL Privacy Service] API | You can programmatically monitor the status of Privacy jobs by using the lookup endpoints provided by the [!DNL Privacy Service] API. See the [Privacy Service API guide](./api/overview.md) for detailed steps on how to use the API. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] leverage Adobe I/O Events sent to a configured webhook in order to facilitate efficient job request automation. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached. See the tutorial on [subscribing to Privacy Events](./privacy-events.md) for more information. |
 
 ## Next steps

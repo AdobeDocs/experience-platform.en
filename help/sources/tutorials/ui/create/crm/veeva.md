@@ -5,7 +5,7 @@ title: Create a Veeva CRM Source Connection in the UI
 topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Veeva CRM source connection using the Adobe Experience Platform UI.
-exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
+exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
 ---
 # Create a [!DNL Veeva CRM] source connection in the UI
 
@@ -31,7 +31,7 @@ If you already have a valid [!DNL Veeva CRM] account, you may skip the remainder
 | `password` | The password for the [!DNL Veeva CRM] user account. |
 | `securityToken` | The security token for the [!DNL Veeva CRM] user account. |
 
-For more information on getting started, refer to [this Veeva CRM document]
+For more information on getting started, refer to this [[!DNL Veeva CRM] document](https://developer.veevacrm.com/api/#order-management-rest-api).
 
 ## Connect your [!DNL Veeva CRM] account
 

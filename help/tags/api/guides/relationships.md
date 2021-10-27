@@ -1,6 +1,7 @@
 ---
 title: Relationships in the Reactor API
 description: Learn how resource relationships are established in the Reactor API, including the relationship requirements for each resource.
+exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 ---
 # Relationships in the Reactor API
 
@@ -288,3 +289,11 @@ The following tables outline the available relationships for each resource type,
 | `property` | &#x2713; | | |
 | `origin` | &#x2713; | | |
 | `rule_components` | | | |
+
+### Secrets
+
+| Relationship | Required | Create by payload | Create by URL |
+| :--- | :---: | :---: | :---: |
+| `property` | &#x2713; | | &#x2713; |
+| `environment` | &#x2713; | &#x2713; | |
+

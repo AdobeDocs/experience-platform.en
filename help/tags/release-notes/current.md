@@ -1,12 +1,23 @@
 ---
 title: Release Notes
 description: The latest release notes for tags in Adobe Experience Platform.
+exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
 # Release notes
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
+
+## October 21, 2021
+
+**Send data to authenticated endpoints in event forwarding** – Using secrets, you can send data to endpoints that require the following authentication protocols:
+
+* **[!UICONTROL Token]**: A single string of characters representing an authentication token value.
+* **[!UICONTROL Simple HTTP]**: Contains two string attributes for a username and password.
+* **[!UICONTROL OAuth2]**: Contains several attributes to support the [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) spec.
+
+For more information, see the guides on [managing secrets in the Data Collection UI](../ui/event-forwarding/secrets.md) or [managing secrets in the Reactor API](../api/guides/secrets.md).
 
 ## July 19, 2021
 

@@ -24,9 +24,9 @@ The most common query parameters for paging include:
 
 | Parameter | Description |
 | --- | --- |
-| `start` | Specify where the listed results should begin. This value can be obtained from the `_page.next` attribute of a list response, and used to access the next page of results. If the `_page.next` value is null, then there is no additional page available.  |
-| `limit` | Limit the number of resources returned. Example: `limit=5` will return a list of five resources. |
 | `orderby` | Sort results by a specific property. Example: `orderby=title` will sort results by title in ascending order (A-Z). Adding a `-` before the parameter value (`orderby=-title`) will sort items by title in descending order (Z-A). |
+| `limit` |  When used in conjunction with an `orderby` parameter, `limit` restricts the maximum number of items that should be returned for a given request. This parameter cannot be used without an `orderby` parameter present.<br><br>The `limit` parameter specifies a positive integer (between `0` and `500`) as a *hint* as to the maximum number of items that should be returned. For example, `limit=5` returns only five resources in the list. However, this value is not strictly honored. The actual response size may be smaller or larger as constrained by the need to provide the reliable operation of the `start` parameter, if one is provided. |
+| `start` | When used in conjunction with an `orderby` parameter, `start` specifies where the sub-setted list of items should begin. This parameter cannot be used without an `orderby` parameter present. This value can be obtained from the `_page.next` attribute of a list response, and used to access the next page of results. If the `_page.next` value is null, then there is no additional page available.<br><br>Typically, this parameter is omitted in order to obtain the first page of results. After that, `start` should be set to the maximum value of the primary sort property of the `orderby` field received in the previous page. The API response then returns entries beginning with those that have a primary sort property from `orderby` strictly greater than (for ascending) or strictly less than (for descending) the specified value.<br><br>For example, if the `orderby` parameter is set to `orderby=name,firstname`, the `start` parameter would contain a value for the `name` property. In this case, if you wanted to show the next 20 entries of a resource immediately following the name "Miller", you would use: `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style="table-layout:auto"}
 
@@ -71,50 +71,52 @@ The following is a side-by-side comparison showing birthday-related fields (with
   <tr>
   <td>
   <pre class=" language-json">
-        {
-          "xdm:birthDate": {
-              "title": "Birth Date",
-              "type": "string",
-              "format": "date",
-          },
-          "xdm:birthDayAndMonth": {
-              "title": "Birth Date",
-              "type": "string",
-              "pattern": "[0-1][0-9]-[0-9][0-9]",
-          },
-          "xdm:birthYear": {
-              "title": "Birth year",
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 32767
-        }
+{
+  "xdm:birthDate": {
+    "title": "Birth Date",
+    "type": "string",
+    "format": "date"
+  },
+  "xdm:birthDayAndMonth": {
+    "title": "Birth Date",
+    "type": "string",
+    "pattern": "[0-1][0-9]-[0-9][0-9]"
+  },
+  "xdm:birthYear": {
+    "title": "Birth year",
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 32767
+  }
+}
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-        {
-          "birthDate": {
-              "title": "Birth Date",
-              "type": "string",
-              "format": "date",
-              "meta:xdmField": "xdm:birthDate",
-              "meta:xdmType": "date"
-          },
-          "birthDayAndMonth": {
-              "title": "Birth Date",
-              "type": "string",
-              "pattern": "[0-1][0-9]-[0-9][0-9]",
-              "meta:xdmField": "xdm:birthDayAndMonth",
-              "meta:xdmType": "string"
-          },
-          "birthYear": {
-              "title": "Birth year",
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 32767,
-              "meta:xdmField": "xdm:birthYear",
-              "meta:xdmType": "short"
-        }
+{
+  "birthDate": {
+    "title": "Birth Date",
+    "type": "string",
+    "format": "date",
+    "meta:xdmField": "xdm:birthDate",
+    "meta:xdmType": "date"
+  },
+  "birthDayAndMonth": {
+    "title": "Birth Date",
+    "type": "string",
+    "pattern": "[0-1][0-9]-[0-9][0-9]",
+    "meta:xdmField": "xdm:birthDayAndMonth",
+    "meta:xdmType": "string"
+  },
+  "birthYear": {
+    "title": "Birth year",
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 32767,
+    "meta:xdmField": "xdm:birthYear",
+    "meta:xdmType": "short"
+  }
+}
       </pre>
   </td>
   </tr>

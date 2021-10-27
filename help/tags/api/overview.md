@@ -1,6 +1,7 @@
 ---
 title: Reactor API Guide
 description: The Reactor API allows developers to programmatically manage all resources for tags in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
+exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 ---
 # [!DNL Reactor] API guide
 
@@ -107,6 +108,10 @@ See the [profile endpoint guide](./endpoints/profile.md) to learn how to view th
 ## Search
 
 The `/search` endpoint provides a way to find resources matching a desired criteria, expressed as a query. All queries are scoped to your current company and accessible properties. See the [search endpoint guide](./endpoints/search.md) to learn how use this functionality.
+
+## Secrets
+
+A secret contains credentials that allow event forwarding to authenticate to another system for secure data exchange. See the [secrets guide](./guides/secrets.md) for an overview on how secrets function in event forwarding, and the [secrets endpoint guide](./endpoints/secrets.md) to learn how to manage them in the Reactor API.
 
 ## Next steps
 

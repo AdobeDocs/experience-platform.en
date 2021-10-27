@@ -552,7 +552,7 @@ The returned response should include in the `transformations` parameter the segm
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {

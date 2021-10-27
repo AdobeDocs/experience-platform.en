@@ -5,8 +5,8 @@ type: Tutorial
 seo-title: Activate audience data to streaming profile export destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
+exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 ---
-
 # Activate audience data to streaming profile export destinations
 
 ## Overview {#overview}
@@ -89,7 +89,7 @@ Your exported [!DNL Experience Platform] data lands in your target destination i
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {

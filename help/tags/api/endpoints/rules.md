@@ -1,6 +1,7 @@
 ---
 title: Rules endpoint
 description: Learn how to make calls to the /rules endpoint in the Reactor API.
+exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 ---
 # Rules endpoint
 

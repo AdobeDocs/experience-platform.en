@@ -1,6 +1,7 @@
 ---
 title: Data Element Types for Edge Extensions
 description: Learn how to define an data-element-type library module for a tag extension in an edge property.
+exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
 ---
 # Data element types in edge extensions
 

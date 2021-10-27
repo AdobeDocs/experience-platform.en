@@ -1,6 +1,7 @@
 ---
 title: Notes
 description: Learn how to add textual annotations to certain tag resources in Adobe Experience Platform.
+exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
 ---
 # Notes
 

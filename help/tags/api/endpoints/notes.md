@@ -1,6 +1,7 @@
 ---
 title: Notes endpoint
 description: Learn how to make calls to the /notes endpoint in the Reactor API.
+exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 ---
 # Notes endpoint
 
@@ -22,6 +23,7 @@ Notes can be applied the following resources:
 * [Properties](./properties.md)
 * [Rule components](./rule-components.md)
 * [Rules](./rules.md)
+* [Secrets](./secrets.md)
 
 These six types are collectively known as "notable" resources. When a notable resource is deleted, its associated notes are also deleted.
 

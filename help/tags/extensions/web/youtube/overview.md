@@ -1,6 +1,7 @@
 ---
 title: YouTube Video Tracking Extension Overview
 description: Learn about the YouTube Video Tracking tag extension in Adobe Experience Platform.
+exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
 ---
 # YouTube Video Tracking extension overview
 
@@ -96,7 +97,7 @@ The following video extension objects are to be included.
 To concatenate video information values, create a new data element called ”Video Meta Data,” and program it to pull in all the video data elements (listed above) and assemble them together. For example:
 
 ```javascript
-var r = ””;
+var r = [];
 
 r.push('YouTube'); //Player Name
 r.push(_satellite.getVar('Video ID'));
