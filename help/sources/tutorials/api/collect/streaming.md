@@ -33,7 +33,6 @@ This tutorial also requires you to have a valid source connection ID for a strea
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
 - [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
-- [[!DNL HTTP API]](../create/streaming/http.md)
 
 ## Create a target XDM schema {#target-schema}
 
