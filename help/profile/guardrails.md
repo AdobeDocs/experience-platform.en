@@ -81,7 +81,7 @@ The following guardrails refer to data size and provide recommended limits for d
 | --- | --- | --- | --- |
 | ExperienceEvent fragment size | 10KB | Hard | **The maximum size of an event fragment is 10KB.** A fragment is defined as a singular record within a dataset that is referencing an XDM ExperienceEvent class-based schema. Ingestion will continue, however any events larger than 10KB will be dropped.|
 | Individual Profile fragment size | 100KB | Hard | **The maximum size of a profile fragment is 100KB.** A fragment is defined as a singular record within a dataset that is referencing an XDM Individual Profile class-based schema. Ingestion will continue, however profile records larger than 100KB will be dropped.|
-| Real-time Customer Profile size | 50MB | Soft | **Note: If two or more of the same Profile identities merge exceeding 50MB, then the data for that identity is deleted from the system.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB may affect system performance. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, may affect system performance.|
+| Real-time Customer Profile size | 50MB | Soft | **Dependent on the [merge policy](#merge-policies) selected, all related [profile fragments](#profile-fragments) across both XDM Individual Profile and XDM ExperienceEvent class-based datasets cannot exceed 50MB.** When utilizing the `private graph` identity stitching option in a merge policy, the Real-time Customer Profile is assembled based on any fragment where the primary identity in the dataset record matches an identity in the identity graph collection. When utilizing no graph (a merge policy with an identity stitching option of `none`) only primary identity values that are common within or across various datasets are used to create the Real-time Customer Profile.|
 | Profile or ExperienceEvent batches per day | 90 | Soft | The combined total of Profile and ExperienceEvent batches ingested each day should not exceed 90. Ingesting additional batches may prevent optimal performance.|
 
 {style="table-layout:auto"}
@@ -129,6 +129,10 @@ The [!DNL Profile] store data model consists of two core entity types:
 ### Profile fragments
 
 In this document, there are several guardrails that refer to "profile fragments." In Experience Platform, multiple profile fragments are merged together to form the Real-time Customer Profile. Each fragment represents a unique primary identity and the corresponding record or event data for that ID within a given dataset. To learn more about profile fragments, refer to the [Profile overview](home.md#profile-fragments-vs-merged-profiles).
+
+### Merge policies {#merge-policies}
+
+When bringing data together from multiple sources, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. To learn more about merge policies, begin by reading the [merge policies overview](merge-policies/overview.md).
 
 ### Adobe Analytics report suite datasets in Platform {#aa-datasets}
 
