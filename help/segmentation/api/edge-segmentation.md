@@ -42,6 +42,8 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 | Multiple incoming hits within a time profile of 24 hours | Any segment definition that refers to multiple events that occur within a time window of 24 hours. | People that visited the homepage **or** visited the checkout page within the last 24 hours. |
 | Multiple events with a profile within a 24 hour time window | Any segment definition that refers to one or more profile attributes and multiple events that occur within a time window of 24 hours. | People from the USA that visited the homepage **and** visited the checkout page within the last 24 hours. |
 
+Additionally, the segment **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
+
 {style="table-layout:auto"}
 
 ## Retrieve all segments enabled for edge segmentation
