@@ -10,105 +10,15 @@ exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
 
 Observability metrics provide insights into usage statistics, historical trends, and performance indicators for various features in Adobe Experience Platform. The `/metrics` endpoint in the [!DNL Observability Insights API] allows you to programmatically retrieve metric data for your organization's activity in [!DNL Platform].
 
+>[!NOTE]
+>
+>The previous version metrics endpoint (V1) has been deprecated. This document focuses exclusively on the current version (V2). For details on the V1 endpoint for legacy implementations, please refer to the [API reference](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+
 ## Getting started
 
 The API endpoint used in this guide is part of the [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve observability metrics
-
-There are two supported methods for retrieving metric data using the API:
-
-* [Version 1](#v1): Specify metrics using query parameters.
-* [Version 2](#v2): Specify and apply filters to metrics using a JSON payload.
-
-### Version 1 {#v1}
-
-You can retrieve metrics data by making a GET request to the `/metrics` endpoint, specifying metrics through the use of query parameters.
-
-**API format**
-
-At least one metric must be provided in the `metric` parameter. Other query parameters are optional for filtering results.
-
-```http
-GET /metrics?metric={METRIC}
-GET /metrics?metric={METRIC}&metric={METRIC_2}
-GET /metrics?metric={METRIC}&id={ID}
-GET /metrics?metric={METRIC}&dateRange={DATE_RANGE}
-GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
-```
-
-| Parameter | Description |
-| --- | --- |
-| `{METRIC}` | The metric you want to expose. When combining multiple metrics in a single call, you must use an ampersand (`&`) to separate individual metrics. For example, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | The identifier for a particular [!DNL Platform] resource whose metrics you want to expose. This ID may be optional, required, or not applicable depending on the metrics being used. See the [appendix](#available-metrics) for a list of available metrics, including the supported IDs (both required and optional) for each metric. |
-| `{DATE_RANGE}` | The date range for the metrics you want to expose, in ISO 8601 format (for example, `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
-
-**Request**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/infrastructure/observability/insights/metrics?metric=timeseries.ingestion.dataset.size&metric=timeseries.ingestion.dataset.recordsuccess.count&id=5cf8ab4ec48aba145214abeb&dateRange=2018-10-01T07:00:00.000Z/2019-06-06T07:00:00.000Z \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns a list of objects, each containing a timestamp within the provided `dateRange` and corresponding values for the metrics specified in the request path. If the `id` of a [!DNL Platform] resource is included in the request path, the results will apply only to that particular resource. If the `id` is omitted, the results will apply to all applicable resources within your IMS Organization.
-
-```json
-{
-  "id": "5cf8ab4ec48aba145214abeb",
-  "imsOrgId": "{IMS_ORG}",
-  "timeseries": {
-    "granularity": "MONTH",
-    "items": [
-      {
-        "timestamp": "2019-06-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 1125,
-          "timeseries.ingestion.dataset.size": 32320
-        }
-      },
-      {
-        "timestamp": "2019-05-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 1003,
-          "timeseries.ingestion.dataset.size": 31409
-        }
-      },
-      {
-        "timestamp": "2019-04-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 740,
-          "timeseries.ingestion.dataset.size": 25809
-        }
-      },
-      {
-        "timestamp": "2019-03-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 740,
-          "timeseries.ingestion.dataset.size": 25809
-        }
-      },
-      {
-        "timestamp": "2019-02-01T00:00:00Z",
-        "metrics": {
-          "timeseries.ingestion.dataset.recordsuccess.count": 390,
-          "timeseries.ingestion.dataset.size": 16801
-        }
-      }
-    ],
-    "_page": null,
-    "_links": null
-  },
-  "stats": {}
-}
-```
-
-### Version 2 {#v2}
 
 You can retrieve metrics data by making a POST request to the `/metrics` endpoint, specifying the metrics you wish to retrieve in the payload.
 
