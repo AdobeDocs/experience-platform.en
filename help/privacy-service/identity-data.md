@@ -20,7 +20,7 @@ For example, when handling customer data requests in [!DNL Privacy Service], an 
 
 It is therefore required that each identity sent to [!DNL Privacy Service] is accompanied with a namespace that provides context by relating the identity value to its system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
 
-Adobe Experience Platform Identity Service maintains a store of globally defined and user-defined identity namespaces. For more detailed information on namespaces, see the [identity namespace overview](../identity-service/namespaces.md). For a list of standard namespaces and namespace qualifiers that are commonly used in [!DNL Privacy Service], see the [appendix section](api/appendix.md) in the developer guide.
+Adobe Experience Platform Identity Service maintains a store of globally defined and user-defined identity namespaces. For more detailed information on namespaces, see the [identity namespace overview](../identity-service/namespaces.md). For a list of standard namespaces and namespace qualifiers that are commonly used in [!DNL Privacy Service], see the [appendix section](api/appendix.md) in the API guide.
 
 ## ECID and Opt-in Service
 
@@ -38,4 +38,4 @@ For more information about [!DNL Privacy JS Library], including code samples for
 
 ## Next steps
 
-This document provided a brief overview of the central concepts involved in retrieving customer identity data for use in privacy requests. It is recommended that you review the documentation links provided in each section for more detailed information about these concepts and services. For steps on how to send retrieved IDs to [!DNL Privacy Service] for creating access, delete, or opt-out-of-sale requests, see the [Privacy Service developer guide](api/getting-started.md).
+This document provided a brief overview of the central concepts involved in retrieving customer identity data for use in privacy requests. It is recommended that you review the documentation links provided in each section for more detailed information about these concepts and services. For steps on how to send retrieved IDs to [!DNL Privacy Service] for creating access, delete, or opt-out-of-sale requests, see the [Privacy Service API guide](api/overview.md).
