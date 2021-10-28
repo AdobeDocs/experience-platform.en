@@ -19,19 +19,28 @@ The following document provides steps on how create a connection specification u
 
 Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Gather artifacts
+## Collect artifacts
+
+The first step in creating a new connection specification to integrate a new source through [!DNL Sources SDK] is to coordinate with your Adobe representative and identify values for your source's corresponding **icon**, **description**, **label**, and **category**.
+
+| Artifacts | Description | Example |
+| --- | --- | --- |
+| Label | The name of your source. | [!DNL MailChimp Members] |
+| Description | A brief description of your source. | Create a live inbound connection to your [!DNL Mailchimp Members] instance, to ingest both historic and scheduled data into Experience Platform. |
+| Icon | The image or logo that represents your source. The icon is displayed in the Platform UI rendering of your source. | `mailchimp-members-icon.svg` |
+| Category | The category of your source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li><li>`streaming`</li></ul> |
+
+{style="table-layout:auto"}
 
 ## Copy connection specification template
 
-Once you have gathered the required information, copy and paste the connection specification template below to the text editor of your choice and then update the attributes with information relevant to your specific source. 
-
+Once you have gathered the required artifacts, copy and paste the connection specification template below to the text editor of your choice and then update the attributes with information relevant to your specific source. 
 
 ```json
 {
-  "id": "<UUID_OF_CONNECTOR_SPEC>",
-  "name": "generic-rest-extension",
+  "name": "{NAME}",
   "type": "generic-rest",
-  "description": "<CONNECTOR_DESCRIPTION>",
+  "description": "{DESCRIPTION}",
   "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
   "version": "1.0",
   "attributes": {
@@ -167,47 +176,47 @@ Once you have gathered the required information, copy and paste the connection s
         "isPreview": true,
         "isBeta": true,
         "category": {
-          "key": "<CATEGORY_OF_CONNECTOR_KEY>"
+          "key": "{CATEGORY}"
         },
         "icon": {
-          "key": "<ICON_TO_BE_USED_BY_CONNECTOR_KEY>"
+          "key": "{ICON}"
         },
         "description": {
-          "key": "<CONNECTOR_DESCRIPTION_KEY>"
+          "key": "{DESCRIPTION}"
         },
         "label": {
-          "key": "<LABEL_DISPLAYED_FOR_CONNECTOR_KEY>"
+          "key": "{LABEL}"
         }
       },
       "urlParams": {
-        "path": "<RESOURCE_PATH>",
-        "method": "<GET or POST>",
-        "queryParams": "<QUERY_PARAMS>"
+        "path": "{RESOURCE_PATH}",
+        "method": "{GET or POST}",
+        "queryParams": "{QUERY_PARAMS}"
       },
-      "headerParams": "<HEADER_VALUES>",
-      "bodyParams": "<BODY_PART_INCASE_METHOD_IS_POST>",
+      "headerParams": "{HEADER_VALUES}",
+      "bodyParams": "{BODY_PART_INCASE_METHOD_IS_POST}",
       "contentPath": {
-        "path": "<PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS>",
+        "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
         "skipAttributes": [],
-        "overrideWrapperAttribute": "<OVERRIDE_ATTRIBUTES>"
+        "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
       },
       "explodeEntityPath": {
-        "path": "<PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS>",
+        "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
         "skipAttributes": [],
-        "overrideWrapperAttribute": "<OVERRIDE_ATTRIBUTES>"
+        "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
       },
       "paginationParams": {
-        "type": "<OFFSET OR POINTER>",
-        "limitName": "<NUMBER OF RECORDS ATTRIBUTE NAME>",
-        "limitValue": "<NUMBER OF RECORDS PER PAGE>",
-        "offSetName": "<OFFSET ATTRIBUTE NAME REQUIRED IN CASE OF OFFSET BASED PAGINATION>",
-        "pointerName": "<POINTER_PATH REQUIRED IN CASE OF POINTER BASED PAGINATION>"
+        "type": "{OFFSET OR POINTER}",
+        "limitName": "{NUMBER OF RECORDS ATTRIBUTE NAME}",
+        "limitValue": "{NUMBER OF RECORDS PER PAGE}",
+        "offSetName": "{OFFSET ATTRIBUTE NAME REQUIRED IN CASE OF OFFSET BASED PAGINATION}",
+        "pointerName": "{POINTER_PATH REQUIRED IN CASE OF POINTER BASED PAGINATION}"
       },
       "scheduleParams": {
-        "scheduleStartParamName": "<START TIME PARAMETER NAME>",
-        "scheduleEndParamName": "<END TIME PARAMETER NAME>",
-        "scheduleStartParamFormat": "<DATE TIME FORMAT FOR START TIME>",
-        "scheduleEndParamFormat": "<END TIME FORMAT FOR START TIME>"
+        "scheduleStartParamName": "{START TIME PARAMETER NAME}",
+        "scheduleEndParamName": "{END TIME PARAMETER NAME}",
+        "scheduleStartParamFormat": "{DATE TIME FORMAT FOR START TIME}",
+        "scheduleEndParamFormat": "{END TIME FORMAT FOR START TIME}"
       }
     },
     "spec": {
@@ -269,7 +278,15 @@ Once you have gathered the required information, copy and paste the connection s
 
 ## Create a connection specification {#create}
 
-To create a connection specification, you must first retrieve a `generic-rest` type of connection specification using the [!DNL Flow Service] API. Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then update the attributes with information relevant to your specific source. For more information on connection specifications, including details particular to its several arrays, see the documentation on [preparing your configurations](../config/config.md).
+Once you have acquired the connection specification template, you can now start authoring a new connection specification by filling in the appropriate values that corresponds to your source. 
+
+A connection specification can be divided into three distinct parts: the authentication specifications, the source specifications, and the explore specifications. 
+
+See the following documents for instructions on how to populate the values of each part of a connection specification:
+
+* [Configure your authentication specification](../config/authspec.md)
+* [Configure your source specification](../config/sourcespec.md)
+* [Configure your explore specification](../config/explorespec.md)
 
 With your specification information updated, you can submit the new connection specification by making a POST request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API.
 
@@ -281,6 +298,8 @@ POST /connectionSpecs
 
 **Request**
 
+The following request is an example of a fully-authored connection specification for a [!DNL MailChimp] source:
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
@@ -290,8 +309,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "MailChimp source",
-      "description": "New MailChimp source using generic-rest",
+      "name": "MailChimp Members source",
+      "description": "MailChimp Members source using generic-rest and SDK",
       "type": "generic-rest",
       "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
       "version": "1.0",
@@ -468,7 +487,7 @@ A successful response returns the newly created connection specification, includ
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
     "imsOrgId": "{IMS_ORG}",
-    "name": "mailchimp-test-source",
+    "name": "MailChimp Members source",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",
     "type": "generic-rest",
@@ -631,7 +650,7 @@ A successful response returns the newly created connection specification, includ
 
 ## Update a connection specification {#update}
 
-You can update the fields of a connection specification through a PUT operation. When updating a connection specification through a PUT request, the body must include all of the fields that would be required when creating a new connection specification in a POST request.
+You can update the properties of a connection specification through a PUT operation. When updating a connection specification through a PUT request, the body must include all of the fields that would be required when creating a new connection specification in a POST request.
 
 **API format**
 
@@ -647,10 +666,10 @@ The following request updates the `name` of the [!DNL MailChimp] source created 
 PUT -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/f6c0de0c-0a42-4cd9-9139-8768bf2f1b55' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp source update 1.0",
       "description": "New MailChimp source using generic-rest",
@@ -990,3 +1009,7 @@ A successful call returns the updated connection specification details, includin
     }
 }
 ```
+
+## Next steps
+
+Now that you have created a new connection specification, you must add its corresponding connection specification ID to an existing flow specification. See the tutorial on [updating flow specifications](./flow-specs.md) for more information.

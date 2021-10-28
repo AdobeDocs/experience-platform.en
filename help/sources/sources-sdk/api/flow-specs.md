@@ -13,7 +13,9 @@ description: The /flowSpecs endpoint in the Flow Service API allows you to creat
 
 Flow specifications contain information that define a flow, including the source and target connection IDs that it supports, transformation specifications that are needed to be applied to the data, and scheduling parameters required to generate a flow. You can create, view, and edit flow specifications by using the `/flowSpecs` endpoint.
 
-The following document provides steps on how to retrieve, create, and update flow specifications using the [!DNL Flow Service] API for Sources SDK.
+Once you have generated a new connection specification ID, you must add this ID to a flow specification in order to create a dataflow.
+
+The following document provides steps on how to retrieve and update flow specifications using the [!DNL Flow Service] API for Sources SDK.
 
 ## Getting started
 
@@ -21,26 +23,26 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Look up a flow specification {#lookup}
 
-You can look up a flow specification by making a GET request that include's the connection specification's ID in the path.
+Sources created with the `generic-rest-extension` template all use the `RestStorageToAEP` flow specification. This flow specification can be retrieved by making a GET request to the `/flowSpecs/` endpoint, and providing the `flowSpec.id` of `6499120c-0b15-42dc-936e-847ea3c24d72`.
 
 **API format**
 
 ```http
-GET /flowSpecs/{FLOW_SPEC_ID}
+GET /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 ```
 
 **Request**
 
-The following request retrieves the `a1233eac-89dc-4ab6-8793-a37618a8d80a` connection specification.
+The following request retrieves the `6499120c-0b15-42dc-936e-847ea3c24d72` connection specification.
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs/a1233eac-89dc-4ab6-8793-a37618a8d80a' \
+  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' 
+  -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
 **Response**
@@ -51,7 +53,7 @@ A successful response returns the details of the queried flow specification.
 {
   "items": [
       {
-          "id": "a1233eac-89dc-4ab6-8793-a37618a8d80a",
+          "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
           "createdAt": 1633080822911,
           "updatedAt": 1633080822911,
           "createdBy": "{CREATED_BY}",
@@ -61,7 +63,7 @@ A successful response returns the details of the queried flow specification.
           "sandboxId": "{SANDBOX_ID}",
           "sandboxName": "{SANDBOX_NAME}",
           "imsOrgId": "{IMS_ORG}",
-          "name": "RestStorageToPlatform",
+          "name": "RestStorageToAEP",
           "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
           "version": "1.0",
           "sourceConnectionSpecIds": [
@@ -234,12 +236,12 @@ You can update the fields of a connection specification through a PUT operation.
 
 >[!IMPORTANT]
 >
->You must update the list of `sourceConnectionSpecIds` of the flow specification that corresponds to a new source, every time a new source is created. This ensures that your new source is supported by an existing flow specification, thus allowing your complete the dataflow creation process with your new source.
+>You must update the list of `sourceConnectionSpecIds` of the flow specification that corresponds to a new source every time a new source is created. This ensures that your new source is supported by an existing flow specification, thus allowing you to complete the dataflow creation process with your new source.
 
 **API format**
 
 ```http
-PUT /flowSpecs/{FLOW_SPEC_ID}
+PUT /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 ```
 
 **Request**
@@ -250,13 +252,13 @@ The following request updates the flow specification of `6499120c-0b15-42dc-936e
 PUT -X GET \
   'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
-`      "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-      "name": "RestStorageToPlatform",
+`     "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
+      "name": "RestStorageToAEP",
       "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
       "version": "1.0",
       "attributes": {
@@ -437,7 +439,7 @@ A successful response returns the details of the queried flow specification, inc
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
     "imsOrgId": "{IMS_ORG}",
-    "name": "RestStorageToPlatform",
+    "name": "RestStorageToAEP",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",
     "sourceConnectionSpecIds": [
@@ -604,3 +606,7 @@ A successful response returns the details of the queried flow specification, inc
     }
 }
 ```
+
+## Next steps
+
+With your new connection specification added to the appropriate flow specification, you can now proceed to testing and submitting your new source. See the guide on [testing and submitting a new source](./submit.md) for more information.

@@ -1,9 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-solution: Experience Platform
 title: Sources SDK API Guide
 topic-legacy: overview
-description: his document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the Flow Service API
+description: This document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the Flow Service API
 ---
 # Sources SDK API guide
 
@@ -27,7 +26,7 @@ See the [connection specifications endpoint guide](./connection-specs.md) for mo
 
 ## Flow specifications
 
-Flow specifications contain information that define a flow, including the source and target connection IDs that it supports, transformation specifications that are needed to be applied to the data, and scheduling parameters required to generate a flow. You can create, view, and edit flow specifications by using the `/flowSpecs` endpoint.
+Flow specifications contain information that define a flow, including the source and target connection IDs that it supports, transformation specifications that are needed to be applied to the data, and scheduling parameters required to generate a flow. You can view and edit flow specifications by using the `/flowSpecs` endpoint.
 
 See the [flow specifications endpoint guide](./flow-specs.md) for more information on the use of this endpoint.
 
