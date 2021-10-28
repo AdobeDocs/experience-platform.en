@@ -60,7 +60,7 @@ Provide the required values and then select **[!UICONTROL Next]** to continue.
 
 ## Select data {#select-data}
 
-By design, Customer AI uses Consumer Experience Event, Adobe Analytics, and Adobe Audience Manager data to calculate propensity scores. When selecting a dataset only ones that are compatible with Customer AI are listed. To select a dataset select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
+By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience event, and Consumer Experience Event data to calculate propensity scores. When selecting a dataset only ones that are compatible with Customer AI are listed. To select a dataset select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
 
 ![Select and search for dataset](../images/user-guide/configure-dataset-page.png)
 
@@ -78,7 +78,7 @@ The dataset preview contains data such as the last update time, source schema, a
 
 <!-- https://www.adobe.com/go/cai-dataset-completeness -->
 
-In the dataset preview is a dataset completeness percentage value. This value provides a quick snapshot of how many columns in your dataset are empty/null. If a dataset contains a lot of missing values and these values are captured elsewhere, it is highly recommended you include the dataset containing the missing values. In this example Person ID is empty, however, Person ID is captured in a separate dataset that we can include.
+In the dataset preview is a dataset completeness percentage value. This value provides a quick snapshot of how many columns in your dataset are empty/null. If a dataset contains a lot of missing values and these values are captured elsewhere, it is highly recommended you include the dataset containing the missing values. In this example Person ID is empty, however, Person ID is captured in a separate dataset that can be included.
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ Datasets need to be aligned and contain the same Primary Identity in order to us
 
 The **[!UICONTROL Define goal]** step appears and it provides an interactive environment for you to visually define a prediction goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame.
 
-To create a goal, select **[!UICONTROL Enter Field Name]** and select a field from the dropdown list. Select the second input and select a clause for the event's condition, then provide the target value to complete the event. Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
+To create a goal, select **[!UICONTROL Enter Field Name]** and select a field from the dropdown list. Select the second input and select a clause for the event's condition, then optionally provide the target value to complete the event. Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
 
 ![](../images/user-guide/define-a-goal.png)
 
@@ -115,13 +115,13 @@ To create a goal, select **[!UICONTROL Enter Field Name]** and select a field fr
 
 While defining your goal, you have the option to select **[!UICONTROL Will occur]** or **[!UICONTROL Will not occur]**. Selecting **[!UICONTROL Will occur]** means that the event conditions you define need to be met for a customer's event data to be included in the insights UI. 
 
-For example, if you would like to set up an app to predict whether a customer will make a purchase, you can select **[!UICONTROL Will occur]** followed by **[!UICONTROL All of]** and then enter **commerce.purchases.id** and **exists** as the operator.
+For example, if you would like to set up an app to predict whether a customer will make a purchase, you can select **[!UICONTROL Will occur]** followed by **[!UICONTROL All of]** and then enter **commerce.purchases.id** (or a similar field) and **exists** as the operator.
 
 ![will occur](../images/user-guide/occur.png)
 
 However, there may be cases when you are interested in predicting whether some event will not happen in a certain timeframe. To configure a goal with this option, select **[!UICONTROL Will not occur]** from the top-level dropdown.
 
-For example, if you are interested in predicting which customers become less engaged and do not visit your account login page in the next month. Select **[!UICONTROL Will not occur]** followed by **[!UICONTROL All of]** and then enter **web.webInteraction.URL** and **[!UICONTROL equals]** as the operator with **account-login** as the value.
+For example, if you are interested in predicting which customers become less engaged and do not visit your account login page in the next month. Select **[!UICONTROL Will not occur]** followed by **[!UICONTROL All of]** and then enter **web.webInteraction.URL** (or a similar field) and **[!UICONTROL equals]** as the operator with **account-login** as the value.
 
 ![will not occur](../images/user-guide/not-occur.png)
 
@@ -138,6 +138,12 @@ In order to predict whether a customer will have any event from a given set, you
 For example, you may want to predict whether a customer visits a certain URL or a web page with a particular name. This prediction goal is defined by two conditions: `web.webPageDetails.URL` **starts with** a particular value and `web.webPageDetails.name` **starts with** a particular value.
 
 ![Any of example](../images/user-guide/any-of.png)
+
+### Eligible population *(optional)*
+
+By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
+
+![eligible population](../images/user-guide/eligible-population.png)
 
 ### Custom events (*optional*) {#custom-events}
 
@@ -159,11 +165,16 @@ Lastly, enter the field value(s) if the operator selected requires one. In this 
 
 Once complete, select **[!UICONTROL Next]** in the top-right to continue.
 
-### Eligible population *(optional)*
+### Custom Profile attributes (*optional*)
 
-By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
+You can define additional fields in your data in addition to the standard event fields used by Customer AI to generate propensity scores. Adding custom profile attributes allows Customer AI to better showcase how particular profiles ended up in a propensity bucket. Similar to adding a custom event, adding profile attributes can make the insights Customer AI generates after scoring easier to read.
 
-![eligible population](../images/user-guide/eligible-population.png)
+>[!NOTE]
+>
+>Adding a custom Profile attribute follows the same workflow as adding a custom event.
+
+<!-- Need updated UI to be live in order to add this screen -->
+![add a custom profile attribute]()
 
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
