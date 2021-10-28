@@ -8,7 +8,21 @@ description: The latest release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| `contains_key` function | The `contains_key` function has been introduced, which lets you check if the object exists within the source. This function replaces the `is_set` function, which is now deprecated. |
+| Error messages | Error messages returned by the `/mappingSets/preview` endpoint in the Data Prep API are now consistent with the error messages that are generated during runtime. |
+
+See the [[!DNL Data Prep] overview](../../data-prep/home.md) to learn more about this service.
 
 ## Sources {#sources}
 
