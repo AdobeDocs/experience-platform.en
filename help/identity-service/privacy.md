@@ -1,8 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics
-solution: Experience Platform
 title: Privacy Request Processing in Identity Service
-type: Documentation
 description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by numerous privacy regulations. This document covers essential concepts related to processing privacy requests for Identity Service.
 ---
 
@@ -36,15 +34,15 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ## Submitting requests {#submit}
 
-The sections below outline how to make privacy requests for [!DNL Identity Service] using the [!DNL Privacy Service] API or UI. Before reading these sections, it is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+The sections below outline how to make privacy requests for [!DNL Identity Service] using the [!DNL Privacy Service] API or UI. Before reading these sections, it is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format user data in request payloads.
 
 ### Using the API
 
 When creating job requests in the API, any IDs provided within `userIDs` must use a specific `namespace` and `type`. A valid [identity namespace](#namespaces) recognized by [!DNL Identity Service] must be provided for the `namespace` value, while the `type` must be either `standard` or `unregistered` (for standard and custom namespaces, respectively).
 
-In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to [!DNL Identity], the array must include the value "Identity".
+In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to [!DNL Identity], the array must include the value `Identity`.
 
-The following request creates a new privacy job for a single customer's data in the [!DNL Identity] store. Two identity values are provided for the customer in the `userIDs` array; one using the standard `Email` identity namespace, and the other using an `ECID` namespace, It also includes the product value for [!DNL Identity] (`Identity`) in the `include` array:
+The following request creates a new privacy job under the GDPR for a single customer's data in the [!DNL Identity] store. Two identity values are provided for the customer in the `userIDs` array; one using the standard `Email` identity namespace, and the other using an `ECID` namespace, It also includes the product value for [!DNL Identity] (`Identity`) in the `include` array:
 
 ```shell
 curl -X POST \
@@ -80,9 +78,6 @@ curl -X POST \
       }
     ],
     "include": ["Identity"],
-    "expandIds": false,
-    "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
     "regulation": "gdpr"
 }'
 ```
@@ -99,6 +94,4 @@ When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Ser
 
 ## Next steps
 
-By reading this document, you have been introduced to the important concepts involved with processing privacy requests in Experience Platform. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
-
-For information on processing privacy requests for other [!DNL Experience Cloud] applications, see the document on [[!DNL Privacy Service] and [!DNL Experience Cloud] applications](../privacy-service/experience-cloud-apps.md).
+By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Identity Service]. For information on processing privacy requests for other [!DNL Experience Cloud] applications, see the document on [[!DNL Privacy Service] and [!DNL Experience Cloud] applications](../privacy-service/experience-cloud-apps.md).
