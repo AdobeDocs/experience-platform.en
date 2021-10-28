@@ -76,16 +76,16 @@ After applying the descriptor, the Schema Registry responds with the following w
   "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
   "title": "Example Schema",
   "properties": {
-     "xdm:eventType": {
-       "type":"string",
-       "title": "Enum Event Type",
-       "description": "Event type field with soft enum values",
-       "meta:enum": {
-         "eventA": "Event Type A",
-         "eventB": "Event Type B"
-       }
-     }
-   }
+    "xdm:eventType": {
+      "type":"string",
+      "title": "Enum Event Type",
+      "description": "Event type field with soft enum values",
+      "meta:enum": {
+        "eventA": "Event Type A",
+        "eventB": "Event Type B"
+      }
+    }
+  }
 }
 ```
 
