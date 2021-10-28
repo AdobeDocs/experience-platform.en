@@ -6,7 +6,7 @@ description: Learn how to extend a soft enum field in the Schema Registry API.
 
 In Experience Data Model (XDM), an enum field represents a string field that is constrained to a pre-defined subset of values. Enum fields can provide validation to ensure that ingested data conforms to a set of accepted values (referred to as a "hard enum"), or they can simply represent a set of suggested values without enforcing constraints (referred to as a "soft enum").
 
-In the Schema Registry API, the constrained values for a hard enum are represented by an `enum` array, while a `meta:enum` object provides friendly display names for the those values:
+In the Schema Registry API, the constrained values for a hard enum are represented by an `enum` array, while a `meta:enum` object provides friendly display names for those values:
 
 ```json
 "sampleHardEnumField": {
@@ -133,7 +133,11 @@ To extend the `meta:enum` of a custom field, you can update the field's parent c
 
 >[!WARNING]
 >
->In contrast with standard fields, updating the `meta:enum` of a custom field affects all other schemas that employ that field. If you do not want changes to propagate across schemas, consider creating a new custom resource instead.
+>In contrast with standard fields, updating the `meta:enum` of a custom field affects all other schemas that employ that field. If you do not want changes to propagate across schemas, consider creating a new custom resource instead:
+>
+>* [Create a custom class](../api/classes.md#create)
+>* [Create a custom field group](../api/field-groups.md#create)
+>* [Create a custom data type](../api/data-types.md#create)
 
 The following request updates the `meta:enum` of a "loyalty level" field provided by a custom data type:
 
