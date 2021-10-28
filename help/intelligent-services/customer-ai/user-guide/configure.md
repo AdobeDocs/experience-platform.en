@@ -165,9 +165,9 @@ Lastly, enter the field value(s) if the operator selected requires one. In this 
 
 Once complete, select **[!UICONTROL Next]** in the top-right to continue.
 
-### Custom Profile attributes (*optional*)
+### Custom profile attributes (*optional*)
 
-You can define important Profile dataset fields (with timestamps) in your data in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores. Using this option allows you add additional Profile attributes that you deem influential which may improve the quality of your model and provide more accurate results. Additionally, adding custom Profile attributes allows Customer AI to better showcase how particular profiles ended up in a propensity bucket.
+You can define important Profile dataset fields (with timestamps) in your data in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores. Using this option allows you to add additional profile attributes that you deem influential which may improve the quality of your model and provide more accurate results. Additionally, adding custom profile attributes allows Customer AI to better showcase how particular profiles ended up in a propensity bucket.
 
 >[!NOTE]
 >

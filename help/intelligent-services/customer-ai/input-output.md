@@ -84,11 +84,11 @@ To view a field group in the Platform UI, select the **[!UICONTROL Schemas]** ta
 
 Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide data for as many fields as possible such as, `startDate`, `endDate`, and any other relevant details.
 
-### Adding custom events and Profile attributes
+### Adding custom events and profile attributes
 
-If you have information you wish to include in addition to the [standard event fields](#standard-events) used by Customer AI, a custom event and custom Profile attribute option is provided during your [instance configuration](./user-guide/configure.md#custom-events). 
+If you have information you wish to include in addition to the [standard event fields](#standard-events) used by Customer AI, a custom event and custom profile attribute option is provided during your [instance configuration](./user-guide/configure.md#custom-events). 
 
-If the dataset you selected includes custom events or profile attributes such as a hotel reservation or employee of X company defined in your schema, you can add them to your instance. These additional custom events and Profile attributes are used by Customer AI to improve the quality of your model and provide more accurate results.
+If the dataset you selected includes custom events or profile attributes such as a "hotel reservation" or "employee of X company" defined in your schema, you can add them to your instance. These additional custom events and profile attributes are used by Customer AI to improve the quality of your model and provide more accurate results.
 
 ### Historical data {#data-requirements}
 
