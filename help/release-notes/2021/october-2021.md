@@ -9,7 +9,7 @@ description: The latest release notes for Adobe Experience Platform.
 Updates to existing features in Adobe Experience Platform:
 
 - [User interface updates](#ui)
-- [!DNL Data Prep](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
 
 ## [User interface updates] {#ui}
