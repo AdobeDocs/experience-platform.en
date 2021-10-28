@@ -36,8 +36,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
   * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
-  * [Real-time Customer Data Platform](../rtcdp/overview.md)
-  * [Real-time Customer Data Platform B2B Edition](../rtcdp/b2b-overview.md)
+  * [Real-time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
   * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Governance, privacy, and security {#governance-privacy-security}
