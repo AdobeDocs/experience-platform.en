@@ -1,5 +1,5 @@
 ---
-title: Overview of Segmentation Use Cases for Real-time CDP B2B Edition (Beta).
+title: Overview of Segmentation Use Cases for Real-time CDP B2B Edition (Beta)
 description: An overview of the various available Real-time CDP B2B Edition use cases.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 ---
@@ -15,7 +15,7 @@ This document provides examples regarding the segmentation available for Real-ti
 
 >[!NOTE]
 >
->The attributes required for these segmentation use cases are only available to Real-time Customer Data Platform B2B Edition customers.If you are not using Real-time Customer Data Platform B2B Edition, see the [segmentation overview](./segmentation-overview.md) instead.
+>The attributes required for these segmentation use cases are only available to Real-time Customer Data Platform B2B Edition customers. If you are not using Real-time Customer Data Platform B2B Edition, see the [segmentation overview](./segmentation-overview.md) instead.
 
 ## Prerequisites
 
