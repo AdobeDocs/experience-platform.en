@@ -9,6 +9,10 @@ description: This document provides an overview of the configurations you need t
 
 Explore specifications defines the parameters required for exploring and inspecting objects contained in your source. Explore specifications also defines the response format returned when objects are explored and inspected.
 
+>[!TIP]
+>
+>Explore specifications is hard-coded and you can simply copy and paste the payload below to your connection specification.
+
 ```json
 "exploreSpec": {
   "name": "Resource",

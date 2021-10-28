@@ -11,9 +11,11 @@ Authentication specifications define how Adobe Experience Platform users can con
 
 The `authSpec` array contains information on the authentication parameters required to connect a source to Platform. Any given source can support multiple different types of authentication.
 
-[!DNL Sources SDK] supports OAuth 2 refresh code and basic authentication.
+Currently, [!DNL Sources SDK] supports OAuth 2 refresh code and basic authentication.
 
 ## OAuth 2 refresh code
+
+OAuth 2 refresh code allows for the secure access to an application by generating a temporary access token and a refresh token. The access token allows you to securely access your resources without having to provide other credentials, while the refresh token allows you to generate a new access token, once the access token expires.
 
 ```json
 {
@@ -92,6 +94,8 @@ The `authSpec` array contains information on the authentication parameters requi
 
 ## Basic authentication
 
+Basic authentication is an authentication type that allows you to access your application by using a combination of your application's host URL, your account username, and your account password.
+
 ```json
 {
   "name": "Basic Authentication",
@@ -126,7 +130,7 @@ The `authSpec` array contains information on the authentication parameters requi
 
 | Property| Description | Example |
 | --- | --- | --- |
-| `authSpec.name` | Displays the name of the supported authentication type. | `oAuth2-refresh-code` |
+| `authSpec.name` | Displays the name of the supported authentication type. | `Basic Authentication` |
 | `authSpec.type` | Defines the type of authentication supported by the source. | `oAuth2-refresh-code` |
 | `authSpec.spec` | Contains information on the authentication's schema, data type, and properties. |
 | `authSpec.spec.$schema` | Defines the schema used for the authentication. | `http://json-schema.org/draft-07/schema#` |
