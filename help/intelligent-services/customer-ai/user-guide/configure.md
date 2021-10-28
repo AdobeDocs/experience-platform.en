@@ -147,7 +147,7 @@ By default, propensity scores are generated for all profiles unless an eligible 
 
 ### Custom events (*optional*) {#custom-events}
 
-If you have additional information in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores, a custom events option is provided. If the dataset you selected includes custom events defined in your schema, you can add them to your instance.
+If you have additional information in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores, a custom events option is provided. Using this option allows you add additional events that you deem influential which may improve the quality of your model and help to provide more accurate results. If the dataset you selected includes custom events defined in your schema, you can add them to your instance.
 
 ![event feature](../images/user-guide/event-feature.png)
 
@@ -167,7 +167,7 @@ Once complete, select **[!UICONTROL Next]** in the top-right to continue.
 
 ### Custom Profile attributes (*optional*)
 
-You can define additional fields in your data in addition to the standard event fields used by Customer AI to generate propensity scores. Adding custom profile attributes allows Customer AI to better showcase how particular profiles ended up in a propensity bucket. Similar to adding a custom event, adding profile attributes can make the insights Customer AI generates after scoring easier to read.
+You can define important Profile dataset fields (with timestamps) in your data in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores. Using this option allows you add additional Profile attributes that you deem influential which may improve the quality of your model and provide more accurate results. Additionally, adding custom Profile attributes allows Customer AI to better showcase how particular profiles ended up in a propensity bucket.
 
 >[!NOTE]
 >
