@@ -26,7 +26,6 @@ See the [Platform UI Guide](../../landing/ui-guide.md) to learn more.
 
 Updates to existing features in Adobe Experience Platform:
 
-- [User interface](#ui)
 - [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
 
