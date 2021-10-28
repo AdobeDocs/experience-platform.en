@@ -15,9 +15,10 @@ The following document outlines the different required events, inputs, and outpu
 
 Customer AI works by analyzing one of the following datasets to predict churn or conversion propensity scores:
 
-- Consumer Experience Event (CEE) dataset
 - Adobe Analytics data using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Adobe Audience Manager data using the [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- Experience Event (EE) dataset
+- Consumer Experience Event (CEE) dataset
 
 >[!IMPORTANT]
 >
@@ -43,7 +44,7 @@ The following table outlines some common terminology used in this document:
 >
 > Customer AI automatically determines which events are useful for predictions and raises a warning if the available data is not sufficient to generate quality predictions.
 
-Customer AI supports CEE, Adobe Analytics, and Adobe Audience Manager datasets. The CEE schema requires you to add field groups during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below during the connection process. 
+Customer AI supports Adobe Analytics, Adobe Audience Manager, Experience Event (EE), and Consumer Experience event (CEE) datasets. The CEE schema requires you to add field groups during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below during the connection process. You can add multiple datasets from different sources if each of the datasets shares the same Namespace and Primary Identity such as an ECID.
 
 For more information on mapping Adobe Analytics data or Audience Manager data, visit the [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md) or [Audience Manager field mappings](../../sources/connectors/adobe-applications/mapping/audience-manager.md) guide.
 
