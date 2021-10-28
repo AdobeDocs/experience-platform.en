@@ -49,178 +49,242 @@ A successful response returns the details of the queried connection specificatio
 
 ```json
 {
-  "items": [
-      {
-          "id": "c4b4d052-0aa6-46e0-9970-5088a8b05327",
-          "createdAt": 1633383140981,
-          "updatedAt": 1633383140981,
-          "createdBy": "{CREATED_BY}",
-          "updatedBy": "{UPDATED_BY}",
-          "createdClient": "{CREATED_CLIENT}",
-          "updatedClient": "{UPDATED_CLIENT}",
-          "sandboxId": "{SANDBOX_ID}",
-          "sandboxName": "{SANDBOX_NAME}",
-          "imsOrgId": "{IMS_ORG}",
-          "name": "generic-rest-extension",
-          "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-          "version": "1.0",
-          "type": "generic-rest",
-          "authSpec": [
-              {
-                  "name": "OAuth2 Refresh Code",
-                  "type": "OAuth2RefreshCode",
-                  "spec": {
-                      "$schema": "http://json-schema.org/draft-07/schema#",
-                      "type": "object",
-                      "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
-                      "properties": {
-                          "host": {
-                              "type": "string",
-                              "description": "Enter resource url host path"
-                          },
-                          "authorizationTestUrl": {
-                              "description": "Authorization test url to validate accessToken.",
-                              "type": "string"
-                          },
-                          "accessToken": {
-                              "description": "Access Token of mailChimp endpoint.",
-                              "type": "string",
-                              "format": "password"
-                          }
-                      },
-                      "required": [
-                          "host",
-                          "accessToken"
-                      ]
-                  }
-              },
-              {
-                  "name": "Basic Authentication",
-                  "type": "BasicAuthentication",
-                  "spec": {
-                      "$schema": "http://json-schema.org/draft-07/schema#",
-                      "type": "object",
-                      "description": "defines auth params required for connecting to rest service.",
-                      "properties": {
-                          "host": {
-                              "type": "string",
-                              "description": "Enter resource url host path."
-                          },
-                          "username": {
-                              "description": "Username to connect mailChimp endpoint.",
-                              "type": "string"
-                          },
-                          "password": {
-                              "description": "Password to connect mailChimp endpoint.",
-                              "type": "string",
-                              "format": "password"
-                          }
-                      },
-                      "required": [
-                          "host",
-                          "username",
-                          "password"
-                      ]
-                  }
-              }
-          ],
-          "sourceSpec": {
-              "spec": {
-                  "$schema": "http://json-schema.org/draft-07/schema#",
-                  "type": "object",
-                  "description": "Define user input parameters to fetch resource values.",
-                  "properties": {
-                      "listId": {
-                          "type": "string",
-                          "description": "listId for which members need to fetch."
-                      }
-                  }
-              },
-              "attributes": {
-                  "uiAttributes": {
-                      "isSource": true,
-                      "isPreview": true,
-                      "isBeta": true,
-                      "icon": {
-                          "key": "mailchimpMembersIcon"
-                      },
-                      "description": {
-                          "key": "mailchimpMembersDescription"
-                      },
-                      "label": {
-                          "key": "mailchimpMembersLabel"
-                      }
-                  },
-                  "urlParams": {
-                      "path": "/3.0/lists/${listId}/members",
-                      "method": "GET"
-                  },
-                  "contentPath": "$.members",
-                  "paginationParams": {
-                      "type": "OFFSET",
-                      "limitName": "count",
-                      "limitValue": "100",
-                      "offSetName": "offset"
-                  },
-                  "scheduleParams": {
-                      "scheduleStartParamName": "since_last_changed",
-                      "scheduleEndParamName": "before_last_changed",
-                      "scheduleStartParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK",
-                      "scheduleEndParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK"
-                  }
-              }
-          },
-          "exploreSpec": {
-              "name": "Resource",
-              "type": "Resource",
-              "requestSpec": {
-                  "$schema": "http://json-schema.org/draft-07/schema#",
-                  "type": "object"
-              },
-              "responseSpec": {
-                  "$schema": "http: //json-schema.org/draft-07/schema#",
-                  "type": "object",
-                  "properties": {
-                      "format": {
-                          "type": "string"
-                      },
-                      "schema": {
-                          "type": "object",
-                          "properties": {
-                              "columns": {
-                                  "type": "array",
-                                  "items": {
-                                      "type": "object",
-                                      "properties": {
-                                          "name": {
-                                              "type": "string"
-                                          },
-                                          "type": {
-                                              "type": "string"
-                                          }
-                                      }
-                                  }
-                              }
-                          }
-                      },
-                      "data": {
-                          "type": "array",
-                          "items": {
-                              "type": "object"
-                          }
-                      }
-                  }
-              }
-          },
-          "attributes": {
-              "uiAttributes": {
-                  "apiFeatures": {
-                      "explorePaginationSupported": false
-                  }
-              }
-          }
+  "id": "<UUID_OF_CONNECTOR_SPEC>",
+  "name": "generic-rest-extension",
+  "type": "generic-rest",
+  "description": "<CONNECTOR_DESCRIPTION>",
+  "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+  "version": "1.0",
+  "attributes": {
+    "uiAttributes": {
+      "apiFeatures": {
+        "explorePaginationSupported": false
       }
-  ]
+    }
+  },
+  "authSpec": [
+    {
+      "name": "OAuth2 Refresh Code",
+      "type": "OAuth2RefreshCode",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
+        "properties": {
+          "host": {
+            "type": "string",
+            "description": "Enter resource url host path."
+          },
+          "authorizationTestUrl": {
+            "description": "Authorization test url to validate accessToken.",
+            "type": "string"
+          },
+          "clientId": {
+            "description": "Client id of user account.",
+            "type": "string"
+          },
+          "clientSecret": {
+            "description": "Client secret of user account.",
+            "type": "string",
+            "format": "password"
+          },
+          "accessToken": {
+            "description": "Access Token",
+            "type": "string",
+            "format": "password"
+          },
+          "refreshToken": {
+            "description": "Refresh Token",
+            "type": "string",
+            "format": "password"
+          },
+          "expirationDate": {
+            "description": "Date of token expiry.",
+            "type": "string",
+            "format": "date",
+            "uiAttributes": {
+              "hidden": true
+            }
+          },
+          "accessTokenUrl": {
+            "description": "Access token url to fetch access token.",
+            "type": "string"
+          },
+          "requestParameterOverride": {
+            "type": "object",
+            "description": "Specify parameter to override.",
+            "properties": {
+              "accessTokenField": {
+                "description": "Access token field name to override.",
+                "type": "string"
+              },
+              "refreshTokenField": {
+                "description": "Refresh token field name to override.",
+                "type": "string"
+              },
+              "expireInField": {
+                "description": "ExpireIn field name to override.",
+                "type": "string"
+              },
+              "authenticationMethod": {
+                "description": "Authentication method override.",
+                "type": "string",
+                "enum": [
+                  "GET",
+                  "POST"
+                ]
+              },
+              "clientId": {
+                "description": "ClientId field name override.",
+                "type": "string"
+              },
+              "clientSecret": {
+                "description": "ClientSecret field name override.",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "host",
+          "accessToken"
+        ]
+      }
+    },
+    {
+      "name": "Basic Authentication",
+      "type": "BasicAuthentication",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "defines auth params required for connecting to rest service.",
+        "properties": {
+          "host": {
+            "type": "string",
+            "description": "Enter resource url host path"
+          },
+          "username": {
+            "description": "Username to connect rest endpoint.",
+            "type": "string"
+          },
+          "password": {
+            "description": "Password to connect rest endpoint.",
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "required": [
+          "host",
+          "username",
+          "password"
+        ]
+      }
+    }
+  ],
+  "sourceSpec": {
+    "attributes": {
+      "uiAttributes": {
+        "isSource": true,
+        "isPreview": true,
+        "isBeta": true,
+        "category": {
+          "key": "<CATEGORY_OF_CONNECTOR_KEY>"
+        },
+        "icon": {
+          "key": "<ICON_TO_BE_USED_BY_CONNECTOR_KEY>"
+        },
+        "description": {
+          "key": "<CONNECTOR_DESCRIPTION_KEY>"
+        },
+        "label": {
+          "key": "<LABEL_DISPLAYED_FOR_CONNECTOR_KEY>"
+        }
+      },
+      "urlParams": {
+        "path": "<RESOURCE_PATH>",
+        "method": "<GET or POST>",
+        "queryParams": "<QUERY_PARAMS>"
+      },
+      "headerParams": "<HEADER_VALUES>",
+      "bodyParams": "<BODY_PART_INCASE_METHOD_IS_POST>",
+      "contentPath": {
+        "path": "<PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS>",
+        "skipAttributes": [],
+        "overrideWrapperAttribute": "<OVERRIDE_ATTRIBUTES>"
+      },
+      "explodeEntityPath": {
+        "path": "<PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS>",
+        "skipAttributes": [],
+        "overrideWrapperAttribute": "<OVERRIDE_ATTRIBUTES>"
+      },
+      "paginationParams": {
+        "type": "<OFFSET OR POINTER>",
+        "limitName": "<NUMBER OF RECORDS ATTRIBUTE NAME>",
+        "limitValue": "<NUMBER OF RECORDS PER PAGE>",
+        "offSetName": "<OFFSET ATTRIBUTE NAME REQUIRED IN CASE OF OFFSET BASED PAGINATION>",
+        "pointerName": "<POINTER_PATH REQUIRED IN CASE OF POINTER BASED PAGINATION>"
+      },
+      "scheduleParams": {
+        "scheduleStartParamName": "<START TIME PARAMETER NAME>",
+        "scheduleEndParamName": "<END TIME PARAMETER NAME>",
+        "scheduleStartParamFormat": "<DATE TIME FORMAT FOR START TIME>",
+        "scheduleEndParamFormat": "<END TIME FORMAT FOR START TIME>"
+      }
+    },
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "description": "Define user input parameters to fetch resource values.",
+      "properties": {
+        "listId": {
+          "type": "string",
+          "description": "listId for which members need to fetch."
+        }
+      }
+    }
+  },
+  "exploreSpec": {
+    "name": "Resource",
+    "type": "Resource",
+    "requestSpec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object"
+    },
+    "responseSpec": {
+      "$schema": "http: //json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "format": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
 }
 ```
 
