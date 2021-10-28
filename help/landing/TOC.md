@@ -53,7 +53,6 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * Audit logs (Beta) {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
 * [License usage dashboard](license-usage-dashboard.md)
-* [Real-time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
 * [Troubleshooting guide](troubleshooting.md)
 * [Gen2 data lake migration](adls2-gen2-migration.md)
 * [Glossary](glossary.md)
