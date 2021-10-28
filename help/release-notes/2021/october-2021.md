@@ -8,8 +8,19 @@ description: The latest release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
+- [User interface updates](#ui)
+- [!DNL Data Prep](#data-prep)
 - [Sources](#sources)
+
+## [User interface updates] {#ui}
+
+The user interface has been updated with the following changes:
+
+- Toggle between the light and dark theme for the Platform interface with the switch located just below your name and email. 
+- Click the menu icon at the top left of the interface to show or hide the left navigation panel. You can lock the navigation in the open position by clicking again after showing the panel.
+- The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were visible but disabled.
+
+See the [Platform UI Guide](../../landing/ui-guide.md) to learn more.
 
 ## [!DNL Data Prep] {#data-prep}
 
