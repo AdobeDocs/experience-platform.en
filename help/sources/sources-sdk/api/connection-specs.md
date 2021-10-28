@@ -19,33 +19,12 @@ The following document provides steps on how create a connection specification u
 
 Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Look up a connection specification {#lookup}
+## Gather artifacts
 
-You can look up a specific connection specification by making a GET request that include's the connection specification's ID in the path.
+## Copy connection specification template
 
-**API format**
+Once you have gathered the required information, copy and paste the connection specification template below to the text editor of your choice and then update the attributes with information relevant to your specific source. 
 
-```http
-GET /connectionSpecs/{CONNECTION_SPEC_ID}
-```
-
-**Request**
-
-The following request retrieves the `c4b4d052-0aa6-46e0-9970-5088a8b05327` connection specification.
-
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c4b4d052-0aa6-46e0-9970-5088a8b05327' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' 
-```
-
-**Response**
-
-A successful response returns the details of the queried connection specification.
 
 ```json
 {
@@ -290,7 +269,7 @@ A successful response returns the details of the queried connection specificatio
 
 ## Create a connection specification {#create}
 
-To create a connection specification, you must first retrieve a `generic-rest` type of connection specification using the [!DNL Flow Service] API. Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then update the attributes with information relevant to your specific source. For more information on connection specifications, including details particular to its several arrays, see the documentation on [preparing your configurations](../config.md).
+To create a connection specification, you must first retrieve a `generic-rest` type of connection specification using the [!DNL Flow Service] API. Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then update the attributes with information relevant to your specific source. For more information on connection specifications, including details particular to its several arrays, see the documentation on [preparing your configurations](../config/config.md).
 
 With your specification information updated, you can submit the new connection specification by making a POST request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API.
 
