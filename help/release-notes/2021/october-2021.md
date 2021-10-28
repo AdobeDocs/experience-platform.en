@@ -6,23 +6,30 @@ description: The latest release notes for Adobe Experience Platform.
 
 **Release date: October 27, 2021**
 
-Updates to existing features in Adobe Experience Platform:
+## Updates to Experience Platform
 
-- [User interface updates](#ui)
-- [[!DNL Data Prep]](#data-prep)
-- [Sources](#sources)
+Updates to Experience Platform.
 
-## [User interface updates] {#ui}
+### [User interface] {#ui}
 
 The user interface has been updated with the following changes:
 
-- Toggle between the light and dark theme for the Platform interface with the switch located just below your name and email. 
-- Click the menu icon at the top left of the interface to show or hide the left navigation panel. You can lock the navigation in the open position by clicking again after showing the panel.
-- The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were visible but disabled.
+| Feature | Description |
+| Dark theme | Use the Dark theme switch to toggle between light and dark themes in the Platform interface. The switch is located in the user profile below user name and email. |
+| Toggle left navigation | Use the improved navigation toggle at the top of the application header to show or hide the menu displaying your Experience Platform capabilities. The system remembers your last selection and shows you only the capabilities you have access to. |
+| Access visibility | The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were visible, even if you were not able to access them. |
 
 See the [Platform UI Guide](../../landing/ui-guide.md) to learn more.
 
-## [!DNL Data Prep] {#data-prep}
+## Updates to existing features
+
+Updates to existing features in Adobe Experience Platform:
+
+- [User interface](#ui)
+- [[!DNL Data Prep]](#data-prep)
+- [Sources](#sources)
+
+### [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -35,7 +42,7 @@ See the [Platform UI Guide](../../landing/ui-guide.md) to learn more.
 
 See the [[!DNL Data Prep] overview](../../data-prep/home.md) to learn more about this service.
 
-## Sources {#sources}
+### Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
