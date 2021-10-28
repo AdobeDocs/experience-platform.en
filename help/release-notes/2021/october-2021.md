@@ -6,10 +6,7 @@ description: The latest release notes for Adobe Experience Platform.
 
 **Release date: October 27, 2021**
 
-- [Updates to Experience Platform](#aep)
-- [Updates to existing features](#existing)
-
-## Updates to Experience Platform {#aep}
+## Updates to Experience Platform
 
 Updates to Experience Platform.
 
@@ -18,13 +15,14 @@ Updates to Experience Platform.
 The user interface has been updated with the following changes:
 
 | Feature | Description |
+| --- | --- |
 | Dark theme | Use the Dark theme switch to toggle between light and dark themes in the Platform interface. The switch is located in the user profile below user name and email. |
 | Toggle left navigation | Use the improved navigation toggle at the top of the application header to show or hide the menu displaying your Experience Platform capabilities. The system remembers your last selection and shows you only the capabilities you have access to. |
 | Access visibility | The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were visible, even if you were not able to access them. |
 
 See the [Platform UI Guide](../../landing/ui-guide.md) to learn more.
 
-## Updates to existing features {#existing}
+## Updates to existing features
 
 Updates to existing features in Adobe Experience Platform:
 
