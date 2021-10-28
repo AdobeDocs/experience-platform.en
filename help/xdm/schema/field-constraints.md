@@ -270,6 +270,7 @@ To begin, find the desired field type and use the sample code provided to build 
   },
   "default": "value1"
 }</pre>
+    <br>Note that the <code>meta:enum</code> value does <strong>not</strong> declare an enumeration or drive any data validation on its own. In most cases, strings provided under <code>meta:enum</code> are also provided under <code>enum</code> to ensure that data is constrained. However, there are some use cases where `enum` and `meta:enum` may not match. See the tutorial on <a href="../tutorials/extend-soft-enum.md">extending soft enums</a> for more information.
     </td>
   </tr>
   <tr>
