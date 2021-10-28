@@ -30,7 +30,7 @@ While each organization can potentially have multiple merge policies per schema 
 >
 >When you set a new merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
 
-To ensure all profile customers are working with the same view on edges, merge policies can be marked as active on edge. In order for a segment to be activated on edge (marked as an edge segment), it must be tied to a merge policy that is marked as active on edge. If a segment is **not** tied to a merge policy that is marked as active on edge, the segment will not be marked as active on edge, and will be marked as a streaming segment.
+To ensure all profile consumers are working with the same view on edges, merge policies can be marked as active on edge. In order for a segment to be activated on edge (marked as an edge segment), it must be tied to a merge policy that is marked as active on edge. If a segment is **not** tied to a merge policy that is marked as active on edge, the segment will not be marked as active on edge, and will be marked as a streaming segment.
 
 Additionally, each IMS Organization can only have **one** merge policy that is active on edge. If a merge policy is active on edge, it can be used for other systems on edge, such as Edge Profile, Edge Segmentation, and Destinations on Edge. 
 
