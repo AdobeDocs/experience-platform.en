@@ -6,7 +6,10 @@ description: The latest release notes for Adobe Experience Platform.
 
 **Release date: October 27, 2021**
 
-## Updates to Experience Platform
+- [Updates to Experience Platform](#aep)
+- [Updates to existing features](#existing)
+
+## Updates to Experience Platform {#aep}
 
 Updates to Experience Platform.
 
@@ -21,7 +24,7 @@ The user interface has been updated with the following changes:
 
 See the [Platform UI Guide](../../landing/ui-guide.md) to learn more.
 
-## Updates to existing features
+## Updates to existing features {#existing}
 
 Updates to existing features in Adobe Experience Platform:
 
