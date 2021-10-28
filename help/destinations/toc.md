@@ -154,6 +154,7 @@ feature: Destinations
         * [Create and test a message transformation template](./destination-sdk/create-template.md)
         * [Test your destination configuration](./destination-sdk/test-destination.md)
     * API operations {#api}
+      * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Destinations endpoint API operations](./destination-sdk/destination-configuration-api.md)
       * [Destination server endpoint API operations](./destination-sdk/destination-server-api.md)
       * [Audience metadata endpoint API operations](./destination-sdk/audience-metadata-api.md)
