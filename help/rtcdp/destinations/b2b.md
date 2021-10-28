@@ -1,9 +1,17 @@
 ---
-title: Destinations in Real-time Customer Data Platform B2B Edition
+title: Destinations in Real-time Customer Data Platform B2B Edition (Beta)
 description: An overview of the role of destinations in Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
 ---
-# An overview of destinations in Real-time Customer Data Platform B2B Edition
+# Destinations in Real-time Customer Data Platform B2B Edition (Beta)
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
+
+>[!NOTE]
+>
+>If you are not using Real-time Customer Data Platform B2B Edition, see the [overview of destinations](../../destinations/home.md) instead.
 
 Experience Platform destinations including Marketo, Google, Linkedin, and Facebook, are available and fully supported by Real-time CDP B2B Edition.
 
