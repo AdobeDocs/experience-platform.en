@@ -18,47 +18,47 @@ Source specifications contain information specific to a source, including attrib
       "isPreview": true,
       "isBeta": true,
       "category": {
-        "key": "<CATEGORY_OF_CONNECTOR_KEY>"
+        "key": "{CATEGORY_OF_CONNECTOR_KEY}"
       },
       "icon": {
-        "key": "<ICON_TO_BE_USED_BY_CONNECTOR_KEY>"
+        "key": "{ICON_TO_BE_USED_BY_CONNECTOR_KEY}"
       },
       "description": {
-        "key": "<CONNECTOR_DESCRIPTION_KEY>"
+        "key": "{CONNECTOR_DESCRIPTION_KEY}"
       },
       "label": {
-        "key": "<LABEL_DISPLAYED_FOR_CONNECTOR_KEY>"
+        "key": "{LABEL_DISPLAYED_FOR_CONNECTOR_KEY}"
       }
     },
     "urlParams": {
-      "path": "<RESOURCE_PATH>",
-      "method": "<GET or POST>",
-      "queryParams": "<QUERY_PARAMS>"
+      "path": "{RESOURCE_PATH}",
+      "method": "{GET or POST}",
+      "queryParams": "{QUERY_PARAMS}"
     },
-    "headerParams": "<HEADER_VALUES>",
-    "bodyParams": "<BODY_PART_INCASE_METHOD_IS_POST>",
+    "headerParams": "{HEADER_VALUES}",
+    "bodyParams": "{BODY_PART_INCASE_METHOD_IS_POST}",
     "contentPath": {
-      "path": "<PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS>",
+      "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
       "skipAttributes": [],
-      "overrideWrapperAttribute": "<OVERRIDE_ATTRIBUTES>"
+      "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
     },
     "explodeEntityPath": {
-      "path": "<PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS>",
+      "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
       "skipAttributes": [],
-      "overrideWrapperAttribute": "<OVERRIDE_ATTRIBUTES>"
+      "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
     },
     "paginationParams": {
-      "type": "<OFFSET OR POINTER>",
-      "limitName": "<NUMBER OF RECORDS ATTRIBUTE NAME>",
-      "limitValue": "<NUMBER OF RECORDS PER PAGE>",
-      "offSetName": "<OFFSET ATTRIBUTE NAME REQUIRED IN CASE OF OFFSET BASED PAGINATION>",
-      "pointerName": "<POINTER_PATH REQUIRED IN CASE OF POINTER BASED PAGINATION>"
+      "type": "{OFFSET OR POINTER}",
+      "limitName": "{NUMBER OF RECORDS ATTRIBUTE NAME}",
+      "limitValue": "{NUMBER OF RECORDS PER PAGE}",
+      "offSetName": "{OFFSET ATTRIBUTE NAME REQUIRED IN CASE OF OFFSET BASED PAGINATION}",
+      "pointerName": "{POINTER_PATH REQUIRED IN CASE OF POINTER BASED PAGINATION}"
     },
     "scheduleParams": {
-      "scheduleStartParamName": "<START TIME PARAMETER NAME>",
-      "scheduleEndParamName": "<END TIME PARAMETER NAME>",
-      "scheduleStartParamFormat": "<DATE TIME FORMAT FOR START TIME>",
-      "scheduleEndParamFormat": "<END TIME FORMAT FOR START TIME>"
+      "scheduleStartParamName": "{START TIME PARAMETER NAME}",
+      "scheduleEndParamName": "{END TIME PARAMETER NAME}",
+      "scheduleStartParamFormat": "{DATE TIME FORMAT FOR START TIME}",
+      "scheduleEndParamFormat": "{END TIME FORMAT FOR START TIME}"
     }
   },
   "spec": {

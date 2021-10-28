@@ -15,7 +15,6 @@ The `authSpec` array contains information on the authentication parameters requi
 
 ## OAuth 2 refresh code
 
-
 ```json
 {
   "name": "oAuth2-refresh-code",
@@ -82,13 +81,13 @@ The `authSpec` array contains information on the authentication parameters requi
 | `authSpec.spec.properties.description` | Displays a brief description on the credential. |
 | `authSpec.spec.properties.type` | Defines the data type of the credential. | `string` |
 | `authSpec.spec.properties.format` | Defines the format of the credential. | `format` |
-| `authSpec.spec.properties.clientId` |
-| `authSpec.spec.properties.clientSecret` |
-| `authSpec.spec.properties.accessToken` |
-| `authSpec.spec.properties.refreshToken` |
-| `authSpec.spec.properties.expirationDate` |
-| `authSpec.spec.properties.refreshTokenUrl` |
-| `authSpec.spec.properties.accessTokenUrl` |
+| `authSpec.spec.properties.clientId` | The client ID associated with your application. The client ID is used to retrieve your access token. |
+| `authSpec.spec.properties.clientSecret` | The client secret associated with your application. The client secret is used to retrieve your access token. |
+| `authSpec.spec.properties.accessToken` | The access token authorizes your secure access to your application. |
+| `authSpec.spec.properties.refreshToken` | The refresh token is used to generate a new access token, when the access token expires. |
+| `authSpec.spec.properties.expirationDate` | Defines the expiration date of the access token. |
+| `authSpec.spec.properties.refreshTokenUrl` | The URL used to retrieve your refresh token. |
+| `authSpec.spec.properties.accessTokenUrl` | The URL used to retrieve your refresh token. |
 | `authSpec.spec.required` | Displays the credentials required in order to authenticate. | `accessToken` |
 
 ## Basic authentication
@@ -133,7 +132,7 @@ The `authSpec` array contains information on the authentication parameters requi
 | `authSpec.spec.$schema` | Defines the schema used for the authentication. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Defines the data type of the schema. | `object` |
 | `authSpec.spec.properties` | Contains information on the credentials used for the authentication. |
-| `authSpec.spec.properties.host` |
-| `authSpec.spec.properties.username` |
-| `authSpec.spec.properties.password` |
+| `authSpec.spec.properties.host` | The host URL of your application. |
+| `authSpec.spec.properties.username` | The account username associated with your application. |
+| `authSpec.spec.properties.password` | The account password associated with your application. |
 | `authSpec.spec.required` | Displays the credentials required in order to authenticate. | `host` |

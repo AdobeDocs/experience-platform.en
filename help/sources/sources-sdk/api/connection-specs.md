@@ -13,7 +13,7 @@ description: The /connectionSpecs endpoint in the Flow Service API allows you to
 
 A connection specification represents the structure of a source. It contains information on a source's authentication and scheduling requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. The `/connectionSpecs` endpoint in the [!DNL Flow Service] API allows you to programmatically manage the connection specifications within your organization.
 
-The following document provides steps on how to retrieve, create, and update connection specifications using the [!DNL Flow Service] API for Sources SDK.
+The following document provides steps on how create a connection specification using the [!DNL Flow Service] API and integrate a new source through Sources SDK.
 
 ## Getting started
 

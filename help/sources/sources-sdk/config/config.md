@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-solution: Experience Platform
 title: Configuration options in Sources SDK
 topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
