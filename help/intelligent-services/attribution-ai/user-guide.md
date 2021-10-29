@@ -52,23 +52,51 @@ Next, the set up page for Attribution AI appears where you can provide a name an
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
-After filling out the basic information, select the dropdown labeled **Select Dataset** to select your dataset. The dataset is used to train the model and score the subsequent data it produces. When selecting a dataset from the dropdown selector, only ones that are compatible with Attribution AI and conform to the Experience Data Model (XDM) schema are listed. Once a dataset is chosen, select **Next** in the top-right corner to proceed to the define events page.
+By design, Attribution AI uses Adobe Analytics, Experience event, and Consumer Experience Event data to calculate attribution scores. When selecting a dataset only ones that are compatible with Attribution AI are listed. To select a dataset select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. You can also use the search option to quickly find the datasets you're interested in.
 
->[!TIP]
->
->Adobe Analytics datasets are supported via the Analytics Source Connector.
+![Select and search for dataset](./images/user-guide/)
 
-![setup page](./images/user-guide/dataset_selector.png)
+After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
+
+![Select datasets](./images/user-guide/)
+
+Selecting the info icon ![info icon](./images/user-guide/) next to the dataset opens the dataset preview popover.
+
+![Select and search for dataset](./images/user-guide/)
+
+The dataset preview contains data such as the last update time, source schema, and a preview of the first ten columns.
 
 ### Dataset completeness {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
 
+In the dataset preview is a dataset completeness percentage value. This value provides a quick snapshot of how many columns in your dataset are empty/null. If a dataset contains a lot of missing values and these values are captured elsewhere, it is highly recommended you include the dataset containing the missing values.
 
+>[!NOTE]
+>
+>Dataset completeness is calculated using the maximum lookback window for Customer AI (one year). This means data that is more than one year old is not taken into account when displaying your dataset completeness value.
+
+![Dataset completeness](../images/user-guide/)
+
+### Dataset Key {#dataset-key}
+
+Datasets need to be aligned and contain the same Namespace in order to use a union schema that represents all the combined datasets. If more than one Identity Namespace is available, you are required to select the Namespace you wish to use from the **[!UICONTROL Primary Identity]** dropdown.
+
+A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match.
+
+For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore [!DNL Platform] is able to see that these fragments are actually the same individual and brings the data together in the identity graph for the individual.
+
+![Dataset key not selected](./images/user-guide/)
+
+>[!NOTE]
+>
+> If no valid Primary Identity exists for a dataset, you must set a primary identity using the schema editor. The same Namespace your primary identity is saved under needs to be used by the other datasets you wish to add. For example, you cannot use AAID and ECID because they are under different Platform Namespaces. To learn more about Namespaces and Identities, visit the [Identity Service Namespaces documenation](../../identity-service/namespaces.md)
 
 ## Mapping media channel and campaign fields {#aai-mapping}
 
 <!-- https://www.adobe.com/go/aai-mapping -->
+
+
 
 ## Defining events {#define-events}
 
@@ -134,7 +162,7 @@ Once an operator for a touchpoint is selected, *Enter Field Value* is made avail
  
 ![touchpoint dropdown](./images/user-guide/touchpoint_dropdown.png)
 
-The *Add event* and *Add Group* buttons are used to further define your touchpoint. Due to the complex nature surrounding touchpoints, it is not uncommon to have multiple events and groups for a single touchpoint.
+The **Add event** and **Add Group** buttons are used to further define your touchpoint. Due to the complex nature surrounding touchpoints, it is not uncommon to have multiple events and groups for a single touchpoint.
 
 When selected, **Add event** allows for additional fields to be added. select the **x** to remove an event that has been added. 
 
