@@ -53,7 +53,7 @@ Your [!DNL Admin Console] administrator must also add you as a user to the same 
 
 >[!NOTE]
 >
->If you are following this document from the [Privacy Service developer guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to [!DNL Privacy Service].
+>If you are following this document from the [Privacy Service API guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to [!DNL Privacy Service].
 
 After you have been given developer and user access to Platform through [!DNL Admin Console], the next step is to generate your `{IMS_ORG}` and `{API_KEY}` credentials in Adobe Developer Console. These credentials only need to be generated once and can be reused in future Platform API calls.
 

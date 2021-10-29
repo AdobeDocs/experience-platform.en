@@ -13,7 +13,7 @@ Within the Adobe Experience Platform user interface, you can view these read-onl
 
 Real-time Customer Data Platform is built on top of Adobe Experience Platform and is thereby able to make use of the profile viewing capabilities in the Experience Platform UI. For a detailed guide to viewing customer profiles within the Platform user interface, refer to the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md).
 
-## Profile enhancements for Real-time CDP, B2B Edition
+## Profile enhancements for Real-time CDP, B2B Edition (Beta)
 
 >[!IMPORTANT]
 >

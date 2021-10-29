@@ -164,7 +164,7 @@ If the code executes successfully, `validIDs` is populated with a list of retrie
 
 ## Next steps
 
-By reading this document, you have been introduced to the core functionalities of the [!DNL Privacy JS Library]. After using the library to retrieve a list of identities, you can use those identities to create data access and delete requests to the [!DNL Privacy Service] API. See the [Privacy Service developer guide](api/getting-started.md) for more information.
+By reading this document, you have been introduced to the core functionalities of the [!DNL Privacy JS Library]. After using the library to retrieve a list of identities, you can use those identities to create data access and delete requests to the [!DNL Privacy Service] API. See the [Privacy Service API guide](api/overview.md) for more information.
 
 ## Appendix
 
