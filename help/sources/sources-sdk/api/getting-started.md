@@ -48,4 +48,4 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Next steps
 
-To begin creating a new source with Sources SDK, see the tutorial on [creating a new source](./connection-specs.md#create).
+To begin creating a new source with Sources SDK, see the tutorial on [creating a new source](./create.md).

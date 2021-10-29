@@ -92,6 +92,9 @@ OAuth 2 refresh code allows for the secure access to an application by generatin
 | `authSpec.spec.properties.accessTokenUrl` | The URL used to retrieve your refresh token. |
 | `authSpec.spec.required` | Displays the credentials required in order to authenticate. | `accessToken` |
 
+{style="table-layout:auto"}
+
+
 ## Basic authentication
 
 Basic authentication is an authentication type that allows you to access your application by using a combination of your application's host URL, your account username, and your account password.
@@ -140,3 +143,5 @@ Basic authentication is an authentication type that allows you to access your ap
 | `authSpec.spec.properties.username` | The account username associated with your application. |
 | `authSpec.spec.properties.password` | The account password associated with your application. |
 | `authSpec.spec.required` | Displays the credentials required in order to authenticate. | `host` |
+
+{style="table-layout:auto"}

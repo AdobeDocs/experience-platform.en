@@ -11,7 +11,7 @@ Explore specifications defines the parameters required for exploring and inspect
 
 >[!TIP]
 >
->Explore specifications is hard-coded and you can simply copy and paste the payload below to your connection specification.
+>Explore specifications are hard-coded and you can simply copy and paste the payload below to your connection specification.
 
 ```json
 "exploreSpec": {
@@ -76,4 +76,7 @@ Explore specifications defines the parameters required for exploring and inspect
 | `responseSpec.schema.properties` | Contains information on the columns, type, and items held within a schema. |
 | `responseSpec.schema.properties.columns.items.properties.name` | Displays the name of the file. |
 | `responseSpec.schema.properties.columns.items.properties.name.type` | Defines the data type of the file name. | `string` |
+
+{style="table-layout:auto"}
+
 

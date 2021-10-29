@@ -694,6 +694,6 @@ The following is an example of pagination set to `"paginationType" = "offset"`.
 
 | Parameter | Description | Example |
 | --- | --- | --- |
-| `limitName` | The name for limit through which the API can specify the number of records to be fetched in a page. | `count` |
+| `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. | `count` |
 | `limitValue` | The number of records to be fetched in a page. | `100` |
 | `offsetName` | The name for offset | `offset` |

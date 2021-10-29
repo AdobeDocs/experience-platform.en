@@ -28,9 +28,9 @@ For more information on sources, and to see a list of different sources currentl
 
 ## Create a source
 
-Through Sources SDK, you can integrate your own REST API-based source and bring your data to Platform with [!DNL Flow Service]. Sources SDK allows you to retrieve generic connection specifications from [!DNL Flow Service], use their specification structures as template, and author your own connection specification by replacing the property values with information that pertain to your own specific source.
+Through Sources SDK, you can integrate your own REST API-based source and bring your data to Platform with [!DNL Flow Service]. Sources SDK allows you to integrate a new source with Platform, by creating a and submitting new connection specification through the [!DNL Flow Service] API.
 
-See the [Sources SDK API guide](./api/overview.md) to start creating a new source to bring your data to Platform.
+See the guide on [creating a new connection specification](./api/overview.md) for information on how to integrate a new source to Platform.
 
 ## Document your source
 

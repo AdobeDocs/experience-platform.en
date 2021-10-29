@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-solution: Experience Platform
-title: Flow Specifications API Endpoint
+title: Update flow specifications using the Flow Service API
 topic-legacy: developer guide
 description: The /flowSpecs endpoint in the Flow Service API allows you to create, view, and update flow specifications and integrate new sources through Sources SDK.
 ---
-# Flow specifications endpoint
+# Update flow specifications using the [!DNL Flow Service] API
 
 >[!IMPORTANT]
 >
