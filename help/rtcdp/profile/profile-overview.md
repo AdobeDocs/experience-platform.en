@@ -14,7 +14,7 @@ Real-time Customer Profile enables you to see a holistic view of each individual
 
 Real-time CDP is built on top of Experience Platform and utilizes many of the core Experience Platform features and functionality, including the creation of profiles. These aggregated views of an individual customer bring together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer data.
 
-## Profile enhancements for Real-time CDP, B2B Edition
+## Profile enhancements for Real-time CDP, B2B Edition (Beta)
 
 >[!IMPORTANT]
 >
