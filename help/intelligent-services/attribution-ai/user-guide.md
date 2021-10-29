@@ -82,21 +82,21 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 Datasets need to be aligned and contain the same Namespace in order to use a union schema that represents all the combined datasets. If more than one Identity Namespace is available, you are required to select the Namespace you wish to use from the **[!UICONTROL Primary Identity]** dropdown.
 
-A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match.
-
-For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore [!DNL Platform] is able to see that these fragments are actually the same individual and brings the data together in the identity graph for the individual.
+A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match. When using multiple datasets Attribution AI needs to concatenate the datasets together using the same Namespace.
 
 ![Dataset key not selected](./images/user-guide/)
 
 >[!NOTE]
 >
-> If no valid Primary Identity exists for a dataset, you must set a primary identity using the schema editor. The same Namespace your primary identity is saved under needs to be used by the other datasets you wish to add. For example, you cannot use AAID and ECID because they are under different Platform Namespaces. To learn more about Namespaces and Identities, visit the [Identity Service Namespaces documenation](../../identity-service/namespaces.md)
+> If no valid Primary Identity exists for a dataset, you must set a primary identity using the schema editor. The same Namespace your primary identity is saved under needs to be used by the other datasets you wish to add. For example, you cannot use AAID and ECID because they are under different Platform Namespaces. To learn more about Namespaces and identities, visit the [Identity Service Namespaces documenation](../../identity-service/namespaces.md)
 
 ## Mapping media channel and campaign fields {#aai-mapping}
 
 <!-- https://www.adobe.com/go/aai-mapping -->
 
+After you have finished selecting and adding datasets, the **Map** configuration step appears. Attribution AI requires that you map the Media channel field for each dataset you selected in the previous step. This is because without the Media channel mapping between datasets, insights derived from Attribution AI may not show up properly making the insights page difficult to interpret. Although only the Media channel is required, it is highly recommended that you map some of the optional fields such as Media action, Campaign name, Campaign group. and Campaign tag. Doing so allows Attribution AI to provide clearer insights and optimal results.
 
+![mapping]()
 
 ## Defining events {#define-events}
 
