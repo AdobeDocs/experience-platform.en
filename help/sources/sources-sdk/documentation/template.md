@@ -270,8 +270,6 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of *YOURSOURCE*. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | The format of the *YOURSOURCE* data that you want to ingest. |
-| `params.server` |
-| `params.listId` |
 
 **Response**
 

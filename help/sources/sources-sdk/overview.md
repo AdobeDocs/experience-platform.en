@@ -15,14 +15,13 @@ Adobe Experience Platform Sources SDK is a set of configuration APIs that allow 
 
 With Sources SDK, you can:
 
-* Configure a new source to the Platform catalog, complete with create, read, update, and delete functionalities, as well as abilities to test and publish the source through [!DNL Flow Service];
-* Define authentication types for your source;
-* Publish your source to one or all IMS Organizations;
+* Configure a new source to the Platform catalog, complete with create, read, update, and delete functionalities using the [!DNL Flow Service] API.
+* Define specifications for your source, including information pertaining to supported authentication types and how resource data is fetched.
 * Create user-facing documentation for your new source.
 
 ## Understanding sources
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 For more information on sources, and to see a list of different sources currently supported on Platform, see the [sources overview](../home.md).
 

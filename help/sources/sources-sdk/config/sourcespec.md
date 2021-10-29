@@ -18,25 +18,25 @@ Source specifications contain information specific to a source, including attrib
       "isPreview": true,
       "isBeta": true,
       "category": {
-        "key": "{CATEGORY_OF_CONNECTOR_KEY}"
+        "key": "{CATEGORY}"
       },
       "icon": {
-        "key": "{ICON_TO_BE_USED_BY_CONNECTOR_KEY}"
+        "key": "{ICON}"
       },
       "description": {
-        "key": "{CONNECTOR_DESCRIPTION_KEY}"
+        "key": "{DESCRIPTION}"
       },
       "label": {
-        "key": "{LABEL_DISPLAYED_FOR_CONNECTOR_KEY}"
+        "key": "{LABEL}"
       }
     },
     "urlParams": {
-      "path": "{PATH}",
-      "method": "{METHOD}",
+      "path": "{RESOURCE_PATH}",
+      "method": "{GET_or_POST}",
       "queryParams": "{QUERY_PARAMS}"
     },
     "headerParams": "{HEADER_VALUES}",
-    "bodyParams": "{BODY_PART_INCASE_METHOD_IS_POST}",
+    "bodyParams": "{BODY_PARAMS_USED_IF_METHOD_IS_POST}",
     "contentPath": {
       "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
       "skipAttributes": [],
@@ -50,15 +50,15 @@ Source specifications contain information specific to a source, including attrib
     "paginationParams": {
       "type": "{OFFSET_OR_POINTER}",
       "limitName": "{NUMBER_OF_RECORDS_ATTRIBUTE_NAME}",
-      "limitValue": "{NUMBER OF RECORDS PER PAGE}",
-      "offSetName": "{OFFSET ATTRIBUTE NAME REQUIRED IN CASE OF OFFSET BASED PAGINATION}",
-      "pointerName": "{POINTER_PATH REQUIRED IN CASE OF POINTER BASED PAGINATION}"
+      "limitValue": "{NUMBER_OF_RECORDS_PER_PAGE}",
+      "offSetName": "{OFFSET_ATTRIBUTE_NAME_REQUIRED_IN_CASE_OF_OFFSET BASED_PAGINATION}",
+      "pointerName": "{POINTER_PATH_REQUIRED_IN__CASE_OF_POINTER BASED_PAGINATION}"
     },
     "scheduleParams": {
-      "scheduleStartParamName": "{START TIME PARAMETER NAME}",
-      "scheduleEndParamName": "{END TIME PARAMETER NAME}",
-      "scheduleStartParamFormat": "{DATE TIME FORMAT FOR START TIME}",
-      "scheduleEndParamFormat": "{END TIME FORMAT FOR START TIME}"
+      "scheduleStartParamName": "{START_TIME_PARAMETER_NAME}",
+      "scheduleEndParamName": "{END_TIME_PARAMETER_NAME}",
+      "scheduleStartParamFormat": "{DATE_TIME_FORMAT_FOR_START_TIME}",
+      "scheduleEndParamFormat": "{END_TIME_FORMAT_FOR_START_TIME}"
     }
   },
   "spec": {

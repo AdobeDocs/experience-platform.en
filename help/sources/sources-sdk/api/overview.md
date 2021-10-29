@@ -30,15 +30,19 @@ Once you successfully create a connection specification, you must then append th
 
 Flow specifications contain information that define a flow, including the source and target connection IDs that it supports, transformation specifications that are needed to be applied to the data, and scheduling parameters required to generate a flow.
 
-For detailed instructions, see the guide on [updating flow specifications](./update.md).
+For detailed instructions, see the guide on [updating flow specifications](./update-flow-specs.md).
 
 ## Update your connection specification
 
-You can make updates to your connection specification by making a PUT request to the [!DNL Flow Service] API. See the guide on [updating your connection specifications](./update.md) for more information.
+You can make updates to your connection specification by making a PUT request to the [!DNL Flow Service] API. See the guide on [updating your connection specifications](./update-connection-specs.md) for more information.
+
+<!--
 
 ## Test and submit your connection specification
 
 The final step is to test your source using Postman. If successful, then you can submit your new source to your Adobe manager for verification.
+
+-->
 
 ## Next steps
 

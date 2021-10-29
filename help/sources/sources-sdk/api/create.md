@@ -11,7 +11,7 @@ description: The /connectionSpecs endpoint in the Flow Service API allows you to
 >
 >Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
-A connection specification represents the structure of a source. It contains information on a source's authentication and scheduling requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. The `/connectionSpecs` endpoint in the [!DNL Flow Service] API allows you to programmatically manage the connection specifications within your organization.
+A connection specification represents the structure of a source. It contains information on a source's authentication requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. The `/connectionSpecs` endpoint in the [!DNL Flow Service] API allows you to programmatically manage the connection specifications within your organization.
 
 The following document provides steps on how create a connection specification using the [!DNL Flow Service] API and integrate a new source through Sources SDK.
 
@@ -34,11 +34,11 @@ The first step in creating a new connection specification to integrate a new sou
 
 ## Copy connection specification template
 
-Once you have gathered the required artifacts, copy and paste the connection specification template below to the text editor of your choice and then update the attributes with information relevant to your specific source. 
+Once you have gathered the required artifacts, copy and paste the connection specification template below to the text editor of your choice and then update the attributes in brackets `{}` with information relevant to your specific source. 
 
 ```json
 {
-  "name": "{NAME}",
+  "name": "{NAME_OF_YOUR_SOURCE}",
   "type": "generic-rest",
   "description": "{DESCRIPTION}",
   "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
@@ -190,11 +190,11 @@ Once you have gathered the required artifacts, copy and paste the connection spe
       },
       "urlParams": {
         "path": "{RESOURCE_PATH}",
-        "method": "{GET or POST}",
+        "method": "{GET_or_POST}",
         "queryParams": "{QUERY_PARAMS}"
       },
       "headerParams": "{HEADER_VALUES}",
-      "bodyParams": "{BODY_PART_INCASE_METHOD_IS_POST}",
+      "bodyParams": "{BODY_PARAMS_USED_IF_METHOD_IS_POST}",
       "contentPath": {
         "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
         "skipAttributes": [],
@@ -206,17 +206,17 @@ Once you have gathered the required artifacts, copy and paste the connection spe
         "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
       },
       "paginationParams": {
-        "type": "{OFFSET OR POINTER}",
-        "limitName": "{NUMBER OF RECORDS ATTRIBUTE NAME}",
-        "limitValue": "{NUMBER OF RECORDS PER PAGE}",
-        "offSetName": "{OFFSET ATTRIBUTE NAME REQUIRED IN CASE OF OFFSET BASED PAGINATION}",
-        "pointerName": "{POINTER_PATH REQUIRED IN CASE OF POINTER BASED PAGINATION}"
+        "type": "{OFFSET_OR_POINTER}",
+        "limitName": "{NUMBER_OF_RECORDS_ATTRIBUTE_NAME}",
+        "limitValue": "{NUMBER_OF_RECORDS_PER_PAGE}",
+        "offSetName": "{OFFSET_ATTRIBUTE_NAME_REQUIRED_IN_CASE_OF_OFFSET BASED_PAGINATION}",
+        "pointerName": "{POINTER_PATH_REQUIRED_IN__CASE_OF_POINTER BASED_PAGINATION}"
       },
       "scheduleParams": {
-        "scheduleStartParamName": "{START TIME PARAMETER NAME}",
-        "scheduleEndParamName": "{END TIME PARAMETER NAME}",
-        "scheduleStartParamFormat": "{DATE TIME FORMAT FOR START TIME}",
-        "scheduleEndParamFormat": "{END TIME FORMAT FOR START TIME}"
+        "scheduleStartParamName": "{START_TIME_PARAMETER_NAME}",
+        "scheduleEndParamName": "{END_TIME_PARAMETER_NAME}",
+        "scheduleStartParamFormat": "{DATE_TIME_FORMAT_FOR_START_TIME}",
+        "scheduleEndParamFormat": "{END_TIME_FORMAT_FOR_START_TIME}"
       }
     },
     "spec": {

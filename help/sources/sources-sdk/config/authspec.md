@@ -11,9 +11,11 @@ Authentication specifications define how Adobe Experience Platform users can con
 
 The `authSpec` array contains information on the authentication parameters required to connect a source to Platform. Any given source can support multiple different types of authentication.
 
-Currently, [!DNL Sources SDK] supports OAuth 2 refresh code and basic authentication.
+## Authentication specifications
 
-## OAuth 2 refresh code
+Currently, [!DNL Sources SDK] supports OAuth 2 refresh code and basic authentication. See the tables below for guidance on using OAuth 2 refresh code and basic authentication.
+
+### OAuth 2 refresh code
 
 OAuth 2 refresh code allows for the secure access to an application by generating a temporary access token and a refresh token. The access token allows you to securely access your resources without having to provide other credentials, while the refresh token allows you to generate a new access token, once the access token expires.
 
