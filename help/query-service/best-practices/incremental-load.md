@@ -1,6 +1,6 @@
 ---
 title: Sample Incremental Load Queries
-description: The incremental load feature uses both anonymous block and snapshot features to provide a near real-time solution for moving data from the data lake to your data warehouse whilst ignoring matching .
+description: The incremental load feature uses both anonymous block and snapshot features to provide a near real-time solution for moving data from the data lake to your data warehouse whilst ignoring matching data.
 ---
 # Sample incremental data load queries
 
@@ -155,4 +155,4 @@ EXCEPTION
 
 ## Next steps
 
-By reading this document you should have a better understanding on how to use anonymous block and snapshot features to perform incremental loads and can apply this logic to your own specific queries. For general guidance on query execution, please read the [guide on query execution in Query Service](./writing-queries.md).
+By reading this document you should have a better understanding of how to use anonymous block and snapshot features to perform incremental loads and can apply this logic to your own specific queries. For general guidance on query execution, please read the [guide on query execution in Query Service](./writing-queries.md).
