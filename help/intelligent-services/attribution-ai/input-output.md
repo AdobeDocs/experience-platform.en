@@ -14,8 +14,9 @@ The following document outlines the different input and outputs utilized in [!DN
 
 Attribution AI works by analyzing one of the following datasets to calculate algorithmic scores:
 
-- Consumer Experience Event (CEE) dataset
 - Adobe Analytics datasets using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Experience Event (EE) dataset
+- Consumer Experience Event (CEE) dataset
 
 >[!IMPORTANT]
 >

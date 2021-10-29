@@ -44,13 +44,7 @@ Select **[!UICONTROL Create instance]** to begin.
 
 ![Create instance](./images/user-guide/landing_page.png)
 
-Next, the setup page for Attribution AI appears, where you can provide basic information and specify a dataset for the instance.
-
-![setup page](./images/user-guide/setup_attribution.png)
-
-### Name the instance
-
-Under **[!UICONTROL Basic information]**, provide a name and optional description for your service instance.
+Next, the set up page for Attribution AI appears where you can provide a name and optional description for your service instance.
 
 ![naming an instance](./images/user-guide/naming_instance.png)
 
@@ -69,6 +63,8 @@ After filling out the basic information, select the dropdown labeled **Select Da
 ### Dataset completeness {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
+
+
 
 ## Mapping media channel and campaign fields {#aai-mapping}
 
@@ -186,7 +182,7 @@ To change the time of day you want scoring to occur, select the clock icon. In t
 
 ### Additional score dataset columns (optional)
 
-By default, a score dataset is created for each service instance in a standard schema. You can choose to add additional columns based on your Conversion Event and Touchpoint configurations to the score dataset output. Start by selecting columns from your input dataset, you can then drag and drop them to change the order by holding down the left mouse button over the hamburger icon.
+By default, a score dataset is created for each service instance in a standard schema. You can choose to add additional columns based on your Conversion Event and Touchpoint configurations to the scoring dataset output. Start by selecting columns from your input dataset, you can then drag and drop them to change the order by holding down the left mouse button over the hamburger icon.
 
 ![score dataset column addition](./images/user-guide/Add-score-dataset.png)
 
