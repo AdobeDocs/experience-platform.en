@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Update a connection specification using the Flow Service API
 topic-legacy: developer guide
-description: The /flowSpecs endpoint in the Flow Service API allows you to create, view, and update flow specifications and integrate new sources through Sources SDK.
+description: You can update the properties of a connection specification through a PUT operation.
 ---
 # Update a connection specification using the Flow Service API
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 solution: Experience Platform
 title: Create a new connection specification using the Flow Service API
 topic-legacy: tutorial
-description: The /connectionSpecs endpoint in the Flow Service API allows you to create, view, and update connection specifications and integrate new sources through Sources SDK.
+description: The following document provides steps on how create a connection specification using the Flow Service API and integrate a new source through Sources SDK.
 ---
 # Create a new connection specification using the [!DNL Flow Service API]
 
