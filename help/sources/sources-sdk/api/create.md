@@ -650,4 +650,6 @@ A successful response returns the newly created connection specification, includ
 
 ## Next steps
 
-Now that you have created a new connection specification, you must add its corresponding connection specification ID to an existing flow specification. See the tutorial on [updating flow specifications](./flow-specs.md) for more information.
+Now that you have created a new connection specification, you must add its corresponding connection specification ID to an existing flow specification. See the tutorial on [updating flow specifications](./update-flow-specs.md) for more information.
+
+To make modifications to the connection specification that you created, see the tutorial on [updating connection specifications](./update-connection-specs.md).
