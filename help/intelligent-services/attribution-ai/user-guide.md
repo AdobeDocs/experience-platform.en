@@ -78,17 +78,16 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 ![Dataset completeness](../images/user-guide/)
 
-### Dataset Key {#dataset-key}
+### Namespace {#dataset-key}
 
-Datasets need to be aligned and contain the same Namespace in order to use a union schema that represents all the combined datasets. If more than one Identity Namespace is available, you are required to select the Namespace you wish to use from the **[!UICONTROL Primary Identity]** dropdown.
+In order for multiple datasets to join on one another, you must select a Namespace and an identity you wish to use for each dataset. The Namespace must be consistent across datasets. It is possible that more than one identity will be available within a Namespace. If more than one identity is available, make sure to select the correct identity field. For example, two email identities are available within the email Namespace, a work and personal email. Depending on the use case, a personal email is more likely to be useful for predictions than a work email.
 
-A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match. When using multiple datasets Attribution AI needs to concatenate the datasets together using the same Namespace.
 
 ![Dataset key not selected](./images/user-guide/)
 
 >[!NOTE]
 >
-> If no valid Primary Identity exists for a dataset, you must set a primary identity using the schema editor. The same Namespace your primary identity is saved under needs to be used by the other datasets you wish to add. For example, you cannot use AAID and ECID because they are under different Platform Namespaces. To learn more about Namespaces and identities, visit the [Identity Service Namespaces documenation](../../identity-service/namespaces.md)
+> If no valid Identity exists for a dataset, you must set a primary identity and assign it to a Namespace using the schema editor. The same Namespace needs to be used to join multiple datasets. For example, you cannot use AAID and ECID Namespaces at the same time. To learn more about Namespaces and identities, visit the [Identity Service Namespaces documenation](../../identity-service/namespaces.md)
 
 ## Mapping media channel and campaign fields {#aai-mapping}
 
