@@ -78,22 +78,23 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 ![Dataset completeness](../images/user-guide/)
 
-### Namespace {#dataset-key}
+### Select an identity namespace {#dataset-key}
 
-In order for multiple datasets to join on one another, you must select a Namespace and an identity you wish to use for each dataset. The Namespace must be consistent across datasets. It is possible that more than one identity will be available within a Namespace. If more than one identity is available, make sure to select the correct identity field. For example, two email identities are available within the email Namespace, a work and personal email. Depending on the use case, a personal email is more likely to be useful for predictions than a work email.
+In order for multiple datasets to join on one another, you must select a identity namespace and a value within that namespace you wish to use for each dataset. The same namespace must be used for every dataset you select. 
 
+In the event that more than one identity is available within a namespace, make sure to select the correct identity field. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more common to be filled in and more useful in individual predictions.
 
 ![Dataset key not selected](./images/user-guide/)
 
 >[!NOTE]
 >
-> If no valid Identity exists for a dataset, you must set a primary identity and assign it to a Namespace using the schema editor. The same Namespace needs to be used to join multiple datasets. For example, you cannot use AAID and ECID Namespaces at the same time. To learn more about Namespaces and identities, visit the [Identity Service Namespaces documenation](../../identity-service/namespaces.md)
+> If no valid identity namespace exists for a dataset, you must set a primary identity and assign it to an identity namespace using the schema editor. To learn more about namespaces and identities, visit the [Identity Service namespaces documenation](../../identity-service/namespaces.md).
 
 ## Mapping media channel and campaign fields {#aai-mapping}
 
 <!-- https://www.adobe.com/go/aai-mapping -->
 
-After you have finished selecting and adding datasets, the **Map** configuration step appears. Attribution AI requires that you map the Media channel field for each dataset you selected in the previous step. This is because without the Media channel mapping between datasets, insights derived from Attribution AI may not show up properly making the insights page difficult to interpret. Although only the Media channel is required, it is highly recommended that you map some of the optional fields such as Media action, Campaign name, Campaign group. and Campaign tag. Doing so allows Attribution AI to provide clearer insights and optimal results.
+After you have finished selecting and adding datasets, the **Map** configuration step appears. Attribution AI requires that you map the Media channel field for each dataset you selected in the previous step. This is because without the Media channel mapping between datasets, insights derived from Attribution AI may not show up properly making the insights page difficult to interpret. Although only the Media channel is required, it is highly recommended that you map some of the optional fields such as Media action, Campaign name, Campaign group, and Campaign tag. Doing so allows Attribution AI to provide clearer insights and optimal results.
 
 ![mapping]()
 
