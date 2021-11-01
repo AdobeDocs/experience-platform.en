@@ -8,7 +8,7 @@ exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 
 ## Overview {#overview}
 
-Adobe Experience Platform can deliver your segments as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for [!DNL Amazon S3], [!DNL Azure Blob] and SFTP. For [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations, data is streamed out of Experience Platform in [!DNL JSON] format.
+Adobe Experience Platform can deliver your segments as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV files for [!DNL Amazon S3], [!DNL Azure Blob] and SFTP. For [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations, data is streamed out of Experience Platform in [!DNL JSON] format.
 
 ![Adobe cloud storage destinations](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
