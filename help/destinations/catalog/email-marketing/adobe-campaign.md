@@ -49,7 +49,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where [!DNL Platform] will deposit your export data as CSV files. 
 * **[!UICONTROL Folder Path]**: Provide the path in your storage location where [!DNL Platform] will deposit your export data as CSV files.
 * **[!UICONTROL Container]**: *For Blob connections*. The container that holds the Blob your folder path is in.
-* **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
+* **[!UICONTROL File Format]**: Select **CSV** to export CSV files to your storage location. 
 
 ## Activate segments to this destination {#activate}
 
