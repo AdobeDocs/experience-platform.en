@@ -9,6 +9,12 @@ exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## October 28, 2021
+
+### Adobe Target v2 Extension 0.16.0
+
+- Updated to support at.js v2.7.0, now available for download from Adobe Target.
+
 ## July 20, 2021
 
 ### Adobe Target v2 Extension 0.15.1
