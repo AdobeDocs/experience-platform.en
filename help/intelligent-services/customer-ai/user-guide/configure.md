@@ -86,19 +86,17 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 ![Dataset completeness](../images/user-guide/dataset-info.png)
 
-### Dataset Key {#dataset-key}
+### Select an identity namespace {#dataset-key}
 
-<!-- https://www.adobe.com/go/cai-dataset-key -->
+In order for multiple datasets to join on one another, you must select a identity namespace and a value within that namespace you wish to use for each dataset. The same namespace must be used for every dataset you select. 
 
-Datasets need to be aligned and contain the same Primary Identity in order to use a union schema that represents all the combined datasets. If more than one Identity is available, you are required to select the identity you wish to use from the **[!UICONTROL Primary Identity]** dropdown.
+In the event that more than one identity is available within a namespace, make sure to select the correct identity field. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more common to be filled in and more useful in individual predictions.
 
-![Dataset key not selected](../images/user-guide/dataset-selected-no-key.png)
+![Dataset key not selected](./images/user-guide/)
 
 >[!NOTE]
 >
-> You must select the same Identity for every dataset key in order to use multiple datasets.
-
-![Dataset key](../images/user-guide/select-primary-identity.png)
+> If no valid identity namespace exists for a dataset, you must set a primary identity and assign it to an identity namespace using the schema editor. To learn more about namespaces and identities, visit the [Identity Service namespaces documenation](../../identity-service/namespaces.md).
 
 
 ## Define a goal {#define-a-goal}
