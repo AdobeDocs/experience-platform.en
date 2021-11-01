@@ -31,7 +31,7 @@ The diagram below illustrates the end-to-end workflow for activating segments vi
 
 Keep in mind the following guardrails when using the ad-hoc activation API.
 
-* Each ad-hoc activation job can activate up to 50 segments. Attempting to activate more than 50 segments per job will cause the job to fail.
+* Each ad-hoc activation job can activate up to 20 segments. Attempting to activate more than 20 segments per job will cause the job to fail.
 * Ad-hoc activation jobs cannot run in parallel with scheduled [segment export jobs](../../segmentation/api/export-jobs.md). Before running an ad-hoc activation job, make sure the scheduled segment export job has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
 * Do not run more than one concurrrent ad-hoc activation job per segment.
 
