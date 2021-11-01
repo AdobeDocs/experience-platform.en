@@ -88,11 +88,13 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 ### Select an identity namespace {#dataset-key}
 
-In order for multiple datasets to join on one another, you must select a identity namespace and a value within that namespace you wish to use for each dataset. The same namespace must be used for every dataset you select. 
+In order for multiple datasets to join on one another, you must select a identity namespace and a value within that namespace you wish to use for each dataset. The same namespace must be used for every dataset you select.
+
+![namespace selected](../images/user-guide/namespace.png)
 
 In the event that more than one identity is available within a namespace, make sure to select the correct identity field. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more common to be filled in and more useful in individual predictions.
 
-![Dataset key not selected](./images/user-guide/)
+![Dataset key not selected](../images/user-guide/select-namespace.png)
 
 >[!NOTE]
 >
