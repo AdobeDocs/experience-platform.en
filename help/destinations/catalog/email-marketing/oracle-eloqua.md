@@ -48,7 +48,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **[!UICONTROL Name]**: Pick a relevant name for your destination.
 * **[!UICONTROL Description]**: Enter a description for your destination.
 * **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV files.
-* **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+* **[!UICONTROL File Format]**: Select **CSV** to export CSV files to your storage location.
 
 <!--
 
