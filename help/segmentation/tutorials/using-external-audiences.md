@@ -16,7 +16,7 @@ This tutorial requires a working understanding of the various [!DNL Adobe Experi
 
 - [Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
 - [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 - [Datasets](../../catalog/datasets/overview.md): The storage and management construct for data persistence in Experience Platform.
 - [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How Experience Platform ingests and stores data from client- and server-side devices in real time.
 

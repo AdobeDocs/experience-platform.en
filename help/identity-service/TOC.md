@@ -23,6 +23,7 @@ feature: Identities
   - [Identity graph viewer](ui/identity-graph-viewer.md)
   - [Shared device detection](ui/shared-devices.md)
 - [ECID overview](ecid.md)
+- [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

@@ -7,7 +7,7 @@ exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
 
 ## Overview {#overview}
 
-This configuration allows you to indicate essential information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
+This configuration allows you to indicate essential information like your destination name, category, description, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
 
 This configuration also connects the other configurations required for your destination to work - destination server and audience metadata - to this one. Read how you can reference the two configurations in a [section further below](./destination-configuration.md#connecting-all-configurations).
 
@@ -131,17 +131,17 @@ Below is an example configuration of a fictional destination, Moviestar, which h
 
 ## Customer authentication configurations {#customer-authentication-configurations}
 
-This section generates the account page in Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination. Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as follows:
+This section in the destinations configuration generates the [Configure new destination](/help/destinations/ui/connect-destination.md) page in the Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination. Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as follows:
 
 **Bearer authentication**
 
-Users are required to input the bearer token that they obtain from your destination.
+When you configure the bearer authentication type, users are required to input the bearer token that they obtain from your destination.
 
 ![UI render with bearer authentication](./assets/bearer-authentication-ui.png)
 
 **OAuth 2 authentication**
 
-Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination.
+Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Tailored Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md).
 
 ![UI render with OAuth 2 authentication](./assets/oauth2-authentication-ui.png)
 
@@ -149,7 +149,7 @@ Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 auth
 |Parameter | Type | Description|
 |---------|----------|------|
 |`customerAuthenticationConfigurations` | String | Indicates the configuration used to authenticate Experience Platform customers to your server. See `authType` below for accepted values. |
-|`authType` | String | Accepted values are `OAUTH2, BEARER`. <br><ul><li> If your destination supports OAuth 2 authentication, select the `OAUTH2` value and add the required fields for OAuth 2, as shown in the Destination SDK OAuth 2 authentication page. Additionally, you should select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md). </li><li>For bearer authentication, select `BEARER` and select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md).</li></ul> |
+|`authType` | String | Accepted values are `OAUTH2, BEARER`. <br><ul><li> If your destination supports OAuth 2 authentication, select the `OAUTH2` value and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md). Additionally, you should select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md). </li><li>For bearer authentication, select `BEARER` and select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -201,9 +201,9 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 ## Identities and attributes {#identities-and-attributes}
 
-The parameters in this section determine how the target identities and attributes are populated in the mapping step of the Experience Platform user interface, where users map their XDM schemas to the schema in your destination.
+The parameters in this section determine which identities your destination accepts. This configuration also populates the target identities and attributes in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
 
-You must indicate which [!DNL Platform] identities customers are able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Platform] identity namespaces that customers can map to identity namespaces from your destination.
+You must indicate which [!DNL Platform] identities customers are able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Platform] identity namespaces that customers can map to identity namespaces from your destination. You can also indicate if customers can map custom namespaces to identities supported by your destination.
 
 Identity namespaces do not require a 1-to-1 correspondence between [!DNL Platform] and your destination.
 For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or they can map the same [!DNL Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
@@ -225,9 +225,8 @@ Read more in the [Identity Namespace overview](https://experienceleague.adobe.co
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via a username and password, a bearer token, or another method of authentication. For example, you would select this option if you also selected `authType: OAUTH2` or `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [Credentials](./credentials-configuration.md) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
+|`authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via a username and password, a bearer token, or another method of authentication. For example, you would select this option if you also selected `authType: OAUTH2` or `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [Credentials](./credentials-configuration-api.md) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
 |`destinationServerId` | String | The `instanceId` of the [destination server configuration](./destination-server-api.md) used for this destination. |
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -240,14 +239,6 @@ This section of the destination configuration relates to how segment metadata li
 Through the `audienceTemplateId`, this section also ties together this configuration with the [audience metadata configuration](./audience-metadata-management.md).
 
 The parameters shown in the configuration above are described in the [destinations endpoint API reference](./destination-configuration-api.md).
-
-## How this configuration connects all necessary information for your destination {#connecting-all-configurations}
-
-Some settings for your destination can be configured through the destination server or the audience metadata endpoint. The destination configuration endpoint connects all these settings by referencing the configurations as follows:
-
-* Use the `destinationServerId` to reference the destination server and template configuration set up for your destination.
-* Use the `audienceMetadataId` to reference the audience metadata configuration set up for your destination.
-
 
 ## Aggregation policy {#aggregation}
 
@@ -265,7 +256,7 @@ Read the section on [using templating](./message-format.md#using-templating) and
 
 >[!TIP]
 >
->Use this option if your API endpoint accepts fewer than 100 profiles per API call. 
+>Use this option if your API endpoint accepts fewer than 100 profiles per API call.
 
 This option works best for destinations which prefer fewer profiles per request and would rather take more requests with less data than fewer requests with more data.
 
@@ -276,18 +267,25 @@ Use the `maxUsersPerRequest` parameter to specify the maximum number of profiles
 This option works best if you'd rather take large batches, with thousands of profiles on the same call. This option also allows you to aggregate the exported profiles based on complex aggregation rules.
 
 This option allows you to:
-* Set the maximum time and number of profiles to aggregate before an API call is made to your destination. 
+* Set the maximum time and maximum number of profiles to aggregate before an API call is made to your destination.
 * Aggregate the exported profiles mapped to the destination based on:
-  * segment ID
-  * segment status
-  * identity or groups of identities
+  * Segment ID;
+  * Segment status;
+  * Identity or groups of identities.
 
 For detailed explanations of the aggregation parameters, refer to the [Destinations API endpoint operations](./destination-configuration-api.md) reference page, where each parameter is described.
 
-## Historical profile qualifications
+## Historical profile qualifications {#profile-backfill}
 
 You can use the `backfillHistoricalProfileData` parameter in the destinations configuration to determine if historical profile qualifications should be exported to your destination.
 
 |Parameter | Type | Description|
 |---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
+
+## How this configuration connects all necessary information for your destination {#connecting-all-configurations}
+
+Some of your destination settings must be configured through the [destination server](./server-and-template-configuration.md) or the [audience metadata configuration](./audience-metadata-management.md). The destination configuration described here connects all these settings by referencing the two other configurations as follows:
+
+* Use the `destinationServerId` to reference the destination server and template configuration set up for your destination.
+* Use the `audienceMetadataId` to reference the audience metadata configuration set up for your destination.

@@ -340,7 +340,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 ## Verify segment activation {#verify}
 
 
-For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a tab-delimited `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
+For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 The files you would receive on three consecutive days could look like this:

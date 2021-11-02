@@ -1,15 +1,17 @@
 ---
-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
-seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
-seo-title: How to use Destination SDK to configure your destination
-title: How to use Destination SDK to configure your destination
+description: This page lists and describes the steps to configure a streaming destination using Destination SDK.
+title: How to use Destination SDK to configure a streaming destination
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 ---
-# How to use Destination SDK to configure your destination
+# How to use Destination SDK to configure a streaming destination
 
 ## Overview {#overview}
 
-This page describes how to use the reference information in [Configuration options in Destinations SDK](./configuration-options.md) to configure your destination. The steps are laid out in sequential order below.
+This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [streaming destination](/help/destinations/destination-types.md#streaming-destinations). The steps are laid out in sequential order below.
+
+>[!NOTE]
+>
+>Configuring a batch destination through Destination SDK is currently not supported.
 
 ## Prerequisites {#prerequisites}
 
@@ -157,7 +159,7 @@ If you use an audience metadata configuration, you must connect it to the destin
 Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
 
 * **Most common case**: If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration and your destination supports the OAuth 2 authentication method, read [OAuth 2 authentication](./oauth2-authentication.md).
-* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to [Credentials configuration](./credentials-configuration.md) in the reference documentation.
+* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [Authentication configuration](./authentication-configuration.md#when-to-use).
 
 ## Step 6: Test your destination {#test-destination}
 
@@ -168,11 +170,10 @@ As part of the process to test your destination, you must use the Experience Pla
 * [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
-
 ## Step 7: Publish your destination {#publish-destination}
 
 After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
 ## Step 8: Document your destination {#document-destination}
 
-If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience League destinations catalog](/help/destinations/catalog/overview.md).
+If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
