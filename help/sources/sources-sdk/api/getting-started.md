@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Getting Started with Sources SDK
+title: Getting Started with Sources SDK (Beta)
 topic-legacy: developer guide
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Sources SDK.
 ---
-# Getting started with Sources SDK
+# Getting Started with Sources SDK (Beta)
 
 >[!IMPORTANT]
 >

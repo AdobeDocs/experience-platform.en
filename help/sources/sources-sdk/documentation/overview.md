@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 solution: Experience Platform
 title: Document Your Source
 topic-legacy: overview
-description: The final step before your new source can be set live in Adobe Experience Platform is to document your new source.
+description: The final step before your new source can be made live in Adobe Experience Platform is to document your new source.
 ---
 # Document your source
 
@@ -16,7 +16,7 @@ The final step before your new source can be set live in Adobe Experience Platfo
 This documentation guide includes:
 
 * A tutorial that you can follow to create a documentation page for your new source;
-* A template for you to fill out for your new source;
+* A documentation template for you to fill out for your new source;
 * [Instructions on how to use Markdown for writing technical documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
 * [Instructions on understanding Adobe Markdown flavor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
 

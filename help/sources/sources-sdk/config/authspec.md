@@ -13,11 +13,11 @@ The `authSpec` array contains information on the authentication parameters requi
 
 ## Authentication specifications
 
-Currently, [!DNL Sources SDK] supports OAuth 2 refresh code and basic authentication. See the tables below for guidance on using OAuth 2 refresh code and basic authentication.
+Currently, [!DNL Sources SDK] supports OAuth 2 refresh codes and basic authentication. See the tables below for guidance on using an OAuth 2 refresh code and basic authentication
 
 ### OAuth 2 refresh code
 
-OAuth 2 refresh code allows for the secure access to an application by generating a temporary access token and a refresh token. The access token allows you to securely access your resources without having to provide other credentials, while the refresh token allows you to generate a new access token, once the access token expires.
+An OAuth 2 refresh code allows for secure access to an application by generating a temporary access token and a refresh token. The access token allows you to securely access your resources without having to provide other credentials, while the refresh token allows you to generate a new access token, once the access token expires.
 
 ```json
 {
@@ -85,8 +85,8 @@ OAuth 2 refresh code allows for the secure access to an application by generatin
 | `authSpec.spec.properties.description` | Displays a brief description on the credential. |
 | `authSpec.spec.properties.type` | Defines the data type of the credential. | `string` |
 | `authSpec.spec.properties.format` | Defines the format of the credential. | `format` |
-| `authSpec.spec.properties.clientId` | The client ID associated with your application. The client ID is used to retrieve your access token. |
-| `authSpec.spec.properties.clientSecret` | The client secret associated with your application. The client secret is used to retrieve your access token. |
+| `authSpec.spec.properties.clientId` | The client ID associated with your application. The client ID is used in conjunction with your client secret to retrieve your access token. |
+| `authSpec.spec.properties.clientSecret` | The client secret associated with your application. The client secret is used in conjunction with your client ID to retrieve your access token. |
 | `authSpec.spec.properties.accessToken` | The access token authorizes your secure access to your application. |
 | `authSpec.spec.properties.refreshToken` | The refresh token is used to generate a new access token, when the access token expires. |
 | `authSpec.spec.properties.expirationDate` | Defines the expiration date of the access token. |
@@ -97,7 +97,7 @@ OAuth 2 refresh code allows for the secure access to an application by generatin
 {style="table-layout:auto"}
 
 
-## Basic authentication
+### Basic authentication
 
 Basic authentication is an authentication type that allows you to access your application by using a combination of your application's host URL, your account username, and your account password.
 

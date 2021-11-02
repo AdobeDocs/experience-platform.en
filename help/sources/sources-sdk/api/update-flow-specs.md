@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Update flow specifications using the Flow Service API
+title: Update flow specifications using the Flow Service API (Beta)
 topic-legacy: developer guide
-description:The following document provides steps on how to retrieve and update flow specifications using the Flow Service API for Sources SDK.
+description: The following document provides steps on how to retrieve and update flow specifications using the Flow Service API for Sources SDK.
 ---
-# Update flow specifications using the [!DNL Flow Service] API
+# Update flow specifications using the [!DNL Flow Service] API (Beta)
 
 >[!IMPORTANT]
 >
@@ -12,7 +12,7 @@ description:The following document provides steps on how to retrieve and update 
 
 Once you have generated a new connection specification ID, you must add this ID to a flow specification in order to create a dataflow.
 
-Flow specifications contain information that define a flow, including the source and target connection IDs that it supports, transformation specifications that are needed to be applied to the data, and scheduling parameters required to generate a flow. You can edit flow specifications by using the `/flowSpecs` endpoint.
+Flow specifications contain information that defines a flow, including the source and target connection IDs that it supports, transformation specifications that are needed to be applied to the data, and scheduling parameters required to generate a flow. You can edit flow specifications by using the `/flowSpecs` endpoint.
 
 The following document provides steps on how to retrieve and update flow specifications using the [!DNL Flow Service] API for Sources SDK.
 

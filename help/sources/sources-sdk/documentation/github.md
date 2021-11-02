@@ -67,6 +67,6 @@ Ensure that the base and compare branches are correct. Add a note to the PR, des
 
 At this point, a notification appears that prompts you to sign the Adobe Contributor License Agreement (CLA). This is a mandatory step. After you sign the CLA, refresh the PR page and submit the pull request.
 
-You can confirm that the pull request has been submitted by inspecting the Pull requests tab in https://github.com/AdobeDocs/experience-platform.en.
+You can confirm that the pull request has been submitted by inspecting the pull requests tab in https://github.com/AdobeDocs/experience-platform.en.
 
 ![confirm-pr](../assets/confirm-pr.png)

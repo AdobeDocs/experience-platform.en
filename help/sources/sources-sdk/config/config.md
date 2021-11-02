@@ -14,7 +14,7 @@ This document provides an overview of the configurations you need to prepare in 
 
 ## Connection specification
 
-Connection specifications return a source's connector properties, including authentication specifications related to creating the base and source connections and a fixed connection specification ID that is assigned to a particular source. Connection specifications are tenant and IMS Organization agnostic. A typical connection specification contains basic information on a given source, as well as three distinct sections: `authSpec`, `sourceSpec`, and `exploreSpec`.
+Connection specifications return a source's connector properties. They include authentication specifications related to creating the base and source connections and a fixed connection specification ID that is assigned to a particular source. Connection specifications are tenant and IMS Organization agnostic. A typical connection specification contains basic information on a given source, as well as three distinct sections: `authSpec`, `sourceSpec`, and `exploreSpec`.
 
 | Specs | Description |
 | --- | --- |
@@ -23,6 +23,8 @@ Connection specifications return a source's connector properties, including auth
 | `exploreSpec` | The `exploreSpec` array defines the parameters required for exploring and inspecting objects contained in your source. The `exploreSpec` also defines the response format returned when objects are explored and inspected. |
 
 {style="table-layout:auto"}
+
+## Populate connection specification values
 
 A connection specification can be divided into three distinct parts: the authentication specifications, the source specifications, and the explore specifications. 
 

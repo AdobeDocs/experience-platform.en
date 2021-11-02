@@ -7,7 +7,7 @@ description: This document provides an overview of the configurations you need t
 
 # Configure source specification for Sources SDK
 
-Source specifications contain information specific to a source, including attributes pertaining to a source's category, beta status, and catalog icon. Source specifications also contain information regarding parameters for the URL, content, header, and schedule, among others. Source specifications also describes the schema of the parameters required to create a source connection from a base connection, and is necessary in order to create a source connection.
+Source specifications contain information specific to a source, including attributes pertaining to a source's category, beta status, and catalog icon. They also contain useful information such as URL parameters, content, header, and schedule. Source specifications also describe the schema of the parameters required to create a source connection from a base connection. The schema is necessary in order to create a source connection.
 
 
 ```json

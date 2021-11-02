@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Update a connection specification using the Flow Service API
+title: Update a connection specification using the Flow Service API (Beta)
 topic-legacy: developer guide
 description: You can update the properties of a connection specification through a PUT operation.
 ---
-# Update a connection specification using the Flow Service API
+# Update a connection specification using the Flow Service API (Beta)
 
 You can update the properties of a connection specification through a PUT operation. When updating a connection specification through a PUT request, the body must include all of the fields that would be required when creating a new connection specification in a POST request.
 

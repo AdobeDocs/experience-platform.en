@@ -15,7 +15,7 @@ This document provides steps on how to use your local environment to author docu
 
 ## Prerequisites
 
-The following tutorial requires that you have GitHub Desktop installed in your local machine. If you do not have GitHub Desktop, you can download the application [here](https://desktop.github.com/).
+The following tutorial requires that you have GitHub Desktop installed on your local machine. If you do not have GitHub Desktop, you can download the application [here](https://desktop.github.com/).
 
 ## Connect to GitHub and set up your local authoring environment
 
@@ -23,7 +23,7 @@ The first step in setting up your local authoring environment is to navigate to 
 
 ![platform-repo](../assets/platform-repo.png)
 
-In the main page of the Platform GitHub repository, select **Fork**.
+On the main page of the Platform GitHub repository, select **Fork**.
 
 ![fork](../assets/fork.png)
 
@@ -35,7 +35,7 @@ To clone the repository to your local machine, select **Code**. From the dropdow
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
-Next, allow for a few moments for GitHub Desktop to clone the `experience-platform.en` repository.
+Next, allow a few moments for GitHub Desktop to clone the `experience-platform.en` repository.
 
 ![cloning](../assets/cloning.png)
 
@@ -71,11 +71,11 @@ Finally, follow the instructions outlined on the template and edit the template 
 
 ## Submit your documentation for review
 
-To create a pull request (PR) and submit your documentation for review, save your work, and then, on GitHub Desktop, enter a commit message and select **Commit to create-source-documentation**.
+To create a pull request (PR) and submit your documentation for review, first save your work in [!DNL Visual Studio Code] (or your chosen text editor). Next, using GitHub Desktop, enter a commit message and select **Commit to create-source-documentation**.
 
 ![commit-vs](../assets/commit-vs.png)
 
-Next, select **Push origin** to bring your work to the remote branch.
+Next, select **Push origin** to upload your work to the remote branch.
 
 ![push-origin](../assets/push-origin.png)
 
@@ -91,6 +91,6 @@ Ensure that the base and compare branches are correct. Add a note to the PR, des
 
 ![create-pr](../assets/create-pr.png)
 
-You can confirm that the pull request has been submitted by inspecting the Pull requests tab in https://github.com/AdobeDocs/experience-platform.en.
+You can confirm that the pull request has been submitted by inspecting the pull requests tab in https://github.com/AdobeDocs/experience-platform.en.
 
 ![confirm-pr](../assets/confirm-pr.png)
