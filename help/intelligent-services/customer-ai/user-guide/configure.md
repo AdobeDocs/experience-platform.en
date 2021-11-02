@@ -42,8 +42,6 @@ To create a new instance, select **[!UICONTROL Create instance]**.
 
 ## Setup
 
-<!-- Get new Go URLs for CAI UI -->
-
 The instance creation workflow appears, starting on the **[!UICONTROL Setup]** step.
 
 Below is important information on values that you must provide the instance with:
@@ -68,7 +66,7 @@ After selecting the datasets you wish to use, select the **[!UICONTROL Add]** bu
 
 ![Select datasets](../images/user-guide/select-datasets.png)
 
-Selecting the info icon ![info icon]() next to the dataset opens the dataset preview popover.
+Selecting the info icon ![info icon](../images/user-guide/info-icon.png) next to the dataset opens the dataset preview popover.
 
 ![Select and search for dataset](../images/user-guide/dataset-info-2.png)
 
@@ -98,7 +96,7 @@ In the event that more than one identity is available within a namespace, make s
 
 >[!NOTE]
 >
-> If no valid identity namespace exists for a dataset, you must set a primary identity and assign it to an identity namespace using the schema editor. To learn more about namespaces and identities, visit the [Identity Service namespaces documenation](../../identity-service/namespaces.md).
+> If no valid identity namespace exists for a dataset, you must set a primary identity and assign it to an identity namespace using the schema editor. To learn more about namespaces and identities, visit the [Identity Service namespaces](../../../identity-service/namespaces.md) documenation.
 
 
 ## Define a goal {#define-a-goal}
