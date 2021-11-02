@@ -48,13 +48,32 @@ By default, only populated schema fields from your data store are shown. This in
 
 #### Adobe Analytics report suite datasets
 
-Additionally, you can use data from either a single or multiple Adobe Analytics reports suites as events within segmentation. 
+You can use data from either a single or multiple Adobe Analytics reports suites as events within segmentation. 
 
->[!NOTE]
->
->Before using the data from Adobe Analytics reports suites, you will need to have them mapped to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+When using data from a single Adobe Analytics report suite, Adobe Experience Platform will automatically add descriptors and friendly names to the generic fields, making it easier to find those fields within [!DNL Segment Builder].
 
-When using data from a single Adobe Analytics report suite, Adobe Experience Platform will automatically add descriptors and friendly names to the generic fields 
+IMAGE
+
+When using data from multiple Adobe Analytics report suites, Adobe Experience Platform **cannot** automatically add descriptors or friendly names to the generic fields. As a result, before using the data from Adobe Analytics reports suites, you will need to have them mapped to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+
+For example, if you had two report suites with the following variables:
+
+| Field | Report Suite Schema A | Report Suite Schema B |
+| ----- | --------------------- | --------------------- |
+| eVar1 | Referring Domain | Logged in Y/N |
+| eVar2 | Page Name | Member Loyalty ID | 
+| eVar3 | URL | Page Name |
+| eVar4 | Search Terms | Product Name |
+| event1 | Clicks | Page Views |
+| event2 | Page Views | Cart Additions |
+| event3 | Cart Additions | Checkouts |
+| event4 | Purchases | Purchases |
+
+You could map the two report suites with the following schema:
+
+IMAGE
+
+Once the report suites have been mapped, you can use these newly mapped fields within your profile-related workflows and segmentation.
 
 ### Audiences
 
