@@ -52,7 +52,7 @@ You can use data from either a single or multiple Adobe Analytics reports suites
 
 When using data from a single Adobe Analytics report suite, Adobe Experience Platform will automatically add descriptors and friendly names to the generic fields, making it easier to find those fields within [!DNL Segment Builder].
 
-IMAGE
+![](../images/ui/segment-builder/single-report-suite.png)
 
 When using data from multiple Adobe Analytics report suites, Adobe Experience Platform **cannot** automatically add descriptors or friendly names to the generic fields. As a result, before using the data from Adobe Analytics reports suites, you will need to have them mapped to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
