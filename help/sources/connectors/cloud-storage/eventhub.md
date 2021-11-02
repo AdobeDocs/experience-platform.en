@@ -13,9 +13,26 @@ Adobe Experience Platform provides native connectivity for cloud providers like 
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from [!DNL Azure Event Hubs] in real time.
 
-## Use an [!DNL Ethos] virtual network to connection [!DNL Azure Event Hubs] to Platform
+## Use a virtual network to connect to [!DNL Azure Event Hubs] to Platform
 
+You can set up a virtual network to connect [!DNL Azure Event Hubs] to Platform while having firewall measures enabled. To set up a virtual network, you must update the **request body** to the JSON below, when authenticating to [!DNL Azure] and setting up your network rule set.
 
+```json
+{
+  "properties": {
+    "defaultAction": "Deny",
+    "virtualNetworkRules": [
+      {
+        "subnet": {
+          "id": "/subscriptions/93f21779-b1fd-49ee-8547-2cdbc979a44f/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_va7_network_10_19_144_0_22/subnets/ethos_12_prod_va7_network_10_19_144_0_22"
+        },
+        "ignoreMissingVnetServiceEndpoint": true
+      },
+    ],
+    "ipRules": []
+  }
+}
+```
 
 ## Connect [!DNL Azure Event Hubs] to Platform
 
