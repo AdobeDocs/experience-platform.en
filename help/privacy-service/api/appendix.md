@@ -67,6 +67,7 @@ The following table outlines the accepted values for specifying an Adobe product
 | Adobe Target | `target` |
 | Automation Product | `automationProduct` |
 | Customer Attributes (CRS) | `CRS` |
+| Identity Service | `Identity` |
 | Real-time Customer Profile | `profileService` |
 
 {style="table-layout:auto"}
