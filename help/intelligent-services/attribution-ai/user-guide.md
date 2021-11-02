@@ -52,17 +52,15 @@ Next, the set up page for Attribution AI appears where you can provide a name an
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
-By design, Attribution AI uses Adobe Analytics, Experience event, and Consumer Experience Event data to calculate attribution scores. When selecting a dataset only ones that are compatible with Attribution AI are listed. To select a dataset select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. You can also use the search option to quickly find the datasets you're interested in.
-
-![Select and search for dataset](./images/user-guide/)
+By design, Attribution AI can use Adobe Analytics, Experience event, and Consumer Experience Event data to calculate attribution scores. When selecting a dataset only ones that are compatible with Attribution AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. You can also use the search option to quickly find the datasets you're interested in.
 
 After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
 
-![Select datasets](./images/user-guide/)
+![Select datasets](./images/user-guide/select-datasets.png)
 
-Selecting the info icon ![info icon](./images/user-guide/) next to the dataset opens the dataset preview popover.
+Selecting the info icon ![info icon](./images/user-guide/info-icon.png) next to a dataset opens the dataset preview popover.
 
-![Select and search for dataset](./images/user-guide/)
+![Select and search for dataset](./images/user-guide/dataset-preview.png)
 
 The dataset preview contains data such as the last update time, source schema, and a preview of the first ten columns.
 
@@ -74,21 +72,25 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 >[!NOTE]
 >
->Dataset completeness is calculated using the maximum lookback window for Customer AI (one year). This means data that is more than one year old is not taken into account when displaying your dataset completeness value.
+>Dataset completeness is calculated using the maximum lookback window for Attribution AI (one year). This means data that is more than one year old is not taken into account when displaying your dataset completeness value.
 
-![Dataset completeness](../images/user-guide/)
+![Dataset completeness](./images/user-guide/dataset-completeness.png)
 
-### Select an identity namespace {#dataset-key}
+### Select an identity {#dataset-key}
 
-In order for multiple datasets to join on one another, you must select a identity namespace and a value within that namespace you wish to use for each dataset. The same namespace must be used for every dataset you select. 
+In order for multiple datasets to join on one another, you must select a identity namespace (also known as an "identity type") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
 
-In the event that more than one identity is available within a namespace, make sure to select the correct identity field. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more common to be filled in and more useful in individual predictions.
+>[!IMPORTANT]
+>
+>The same namespace (identity type) must be used for every dataset you select. For example, when using the Phone namespace and `mobilePhone.number` as the identifier, all identifiers for the remaining datasets must contain and use the Phone namespace.
 
-![Dataset key not selected](./images/user-guide/)
+In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and more useful in individual predictions. This means I would select `EMAIL (personalEmail.address)` as my identity.
+
+![Dataset key not selected](./images/user-guide/aai-namespace.png)
 
 >[!NOTE]
 >
-> If no valid identity namespace exists for a dataset, you must set a primary identity and assign it to an identity namespace using the schema editor. To learn more about namespaces and identities, visit the [Identity Service namespaces documenation](../../identity-service/namespaces.md).
+> If no valid identity namespace exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../identity-service/namespaces.md) documentation.
 
 ## Mapping media channel and campaign fields {#aai-mapping}
 
@@ -96,7 +98,7 @@ In the event that more than one identity is available within a namespace, make s
 
 After you have finished selecting and adding datasets, the **Map** configuration step appears. Attribution AI requires that you map the Media channel field for each dataset you selected in the previous step. This is because without the Media channel mapping between datasets, insights derived from Attribution AI may not show up properly making the insights page difficult to interpret. Although only the Media channel is required, it is highly recommended that you map some of the optional fields such as Media action, Campaign name, Campaign group, and Campaign tag. Doing so allows Attribution AI to provide clearer insights and optimal results.
 
-![mapping]()
+![mapping](./images/user-guide/mapping.png)
 
 ## Defining events {#define-events}
 
