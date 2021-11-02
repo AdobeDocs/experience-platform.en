@@ -46,6 +46,16 @@ By default, only populated schema fields from your data store are shown. This in
 
 ![](../images/ui/segment-builder/show-populated.png)
 
+#### Adobe Analytics report suite datasets
+
+Additionally, you can use data from either a single or multiple Adobe Analytics reports suites as events within segmentation. 
+
+>[!NOTE]
+>
+>Before using the data from Adobe Analytics reports suites, you will need to have them mapped to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+
+When using data from a single Adobe Analytics report suite, Adobe Experience Platform will automatically add descriptors and friendly names to the generic fields 
+
 ### Audiences
 
 The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within [!DNL Experience Platform].
