@@ -67,4 +67,6 @@ For more information, read the following Experience Platform Access Control docu
 
 ## Next steps {#next-steps}
 
-By following the steps in this article, you obtained authentication credentials to Adobe I/O, a sandbox name, and the destination authoring access control permission. Next, you can set up a destination using Destination SDK. Read [Use Destination SDK to configure your destination](./configure-destination-instructions.md) for next steps.
+By following the steps in this article, you obtained authentication credentials to Adobe I/O, a sandbox name, and the destination authoring access control permission. Next, you can set up a destination using Destination SDK. 
+* Read [Use Destination SDK to configure your destination](./configure-destination-instructions.md) for next steps.
+* For all operations, refer to the [Destination Authoring API documentation](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).

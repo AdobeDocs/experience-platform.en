@@ -62,10 +62,9 @@ The following request creates a new privacy job for a single customer's data in 
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
@@ -98,6 +97,10 @@ curl -X POST \
 }'
 ```
 
+>[!IMPORTANT]
+>
+>Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
+
 ### Using the UI
 
 When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
@@ -119,10 +122,6 @@ For example, consider a situation where you are storing customer attribute data 
 One of the datasets uses `customer_id` as its primary identifier, whereas the other two use `email_id`. If you were to send a privacy request (access or delete) using only `email_id` as the user ID value, only the `firstName`, `lastName`, and `mlScore` attributes would be processed, while `address` would not be affected.
 
 To ensure that your privacy requests process all relevant customer attributes, you must provide the primary identity values for all applicable datasets where those attributes may be stored (up to a maximum of nine IDs per customer). See the section on identity fields in the [basics of schema composition](../xdm/schema/composition.md#identity) for more information on fields that are commonly marked as identities.
-
->[!NOTE]
->
->If you are using different [sandboxes](../sandboxes/home.md) to store your [!DNL Profile] data, you must make a separate privacy request for each sandbox, indicating the appropriate sandbox name in the `x-sandbox-name` header.
 
 ## Delete request processing
 
