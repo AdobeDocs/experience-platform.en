@@ -171,8 +171,7 @@ You can define important Profile dataset fields (with timestamps) in your data i
 >
 >Adding a custom Profile attribute follows the same workflow as adding a custom event.
 
-<!-- Need updated UI to be live in order to add this screen -->
-![add a custom profile attribute]()
+![add a custom profile attribute](../images/user-guide/profile-attributes.png)
 
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
