@@ -77,6 +77,8 @@ See the following tutorial for detailed instructions on how to configure an acti
 
 ## Step 4: Obtain the latest segment export job ID {#segment-export-id}
 
+After you configure an activation flow for your batch destination, scheduled segmentation jobs start running automatically every 24 hours.
+
 Before you can run the ad-hoc activation job, you must obtain the ID of the latest segment export job. You must pass this ID in the ad-hoc activation job request.
 
 Follow the instructions described [here](../../segmentation/api/export-jobs.md#retrieve-list) to retrieve a list of all the segment export jobs.
@@ -128,8 +130,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
       ]
    },
    "exportId":[
-      "exportid11",
-      "exportid12"
+      "exportId1",
+      "exportId2"
    ]
 }
 ```
@@ -138,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audience segments. |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audience segments that you want to activate to the selected destination. |
-| <ul><li>`exportid11`</li><li>`exportid12`</li></ul> | The IDs returned in the response of the [segment export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest segment export job ID](#segment-export-id) for instructions on how to find this ID. |
+| <ul><li>`exportId1`</li><li>`exportId2`</li></ul> | The IDs returned in the response of the [segment export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest segment export job ID](#segment-export-id) for instructions on how to find this ID. |
 
 ### Response
 
