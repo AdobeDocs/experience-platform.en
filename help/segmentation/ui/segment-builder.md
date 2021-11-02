@@ -75,6 +75,11 @@ IMAGE
 
 Once the report suites have been mapped, you can use these newly mapped fields within your profile-related workflows and segmentation.
 
+| Scenario | Union Schema experience | Segmentation generic variable | Segmentation mapped variable |
+| -------- | ----------------------- | ----------------------------- | ---------------------------- |
+| Single report suite | Friendly name descriptor is included with generic variables. <br><br>**Example:** Page Name (eVar2) | <ul><li>Friendly name descriptor included with generic variables</li><li>Queries use data from the specific dataset, since it is the only one</li></ul> | Queries can use Adobe Analytics data and potentially other sources. |
+| Multiple report suites | No friendly name descriptors are included with generic variables. <br><br>**Example:** eVar2 | <ul><li>Any field with multiple descriptors will show up as generic. This means that no friendly names will show up in the UI.</li><li>Queries can use data from any datasets that contain the eVar, which may result in mixed or incorrect results.</li></ul> | Queries will use correctly combined results from multiple datasets. |
+ 
 ### Audiences
 
 The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within [!DNL Experience Platform].
