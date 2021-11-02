@@ -11,11 +11,15 @@ exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into Platform.
 
-Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from [!DNL Azure Event Hubs] in real time.
+Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from [!DNL Event Hubs] in real time.
 
-## Use a virtual network to connect to [!DNL Azure Event Hubs] to Platform
+## Use a virtual network to connect to [!DNL Event Hubs] to Platform
 
-You can set up a virtual network to connect [!DNL Azure Event Hubs] to Platform while having firewall measures enabled. To set up a virtual network, you must update the **request body** to the JSON below, when authenticating to [!DNL Azure] and setting up your network rule set.
+You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having firewall measures enabled. To set up a virtual network, you must update the **request body** to the JSON below, when authenticating to [!DNL Azure] and establishing a network rule set for your [!DNL Event Hubs] namespace.
+
+>[!NOTE]
+>
+>The example payload below is specific to the `VA7` region network. When setting up a virtual network, you must update `subnet.id` with your corresponding region network.
 
 ```json
 {
@@ -34,16 +38,18 @@ You can set up a virtual network to connect [!DNL Azure Event Hubs] to Platform 
 }
 ```
 
-## Connect [!DNL Azure Event Hubs] to Platform
+See the following [[!DNL Event Hubs] document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) for more information on network rule sets.
 
-The documentation below provides information on how to connect [!DNL Azure Event Hubs] to Platform using APIs or the user interface:
+## Connect [!DNL Event Hubs] to Platform
+
+The documentation below provides information on how to connect [!DNL Event Hubs] to Platform using APIs or the user interface:
 
 ### Using APIs
 
-- [Create a Azure Event Hubs source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
+- [Create a Event Hubs source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Collect streaming data using the Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### Using the UI
 
-- [Create a Azure Event Hubs source connection in the UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
+- [Create a Event Hubs source connection in the UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
