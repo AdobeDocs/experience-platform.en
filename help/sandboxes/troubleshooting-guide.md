@@ -20,12 +20,11 @@ Sandboxes are virtual partitions within a single instance of Experience Platform
 
 There are two sandbox types available in Experience Platform:
 
-* Production sandbox
-* Non-production sandbox
-
-Experience Platform provides a single production sandbox, which cannot be deleted or reset. Only one production sandbox can exist for a single Platform instance.
-
-By contrast, multiple non-production sandboxes can be created by sandbox administrators for a single Platform instance. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 total sandboxes. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
+* **Production sandbox**: A production sandbox is meant to be used with profiles in your production environment. Platform allows you to create multiple production sandboxes in order to provide the right functionality for data while still maintaining operational isolation. This feature allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions. Production sandboxes support a volume of production profiles up to your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized production sandboxes). You are entitled to use licensed average profile per authorized [!DNL Profile] (measured cumulatively across all of your authorized production sandboxes).
+* **Development sandbox**: A development sandbox is a sandbox that can be used exclusively for development and testing with non-production profiles. Development sandboxes support a volume of non-production profiles up to 10% of your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized development sandboxes). You are entitled to up to:
+  * An average non-production profile richness of 75 kilobytes per authorized non-production Profile (measured cumulatively across all of your authorized development sandboxes);
+  * One batch segmentation job per day, per development sandbox;
+  * An average of 120 [!DNL Profile] API calls, per [!DNL Profile], per year (measured cumulatively across all of your authorized development sandboxes.
 
 See the [sandboxes overview](./home.md) for more information.
 
@@ -35,7 +34,13 @@ Sandboxes are isolated partitions of a single Platform instance, with each sandb
 
 ## How many production sandboxes can I have?
 
-Experience Platform only supports one production sandbox per IMS Organization, which is provided out-of-the-box. While the production sandbox can be renamed, it cannot be deleted or reset. Users with Sandbox Administration permissions can only create, reset, and delete non-production sandboxes.
+An Experience Platform instance supports multiple production and development sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on).
+
+User-created production sandboxes can be reset or deleted, except for production sandboxes that are also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
+
+You can update the title of a production sandbox. However, a production sandbox cannot be renamed. The out-of-the-box default production sandbox that come with your IMS Organization can neither be reset nor deleted.
+
+Development sandboxes support both reset and delete functionalities.
 
 ## How many non-production sandboxes can I have?
 
