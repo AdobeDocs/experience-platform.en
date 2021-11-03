@@ -27,6 +27,22 @@ The diagram below illustrates the end-to-end workflow for activating segments vi
 >
 >Ad-hoc audience activation is only supported by [batch file-based destinations](../destination-types.md#file-based).
 
+## Use cases {#use-cases}
+
+### Flash sales or promotions
+
+An online retailer is preparing a limited flash sale and wants to notify customers on a short notice. Through the Experience Platform ad-hoc activation API, the marketing team can export audience segments on-demand, and quickly send promotional emails to the customer base.
+
+
+### Current events or breaking news
+
+A hotel expects inclement weather over the following days, and the team wants to inform the arriving guests quickly, so they can plan accordingly. The marketing team can use the Experience Platform ad-hoc activation API to export audience segments on-demand, and notify the guests.
+
+### Integration testing
+
+IT managers can use the Experience Platform ad-hoc activation API to export audience segments on-demand, so they can test their custom integration with Adobe Experience Platform, and ensure everything is working correctly.
+
+
 ## Guardrails {#guardrails}
 
 Keep in mind the following guardrails when using the ad-hoc activation API.
