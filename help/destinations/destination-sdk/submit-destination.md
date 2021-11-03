@@ -8,7 +8,7 @@ title: How to submit a destination authored in Destination SDK
 
 Before your destination can be published to the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md), you must provide Adobe with certain information about the destination and the testing you performed, to ensure that users enjoy the best possible experience when activating data to your platform.
 
-This page lists all the information you need to provide when submitting or updating a destination you authored using Adobe Experience Platform Destination SDK. To successfully submit a destination in Adobe Experience Platform, send an email to .... which includes:
+This page lists all the information you need to provide when submitting or updating a destination you authored using Adobe Experience Platform Destination SDK. To successfully submit a destination in Adobe Experience Platform, send an email to <aepdestsdk@adobe.com> which includes:
 
 * A description of the use cases that your destination solves. This is not required if you are updating an existing destination configuration.
 * A copy of the message transformation template you submitted via API.
@@ -23,8 +23,10 @@ You can find detailed information about each item in the sections below:
 
 ## Use case description
 
-Provide a description of the use cases that your destination solves for Experience Platform customers. See two examples below:
+Provide a description of the use cases that your destination solves for Experience Platform customers. Your descriptions can be similar to use cases from existing partners:
 
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Create audiences from your customer lists, people who’ve visited your site or people who have already interacted with your content on Pinterest.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX APIs are available for advertisers that want to target a specific audience group keyed off email addresses in Verizon Media (VMG) can quickly create a new segment and push the desired audience group using VMG’s near-real-time API.
 
 ## Copy of the message transformation template
 
