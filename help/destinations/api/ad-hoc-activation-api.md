@@ -5,8 +5,6 @@ title: (Beta) Activate audience segments through the Experience Platform ad-hoc 
 description: This article illustrates the end-to-end workflow for activating segments via the ad-hoc activation API, including the segmentation jobs that take place before activation.
 topic-legacy: tutorial
 type: Tutorial
-hidefromtoc: yes
-hide: yes
 ---
 
 # (Beta) Activate audience segments through the Experience Platform ad-hoc activation API
@@ -146,8 +144,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
       ]
    },
    "exportId":[
-      "exportId1",
-      "exportId2"
+      "exportId1"
    ]
 }
 ```
@@ -156,7 +153,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audience segments. |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audience segments that you want to activate to the selected destination. |
-| <ul><li>`exportId1`</li><li>`exportId2`</li></ul> | The IDs returned in the response of the [segment export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest segment export job ID](#segment-export-id) for instructions on how to find this ID. |
+| <ul><li>`exportId1`</li></ul> | The ID returned in the response of the [segment export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest segment export job ID](#segment-export-id) for instructions on how to find this ID. |
 
 ### Response
 
