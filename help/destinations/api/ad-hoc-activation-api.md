@@ -143,7 +143,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
          "segmentId3"
       ]
    },
-   "exportId":[
+   "exportIds":[
       "exportId1"
    ]
 }
