@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;destination api;ad-hoc activation;activate segments ad-hoc
 solution: Experience Platform
-title: (Beta) Activate audience segments through the Experience Platform ad-hoc activation API
-description: This article illustrates the end-to-end workflow for activating segments via the ad-hoc activation API, including the segmentation jobs that take place before activation.
+title: (Beta) Activate audience segments to batch destinations via the ad-hoc activation API
+description: This article illustrates the end-to-end workflow for activating audience segments via the ad-hoc activation API, including the segmentation jobs that take place before activation.
 topic-legacy: tutorial
 type: Tutorial
 ---
 
-# (Beta) Activate audience segments through the Experience Platform ad-hoc activation API
+# (Beta) Activate audience segments to batch destinations via the ad-hoc activation API
 
 >[!IMPORTANT]
 >
@@ -29,16 +29,16 @@ The diagram below illustrates the end-to-end workflow for activating segments vi
 
 ### Flash sales or promotions
 
-An online retailer is preparing a limited flash sale and wants to notify customers on a short notice. Through the Experience Platform ad-hoc activation API, the marketing team can export audience segments on-demand, and quickly send promotional emails to the customer base.
+An online retailer is preparing a limited flash sale and wants to notify customers on a short notice. Through the Experience Platform ad-hoc activation API, the marketing team can export segments on-demand, and quickly send promotional emails to the customer base.
 
 
 ### Current events or breaking news
 
-A hotel expects inclement weather over the following days, and the team wants to inform the arriving guests quickly, so they can plan accordingly. The marketing team can use the Experience Platform ad-hoc activation API to export audience segments on-demand, and notify the guests.
+A hotel expects inclement weather over the following days, and the team wants to inform the arriving guests quickly, so they can plan accordingly. The marketing team can use the Experience Platform ad-hoc activation API to export segments on-demand, and notify the guests.
 
 ### Integration testing
 
-IT managers can use the Experience Platform ad-hoc activation API to export audience segments on-demand, so they can test their custom integration with Adobe Experience Platform, and ensure everything is working correctly.
+IT managers can use the Experience Platform ad-hoc activation API to export segments on-demand, so they can test their custom integration with Adobe Experience Platform, and ensure everything is working correctly.
 
 
 ## Guardrails {#guardrails}
@@ -151,8 +151,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Property | Description |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audience segments. |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audience segments that you want to activate to the selected destination. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate segments. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the segments that you want to activate to the selected destination. |
 | <ul><li>`exportId1`</li></ul> | The ID returned in the response of the [segment export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest segment export job ID](#segment-export-id) for instructions on how to find this ID. |
 
 ### Response
