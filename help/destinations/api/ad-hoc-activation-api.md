@@ -118,9 +118,9 @@ Before running an ad-hoc activation job, make sure the scheduled segment export 
 
 Once the segment export job has completed, you can trigger the activation.
 
->[!WARNING]
+>[!NOTE]
 >
->You can activate a maximum of 50 segments per ad-hoc activation job. Attempting to activate more segments will cause the job to fail.
+>You can activate a maximum of 20 segments per ad-hoc activation job. Attempting to activate more segments will cause the job to fail.
 
 ### Request
 
