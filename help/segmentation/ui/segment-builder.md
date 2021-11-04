@@ -71,7 +71,7 @@ For example, if you had two report suites with the following variables:
 
 You could map the two report suites with the following schema:
 
-IMAGE
+![](../images/ui/segment-builder/union-schema.png)
 
 Once the report suites have been mapped, you can use these newly mapped fields within your profile-related workflows and segmentation.
 
