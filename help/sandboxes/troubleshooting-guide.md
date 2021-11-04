@@ -32,19 +32,23 @@ See the [sandboxes overview](./home.md) for more information.
 
 Sandboxes are isolated partitions of a single Platform instance, with each sandbox maintaining its own independent library of resources. A resource that exists in one sandbox cannot be accessed from any other sandbox, regardless of sandbox type (production or non-production).
 
+## What is the default production sandbox?
+
+The default production sandbox is the first production sandbox that is created when an IMS Organization is first provisioned. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID. The default production sandbox can be reset but not deleted.
+
 ## How many production sandboxes can I have?
 
 An Experience Platform instance supports multiple production and development sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on).
 
-User-created production sandboxes can be reset or deleted, except for production sandboxes that are also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
+Production sandboxes can be reset or deleted, except for production sandboxes that are also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
 
-You can update the title of a production sandbox. However, a production sandbox cannot be renamed. The out-of-the-box default production sandbox that comes with your IMS Organization can be reset but not deleted.
+You can update the title of a production sandbox. However, a production sandbox cannot be renamed. 
+
+## How many development sandboxes can I have?
+
+Experience Platform currently allows a maximum of 75 total sandboxes (production and development) to be active within a single IMS Organization.
 
 Development sandboxes support both reset and delete functionalities.
-
-## How many non-production sandboxes can I have?
-
-Experience Platform currently allows up to 15 non-production sandboxes to be active within a single IMS Organization.
 
 ## I just created a sandbox. How do I set permissions for the users who will be working with this sandbox?
 
