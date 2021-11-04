@@ -12,7 +12,7 @@ Observability metrics provide insights into usage statistics, historical trends,
 
 >[!NOTE]
 >
->The previous version metrics endpoint (V1) has been deprecated. This document focuses exclusively on the current version (V2). For details on the V1 endpoint for legacy implementations, please refer to the [API reference](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>The previous version of the metrics endpoint (V1) has been deprecated. This document focuses exclusively on the current version (V2). For details on the V1 endpoint for legacy implementations, please refer to the [API reference](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
 
 ## Getting started
 
