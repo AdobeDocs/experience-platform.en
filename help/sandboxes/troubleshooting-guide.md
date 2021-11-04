@@ -38,7 +38,7 @@ An Experience Platform instance supports multiple production and development san
 
 User-created production sandboxes can be reset or deleted, except for production sandboxes that are also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
 
-You can update the title of a production sandbox. However, a production sandbox cannot be renamed. The out-of-the-box default production sandbox that come with your IMS Organization can neither be reset nor deleted.
+You can update the title of a production sandbox. However, a production sandbox cannot be renamed. The out-of-the-box default production sandbox that comes with your IMS Organization can be reset but not deleted.
 
 Development sandboxes support both reset and delete functionalities.
 
