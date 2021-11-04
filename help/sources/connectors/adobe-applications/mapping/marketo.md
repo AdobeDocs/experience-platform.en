@@ -22,7 +22,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `eventType` | `eventType`|
 | `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
-| `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
+| `web.webPageDetails.URL` | `web.webPageDetails.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
 | `environment.ipV4` | `environment.ipV4`|
 | `search.keywords` | `search.keywords` |
