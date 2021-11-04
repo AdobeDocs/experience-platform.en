@@ -13,6 +13,7 @@ feature: Destinations
 * API tutorials {#api}
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
+    * [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
@@ -21,6 +22,7 @@ feature: Destinations
         * [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
+        * [Activate audience data to profile request destinations (Beta)](./ui/activate-profile-request-destinations.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Edit activation flows](./ui/edit-activation.md)
@@ -108,9 +110,11 @@ feature: Destinations
         * [Braze connection](./catalog/mobile-engagement/braze.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
+        * [Adobe Target connection (Beta)](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
         * [Adobe Target v2 extension](./catalog/personalization/adobe-target-v2.md)
         * [Beemray extension](./catalog/personalization/beemray.md)
+        * [Custom personalization connection (Beta)](./catalog/personalization/custom-personalization.md)
         * [D&B Visitor Intelligence extension](./catalog/personalization/dnb.md)
         * [Experience Cloud ID Service extension](./catalog/personalization/adobe-ecid.md)
         * [Gainsight extension](./catalog/personalization/gainsight.md)
@@ -144,12 +148,14 @@ feature: Destinations
       * [Server and template specs](./destination-sdk/server-and-template-configuration.md)
       * [Message format](./destination-sdk/message-format.md)
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
-      * [Authentication configuration](./destination-sdk/credentials-configuration.md)
-      * [OAuth 2 authentication](./destination-sdk/oauth2-authentication.md)
+      * Authentication {#authentication}
+        * [Authentication configuration](./destination-sdk/authentication-configuration.md)
+        * [OAuth 2 authentication](./destination-sdk/oauth2-authentication.md)
       * Developer tools {#developer-tools}
         * [Create and test a message transformation template](./destination-sdk/create-template.md)
         * [Test your destination configuration](./destination-sdk/test-destination.md)
-    * API reference {#api-reference}
+    * API operations {#api}
+      * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Destinations endpoint API operations](./destination-sdk/destination-configuration-api.md)
       * [Destination server endpoint API operations](./destination-sdk/destination-server-api.md)
       * [Audience metadata endpoint API operations](./destination-sdk/audience-metadata-api.md)
@@ -161,7 +167,7 @@ feature: Destinations
         * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
         * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
     * Guides {#guides}
-      * [Use Destination SDK to configure your destination](./destination-sdk/configure-destination-instructions.md)
+      * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
     * Document your destination {#document-destination}
       * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)

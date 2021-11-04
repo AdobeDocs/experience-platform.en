@@ -9,6 +9,47 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## October 8, 2021
+
+v3.2.2
+
+* Fix the conditional value data element JSON schema for all the available operators.
+* Fix https://github.com/adobe/reactor-extension-core/issues/64.
+
+## September 23, 2021
+
+v3.2.1
+
+* Fixed an error where the conditional value data element view initialization was not working properly when the field values were 0.
+
+## September 23, 2021
+
+v3.2.0
+
+The following changes were introduced in the Conditional Value data element:
+
+* Add a checkbox for the conditional and fallback values that allows the user to choose if they want undefined to be the returned value.
+* Number values are exposed as numbers in the settings object.
+* Conditional value is no longer required so that it can behave in the same way like the fallback value.
+
+## September 17, 2021
+
+v3.1.1
+
+* Fix a JS error that was preventing the date range condition view to be loaded.
+
+## September 16, 2021
+
+v3.1.0
+
+New data elements were added:
+
+* Merged Object - Select multiple data elements that will each provide an object. These objects will be deeply (recursively) merged together to produce a new object.
+* Conditional Value - Return one of two values (conditionalValue or fallbackValue) based on the result of the comparison.
+* Runtime Environment - Return one of the following Launch environment variables: environment stage, library build date, property name, property ID, rule name, rule id, event type, event detail payload, direct call identifier.
+* JavaScript Tools - Wrapper for common JavaScript operations: basic string manipulation (replace, substring, regex match, first and last index, split, slice), basic array operations (slice, join, pop, shift) and basic universal operations (slice, length).
+* Device Attributes - Return device attributes like window size or screen size.
+
 ## August 11, 2021
 
 v3.0.0

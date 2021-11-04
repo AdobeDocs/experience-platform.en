@@ -5,9 +5,11 @@ title: HTTP API Source Connector Overview
 description: Learn how to create streaming connectors to connect with Adobe Experience Platform using APIs or the user interface.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
 ---
-# HTTP API connector
+# [!DNL HTTP API] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+
+You can use the [!DNL HTTP API] source connector to stream your data to Platform. The [!DNL HTTP API] source is supported by [!DNL Data Prep] functions, allowing you to map any non XDM-compliant data to an XDM-compliant dataset.
 
 The documentation below provides information on how to create an HTTP API streaming connector to connect with [!DNL Platform] using APIs or the user interface:
 

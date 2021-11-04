@@ -2,7 +2,6 @@
 title: Action Types in the Adobe Experience Platform Web SDK Extension
 description: Learn about the different action types provided by the Adobe Experience Platform Web SDK tag extension.
 solution: Experience Platform
-feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
 ---
 # Action types
