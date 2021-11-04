@@ -15,9 +15,17 @@ Cloud storage sources can bring your own data into Platform without the need to 
 
 ## Use a virtual network to connect to [!DNL Event Hubs] to Platform
 
-You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having firewall measures enabled. To set up a virtual network, you must update the **request body** to the JSON below, when authenticating to [!DNL Azure] and establishing a network rule set for your [!DNL Event Hubs] namespace.
+You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, you must update the **request body** to the JSON below, when authenticating to [!DNL Azure] and establishing a network rule set for your [!DNL Event Hubs] namespace.
 
-The example payload below is specific to the `VA7` region network. When setting up a virtual network, you must update `subnet.id` with your corresponding region network. The following are the various domains and their corresponding accounts URLs:<ul><li>North America: `VA7`</li><li>Europe: `NLD2`</li><li>Australia: `AUS5`</li></ul>
+To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) and then select **Try It** from the REST API panel. Next, authenticate your [!DNL Azure] account using your credentials and then select the [!DNL Event Hubs] namespace, resource group, and subscription that you want to bring to Platform.
+
+Once set up, update the **request body** with the JSON that corresponds to your network region, from the list below:
+
+>[!TIP]
+>
+>You must make a backup of your existing firewall IP filtering rules as they will be deleted after this call.
+
+### VA7: North America
 
 ```json
 {
@@ -36,9 +44,43 @@ The example payload below is specific to the `VA7` region network. When setting 
 }
 ```
 
->[!TIP]
->
->You must make a backup of your existing firewall IP filtering rules as they will be deleted after this call.
+### NLD2: Europe
+
+```json
+{
+  "properties": {
+    "defaultAction": "Deny",
+    "virtualNetworkRules": [
+      {
+        "subnet": {
+          "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+        },
+        "ignoreMissingVnetServiceEndpoint": true
+      },
+    ],
+    "ipRules": []
+  }
+}
+```
+
+### AUS5: Australia
+
+```json
+{
+  "properties": {
+    "defaultAction": "Deny",
+    "virtualNetworkRules": [
+      {
+        "subnet": {
+          "id": "/subscriptions/1618ef18-9edc-48bf-88dd-61cc979629b5/resourceGroups/ethos_12_prod_aus5_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_aus5_network_10_21_116_0_22/subnets/ethos_12_prod_aus5_network_10_21_116_0_22"
+        },
+        "ignoreMissingVnetServiceEndpoint": true
+      },
+    ],
+    "ipRules": []
+  }
+}
+```
 
 See the following [[!DNL Event Hubs] document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) for more information on network rule sets.
 
