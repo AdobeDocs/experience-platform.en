@@ -15,9 +15,7 @@ Cloud storage sources can bring your own data into Platform without the need to 
 
 ## Use a virtual network to connect to [!DNL Event Hubs] to Platform
 
-You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, you must update the **request body** to the JSON below, when authenticating to [!DNL Azure] and establishing a network rule set for your [!DNL Event Hubs] namespace.
-
-To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) and then select **Try It** from the REST API panel. Next, authenticate your [!DNL Azure] account using your credentials and then select the [!DNL Event Hubs] namespace, resource group, and subscription that you want to bring to Platform.
+You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) and then select **Try It** from the REST API panel. Next, authenticate your [!DNL Azure] account using your credentials and then select the [!DNL Event Hubs] namespace, resource group, and subscription that you want to bring to Platform.
 
 Once set up, update the **request body** with the JSON that corresponds to your network region, from the list below:
 
