@@ -45,7 +45,7 @@ IT managers can use the Experience Platform ad-hoc activation API to export segm
 
 Keep in mind the following guardrails when using the ad-hoc activation API.
 
-* Each ad-hoc activation job can activate up to 20 segments. Attempting to activate more than 20 segments per job will cause the job to fail.
+* Currently, each ad-hoc activation job can activate up to 20 segments. Attempting to activate more than 20 segments per job will cause the job to fail. This behavior is subject to change in future releases.
 * Ad-hoc activation jobs cannot run in parallel with scheduled [segment export jobs](../../segmentation/api/export-jobs.md). Before running an ad-hoc activation job, make sure the scheduled segment export job has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
 * Do not run more than one concurrrent ad-hoc activation job per segment.
 
@@ -120,7 +120,7 @@ Once the segment export job has completed, you can trigger the activation.
 
 >[!NOTE]
 >
->You can activate a maximum of 20 segments per ad-hoc activation job. Attempting to activate more segments will cause the job to fail.
+>Currently, each ad-hoc activation job can activate up to 20 segments. Attempting to activate more than 20 segments per job will cause the job to fail. This behavior is subject to change in future releases.
 
 ### Request
 
@@ -175,7 +175,7 @@ A successful response returns HTTP status 200.
 | -------- | ----------- |
 | `segment` | The ID of the activated segment. |
 | `order` | The ID of the destination to which the segment was activated. |
-| `statusURLs` | The status URL of the activation flow. You can track the flow progress using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
+| `statusURL` | The status URL of the activation flow. You can track the flow progress using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
 
 
 ## API error handling
