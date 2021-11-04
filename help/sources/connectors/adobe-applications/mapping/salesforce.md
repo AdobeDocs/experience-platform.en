@@ -274,4 +274,4 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Next steps
 
-By reading this document, you have gained insight on the mapping relationship between [!DNL Salesforce] source fields and their corresponding XDM fields. See the tutorial on [creating a [!DNL Salesforce] source connection](../../../tutorials/ui/create/crm/salesforce.md) to start your [!DNL Salesforce] dataflow.
+By reading this document, you have gained insight on the mapping relationship between [!DNL Salesforce] source fields and their corresponding XDM fields. See the documentation on [creating a [!DNL Salesforce] source connection](../../../connectors/crm/salesforce.md) for more information.
