@@ -38,11 +38,17 @@ The default production sandbox is the first production sandbox that is created w
 
 ## How many production sandboxes can I have?
 
-An Experience Platform instance supports multiple production and development sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on).
+An Experience Platform instance supports multiple production and development sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, and profiles).
+
+A default Experience Platform license grants you a total of five sandboxes, which you can classify as production or development. You can license additional packs of 10 sandboxes up to a maximum of 75 sandboxes in total.
 
 Production sandboxes can be reset or deleted, except for production sandboxes that are also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
 
-You can update the title of a production sandbox. However, a production sandbox cannot be renamed. 
+You can update the title of a production sandbox. However, a production sandbox cannot be renamed.
+
+>[!NOTE]
+>
+>The sandbox name is used for lookup purposes in API calls, whereas the sandbox title is used as the display name.
 
 ## How many development sandboxes can I have?
 
