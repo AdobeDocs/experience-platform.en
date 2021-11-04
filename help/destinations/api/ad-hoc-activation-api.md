@@ -175,7 +175,7 @@ A successful response returns HTTP status 200.
 | -------- | ----------- |
 | `segment` | The ID of the activated segment. |
 | `order` | The ID of the destination to which the segment was activated. |
-| `statusURLs` | The status URL of the activation flow. You can track the flow progress using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
+| `statusURL` | The status URL of the activation flow. You can track the flow progress using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
 
 
 ## API error handling
