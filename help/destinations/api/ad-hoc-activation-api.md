@@ -161,19 +161,20 @@ A successful response returns HTTP status 200.
 
 ```shell
 {
-   "code":"DEST-ADH-200",
-   "message":"Adhoc run triggered successfully",
-   "statusURLs":[
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-1",
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-2"
+   "order":[
+      {
+         "segment":"db8961e9-d52f-45bc-b3fb-76d0382a6851",
+         "order":"ef2dcbd6-36fc-49a3-afed-d7b8e8f724eb",
+         "statusURL":"https://platform.adobe.io/data/foundation/flowservice/runs/88d6da63-dc97-460e-b781-fc795a7386d9"
+      }
    ]
 }
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `code` | The API response code. A successful call returns `DEST-ADH-200` (status code 200), while an incorrectly formatted one returns `DEST-ADH-400` (status code 400). |
-| `message` | The success or error message returned by the API. |
+| `segment` | The ID of the activated segment. |
+| `order` | The ID of the destination to which the segment was activated. |
 | `statusURLs` | The status URL of the activation flow. You can track the flow progress using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
 
 
