@@ -69,5 +69,6 @@ The following table outlines the accepted values for specifying an Adobe product
 | Customer Attributes (CRS) | `CRS` |
 | Identity Service | `Identity` |
 | Real-time Customer Profile | `profileService` |
+| Marketo Engage | `marketo` |
 
 {style="table-layout:auto"}
