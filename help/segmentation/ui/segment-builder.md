@@ -48,15 +48,15 @@ By default, only populated schema fields from your data store are shown. This in
 
 #### Adobe Analytics report suite datasets
 
-You can use data from either a single or multiple Adobe Analytics reports suites as events within segmentation. 
+You can use data from either a single or multiple Adobe Analytics report suites as events within segmentation. 
 
-When using data from a single Adobe Analytics report suite, Adobe Experience Platform will automatically add descriptors and friendly names to the generic fields, making it easier to find those fields within [!DNL Segment Builder].
+When using data from a single Analytics report suite, Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
 
 ![](../images/ui/segment-builder/single-report-suite.png)
 
-When using data from multiple Adobe Analytics report suites, Adobe Experience Platform **cannot** automatically add descriptors or friendly names to the generic fields. As a result, before using the data from Adobe Analytics reports suites, you will need to have them mapped to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+When using data from multiple Analytics report suites, Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
 
-For example, if you had two report suites with the following variables:
+For example, consider a situation where you had two report suites with the following variables:
 
 | Field | Report Suite Schema A | Report Suite Schema B |
 | ----- | --------------------- | --------------------- |
@@ -69,20 +69,20 @@ For example, if you had two report suites with the following variables:
 | event3 | Cart Additions | Checkouts |
 | event4 | Purchases | Purchases |
 
-You could map the two report suites with the following schema:
+In this case, you could map the two report suites with the following schema:
 
 ![](../images/ui/segment-builder/union-schema.png)
 
 >[!NOTE]
 >
->While the generic eVar values still get populated, you should **not** use them in your segment definitions, if possible, since the values could mean different things to when they were originally in their reports.
+>While the generic eVar values still get populated, you should **not** use them in your segment definitions (if possible), since the values could mean different things than what they were originally in their reports.
 
-Once the report suites have been mapped, you can use these newly mapped fields within your profile-related workflows and segmentation.
+Once the report suites have been mapped, you can use these newly mapped fields within your Profile-related workflows and segmentation.
 
 | Scenario | Union Schema experience | Segmentation generic variable | Segmentation mapped variable |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
 | Single report suite | Friendly name descriptor is included with generic variables. <br><br>**Example:** Page Name (eVar2) | <ul><li>Friendly name descriptor included with generic variables</li><li>Queries use data from the specific dataset, since it is the only one</li></ul> | Queries can use Adobe Analytics data and potentially other sources. |
-| Multiple report suites | No friendly name descriptors are included with generic variables. <br><br>**Example:** eVar2 | <ul><li>Any field with multiple descriptors will show up as generic. This means that no friendly names will show up in the UI.</li><li>Queries can use data from any datasets that contain the eVar, which may result in mixed or incorrect results.</li></ul> | Queries will use correctly combined results from multiple datasets. |
+| Multiple report suites | No friendly name descriptors are included with generic variables. <br><br>**Example:** eVar2 | <ul><li>Any field with multiple descriptors appear as generic. This means that no friendly names appear in the UI.</li><li>Queries can use data from any datasets that contain the eVar, which may result in mixed or incorrect results.</li></ul> | Queries will use correctly combined results from multiple datasets. |
  
 ### Audiences
 
