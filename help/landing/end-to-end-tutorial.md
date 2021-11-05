@@ -57,23 +57,27 @@ For more detailed instructions on source connectors, please read the [source con
 
 ## Evaluate your data
 
-After ingesting your data into Platform through a source connector, you can evaluate your data by using segmentation. To learn more about segmentation, please read the [segmentation service overview](../segmentation/home.md).
+After ingesting your data into Platform through a source connector, you can evaluate your data by using segmentation. Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. To learn more about segmentation, please read the [segmentation service overview](../segmentation/home.md).
 
 ### Create a segment definition
 
-Firstly, you will need to create a segment definition to cluster your individuals to create your target audience. To create a segment definition, you can follow the instructions in either the API tutorial on [creating a segment]() or the UI guide on using the [Segment Builder]().
+Firstly, you will need to create a segment definition to cluster your individuals to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the API tutorial on [creating a segment]() or the UI guide on using the [Segment Builder]().
 
 Ensure that once you've created a segment definition, that you keep note of the segment definition ID.
 
-### Schedule a segment job
+### Evaluate your segment definition
 
-After creating your segment definition, you can create a schedule to evaluate the segment on a regular basis. To create a schedule, you can follow the instructions in the API guide on the [schedules endpoint]().
+After creating your segment definition, you can either create a segment job to evaluate the segment as a one-time instance or create a schedule to evaluate the segment on an ongoing basis. 
 
-### Evaluate a segment job
+To evaluate a segment definition on demand, you will need to create a segment job. A segment job is an asynchronous process that creates a new audience segment, based on the referred segment definition and merge policies. Once the segment job is created and evaluated, you can get information about the segment, such as errors that may have occurred during processing or the size of your audience. To learn how to create a segment job, including all the details you need to provide, please read the [segment job developer guide](). 
 
-### Monitor the segment job
+To evaluate a segment definition on an ongoing basis, you will need to create and enable a schedule. A schedule is a tool that can be used to used to automatically run a segment job once a day at a specified time. To learn how to create and enable a schedule, you can follow the instructions in the API guide on the [schedules endpoint]().
 
 ## Export your evaluated data
+
+After either creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation by creating a segment export job. A segment export job is an asynchronous task that sends information about the evaluated segment job's audiences to a dataset. 
+
+Before creating an export job, you will first need to create a dataset to export the data to. To learn how to create a dataset, please read the create a target dataset step in the tutorial on [evaluating a segment]().
 
 ## Next steps
 
