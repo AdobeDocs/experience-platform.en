@@ -12,7 +12,7 @@ This tutorial workflow relies on several Adobe Experience Platform services to d
 - [Sources](../sources/home.md)
 - [XDM](../xdm/home.md)
 - [Segmentation](../segmentation/home.md)
-- Destinations
+- [Destinations](../destinations/home.md)
 
 Additionally, to make calls to a Platform API you must first complete the [Authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). This tutorial helps you gather your access credentials to be used in required headers.
 
