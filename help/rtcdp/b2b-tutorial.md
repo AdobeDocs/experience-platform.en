@@ -32,7 +32,7 @@ You can ingest your data by using one of the [various sources provided by Platfo
 
 In order to access your Marketo account on Platform, you must acquire your authentication credentials which include: `munchkinId`, `clientId`, and  `clientSecret`. See the [authenticate your Marketo source connector](../sources/connectors/adobe-applications/marketo/marketo-auth.md) documentation for instructions. 
 
-- This [guide demonstrates how to connect your Marketo Account through the Platform UI](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/marketo.html).
+- This [guide demonstrates how to connect your Marketo Account through the Platform UI](../sources/tutorials/ui/create/adobe-applications/marketo.md).
 
 <!-- >[!NOTE]
 >
@@ -40,7 +40,7 @@ In order to access your Marketo account on Platform, you must acquire your authe
 
 ## Create a segment to evaluate your data
 
-After ingesting your data into Platform through the Marketo Engage source connector, you can evaluate your data by using the [Segmentation Service Segment Builder](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=en).
+After ingesting your data into Platform through the Marketo Engage source connector, you can evaluate your data by using the [Segmentation Service Segment Builder](../segmentation/ui/segment-builder.md).
 
 - Create a marketable audience from Real-time Customer Profile B2B data and view estimates of your prospective audience based on the combination of attributes, events, and existing audiences you defined. 
 
