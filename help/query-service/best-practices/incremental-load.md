@@ -45,13 +45,17 @@ INSERT INTO
        CURRENT_TIMESTAMP process_timestamp;
 ```
 
-1. Next, initialize `DIM_TABLE_ABC_Incremental` to contain processed output from `DIM_TABLE_ABC`. The anonymous block feature is used in the following steps to complete this process, as demonstrated in the SQL example below. 
+1. Next, initialize `DIM_TABLE_ABC_Incremental` to contain processed output from `DIM_TABLE_ABC`. The anonymous block in the **required** execution section of the SQL example below, as described in steps one to four, is executed sequentially to process data incrementally.
 
    1. Set the `from_snapshot_id` which indicates where the processing starts from. The `from_snapshot_id` in the example is queried from the `checkpoint_log` table for use with `DIM_TABLE_ABC`. On the initial run, the snapshot ID will be `null` meaning that the entire dataset will be processed.
    2. Set the `to_snapshot_id` as the current snapshot ID of the source table (`DIM_TABLE_ABC`). In the example, this is queried from the metadata table of the source table. 
    3. Use the `CREATE` keyword to create `DIM_TABLE_ABC_Incremenal` as the destination table. The destination table persists the processed data from the source dataset (`DIM_TABLE_ABC`). This allows the processed data from the source table between `from_snapshot_id` and `to_snapshot_id`, to be incrementally appended to the destination table.
    4. Update the `checkpoint_log` table with the `to_snapshot_id` for the source data that `DIM_TABLE_ABC` processed successfully.
-   5. If any of the queries fail, the exception block is executed which returns an error and ends the process.
+   5. If any of the sequentially executed queries of the anonymous block fail, the **optional** exception section is executed. This returns an error and ends the process.
+
+>[!NOTE]
+>
+>The `history_meta('source table name')` is a convenient method used to gain access to available snapshot in a dataset.
 
 ```SQL
 $$
@@ -130,13 +134,13 @@ The entire code block looks as follows:
 ```SQL
 $$
 BEGIN
+    SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
                                 on a.process_timestamp=b.process_timestamp;
     SET @to_snapshot_id = SELECT snapshot_id FROM (SELECT history_meta('DIM_TABLE_ABC')) WHERE  is_current = true;
     SET @last_updated_timestamp= SELECT CURRENT_TIMESTAMP;
-    SET resolve_fallback_snapshot_on_failure=true;
     INSERT INTO DIM_TABLE_ABC_Incremental
      SELECT  *  FROM DIM_TABLE_ABC SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a WHERE _id=a._id);
  
