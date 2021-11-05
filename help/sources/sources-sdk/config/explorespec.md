@@ -79,4 +79,6 @@ Explore specifications defines the parameters required for exploring and inspect
 
 {style="table-layout:auto"}
 
+## Next steps
 
+With your explore specifications populated, you can proceed to create a complete connection specification using the [!DNL Flow Service] API. See the the [[!DNL Sources SDK] API guide](../api/overview.md) for more information.

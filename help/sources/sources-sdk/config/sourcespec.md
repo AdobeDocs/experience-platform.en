@@ -160,3 +160,6 @@ The following is an example of the contents of the `contentPath` property in a [
 }
 ```
 
+## Next steps
+
+With your source specifications populated, you can proceed to configure the explore specifications for the source that you want to integrate to Platform. See the the document on [configuring explore specifications](./explorespec.md) for more information.

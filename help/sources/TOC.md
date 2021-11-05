@@ -251,6 +251,24 @@ feature: Sources
   - [Update dataflows](tutorials/ui/update-dataflows.md)
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
+- [Sources SDK] {#sources-sdk}
+  - [Overview](sources-sdk/overview.md)
+  - [Sources SDK functionality] {#functionality}
+    - [Configuration options](sources-sdk/config/config.md)
+    - [Configure authentication specification](sources-sdk/config/authspec.md)
+    - [Configure source specification](sources-sdk/config/sourcespec.md)
+    - [Configure explore specification](sources-sdk/config/explorespec.md)
+  - [Sources SDK API tutorials] {sdk-tutorials}
+    - [Sources SDK API overview](sources-sdk/api/overview.md)
+    - [Getting started](sources-sdk/api/getting-started.md)
+    - [Create a connection specification](sources-sdk/api/create.md)
+    - [Update a connection specification](sources-sdk/api/update-connection-specs.md)
+    - [Update a flow specification](sources-sdk/api/update-flow-specs.md)
+  - [Document your source] {#document}
+    - [Document your source in Adobe Experience Platform](sources-sdk/documentation/overview.md)
+    - [Use the GitHub web interface to create a sources documentation page](sources-sdk/documentation/github.md)
+    - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
+    - [Documentation self-service template](sources-sdk/documentation/template.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)

@@ -19,6 +19,10 @@ With Sources SDK, you can:
 * Define specifications for your source, including information pertaining to supported authentication types and how resource data is fetched.
 * Create user-facing documentation for your new source.
 
+The Sources SDK documentation provides instructions for you to use the Adobe Experience Platform Sources SDK to configure, test and release a REST API-based source integration with Platform, and have your source become part of the ever-growing sources catalog.
+
+![catalog](./assets/catalog.png)
+
 ## Understanding sources
 
 Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.

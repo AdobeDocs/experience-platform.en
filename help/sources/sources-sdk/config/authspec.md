@@ -147,3 +147,7 @@ Basic authentication is an authentication type that allows you to access your ap
 | `authSpec.spec.required` | Displays the credentials required in order to authenticate. | `host` |
 
 {style="table-layout:auto"}
+
+## Next steps
+
+With your authentication specifications populated, you can proceed to configure the source specifications for the source that you want to integrate to Platform. See the the document on [configuring source specifications](./sourcespec.md) for more information.
