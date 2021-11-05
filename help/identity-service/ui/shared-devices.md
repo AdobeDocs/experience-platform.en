@@ -1,8 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;identity service;Identity Service;shared devices;Shared Devices
-solution: Experience Platform
 title: Shared Devices Overview (Beta)
-topic-legacy: tutorial
 description: Shared Device Detection identifies different authenticated users of the same device, allowing for a more accurate representation of customer data in identity graphs
 hide: true
 hidefromtoc: true
@@ -28,13 +26,28 @@ With [!DNL Shared Device Detection] you can:
 >
 >Configurations for [!DNL Shared Device Detection] must be completed prior to enabling Profile for dataset because you can no longer revise settings once graphs are generated in [!DNL Identity Service].
 
-## Getting started
+## Getting started with [!DNL Shared Device Detection]
 
 Working with [!DNL Shared Device Detection] requires an understanding of the various Platform services involved. Before beginning to work with [!DNL Shared Device Detection], please review the documentation for the following services:
 
 * [[!DNL Identity Service]](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
   * [Identity graph viewer](./identity-graph-viewer.md): Visualize and interact with the identity graph viewer to better understand how customer identities are stitched together, and in what ways.
   * [Identity namespaces](../namespaces.md): See the components of a fully qualified identity, and how identity namespaces allows you to distinguish the context and type of an identity.
+
+### Understanding [!DNL Shared Device Detection]
+
+This is how Shared Device Detection works:
+
+* You have a single device used by at least two users, suppose this is a tablet;
+* Suppose you have two users who share the tablet: Greg and Tom;
+* There are two identity namespaces to take note of:
+  * The Shared Identity Namespace that is attached to the device (99% of the time, this is going to be the ECID)
+  * The User Identity Namespace that is attached to the user (this can be any identity namespace that corresponds to the user's login ID, such as: email, hashed email, customer ID, etc.)
+* Greg uses the tablet to browse for tools, he logs in to the tools shop with his email
+  * The User Identity Namespace is sent to the identity graph because User Identity Namespace = Email = Authenticated User = Greg
+  * If Greg doesn't log out and gives the tablet to Tom, then all activities in the tool shop are attributed to Greg (because he is still logged in)
+  * If Greg logs out and gives the tablet to Tom, but Tom doesn't sign in, then all activities in the tool shop are assigned to the Shared Identity Namespace (ECID), but is connected to the last authenticated user (Greg)
+  * If Greg logs out and gives the tablet to Tom, and if Tom logs in to the tool shop with his own account information, then the User Identity Namespace is sent, but this time, it is assigned to Tom
 
 ### Terminology
 
