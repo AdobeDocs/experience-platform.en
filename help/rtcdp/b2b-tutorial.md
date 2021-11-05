@@ -9,12 +9,22 @@ exl-id: edcce353-338a-440e-99eb-a64e2abca579
 
 This tutorial workflow relies on several Adobe Experience Platform services to demonstrate how to get started with Real-time Customer Data Platform (CDP) B2B Edition. If you want to follow along it is recommended to have a good understanding of the following services:
 
-- [Sources](../sources/home.md)
 - [XDM](../xdm/home.md)
+- [Sources](../sources/home.md)
 - [Segmentation](../segmentation/home.md)
 - [Destinations](../destinations/home.md)
 
-Additionally, to make calls to a Platform API you must first complete the [Authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). This tutorial helps you gather your access credentials to be used in required headers.
+Additionally, to make calls to a Platform API you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). This tutorial helps you gather your access credentials to be used in required headers.
+
+## Create schemas for your data
+
+Follow the instructions provided to [create an empty schema using the API](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/model-data-in-schemas.html%3Flang%3Dko#create-crm-schema-via-api).
+
+The new schema is now visible in the Platform Schema workspace. Use the new standard XDM B2B classes during the connection process to establish a source connection between Marketo and Platform. This is necessary to ingest data for use in downstream services. The standard B2B classes are designed to capture essential B2B data entities allowing for advanced segmentation use cases.
+
+- [Create relationships between your XDM B2B schemas](../xdm/tutorials/relationship-b2b.md)
+
+Ingest data using datasets based on your B2B schemas. By creating a dataflow to bring in Marketo data, incoming data can be used by downstream Platform services.
 
 ## Ingest your data into Experience Platform
 
@@ -22,15 +32,7 @@ You can ingest your data by using one of the [various sources provided by Platfo
 
 In order to access your Marketo account on Platform, you must acquire your authentication credentials which include: `munchkinId`, `clientId`, and  `clientSecret`. See the [authenticate your Marketo source connector](../sources/connectors/adobe-applications/marketo/marketo-auth.md) documentation for instructions. 
 
-## Create Schemas for your data
-
-- Next, use this guide to [connect your Marketo Account through the Platform UI](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/marketo.html).
-
-Use XDM standards during the connection process to establish a source connection between Marketo and Platform (this must be done before you can ingest data for use in downstream services). New standard classes are available to capture essential B2B data entities allowing for advanced segmentation use cases.
-
-- [Create relationships between your XDM B2B Schemas](../xdm/tutorials/relationship-b2b.md)
-
-Ingest data using datasets based on your B2B schemas. By creating a dataflow to bring in Marketo data. Incoming data can now be used by downstream Platform services.
+- This [guide demonstrates how to connect your Marketo Account through the Platform UI](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/marketo.html).
 
 <!-- >[!NOTE]
 >
@@ -41,20 +43,12 @@ Ingest data using datasets based on your B2B schemas. By creating a dataflow to 
 After ingesting your data into Platform through the Marketo Engage source connector, you can evaluate your data by using the [Segmentation Service Segment Builder](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=en).
 
 - Create a marketable audience from Real-time Customer Profile B2B data and view estimates of your prospective audience based on the combination of attributes, events, and existing audiences you defined. 
-  
-### Evaluate a segment job
-
-Once you have developed, tested, and saved your segment definition, you can then evaluate the segment through either scheduled evaluation or on-demand evaluation.
-
-See the segmentation documentation on [scheduled or on-demand segment evaluation for more information](../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment)
 
 ## Export your evaluated data
 
 After your segmentation job has successfully completed, you can export your audience to a dataset where it can be accessed and acted upon.
 
-- [Create a target dataset in the UI](../segmentation/ui/overview.md)
-
-- [Push the audience created in Experience Platform out to the Marketo Engage destination](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en).
+- [Activate your segment to a destination](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en)
 
 ## Next steps
 
