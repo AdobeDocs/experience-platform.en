@@ -73,6 +73,10 @@ You could map the two report suites with the following schema:
 
 ![](../images/ui/segment-builder/union-schema.png)
 
+>[!NOTE]
+>
+>While the generic eVar values still get populated, you should **not** use them in your segment definitions, if possible, since the values could mean different things to when they were originally in their reports.
+
 Once the report suites have been mapped, you can use these newly mapped fields within your profile-related workflows and segmentation.
 
 | Scenario | Union Schema experience | Segmentation generic variable | Segmentation mapped variable |
