@@ -77,7 +77,7 @@ To evaluate a segment definition on an ongoing basis, you will need to create an
 
 After either creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation by creating a segment export job. A segment export job is an asynchronous task that sends information about the evaluated segment job's audiences to a dataset. 
 
-Before creating an export job, you will first need to create a dataset to export the data to. To learn how to create a dataset, please read the create a target dataset step in the tutorial on [evaluating a segment]().
+Before creating an export job, you will first need to create a dataset to export the data to. To learn how to create a dataset, please read the create a target dataset step in the tutorial on [evaluating a segment](), ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job, using 
 
 ## Next steps
 
