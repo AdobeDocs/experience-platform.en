@@ -73,11 +73,15 @@ To evaluate a segment definition on demand, you will need to create a segment jo
 
 To evaluate a segment definition on an ongoing basis, you will need to create and enable a schedule. A schedule is a tool that can be used to used to automatically run a segment job once a day at a specified time. To learn how to create and enable a schedule, you can follow the instructions in the API guide on the [schedules endpoint]().
 
-## Export your evaluated data
+## Export your evaluated data to a dataset
 
 After either creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation by creating a segment export job. A segment export job is an asynchronous task that sends information about the evaluated segment job's audiences to a dataset. 
 
-Before creating an export job, you will first need to create a dataset to export the data to. To learn how to create a dataset, please read the create a target dataset step in the tutorial on [evaluating a segment](), ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job, using 
+Before creating an export job, you will first need to create a dataset to export the data to. To learn how to create a dataset, please read the create a target dataset step in the tutorial on [evaluating a segment](), ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job. To learn how to create an export job, you can follow the instructions in the API guide on the [export jobs endpoint]().
+
+## Export your evaluated data to an external destination
+
+Alternatively, after creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation to an external destination.
 
 ## Next steps
 
