@@ -3,7 +3,6 @@ keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time custo
 solution: Experience Platform
 title: Getting Started with Real-time Customer Data Platform B2B Edition (Beta)
 description: Use this sample scenario as an example when setting up your implementation of Real-time Customer Data Platform B2B Edition.
-exl-id: edcce353-338a-440e-99eb-a64e2abca579
 ---
 # Getting Started with Real-time Customer Data Platform B2B Edition (Beta)
 
@@ -33,10 +32,6 @@ You can ingest your data by using one of the [various sources provided by Platfo
 In order to access your Marketo account on Platform, you must acquire your authentication credentials which include: `munchkinId`, `clientId`, and  `clientSecret`. See the [authenticate your Marketo source connector](../sources/connectors/adobe-applications/marketo/marketo-auth.md) documentation for instructions. 
 
 - This [guide demonstrates how to connect your Marketo Account through the Platform UI](../sources/tutorials/ui/create/adobe-applications/marketo.md).
-
-<!-- >[!NOTE]
->
->B2B classes and their attributes are appended with a `B2B` label within the Segmentation workspace to differentiate them from those available as standard within Real-time Customer Data Platform. -->
 
 ## Create a segment to evaluate your data
 
