@@ -95,27 +95,33 @@ A successful response returns the newly created base connection, including its u
 
 ### Explore your source {#explore}
 
-Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests. When performing GET requests to explore your source's file structure and contents, you must include the query parameters that are listed in the table below:
-
-| Parameter | Description |
-| --------- | ----------- |
-| `objectType` | The type of object that you wish to explore. Set this value as either: <ul><li>`folder`: Explore a specific directory</li><li>`root`: Explore the root directory.</li></ul> |
-| `object` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
-
+Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests.
 Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
 
 **API format**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
+
+When performing GET requests to explore your source's file structure and contents, you must include the query parameters that are listed in the table below:
+
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
+| `objectType=rest` | The type of object that you wish to explore. Currently, this value is always set to `rest`. |
+| `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
+| `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
+| `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `list_id` string in base64. In the example below, `"list_id": "10c097ca71"` encoded in base64 equates to `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
+
 
 **Request**
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/70383d02-2777-4be7-a309-9dd6eea1b46d/explore?objectType=file&object=json&fileType=json&server=us6&listId=10c097ca71' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/70383d02-2777-4be7-a309-9dd6eea1b46d/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -215,18 +221,6 @@ A successful response returns the structure of the queried file.
 
 You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
 
-To create a source connection, you must also define an enum value for the data format attribute.
-
-Use the following the enum values for file-based sources:
-
-| Data format | Enum value |
-| ----------- | ---------- |
-| Delimited | `delimited` |
-| JSON | `json` |
-| Parquet | `parquet` |
-
-For all table-based sources, set the value to `tabular`.
-
 **API format**
 
 ```https
@@ -269,7 +263,7 @@ curl -X POST \
 | `description` | An optional value that you can include to provide more information on your source connection. |
 | `baseConnectionId` | The base connection ID of *YOURSOURCE*. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
-| `data.format` | The format of the *YOURSOURCE* data that you want to ingest. |
+| `data.format` | The format of the *YOURSOURCE* data that you want to ingest. Currently, the only supported data format is `json`. |
 
 **Response**
 

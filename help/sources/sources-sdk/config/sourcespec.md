@@ -40,12 +40,14 @@ Source specifications contain information specific to a source, including attrib
     "contentPath": {
       "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
       "skipAttributes": [],
-      "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
+      "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}",
+      "keepAttributes": ["action", "type", "timestamp"]
     },
     "explodeEntityPath": {
       "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
       "skipAttributes": [],
-      "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
+      "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}",
+      "keepAttributes": ["action", "type", "timestamp"]
     },
     "paginationParams": {
       "type": "{OFFSET_OR_POINTER}",
@@ -93,22 +95,23 @@ Source specifications contain information specific to a source, including attrib
 | `sourceSpec.attributes.contentPath` | Defines the node that contains the list of items required to be ingested to Platform. This attribute should follow valid JSON path syntax and must point to a particular array. | See the [appendix](#appendix) for an example of the resource contained within a content path. |
 | `sourceSpec.attributes.contentPath.path` | The path that points to the collection records to be ingested to Platform. | `$.emails` |
 | `sourceSpec.attributes.contentPath.skipAttributes` | This property allows you to identify specific items from the resource identified in the content path that are to be excluded from being ingested. |
-| `sourceSpec.attributes.contentPath.overrideWrapperAttribute` |
+| `sourceSpec.attributes.contentPath.overrideWrapperAttribute` | This property allows you to specify attributes to override when a batch run occurs. |
 | `sourceSpec.attributes.explodeEntityPath` | This property allows you to flatten two arrays and transform resource data to Platform resource. |
 | `sourceSpec.attributes.explodeEntityPath.path` | The path that points to the collection records that you want to flatten. | `$.email.activity` |
 | `sourceSpec.attributes.explodeEntityPath.skipAttributes` | This property allows you to identify specific items from the resource identified in the entity path that are to be excluded from being ingested. |
-| `sourceSpec.attributes.explodeEntityPath.overrideWrapperAttribute` |
+| `sourceSpec.attributes.explodeEntityPath.overrideWrapperAttribute` | This property allows you to specify attributes to override when a batch run occurs. |
 | `sourceSpec.attributes.paginationParams` | Defines the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
-| `sourceSpec.attributes.paginationParams.type` | Displays the type of the supported pagination type for your source. | <ul><li>`offset`: This pagination type allows you to parse through results by specifying an index from where to start the resulting array, and a limit on how many results are returned.</li><li>`pointer`: This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request.</li></ul> |
+| `sourceSpec.attributes.paginationParams.type` | Displays the type of the supported pagination type for your source. | <ul><li>`offset`: This pagination type allows you to parse through results by specifying an index from where to start the resulting array, and a limit on how many results are returned.</li><li>`pointer`: This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request. The pointer type pagination requires path in payload that point to next page</li></ul> |
 | `sourceSpec.attributes.paginationParams.limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. | `count` |
 | `sourceSpec.attributes.paginationParams.limitValue` | The number of records to be fetched in a page. | `100` |
 | `sourceSpec.attributes.paginationParams.offSetName` | The offset attribute name. This is required if pagination type is set to `offset`. | `offset` |
-| `sourceSpec.attributes.paginationParams.pointerName` | The pointer attribute name. This is required if pagination type is set to `pointer`. | `pointer` |
-| `sourceSpec.attributes.scheduleParams` | Contains parameters that define supported scheduling formats for your source. |
+| `sourceSpec.attributes.paginationParams.pointerName` | The pointer attribute name. This requires json path to the attribute that will point to next page. This is required if pagination type is set to `pointer`. | `pointer` |
+| `sourceSpec.attributes.scheduleParams` | Contains parameters that define supported scheduling formats for your source. Schedule parameters include `startTime` and `endTime`, both of which allows you to set specific time intervals for batch runs, which then ensures that records fetched in a previous batch run are not fetched again. |
 | `sourceSpec.attributes.scheduleParams.scheduleStartParamName` | Defines the start time parameter name | `since_last_changed` |
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamName` | Defines the end time parameter name | `before_last_changed` |
 | `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | Defines the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | Defines the supported format for the `scheduleEndParamName`.| `yyyy-MM-ddTHH:mm:ssZ` |
+| `sourceSpec.spec.properties` | 
 
 {style="table-layout:auto"}
 

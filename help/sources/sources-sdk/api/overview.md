@@ -22,7 +22,7 @@ The first step in configuring a new source is to create a new connection specifi
 
 Connection specifications return a source's connector properties. They include authentication specifications related to creating the base and source connections and a fixed connection specification ID that is assigned to a particular source. Connection specifications are tenant and IMS Organization agnostic. A typical connection specification contains basic information on a given source, as well as three distinct sections: `authSpec`, `sourceSpec`, and `exploreSpec`.
 
-For detailed instructions, see the guide on [creating a new connection specification](./create.md). For information on the properties and values used for a connection specification, including details on configuring authentication, source, and explore specifications, see the [configuration options document](../config.md).
+For detailed instructions, see the guide on [creating a new connection specification](./create.md). For information on the properties and values used for a connection specification, including details on configuring authentication, source, and explore specifications, see the [configuration options document](../config/config.md).
 
 ## Update flow specifications
 

@@ -21,25 +21,27 @@ An OAuth 2 refresh code allows for secure access to an application by generating
 
 ```json
 {
-  "name": "oAuth2-refresh-code",
-  "type": "oAuth2-refresh-code",
+  "name": "OAuth2 Refresh Code",
+  "type": "OAuth2RefreshCode",
   "spec": {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
-    "description": "defines auth params required for connecting to rest service using authorization flow.",
-    "links": [
-      {
-        "rel": "specificationLink",
-        "href": "https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.1"
-      }
-    ],
+    "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
     "properties": {
+      "host": {
+        "type": "string",
+        "description": "Enter resource url host path."
+      },
+      "authorizationTestUrl": {
+        "description": "Authorization test url to validate accessToken.",
+        "type": "string"
+      },
       "clientId": {
-        "description": "Client id of user app. Needed to generate accessToken post its expiry.",
+        "description": "Client id of user account.",
         "type": "string"
       },
       "clientSecret": {
-        "description": "Client secret of user app. Needed to generate accessToken post its expiry.",
+        "description": "Client secret of user account.",
         "type": "string",
         "format": "password"
       },
@@ -49,25 +51,59 @@ An OAuth 2 refresh code allows for secure access to an application by generating
         "format": "password"
       },
       "refreshToken": {
-        "description": "Refresh Token. Needed to generate accessToken once it expires.",
+        "description": "Refresh Token",
         "type": "string",
         "format": "password"
       },
       "expirationDate": {
-        "description": "Date when accessToken will expire",
+        "description": "Date of token expiry.",
         "type": "string",
-        "format": "date"
-      },
-      "refreshTokenUrl": {
-        "description": "Refresh token url to fetch refresh token.",
-        "type": "string"
+        "format": "date",
+        "uiAttributes": {
+          "hidden": true
+        }
       },
       "accessTokenUrl": {
         "description": "Access token url to fetch access token.",
-        "type": "object"
+        "type": "string"
+      },
+      "requestParameterOverride": {
+        "type": "object",
+        "description": "Specify parameter to override.",
+        "properties": {
+          "accessTokenField": {
+            "description": "Access token field name to override.",
+            "type": "string"
+          },
+          "refreshTokenField": {
+            "description": "Refresh token field name to override.",
+            "type": "string"
+          },
+          "expireInField": {
+            "description": "ExpireIn field name to override.",
+            "type": "string"
+          },
+          "authenticationMethod": {
+            "description": "Authentication method override.",
+            "type": "string",
+            "enum": [
+              "GET",
+              "POST"
+            ]
+          },
+          "clientId": {
+            "description": "ClientId field name override.",
+            "type": "string"
+          },
+          "clientSecret": {
+            "description": "ClientSecret field name override.",
+            "type": "string"
+          }
+        }
       }
     },
     "required": [
+      "host",
       "accessToken"
     ]
   }
@@ -84,7 +120,6 @@ An OAuth 2 refresh code allows for secure access to an application by generating
 | `authSpec.spec.properties` | Contains information on the credentials used for the authentication. |
 | `authSpec.spec.properties.description` | Displays a brief description on the credential. |
 | `authSpec.spec.properties.type` | Defines the data type of the credential. | `string` |
-| `authSpec.spec.properties.format` | Defines the format of the credential. | `format` |
 | `authSpec.spec.properties.clientId` | The client ID associated with your application. The client ID is used in conjunction with your client secret to retrieve your access token. |
 | `authSpec.spec.properties.clientSecret` | The client secret associated with your application. The client secret is used in conjunction with your client ID to retrieve your access token. |
 | `authSpec.spec.properties.accessToken` | The access token authorizes your secure access to your application. |
@@ -92,6 +127,7 @@ An OAuth 2 refresh code allows for secure access to an application by generating
 | `authSpec.spec.properties.expirationDate` | Defines the expiration date of the access token. |
 | `authSpec.spec.properties.refreshTokenUrl` | The URL used to retrieve your refresh token. |
 | `authSpec.spec.properties.accessTokenUrl` | The URL used to retrieve your refresh token. |
+| `authSpec.spec.properties.requestParameterOverride` | Allows you to specify credential parameters to override when authenticating. |
 | `authSpec.spec.required` | Displays the credentials required in order to authenticate. | `accessToken` |
 
 {style="table-layout:auto"}
@@ -140,11 +176,12 @@ Basic authentication is an authentication type that allows you to access your ap
 | `authSpec.spec` | Contains information on the authentication's schema, data type, and properties. |
 | `authSpec.spec.$schema` | Defines the schema used for the authentication. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Defines the data type of the schema. | `object` |
+| `authSpec.spec.description` | Displays further information specific to your authentication type. |
 | `authSpec.spec.properties` | Contains information on the credentials used for the authentication. |
 | `authSpec.spec.properties.host` | The host URL of your application. |
 | `authSpec.spec.properties.username` | The account username associated with your application. |
 | `authSpec.spec.properties.password` | The account password associated with your application. |
-| `authSpec.spec.required` | Displays the credentials required in order to authenticate. | `host` |
+| `authSpec.spec.required` | Specifies the fields required as mandatory values to be inputted in Platform. | `host` |
 
 {style="table-layout:auto"}
 

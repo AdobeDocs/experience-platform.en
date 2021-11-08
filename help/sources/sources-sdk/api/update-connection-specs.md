@@ -118,7 +118,15 @@ PUT -X GET \
                   "path": "/3.0/lists/${listId}/members",
                   "method": "GET"
               },
-              "contentPath": "$.members",
+              "contentPath": {
+                  "path": "$.members",
+                  "skipAttributes": [
+                  "_links",
+                  "total_items",
+                  "list_id"
+                  ],
+                  "overrideWrapperAttribute": "member"
+               },
               "paginationParams": {
                   "type": "OFFSET",
                   "limitName": "count",

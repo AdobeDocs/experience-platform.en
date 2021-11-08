@@ -38,7 +38,7 @@ Once you have gathered the required artifacts, copy and paste the connection spe
 
 ```json
 {
-  "name": "{NAME_OF_YOUR_SOURCE}",
+  "name": "generic-rest-extension",
   "type": "generic-rest",
   "description": "{DESCRIPTION}",
   "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
@@ -581,7 +581,15 @@ A successful response returns the newly created connection specification, includ
                 "path": "/3.0/lists/${listId}/members",
                 "method": "GET"
             },
-            "contentPath": "$.members",
+            "contentPath": {
+                    "path": "$.members",
+                    "skipAttributes": [
+                      "_links",
+                      "total_items",
+                      "list_id"
+                    ],
+                    "overrideWrapperAttribute": "member"
+                  },
             "paginationParams": {
                 "type": "OFFSET",
                 "limitName": "count",
