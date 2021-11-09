@@ -18,6 +18,8 @@ Attribution AI works by analyzing the following datasets to calculate algorithmi
 - Experience Event (EE) dataset
 - Consumer Experience Event (CEE) dataset
 
+You can add multiple datasets from different sources if each of the datasets shares the same identity type (namespace) such as an ECID. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
+
 >[!IMPORTANT]
 >
 >The Adobe Analytics source connector can take up to four weeks to backfill data. If you recently set up a connector, you should verify that the dataset has the minimum length of data required for Attribution AI. Please review the [historical data](#data-requirements) section to verify you have enough data to calculate accurate algorithmic scores.

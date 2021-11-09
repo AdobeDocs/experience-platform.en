@@ -76,7 +76,7 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 ![Dataset completeness](./images/user-guide/dataset-completeness.png)
 
-### Select an identity {#dataset-key}
+### Select an identity {#identity}
 
 In order for multiple datasets to join on one another, you must select a identity type (also known as an "identity namespace") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
 
