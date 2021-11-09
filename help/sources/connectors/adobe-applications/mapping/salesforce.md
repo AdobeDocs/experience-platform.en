@@ -83,7 +83,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
-| `Id` | `personComponents.sourcePersonKey.sourceID	`|
+| `Id` | `personComponents.sourcePersonKey.sourceID`|
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourcePersonKey.sourceKey` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -118,7 +118,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `AccountNumber`| `accountNumber`|
 | `AccountSource` | `accountSourceType`|
 | `AnnualRevenue` | `accountOrganization.annualRevenue.amount` |
-| `BillingCity` | address | `accountBillingAddress.city`|
+| `BillingCity` | `accountBillingAddress.city`|
 | `BillingCountry`| `accountBillingAddress.country`|
 | `BillingLatitude` | `accountBillingAddress._schema.latitude` |
 | `BillingLongitude` | `accountBillingAddress._schema.longitude` |
@@ -257,7 +257,6 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `Id` | `campaignMemberKey.sourceID`|
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
-| `CampaignId` | `campaignID`|
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `${CRM_ORG_ID}` | `campaignKey.sourceInstanceID` |
 | `CampaignId` | `campaignKey.sourceID` |
