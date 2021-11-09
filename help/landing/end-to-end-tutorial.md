@@ -14,10 +14,11 @@ intro blurb
 
 This end-to-end workflow involves the usage of multiple Adobe Experience Platform services. For more information about the services used in this workflow, please review the documentation for the following services:
 
-Sources
-Segmentation
-XDM
-Destinations
+- [Sources](../../sources/home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] allows you to divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
+- [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
@@ -79,9 +80,11 @@ After either creating your one-time segment job or your ongoing schedule, you ca
 
 Before creating an export job, you will first need to create a dataset to export the data to. To learn how to create a dataset, please read the create a target dataset step in the tutorial on [evaluating a segment](), ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job. To learn how to create an export job, you can follow the instructions in the API guide on the [export jobs endpoint]().
 
-## Export your evaluated data to an external destination
+## Export your evaluated data to a destination
 
-Alternatively, after creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation to an external destination.
+Alternatively, after creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation to a destination. A destination is an endpoint, such as an Adobe application on an external service, where an audience can be activated and delivered. A full list of available destinations can be found in the [destinations overview]().
+
+To learn how to activate your segment definition to a destination, please read the activate data to your new destination step in the tutorial on [connecting to destinations and activating data]().
 
 ## Next steps
 
