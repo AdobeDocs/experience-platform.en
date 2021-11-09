@@ -43,9 +43,9 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Real-time CDP B2B Edition standard XDM class datasets | 60 | Soft| A maximum of 60 datasets that leverage the standard Experience Data Model (XDM) classes provided by Real-time CDP B2B Edition is recommended. For a complete list of standard XDM classes for B2B use cases, refer to the [schemas in Real-time CDP B2B Edition documentation](schemas/b2b.md). *Note: Due to the nature of Experience Platform's denormalized hybrid data model, most customers do not exceed this limit. For questions about how to model your data, or if you would like to learn more about custom limits, please contact your customer care representative.*|
+|Real-time CDP B2B Edition standard XDM class datasets | 60 | Soft| A maximum of 60 datasets that leverage the standard Experience Data Model (XDM) classes provided by Real-time CDP B2B Edition is recommended. For a complete list of standard XDM classes for B2B use cases, refer to the [schemas in Real-time CDP B2B Edition documentation](schemas/b2b.md). <br/><br/>*Note: Due to the nature of Experience Platform's denormalized hybrid data model, most customers do not exceed this limit. For questions about how to model your data, or if you would like to learn more about custom limits, please contact your customer care representative.*|
 | Legacy multi-entity relationships| 20 | Soft | A maximum of 20 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
-| One-to-many relationships per XDM class | 2 | Soft | A maximum of 2 one-to-many relationships defined per XDM class is recommended. Additional relationship should not be made until an existing relationship is removed or disabled. For steps on how to create a relationship between two schemas, refer to the tutorial on [defining B2B schema relationships](../../xdm/tutorials/relationship-b2b.md).|
+| One-to-many relationships per XDM class | 2 | Soft | A maximum of 2 one-to-many relationships defined per XDM class is recommended. Additional relationship should not be made until an existing relationship is removed or disabled. For steps on how to create a relationship between two schemas, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md).|
 
 ### Dimension entity guardrails
 
@@ -103,7 +103,7 @@ The guardrails outlined in this section refer to the number and nature of segmen
 
 ## Next Steps
 
-The limits outlined in this document are specific to Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Adobe Experience Platform, refer to the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
+The limits outlined in this document are specific to Real-time Customer Data Platform B2B Edition. To view a complete list of default limits for Adobe Experience Platform, please refer to the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
 
 ## Appendix
 
