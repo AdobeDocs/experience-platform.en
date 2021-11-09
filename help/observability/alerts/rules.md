@@ -42,7 +42,6 @@ The following alert rules are specific to [Data Ingestion](../../ingestion/home.
 | Rule | Description | Threshold | Evaluation frequency | Repeat window | 
 | --- | --- | --- | --- | --- |
 | Ingestion Delay | This alert triggers when a batch ingestion flow run is taking longer to process than the allotted threshold. | 150 minutes | 30 seconds | 10 hours |
-| No Ingestion Activity in Past 24 Hours | This alert triggers when no new data has been ingested in the last 24-hour period. | N/A | 1 day | 1 day |
 
 {style="table-layout:auto"}
 
@@ -87,6 +86,7 @@ The following alert rules are specific to [destinations](../../destinations/home
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
+| No Ingestion Activity in Past 24 Hours | This alert triggers when no new data has been ingested in the last 24-hour period. | N/A | 1 day | 1 day |
 | Ingestion Error Rate Exceeded | This alert triggers when the error rate for data ingestion exceeds the allotted threshold. | 20% | 30 seconds | 30 seconds |
 | Entitlement Threshold Exceeded | This alert triggers when the number of created profiles exceeds 80% of your organization's entitlement. | 30 seconds | N/A |
 | SFTP source has not ingested data | This alert triggers when an [SFTP source](../../sources/connectors/cloud-storage/sftp.md) has not ingested any data within a certain time period. | 1 day | 1 day |
