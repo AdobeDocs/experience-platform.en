@@ -45,6 +45,7 @@ feature: Sources
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
+    - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
@@ -78,6 +79,7 @@ feature: Sources
     - [PayPal connector](connectors/payments/paypal.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
+    - [Generic REST API connector](connectors/protocols/generic-rest.md)
   - Streaming {#streaming}
     - [HTTP API connector](connectors/streaming/http.md)
 - API tutorials {#api-tutorials}
@@ -102,6 +104,7 @@ feature: Sources
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
+      - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -135,6 +138,7 @@ feature: Sources
       - [PayPal](tutorials/api/create/payments/paypal.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
+      - [Generic REST API](tutorials/api/create/protocols/generic-rest.md)
     - Streaming {#streaming}
       - [HTTP API](tutorials/api/create/streaming/http.md)
   - Explore data {#explore}
@@ -192,6 +196,7 @@ feature: Sources
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
+      - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
@@ -225,6 +230,7 @@ feature: Sources
       - [PayPal](tutorials/ui/create/payments/paypal.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
+      - [Generic REST API](tutorials/ui/create/protocols/generic-rest.md)
     - Streaming {#streaming}
       - [HTTP API](tutorials/ui/create/streaming/http.md)
   - Configure a dataflow {#dataflow}

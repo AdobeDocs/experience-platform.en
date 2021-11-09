@@ -39,7 +39,7 @@ Optionally, you can attach your RSA-formatted public key to add encryption to yo
 
 ## Exported data {#exported-data}
 
-For [!DNL SFTP] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
+For [!DNL SFTP] destinations, Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
 
 ## IP address allow list
 

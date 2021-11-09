@@ -9,7 +9,7 @@ exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 ---
 # Update dataflows using the Flow Service API
 
-This tutorial covers the steps for updating a dataflow, including its name, description, and schedule using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for updating a dataflow, including its basic information, schedule, and mapping sets using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
@@ -189,7 +189,7 @@ To update your dataflow's run schedule, name, and description, perform a PATCH r
 
 >[!IMPORTANT]
 >
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update.
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update. The etag value updates with every successful update of a dataflow.
 
 **API format**
 
@@ -228,10 +228,10 @@ curl -X PATCH \
         ]'
 ```
 
-| Parameter | Description |
+| Property | Description |
 | --------- | ----------- |
 | `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. |
-| `path` | The path of the parameter to be updated. |
+| `path` | Defines the part of the flow that is to be updated. |
 | `value` | The new value you want to update your parameter with. |
 
 **Response**
@@ -245,6 +245,62 @@ A successful response returns your flow ID and an updated etag. You can verify t
 }
 ```
 
+## Update mapping
+
+You can update the mapping set of an existing dataflow by making a PATCH request to the [!DNL Flow Service] API and providing updated values for your `mappingId` and `mappingVersion`.
+
+**API format**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Request**
+
+The following request updates your dataflow's mapping set.
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+    -d '[
+        {
+            "op": "replace",
+            "path": "/transformations/0",
+            "value": {
+                "name": "Mapping",
+                "params": {
+                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
+                    "mappingVersion": 2
+                }
+            }
+        }
+    ]'
+```
+
+| Property | Description |
+| --- | --- |
+| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. |
+| `path` | Defines the part of the flow that is to be updated. In this example, `transformations` is being updated. |
+| `value.name` | The name of the property that is to be updated. |
+| `value.params.mappingId` | The new mapping ID to be used to update the mapping set of the dataflow. |
+| `value.params.mappingVersion` | The new mapping version associated with the updated mapping ID. |
+
+**Response**
+
+A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
 ## Next steps
 
-By following this tutorial, you have updated run schedule, name, and description of your dataflow using the [!DNL Flow Service] API. For more information on using source connectors, see the [sources overview](../../home.md).
+By following this tutorial, you have updated the basic information, schedule, and mapping sets of your dataflow using the [!DNL Flow Service] API. For more information on using source connectors, see the [sources overview](../../home.md).
