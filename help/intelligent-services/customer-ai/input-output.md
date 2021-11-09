@@ -44,7 +44,7 @@ The following table outlines some common terminology used in this document:
 >
 > Customer AI automatically determines which events are useful for predictions and raises a warning if the available data is not sufficient to generate quality predictions.
 
-Customer AI supports Adobe Analytics, Adobe Audience Manager, Experience Event (EE), and Consumer Experience event (CEE) datasets. The CEE schema requires you to add field groups during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below during the connection process. You can add multiple datasets from different sources if each of the datasets shares the same Namespace and Primary Identity such as an ECID.
+Customer AI supports Adobe Analytics, Adobe Audience Manager, Experience Event (EE), and Consumer Experience event (CEE) datasets. The CEE schema requires you to add field groups during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below during the connection process. You can add multiple datasets from different sources if each of the datasets shares the same identity type (namespace) such as an ECID.
 
 For more information on mapping Adobe Analytics data or Audience Manager data, visit the [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md) or [Audience Manager field mappings](../../sources/connectors/adobe-applications/mapping/audience-manager.md) guide.
 
