@@ -4,6 +4,8 @@ solution: Experience Platform
 title: Create a new connection specification using the Flow Service API (Beta)
 topic-legacy: tutorial
 description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Sources SDK.
+hide: true
+hidefromtoc: true
 ---
 # Create a new connection specification using the [!DNL Flow Service] API (Beta)
 

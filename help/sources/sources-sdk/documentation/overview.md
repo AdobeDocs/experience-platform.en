@@ -4,6 +4,8 @@ solution: Experience Platform
 title: Document Your Source
 topic-legacy: overview
 description: The final step before your new source can be made live in Adobe Experience Platform is to document your new source.
+hide: true
+hidefromtoc: true
 ---
 # Document your source
 

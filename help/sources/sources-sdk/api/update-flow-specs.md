@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Update flow specifications using the Flow Service API (Beta)
 topic-legacy: developer guide
 description: The following document provides steps on how to retrieve and update flow specifications using the Flow Service API for Sources SDK.
+hide: true
+hidefromtoc: true
 ---
 # Update flow specifications using the [!DNL Flow Service] API (Beta)
 

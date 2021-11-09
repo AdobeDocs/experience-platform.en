@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Configure explore specifications for Sources SDK
 topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
+hide: true
+hidefromtoc: true
 ---
 
 # Configure explore specifications for Sources SDK

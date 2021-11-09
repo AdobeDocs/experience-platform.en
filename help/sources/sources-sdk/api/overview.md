@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Sources SDK API Guide (Beta)
 topic-legacy: overview
 description: This document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the Flow Service API.
+hide: true
+hidefromtoc: true
 ---
 # Sources SDK API Guide (Beta)
 

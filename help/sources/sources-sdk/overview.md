@@ -4,6 +4,8 @@ solution: Experience Platform
 title: Sources SDK Overview (Beta)
 topic-legacy: overview
 description: Adobe Experience Platform Sources SDK is a set of configuration APIs that allow you to integrate a REST API-based source using the Flow Service API to bring your data to Experience Platform.
+hide: true
+hidefromtoc: true
 ---
 # Sources SDK overview (Beta)
 

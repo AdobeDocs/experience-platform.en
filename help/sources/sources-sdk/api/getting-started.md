@@ -4,6 +4,8 @@ solution: Experience Platform
 title: Getting Started with Sources SDK (Beta)
 topic-legacy: developer guide
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Sources SDK.
+hide: true
+hidefromtoc: true
 ---
 # Getting Started with Sources SDK (Beta)
 

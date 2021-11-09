@@ -4,6 +4,8 @@ solution: Experience Platform
 title: Documentation self-service template
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to YOURSOURCE using the Flow Service API.
+hide: true
+hidefromtoc: true
 ---
 # Create a *YOURSOURCE* connection using the Flow Service API
 
