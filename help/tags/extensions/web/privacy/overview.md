@@ -65,11 +65,11 @@ When using the Adobe Privacy tag extension, you must provide the required callba
 
 ### Define a data element to handle identities
 
-In the Data Collection UI, start the process of creating a new data element. Select **[!UICONTROL Core]** for the extension, and **[!UICONTROL Custom Code]** for the data element type. From here, select **[!UICONTROL Open Editor]** in the right panel.
+In the Data Collection UI, start the process of creating a new data element by selecting **[!UICONTROL Data Elements]** in the left navigation, followed by **[!UICONTROL Add Data Element]**. Once you are on the configuration screen, select **[!UICONTROL Core]** for the extension and **[!UICONTROL Custom Code]** for the data element type. From here, select **[!UICONTROL Open Editor]** in the right panel.
 
 ![Select data element type](../../../images/extensions/privacy/data-element-type.png)
 
-In the dialog that appears, define a JavaScript function that will handle the retrieved identities. The callback must accept a single object-type argument (`ids` in the example below). The function can also invoke any variables and functions that are globally available on your site for further processing.
+In the dialog that appears, define a JavaScript function that will handle the retrieved identities. The callback must accept a single object-type argument (`ids` in the example below). The function can then handle the IDs however you wish, and can also invoke any variables and functions that are globally available on your site for further processing.
 
 >[!NOTE]
 >
