@@ -45,7 +45,7 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 | --- | --- | --- | --- |
 |Real-time CDP B2B Edition standard XDM class datasets | 60 | Soft| A maximum of 60 datasets that leverage the standard Experience Data Model (XDM) classes provided by Real-time CDP B2B Edition is recommended. For a complete list of standard XDM classes for B2B use cases, refer to the [schemas in Real-time CDP B2B Edition documentation](schemas/b2b.md). <br/><br/>*Note: Due to the nature of Experience Platform's denormalized hybrid data model, most customers do not exceed this limit. For questions about how to model your data, or if you would like to learn more about custom limits, please contact your customer care representative.*|
 | Legacy multi-entity relationships| 20 | Soft | A maximum of 20 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
-| One-to-many relationships per XDM class | 2 | Soft | A maximum of 2 one-to-many relationships defined per XDM class is recommended. Additional relationship should not be made until an existing relationship is removed or disabled. For steps on how to create a relationship between two schemas, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md).|
+| Many-to-one relationships per XDM class | 2 | Soft | A maximum of 2 many-to-one relationships defined per XDM class is recommended. Additional relationship should not be made until an existing relationship is removed or disabled. For steps on how to create a relationship between two schemas, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md).|
 
 ### Dimension entity guardrails
 
@@ -56,7 +56,7 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | No nested legacy relationships | 0 | Soft | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema.|
-| Only B2B objects may participate in one-to-many relationships | 0 | Hard | The system only supports one-to-many relationships between B2B objects.|
+| Only B2B objects may participate in many-to-one relationships | 0 | Hard | The system only supports many-to-one relationships between B2B objects. For more information on many-to-one relationships, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md).|
 | Maximum depth of nested relationships between B2B objects | 3 | Hard | The maximum depth of nested relationships between B2B objects is 3. This means that in a highly nested schema, you should not have a relationship between B2B objects nested more than 3 levels deep.|
 
 ## Data size limits
