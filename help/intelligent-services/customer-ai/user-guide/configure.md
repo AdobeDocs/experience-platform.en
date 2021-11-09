@@ -104,7 +104,6 @@ In the event that more than one identity is available within a namespace, make s
 >
 > If no valid identity type (namespace) exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../identity-service/namespaces.md) documentation.
 
-
 ## Define a goal {#define-a-goal}
 
 <!-- https://www.adobe.com/go/cai-define-a-goal -->
