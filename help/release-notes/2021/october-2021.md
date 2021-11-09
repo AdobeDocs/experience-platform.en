@@ -10,7 +10,7 @@ description: The latest release notes for Adobe Experience Platform.
 
 Updates to Experience Platform.
 
-### [User interface] {#ui}
+### User interface {#ui}
 
 The user interface has been updated with the following changes:
 
