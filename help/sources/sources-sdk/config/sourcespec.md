@@ -134,7 +134,9 @@ The following is an example of the contents of the `contentPath` property in a [
 
 ### `spec.properties` user input example {#user-input}
 
-The following is an example of a user-provided `spec.properties` using a [!DNL MailChimp Members] connection specification:
+The following is an example of a user-provided `spec.properties` using a [!DNL MailChimp Members] connection specification.
+
+In this example, `listId` is provided as part of `urlParams.path`. If you need to retrieve `listId` from a customer, then you must also define it as part of `spec.properties`.
 
 
 ```json
