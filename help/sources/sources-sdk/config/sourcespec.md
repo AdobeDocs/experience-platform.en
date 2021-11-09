@@ -67,12 +67,7 @@ Source specifications contain information specific to a source, including attrib
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "description": "Define user input parameters to fetch resource values.",
-    "properties": {
-      "listId": {
-        "type": "string",
-        "description": "listId for which members need to fetch."
-      }
-    }
+    "properties": "{USER_INPUT}"
   }
 }
 ```
@@ -111,7 +106,7 @@ Source specifications contain information specific to a source, including attrib
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamName` | Defines the end time parameter name | `before_last_changed` |
 | `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | Defines the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | Defines the supported format for the `scheduleEndParamName`.| `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | 
+| `sourceSpec.spec.properties` | Defines the user-provided parameters to fetch resource values. | See the [appendix](#appendix) for an example user-inputted parameters for `spec.properties`. |
 
 {style="table-layout:auto"}
 
@@ -122,44 +117,32 @@ Source specifications contain information specific to a source, including attrib
 The following is an example of the contents of the `contentPath` property in a [!DNL MailChimp Campaigns] connection specification.
 
 ```json
-{
-  "emails": [
-    {
-      "campaign_id": "c66a200cda",
-      "list_id": "10c097ca71",
-      "list_is_active": true,
-      "email_id": "cff65fb4c5f5828666ad846443720efd",
-      "email_address": "kendall2134@gmail.com",
-      "activity": [
-        {
-          "action": "bounce",
-          "type": "hard",
-          "timestamp": "2021-09-27T09:26:17+00:00"
-        }
-      ]
-    },
-    {
-      "campaign_id": "c66a200cda",
-      "list_id": "10c097ca71",
-      "list_is_active": true,
-      "email_id": "7af33ff174dc1547754c77d9152d4673",
-      "email_address": "kendall3235@gmail.com",
-      "activity": [
-        {
-          "action": "bounce",
-          "type": "hard",
-          "timestamp": "2021-09-27T09:26:17+00:00"
-        },
-        {
-          "action": "bounce",
-          "type": "hard",
-          "timestamp": "2021-09-27T09:26:17+00:00"
-        }
-      ]
-    }
+"contentPath": {
+  "path": "$.members",
+  "skipAttributes": [
+    "_links",
+    "total_items",
+    "list_id"
   ],
-  "campaign_id": "c66a200cda",
-  "total_items": 26
+  "overrideWrapperAttribute": "member"
+}
+```
+
+### `spec.properties` user input example
+
+The following is an example of a user-provided `spec.properties` using a [!DNL MailChimp Members] connection specification.
+
+```json
+"spec": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Define user input parameters to fetch resource values.",
+    "properties": {
+        "listId": {
+            "type": "string",
+            "description": "listId for which members need to fetch."
+        }
+    }
 }
 ```
 
