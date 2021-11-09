@@ -20,6 +20,7 @@ To use Sources SDK, you must ensure that you have access to an IMS Organization 
 This guide also requires a working understanding of the following components of Adobe Experience Platform:
 
 * [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Reading sample API calls
 
@@ -39,7 +40,7 @@ All resources in Platform, including those belonging to [!DNL Flow Service], are
 
 >[!NOTE]
 >
->For more information on sandboxes in Platform, see the [sandbox documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in Platform, see the [sandbox documentation](../../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
