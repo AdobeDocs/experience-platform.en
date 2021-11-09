@@ -187,7 +187,7 @@ Basic authentication is an authentication type that allows you to access your ap
 
 ## Example authentication specification
 
-The following is an example of a completed authentication specification using a [!DNL MailChimp Members] source.
+The following is an example of a completed authentication specification using a [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) source.
 
 ```json
   "authSpec": [
