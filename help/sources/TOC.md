@@ -258,7 +258,7 @@ feature: Sources
     - [Configure authentication specification](sources-sdk/config/authspec.md)
     - [Configure source specification](sources-sdk/config/sourcespec.md)
     - [Configure explore specification](sources-sdk/config/explorespec.md)
-  - [Sources SDK API tutorials] {sdk-tutorials}
+  - [Sources SDK API tutorials] {#sdk-tutorials}
     - [Sources SDK API overview](sources-sdk/api/overview.md)
     - [Getting started](sources-sdk/api/getting-started.md)
     - [Create a connection specification](sources-sdk/api/create.md)
