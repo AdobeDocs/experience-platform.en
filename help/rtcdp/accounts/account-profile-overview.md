@@ -1,10 +1,10 @@
 ---
 keywords: rtcdp b2b;b2b;account;account profile;account profiles rtcdp;real-time customer data platform;
-title: Account Profiles in Real-time CDP B2B Edition
+title: Account Profiles in Real-time CDP B2B Edition (Beta)
 description: Learn how Real-time Customer Data Platform B2B Edition enables you to unify account information from multiple sources using account profiles.
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 ---
-# Account profiles overview
+# Account profiles overview (Beta)
 
 >[!IMPORTANT]
 >

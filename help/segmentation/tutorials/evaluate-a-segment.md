@@ -17,7 +17,7 @@ This tutorial requires a working understanding of the various [!DNL Adobe Experi
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Required headers
@@ -144,7 +144,7 @@ After a segmentation job has successfully completed (the value of the `status` a
 The following steps are required to export your audience:
 
 - [Create a target dataset](#create-a-target-dataset) - Create the dataset to hold audience members.
-- [Generate audience profiles in the dataset](#generate-profiles-for-audience-members) - Populate the dataset with XDM Individual Profiles based on the results of a segment job.
+- [Generate audience profiles in the dataset](#generate-profiles) - Populate the dataset with XDM Individual Profiles based on the results of a segment job.
 - [Monitor export progress](#monitor-export-progress) - Check the current progress of the export process. 
 - [Read audience data](#next-steps) - Retrieve the resulting XDM Individual Profiles representing the members of your audience.
 
@@ -157,9 +157,9 @@ One of the key considerations is the schema upon which the dataset is based (`sc
 There are two ways to create the necessary dataset:
 
 - **Using APIs:** The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile Union Schema] using the [!DNL Catalog] API. 
-- **Using the UI:** To use the [!DNL Adobe Experience Platform] user interface to create a dataset that references the union schema, follow the steps in the [UI tutorial](../ui/overview.md) and then return to this tutorial to proceed with the steps for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
+- **Using the UI:** To use the [!DNL Adobe Experience Platform] user interface to create a dataset that references the union schema, follow the steps in the [UI tutorial](../ui/overview.md) and then return to this tutorial to proceed with the steps for [generating audience profiles](#generate-profiles).
 
-If you already have a compatible dataset and know its ID, you can proceed directly to the step for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
+If you already have a compatible dataset and know its ID, you can proceed directly to the step for [generating audience profiles](#generate-profiles).
 
 **API format**
 
