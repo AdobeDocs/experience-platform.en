@@ -44,14 +44,14 @@ Once your source is created, see the [documentation guide](./documentation/overv
 The step-by-step process to configure your source in Experience Platform is outlined below:
 
 * Read the [Sources SDK API guide](./api/overview.md);
-  * Ensure that you have your [prerequisites covered](./api/getting-started.md);
+  * Read the [getting started guide](./api/getting-started.md);
   * Follow the tutorial on [creating a new connection specification](./api/create.md);
   * Follow the tutorial on [updating your connection specification](./api/update-connection-specs.md);
   * Follow the tutorial on [adding your new connection specification ID to a flow specification](./api/update-flow-specs.md)
   * [Submit your new source](./api/overview.md#submit).
 * To gain a better understanding of the structure and properties of a connection specification, see the guide on [configuration options for Sources SDK](./config/config.md);
   * See the guide on [configuring your authentication specifications](./config/authspec.md);
-  * See the guide on [configuring your source specifications](./config/sourcspec.md);
+  * See the guide on [configuring your source specifications](./config/sourcespec.md);
   * See the guide on [configuring your explore specifications](./config/explorespec.md);
 * To start documenting your source, see the [overview on creating documentation for Sources SDK](./documentation/overview.md)
   * You can use this [sources documentation template](./documentation/template.md) to structure your documentation;
