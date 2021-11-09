@@ -2,14 +2,14 @@
 keywords: profile;real-time customer profile;troubleshooting;guardrails;guidelines;limit;entity;primary entity;dimension entity;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;
 title: Default Guardrails for Real-time Customer Data Platform B2B Edition
 type: Documentation
-description: Adobe Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model. This document provides default use and rate limits to help you model your Profile data for optimal system performance using Real-time Customer Data Platform B2B Edition. 
+description: Adobe Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model. This document provides default use and rate limits to help you model your data for optimal system performance using Real-time Customer Data Platform B2B Edition. 
 ---
 
 # Default Guardrails for Real-time Customer Data Platform B2B Edition
 
 >[!NOTE]
 >
->The limits outlined in this document are specific to Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Adobe Experience Platform, refer to the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
+>The limits outlined in this document represent the changes enabled by Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Real-time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
 
 Real-time Customer Data Platform B2B Edition enables you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes in the form of Real-time Customer Profiles and Account Profiles. To support this new approach to profiles, Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model.
 
@@ -27,7 +27,7 @@ There are two types of default limits within this document:
 
 * **Hard limit:** A hard limit provides an absolute maximum.
 
->[!NOTE]
+>[!INFO]
 >
 >The limits outlined in this document are constantly being improved. Please check back regularly for updates. If you are interested in learning about custom limits, please contact your customer care representative.
 
@@ -39,7 +39,7 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 
 >[!NOTE]
 >
->The data model limits outlined in this section are specific to Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Adobe Experience Platform, refer to the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
+>The data model limits outlined in this section represent the changes enabled by Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Real-time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
@@ -51,7 +51,7 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 
 >[!NOTE]
 >
->The data model limits outlined in this section are specific to Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Adobe Experience Platform, refer to the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
+>The data model limits outlined in this section represent the changes enabled by Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Real-time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
@@ -71,7 +71,7 @@ The following guardrails refer to data size and provide recommended limits for d
 
 >[!NOTE]
 >
->The data size limits outlined in this section are specific to Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Adobe Experience Platform, refer to the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
+>The data size limits outlined in this section represent the changes enabled by Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Real-time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
 
 | Guardrail | Limit| Limit Type | Description|
 | --- | --- | --- | --- |
@@ -81,7 +81,7 @@ The following guardrails refer to data size and provide recommended limits for d
 
 >[!NOTE]
 >
->The data size limits outlined in this section are specific to Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Adobe Experience Platform, refer to the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
+>The data size limits outlined in this section represent the changes enabled by Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Real-time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ The guardrails outlined in this section refer to the number and nature of segmen
 
 >[!NOTE]
 >
->The segmentation limits outlined in this section are specific to Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Adobe Experience Platform, refer to the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
+>The segmentation limits outlined in this section represent the changes enabled by Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Real-time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
@@ -103,7 +103,7 @@ The guardrails outlined in this section refer to the number and nature of segmen
 
 ## Next Steps
 
-The limits outlined in this document are specific to Real-time Customer Data Platform B2B Edition. To view a complete list of default limits for Adobe Experience Platform, please refer to the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
+The limits outlined in this document represent the changes enabled by Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Real-time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
 
 ## Appendix
 
