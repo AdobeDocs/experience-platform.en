@@ -12,7 +12,7 @@ The following document outlines the different input and outputs utilized in [!DN
 
 ## [!DNL Attribution AI] input data
 
-Attribution AI works by analyzing one of the following datasets to calculate algorithmic scores:
+Attribution AI works by analyzing the following datasets to calculate algorithmic scores:
 
 - Adobe Analytics datasets using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Experience Event (EE) dataset

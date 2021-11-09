@@ -22,7 +22,7 @@ The Attribution AI service page appears. This page lists service instances of At
 
 You can find the **[!UICONTROL Total conversion events scored]** metric located in the bottom-right side of the **[!UICONTROL Create instance]** container. This metric tracks the total number of conversion events scored by Attribution AI for the current calendar year including all sandbox environments and any deleted service instances.
 
-![](./images/user-guide/total_conversions.png)
+![total conversions](./images/user-guide/total_conversions.png)
 
 Service instances can be edited, cloned, and deleted by using the controls on the right-hand side of the UI. To display these controls, select an instance from your existing **[!UICONTROL Service instances]**. The controls contain the following information:
 
@@ -32,7 +32,7 @@ Service instances can be edited, cloned, and deleted by using the controls on th
 - **[!UICONTROL Data source]**: A link to the dataset being used. If more than one dataset is being used by Attribution AI, "Multiple" followed by the number of datasets is displayed. Upon selecting the hyperlink, the datasets preview popover is shown.
 - **[!UICONTROL Last run details]**: This is only displayed when a run fails. Information on why the run failed such as error codes are displayed here.
 
-![](./images/user-guide/side_panel.png)
+![Side pane](./images/user-guide/multiple-datasets-pane.png)
 
 - **[!UICONTROL Conversion events]**: A quick overview of the conversion events configured for this instance.
 - **[!UICONTROL Lookback window]**: The time frame you defined indicating how many days prior to the conversion event touchpoints are included.
@@ -72,25 +72,29 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 >[!NOTE]
 >
->Dataset completeness is calculated using the maximum lookback window for Attribution AI (one year). This means data that is more than one year old is not taken into account when displaying your dataset completeness value.
+>Dataset completeness is calculated using the maximum training window for Attribution AI (one year). This means data that is more than a year old is not taken into account when displaying your dataset completeness value.
 
 ![Dataset completeness](./images/user-guide/dataset-completeness.png)
 
 ### Select an identity {#dataset-key}
 
-In order for multiple datasets to join on one another, you must select a identity namespace (also known as an "identity type") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
+In order for multiple datasets to join on one another, you must select a identity type (also known as an "identity namespace") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
 
 >[!IMPORTANT]
 >
->The same namespace (identity type) must be used for every dataset you select. For example, when using the Phone namespace and `mobilePhone.number` as the identifier, all identifiers for the remaining datasets must contain and use the Phone namespace.
+>The same identity type (namespace) must be used for every dataset you select. A green checkmark appears next to the identity type within the identity column indicating datasets are compatible. For example, when using the Phone namespace and `mobilePhone.number` as the identifier, all identifiers for the remaining datasets must contain and use the Phone namespace.
 
-In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and more useful in individual predictions. This means I would select `EMAIL (personalEmail.address)` as my identity.
+To select an identity, select the underlined value located in the identity column. The select an identity popover appears.
 
-![Dataset key not selected](./images/user-guide/aai-namespace.png)
+![select same namespace](./images/user-guide/identity-type.png)
+
+In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and be more useful in individual predictions. This means I would select `EMAIL (personalEmail.address)` as my identity.
+
+![Dataset key not selected](./images/user-guide/select-identity.png)
 
 >[!NOTE]
 >
-> If no valid identity namespace exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../identity-service/namespaces.md) documentation.
+> If no valid identity type (namespace) exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../identity-service/namespaces.md) documentation.
 
 ## Mapping media channel and campaign fields {#aai-mapping}
 
@@ -198,7 +202,7 @@ The final page in Attribution AI is the **[!UICONTROL Advanced]** page used for 
 
 Using the *Schedule*, you can select a day and time of the week you want scoring to take place. 
 
-Select the dropdown under *Scoring Frequency* to select between daily, weekly, and monthly scoring. Next, select the days of the week you want the scoring to take place. Multiple days can be selected. Select a day a second time to deselect it.
+Select the dropdown under *Scoring Frequency* to select between daily, weekly, and monthly scoring. Next, select the days of the week you want the scoring to take place. Multiple days can be selected. Selecting the same day again de-selects it.
 
 ![Schedule training](./images/user-guide/schedule_training.png)
 
