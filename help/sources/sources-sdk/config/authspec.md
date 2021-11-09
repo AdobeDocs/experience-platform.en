@@ -185,6 +185,72 @@ Basic authentication is an authentication type that allows you to access your ap
 
 {style="table-layout:auto"}
 
+## Example authentication specification
+
+The following is an example of a completed authentication specification using a [!DNL MailChimp Members] source.
+
+```json
+  "authSpec": [
+    {
+      "name": "OAuth2 Refresh Code",
+      "type": "OAuth2RefreshCode",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
+        "properties": {
+          "host": {
+            "type": "string",
+            "description": "Enter resource url host path"
+          },
+          "authorizationTestUrl": {
+            "description": "Authorization test url to validate accessToken.",
+            "type": "string"
+          },
+          "accessToken": {
+            "description": "Access Token of mailChimp endpoint.",
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "required": [
+          "host",
+          "accessToken"
+        ]
+      }
+    },
+    {
+      "name": "Basic Authentication",
+      "type": "BasicAuthentication",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "defines auth params required for connecting to rest service.",
+        "properties": {
+          "host": {
+            "type": "string",
+            "description": "Enter resource url host path."
+          },
+          "username": {
+            "description": "Username to connect mailChimp endpoint.",
+            "type": "string"
+          },
+          "password": {
+            "description": "Password to connect mailChimp endpoint.",
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "required": [
+          "host",
+          "username",
+          "password"
+        ]
+      }
+    }
+  ],
+```
+
 ## Next steps
 
 With your authentication specifications populated, you can proceed to configure the source specifications for the source that you want to integrate to Platform. See the the document on [configuring source specifications](./sourcespec.md) for more information.
