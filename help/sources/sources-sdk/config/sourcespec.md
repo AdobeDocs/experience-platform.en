@@ -9,6 +9,8 @@ description: This document provides an overview of the configurations you need t
 
 Source specifications contain information specific to a source, including attributes pertaining to a source's category, beta status, and catalog icon. They also contain useful information such as URL parameters, content, header, and schedule. Source specifications also describe the schema of the parameters required to create a source connection from a base connection. The schema is necessary in order to create a source connection.
 
+See the [appendix](#source-spec) for an example of a fully-populated source specification.
+
 
 ```json
 "sourceSpec": {
@@ -87,14 +89,16 @@ Source specifications contain information specific to a source, including attrib
 | `sourceSpec.attributes.urlParams.queryParams` | Defines the supported query parameters that can be used to append the source URL when making a request to fetch data. Query parameters must be comma (`,`) separated key-value pairs. **Note**: Any user-provided parameter value must be formatted as a placeholder. For example: `${USER_PARAMETER}`. | `exclude_fields=emails._links,id=${id}` |
 | `sourceSpec.attributes.headerParams` | Defines the comma (`,`) separated headers that need to be supplied in the HTTP request to source URL while fetching data. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
 | `sourceSpec.attributes.bodyParams` | Defines the required body parameters. This property is only used if `urlParams.method` is set to `POST`. | 
-| `sourceSpec.attributes.contentPath` | Defines the node that contains the list of items required to be ingested to Platform. This attribute should follow valid JSON path syntax and must point to a particular array. | See the [appendix](#appendix) for an example of the resource contained within a content path. |
+| `sourceSpec.attributes.contentPath` | Defines the node that contains the list of items required to be ingested to Platform. This attribute should follow valid JSON path syntax and must point to a particular array. | See the [appendix](#content-path) for an example of the resource contained within a content path. |
 | `sourceSpec.attributes.contentPath.path` | The path that points to the collection records to be ingested to Platform. | `$.emails` |
 | `sourceSpec.attributes.contentPath.skipAttributes` | This property allows you to identify specific items from the resource identified in the content path that are to be excluded from being ingested. |
-| `sourceSpec.attributes.contentPath.overrideWrapperAttribute` | This property allows you to specify attributes to override when a batch run occurs. |
+| `sourceSpec.attributes.contentPath.overrideWrapperAttribute` | This property allows you to override the value of attribute name you specified in `contentPath`. |
+| `sourceSpec.attributes.contentPath.keepAttributes` | This property allows you to explicitly specify the individual attributes that you want to map. | 
 | `sourceSpec.attributes.explodeEntityPath` | This property allows you to flatten two arrays and transform resource data to Platform resource. |
 | `sourceSpec.attributes.explodeEntityPath.path` | The path that points to the collection records that you want to flatten. | `$.email.activity` |
 | `sourceSpec.attributes.explodeEntityPath.skipAttributes` | This property allows you to identify specific items from the resource identified in the entity path that are to be excluded from being ingested. |
-| `sourceSpec.attributes.explodeEntityPath.overrideWrapperAttribute` | This property allows you to specify attributes to override when a batch run occurs. |
+| `sourceSpec.attributes.explodeEntityPath.overrideWrapperAttribute` | This property allows you to override the value of attribute name you specified in `explodeEntityPath`. |
+| `sourceSpec.attributes.explodeEntityPath.keepAttributes` | This property allows you to explicitly specify the individual attributes that you want to map. |
 | `sourceSpec.attributes.paginationParams` | Defines the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
 | `sourceSpec.attributes.paginationParams.type` | Displays the type of the supported pagination type for your source. | <ul><li>`offset`: This pagination type allows you to parse through results by specifying an index from where to start the resulting array, and a limit on how many results are returned.</li><li>`pointer`: This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request. The pointer type pagination requires path in payload that point to next page</li></ul> |
 | `sourceSpec.attributes.paginationParams.limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. | `count` |
@@ -106,13 +110,13 @@ Source specifications contain information specific to a source, including attrib
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamName` | Defines the end time parameter name | `before_last_changed` |
 | `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | Defines the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | Defines the supported format for the `scheduleEndParamName`.| `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | Defines the user-provided parameters to fetch resource values. | See the [appendix](#appendix) for an example user-inputted parameters for `spec.properties`. |
+| `sourceSpec.spec.properties` | Defines the user-provided parameters to fetch resource values. | See the [appendix](#user-input) for an example user-inputted parameters for `spec.properties`. |
 
 {style="table-layout:auto"}
 
 ## Appendix {#appendix}
 
-### Content path example
+### Content path example {#content-path}
 
 The following is an example of the contents of the `contentPath` property in a [!DNL MailChimp Campaigns] connection specification.
 
@@ -128,22 +132,91 @@ The following is an example of the contents of the `contentPath` property in a [
 }
 ```
 
-### `spec.properties` user input example
+### `spec.properties` user input example {#user-input}
 
-The following is an example of a user-provided `spec.properties` using a [!DNL MailChimp Members] connection specification.
+The following is an example of a user-provided `spec.properties` using a [!DNL MailChimp Members] connection specification:
+
 
 ```json
+"urlParams": {
+        "path": "/3.0/lists/${listId}/members",
+        "method": "GET"
+      }
 "spec": {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "description": "Define user input parameters to fetch resource values.",
-    "properties": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "description": "Define user input parameters to fetch resource values.",
+      "properties": {
         "listId": {
-            "type": "string",
-            "description": "listId for which members need to fetch."
+          "type": "string",
+          "description": "listId for which members need to fetch."
         }
+      }
     }
-}
+```
+
+### Source specification example {#source-spec}
+
+The following is a completed source specification using [!DNL MailChimp Members]:
+
+```json
+  "sourceSpec": {
+    "attributes": {
+      "uiAttributes": {
+        "isSource": true,
+        "isPreview": true,
+        "isBeta": true,
+        "category": {
+          "key": "marketingAutomation"
+        },
+        "icon": {
+          "key": "mailchimpMembersIcon"
+        },
+        "description": {
+          "key": "mailchimpMembersDescription"
+        },
+        "label": {
+          "key": "mailchimpMembersLabel"
+        }
+      },
+      "urlParams": {
+        "path": "/3.0/lists/${listId}/members",
+        "method": "GET"
+      },
+      "contentPath": {
+        "path": "$.members",
+        "skipAttributes": [
+          "_links",
+          "total_items",
+          "list_id"
+        ],
+        "overrideWrapperAttribute": "member"
+      },
+      "paginationParams": {
+        "type": "OFFSET",
+        "limitName": "count",
+        "limitValue": "100",
+        "offSetName": "offset"
+      },
+      "scheduleParams": {
+        "scheduleStartParamName": "since_last_changed",
+        "scheduleEndParamName": "before_last_changed",
+        "scheduleStartParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK",
+        "scheduleEndParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK"
+      }
+    },
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "description": "Define user input parameters to fetch resource values.",
+      "properties": {
+        "listId": {
+          "type": "string",
+          "description": "listId for which members need to fetch."
+        }
+      }
+    }
+  }
 ```
 
 ## Next steps
