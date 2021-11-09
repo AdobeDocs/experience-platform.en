@@ -7,7 +7,7 @@ description: Adobe Experience Platform uses a highly denormalized hybrid data mo
 
 # Default Guardrails for Real-time Customer Data Platform B2B Edition
 
->[!WARNING]
+>[!NOTE]
 >
 >The limits outlined in this document are specific to Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Adobe Experience Platform, refer to the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
 
@@ -15,7 +15,7 @@ Real-time Customer Data Platform B2B Edition enables you to deliver personalized
 
 This document provides default use and rate limits to help you model your data for optimal system performance. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
->[!NOTE]
+>[!INFO]
 >
 >Most customers do not exceed these default limits. If you would like to learn about custom limits, please contact your customer care representative.
 
@@ -47,8 +47,6 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 | Legacy multi-entity relationships| 20 | Soft | A maximum of 20 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | One-to-many relationships per XDM class | 2 | Soft | A maximum of 2 one-to-many relationships defined per XDM class is recommended. Additional relationship should not be made until an existing relationship is removed or disabled. For steps on how to create a relationship between two schemas, refer to the tutorial on [defining B2B schema relationships](../../xdm/tutorials/relationship-b2b.md).|
 
-{style="table-layout:auto"}
-
 ### Dimension entity guardrails
 
 >[!NOTE]
@@ -61,13 +59,11 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 | Only B2B objects may participate in one-to-many relationships | 0 | Hard | The system only supports one-to-many relationships between B2B objects.|
 | Maximum depth of nested relationships between B2B objects | 3 | Hard | The maximum depth of nested relationships between B2B objects is 3. This means that in a highly nested schema, you should not have a relationship between B2B objects nested more than 3 levels deep.|
 
-{style="table-layout:auto"}
-
 ## Data size limits
 
 The following guardrails refer to data size and provide recommended limits for data that can be ingested, stored, and queried as intended. To learn more about primary entities and dimension entities, see the section on [entity types](#entity-types) in the Appendix.
 
->[!NOTE]
+>[!INFO]
 >
 >Data size is measured as uncompressed data in JSON at time of ingestion.
 
@@ -81,8 +77,6 @@ The following guardrails refer to data size and provide recommended limits for d
 | --- | --- | --- | --- |
 | Batches ingested per XDM class per day | 45 | Soft | The total number of batches ingested each day per XDM class should not exceed 45. Ingesting additional batches may prevent optimal performance.|
 
-{style="table-layout:auto"}
-
 ### Dimension entity guardrails
 
 >[!NOTE]
@@ -95,8 +89,6 @@ The following guardrails refer to data size and provide recommended limits for d
 | Datasets per dimensional entity schema | 5 | Soft | A maximum of 5 datasets associated with each dimensional entity schema is recommended. For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|
 |Dimension entity batches ingested per day |4 per entity|Soft|The recommended maximum number of dimension entity batches ingested per day is 4 per entity. For example, you could ingest updates to a product catalog up to 4 times per day. Ingesting additional dimension entity batches for the same entity may affect system performance.|
 
-{style="table-layout:auto"}
-
 ## Segmentation guardrails
 
 The guardrails outlined in this section refer to the number and nature of segments an organization can create within Experience Platform, as well as mapping and activating segments to destinations.
@@ -108,8 +100,6 @@ The guardrails outlined in this section refer to the number and nature of segmen
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
 | Segments per B2B sandbox | 400 | Soft | An organization can have more than 400 segments in total, as long as there are less than 400 segments in each individual B2B sandbox. Attempting to create additional segments may affect system performance.|
-
-{style="table-layout:auto"}
 
 ## Next Steps
 
@@ -127,8 +117,8 @@ The [!DNL Profile] store data model consists of two core entity types:
 
   Time-independent attributes, also known as "record data" are modeled using [!DNL XDM Individual Profile], while time-series data, also known as "event data" is modeled using [!DNL XDM ExperienceEvent]. As record and time-series data is ingested in Adobe Experience Platform, it triggers [!DNL Real-time Customer Profile] to begin ingesting data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
 
-  ![](images/guardrails/profile-entity.png) 
+  ![](../profile/images/guardrails/profile-entity.png) 
 
 * **Dimension entity:** While the Profile data store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as [multi-entity segmentation](../segmentation/multi-entity-segmentation.md). Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These non-[!DNL XDM Individual Profile] schemas are known as "dimension entities" and do not contain time-series data. Dimension entities provide lookup data which aids and simplifies multi-entity segment definitions and must be small enough that the segmentation engine can load the entire data set into memory for optimal processing (fast point lookup).
 
-  ![](images/guardrails/profile-and-dimension-entities.png)
+  ![](../profile/images/guardrails/profile-and-dimension-entities.png)
