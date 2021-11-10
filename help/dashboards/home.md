@@ -26,6 +26,12 @@ The data in the snapshot shows the data exactly as it appears at the specific po
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
+## Dashboard inventory
+
+For detailed steps on how to use the **[!UICONTROL Dashboards]** section of the Experience Platform UI to view all available dashboards, please refer to the [dashboard inventory guide](inventory.md).
+
+<!-- confirm whether Application intergrations are still a thing. -->
+
 ## Available dashboards
 
 There are multiple dashboards currently available within Experience Platform, each providing transparency into your organization's customer data.
