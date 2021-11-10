@@ -78,7 +78,7 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 ### Select an identity {#identity}
 
-In order for multiple datasets to join on one another, you must select a identity type (also known as an "identity namespace") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
+In order for multiple datasets to join on one another, you must select an identity type (also known as an "identity namespace") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
 
 >[!IMPORTANT]
 >
@@ -88,7 +88,7 @@ To select an identity, select the underlined value located in the identity colum
 
 ![select same namespace](./images/user-guide/identity-type.png)
 
-In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and be more useful in individual predictions. This means I would select `EMAIL (personalEmail.address)` as my identity.
+In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and be more useful in individual predictions. This means you would select `EMAIL (personalEmail.address)` as your identity.
 
 ![Dataset key not selected](./images/user-guide/select-identity.png)
 
