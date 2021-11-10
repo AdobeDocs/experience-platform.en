@@ -179,14 +179,14 @@ The following is a list of the accepted configuration parameters for supported A
 
 | Parameter | Description |
 | --- | --- |
-| `key` | A unique ID that identifies the user or data subject. Adobe does not use this property and is intended to be used for your own internal tracking purposes. |
+| `key` | A unique ID that identifies the user or data subject. This property is intended to be used for your own internal tracking purposes and is not used by Adobe. |
 
 **Adobe Analytics**
 
 | Parameter | Description |
 | --- | --- |
-| `cookieDomainPeriods` | The number of periods in a domain used for cookie tracking (defaults to `2`, e.g. `domain.com`). Do not define it here unless specified in your JavaScript web beacon.|
-| `dataCenter` | The Adobe data collection data center. This should only be included if it is specified in your JavaScript web beacon. Potential values are: <ul><li>`d1`: San Jose data center.</li><li>`d2`: Dallas data center.</li></ul> |
+| `cookieDomainPeriods` | The number of periods in a domain used for cookie tracking (defaults to `2`, e.g. `.domain.com`). Do not define it here unless specified in your JavaScript web beacon.|
+| `dataCenter` | The Adobe data collection data center. This should only be included if it is specified in your JavaScript web beacon. Potential values are: <ul><li>`d1`: San Jose data center</li><li>`d2`: Dallas data center</li></ul> |
 | `reportSuite` | The Report Suite ID as specified in your JavaScript web beacon (for example, `s_code.js` or `dtm`). |
 | `trackingServer` | A non-SSL data collection domain. This should only be included if it is specified in your JavaScript web beacon. |
 | `trackingServerSecure` | An SSL data collection domain. This should only be included if it is specified in your JavaScript web beacon. |
