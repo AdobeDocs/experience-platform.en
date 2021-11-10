@@ -48,6 +48,7 @@ feature: Tags
 * Event forwarding {#event-forwarding}
   * [Overview](./ui/event-forwarding/overview.md)
   * [Getting started](./ui/event-forwarding/getting-started.md)
+  * [Secrets](./ui/event-forwarding/secrets.md)
 * Administration {#admin}
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
@@ -169,6 +170,7 @@ feature: Tags
     * [Notes](./api/endpoints/notes.md)
     * [Profile](./api/endpoints/profile.md)
     * [Search](./api/endpoints/search.md)
+    * [Secrets](./api/endpoints/secrets.md)
   * Guides {#guides}
     * [Delegate descriptor IDs](./api/guides/delegate-descriptor-ids.md)
     * [Encrypting values](./api/guides/encrypting-values.md)
@@ -178,6 +180,7 @@ feature: Tags
     * [Sorting responses](./api/guides/sorting.md)
     * [Relationships](./api/guides/relationships.md)
     * [Searching resources](./api/guides/search.md)
+    * [Secrets](./api/guides/secrets.md)
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * Release notes {#release-notes}

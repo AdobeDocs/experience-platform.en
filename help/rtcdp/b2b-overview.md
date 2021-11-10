@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;Customer AI
-title: Real-time CDP B2B Edition Overview
+title: Real-time CDP B2B Edition Overview (Beta)
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Overview of Real-time Customer Data Platform B2B Edition Account
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 ---
-# Real-time Customer Data Platform B2B Edition overview
+# Real-time Customer Data Platform B2B Edition overview (Beta)
 
 >[!IMPORTANT]
 >
@@ -67,7 +67,9 @@ See the [sources in Real-time CDP B2B Edition](./sources/b2b.md) documentation f
 
 ## B2B destinations
 
-Experience Platform destinations such as Google, Linkedin, and Facebook, are available and fully supported by Real-time CDP B2B Edition. There is also a Marketo Engage destination that streams segment membership data out of Platform and makes it available as lists in Marketo.
+Experience Platform destinations such as Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display & Video 360, Google Ads, and Google Ad Manager are available and fully supported by Real-time CDP B2B Edition. The Marketo Engage destination also streams segment membership data out of Platform and makes it available as lists in Marketo.
+
+See the overview on the [Marketo Engage Destination](../destinations/catalog/adobe/marketo-engage.md) for more information.
 
 For companies with more than one CRM, Real-time CDP B2B Edition provides the option to configure destination connectors to separate instances of Marketo or CRM. If required, you can configure destination connectors to each instance and send audiences to each of the CRM instances independently.
 
@@ -75,4 +77,14 @@ For companies with more than one CRM, Real-time CDP B2B Edition provides the opt
 
 Now that you better understand the benefits for marketers offered by Real-time CDP B2B Edition, and differences between it and Real-time CDP, you can learn about how to apply these features to your own IMS Organization.
 
-To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the [example use case for Real-time CDP B2B Edition](./b2b-use-case.md). Alternatively you can refer to the [schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentation for more specific guidance on creating schemas, and defining relationships for essential B2B data entities.
+To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the following documentation to help you get started:
+
+* [An example use case for Real-time CDP B2B Edition](./b2b-use-case.md)
+* [How to ingest data](./sources/b2b.md)
+* [How to access profiles](./profile/profile-overview.md)
+* [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+* [How to build segments](./segmentation/b2b.md)
+* [How to activate segments to destinations](./destinations/b2b.md)
+* [How to define and enforce data governance policies](./privacy/data-governance-overview.md)
+<!-- PLACEHOLDER - page under construction -->
+<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

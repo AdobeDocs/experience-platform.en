@@ -57,7 +57,7 @@ Your exported [!DNL Experience Platform] data lands in [!DNL Azure Event Hubs] i
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {
