@@ -300,6 +300,44 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
+## Anonymous block
+
+An anonymous block consists of two sections: executable and exception-handling sections. In an anonymous block, the executable section is mandatory. However, the exception-handling section is optional.
+
+The following example shows how to create a block with one or more statements to be executed together:
+
+```sql
+BEGIN
+  statementList
+[EXCEPTION exceptionHandler]
+END
+
+exceptionHandler:
+      WHEN OTHER
+      THEN statementList
+
+statementList:
+    : (statement (';')) +
+```
+
+Below is an example using anonymous block.
+
+```sql
+$$
+BEGIN
+   SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
+   SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
+   SET @v_log_id = select now();
+   CREATE TABLE tracking_email_id_incrementally
+     AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
+
+EXCEPTION
+  WHEN OTHER THEN
+    DROP TABLE IF EXISTS tracking_email_id_incrementally;
+    SELECT 'ERROR';
+END$$;
+```
+
 ## [!DNL Spark] SQL commands 
 
 The sub-section below covers the Spark SQL commands supported by Query Service.
