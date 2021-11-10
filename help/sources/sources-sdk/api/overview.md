@@ -38,9 +38,9 @@ For detailed instructions, see the guide on [updating flow specifications](./upd
 
 You can make updates to your connection specification by making a PUT request to the [!DNL Flow Service] API. See the guide on [updating your connection specifications](./update-connection-specs.md) for more information.
 
-## Submit your source {#submit}
+## Submit your source
 
-The final step is to test your source using this Postman collection. If your source runs successfully, then you can proceed and contact your Adobe representative for verification and promotion.
+To submit your source for integration to Experience Platform, you must first complete the entire [!DNL Flow Service] API workflow for sources to ensure that your source works successfully. If your source runs successfully, then you can proceed and contact your Adobe representative for verification and promotion. See the guide on [testing and submitting your source](./submit.md) for more information
 
 ## Next steps
 

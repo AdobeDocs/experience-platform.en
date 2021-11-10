@@ -263,6 +263,7 @@ feature: Sources
     - [Create a connection specification](sources-sdk/api/create.md)
     - [Update a connection specification](sources-sdk/api/update-connection-specs.md)
     - [Update a flow specification](sources-sdk/api/update-flow-specs.md)
+    - [Submit your source](sources-sdk/api/submit.md)
   - [Document your source] {#document}
     - [Document your source in Adobe Experience Platform](sources-sdk/documentation/overview.md)
     - [Use the GitHub web interface to create a sources documentation page](sources-sdk/documentation/github.md)
