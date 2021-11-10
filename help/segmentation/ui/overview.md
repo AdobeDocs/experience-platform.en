@@ -193,7 +193,7 @@ More information about edge segmentation can be found in the [edge segmentation 
 >
 >Policy violations only apply if you are creating a segment that has been assigned to a destination.
 
-Once you are done creating your segment, the segment will be analyzed by Adobe Experience Platform Data Governance to ensure there are no policy violations within the segment. See the [[!DNL Data Governance] overview](../../data-governance/home.md) for more information.
+Once you are done creating your segment, the segment will be analyzed by Adobe Experience Platform Data Governance to ensure there are no policy violations within the segment. See the [Data Governance overview](../../data-governance/home.md) for more information.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
