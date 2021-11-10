@@ -302,7 +302,7 @@ DROP VIEW IF EXISTS v1
 
 ## Anonymous block
 
-An anonymous block consists of two sections: executable and exception-handling sections. In an anonymous block, the executable section is mandatory. However, in an exception-handling section, the executable section is optional.
+An anonymous block consists of two sections: executable and exception-handling sections. In an anonymous block, the executable section is mandatory. However, the exception-handling section is optional.
 
 The following example shows how to create a block with one or more statements to be executed together:
 
@@ -319,6 +319,8 @@ exceptionHandler:
 statementList:
     : (statement (';')) +
 ```
+
+Below is an example using anonymous block.
 
 ```sql
 $$
