@@ -26,15 +26,12 @@ Additionally, to make calls to a Platform API you must first complete the [authe
 As part of the initial setup, Bodea's IT department needs to create an XDM schema to ensure data standardization and allow its use across different applications and Experience Platform services (such as Adobe Analytics or Target). Both Marketo Engage and Salesforce CRMs provide an auto-generation namespace and schema creator. This tool ensures that the schemas created describe the data in a structured reusable way. 
 
 Follow the [B2B namespaces and schema auto-generation utility documentation](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) for a complete reference to the setup process.
-<!-- https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/marketo/marketo-namespaces.html -->
-<!-- [Experience Platform Postman scripts](https://github.com/adobe/experience-platform-postman-samples) can be downloaded from the Adobe GitHub repository for convenience. The [CDP namespaces and schemas auto-generation utility script and the CDP Environment.postman_environment.json](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) are found within this Adobe GitHub repo.  -->
 
 >[!NOTE]
 > 
 >If you are not using Marketo Engage or Salesforce as a data source, you can [follow these steps to create an empty schema using the API](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/model-data-in-schemas.html%3Flang%3Dko#create-crm-schema-via-api) and configure the schema manually through the Platform UI.
-<!-- Before schemas can be created using either the API or the Experience Platform UI, the system administrator must grant user permissions from Adobe’s Admin Console. See the documentation for full instructions on how to [configure permissions](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) -->
 
-Within the Adobe Experience Platfrom UI, the Bodea marketer selects **Schemas** in the left rail of Experience Platform UI, followed by the **Browse** tab. The new empty schemas created by the auto-generation utility all have the prefix of `B2B` and are visible in the Platform Schema workspace.
+Within the Adobe Experience Platfrom UI, the Bodea marketer selects [!UICONTROL **Schemas**] in the left rail of Experience Platform UI, followed by the [!UICONTROL **Browse**] tab. The new empty schemas created by the auto-generation utility all have the prefix of `B2B` and are visible in the Platform Schema workspace.
 
 ![Schema workspace browse tab](./assets/b2b-tutorial/empty-b2b-schemas.png)
 
@@ -72,15 +69,13 @@ The Bodea marketer checks that all field groups are appropriately mapped and con
 
 ## Create a segment to evaluate your data
 
-The next task is to create an audience for Bodea's new email marketing campaign based on specific attributes of related entities from the source data. Within the Platform UI, the Bodea marketer first selects [!UICONTROL**Segments**] in the left navigation, then [!UICONTROL**Create segment**].
+The next task is to create an audience for Bodea's new email marketing campaign based on specific attributes of related entities from the source data. Within the Platform UI, the Bodea marketer first selects [!UICONTROL **Segments**] in the left navigation, then [!UICONTROL **Create segment**].
 
 In this example, the segment finds all the people who work in the sales department and are related to any account that has at least one open opportunity. This segment requires a link between the XDM Individual Profile class, XDM Business Account class, and XDM Business Opportunity class.
 
 ![Use case segment](./assets/b2b-tutorial/use-case-segment.png) 
 
 For instructions on how to create segments to evaluate your data see the [Segment Builder UI guide](../segmentation/ui/segment-builder.md), or for more specific B2B use cases and information refer to the [segmentation overview for Real-time CDP B2B Edition](./segmentation/b2b.md).
-
-<!-- https://experienceleague.adobe.com/docs/experience-platform/rtcdp/segmentation/b2b.html -->
 
 The Segment Builder allows you to create a marketable audience from Real-time Customer Profile B2B data and view estimates of your prospective audience based on the combination of attributes, events, and existing audiences you defined. 
 
@@ -90,7 +85,7 @@ After the segment is successfully created, a summary is provided in the [!UICONT
 
 As no destinations are currently activated for the segment, the next step is to export your audience to a dataset where it can be accessed and acted upon.
 
-Within the Segments workspace of the Platform UI, the Bodea marketer selects [!UICONTROL**Activate to destination**].
+Within the Segments workspace of the Platform UI, the Bodea marketer selects [!UICONTROL **Activate to destination**].
 
 ![Activate the segment to a destination](./assets/b2b-tutorial/activate-to-destination.png)
 
@@ -100,4 +95,4 @@ Once the destination is activated you can push segments from Experience Platform
 
 ## Next steps
 
-By following this tutorial you have successfully leveraged the various Adobe Experience Platform services used by Real-time CDP B2B Edition. As a result, you have learned to ingest, segment, evaluate, and export your B2B data into precise specific audiences and engage those audiences across different channels. 
+By following this tutorial, you have successfully leveraged the various Adobe Experience Platform services used by Real-time CDP B2B Edition. As a result, you have learned to ingest, segment, evaluate, and export your B2B data into specific audiences and engage those audiences across different channels. 
