@@ -31,7 +31,7 @@ Follow the [B2B namespaces and schema auto-generation utility documentation](../
 > 
 >If you are not using Marketo Engage or Salesforce as a data source, you can [follow these steps to create an empty schema using the API](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/model-data-in-schemas.html%3Flang%3Dko#create-crm-schema-via-api) and configure the schema manually through the Platform UI.
 
-Within the Adobe Experience Platfrom UI, the Bodea marketer selects [!UICONTROL **Schemas**] in the left rail of Experience Platform UI, followed by the [!UICONTROL **Browse**] tab. The new empty schemas created by the auto-generation utility all have the prefix of `B2B` and are visible in the Platform Schema workspace.
+Within the Adobe Experience Platform UI, the Bodea marketer selects **[!UICONTROL Schemas]** in the left rail of Experience Platform UI, followed by the **[!UICONTROL Browse]** tab. The new empty schemas created by the auto-generation utility all have the prefix of `B2B` and are visible in the Platform Schema workspace.
 
 ![Schema workspace browse tab](./assets/b2b-tutorial/empty-b2b-schemas.png)
 
@@ -69,7 +69,7 @@ The Bodea marketer checks that all field groups are appropriately mapped and con
 
 ## Create a segment to evaluate your data
 
-The next task is to create an audience for Bodea's new email marketing campaign based on specific attributes of related entities from the source data. Within the Platform UI, the Bodea marketer first selects [!UICONTROL **Segments**] in the left navigation, then [!UICONTROL **Create segment**].
+The next task is to create an audience for Bodea's new email marketing campaign based on specific attributes of related entities from the source data. Within the Platform UI, the Bodea marketer first selects **[!UICONTROL Segments]** in the left navigation, then **[!UICONTROL Create segment]**.
 
 In this example, the segment finds all the people who work in the sales department and are related to any account that has at least one open opportunity. This segment requires a link between the XDM Individual Profile class, XDM Business Account class, and XDM Business Opportunity class.
 
@@ -85,7 +85,7 @@ After the segment is successfully created, a summary is provided in the [!UICONT
 
 As no destinations are currently activated for the segment, the next step is to export your audience to a dataset where it can be accessed and acted upon.
 
-Within the Segments workspace of the Platform UI, the Bodea marketer selects [!UICONTROL **Activate to destination**].
+Within the Segments workspace of the Platform UI, the Bodea marketer selects **[!UICONTROL Activate to destination]**.
 
 ![Activate the segment to a destination](./assets/b2b-tutorial/activate-to-destination.png)
 
