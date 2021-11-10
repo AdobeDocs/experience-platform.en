@@ -208,7 +208,7 @@ If the instance is created successfully, a prediction run is immediately trigger
 >
 >Depending on the size of the input data, prediction runs can take up to 24 hours to complete.
 
-By following this section, you have configured an instance of Customer AI and a prediction run was executed. Upon the run's successful completion, scored insights automatically populate profiles with predicted scores if the profile toggle is enabled. Please wait up to 24 hours before continuing to the next section of this tutorial.
+By following this section, you have configured an instance of Customer AI and executed a prediction run. Upon the run's successful completion, scored insights automatically populate profiles with predicted scores if the profile toggle is enabled. Please wait up to 24 hours before continuing to the next section of this tutorial.
 
 ## Next steps {#next-steps}
 
