@@ -521,13 +521,13 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 ```
 
 
-## Activate data to your new destination
+## Activate data to your new destination {#activate-data}
 
 ![Destination steps overview step 5](../assets/api/email-marketing/step5.png)
 
 Having created all the connections and the data flow, now you can activate your profile data to the email marketing platform. In this step, you select which segments and which profile attributes you are sending to the destination and you can schedule and send data to the destination.
 
-To activate segments to your new destination, you must perform a JSON PATCH operation, similar to the example below. You can activate mutiple segments and profile attributes in one call. To learn more about JSON PATCH, see the [RFC specification](https://tools.ietf.org/html/rfc6902). 
+To activate segments to your new destination, you must perform a JSON PATCH operation, similar to the example below. You can activate multiple segments and profile attributes in one call. To learn more about JSON PATCH, see the [RFC specification](https://tools.ietf.org/html/rfc6902). 
 
 **API format**
 

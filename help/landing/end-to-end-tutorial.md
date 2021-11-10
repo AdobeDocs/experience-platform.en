@@ -8,17 +8,19 @@ exl-id: edcce353-338a-440e-99eb-a64e2abca579
 ---
 # Adobe Experience Platform end-to-end example workflow
 
-intro blurb
+Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. [!DNL Experience Platform] enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
+
+Built on RESTful APIs, [!DNL Experience Platform] exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. [!DNL Experience Platform] lets you derive a holistic view of your customers by ingesting your customer data, segmenting your data to the audiences you want to target, and activating these audiences to an external destination. The following tutorial shows an end-to-end workflow, showing all the steps from ingestion via sources to audience activation via destinations.
 
 ## Getting started
 
 This end-to-end workflow involves the usage of multiple Adobe Experience Platform services. For more information about the services used in this workflow, please review the documentation for the following services:
 
-- [Sources](../../sources/home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] allows you to divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
-- [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+- [Sources](../sources/home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+- [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] allows you to divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups.
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../xdm/schema/best-practices.md).
+- [Destinations](../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
@@ -40,7 +42,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -62,7 +64,7 @@ After ingesting your data into Platform through a source connector, you can eval
 
 ### Create a segment definition
 
-Firstly, you will need to create a segment definition to cluster your individuals to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the API tutorial on [creating a segment]() or the UI guide on using the [Segment Builder]().
+Firstly, you will need to create a segment definition to cluster your individuals to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the API tutorial on [creating a segment](../segmentation/tutorials/create-a-segment.md) or the UI guide on using the [Segment Builder](../segmentation/ui/segment-builder.md).
 
 Ensure that once you've created a segment definition, that you keep note of the segment definition ID.
 
@@ -70,22 +72,22 @@ Ensure that once you've created a segment definition, that you keep note of the 
 
 After creating your segment definition, you can either create a segment job to evaluate the segment as a one-time instance or create a schedule to evaluate the segment on an ongoing basis. 
 
-To evaluate a segment definition on demand, you will need to create a segment job. A segment job is an asynchronous process that creates a new audience segment, based on the referred segment definition and merge policies. Once the segment job is created and evaluated, you can get information about the segment, such as errors that may have occurred during processing or the size of your audience. To learn how to create a segment job, including all the details you need to provide, please read the [segment job developer guide](). 
+To evaluate a segment definition on demand, you will need to create a segment job. A segment job is an asynchronous process that creates a new audience segment, based on the referred segment definition and merge policies. Once the segment job is created and evaluated, you can get information about the segment, such as errors that may have occurred during processing or the size of your audience. To learn how to create a segment job, including all the details you need to provide, please read the [segment job developer guide](../segmentation/api/segment-jobs.md). 
 
-To evaluate a segment definition on an ongoing basis, you will need to create and enable a schedule. A schedule is a tool that can be used to used to automatically run a segment job once a day at a specified time. To learn how to create and enable a schedule, you can follow the instructions in the API guide on the [schedules endpoint]().
+To evaluate a segment definition on an ongoing basis, you will need to create and enable a schedule. A schedule is a tool that can be used to used to automatically run a segment job once a day at a specified time. To learn how to create and enable a schedule, you can follow the instructions in the API guide on the [schedules endpoint](../segmentation/api/schedules.md).
 
 ## Export your evaluated data to a dataset
 
 After either creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation by creating a segment export job. A segment export job is an asynchronous task that sends information about the evaluated segment job's audiences to a dataset. 
 
-Before creating an export job, you will first need to create a dataset to export the data to. To learn how to create a dataset, please read the create a target dataset step in the tutorial on [evaluating a segment](), ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job. To learn how to create an export job, you can follow the instructions in the API guide on the [export jobs endpoint]().
+Before creating an export job, you will first need to create a dataset to export the data to. To learn how to create a dataset, please read the create a target dataset step in the tutorial on [evaluating a segment](../segmentation/tutorials/evaluate-a-segment.md#create-dataset), ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job. To learn how to create an export job, you can follow the instructions in the API guide on the [export jobs endpoint](../segmentation/api/export-jobs.md).
 
 ## Export your evaluated data to a destination
 
-Alternatively, after creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation to a destination. A destination is an endpoint, such as an Adobe application on an external service, where an audience can be activated and delivered. A full list of available destinations can be found in the [destinations overview]().
+Alternatively, after creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation to a destination. A destination is an endpoint, such as an Adobe application on an external service, where an audience can be activated and delivered. A full list of available destinations can be found in the [destinations overview](../destinations/home.md).
 
-To learn how to activate your segment definition to a destination, please read the activate data to your new destination step in the tutorial on [connecting to destinations and activating data]().
+To learn how to activate your segment definition to a destination, please read the activate data to your new destination step in the tutorial on [connecting to destinations and activating data](../destinations/api/email-marketing.md#activate-data).
 
 ## Next steps
 
-ending
+By reading this tutorial, you have been introduced to a high level overview for a simple end-to-end flow for Platform. 
