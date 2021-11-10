@@ -76,7 +76,7 @@ If more than one dataset is used by Customer AI, a hyperlink labeled **[!UICONTR
 
 ![multiple datasets](../images/insights/insights-multi-datasets.png)
 
-Selecting the multiple datasets link opens the Customer AI dataset preview popover. Each color in the preview represents a dataset as shown by the color key to the left of the dataset columns. In this example you can see that only **Dataset 1** contains the `PROP1` column.
+Selecting the multiple datasets link opens the Customer AI dataset preview popover. Each color in the preview represents a dataset as shown by the color key to the left of the dataset columns. In this example, you can see that only **Dataset 1** contains the `PROP1` column.
 
 ![show more](../images/insights/dataset-preview.png)
 
@@ -151,7 +151,7 @@ Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for l
 
 ![Create a segment](../images/insights/create-segment.png)
 
-The segment builder is used to define a segment. When selecting **[!UICONTROL Create Segment]** from the Insights page, Customer AI automatically adds the selected buckets information to the segment. To finish creating your segment, simply fill in the *Name* and *Description* containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, select **[!UICONTROL Save]** in the top-right.
+The segment builder is used to define a segment. When selecting **[!UICONTROL Create Segment]** from the Insights page, Customer AI automatically adds the selected buckets information to the segment. To finish creating your segment, simply fill in the **Name** and **Description** containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, select **[!UICONTROL Save]** in the top-right.
 
 >[!NOTE]
 >

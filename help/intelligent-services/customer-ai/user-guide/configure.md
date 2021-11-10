@@ -46,11 +46,11 @@ The instance creation workflow appears, starting on the **[!UICONTROL Setup]** s
 
 Below is important information on values that you must provide the instance with:
 
--   **Name:** The instance's name is used in all places where Customer AI scores are displayed. Hence, names should describe what the prediction scores represent, for example, "Likelihood to cancel magazine subscription".
+-   **[!UICONTROL Name]:** The instance's name is used in all places where Customer AI scores are displayed. Hence, names should describe what the prediction scores represent. For example, "Likelihood to cancel magazine subscription".
 
--   **Description:** A description indicating what you are trying to predict.
+-   **[!UICONTROL Description]:** A description indicating what you are trying to predict.
 
--   **Propensity type:** The propensity type determines the intent of the score and metric polarity. You can either choose **[!UICONTROL Churn]** or **[!UICONTROL Conversion]**. Please see the note under [scoring summary](./discover-insights.md#scoring-summary) in the discovering insights document for more information on how the propensity type affects your instance.
+-   **[!UICONTROL Propensity type]:** The propensity type determines the intent of the score and metric polarity. You can either choose **[!UICONTROL Churn]** or **[!UICONTROL Conversion]**. Please see the note under [scoring summary](./discover-insights.md#scoring-summary) in the discovering insights document for more information on how the propensity type affects your instance.
 
 ![Setup screen](../images/user-guide/create-instance.png)
 
@@ -58,7 +58,7 @@ Provide the required values and then select **[!UICONTROL Next]** to continue.
 
 ## Select data {#select-data}
 
-By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience event, and Consumer Experience Event data to calculate propensity scores. When selecting a dataset only ones that are compatible with Customer AI are listed. To select a dataset select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
+By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience Event, and Consumer Experience Event data to calculate propensity scores. When selecting a dataset, only ones that are compatible with Customer AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
 
 ![Select and search for dataset](../images/user-guide/configure-dataset-page.png)
 
@@ -74,14 +74,12 @@ The dataset preview contains data such as the last update time, source schema, a
 
 ### Dataset completeness {#dataset-completeness}
 
-<!-- https://www.adobe.com/go/cai-dataset-completeness -->
-
-In the dataset preview is a dataset completeness percentage value. This value provides a quick snapshot of how many columns in your dataset are empty/null. If a dataset contains a lot of missing values and these values are captured elsewhere, it is highly recommended you include the dataset containing the missing values. In this example Person ID is empty, however, Person ID is captured in a separate dataset that can be included.
+There is a dataset completeness percentage value in the dataset preview. This value provides a quick snapshot of how many columns in your dataset are empty/null. If a dataset contains a lot of missing values and these values are captured elsewhere, it is highly recommended you include the dataset containing the missing values. In this example Person ID is empty, however, Person ID is captured in a separate dataset that can be included.
 
 >[!NOTE]
 >
 >Dataset completeness is calculated using the maximum training window for Customer AI (one year). This means data that is more than one year old is not taken into account when displaying your dataset completeness value.
-
+<!-- training dataset completness needs to change -->
 ![Dataset completeness](../images/user-guide/dataset-info.png)
 
 ### Select an identity {#identity}
@@ -96,7 +94,7 @@ To select an identity, select the underlined value located in the identity colum
 
 ![select same namespace](../images/user-guide/identity-type.png)
 
-In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and be more useful in individual predictions. This means I would select `EMAIL (personalEmail.address)` as my identity.
+In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and be more useful in individual predictions. This means that `EMAIL (personalEmail.address)` would be selected as the identity.
 
 ![Dataset key not selected](../images/user-guide/select-identity.png)
 
@@ -110,7 +108,7 @@ In the event that more than one identity is available within a namespace, make s
 
 The **[!UICONTROL Define goal]** step appears and it provides an interactive environment for you to visually define a prediction goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame.
 
-To create a goal, select **[!UICONTROL Enter Field Name]** and select a field from the dropdown list. Select the second input and select a clause for the event's condition, then optionally provide the target value to complete the event. Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
+To create a goal, select **[!UICONTROL Enter Field Name]** and followed by a field from the dropdown list. Select the second input, a clause for the event's condition, then optionally provide the target value to complete the event. Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
 
 ![](../images/user-guide/define-a-goal.png)
 
@@ -118,7 +116,7 @@ To create a goal, select **[!UICONTROL Enter Field Name]** and select a field fr
 
 While defining your goal, you have the option to select **[!UICONTROL Will occur]** or **[!UICONTROL Will not occur]**. Selecting **[!UICONTROL Will occur]** means that the event conditions you define need to be met for a customer's event data to be included in the insights UI. 
 
-For example, if you would like to set up an app to predict whether a customer will make a purchase, you can select **[!UICONTROL Will occur]** followed by **[!UICONTROL All of]** and then enter **commerce.purchases.id** (or a similar field) and **exists** as the operator.
+For example, if you would like to set up an app to predict whether a customer will make a purchase, you can select **[!UICONTROL Will occur]** followed by **[!UICONTROL All of]** and then enter **commerce.purchases.id** (or a similar field) and **[!UICONTROL exists]** as the operator.
 
 ![will occur](../images/user-guide/occur.png)
 
@@ -198,7 +196,7 @@ To exclude an event, select **[!UICONTROL Add exclusion]** and define the event.
 
 The Profile toggle allows Customer AI to export the scoring results into Real-time Customer Profile. Disabling this toggle prevents the models scoring results from being added to Profile. Customer AI scoring results are still available with this feature disabled.
 
-When using Customer AI for the first time ,it is recommended that you toggle this feature off until you are happy with the model output results. This prevents you from uploading multiple scoring datasets to Real-time Customer Profile while fine tuning your model.
+When using Customer AI for the first time ,you should toggle this feature off until you are happy with the model output results. This prevents you from uploading multiple scoring datasets to Real-time Customer Profile while fine tuning your model.
 
 ![Profile toggle](../images/user-guide/advanced-workflow.png)
 
