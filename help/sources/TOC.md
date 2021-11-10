@@ -230,7 +230,6 @@ feature: Sources
       - [PayPal](tutorials/ui/create/payments/paypal.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
-      - [Generic REST API](tutorials/ui/create/protocols/generic-rest.md)
     - Streaming {#streaming}
       - [HTTP API](tutorials/ui/create/streaming/http.md)
   - Configure a dataflow {#dataflow}
