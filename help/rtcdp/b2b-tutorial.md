@@ -51,7 +51,7 @@ Next, the Bodea marketer uses the [Marketo Engage connector](../sources/connecto
 > 
 >To learn which source connectors are available to your organization, you can view the sources catalog in the Platform UI. To access the catalog, select **Sources** in the left navigation, then select **Catalog**.
 
-In order to create a connection between your Marketo account and Platform, you must acquire your authentication credentials. See the [guide on attaining Marketo source connector authentication credentials](../sources/connectors/adobe-applications/marketo/marketo-auth.md) for detailed instructions. 
+In order to create a connection between a Marketo account and Platform, you must acquire authentication credentials. See the [guide on attaining Marketo source connector authentication credentials](../sources/connectors/adobe-applications/marketo/marketo-auth.md) for detailed instructions. 
 
 After acquiring authentication credentials, the Bodea marketer creates a connection between the Marketo Account and their Platform IMS Organization. See the documentation for instructions on [how to connect a Marketo Account using the Platform UI](../sources/tutorials/ui/create/adobe-applications/marketo.md).
 
