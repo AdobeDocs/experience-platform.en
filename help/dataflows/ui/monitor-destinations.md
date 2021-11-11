@@ -22,7 +22,7 @@ This guide requires a working understanding of the following components of Adobe
 - [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Monitor dataflows in the Destinations workspace
+## Monitor dataflows in the Destinations workspace {#monitor-dataflows-in-the-destinations-workspace}
 
 In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
 
@@ -39,7 +39,7 @@ See the following table for more information on statuses:
 | Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
 | Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
 
-### Dataflow runs for streaming destinations
+### Dataflow runs for streaming destinations {#dataflow-runs-for-streaming-destinations}
 
 For streaming destinations, the [!UICONTROL Dataflow runs] tab provides an hourly update for metric data on your dataflow runs. The most prominent statistics labelled are for identities.
 
@@ -75,7 +75,7 @@ The details page also displays a list of identities that failed and identities t
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### Dataflow runs for batch destinations
+### Dataflow runs for batch destinations {#dataflow-runs-for-batch-destinations}
 
 For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
@@ -115,7 +115,7 @@ The details page also displays a list of identities that failed and identities t
 
 To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 
-At the center of the dashboard is the Activation panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to destinations.
+At the center of the dashboard is the [!UICONTROL Activation] panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to destinations.
 
 ![](../assets/ui/monitor-destinations/dashboard-graph.png)
 
@@ -127,6 +127,11 @@ By default, the data displayed contains the activation rates from the last 24 ho
 >The following screenshot shows the activation rate for the last 30 days instead of the last 24 hours. You can adjust the time frame by selecting **[!UICONTROL Last 30 days]**.
 
 ![](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
+
+You can dismiss the graph and view essential information about the activation details, based on the destination type - streaming or batch:
+
+* **[!UICONTROL Streaming activation rate]**: Represents the percentage of received identities that have either been successfully activated or skipped. The formula used to calculate this percentage is described higher above, in the [Dataflow runs for streaming destinations](#dataflow-runs-for-streaming-destinations) section.
+* **Batch failed flow runs**: 
 
 The graph is displayed by default and you can disable it to expand the list of destinations below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
 
@@ -147,6 +152,10 @@ If you want to view all existing dataflows across all destinations, select **[!U
 A list of dataflows appears, grouped on a per-destination basis. You can see additional details for a specific dataflow by locating the destination you want to monitor, selecting the filter ![filter](../assets/ui/monitor-destinations/filter.png) beside it, and then subsequently selecting the filter ![filter](../assets/ui/monitor-destinations/filter.png) beside the dataflow you want more information about.
 
 ![](../assets/ui/monitor-destinations/dashboard-dataflows.png)
+
+>[!IMPORTANT]
+>
+>Segment level metrics are currently not recorded for failed flow runs and excluded records.
 
 
 The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, profiles received, identities activated, identities excluded, identities failed, activation rate, and status. To see more details about a specific dataflow run, select the filter ![filter](../assets/ui/monitor-destinations/filter.png) beside the dataflow run start time.
