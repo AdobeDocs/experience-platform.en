@@ -23,19 +23,13 @@ This tutorial workflow relies on several Adobe Experience Platform services as p
 
 As part of the initial setup, Bodea's IT department needs to create an XDM schema to ensure that their data follows a standard format when being brought into Platform, and is actionable across different Platform services and Adobe Experience Cloud products (such as Adobe Analytics and Adobe Target). 
 
-Both Marketo Engage and Salesforce CRMs provide an auto-generation namespace and schema creator. This tool ensures that the schemas created describe the data in a structured reusable way. Follow the [B2B namespaces and schema auto-generation utility documentation](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) for a complete reference to the setup process.
-
->[!NOTE]
-> 
->If you are not using Marketo Engage or Salesforce as a data source, you can [follow these steps to create an empty schema using the API](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/model-data-in-schemas.html%3Flang%3Dko#create-crm-schema-via-api) and configure the schema manually through the Platform UI.
+Adobe Experience Platform allows you to automatically generate the schemas and namespaces required for B2B data sources. This tool ensures that the schemas created describe the data in a structured reusable way. Follow the [B2B namespaces and schema auto-generation utility documentation](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) for a complete reference to the setup process.
 
 Within the Adobe Experience Platform UI, the Bodea marketer selects **[!UICONTROL Schemas]** in the left rail, followed by the **[!UICONTROL Browse]** tab. Since they used the Marketo Engage auto-generation utility, the new empty schemas appear in the list and all have a prefix of "B2B".
 
 ![Schema workspace browse tab](./assets/b2b-tutorial/empty-b2b-schemas.png)
 
 The auto-generation utility defined the data model structure for the schemas using standard XDM B2B classes (such as [XDM Business Account](../xdm/classes/b2b/business-account.md) and [XDM Business Opportunity](../xdm/classes/b2b/business-opportunity.md)) that capture fundamental B2B data entities. In addition, the auto-generated B2B schemas built on these classes have pre-established relationships that allow for advanced segmentation use cases. Any additional field groups required for the data structure can easily be made here through the UI. See the [XDM UI guide, adding field groups to a schema section](../xdm/ui/resources/schemas.md#add-field-groups) for more information.
-
-The combination of data from different siloed data sources requires the use of union schemas. However, as union schemas can only contain data fields from schemas of the same class, relationships between the multiple schemas are required to describe how these business entities relate to one another.
 
 >[!NOTE]
 > 
@@ -51,9 +45,11 @@ Real-time Customer Profile merges data from disparate sources to create consolid
 
 ## Ingest your data into Experience Platform
 
-Next, the Bodea marketer uses the [Marketo Engage connector](../sources/connectors/adobe-applications/marketo/marketo.md) to ingest data into Platform for use in downstream services.
+Next, the Bodea marketer uses the [Marketo Engage connector](../sources/connectors/adobe-applications/marketo/marketo.md) to ingest data into Platform for use in downstream services. You can also ingest data by using one of the approved sources for Real-time CDP B2B Edition.
 
-You can also ingest data by using one of the [approved sources for Real-time CDP B2B Edition](./sources/b2b.md).
+>[!NOTE]
+> 
+>To learn which source connectors are available to your organization, you can view the sources catalog in the Platform UI. To access the catalog, select **Sources** in the left navigation, then select **Catalog**.
 
 In order to create a connection between your Marketo account and Platform, you must acquire your authentication credentials. See the [guide on attaining Marketo source connector authentication credentials](../sources/connectors/adobe-applications/marketo/marketo-auth.md) for detailed instructions. 
 
@@ -81,7 +77,7 @@ In this example, the segment finds all the people who work in the sales departme
 
 The Segment Builder allows you to create a marketable audience from Real-time Customer Profile data and view estimates of your prospective audience based on the combination of attributes, events, and existing audiences you defined.
 
-## Export your evaluated data
+## Activate your evaluated data to a destination
 
 After the segment is successfully created, a summary is provided in the [!UICONTROL Details] section of the workspace. As no destinations are currently activated for the segment, the Bodea marketer needs to export the audience to a dataset where it can be accessed and acted upon.
 
