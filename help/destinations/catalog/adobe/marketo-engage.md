@@ -18,6 +18,10 @@ The destination enables marketers to push segments created in Adobe Experience P
 |ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: “Adobe Marketing Cloud ID”, “Adobe Experience Cloud ID”, “Adobe Experience Platform ID”. See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
 |Email|A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels.|
 
+>[!NOTE]
+>
+>Mapping attributes is optional. Mapping Email and/or ECID from the Identity Namespace tab is the most important thing to do to ensure the person is matched in Marketo. Mapping Email ensures the highest match rate.
+
 ## Export type {#export-type}
 
 Segment Export - you are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the Marketo Engage destination.
