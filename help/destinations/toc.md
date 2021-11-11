@@ -33,7 +33,7 @@ feature: Destinations
     * [ (Alpha) HTTP connection](./catalog/http-destination.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
-        * [(Beta) Marketo Engage connection](./catalog/adobe/marketo-engage.md)
+        * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [Experience Platform segment sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising}
         * [Advertising destinations overview](./catalog/advertising/overview.md)
