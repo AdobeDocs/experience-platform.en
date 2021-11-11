@@ -16,10 +16,11 @@ Built on RESTful APIs, [!DNL Experience Platform] exposes the full functionality
 
 This end-to-end workflow involves the usage of multiple Adobe Experience Platform services. For more information about the services used in this workflow, please review the documentation for the following services:
 
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../xdm/schema/best-practices.md).
 - [Sources](../sources/home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] allows you to divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups.
 - [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../xdm/schema/best-practices.md).
+- [Datasets](../catalog/datasets/overview.md): The storage and management construct for data persistence in [!DNL Experience Platform].
 - [Destinations](../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
@@ -48,13 +49,13 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 - Content-Type: application/json
 
-Additional headers may be required to complete specific requests. The correct headers are shown in each of the examples within this document. Please pay special attention to the sample requests in order to ensure that all required headers are included.
+Additional headers may be required to complete specific requests. The correct headers are shown in each of the examples within this document. Please pay special attention to the sample requests in order to ensure that all required headers are included. 
 
 ## Ingest your data into Platform
 
 In order to use Platform to evaluate your data, you will first need to ingest your data into Platform. You can ingest your data by using one of the various sources provided by Platform, such as [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). A full list of available sources can be found in the [source connectors overview](../sources/home.md).
 
-If you use Amazon S3 as your source connector, you can follow the instructions in either the API tutorial on [creating an Amazon S3 connector](../sources/tutorials/api/create/cloud-storage/s3.md) or the UI tutorial on [creating an Amazon S3 connector](../sources/tutorials/ui/create/cloud-storage/s3.md) to learn how to create, connect to, and ingest data within the connector.
+If you use Amazon S3 as your source connector, you can follow the instructions in either the API tutorial on [creating an Amazon S3 connector](../sources/tutorials/api/create/cloud-storage/s3.md) or the UI tutorial on [creating an Amazon S3 connector](../sources/tutorials/ui/create/cloud-storage/s3.md) to learn how to create, connect to, and ingest data within the connector. Please note that when you ingest your data, you will need to create an XDM schema for the data to be formatted into. To learn how to best create an XDM schema, please read the guide on the [basics of schema composition](../xdm/schema/composition.md).
 
 For more detailed instructions on source connectors, please read the [source connectors overview](../sources/home.md). To learn more about Flow Service, the API which sources is based off of, please read the [Flow Service API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -90,4 +91,4 @@ To learn how to activate your segment definition to a destination, please read t
 
 ## Next steps
 
-By reading this tutorial, you have been introduced to a high level overview for a simple end-to-end flow for Platform. 
+By reading this tutorial, you have been introduced to a high level overview for a simple end-to-end flow for Platform. To learn more about Adobe Experience Platform, please read the [Platform overview](./home.md). To learn more about using the Platform API and the Platform UI, please read the [Platform API guide](./api-guide.md) and the [Platform UI guide](./ui-guide.md) respectively.
