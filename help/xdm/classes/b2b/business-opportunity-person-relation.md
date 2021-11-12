@@ -3,11 +3,7 @@ title: XDM Business Opportunity Person Relation Class
 description: This document provides an overview of the XDM Business Opportunity Person Relation class in Experience Data Model (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
 ---
-# [!UICONTROL XDM Business Opportunity Person Relation] class (Beta)
-
->[!IMPORTANT]
->
->This class is available as part of Real-time Customer Data Platform B2B Edition, which is currently in beta. The documentation and functionality are subject to change.
+# [!UICONTROL XDM Business Opportunity Person Relation] class
 
 [!UICONTROL XDM Business Opportunity Person Relation] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a person that is associated with a business opportunity.
 
