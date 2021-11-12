@@ -9,7 +9,7 @@ exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
 >
 >If you are not using Real-time Customer Data Platform B2B Edition, see the [sources overview](./sources-overview.md) instead.
 
-Real-time Customer Data Platform B2B Edition allows you to bring your B2B data through the [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) source connector while providing you with the ability to structure, label, and enhance incoming data using services.
+Real-time Customer Data Platform B2B Edition allows you to bring your B2B data through various sources including the [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) source connector, Salesforce, Amazon S3, and ADLS among others. This range of sources provides you with the ability to structure, label, and enhance incoming data using services.
 
 >[!TIP]
 >
