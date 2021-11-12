@@ -76,11 +76,10 @@ Now that you better understand the benefits for marketers offered by Real-time C
 To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the following documentation to help you get started:
 
 * [An example use case for Real-time CDP B2B Edition](./b2b-use-case.md)
+* [An end-to-end tutorial for Real-time Customer Data Platform B2B Edition](./b2b-tutorial.md)
 * [How to ingest data](./sources/b2b.md)
 * [How to access profiles](./profile/profile-overview.md)
 * [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
 * [How to build segments](./segmentation/b2b.md)
 * [How to activate segments to destinations](./destinations/b2b.md)
 * [How to define and enforce data governance policies](./privacy/data-governance-overview.md)
-<!-- PLACEHOLDER - page under construction -->
-<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->
