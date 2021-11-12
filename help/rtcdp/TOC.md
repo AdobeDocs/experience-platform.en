@@ -15,7 +15,8 @@ user-guide-description: Bring together known and anonymous data from multiple en
     * [Get started with Real-time CDP](get-started.md)
     * [Metrics overview](home-page-dashboards.md)
   * Real-time CDP B2B Edition {#rtcdpb2b-intro}
-    * [Get started with Real-time CDP B2B Edition](./b2b-use-case.md)
+    * [Real-time CDP B2B Edition example use case (Beta)](./b2b-use-case.md)
+    * [Real-time CDP B2B Edition end-to-end tutorial (Beta)](./b2b-tutorial.md)
     * [Real-time CDP B2B Edition guardrails](b2b-guardrails.md)
 * Account profiles {#account}
   * [Account profile overview](accounts/account-profile-overview.md)
