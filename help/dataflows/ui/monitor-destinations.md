@@ -115,31 +115,40 @@ The details page also displays a list of identities that failed and identities t
 
 To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 
-At the center of the dashboard is the [!UICONTROL Activation] panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to destinations.
+At the center of the dashboard is the [!UICONTROL Activation] panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to destinations, as well as on the batch flow runs to destinations.
 
 ![](../assets/ui/monitor-destinations/dashboard-graph.png)
 
 
-By default, the data displayed contains the activation rates from the last 24 hours. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed. Available options include **[!UICONTROL Last 24 hours]**, **[!UICONTROL Last 7 days]**, and **[!UICONTROL Last 30 days]**. Alternatively, you can select the dates on the calendar pop-up window that appears. Once you have selected dates, select **[!UICONTROL Apply]** to adjust the time frame of the information shown.
+By default, the data displayed contains the activation information from the last 24 hours. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed. Available options include **[!UICONTROL Last 24 hours]**, **[!UICONTROL Last 7 days]**, and **[!UICONTROL Last 30 days]**. Alternatively, you can select the dates on the calendar pop-up window that appears. Once you have selected dates, select **[!UICONTROL Apply]** to adjust the time frame of the information shown.
 
 >[!NOTE]
 >
->The following screenshot shows the activation rate for the last 30 days instead of the last 24 hours. You can adjust the time frame by selecting **[!UICONTROL Last 30 days]**.
+>The following screenshot shows the activation rate and batch flow runs for the last 30 days instead of the last 24 hours. You can adjust the time frame by selecting **[!UICONTROL Last 30 days]**.
 
 ![](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-You can dismiss the graph and view essential information about the activation details, based on the destination type - streaming or batch:
+Select the arrow icon (![arrow icon](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) to expand the cards at the top of the screen to view at-a-glance information about the activation details, based on the destination type - streaming or batch:
 
-* **[!UICONTROL Streaming activation rate]**: Represents the percentage of received identities that have either been successfully activated or skipped. The formula used to calculate this percentage is described higher above, in the [Dataflow runs for streaming destinations](#dataflow-runs-for-streaming-destinations) section.
-* **Batch failed flow runs**: 
+* **[!UICONTROL Streaming activation rate]**: Represents the percentage of received identities that have either been successfully activated or skipped. The formula used to calculate this percentage is described higher on this page, in the [Dataflow runs for streaming destinations](#dataflow-runs-for-streaming-destinations) section.
+* **Batch failed flow runs**: Represents the number of failed flow runs in the selected time interval.
 
-The graph is displayed by default and you can disable it to expand the list of destinations below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
+The **[!UICONTROL Activation]** graph is displayed by default and you can disable it to expand the list of destinations below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
 
-The **[!UICONTROL Activation]** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, profile records activated, profile records failed, profile records skipped, total failed dataflows, and the last updated date for these destinations.
+The **[!UICONTROL Activation]** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, identities activated, identities failed, identities excluded, activation rate, total failed dataflows, and the last updated date for these destinations. Not all metrics are available for all destination types. The table below outlines which metrics are available per destination type, streaming or batch.
+
+| Metric | Destination types |
+---------|----------|
+| Profiles received | Streaming and batch |
+| Identities activated | Streaming and batch |
+| Identities failed | Streaming |
+| Identities excluded | Streaming and batch |
+| Activation rate | Streaming |
+| Total failed dataflows | Batch |
 
 ![](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
-You can also filter your list of destinations to only display the selected category of destinations. Select the **[!UICONTROL My destinations]** dropdown, and select the destination type you want to filter to. 
+You can also filter your list of destinations to only display the selected category of destinations. Select the **[!UICONTROL My destinations]** dropdown, and select the [destination category](/help/destinations/destination-types.md#categories) you want to filter to.
 
 ![](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
@@ -153,10 +162,21 @@ A list of dataflows appears, grouped on a per-destination basis. You can see add
 
 ![](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
+The dataflow runs page contains a toggle which allows you to see the activated data in the dataflow, broken down by flow runs or segments.
+
+When **[!UICONTROL Flow runs]** is selected, you can see a list of dataflow runs and further information about each run.
+
+![Flow runs panel](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
+
+When **[!UICONTROL Segments]** is selected, you see a list of the segments which are currently being activated to the selected *dataflow*. This screen includes segment-level information about the identities activated, identities excluded, as well as the status and the time of the last dataflow run.
+
 >[!IMPORTANT]
 >
->Segment level metrics are currently not recorded for failed flow runs and excluded records.
+>Note the current limitations related to segment-level metrics:
+>* The segment-level view is currently only available for batch destinations.
+>* Segment level metrics are currently not recorded for failed flow runs and excluded records.
 
+![Segments in dataflow panel](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, profiles received, identities activated, identities excluded, identities failed, activation rate, and status. To see more details about a specific dataflow run, select the filter ![filter](../assets/ui/monitor-destinations/filter.png) beside the dataflow run start time.
 
@@ -168,9 +188,15 @@ The dataflows details page, in addition to the details shown on the dataflows li
 - **[!UICONTROL IMS org ID]**: The IMS organization the dataflow belongs to.
 - **[!UICONTROL Last updated]**: The time the dataflow run was last updated.
 
-The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Identities excluded]** toggle.
+The details page also has a toggle to switch between dataflow run errors and segments. 
+
+The dataflow run errors view displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Identities excluded]** toggle.
 
 ![](../assets/ui/monitor-destinations/identities-excluded.png)
+
+When **[!UICONTROL Segments]** is selected, you see a list of the segments which were activated in the selected *dataflow run*. This screen includes segment-level information about the identities activated, identities excluded, as well as the status and the time of the last dataflow run.
+
+![](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
 ## Next steps
 
