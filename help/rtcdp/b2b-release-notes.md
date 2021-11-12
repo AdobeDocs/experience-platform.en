@@ -10,7 +10,9 @@ description: The latest release notes for Adobe Experience Platform Real-time Cu
 
 ## Updates to Real-time Customer Data Platform
 
-Updates to Real-time Customer Data Platform.
+Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+
+There are improvements to a variety of Adobe Experience Platform capabilities that distinguish Real-time CDP B2B Edition from its B2C counterpart. They include improvements to the Experience Data Model (XDM) for B2B use cases, upgrades to identity resolution and profile segmentation, as well as a custom-built connector and destination for Marketo Engage. The Marketo connector allows B2B brands to connect its industry-leading B2B engagement data with behavioral information in order to nurture leads and enhance account-based marketing operations.
 
 -[**New B2B and B2P editions**](#editions)
 -[**New Marketo data source and destination connectors**](#marketo)
