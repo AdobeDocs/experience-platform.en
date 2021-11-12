@@ -3,11 +3,7 @@ title: XDM Business Marketing List Class
 description: This document provides an overview of the XDM Business Marketing List class in Experience Data Model (XDM).
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
 ---
-# [!UICONTROL XDM Business Marketing List] class (Beta)
-
->[!IMPORTANT]
->
->This class is available as part of Real-time Customer Data Platform B2B Edition, which is currently in beta. The documentation and functionality are subject to change.
+# [!UICONTROL XDM Business Marketing List] class
 
 [!UICONTROL XDM Business Marketing List] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a marketing list. Marketing lists allow you to prioritize on prospect clients who are most likely to buy your product.
 

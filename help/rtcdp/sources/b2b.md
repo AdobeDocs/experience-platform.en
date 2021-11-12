@@ -1,13 +1,9 @@
 ---
-title: Sources in Real-time Customer Data Platform B2B Edition (Beta)
+title: Sources in Real-time Customer Data Platform B2B Edition
 description: An overview of the role of sources in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
 ---
-# Sources in Real-time Customer Data Platform B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
+# Sources in Real-time Customer Data Platform B2B Edition
 
 >[!NOTE]
 >
