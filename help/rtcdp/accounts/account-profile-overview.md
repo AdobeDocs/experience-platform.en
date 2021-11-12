@@ -6,10 +6,6 @@ exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 ---
 # Account profiles overview
 
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
-
 >[!NOTE]
 >
 >Account profiles are only available to Real-time Customer Data Platform B2B Edition customers. To learn more about Real-time CDP, B2B Edition including the features and functionality available, please begin by reading the [Real-time CDP, B2B Edition overview](../b2b-overview.md).

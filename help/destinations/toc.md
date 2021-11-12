@@ -13,6 +13,7 @@ feature: Destinations
 * API tutorials {#api}
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
+    * [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
@@ -32,7 +33,7 @@ feature: Destinations
     * [ (Alpha) HTTP connection](./catalog/http-destination.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
-        * [(Beta) Marketo Engage connection](./catalog/adobe/marketo-engage.md)
+        * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [Experience Platform segment sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising}
         * [Advertising destinations overview](./catalog/advertising/overview.md)
@@ -147,12 +148,14 @@ feature: Destinations
       * [Server and template specs](./destination-sdk/server-and-template-configuration.md)
       * [Message format](./destination-sdk/message-format.md)
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
-      * [Authentication configuration](./destination-sdk/credentials-configuration.md)
-      * [OAuth 2 authentication](./destination-sdk/oauth2-authentication.md)
+      * Authentication {#authentication}
+        * [Authentication configuration](./destination-sdk/authentication-configuration.md)
+        * [OAuth 2 authentication](./destination-sdk/oauth2-authentication.md)
       * Developer tools {#developer-tools}
         * [Create and test a message transformation template](./destination-sdk/create-template.md)
         * [Test your destination configuration](./destination-sdk/test-destination.md)
-    * API reference {#api-reference}
+    * API operations {#api}
+      * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [Destinations endpoint API operations](./destination-sdk/destination-configuration-api.md)
       * [Destination server endpoint API operations](./destination-sdk/destination-server-api.md)
       * [Audience metadata endpoint API operations](./destination-sdk/audience-metadata-api.md)
