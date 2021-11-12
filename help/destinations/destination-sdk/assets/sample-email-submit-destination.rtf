@@ -18,49 +18,6 @@ Please find attached the required information to publish the \{INSERT_DESTINATIO
 \f0\b0 The \{INSERT_DESTINATION_NAME\} destination solves the following use case for Experience Platform customers:\
 
 \f1\b \
-\
-Copy of the message transformation template\
-
-\f0\b0 Please find below the message transformation template used by our destination:
-\f1\b \
-\
-\pard\pardeftab560\slleading20\partightenfactor0
-
-\f2\b0 \cf0 \{\
-    "profiles": [\
-    \{%- for profile in input.profiles %\}\
-        \{\
-            "identities": [\
-            \{%- for idMapEntry in profile.identityMap -%\}\
-            \{%- set namespace = idMapEntry.key -%\}\
-                \{%- for identity in idMapEntry.value %\}\
-                \{\
-                    "type": "\{\{ namespace \}\}",\
-                    "id": "\{\{ identity.id \}\}"\
-                \}\{%- if not loop.last -%\},\{%- endif -%\}\
-                \{%- endfor -%\}\{%- if not loop.last -%\},\{%- endif -%\}\
-            \{% endfor %\}\
-            ],\
-            "AdobeExperiencePlatformSegments": \{\
-                "add": [\
-                \{%- for segment in profile.segmentMembership.ups | added %\}\
-                    "\{\{ segment.key \}\}"\{%- if not loop.last -%\},\{%- endif -%\}\
-                \{% endfor %\}\
-                ],\
-                "remove": [\
-                \{#- Alternative syntax for filtering segments by status: -#\}\
-                \{% for segment in removedSegments(profile.segmentMembership.ups) %\}\
-                    "\{\{ segment.key \}\}"\{%- if not loop.last -%\},\{%- endif -%\}\
-                \{% endfor %\}\
-                ]\
-            \}\
-        \}\{%- if not loop.last -%\},\{%- endif -%\}\
-    \{% endfor %\}\
-    ]\
-\}
-\f1\b \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
 Test results after using the test destination API\
 
 \f0\b0 Please find below a sample request to our destination endpoint and the corresponding successful response: \
@@ -235,18 +192,18 @@ Test results after using the test destination API\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0 \
 Destination publishing request ID\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\b0 \cf0 The configID of our destination publishing request is:  
+\f0\b0 The configID of our destination publishing request is:  
 \f3 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec3 c61387c0-4772-4709-a3ce-6d5fee654520\cf5 \cb1 \strokec5 \
-
-\f1\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+c61387c0-4772-4709-a3ce-6d5fee654520\cf5 \cb1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-Documentation PR (pull request)\
 
-\f0\b0 The PR for our destination documentation is https://github.com/AdobeDocs/experience-platform.en/pull/110 
+\f1\b \cf0 \kerning1\expnd0\expndtw0 \
+\
+Documentation PR (pull request)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 The PR for our destination documentation is https://github.com/AdobeDocs/experience-platform.en/pull/110 
 \f1\b \
 \
 \

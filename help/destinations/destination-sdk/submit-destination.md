@@ -11,9 +11,8 @@ Before your destination can be published to the [Experience Platform destination
 This page lists all the information you need to provide when submitting or updating a destination you authored using Adobe Experience Platform Destination SDK. To successfully submit a destination in Adobe Experience Platform, send an email to <aepdestsdk@adobe.com> which includes:
 
 * A description of the use cases that your destination solves. This is not required if you are updating an existing destination configuration.
-* A copy of the message transformation template you submitted via API.
-* Test results after using the test destination API endpoint to perform an HTTP call to your destination. This includes:
-  * The API payload of a call made out of Experience Platform.
+* Test results after using the test destination API endpoint to perform an HTTP call to your destination. Please share with Adobe:
+  * An API call made out of Experience Platform to your destination endpoint.
   * The API response received from your destination endpoint.
 * Proof that you have submitted a destination publishing request for your destination using the [destination publishing API](./destination-publish-api.md).
 * (For productized integrations only) a documentation PR (pull request), following the instructions described in the the [self-service documentation process](./docs-framework/documentation-instructions.md).
@@ -28,14 +27,10 @@ Provide a description of the use cases that your destination solves for Experien
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Create audiences from your customer lists, people who’ve visited your site or people who have already interacted with your content on Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX APIs are available for advertisers that want to target a specific audience group keyed off email addresses in Verizon Media (VMG) can quickly create a new segment and push the desired audience group using VMG’s near-real-time API.
 
-## Copy of the message transformation template
-
-Include a copy of the [message transformation template](./create-template.md) used to transform data when exporting profiles to your destination.
-
 ## Test results after using the test destination API
 
 Provide test results after using the [test destination API](./test-destination.md) endpoint to perform an HTTP call to your destination. This includes:
-* The API payload of a request made out from Experience Platform to your destination endpoint, using the testing API.
+* Include the entire API request (headers and body) made out from Experience Platform to your destination endpoint, using the testing API.
 * The API response received from your destination endpoint.
 
 For example, your request and response may look similar to the samples below:
