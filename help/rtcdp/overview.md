@@ -21,7 +21,7 @@ With Real-time Customer Data Platform, you can:
 * Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
 * Deliver personalized experiences in realtime across all channels and destinations.
 
-## Real-time Customer Data Platform B2B Edition (Beta)
+## Real-time Customer Data Platform B2B Edition
 
 There is also a different edition of Real-time CDP available to suit business-to-business organizational needs. Real-time CDP B2B Edition is purpose-built to expand the functionality of Real-time CDP for marketers. It has different capabilities enabled within the Adobe Experience Platform ecosystem to better suit operating within a business-to-business service model. 
 
