@@ -25,9 +25,39 @@ The following document provides steps on how to test and debug your source using
 
 ## Test your source
 
-To test your source, you must run the [[!DNL Sources SDK] verification collection and environment](../assets/sdk-verification.zip) collection on [!DNL Postman] while providing the appropriate environment variables that pertain to your source.
+To test your source, you must run the [[!DNL Sources SDK] verification collection and environment](../assets/sdk-verification.zip) on [!DNL Postman] while providing the appropriate environment variables that pertain to your source.
 
-| Variable | Description | Example |
+To start testing, you must first set up the collection and environment on [!DNL Postman]. Next, specify the connection specification ID that you want to test. This ID should be the same ID that you generated using [!DNL Sources SDK].
+
+### Specify `authSpecName`
+
+Once you have entered your connection specification ID, you must then specify the `authSpecName` that you are using for your base connection. Depending on your choice, this could be either `OAuth 2 Refresh Code` or  `Basic Authentication`. Once you specify your `authSpecName`, you must then include its required credentials in your environment. For example, if you specify `authSpecName` as `OAuth 2 Refresh Code`,  then you must provide the required credentials for OAuth 2, which are `host` and `accessToken`.
+
+### Specify `sourceSpec`
+
+With your authentication specification parameters added, you must next add required properties from your source specification. You can find the required properties in `sourceSpec.spec.properties`. In the case of the [!DNL MailChimp Members] example below, the only required property is `listId`, which means `listId` and it's corresponding ID value to your [!DNL Postman] environment.
+
+```json
+"spec": {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "Define user input parameters to fetch resource values.",
+  "properties": {
+    "listId": {
+      "type": "string",
+      "description": "listId for which members need to fetch."
+    }
+  }
+}
+```
+
+Once your authentication and source specification parameters are provided, you can start populating the rest of your environment variables, see the table below for reference:
+
+>[!NOTE]
+>
+>All of the example variables below are placeholder values that you must update, except for `flowSpecificationId` and `targetConnectionSpecId`, which are fixed values.
+
+| Parameter | Description | Example |
 | --- | --- | --- |
 | `x-api-key` | A unique identifier used to authenticate calls to Experience Platform APIs. See the tutorial on [authenticating and accessing Experience Platform APIs](../../../landing/api-authentication.md) for information on how to retrieve your `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | A corporate entity that can own or license products and services and allow access to its members. See the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md) for instructions on how to retrieve your `x-gw-ims-org-id` information. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
@@ -41,14 +71,10 @@ To test your source, you must run the [[!DNL Sources SDK] verification collectio
 | `connectionSpecId` | The connection specification ID that corresponds with your source. This is the ID that you generated after [creating a new connection specification](./create.md). |
 | `flowSpecificationId` | The flow specification ID of `RestStorageToAEP`. **This is a fixed value**. | `6499120c-0b15-42dc-936e-847ea3c24d72` |
 | `targetConnectionSpecId` | The target connection ID of the data lake where ingested data lands in. **This is a fixed value**. | `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
-| `verifyWatTimeInSecond` |
+| `verifyWatTimeInSecond` | The designated time interval to follow when checking for the completion of a flow run. | `40` |
 | `startTime` | The designated start time for your dataflow. The start time must be formatted in unix time. |  `1597784298` |
-| `interval` |
 
-Additionally, you must provide variables and values for properties defined as required in your connection specification. For example, if your source defined `authSpec.name` as basic authentication, then you must provide the required credentials for basic authentication.
-
-
-In the [!DNL Postman] interface, select the ellipses (**...**) beside [!DNL Sources SDK Verification Collection] and then select **Run collection**.
+Once you have provided all of your environment variables, you can start running the collection using the [!DNL Postman] interface. In the [!DNL Postman] interface, select the ellipses (**...**) beside [!DNL Sources SDK Verification Collection] and then select **Run collection**.
 
 ![runner]
 
