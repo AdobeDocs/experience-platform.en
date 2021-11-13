@@ -6,11 +6,7 @@ topic-legacy: overview
 description: This document provides an overview of custom namespaces required when creating a B2B source connector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 ---
-# (Beta) B2B namespaces and schemas
-
->[!IMPORTANT]
->
->This feature is currently in beta. The documentation and functionality are subject to change.
+# B2B namespaces and schemas
 
 This document provides information on the underlying set up for the namespaces and schemas to be used with B2B sources. This document also provides details around setting up your Postman automation utility required for generating B2B namespaces and schemas.
 
