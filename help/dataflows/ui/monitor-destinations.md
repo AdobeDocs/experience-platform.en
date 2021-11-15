@@ -130,8 +130,8 @@ By default, the data displayed contains the activation information from the last
 
 Select the arrow icon (![arrow icon](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) to expand the cards at the top of the screen to view at-a-glance information about the activation details, based on the destination type - streaming or batch:
 
-* **[!UICONTROL Streaming activation rate]**: Represents the percentage of received identities that have either been successfully activated or skipped. The formula used to calculate this percentage is described higher on this page, in the [Dataflow runs for streaming destinations](#dataflow-runs-for-streaming-destinations) section.
-* **Batch failed flow runs**: Represents the number of failed flow runs in the selected time interval.
+- **[!UICONTROL Streaming activation rate]**: Represents the percentage of received identities that have either been successfully activated or skipped. The formula used to calculate this percentage is described higher on this page, in the [Dataflow runs for streaming destinations](#dataflow-runs-for-streaming-destinations) section.
+- **Batch failed flow runs**: Represents the number of failed flow runs in the selected time interval.
 
 The **[!UICONTROL Activation]** graph is displayed by default and you can disable it to expand the list of destinations below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
 
@@ -173,8 +173,8 @@ When **[!UICONTROL Segments]** is selected, you see a list of the segments which
 >[!IMPORTANT]
 >
 >Note the current limitations related to segment-level metrics:
->* The segment-level view is currently only available for batch destinations.
->* Segment level metrics are currently not recorded for failed flow runs and excluded records.
+>- The segment-level view is currently only available for batch destinations.
+>- Segment level metrics are currently not recorded for failed flow runs and excluded records.
 
 ![Segments in dataflow panel](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
