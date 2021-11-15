@@ -74,17 +74,17 @@ Once your authentication and source specification parameters are provided, you c
 | `verifyWatTimeInSecond` | The designated time interval to follow when checking for the completion of a flow run. | `40` |
 | `startTime` | The designated start time for your dataflow. The start time must be formatted in unix time. |  `1597784298` |
 
-Once you have provided all of your environment variables, you can start running the collection using the [!DNL Postman] interface. In the [!DNL Postman] interface, select the ellipses (**...**) beside [!DNL Sources SDK Verification Collection] and then select **Run collection**.
+Once you have provided all of your environment variables, you can start running the collection using the [!DNL Postman] interface. In the [!DNL Postman] interface, select the ellipses (**...**) beside [!DNL Sources SSSs Verification Collection] and then select **Run collection**.
 
-![runner]
+![runner](../assets/runner.png)
 
 The [!DNL Runner] interface appears, allowing you to configure the run order of your dataflow. Select **Run SSS Verification Collection** to run the collection.
-
-![run-collection]
 
 >[!NOTE]
 >
 >You can disable **Delete Flow** from the run order checklist if you prefer to use the sources monitoring dashboard in Platform UI. However, once you are finished with testing, you must ensure that your test flows are deleted.
+
+![run-collection](../assets/run-collection.png)
 
 ## Submit your source
 
