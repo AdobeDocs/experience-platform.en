@@ -93,11 +93,11 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded for activation based on missing attributes and consent violation.
 - **[!UICONTROL Status]**: Represents the state the dataflow is in. This can be one of three states: [!UICONTROL Success], [!UICONTROL Failed], and [!UICONTROL Processing]. [!UICONTROL Success] means that the dataflow is active and is exporting data according to its provided schedule. [!UICONTROL Failed] means that the activation of data has been suspended due to errors. [!UICONTROL Processing] means that the dataflow is not yet active and is generally encountered when a new dataflow is created.
 
-To view details of a specific dataflow run, select the run's start time from the list. 
+To view details of a specific dataflow run, select the run's start time from the list.
 
 >[!NOTE]
 >
->Dataflow runs are generated based on the destination dataflow's schedule frequency. A separate dataflow run is made for each merge policy applied to a segment.
+>Dataflow runs are generated based on the destination dataflow's schedule frequency. A separate dataflow run is made for each [merge policy](../../profile/merge-policies/overview.md) applied to a segment.
 
 The details page for a dataflow, in addition to the details shown on the dataflows list, displays more specific information about the dataflow:
 
