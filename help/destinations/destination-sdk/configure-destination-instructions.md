@@ -1,9 +1,9 @@
 ---
 description: This page lists and describes the steps to configure a streaming destination using Destination SDK.
-title: How to use Destination SDK to configure a streaming destination
+title: Use Destination SDK to configure a streaming destination
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 ---
-# How to use Destination SDK to configure a streaming destination
+# Use Destination SDK to configure a streaming destination
 
 ## Overview {#overview}
 
