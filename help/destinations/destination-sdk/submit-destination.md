@@ -1,8 +1,8 @@
 ---
-description: This page provides all information you need to submit for review a destination authored using Destination SDK.
-title: How to submit a destination authored in Destination SDK
+description: This page provides all the information you need to submit for review a destination authored using Destination SDK.
+title: Submit for review a destination authored in Destination SDK
 ---
-# How to submit for review a destination authored in Destination SDK
+# Submit for review a destination authored in Destination SDK
 
 ## Overview {#overview}
 
@@ -12,7 +12,7 @@ This page lists all the information you need to provide when submitting or updat
 
 * A description of the use cases that your destination solves. This is not required if you are updating an existing destination configuration.
 * Test results after using the test destination API endpoint to perform an HTTP call to your destination. Please share with Adobe:
-  * An API call made out of Experience Platform to your destination endpoint.
+  * An API call made to your destination endpoint.
   * The API response received from your destination endpoint.
 * Proof that you have submitted a destination publishing request for your destination using the [destination publishing API](./destination-publish-api.md).
 * (For productized integrations only) a documentation PR (pull request), following the instructions described in the the [self-service documentation process](./docs-framework/documentation-instructions.md).
@@ -30,7 +30,7 @@ Provide a description of the use cases that your destination solves for Experien
 ## Test results after using the test destination API
 
 Provide test results after using the [test destination API](./test-destination.md) endpoint to perform an HTTP call to your destination. This includes:
-* Include the entire API request (headers and body) made out from Experience Platform to your destination endpoint, using the testing API.
+* The complete API request (headers and body) made to your destination endpoint, using the testing API.
 * The API response received from your destination endpoint.
 
 For example, your request and response may look similar to the samples below:
