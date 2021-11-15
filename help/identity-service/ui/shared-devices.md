@@ -36,18 +36,16 @@ Working with [!DNL Shared Device Detection] requires an understanding of the var
 
 ### Understanding [!DNL Shared Device Detection]
 
-This is how Shared Device Detection works:
+Shared Device Detection works by assigning the Shared Identity Namespace to a shared device and then assigning the User Identity Namespace to the authenticated user of the shared device.
 
-* You have a single device used by at least two users, suppose this is a tablet;
-* Suppose you have two users who share the tablet: Greg and Tom;
-* There are two identity namespaces to take note of:
-  * The Shared Identity Namespace that is attached to the device (99% of the time, this is going to be the ECID)
-  * The User Identity Namespace that is attached to the user (this can be any identity namespace that corresponds to the user's login ID, such as: email, hashed email, customer ID, etc.)
-* Greg uses the tablet to browse for tools, he logs in to the tools shop with his email
-  * The User Identity Namespace is sent to the identity graph because User Identity Namespace = Email = Authenticated User = Greg
-  * If Greg doesn't log out and gives the tablet to Tom, then all activities in the tool shop are attributed to Greg (because he is still logged in)
-  * If Greg logs out and gives the tablet to Tom, but Tom doesn't sign in, then all activities in the tool shop are assigned to the Shared Identity Namespace (ECID), but is connected to the last authenticated user (Greg)
-  * If Greg logs out and gives the tablet to Tom, and if Tom logs in to the tool shop with his own account information, then the User Identity Namespace is sent, but this time, it is assigned to Tom
+Consider the following example to help your understanding of how Shared Device Detection works:
+
+* Kevin and Nora share a tablet for e-commerce purposes. However, they both have their own independent accounts that they each use to browse and shop online;
+  * As a shared device, the tablet is assigned the **Shared Identity Namespace** (99% of the time, this namespace is set to ECID);
+* Suppose that Kevin uses the tablet and **logs in** to his e-commerce account to browse for headphones, this then means that the **User Identity Namespace** is assigned to Kevin because he is the current authenticated user of the tablet;
+  * If Kevin gives the tablet to Nora, but **does not log out**, and Nora proceeds to browse the e-commerce store for a camera, then her browsing activities are recorded as part of Kevin's graph because he is still the current authenticated user;
+  * If Kevin **logs out** and gives the tablet to Nora, and Nora **logs in** to her own account and browses the store for a camera, then her browsing activities are recorded as part of her own graph because she is now the current authenticated user. This means that the **User Identity Namespace** is now assigned to Nora;
+  * If Kevin **logs out**, gives the tablet to Nora, and Nora proceeds to browse the e-commerce store **without logging into her own account**, then her activities are recorded as part of the shared device (Shared Identity Namespace), but are associated with Kevin's graph because he is the **last authenticated user** and thus owns the Shared Identity Namespace.
 
 ### Terminology
 
