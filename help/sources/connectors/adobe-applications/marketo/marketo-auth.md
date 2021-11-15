@@ -6,11 +6,7 @@ topic-legacy: overview
 description: This document provides information on how to generate your Marketo authentication credentials.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
 ---
-# (Beta) Authenticate your [!DNL Marketo Engage] source connector
-
->[!IMPORTANT]
->
->The [!DNL Marketo Engage] source in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
+# Authenticate your [!DNL Marketo Engage] source connector
 
 Before you can create a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector, you must first set up a custom service through the [!DNL Marketo] interface, as well as retrieve values for your Munchkin ID, client ID, and client secret.
 

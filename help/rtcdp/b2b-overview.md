@@ -1,16 +1,12 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;Customer AI
-title: Real-time CDP B2B Edition Overview (Beta)
+title: Real-time CDP B2B Edition Overview
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Overview of Real-time Customer Data Platform B2B Edition Account
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 ---
-# Real-time Customer Data Platform B2B Edition overview (Beta)
-
->[!IMPORTANT]
->
->Real-time CDP B2B Edition is currently in beta. The documentation and the functionality are subject to change.
+# Real-time Customer Data Platform B2B Edition overview
 
 Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
@@ -80,11 +76,10 @@ Now that you better understand the benefits for marketers offered by Real-time C
 To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the following documentation to help you get started:
 
 * [An example use case for Real-time CDP B2B Edition](./b2b-use-case.md)
+* [An end-to-end tutorial for Real-time Customer Data Platform B2B Edition](./b2b-tutorial.md)
 * [How to ingest data](./sources/b2b.md)
 * [How to access profiles](./profile/profile-overview.md)
 * [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
 * [How to build segments](./segmentation/b2b.md)
 * [How to activate segments to destinations](./destinations/b2b.md)
 * [How to define and enforce data governance policies](./privacy/data-governance-overview.md)
-<!-- PLACEHOLDER - page under construction -->
-<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->
