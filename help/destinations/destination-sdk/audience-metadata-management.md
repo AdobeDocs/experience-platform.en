@@ -74,7 +74,7 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
    "lastModifiedDate":"2021-07-27T21:25:42.763478Z",
    "metadataTemplate":{
       "create":{
-         "url":"https://api.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
          "httpMethod":"POST",
          "headers":[
             {
@@ -113,7 +113,7 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
          ]
       },
       "update":{
-         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"PUT",
          "headers":[
             {
@@ -150,7 +150,7 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
          ]
       },
       "delete":{
-         "url":"https://adsapi.moviestar.com/v1/segments/{{segment.alias}}",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"DELETE",
          "headers":[
             {
