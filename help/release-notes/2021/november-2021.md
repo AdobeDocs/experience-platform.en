@@ -19,7 +19,7 @@ Attribution AI is used to attribute credits to touchpoints leading to conversion
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for multiple datasets | Attribution AI can now easily ingest multiple datasets directly in the UI without the need to map and stitch data. This new time savings capability provides more powerful and accurate scores with richer data from the multiple datasets. |
+| Support for multiple datasets | Attribution AI can now easily ingest multiple datasets directly in the UI without the need to map and stitch each dataset. This new time savings capability provides more powerful and accurate scores with richer data from the multiple datasets. |
 
 For more information on Attribution AI, please see the [Attribution AI documentation](../../intelligent-services/attribution-ai/overview.md).
 
