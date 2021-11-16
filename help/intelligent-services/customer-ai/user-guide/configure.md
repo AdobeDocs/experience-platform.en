@@ -68,7 +68,7 @@ After selecting the datasets you wish to use, select the **[!UICONTROL Add]** bu
 
 Selecting the info icon ![info icon](../images/user-guide/info-icon.png) next to the dataset opens the dataset preview popover.
 
-![Select and search for dataset](../images/user-guide/dataset-info-2.png)
+![Select and search for dataset](../images/user-guide/dataset-info.png)
 
 The dataset preview contains data such as the last update time, source schema, and a preview of the first ten columns.
 
@@ -79,8 +79,8 @@ There is a dataset completeness percentage value in the dataset preview. This va
 >[!NOTE]
 >
 >Dataset completeness is calculated using the maximum training window for Customer AI (one year). This means data that is more than one year old is not taken into account when displaying your dataset completeness value.
-<!-- training dataset completness needs to change -->
-![Dataset completeness](../images/user-guide/dataset-info.png)
+
+![Dataset completeness](../images/user-guide/dataset-info-2.png)
 
 ### Select an identity {#identity}
 
