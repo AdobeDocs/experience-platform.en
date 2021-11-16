@@ -35,17 +35,17 @@ For more information on sources, and to see a list of different sources currentl
 
 Through Sources SDK, you can integrate your own REST API-based source and bring your data to Platform with [!DNL Flow Service]. Sources SDK allows you to integrate a new source with Platform, by creating and submitting new connection specification through the [!DNL Flow Service] API.
 
-See the guide on [creating a new connection specification](./api/overview.md) for information on how to integrate a new source to Platform.
+See the guide on [creating a new connection specification](./api/api-overview.md) for information on how to integrate a new source to Platform.
 
 ## Document your source
 
-Once your source is created, see the [documentation guide](./documentation/overview.md) for instructions on how to document your source through the [!DNL GitHub] web interface or through your own text editor.
+Once your source is created, see the [documentation guide](./documentation/doc-overview.md) for instructions on how to document your source through the [!DNL GitHub] web interface or through your own text editor.
 
 ## High-level process
 
 The step-by-step process to configure your source in Experience Platform is outlined below:
 
-* Read the [Sources SDK API guide](./api/overview.md);
+* Read the [Sources SDK API guide](./api/api-overview.md);
   * Read the [getting started guide](./api/getting-started.md);
   * Follow the tutorial on [creating a new connection specification](./api/create.md);
   * Follow the tutorial on [updating your connection specification](./api/update-connection-specs.md);
@@ -55,7 +55,7 @@ The step-by-step process to configure your source in Experience Platform is outl
   * See the guide on [configuring your authentication specifications](./config/authspec.md);
   * See the guide on [configuring your source specifications](./config/sourcespec.md);
   * See the guide on [configuring your explore specifications](./config/explorespec.md);
-* To start documenting your source, see the [overview on creating documentation for Sources SDK](./documentation/overview.md)
+* To start documenting your source, see the [overview on creating documentation for Sources SDK](./documentation/doc-overview.md)
   * You can use this [sources documentation template](./documentation/template.md) to structure your documentation;
   * See the guide on [using the GitHub web interface](./documentation/github.md) for steps on how to create documentation using GitHub;
   * See the guide on [using a text editor](./documentation/text-editor.md) for steps on how to create documentation using your local machine.
