@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: The latest release notes for Adobe Experience Platform.
+description: The November 2021 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
