@@ -5,6 +5,10 @@ exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
 ---
 # [!UICONTROL XDM Business Opportunity Person Relation] class
 
+>[!IMPORTANT]
+>
+>This class is intended to be used by organizations with access to [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). You must have access to Real-time CDP B2B Edition in order for this class to participate in [Real-time Customer Profile](../../../profile/home.md).
+
 [!UICONTROL XDM Business Opportunity Person Relation] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a person that is associated with a business opportunity.
 
 ![](../../images/classes/b2b/business-opportunity-person-relation.png)

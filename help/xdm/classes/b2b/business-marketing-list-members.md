@@ -5,6 +5,10 @@ exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
 ---
 # [!UICONTROL XDM Business Marketing List Members] class
 
+>[!IMPORTANT]
+>
+>This class is intended to be used by organizations with access to [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). You must have access to Real-time CDP B2B Edition in order for this class to participate in [Real-time Customer Profile](../../../profile/home.md).
+
 [!UICONTROL XDM Business Marketing List Members] is a standard Experience Data Model (XDM) class that describes members, persons, or contacts associated with a marketing list.
 
 ![](../../images/classes/b2b/business-marketing-list-members.png)

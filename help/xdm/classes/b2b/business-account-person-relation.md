@@ -5,6 +5,10 @@ exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
 ---
 # [!UICONTROL XDM Business Account Person Relation] class
 
+>[!IMPORTANT]
+>
+>This class is intended to be used by organizations with access to [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). You must have access to Real-time CDP B2B Edition in order for this class to participate in [Real-time Customer Profile](../../../profile/home.md).
+
 [!UICONTROL XDM Business Account Person Relation] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a person that is associated with a business account.
 
 ![](../../images/classes/b2b/business-account-person-relation.png)
