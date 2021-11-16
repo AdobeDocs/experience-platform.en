@@ -5,6 +5,10 @@ exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
 ---
 # [!UICONTROL XDM Business Account] class
 
+>[!IMPORTANT]
+>
+>This class is intended to be used by organizations with access to [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). You must have access to Real-time CDP B2B Edition in order for this class to participate in [Real-time Customer Profile](../../../profile/home.md).
+
 [!UICONTROL XDM Business Account] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a business account.
 
 ![](../../images/classes/b2b/business-account.png)

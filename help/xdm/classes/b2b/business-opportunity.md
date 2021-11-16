@@ -5,6 +5,10 @@ exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 ---
 # [!UICONTROL XDM Business Opportunity] class
 
+>[!IMPORTANT]
+>
+>This class is intended to be used by organizations with access to [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). You must have access to Real-time CDP B2B Edition in order for this class to participate in [Real-time Customer Profile](../../../profile/home.md).
+
 [!UICONTROL XDM Business Opportunity] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a business opportunity.
 
 ![](../../images/classes/b2b/business-opportunity.png)

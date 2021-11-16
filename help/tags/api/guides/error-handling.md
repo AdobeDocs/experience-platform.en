@@ -80,7 +80,7 @@ The following table lists the different errors that the API can return.
 | `invalid-rule` | An invalid rule cannot be added to a library. |
 | `invalid-settings-syntax` | A syntax error was encountered while parsing the settings JSON. |
 | `library-file-not-found` | A required file defined in extension.json could not be found inside the zip package. |
-| `minification-error` | The code could not be compiled due to invalid code or ES6 code. |
+| `minification-error` | The code could not be compiled due to invalid code. |
 | `multiple-revisions` | Only one revision of each resource can be included in a library. |
 | `no-available-orgs` | This user account does not belong to a product profile that has access to tags. Use the Admin Console to add this user to a product profile with tags rights. |
 | `not-authorized` | This user account does not have the necessary permissions to perform this action. |
