@@ -115,6 +115,8 @@ The details page also displays a list of identities that failed and identities t
 
 To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 
+Use the [!UICONTROL Monitoring] dashboard to get an overall idea of the health of your activation flows. Start by getting insights on an aggregated level for all batch and streaming destinations and then drill down into detailed views for dataflows, dataflow runs, and activated segments for an in-depth look at your activation data. The screens in the [!UICONTROL Monitoring] dashboard provide actionable insights to help you troubleshoot any problems that might arise in your activation scenarios.
+
 At the center of the dashboard is the [!UICONTROL Activation] panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to destinations, as well as on the batch flow runs to destinations.
 
 ![](../assets/ui/monitor-destinations/dashboard-graph.png)
@@ -128,10 +130,10 @@ By default, the data displayed contains the activation information from the last
 
 ![](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-Select the arrow icon (![arrow icon](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) to expand the cards at the top of the screen to view at-a-glance information about the activation details, based on the destination type - streaming or batch:
+Toggle the arrow icon (![arrow icon](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) to expand the cards at the top of the screen to view at-a-glance information about the activation details, based on the destination type - streaming or batch:
 
 - **[!UICONTROL Streaming activation rate]**: Represents the percentage of received identities that have either been successfully activated or skipped. The formula used to calculate this percentage is described higher on this page, in the [Dataflow runs for streaming destinations](#dataflow-runs-for-streaming-destinations) section.
-- **Batch failed flow runs**: Represents the number of failed flow runs in the selected time interval.
+- **[!UICONTROL Batch failed flow runs]**: Represents the number of failed flow runs in the selected time interval.
 
 The **[!UICONTROL Activation]** graph is displayed by default and you can disable it to expand the list of destinations below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
 
@@ -139,16 +141,17 @@ The **[!UICONTROL Activation]** panel displays a list of destinations that conta
 
 | Metric | Destination types |
 ---------|----------|
-| Profiles received | Streaming and batch |
-| Identities activated | Streaming and batch |
-| Identities failed | Streaming |
-| Identities excluded | Streaming and batch |
-| Activation rate | Streaming |
-| Total failed dataflows | Batch |
+| **[!UICONTROL Profiles received]** | Streaming and batch |
+| **[!UICONTROL Identities activated]** | Streaming and batch |
+| **[!UICONTROL Identities failed]** | Streaming |
+| **[!UICONTROL Identities excluded]** | Streaming and batch |
+| **[!UICONTROL Activation rate]** | Streaming |
+| **[!UICONTROL Total failed dataflows]** | Batch |
+| **[!UICONTROL Last updated]** | Streaming and batch |
 
 ![](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
-You can also filter your list of destinations to only display the selected category of destinations. Select the **[!UICONTROL My destinations]** dropdown, and select the [destination category](/help/destinations/destination-types.md#categories) you want to filter to.
+You can also filter your list of destinations to only display the selected category of destinations. Select the **[!UICONTROL My destinations]** dropdown, and select the [destination category](/help/destinations/destination-types.md#categories) that you want to filter to.
 
 ![](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
@@ -174,7 +177,7 @@ When **[!UICONTROL Segments]** is selected, you see a list of the segments which
 >
 >Note the current limitations related to segment-level metrics:
 >- The segment-level view is currently only available for batch destinations.
->- Segment level metrics are currently not recorded for failed flow runs and excluded records.
+>- Segment level metrics are currently recorded for successful flow runs only. They are not recorded for failed flow runs and excluded records.
 
 ![Segments in dataflow panel](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
