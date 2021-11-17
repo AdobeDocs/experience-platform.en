@@ -61,6 +61,7 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
 |`update` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update segments/audiences in your platform and sync the information back to Adobe Experience Platform. |
 |`delete` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically delete segments/audiences in your platform. |
 |`validate` | Runs validations for any fields in the template configuration before making a call to the partner API. For example, you could validate that the user's account ID is input correctly. |
+|`notify`| Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to notify you of successful file exports.|
 
 {style="table-layout:auto"}
 

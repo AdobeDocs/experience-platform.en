@@ -21,7 +21,6 @@ You can create a new destination configuration by making a POST request to the `
 
 **API format**
 
-
 ```http
 POST /authoring/destinations
 ```
