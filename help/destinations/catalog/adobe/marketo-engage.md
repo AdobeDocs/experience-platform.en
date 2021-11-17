@@ -34,7 +34,7 @@ The video below also demonstrates the steps to configure a Marketo destination a
 
 >[!NOTE]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please refer to the [UI guide](../ui/user-guide.md) linked above.
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please refer to the guide linked above.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
