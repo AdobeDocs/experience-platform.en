@@ -251,7 +251,7 @@ feature: Sources
   - [Update dataflows](tutorials/ui/update-dataflows.md)
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
-- [Sources SDK] {#sdk}
+- Sources SDK {#sdk}
   - [Overview](sources-sdk/overview.md)
   - [Configuration options](sources-sdk/config/config.md)
   - [Configure authentication specification](sources-sdk/config/authspec.md)
