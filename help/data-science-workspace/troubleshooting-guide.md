@@ -10,6 +10,20 @@ exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 
 This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Data Science Workspace]. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
+## JupyterLab Notebook query status stuck in execution state
+
+A JupyterLab Notebook may indicate a cell is in the executing state, indefinitely, in some out of memory conditions. For example, when querying a large dataset or performing multiple subsequent queries the JupyterLab Notebook can run out of available memory to store the resulting dataframe object. There are a few indicators which can be seen in this situation. First, the kernel enters the idle state even though the cell shows as executing indicated by the [`*`] icon next to the cell. In addition, the bottom bar indicates the amount of RAM used/available.
+
+![Available ram](./images/jupyterlab/user-guide/allocate-ram.png)
+
+During the data read, the memory may grow until it hits your maximum amount of allocated memory. The memory is freed as soon as the max memory is reached and the kernel restarts. This means the used memory in this scenario may show as very low due to the kernel restart whereas just before the restart, the memory would have been very close to the maximum allocated RAM.
+
+To resolve this issue, select the gear icon in the top right of JupyterLab and slide the slider to the right followed by selecting **[!UICONTROL Update configs]** to allocate more RAM. Additionally, if you are running multiple queries and your RAM value is nearing the maximum allocated amount, unless you need the results from previous queries, restart the kernel to reset the available amount of RAM. This ensures that you have the maximum amount of RAM available to the current query.
+
+![allocate more ram](./images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+In the event you are allocating the maximum amount of memory (RAM) and still encountering this issue, you can  modify your query to operate on a smaller dataset size by reducing the columns or range of data. To use the full amount of data, it is recommended you leverage a Spark notebook.
+
 ## [!DNL JupyterLab] environment is not loading in [!DNL Google Chrome]
 
 >[!IMPORTANT]

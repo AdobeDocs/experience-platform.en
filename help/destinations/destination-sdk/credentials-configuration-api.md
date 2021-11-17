@@ -15,7 +15,7 @@ This page lists and describes all the API operations that you can perform using 
 
 >[!IMPORTANT]
 >
->In most cases, you *do not* need to use the `/credentials` API endpoint. Instead, you can configure the authentication information for your destination via the `customerAuthenticationConfigurations` parameters of the `/destinations` endpoint. Read [Credentials configuration](./credentials-configuration.md) for more information.
+>In most cases, you *do not* need to use the `/credentials` API endpoint. Instead, you can configure the authentication information for your destination via the `customerAuthenticationConfigurations` parameters of the `/destinations` endpoint. Read [Authentication configuration](./authentication-configuration.md#when-to-use) for more information.
 
 Use this API endpoint and select `PLATFORM_AUTHENTICATION` in the [destination configuration](./destination-configuration.md#destination-delivery) if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the `/credentials` API endpoint.
 

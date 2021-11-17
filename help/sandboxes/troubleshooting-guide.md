@@ -20,12 +20,11 @@ Sandboxes are virtual partitions within a single instance of Experience Platform
 
 There are two sandbox types available in Experience Platform:
 
-* Production sandbox
-* Non-production sandbox
-
-Experience Platform provides a single production sandbox, which cannot be deleted or reset. Only one production sandbox can exist for a single Platform instance.
-
-By contrast, multiple non-production sandboxes can be created by sandbox administrators for a single Platform instance. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 total sandboxes. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
+* **Production sandbox**: A production sandbox is meant to be used with profiles in your production environment. Platform allows you to create multiple production sandboxes in order to provide the right functionality for data while still maintaining operational isolation. This feature allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions. Production sandboxes support a volume of production profiles up to your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized production sandboxes). You are entitled to use licensed average profile per authorized [!DNL Profile] (measured cumulatively across all of your authorized production sandboxes).
+* **Development sandbox**: A development sandbox is a sandbox that can be used exclusively for development and testing with non-production profiles. Development sandboxes support a volume of non-production profiles up to 10% of your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized development sandboxes). You are entitled to up to:
+  * An average non-production profile richness of 75 kilobytes per authorized non-production Profile (measured cumulatively across all of your authorized development sandboxes);
+  * One batch segmentation job per day, per development sandbox;
+  * An average of 120 [!DNL Profile] API calls, per [!DNL Profile], per year (measured cumulatively across all of your authorized development sandboxes.
 
 See the [sandboxes overview](./home.md) for more information.
 
@@ -33,13 +32,29 @@ See the [sandboxes overview](./home.md) for more information.
 
 Sandboxes are isolated partitions of a single Platform instance, with each sandbox maintaining its own independent library of resources. A resource that exists in one sandbox cannot be accessed from any other sandbox, regardless of sandbox type (production or non-production).
 
+## What is the default production sandbox?
+
+The default production sandbox is the first production sandbox that is created when an IMS Organization is first provisioned. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID. The default production sandbox can be reset but not deleted.
+
 ## How many production sandboxes can I have?
 
-Experience Platform only supports one production sandbox per IMS Organization, which is provided out-of-the-box. While the production sandbox can be renamed, it cannot be deleted or reset. Users with Sandbox Administration permissions can only create, reset, and delete non-production sandboxes.
+An Experience Platform instance supports multiple production and development sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, and profiles).
 
-## How many non-production sandboxes can I have?
+A default Experience Platform license grants you a total of five sandboxes, which you can classify as production or development. You can license additional packs of 10 sandboxes up to a maximum of 75 sandboxes in total.
 
-Experience Platform currently allows up to 15 non-production sandboxes to be active within a single IMS Organization.
+Production sandboxes can be reset or deleted, except for production sandboxes that are also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
+
+You can update the title of a production sandbox. However, a production sandbox cannot be renamed.
+
+>[!NOTE]
+>
+>The sandbox name is used for lookup purposes in API calls, whereas the sandbox title is used as the display name.
+
+## How many development sandboxes can I have?
+
+Experience Platform currently allows a maximum of 75 total sandboxes (production and development) to be active within a single IMS Organization.
+
+Development sandboxes support both reset and delete functionalities.
 
 ## I just created a sandbox. How do I set permissions for the users who will be working with this sandbox?
 

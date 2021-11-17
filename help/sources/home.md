@@ -63,6 +63,7 @@ CRM systems provide data that can help build customer relationships, which in tu
 - [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
 ### Customer Success
 
@@ -111,6 +112,8 @@ Experience Platform provides support for ingesting data from your local system. 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL HubSpot] connector](connectors/marketing-automation/hubspot.md)
+- [[!DNL MailChimp Campaign]](./tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+- [[!DNL MailChimp Members]](./tutorials/api/create/marketing-automation/mailchimp-members.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Payments
@@ -129,7 +132,8 @@ Experience Platform provides support for ingesting data from streaming sources. 
 
 Experience Platform provides support for ingesting data from a third-party protocols system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Generic OData] connector](connectors/protocols/odata.md)
+- [[!DNL Generic OData]](connectors/protocols/odata.md)
+- [[!DNL Genereic REST API]](connectors/protocols/generic-rest.md)
 
 ## Access control for sources in data ingestion
 

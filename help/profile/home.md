@@ -99,9 +99,13 @@ In order to drive coordinated, consistent, and personalized experiences for your
 
 Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to [!DNL Experience Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific profile-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights API overview](../observability/api/overview.md), and for a complete list of Real-time Customer Profile metrics, see the documentation on [available metrics](../observability/api/metrics.md#available-metrics).
 
-## [!DNL Data governance] and [!DNL Privacy]
+## Update Profile Store data
 
-[!DNL Data governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
+Occasionally it may be necessary to update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. This can be done through batch or streaming ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to configure a dataset for attribute updates, please refer to the tutorial for [enabling a dataset for Profile and upsert](../catalog/datasets/enable-upsert.md).
+
+## Data Governance and [!DNL Privacy]
+
+Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
 
 As it relates to accessing data, data governance plays a key role within [!DNL Experience Platform] at various levels: 
 
@@ -109,7 +113,7 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 *   Data access policies 
 *   Access control on data for marketing actions
 
-[!DNL Data governance] is managed at several points. These include deciding what data is ingested into [!DNL Platform] and what data is accessible after ingestion for a given marketing action. For more information, begin by reading the [data governance overview](../data-governance/home.md).
+Data Governance is managed at several points. These include deciding what data is ingested into [!DNL Platform] and what data is accessible after ingestion for a given marketing action. For more information, begin by reading the [data governance overview](../data-governance/home.md).
 
 ### Handling opt-out and data privacy requests
 
