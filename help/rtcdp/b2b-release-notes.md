@@ -30,7 +30,7 @@ To learn more about the Real-time CDP B2B Edition see the [overview](./b2b-overv
 
 | Feature  | Description  |
 |---|---|
-| Marketo Engage Source Connector  | Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. The Marketo Engage source connector is a complete solution for lead management and B2B marketers. |
+| Marketo Engage Source Connector  | The Marketo Engage source connector allows marketers to seamlessly ingest data from their one or more Marketo instances into their Adobe Experience Platform instance and provides a complete solution for lead management and B2B marketers. |
 | Marketo Engage Destination  | The [Marketo destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists. |
 
 To learn more about the Marketo Source Connector see the [overview](../sources/connectors/adobe-applications/marketo/marketo.md)
