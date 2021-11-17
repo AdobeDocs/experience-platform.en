@@ -46,10 +46,10 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
 * **[!UICONTROL Name]**: Pick a relevant name for your destination.
 * **[!UICONTROL Description]**: Enter a description for your destination.
-* **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where [!DNL Platform] will deposit your export data as CSV or tab-delimited files. 
-* **[!UICONTROL Folder Path]**: Provide the path in your storage location where [!DNL Platform] will deposit your export data as CSV or tab-delimited files.
+* **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where [!DNL Platform] will deposit your export data as CSV files. 
+* **[!UICONTROL Folder Path]**: Provide the path in your storage location where [!DNL Platform] will deposit your export data as CSV files.
 * **[!UICONTROL Container]**: *For Blob connections*. The container that holds the Blob your folder path is in.
-* **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
+* **[!UICONTROL File Format]**: Select **CSV** to export CSV files to your storage location. 
 
 ## Activate segments to this destination {#activate}
 
@@ -61,7 +61,7 @@ When activating segments to this destination, Adobe recommends that you select a
 
 ## Exported data {#exported-data}
 
-For [!DNL Adobe Campaign] destinations, [!DNL Platform] creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [verify segment activation](../../ui/activate-batch-profile-destinations.md#verify) in the segment activation tutorial. 
+For [!DNL Adobe Campaign] destinations, [!DNL Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see [verify segment activation](../../ui/activate-batch-profile-destinations.md#verify) in the segment activation tutorial. 
 
 ## Set up data import into Adobe Campaign {#import-data-into-campaign}
 

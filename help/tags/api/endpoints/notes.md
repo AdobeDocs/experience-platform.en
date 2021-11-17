@@ -23,6 +23,7 @@ Notes can be applied the following resources:
 * [Properties](./properties.md)
 * [Rule components](./rule-components.md)
 * [Rules](./rules.md)
+* [Secrets](./secrets.md)
 
 These six types are collectively known as "notable" resources. When a notable resource is deleted, its associated notes are also deleted.
 

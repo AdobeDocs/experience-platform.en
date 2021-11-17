@@ -3,11 +3,7 @@ title: Marketo Engage Destination
 description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 ---
-# (Beta) Marketo Engage destination {#beta-marketo-engage-destination}
-
->[!IMPORTANT]
->
->The Marketo Engage destination in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
+# Marketo Engage destination {#beta-marketo-engage-destination}
 
 ## Overview {#overview}
 
@@ -21,6 +17,10 @@ The destination enables marketers to push segments created in Adobe Experience P
 |---|---|
 |ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: “Adobe Marketing Cloud ID”, “Adobe Experience Cloud ID”, “Adobe Experience Platform ID”. See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
 |Email|A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels.|
+
+>[!NOTE]
+>
+>In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activate destination workflow, it is *mandatory* to map identities and *optional* to map attributes. Mapping Email and/or ECID from the Identity Namespace tab is the most important thing to do to ensure the person is matched in Marketo. Mapping Email ensures the highest match rate.
 
 ## Export type {#export-type}
 

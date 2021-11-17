@@ -1,39 +1,38 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: September 29, 2021**
+**Release date: November 17, 2021**
+
+## Updates to existing features
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
-- [Sources](#sources)
+- [Attribution AI](#attribution-ai)
+- [Customer AI](#customer-ai)
 
-## [!DNL Data Prep] {#data-prep}
+### Attribution AI {#attribution-ai}
 
-[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 
-**New features**
+| Feature | Description |
+| ------- | ----------- |
+| Support for multiple datasets | Attribution AI can now easily ingest multiple datasets directly in the UI without the need to map and stitch each dataset. This new time savings capability provides more powerful and accurate scores with richer data from the multiple datasets. |
+| Media channel and campaign field mapping | Attribution AI now supports the mapping of media channel and campaign fields. Media channel mapping between datasets improves the insights derived from Attribution AI and helps provide clearer results that are easy to interpret. |
+
+For more information on Attribution AI, please see the [Attribution AI documentation](../../intelligent-services/attribution-ai/overview.md).
+
+### Customer AI {#customer-ai}
+
+Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
+
+**Updated features**
 
 | Feature | Description |
 | --- | --- |
-| Support for streaming dataflows | You can now use data prep functions when creating a streaming dataflow for [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], and [!DNL Google PubSub]. See the tutorial on [creating a streaming dataflow for cloud storage sources](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md) for more information. |
+| Support for multiple datasets | Customer AI can now easily ingest multiple datasets directly in the UI without the need to map and stitch each dataset. This new time savings capability provides more powerful and accurate scores with richer data from the multiple datasets. |
+| Custom profile attributes | Customer AI now supports defining custom profile dataset fields (with timestamps) in your data in addition to standard event fields. Using this option allows you to add additional profile attributes that you deem influential which may improve the quality of your model and provide more accurate results |
 
-To learn more about [!DNL Data Prep] see the [[!DNL Data Prep] overview](../../data-prep/home.md).
-
-## Sources {#sources}
-
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
-
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
-
-| Feature | Description |
-| --- | --- |
-| [!DNL Data Landing Zone] | You can now create a [!DNL Data Landing Zone] source connection using the [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) or the [user interface](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Platform, granting you to access a secure, cloud-based file storage facility to ingest and egress files in and out of Platform. See the [[!DNL Data Landing Zone] overview](../../sources/connectors/cloud-storage/data-landing-zone.md) for more information. |
-| [!DNL Snowflake] | You can now create a [!DNL Snowflake] source connection using the [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) or the [user interface](../../sources/tutorials/ui/create/databases/snowflake.md) to bring data from your [!DNL Snowflake] database to Platform. See the [[!DNL Snowflake] overview](../../sources/connectors/databases/snowflake.md) for more information. |
-| [!DNL SFTP] source enhancements | You can manually set a custom port number when creating an [!DNL SFTP] source connection. See the [[!DNL SFTP] overview](../../sources/connectors/cloud-storage/sftp.md) for more information. | 
-
-To learn more about sources, see the [sources overview](../../sources/home.md).
+For more information on Customer AI, please see the [Customer AI documentation](../../intelligent-services/customer-ai/overview.md).

@@ -5,10 +5,6 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 ---
 # Define a relationship between two schemas in Real-time Customer Data Platform B2B Edition
 
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
-
 >[!NOTE]
 >
 >If you are not using Real-time Customer Data Platform B2B Edition, see the guide on [creating a non-B2B relationship](./relationship-ui.md) instead.

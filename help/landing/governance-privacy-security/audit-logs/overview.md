@@ -7,7 +7,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 
 >[!IMPORTANT]
 >
->The audit logs feature in Adobe Experience Platform is currently in beta. The functionality described in this documentation is subject to change.
+>The audit logs feature in Adobe Experience Platform is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
 In order to increase the transparency and visibility of activities performed in the system, Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of "audit logs". These logs form an audit trail that can help with troubleshooting issues on Platform, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.
 

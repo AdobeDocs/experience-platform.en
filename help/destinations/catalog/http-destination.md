@@ -63,7 +63,7 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destinat
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {

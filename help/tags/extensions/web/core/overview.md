@@ -213,7 +213,13 @@ Specify the cookie name and value that must exist for an event to trigger an act
 
 #### Custom Code
 
-Specify any custom code that must exist as a condition of the event. Use the built-in code editor to enter the custom code.
+Specify any custom code that must exist as a condition of the event.
+
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
+
+Use the built-in code editor to enter the custom code:
 
 1. Select **[!UICONTROL Open Editor]**.
 1. Type the custom code.
@@ -530,6 +536,10 @@ This section describes the action types available in the Core extension.
 
 ### Custom Code
 
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
+
 Provide the code that runs after the event is triggered and conditions are evaluated.
 
 1. Name the action code.
@@ -633,6 +643,10 @@ Any constant string value that can be then referenced in actions or conditions.
 `string`
 
 ### Custom code
+
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
 
 Custom JavaScript can be entered into the UI by selecting  Open Editor and inserting code into the editor window.
 
