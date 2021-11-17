@@ -20,7 +20,7 @@ There are improvements to a variety of Adobe Experience Platform capabilities th
 
 ## New B2B and B2P editions {#editions}
 
-**New B2B and B2P editions** that bring ABM data and functionality to both the Real-time CDP and Platform Activation products are available for purchase.
+**New B2B and B2P editions** that bring B2B data and functionality to both Real-time CDP and Platform Activation products are available for purchase.
 
 To learn more about the Real-time CDP B2B Edition see the [overview](./b2b-overview.md)
 
