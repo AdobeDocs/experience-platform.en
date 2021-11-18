@@ -149,10 +149,6 @@ Rule events and conditions are always bundled into the main tag library. Actions
 These events need to be executed almost always (unless conditions evaluate to false), so for efficiency, they are bundled into the main library, the file referenced by your embed code.
 
 * **Javascript:** The JavaScript is embedded in the main tag library. The custom script is wrapped in a script tag and written to the document using `document.write`. If the rule has multiple custom scripts, they're written in order.
-
-   >[!NOTE]
-   >
-   >Tags uses ES5 JavaScript. Event forwarding uses ES6.
    
 * **HTML:** The HTML is embedded in the main tag library. `document.write` is used to write the HTML to the document. If the rule has multiple custom scripts, they're written in order.
 
