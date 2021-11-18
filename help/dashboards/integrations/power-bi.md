@@ -36,9 +36,9 @@ Next, select the **[!UICONTROL Integrations]** tab. The Power BI application int
 
 >[!NOTE]
 >
-> If you do not have both Query Service Manage and Manage Sandboxes permissions then [!UICONTROL Install] will be grayed out.
+> Unless you have both Query Service Manage and Manage Sandboxes permissions the [!UICONTROL Install] button will be grayed out.
 
-![Power BI details screen with Install button highlighted.](../images/power-bi/power-bi-details-screen.png)
+![Power BI details screen with Install button highlighted.](../images/power-bi/details-screen.png)
 
 ### Credentials
 
@@ -74,7 +74,7 @@ Next you must provide consent to Microsoft for the permissions requested by Powe
 
 These permissions allow Power BI to use your data according to their terms of service and privacy statement. Select **[!UICONTROL Accept]**.
 
-![Permissions request for Power BI application.](../images/power-bi/power-bi-permissions.png)
+![Permissions request for Power BI application.](../images/power-bi/permissions.png)
 
 >[!NOTE]
 >
@@ -98,4 +98,4 @@ After logging into [the Power BI workspace](https://dxt.powerbi.com), report tem
 
 The same standard metrics from Profiles, Segments, and Destinations are available within the Power BI template reports. These reports can then be customized further  
 
-![Power BI Profile template report.](../images/power-bi/power-bi-profile-report-template.png)
+![Power BI Profile template report.](../images/power-bi/profile-report-template.png)
