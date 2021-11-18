@@ -44,7 +44,7 @@ A segment definition will **not** be enabled for streaming segmentation in the f
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
 
-Additionally, some guidelines apply when doing streaming segmentation:
+Please note the following guidelines apply when doing streaming segmentation:
 
 | Query type | Guideline |
 | ---------- | -------- |
@@ -52,6 +52,8 @@ Additionally, some guidelines apply when doing streaming segmentation:
 | Query with event history | <ul><li>The lookback window is limited to **one day**.</li><li>A strict time-ordering condition **must** exist between the events.</li><li>Queries with at least one negated event are supported. However, the entire event **cannot** be a negation.</li></ul>|
 
 If a segment definition is modified so it no longer meets the criteria for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
+
+Additionally, segment unqualification, similarly to segment qualification, happens in real-time. As a result, if an audience no longer qualifies for a segment, it will be immediately unqualified. For example, if the segment definition asks for "All users who bought red shoes in the last three hours", after three hours, all the profiles that initially qualified for the segment definition will be unqualified.
 
 ## Streaming segmentation segment details
 
