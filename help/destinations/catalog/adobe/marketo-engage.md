@@ -30,6 +30,14 @@ Segment Export - you are exporting all members of a segment (audience) with the 
 
 For detailed instructions on how to set up the destination and activate segments, read [Push an Adobe Experience Platform Segment to a Marketo Static List](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) in the Marketo documentation.
 
+The video below also demonstrates the steps to configure a Marketo destination and activate segments.
+
+>[!NOTE]
+>
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please refer to the guide linked above.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
+
 <!--
 
 ## Connect to the destination {#connect}
