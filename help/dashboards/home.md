@@ -28,7 +28,7 @@ The data in the snapshot shows the data exactly as it appears at the specific po
 
 ## Dashboard inventory
 
-For detailed steps on how to use the **[!UICONTROL Dashboards]** section of the Experience Platform UI to view all available dashboards, please refer to the [dashboard inventory guide](inventory.md).
+For detailed steps on how to use the **[!UICONTROL Dashboards]** section of the Experience Platform UI to view all available dashboards, please refer to the [dashboard inventory guide](./inventory.md).
 
 <!-- confirm whether Application intergrations are still a thing. -->
 
