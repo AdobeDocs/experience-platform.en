@@ -10,7 +10,7 @@ description: The November 2021 release notes for Adobe Experience Platform.
 
 New features in Adobe Experience Platform:
 
-- [Real-time Customer Data Platform B2B Edition](#RTCDP-B2B)
+- [Real-time Customer Data Platform B2B Edition](#B2B)
 
 ## Updates to existing features
 
@@ -19,7 +19,7 @@ Updates to existing features in Adobe Experience Platform:
 - [Attribution AI](#attribution-ai)
 - [Customer AI](#customer-ai)
 
-### Real-time Customer Data Platform B2B Edition {#RTCDP-B2B}
+### Real-time Customer Data Platform B2B Edition {#B2B}
 
 **Release date: November 12, 2021**
 
@@ -27,9 +27,9 @@ Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edi
 
 There are improvements to a variety of Adobe Experience Platform capabilities that distinguish Real-time CDP B2B Edition from its B2C counterpart. They include improvements to the Experience Data Model (XDM) for B2B use cases, upgrades to identity resolution and profile segmentation, as well as a custom-built connector and destination for Marketo Engage. The Marketo connector allows B2B brands to connect their industry-leading B2B engagement data with behavioral information in order to nurture leads and enhance account-based marketing operations.
 
--[**New B2B and B2P editions**](#editions)
--[**New Marketo data source and destination connectors**](#marketo)
--[**Standard B2B XDM**](#XDM)
+-[New B2B and B2P editions](#editions)
+-[New Marketo data source and destination connectors](#marketo)
+-[Standard B2B XDM](#XDM)
 
 ### New B2B and B2P editions {#editions}
 
@@ -43,7 +43,7 @@ New Marketo data source and destination connectors stream Marketo data into Plat
 
 | Feature   | Description  |
 |-----------|--------------|
-| Marketo Engage Source Connector | The [Marketo Engage source connector](../../sources/connectors/adobe-applications/marketo/marketo.md) allows marketers to seamlessly ingest data from their one or more Marketo instances into their Adobe Experience Platform instance and provides a complete solution for lead management and B2B marketers. |
+| Marketo Engage source connector | The [Marketo Engage source connector](../../sources/connectors/adobe-applications/marketo/marketo.md) allows marketers to seamlessly ingest data from one or more Marketo instances into their Adobe Experience Platform instance and provides a complete solution for lead management and B2B marketers. |
 | Marketo Engage Destination | The [Marketo destination](../../destinations/catalog/adobe/marketo-engage.md) enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists. |
 
 ### Standard B2B XDM {#XDM}
