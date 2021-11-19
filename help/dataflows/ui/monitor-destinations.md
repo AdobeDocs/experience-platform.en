@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
 description: Destinations allow you to activate your data from Adobe Experience Platform to countless external partners. This tutorial provides instructions on how you can monitor dataflows for your destinations using the Experience Platform user interface.
 solution: Experience Platform
-title: Monitor Dataflows for Destinations in the UI
+title: Monitor dataflows for Destinations in the UI
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
@@ -171,7 +171,7 @@ Once you select a dataflow for further inspection, the dataflow details page con
 
 ### Flow runs view
 
-When **[!UICONTROL Flow runs]** is selected, you can see a list of dataflow runs and further information about each run.
+When **[!UICONTROL Flow runs]** is selected, you can see a list of flow runs for the selected dataflow and further information about each run.
 
 ![Flow runs panel](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
@@ -181,7 +181,7 @@ Use the **[!UICONTROL Show failures only]** toggle to display only the failed ru
 
 ### Segment-level view
 
-When **[!UICONTROL Segments]** is selected, you see a list of the segments which were activated to the selected *dataflow*, within the selected time range. This screen includes segment-level information about the identities activated, identities excluded, as well as the status and the time of the last dataflow run. By reviewing the metrics for identities excluded and activated, you can verify if a segment has been successfully activated or not. **[NEEDS EXAMPLE FOR FURTHER DETAIL HERE]** 
+When **[!UICONTROL Segments]** is selected, you see a list of the segments which were activated to the selected dataflow, within the selected time range. This screen includes segment-level information about the identities activated, identities excluded, as well as the status and the time of the last dataflow run. By reviewing the metrics for identities excluded and activated, you can verify if a segment has been successfully activated or not. **[NEEDS EXAMPLE FOR FURTHER DETAIL HERE]** 
 
 >[!IMPORTANT]
 >
@@ -201,7 +201,7 @@ The dataflow runs page displays information on your dataflow runs, including the
 
 ### Dataflow run details page
 
-The dataflows details page, in addition to the details shown on the dataflow runs list, displays more specific information about the dataflow:
+The dataflow run details page, in addition to the details shown on the dataflow runs list, displays more specific information about the dataflow:
 
 - **[!UICONTROL Dataflow run ID]**: The ID of the dataflow.
 - **[!UICONTROL IMS org ID]**: The IMS organization the dataflow belongs to.
