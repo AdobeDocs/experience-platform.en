@@ -13,6 +13,8 @@ This document provides instructions on how to connect Adobe Experience Platform 
 
 ## Getting started
 
+Before continuing with this tutorial it is recommended to have a good understanding of [schemas and how union schemas aggregate fields](../../xdm/schema/composition.md#composition-example). The [Experience Data Model (XDM) overview](../../xdm/home.md) offers more general information if required.
+
 To install the Power BI application integration, users must first have acquire the following Platform permissions:
 
 - Query Service Manage
@@ -114,9 +116,9 @@ To access the Widget Library, select the **[!UICONTROL Modify dashboard]** butto
 
 ![The Profile dashboard with Modify dashboard highlighted.](../images/power-bi/modify-dashboard.png)
 
-From the Widget Library you must select the **[!UICONTROL Custom] tab to edit a schema.
+From the Widget Library you must then select the **[!UICONTROL Custom]** tab followed by **[!UICONTROL Edit schema]**.
 
-![The Widget Library display with the Custom tab highlighted.]()
+![The Widget Library display with the Custom tab and Edit schema highlighted.](../images/power-bi/widget-library-custom-tab.md)
 
 See the documentation for complete instructions on how to [edit a schema](../customize/edit-schema.md#edit-schema).
 
@@ -126,4 +128,4 @@ See the documentation for complete instructions on how to [edit a schema](../cus
 
 ## Next steps
 
-By reading this document you have a better understanding of how Power BI Report Templates can be integrated into Platform to share compelling data insights from your Profiles, Segments, of Destinations dashboards. See the [Dashboard customization overview](https://experienceleague.adobe.com/docs/experience-platform/dashboards/customize/overview.html?lang=en) document to learn more about customizing your dashboards, or documentation on creating custom widgets 
+By reading this document you have a better understanding of how Power BI Report Templates can be integrated into Platform to share compelling data insights from your Profiles, Segments, of Destinations dashboards. See the [Dashboard customization overview](../customize/overview.md) document to learn more about customizing your dashboards, or documentation on creating custom widgets 

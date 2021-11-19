@@ -15,12 +15,12 @@ In order to view the dashboards that your organization has configured within Exp
 
 The list of dashboards includes all dashboards available on Experience Platform, including integrated dashboards created by your organization that have been configured through third party applications.
 
-![The Browse tab within the dashboards section of the UI.](../images/inventory/browse-tab.md)
+![The Browse tab within the dashboards section of the UI.](./images/inventory/browse-tab.png)
 
 ## View individual dashboard
 
 You can view an individual dashboard by selecting the name of the dashboard from the list.
 
-![Browse tab with a name of a dashboard highlighted.](../images/inventory/dashboard-name.md)
+![Browse tab with a name of a dashboard highlighted.](./images/inventory/dashboard-name..png)
 
 When a dashboard is selected, it will either open in the Platform UI or in a fully integrated application workspace that requires you to log in using the necessary credentials in order to view the dashboard.
