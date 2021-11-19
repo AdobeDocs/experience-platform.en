@@ -30,7 +30,7 @@ feature: Destinations
     * [Monitor dataflows](./ui/monitor-dataflows.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
-    * [ (Alpha) HTTP connection](./catalog/http-destination.md)
+    * [ (Beta) HTTP connection](./catalog/http-destination.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)

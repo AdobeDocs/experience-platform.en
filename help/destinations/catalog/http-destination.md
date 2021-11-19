@@ -4,11 +4,11 @@ title: HTTP connection
 description: The HTTP destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 ---
-# (Alpha) [!DNL HTTP] connection
+# (Beta) [!DNL HTTP] connection
 
 >[!IMPORTANT]
 >
->The [!DNL HTTP] destination in Platform is currently in alpha. The documentation and the functionality are subject to change.
+>The [!DNL HTTP] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
