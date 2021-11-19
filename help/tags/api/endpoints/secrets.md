@@ -1,6 +1,7 @@
 ---
 title: Secrets endpoint
 description: Learn how to make calls to the /secrets endpoint in the Reactor API.
+exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 ---
 # Secrets endpoint
 

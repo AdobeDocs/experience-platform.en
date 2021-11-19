@@ -3,6 +3,7 @@ product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 title: Adobe Experience Platform Real-time Customer Data Platform B2B Edition Release Notes
 description: The latest release notes for Adobe Experience Platform Real-time Customer Data Platform B2B Edition.
+exl-id: bac121cc-ff27-4621-8982-491a66f8c00b
 ---
 # Adobe Experience Platform Real-time Customer Data Platform B2B Edition release notes
 
@@ -43,4 +44,4 @@ To learn more about the Marketo Source Connector see the [overview](../sources/c
 |---|---|
 | Standard B2B XDM classes  | Real-time Customer Data Platform B2B Edition provides several standard XDM that capture details about essential B2B data entities, such as accounts, opportunities, campaigns, and more  |
 
-See the [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) to learn more about capturing B2B data entities.   
+See the [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) to learn more about capturing B2B data entities.
