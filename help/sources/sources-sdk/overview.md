@@ -6,6 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform Sources SDK is a set of configuration APIs that allow you to integrate a REST API-based source using the Flow Service API to bring your data to Experience Platform.
 hide: true
 hidefromtoc: true
+exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
 ---
 # Sources SDK overview (Beta)
 
@@ -59,4 +60,3 @@ The step-by-step process to configure your source in Experience Platform is outl
   * You can use this [sources documentation template](./documentation/template.md) to structure your documentation;
   * See the guide on [using the GitHub web interface](./documentation/github.md) for steps on how to create documentation using GitHub;
   * See the guide on [using a text editor](./documentation/text-editor.md) for steps on how to create documentation using your local machine.
-

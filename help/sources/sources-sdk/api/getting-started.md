@@ -6,6 +6,7 @@ topic-legacy: developer guide
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Sources SDK.
 hide: true
 hidefromtoc: true
+exl-id: ba131442-ff20-4854-87fe-918aa313382d
 ---
 # Getting Started with Sources SDK (Beta)
 
