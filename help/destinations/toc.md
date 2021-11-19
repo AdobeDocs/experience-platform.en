@@ -30,7 +30,6 @@ feature: Destinations
     * [Monitor dataflows](./ui/monitor-dataflows.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
-    * [ (Beta) HTTP connection](./catalog/http-destination.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
@@ -126,6 +125,8 @@ feature: Destinations
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
+    * Streaming destinations {#streaming}
+        * [ (Beta) HTTP API connection](./catalog/streaming/http-destination.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
