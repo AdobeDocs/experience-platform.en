@@ -92,12 +92,38 @@ Now that the Power BI report template is installed, the Power BI link is added t
 
 After logging into [the Power BI workspace](https://dxt.powerbi.com), report templates are available for each of the services for which you have permission. The report templates will include Profiles, Segments, and Destinations dashboards **only** if they have the corresponding view permissions.
 
+The standard widgets from Profiles, Segments, and Destinations are available within the Power BI template reports by default.
+
 >[!NOTE]
 >
 >You must have edit permissions to allow that dashboard to be installed in the Power BI environment.
 
+![Power BI Profile template report using standard Platform Profile widgets.](../images/power-bi/profile-report-template.png)
+
 After a Power BI dashboard is installed, it will be displayed to all users by default. If you want to restrict access to any dashboards, make sure that you disable access to any users from within the Power BI environment.  
 
-The same standard metrics from Profiles, Segments, and Destinations are available within the Power BI template reports. These reports can then be customized further ...  
+## Customize your Power BI Report Template
 
-![Power BI Profile template report.](../images/power-bi/profile-report-template.png)
+>[!IMPORTANT]
+>
+>Newly created custom widgets are NOT automatically synchronized between Adobe Experience Platform dashboards and the Power BI report templates. Any custom widgets created in the Platform UI have to be manually recreated inside the Power BI environment.
+
+To add custom attributes for use with the Power BI report templates, you must edit your organization's schema using the Platform UI. This process requires access to the Widget Library. See the [Widget Library overview](https://experienceleague.adobe.com/docs/experience-platform/dashboards/customize/widget-library.html) for more information. 
+
+To access the Widget Library, select the **[!UICONTROL Modify dashboard]** button from either the Profiles, Segments, or Destinations overview tab. 
+
+![The Profile dashboard with Modify dashboard highlighted.](../images/power-bi/modify-dashboard.png)
+
+From the Widget Library you must select the **[!UICONTROL Custom] tab to edit a schema.
+
+![The Widget Library display with the Custom tab highlighted.]()
+
+See the documentation for complete instructions on how to [edit a schema](../customize/edit-schema.md#edit-schema).
+
+>[!NOTE]
+>
+>Newly selected attributes become available following the next daily snapshot when the data is refreshed.
+
+## Next steps
+
+By reading this document you have a better understanding of how Power BI Report Templates can be integrated into Platform to share compelling data insights from your Profiles, Segments, of Destinations dashboards. See the [Dashboard customization overview](https://experienceleague.adobe.com/docs/experience-platform/dashboards/customize/overview.html?lang=en) document to learn more about customizing your dashboards, or documentation on creating custom widgets 
