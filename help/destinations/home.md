@@ -19,7 +19,7 @@ One of the core functionalities of Platform is ingesting your first-party data a
 ## Destinations steps {#steps}
 
 * Choose from a [self-service catalog](./catalog/overview.md) of all the destinations available in Platform.
-* Use destinations to and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
+* Use destinations to send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Controls {#controls}

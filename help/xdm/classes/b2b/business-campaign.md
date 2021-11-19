@@ -5,6 +5,10 @@ exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 ---
 # [!UICONTROL XDM Business Campaign] class
 
+>[!IMPORTANT]
+>
+>This class is intended to be used by organizations with access to [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). You must have access to Real-time CDP B2B Edition in order for this class to participate in [Real-time Customer Profile](../../../profile/home.md).
+
 [!UICONTROL XDM Business Campaign] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a business campaign.
 
 ![](../../images/classes/b2b/business-campaign.png)

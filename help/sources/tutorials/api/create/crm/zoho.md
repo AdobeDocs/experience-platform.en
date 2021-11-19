@@ -5,6 +5,7 @@ title: Create a Zoho CRM Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Zoho CRM using the Flow Service API.
+exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
 ---
 # (Beta) Create a [!DNL Zoho CRM] base connection using the [!DNL Flow Service] API
 

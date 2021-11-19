@@ -3,6 +3,7 @@ product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 title: Adobe Experience Platform Real-time Customer Data Platform B2B Edition Release Notes
 description: The latest release notes for Adobe Experience Platform Real-time Customer Data Platform B2B Edition.
+exl-id: bac121cc-ff27-4621-8982-491a66f8c00b
 ---
 # Adobe Experience Platform Real-time Customer Data Platform B2B Edition release notes
 
@@ -20,7 +21,7 @@ There are improvements to a variety of Adobe Experience Platform capabilities th
 
 ## New B2B and B2P editions {#editions}
 
-**New B2B and B2P editions** that bring ABM data and functionality to both the Real-time CDP and Platform Activation products are available for purchase.
+**New B2B and B2P editions** that bring B2B data and functionality to both Real-time CDP and Platform Activation products are available for purchase.
 
 To learn more about the Real-time CDP B2B Edition see the [overview](./b2b-overview.md)
 
@@ -30,7 +31,7 @@ To learn more about the Real-time CDP B2B Edition see the [overview](./b2b-overv
 
 | Feature  | Description  |
 |---|---|
-| Marketo Engage Source Connector  | Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. The Marketo Engage source connector is a complete solution for lead management and B2B marketers. |
+| Marketo Engage Source Connector  | The Marketo Engage source connector allows marketers to seamlessly ingest data from their one or more Marketo instances into their Adobe Experience Platform instance and provides a complete solution for lead management and B2B marketers. |
 | Marketo Engage Destination  | The [Marketo destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists. |
 
 To learn more about the Marketo Source Connector see the [overview](../sources/connectors/adobe-applications/marketo/marketo.md)
@@ -43,4 +44,4 @@ To learn more about the Marketo Source Connector see the [overview](../sources/c
 |---|---|
 | Standard B2B XDM classes  | Real-time Customer Data Platform B2B Edition provides several standard XDM that capture details about essential B2B data entities, such as accounts, opportunities, campaigns, and more  |
 
-See the [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) to learn more about capturing B2B data entities.   
+See the [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) to learn more about capturing B2B data entities.
