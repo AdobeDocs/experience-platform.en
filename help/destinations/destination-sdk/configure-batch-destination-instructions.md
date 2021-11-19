@@ -1,13 +1,17 @@
 ---
-description: This page lists and describes the steps to configure a streaming destination using Destination SDK.
-title: Use Destination SDK to configure a streaming destination
+description: This page lists and describes the steps to configure a file-based destination using Destination SDK.
+title: Use Destination SDK to configure a file-based destination
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 ---
-# Use Destination SDK to configure a streaming destination
+# Use Destination SDK to configure a file-based destination
 
 ## Overview {#overview}
 
-This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [streaming destination](/help/destinations/destination-types.md#streaming-destinations). The steps are laid out in sequential order below.
+This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destinations/destination-types.md#file-based). The steps are laid out in sequential order below.
+
+>[!NOTE]
+>
+>Configuring a batch destination through Destination SDK is currently not supported.
 
 ## Prerequisites {#prerequisites}
 

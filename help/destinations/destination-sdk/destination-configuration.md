@@ -13,9 +13,13 @@ This configuration also connects the other configurations required for your dest
 
 You can configure the functionality described in this document by using the `/authoring/destinations` API endpoint. Read [Destinations API endpoint operations](./destination-configuration-api.md) for a complete list of operations you can perform on the endpoint.
 
-## Example configuration {#example-configuration}
+## Example configurations {#example-configurations}
 
-Below is an example configuration of a fictional destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category. The sections further below break down how this configuration is constructed.
+Below are two examples of destination configurations, one for a streaming destination, and one for a batch destination. The sections further below break down how these configurations are constructed.
+
+### Streaming configuration example {#example-configuration}
+
+This is an example configuration of a fictional destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category.
 
 ```json
 
@@ -79,6 +83,26 @@ Below is an example configuration of a fictional destination, Moviestar, which h
       "segmentRequired":true,
       "identityRequired":true
    },
+   "batchConfig":{
+      "allowMandatoryFieldSelection": true,
+      "allowJoinKeyFieldSelection": true,
+      "defaultExportMode": "DAILY_FULL_EXPORT",
+      "allowedExportModes": [
+          "DAILY_FULL_EXPORT",
+          "FIRST_FULL_THEN_INCREMENTAL"
+      ],
+      "allowedScheduleFrequency": [
+          "DAILY",
+          "EVERY_3_HOURS",
+          "EVERY_6_HOURS",
+          "EVERY_12_HOURS",
+          "EVERY_8_HOURS",
+          "ONCE",
+          "EVERY_HOUR"
+      ],
+      "defaultFrequency": "DAILY",
+      "defaultStartTime": "00:00",
+   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -120,8 +144,139 @@ Below is an example configuration of a fictional destination, Moviestar, which h
    },
    "backfillHistoricalProfileData":true
 }
-
 ```
+
+### Batch configuration example {#example-configuration}
+
+This is an example configuration of a fictional destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category.
+
+```json
+{
+    "name": "Adobe Campaign Classic Destination",
+    "description": "Adobe Campaign Classic Destination",
+    "status": "TEST",
+    "maxProfileAttributes": "2000",
+    "maxIdentityAttributes": "500",
+    "customerAuthenticationConfigurations":[
+      {
+         "authType":"BEARER"
+      }
+   ],
+    "customerEncryptionConfigurations": [],
+    "customerDataFields": [
+        {
+            "name": "accInstance",
+            "title": "Select Instance",
+            "description": "Select an Adobe Campaign Classic Instance.",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": true,
+            "hidden": false,
+            "dynamicEnum": {
+                "destinationServerId": "30d0f829-1bed-44ef-bd1c-c5323dff69b1",
+                "authenticationRule": "IMS_AUTHENTICATION",
+                "value": "accInstances"
+            }
+        },
+        {
+            "name": "accTargetMapping",
+            "title": "Select Target Mapping",
+            "description": "Select an Adobe Campaign Classic Target Mapping.",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": true,
+            "hidden": false,
+            "dynamicEnum": {
+                "queryParams": [
+                    "accInstance"
+                ],
+                "destinationServerId": "676c3dcd-73ab-4bcc-907c-29fe5edda48e",
+                "authenticationRule": "IMS_AUTHENTICATION",
+                "value": "accTargetMappings"
+            }
+        }
+    ],
+    "uiAttributes": {
+        "documentationLink": "https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en",
+        "category": "emailMarketing",
+        "connectionType": "Server-to-server",
+        "frequency": "Batch"
+    },
+    "segmentMappingConfig": {
+        "mapExperiencePlatformSegmentName": false,
+        "mapExperiencePlatformSegmentId": false,
+        "mapUserInput": false,
+        "audienceTemplateId": "e091f36a-a849-4b6a-9c79-18405fa08ead"
+    },
+    "aggregation": {
+        "aggregationType": "CONFIGURABLE_AGGREGATION",
+        "configurableAggregation": {
+            "aggregationPolicyId": null,
+            "aggregationKey": {
+                "includeSegmentId": true,
+                "includeSegmentStatus": true,
+                "includeIdentity": false,
+                "oneIdentityPerGroup": false,
+                "groups": null
+            },
+            "splitUserById": true,
+            "maxBatchAgeInSecs": 360,
+            "maxNumEventsInBatch": 100
+        }
+    },
+    "destinationDelivery": [
+        {
+            "deliveryMatchers": [
+                {
+                    "type": "SOURCE",
+                    "value": [
+                        "batch"
+                    ]
+                }
+            ],
+            "authenticationRule": "NONE",
+            "destinationServerId": "99848e42-b2ca-41eb-aa93-abf2104f7b28"
+        }
+    ],
+    "inputSchemaId": "4b8f51a3b10c43e1bcc18592e36ce0c7",
+    "schemaConfig": {
+        "profileRequired": true,
+        "segmentRequired": true,
+        "identityRequired": true,
+        "dynamicSchemaConfig": {
+            "dynamicEnum": {
+                "destinationServerId": "3a696db6-e7e9-48cb-a657-17489850a315",
+                "authenticationRule": "IMS_AUTHENTICATION",
+                "value": "accSchema",
+                "responseFormat": "SCHEMA"
+            }
+        }
+    },
+    "batchConfig": {
+        "allowMandatoryFieldSelection": true,
+        "allowJoinKeyFieldSelection": true,
+        "defaultExportMode": "DAILY_FULL_EXPORT",
+        "allowedExportModes": [
+            "DAILY_FULL_EXPORT",
+            "FIRST_FULL_THEN_INCREMENTAL"
+        ],
+        "allowedScheduleFrequency": [
+            "DAILY",
+            "EVERY_3_HOURS",
+            "EVERY_6_HOURS",
+            "EVERY_12_HOURS",
+            "EVERY_8_HOURS",
+            "ONCE",
+            "EVERY_HOUR"
+        ],
+        "defaultFrequency": "DAILY",
+        "defaultStartTime": "00:00",
+    },
+    "destConfigId": "401bba59-d687-47dd-8128-61947fe32333",
+    "backfillHistoricalProfileData": true
+}
+```
+
 
 |Parameter | Type | Description|
 |---------|----------|------|
@@ -203,10 +358,9 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 {style="table-layout:auto"}
 
-
 ## Batch configuration {#batch-configuration}
 
-Use the parameters in `batchConfig` to describe the configuration of the file-based destination that you are about to create.
+For batch destinations, use the parameters in `batchConfig` to describe the configuration of the file-based destination that you are about to create.
 
 |Parameter | Type | Description|
 |---------|----------|------|
@@ -217,8 +371,6 @@ Use the parameters in `batchConfig` to describe the configuration of the file-ba
 |`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_HOUR`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
 |`defaultFrequency`|Enum|Defines the default file export frequency.Supported values:<ul><li>`ONCE`</li><li>`EVERY_HOUR`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br> Default value is `DAILY`.|
 |`defaultStartTime`|String|Defines the default start time for the file export. Uses 24-hour file format. Default value is "00:00".|
-|`filenameConfig`|Object||
-
 
 ## Identities and attributes {#identities-and-attributes}
 
