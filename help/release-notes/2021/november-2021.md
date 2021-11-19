@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The November 2021 release notes for Adobe Experience Platform.
+exl-id: f649b516-8ef8-49af-bb3e-0392337d0d86
 ---
 # Adobe Experience Platform release notes 
 

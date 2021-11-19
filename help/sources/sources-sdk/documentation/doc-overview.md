@@ -6,6 +6,7 @@ topic-legacy: overview
 description: The final step before your new source can be made live in Adobe Experience Platform is to document your new source.
 hide: true
 hidefromtoc: true
+exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
 ---
 # Document your source
 
