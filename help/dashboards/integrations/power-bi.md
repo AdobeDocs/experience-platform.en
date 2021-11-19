@@ -118,7 +118,7 @@ To access the Widget Library, select the **[!UICONTROL Modify dashboard]** butto
 
 From the Widget Library you must then select the **[!UICONTROL Custom]** tab followed by **[!UICONTROL Edit schema]**.
 
-![The Widget Library display with the Custom tab and Edit schema highlighted.](../images/power-bi/widget-library-custom-tab.md)
+![The Widget Library display with the Custom tab and Edit schema highlighted.](../images/power-bi/widget-library-custom-tab.png)
 
 See the documentation for complete instructions on how to [edit a schema](../customize/edit-schema.md#edit-schema).
 

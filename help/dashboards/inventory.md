@@ -21,6 +21,6 @@ The list of dashboards includes all dashboards available on Experience Platform,
 
 You can view an individual dashboard by selecting the name of the dashboard from the list.
 
-![Browse tab with a name of a dashboard highlighted.](./images/inventory/dashboard-name..png)
+![Browse tab with a name of a dashboard highlighted.](./images/inventory/dashboard-name.png)
 
 When a dashboard is selected, it will either open in the Platform UI or in a fully integrated application workspace that requires you to log in using the necessary credentials in order to view the dashboard.
