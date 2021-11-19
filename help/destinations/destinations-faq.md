@@ -69,6 +69,10 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 
 [!DNL Facebook Custom Audiences] supports the activation of the following identities: hashed emails, hashed phone numbers, [!DNL GAID], [!DNL IDFA], and custom external IDs.
 
+**Can I create multiple Facebook destinations in the Platform UI for separate Facebook accounts?** 
+
+A Facebook destination in Experience Platform is 1:1 to an ad account in Facebook. You can create a separate Facebook destination for each Facebook ad account in your company. Follow the [destination connection tutorial](/help/destinations/ui/connect-destination.md) and connect to a separate Facebook account for each new Facebook destination in the Platform UI.
+
 ## LinkedIn Matched Audiences {#linkedin}
 
 **Do I need to add any apps or pixels to my [!DNL LinkedIn] advertiser account?**
