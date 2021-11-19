@@ -71,7 +71,7 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 
 **Can I create multiple Facebook destinations in the Platform UI for separate Facebook accounts?** 
 
-A Facebook destination in Experience Platform is 1:1 to an ad account in Facebook. You can create a separate Facebook destination for each Facebook ad account in your company. Follow the [destination connection tutorial](/help/destinations/ui/connect-destination.md) and connect to a separate Facebook account for each new Facebook destination in the Platform UI.
+Yes. A Facebook destination in Experience Platform is 1:1 to an ad account in Facebook. You can create a separate Facebook destination for each Facebook ad account in your company. Follow the [destination connection tutorial](/help/destinations/ui/connect-destination.md) and connect to a separate Facebook account for each new Facebook destination in the Platform UI. There is no limit on the number of Facebook ad accounts that you can connect to.
 
 ## LinkedIn Matched Audiences {#linkedin}
 
