@@ -1,6 +1,7 @@
 ---
 title: Event Forwarding Secrets
 description: Learn how to configure secrets in the Data Collection UI to authenticate to endpoints used in event forwarding properties.
+exl-id: eefd87d7-457f-422a-b159-5b428da54189
 ---
 # Event forwarding secrets
 

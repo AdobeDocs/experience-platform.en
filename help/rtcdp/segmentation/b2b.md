@@ -1,15 +1,9 @@
 ---
-title: Overview of Segmentation Use Cases for Real-time CDP B2B Edition (Beta)
+title: Overview of Segmentation Use Cases for Real-time CDP B2B Edition
 description: An overview of the various available Real-time CDP B2B Edition use cases.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 ---
-# Overview of Segmentation use cases for Real-time Customer Data Platform B2B Edition (Beta)
-
-<!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
-
->[!IMPORTANT]
->
->Real-time CDP B2B Edition is currently in beta. The documentation and the functionality are subject to change.
+# Overview of Segmentation use cases for Real-time Customer Data Platform B2B Edition
 
 This document provides examples regarding the segmentation available for Real-time CDP B2B Edition and how the different types of attributes can be combined for common B2B use cases.
 

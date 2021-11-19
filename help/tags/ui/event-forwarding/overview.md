@@ -56,8 +56,4 @@ It is important to note the following differences between event forwarding and t
 
     In the Action section of a rule, event forwarding rules are always executed sequentially. Make sure the order of actions is correct when you save a rule. This execution sequence cannot be chosen like it can with tags.
 
-* Custom code JavaScript versions
-
-    Tags use JavaScript version es5. Event forwarding uses version es6.
-
 <!--doc Adobe Cloud Connector extension, get from Jon-->

@@ -168,11 +168,11 @@ It's done. You just added [!DNL Microsoft CRM] as a data source into [!DNL Exper
 
 ### Labeling ingested data for usage policies
 
-Luma has many internal policies that restrict the usage of certain kinds of collected information, and must also comply with legal and privacy-related concerns regarding data usage. Using Adobe Experience Platform [!DNL Data Governance], predefined data usage labels can be applied to datasets (and specific fields within those datasets), allowing Luma to categorize their data according to specific usage restrictions.
+Luma has many internal policies that restrict the usage of certain kinds of collected information, and must also comply with legal and privacy-related concerns regarding data usage. Using Adobe Experience Platform Data Governance, predefined data usage labels can be applied to datasets (and specific fields within those datasets), allowing Luma to categorize their data according to specific usage restrictions.
 
 ![](assets/governance-labels.png)
 
-Once data usage labels have been applied, Luma can then use [!DNL Data Governance] to create data usage policies. Data usage policies are rules that describe the kinds of actions that you are allowed to perform on data that contains certain labels. When attempting to perform an action in Real-time CDP that constitutes a policy violation, the action is prevented and an alert is given to show which policy was violated and why.
+Once data usage labels have been applied, Luma can then use Data Governance to create data usage policies. Data usage policies are rules that describe the kinds of actions that you are allowed to perform on data that contains certain labels. When attempting to perform an action in Real-time CDP that constitutes a policy violation, the action is prevented and an alert is given to show which policy was violated and why.
 
 ## Bringing the data together for a specific customer
 

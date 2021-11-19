@@ -5,8 +5,8 @@ title: (Beta) Activate audience segments to batch destinations via the ad-hoc ac
 description: This article illustrates the end-to-end workflow for activating audience segments via the ad-hoc activation API, including the segmentation jobs that take place before activation.
 topic-legacy: tutorial
 type: Tutorial
+exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
 ---
-
 # (Beta) Activate audience segments to batch destinations via the ad-hoc activation API
 
 >[!IMPORTANT]
@@ -45,7 +45,7 @@ IT managers can use the Experience Platform ad-hoc activation API to export segm
 
 Keep in mind the following guardrails when using the ad-hoc activation API.
 
-* Each ad-hoc activation job can activate up to 20 segments. Attempting to activate more than 20 segments per job will cause the job to fail.
+* Currently, each ad-hoc activation job can activate up to 20 segments. Attempting to activate more than 20 segments per job will cause the job to fail. This behavior is subject to change in future releases.
 * Ad-hoc activation jobs cannot run in parallel with scheduled [segment export jobs](../../segmentation/api/export-jobs.md). Before running an ad-hoc activation job, make sure the scheduled segment export job has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
 * Do not run more than one concurrrent ad-hoc activation job per segment.
 
@@ -120,7 +120,7 @@ Once the segment export job has completed, you can trigger the activation.
 
 >[!NOTE]
 >
->You can activate a maximum of 20 segments per ad-hoc activation job. Attempting to activate more segments will cause the job to fail.
+>Currently, each ad-hoc activation job can activate up to 20 segments. Attempting to activate more than 20 segments per job will cause the job to fail. This behavior is subject to change in future releases.
 
 ### Request
 
@@ -161,20 +161,21 @@ A successful response returns HTTP status 200.
 
 ```shell
 {
-   "code":"DEST-ADH-200",
-   "message":"Adhoc run triggered successfully",
-   "statusURLs":[
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-1",
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-2"
+   "order":[
+      {
+         "segment":"db8961e9-d52f-45bc-b3fb-76d0382a6851",
+         "order":"ef2dcbd6-36fc-49a3-afed-d7b8e8f724eb",
+         "statusURL":"https://platform.adobe.io/data/foundation/flowservice/runs/88d6da63-dc97-460e-b781-fc795a7386d9"
+      }
    ]
 }
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `code` | The API response code. A successful call returns `DEST-ADH-200` (status code 200), while an incorrectly formatted one returns `DEST-ADH-400` (status code 400). |
-| `message` | The success or error message returned by the API. |
-| `statusURLs` | The status URL of the activation flow. You can track the flow progress using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
+| `segment` | The ID of the activated segment. |
+| `order` | The ID of the destination to which the segment was activated. |
+| `statusURL` | The status URL of the activation flow. You can track the flow progress using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
 
 
 ## API error handling
