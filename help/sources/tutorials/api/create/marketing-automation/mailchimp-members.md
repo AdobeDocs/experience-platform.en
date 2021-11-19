@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Create a dataflow for MailChimp Members using the Flow Service API
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp Members using the Flow Service API.
+exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
 ---
 # Create a dataflow for [!DNL MailChimp Members] using the Flow Service API
 

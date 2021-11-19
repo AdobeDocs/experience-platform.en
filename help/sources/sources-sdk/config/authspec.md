@@ -5,8 +5,8 @@ topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
 hide: true
 hidefromtoc: true
+exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 ---
-
 # Configure authentication specifications for Sources SDK
 
 Authentication specifications define how Adobe Experience Platform users can connect to your source.

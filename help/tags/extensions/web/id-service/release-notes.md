@@ -11,7 +11,7 @@ exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 
 For release notes on the Experience Cloud Identity Service itself and not just the Adobe Experience Platform tag extension, please reference: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)
 
-## Nov 3, 2020
+## Nov 3, 2021
 
 ### Experience Cloud ID Extension 5.2.1
 

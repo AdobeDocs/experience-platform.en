@@ -5,6 +5,7 @@ topic-legacy: developer guide
 description: The following document provides steps on how to retrieve and update flow specifications using the Flow Service API for Sources SDK.
 hide: true
 hidefromtoc: true
+exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
 ---
 # Update flow specifications using the [!DNL Flow Service] API (Beta)
 
@@ -610,4 +611,4 @@ A successful response returns the details of the queried flow specification, inc
 
 ## Next steps
 
-With your new connection specification added to the appropriate flow specification, you can now proceed to testing and submitting your new source. See the guide on [testing and submitting a new source](./overview.md#submit) for more information.
+With your new connection specification added to the appropriate flow specification, you can now proceed to testing and submitting your new source. See the guide on [testing and submitting a new source](./submit.md) for more information.

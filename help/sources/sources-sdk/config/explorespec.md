@@ -5,8 +5,8 @@ topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
 hide: true
 hidefromtoc: true
+exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 ---
-
 # Configure explore specifications for Sources SDK
 
 Explore specifications defines the parameters required for exploring and inspecting objects contained in your source. Explore specifications also defines the response format returned when objects are explored and inspected.
@@ -81,4 +81,4 @@ Explore specifications defines the parameters required for exploring and inspect
 
 ## Next steps
 
-With your explore specifications populated, you can proceed to create a complete connection specification using the [!DNL Flow Service] API. See the the [[!DNL Sources SDK] API guide](../api/overview.md) for more information.
+With your explore specifications populated, you can proceed to create a complete connection specification using the [!DNL Flow Service] API. See the the [[!DNL Sources SDK] API guide](../api/api-overview.md) for more information.

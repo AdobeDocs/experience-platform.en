@@ -163,6 +163,10 @@ To set the start time for ingestion, adjust the date and time displayed in the s
 
 Provide values for the schedule and select **[!UICONTROL Next]**.
 
+>[!NOTE]
+>
+>For batch ingestion, every ensuing dataflow selects files to be ingested from your source based on their **last modified** timestamp. This means that batch dataflows select files from the source that are either new or have been modified since the last dataflow run.
+
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
 ### Set up a one-time ingestion dataflow
