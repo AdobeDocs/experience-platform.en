@@ -5,9 +5,9 @@ type: Documentation
 description: Use the Power BI report templates feature to explore Experience Platform data using Power BI.
 ---
 
-# Power BI Report Templates for Platform Dashboards
+# Power BI report templates for Platform Dashboards
 
-The Power BI Report Template feature allows you to create compelling reports populated with data from Adobe Experience Platform. The streamlined installation process automatically installs Profile, Segment, and Destination standard widgets and connects to the data model allowing easy customization and extension of the report templates. These reports can be shared across your entire organization without the recipients needing credentials for your Platform IMS ORG.
+The Power BI report template feature allows you to create compelling reports populated with data from Adobe Experience Platform. The streamlined installation process automatically installs Profile, Segment, and Destination standard widgets and connects to the data model allowing easy customization and extension of the report templates. These reports can be shared across your entire organization without the recipients needing credentials for your Platform IMS ORG.
 
 This document provides instructions on how to connect Adobe Experience Platform with the Power BI application and use report templates to share key Platform data insights with external users.
 
@@ -15,14 +15,14 @@ This document provides instructions on how to connect Adobe Experience Platform 
 
 Before continuing with this tutorial it is recommended to have a good understanding of [schemas and how union schemas aggregate fields](../../xdm/schema/composition.md#composition-example). The [Experience Data Model (XDM) overview](../../xdm/home.md) offers more general information if required.
 
-To install the Power BI application integration, users must first have acquire the following Platform permissions:
+To install the Power BI application integration, users must first have acquired the following Platform permissions:
 
 - Query Service Manage
 - Manage sandboxes permission
 
 To learn how to assign these permissions, please read the [Access Control](../../access-control/home.md) documentation.
 
-You must also have a Power BI account. To create an account navigate to the [Power BI homepage](https://powerbi.microsoft.com/en-us/). Users for this Power BI account must also have the **Create workspace** setting enabled within the Power BI settings within Tenant settings of the Power BI admin portal. If your account is provided by your Tenant or employer, contact your respective admin to get this setting enabled. 
+You must also have a Power BI account. To create an account navigate to the [Power BI homepage](https://powerbi.microsoft.com/en-us/). Users for this Power BI account must also have the **Create workspace** setting enabled within Power BI settings. The **Create workspace** setting is found within Tenant settings of the Power BI admin portal. If your account is provided by your Tenant or employer, contact your respective admin to get this setting enabled. 
 
 ![Power BI Admin portal create workspace settings.](../images/power-bi/create-workspace-settings.png)
 
@@ -40,11 +40,13 @@ Next, select the **[!UICONTROL Integrations]** tab. The Power BI application int
 
 ### Credentials
 
-The first step is to provide non-expiring credentials for the the Power BI application integration. There are two options available to provide these, [!UICONTROL  Create  new credentials] or [!UICONTROL  Use existing credentials]. Select the appropriate toggle.
+The first step is to provide non-expiring credentials for the Power BI application integration. There are two options available to provide these, [!UICONTROL  Create  new credentials] or [!UICONTROL  Use existing credentials]. Select the appropriate toggle.
 
 #### Create New credentials
 
 There are three required fields when generating new credentials, [!UICONTROL Name], [!UICONTROL Assigned to], and [!UICONTROL Password]. The [!UICONTROL Assigned to] field relates to the email address associated with your Power BI account. 
+
+![Power BI generate new credentials screen.](../images/power-bi/generate-new-credentials.png)
 
 To learn more about generating non-expiring Query Service credentials, please refer to the [Query Service non-expiring credentials guide](../../query-service/ui/credentials.md#non-expiring-credentials).
 
@@ -52,11 +54,11 @@ To learn more about generating non-expiring Query Service credentials, please re
 >
 >Creating non-expiring credentials requires you to have the following three permissions and two roles assigned. The necessary permissions are Query Service Manage, Manage Sandboxes, and Query Service Integration permission. The required roles are Adobe Experience Platform admin and developer roles. To learn how to assign these permissions, please read the [Access Control](../../access-control/home.md) documentation.
 
-After generating non-expiring credentials for the first time, a JSON file is downloaded that can be shared with other users who can then use these credentials top complete the installation process.
+After generating non-expiring credentials for the first time, a JSON file is downloaded that can be shared with other users who can then use these credentials to complete the installation process.
 
 #### Use Existing credentials
 
-A JSON credential file can also be uploaded to pass validation. These JSON files are created at the same time a non-expiring credential is created.
+A JSON credential file can also be uploaded to pass validation. These JSON files holding the non-expiring credential values are downloaded to the local machine when a non-expiring credential is created.
 
 >[!IMPORTANT]
 >
@@ -68,7 +70,7 @@ Select **[!UICONTROL Upload credential file]**. A file browser dialog appears. S
 
 ### Review consent
 
-After selecting either **[!UICONTROL Generate Credentials]** or **[!UICONTROL Upload credential file]** Platform automatically validates the credentials. Assuming you have the correct credentials, a confirmation popover appears.
+After selecting either **[!UICONTROL Generate Credentials]** or **[!UICONTROL Upload credential file]** Platform automatically validates the credentials. After providing the correct credentials, a confirmation popover appears.
 
 Next, you must provide consent to Microsoft for the permissions requested by Power BI. A new window appears requesting permissions to allow Power BI access and use of your data according to their terms of service and privacy statement. Select **[!UICONTROL Accept]**.
 
@@ -112,11 +114,11 @@ After a dashboard is installed in Power BI, report templates are displayed to al
 
 Add custom attributes to your data model to enrich the report templates provided by Power BI. Platform provides two methods to add custom attributes, either through the UI or by using the Schema Registry API. 
 
-Any attribute that is not included with the default Profile XDM schema is added as a custom attribute. See the documentation on [how to add field groups](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en#field-group) through the UI or [creating and editing schemas in the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en) for more information. You can also conveniently edit the schema through the UI when you create a custom widget.
+Any attribute that is not included with the default Profile XDM schema is added as a custom attribute. See the documentation on [how to add field groups](../../xdm/tutorials/create-schema-ui.md#field-group) through the UI Schema Editor or [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information. You can also conveniently edit the schema through the UI when you create a custom widget.
 
 ### Create a custom widget
 
-Access to the Widget Library is required to edit your organization's schema using the Platform UI. See the [Widget Library overview](https://experienceleague.adobe.com/docs/experience-platform/dashboards/customize/widget-library.html) for more information. To access the Widget Library, select the **[!UICONTROL Modify dashboard]** button from either the Profiles, Segments, or Destinations overview tab. 
+Outside of the Schema Editor, the Widget Library is required to edit your organization's schema using the Platform UI. See the [Widget Library overview](../customize/widget-library.md) for more information. To access the Widget Library, select the **[!UICONTROL Modify dashboard]** button from either the Profiles, Segments, or Destinations overview tab. 
 
 ![The Profile dashboard with Modify dashboard highlighted.](../images/power-bi/modify-dashboard.png)
 
@@ -136,4 +138,4 @@ See the documentation for instructions on [how to add field groups to the Schema
 
 ## Next steps
 
-By reading this document you have a better understanding of how Power BI Report Templates can be integrated into Platform to share compelling data insights from your Profiles, Segments, of Destinations dashboards. See the [Dashboard customization overview](../customize/overview.md) document to learn more about customizing your dashboards, or documentation on creating custom widgets.
+By reading this document you have a better understanding of how Power BI report templates can be integrated into Platform to share compelling data insights from your Profiles, Segments, of Destinations dashboards. See the [Dashboard customization overview](../customize/overview.md) document to learn more about customizing your dashboards, or documentation on creating custom widgets.
