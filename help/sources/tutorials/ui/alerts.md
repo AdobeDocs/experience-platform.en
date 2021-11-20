@@ -21,3 +21,8 @@ This document requires a working understanding of the following components of Ad
 
 ## Subscribe to alerts in the UI
 
+>[!CONTEXTUALHELP]
+>id="platform_sources_alerts_subscribe"
+>title="Subscribe to sources alerts"
+>abstract="Check this option to subscribe to notification alerts for your sources dataflows."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="Learn more in documentation"
