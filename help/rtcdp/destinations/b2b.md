@@ -1,13 +1,9 @@
 ---
-title: Destinations in Real-time Customer Data Platform B2B Edition (Beta)
+title: Destinations in Real-time Customer Data Platform B2B Edition
 description: An overview of the role of destinations in Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
 ---
-# Destinations in Real-time Customer Data Platform B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
+# Destinations in Real-time Customer Data Platform B2B Edition
 
 >[!NOTE]
 >

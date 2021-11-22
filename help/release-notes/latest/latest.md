@@ -1,57 +1,88 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: October 27, 2021**
+**Release date: November 17, 2021**
 
-## Updates to Experience Platform
+## New features
 
-Updates to Experience Platform.
+New features in Adobe Experience Platform:
 
-### [User interface] {#ui}
-
-The user interface has been updated with the following changes:
-
-| Feature | Description |
-| --- | --- |
-| Dark theme | Use the Dark theme switch to toggle between light and dark themes in the Platform interface. The switch is located in the user profile below user name and email. |
-| Toggle left navigation | Use the improved navigation toggle at the top of the application header to show or hide the menu displaying your Experience Platform capabilities. The system remembers your last selection and shows you only the capabilities you have access to. |
-| Access visibility | The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were visible, even if you were not able to access them. |
-
-See the [Platform UI Guide](../../landing/ui-guide.md) to learn more.
+- [Real-time Customer Data Platform B2B Edition](#B2B)
+- [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](#ad-hoc-activation)
 
 ## Updates to existing features
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
-- [Sources](#sources)
+- [Attribution AI](#attribution-ai)
+- [Customer AI](#customer-ai)
 
-### [!DNL Data Prep] {#data-prep}
+### Real-time Customer Data Platform B2B Edition {#B2B}
 
-[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+**Release date: November 12, 2021**
+
+Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+
+There are improvements to a variety of Adobe Experience Platform capabilities that distinguish Real-time CDP B2B Edition from its B2C counterpart. They include improvements to the Experience Data Model (XDM) for B2B use cases, upgrades to identity resolution and profile segmentation, as well as a custom-built connector and destination for Marketo Engage. The Marketo connector allows B2B brands to connect their industry-leading B2B engagement data with behavioral information in order to nurture leads and enhance account-based marketing operations.
+
+-[New B2B and B2P editions](#editions)
+-[New Marketo data source and destination connectors](#marketo)
+-[Standard B2B XDM](#XDM)
+
+### New B2B and B2P editions {#editions}
+
+New B2B and B2P editions that bring B2B data and functionality to both Real-time CDP and Platform Activation products are available for purchase.
+
+To learn more about Real-time CDP B2B Edition see the [overview](../../rtcdp/overview.md).
+
+### New Marketo data source and destination connectors {#marketo}
+
+New Marketo data source and destination connectors stream Marketo data into Platform and Platform audiences back to Marketo. Available for all Platform users.
+
+| Feature  | Description |
+|----------|-------------|
+| Marketo Engage source connector | The [Marketo Engage source connector](../../sources/connectors/adobe-applications/marketo/marketo.md) allows marketers to seamlessly ingest data from one or more Marketo instances into their Adobe Experience Platform instance and provides a complete solution for lead management and B2B marketers. |
+| Marketo Engage Destination      | The [Marketo destination](../../destinations/catalog/adobe/marketo-engage.md) enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists. |
+
+### Standard B2B XDM {#XDM}
+
+Standard B2B XDM classes, field groups, and data types are available for all Platform users.
+
+| Feature   | Description  |
+|-----------|--------------|
+| Standard B2B XDM classes | Real-time Customer Data Platform B2B Edition provides several standard XDM that capture details about essential B2B data entities, such as accounts, opportunities, campaigns, and more. |
+
+See the [Schemas in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentation to learn more about capturing B2B data entities.
+
+### (Beta) Activate audience segments to batch destinations via the ad-hoc activation API {#ad-hoc-activation}
+
+The ad-hoc activation API allows marketers to programmatically activate audience segments to destinations, in a fast and efficient manner, for situations where immediate activation is required. Ad-hoc audience activation is only supported by [batch file-based destinations](../../destinations/destination-types.md#file-based) and is currently in beta. For more information, see the [ad-hoc activation API documentation](../../destinations/api/ad-hoc-activation-api.md).
+
+### Attribution AI {#attribution-ai}
+
+Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+
+| Feature   | Description   |
+|-----------|---------------|
+| Support for multiple datasets | Attribution AI can now easily ingest multiple datasets directly in the UI without the need to map and stitch each dataset. This new time-saving capability provides more powerful and accurate scores with richer data from multiple datasets. |
+| Media channel and campaign field mapping | Attribution AI now supports the mapping of media channel and campaign fields. Media channel mapping between datasets improves the insights derived from Attribution AI and helps provide clearer results that are easy to interpret. |
+
+For more information on Attribution AI, please see the [Attribution AI documentation](../../intelligent-services/attribution-ai/overview.md).
+
+### Customer AI {#customer-ai}
+
+Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
 
 **Updated features**
 
-| Feature | Description |
-| --- | --- |
-| `contains_key` function | The `contains_key` function has been introduced, which lets you check if the object exists within the source. This function replaces the `is_set` function, which is now deprecated. |
-| Error messages | Error messages returned by the `/mappingSets/preview` endpoint in the Data Prep API are now consistent with the error messages that are generated during runtime. |
+| Feature   | Description |
+|-----------|-------------|
+| Support for multiple datasets | Customer AI can now easily ingest multiple datasets directly in the UI without the need to map and stitch each dataset. This new time-saving capability provides more powerful and accurate scores with richer data from multiple datasets.  |
+| Custom profile attributes     | Customer AI now supports defining custom profile dataset fields (with timestamps) in your data in addition to standard event fields. Using this option allows you to add additional profile attributes that you deem influential which may improve the quality of your model and provide more accurate results. |
 
-See the [[!DNL Data Prep] overview](../../data-prep/home.md) to learn more about this service.
+For more information on Customer AI, please see the [Customer AI documentation](../../intelligent-services/customer-ai/overview.md).
 
-### Sources {#sources}
-
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
-
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
-
-| Feature | Description |
-| --- | --- |
-| [!DNL Amazon S3] source enhancements | You can now use the `s3SessionToken` parameter to connect your [!DNL Amazon S3] account to Platform using temporary security credentials. This token allows you to provide short-term, temporary access to your [!DNL Amazon S3] resources to users in untrusted environments. See the [[!DNL Amazon S3] documentation](../../sources/connectors/cloud-storage/s3.md#prerequisites) for more information. |
-| [!DNL Generic REST API] (Beta) | You can now create a [!DNL Generic REST API] source connection using the [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) or the [user interface](../../sources/tutorials/ui/create/protocols/generic-rest.md) to bring data from a generic REST application to Platform. See the [[!DNL Generic REST API] overview](../../sources/connectors/protocols/generic-rest.md) for more information. |
-| [!DNL Zoho CRM] (Beta) | You can now create a [!DNL Zoho CRM] source connection using the [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) or the [user interface](../../sources/tutorials/ui/create/crm/zoho.md) to bring data from your [!DNL Zoho CRM] account to Platform. See the [[!DNL Zoho CRM] overview](../../sources/connectors/crm/zoho.md) for more information. |
-
-To learn more about sources, see the [sources overview](../../sources/home.md).

@@ -2,8 +2,8 @@
 keywords: Experience Platform;home;popular topics
 title: Privacy Request Processing in Identity Service
 description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by numerous privacy regulations. This document covers essential concepts related to processing privacy requests for Identity Service.
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 ---
-
 # Privacy request processing in [!DNL Identity Service]
 
 Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and [!DNL California Consumer Privacy Act] (CCPA).

@@ -536,6 +536,10 @@ This section describes the action types available in the Core extension.
 
 ### Custom Code
 
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
+
 Provide the code that runs after the event is triggered and conditions are evaluated.
 
 1. Name the action code.
@@ -639,6 +643,10 @@ Any constant string value that can be then referenced in actions or conditions.
 `string`
 
 ### Custom code
+
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
 
 Custom JavaScript can be entered into the UI by selecting  Open Editor and inserting code into the editor window.
 

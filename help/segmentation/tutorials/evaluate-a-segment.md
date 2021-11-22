@@ -144,7 +144,7 @@ After a segmentation job has successfully completed (the value of the `status` a
 The following steps are required to export your audience:
 
 - [Create a target dataset](#create-a-target-dataset) - Create the dataset to hold audience members.
-- [Generate audience profiles in the dataset](#generate-profiles-for-audience-members) - Populate the dataset with XDM Individual Profiles based on the results of a segment job.
+- [Generate audience profiles in the dataset](#generate-profiles) - Populate the dataset with XDM Individual Profiles based on the results of a segment job.
 - [Monitor export progress](#monitor-export-progress) - Check the current progress of the export process. 
 - [Read audience data](#next-steps) - Retrieve the resulting XDM Individual Profiles representing the members of your audience.
 
@@ -157,9 +157,9 @@ One of the key considerations is the schema upon which the dataset is based (`sc
 There are two ways to create the necessary dataset:
 
 - **Using APIs:** The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile Union Schema] using the [!DNL Catalog] API. 
-- **Using the UI:** To use the [!DNL Adobe Experience Platform] user interface to create a dataset that references the union schema, follow the steps in the [UI tutorial](../ui/overview.md) and then return to this tutorial to proceed with the steps for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
+- **Using the UI:** To use the [!DNL Adobe Experience Platform] user interface to create a dataset that references the union schema, follow the steps in the [UI tutorial](../ui/overview.md) and then return to this tutorial to proceed with the steps for [generating audience profiles](#generate-profiles).
 
-If you already have a compatible dataset and know its ID, you can proceed directly to the step for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
+If you already have a compatible dataset and know its ID, you can proceed directly to the step for [generating audience profiles](#generate-profiles).
 
 **API format**
 
