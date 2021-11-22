@@ -5,6 +5,7 @@ title: Create a Generic REST API Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Generic REST API to Adobe Experience Platform using the Flow Service API.
+exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
 ---
 # Create a Generic REST API base connection using the [!DNL Flow Service] API
 

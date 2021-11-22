@@ -1,6 +1,7 @@
 ---
 title: Secrets in the Reactor API
 description: Learn the fundamentals of how to configure secrets in the Reactor API for use in event forwarding.
+exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
 ---
 # Secrets in the Reactor API
 

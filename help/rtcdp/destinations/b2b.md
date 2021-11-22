@@ -3,7 +3,11 @@ title: Destinations in Real-time Customer Data Platform B2B Edition
 description: An overview of the role of destinations in Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
 ---
-# An overview of destinations in Real-time Customer Data Platform B2B Edition
+# Destinations in Real-time Customer Data Platform B2B Edition
+
+>[!NOTE]
+>
+>If you are not using Real-time Customer Data Platform B2B Edition, see the [overview of destinations](../../destinations/home.md) instead.
 
 Experience Platform destinations fully supported by Real-time CDP B2B Edition include Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display & Video 360, Google Ads, and Google Ad Manager.
 

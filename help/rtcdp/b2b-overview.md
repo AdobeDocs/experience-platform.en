@@ -8,10 +8,6 @@ exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 ---
 # Real-time Customer Data Platform B2B Edition overview
 
->[!IMPORTANT]
->
->Real-time CDP B2B Edition is currently in beta. The documentation and the functionality are subject to change.
-
 Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
 There are improvements to a variety of Adobe Experience Platform capabilities that distinguish Real-time CDP B2B Edition from its B2C counterpart. They include improvements to the Experience Data Model (XDM) for B2B use cases, upgrades to identity resolution and profile segmentation, as well as a custom-built connector and destination for [!DNL Marketo Engage]. The [!DNL Marketo] connector allows B2B brands to connect its industry-leading B2B engagement data with behavioral information in order to nurture leads and enhance account-based marketing operations.
@@ -77,4 +73,13 @@ For companies with more than one CRM, Real-time CDP B2B Edition provides the opt
 
 Now that you better understand the benefits for marketers offered by Real-time CDP B2B Edition, and differences between it and Real-time CDP, you can learn about how to apply these features to your own IMS Organization.
 
-To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the [example use case for Real-time CDP B2B Edition](./b2b-use-case.md). Alternatively you can refer to the [schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentation for more specific guidance on creating schemas, and defining relationships for essential B2B data entities.
+To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the following documentation to help you get started:
+
+* [An example use case for Real-time CDP B2B Edition](./b2b-use-case.md)
+* [An end-to-end tutorial for Real-time Customer Data Platform B2B Edition](./b2b-tutorial.md)
+* [How to ingest data](./sources/b2b.md)
+* [How to access profiles](./profile/profile-overview.md)
+* [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+* [How to build segments](./segmentation/b2b.md)
+* [How to activate segments to destinations](./destinations/b2b.md)
+* [How to define and enforce data governance policies](./privacy/data-governance-overview.md)

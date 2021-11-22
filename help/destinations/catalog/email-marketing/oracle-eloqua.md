@@ -47,8 +47,8 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
 * **[!UICONTROL Name]**: Pick a relevant name for your destination.
 * **[!UICONTROL Description]**: Enter a description for your destination.
-* **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV or tab-delimited files.
-* **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+* **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV files.
+* **[!UICONTROL File Format]**: Select **CSV** to export CSV files to your storage location.
 
 <!--
 
@@ -68,7 +68,7 @@ When activating segments to this destination, Adobe recommends that you select a
 
 ## Exported data {#exported-data}
 
-For [!DNL Oracle Eloqua] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [verify segment activation](../../ui/activate-batch-profile-destinations.md#verify) in the segment activation tutorial. 
+For [!DNL Oracle Eloqua] destinations, Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [verify segment activation](../../ui/activate-batch-profile-destinations.md#verify) in the segment activation tutorial. 
 
 ## Set up data import into [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
