@@ -16,11 +16,10 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will be evaluated along with the nightly scheduled segment job.
 >
->Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
+>Segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
 
-## Streaming segmentation query types
+## Streaming segmentation query types {#query-types}
 
 >[!NOTE]
 >
@@ -78,3 +77,31 @@ For more information about segment definitions, please read the previous section
 This user guide explains how streaming-enabled segment definitions work on Adobe Experience Platform and how to monitor streaming-enabled segments. 
 
 To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md).
+
+## Appendix
+
+The following section lists frequently asked questions regarding streaming segmentation:
+
+### Does streaming segmentation "unqualification" also happen in real time?
+
+For most instances, streaming segmentation unqualification happens in real-time. However, streaming segments that use segments of segments do **not** unqualify in real-time, instead unqualifying after 24 hours.
+
+### What data does streaming segmentation work on?
+
+Streaming segmentation works on all data that was ingested using a streaming source. Additionally, streaming segmentation may work on data that was ingested using a batch-based source **after** new data comes in for already ingested data if the segment has not been re-evaluated yet. However, 
+
+### How are segments defined as batch or streaming segmentation?
+
+A segment is defined as either batch or streaming segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment can be found in the [streaming segmentation query types section](#query-types).
+
+### Can a user define a segment as batch or streaming segmentation?
+
+At this time, the user cannot define if a segment is evaluated using batch or streaming ingestion, as the system will automatically determine which method the segment will be evaluated with. 
+
+### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
+
+The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. 
+
+The number under the "Last X days", however, **only** includes audiences that are qualified in streaming segmentation, and only increases if you have streamed data into the system and it accounts toward that streaming definition.
+
+As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment.
