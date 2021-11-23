@@ -1,6 +1,7 @@
 ---
 title: Extend a Soft Enum Field
 description: Learn how to extend a soft enum field in the Schema Registry API.
+exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 ---
 # Extend a soft enum field
 
