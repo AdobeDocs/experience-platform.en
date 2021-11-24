@@ -63,6 +63,12 @@ Specifically, details about the **[!UICONTROL total qualified audience size]** a
 
 Underneath is a line graph that shows the number of segments that were qualified and disqualified in the last 24 hours. The dropdown can be adjusted to show the last 24 hours, last week, or last 30 days.
 
+>[!NOTE]
+>
+>A segment is considered qualified if it goes from having no status to realized or if it goes from exited to realized. A segment is considered unqualified if it goes from realized to exited or from existing to exited.
+>
+>More information about these statuses can be found in the status table within the [segmentation overview](../home.md#browse).
+
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
 Additional information about the last segment evaluation can be found by selecting the information bubble.
