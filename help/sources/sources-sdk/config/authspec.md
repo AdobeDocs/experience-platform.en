@@ -174,7 +174,7 @@ Basic authentication is an authentication type that allows you to access your ap
 | Property| Description | Example |
 | --- | --- | --- |
 | `authSpec.name` | Displays the name of the supported authentication type. | `Basic Authentication` |
-| `authSpec.type` | Defines the type of authentication supported by the source. | `oAuth2-refresh-code` |
+| `authSpec.type` | Defines the type of authentication supported by the source. | `BasicAuthentication` |
 | `authSpec.spec` | Contains information on the authentication's schema, data type, and properties. |
 | `authSpec.spec.$schema` | Defines the schema used for the authentication. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Defines the data type of the schema. | `object` |

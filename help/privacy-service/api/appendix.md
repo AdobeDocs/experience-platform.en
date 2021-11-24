@@ -62,7 +62,7 @@ The following table outlines the accepted values for specifying an Adobe product
 | Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
-| Adobe Experience Platform | `AdobeCloudPlatform` |
+| Adobe Experience Platform (Data Lake) | `aepDataLake` |
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Automation Product | `automationProduct` |
