@@ -15,9 +15,9 @@ This page lists and describes all the API operations that you can perform using 
 
 >[!IMPORTANT]
 >
->Use this API endpoint to generate sample profiles for two separate purposes, either: 
->* to use when [crafting and testing a message transformation template](./create-template.md) - by using *destination ID* as a query parameter.
->* to use when making calls to [test if your destination is configured correctly](./test-destination.md) - by using *destination instance ID* as a query parameter.
+>Use this API endpoint to generate sample profiles for two separate use cases. You can either: 
+>* generate profiles to use when [crafting and testing a message transformation template](./create-template.md) - by using *destination ID* as a query parameter.
+>* generate profiles to use when making calls to [test if your destination is configured correctly](./test-destination.md) - by using *destination instance ID* as a query parameter.
 
 You can generate sample profiles based on either the Adobe XDM source schema (to use when testing your destination), or the target schema supported by your destination (to use when crafting your template). To understand the difference between Adobe XDM source schema and target schema, read the overview section of the [Message format](./message-format.md) article.
 
@@ -33,7 +33,9 @@ Before continuing, please review the [getting started guide](./getting-started.m
 >
 >Add the sample profiles generated here to HTTP calls when [testing your destination](./test-destination.md). 
 
-You can generate sample profiles based on the source schema by making a GET request to the `authoring/sample-profiles/` endpoint and providing the ID of a destination instance that you created based on the destination configuration that you want to test. Note that you must have established a connection to your destination before attempting to test your destination. Read the [activate destination tutorial](/help/destinations/ui/activation-overview.md) and see the tip below for how to get the destinations instance ID to use for this API.
+You can generate sample profiles based on the source schema by making a GET request to the `authoring/sample-profiles/` endpoint and providing the ID of a destination instance that you created based on the destination configuration that you want to test. 
+
+To get the ID of a destination instance, you must first create a connection in the Experience Platform UI to your destination before attempting to test your destination. Read the [activate destination tutorial](/help/destinations/ui/activation-overview.md) and see the tip below for how to get the destinations instance ID to use for this API.
 
 >[!TIP]
 >
