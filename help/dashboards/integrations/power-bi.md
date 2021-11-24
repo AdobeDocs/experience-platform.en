@@ -26,7 +26,7 @@ You must also have a Power BI account to follow this tutorial. To create an acco
 
 ## Install the Power BI application integration
 
-Within the Platform UI, select **[!UICONTROL Dashboards]** in the left navigation to open the [UICONTROL Dashboards] workspace. The Dashboards workspace appears. The [!UICONTROL Browse] tab displays a list of currently available dashboard views. To learn more about available dashboards, see the [inventory documentation](../inventory.md). 
+Within the Platform UI, select **[!UICONTROL Dashboards]** in the left navigation to open the [!UICONTROL Dashboards] workspace. The Dashboards workspace appears. The [!UICONTROL Browse] tab displays a list of currently available dashboard views. To learn more about available dashboards, see the [inventory documentation](../inventory.md). 
 
 Next, select the **[!UICONTROL Integrations]** tab. The Power BI application integration page appears. From here, select **[!UICONTROL Install]** to begin the installation.
 
