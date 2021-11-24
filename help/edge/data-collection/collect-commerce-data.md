@@ -117,7 +117,7 @@ The product list indicates which products are related to the corresponding actio
 
 ## Examples
 
-`productView` event
+`productViews` event
 
 ```javascript
 alloy("sendEvent",{
@@ -141,7 +141,7 @@ alloy("sendEvent",{
 });
 ```
 
-`productView` event
+`productListAdds` event
 
 ```javascript
 alloy("sendEvent",{
@@ -171,7 +171,7 @@ alloy("sendEvent",{
 });
 ```
 
-`checkout` event
+`checkouts` event
 
 ```javascript
 alloy("sendEvent",{
@@ -199,7 +199,7 @@ alloy("sendEvent",{
 });
 ```
 
-`purchase` event
+`order` event
 
 ```javascript
 alloy("sendEvent",{
