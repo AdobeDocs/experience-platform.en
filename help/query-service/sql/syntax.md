@@ -344,6 +344,17 @@ Datagroups are a common component of Decision Support Systems (DSS) that support
 
 Query Service provides constructs to create databases, schemas, and tables and defines relations between them using relationship tables tables. A relationship is defined between datasets using dimension tables to contain primary keys, and Fact tables that contain foreign keys and point to the dimension table. Both store their information in either a column or attribute.
 
+Fact tables can point to other fact tables through primary and foreign key relationships using the ALTER keyword. Below is an example of this type of link.
+
+```SQL
+CREATE DATABASE dg1;
+CREATE SCHEMA dg1.schema1;
+CREATE table t1 ...;
+CREATE view v1 ...;
+ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
+ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
+```
+
 ## [!DNL Spark] SQL commands 
 
 The sub-section below covers the Spark SQL commands supported by Query Service.
