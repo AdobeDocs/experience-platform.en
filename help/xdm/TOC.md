@@ -34,7 +34,7 @@ feature: Schemas
     * [XDM Business Opportunity Person Relation](./classes/b2b/business-opportunity-person-relation.md)
     * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
     * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
-* Schema field groups {#field-groups}
+* Field groups {#field-groups}
   * Profile field groups {#profile}
     * [Demographic Details](./field-groups/profile/demographic-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
