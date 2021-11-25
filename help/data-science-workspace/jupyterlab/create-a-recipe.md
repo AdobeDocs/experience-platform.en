@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
 solution: Experience Platform
-title: Create a recipe using JupyterLab Notebooks
+title: Create a model using JupyterLab Notebooks
 topic-legacy: tutorial
 type: Tutorial
 description: This tutorial walks you through the required steps to create a recipe using the JupyterLab notebooks recipe builder template.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 ---
-# Create a recipe using JupyterLab Notebooks
+# Create a model using JupyterLab Notebooks
 
 This tutorial walks you through the required steps to create a recipe using the JupyterLab notebooks recipe builder template.
 
@@ -22,14 +22,14 @@ This tutorial walks you through the required steps to create a recipe using the 
 
 The following tutorial uses a custom Luma purchase propensity model. Before proceeding [download the required assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) zip folder. This folder contains:
 
-- The purchase propensity model
-- A notebook used to create a training dataset (a subset of the Luma web data)
+- The purchase propensity model notebook
+- A notebook used to ingest data to a training dataset (a subset of the Luma web data)
 - A demo JSON file containing 730,000 Luma users web data
 - An optional Python 3 EDA (exploratory data analysis) Notebook which can be used to understand the web data and model.
 
 >[!NOTE]
 >
-> You can use your own schema and data to follow along, however, the demo model used in this tutorial will not work unless it's provided the proper configuration files and requirements file. This propensity model was designed to work with specific data.
+> You can use your own schema and data to follow along, however, the demo model used in this tutorial does not work unless it's provided the proper configuration files and requirements file. This demo propensity model was designed to work with specific data.
 
 ### Create the Luma web data schema and ingest the data
 
@@ -39,7 +39,7 @@ In order to create a recipe you must have a dataset in Platform that can be used
 
 ### Create the training, scoring, and scoring results datasets
 
-In order to run the recipe builder notebooks training and scoring function, you need to have datasets to read and write to. The following video tutorial walks you through setting up the training, scoring, and scoring results datasets used in this tutorial.
+In order to run the recipe builder notebooks training and scoring function, you need to specify the dataset(s) and schema(s) that are needed for training/scoring. The following video tutorial walks you through setting up the training, scoring, and scoring results datasets used in this tutorial.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333426)
 
@@ -53,9 +53,10 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 >
 >The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports [!DNL Python].
 
+<!-- update this screenshot -->
 ![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-When you click on the Recipe Builder notebook from the launcher, the notebook is be opened in the tab. The template used in the notebook is the Python Retail Sales Forecasting Recipe which can also be found in [this public repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
+When you select the Recipe Builder notebook from the launcher, the notebook is be opened in a new tab. 
 
 You will notice that in the toolbar there are three additional actions namely – **[!UICONTROL Train]**, **[!UICONTROL Score]**, and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. More information about these actions will be talked about [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
 
