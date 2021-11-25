@@ -80,7 +80,13 @@ The **[!UICONTROL Audience size trend]** widget provides information regarding t
 
 To learn more about segment evaluation and how profiles qualify and exit from segments, please refer to the [Segmentation Service documentation](../../segmentation/home.md).
 
-![](../images/segments/audience-size-trend.png)
+![](../images/segments/audience-size-trend-captions.png)
+
+The **[!UICONTROL Audience size trend]** widget displays a 'captions' button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog.
+
+A machine learning model automatically generates captions for describing the key trends and important events by analyzing the chart and the data.
+
+![The automatic captions dialog for the Audience size trend widget.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
