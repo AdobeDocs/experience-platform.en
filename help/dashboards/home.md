@@ -16,9 +16,9 @@ Dashboards provide out-of-the-box reporting on your organization's data and are 
 
 ## Getting started with dashboards
 
-To view and manage dashboards, navigate to **[!UICONTROL Dashboards]** in the Experience Platform user interface (UI) and select the **[!UICONTROL Browse]** tab.
+To view and manage dashboards, navigate to **[!UICONTROL Dashboards]** in the Experience Platform user interface (UI) and select the **[!UICONTROL Browse]** tab to access the dashboard inventory.
 
-You can also access dashboards by navigating to the appropriate section within the UI for the dashboard you would like to view. For example, navigate to **[!UICONTROL Profiles]** to view the profiles dashboard. Once in the appropriate section of the UI, select the **[!UICONTROL Overview]** tab.
+You can also access dashboards by navigating to the appropriate section within the UI for the dashboard you would like to view. To view the dashboard for profiles, for example, navigate to the **[!UICONTROL Profiles]** workspace and select the **[!UICONTROL Overview]** tab.
 
 The data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the dashboards are not updating in real time.
 
@@ -28,9 +28,7 @@ The data in the snapshot shows the data exactly as it appears at the specific po
 
 ## Dashboard inventory
 
-For detailed steps on how to use the **[!UICONTROL Dashboards]** section of the Experience Platform UI to view all available dashboards, please refer to the [dashboard inventory guide](./inventory.md).
-
-<!-- confirm whether Application intergrations are still a thing. -->
+For detailed steps on how to use the **[!UICONTROL Dashboards]** workspace to view all available dashboards, please refer to the [dashboard inventory guide](./inventory.md).
 
 ## Available dashboards
 
