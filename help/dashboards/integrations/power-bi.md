@@ -5,7 +5,7 @@ description: Use the Power BI report templates feature to explore Experience Pla
 
 # Power BI report templates for Platform Dashboards
 
-The Power BI report template feature allows you to create compelling reports populated with data from Adobe Experience Platform. The streamlined installation process automatically installs standard widgets for Real-time Customer Profile, Segmentation, and destinations, and connects to your data models so you can easily customize and extend your report templates. These reports can be shared across your entire organization without the recipients needing credentials for your IMS Organization on Platform.
+The Power BI report template feature allows you to create compelling reports populated with data from Adobe Experience Platform. The streamlined installation process automatically installs standard widgets for Real-time Customer Profile, segmentation, and destinations. The installation also connects Power BI to your data models so you can easily customize and extend your report templates. These reports can be shared across your entire organization without the recipients needing credentials for your IMS Organization on Platform.
 
 This document provides instructions on how to connect Adobe Experience Platform with the Power BI application and use report templates to share key Platform data insights with external users.
 
@@ -20,7 +20,7 @@ To install the Power BI application integration, users must first have acquired 
 
 To learn how to assign these permissions, please read the [access control](../../access-control/home.md) documentation.
 
-You must also have a Power BI account to follow this tutorial. To create an account, navigate to the [Power BI homepage](https://powerbi.microsoft.com/en-us/) and follow the sign-up process. Users for this Power BI account must also have the **Create workspace** setting enabled within Power BI settings. The **Create workspace** setting is found within Tenant settings of the Power BI admin portal. If your account is provided by your Tenant or employer, contact your respective admin to enable this setting. 
+You must also have a Power BI account to follow this tutorial. To create an account, navigate to the [Power BI homepage](https://powerbi.microsoft.com/en-us/) and follow the sign-up process. Users for this Power BI account must also enable the **Create workspace** setting within their Power BI settings. The **Create workspace** setting is found within the tenant settings of the Power BI admin portal. If your account is provided by your tenant or employer, contact your respective admin to enable this setting. 
 
 ![Power BI Admin portal create workspace settings.](../images/power-bi/create-workspace-settings.png)
 
@@ -38,11 +38,11 @@ Next, select the **[!UICONTROL Integrations]** tab. The Power BI application int
 
 ### Credentials
 
-The first step in the installation process is to provide non-expiring credentials for the Power BI application integration. There are two options available to provide these: [!UICONTROL  Create  new credentials] or [!UICONTROL  Use existing credentials]. Select the appropriate toggle.
+The first step in the installation process is to provide non-expiring credentials for the Power BI application integration. There are two options available to provide these: [!UICONTROL  Create new credentials] or [!UICONTROL Use existing credentials]. Select the appropriate toggle.
 
-#### Create New credentials
+#### Create new credentials
 
-There are three required fields when generating new credentials, [!UICONTROL Name], [!UICONTROL Assigned to], and [!UICONTROL Password]. The [!UICONTROL Assigned to] field relates to the email address associated with your Power BI account. 
+There are two required fields when generating new credentials, [!UICONTROL Name], and [!UICONTROL Assigned to]. The [!UICONTROL Assigned to] field relates to the email address associated with your Power BI account. 
 
 ![Power BI generate new credentials screen.](../images/power-bi/generate-new-credentials.png)
 
@@ -54,7 +54,7 @@ To learn more about generating non-expiring Query Service credentials, please re
 
 After generating non-expiring credentials for the first time, a JSON file is downloaded that can be shared with other users who can then use these credentials to complete the installation process.
 
-#### Use Existing credentials
+#### Use existing credentials
 
 A JSON credential file can also be uploaded to pass validation. These JSON files holding the non-expiring credential values are downloaded to the local machine when a non-expiring credential is created.
 
@@ -66,23 +66,29 @@ Select **[!UICONTROL Upload credential file]**, then select the appropriate JSON
 
 ![Power BI credentials screen with Upload credential file button highlighted.](../images/power-bi/upload-credential-file.png)
 
-### Review consent
+After you provide the non-expiring credentials, they are automatically validated by Platform. A confirmation message appears once validation is successful. Select **[!UICONTROL Next]** to review the consent agreement for the Power BI application.  
 
-After you provide the non-expiring credentials, they are automatically validated by Platform. A confirmation message appears once validation is successful.
+![Non-expiring credentials successfully validated screen with the Next button highlighted.](../images/power-bi/successfully-uploaded-credential-file.png)
 
-A new window appears where you must provide consent to allow Power BI to access and use your data according their terms of service and privacy statement. Select **[!UICONTROL Accept]** to grant Power BI permission to access and use your Platform data.
+### Provide consent
+
+The consent display appears. Select **[!UICONTROL Review consent]** to open a new window detailing the permissions required to allow Power BI access and use of your data according to their terms of service and privacy statement. 
+
+![The provide consent display with the Review consent button highlighted.](../images/power-bi/provide-consent-display.png)
+
+Select **[!UICONTROL Accept]** to grant Power BI permission to access and use your Platform data.
 
 ![Permissions request for Power BI application.](../images/power-bi/permissions.png)
 
 >[!NOTE]
 >
->If you exit the installation process at any point before providing consent, the Power BI application integration will not be installed to the Dashboards inventory.
+>If you exit the installation process at any point before providing consent, the Power BI application integration will not be installed to the dashboards inventory.
 
 After providing consent, the report template is automatically installed in the Power BI environment as part of the installation process. Power BI then uses the non-expiring credentials access Platform, sequentially execute all the SQL queries, and populate the report template with the returned data.
 
->[!NOTE]
->
->Only the user who installs the Power BI dashboard can delete it. Deleting the Power BI dashboard from the Platform UI does NOT delete the report templates available in your Power BI environment. If you want to completely delete the information held in the Power BI report templates, you need to log into your Power BI account and delete the report templates from that environment. Once deleted, a user can reinstall the Power BI dashboard by following the same installation instructions as outlined above.
+Select **[!UICONTROL Finish]** to return to the dashboard inventory.
+
+![The provide consent display with the Finish button highlighted.](../images/power-bi/finish-consent-review.png)
 
 Now that the Power BI report template is installed, its link is added to the list of available Dashboards under the [!UICONTROL Browse] tab. Select **[!UICONTROL Power BI]** from the list to navigate to the Power BI environment. 
 
@@ -90,9 +96,11 @@ Now that the Power BI report template is installed, its link is added to the lis
 >
 >Power BI admins need to make sure that the users have the appropriate access permissions to view these dashboards in the Power BI environment. 
 
+![Power BI listed in the dashboards inventory.](../images/power-bi/power-bi-dashboard-inventory.png)
+
 ## Power BI workspace
 
-After logging into [the Power BI workspace](https://dxt.powerbi.com), report templates are available for each of the services for which you have access to. The report templates include profiles, segments, and destinations dashboards **only** if they have the corresponding view permissions.
+After logging into [the Power BI workspace](https://dxt.powerbi.com), report templates are available for each of the services to which you have access. The report templates include profiles, segments, and destinations dashboards **only** if they have the corresponding view permissions.
 
 The standard widgets from profiles, segments, and destinations are available within the Power BI template reports by default.
 
@@ -106,26 +114,38 @@ After a dashboard is installed in Power BI, report templates are displayed to al
 
 ## Customize your Power BI report template
 
+Through the use of custom widgets, you can add custom attributes to your data model to enrich the report templates provided by Power BI.
+
+### Create a custom widget
+
+Create a custom widget to include data other than standard XDM schema class attributes within your Power BI reports. Different attributes from the union schema of a particular class can be added to a custom widget through the Widget Library in the Platform UI.
+
+To learn more about the function of the Widget Library and how to access it within the Platform UI see the [Widget Library overview](../customize/widget-library.md). When you have a good understanding of the Widget Library, please read the documentation for [instructions on how to create a custom widget](../customize/custom-widgets.md).
+
 >[!IMPORTANT]
 >
 >Newly created custom widgets are NOT automatically synchronized between Adobe Experience Platform dashboards and the Power BI report templates. Any custom widgets created in the Platform UI have to be manually recreated inside the Power BI environment.
 
-You can add custom attributes to your data model to enrich the report templates provided by Power BI. Platform provides two methods to add custom attributes, either through the UI or by using the Schema Registry API. 
+To learn more about how you can view and explore union schemas to the benefit of your custom widgets read the [union schema UI guide](../../profile/ui/union-schema.md).
 
-Any attribute that you choose to add to the XDM Individual Profile class is added to the union schema as a custom attribute. See the documentation on [how to add field groups](../../xdm/tutorials/create-schema-ui.md#field-group) through the UI Schema Editor or [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information.
+### Recreate your custom widget in the Power BI environment
 
-### Create a custom widget
+Once your dashboard has the appropriate metrics and attributes contained within custom widgets, you are ready to modify the report template displayed from within the Power BI environment. See the [Power BI documentation](https://docs.microsoft.com/en-us/power-bi/) for information on how to edit a report templates using the Power BI UI.
 
-Different attributes from the union schema of a particular class can be added to a custom widget. A custom widget is created or modified through the Widget Library in the Platform UI. See the [Widget Library overview](../customize/widget-library.md) for more information. To access the Widget Library, select the **[!UICONTROL Modify dashboard]** button from either the [!UICONTROL Profiles], [!UICONTROL Segments], or [!UICONTROL Destinations] overview tab. 
+## Delete the Power BI application integration
 
-![The Profile dashboard with Modify dashboard highlighted.](../images/power-bi/modify-dashboard.png)
+Only the user who installed the Power BI dashboard can delete the integration from the Platform UI. To delete the dashboard, navigate to the dashboard inventory **[!UICONTROL Browse]** tab. Next, select the delete icon (![](../images/power-bi/delete-icon.png)) next to the dashboard name. 
 
-From the Widget Library you must then select the **[!UICONTROL Custom]** tab followed by **[!UICONTROL Edit schema]**.
+![Dashboards inventory screen browse tab displayed with Browse button and delete icon highlighted.](../images/power-bi/delete-power-bi-dashboard.png)
 
-![The Widget Library display with the Custom tab and Edit schema highlighted.](../images/power-bi/widget-library-custom-tab.png)
+A confirmation popover appears. Select **[!UICONTROL Delete]** to confirm the process.
 
-See the documentation for complete instructions on how to [edit a schema to create custom widgets](../customize/edit-schema.md#edit-schema). Newly selected attributes become available following the next daily snapshot when the data is refreshed.
+>[!IMPORTANT]
+>
+>Deleting the Power BI dashboard from the Platform UI does NOT delete the report templates available in your Power BI environment.
+
+If you want to completely delete the information held in the Power BI report templates, you need to log into your Power BI account and delete the report templates from that environment. Once deleted, a user can reinstall the Power BI dashboard by following the same installation instructions as outlined above.
 
 ## Next steps
 
-By reading this document you have a better understanding of how Power BI report templates can be integrated into Platform to share compelling data insights from your profiles, segments, or destinations dashboards. See the [Dashboard customization overview](../customize/overview.md) document to learn more about customizing your dashboards, or documentation on creating custom widgets.
+By reading this document you have a better understanding of how Power BI report templates can be integrated into Platform to share compelling data insights from your profiles, segments, or destinations dashboards. See the [dashboard customization overview](../customize/overview.md) document to learn more about customizing your dashboards, or documentation on creating custom widgets.
