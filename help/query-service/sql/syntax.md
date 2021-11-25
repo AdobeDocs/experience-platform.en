@@ -338,6 +338,12 @@ EXCEPTION
 END$$;
 ```
 
+## Datagroups
+
+Datagroups are a common component of Decision Support Systems (DSS) that support decision-making activities for computerized information.
+
+Query Service provides constructs to create databases, schemas, and tables and defines relations between them using relationship tables tables. A relationship is defined between datasets using dimension tables to contain primary keys, and Fact tables that contain foreign keys and point to the dimension table. Both store their information in either a column or attribute.
+
 ## [!DNL Spark] SQL commands 
 
 The sub-section below covers the Spark SQL commands supported by Query Service.
