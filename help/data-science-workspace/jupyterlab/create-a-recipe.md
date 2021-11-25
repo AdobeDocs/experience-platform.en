@@ -1,22 +1,47 @@
 ---
 keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
 solution: Experience Platform
-title: Create a Recipe Using Jupyter Notebooks
+title: Create a recipe using JupyterLab Notebooks
 topic-legacy: tutorial
 type: Tutorial
-description: This tutorial will go over two main sections. First, you will create a machine learning model using a template within JupyterLab Notebook. Next, you will exercise the notebook to recipe workflow within JupyterLab to create a recipe within Data Science Workspace.
+description: This tutorial walks you through the required steps to create a recipe using the JupyterLab notebooks recipe builder template.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 ---
-# Create a recipe using Jupyter Notebooks
+# Create a recipe using JupyterLab Notebooks
 
-This tutorial will go over two main sections. First, you will create a machine learning model using a template within [!DNL JupyterLab Notebook]. Next, you will exercise the notebook to recipe workflow within [!DNL JupyterLab] to create a recipe within [!DNL Data Science Workspace]. 
+This tutorial walks you through the required steps to create a recipe using the JupyterLab notebooks recipe builder template.
 
 ## Concepts introduced:
 
-- **Recipes:** A recipe is Adobe's term for a model specification and is a top-level container representing a specific machine learning, AI algorithm or ensemble of algorithms, processing logic, and configuration required to build and execute a trained model and hence help solve specific business problems.
+- **Recipes:** A recipe is Adobe's term for a model specification and is a top-level container representing a specific machine learning, AI algorithm or ensemble of algorithms, processing logic, and configuration required to build and execute a trained model.
 - **Model:** A model is an instance of a machine learning recipe that is trained using historical data and configurations to solve for a business use case.
 - **Training:** Training is the process of learning patterns and insights from labeled data.
 - **Scoring:** Scoring is the process of generating insights from data using a trained model.
+
+## Download the required assets
+
+The following tutorial uses a custom Luma purchase propensity model. Before proceeding [download the required assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) zip folder. This folder contains:
+
+- The purchase propensity model
+- A notebook used to create a training dataset (a subset of the Luma web data)
+- A demo JSON file containing 730,000 Luma users web data
+- An optional Python 3 EDA (exploratory data analysis) Notebook which can be used to understand the web data and model.
+
+>[!NOTE]
+>
+> You can use your own schema and data to follow along, however, the demo model used in this tutorial will not work unless it's provided the proper configuration files and requirements file. This propensity model was designed to work with specific data.
+
+### Create the Luma web data schema and ingest the data
+
+In order to create a recipe you must have a dataset in Platform that can be used to train and score your model. The following video tutorial from the [Data Science Workspace course](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) walks you through creating the schema and ingesting the data used by the purchase propensity model.
+
+>[!VIDEO](https://video.tv.adobe.com/v/333312)
+
+### Create the training, scoring, and scoring results datasets
+
+In order to run the recipe builder notebooks training and scoring function, you need to have datasets to read and write to. The following video tutorial walks you through setting up the training, scoring, and scoring results datasets used in this tutorial.
+
+>[!VIDEO](https://video.tv.adobe.com/v/333426)
 
 ## Get started with the [!DNL JupyterLab] notebook environment
 
