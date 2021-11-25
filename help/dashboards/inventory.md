@@ -1,21 +1,17 @@
 ---
-title: View Configured Dashboards in Experience Platform
+title: View Configured Dashboards
 description: View a list of your organization's configured dashboards within the Experience Platform UI.
 ---
 
-# View configured dashboards in Experience Platform
+# View configured dashboards
 
-If your organization has multiple dashboards available within Adobe Experience Platform, you can review these dashboards within the user interface.
+If your organization has multiple dashboards available within Adobe Experience Platform, you can review these dashboards within the user interface (UI).
 
-## View list of dashboards
+To view the dashboards that your organization has configured, select **[!UICONTROL Dashboards]** in the left navigation and then select the **[!UICONTROL Browse]** tab.
 
-In order to view the dashboards that your organization has configured, select **[!UICONTROL Dashboards]** in the left navigation and then select the **[!UICONTROL Browse]** tab.
-
-The list includes all dashboards available on your Platform instance, including integrated dashboards created by your organization that have been configured through third party applications.
+A list of all dashboards available on your Platform instance is displayed under the [!UICONTROL Browse] tab. This includes integrated dashboards created by your organization that have been configured through third-party applications.
 
 ![The Browse tab within the dashboards section of the UI.](./images/inventory/browse-tab.png)
-
-## View an individual dashboard
 
 You can view an individual dashboard by selecting the name of the dashboard from the list.
 
