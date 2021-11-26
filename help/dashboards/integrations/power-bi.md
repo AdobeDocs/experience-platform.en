@@ -126,7 +126,7 @@ Custom widgets are created through the Widget Library. See the [Widget Library o
 
 >[!IMPORTANT]
 >
->Newly created custom widgets are NOT automatically synchronized between Adobe Experience Platform dashboards and the Power BI report templates. Any custom widgets created in the Platform UI have to be manually recreated inside the Power BI environment.
+>Newly created custom widgets are **not** automatically synchronized between Adobe Experience Platform dashboards and the Power BI report templates. Any custom widgets created in the Platform UI have to be manually re-created inside the Power BI environment.
 
 ### Recreate your custom widget in the Power BI environment
 
@@ -146,7 +146,7 @@ A confirmation popover appears. Select **[!UICONTROL Delete]** to confirm the pr
 
 >[!IMPORTANT]
 >
->Deleting the Power BI dashboard from the Platform UI does NOT delete the report templates available in your Power BI environment. If you want to completely delete the information held in the Power BI report templates, you need to log into your Power BI account and delete the report templates from that environment. Once deleted, a user can reinstall the Power BI dashboard by following the same installation instructions as outlined above.
+>Deleting the Power BI dashboard from the Platform UI does **not** delete the report templates available in your Power BI environment. If you want to completely delete the information held in the Power BI report templates, you need to log into your Power BI account and delete the report templates from that environment. Once deleted, a user can reinstall the Power BI dashboard by following the same installation instructions as outlined above.
 
 ## Next steps
 
