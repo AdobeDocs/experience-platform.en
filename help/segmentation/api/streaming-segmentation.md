@@ -428,8 +428,8 @@ At this time, the user cannot define if a segment is evaluated using batch or st
 
 ### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
 
-The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. 
+The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. This value is shown for both batch and streaming segments.
 
-The number under the "Last X days", however, **only** includes audiences that are qualified in streaming segmentation, and only increases if you have streamed data into the system and it accounts toward that streaming definition.
+The number under the "Last X days", however, **only** includes audiences that are qualified in streaming segmentation, and only increases if you have streamed data into the system and it accounts toward that streaming definition. This value is **only** shown for streaming segments. As a result, this value **may** display as 0 for batch segments.
 
 As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment.
