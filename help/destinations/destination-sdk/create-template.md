@@ -39,7 +39,7 @@ Before you are ready to create the template, make sure you complete the steps be
 
 >[!TIP]
 >
->Before you start crafting and editing your message transformation template, you can start calling the [render template API endpoint](./create-template.md#render-template-api) with a simple template that exports your raw profiles without applying any transformations. The syntax for the simple template is: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+>Before crafting and editing your message transformation template, you can start by calling the [render template API endpoint](./render-template-api.md#render-exported-data) with a simple template that exports your raw profiles without applying any transformations. The syntax for the simple template is: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 The process to get and test the template is iterative. Repeat the steps below until the exported profiles match your destination's expected data format.
 
