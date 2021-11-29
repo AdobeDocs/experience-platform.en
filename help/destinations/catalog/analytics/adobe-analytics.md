@@ -36,7 +36,7 @@ Select the tag property in which you want to install the extension. You also hav
 
 The workflow takes you to the Data Collection UI to complete the installation. 
 
-For information about the extension configuration options, see the [Adobe Analytics extension page](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html) the tags documentation.
+For information about the extension configuration options, see the [Adobe Analytics extension page](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) the tags documentation.
 
 You can also install the extension directly in the [Data Collection UI](https://experience.adobe.com/#/data-collection/). See the guide on [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) for more information.
 

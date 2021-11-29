@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Input and Output in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: The following document outlines the different input and outputs utilized in Attribution AI.
@@ -12,10 +12,13 @@ The following document outlines the different input and outputs utilized in [!DN
 
 ## [!DNL Attribution AI] input data
 
-Attribution AI works by analyzing one of the following datasets to calculate algorithmic scores:
+Attribution AI works by analyzing the following datasets to calculate algorithmic scores:
 
-- Consumer Experience Event (CEE) dataset
 - Adobe Analytics datasets using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Experience Event (EE) dataset
+- Consumer Experience Event (CEE) dataset
+
+You can add multiple datasets from different sources if each of the datasets shares the same identity type (namespace) such as an ECID. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
 
 >[!IMPORTANT]
 >

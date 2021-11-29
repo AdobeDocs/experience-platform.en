@@ -109,6 +109,10 @@ See the [profile endpoint guide](./endpoints/profile.md) to learn how to view th
 
 The `/search` endpoint provides a way to find resources matching a desired criteria, expressed as a query. All queries are scoped to your current company and accessible properties. See the [search endpoint guide](./endpoints/search.md) to learn how use this functionality.
 
+## Secrets
+
+A secret contains credentials that allow event forwarding to authenticate to another system for secure data exchange. See the [secrets guide](./guides/secrets.md) for an overview on how secrets function in event forwarding, and the [secrets endpoint guide](./endpoints/secrets.md) to learn how to manage them in the Reactor API.
+
 ## Next steps
 
 To begin making calls using the Schema Registry API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.

@@ -136,7 +136,7 @@ Please note that you cannot map across different types. For example, you cannot 
 
 >[!TIP]
 >
->[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
+>Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
 Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
 
@@ -163,6 +163,10 @@ To set the start time for ingestion, adjust the date and time displayed in the s
 
 Provide values for the schedule and select **[!UICONTROL Next]**.
 
+>[!NOTE]
+>
+>For batch ingestion, every ensuing dataflow selects files to be ingested from your source based on their **last modified** timestamp. This means that batch dataflows select files from the source that are either new or have been modified since the last dataflow run.
+
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
 ### Set up a one-time ingestion dataflow
@@ -178,6 +182,12 @@ Once you have provided appropriate values to the schedule, select **[!UICONTROL 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
 ## Provide dataflow details
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_alerts_subscribe"
+>title="Subscribe to sources alerts"
+>abstract="Check this option to subscribe to notification alerts for your sources dataflows."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="Learn more in documentation"
 
 The **[!UICONTROL Dataflow detail]** step appears, allowing you to name and give a brief description about your new dataflow.
 
