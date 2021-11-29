@@ -9,7 +9,7 @@ exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 ---
 # Create a model using JupyterLab Notebooks
 
-This tutorial walks you through the required steps to create a recipe using the JupyterLab notebooks recipe builder template.
+This tutorial walks you through the required steps to create a model using the JupyterLab notebooks recipe builder template.
 
 ## Concepts introduced:
 
@@ -45,36 +45,25 @@ In order to run the recipe builder notebooks training and scoring function, you 
 
 ## Get started with the [!DNL JupyterLab] notebook environment
 
-Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. To start, navigate to [Adobe Experience Platform](https://platform.adobe.com) and click on the **[!UICONTROL Notebooks]** tab on the left. Create a new notebook by selecting the Recipe Builder template from the [!DNL JupyterLab Launcher].
+Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. To start, navigate to [Adobe Experience Platform](https://platform.adobe.com) and select the **[!UICONTROL Notebooks]** tab on the left. To create a new notebook, select the Recipe Builder template from the [!DNL JupyterLab Launcher].
 
-The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring runs inside the notebook. This gives you the flexibility to make changes to their `train()` and `score()` methods in between running experiments on the training and scoring data. Once you are happy with the outputs of the training and scoring, you can create a recipe to be used in [!DNL Data Science Workspace] using the notebook to recipe functionality built in to the Recipe Builder notebook.
+The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring runs inside the notebook. This gives you the flexibility to make changes to their `train()` and `score()` methods in between running experiments on the training and scoring data. Once you are happy with the outputs of the training and scoring, you the can create a recipe and furthermore publish it as a model using the recipe to model functionality.
 
 >[!NOTE]
 >
->The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports [!DNL Python].
+>The Recipe Builder notebook supports working with all file formats but currently the create recipe functionality only supports [!DNL Python].
 
-<!-- update this screenshot -->
 ![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-When you select the Recipe Builder notebook from the launcher, the notebook is be opened in a new tab. 
+When you select the Recipe Builder notebook from the launcher, the notebook is opened in a new tab. 
 
-You will notice that in the toolbar there are three additional actions namely – **[!UICONTROL Train]**, **[!UICONTROL Score]**, and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. More information about these actions will be talked about [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
+In the new tab a toolbar contains three additional actions – **[!UICONTROL Train]**, **[!UICONTROL Score]**, and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. More information about these actions will be talked about [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## Make edits to recipe files
-
-To make edits to the recipe files, navigate to the cell in Jupyter corresponding to the file path. For example, if you want to make changes to `evaluator.py`, look for `%%writefile demo-recipe/evaluator.py`. 
-
-Start making necessary changes to the cell and when finished, simply run the cell. The `%%writefile filename.py` command will write the contents of the cell to the `filename.py`. You will have to manually run the cell for each file with changes.
-
->[!NOTE]
->
->You should run the cells manually when applicable. 
-
 ## Get started with the Recipe Builder notebook
 
-Now that you know the basics for the [!DNL JupyterLab] notebook environment, you can begin looking at the files that make up a machine learning model recipe. The files we will talk about are shown here:
+Now that you know the basics for the [!DNL JupyterLab] notebook environment, you can begin looking at the files that make up a machine learning model recipe. In this tutorial, the following files are pre-defined in the propensity model notebook:
 
 - [Requirements file](#requirements-file)
 - [Configuration files](#configuration-files)
