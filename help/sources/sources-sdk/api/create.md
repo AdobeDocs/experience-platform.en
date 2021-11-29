@@ -6,6 +6,7 @@ topic-legacy: tutorial
 description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Sources SDK.
 hide: true
 hidefromtoc: true
+exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 ---
 # Create a new connection specification using the [!DNL Flow Service] API (Beta)
 

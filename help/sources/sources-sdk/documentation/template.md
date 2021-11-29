@@ -6,6 +6,7 @@ topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to YOURSOURCE using the Flow Service API.
 hide: true
 hidefromtoc: true
+exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
 ---
 # Create a *YOURSOURCE* connection using the Flow Service API
 

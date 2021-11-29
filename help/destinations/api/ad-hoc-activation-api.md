@@ -5,8 +5,8 @@ title: (Beta) Activate audience segments to batch destinations via the ad-hoc ac
 description: This article illustrates the end-to-end workflow for activating audience segments via the ad-hoc activation API, including the segmentation jobs that take place before activation.
 topic-legacy: tutorial
 type: Tutorial
+exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
 ---
-
 # (Beta) Activate audience segments to batch destinations via the ad-hoc activation API
 
 >[!IMPORTANT]
