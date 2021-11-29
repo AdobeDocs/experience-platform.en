@@ -416,7 +416,7 @@ For most instances, streaming segmentation unqualification happens in real-time.
 
 ### What data does streaming segmentation work on?
 
-Streaming segmentation works on all data that was ingested using a streaming source. Additionally, streaming segmentation may work on data that was ingested using a batch-based source **after** new data comes in for already ingested data if the segment has not been re-evaluated yet. However, 
+Streaming segmentation works on all data that was ingested using a streaming source. For segment ingested using a batch-based source, even if a segment qualifies for streaming segmentation, it will be evaluated nightly. 
 
 ### How are segments defined as batch or streaming segmentation?
 
