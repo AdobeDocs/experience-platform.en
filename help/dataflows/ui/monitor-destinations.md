@@ -188,7 +188,8 @@ When **[!UICONTROL Flow runs]** is selected, you can see a list of flow runs for
 >[!INFO]
 >
 >For dataflows to streaming destinations, a dataflow run is broken down into hourly windows. Each hourly window generates a corresponding dataflow run ID.
-For dataflows to batch destinations, each segment has a corresponding dataflow run generated, based on the segment activation scheduled frequency. For example, if you set up a daily scheduled activation for five segments in the same destination dataflow, there will be five separate dataflow runs generated every day.
+>
+>For dataflows to batch destinations, each segment has a corresponding dataflow run generated, based on the segment activation scheduled frequency. For example, if you set up a daily scheduled activation for five segments in the same destination dataflow, there will be five separate dataflow runs generated every day.
 
 ![Flow runs panel](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
