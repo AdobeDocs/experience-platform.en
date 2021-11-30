@@ -82,13 +82,15 @@ To learn more about using the Adobe Experience Platform user interface, please r
 
 The following section lists frequently asked questions regarding streaming segmentation:
 
+The following section lists frequently asked questions regarding streaming segmentation:
+
 ### Does streaming segmentation "unqualification" also happen in real time?
 
 For most instances, streaming segmentation unqualification happens in real-time. However, streaming segments that use segments of segments do **not** unqualify in real-time, instead unqualifying after 24 hours.
 
 ### What data does streaming segmentation work on?
 
-Streaming segmentation works on all data that was ingested using a streaming source. Additionally, streaming segmentation may work on data that was ingested using a batch-based source **after** new data comes in for already ingested data if the segment has not been re-evaluated yet. However, 
+Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
 
 ### How are segments defined as batch or streaming segmentation?
 
@@ -96,12 +98,12 @@ A segment is defined as either batch or streaming segmentation based on a combin
 
 ### Can a user define a segment as batch or streaming segmentation?
 
-At this time, the user cannot define if a segment is evaluated using batch or streaming ingestion, as the system will automatically determine which method the segment will be evaluated with. 
+At this time, the user cannot define whether a segment is evaluated using batch or streaming ingestion, as the system will automatically determine which method the segment will be evaluated with. 
 
 ### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
 
-The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. 
+The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. This value is shown for both batch and streaming segments.
 
-The number under the "Last X days", however, **only** includes audiences that are qualified in streaming segmentation, and only increases if you have streamed data into the system and it accounts toward that streaming definition.
+The number under the "Last X days" **only** includes audiences that are qualified in streaming segmentation, and **only** increases if you have streamed data into the system and it counts toward that streaming definition. This value is **only** shown for streaming segments. As a result, this value **may** display as 0 for batch segments.
 
 As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment.
