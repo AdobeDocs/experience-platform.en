@@ -18,7 +18,7 @@ This tutorial walks you through the required steps to create a model using the J
 - **Training:** Training is the process of learning patterns and insights from labeled data.
 - **Scoring:** Scoring is the process of generating insights from data using a trained model.
 
-## Download the required assets
+## Download the required assets {#assets}
 
 The following tutorial uses a custom Luma purchase propensity model. Before proceeding [download the required assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) zip folder. This folder contains:
 
@@ -57,13 +57,17 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 
 When you select the Recipe Builder notebook from the launcher, the notebook is opened in a new tab. 
 
-In the new tab a toolbar contains three additional actions – **[!UICONTROL Train]**, **[!UICONTROL Score]**, and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. More information about these actions will be talked about [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
+In the new notebook tab at the top, a toolbar loads containing three additional actions – **[!UICONTROL Train]**, **[!UICONTROL Score]**, and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. More information about these actions are provided [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
 ## Get started with the Recipe Builder notebook
 
-Now that you know the basics for the [!DNL JupyterLab] notebook environment, you can begin looking at the files that make up a machine learning model recipe. In this tutorial, the following files are pre-defined in the propensity model notebook:
+In the provided assets folder is a Luma propensity model `propensity_model.ipynb`. Using the upload notebook option in JupyterLab, upload the provided model and open the notebook.
+
+![upload notebook]()
+
+The remainder of this tutorial covers the following files that are pre-defined in the propensity model notebook:
 
 - [Requirements file](#requirements-file)
 - [Configuration files](#configuration-files)
@@ -75,7 +79,7 @@ Now that you know the basics for the [!DNL JupyterLab] notebook environment, you
 
 ### Requirements file {#requirements-file}
 
-The requirements file is used to declare additional libraries you wish to use in the recipe. You can specify the version number if there is a dependency. To look for additional libraries, visit [anaconda.org](https://anaconda.org). To learn how to format the requirements file, visit [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). The list of main libraries already in use include:
+The requirements file is used to declare additional libraries you wish to use in the model. You can specify the version number if there is a dependency. To look for additional libraries, visit [anaconda.org](https://anaconda.org). To learn how to format the requirements file, visit [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). The list of main libraries already in use include:
 
 ```JSON
 python=3.6.7
@@ -89,34 +93,36 @@ data_access_sdk_python
 >
 >Libraries or specific versions you add may be incompatible with the above libraries. Additionally, if you choose to create an environment file manually, the `name` field is not allowed to be overridden.
 
+For the Luma propensity model notebook, the requirements do not need to be updated.
+
 ### Configuration files {#configuration-files}
 
 The configuration files, `training.conf` and `scoring.conf`, are used to specify the datasets you wish to use for training and scoring as well as adding hyperparameters. There are separate configurations for training and scoring. 
 
-Users must fill in the following variables before running training and scoring:
-- `trainingDataSetId`
-- `ACP_DSW_TRAINING_XDM_SCHEMA`
-- `scoringDataSetId`
-- `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA`
-- `scoringResultsDataSetId`
+In order for a model to run training, you must provide the `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA`, and `tenantId`. Additionally for scoring, you must provide the `scoringDataSetId`, `tenantId`, and `scoringResultsDataSetId `.
 
-To find the dataset and schema IDs, go to the data tab ![Data tab](../images/jupyterlab/create-recipe/dataset-tab.png) within notebooks on the left navigation bar (under the folder icon).
+To find the dataset and schema IDs, go to the data tab ![Data tab](../images/jupyterlab/create-recipe/dataset-tab.png) within notebooks on the left navigation bar (under the folder icon). Three different dataset ID's need to be provided. The `scoringResultsDataSetId` is used to store the model scoring results and should be an empty dataset. These datasets were made previously in the [Required assets](#assets) step.
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
 The same information can be found on [Adobe Experience Platform](https://platform.adobe.com/) under the **[Schema](https://platform.adobe.com/schema)** and **[Datasets](https://platform.adobe.com/dataset/overview)** tabs.
 
-By default, the following configuration parameters are set for you when you access data:
+Once compete your training and scoring configuration should look similar to the following screenshot:
+
+![configuration](../images/jupyterlab/create-recipe/config.png)
+
+By default, the following configuration parameters are set for you when you train and score data:
 
 - `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
 - `ML_FRAMEWORK_IMS_TOKEN` 
 - `ML_FRAMEWORK_IMS_ML_TOKEN` 
 - `ML_FRAMEWORK_IMS_TENANT_ID` 
 
-## Training data loader {#training-data-loader}
+## Understanding the training data loader {#training-data-loader}
 
-The purpose of the Training Data Loader is to instantiate data used for creating the machine learning model. Typically, there are two tasks that the training data loader will accomplish:
-- Load data from [!DNL Platform]
+The purpose of the Training Data Loader is to instantiate data used for creating the machine learning model. Typically, there are two tasks that the training data loader accomplishes:
+
+- Loading data from [!DNL Platform]
 - Data preparation and feature engineering
 
 The following two sections will go over loading data and data preparation. 
@@ -156,13 +162,13 @@ df = pd.read_json(data)
 
 Now your data is in the dataframe object and can be analyzed and manipulated in the [next section](#data-preparation-and-feature-engineering).
 
-### From Platform SDK
+## Training Data Loader File
 
-You can load data using the Platform SDK. The library can be imported at the top of the page by including the line:
+In this example data is loaded using the Platform SDK. The library can be imported at the top of the page by including the line:
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
-We then use the `load()` method to grab the training dataset from the `trainingDataSetId` as set in our configuration (`recipe.conf`) file.
+You can then use the `load()` method to grab the training dataset from the `trainingDataSetId` as set in our configuration (`recipe.conf`) file.
 
 ```PYTHON
 def load(config_properties):
@@ -172,16 +178,12 @@ def load(config_properties):
     # Load Data
     #########################################    
     client_context = get_client_context(config_properties)
-    
-    dataset_reader = DatasetReader(client_context, config_properties['trainingDataSetId'])
-    
-    timeframe = config_properties.get("timeframe")
-    tenant_id = config_properties.get("tenant_id")
+    dataset_reader = DatasetReader(client_context, dataset_id=config_properties['trainingDataSetId'])
 ```
 
 >[!NOTE]
 >
->As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from Experience Platform using `client_context`:
+>As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from Experience Platform using `client_context = get_client_context(config_properties)`:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
 > - `ML_FRAMEWORK_IMS_TOKEN` 
 > - `ML_FRAMEWORK_IMS_ML_TOKEN` 
@@ -191,47 +193,23 @@ Now that you have your data, you can begin with data preparation and feature eng
 
 ### Data preparation and feature engineering {#data-preparation-and-feature-engineering}
 
-After the data is loaded, the data undergoes preparation and is then split to the `train` and `val` datasets. Sample code is seen below:
+After the data is loaded, the data needs to be cleaned and undergo data preparation. In this example, the goal of the model is to predict whether a customer is going to order a product or not. Because the model is not looking at specific products, you do not need `productListItems` and therefore the column is dropped. Next, additional columns are dropped that only contain a single value or two values in a single column. When training a model, it's important to only keep useful data that will assist in predicting your goal.
 
-```PYTHON
-#########################################
-# Data Preparation/Feature Engineering
-#########################################
-dataframe.date = pd.to_datetime(dataframe.date)
-dataframe['week'] = dataframe.date.dt.week
-dataframe['year'] = dataframe.date.dt.year
+![example of data prep](../images/jupyterlab/create-recipe/data_prep.png)
 
-dataframe = pd.concat([dataframe, pd.get_dummies(dataframe['storeType'])], axis=1)
-dataframe.drop('storeType', axis=1, inplace=True)
-dataframe['isHoliday'] = dataframe['isHoliday'].astype(int)
+Once you have dropped any unnecessary data, you can begin feature engineering. The demo data used for this example does not contain any session information. Normally, you would want to have data on the current and past sessions for a particular customer. Due to the lack of session information, this example instead mimics current and past sessions via journey demarcation.
 
-dataframe['weeklySalesAhead'] = dataframe.shift(-45)['weeklySales']
-dataframe['weeklySalesLag'] = dataframe.shift(45)['weeklySales']
-dataframe['weeklySalesDiff'] = (dataframe['weeklySales'] - dataframe['weeklySalesLag']) / dataframe['weeklySalesLag']
-dataframe.dropna(0, inplace=True)
+![Journey demarcation](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
-dataframe = dataframe.set_index(dataframe.date)
-dataframe.drop('date', axis=1, inplace=True) 
-```
+After the demarcation is complete, the data is labeled and a journey is created.
 
-In this example, there are five things being done to the original dataset:
-- add `week` and `year` columns
-- convert `storeType` to an indicator variable
-- convert `isHoliday` to a numeric variable
-- offset `weeklySales` to get future and past sales value
-- split data, by date, to `train` and `val` dataset
+![label the data](../images/jupyterlab/create-recipe/label_data.png)
 
-First, `week` and `year` columns are created and the original `date` column converted to [!DNL Python] [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). Week and year values are extracted from the datetime object.
+Next, the features are created and divided into past and present. Then, any columns that are unnecessary are dropped leaving you with both the past and current journeys for Luma customers. These journeys contain information such as whether a customer purchased an item or not and the journey they took leading up to the purchase.
 
-Next, `storeType` is converted to three columns representing the three different store types, (`A`, `B`, and `C`). Each will contain a boolean value to state which `storeType` is true. The `storeType` column will be dropped.
+![final current training](../images/jupyterlab/create-recipe/final_journey.png)
 
-Similarly, `weeklySales` changes the `isHoliday` boolean to a numerical representation, one or zero.
-
-This data is split between `train` and `val` dataset.
-
-The `load()` function should complete with the `train` and `val` dataset as the output.
-
-### Scoring data loader {#scoring-data-loader}
+## Scoring data loader {#scoring-data-loader}
 
 The procedure to load data for scoring is similar to the loading training data in the `split()` function. We use the Data Access SDK to load data from the `scoringDataSetId` found in our `recipe.conf` file. 
 
