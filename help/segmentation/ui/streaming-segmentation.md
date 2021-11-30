@@ -82,8 +82,6 @@ To learn more about using the Adobe Experience Platform user interface, please r
 
 The following section lists frequently asked questions regarding streaming segmentation:
 
-The following section lists frequently asked questions regarding streaming segmentation:
-
 ### Does streaming segmentation "unqualification" also happen in real time?
 
 For most instances, streaming segmentation unqualification happens in real-time. However, streaming segments that use segments of segments do **not** unqualify in real-time, instead unqualifying after 24 hours.
