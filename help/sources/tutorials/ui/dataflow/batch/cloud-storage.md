@@ -187,7 +187,7 @@ Once you have provided appropriate values to the schedule, select **[!UICONTROL 
 >id="platform_sources_alerts_subscribe"
 >title="Subscribe to sources alerts"
 >abstract="Select the option(s) you would like to subscribe to, to receive notification alerts for your sources dataflows."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="Learn more in documentation"
+>text="Learn more in documentation"
 
 The **[!UICONTROL Dataflow detail]** step appears, allowing you to name and give a brief description about your new dataflow.
 
