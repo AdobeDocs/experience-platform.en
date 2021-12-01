@@ -57,7 +57,7 @@ Event forwarding has its own catalog of compatible extensions, such as the [Core
 
 ### Data elements
 
-The available types of data elements in event forwarding are limited to the catalog of compatible [extensions](#extensions) that provide them.
+The types of data elements that are available in event forwarding are limited to the catalog of compatible [extensions](#extensions) that provide them.
 
 While data elements themselves are created and configured the same way in event forwarding as they are for tags, there are some important syntax differences when it comes to how they reference data from Platform Edge Network and how they are tokenized in rules.
 
