@@ -2,6 +2,8 @@
 keywords: Experience Platform;home;popular topics; alerts
 description: You can subscribe to alerts when creating a dataflow, to receive alert messages regarding the status, success, or failure of your flow run.
 title: Subscribe to in-context alerts in the UI
+hide: true
+hidefromtoc: true
 ---
 # Subscribe to alert messages to monitor your sources dataflows in the UI
 
@@ -19,10 +21,10 @@ This document requires a working understanding of the following components of Ad
 * [Observability](../../../observability/home.md): [!DNL Observability Insights] allows you to monitor Platform activities through the use of statistical metrics and event notifications.
   * [Alerts](../../../observability/alerts/overview.md): When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Platform can deliver alert messages to any users in your organization who have subscribed to them.
 
-## Subscribe to alerts in the UI {#subscribe}
+## Subscribe to alerts in the UI {#subscribe-sources-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
 >title="Subscribe to sources alerts"
->abstract="Check this option to subscribe to notification alerts for your sources dataflows."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui/alerts.html?lang=en#subscribe" text="Learn more in documentation"
+>abstract="Alerts allow you to receive notifications based on the status of your sources dataflows. You can set alert notifications to get updates if your dataflow has started, is successful, has failed, or did not ingest any data."
+>text="Learn more in documentation"
