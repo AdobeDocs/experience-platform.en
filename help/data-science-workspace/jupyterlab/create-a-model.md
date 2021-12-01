@@ -20,28 +20,11 @@ This tutorial walks you through the required steps to create a model using the J
 
 ## Download the required assets {#assets}
 
-The following tutorial uses a custom Luma purchase propensity model. Before proceeding [download the required assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) zip folder. This folder contains:
-
-- The purchase propensity model notebook
-- A notebook used to ingest data to a training dataset (a subset of the Luma web data)
-- A demo JSON file containing 730,000 Luma users web data
-- An optional Python 3 EDA (exploratory data analysis) Notebook which can be used to understand the web data and model.
+Before you proceed with this tutorial you must create the required schemas and datasets. Visit the tutorial for [creating the Luma propensity model schemas and datasets](../models-recipes/create-luma-data.md) to download the required assets and set up the pre-requisites.
 
 >[!NOTE]
 >
-> You can use your own schema and data to follow along, however, the demo model used in this tutorial does not work unless it's provided the proper configuration files and requirements file. This demo propensity model was designed to work with specific data.
-
-### Create the Luma web data schema and ingest the data
-
-In order to create a recipe you must have a dataset in Platform that can be used to train and score your model. The following video tutorial from the [Data Science Workspace course](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) walks you through creating the schema and ingesting the data used by the purchase propensity model.
-
->[!VIDEO](https://video.tv.adobe.com/v/333312)
-
-### Create the training, scoring, and scoring results datasets
-
-In order to run the recipe builder notebooks training and scoring function, you need to specify the dataset(s) and schema(s) that are needed for training/scoring. The following video tutorial walks you through setting up the training, scoring, and scoring results datasets used in this tutorial.
-
->[!VIDEO](https://video.tv.adobe.com/v/333426)
+> You can skip this step if you already have the required assets and the Luma datasets for training, scoring, and scoring results.
 
 ## Get started with the [!DNL JupyterLab] notebook environment
 
