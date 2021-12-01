@@ -4,6 +4,7 @@ description: You can subscribe to alerts when creating a dataflow, to receive al
 title: Subscribe to in-context alerts in the UI
 hide: true
 hidefromtoc: true
+exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 ---
 # Subscribe to alert messages to monitor your sources dataflows in the UI
 
