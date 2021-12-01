@@ -12,7 +12,7 @@ exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 
 Event forwarding in Adobe Experience Platform allows you to send collected event data to non-Adobe destinations for server-side processing. Event forwarding decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Implemented in a similar manner to tags, event forwarding rules can transform and send data to new destinations without changing client-side implementations.
 
-This document provides a high-level overview of event forwarding features in Platform.
+This document provides a high-level overview of event forwarding in Platform.
 
 ![Event forwarding in the data collection ecosystem](../../../collection/images/home/event-forwarding.png)
 
@@ -26,11 +26,11 @@ Event forwarding combined with the Adobe Experience Platform [Web SDK](../../../
 
 * Make a single call from a page that contains a payload of data which then federates on the server side to reduce client-side network traffic and deliver a faster experience for customers.
 * Decrease the amount of time it takes for web pages to load so your site performs to industry best practices.
+* Decrease the number of required client-side technologies to reach your target market and send data to non-Adobe destinations.
 
 **Data governance**:
 
 * Increase transparency and control over which data types are sent where across all properties.
-* Decrease the number of required client-side technologies to reach your target market and send data to non-Adobe destinations.
 
 ## Differences between event forwarding and tags
 
@@ -39,7 +39,7 @@ In terms of implementation, event forwarding uses many of the same concepts as t
 * Tags **collects** event data and sends it to Platform Edge Network.
 * Event forwarding **sends** incoming event data from Platform Edge Network to non-Adobe destinations.
 
-While tags collects event data directly from your site using the Platform Web and Mobile SDKs, event forwarding requires event data to already be sent through Platform Edge Network in order to forward it to non-Adobe destinations. In other words, you must implement the Platform Web or Mobile SDKs on your site (either through tags or using raw code) in order to use event forwarding.
+While tags collects event data directly from your site using the Platform Web and Mobile SDKs, event forwarding requires event data to already be sent through Platform Edge Network in order to forward it to non-Adobe destinations. In other words, you must implement the Platform Web or Mobile SDK on your site (either through tags or using raw code) in order to use event forwarding.
 
 ### Properties
 
@@ -59,7 +59,7 @@ Event forwarding has its own catalog of compatible extensions, such as the [Core
 
 The types of data elements that are available in event forwarding are limited to the catalog of compatible [extensions](#extensions) that provide them.
 
-While data elements themselves are created and configured the same way in event forwarding as they are for tags, there are some important syntax differences when it comes to how they reference data from Platform Edge Network and how they are tokenized in rules.
+While data elements themselves are created and configured the same way in event forwarding as they are for tags, there are some important syntax differences when it comes to how they reference data from Platform Edge Network.
 
 #### Referencing data from Platform Edge Network
     
@@ -69,21 +69,17 @@ The **[!UICONTROL Path]** value for the data element must follow the pattern `ar
 
 ![Example of a path type data element for event forwarding](../../images/ui/event-forwarding/overview/data-reference.png)
 
->[!NOTE]
->
->`arc` stands for Adobe Response Context.
-
-#### Tokenization
-
-In tag rules, data elements are tokenized with a `%` at the beginning and end of the data element name (for example: `%viewportHeight%`). In event forwarding rules, data elements are instead tokenized with `{{` at the beginning and `}}` at the end of the data element name (for example: `{{viewportHeight}}`).
-
-![Example of a path type data element for event forwarding](../../images/ui/event-forwarding/overview/tokenization.png)
-
 ### Rules
 
 Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../edge/fundamentals/datastreams.md) and forwards those events to non-Adobe destinations if certain conditions are satisfied.
 
 ![Event forwarding rules in the Data Collection UI](../../images/ui/event-forwarding/overview/rules.png)
+
+#### Data element tokenization
+
+In tag rules, data elements are tokenized with a `%` at the beginning and end of the data element name (for example: `%viewportHeight%`). In event forwarding rules, data elements are instead tokenized with `{{` at the beginning and `}}` at the end of the data element name (for example: `{{viewportHeight}}`).
+
+![Example of a path type data element for event forwarding](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Sequence of rule actions
 
