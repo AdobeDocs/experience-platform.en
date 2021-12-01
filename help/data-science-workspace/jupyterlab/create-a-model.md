@@ -65,7 +65,7 @@ In the new notebook tab at the top, a toolbar loads containing three additional 
 
 In the provided assets folder is a Luma propensity model `propensity_model.ipynb`. Using the upload notebook option in JupyterLab, upload the provided model and open the notebook.
 
-![upload notebook]()
+![upload notebook](../images/jupyterlab/create-recipe/upload_notebook.png)
 
 The remainder of this tutorial covers the following files that are pre-defined in the propensity model notebook:
 
@@ -211,150 +211,25 @@ Next, the features are created and divided into past and present. Then, any colu
 
 ## Scoring data loader {#scoring-data-loader}
 
-The procedure to load data for scoring is similar to the loading training data in the `split()` function. We use the Data Access SDK to load data from the `scoringDataSetId` found in our `recipe.conf` file. 
+The procedure to load data for scoring is similar to loading training data. Looking closely at the code you can see that everything is the same except for the `scoringDataSetId` in the `dataset_reader`. This is because we are using the same Luma data source for both training and scoring.
 
-```PYTHON
-def load(config_properties):
+In the event that you wanted to use different data files for training and scoring, the training and scoring data loader are separate. This allows you to perform additional pre-processing such as mapping your training data to your scoring data if necessary.
 
-    print("Scoring Data Load Start")
-
-    #########################################
-    # Load Data
-    #########################################
-    client_context = get_client_context(config_properties)
-
-    dataset_reader = DatasetReader(client_context, config_properties['scoringDataSetId'])
-    timeframe = config_properties.get("timeframe")
-    tenant_id = config_properties.get("tenant_id")
-```
-
-After loading the data, data preparation and feature engineering is done. 
-
-```PYTHON
-    #########################################
-    # Data Preparation/Feature Engineering
-    #########################################
-    if '_id' in dataframe.columns:
-        #Rename columns to strip tenantId
-        dataframe = dataframe.rename(columns = lambda x : str(x)[str(x).find('.')+1:])
-        #Drop id, eventType and timestamp
-        dataframe.drop(['_id', 'eventType', 'timestamp'], axis=1, inplace=True)
-
-    dataframe.date = pd.to_datetime(dataframe.date)
-    dataframe['week'] = dataframe.date.dt.week
-    dataframe['year'] = dataframe.date.dt.year
-
-    dataframe = pd.concat([dataframe, pd.get_dummies(dataframe['storeType'])], axis=1)
-    dataframe.drop('storeType', axis=1, inplace=True)
-    dataframe['isHoliday'] = dataframe['isHoliday'].astype(int)
-
-    dataframe['weeklySalesAhead'] = dataframe.shift(-45)['weeklySales']
-    dataframe['weeklySalesLag'] = dataframe.shift(45)['weeklySales']
-    dataframe['weeklySalesDiff'] = (dataframe['weeklySales'] - dataframe['weeklySalesLag']) / dataframe['weeklySalesLag']
-    dataframe.dropna(0, inplace=True)
-
-    dataframe = dataframe.set_index(dataframe.date)
-    dataframe.drop('date', axis=1, inplace=True)
-
-    print("Scoring Data Load Finish")
-
-    return dataframe
-```
-
-Since the purpose of our model is to predict future weekly sales, you will need to create a scoring dataset used to evaluate how well the model's prediction performs.
-
-This Recipe Builder notebook does this by offsetting our weeklySales 7 days forwards. Notice that there are measurements for 45 stores every week so you can shift the `weeklySales` values 45 datasets forwards into a new column called `weeklySalesAhead`.
-
-```PYTHON
-df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
-```
-
-Similarly, you can create a column `weeklySalesLag` by shifted 45 back. Using this you can also calculate the difference in weekly sales and store them in column `weeklySalesDiff`.
-
-```PYTHON
-df['weeklySalesLag'] = df.shift(45)['weeklySales']
-df['weeklySalesDiff'] = (df['weeklySales'] - df['weeklySalesLag']) / df['weeklySalesLag']
-```
-
-Since you are offsetting the `weeklySales` datapoints 45 datasets forwards and 45 datasets backwards to create new columns, the first and last 45 data points will have NaN values. You can remove these points from our dataset by using the `df.dropna()` function which removes all rows that have NaN values.
-
-```PYTHON
-df.dropna(0, inplace=True)
-```
-
-The `load()` function in your scoring data loader should complete with the scoring dataset as the output.
-
-### Pipeline file {#pipeline-file}
+## Pipeline file {#pipeline-file}
 
 The `pipeline.py` file includes logic for training and scoring. 
 
-### Training {#training}
-
-The purpose of training is to create a model using features and labels in your training dataset. 
+The purpose of training is to create a model using features and labels in your training dataset. After choosing your training model, you fit your x and y training dataset to the model and the function returns the trained model.
 
 >[!NOTE]
 > 
 >Features refer to the input variable used by the machine learning model to predict the labels.
 
-The `train()` function should include the training model and return the trained model. Some examples of different models can be found in the [scikit-learn user guide documentation](https://scikit-learn.org/stable/user_guide.html). 
-
-After choosing your training model, you will fit your x and y training dataset to the model and the function will return the trained model. An example that shows this is as follows:
-
-```PYTHON
-def train(configProperties, data):
-
-    print("Train Start")
-
-    #########################################
-    # Extract fields from configProperties
-    #########################################
-    learning_rate = float(configProperties['learning_rate'])
-    n_estimators = int(configProperties['n_estimators'])
-    max_depth = int(configProperties['max_depth'])
-
-
-    #########################################
-    # Fit model
-    #########################################
-    X_train = data.drop('weeklySalesAhead', axis=1).values
-    y_train = data['weeklySalesAhead'].values
-
-    seed = 1234
-    model = GradientBoostingRegressor(learning_rate=learning_rate,
-                                      n_estimators=n_estimators,
-                                      max_depth=max_depth,
-                                      random_state=seed)
-
-    model.fit(X_train, y_train)
-
-    print("Train Complete")
-
-    return model
-```
-
-Notice that depending on your application, you will have arguments in your `GradientBoostingRegressor()` function. `xTrainingDataset` should contain your features used for training while `yTrainingDataset` should contain your labels.
-
-### Scoring {#scoring}
+![def train]()
 
 The `score()` function should contain the scoring algorithm and return a measurement to indicate how successful the model performs. The `score()` function uses the scoring dataset labels and the trained model to generate a set of predicted features. These predicted values are then compared with the actual features in the scoring dataset. In this example, the `score()` function uses the trained model to predict features using the labels from the scoring dataset. The predicted features are returned.
 
-```PYTHON
-def score(configProperties, data, model):
-
-    print("Score Start")
-
-    X_test = data.drop('weeklySalesAhead', axis=1).values
-    y_test = data['weeklySalesAhead'].values
-    y_pred = model.predict(X_test)
-
-    data['prediction'] = y_pred
-    data = data[['store', 'prediction']].reset_index()
-    data['date'] = data['date'].astype(str)
-
-    print("Score Complete")
-
-    return data
-```
+![def score]()
 
 ### Evaluator file {#evaluator-file}
 
@@ -443,7 +318,7 @@ def save(configProperties, prediction):
 
 ## Training and scoring {#training-and-scoring}
 
-When you are done making changes to your notebook and want to train your recipe, you can click on the associated buttons at the top of the bar to creating a training run in the cell. Upon clicking the button, a log of commands and outputs from the training script will appear in the notebook (under the `evaluator.py` cell). Conda first installs all the dependencies, then the training is initiated.
+When you are done making changes to your notebook and want to train your recipe, you can select the associated buttons at the top of the bar to creating a training run in the cell. Upon selecting the button, a log of commands and outputs from the training script will appear in the notebook (under the `evaluator.py` cell). Conda first installs all the dependencies, then the training is initiated.
 
 Note that you must run training at least once before you can run scoring. Clicking on the **[!UICONTROL Run Scoring]** button will score on the trained model that was generated during training. The scoring script will appear under `datasaver.py`.
 
