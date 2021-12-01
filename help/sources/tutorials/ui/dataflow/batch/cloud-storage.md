@@ -181,13 +181,7 @@ Once you have provided appropriate values to the schedule, select **[!UICONTROL 
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-## Provide dataflow details {#provide-dataflow-details}
-
->[!CONTEXTUALHELP]
->id="platform_sources_alerts_subscribe"
->title="Subscribe to sources alerts"
->abstract="Select the option(s) you would like to subscribe to, to receive notification alerts for your sources dataflows."
->text="Learn more in documentation"
+## Provide dataflow details
 
 The **[!UICONTROL Dataflow detail]** step appears, allowing you to name and give a brief description about your new dataflow.
 
