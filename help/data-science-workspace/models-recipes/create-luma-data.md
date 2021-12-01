@@ -1,16 +1,25 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
+keywords: Experience Platform;luma web data;Data Science Workspace;popular topics;recipes;demo data;demo web data;luma data
 solution: Experience Platform
-title: Create the Retail Sales Schema and Dataset
+title: Create the Luma web schemas and datasets
 topic-legacy: tutorial
 type: Tutorial
-description: This tutorial provides you with the prerequisites and assets required for all other Adobe Experience Platform Data Science Workspace tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on Experience Platform.
-exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
+description: This tutorial provides you with the prerequisites and assets required for the Luma demo propensity model.
 ---
 
 # Create the Luma propenstiy model schemas and datasets
 
-This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on [!DNL Experience Platform].
+This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Once complete, the following schemas and datasets will be available to you and your IMS organization.
+
+Schemas:
+- Luma web data schema
+- Propensity model scoring results schema
+
+Datasets:
+- Luma web dataset
+- Propensity model training dataset
+- Propensity model scoring dataset
+- Propensity model scoring results dataset
 
 ## Download the assets {#assets}
 
@@ -33,7 +42,7 @@ In order to create a model you must have a dataset in Platform which is used to 
 
 ### Create the training, scoring, and scoring results datasets
 
-In order to run the recipe builder notebook or use the API to train and score a model, you need to specify the dataset(s) and schema(s) that are used for training/scoring. The following video tutorial walks you through setting up the training, scoring, and scoring results datasets used for the Luma purchase propensity model.
+In order to run the recipe builder notebook or use the API to train and score a model, you need to specify the dataset(s) and schema(s) that are used for training/scoring. The following video tutorial walks you through setting up the training, scoring, and scoring results datasets, as well as, the scoring results schema used in the Luma purchase propensity model.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333426)
 
