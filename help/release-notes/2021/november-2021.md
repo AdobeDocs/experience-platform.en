@@ -12,6 +12,7 @@ exl-id: f649b516-8ef8-49af-bb3e-0392337d0d86
 New features in Adobe Experience Platform:
 
 - [Real-time Customer Data Platform B2B Edition](#B2B)
+- [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](#ad-hoc-activation)
 
 ## Updates to existing features
 
@@ -56,6 +57,10 @@ Standard B2B XDM classes, field groups, and data types are available for all Pla
 | Standard B2B XDM classes | Real-time Customer Data Platform B2B Edition provides several standard XDM that capture details about essential B2B data entities, such as accounts, opportunities, campaigns, and more. |
 
 See the [Schemas in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentation to learn more about capturing B2B data entities.
+
+### (Beta) Activate audience segments to batch destinations via the ad-hoc activation API {#ad-hoc-activation}
+
+The ad-hoc activation API allows marketers to programmatically activate audience segments to destinations, in a fast and efficient manner, for situations where immediate activation is required. Ad-hoc audience activation is only supported by [batch file-based destinations](../../destinations/destination-types.md#file-based) and is currently in beta. For more information, see the [ad-hoc activation API documentation](../../destinations/api/ad-hoc-activation-api.md).
 
 ### Attribution AI {#attribution-ai}
 

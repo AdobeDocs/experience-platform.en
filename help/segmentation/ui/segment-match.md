@@ -137,7 +137,7 @@ Finally, select the appropriate identity namespaces for your feed. For informati
 
 ![audience-sharing.png](../images/ui/segment-match/audience-sharing.png)
 
-Once you have established the settings of your feed, select the segments you want to share from your list of first-party segments. You can select more the one segment from the list and you can use the right-rail to manage your list of selected segments. Once you are finished, select **[!UICONTROL Next]**.
+Once you have established the settings of your feed, select the segments you want to share from your list of first-party segments. You can select more than one segment from the list and you can use the right-rail to manage your list of selected segments. Once you are finished, select **[!UICONTROL Next]**.
 
 ![select-segments.png](../images/ui/segment-match/select-segments.png)
 

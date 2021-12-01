@@ -83,6 +83,12 @@ When you are mapping unhashed source attributes to target attributes that the de
 
 ## Schedule segment export {#scheduling}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_enddate"
+>title="End date"
+>abstract="Adding an end date for segment schedule is not available."
+>additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="Learn more in documentation"
+
 By default, the [!UICONTROL Segment schedule] page shows only the newly selected segments that you chose in the current activation flow.
 
 ![New segments](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
