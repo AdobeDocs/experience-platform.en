@@ -77,6 +77,10 @@ The remainder of this tutorial covers the following files that are pre-defined i
 - [Evaluator file](#evaluator-file)
 - [Data Saver file](#data-saver-file)
 
+The following video tutorial explains the Luma propensity model notebook:
+
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
+
 ### Requirements file {#requirements-file}
 
 The requirements file is used to declare additional libraries you wish to use in the model. You can specify the version number if there is a dependency. To look for additional libraries, visit [anaconda.org](https://anaconda.org). To learn how to format the requirements file, visit [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). The list of main libraries already in use include:
@@ -225,122 +229,63 @@ The purpose of training is to create a model using features and labels in your t
 > 
 >Features refer to the input variable used by the machine learning model to predict the labels.
 
-![def train]()
+![def train](../images/jupyterlab/create-recipe/def_train.png)
 
 The `score()` function should contain the scoring algorithm and return a measurement to indicate how successful the model performs. The `score()` function uses the scoring dataset labels and the trained model to generate a set of predicted features. These predicted values are then compared with the actual features in the scoring dataset. In this example, the `score()` function uses the trained model to predict features using the labels from the scoring dataset. The predicted features are returned.
 
-![def score]()
+![def score](../images/jupyterlab/create-recipe/def_score.png)
 
-### Evaluator file {#evaluator-file}
+## Evaluator file {#evaluator-file}
 
 The `evaluator.py` file contains logic for how you wish to evaluate your trained recipe as well as how your training data should be split. In the retail sales example, the logic for loading and preparing the training data will be included. We will go over the two sections below.
 
 ### Split the dataset {#split-the-dataset}
 
-The data preparation phase for training requires splitting the dataset to be used for training and testing. This `val` data will be used implicitly to evaluate the model after it is trained. This process is separate from scoring. 
+The data preparation phase for training requires splitting the dataset to be used for training and testing. This `val` data is used implicitly to evaluate the model after it is trained. This process is separate from scoring. 
 
-This section will show the `split()` function which will first load data into the notebook, then clean up the data by removing unrelated columns in the dataset. From there, you will be able to perform feature engineering which is the process to create additional relevant features from existing raw features in the data. An example of this process can be seen below along with an explanation.
+This section shows the `split()` function which loads data into the notebook, then cleans up the data by removing unrelated columns in the dataset. From there, you can  perform feature engineering which is the process to create additional relevant features from existing raw features in the data.
 
-The `split()` function is shown below. The dataframe provided in the argument will be split to the `train` and `val` variables to be returned.
-
-```PYTHON
-def split(self, configProperties={}, dataframe=None):
-    train_start = '2010-02-12'
-    train_end = '2012-01-27'
-    val_start = '2012-02-03'
-    train = dataframe[train_start:train_end]
-    val = dataframe[val_start:]
-
-    return train, val
-```
+![Split function](../images/jupyterlab/create-recipe/split.png)
 
 ### Evaluate the trained model {#evaluate-the-trained-model}
 
-The `evaluate()` function is performed after the model is trained and will return a metric to indicate how successful the model performs. The `evaluate()` function uses the testing dataset labels and the Trained model to predict a set of features. These predicted values are then compared with actual features in the testing dataset. Common scoring algorithms include:
-- [Mean absolute percentage error (MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
-- [Mean absolute error (MAE)](https://en.wikipedia.org/wiki/Mean_absolute_error)
-- [Root-mean-square error (RMSE)](https://en.wikipedia.org/wiki/Root-mean-square_deviation)
+The `evaluate()` function is performed after the model is trained and returns a metric to indicate how successful the model performs. The `evaluate()` function uses the testing dataset labels and the trained model to predict a set of features. These predicted values are then compared with actual features in the testing dataset. In this example the metrics used are precision, recall, f1, and accuracy. Notice that the function returns a `metric` object containing an array of evaluation metrics. These metrics are used to evaluate how well the trained model performs.
 
+![evaluate](../images/jupyterlab/create-recipe/evaluate.png)
 
-The `evaluate()` function in the retail sales sample is shown below:
+Adding `print(metric)` allows you to view the metric results.
 
-```PYTHON
-def evaluate(self, data=[], model={}, configProperties={}):
-    print ("Evaluation evaluate triggered")
-    val = data.drop('weeklySalesAhead', axis=1)
-    y_pred = model.predict(val)
-    y_actual = data['weeklySalesAhead'].values
-    mape = np.mean(np.abs((y_actual - y_pred) / y_actual))
-    mae = np.mean(np.abs(y_actual - y_pred))
-    rmse = np.sqrt(np.mean((y_actual - y_pred) ** 2))
+![metric results](../images/jupyterlab/create-recipe/evaluate_metric.png)
 
-    metric = [{"name": "MAPE", "value": mape, "valueType": "double"},
-                {"name": "MAE", "value": mae, "valueType": "double"},
-                {"name": "RMSE", "value": rmse, "valueType": "double"}]
+## Data Saver file {#data-saver-file}
 
-    return metric
-```
+The `datasaver.py` file contains the `save()` function and is used to save your prediction while testing scoring. The `save()` function takes your prediction and using [!DNL Experience Platform Catalog] APIs, writes the data to the `scoringResultsDataSetId` you specified in your `scoring.conf` file. You may 
 
-Notice that the function returns a `metric` object containing an array of evaluation metrics. These metrics will be used to evaluate how well the trained model performs.
-
-### Data Saver file {#data-saver-file}
-
-The `datasaver.py` file contains the `save()` function to save your prediction while testing scoring. The `save()` function will take your prediction and using [!DNL Experience Platform Catalog] APIs, write the data to the `scoringResultsDataSetId` you specified in your `scoring.conf` file.
-
-The example used in the retail sales sample recipe is seen here. Note the use of `DataSetWriter` library to write data to Platform:
-
-```PYTHON
-from data_access_sdk_python.writer import DataSetWriter
-
-def save(configProperties, prediction):
-    print("Datasaver Start")
-    print("Setting up Writer")
-
-    catalog_url = "https://platform.adobe.io/data/foundation/catalog"
-    ingestion_url = "https://platform.adobe.io/data/foundation/import"
-
-    writer = DataSetWriter(catalog_url=catalog_url,
-                           ingestion_url=ingestion_url,
-                           client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                           user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                           service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
-
-    print("Writer Configured")
-
-    writer.write(data_set_id=configProperties['scoringResultsDataSetId'],
-                 dataframe=prediction,
-                 ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
-
-    print("Write Done")
-    print("Datasaver Finish")
-    print(prediction)
-```
+![Data saver](../images/jupyterlab/create-recipe/data_saver.png)
 
 ## Training and scoring {#training-and-scoring}
 
-When you are done making changes to your notebook and want to train your recipe, you can select the associated buttons at the top of the bar to creating a training run in the cell. Upon selecting the button, a log of commands and outputs from the training script will appear in the notebook (under the `evaluator.py` cell). Conda first installs all the dependencies, then the training is initiated.
+When you are done making changes to your notebook and want to train your recipe, you can select the associated buttons at the top of the bar to creating a training run in the cell. Upon selecting the button, a log of commands and outputs from the training script appears in the notebook (under the `evaluator.py` cell). Conda first installs all the dependencies, then the training is initiated.
 
-Note that you must run training at least once before you can run scoring. Clicking on the **[!UICONTROL Run Scoring]** button will score on the trained model that was generated during training. The scoring script will appear under `datasaver.py`.
+Note that you must run training at least once before you can run scoring. Selecting the **[!UICONTROL Run Scoring]** button will score on the trained model that was generated during training. The scoring script appears under `datasaver.py`.
 
 For debugging purposes, if you wish to see the hidden output, add `debug` to the end of the output cell and re-run it.
 
-## Create recipe {#create-recipe}
+![train and score](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by pressing **[!UICONTROL Create Recipe]** in the top-right navigation. 
+## Create a recipe {#create-recipe}
+
+When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by selecting **[!UICONTROL Create Recipe]** in the top-right. 
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-After pressing the button, you are prompted to enter a recipe name. This name represents the actual recipe created on [!DNL Platform].
+After selecting **[!UICONTROL Create Recipe]** you are prompted to enter a recipe name. This name represents the actual recipe created on [!DNL Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Once you press **[!UICONTROL Ok]** you will be able to navigate to the new recipe on [Adobe Experience Platform](https://platform.adobe.com/). You can click on the **[!UICONTROL View Recipes]** button to take you to the **[!UICONTROL Recipes]** tab under **[!UICONTROL ML Models]**
+Once you select **[!UICONTROL Ok]** the recipe creation process begins. This can take some time and a progress bar is displayed in place of the create recipe button. Once complete, you can select the **[!UICONTROL View Recipes]** button to take you to the **[!UICONTROL Recipes]** tab under **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
-
-Once the process is complete, the recipe will look something like this:
-
-![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
 >
@@ -350,12 +295,6 @@ Once the process is complete, the recipe will look something like this:
 
 ## Next steps {#next-steps}
 
-By completing this tutorial, you have learned how to create a machine learning model in the Recipe Builder notebook. You have also learned how to exercise the notebook to recipe workflow within the notebook to create a recipe within [!DNL Data Science Workspace].
+By completing this tutorial, you have learned how to create a machine learning model in the Recipe Builder notebook. You have also learned how to exercise the notebook to recipe workflow.
 
 To continue learning how to work with resources within [!DNL Data Science Workspace], please visit the [!DNL Data Science Workspace] recipes and models dropdown.
-
-## Additional resources {#additional-resources}
-
-The following video is designed to support your understanding of building and deploying models.
-
->[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
