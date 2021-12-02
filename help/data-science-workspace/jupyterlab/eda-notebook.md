@@ -825,4 +825,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 After you have finished your exploratory data analysis, you are ready to begin creating a model. Alternatively, you can use the data and insights you derived to create a dashboard with tools such as Power BI.
 
-Adobe Experience Platform separates the model creation process into two distinct stages, Recipes (a model instance) and Models. To begin the recipe creation process, visit the documentation for [creating a recipe in JupyerLab Notebooks](./create-a-recipe.md). This document contains information and examples for creating, training, and scoring, a recipe within [!DNL JupyterLab] Notebooks.
+Adobe Experience Platform separates the model creation process into two distinct stages, Recipes (a model instance) and Models. To begin the recipe creation process, visit the documentation for [creating a recipe in JupyerLab Notebooks](./create-a-model.md). This document contains information and examples for creating, training, and scoring, a recipe within [!DNL JupyterLab] Notebooks.
