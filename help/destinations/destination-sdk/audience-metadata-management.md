@@ -150,6 +150,43 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
             }
          ]
       },
+      "notify":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
+         "httpMethod":"PUT",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "id":"{{segment.alias}}",
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}"
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
       "delete":{
          "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"DELETE",
@@ -267,7 +304,29 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
                "name":"message"
             }
          ]
-      }
+      },
+      "notify":{
+         "url":"https://api.moviestar.com/v1.0/permissions?access_token={{authData.accessToken}}",
+         "httpMethod":"GET",
+         "headers":[
+            {
+               "value":"application/x-www-form-urlencoded",
+               "header":"Content-Type"
+            }
+         ],
+         "responseFields":[
+            {
+               "value":"{{response.data[0].permission}}",
+               "name":"Id"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{error.message}}",
+               "name":"message"
+            }
+         ]
+      },
    }
 }
 
@@ -323,6 +382,35 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
          ]
       },
       "update":{
+         "url":"https://api.moviestar.com/v2/dmpSegments/{{segment.alias}}",
+         "httpMethod":"POST",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{authData.accessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "patch":{
+                  "$set":{
+                     "name":"{{segment.name}}"
+                  }
+               }
+            }
+         },
+         "responseErrorFields":[
+            {
+               "value":"{{message}}",
+               "name":"message"
+            }
+         ]
+      },
+      "notify":{
          "url":"https://api.moviestar.com/v2/dmpSegments/{{segment.alias}}",
          "httpMethod":"POST",
          "headers":[
