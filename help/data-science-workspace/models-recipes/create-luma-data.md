@@ -11,11 +11,13 @@ description: This tutorial provides you with the prerequisites and assets requir
 
 This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Once complete, the following schemas and datasets will be available to you and your IMS organization.
 
-Schemas:
+**Schemas:**
+
 - Luma web data schema
 - Propensity model scoring results schema
 
-Datasets:
+**Datasets:**
+
 - Luma web dataset
 - Propensity model training dataset
 - Propensity model scoring dataset
@@ -23,20 +25,20 @@ Datasets:
 
 ## Download the assets {#assets}
 
-The following tutorial uses a custom Luma purchase propensity model. Before proceeding [download the required assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) zip folder. This folder contains:
+The following tutorial uses a custom Luma purchase propensity model. Before proceeding, [download the required assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) zip folder. This folder contains:
 
 - The purchase propensity model notebook
-- A notebook used to ingest data to a training dataset (a subset of the Luma web data)
+- A notebook used to ingest data to a training and scoring dataset (a subset of the Luma web data)
 - A demo JSON file containing the web data of 730,000 Luma users
-- An optional Python 3 EDA (exploratory data analysis) Notebook which can be used to understand the web data and model.
+- An optional Python 3 EDA (exploratory data analysis) Notebook which can be used to assist in understanding the web data and model.
 
 >[!NOTE]
 >
-> You can use your own schema and data for any of the tutorials, however, the demo model provided in the assets does not work unless it's provided the proper configuration files and requirements file. This demo propensity model was designed to work with Luma web data.
+> You can use your own schema and data for any of the tutorials. However, the demo model provided in the assets does not work unless it's provided the proper configuration files and requirements file. This demo propensity model was designed to work with Luma web data.
 
 ### Create the Luma web data schema and ingest the data
 
-In order to create a model you must have a dataset in Platform which is used to train and score your model. The following video tutorial from the [Data Science Workspace course](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) walks you through creating the Luma schema and ingesting the data used by the purchase propensity model.
+In order to create a model, you must have a dataset in Platform which is used to train and score your model. The following video tutorial from the [Data Science Workspace course](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) walks you through creating the Luma schema and ingesting the data used by the purchase propensity model.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 

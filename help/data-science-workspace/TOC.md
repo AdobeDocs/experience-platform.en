@@ -46,6 +46,7 @@ solution: Experience Platform, Intelligent Services
   * [Spark data access](authoring/spark.md)
 * Model and recipe tutorials {#models-recipes}
   * [Create and publish a machine-learning model](models-recipes/create-publish-model.md)
+  * [Create the demo Luma schemas and datasets](models-recipes/create-luma-data.md)
   * [Create the Retail Sales schema and dataset](models-recipes/create-retails-sales-dataset.md)
   * [Preview schemas and datasets](models-recipes/preview-schema-data.md)
   * [Package source files into a recipe](models-recipes/package-source-files-recipe.md)

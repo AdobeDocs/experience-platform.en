@@ -20,7 +20,7 @@ This tutorial walks you through the required steps to create a model using the J
 
 ## Download the required assets {#assets}
 
-Before you proceed with this tutorial you must create the required schemas and datasets. Visit the tutorial for [creating the Luma propensity model schemas and datasets](../models-recipes/create-luma-data.md) to download the required assets and set up the pre-requisites.
+Before you proceed with this tutorial, you must create the required schemas and datasets. Visit the tutorial for [creating the Luma propensity model schemas and datasets](../models-recipes/create-luma-data.md) to download the required assets and set up the pre-requisites.
 
 ## Get started with the [!DNL JupyterLab] notebook environment
 
@@ -30,17 +30,17 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 
 >[!NOTE]
 >
->The Recipe Builder notebook supports working with all file formats but currently the create recipe functionality only supports [!DNL Python].
+>The [!UICONTROL Recipe Builder] notebook supports working with all file formats but currently the create recipe functionality only supports [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-When you select the Recipe Builder notebook from the launcher, the notebook is opened in a new tab. 
+When you select the [!UICONTROL Recipe Builder] notebook from the launcher, the notebook is opened in a new tab. 
 
 In the new notebook tab at the top, a toolbar loads containing three additional actions – **[!UICONTROL Train]**, **[!UICONTROL Score]**, and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. More information about these actions are provided [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## Get started with the Recipe Builder notebook
+## Get started with the [!UICONTROL Recipe Builder] notebook
 
 In the provided assets folder is a Luma propensity model `propensity_model.ipynb`. Using the upload notebook option in JupyterLab, upload the provided model and open the notebook.
 
@@ -90,7 +90,7 @@ To find the dataset and schema IDs, go to the data tab ![Data tab](../images/jup
 
 The same information can be found on [Adobe Experience Platform](https://platform.adobe.com/) under the **[Schema](https://platform.adobe.com/schema)** and **[Datasets](https://platform.adobe.com/dataset/overview)** tabs.
 
-Once compete your training and scoring configuration should look similar to the following screenshot:
+Once compete, your training and scoring configuration should look similar to the following screenshot:
 
 ![configuration](../images/jupyterlab/create-recipe/config.png)
 
@@ -101,7 +101,7 @@ By default, the following configuration parameters are set for you when you trai
 - `ML_FRAMEWORK_IMS_ML_TOKEN` 
 - `ML_FRAMEWORK_IMS_TENANT_ID` 
 
-## Understanding the training data loader {#training-data-loader}
+## Understanding the Training Data Loader {#training-data-loader}
 
 The purpose of the Training Data Loader is to instantiate data used for creating the machine learning model. Typically, there are two tasks that the training data loader accomplishes:
 
@@ -147,11 +147,11 @@ Now your data is in the dataframe object and can be analyzed and manipulated in 
 
 ## Training Data Loader File
 
-In this example data is loaded using the Platform SDK. The library can be imported at the top of the page by including the line:
+In this example, data is loaded using the Platform SDK. The library can be imported at the top of the page by including the line:
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
-You can then use the `load()` method to grab the training dataset from the `trainingDataSetId` as set in our configuration (`recipe.conf`) file.
+You can then use the `load()` method to grab the training dataset from the `trainingDataSetId` as set in the configuration (`recipe.conf`) file.
 
 ```PYTHON
 def load(config_properties):
@@ -188,13 +188,13 @@ After the demarcation is complete, the data is labeled and a journey is created.
 
 ![label the data](../images/jupyterlab/create-recipe/label_data.png)
 
-Next, the features are created and divided into past and present. Then, any columns that are unnecessary are dropped leaving you with both the past and current journeys for Luma customers. These journeys contain information such as whether a customer purchased an item or not and the journey they took leading up to the purchase.
+Next, the features are created and divided into past and present. Then, any columns that are unnecessary are dropped, leaving you with both the past and current journeys for Luma customers. These journeys contain information such as whether a customer purchased an item and the journey they took leading up to the purchase.
 
 ![final current training](../images/jupyterlab/create-recipe/final_journey.png)
 
 ## Scoring data loader {#scoring-data-loader}
 
-The procedure to load data for scoring is similar to loading training data. Looking closely at the code you can see that everything is the same except for the `scoringDataSetId` in the `dataset_reader`. This is because we are using the same Luma data source for both training and scoring.
+The procedure to load data for scoring is similar to loading training data. Looking closely at the code, you can see that everything is the same except for the `scoringDataSetId` in the `dataset_reader`. This is because the same Luma data source is used for both training and scoring.
 
 In the event that you wanted to use different data files for training and scoring, the training and scoring data loader are separate. This allows you to perform additional pre-processing such as mapping your training data to your scoring data if necessary.
 
@@ -202,7 +202,7 @@ In the event that you wanted to use different data files for training and scorin
 
 The `pipeline.py` file includes logic for training and scoring. 
 
-The purpose of training is to create a model using features and labels in your training dataset. After choosing your training model, you fit your x and y training dataset to the model and the function returns the trained model.
+The purpose of training is to create a model using features and labels in your training dataset. After choosing your training model, you must fit your x and y training dataset to the model and the function returns the trained model.
 
 >[!NOTE]
 > 
@@ -216,19 +216,19 @@ The `score()` function should contain the scoring algorithm and return a measure
 
 ## Evaluator file {#evaluator-file}
 
-The `evaluator.py` file contains logic for how you wish to evaluate your trained recipe as well as how your training data should be split. In the retail sales example, the logic for loading and preparing the training data will be included. We will go over the two sections below.
+The `evaluator.py` file contains logic for how you wish to evaluate your trained recipe as well as how your training data should be split.
 
 ### Split the dataset {#split-the-dataset}
 
 The data preparation phase for training requires splitting the dataset to be used for training and testing. This `val` data is used implicitly to evaluate the model after it is trained. This process is separate from scoring. 
 
-This section shows the `split()` function which loads data into the notebook, then cleans up the data by removing unrelated columns in the dataset. From there, you can  perform feature engineering which is the process to create additional relevant features from existing raw features in the data.
+This section shows the `split()` function which loads data into the notebook, then cleans up the data by removing unrelated columns in the dataset. From there, you can perform feature engineering which is the process to create additional relevant features from existing raw features in the data.
 
 ![Split function](../images/jupyterlab/create-recipe/split.png)
 
 ### Evaluate the trained model {#evaluate-the-trained-model}
 
-The `evaluate()` function is performed after the model is trained and returns a metric to indicate how successful the model performs. The `evaluate()` function uses the testing dataset labels and the trained model to predict a set of features. These predicted values are then compared with actual features in the testing dataset. In this example the metrics used are precision, recall, f1, and accuracy. Notice that the function returns a `metric` object containing an array of evaluation metrics. These metrics are used to evaluate how well the trained model performs.
+The `evaluate()` function is performed after the model is trained and returns a metric to indicate how successful the model performs. The `evaluate()` function uses the testing dataset labels and the trained model to predict a set of features. These predicted values are then compared with actual features in the testing dataset. In this example the metrics used are `precision`, `recall`, `f1`, and `accuracy`. Notice that the function returns a `metric` object containing an array of evaluation metrics. These metrics are used to evaluate how well the trained model performs.
 
 ![evaluate](../images/jupyterlab/create-recipe/evaluate.png)
 
@@ -258,11 +258,11 @@ When you are done editing the recipe and satisfied with the training/scoring out
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-After selecting **[!UICONTROL Create Recipe]** you are prompted to enter a recipe name. This name represents the actual recipe created on [!DNL Platform].
+After selecting **[!UICONTROL Create Recipe]**, you are prompted to enter a recipe name. This name represents the actual recipe created on [!DNL Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Once you select **[!UICONTROL Ok]** the recipe creation process begins. This can take some time and a progress bar is displayed in place of the create recipe button. Once complete, you can select the **[!UICONTROL View Recipes]** button to take you to the **[!UICONTROL Recipes]** tab under **[!UICONTROL ML Models]**
+Once you select **[!UICONTROL Ok]**, the recipe creation process begins. This can take some time and a progress bar is displayed in place of the create recipe button. Once complete, you can select the **[!UICONTROL View Recipes]** button to take you to the **[!UICONTROL Recipes]** tab under **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -274,6 +274,6 @@ Once you select **[!UICONTROL Ok]** the recipe creation process begins. This can
 
 ## Next steps {#next-steps}
 
-By completing this tutorial, you have learned how to create a machine learning model in the Recipe Builder notebook. You have also learned how to exercise the notebook to recipe workflow.
+By completing this tutorial, you have learned how to create a machine learning model in the [!UICONTROL Recipe Builder] notebook. You have also learned how to exercise the notebook to recipe workflow.
 
 To continue learning how to work with resources within [!DNL Data Science Workspace], please visit the [!DNL Data Science Workspace] recipes and models dropdown.
