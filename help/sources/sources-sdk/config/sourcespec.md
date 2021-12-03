@@ -5,8 +5,8 @@ topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
 hide: true
 hidefromtoc: true
+exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 ---
-
 # Configure source specification for Sources SDK
 
 Source specifications contain information specific to a source, including attributes pertaining to a source's category, beta status, and catalog icon. They also contain useful information such as URL parameters, content, header, and schedule. Source specifications also describe the schema of the parameters required to create a source connection from a base connection. The schema is necessary in order to create a source connection.

@@ -5,8 +5,8 @@ topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
 hide: true
 hidefromtoc: true
+exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 ---
-
 # Configure authentication specifications for Sources SDK
 
 Authentication specifications define how Adobe Experience Platform users can connect to your source.
@@ -174,7 +174,7 @@ Basic authentication is an authentication type that allows you to access your ap
 | Property| Description | Example |
 | --- | --- | --- |
 | `authSpec.name` | Displays the name of the supported authentication type. | `Basic Authentication` |
-| `authSpec.type` | Defines the type of authentication supported by the source. | `oAuth2-refresh-code` |
+| `authSpec.type` | Defines the type of authentication supported by the source. | `BasicAuthentication` |
 | `authSpec.spec` | Contains information on the authentication's schema, data type, and properties. |
 | `authSpec.spec.$schema` | Defines the schema used for the authentication. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Defines the data type of the schema. | `object` |
