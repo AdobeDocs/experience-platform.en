@@ -40,12 +40,21 @@ Shared Device Detection works by assigning the Shared Identity Namespace to a sh
 
 Consider the following example to help your understanding of how Shared Device Detection works:
 
+![diagram](../images/shared-device/diagram.png)
+
 * Kevin and Nora share a tablet for e-commerce purposes. However, they both have their own independent accounts that they each use to browse and shop online;
   * As a shared device, the tablet is assigned the **Shared Identity Namespace** (99% of the time, this namespace is set to ECID);
 * Suppose that Kevin uses the tablet and **logs in** to his e-commerce account to browse for headphones, this then means that the **User Identity Namespace** is assigned to Kevin because he is the current authenticated user of the tablet;
+  * Kevin **logs out** -> Nora uses the tablet and **logs in** (authenticated user) to buy a camera -> The **User Identity Namespace** is now assigned to her -> Data is sent to Nora's own identity graph.
+  * Nora **does not** log out -> Kevin uses the tablet and **does not log in** -> Browsing data is sent to Nora's identity graph because she is still authenticated.
+  * Nora **does log out** -> Kevin uses the tablet, but **does not log in** -> The **User Identity Namespace** stays with Nora because she was the **last authenticated user** -> Browsing data is then linked between the CRM ID and the ECID.
+  * Kevin **logs in** again --> The **User Identity Namespace** comes back to him because he is once again the authenticated user.
+
+<!--
   * If Kevin gives the tablet to Nora, but **does not log out**, and Nora proceeds to browse the e-commerce store for a camera, then her browsing activities are recorded as part of Kevin's graph because he is still the current authenticated user;
   * If Kevin **logs out** and gives the tablet to Nora, and Nora **logs in** to her own account and browses the store for a camera, then her browsing activities are recorded as part of her own graph because she is now the current authenticated user. This means that the **User Identity Namespace** is now assigned to Nora;
   * If Kevin **logs out**, gives the tablet to Nora, and Nora proceeds to browse the e-commerce store **without logging into her own account**, then her activities are recorded as part of the shared device (Shared Identity Namespace), but are associated with Kevin's graph because he is the **last authenticated user** and thus owns the Shared Identity Namespace.
+-->
 
 ### Terminology
 
