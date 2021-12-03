@@ -5,6 +5,7 @@ topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
 hide: true
 hidefromtoc: true
+exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
 ---
 # Configuration options in Sources SDK
 
@@ -35,5 +36,3 @@ See the following documents for instructions on how to populate the values of ea
 * [Configure your authentication specification](./authspec.md)
 * [Configure your source specification](./sourcespec.md)
 * [Configure your explore specification](./explorespec.md)
-
-

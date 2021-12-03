@@ -3,6 +3,7 @@ keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time custo
 solution: Experience Platform
 title: Getting Started with Real-time Customer Data Platform B2B Edition
 description: Use this sample scenario as an example when setting up your implementation of Real-time Customer Data Platform B2B Edition.
+exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 ---
 # Getting started with Real-time Customer Data Platform B2B Edition
 
@@ -93,4 +94,4 @@ The Bodea marketer activates the segment to the Marketo destination, which allow
 
 ## Next steps
 
-By following this tutorial, you have successfully leveraged the various Adobe Experience Platform services used by Real-time CDP B2B Edition. As a result, you have learned to ingest, segment, evaluate, and export your B2B data as actionable audiences that can be engaged across different channels. 
+By following this tutorial, you have successfully leveraged the various Adobe Experience Platform services used by Real-time CDP B2B Edition. As a result, you have learned to ingest, segment, evaluate, and export your B2B data as actionable audiences that can be engaged across different channels.

@@ -5,8 +5,8 @@ topic-legacy: overview
 description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
 hide: true
 hidefromtoc: true
+exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 ---
-
 # Configure explore specifications for Sources SDK
 
 Explore specifications defines the parameters required for exploring and inspecting objects contained in your source. Explore specifications also defines the response format returned when objects are explored and inspected.
