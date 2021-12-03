@@ -34,7 +34,18 @@ Working with [!DNL Shared Device Detection] requires an understanding of the var
   * [Identity graph viewer](./identity-graph-viewer.md): Visualize and interact with the identity graph viewer to better understand how customer identities are stitched together, and in what ways.
   * [Identity namespaces](../namespaces.md): See the components of a fully qualified identity, and how identity namespaces allows you to distinguish the context and type of an identity.
 
-### Understanding [!DNL Shared Device Detection]
+## Understanding [!DNL Shared Device Detection]
+
+### Terminology
+
+The following table contains a list of terms that are essential to understanding [!DNL Shared Device Detection]:
+
+| Terms | Definition |
+| --- | --- |
+| Shared device | A shared device is any device that is used by more than one individual. Examples of shared devices include tablets, library computers, and kiosks. |
+| [!DNL Shared Device Detection] | [!DNL Shared Device Detection] refers to a configuration setting that allows for data from different users of the same device to be separated from one another. |
+| [!UICONTROL Shared Identity Namespace] | A [!UICONTROL Shared Identity Namespace] is used to represent a single device that is shared by multiple different users. | 
+| [!UICONTROL User Identity Namespace] | A [!UICONTROL User Identity Namespace] represents the authenticated (logged in) user of a shared device. The [!UICONTROL User Identity Namespace] also represents the last authenticated user of a device, when a device is used anonymously. |
 
 Shared Device Detection works by assigning the Shared Identity Namespace to a shared device and then assigning the User Identity Namespace to the authenticated user of the shared device.
 
@@ -49,23 +60,6 @@ Consider the following example to help your understanding of how Shared Device D
   * Nora **does not** log out -> Kevin uses the tablet and **does not log in** -> Browsing data is sent to Nora's identity graph because she is still authenticated.
   * Nora **does log out** -> Kevin uses the tablet, but **does not log in** -> The **User Identity Namespace** stays with Nora because she was the **last authenticated user** -> Browsing data is then linked between the CRM ID and the ECID.
   * Kevin **logs in** again --> The **User Identity Namespace** comes back to him because he is once again the authenticated user.
-
-<!--
-  * If Kevin gives the tablet to Nora, but **does not log out**, and Nora proceeds to browse the e-commerce store for a camera, then her browsing activities are recorded as part of Kevin's graph because he is still the current authenticated user;
-  * If Kevin **logs out** and gives the tablet to Nora, and Nora **logs in** to her own account and browses the store for a camera, then her browsing activities are recorded as part of her own graph because she is now the current authenticated user. This means that the **User Identity Namespace** is now assigned to Nora;
-  * If Kevin **logs out**, gives the tablet to Nora, and Nora proceeds to browse the e-commerce store **without logging into her own account**, then her activities are recorded as part of the shared device (Shared Identity Namespace), but are associated with Kevin's graph because he is the **last authenticated user** and thus owns the Shared Identity Namespace.
--->
-
-### Terminology
-
-The following table contains a list of terms that are essential to understanding [!DNL Shared Device Detection]:
-
-| Terms | Definition |
-| --- | --- |
-| Shared device | A shared device is any device that is used by more than one individual. Examples of shared devices include tablets, library computers, and kiosks. |
-| [!DNL Shared Device Detection] | [!DNL Shared Device Detection] refers to a configuration setting that allows for data from different users of the same device to be separated from one another. |
-| [!UICONTROL Shared Identity Namespace] | A [!UICONTROL Shared Identity Namespace] is used to represent a single device that is shared by multiple different users. | 
-| [!UICONTROL User Identity Namespace] | A [!UICONTROL User Identity Namespace] is used to represent the authenticated, or logged in, user of a shared device. |
 
 ## Shared Devices UI
 
