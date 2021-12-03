@@ -40,7 +40,7 @@ To create a new instance, select **[!UICONTROL Create instance]**.
 
 ![](../images/user-guide/dashboard.png)
 
-## Setup
+## Set up
 
 The instance creation workflow appears, starting on the **[!UICONTROL Setup]** step.
 
@@ -102,7 +102,7 @@ In the event that more than one identity is available within a namespace, make s
 >
 > If no valid identity type (namespace) exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../../identity-service/namespaces.md) documentation.
 
-## Define a goal {#define-a-goal}
+## Define goal {#define-a-goal}
 
 <!-- https://www.adobe.com/go/cai-define-a-goal -->
 
@@ -176,15 +176,17 @@ You can define important Profile dataset fields (with timestamps) in your data i
 
 ![add a custom profile attribute](../images/user-guide/profile-attributes.png)
 
+## Set options
+
+The set options step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, and toggle Profile on/off.
+
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
-The **[!UICONTROL Advanced]** step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed. 
-
-Setup a scoring schedule by configuring the **[!UICONTROL Scoring Frequency]**. Automated prediction runs can be scheduled to run on either a weekly or a monthly basis.
+To set up a scoring schedule, start by configuring the **[!UICONTROL Scoring Frequency]**. Automated prediction runs can be scheduled to run on either a weekly or a monthly basis.
 
 ![](../images/user-guide/schedule.png)
 
-### Prediction exclusions
+### Prediction exclusions *(optional)*
 
 If your dataset contained any columns added as test data, you can add that column or event to an exclusion list by selecting **Add Exclusion** followed by entering the field you wish to exclude. This prevents events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs or certain promotions.
 
@@ -196,7 +198,7 @@ To exclude an event, select **[!UICONTROL Add exclusion]** and define the event.
 
 The Profile toggle allows Customer AI to export the scoring results into Real-time Customer Profile. Disabling this toggle prevents the models scoring results from being added to Profile. Customer AI scoring results are still available with this feature disabled.
 
-When using Customer AI for the first time ,you should toggle this feature off until you are happy with the model output results. This prevents you from uploading multiple scoring datasets to Real-time Customer Profile while fine tuning your model.
+When using Customer AI for the first time you should toggle this feature off until you are happy with the model output results. This prevents you from uploading multiple scoring datasets to Real-time Customer Profile while fine tuning your model.
 
 ![Profile toggle](../images/user-guide/advanced-workflow.png)
 
