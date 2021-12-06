@@ -47,6 +47,8 @@ Select an event from the list to view its details in the right rail.
 
 ![Event details](../../images/audit-logs/select-event.png)
 
+### Filter audit logs
+
 Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results.
 
 ![Filters](../../images/audit-logs/filters.png)
@@ -64,11 +66,15 @@ To remove a filter, select the "X" on the pill icon for the filter in question, 
 
 ![Clear filters](../../images/audit-logs/clear-filters.png)
 
-<!-- (Planned for post-beta release)
-### Export an audit log
+### Export audit logs
 
-Select **[!UICONTROL Download log]** to export an audit log.
--->
+To export the current list of audit logs, select **[!UICONTROL Download log]**.
+
+![Download log](../../images/audit-logs/download.png)
+
+In the dialog that appears, select your preferred format (either **[!UICONTROL CSV]** or **[!UICONTROL JSON]**), then select **[!UICONTROL Download]**. The browser downloads the generated file and saves it to your machine.
+
+![Select download format](../../images/audit-logs/select-download-format.png)
 
 ## Managing audit logs in the API
 
