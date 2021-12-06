@@ -9,10 +9,6 @@ exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 
 This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destinations/destination-types.md#file-based). The steps are laid out in sequential order below.
 
->[!NOTE]
->
->Configuring a batch destination through Destination SDK is currently not supported.
-
 ## Prerequisites {#prerequisites}
 
 Before advancing to the steps illustrated below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
@@ -32,12 +28,18 @@ Shown below is an example configuration. Note that the message transformation te
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 {
-   "name":"Moviestar destination server",
-   "destinationServerType":"URL_BASED",
-   "urlBasedDestination":{
+   "name":"S3 destination server",
+   "destinationServerType":"FILE_BASED_S3",
+   "fileBasedS3Destination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
+      },
+      "bucket":{
+
+      },
+      "path":{
+
       }
    },
    "httpTemplate":{
@@ -63,8 +65,8 @@ To connect the server and template configuration in step 1 to this destination c
 POST platform.adobe.io/data/core/activation/authoring/destinations
  
 {
-   "name":"Moviestar",
-   "description":"Moviestar is a fictional destination, used for this example.",
+   "name":"S3 destination",
+   "description":"S3 destination is a fictional destination, used for this example.",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -76,7 +78,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "name":"endpointsInstance",
          "type":"string",
          "title":"Select Endpoint",
-         "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
+         "description":"Select your endpoint in the dropdown list.",
          "isRequired":true,
          "enum":[
             "US",
@@ -132,6 +134,26 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "maxNumEventsInBatch":100
       }
    },
+   "batchConfig": {
+        "allowMandatoryFieldSelection": true,
+        "allowJoinKeyFieldSelection": true,
+        "defaultExportMode": "DAILY_FULL_EXPORT",
+        "allowedExportModes": [
+            "DAILY_FULL_EXPORT",
+            "FIRST_FULL_THEN_INCREMENTAL"
+        ],
+        "allowedScheduleFrequency": [
+            "DAILY",
+            "EVERY_3_HOURS",
+            "EVERY_6_HOURS",
+            "EVERY_12_HOURS",
+            "EVERY_8_HOURS",
+            "ONCE",
+            "EVERY_HOUR"
+        ],
+        "defaultFrequency": "DAILY",
+        "defaultStartTime": "00:00",
+    },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",

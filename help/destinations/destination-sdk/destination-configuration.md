@@ -19,16 +19,13 @@ Below are two examples of destination configurations, one for a streaming destin
 
 ### Streaming configuration example {#example-configuration}
 
-This is an example configuration of a fictional destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category.
+This is an example configuration of a fictional streaming destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category.
 
 ```json
-
 {
    "name":"Moviestar",
    "description":"Moviestar is a fictional destination, used for this example.",
    "status":"TEST",
-   "maxProfileAttributes": "2000",
-   "maxIdentityAttributes": "500",
    "customerAuthenticationConfigurations":[
       {
          "authType":"BEARER"
@@ -83,26 +80,6 @@ This is an example configuration of a fictional destination, Moviestar, which ha
       "segmentRequired":true,
       "identityRequired":true
    },
-   "batchConfig":{
-      "allowMandatoryFieldSelection": true,
-      "allowJoinKeyFieldSelection": true,
-      "defaultExportMode": "DAILY_FULL_EXPORT",
-      "allowedExportModes": [
-          "DAILY_FULL_EXPORT",
-          "FIRST_FULL_THEN_INCREMENTAL"
-      ],
-      "allowedScheduleFrequency": [
-          "DAILY",
-          "EVERY_3_HOURS",
-          "EVERY_6_HOURS",
-          "EVERY_12_HOURS",
-          "EVERY_8_HOURS",
-          "ONCE",
-          "EVERY_HOUR"
-      ],
-      "defaultFrequency": "DAILY",
-      "defaultStartTime": "00:00",
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -144,11 +121,13 @@ This is an example configuration of a fictional destination, Moviestar, which ha
    },
    "backfillHistoricalProfileData":true
 }
+
+
 ```
 
 ### Batch configuration example {#example-configuration}
 
-This is an example configuration of a fictional destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category.
+This is an example configuration of a fictional batch destination, which has endpoints in four locations on the globe. The destination belongs to the email marketing category.
 
 ```json
 {
