@@ -183,12 +183,6 @@ Once you have provided appropriate values to the schedule, select **[!UICONTROL 
 
 ## Provide dataflow details
 
->[!CONTEXTUALHELP]
->id="platform_sources_alerts_subscribe"
->title="Subscribe to sources alerts"
->abstract="Check this option to subscribe to notification alerts for your sources dataflows."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="Learn more in documentation"
-
 The **[!UICONTROL Dataflow detail]** step appears, allowing you to name and give a brief description about your new dataflow.
 
 During this process, you can also enable **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]**. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors, up to a certain threshold that you can set. Enabling **[!UICONTROL Error diagnostics]** will provide details on any incorrect data that is batched separately. For more information, see the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md).
