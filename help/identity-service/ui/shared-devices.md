@@ -36,27 +36,33 @@ Working with [!DNL Shared Device Detection] requires an understanding of the var
 
 ## Understanding [!DNL Shared Device Detection]
 
-[!DNL Shared Device Detection] works by linking the Shared Identity Namespace with the User Identity Namespace. The Shared Identity Namespace represents the shared device and is almost always set to ECID. The User Identity Namespace represents the user that is currently authenticated to the device. The User Identity Namespace must be set to the end user's login ID, which can be their email, customer ID, or CRM ID.
-
-When a shared device is used anonymously, such as browsing an e-commerce website without authenticating, then the CRM ID (User Identity Namespace) of the last authenticated user is linked with the ECID (Shared Identity Namespace). 
-
-When a CRM ID is linked to the ECID, then [!DNL Shared Device Detection] is able to make distinctions between different users, allowing you to create more accurate and representative identity graphs for users with shared devices.
+It is important to understand the following terminology when working with 
+[!DNL Shared Device Detection]. See the table below for a list of terms essential to understanding [!DNL Shared Device Detection].
 
 ### Terminology
-
-The following table contains a list of terms that are essential to understanding [!DNL Shared Device Detection]:
 
 | Terms | Definition |
 | --- | --- |
 | Shared device | A shared device is any device that is used by more than one individual. Examples of shared devices include tablets, library computers, and kiosks. |
 | [!DNL Shared Device Detection] | [!DNL Shared Device Detection] refers to a configuration setting that allows for data from different users of the same device to be separated from one another. |
-| [!UICONTROL Shared Identity Namespace] | The [!UICONTROL Shared Identity Namespace] represents the shared device that used by multiple users (99% of the time, this namespace is set to ECID). | 
-| [!UICONTROL User Identity Namespace] | The [!UICONTROL User Identity Namespace] represents the authenticated (logged in) user of a shared device. The [!UICONTROL User Identity Namespace] also represents the last authenticated user of a device, when a device is used anonymously. |
-| Last authenticated user | The last authenticated user represents the user who was last logged into a device. For example, if Kevin anonymously uses a tablet that he shares with Nora to browse for headphones, then his browsing data are incorporated with the user who was last logged in. |
+| Shared Identity Namespace | The Shared Identity Namespace represents the shared device that used by multiple users (99% of the time, this namespace is set to ECID). | 
+| User Identity Namespace | The User Identity Namespace represents the authenticated (logged in) user of a shared device. The User Identity Namespace also represents the last authenticated user of a device, when a device is used anonymously. |
+| Last authenticated user | The last authenticated user represents the user who was last logged-in to a device, if a device is being used anonymously. |
+
+{style="table-layout:auto"}
+
+[!DNL Shared Device Detection] works by establishing two namespaces: the **Shared Identity Namespace** and the **User Identity Namespace**.
+
+* The Shared Identity Namespace represents the ECID of a shared device. ECID provides the foundation for customer identity. With the context of [[!DNL Identity Service]](../../identity-service/home.md), ECID is used as the primary ID for devices and as a base node for identity graphs. 
+* The User Identity Namespace is mapped to the identity namespace that corresponds to a user's login ID, this can be a user's CRM ID, email address, hashed email, or phone number. 
+
+A shared device, like a tablet, has a single ECID, which means it has a single **Shared Identity Namespace**. On the other hand, each user of a shared device has their own designated **User Identity Namespace** that corresponds with their respective login IDs. For example, a tablet that Kevin and Nora share for e-commerce use has its own ECID of `1234`, while Kevin has his own User Identity Namespace that is mapped to his `kevin@email.com` account and Nora has her own User Identity Namespace mapped to her `nora@email.com` account.
+
+[!DNL Shared Device Detection] is able to make distinctions between several users of the same device by linking the User Identity Namespace (login ID) of the current and last authenticated user with the shared device's Shared Identity Namespace (ECID).
 
 ### How identity data is sent to an identity graph
 
-Consider the following example to help your understanding of how Shared Device Detection works:
+Consider the following example to help your understanding of how [!DNL Shared Device Detection] works:
 
 ![diagram](../images/shared-device/diagram.png)
 
@@ -64,11 +70,19 @@ Consider the following example to help your understanding of how Shared Device D
   * As a shared device, the tablet has a corresponding ECID, which is also its **Shared Identity Namespace**;
 * Suppose that Kevin uses the tablet and **logs in** to his e-commerce account to browse for headphones, this then means that Kevin's CRM ID (**User Identity Namespace**) is now linked with the tablet's ECID (**Shared Identity Namespace**). The tablet's browsing data are now incorporated with Kevin's identity graph.
   * If Kevin **logs out** and Nora uses the tablet and **logs in** to her own account and buys a camera, then her CRM ID is now linked to the tablet's ECID. Therefore, the tablet's browsing data are now incorporated with Nora's identity graph.
-  * If Nora **does not log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora, because she remains as the authenticated and her CRM ID is still linked to the tablet's ECID.
-  * If Nora **does log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora's identity graph, because her CRM ID remains linked with the tablet's ECID, as she was the **last authenticated user**.
-  * If Kevin **logs in** again, then his CRM ID now gets linked to the tablet's ECID, because he is now the authenticated user, and the tablet's browsing data are now incorporated with Kevin's identity graph.
+  * If Nora **does not log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora, because she remains as the authenticated user and her CRM ID is still linked to the tablet's ECID.
+  * If Nora **does log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora's identity graph, because as the **last authenticated user**, her CRM ID remains linked with the tablet's ECID.
+  * If Kevin **logs in** again, then his CRM ID now gets linked to the tablet's ECID, because he is now the current authenticated user, and the tablet's browsing data are now incorporated with Kevin's identity graph.
 
 ### How [!DNL Profile Service] merges experience events
+
+[!DNL Profile Service] takes note of profile fragments and merged profiles. Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. 
+
+In other words, profile fragments represent a unique primary identity and the corresponding [record](../../profile/home.md#record-data) or [event](../../profile/home.md#time-series-events) data for that ID within a given dataset.
+
+With regards to [!DNL Shared Device Detection], [!DNL Profile] takes a look at both authenticated and unauthenticated experience events. An **authenticated experience event** is an action completed by a user while logged-in to a device. For authenticated experience events, the primary identity becomes the **User Identity Namespace** (Login ID). An **unauthenticated experience event** is an action completed by a user who is not logged-in to a device. For unauthenticated experience events, the primary identity becomes the **Shared Identity Namespace** (ECID).
+
+For more information, see the  [[!DNL Real-time Customer Profile] overview](../../profile/home).
 
 ## Shared Devices UI
 
