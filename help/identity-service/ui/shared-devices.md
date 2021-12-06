@@ -66,21 +66,21 @@ Consider the following example to help your understanding of how [!DNL Shared De
 
 ![diagram](../images/shared-device/diagram.png)
 
-* Kevin and Nora share a tablet for e-commerce purposes. However, they both have their own independent accounts that they each use to browse and shop online;
-  * As a shared device, the tablet has a corresponding ECID, which is also its **Shared Identity Namespace**;
+* Kevin and Nora share a tablet to visit an e-commerce website. However, they both have their own independent accounts that they each use to browse and shop online;
+  * As a shared device, the tablet has a corresponding ECID, which represents the tablet's web browser cookie ID;
 * Suppose that Kevin uses the tablet and **logs in** to his e-commerce account to browse for headphones, this then means that Kevin's CRM ID (**User Identity Namespace**) is now linked with the tablet's ECID (**Shared Identity Namespace**). The tablet's browsing data are now incorporated with Kevin's identity graph.
   * If Kevin **logs out** and Nora uses the tablet and **logs in** to her own account and buys a camera, then her CRM ID is now linked to the tablet's ECID. Therefore, the tablet's browsing data are now incorporated with Nora's identity graph.
   * If Nora **does not log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora, because she remains as the authenticated user and her CRM ID is still linked to the tablet's ECID.
   * If Nora **does log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora's identity graph, because as the **last authenticated user**, her CRM ID remains linked with the tablet's ECID.
   * If Kevin **logs in** again, then his CRM ID now gets linked to the tablet's ECID, because he is now the current authenticated user, and the tablet's browsing data are now incorporated with Kevin's identity graph.
 
-### How [!DNL Profile Service] merges experience events
+### How [!DNL Profile Service] merges profile fragments with [!DNL Shared Device Detection] enabled
 
 [!DNL Profile Service] takes note of profile fragments and merged profiles. Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. 
 
-In other words, profile fragments represent a unique primary identity and the corresponding [record](../../profile/home.md#record-data) or [event](../../profile/home.md#time-series-events) data for that ID within a given dataset.
+When [!DNL Shared Device Detection] is enabled, [!DNL Profile] defines the primary identity of the profile fragment based on whether the experience event is authenticated or unauthenticated
 
-With regards to [!DNL Shared Device Detection], [!DNL Profile] takes a look at both authenticated and unauthenticated experience events. An **authenticated experience event** is an action completed by a user while logged-in to a device. For authenticated experience events, the primary identity becomes the **User Identity Namespace** (Login ID). An **unauthenticated experience event** is an action completed by a user who is not logged-in to a device. For unauthenticated experience events, the primary identity becomes the **Shared Identity Namespace** (ECID).
+An **authenticated experience event** is an action completed by a user while logged-in to a device. For authenticated experience events, the primary identity is the **User Identity Namespace** (Login ID). An **unauthenticated experience event** is an action completed by a user who is not logged-in to a device. For unauthenticated experience events, the primary identity is the **Shared Identity Namespace** (ECID).
 
 For more information, see the  [[!DNL Real-time Customer Profile] overview](../../profile/home).
 
