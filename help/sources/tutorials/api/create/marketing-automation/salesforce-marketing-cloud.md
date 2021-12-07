@@ -39,7 +39,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Salesforce Marketing Clou
 | `host` | The host server of your application. This is often your subdomain. |
 | `clientId` | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
 | `clientSecret` | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Marketing Cloud] is: `cea1c2a08-b722-11eb-8529-0242ac130003`.  |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Marketing Cloud] is: `ea1c2a08-b722-11eb-8529-0242ac130003`.  |
 
 For more information about getting started, refer to this [[!DNL Salesforce Marketing Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 
@@ -79,7 +79,7 @@ curl -X POST \
             }
         },
         "connectionSpec": {
-            "id": "cea1c2a08-b722-11eb-8529-0242ac130003",
+            "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
             "version": "1.0"
         }
     }'
@@ -89,7 +89,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.clientId` | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
 | `auth.params.clientSecret` | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
-| `connectionSpec.id` | The [!DNL Salesforce Marketing Cloud] connection specification ID: `cea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `connectionSpec.id` | The [!DNL Salesforce Marketing Cloud] connection specification ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **Response**
 
