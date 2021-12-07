@@ -76,7 +76,7 @@ Consider the following example to help your understanding of how [!DNL Shared De
   * If Kevin **logs out** and Nora uses the tablet and **logs in** to her own account and buys a camera, then her CRM ID is now linked to the tablet's ECID. Therefore, the tablet's browsing data are now incorporated with Nora's identity graph.
   * If Nora **does not log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora, because she remains as the authenticated user and her CRM ID is still linked to the tablet's ECID.
   * If Nora **does log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora's identity graph, because as the **last authenticated user**, her CRM ID remains linked with the tablet's ECID.
-  * If Kevin **logs in** again, then his CRM ID now gets linked to the tablet's ECID, because he is now the current authenticated user, and the tablet's browsing data are now incorporated with Kevin's identity graph.
+  * If Kevin **logs in** again, then his CRM ID now gets linked to the tablet's ECID, because he is now the last authenticated user and the tablet's browsing data are now incorporated with his identity graph.
 
 ### How [!DNL Profile Service] merges profile fragments with [!DNL Shared Device Detection] enabled
 
