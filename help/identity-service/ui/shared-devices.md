@@ -45,7 +45,7 @@ It is important to understand the following terminology when working with
 | --- | --- |
 | Shared device | A shared device is any device that is used by more than one individual. Examples of shared devices include tablets, library computers, and kiosks. |
 | [!DNL Shared Device Detection] | [!DNL Shared Device Detection] refers to a configuration setting that allows for data from different users of the same device to be separated from one another. |
-| Shared Identity Namespace | The Shared Identity Namespace represents the shared device that is used by multiple users. The Shared Identity Namespace is usually the ECID, but can be set to other device IDs. | 
+| Shared Identity Namespace | The Shared Identity Namespace represents the device that could be used by multiple users. The Shared Identity Namespace is usually the ECID, but can be set to other device IDs. | 
 | User Identity Namespace | The User Identity Namespace represents the authenticated (logged in) user of a shared device. |
 | Last authenticated user | The last authenticated user represents the user who was last logged-in to a device, if a device is being logged on by multiple accounts. |
 
@@ -53,10 +53,10 @@ It is important to understand the following terminology when working with
 
 [!DNL Shared Device Detection] works by establishing two namespaces: the **Shared Identity Namespace** and the **User Identity Namespace**.
 
-* The Shared Identity Namespace represents the ECID of a shared device. ECID provides the foundation for customer identity. With the context of [[!DNL Identity Service]](../../identity-service/home.md), ECID is used as the primary ID for devices and as a base node for identity graphs. 
+* The Shared Identity Namespace represents the  device that could be used by multiple users. Adobe recommends that customers use ECID as the shared device identifier. 
 * The User Identity Namespace is mapped to the identity namespace that corresponds to a user's login ID, this can be a user's CRM ID, email address, hashed email, or phone number. 
 
-A shared device, like a tablet, has a single ECID, which means it has a single **Shared Identity Namespace**. On the other hand, each user of a shared device has their own designated **User Identity Namespace** that corresponds with their respective login IDs. For example, a tablet that Kevin and Nora share for e-commerce use has its own ECID of `1234`, while Kevin has his own User Identity Namespace that is mapped to his `kevin@email.com` account and Nora has her own User Identity Namespace mapped to her `nora@email.com` account.
+A shared device, like a tablet, has a single **Shared Identity Namespace**. On the other hand, each user of a shared device has their own designated **User Identity Namespace** that corresponds with their respective login IDs. For example, a tablet that Kevin and Nora share for e-commerce use has its own ECID of `1234`, while Kevin has his own User Identity Namespace that is mapped to his `kevin@email.com` account and Nora has her own User Identity Namespace mapped to her `nora@email.com` account.
 
 [!DNL Shared Device Detection] is able to make distinctions between several users of the same device by linking the shared identity namespace (ex. ECID) with the last authenticated user's User Identity Namespace (login ID).
 
