@@ -198,7 +198,7 @@ To exclude an event, select **[!UICONTROL Add exclusion]** and define the event.
 
 The Profile toggle allows Customer AI to export the scoring results into Real-time Customer Profile. Disabling this toggle prevents the models scoring results from being added to Profile. Customer AI scoring results are still available with this feature disabled.
 
-When using Customer AI for the first time you should toggle this feature off until you are happy with the model output results. This prevents you from uploading multiple scoring datasets to Real-time Customer Profile while fine tuning your model.
+When using Customer AI for the first time you can toggle this feature off until you are happy with the model output results. This prevents you from uploading multiple scoring datasets to Real-time Customer Profile while fine tuning your model. Once you have finished fine tuning your model, you can clone the model using the [clone option](#set-up-your-instance) from the **Service instances** page. This allows you to create a copy of your model and toggle profile on.
 
 ![Profile toggle](../images/user-guide/advanced-workflow.png)
 
