@@ -18,12 +18,14 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 ## Prerequisites
 
-Before you can connect your [!DNL Salesforce Marketing Cloud] source to Platform, you must ensure that the following **scopes** are provisioned to your client ID and client secret combination:
+Before you can connect your [!DNL Salesforce Marketing Cloud] source to Platform, you must ensure that the following **permission scopes** are provisioned to your [!DNL Salesforce Marketing Cloud] client ID and client secret combination:
 
 * `campaign_read`
 * `list_and_subscribers_read`
 
-For more information on scopes, see this [[!DNL Salesforce Marketing Cloud] REST API document](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html).
+You can request for scopes by making a call to the `v2/userinfo` resource of the [!DNL Salesforce Marketing Cloud] API. See the [[!DNL Salesforce Marketing Cloud] API Integration Permission Scopes document](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html) for guidance on how to request and compare scopes.
+
+For more information on scopes including a list of their related permissions and behaviors, see this [[!DNL Salesforce Marketing Cloud] REST API document](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html).
 
 ## IP address allow list
 
