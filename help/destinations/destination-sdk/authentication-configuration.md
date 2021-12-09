@@ -50,7 +50,7 @@ To set up Amazon S3 authentication for your destinations, configure the `custome
 ```
 
 
-|Parameter | Type | Description| Required
+|Parameter | Type | Description| Required|
 |---------|----------|------|----|
 |`s3AccessKey` | String | Your Amazon S3 access key |Yes|
 |`s3SecretKey` | String | Your Amazon S3 secret key |Yes|
@@ -73,7 +73,7 @@ To set up SFTP authentication with SSH key for your destinations, configure the 
 
 ```
 
-|Parameter | Type | Description| Required
+|Parameter | Type | Description| Required|
 |---------|----------|------|----|
 |`domain` | String | Your SFTP domain |Yes|
 |`port` | Integer | Your destination's SFTP port. Default port is 22. |No|
@@ -98,7 +98,7 @@ To set up SFTP authentication with password for your destinations, configure the
 
 ```
 
-|Parameter | Type | Description| Required
+|Parameter | Type | Description| Required|
 |---------|----------|------|----|
 |`domain` | String | Your SFTP domain |Yes|
 |`port` | Integer | Your destination's SFTP port. Default port is 22. |No|

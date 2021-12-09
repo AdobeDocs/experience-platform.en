@@ -125,7 +125,7 @@ This is an example configuration of a fictional streaming destination, Moviestar
 
 ```
 
-### Batch configuration example {#example-configuration}
+### Batch configuration example {#batch-example-configuration}
 
 This is an example configuration of a fictional batch destination, which has endpoints in four locations on the globe. The destination belongs to the email marketing category.
 
