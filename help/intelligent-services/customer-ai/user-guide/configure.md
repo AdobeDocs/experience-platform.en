@@ -13,7 +13,7 @@ Customer AI, as part of Intelligent Services enables you to generate custom prop
 
 Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 
-## Set up your instance {#set-up-your-instance}
+## Create an instance {#set-up-your-instance}
 
 In the Platform UI, select **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays all available services at your disposal. In the container for Customer AI, select **[!UICONTROL Open]**.
 
@@ -42,7 +42,7 @@ To create a new instance, select **[!UICONTROL Create instance]**.
 
 ## Set up
 
-The instance creation workflow appears, starting on the **[!UICONTROL Setup]** step.
+The instance creation workflow appears, starting on the **[!UICONTROL Set up]** step.
 
 Below is important information on values that you must provide the instance with:
 
