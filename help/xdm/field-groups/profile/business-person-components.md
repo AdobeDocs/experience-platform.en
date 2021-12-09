@@ -11,6 +11,10 @@ When a profile is created for a person through [Real-time Customer Profile](../.
 
 The field group provides a root-level `personComponents` field, which is an array of objects. Each object in the array represents a different source record.
 
+>![IMPORTANT]
+>
+>You must follow the ingestion patterns as described in the sources documentation. Other field mapping methods are not guaranteed to work. Each object of the  `personComponents` array is submitted individually during standard ingestion patterns and added to the array by Platform. Manually adding an array of objects to the Business Person Component will return an error. 
+
 ![](../../images/field-groups/business-person-components.png)
 
 | Property | Data type | Description |
