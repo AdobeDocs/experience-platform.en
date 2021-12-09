@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Connect to email marketing destinations and activate data using the Flow Service API
-description: This document covers the creation of email marketing destinations by using the Adobe Experience Platform API
+title: Connect to batch cloud storage destinations and activate data using the Flow Service API
+description: Step-by-step instructions to use the Flow Service API to create a batch cloud storage destination in Experience Platform and activate data
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 ---
 # Connect to email marketing destinations and activate data using the Flow Service API
 
-This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create an [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your new created destination, and activate data to your new created destination.
+This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your new created destination, and activate data to your new created destination.
 
 This tutorial uses the Adobe Campaign destination in all examples, but the steps are identical for all email marketing destinations.
 
