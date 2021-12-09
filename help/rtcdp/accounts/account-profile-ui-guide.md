@@ -12,6 +12,8 @@ exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 
 Account profiles enable you to unify account information from multiple sources. This unified view of an account brings together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer account information. This document provides a guide to interacting with account profiles using the Real-time CDP, B2B Edition capabilities available in the Adobe Experience Platform user interface (UI).
 
+To learn more about how Account Profiles are created as part of the B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md).
+
 ## Browse account profiles
 
 To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation. 
