@@ -188,7 +188,7 @@ To set up a scoring schedule, start by configuring the **[!UICONTROL Scoring Fre
 
 ### Prediction exclusions *(optional)*
 
-If your dataset contained any columns added as test data, you can add that column or event to an exclusion list by selecting **Add Exclusion** followed by entering the field you wish to exclude. This prevents events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs or certain promotions.
+If your dataset contained any columns added as test data, you can add that column or event to an exclusion list by selecting **[!UICONTROL Add Exclusion]** followed by entering the field you wish to exclude. This prevents events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs or certain promotions.
 
 To exclude an event, select **[!UICONTROL Add exclusion]** and define the event. To remove an exclusion, select the ellipses (**[!UICONTROL ...]**) to the top-right of the event container, then select **[!UICONTROL Remove Container]**.
 
