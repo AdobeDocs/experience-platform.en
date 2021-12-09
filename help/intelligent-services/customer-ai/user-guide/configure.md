@@ -150,6 +150,10 @@ By default, propensity scores are generated for all profiles unless an eligible 
 
 If you have additional information in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores, a custom events option is provided. Using this option allows you add additional events that you deem influential which may improve the quality of your model and help to provide more accurate results. If the dataset you selected includes custom events defined in your schema, you can add them to your instance.
 
+>[!NOTE]
+>
+> For an in depth explanation on how custom events effect Customer AI scoring results, visit the [Custom event example](#custom-event) section.
+
 ![event feature](../images/user-guide/event-feature.png)
 
 To add a custom event, select **[!UICONTROL Add custom event]**. Next, input a custom event name then map it to the event field in your schema. Custom event names are displayed in place of the fields value when looking at influential factors and other insights. This means user id's, reservation id's, device info, and other custom values are listed with the custom event name instead of the ID/value of the event. These additional custom events are used by Customer AI to improve the quality of your model and provide more accurate results.
@@ -172,9 +176,17 @@ You can define important Profile dataset fields (with timestamps) in your data i
 
 >[!NOTE]
 >
->Adding a custom Profile attribute follows the same workflow as adding a custom event.
+>Adding a custom Profile attribute follows the same workflow as adding a custom event. Similar to custom events, custom profile attributes effect your model scoring in the same way. For an in depth explanation, visit the [Custom event example](#custom-event) section.
 
 ![add a custom profile attribute](../images/user-guide/profile-attributes.png)
+
+### Adding a custom event example {#custom-event}
+
+In the following example, a custom event and profile attribute is added to a Customer AI instance. The goal of the Customer AI instance is to predict the likelihood to buy another Luma product in the next 60 days. Normally, product data is linked to a product SKU in this case the SKU is `prd1013`. After the Customer AI model is trained/scored, this SKU can be linked to an event and displayed as an influential factor for a propensity bucket.
+
+Customer AI automatically applies feature generation such as "Days since" or "Counts of" against custom events such as **Watch purchase**. If this event was considered an influential factor on why customers are high, medium, or low propensity, Customer AI displays it as `Days since prd1013 purchase` or `Count of prd1013 purchase`. By creating this as a Custom event, you can give the event a new name making the results much easier to read `Days since Watch purchase`. Additionally, Customer AI uses this event in its training and scoring even if the event is not a standard event. This means you can add multiple events that you think might be influential and customize your model further by including data such as reservations, visitor logs, and other events.
+
+![example of a custom event](../images/user-guide/custom-event-name.png)
 
 ## Set options
 
