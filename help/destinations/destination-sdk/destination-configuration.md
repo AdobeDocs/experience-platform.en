@@ -275,19 +275,37 @@ This section in the destinations configuration generates the [Configure new dest
 
 When you configure the bearer authentication type, users are required to input the bearer token that they obtain from your destination.
 
-![UI render with bearer authentication](./assets/bearer-authentication-ui.png)
+![UI render with bearer authentication](assets/bearer-authentication-ui.png)
+
+**Amazon S3 authentication**
+
+When you configure the Amazon S3 authentication type, users are required to input the S3 credentials.
+
+![UI render with S3 authentication](assets/s3-authentication-ui.png)
+
+**SFTP with password authentication**
+
+When you configure the SFTP with password authentication type, users are required to input the SFTP username and password, as well as the SFTP domain and port (default port is 22).
+
+![UI render with SFTP with password authentication](assets/sftp-password-authentication-ui.png)
+
+**SFTP with SSH key authentication**
+
+When you configure the SFTP with SSH key authentication type, users are required to input the SFTP username and SSH key, as well as the SFTP domain and port (default port is 22).
+
+![UI render with SFTP with SSH key authentication](assets/sftp-key-authentication-ui.png)
 
 **OAuth 2 authentication**
 
-Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Tailored Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md).
+Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Custom Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md).
 
-![UI render with OAuth 2 authentication](./assets/oauth2-authentication-ui.png)
+![UI render with OAuth 2 authentication](assets/oauth2-authentication-ui.png)
 
 
 |Parameter | Type | Description|
 |---------|----------|------|
 |`customerAuthenticationConfigurations` | String | Indicates the configuration used to authenticate Experience Platform customers to your server. See `authType` below for accepted values. |
-|`authType` | String | Accepted values are `OAUTH2, BEARER`. <br><ul><li> If your destination supports OAuth 2 authentication, select the `OAUTH2` value and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md). Additionally, you should select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md). </li><li>For bearer authentication, select `BEARER` and select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md).</li></ul> |
+|`authType` | String | Accepted values are:<ul><li>`BEARER`. If your destination supports bearer authentication, set `"authType":"Bearer"` and  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`OAUTH2`. If your destination supports OAuth 2 authentication, set `"authType":"OAUTH2"` and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`S3`. If your destination supports Amazon S3 authentication, set `"authType":"S3"` and add the required fields for Amazon S3, as shown in the [Destination SDK authentication configuration page](./authentication-configuration.md#s3). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`SFTP_WITH_SSH_KEY`. If your destination supports SFTP authentication with SSH key, set `"authType":"SFTP_WITH_SSH_KEY"` and add the required fields for SFTP with SSH key, as shown in the [Destination SDK authentication configuration page](./authentication-configuration.md#sftp-ssh).  Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`SFTP_WITH_PASSWORD`. If your destination supports SFTP authentication with password, set `"authType":"SFTP_WITH_PASSWORD"` and add the required fields for SFTP with password, as shown in the [Destination SDK authentication configuration page](./authentication-configuration.md#sftp-password). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li></ul> |
 
 {style="table-layout:auto"}
 

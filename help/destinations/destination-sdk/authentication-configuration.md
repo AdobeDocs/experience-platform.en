@@ -10,6 +10,9 @@ exl-id: 33eaab24-f867-4744-b424-4ba71727373c
 Adobe Experience Platform Destination SDK supports several authentication types:
 
 * Bearer authentication
+* Amazon S3
+* SFTP with SSH key
+* SFTP with password
 * OAuth 2 with authorization code
 * OAUth 2 with password grant
 * OAuth 2 with client credentials grant
@@ -18,7 +21,7 @@ You can configure the authentication information for your destination via the `c
 
 ## Bearer authentication {#bearer}
 
-To set up bearer type authentication for your destinations, you just need to configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+To set up bearer type authentication for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
 ```json
 
@@ -29,6 +32,78 @@ To set up bearer type authentication for your destinations, you just need to con
    ]
 
 ```
+
+## Amazon S3 authentication {#s3}
+
+To set up Amazon S3 authentication for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+
+```json
+
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"S3",
+         "s3AccessKey":"string",
+         "s3SecretKey":"string"
+      }
+   ]
+
+```
+
+
+|Parameter | Type | Description| Required
+|---------|----------|------|----|
+|`s3AccessKey` | String | Your Amazon S3 access key |Yes|
+|`s3SecretKey` | String | Your Amazon S3 secret key |Yes|
+
+## SFTP authentication with SSH key {#sftp-ssh}
+
+To set up SFTP authentication with SSH key for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+
+```json
+
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"SFTP_WITH_SSH_KEY",
+         "domain":"string",
+         "port":22,
+         "username":"string",
+         "sshKey":"base64 encoded string"
+      }
+   ]
+
+```
+
+|Parameter | Type | Description| Required
+|---------|----------|------|----|
+|`domain` | String | Your SFTP domain |Yes|
+|`port` | Integer | Your destination's SFTP port. Default port is 22. |No|
+|`username` | String | Your SFTP username |Yes|
+|`sshKey` | String | Your base64-encoded SSH key |Yes|
+
+## SFTP authentication with password {#sftp-password}
+
+To set up SFTP authentication with password for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+
+```json
+
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"SFTP_WITH_PASSWORD",
+         "domain":"string",
+         "port":22,
+         "username":"string",
+         "password":"string"
+      }
+   ]
+
+```
+
+|Parameter | Type | Description| Required
+|---------|----------|------|----|
+|`domain` | String | Your SFTP domain |Yes|
+|`port` | Integer | Your destination's SFTP port. Default port is 22. |No|
+|`username` | String | Your SFTP username |Yes|
+|`password` | String | Your SFTP password |Yes|
 
 ## OAuth 2 authentication {#oauth2}
 
