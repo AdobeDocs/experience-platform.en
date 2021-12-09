@@ -11,9 +11,14 @@ When a profile is created for a person through [Real-time Customer Profile](../.
 
 The field group provides a root-level `personComponents` field, which is an array of objects. Each object in the array represents a different source record.
 
->![IMPORTANT]
+>![WARNING]
 >
->You must follow the ingestion patterns as described in the sources documentation. Other field mapping methods are not guaranteed to work. Each object of the  `personComponents` array is submitted individually during standard ingestion patterns and added to the array by Platform. Manually adding an array of objects to the Business Person Component will return an error. 
+>You must follow the ingestion patterns as described in the sources documentation. Other field mapping methods are not guaranteed to work.
+>For example, each object of the `personComponents` array is submitted individually during standard ingestion patterns and then added to the array by Platform. Manually adding an array of objects to the Business Person Component will return an error.
+
+>![IMPORTANT]
+>It is recommended to use the auto-generation utility when creating schemas for your B2B data. See the documentation for instructions on how to use the [B2B namespace and schema auto-generation utility](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). If you are not using the auto-generation utility ensure you have read [the basics of schema composition](../../schema/composition.md) before mapping your data.
+>See the [end-to-end tutorial](../../../rtcdp/b2b-tutorial.md) for information on recommended workflows for B2B data. 
 
 ![](../../images/field-groups/business-person-components.png)
 
