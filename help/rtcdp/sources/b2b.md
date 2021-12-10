@@ -15,6 +15,8 @@ Real-time Customer Data Platform B2B Edition allows you to bring your B2B data t
 >
 >While Real-time Customer Data Platform B2B Edition offers a broad range of external sources from which to ingest data, it does not have as many as those available for Real-time Customer Data Platform. To learn which source connectors are available to your organization, you can view the sources catalog in the Platform UI. To access the catalog, select **Sources** in the left navigation, then select **Catalog**.
 
+To understand how sources fit into your B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
+
 See the [source connectors overview](../../sources/home.md) for more information on the types of sources available in Adobe Experience Platform.
 
 The following documents provide more information on using [!DNL Marketo] to bring B2B data to Platform:
