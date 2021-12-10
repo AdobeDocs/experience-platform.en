@@ -17,7 +17,7 @@ The field group provides a root-level `personComponents` field, which is an arra
 >
 >For example, each object of the `personComponents` array is submitted individually during standard ingestion patterns and then added to the array by Platform. Manually adding an array of objects to the Business Person Component will return an error.
 >
->It is recommended to use the auto-generation utility when creating schemas for your B2B data. See the documentation for instructions on how to use the [B2B namespace and schema auto-generation utility](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). If you are not using the auto-generation utility and intend to manually map your data model, be sure to read the documentation on [the Real-time Customer Data Platform B2B Edition Experience Data Model (XDM) classes ](../../../rtcdp/schemas/b2b.md) before mapping your data.
+You should use the auto-generation utility when creating schemas for your B2B data. See the documentation for instructions on how to use the [B2B namespace and schema auto-generation utility](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). If you are not using the auto-generation utility and intend to manually map your data model, be sure to read the documentation on [the Real-time Customer Data Platform B2B Edition Experience Data Model (XDM) classes](../../../rtcdp/schemas/b2b.md) before mapping your data.
 >
 >See the [end-to-end tutorial](../../../rtcdp/b2b-tutorial.md) for information on recommended workflows for B2B data. 
 
