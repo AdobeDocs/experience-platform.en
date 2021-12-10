@@ -176,21 +176,21 @@ You can define important Profile dataset fields (with timestamps) in your data i
 
 >[!NOTE]
 >
->Adding a custom Profile attribute follows the same workflow as adding a custom event. Similar to custom events, custom profile attributes effect your model scoring in the same way. For an in depth explanation, visit the [Custom event example](#custom-event) section.
+>Adding a custom Profile attribute follows the same workflow as adding a custom event. Similar to custom events, custom profile attributes affect your model scoring in the same way. For an in-depth explanation, visit the [Custom event example](#custom-event) section.
 
 ![add a custom profile attribute](../images/user-guide/profile-attributes.png)
 
 ### Adding a custom event example {#custom-event}
 
-In the following example, a custom event and profile attribute is added to a Customer AI instance. The goal of the Customer AI instance is to predict the likelihood to buy another Luma product in the next 60 days. Normally, product data is linked to a product SKU in this case the SKU is `prd1013`. After the Customer AI model is trained/scored, this SKU can be linked to an event and displayed as an influential factor for a propensity bucket.
+In the following example, a custom event and profile attribute is added to a Customer AI instance. The goal of the Customer AI instance is to predict the likelihood of a customer to buy another Luma product in the next 60 days. Normally, product data is linked to a product SKU. In this case, the SKU is `prd1013`. After the Customer AI model is trained/scored, this SKU can be linked to an event and displayed as an influential factor for a propensity bucket.
 
-Customer AI automatically applies feature generation such as "Days since" or "Counts of" against custom events such as **Watch purchase**. If this event was considered an influential factor on why customers are high, medium, or low propensity, Customer AI displays it as `Days since prd1013 purchase` or `Count of prd1013 purchase`. By creating this as a Custom event, you can give the event a new name making the results much easier to read. For example, `Days since Watch purchase`. Additionally, Customer AI uses this event in its training and scoring even if the event is not a standard event. This means you can add multiple events that you think might be influential and customize your model further by including data such as reservations, visitor logs, and other events to further increase the accuracy and precision of your Customer AI model.
+Customer AI automatically applies feature generation such as "Days since" or "Counts of" against custom events such as **Watch purchase**. If this event was considered an influential factor on why customers are high, medium, or low propensity, Customer AI displays it as `Days since prd1013 purchase` or `Count of prd1013 purchase`. By creating this as a Custom event, you can give the event a new name making the results much easier to read. For example, `Days since Watch purchase`. Additionally, Customer AI uses this event in its training and scoring even if the event is not a standard event. This means you can add multiple events that you think might be influential and customize your model further by including data such as reservations, visitor logs, and other events. Adding these data points further increases the accuracy and precision of your Customer AI model.
 
 ![example of a custom event](../images/user-guide/custom-event-name.png)
 
 ## Set options
 
-The set options step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, and toggle Profile on/off.
+The set options step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, and toggle **[!UICONTROL Profile]** on/off.
 
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
@@ -200,7 +200,7 @@ To set up a scoring schedule, start by configuring the **[!UICONTROL Scoring Fre
 
 ### Prediction exclusions *(optional)*
 
-If your dataset contained any columns added as test data, you can add that column or event to an exclusion list by selecting **[!UICONTROL Add Exclusion]** followed by entering the field you wish to exclude. This prevents events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs or certain promotions.
+If your dataset contained any columns added as test data, you can add that column or event to an exclusion list by selecting **[!UICONTROL Add Exclusion]** followed by entering the field you wish to exclude. This prevents events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs or promotions.
 
 To exclude an event, select **[!UICONTROL Add exclusion]** and define the event. To remove an exclusion, select the ellipses (**[!UICONTROL ...]**) to the top-right of the event container, then select **[!UICONTROL Remove Container]**.
 
@@ -210,7 +210,7 @@ To exclude an event, select **[!UICONTROL Add exclusion]** and define the event.
 
 The Profile toggle allows Customer AI to export the scoring results into Real-time Customer Profile. Disabling this toggle prevents the models scoring results from being added to Profile. Customer AI scoring results are still available with this feature disabled.
 
-When using Customer AI for the first time you can toggle this feature off until you are happy with the model output results. This prevents you from uploading multiple scoring datasets to Real-time Customer Profile while fine tuning your model. Once you have finished fine tuning your model, you can clone the model using the [clone option](#set-up-your-instance) from the **Service instances** page. This allows you to create a copy of your model and toggle profile on.
+When using Customer AI for the first time you can toggle this feature off until you are satisfied with the model output results. This prevents you from uploading multiple scoring datasets to your Customer Profiles while fine tuning your model. Once you have finished calibrating your model, you can clone the model using the [clone option](#set-up-your-instance) from the **Service instances** page. This allows you to create a copy of your model and toggle profile on.
 
 ![Profile toggle](../images/user-guide/advanced-workflow.png)
 
