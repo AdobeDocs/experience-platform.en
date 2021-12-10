@@ -47,7 +47,7 @@ The following request calls your destination's REST API endpoint. The request is
 
 ```shell
 
-curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
+curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -180,7 +180,7 @@ The following request calls your destination's REST API endpoint. The request is
 
 ```shell
 
-curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
+curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
