@@ -26,7 +26,7 @@ As part of the initial setup, Bodea's IT department needs to create an XDM schem
 
 >![WARNING]
 >
->You must follow the ingestion patterns as described in the relevant sources documentation. Other field mapping methods are not guaranteed to work.
+>You must follow the ingestion patterns as described in the relevant sources documentation linked to throughout this tutorial. Other field mapping methods are not guaranteed to work.
 
 Adobe Experience Platform allows you to automatically generate the schemas and namespaces required for B2B data sources. This tool ensures that the schemas created describe the data in a structured reusable way. Follow the [B2B namespaces and schema auto-generation utility documentation](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) for a complete reference to the setup process.
 
