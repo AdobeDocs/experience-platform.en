@@ -23,34 +23,36 @@ Start by creating a server and template configuration using the `/destinations-s
 
 Shown below is an example configuration. Note that the message transformation template in the `requestBody.value` parameter is addressed in step 3, [Create transformation template](./configure-destination-instructions.md#create-transformation-template).
 
-```json
+**API format**
 
+```http
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
+```
 
+```json
 {
-   "name":"S3 destination server",
+   "name":"Amazon S3 destination server",
    "destinationServerType":"FILE_BASED_S3",
    "fileBasedS3Destination":{
-      "url":{
-         "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
-      },
       "bucket":{
-
+         "templatingStrategy":"PEBBLE_V1",
+         "value":""
       },
       "path":{
-
-      }
-   },
-   "httpTemplate":{
-      "httpMethod":"POST",
-      "requestBody":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"insert after you create a template in step 3"
+         "value":""
       },
-      "contentType":"application/json"
+      "httpTemplate":{
+         "httpMethod":"POST",
+         "requestBody":{
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if input.profile.segmentMembership.ups is not empty %} , \"AEPSegments\": { \"add\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"realized\" or segment.value.status == \"existing\" %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ], \"remove\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"exited\" %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
+         },
+         "contentType":"application/json"
+      }
    }
 }
+
 
 ```
 
@@ -60,17 +62,23 @@ Shown below is an example configuration for a destination template, created by u
 
 To connect the server and template configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
 
-```json
+**API format**
 
+
+```http
 POST platform.adobe.io/data/core/activation/authoring/destinations
- 
+``` 
+
+```json
 {
-   "name":"S3 destination",
-   "description":"S3 destination is a fictional destination, used for this example.",
+   "name":"Amazon S3 destination",
+   "description":"Amazon S3 destination is a fictional destination, used for this example.",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
-         "authType":"BEARER"
+         "authType":"S3",
+         "s3AccessKey":"string",
+         "s3SecretKey":"string"
       }
    ],
    "customerDataFields":[
@@ -90,8 +98,8 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
       {
          "name":"customerID",
          "type":"string",
-         "title":"Moviestar Customer ID",
-         "description":"Your customer ID in the Moviestar destination (e.g. abcdef).",
+         "title":"Destination Customer ID",
+         "description":"Your customer ID in the destination (e.g. abcdef).",
          "isRequired":true,
          "pattern":""
       }
@@ -180,7 +188,12 @@ If you use an audience metadata configuration, you must connect it to the destin
 
 Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
 
-* **Most common case**: If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration and your destination supports the OAuth 2 authentication method, read [OAuth 2 authentication](./oauth2-authentication.md).
+* If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK:
+   * [OAuth 2 authentication](./oauth2-authentication.md)
+   * [Amazon S3 authentication](authentication-configuration.md#s3)
+   * [SFTP authentication with SSH key](authentication-configuration.md#sftp-ssh)
+   * [SFTP authentication with password](authentication-configuration.md#sftp-password)
+
 * If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [Authentication configuration](./authentication-configuration.md#when-to-use).
 
 ## Step 6: Test your destination {#test-destination}
