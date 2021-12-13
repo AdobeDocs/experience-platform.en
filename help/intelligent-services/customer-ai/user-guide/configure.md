@@ -156,7 +156,7 @@ If you have additional information in addition to the [standard event fields](..
 
 ![event feature](../images/user-guide/event-feature.png)
 
-To add a custom event, select **[!UICONTROL Add custom event]**. Next, input a custom event name then map it to the event field in your schema. Custom event names are displayed in place of the fields value when looking at influential factors and other insights. This means user id's, reservation id's, device info, and other custom values are listed with the custom event name instead of the ID/value of the event. These additional custom events are used by Customer AI to improve the quality of your model and provide more accurate results.
+To add a custom event, select **[!UICONTROL Add custom event]**. Next, input a custom event name then map it to the event field in your schema. Custom event names are displayed in place of the fields value when looking at influential factors and other insights. This means that the custom event name will be used instead of the ID/value of the event. For more information on how custom events are displayed, see the [custom event example section](#custom-event). These additional custom events are used by Customer AI to improve the quality of your model and provide more accurate results.
 
 ![Custom Event field](../images/user-guide/custom-event.png)
 
