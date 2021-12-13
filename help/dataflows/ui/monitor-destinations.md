@@ -42,13 +42,13 @@ See the following table for more information on statuses:
 ### Dataflow runs for streaming destinations {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_identitiesactivated"
+>id="platform_destinations_dataflow_identitiesactivated"
 >title="Identities activated"
 >abstract="The count of individual profile identities successfully activated to the selected destination."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_identitiesexcluded"
+>id="platform_destinations_dataflow_identitiesexcluded"
 >title="Identities excluded"
 >abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"

@@ -54,6 +54,8 @@ To learn more about streaming segmentation, please read the [streaming segmentat
 
 As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so that you can export it for use. 
 
+Batch segments are automatically evaluated every 24 hours. If you want to evaluate a batch segment on demand, you can use a segment job. To learn more about segment jobs, please read the [segment jobs documentation](./api/segment-jobs.md).
+
 **Incremental segmentation (beta)**
 
 Batch segments are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments fresh for up to an hour.
@@ -68,7 +70,7 @@ To learn how to evaluate segments see the [segment evaluation tutorial](./tutori
 
 ### Edge segmentation
 
-Edge segmentation is the ability to evaluate segments in Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
+Edge segmentation is the ability to evaluate segments in Platform instantaneously on Experience Edge, enabling same page and next page personalization use cases. 
 
 To learn more about edge segmentation, please read either the [API documentation](./api/edge-segmentation.md) or the [UI documentation](./ui/edge-segmentation.md).
 
