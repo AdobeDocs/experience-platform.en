@@ -8,7 +8,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 
 >[!IMPORTANT]
 >
->The [!DNL HTTP] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
+>The [!DNL HTTP] API destination in Platform is currently in beta. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
@@ -21,6 +21,22 @@ To send profile data to [!DNL HTTP] endpoints, you must first connect to the des
 The [!DNL HTTP] destination is targeted towards customers who need to export XDM profile data and audience segments to generic [!DNL HTTP] endpoints.
 
 [!DNL HTTP] endpoints can be either customers' own systems  or third-party solutions.
+
+## Prerequisites {#prerequisites}
+
+>[!IMPORTANT]
+>
+>Contact your Adobe representatives or Adobe Customer Care if you would like to enable the HTTP API destination beta functionality for your company.
+
+To use the HTTP API destination to export data out of Experience Platform, you must meet the following prerequisites:
+
+* You must have an HTTP endpoint that supports REST API
+* Your HTTP endpoint must support OAuth 2.0 client credentials authentication (for Beta)
+* The client credential needs to be included in POST requests to your endpoint (share examples)
+* Your HTTP endpoint must support the Experience Platform profile schema. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. (point to expected outputs)
+* Your HTTP endpoint must support headers
+
+You can also use [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to set up an integration and send Experience Platform profile data to an HTTP endpoint.
 
 ## Connect to the destination {#connect}
 
