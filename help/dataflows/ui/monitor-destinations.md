@@ -129,7 +129,7 @@ To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring
 
 Use the [!UICONTROL Monitoring] dashboard to get an overall idea of the health of your activation flows. Start by getting insights on an aggregated level for all batch and streaming destinations and then drill down into detailed views for dataflows, dataflow runs, and activated segments for an in-depth look at your activation data. The screens in the [!UICONTROL Monitoring] dashboard provide actionable insights through metrics and error descriptions to help you troubleshoot any problems that might arise in your activation scenarios.
 
-At the center of the dashboard is the [!UICONTROL Activation] panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to streaming destinations, as well as on the batch flow runs to batch destinations.
+At the center of the dashboard is the [!UICONTROL Activation] panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to streaming destinations, as well as on the failed batch flow runs to batch destinations.
 
 ![Streaming and batch activation graphs](../assets/ui/monitor-destinations/dashboard-graph.png)
 
