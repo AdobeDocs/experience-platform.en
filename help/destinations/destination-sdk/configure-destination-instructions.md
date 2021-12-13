@@ -54,6 +54,10 @@ Shown below is an example configuration for a destination template, created by u
 
 To connect the server and template configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
 
+>[!IMPORTANT]
+>
+>To create a correctly configured destination, you *must* add at least one target identity in `identityNamespaces`, as shown below. If no target identity is configured, users will not be able to proceed past the [Mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activation workflow.
+
 ```json
 
 POST platform.adobe.io/data/core/activation/authoring/destinations
