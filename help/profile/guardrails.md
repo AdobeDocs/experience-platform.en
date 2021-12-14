@@ -46,7 +46,7 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|XDM Individual Profile class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended. *Note: Due to the nature of Experience Platform's denormalized hybrid data model, most customers do not exceed this limit. For questions about how to model your data, or if you would like to learn more about custom limits, please contact your customer care representative.*|
+|XDM Individual Profile class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended.|
 |XDM ExperienceEvent class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended.|
 |Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix.|
 | Multi-entity relationships| 5 | Soft | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
@@ -79,10 +79,11 @@ The following guardrails refer to data size and provide recommended limits for d
 
 | Guardrail | Limit| Limit Type | Description|
 | --- | --- | --- | --- |
-| ExperienceEvent fragment size | 10KB | Hard | **The maximum size of an event fragment is 10KB.** A fragment is defined as a singular record within a dataset that is referencing an XDM ExperienceEvent class-based schema. Ingestion will continue, however any events larger than 10KB will be dropped.|
-| Individual Profile fragment size | 100KB | Hard | **The maximum size of a profile fragment is 100KB.** A fragment is defined as a singular record within a dataset that is referencing an XDM Individual Profile class-based schema. Ingestion will continue, however profile records larger than 100KB will be dropped.|
-| Real-time Customer Profile size | 50MB | Soft | **Dependent on the [merge policy](#merge-policies) selected, all related [profile fragments](#profile-fragments) across both XDM Individual Profile and XDM ExperienceEvent class-based datasets cannot exceed 50MB.** When utilizing the `private graph` identity stitching option in a merge policy, the Real-time Customer Profile is assembled based on any fragment where the primary identity in the dataset record matches an identity in the identity graph collection. When utilizing no graph (a merge policy with an identity stitching option of `none`) only primary identity values that are common within or across various datasets are used to create the Real-time Customer Profile.|
-| Profile or ExperienceEvent batches per day | 90 | Soft | The combined total of Profile and ExperienceEvent batches ingested each day should not exceed 90. Ingesting additional batches may prevent optimal performance.|
+| Maximum ExperienceEvent size | 10KB | Hard | **The maximum size of an event is 10KB.** Ingestion will continue, however any events larger than 10KB will be dropped.|
+| Maximum profile record size | 100KB | Hard | **The maximum size of a profile record is 100KB.** Ingestion will continue, however profile records larger than 100KB will be dropped.|
+| Maximum profile fragment size | 50MB | Hard | **The maximum size of a single profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
+| Maximum profile storage size | 50MB | Soft | **The maximum size of a stored profile is 50MB.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance. For example, a profile could contain a single fragment that is 50MB or it could contain multiple fragments across multiple datasets with a combined total size of 50MB. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, will affect system performance.|
+| Number of Profile or ExperienceEvent batches ingested per day | 90 | Soft | **The maximum number of Profile or ExperienceEvent batches ingested per day is 90.** This means that the combined total of Profile and ExperienceEvent batches ingested each day cannot exceed 90. Ingesting additional batches will affect system performance.|
 
 {style="table-layout:auto"}
 
