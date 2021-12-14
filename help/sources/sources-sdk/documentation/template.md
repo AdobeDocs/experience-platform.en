@@ -49,7 +49,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for *YOURSOURCE* :
+The following request creates a base connection for *YOURSOURCE*:
 
 ```shell
 curl -X POST \
@@ -232,7 +232,7 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for *YOURSOURCE* :
+The following request creates a source connection for *YOURSOURCE*:
 
 ```shell
 curl -X POST \
@@ -307,7 +307,7 @@ POST /targetConnections
 
 **Request**
 
-The following request creates a target connection for *YOURSOURCE* :
+The following request creates a target connection for *YOURSOURCE*:
 
 ```shell
 curl -X POST \

@@ -116,7 +116,7 @@ The keys for each namespace object represent the unique identity values that the
       }
     }
   },
-  "ECID" : {
+  "ECID": {
     "37784337855396895622558625508046772577": {
       "collect": {
         "val": "y"
@@ -144,7 +144,7 @@ The `adID` consent represents the customer's consent for whether an advertiser I
 
 ```json
 "idSpecific": {
-  "ECID" : {
+  "ECID": {
     "37784337855396895622558625508046772577": {
       "collect": {
         "val": "y"
