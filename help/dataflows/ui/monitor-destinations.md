@@ -171,7 +171,7 @@ You can also filter your list of destinations to only display the selected categ
 
 Additionally, you can enter a destination into the search bar to isolate to a single destination. If you want to see the destination's dataflows you can select the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside it to see a list of its active dataflows.
 
-![Filter destinations using search  bar](../assets/ui/monitor-destinations/filtered-destinations.png)
+![Filter destinations using search bar](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 If you want to view all existing dataflows across all destinations, select **[!UICONTROL Dataflows]**.
 
