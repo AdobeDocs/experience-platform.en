@@ -10,7 +10,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 
 Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Adobe Experience Platform Data Governance provides several core data usage labels out-of-the-box that you can use to start categorizing your data.
 
-This document outlines the core data usage labels currently provided by [!DNL Experience Platform]. More information regarding [!DNL Data Governance] can be found in the [Data Governance overview](../home.md).
+This document outlines the core data usage labels currently provided by [!DNL Experience Platform]. More information regarding Data Governance can be found in the [Data Governance overview](../home.md).
 
 ## Contract labels
 

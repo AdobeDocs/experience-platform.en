@@ -32,7 +32,7 @@ In order for [!DNL Flow Service] to connect to ADLS Gen2, you must provide value
 | `servicePrincipalId` | The application's client ID. |
 | `servicePrincipalKey` | The application's key. |
 | `tenant` | The tenant information that contains your application. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for ADLS Gen2 is: `0ed90a81-07f4-4586-8190-b40eccef1c5a`. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for ADLS Gen2 is: `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
 
 For more information about these values, refer to [this ADLS Gen2 document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
@@ -77,7 +77,7 @@ curl -X POST \
             }
         },
         "connectionSpec": {
-            "id": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
             "version": "1.0"
         }
     }'
@@ -89,7 +89,7 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | The service principal ID of your ADLS Gen2 account. |
 | `auth.params.servicePrincipalKey` | The service principal key of your ADLS Gen2 account. |
 | `auth.params.tenant` | The tenant information of your ADLS Gen2 account. |
-| `connectionSpec.id` | The ADLS Gen2 connection specification ID: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
+| `connectionSpec.id` | The ADLS Gen2 connection specification ID: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
 
 **Response**
 

@@ -25,7 +25,7 @@ feature: Schemas
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
   * [Segment definition](./classes/segment-definition.md)
-  * B2B classes (Beta) {#b2b}
+  * B2B classes {#b2b}
     * [XDM Business Account](./classes/b2b/business-account.md)
     * [XDM Business Account Person Relation](./classes/b2b/business-account-person-relation.md)
     * [XDM Business Campaign](./classes/b2b/business-campaign.md)
@@ -34,7 +34,7 @@ feature: Schemas
     * [XDM Business Opportunity Person Relation](./classes/b2b/business-opportunity-person-relation.md)
     * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
     * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
-* Schema field groups {#field-groups}
+* Field groups {#field-groups}
   * Profile field groups {#profile}
     * [Demographic Details](./field-groups/profile/demographic-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
@@ -147,8 +147,9 @@ feature: Schemas
   * [Create a schema in the API](tutorials/create-schema-api.md)
   * [Define a schema relationship in the UI](tutorials/relationship-ui.md)
   * [Define a schema relationship in the API](tutorials/relationship-api.md)
-  * [Define a schema relationship in Real-time CDP B2B Edition (Beta)](tutorials/relationship-b2b.md)
+  * [Define a schema relationship in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
+  * [Extend a soft enum field (API)](tutorials/extend-soft-enum.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

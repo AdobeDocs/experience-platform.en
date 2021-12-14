@@ -6,15 +6,13 @@ exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 ---
 # Account profile UI guide
 
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
-
 >[!NOTE]
 >
 >Account profiles are only available to Real-time Customer Data Platform B2B Edition customers. To learn more about Real-time CDP, including the features and functionality available to each license type, please begin by reading the [Real-time CDP overview](../overview.md).
 
 Account profiles enable you to unify account information from multiple sources. This unified view of an account brings together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer account information. This document provides a guide to interacting with account profiles using the Real-time CDP, B2B Edition capabilities available in the Adobe Experience Platform user interface (UI).
+
+To learn more about how account profiles are created as part of the B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md).
 
 ## Browse account profiles
 

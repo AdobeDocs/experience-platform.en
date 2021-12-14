@@ -7,6 +7,7 @@ type: Tutorial
 description: This tutorial provides you with the prerequisites and assets required for all other Adobe Experience Platform Data Science Workspace tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
 ---
+
 # Create the retail sales schema and dataset
 
 This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on [!DNL Experience Platform].
@@ -60,11 +61,11 @@ The Retail Sales schema and datasets are created automatically by using the prov
         kernel_type: Python
     ```
 
-    -   `platform_gateway` : The base path for API calls. Do not modify this value.
-    -   `ims_token` : Your `{ACCESS_TOKEN}` goes here.
-    -   `ingest_data` : For the purpose of this tutorial, set this value as `"True"` in order to create the Retail Sales schemas and datasets. A value of `"False"` will only create the schemas.
-    -   `build_recipe_artifacts` : For the purpose of this tutorial, set this value as `"False"` to prevent the script from generating a Recipe artifact.
-    -   `kernel_type` : The execution type of the Recipe artifact. Leave this value as `Python` if `build_recipe_artifacts` is set as `"False"`, otherwise specify the correct execution type.
+    -   `platform_gateway`: The base path for API calls. Do not modify this value.
+    -   `ims_token`: Your `{ACCESS_TOKEN}` goes here.
+    -   `ingest_data`: For the purpose of this tutorial, set this value as `"True"` in order to create the Retail Sales schemas and datasets. A value of `"False"` will only create the schemas.
+    -   `build_recipe_artifacts`: For the purpose of this tutorial, set this value as `"False"` to prevent the script from generating a Recipe artifact.
+    -   `kernel_type`: The execution type of the Recipe artifact. Leave this value as `Python` if `build_recipe_artifacts` is set as `"False"`, otherwise specify the correct execution type.
 
 4.  Under the `Titles` section, provide the following information appropriately for the Retail Sales sample data, save and close the file after edits are in place. Example shown below:
 
