@@ -103,8 +103,8 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destinat
 
 Experience Platform optimizes the profile export behavior to your HTTP API destination, to only export data to your API endpoint when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
 
-* The profile update was triggered by a change in segment membership for at least one of the flow's mapped segments. For example, the profile might qualify for one of the segments mapped to the destination flow.
-* The profile update was triggered by a change in [identity map](/help/xdm/field-groups/profile/identitymap.md). For example, a profile who had already qualified for one of the segments mapped to the destination flow has been added a new identity in the identity map attribute.
-* The profile update was triggered by a change in attributes for at least one of the flow's mapped attributes. For example, one of the attributes mapped to the destination flow in the mapping step is added to a profile.
+* The profile update was triggered by a change in segment membership for at least one of the flow's mapped segments. For example, the profile might qualify for one of the segments mapped to the destination.
+* The profile update was triggered by a change in [identity map](/help/xdm/field-groups/profile/identitymap.md). For example, a profile who had already qualified for one of the segments mapped to the destination has been added a new identity in the identity map attribute.
+* The profile update was triggered by a change in attributes for at least one of the flow's mapped attributes. For example, one of the attributes mapped to the destination in the mapping step is added to a profile.
 
 In all cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if a segment mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
