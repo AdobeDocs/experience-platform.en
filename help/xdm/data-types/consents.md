@@ -124,7 +124,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 `collect` represents the customer's consent for having their data collected.
 
 ```json
-"collect" : {
+"collect": {
   "val": "y"
 }
 ```
@@ -140,7 +140,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 `adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device.
 
 ```json
-"adID" : {
+"adID": {
   "val": "y"
 }
 ```
@@ -156,7 +156,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 `share` represents the customer's consent for whether their data can be shared with (or sold to) second or third parties.
 
 ```json
-"share" : {
+"share": {
   "val": "y"
 }
 ```
