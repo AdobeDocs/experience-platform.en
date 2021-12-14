@@ -24,6 +24,10 @@ This tutorial workflow relies on several Adobe Experience Platform services as p
 
 As part of the initial setup, Bodea's IT department needs to create an XDM schema to ensure that their data follows a standard format when being brought into Platform, and is actionable across different Platform services and Adobe Experience Cloud products (such as Adobe Analytics and Adobe Target). 
 
+>![WARNING]
+>
+>You must follow the ingestion patterns as described in the relevant sources documentation linked to throughout this tutorial. Other field mapping methods are not guaranteed to work.
+
 Adobe Experience Platform allows you to automatically generate the schemas and namespaces required for B2B data sources. This tool ensures that the schemas created describe the data in a structured reusable way. Follow the [B2B namespaces and schema auto-generation utility documentation](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) for a complete reference to the setup process.
 
 Within the Adobe Experience Platform UI, the Bodea marketer selects **[!UICONTROL Schemas]** in the left rail, followed by the **[!UICONTROL Browse]** tab. Since they used the Marketo Engage auto-generation utility, the new empty schemas appear in the list and all have a prefix of "B2B".
