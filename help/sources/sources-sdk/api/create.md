@@ -31,7 +31,7 @@ The first step in creating a new source through [!DNL Sources SDK] is to coordin
 | Label | The name of your source. | [!DNL MailChimp Members] |
 | Description | A brief description of your source. | Create a live inbound connection to your [!DNL Mailchimp Members] instance, to ingest both historic and scheduled data into Experience Platform. |
 | Icon | The image or logo that represents your source. The icon is displayed in the Platform UI rendering of your source. | `mailchimp-members-icon.svg` |
-| Category | The category of your source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| Category | The category of your source. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 
 {style="table-layout:auto"}
 
