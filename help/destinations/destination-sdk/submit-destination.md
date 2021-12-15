@@ -211,10 +211,6 @@ Provide the ID of the publish request for your destination. For information on h
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination. As part of the submission process, provide the pull request (PR) for your destination documentation.
 
-Example PRs from existing integration partners are:
-* [Yahoo destination documentation PR](https://github.com/AdobeDocs/experience-platform.en/pull/110);
-* [Airship destination documentation PR](https://github.com/AdobeDocs/experience-platform.en/pull/54).
-
 ## Logo for your destination
 
 The destinations catalog includes a logo for each destination card. In your submission email, include an image with the logo for your destination.
