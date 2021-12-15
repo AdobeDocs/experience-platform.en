@@ -122,9 +122,13 @@ The event triggers if a custom event type occurs. Named JavaScript functions tha
 
 The event triggers if a specified data element changes. You must provide a name for the data element. You can select the data element by either typing its name into the text field, or selecting the data element icon to the right side of the text field and choosing from a list provided within the dialog that appears.
 
-#### Direct Call
+#### Direct Call {#direct-call-event}
 
-The direct-call event bypasses event detection and lookup systems. Direct-call rules are ideal for situations where you want to tell Platform exactly what is happening. Also, they are ideal when Platform cannot detect an event in the DOM, such as with Adobe Flash. Specify the `_satellite.track` string in the identifier text field.
+A direct call event bypasses event detection and lookup systems. Direct call rules are ideal for situations where you want to tell the system exactly what is happening. Also, they are ideal when the system cannot detect an event in the DOM, such as with Adobe Flash.
+
+When defining a direct call event, you must specify an string that will act as this event's identifier. If a [trigger direct call action](#direct-call-action) that contains this identifier executes, then all rules that use this event will fire.
+
+![Screenshot of a Direct Call event in the Data Collection UI](../../../images/extensions/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -619,6 +623,14 @@ setTimeout(function() {
 }, 1000);
 </script>
 ```
+
+### Trigger Direct Call {#direct-call-action}
+
+This action triggers all rules that use a specific [direct call event](#direct-call-event). When configuring the action, you must provide the identifier string for the direct call event you want to trigger. Optionally, you can also pass data to the direct call event via a `detail` object, which can can contain a custom set of key-value pairs.
+
+![Screenshot of a Trigger Direct Call action in the Data Collection UI](../../../images/extensions/core/direct-call-action.png)
+
+The action maps directly to the [`track` method](../../../ui/client-side/satellite-object.md?lang=en#track) in the `satellite` object, which can be accessed by client-side code.
 
 ## Core extension data element types
 
