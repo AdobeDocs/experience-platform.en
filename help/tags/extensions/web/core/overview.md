@@ -626,7 +626,7 @@ setTimeout(function() {
 
 ### Trigger Direct Call {#direct-call-action}
 
-This action triggers all rules that use a specific [direct call event](#direct-call-event). When configuring the action, you must provide the identifier string for the direct call event you want to trigger. Optionally, you can also pass data to the direct call event via a `detail` object, which can can contain a custom set of key-value pairs.
+This action triggers all rules that use a specific [direct call event](#direct-call-event). When configuring the action, you must provide the identifier string for the direct call event you want to trigger. Optionally, you can also pass data to the direct call event via a `detail` object, which can contain a custom set of key-value pairs.
 
 ![Screenshot of a Trigger Direct Call action in the Data Collection UI](../../../images/extensions/core/direct-call-action.png)
 
