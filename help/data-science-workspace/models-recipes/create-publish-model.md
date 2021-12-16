@@ -24,11 +24,15 @@ Before starting this tutorial, you must have the following prerequisites:
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com/) and select **[!UICONTROL Datasets]** to list all existing datasets and select the dataset that you would like to explore. In this case, the **Luma web data** dataset.
 
-<!-- need new image for the dataset -->
+![select Luma web dataset](../images/models-recipes/model-walkthrough/luma-dataset.png)
 
-The dataset activity page opens, listing information relating to your dataset. You can select **[!UICONTROL Preview Dataset]** near the top-right to examine sample records. You can also view the schema for the selected dataset. Select the schema link in the right-rail. A popover appears, selecting the link under **[!UICONTROL schema name]** opens the schema in a new tab.
+The dataset activity page opens, listing information relating to your dataset. You can select **[!UICONTROL Preview Dataset]** near the top-right to examine sample records. You can also view the schema for the selected dataset. 
 
-<!-- dataset preview image -->
+![perview Luma web data](../images/models-recipes/model-walkthrough/preview-dataset.png)
+
+Select the schema link in the right-rail. A popover appears, selecting the link under **[!UICONTROL schema name]** opens the schema in a new tab.
+
+![preview the luma web data schema](../images/models-recipes/model-walkthrough/preview-schema.png)
 
 You can further explore the data using the provided Exploratory Data Analysis (EDA) notebook. This notebook can be used to help understand patterns in the Luma data, check data sanity, and summarizes the relevant data for the predictive propensity model. To learn more about Exploratory Data Analysis, visit the [EDA documenation](../jupyterlab/eda-notebook.md).
 
@@ -54,64 +58,38 @@ The Data Science Workspace UI and API allow you to publish your recipe as a mode
 
 ### Create a Model
 
-To learn more about creating a model using the UI, visit the [Train and evaluate a model in the Data Science Workspace UI](./train-evaluate-model-ui.md) tutorial. This tutorial provides an example on how to create, train, and update hyperparameters to fine tune your model.
+To learn more about creating a model using the UI, visit the train and evaluate a model in the Data Science Workspace [UI](./train-evaluate-model-ui.md) or [API](./train-evaluate-model-api) tutorial. This tutorial provides an example on how to create, train, and update hyperparameters to fine tune your model.
 
 >[!NOTE]
 >
 > Hyperparameters cannot be learned, therefore they must be assigned before training runs occur. Adjusting hyperparameters may change the accuracy of your trained model. Since optimizing a model is an iterative process, multiple training runs may be required before a satisfactory evaluation is achieved.
 
-### Evaluate the Model 
+## Score a model {#score-a-model}
 
-Each time a training run completes, you can view the resulting evaluation metrics to determine how well the Model performed.
+The next step in creating and publishing a model is to operationalize your model in order to score and consume insights from the data lake and Real-Time Customer Profile.
 
-To review the evaluation metrics (Precision and Recall) for each completed training run, select the training run.
+Scoring in Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 
-![](../images/models-recipes/model-walkthrough/select-training-run.png)
+To learn how to score your model, visit the score a model [UI](./score-model-ui.md) or [API](./score-model-api.md) tutorial.
 
-You can explore the information provided for each evaluation metric. The higher these metrics, the better the model performed.
+## Publish a scored model as a service
 
-![](../images/models-recipes/model-walkthrough/metrics.png)
+Data Science Workspace allows you to publish your trained model as a service. This enables users within your IMS Organization to score data without the need fto create their own models.
 
-You can see the dataset, schema, and configuration parameters used for each training run on the right rail. Navigate back to the Model page and identify the top performing training run by observing their evaluation metrics.
+To learn how to publish a model as a service, visit the [UI](./publish-model-service-ui.md) or [API](./publish-model-service-api.md) tutorial.
 
-## Operationalize your Model {#operationalize-your-model}
+### Schedule automated training for a service
 
-The final step in the Data Science workflow is to operationalize your model in order to score and consume insights from your data store.
+Once you have published a model as a service you can set up scheduled scoring and training runs for your machine learning service. Automating the training and scoring process can help maintain and improve a service's efficiency through time by keeping up with patterns within your data. Visit the [schedule a model in the Data Science Workspace UI](./schedule-models-ui.md) tutorial.
 
-### Score and generate insights
-
-On the product recommendations model overview page, select the name of the best-performing training run, with the highest recall and precision values.
-
-![score the best run](../images/models-recipes/model-walkthrough/select-training-run.png)
-
-Then, on the top-right of the training run details page, select **[!UICONTROL Score]**.
-
-![select score](../images/models-recipes/model-walkthrough/select-score.png)
-
-Next, select the **[!UICONTROL Recommendations Input Dataset]** as the scoring input dataset, which is the same dataset you used when you created the Model and executed its training runs. Then, select **[!UICONTROL Next]**.
-
-![](../images/models-recipes/model-walkthrough/score-input.png)
-
-Once you have your input dataset, select the **[!UICONTROL Recommendations Output Dataset]** as the scoring output dataset. Scoring results are stored in this dataset as a batch.
-
-![](../images/models-recipes/model-walkthrough/score-output.png)
-
-Finally, review the scoring configurations. These parameters contain the input and output datasets you selected earlier along with the appropriate schemas. Select **[!UICONTROL Finish]** to begin the scoring run. The run may take several minutes to complete.
-
-![](../images/models-recipes/model-walkthrough/score-finish.png)
-
-### View scored insights
-
-Once the scoring run has successfully completed, you are able to preview the results and view the insights generated.
-
-On the scoring runs page, select the completed scoring run, then select **[!UICONTROL Preview Scoring Results Dataset]** on the right rail.
-
-![](../images/models-recipes/model-walkthrough/preview-scores.png)
-
-In the preview table, each row contains product recommendations for a particular customer, labeled as [!UICONTROL recommendations] and [!UICONTROL userId] respectively. Since the [!UICONTROL num_recommendations] hyperparameter was set to 10 in the sample screenshots, each row of recommendations can contain up to 10 product identities delimited by a number sign (#).
-
-![](../images/models-recipes/model-walkthrough/preview_score_results.png)
+>[!NOTE]
+>
+> You can only schedule a model for automated training and scoring from the UI.
 
 ## Next steps {#next-steps}
 
-This tutorial introduced you to the workflow of [!DNL Data Science Workspace], demonstrating how raw unprocessed data can be turned into useful information through machine learning. To learn more about using the [!DNL Data Science Workspace], continue to the next guide on [creating the retail sales schema and dataset](./create-retails-sales-dataset.md).
+Adobe Experience Platform [!DNL Data Science Workspace] provides the tools and resources to create, evaluate, and utilize machine learning models to generate data predictions and insights. When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented using [!DNL Adobe Experience Platform Segmentation Service].
+
+ As profile and time series data is ingested, Real-time Customer Profile automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. As a result, you can instantaneously perform computations and make decisions to deliver enhanced, individualized experiences to customers as they interact with your brand.
+
+ Visit the tutorial for [enriching Real-Time Customer Profile with machine learning insights](./enrich-profile.md) to learn more about how you can utilize machine learning insights.
