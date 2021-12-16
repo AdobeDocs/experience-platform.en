@@ -124,9 +124,9 @@ The event triggers if a specified data element changes. You must provide a name 
 
 #### Direct Call {#direct-call-event}
 
-A direct call event bypasses event detection and lookup systems. Direct call rules are ideal for situations where you want to tell the system exactly what is happening. Also, they are ideal when the system cannot detect an event in the DOM, such as with Adobe Flash.
+A direct call event bypasses event detection and lookup systems. Direct call rules are ideal for situations where you want to tell the system exactly what is happening. Also, they are ideal when the system cannot detect an event in the DOM.
 
-When defining a direct call event, you must specify a string that will act as this event's identifier. If a [trigger direct call action](#direct-call-action) that contains this identifier executes, then all rules that use this event will fire.
+When defining a direct call event, you must specify a string that will act as this event's identifier. If a [trigger direct call action](#direct-call-action) containing the same identifier is fired, then any direct call event rules listening for that identifier will run.
 
 ![Screenshot of a Direct Call event in the Data Collection UI](../../../images/extensions/core/direct-call-event.png)
 
