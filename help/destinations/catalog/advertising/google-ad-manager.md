@@ -49,8 +49,8 @@ Before creating the [!DNL Google Ad Manager] destination in Platform, you must c
 
 * **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
 * **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
-* **Network ID** : this is your account with [!DNL Google Ad Manager]
-* **Audience Link ID** : this is your account with [!DNL Google Ad Manager]
+* **Network ID**: this is your account with [!DNL Google Ad Manager]
+* **Audience Link ID**: this is your account with [!DNL Google Ad Manager]
 * Your account type. DFP by Google or AdX buyer.
 
 ## Connect to the destination {#connect}

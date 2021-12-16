@@ -113,8 +113,8 @@ The sections below cover the unique data element types provided by the extension
 
 The Data Layer Computed State data element can return one of two things, depending on how you configure it:
 
-* The complete Data Layer state : By default, the complete Data Layer Computed State is returned.
-* A specific path : You can specify the path that you want to return in your Data Layer. Paths are specified using dot notation (for example, `data.foo`).
+* The complete Data Layer state: By default, the complete Data Layer Computed State is returned.
+* A specific path: You can specify the path that you want to return in your Data Layer. Paths are specified using dot notation (for example, `data.foo`).
 
 ### Data Layer size
 
