@@ -154,7 +154,7 @@ curl -X POST \
         "data": {
             "format": "delimited",
             "properties": {
-                "compressionType" : "gzip"
+                "compressionType": "gzip"
             }
         },
         "params": {
