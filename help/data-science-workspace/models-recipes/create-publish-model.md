@@ -58,7 +58,7 @@ The Data Science Workspace UI and API allow you to publish your recipe as a mode
 
 ### Create a Model
 
-To learn more about creating a model using the UI, visit the train and evaluate a model in the Data Science Workspace [UI](./train-evaluate-model-ui.md) or [API](./train-evaluate-model-api) tutorial. This tutorial provides an example on how to create, train, and update hyperparameters to fine tune your model.
+To learn more about creating a model using the UI, visit the train and evaluate a model in the Data Science Workspace [UI](./train-evaluate-model-ui.md) or [API](./train-evaluate-model-api.md) tutorial. This tutorial provides an example on how to create, train, and update hyperparameters to fine tune your model.
 
 >[!NOTE]
 >
