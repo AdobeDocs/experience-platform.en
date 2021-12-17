@@ -10,7 +10,7 @@ exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
-Event forwarding in Adobe Experience Platform allows you to send collected event data to non-Adobe destinations for server-side processing. Event forwarding decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Implemented in a similar manner to tags, event forwarding rules can transform and send data to new destinations without changing client-side implementations.
+Event forwarding in Adobe Experience Platform allows you to send collected event data to a destination for server-side processing. Event forwarding decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Implemented in a similar manner to tags, event forwarding rules can transform and send data to new destinations, but instead of sending this data from a client application like a web browser, it is sent from Adobe's servers.
 
 This document provides a high-level overview of event forwarding in Platform.
 
@@ -25,21 +25,21 @@ Event forwarding combined with the Adobe Experience Platform [Web SDK](../../../
 **Performance**:
 
 * Make a single call from a page that contains a payload of data which then federates on the server side to reduce client-side network traffic and deliver a faster experience for customers.
-* Decrease the amount of time it takes for web pages to load so your site performs to industry best practices.
-* Decrease the number of required client-side technologies to reach your target market and send data to non-Adobe destinations.
+* Decrease the amount of time it takes for web pages to load to improve site performance.
+* Decrease the number of required client-side technologies to deliver your experience and send data to many destinations.
 
 **Data governance**:
 
-* Increase transparency and control over which data types are sent where across all properties.
+* Increase transparency and control over which data is sent where across all properties.
 
 ## Differences between event forwarding and tags
 
-In terms of implementation, event forwarding uses many of the same concepts as tags, such as [rules](../managing-resources/rules.md), [data elements](../managing-resources/data-elements.md), and [extensions](../managing-resources/extensions/overview.md). The main difference between the two can be summarized as follows: 
+In terms of configuration, event forwarding uses many of the same concepts as tags, such as [rules](../managing-resources/rules.md), [data elements](../managing-resources/data-elements.md), and [extensions](../managing-resources/extensions/overview.md). The main difference between the two can be summarized as follows: 
 
-* Tags **collects** event data and sends it to Platform Edge Network.
-* Event forwarding **sends** incoming event data from Platform Edge Network to non-Adobe destinations.
+* Tags **collects** event data from a website or native mobile application and sends it to Platform Edge Network.
+* Event forwarding **sends** incoming event data from Platform Edge Network to an endpoint which represents a final destination or an endpoint that provides data that you want to enrich the original payload with.
 
-While tags collects event data directly from your site using the Platform Web and Mobile SDKs, event forwarding requires event data to already be sent through Platform Edge Network in order to forward it to non-Adobe destinations. In other words, you must implement the Platform Web or Mobile SDK on your site (either through tags or using raw code) in order to use event forwarding.
+While tags collects event data directly from your site or native mobile application using the Platform Web and Mobile SDKs, event forwarding requires event data to already be sent through Platform Edge Network in order to forward it to destinations. In other words, you must implement the Platform Web or Mobile SDK on your digital property (either through tags or using raw code) in order to use event forwarding.
 
 ### Properties
 
@@ -71,7 +71,7 @@ The **[!UICONTROL Path]** value for the data element must follow the pattern `ar
 
 ### Rules
 
-Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../edge/fundamentals/datastreams.md) and forwards those events to non-Adobe destinations if certain conditions are satisfied.
+Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../edge/fundamentals/datastreams.md) and forwards those events to destinations if certain conditions are satisfied.
 
 ![Event forwarding rules in the Data Collection UI](../../images/ui/event-forwarding/overview/rules.png)
 
@@ -83,7 +83,7 @@ In tag rules, data elements are tokenized with a `%` at the beginning and end of
 
 #### Sequence of rule actions
 
-The [!UICONTROL Actions] section of an event forwarding rule is always executed sequentially. Make sure the order of actions is correct when you save a rule. This execution sequence cannot be customized like it can with tags.
+The [!UICONTROL Actions] section of an event forwarding rule is always executed sequentially. Make sure the order of actions is correct when you save a rule. This execution sequence cannot be executed asynchronously like it can with tags.
 
 ## Secrets
 
