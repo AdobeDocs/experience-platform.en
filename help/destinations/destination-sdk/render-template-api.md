@@ -17,7 +17,9 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Render exported profiles based on the message transformation template {#render-exported-data}
 
-You can render exported profiles by making a POST request to the `authoring/testing/template/render` endpoint and providing the destination ID of the destination configuration and the template you created using the [sample template API endpoint](./sample-template-api.md).
+You can render exported profiles by making a POST request to the `authoring/testing/template/render` endpoint and providing the destination ID of the destination configuration and the template you created using the [sample template API endpoint](./sample-template-api.md). 
+
+You can start by using a simple template that exports your raw profiles without applying any transformations and then move on to a more complex template, that applies transformations to profiles. The syntax for the simple template is: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >

@@ -24,7 +24,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'content-type: application/json' \
   -d '{
         "datasetId":"5c8c3c555033b814b69f947f"

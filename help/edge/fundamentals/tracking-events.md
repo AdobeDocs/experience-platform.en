@@ -86,8 +86,8 @@ alloy("sendEvent", {
       target: {
         "profile.gender": "female",
         "profile.age": 30,
-        "entity.id" : "123",
-        "entity.genre" : "Drama"
+        "entity.id": "123",
+        "entity.genre": "Drama"
       }
     }
   }

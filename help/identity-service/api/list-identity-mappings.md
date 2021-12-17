@@ -109,7 +109,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: 111111@AdobeOrg' \
   -d '{
-        "xids" : ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
+        "xids": ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
         "targetNs": "0",
         "graph-type": "Private Graph"
       }' | json_pp

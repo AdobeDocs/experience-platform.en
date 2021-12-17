@@ -30,7 +30,7 @@ The following sections provide additional information that you will need to know
 | ---------- | ----------- |
 | `connectionString` | The connection string used to connect to your [!DNL GreenPlum] instance. The connection string pattern for [!DNL GreenPlum] is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
-For more information about getting started, refer to [this GreenPlum document](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
+For more information about getting started, refer to [this GreenPlum document](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ## Connect your [!DNL GreenPlum] account
 
