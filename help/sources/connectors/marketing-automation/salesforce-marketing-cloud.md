@@ -14,7 +14,7 @@ exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[!DNL Experience Platform] provides support for ingesting data from third-party marketing automation systems. Support for marketing automation providers include [!DNL Salesforce Marketing Cloud].
+[DNL Experience Platform] provides support for ingesting data from third-party marketing automation systems. Support for marketing automation providers include [!DNL Salesforce Marketing Cloud].
 
 ## Prerequisites
 
