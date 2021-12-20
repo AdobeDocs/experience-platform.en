@@ -9,15 +9,15 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 ---
 # Connect to email marketing destinations and activate data using the Flow Service API
 
-This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your new created destination, and activate data to your new created destination.
+This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a cloud storage destination or [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your new created destination, and activate data to your new created destination.
 
-This tutorial uses the Adobe Campaign destination in all examples, but the steps are identical for all email marketing destinations.
+This tutorial uses the Adobe Campaign destination in all examples, but the steps are identical for all batch cloud storage and email marketing destinations.
 
 ![Overview - the steps to create a destination and activate segments](../assets/api/email-marketing/overview.png)
 
 If you prefer to use the user interface in Platform to connect a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) tutorials.
 
-## Get started
+## Get started {#get-started}
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -27,18 +27,18 @@ This guide requires a working understanding of the following components of Adobe
 
 The following sections provide additional information that you will need to know in order to activate data to email marketing destinations in Platform.
 
-### Gather required credentials
+### Gather required credentials {#gather-required-credentials}
 
 To complete the steps in this tutorial, you should have the following credentials ready, depending on the type of destinations that you are connecting and activating segments to.
 
 * For [!DNL Amazon] S3 connections to email marketing platforms: `accessId`, `secretKey`
 * For SFTP connections to email marketing platforms: `domain`, `port`, `username`, `password` or `ssh key` (depending on the connection method to the FTP location)
 
-### Reading sample API calls
+### Reading sample API calls {#reading-sample-api-calls}
 
 This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Gather values for required and optional headers
+### Gather values for required and optional headers {#gather-values-headers}
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
@@ -58,9 +58,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-### Swagger documentation 
+### API reference documentation {#api-reference-documentation}
 
-You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the Swagger documentation page in parallel.
+You can find accompanying reference documentation for all the API calls in this tutorial. Refer to the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the API reference documentation in parallel.
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 
@@ -505,7 +505,7 @@ curl -X POST \
     }
 ```
 
-*   `{FLOW_SPEC_ID}`: Use the flow for the email marketing destination that you want to connect to. To get the flow spec, perform a GET operation on the `flowspecs` endpoint. See Swagger documentation here: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In the response, look for `upsTo` and copy the corresponding ID of the email marketing destination that you want to connect to. For example, for Adobe Campaign, look for `upsToCampaign` and copy the `id` parameter.
+*   `{FLOW_SPEC_ID}`: Use the flow spec ID for the email marketing destination that you want to connect to. To retrieve the flow spec ID, perform a GET operation on the `flowspecs` endpoint, as shown in the [flow specs API reference documentation](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In the response, look for `upsTo` and copy the corresponding ID of the email marketing destination that you want to connect to. For example, for Adobe Campaign, look for `upsToCampaign` and copy the `id` parameter.
 *   `{SOURCE_CONNECTION_ID}`: Use the source connection ID you obtained in the step [Connect to your Experience Platform](#connect-to-your-experience-platform-data).
 *   `{TARGET_CONNECTION_ID}`: Use the target connection ID you obtained in the step [Connect to email marketing destination](#connect-to-email-marketing-destination).
 
@@ -525,7 +525,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 ![Destination steps overview step 5](../assets/api/email-marketing/step5.png)
 
-Having created all the connections and the data flow, now you can activate your profile data to the email marketing platform. In this step, you select which segments and which profile attributes you are sending to the destination and you can schedule and send data to the destination.
+Having created all the connections and the data flow, now you can activate your profile data to the email marketing platform. In this step, you select which segments and which profile attributes you are sending to the destination. You can also determine the file naming format of the exported files and which attributes should be used as deduplication keys or mandatory keys. and you can schedule and send data to the destination.
 
 To activate segments to your new destination, you must perform a JSON PATCH operation, similar to the example below. You can activate mutiple segments and profile attributes in one call. To learn more about JSON PATCH, see the [RFC specification](https://tools.ietf.org/html/rfc6902). 
 
@@ -554,7 +554,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
             "value": {
                 "name": "Name of the segment that you are activating",
                 "description": "Description of the segment that you are activating",
-                "id": "{SEGMENT_ID}"
+                "id": "{SEGMENT_ID}",
+                "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                "exportMode": "DAILY_FULL_EXPORT",
+                "schedule": {
+                    "frequency": "ONCE",
+                    "startDate": "2021-12-20",
+                    "startTime": "17:00"
+                },   
             }
         }
     },
@@ -584,7 +591,9 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-*   `{DATAFLOW_ID}`: Use the data flow you obtained in the previous step.
+
+
+*   `{DATAFLOW_ID}`: Use the data flow that you obtained in the previous step.
 *   `{ETAG}`: Use the etag that you obtained in the previous step.
 *   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, select **[!UICONTROL Segmentation Service API]** in the left navigation menu, and look for the `GET /segment/definitions` operation in **[!UICONTROL Segment Definitions]**.
 *   `{PROFILE_ATTRIBUTE}`: For example, `"person.lastName"`
