@@ -143,7 +143,7 @@ curl -X POST \
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can provide to include more information on your source connection. |
 | `baseConnectionId` | The connection ID of your [!DNL Event Hubs] source that was generated in the previous step. |
-| `connectionSpec.id` | The fixed connection specification ID for [!DNL Event Hubs]. This ID is : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `connectionSpec.id` | The fixed connection specification ID for [!DNL Event Hubs]. This ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 | `data.format` | The format of the [!DNL Event Hubs] data that you want to ingest. Currently, the only supported data format is `json`. |
 | `params.eventHubName` | The name for your [!DNL Event Hubs] source. |
 | `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw` and `xdm`. |

@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-match.html,https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-match/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/b2b-release-notes.html,https://experienceleague.adobe.com/docs/experience-platform/release-notes/2021/november-2021.html
 https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html,https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension-configuration.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/home-page-dashboards.html,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/home-page-dashboards.html
@@ -317,3 +318,4 @@ https://experienceleague.adobe.com/docs/experience-platform/destinations/destina
 https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/functionality/credentials-configuration.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/functionality/authentication/authentication-configuration.html
 https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/functionality/oauth2-authentication.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/functionality/authentication/oauth2-authentication.html
 https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/http-destination.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/streaming/http-destination.html
+https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/create-a-recipe.html,https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/create-a-model.html

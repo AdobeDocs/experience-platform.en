@@ -34,7 +34,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL MailChimp] :
+The following request creates a base connection for [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -97,7 +97,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL MailChimp] :
+The following request creates a base connection for [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -343,7 +343,7 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for [!DNL MailChimp] :
+The following request creates a source connection for [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -418,7 +418,7 @@ POST /targetConnections
 
 **Request**
 
-The following request creates a target connection for [!DNL MailChimp] :
+The following request creates a target connection for [!DNL MailChimp]:
 
 ```shell
 curl -X POST \

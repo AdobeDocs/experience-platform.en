@@ -336,7 +336,7 @@ The following features are created and explored in this section:
 - `COUNT_CHECK_OUTS`: The number of check outs.
 - `COUNT_PURCHASES`: The number of purchases.
 - `COUNT_INSTANCE_PRODUCTADDS`: The number of product add instances.
-- `NUMBER_VISITS` : The number of visits.
+- `NUMBER_VISITS`: The number of visits.
 - `COUNT_PAID_SEARCHES`: The number of paid searches.
 - `DAYS_SINCE_VISIT`: The number of days since the last visit.
 - `TOTAL_ORDER_REVENUE`: The total order revenue.
@@ -463,7 +463,7 @@ Data.head(5)
 This cell prints the number of unique profiles.
 
 ```python
-print("Count of unique profiles :", (len(Data)))
+print("Count of unique profiles:", (len(Data)))
 ```
 
 ### Detect missing values and outliers
@@ -615,11 +615,11 @@ Columns that have only value one do not add any information to the analysis, and
 for col in Data.columns:
     if len(Data[col].unique()) == 1:
         if col == 'TARGET':
-            print(Fore.RED + '\033[1m' + 'WARNING : TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+            print(Fore.RED + '\033[1m' + 'WARNING: TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
         elif col == 'ID':
-            print(Fore.RED + '\033[1m' + 'WARNING : THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+            print(Fore.RED + '\033[1m' + 'WARNING: THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
         else:
-            print('Dropped column :',col)
+            print('Dropped column:',col)
             Data.drop(col,inplace=True,axis=1)
 ```
 
