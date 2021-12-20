@@ -49,8 +49,12 @@ Datasets are a storage and management construct for a collection of data, typica
 
 Audience Manager datasets are disabled for Profile by default and users have the ability to enable or disable datasets based on their use cases. It is not recommended to disable datasets that will be used for segment membership in Profile.
 
-| Dataset Name | Description | Class | [!DNL Profile] store or [!DNL Data Lake] |
-| --- | --- | --- | --- |
+>[!NOTE]
+>
+>AAM Real-time is the only dataset that goes to the [!DNL Data Lake]. All of the other Audience Manager datasets go to [!DNL Profile], if they are enabled for [!DNL Profile]. If they are not enabled for [!DNL Profile], then they don't receive any data and they will show as empty.
+
+| Dataset Name | Description | Class |
+| --- | --- | --- |
 | AAM Real-time | This dataset contains data collected by direct hits on Audience Manager DCS endpoints and identity maps for Audience Manager Profiles. Keep this dataset enabled for Profile ingestion. | Experience event |
 | AAM Real-time Profile Updates | This dataset enables Real-time targeting of Audience Manager traits and segments. It includes information for Edge regional routing, trait, and segment membership. Keep this dataset enabled for Profile ingestion. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile. | Record |
 | AAM Devices Data | Device data with ECIDs and corresponding segment realizations aggregated in Audience Manager. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile.  | Record |
