@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;delete destination accounts;delete;api
 solution: Experience Platform
-title: Delete a destination account Using the Flow Service API
+title: Delete a destination account using the Flow Service API
 type: Tutorial
 description: Learn how to delete a destination account using the Flow Service API.
 ---
@@ -22,13 +22,13 @@ This tutorial requires you to have a valid connection ID. The connection ID repr
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [Destinations](../home.md): [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully delete a destination account using the [!DNL Flow Service] API.
 
 ### Reading sample API calls {#reading-sample-api-calls}
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Gather values for required headers {#gather-values-for-required-headers}
 
@@ -49,7 +49,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 ## Find the connection ID of the destination account that you want to delete {#find-connection-id}
 
 >[!NOTE]
->This tutorial uses an [Airship destination](../catalog/mobile-engagement/airship-attributes.md) as an example, but the steps outlined apply to any of the [available source connectors](../../home.md).
+>This tutorial uses the [Airship destination](../catalog/mobile-engagement/airship-attributes.md) as an example, but the steps outlined apply to any of the [available destinations](../catalog/overview.md).
 
 The first step in deleting a destination account is to find out the connection ID that corresponds to the destination account that you want to delete.
 
@@ -66,7 +66,7 @@ Next, you can retrieve the connection ID of the destination account from the URL
 >You will not be able to delete the destination account if any dataflows exist to the destination account.
 >To delete existing dataflows, refer to the pages below:
 >* [Use the Experience Platform UI](../ui/delete-destinations.md) to delete existing dataflows;
->* [Use the Flow Service API](delete-destinations-dataflows.md) to delete existing dataflows.
+>* [Use the Flow Service API](delete-destination-dataflow.md) to delete existing dataflows.
 
 <!--
 
