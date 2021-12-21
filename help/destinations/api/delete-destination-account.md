@@ -174,5 +174,3 @@ You can confirm the deletion by attempting a lookup (GET) request to the connect
 ## Next steps
 
 By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete existing destination accounts.
-
-For steps on how to perform these operations using the user interface, please refer to the tutorial on [deleting accounts in the UI](../../tutorials/ui/delete-accounts.md)
