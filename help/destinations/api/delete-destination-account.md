@@ -63,7 +63,7 @@ Next, you can retrieve the connection ID of the destination account from the URL
 
 >[!IMPORTANT]
 >
->You will not be able to delete the destination account if any dataflows exist to the destination account.
+>Before deleting the destination account, you must delete any existing dataflows to the destination account.
 >To delete existing dataflows, refer to the pages below:
 >* [Use the Experience Platform UI](../ui/delete-destinations.md) to delete existing dataflows;
 >* [Use the Flow Service API](delete-destination-dataflow.md) to delete existing dataflows.
@@ -138,11 +138,9 @@ A successful response returns the current details of your connection including i
 
 -->
 
-## Delete connection
+## Delete connection {#delete-connection}
 
-Once you have an existing connection ID, perform a DELETE request to the [!DNL Flow Service] API.
-
-Make sure that there are no existing dataflows to the destination with the connection ID you are attempting to delete, otherwise you will not be able to delete the destination account.
+Once you have a connection ID and have ensured that no dataflows exist to the destination account, perform a DELETE request to the [!DNL Flow Service] API.
 
 **API format**
 
