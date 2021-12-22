@@ -15,8 +15,8 @@ This document covers the structure and intended use of the fields provided by th
 
 This document requires a working understanding of XDM and the use of the schemas in [!DNL Experience Platform]. Please review the following documentation before continuing:
 
-* [XDM System overview](http://www.adobe.com/go/xdm-home-en)
-* [Basics of schema composition](http://www.adobe.com/go/xdm-schema-best-practices-en)
+* [XDM System overview](https://www.adobe.com/go/xdm-home-en)
+* [Basics of schema composition](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Data type structure {#structure}
 
@@ -248,7 +248,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 
 In order to use the [!UICONTROL Consents and Preferences] data type to ingest consent data from your customers, you must create a dataset based on a schema that contains that data type.
 
-See the tutorial on [creating a schema in the UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign data types to fields. Once you have created a schema containing a field with the [!UICONTROL Consents and Preferences] data type, refer to the the section on [creating a dataset](../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
+See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign data types to fields. Once you have created a schema containing a field with the [!UICONTROL Consents and Preferences] data type, refer to the the section on [creating a dataset](../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
 
 >[!IMPORTANT]
 >
