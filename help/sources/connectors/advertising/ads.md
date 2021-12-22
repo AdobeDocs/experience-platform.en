@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;Google AdWords;google adwords
 solution: Experience Platform
-title: Google AdWords Source Connector Overview
+title: Google AdWords Source Overview
 topic-legacy: overview
 description: Learn how to connect Google AdWords to Adobe Experience Platform using APIs or the user interface.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 ---
-# [!DNL Google AdWords] connector
+# [!DNL Google AdWords] source
 
 >[!NOTE]
 >
->The [!DNL Google AdWords] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL Google AdWords] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
