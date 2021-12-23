@@ -23,7 +23,7 @@ To find the extensions in the Platform interface, browse to **[!UICONTROL Destin
 
 A [tag extension](../../../tags/home.md#extensions) is a package of code that enhances the functionality of a website or mobile app. This could include sending raw event data to a destination like [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) but they can also serve other functions.
 
-It is important to differentiate between tag and event forwarding extensions. The extensions surfaced in the Platform destinations user interface are *tag extensions*. Read about the [difference between tags and event forwarding](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
+It is important to differentiate between tag and event forwarding extensions. The extensions surfaced in the Platform destinations user interface are *tag extensions*. Refer to the overview on event forwarding for more information on the [differences between tags and event forwarding](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
 
 
