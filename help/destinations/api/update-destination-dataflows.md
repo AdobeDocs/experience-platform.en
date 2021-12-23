@@ -12,11 +12,11 @@ You can update various components of a dataflow to a destination. This tutorial 
 
 ## Getting started
 
-This tutorial requires you to have a valid flow ID. If you do not have a valid flow ID, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
+This tutorial requires you to have a valid flow ID. If you do not have a valid flow ID, select your destination of choice from the [destinations catalog](../catalog/overview.md) and follow the steps outlined to [connect to the destination](../ui/connect-destination.md) and [activate data](../ui/activation-overview.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Destinations](../home.md): [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully update your dataflow using the [!DNL Flow Service] API.
@@ -43,7 +43,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Look up dataflow details
 
-The first step in updating your dataflow is to retrieve dataflow details using your flow ID. You can view the current details of an existing dataflow by making a GET request to the `/flows` endpoint.
+The first step in updating your destination dataflow is to retrieve dataflow details using your flow ID. You can view the current details of an existing dataflow by making a GET request to the `/flows` endpoint.
 
 **API format**
 
@@ -53,7 +53,7 @@ GET /flows/{FLOW_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FLOW_ID}` | The unique `id` value for the dataflow you want to retrieve. |
+| `{FLOW_ID}` | The unique `id` value for the destination dataflow you want to retrieve. |
 
 **Request**
 
@@ -61,7 +61,7 @@ The following request retrieves updated information regarding your flow ID.
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -76,111 +76,351 @@ A successful response returns the current details of your dataflow including its
 {
     "items": [
         {
-            "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
-            "createdAt": 1612310475905,
-            "updatedAt": 1614122324830,
+            "id": "226fb2e1-db69-4760-b67e-9e671e05abfc",
+            "createdAt": {CREATED_AT},
+            "updatedAt": {UPDATED_BY},
             "createdBy": "{CREATED_BY}",
             "updatedBy": "{UPDATED_BY}",
             "createdClient": "{CREATED_CLIENT}",
             "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "{SANDBOX_NAME}",
+            "sandboxName": "prod",
             "imsOrgId": "{IMS_ORG}",
-            "name": "Database dataflow using BigQuery",
-            "description": "collecting test1.Mytable from Google BigQuery",
+            "name": "2021 winter campaign",
+            "description": "ACME company holiday campaign for high fidelity customers",
             "flowSpec": {
-                "id": "14518937-270c-4525-bdec-c2ba7cce3860",
+                "id": "71471eba-b620-49e4-90fd-23f1fa0174d8",
                 "version": "1.0"
             },
             "state": "enabled",
-            "version": "\"5400d99c-0000-0200-0000-60358d540000\"",
-            "etag": "\"5400d99c-0000-0200-0000-60358d540000\"",
+            "version": "\"8b0351ca-0000-0200-0000-61c4d6700000\"",
+            "etag": "\"8b0351ca-0000-0200-0000-61c4d6700000\"",
             "sourceConnectionIds": [
-                "b7581b59-c603-4df1-a689-d23d7ac440f3"
+                "5e45582a-5336-4ea1-9ec9-d0004a9f344a"
             ],
             "targetConnectionIds": [
-                "320f119a-5ac1-4ab1-88ea-eb19e674ea2e"
+                "8ce3dc63-3766-4220-9f61-51d2f8f14618"
             ],
             "inheritedAttributes": {
                 "sourceConnections": [
                     {
-                        "id": "b7581b59-c603-4df1-a689-d23d7ac440f3",
+                        "id": "5e45582a-5336-4ea1-9ec9-d0004a9f344a",
                         "connectionSpec": {
-                            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+                            "id": "8a9c3494-9708-43d7-ae3f-cda01e5030e1",
                             "version": "1.0"
                         },
                         "baseConnection": {
-                            "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+                            "id": "0a82f29f-b457-47f7-bb30-33856e2ae5aa",
                             "connectionSpec": {
-                                "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+                                "id": "8a9c3494-9708-43d7-ae3f-cda01e5030e1",
                                 "version": "1.0"
                             }
+                        },
+                        "typeInfo": {
+                            "type": "ProfileFragments",
+                            "id": "ups"
                         }
                     }
                 ],
                 "targetConnections": [
                     {
-                        "id": "320f119a-5ac1-4ab1-88ea-eb19e674ea2e",
+                        "id": "8ce3dc63-3766-4220-9f61-51d2f8f14618",
                         "connectionSpec": {
-                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                            "id": "0b23e41a-cb4a-4321-a78f-3b654f5d7d97",
                             "version": "1.0"
+                        },
+                        "baseConnection": {
+                            "id": "7fbf542b-83ed-498f-8838-8fde0c4d4d69",
+                            "connectionSpec": {
+                                "id": "0b23e41a-cb4a-4321-a78f-3b654f5d7d97",
+                                "version": "1.0"
+                            }
                         }
                     }
                 ]
             },
-            "scheduleParams": {
-                "startTime": "1612310466",
-                "frequency": "week",
-                "interval": "15",
-                "backfill": "true"
-            },
             "transformations": [
                 {
-                    "name": "Copy",
+                    "name": "GeneralTransform",
                     "params": {
-                        "deltaColumn": {
-                            "name": "Datefield",
-                            "dateFormat": "YYYY-MM-DD",
-                            "timezone": "UTC"
+                        "profileSelectors": {
+                            "selectors": [
+                                {
+                                    "type": "JSON_PATH",
+                                    "value": {
+                                        "path": "Email",
+                                        "operator": "EXISTS",
+                                        "identity": {
+                                            "namespace": "Email"
+                                        },
+                                        "mapping": {
+                                            "sourceType": "text/x.schema-path",
+                                            "source": "Email",
+                                            "destination": "Email",
+                                            "identity": false,
+                                            "primaryIdentity": false,
+                                            "functionVersion": 0,
+                                            "copyModeMapping": false,
+                                            "sourceAttribute": "Email",
+                                            "destinationXdmPath": "Email"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "JSON_PATH",
+                                    "value": {
+                                        "path": "person.name.firstName",
+                                        "operator": "EXISTS",
+                                        "mapping": {
+                                            "sourceType": "text/x.schema-path",
+                                            "source": "person.name.firstName",
+                                            "destination": "person.name.firstName",
+                                            "identity": false,
+                                            "primaryIdentity": false,
+                                            "functionVersion": 0,
+                                            "copyModeMapping": false,
+                                            "sourceAttribute": "person.name.firstName",
+                                            "destinationXdmPath": "person.name.firstName"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "JSON_PATH",
+                                    "value": {
+                                        "path": "person.name.lastName",
+                                        "operator": "EXISTS",
+                                        "mapping": {
+                                            "sourceType": "text/x.schema-path",
+                                            "source": "person.name.lastName",
+                                            "destination": "person.name.lastName",
+                                            "identity": false,
+                                            "primaryIdentity": false,
+                                            "functionVersion": 0,
+                                            "copyModeMapping": false,
+                                            "sourceAttribute": "person.name.lastName",
+                                            "destinationXdmPath": "person.name.lastName"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "JSON_PATH",
+                                    "value": {
+                                        "path": "personalEmail.address",
+                                        "operator": "EXISTS",
+                                        "mapping": {
+                                            "sourceType": "text/x.schema-path",
+                                            "source": "personalEmail.address",
+                                            "destination": "personalEmail.address",
+                                            "identity": false,
+                                            "primaryIdentity": false,
+                                            "functionVersion": 0,
+                                            "copyModeMapping": false,
+                                            "sourceAttribute": "personalEmail.address",
+                                            "destinationXdmPath": "personalEmail.address"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "JSON_PATH",
+                                    "value": {
+                                        "path": "segmentMembership.status",
+                                        "operator": "EXISTS",
+                                        "mapping": {
+                                            "sourceType": "text/x.schema-path",
+                                            "source": "segmentMembership.status",
+                                            "destination": "segmentMembership.status",
+                                            "identity": false,
+                                            "primaryIdentity": false,
+                                            "functionVersion": 0,
+                                            "copyModeMapping": false,
+                                            "sourceAttribute": "segmentMembership.status",
+                                            "destinationXdmPath": "segmentMembership.status"
+                                        }
+                                    }
+                                }
+                            ],
+                            "mandatoryFields": [
+                                "Email",
+                                "person.name.firstName",
+                                "person.name.lastName"
+                            ],
+                            "primaryFields": [
+                                {
+                                    "identityNamespace": "Email",
+                                    "fieldType": "IDENTITY"
+                                }
+                            ]
+                        },
+                        "segmentSelectors": {
+                            "selectors": [
+                                {
+                                    "type": "PLATFORM_SEGMENT",
+                                    "value": {
+                                        "id": "9f7d37fd-7039-4454-94ef-2b0cd6c3206a",
+                                        "name": "Interested in Mountain Biking",
+                                        "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                                        "exportMode": "DAILY_FULL_EXPORT",
+                                        "schedule": {
+                                            "frequency": "ONCE",
+                                            "startDate": "2021-12-25",
+                                            "startTime": "20:00"
+                                        },
+                                        "createTime": "1640289901",
+                                        "updateTime": "1640289901"
+                                    }
+                                },
+                                {
+                                    "type": "PLATFORM_SEGMENT",
+                                    "value": {
+                                        "id": "f52a3785-2e7c-40a7-8137-9be99af7794e",
+                                        "name": "Birth year 1970",
+                                        "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                                        "exportMode": "DAILY_FULL_EXPORT",
+                                        "schedule": {
+                                            "frequency": "DAILY",
+                                            "startDate": "2021-12-23",
+                                            "endDate": "2021-12-31",
+                                            "startTime": "20:00"
+                                        },
+                                        "createTime": "1640289901",
+                                        "updateTime": "1640289901"
+                                    }
+                                },
+                                {
+                                    "type": "PLATFORM_SEGMENT",
+                                    "value": {
+                                        "id": "6caa79b9-39e0-4c37-892b-5061cdca2377",
+                                        "name": "GCM_E2E_PersonId_Test",
+                                        "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                                        "exportMode": "FIRST_FULL_THEN_INCREMENTAL",
+                                        "schedule": {
+                                            "frequency": "DAILY",
+                                            "startDate": "2021-12-23",
+                                            "endDate": "2021-12-31",
+                                            "startTime": "20:00"
+                                        },
+                                        "createTime": "1640289901",
+                                        "updateTime": "1640289901"
+                                    }
+                                },
+                                {
+                                    "type": "PLATFORM_SEGMENT",
+                                    "value": {
+                                        "id": "4c41c318-9e8c-4a4f-b880-877cdd629fc7",
+                                        "name": "GCM_NewBatch_Segment",
+                                        "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                                        "exportMode": "FIRST_FULL_THEN_INCREMENTAL",
+                                        "schedule": {
+                                            "frequency": "EVERY_6_HOURS",
+                                            "startDate": "2021-12-23",
+                                            "endDate": "2021-12-30",
+                                            "startTime": "20:00"
+                                        },
+                                        "createTime": "1640289901",
+                                        "updateTime": "1640289901"
+                                    }
+                                }
+                            ]
                         }
-                    }
-                },
-                {
-                    "name": "Mapping",
-                    "params": {
-                        "mappingId": "0b090130b58b4819afc78b6dc98b484d",
-                        "mappingVersion": "0"
                     }
                 }
             ],
-            "runs": "/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c/runs",
+            "runs": "/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/runs",
             "lastOperation": {
-                "started": 1614122316652,
-                "updated": 1614122324830,
+                "started": 1640289903353,
+                "updated": 1640289904158,
                 "percentCompleted": 100.0,
                 "status": {
                     "value": "completed",
+                    "properties": null,
                     "errors": []
                 },
                 "ops": [
                     {
-                        "op": "replace",
-                        "path": "/scheduleParams/frequency",
-                        "value": "week"
+                        "op": "add",
+                        "path": "/transformations/0/params/profileSelectors/selectors/-",
+                        "value": {
+                            "type": "JSON_PATH",
+                            "value": {
+                                "path": "Email",
+                                "identity": {
+                                    "namespace": "Email"
+                                },
+                                "operator": "EXISTS"
+                            }
+                        }
+                    },
+                    {
+                        "op": "add",
+                        "path": "/transformations/0/params/profileSelectors/selectors/-",
+                        "value": {
+                            "type": "JSON_PATH",
+                            "value": {
+                                "path": "person.name.firstName",
+                                "operator": "EXISTS"
+                            }
+                        }
+                    },
+                    {
+                        "op": "add",
+                        "path": "/transformations/0/params/profileSelectors/selectors/-",
+                        "value": {
+                            "type": "JSON_PATH",
+                            "value": {
+                                "path": "person.name.lastName",
+                                "operator": "EXISTS"
+                            }
+                        }
+                    },
+                    {
+                        "op": "add",
+                        "path": "/transformations/0/params/profileSelectors/selectors/-",
+                        "value": {
+                            "type": "JSON_PATH",
+                            "value": {
+                                "path": "personalEmail.address",
+                                "operator": "EXISTS"
+                            }
+                        }
+                    },
+                    {
+                        "op": "add",
+                        "path": "/transformations/0/params/profileSelectors/selectors/-",
+                        "value": {
+                            "type": "JSON_PATH",
+                            "value": {
+                                "path": "segmentMembership.status",
+                                "operator": "EXISTS"
+                            }
+                        }
+                    },
+                    {
+                        "op": "add",
+                        "path": "/transformations/0/params/profileSelectors/mandatoryFields",
+                        "value": [
+                            "Email",
+                            "person.name.firstName",
+                            "person.name.lastName"
+                        ]
+                    },
+                    {
+                        "op": "add",
+                        "path": "/transformations/0/params/profileSelectors/primaryFields",
+                        "value": [
+                            {
+                                "identityNamespace": "Email",
+                                "fieldType": "IDENTITY"
+                            }
+                        ]
                     }
                 ],
                 "operation": "update"
-            },
-            "lastRunDetails": {
-                "id": "a10cc80b-fbea-4c6b-873e-d7fd32f4d12d",
-                "state": "success",
-                "startedAtUTC": 1613079975512,
-                "completedAtUTC": 1613080027511
             }
         }
     ]
 }
 ```
+
 
 ## Update dataflow
 
