@@ -14,7 +14,7 @@ An example of the UTC format is `2021-12-22T19:52:05Z`
 
 Query service supports built-in Spark SQL functions to convert a given timestamp and render that time as a timestamp in UTC or return it to another format. The example queries provided in this document can be used in both the user interface and the Query Service API.
 
-Both the from_utc_timestamp and the to_utc_timestamp method take two parameters. These variables are the date in year-month-day format and the continent and city separated by a `/`.
+Both the `from_utc_timestamp()` and the `to_utc_timestamp()` methods take two parameters. These variables are the date in year-month-day format and the continent and city separated by a `/`.
 
 ## Convert from the UTC timestamp
 
