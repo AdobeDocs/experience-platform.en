@@ -83,7 +83,7 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
       >
       >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
-1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, Adobe recommends that you set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
       >[!IMPORTANT]
       >
@@ -113,7 +113,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
      >
      >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
-1. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Adobe recommends that you set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+1. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
       >[!IMPORTANT]
       >
