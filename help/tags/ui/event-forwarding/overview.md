@@ -32,7 +32,7 @@ Event forwarding combined with the Adobe Experience Platform [Web SDK](../../../
 
 * Increase transparency and control over which data is sent where across all properties.
 
-## Differences between event forwarding and tags
+## Differences between event forwarding and tags {#differences-from-tags}
 
 In terms of configuration, event forwarding uses many of the same concepts as tags, such as [rules](../managing-resources/rules.md), [data elements](../managing-resources/data-elements.md), and [extensions](../managing-resources/extensions/overview.md). The main difference between the two can be summarized as follows: 
 
@@ -41,7 +41,7 @@ In terms of configuration, event forwarding uses many of the same concepts as ta
 
 While tags collects event data directly from your site or native mobile application using the Platform Web and Mobile SDKs, event forwarding requires event data to already be sent through Platform Edge Network in order to forward it to destinations. In other words, you must implement the Platform Web or Mobile SDK on your digital property (either through tags or using raw code) in order to use event forwarding.
 
-### Properties
+### Properties {#properties}
 
 Event forwarding maintains its own store of properties separate from tags, which you can view in the Data Collection UI by selecting **[!UICONTROL Event Forwarding]** in the left navigation.
 
@@ -55,13 +55,13 @@ Event forwarding has its own catalog of compatible extensions, such as the [Core
 
 ![Event forwarding extensions in the Data Collection UI](../../images/ui/event-forwarding/overview/extensions.png)
 
-### Data elements
+### Data elements {#data-elements}
 
 The types of data elements that are available in event forwarding are limited to the catalog of compatible [extensions](#extensions) that provide them.
 
 While data elements themselves are created and configured the same way in event forwarding as they are for tags, there are some important syntax differences when it comes to how they reference data from Platform Edge Network.
 
-#### Referencing data from Platform Edge Network
+#### Referencing data from Platform Edge Network {#edge}
     
 To reference data from Platform Edge Network, you must create a data element that provides a valid path to that data. When creating the data element in the UI, select **[!UICONTROL Core]** for the extension and **[!UICONTROL Path]** for the type.
 
@@ -69,23 +69,23 @@ The **[!UICONTROL Path]** value for the data element must follow the pattern `ar
 
 ![Example of a path type data element for event forwarding](../../images/ui/event-forwarding/overview/data-reference.png)
 
-### Rules
+### Rules {#rules}
 
 Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../edge/fundamentals/datastreams.md) and forwards those events to destinations if certain conditions are satisfied.
 
 ![Event forwarding rules in the Data Collection UI](../../images/ui/event-forwarding/overview/rules.png)
 
-#### Data element tokenization
+#### Data element tokenization {#tokenization}
 
 In tag rules, data elements are tokenized with a `%` at the beginning and end of the data element name (for example: `%viewportHeight%`). In event forwarding rules, data elements are instead tokenized with `{{` at the beginning and `}}` at the end of the data element name (for example: `{{viewportHeight}}`).
 
 ![Example of a path type data element for event forwarding](../../images/ui/event-forwarding/overview/tokenization.png)
 
-#### Sequence of rule actions
+#### Sequence of rule actions {#action-sequencing}
 
 The [!UICONTROL Actions] section of an event forwarding rule is always executed sequentially. Make sure the order of actions is correct when you save a rule. This execution sequence cannot be executed asynchronously like it can with tags.
 
-## Secrets
+## Secrets {#secrets}
 
 Event forwarding allows you to create, manage, and store secrets that can be used to authenticate to the servers that you are sending data to. See the guide on [secrets](./secrets.md) on the different kinds of available secret types and how they are implemented in the UI.
 
