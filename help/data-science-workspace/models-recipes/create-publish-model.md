@@ -22,7 +22,7 @@ Before starting this tutorial, you must have the following prerequisites:
 
 ### Explore the data and understand the schemas
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com/) and select **[!UICONTROL Datasets]** to list all existing datasets and select the dataset that you would like to explore. In this case, the **Luma web data** dataset.
+Log in to [Adobe Experience Platform](https://platform.adobe.com/) and select **[!UICONTROL Datasets]** to list all existing datasets and select the dataset that you would like to explore. In this case, you should select the **Luma web data** dataset.
 
 ![select Luma web dataset](../images/models-recipes/model-walkthrough/luma-dataset.png)
 
@@ -34,31 +34,31 @@ Select the schema link in the right-rail. A popover appears, selecting the link 
 
 ![preview the luma web data schema](../images/models-recipes/model-walkthrough/preview-schema.png)
 
-You can further explore the data using the provided Exploratory Data Analysis (EDA) notebook. This notebook can be used to help understand patterns in the Luma data, check data sanity, and summarizes the relevant data for the predictive propensity model. To learn more about Exploratory Data Analysis, visit the [EDA documenation](../jupyterlab/eda-notebook.md).
+You can further explore the data using the provided Exploratory Data Analysis (EDA) notebook. This notebook can be used to help understand patterns in the Luma data, check data sanity, and summarize the relevant data for the predictive propensity model. To learn more about Exploratory Data Analysis, visit the [EDA documenation](../jupyterlab/eda-notebook.md).
 
 ## Create the Luma propensity recipe {#author-your-model}
 
-A main component of the [!DNL Data Science Workspace] lifecycle involves authoring Recipes and Models. The Luma Propensity model is designed to generate a prediction on whether customers have a high propensity to purchase a product from Luma.
+A main component of the [!DNL Data Science Workspace] lifecycle involves authoring Recipes and Models. The Luma propensity model is designed to generate a prediction on whether customers have a high propensity to purchase a product from Luma.
 
-To create the Luma propensity model, the recipe builder template is used. Recipes are the basis for a Model as they contain machine learning algorithms and logic designed to solve specific problems. More importantly, Recipes empower you to democratize machine learning across your organization, enabling other users to access a Model for disparate use cases without writing any code.
+To create the Luma propensity model, the recipe builder template is used. Recipes are the basis for a Model, as they contain machine learning algorithms and logic designed to solve specific problems. More importantly, Recipes empower you to democratize machine learning across your organization, enabling other users to access a Model for disparate use cases without writing any code.
 
 Follow the [create a model using JupyterLab Notebooks](../jupyterlab/create-a-model.md) tutorial to create the Luma propensity model recipe which is used in subsequent tutorials.
 
 ## Import and package a recipe from external sources (*optional*)
 
-If you wish to import and package a recipe for use in Data Science Workspace, you must package your source files into an archive file. Follow the [Package source files into a recipe](./package-source-files-recipe.md) tutorial. This tutorial shows you how to package source files into a recipe which is the prerequisite step for importing a recipe into Data Science Workspace. Once the tutorial is complete, you are provided a Docker image in a Azure Container Registry along with the corresponding image URL. In other words, an archive file.
+If you wish to import and package a recipe for use in Data Science Workspace, you must package your source files into an archive file. Follow the [package source files into a recipe](./package-source-files-recipe.md) tutorial. This tutorial shows you how to package source files into a recipe, which is the prerequisite step for importing a recipe into Data Science Workspace. Once the tutorial is complete, you are provided a Docker image in a Azure Container Registry, along with the corresponding image URL, in other words, an archive file.
 
-This archive file can be used to create a recipe in Data Science Workspace by following the recipe import workflow using the [UI](./import-packaged-recipe-ui.md) or the [API](./import-packaged-recipe-api.md).
+This archive file can be used to create a recipe in Data Science Workspace by following the recipe import workflow using the [UI workflow](./import-packaged-recipe-ui.md) or the [API workflow](./import-packaged-recipe-api.md).
 
 ## Train and evaluate a model {#train-and-evaluate-your-model}
 
-Now that your data is prepared and a recipe is ready, you have the ability to create, train, and evaluate your machine learning model further. While using the recipe builder, you should have already trained, scored, and evaluated your model before packaging it into a recipe. 
+Now that your data is prepared and a recipe is ready, you have the ability to create, train, and evaluate your machine learning model further. While using the Recipe Builder, you should have already trained, scored, and evaluated your model before packaging it into a recipe. 
 
-The Data Science Workspace UI and API allow you to publish your recipe as a model. Additionally, you can further fine-tune specific aspects of your model such as adding, removing, and changing Hyperparameters.
+The Data Science Workspace UI and API allow you to publish your recipe as a model. Additionally, you can further fine-tune specific aspects of your model such as adding, removing, and changing hyperparameters.
 
 ### Create a Model
 
-To learn more about creating a model using the UI, visit the train and evaluate a model in the Data Science Workspace [UI](./train-evaluate-model-ui.md) or [API](./train-evaluate-model-api.md) tutorial. This tutorial provides an example on how to create, train, and update hyperparameters to fine tune your model.
+To learn more about creating a model using the UI, visit the train and evaluate a model in the Data Science Workspace [UI tutorial](./train-evaluate-model-ui.md) or [API tutorial](./train-evaluate-model-api.md). This tutorial provides an example on how to create, train, and update hyperparameters to fine tune your model.
 
 >[!NOTE]
 >
@@ -70,17 +70,17 @@ The next step in creating and publishing a model is to operationalize your model
 
 Scoring in Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 
-To learn how to score your model, visit the score a model [UI](./score-model-ui.md) or [API](./score-model-api.md) tutorial.
+To learn how to score your model, visit the score a model [UI tutorial](./score-model-ui.md) or [API tutorial](./score-model-api.md).
 
 ## Publish a scored model as a service
 
-Data Science Workspace allows you to publish your trained model as a service. This enables users within your IMS Organization to score data without the need fto create their own models.
+Data Science Workspace allows you to publish your trained model as a service. This enables users within your IMS Organization to score data without the need to create their own models.
 
-To learn how to publish a model as a service, visit the [UI](./publish-model-service-ui.md) or [API](./publish-model-service-api.md) tutorial.
+To learn how to publish a model as a service, visit the [UI tutorial](./publish-model-service-ui.md) or [API tutorial](./publish-model-service-api.md).
 
 ### Schedule automated training for a service
 
-Once you have published a model as a service you can set up scheduled scoring and training runs for your machine learning service. Automating the training and scoring process can help maintain and improve a service's efficiency through time by keeping up with patterns within your data. Visit the [schedule a model in the Data Science Workspace UI](./schedule-models-ui.md) tutorial.
+Once you have published a model as a service, you can set up scheduled scoring and training runs for your machine learning service. Automating the training and scoring process can help maintain and improve a service's efficiency through time by keeping up with patterns within your data. Visit the [schedule a model in the Data Science Workspace UI](./schedule-models-ui.md) tutorial.
 
 >[!NOTE]
 >
