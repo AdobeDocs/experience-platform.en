@@ -56,18 +56,6 @@ As an alternative to an ongoing data selection process, batch segmentation moves
 
 Batch segments are automatically evaluated every 24 hours. If you want to evaluate a batch segment on demand, you can use a segment job. To learn more about segment jobs, please read the [segment jobs documentation](./api/segment-jobs.md).
 
-**Incremental segmentation (beta)**
-
-Batch segments are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments fresh for up to an hour.
-
-Incremental segmentation runs on new data coming into the profile store. However, the following caveats applies for incremental segmentation:
-
-- For any new or recently modified segments, profiles with new data will start getting qualified in the next incremental run. However, profiles without changes will catch up in the next full batch segmentation job.
-- Multi-entity segments will be refreshed in incremental segmentation. If there are entity updates, any profiles with new data will start using them in the next incremental run. However, profiles without changes will catch up in next full batch segmentation job.
-- Events dropping off a segment's time window will be reconciled in the next full batch segmentation job.
-
-To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
-
 ### Edge segmentation
 
 Edge segmentation is the ability to evaluate segments in Platform instantaneously on Experience Edge, enabling same page and next page personalization use cases. 
