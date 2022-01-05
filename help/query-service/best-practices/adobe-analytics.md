@@ -114,7 +114,7 @@ ORDER BY Hour;
 
 ## Dedupication  
 
-Adobe Experience Platform Query Service supports data deduplication. See the [Data deduplication in Query Service documentation](./deduplication.md) for information on how to generate new values at the time of querying Experience Event datasets.
+Adobe Experience Platform Query Service supports data deduplication. See the [Data deduplication in Query Service documentation](./deduplication.md) for information on how to generate new values at the time of querying [!DNL Experience Event] datasets.
 
 ## Merchandising variables (product syntax)
 

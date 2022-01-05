@@ -61,7 +61,7 @@ SELECT COUNT(*) AS num_events FROM (
 
 ## Purchases {#purchases}
 
-If you have duplicate purchases, you will likely wish to keep most of the Experience Event row, but ignore the fields tied to the purchase (such as the `commerce.orders` metric). Purchases contain a special field for the purchase ID, which is `commerce.order.purchaseID`.
+If you have duplicate purchases, you will likely wish to keep most of the [!DNL Experience Event] row, but ignore the fields tied to the purchase (such as the `commerce.orders` metric). Purchases contain a special field for the purchase ID, which is `commerce.order.purchaseID`.
 
 It is recommended to use `purchaseID` within the visitor scope, as it is the standard semantic field for purchase IDs within XDM. Visitor scope is recommended for removing duplicate purchase data because the query is faster than using global scope and it is unlikely that a purchase ID is duplicated across multiple visitor IDs.
 
