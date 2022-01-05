@@ -112,7 +112,7 @@ GROUP BY Day, Hour
 ORDER BY Hour;
 ```
 
-## Dedupication  
+## Deduplication  
 
 Adobe Experience Platform Query Service supports data deduplication. See the [Data deduplication in Query Service documentation](./deduplication.md) for information on how to generate new values at the time of querying [!DNL Experience Event] datasets.
 
