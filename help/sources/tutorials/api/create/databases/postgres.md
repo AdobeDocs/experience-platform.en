@@ -32,6 +32,10 @@ In order for [!DNL Flow Service] to connect with [!DNL PostgreSQL], you must pro
 | `connectionString` | The connection string associated with your [!DNL PostgreSQL] account. The [!DNL PostgreSQL] connection string pattern is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
+#### Enable SSL encryption for your connection string
+
+You can apply more properties to your connection string depending on your use case. The `EncryptionMethod` property allows you to enable SSL encryption on your data, while the `ValidateServerCertificate` property validates the certificate sent by your  [!DNL PostgreSQL] database when `EncryptionMethod` is applied. The following is an example of a [!DNL PostgreSQL] connection string appended with SSL encryption: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`. 
+
 For more information about obtaining a connection string, refer to this [[!DNL PostgreSQL] document](https://www.postgresql.org/docs/9.2/app-psql.html).
 
 ### Using Platform APIs
