@@ -112,92 +112,9 @@ GROUP BY Day, Hour
 ORDER BY Hour;
 ```
 
-## Dedupication SQL examples for ExperienceEvent Datasets 
+## Dedupication  
 
-This section covers how to accomplish generating new values at the time of querying for Experience Event datasets.
-
-The use-case for duplication varies. It can require the removal of an entire row from the calculation, or to ignore a specific set of fields as only part of the data in the row is a duplication. Different levels of deduplication are supported by the following queries.
-
-### Remove an entire row from calculation
-
-The following example demonstrates how to ignore an entire row if you have duplicate ExperienceEvents. The code block is global in scope and has a Window key of `id`.
-
->[!IMPORTANT]
->
-> Many DataSets in Platform, including those produced by the Analytics Data Connector, already have ExperienceEvent level deduplication applied so reapplying this level of deduplication is unnecessary and will slow down your query. You should understand the source of your DataSets and know if deduplication at the ExperienceEvent level has already been applied. For any DataSets that are streamed in, for example Target datasets, you will need to apply ExperienceEvent level deduplication because those sources of data have at-least-once semantics.
-
-```sql
-SELECT COUNT(*) AS num_events FROM (
-  SELECT *,
-    ROW_NUMBER()
-      OVER (PARTITION BY id
-            ORDER BY timestamp ASC
-      ) AS id_dup_num
-  FROM experience_events
-) WHERE id_dup_num = 1
-```
-
-### Remove duplicate purchases
-
-If you have duplicate purchases, you should retain most of the ExperienceEvent row but ignore the fields directly related to the purchase. An example of this would be the `commerce.orders` metric. Each purchase has a unique purchase ID field found at the namespace `commerce.order.purchaseID`. It is recommended to use `purchaseID` within the visitor scope. This example code block scope is restricted to the visitor level and has a Window key of `identityMap[$NAMESPACE].id & commerce.order.purchaseID`.
-
-<!-- Q) Why is it recommended to use `purchaseID` within the visitor scope? -->
-
-```sql
-SELECT *,
-  IF(LENGTH(commerce.`order`.purchaseID) > 0,
-    ROW_NUMBER()
-      OVER (PARTITION BY identityMap['ECID'].id, commerce.`order`.purchaseID
-            ORDER BY timestamp ASC
-      ),
-    1) AS purchaseID_dup_num
-FROM experience_events
-```
-
->[!NOTE]
->
->In some instances where the original Analytics data has duplicate purchase IDs across visitor IDs, you **may** need to run the purchase ID duplicate counting across all visitors. This method requires you to include a condition that instead uses the event ID when the purchase ID is not present. By using the event ID it avoids shuffle issues which have poor legibility and do not match Customer Journey Analytics.
-<!-- Q) What does using the event ID achieve? What is shuffle? What does not match CJA? -->
-
-The example below uses a condition clause to use the event ID in the case that the purchase ID is not present.
-
-```sql
-SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
-  SELECT *,
-    ROW_NUMBER()
-      OVER (PARTITION BY id
-            ORDER BY timestamp ASC
-      ) AS id_dup_num,
-    IF(LENGTH(commerce.`order`.purchaseID) > 0,
-      ROW_NUMBER()
-        OVER (PARTITION BY identityMap['ECID'].id, commerce.order.purchaseID
-              ORDER BY timestamp ASC
-        ),
-      1) AS purchaseID_dup_num
-  FROM experience_events
-) WHERE id_dup_num = 1 AND purchaseID_dup_num = 1
-```
-
-### Remove metrics duplicated using the optional ID field
-
-Most XDM metrics use the Measure data type that includes an optional ID field. If you have duplication due to the use of an optional unique ID for a metric, you can ignore that metric value and keep the rest of the ExperienceEvent as demonstrated bny the example below. This example code block scope is restricted to the visitor level and has a Window key of `identityMap[$NAMESPACE].id & id of Measure object`.
-
-```sql
-SELECT SUM(application.launches.value) AS num_launches FROM (
-  SELECT *,
-    ROW_NUMBER()
-      OVER (PARTITION BY id
-            ORDER BY timestamp ASC
-      ) AS id_dup_num,
-    IF(LENGTH(application.launches.id) > 0,
-      ROW_NUMBER()
-        OVER (PARTITION BY identityMap['ECID'].id, application.launches.id
-              ORDER BY timestamp ASC
-        ),
-      1) AS launchesID_dup_num
-  FROM experience_events
-) WHERE id_dup_num = 1 AND launchesID_dup_num = 1
-```
+Adobe Experience Platform Query Service supports data deduplication. See the [Data deduplication in Query Service documentation](./deduplication.md) for information on how to generate new values at the time of querying Experience Event datasets.
 
 ## Merchandising variables (product syntax)
 
