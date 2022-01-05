@@ -25,6 +25,7 @@ feature: Queries
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Data deduplication](best-practices/deduplication.md)
+  - [Time zone conversion queries](best-practices/time-zone.md)
   - [Sample Experience Event queries](best-practices/experience-event-queries.md)
   - [Sample Adobe Analytics queries](best-practices/adobe-analytics.md)
   - [Sample Adobe Target queries](best-practices/adobe-target.md)
