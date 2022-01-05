@@ -1,9 +1,9 @@
 ---
-title: Event Forwarding Secrets
+title: Configuring Secrets in Event Forwarding
 description: Learn how to configure secrets in the Data Collection UI to authenticate to endpoints used in event forwarding properties.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 ---
-# Event forwarding secrets
+# Configuring secrets in event forwarding
 
 In event forwarding, a secret is a resource that represents an authentication credential for another system, allowing for the secure exchange of data. Secrets can only be created within event forwarding properties.
 
