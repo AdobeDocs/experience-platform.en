@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Update destination dataflows using the Flow Service API
 topic-legacy: overview
 type: Tutorial
-description: This tutorial covers the steps for updating a dataflow, including its basic information, schedule, adding or removing segments and attributes using the Flow Service API.
+description: This tutorial covers the steps for updating a destination dataflow, including its basic information, and adding or removing segments and attributes using the Flow Service API.
 ---
 # Update destination dataflows using the Flow Service API
 
-You can update various components of a dataflow to a destination. This tutorial covers the steps for updating a dataflow, including its basic information, schedule, adding or removing segments and attributes using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). For information on editing destination dataflows using the Experience Platform UI, read [Edit activation flows](/help/destinations/ui/edit-activation.md).
+You can update various components of a destination dataflow. This tutorial covers the steps for updating a dataflow, including its basic information, and adding or removing segments and attributes using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). For information on editing destination dataflows using the Experience Platform UI, read [Edit activation flows](/help/destinations/ui/edit-activation.md).
 
 ## Getting started
 
