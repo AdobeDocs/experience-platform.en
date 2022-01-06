@@ -14,6 +14,10 @@ You can update various components of a destination dataflow. This tutorial cover
 
 This tutorial requires you to have a valid flow ID. If you do not have a valid flow ID, select your destination of choice from the [destinations catalog](../catalog/overview.md) and follow the steps outlined to [connect to the destination](../ui/connect-destination.md) and [activate data](../ui/activation-overview.md) before attempting this tutorial.
 
+>[!NOTE]
+>
+> The terms *flow* and *dataflow* are used interchangeably in this tutorial. In the context of this tutorial, the have the same meaning.
+
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [Destinations](../home.md): [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
@@ -57,7 +61,7 @@ GET /flows/{FLOW_ID}
 
 **Request**
 
-The following request retrieves updated information regarding your flow ID.
+The following request retrieves information regarding your flow ID.
 
 ```shell
 curl -X GET \
@@ -422,9 +426,9 @@ A successful response returns the current details of your dataflow including its
 ```
 
 
-## Update dataflow
+## Update dataflow name and description {#update-dataflow}
 
-To update your dataflow's run schedule, name, and description, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the new schedule you want to use.
+To update your dataflow's name and description, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the new values you want to use.
 
 >[!IMPORTANT]
 >
@@ -438,7 +442,7 @@ PATCH /flows/{FLOW_ID}
 
 **Request**
 
-The following request updates your flow run schedule, as well as your dataflow's name and description.
+The following request updates your dataflow's name and description.
 
 ```shell
 curl -X PATCH \
@@ -451,18 +455,13 @@ curl -X PATCH \
     -d '[
             {
                 "op": "replace",
-                "path": "/scheduleParams/frequency",
-                "value": "day"
-            },
-            {
-                "op": "replace",
                 "path": "/name",
-                "value": "Database Dataflow Feb2021"
+                "value": "2021/2022 winter campaign"
             },
             {
                 "op": "replace",
                 "path": "/description",
-                "value": "Database dataflow for testing update API"
+                "value": "ACME company holiday campaign for high fidelity customers and prospects"
             }
         ]'
 ```
@@ -486,7 +485,7 @@ A successful response returns your flow ID and an updated etag. You can verify t
 
 ## Add a segment to a dataflow {#add-segment}
 
-To add a segment to the destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the segment you want to add.
+To add a segment to the destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the segment you want to add. 
 
 >[!IMPORTANT]
 >
@@ -559,7 +558,7 @@ A successful response returns your flow ID and an updated etag. You can verify t
 
 ## Remove a segment from a dataflow {#remove-segment}
 
-To remove a segment from an existing destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the segment you want to remove.
+To remove a segment from an existing destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the index selector of the segment you want to remove. Indexing starts at `0`. For example, the sample request further below removes the first and second segments from the dataflow.
 
 >[!IMPORTANT]
 >
@@ -586,7 +585,7 @@ curl -X PATCH \
     -d '[
 {
    "op":"remove",
-   "path":"/transformations/0/params/segmentSelectors/selectors/0",
+   "path":"transformations/0/params/segmentSelectors/selectors/0/",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -599,7 +598,70 @@ curl -X PATCH \
 | Property | Description |
 | --------- | ----------- |
 | `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To remove a segment from a dataflow, use the `remove` operation. |
-| `path` | Specifies which existing segment should be removed from the destination dataflow.  |
+| `path` | Specifies which existing segment should be removed from the destination dataflow, based on the index of the segment selector. To delete the first segment in a dataflow, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`.|
+
+
+**Response**
+
+A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
+}
+```
+
+## Update components of a segment in a dataflow {#update-segment}
+
+You can update components of a segment in an existing destination dataflow. For example, you can change the export frequency or you can edit the file name template. To do this, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the index selector of the segment you want to remove. Indexing starts at `0`. For example, the sample request further below removes the first and second segments from the dataflow.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update. The etag value updates with every successful update of a dataflow.
+
+**API format**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Request**
+
+When updating a segment in an existing destination dataflow, first perform a GET operation retrieve the details of the segment you want to update. Then, provide all the segment information in the payload, not just the fields that you want to update. In the example below, custom text is added at the end of the file name template and the export schedule frequency is updated from 3 hours to 12 hours.
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+{
+   "op":"replace",
+   "path":"/transformations/0/params/segmentSelectors/selectors/8",
+   "value":{
+      "type":"PLATFORM_SEGMENT",
+      "value":{
+         "id":"f52a3785-2e7c-40a7-8137-9be99af7794e",
+         "name":"Birth year 1970",
+         "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%custom-text",
+         "exportMode":"FIRST_FULL_THEN_INCREMENTAL",
+         "schedule":{
+            "startDate":"2022-01-14",
+            "frequency":"EVERY_12_HOURS",
+            "endDate":"2022-01-21",
+            "startTime":"17:00"
+         }
+      }
+   }
+}
+]'
+```
+
+For descriptions of the properties in the payload, refer to the section 
 
 
 **Response**
@@ -615,36 +677,11 @@ A successful response returns your flow ID and an updated etag. You can verify t
 
 ## Add a profile attribute to a dataflow {#add-profile-attribute}
 
- {
-                        "op": "add",
-                        "path": "/transformations/0/params/profileSelectors/selectors/-",
-                        "value": {
-                            "type": "JSON_PATH",
-                            "value": {
-                                "path": "mobilePhone.status",
-                                "operator": "EXISTS"
-                            }
-                        }
-                    }
+To add a profile attribute to the destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the profile attribute you want to add. 
 
-
-## Remove a profile attribute from a dataflow {#remove-profile-attribute}
-
- {
-                        "op": "remove",
-                        "path": "/transformations/0/params/profileSelectors/selectors/-",
-                        "value": {
-                            "type": "JSON_PATH",
-                            "value": {
-                                "path": "mobilePhone.status",
-                                "operator": "EXISTS"
-                            }
-                        }
-                    }
-
-## Update mapping
-
-You can update the mapping set of an existing dataflow by making a PATCH request to the [!DNL Flow Service] API and providing updated values for your `mappingId` and `mappingVersion`.
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update. The etag value updates with every successful update of a dataflow.
 
 **API format**
 
@@ -654,38 +691,35 @@ PATCH /flows/{FLOW_ID}
 
 **Request**
 
-The following request updates your dataflow's mapping set.
+The following request adds a new profile attribute to an existing destination dataflow.
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
-        {
-            "op": "replace",
-            "path": "/transformations/0",
-            "value": {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
-                    "mappingVersion": 2
-                }
-            }
+    {
+    "op":"add",
+    "path":"/transformations/0/params/profileSelectors/selectors/-",
+    "value":{
+        "type":"JSON_PATH",
+        "value":{
+            "path":"mobilePhone.status"
         }
-    ]'
+    }
+    }
+]'
 ```
 
 | Property | Description |
-| --- | --- |
-| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. |
-| `path` | Defines the part of the flow that is to be updated. In this example, `transformations` is being updated. |
-| `value.name` | The name of the property that is to be updated. |
-| `value.params.mappingId` | The new mapping ID to be used to update the mapping set of the dataflow. |
-| `value.params.mappingVersion` | The new mapping version associated with the updated mapping ID. |
+| --------- | ----------- |
+| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add a profile attribute to a dataflow, use the `add` operation. |
+| `path` | Defines the part of the flow that is to be updated. When adding a profile attribute to a dataflow, use the path specified in the example. |
+| `value.path` | The value of the profile attribute that you are adding to the dataflow. |
 
 **Response**
 
@@ -694,9 +728,94 @@ A successful response returns your flow ID and an updated etag. You can verify t
 ```json
 {
     "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
-    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
 }
 ```
+
+## Remove a profile attribute from a dataflow {#remove-profile-attribute}
+
+{
+   "op":"add",
+   "path":"/transformations/0/params/profileSelectors/selectors/-",
+   "value":{
+      "type":"JSON_PATH",
+      "value":{
+         "path":"mobilePhone.status",
+         "operator":"EXISTS"
+      }
+   }
+}
+
+## Enable or disable dataflow {#enable-disable-dataflow}
+
+When enabled, a dataflow exports profiles to the destination.
+
+You can enable or disable an existing destination dataflow by making a PATCH request to the [!DNL Flow Service] API and providing an updated value for the `state` property.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update. The etag value updates with every successful update of a dataflow.
+
+**API format**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Request**
+
+The following request updates your dataflow's state to enabled.
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+            {
+                "op": "replace",
+                "path": "/state",
+                "value": "enabled"
+            }
+]'
+```
+
+The following request updates your dataflow's state to disabled.
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+            {
+                "op": "replace",
+                "path": "/state",
+                "value": "disabled"
+            }
+]'
+```
+
+**Response**
+
+A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
+}
+```
+
+## API error handling {#api-error-handling}
+
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
 
 ## Next steps
 
