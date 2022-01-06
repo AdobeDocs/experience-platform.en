@@ -1,6 +1,6 @@
 ---
 title: Sensitive and Personal Information in XDM
-description: Learn how sensitive personal information (SPI) and personally identifiable information (PII).
+description: Learn about key considerations regarding sensitive personal information (SPI) and personally identifiable information (PII) in Experience Data Model (XDM).
 ---
 # Sensitive and personal information in XDM
 
