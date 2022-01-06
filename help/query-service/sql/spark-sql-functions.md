@@ -16,27 +16,15 @@ For more detailed information about the functions, including their syntax, usage
 >
 >Not all functions in the external documentation are supported. 
 
-## Categories
-
-- [Math and statistical operators and functions](#math)
-- [Logical operators](#logical-operators)
-- [Date/time functions](#datetime-functions)
-- [Arrays](#arrays)
-- [Datatype casting functions](#datatype-casting)
-- [Conversion and formatting functions](#conversion)
-- [Data evaluation](#data-evaluation)
-- [Current Information](#current-information)
-- [Higher order functions](#higher-order)
-
 ## Math and statistical operators and functions {#math}
 
 | Operator/Function | Description |
 | ----------------- | ----------- |
-| [`%`](https://spark.apache.org/docs/latest/api/sql/index.html#_2) | Returns the remainder of the two numbers |
-| [`*`](https://spark.apache.org/docs/latest/api/sql/index.html#_4) | Multiplies the two numbers |
-| [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | Adds the two numbers |
-| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | Subtracts the two numbers | 
-| [`/`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Divides the two numbers |
+| [`%`](https://spark.apache.org/docs/latest/api/sql/index.html#_3) | Returns the remainder of the two numbers |
+| [`*`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | Multiplies the two numbers |
+| [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | Adds the two numbers |
+| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Subtracts the two numbers | 
+| [`/`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Divides the two numbers |
 | [`abs`](https://spark.apache.org/docs/latest/api/sql/index.html#abs) | Returns the absolute value of the input |
 | [`acos`](https://spark.apache.org/docs/latest/api/sql/index.html#acos) | Returns the inverse cosine value |
 | [`approx_count_distinct`](https://spark.apache.org/docs/latest/api/sql/index.html#approx_count_distinct) | Returns the estimated cardinality by HyperLogLog++ |
@@ -102,15 +90,14 @@ For more detailed information about the functions, including their syntax, usage
 | Operator/Function | Description |
 | ----------------- | ----------- |
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) or [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not)| Logical not |
-| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Less than |
-| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Less than or equal to |
-| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_10) | Equal to |
-| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Greater than |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | Greater than or equal to |
-| [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Bitwise exclusive or |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | Greater than or equal to |
-| [`|`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | Bitwise or |
-| [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | Bitwise not |
+| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Less than |
+| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | Less than or equal to |
+| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Equal to |
+| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Greater than |
+| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | Greater than or equal to |
+| [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | Bitwise exclusive or |
+| [`\|`](https://spark.apache.org/docs/latest/api/sql/index.html#_17) | Bitwise or |
+| [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_19) | Bitwise not |
 | [`arrays_overlap`](https://spark.apache.org/docs/latest/api/sql/index.html#arrays_overlap) | Returns the common elements |
 | [`assert_true`](https://spark.apache.org/docs/latest/api/sql/index.html#assert_true) | Asserts if the expression is true |
 | [`if`](https://spark.apache.org/docs/latest/api/sql/index.html#if) | If the expression evaluates to true, return the second expression. Otherwise, return the third expression. |
@@ -174,7 +161,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`array_repeat`](https://spark.apache.org/docs/latest/api/sql/index.html#array_repeat) | Creates an array containing the value counted times |
 | [`array_sort`](https://spark.apache.org/docs/latest/api/sql/index.html#array_sort) | Sorts the array |
 | [`array_union`](https://spark.apache.org/docs/latest/api/sql/index.html#array_union) | Joins the array together, without any duplicates |
-| [`array_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | Zip |
+| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | Combines the values of given arrays with the values of original collection at a given index |
 | [`cardinality`](https://spark.apache.org/docs/latest/api/sql/index.html#cardinality) | Return the size of the array |
 | [`element_at`](https://spark.apache.org/docs/latest/api/sql/index.html#element_at) | Return the element at position |
 | [`explode`](https://spark.apache.org/docs/latest/api/sql/index.html#explode) | Separate elements of array into multiple rows, excluding null |
@@ -183,8 +170,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | Flattens an array of arrays |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | Separate array of structs into a table, excluding null |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | Separate array of structs into a table, including null |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | Separate elements of array into multiple rows with positions, excluding null |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | Separate elements of array into multiple rows with positions, including null |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Separate elements of array into multiple rows with positions, excluding null |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | Reverse elements of the array |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | Return a random permutation of the array |
 | [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | Subsets an array |
