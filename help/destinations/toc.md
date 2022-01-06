@@ -14,6 +14,7 @@ feature: Destinations
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
     * [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
+    * [Update destination dataflows](./api/update-destination-dataflows.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
