@@ -161,7 +161,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`array_repeat`](https://spark.apache.org/docs/latest/api/sql/index.html#array_repeat) | Creates an array containing the value counted times |
 | [`array_sort`](https://spark.apache.org/docs/latest/api/sql/index.html#array_sort) | Sorts the array |
 | [`array_union`](https://spark.apache.org/docs/latest/api/sql/index.html#array_union) | Joins the array together, without any duplicates |
-| [`array_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | Zip |
+| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | Combines the values of given arrays with the values of original collection at a given index |
 | [`cardinality`](https://spark.apache.org/docs/latest/api/sql/index.html#cardinality) | Return the size of the array |
 | [`element_at`](https://spark.apache.org/docs/latest/api/sql/index.html#element_at) | Return the element at position |
 | [`explode`](https://spark.apache.org/docs/latest/api/sql/index.html#explode) | Separate elements of array into multiple rows, excluding null |
@@ -170,8 +170,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | Flattens an array of arrays |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | Separate array of structs into a table, excluding null |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | Separate array of structs into a table, including null |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | Separate elements of array into multiple rows with positions, excluding null |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | Separate elements of array into multiple rows with positions, including null |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Separate elements of array into multiple rows with positions, excluding null |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | Reverse elements of the array |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | Return a random permutation of the array |
 | [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | Subsets an array |
