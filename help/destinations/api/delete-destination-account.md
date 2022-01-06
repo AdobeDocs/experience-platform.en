@@ -169,6 +169,10 @@ A successful response returns HTTP status 204 (No Content) and a blank body.
 
 You can confirm the deletion by attempting a lookup (GET) request to the connection.
 
+## API error handling {#api-error-handling}
+
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+
 ## Next steps
 
 By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete existing destination accounts.
