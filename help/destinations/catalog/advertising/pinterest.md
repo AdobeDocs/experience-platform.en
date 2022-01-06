@@ -51,14 +51,13 @@ Create audiences from your customer lists, people who've visited your site or pe
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
 
-
 ### Connection parameters {#parameters}
 
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your Pinterest ad account ID.
+*  **[!UICONTROL Advertiser ID]**: Your Pinterest advertiser ID.
 
 ## Activate segments to this destination {#activate}
 
