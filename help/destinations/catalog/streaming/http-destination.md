@@ -103,7 +103,7 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destinat
 
 Experience Platform optimizes the profile export behavior to your HTTP API destination, to only export data to your API endpoint when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
 
-* The profile update was triggered by a change in segment membership for at least one of the flow's mapped segments. For example, the profile has qualified for one of the segments mapped to the destination or has exited one of the segments mapped to the destination.
+* The profile update was triggered by a change in segment membership for at least one of the dataflow's mapped segments. For example, the profile has qualified for one of the segments mapped to the destination or has exited one of the segments mapped to the destination.
 * The profile update was triggered by a change in the [identity map](/help/xdm/field-groups/profile/identitymap.md). For example, a profile who had already qualified for one of the segments mapped to the destination has been added a new identity in the identity map attribute.
 * The profile update was triggered by a change in attributes for at least one of the flow's mapped attributes. For example, one of the attributes mapped to the destination in the mapping step is added to a profile.
 
