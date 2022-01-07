@@ -85,3 +85,5 @@ The API endpoints in this tutorial follow the general Experience Platform API er
 By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete an existing dataflow to a destination.
 
 For steps on how to perform these operations using the user interface, please refer to the tutorial on [deleting dataflows in the UI](../ui/delete-destinations.md).
+
+You can now go on and [delete destination accounts](/help/destinations/api/delete-destination-account.md) using the [!DNL Flow Service] API.
