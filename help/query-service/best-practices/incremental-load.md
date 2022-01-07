@@ -34,7 +34,7 @@ SELECT
    WHERE false;
 ```
 
-1. Populate the `checkpoint_log` table with one empty record for the dataset that needs incremental processing. `DIM_TABLE_ABC` is the dataset to be processed in the example below. On the first occasion of processing `DIM_TABLE_ABC`, the `last_snapshot_id` is initialized as `null`. This allows you to process the entire dataset on the first occasion and incrementally thereafter.
+2. Populate the `checkpoint_log` table with one empty record for the dataset that needs incremental processing. `DIM_TABLE_ABC` is the dataset to be processed in the example below. On the first occasion of processing `DIM_TABLE_ABC`, the `last_snapshot_id` is initialized as `null`. This allows you to process the entire dataset on the first occasion and incrementally thereafter.
 
 ```SQL
 INSERT INTO
@@ -46,7 +46,7 @@ INSERT INTO
        CURRENT_TIMESTAMP process_timestamp;
 ```
 
-1. Next, initialize `DIM_TABLE_ABC_Incremental` to contain processed output from `DIM_TABLE_ABC`. The anonymous block in the **required** execution section of the SQL example below, as described in steps one to four, is executed sequentially to process data incrementally.
+3. Next, initialize `DIM_TABLE_ABC_Incremental` to contain processed output from `DIM_TABLE_ABC`. The anonymous block in the **required** execution section of the SQL example below, as described in steps one to four, is executed sequentially to process data incrementally.
 
    1. Set the `from_snapshot_id` which indicates where the processing starts from. The `from_snapshot_id` in the example is queried from the `checkpoint_log` table for use with `DIM_TABLE_ABC`. On the initial run, the snapshot ID will be `null` meaning that the entire dataset will be processed.
    2. Set the `to_snapshot_id` as the current snapshot ID of the source table (`DIM_TABLE_ABC`). In the example, this is queried from the metadata table of the source table. 
@@ -59,7 +59,6 @@ INSERT INTO
 >The `history_meta('source table name')` is a convenient method used to gain access to available snapshot in a dataset.
 
 ```SQL
-$$
 BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -81,17 +80,16 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
-1. Use the incremental data load logic in the anonymous block example below to allow any new data from the source dataset (since the most recent timestamp), to be processed and appended to the destination table at a regular cadence. In the example, data changes to `DIM_TABLE_ABC` will be processed and appended to `DIM_TABLE_ABC_incremental`.
+4. Use the incremental data load logic in the anonymous block example below to allow any new data from the source dataset (since the most recent timestamp), to be processed and appended to the destination table at a regular cadence. In the example, data changes to `DIM_TABLE_ABC` will be processed and appended to `DIM_TABLE_ABC_incremental`.
 
 >[!NOTE]
 >
 > `_ID` is the Primary Key in both `DIM_TABLE_ABC_Incremental` and `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-$$
 BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -113,7 +111,7 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
 This logic can be applied to any table to perform incremental loads.
@@ -133,7 +131,6 @@ SET resolve_fallback_snapshot_on_failure=true;
 The entire code block looks as follows:
 
 ```SQL
-$$
 BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
@@ -155,7 +152,7 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END$$;
+ END;
 ```
 
 ## Next steps
