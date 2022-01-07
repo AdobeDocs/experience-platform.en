@@ -30,7 +30,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 >[!TIP]
 >
->Before deleting the source account, you must first delete any existing dataflows to the source account. To delete existing dataflows, refer to the tutorial on [deleting sources dataflows](./delete-dataflows.md).
+>Before deleting the source account, you must first delete any existing dataflows associated with the source account. To delete existing dataflows, refer to the tutorial on [deleting sources dataflows](./delete-dataflows.md).
 
 To delete an account, make a DELETE request to the [!DNL Flow Service] API while providing the base connection ID that corresponds with the account that you want to delete.
 
@@ -65,4 +65,4 @@ You can confirm the deletion by attempting a lookup (GET) request to the connect
 
 By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete existing accounts.
 
-For steps on how to perform these operations using the user interface, please refer to the tutorial on [deleting accounts in the UI](../../tutorials/ui/delete-accounts.md)
+For steps on how to perform these operations using the user interface, please refer to the tutorial on [deleting accounts in the UI](../../tutorials/ui/delete-accounts.md).
