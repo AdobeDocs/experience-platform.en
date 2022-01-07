@@ -1,7 +1,7 @@
 ---
 keywords: Azure event hub destination;azure event hub;azure eventhub
-title: (Beta) !DNL Azure Event Hubs] connection
-description: Create a real-time outbound connection to your !DNL Azure Event Hubs] storage to stream data from Experience Platform.
+title: (Beta) [!DNL Azure Event Hubs] connection
+description: Create a real-time outbound connection to your [!DNL Azure Event Hubs] storage to stream data from Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 ---
 # (Beta) [!DNL Azure Event Hubs] connection
@@ -49,6 +49,18 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 ## Activate segments to this destination {#activate}
 
 See [Activate audience data to streaming profile export destinations](../../ui/activate-streaming-profile-destinations.md) for instructions on activating audience segments to this destination.
+
+## Profile export behavior {#profile-export-behavior}
+
+Experience Platform optimizes the profile export behavior to your Azure Event Hubs destination, to only export data to your destination when relevant updates to a profile have occurred following segment qualification or other significant events. Profiles are exported to your destination in the following situations:
+
+* The profile update was triggered by a change in segment membership for at least one of the segments mapped to the destination. For example, the profile has qualified for one of the segments mapped to the destination or has exited one of the segments mapped to the destination.
+* The profile update was triggered by a change in the [identity map](/help/xdm/field-groups/profile/identitymap.md). For example, a profile who had already qualified for one of the segments mapped to the destination has been added a new identity in the identity map attribute.
+* The profile update was triggered by a change in attributes for at least one of the attributes mapped to the destination. For example, one of the attributes mapped to the destination in the mapping step is added to a profile.
+
+In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if a segment mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
+
+Note that the all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
 ## Exported data {#exported-data}
 
