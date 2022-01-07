@@ -41,6 +41,10 @@ All resources in Experience Platform, including those belonging to [!DNL Flow Se
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
+>[!NOTE]
+>
+>If the `x-sandbox-name` header is not specified, requests are resolved under the `prod` sandbox.
+
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
 * `Content-Type: application/json`
@@ -392,7 +396,7 @@ A successful response returns your flow ID and an updated etag. You can verify t
 
 ## Enable or disable dataflow {#enable-disable-dataflow}
 
-When enabled, a dataflow exports profiles to the destination. Dataflows are enabled by default, but can be disabled to pause from exporting profiles.
+When enabled, a dataflow exports profiles to the destination. Dataflows are enabled by default, but can be disabled to pause the profile exports.
 
 You can enable or disable an existing destination dataflow by making a PATCH request to the [!DNL Flow Service] API and providing an updated value for the `state` property.
 
@@ -592,7 +596,7 @@ A successful response returns your flow ID and an updated etag. You can verify t
 
 ## Update components of a segment in a dataflow {#update-segment}
 
-You can update components of a segment in an existing destination dataflow. For example, you can change the export frequency or you can edit the file name template. To do this, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the index selector of the segment you want to update. Indexing starts at `0`. For example, the request below updates the ninth segment in a dataflow
+You can update components of a segment in an existing destination dataflow. For example, you can change the export frequency or you can edit the file name template. To do this, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the index selector of the segment you want to update. Indexing starts at `0`. For example, the request below updates the ninth segment in a dataflow.
 
 **API format**
 
@@ -602,7 +606,7 @@ PATCH /flows/{FLOW_ID}
 
 **Request**
 
-When updating a segment in an existing destination dataflow, first perform a GET operation retrieve the details of the segment you want to update. Then, provide all the segment information in the payload, not just the fields that you want to update. In the example below, custom text is added at the end of the file name template and the export schedule frequency is updated from 6 hours to 12 hours.
+When updating a segment in an existing destination dataflow, you should first perform a GET operation to retrieve the details of the segment you want to update. Then, provide all the segment information in the payload, not just the fields that you want to update. In the example below, custom text is added at the end of the file name template and the export schedule frequency is updated from 6 hours to 12 hours.
 
 ```shell
 curl -X PATCH \
@@ -637,7 +641,7 @@ curl -X PATCH \
 ]'
 ```
 
-For descriptions of the properties in the payload, refer to the section 
+For descriptions of the properties in the payload, refer to the section [Add a segment to a dataflow](#add-segment).
 
 
 **Response**
