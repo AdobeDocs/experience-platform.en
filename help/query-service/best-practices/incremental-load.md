@@ -17,7 +17,7 @@ The SQL examples throughout this document require you to have an understanding o
 
 For guidance on any terminology used within this guide, refer to the [SQL syntax guide](../sql/syntax.md).
 
-## Steps
+## Incrementally load data 
 
 The steps below demonstrate how to create and incrementally load data using snapshots and the anonymous block feature. The design pattern can be used as a template for your own sequence of queries.
 
