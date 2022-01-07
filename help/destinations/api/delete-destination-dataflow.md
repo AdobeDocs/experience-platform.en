@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Delete a destination dataflow using the Flow Service API
 type: Tutorial
 description: Learn how to delete dataflows to batch and streaming destinations using the Flow Service API.
+exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
 ---
 # Delete a destination dataflow using the Flow Service API
 

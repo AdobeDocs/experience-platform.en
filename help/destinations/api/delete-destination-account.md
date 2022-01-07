@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Delete a destination account using the Flow Service API
 type: Tutorial
 description: Learn how to delete a destination account using the Flow Service API.
+exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
 ---
 # Delete a destination account using the Flow Service API
 
