@@ -13,6 +13,10 @@ Adobe Experience Platform provides native connectivity for cloud providers like 
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from [!DNL Event Hubs] in real time.
 
+>[!IMPORTANT]
+>
+>The scale factor of [!DNL Event Hubs] must be increased if you need to complete any of the following use cases: <ul><li>Ingest high volume data;</li><li>Increase parallelism on the source side;</li><li>Raise the speed of ingestion on Platform;</li></ul> To increase the scale factor of your [!DNL Event Hubs] source, please contact your Adobe representative.
+
 ## Use a virtual network to connect to [!DNL Event Hubs] to Platform
 
 You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) and then select **Try It** from the REST API panel. Next, authenticate your [!DNL Azure] account using your credentials and then select the [!DNL Event Hubs] namespace, resource group, and subscription that you want to bring to Platform.
