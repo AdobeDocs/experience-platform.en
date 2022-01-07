@@ -177,4 +177,4 @@ The API endpoints in this tutorial follow the general Experience Platform API er
 
 ## Next steps
 
-By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete existing destination accounts.
+By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete existing destination accounts. For more information on using destinations, refer to the [destinations overview](/help/destinations/home.md).
