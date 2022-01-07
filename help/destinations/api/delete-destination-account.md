@@ -42,6 +42,10 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
+>[!NOTE]
+>
+>If the `x-sandbox-name` header is not specified, requests are resolved under the `prod` sandbox.
+
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
 * `Content-Type: application/json`
@@ -60,13 +64,6 @@ In the Experience Platform UI, browse to **[!UICONTROL Destinations]** > **[!UIC
 Next, you can retrieve the connection ID of the destination account from the URL in your browser.
 
 ![Retrieve connection ID from URL](/help/destinations/assets/api/delete-destination-account/find-connection-id.png)
-
->[!IMPORTANT]
->
->Before deleting the destination account, you must delete any existing dataflows to the destination account.
->To delete existing dataflows, refer to the pages below:
->* [Use the Experience Platform UI](../ui/delete-destinations.md) to delete existing dataflows;
->* [Use the Flow Service API](delete-destination-dataflow.md) to delete existing dataflows.
 
 <!--
 
@@ -140,6 +137,13 @@ A successful response returns the current details of your connection including i
 
 ## Delete connection {#delete-connection}
 
+>[!IMPORTANT]
+>
+>Before deleting the destination account, you must delete any existing dataflows to the destination account.
+>To delete existing dataflows, refer to the pages below:
+>* [Use the Experience Platform UI](../ui/delete-destinations.md) to delete existing dataflows;
+>* [Use the Flow Service API](delete-destination-dataflow.md) to delete existing dataflows.
+
 Once you have a connection ID and have ensured that no dataflows exist to the destination account, perform a DELETE request to the [!DNL Flow Service] API.
 
 **API format**
@@ -165,13 +169,11 @@ curl -X DELETE \
 
 **Response**
 
-A successful response returns HTTP status 204 (No Content) and a blank body.
-
-You can confirm the deletion by attempting a lookup (GET) request to the connection.
+A successful response returns HTTP status 204 (No Content) and a blank body. You can confirm the deletion by attempting a lookup (GET) request to the connection. The API will return an HTTP 404 (Not Found) error, indicating that the destination account has been deleted.
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
 
 ## Next steps
 

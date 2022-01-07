@@ -38,6 +38,10 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
+>[!NOTE]
+>
+>If the `x-sandbox-name` header is not specified, requests are resolved under the `prod` sandbox.
+
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
 * `Content-Type: application/json`
@@ -73,7 +77,7 @@ A successful response returns HTTP status 202 (No Content) and a blank body. You
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
 
 ## Next steps {#next-steps}
 
