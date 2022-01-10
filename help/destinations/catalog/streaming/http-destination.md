@@ -1,5 +1,5 @@
 ---
-keywords: streaming;
+keywords: streaming; HTTP destination
 title: HTTP connection
 description: The HTTP API destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
@@ -14,7 +14,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 
 The HTTP API destination is an [!DNL Adobe Experience Platform] streaming destination that helps you send profile data to third-party HTTP endpoints.
 
-To send profile data to HTTP endpoints, you must first connect to the destination in [[!DNL Adobe Experience Platform]](#connect-destination).
+To send profile data to HTTP endpoints, you must first [connect to the destination](#connect-destination) in [!DNL Adobe Experience Platform].
 
 ## Use cases {#use-cases}
 
@@ -30,15 +30,15 @@ HTTP endpoints can be either customers' own systems  or third-party solutions.
 
 To use the HTTP API destination to export data out of Experience Platform, you must meet the following prerequisites:
 
-* You must have an HTTP endpoint that supports REST API
+* You must have an HTTP endpoint that supports REST API.
 * Your HTTP endpoint must support [OAuth 2.0 client credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4) authentication. This requirement is valid while the HTTP API destination is in the beta phase.
-* The client credential needs to be included in POST requests to your endpoint
+* The client credential needs to be included in POST requests to your endpoint.
 * Your HTTP endpoint must support the Experience Platform profile schema. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. Refer to the [exported data](#exported-data) section for an example of the Experience Platform output schema.
 * Your HTTP endpoint must support headers.
 
 You can also use [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to set up an integration and send Experience Platform profile data to an HTTP endpoint.
 
-## Connect to the destination {#connect}
+## Connect to the destination {#connect-destination}
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
