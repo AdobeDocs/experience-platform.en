@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Delete a destination account using the Flow Service API
 type: Tutorial
 description: Learn how to delete a destination account using the Flow Service API.
+exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
 ---
 # Delete a destination account using the Flow Service API
 
@@ -177,4 +178,4 @@ The API endpoints in this tutorial follow the general Experience Platform API er
 
 ## Next steps
 
-By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete existing destination accounts.
+By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete existing destination accounts. For more information on using destinations, refer to the [destinations overview](/help/destinations/home.md).
