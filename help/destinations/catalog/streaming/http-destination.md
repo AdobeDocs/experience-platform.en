@@ -70,7 +70,7 @@ Note that the all the mapped attributes are exported for a profile, no matter wh
 
 ## Exported data {#exported-data}
 
-Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destination in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are [!DNL ECID] and email.
+Your exported [!DNL Experience Platform] data lands in [!DNL Azure Event Hubs] in JSON format. For example, the export below contains a profile that has qualified for a certain segment and exited another segment, and it includes the profile attribute first name, last name, date of birth, and personal email address. The identities for this profile are ECID and email.
 
 ```json
 {
