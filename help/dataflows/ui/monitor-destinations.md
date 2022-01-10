@@ -42,13 +42,13 @@ See the following table for more information on statuses:
 ### Dataflow runs for streaming destinations
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesactivated"
+>id="platform_monitoring_identities_activated"
 >title="Identities activated"
 >abstract="The count of individual profile identities successfully activated to the selected destination."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesexcluded"
+>id="platform_monitoring_identities_excluded"
 >title="Identities excluded"
 >abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
@@ -89,6 +89,17 @@ The details page also displays a list of identities that failed and identities t
 
 ### Dataflow runs for batch destinations
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="Dataflow run details"
+>abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received"
+>title="Profiles received"
+>abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
+
 For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
 - **[!UICONTROL Identities activated]**: The count of individual profile identities successfully activated to the selected destination.
@@ -124,6 +135,11 @@ The details page also displays a list of identities that failed and identities t
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_activation"
+>title="Activation"
+>abstract="The destination activation contains information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities."
 
 To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 
