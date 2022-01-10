@@ -36,7 +36,7 @@ To use the HTTP API destination to export data out of Experience Platform, you m
 * Your HTTP endpoint must support the Experience Platform profile schema. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. Refer to the [exported data](#exported-data) section for an example of the Experience Platform output schema.
 * Your HTTP endpoint must support headers.
 * Your HTTP endpoint must support [OAuth 2.0 client credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4) authentication. This requirement is valid while the HTTP API destination is in the beta phase.
-* The client credential needs to be included in POST requests to your endpoint, as shown in the example below.
+* The client credential needs to be included in the body of POST requests to your endpoint, as shown in the example below.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
