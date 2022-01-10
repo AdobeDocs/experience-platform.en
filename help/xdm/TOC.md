@@ -12,15 +12,16 @@ feature: Schemas
 * Schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
   * [Best practices for data modeling](schema/best-practices.md)
+  * [Sensitive and personal data](./schema/sensitive-and-personal-data.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [Namespacing in XDM](./schema/namespaces.md)
-  * [XDM field dictionary](schema/field-dictionary.md)
   * Industry data models {#industries}
     * [Overview](./schema/industries/overview.md)
     * [Retail](./schema/industries/retail.md)
     * [Financial services](./schema/industries/financial.md)
     * [Telecommunications](./schema/industries/telecom.md)
     * [Travel and hospitality](./schema/industries/travel-hospitality.md)
+  * [XDM field dictionary](schema/field-dictionary.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
