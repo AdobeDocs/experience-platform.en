@@ -75,7 +75,14 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destinat
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.com"
+    "birthDate": "YYYY-MM-DD",
+    "name": {
+      "firstName": "John",
+      "lastName": "Doe"
+    }
+  },
+  "personalEmail": {
+    "address": "john.doe@acme.com"
   },
   "segmentMembership": {
     "ups": {
@@ -108,4 +115,5 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destinat
     ]
   }
 }
+
 ```
