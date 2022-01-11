@@ -53,6 +53,12 @@ See the following table for more information on statuses:
 >abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="Identities failed"
+>abstract="The count of individual profile identities which failed for the selected destination. Please check error diagnostics for details."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
+
 For streaming destinations, the [!UICONTROL Dataflow runs] tab provides an hourly update for metric data on your dataflow runs. The most prominent statistics labelled are for identities.
 
 Identities represent the different facets of a profile. For example, if a profile contains both a phone number and an email address, that profile will have two identities.
