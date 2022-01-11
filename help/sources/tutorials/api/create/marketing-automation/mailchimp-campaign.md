@@ -97,7 +97,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL MailChimp] :
+The following request creates a base connection for [!DNL MailChimp]:
 
 ```shell
 curl -X POST \

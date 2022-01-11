@@ -13,7 +13,7 @@ Adobe Experience Platform supports a wide range of destinations. The audience ac
 
 ## Activation methods {#activation-methods}
 
-After you [configure your destinations](connect-destination.md), you can activate audience segments in multiple ways:
+After you [configure your destination](connect-destination.md), you can activate audience segments in multiple ways:
 
 ### Activate audiences from the destinations catalog
 

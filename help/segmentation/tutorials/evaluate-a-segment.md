@@ -80,12 +80,11 @@ On-demand evaluation allows you to create a segment job in order to generate an 
 
 ### Create a segment job
 
-A segment job is an asynchronous process that creates a new audience segment. It references a segment definition, as well as any merge policies controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
+A segment job is an asynchronous process that creates an audience segment on demand. It references a segment definition, as well as any merge policies controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience. A segment job needs to be run every time you want to refresh the audience that currently qualifies for the segment definition.
 
 You can create a new segment job by making a POST request to the `/segment/jobs` endpoint in the [!DNL Real-time Customer Profile] API.
 
 More detailed information about using this endpoint can be found in the [segment jobs endpoint guide](../api/segment-jobs.md#create)
-
 
 ### Look up segment job status
 

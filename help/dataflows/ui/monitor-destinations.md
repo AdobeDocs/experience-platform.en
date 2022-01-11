@@ -22,7 +22,7 @@ This guide requires a working understanding of the following components of Adobe
 - [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Monitor dataflows in the Destinations workspace
+## Monitor dataflows in the Destinations workspace {#monitor-dataflows-in-the-destinations-workspace}
 
 In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
 
@@ -39,18 +39,24 @@ See the following table for more information on statuses:
 | Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
 | Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
 
-### Dataflow runs for streaming destinations
+### Dataflow runs for streaming destinations {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated"
 >title="Identities activated"
 >abstract="The count of individual profile identities successfully activated to the selected destination."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded"
 >title="Identities excluded"
 >abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="Identities failed"
+>abstract="The count of individual profile identities which failed for the selected destination. Please check error diagnostics for details."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
 
 For streaming destinations, the [!UICONTROL Dataflow runs] tab provides an hourly update for metric data on your dataflow runs. The most prominent statistics labelled are for identities.
@@ -87,7 +93,7 @@ The details page also displays a list of identities that failed and identities t
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### Dataflow runs for batch destinations
+### Dataflow runs for batch destinations {#dataflow-runs-for-batch-destinations}
 
 For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 

@@ -22,6 +22,8 @@ The following standard classes are provided in Real-time CDP B2B Edition:
 * [XDM Business Marketing List](../../xdm/classes/b2b/business-marketing-list.md)
 * [XDM Business Marketing List Members](../../xdm/classes/b2b/business-marketing-list-members.md)
 
+To understand how schemas fit into your B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md).
+
 For steps on how to create a many-to-one relationship between two schemas, refer to the tutorial on [defining B2B schema relationships](../../xdm/tutorials/relationship-b2b.md).
 
 If you are using a B2B source connection, you can use a tool to automatically generate the required schemas and the relationships between them. See the guide on [B2B namespaces](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) in the sources documentation for more information.
