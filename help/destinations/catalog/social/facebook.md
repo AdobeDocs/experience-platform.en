@@ -127,6 +127,27 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 ## Activate segments to this destination {#activate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience"
+>title="Origin of audience"
+>abstract="Choose how the customer data in the segment was originally collected. The data will be displayed in Facebook when a user is targeted by the segment"
+>additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="Origin of audience"
+>abstract="Advertisers collected data directly from customers."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="Origin of audience"
+>abstract="Advertisers collected data directly from their partners."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="Origin of audience"
+>abstract="Advertisers collected data directly from their customers and partners."
+
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL Origin of audience] when sending segments to [!DNL Facebook Custom Audiences].

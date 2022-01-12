@@ -11,7 +11,7 @@ This tutorial covers the process of enabling a dataset with "upsert" capabilitie
 
 ## Getting started
 
-This tutorial requires a working understanding of several Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for these related DNL Platform services:
+This tutorial requires a working understanding of several Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for these related [!DNL Platform] services:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Catalog Service]](../../catalog/home.md): A RESTful API that allows you to create datasets and configure them for [!DNL Real-time Customer Profile] and [!DNL Identity Service].
@@ -66,11 +66,11 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "fields":[],
-        "schemaRef" : {
+        "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
           "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
-        "tags" : {
+        "tags": {
           "unifiedProfile": [
             "enabled:true",
             "isUpsert:true"

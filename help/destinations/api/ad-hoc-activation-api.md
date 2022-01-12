@@ -5,8 +5,8 @@ title: (Beta) Activate audience segments to batch destinations via the ad-hoc ac
 description: This article illustrates the end-to-end workflow for activating audience segments via the ad-hoc activation API, including the segmentation jobs that take place before activation.
 topic-legacy: tutorial
 type: Tutorial
+exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
 ---
-
 # (Beta) Activate audience segments to batch destinations via the ad-hoc activation API
 
 >[!IMPORTANT]
@@ -180,4 +180,4 @@ A successful response returns HTTP status 200.
 
 ## API error handling
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.

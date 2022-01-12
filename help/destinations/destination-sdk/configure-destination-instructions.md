@@ -1,9 +1,9 @@
 ---
 description: This page lists and describes the steps to configure a streaming destination using Destination SDK.
-title: How to use Destination SDK to configure a streaming destination
+title: Use Destination SDK to configure a streaming destination
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 ---
-# How to use Destination SDK to configure a streaming destination
+# Use Destination SDK to configure a streaming destination
 
 ## Overview {#overview}
 
@@ -57,6 +57,10 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 Shown below is an example configuration for a destination template, created by using the `/destinations` API endpoint. For more information about this template, refer to [Destination configuration](./destination-configuration.md).
 
 To connect the server and template configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
+
+>[!IMPORTANT]
+>
+>To create a correctly configured destination, you *must* add at least one target identity in `identityNamespaces`, as shown below. If no target identity is configured, users will not be able to proceed past the [Mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activation workflow.
 
 ```json
 
@@ -163,7 +167,7 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 
 ## Step 6: Test your destination {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./test-destination.md) to test the integration between Adobe Experience Platform and your destination.
 
 As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
 

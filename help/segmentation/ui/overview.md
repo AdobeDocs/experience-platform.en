@@ -39,7 +39,7 @@ To learn more, visit the [segment dashboard guide](../../dashboards/guides/segme
 
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
-## Browse
+## Browse {#browse}
 
 Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your IMS Organization. 
 

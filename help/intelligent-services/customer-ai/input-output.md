@@ -108,7 +108,7 @@ Minimum length of data required = eligible population + outcome window
 >
 > 30 is the minimum number of days required for eligible population. If this is not provided the default is 120 days.
 
-Examples : 
+Examples: 
 
 - You want to predict whether a customer is likely to purchase a watch in the next 30 days. You also want to score users who have some web activity in the last 60 days. In this case the minimum length of data required = 60 days + 30 days. The eligible population is 60 days and the outcome window is 30 days totaling 90 days.
 

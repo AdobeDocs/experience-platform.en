@@ -13,7 +13,7 @@ Customer AI, as part of Intelligent Services enables you to generate custom prop
 
 Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 
-## Set up your instance {#set-up-your-instance}
+## Create an instance {#set-up-your-instance}
 
 In the Platform UI, select **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays all available services at your disposal. In the container for Customer AI, select **[!UICONTROL Open]**.
 
@@ -40,9 +40,9 @@ To create a new instance, select **[!UICONTROL Create instance]**.
 
 ![](../images/user-guide/dashboard.png)
 
-## Setup
+## Set up
 
-The instance creation workflow appears, starting on the **[!UICONTROL Setup]** step.
+The instance creation workflow appears, starting on the **[!UICONTROL Set up]** step.
 
 Below is important information on values that you must provide the instance with:
 
@@ -68,7 +68,7 @@ After selecting the datasets you wish to use, select the **[!UICONTROL Add]** bu
 
 Selecting the info icon ![info icon](../images/user-guide/info-icon.png) next to the dataset opens the dataset preview popover.
 
-![Select and search for dataset](../images/user-guide/dataset-info-2.png)
+![Select and search for dataset](../images/user-guide/dataset-info.png)
 
 The dataset preview contains data such as the last update time, source schema, and a preview of the first ten columns.
 
@@ -79,8 +79,8 @@ There is a dataset completeness percentage value in the dataset preview. This va
 >[!NOTE]
 >
 >Dataset completeness is calculated using the maximum training window for Customer AI (one year). This means data that is more than one year old is not taken into account when displaying your dataset completeness value.
-<!-- training dataset completness needs to change -->
-![Dataset completeness](../images/user-guide/dataset-info.png)
+
+![Dataset completeness](../images/user-guide/dataset-info-2.png)
 
 ### Select an identity {#identity}
 
@@ -102,7 +102,7 @@ In the event that more than one identity is available within a namespace, make s
 >
 > If no valid identity type (namespace) exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../../identity-service/namespaces.md) documentation.
 
-## Define a goal {#define-a-goal}
+## Define goal {#define-a-goal}
 
 <!-- https://www.adobe.com/go/cai-define-a-goal -->
 
@@ -150,9 +150,13 @@ By default, propensity scores are generated for all profiles unless an eligible 
 
 If you have additional information in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores, a custom events option is provided. Using this option allows you add additional events that you deem influential which may improve the quality of your model and help to provide more accurate results. If the dataset you selected includes custom events defined in your schema, you can add them to your instance.
 
+>[!NOTE]
+>
+> For an in depth explanation on how custom events effect Customer AI scoring results, visit the [Custom event example](#custom-event) section.
+
 ![event feature](../images/user-guide/event-feature.png)
 
-To add a custom event, select **[!UICONTROL Add custom event]**. Next, input a custom event name then map it to the event field in your schema. Custom event names are displayed in place of the fields value when looking at influential factors and other insights. This means user id's, reservation id's, device info, and other custom values are listed with the custom event name instead of the ID/value of the event. These additional custom events are used by Customer AI to improve the quality of your model and provide more accurate results.
+To add a custom event, select **[!UICONTROL Add custom event]**. Next, input a custom event name then map it to the event field in your schema. Custom event names are displayed in place of the fields value when looking at influential factors and other insights. This means that the custom event name will be used instead of the ID/value of the event. For more information on how custom events are displayed, see the [custom event example section](#custom-event). These additional custom events are used by Customer AI to improve the quality of your model and provide more accurate results.
 
 ![Custom Event field](../images/user-guide/custom-event.png)
 
@@ -172,21 +176,31 @@ You can define important Profile dataset fields (with timestamps) in your data i
 
 >[!NOTE]
 >
->Adding a custom Profile attribute follows the same workflow as adding a custom event.
+>Adding a custom Profile attribute follows the same workflow as adding a custom event. Similar to custom events, custom profile attributes affect your model scoring in the same way. For an in-depth explanation, visit the [Custom event example](#custom-event) section.
 
 ![add a custom profile attribute](../images/user-guide/profile-attributes.png)
 
+### Adding a custom event example {#custom-event}
+
+In the following example, a custom event and profile attribute is added to a Customer AI instance. The goal of the Customer AI instance is to predict the likelihood of a customer to buy another Luma product in the next 60 days. Normally, product data is linked to a product SKU. In this case, the SKU is `prd1013`. After the Customer AI model is trained/scored, this SKU can be linked to an event and displayed as an influential factor for a propensity bucket.
+
+Customer AI automatically applies feature generation such as "Days since" or "Counts of" against custom events such as **Watch purchase**. If this event was considered an influential factor on why customers are high, medium, or low propensity, Customer AI displays it as `Days since prd1013 purchase` or `Count of prd1013 purchase`. By creating this as a Custom event, you can give the event a new name making the results much easier to read. For example, `Days since Watch purchase`. Additionally, Customer AI uses this event in its training and scoring even if the event is not a standard event. This means you can add multiple events that you think might be influential and customize your model further by including data such as reservations, visitor logs, and other events. Adding these data points further increases the accuracy and precision of your Customer AI model.
+
+![example of a custom event](../images/user-guide/custom-event-name.png)
+
+## Set options
+
+The set options step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, and toggle **[!UICONTROL Profile]** on/off.
+
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
-The **[!UICONTROL Advanced]** step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed. 
-
-Setup a scoring schedule by configuring the **[!UICONTROL Scoring Frequency]**. Automated prediction runs can be scheduled to run on either a weekly or a monthly basis.
+To set up a scoring schedule, start by configuring the **[!UICONTROL Scoring Frequency]**. Automated prediction runs can be scheduled to run on either a weekly or a monthly basis.
 
 ![](../images/user-guide/schedule.png)
 
-### Prediction exclusions
+### Prediction exclusions *(optional)*
 
-If your dataset contained any columns added as test data, you can add that column or event to an exclusion list by selecting **Add Exclusion** followed by entering the field you wish to exclude. This prevents events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs or certain promotions.
+If your dataset contained any columns added as test data, you can add that column or event to an exclusion list by selecting **[!UICONTROL Add Exclusion]** followed by entering the field you wish to exclude. This prevents events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs or promotions.
 
 To exclude an event, select **[!UICONTROL Add exclusion]** and define the event. To remove an exclusion, select the ellipses (**[!UICONTROL ...]**) to the top-right of the event container, then select **[!UICONTROL Remove Container]**.
 
@@ -196,7 +210,7 @@ To exclude an event, select **[!UICONTROL Add exclusion]** and define the event.
 
 The Profile toggle allows Customer AI to export the scoring results into Real-time Customer Profile. Disabling this toggle prevents the models scoring results from being added to Profile. Customer AI scoring results are still available with this feature disabled.
 
-When using Customer AI for the first time ,you should toggle this feature off until you are happy with the model output results. This prevents you from uploading multiple scoring datasets to Real-time Customer Profile while fine tuning your model.
+When using Customer AI for the first time you can toggle this feature off until you are satisfied with the model output results. This prevents you from uploading multiple scoring datasets to your Customer Profiles while fine tuning your model. Once you have finished calibrating your model, you can clone the model using the [clone option](#set-up-your-instance) from the **Service instances** page. This allows you to create a copy of your model and toggle profile on.
 
 ![Profile toggle](../images/user-guide/advanced-workflow.png)
 

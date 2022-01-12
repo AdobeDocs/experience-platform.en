@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Create a dataflow for MailChimp Members using the Flow Service API
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp Members using the Flow Service API.
+exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
 ---
 # Create a dataflow for [!DNL MailChimp Members] using the Flow Service API
 
@@ -33,7 +34,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL MailChimp] :
+The following request creates a base connection for [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -96,7 +97,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL MailChimp] :
+The following request creates a base connection for [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -342,7 +343,7 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for [!DNL MailChimp] :
+The following request creates a source connection for [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -417,7 +418,7 @@ POST /targetConnections
 
 **Request**
 
-The following request creates a target connection for [!DNL MailChimp] :
+The following request creates a target connection for [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
