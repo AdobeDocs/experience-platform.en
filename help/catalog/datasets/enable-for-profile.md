@@ -18,7 +18,7 @@ This tutorial covers the process of enabling a dataset for use in [!DNL Real-tim
 
 ## Getting started
 
-This tutorial requires a working understanding of several Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for these related DNL Platform services:
+This tutorial requires a working understanding of several Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for these related [!DNL Platform] services:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources being ingested into [!DNL Platform].
@@ -73,11 +73,11 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fields":[],
-    "schemaRef" : {
+    "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
         "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
     },
-    "tags" : {
+    "tags": {
        "unifiedProfile": ["enabled:true"],
        "unifiedIdentity": ["enabled:true"]
     }

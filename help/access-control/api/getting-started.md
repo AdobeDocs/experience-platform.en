@@ -17,7 +17,7 @@ This developer guide provides information on how to format your requests to the 
 
 ## Getting started
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Schema Registry] API.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Access Control] API.
 
 ### Reading sample API calls
 
