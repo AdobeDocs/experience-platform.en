@@ -38,7 +38,7 @@ When you are working with [!DNL Experience Event] data originating from a websit
 
 This grouping, or sessionization of data, helps associate the events to uncover more context about the customer experience.
 
-For more information about sessionization in Adobe Analytics, see the documentation on [context-aware sessions](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html.
+For more information about sessionization in Adobe Analytics, see the documentation on [context-aware sessions](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **Query syntax**
 

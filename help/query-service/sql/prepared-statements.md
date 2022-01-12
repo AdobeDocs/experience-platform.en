@@ -8,7 +8,7 @@ exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
 ---
 # Prepared statements
 
-In SQL, prepared statements are used to templatize similar queries or updates. Adobe Experience Platform [!DNL Query Service] supports prepared statements by using a parameterized query. This can be used to optimize performance, as you will no longer need to re-parse a query over and over again.
+In SQL, prepared statements are used to templatize similar queries or updates. Adobe Experience Platform [!DNL Query Service] supports prepared statements by using a parameterized query. This can optimize performance, as you no longer need to repetitiously re-parse a query.
 
 ## Using prepared statements
 

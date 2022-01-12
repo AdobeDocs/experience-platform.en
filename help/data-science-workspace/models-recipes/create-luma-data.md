@@ -7,7 +7,7 @@ type: Tutorial
 description: This tutorial provides you with the prerequisites and assets required for the Luma demo propensity model.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
 ---
-# Create the Luma propenstiy model schemas and datasets
+# Create the Luma propensity model schemas and datasets
 
 This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Once complete, the following schemas and datasets will be available to you and your IMS organization.
 
