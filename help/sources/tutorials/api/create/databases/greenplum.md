@@ -27,7 +27,7 @@ The following sections provide additional information that you will need to know
 | `connectionString` | The connection string used to connect to your [!DNL GreenPlum] instance. The connection string pattern for [!DNL GreenPlum] is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
-For more information on acquiring a connection string, refer to [this GreenPlum document](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
+For more information on acquiring a connection string, refer to [this GreenPlum document](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ### Using Platform APIs
 

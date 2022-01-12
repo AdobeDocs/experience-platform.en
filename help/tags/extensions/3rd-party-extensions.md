@@ -11,4 +11,4 @@ exl-id: c82546de-a89d-4d1c-b97a-43983b513360
 
 In addition to extensions provided by Adobe solutions, third-party extensions for Adobe Experience Platform are also available.
 
-Adobe does not warranty the extensions from third-party developers, and there for it is the responsibility of extension authors to choose a license and support process for their extensions. Many developers have chosen to post the source code of their extension packages on a public GitHub repository where users can review them at their convenience. Refer to the [tag developer repository](https://github.com/Launch-Developers) for more information.
+Adobe does not warranty the extensions from third-party developers, and there for it is the responsibility of extension authors to choose a license and support process for their extensions. Many developers have chosen to post the source code of their extension packages on a public GitHub repository where users can review them at their convenience. Refer to the [Connections Developers group on GitHub](https://github.com/Connections-Developers) for more information.
