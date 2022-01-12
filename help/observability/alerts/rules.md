@@ -28,7 +28,7 @@ The following alert rules are specific to [Identity Service](../../identity-serv
 
 | Rule | Description | Threshold | Evaluation frequency | Repeat window | 
 | --- | --- | --- | --- | --- |
-| Identity Service Flow Run Start | This alert triggers when an Identity Service flow run starts processing data. | N/A | N/A | N/A |
+| Identity Service Flow Run Start | This alert triggers when an Identity Service flow run starts processing data. In other words, ingested data is being loaded from the Data Lake into Identity Service. | N/A | N/A | N/A |
 | Identity Service Flow Run Delay | This alert triggers when an Identity Service flow run is taking longer to process than the allotted threshold. | 150 minutes | 30 seconds | 2 minutes |
 | Identity Service Flow Run Success | This alert triggers when data is successfully ingested into Identity Service. | N/A | N/A | N/A |
 | Identity Service Flow Run Failure | This alert triggers when an error occurs while ingesting data into Identity Service. | N/A | N/A | N/A |
