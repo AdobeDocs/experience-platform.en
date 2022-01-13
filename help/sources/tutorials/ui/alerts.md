@@ -29,3 +29,7 @@ This document requires a working understanding of the following components of Ad
 >title="Subscribe to sources alerts"
 >abstract="Alerts allow you to receive notifications based on the status of your sources dataflows. You can set alert notifications to get updates if your dataflow has started, is successful, has failed, or did not ingest any data."
 >text="Learn more in documentation"
+
+>[!IMPORTANT]
+>
+>You must enable instant notifications of emails for your Platform account in order to receive email-based alert notifications for your dataflows.
