@@ -14,7 +14,7 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 
 >[!NOTE]
 >
->The scale factor for [!DNL Kinesis] must be increased if you need to ingest high volume data. Currently, maximum volume of data that you can bring from your [!DNL Kinesis] account to Platform is (x). To scale up and ingest higher volume data, please contact your Adobe representative.
+>The scale factor for [!DNL Kinesis] must be increased if you need to ingest high volume data. Currently, maximum volume of data that you can bring from your [!DNL Kinesis] account to Platform is 4000 records per second. To scale up and ingest higher volume data, please contact your Adobe representative.
 
 ## Prerequisites
 

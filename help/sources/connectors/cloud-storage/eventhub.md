@@ -19,7 +19,7 @@ The scale factor of your [!DNL Event Hubs] instance must be increased if you nee
 
 ### Ingress higher volume data
 
-Currently, the maximum volume of data that you can bring from your [!DNL Event Hubs] account to Platform is (x). To scale up and ingest higher volume data, please contact your Adobe representative.
+Currently, the maximum volume of data that you can bring from your [!DNL Event Hubs] account to Platform is 2000 records per second. To scale up and ingest higher volume data, please contact your Adobe representative.
 
 ### Increase parallelism on [!DNL Event Hubs] and Platform
 
