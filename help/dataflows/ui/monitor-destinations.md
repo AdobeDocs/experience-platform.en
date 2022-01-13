@@ -13,7 +13,7 @@ Destinations allow you to activate your data from Adobe Experience Platform to c
 
 The monitoring dashboard provides you with a visual representation of the journey of a dataflow, including the destination the data is activated to. This tutorial provides instructions on how you can either monitor dataflows directly in the destinations workspace or use the monitoring dashboard to monitor dataflows for your destinations using the Experience Platform user interface.
 
-## Getting started
+## Getting started {#getting-started}
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -140,6 +140,24 @@ The details page also displays a list of identities that failed and identities t
 
 ![Dataflow records for batch destinations](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
+## Monitoring Segment Jobs dashboard {#monitoring-segment-jobs-dashboard}
+
+To access the [!UICONTROL Segment Jobs] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Segment Jobs]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the segment evaluation and export jobs.
+
+![Segment jobs monitoring dashboard](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
+
+Use the [!UICONTROL Segment Jobs] dashboard to understand if profile evaluation and export happens on time and without any exceptions, so the downstream services for destination activation can have the latest evaluated profile data.
+
+The following metrics are available for segment jobs:
+
+| Metric | Description |
+---------|----------|
+| **[!UICONTROL Segment job]** | Indicates the name of the segment job. |
+| **[!UICONTROL Type]** | Indicates the type of segment job - export or evaluation. Note that in both cases, the segment job evaluates or exports *all* segments belonging to an organization. |
+| **[!UICONTROL Job start]** | The date and time when the segment job started. |
+| **[!UICONTROL Job end]** | The date and time when the segment job completed. |
+| **[!UICONTROL Status]** | The status of the completed job - success or failed. |
+
 ## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
 
 >[!CONTEXTUALHELP]
@@ -149,7 +167,7 @@ The details page also displays a list of identities that failed and identities t
 
 To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 
-Use the [!UICONTROL Monitoring] dashboard to get an overall idea of the health of your activation flows. Start by getting insights on an aggregated level for all batch and streaming destinations and then drill down into detailed views for dataflows, dataflow runs, and activated segments for an in-depth look at your activation data. The screens in the [!UICONTROL Monitoring] dashboard provide actionable insights through metrics and error descriptions to help you troubleshoot any problems that might arise in your activation scenarios.
+Use the [!UICONTROL Destinations] dashboard to get an overall idea of the health of your activation flows. Start by getting insights on an aggregated level for all batch and streaming destinations and then drill down into detailed views for dataflows, dataflow runs, and activated segments for an in-depth look at your activation data. The screens in the [!UICONTROL Monitoring] dashboard provide actionable insights through metrics and error descriptions to help you troubleshoot any problems that might arise in your activation scenarios.
 
 At the center of the dashboard is the [!UICONTROL Activation] panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to streaming destinations, as well as on the failed batch flow runs to batch destinations.
 
