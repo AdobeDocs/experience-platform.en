@@ -582,7 +582,7 @@ curl -X PATCH \
 
 |Property|Description|
 |---|---|
-|`op`|Specifies the operation to take. Examples of other PATCH operations can be found in the [JSON Patch documentation](http://jsonpatch.com)|
+|`op`|Specifies the operation to take. Examples of other PATCH operations can be found in the [JSON Patch documentation](https://datatracker.ietf.org/doc/html/rfc6902)|
 |`path`|The path of the field to update. Accepted values are: "/name", "/identityGraph.type", "/attributeMerge.type", "/schema.name", "/version", "/default", "/isActiveOnEdge"|
 |`value`|The value to set the specified field to.|
 

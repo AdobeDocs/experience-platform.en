@@ -23,7 +23,7 @@ A manifest file ([`extension.json`](./manifest.md)) must exist at the root of th
 
 ### Library modules
 
-Library modules are the files that describe the different [components](#components) that an extension provides (in other words, the logic to be emitted within the tag runtime library). The content of each library module file must follow the [CommonJS module standard](http://wiki.commonjs.org/wiki/Modules/1.1.1).
+Library modules are the files that describe the different [components](#components) that an extension provides (in other words, the logic to be emitted within the tag runtime library). The content of each library module file must follow the [CommonJS module standard](https://nodejs.org/api/modules.html#modules-commonjs-modules).
 
 For example, if you are building an action type called "send beacon", you must have a file that contains the logic that sends the beacon. If using JavaScript, the file could be called `sendBeacon.js`. The content of this file will be emitted within the tag runtime library.
 
