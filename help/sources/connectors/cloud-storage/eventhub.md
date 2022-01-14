@@ -15,7 +15,7 @@ Cloud storage sources can bring your own data into Platform without the need to 
 
 ## Scaling with [!DNL Event Hubs]
 
-The scale factor of your [!DNL Event Hubs] instance must be increased if you need to ingress high volume data, increase parallelism, or raise the speed of ingestion Platform.
+The scale factor of your [!DNL Event Hubs] instance must be increased if you need to ingress high volume data, increase parallelism, or raise the speed of the ingestion Platform.
 
 ### Ingress higher volume data
 
@@ -23,7 +23,7 @@ Currently, the maximum volume of data that you can bring from your [!DNL Event H
 
 ### Increase parallelism on [!DNL Event Hubs] and Platform
 
-Parallelism refers to simultaneous execution of the same tasks on multiple processing units in order to increase speed and performance. You can increase parallelism on the [!DNL Event Hubs] side by increasing partition or by acquiring more processing units for your [!DNL Event Hubs] account. See this [[!DNL Event Hubs] document on scaling](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) for more information.
+Parallelism refers to the simultaneous execution of the same tasks on multiple processing units in order to increase speed and performance. You can increase parallelism on the [!DNL Event Hubs] side by increasing partition or by acquiring more processing units for your [!DNL Event Hubs] account. See this [[!DNL Event Hubs] document on scaling](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) for more information.
 
 To increase the rate of speed of ingestion on the Platform side, Platform must increase the number of tasks in the source connector to read from your [!DNL Event Hubs] partitions. Once you have increased parallelism on the [!DNL Event Hubs] side, please contact your Adobe representative to scale Platform tasks based on your new partition. Currently, this process is not automated.
 
