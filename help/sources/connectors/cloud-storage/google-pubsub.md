@@ -16,10 +16,6 @@ Adobe Experience Platform provides native connectivity for cloud providers like 
 
 Cloud storage sources can bring your data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the sources workflow. Platform allows you to bring in data from [!DNL Azure Event Hubs] in real time.
 
->[!NOTE]
->
->The scale factor for [!DNL Google PubSub] must be increased if you need to ingest high volume data. Currently, maximum volume of data that you can bring from your [!DNL Google PubSub] account to Platform is (x). To scale up and ingest higher volume data, please contact your Adobe representative.
-
 ## Connect [!DNL Google PubSub] to Platform
 
 The documentation below provides information on how to connect [!DNL Google PubSub] to Platform using APIs or the user interface:
