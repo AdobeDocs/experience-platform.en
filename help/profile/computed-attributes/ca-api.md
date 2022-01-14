@@ -502,7 +502,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **Request**
 
-This request uses [JSON Patch formatting](http://jsonpatch.com/) to update the "value" of the "expression" field.
+This request uses [JSON Patch formatting](https://datatracker.ietf.org/doc/html/rfc6902) to update the "value" of the "expression" field.
 
 ```shell
 curl -X PATCH \
