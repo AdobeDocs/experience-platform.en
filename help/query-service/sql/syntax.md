@@ -323,7 +323,6 @@ statementList:
 Below is an example using anonymous block.
 
 ```sql
-$$
 BEGIN
    SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
@@ -335,7 +334,7 @@ EXCEPTION
   WHEN OTHER THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
-END$$;
+END;
 ```
 
 ## [!DNL Spark] SQL commands 
@@ -575,7 +574,7 @@ SHOW DateStyle;
 
 ### COPY
 
-The `COPY` command dumps the output of any `SELECT` query to a specified location. The user must have access to this location for this command to succeed.
+The `COPY` command duplicates the output of any `SELECT` query to a specified location. The user must have access to this location for this command to succeed.
 
 ```sql
 COPY query
