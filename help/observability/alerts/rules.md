@@ -7,18 +7,20 @@ exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 ---
 # Standard alert rules
 
-Adobe Experience Platform provides several predefined alert rules that you can enable for your organization. The table below covers the details of these Adobe-provided alert rules. For more general information on alerts in Experience Platform, see the [alerts overview](./overview.md).
+Adobe Experience Platform provides several predefined alert rules that you can enable for your organization. This document covers the details of these Adobe-provided alert rules. For more general information on alerts in Experience Platform, see the [alerts overview](./overview.md).
+
+When [viewing alert rules in the Platform UI](./ui.md), you can subscribe to each rule individually. When subscribing to alerts through [I/O Event notifications](./subscribe.md), however, alert rules are organized into different subscription packages. In the tables below, each rule is shown with its corresponding I/O Event subscription name.
 
 ## Data Ingestion
 
 The following alert rules are specific to [Data Ingestion](../../ingestion/home.md) and  [sources](../../sources/home.md):
 
-| Rule | Description | Threshold | Evaluation frequency | Repeat window | 
-| --- | --- | --- | --- | --- |
-| Sources Flow Run Start | This alert triggers when a source connection starts processing data. | N/A | N/A | N/A |
-| Sources Flow Run Success | This alert triggers when data is successfully ingested from a source connection. | N/A | N/A | N/A |
-| Sources Flow Run Failure | This alert triggers when an error occurs while ingesting data from a source connection. | N/A | N/A | N/A |
-| Ingestion Delay | This alert triggers when a batch ingestion flow run is taking longer to process than the allotted threshold. | 150 minutes | 30 seconds | 10 hours |
+| I/O Event subscription | Alert rule | Description |
+| --- | --- | --- |
+| Source Flow Run Info | Sources Flow Run Start | This alert triggers when a source connection starts processing data. |
+| Source Flow Run Info | Sources Flow Run Success | This alert triggers when data is successfully ingested from a source connection. |
+| Source Flow Run Delays, Failures and Errors | Sources Flow Run Failure | This alert triggers when an error occurs while ingesting data from a source connection. |
+| Source Flow Run Delays, Failures and Errors | Ingestion Delay | This alert triggers when a batch ingestion flow run takes longer than 150 minutes to process. |
 
 {style="table-layout:auto"}
 
@@ -26,12 +28,12 @@ The following alert rules are specific to [Data Ingestion](../../ingestion/home.
 
 The following alert rules are specific to [Identity Service](../../identity-service/home.md):
 
-| Rule | Description | Threshold | Evaluation frequency | Repeat window | 
-| --- | --- | --- | --- | --- |
-| Identity Service Flow Run Start | This alert triggers when an Identity Service flow run starts processing data. In other words, ingested data is being loaded from the Data Lake into Identity Service. | N/A | N/A | N/A |
-| Identity Service Flow Run Delay | This alert triggers when an Identity Service flow run is taking longer to process than the allotted threshold. | 150 minutes | 30 seconds | 2 minutes |
-| Identity Service Flow Run Success | This alert triggers when data is successfully ingested into Identity Service. | N/A | N/A | N/A |
-| Identity Service Flow Run Failure | This alert triggers when an error occurs while ingesting data into Identity Service. | N/A | N/A | N/A |
+| I/O Event subscription | Alert rule | Description |
+| --- | --- | --- |
+| Identity Ingestion Info | Identity Service Flow Run Start | This alert triggers when an Identity Service flow run starts processing data. In other words, ingested data is being loaded from the Data Lake into Identity Service. |
+| Identity Ingestion Info | Identity Service Flow Run Success | This alert triggers when data is successfully ingested into Identity Service. |
+| Identity Ingestion Delays, Failures and Errors | Identity Service Flow Run Delay | This alert triggers when an Identity Service flow run takes longer than 150 minutes to process. |
+| Identity Ingestion Delays, Failures and Errors | Identity Service Flow Run Failure | This alert triggers when an error occurs while ingesting data into Identity Service. |
 
 {style="table-layout:auto"}
 
@@ -39,12 +41,12 @@ The following alert rules are specific to [Identity Service](../../identity-serv
 
 The following alert rules are specific to [Real-time Customer Profile](../../profile/home.md):
 
-| Rule | Description | Threshold | Evaluation frequency | Repeat window | 
-| --- | --- | --- | --- | --- |
-| Profile Flow Run Start | This alert triggers when a Profile flow run starts processing data. | N/A | N/A | N/A |
-| Profile Flow Run Delay | This alert triggers when a Real-time Customer Profile flow run is taking longer to process than the allotted threshold. | 150 minutes | 30 seconds | 10 hours |
-| Profile Flow Run Success | This alert triggers when data is successfully ingested into Profile. | N/A | N/A | N/A |
-| Profile Flow Run Failure | This alert triggers when an error occurs while ingesting data into Profile. | N/A | N/A | N/A |
+| I/O Event subscription | Alert rule | Description |
+| --- | --- | --- |
+| Profile Ingestion Info | Profile Flow Run Start | This alert triggers when a Profile flow run starts processing data. |
+| Profile Ingestion Info | Profile Flow Run Success | This alert triggers when data is successfully ingested into Profile. |
+| Profile Ingestion Delays, Failures and Errors | Profile Flow Run Delay | This alert triggers when a Real-time Customer Profile flow run takes longer than 150 minutes to process. |
+| Profile Ingestion Delays, Failures and Errors | Profile Flow Run Failure | This alert triggers when an error occurs while ingesting data into Profile. |
 
 {style="table-layout:auto"}
 
@@ -52,13 +54,13 @@ The following alert rules are specific to [Real-time Customer Profile](../../pro
 
 The following alert rules are specific to [Segmentation Service](../../segmentation/home.md):
 
-| Rule | Description | Threshold | Evaluation frequency | Repeat window | 
-| --- | --- | --- | --- | --- |
-| Segment Job Start | This alert triggers when a segment starts processing data. | N/A | N/A | N/A |
-| Segment Job Delay | This alert triggers when a segment jobs takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
-| Segment Job Success | This alert triggers when a segment job completes successfully. | N/A | N/A | N/A |
-| Segment Job Failure | This alert triggers when a segment job results in an error. | N/A | N/A | N/A |
-| Segment Definition Disabled | This alert triggers when a segment definition is disabled. | N/A | N/A | N/A |
+| I/O Event subscription | Alert rule | Description |
+| --- | --- | --- |
+| Segment Evaluation Job Info | Segment Job Start | This alert triggers when a segment starts processing data. |
+| Segment Evaluation Job Info | Segment Job Success | This alert triggers when a segment job completes successfully. |
+| Segment Evaluation Job Delays, Failures and Errors | Segment Job Delay | This alert triggers when a segment jobs takes longer than 150 minutes to complete. |
+| Segment Evaluation Job Delays, Failures and Errors | Segment Job Failure | This alert triggers when a segment job results in an error. |
+| Segment Evaluation Job Delays, Failures and Errors | Segment Definition Disabled | This alert triggers when a segment definition is disabled. |
 
 {style="table-layout:auto"}
 
@@ -66,12 +68,12 @@ The following alert rules are specific to [Segmentation Service](../../segmentat
 
 The following alert rules are specific to [destinations](../../destinations/home.md):
 
-| Rule | Description | Threshold | Evaluation frequency | Repeat window | 
-| --- | --- | --- | --- | --- |
-| Destination Flow Run Start | This alert triggers when a destination flow run starts processing data. | N/A | N/A | N/A |
-| Destination Flow Run Delay | This alert triggers when a destination flow run is taking longer to process than the allotted threshold. | 150 minutes | 30 seconds | 10 hours |
-| Destination Flow Run Success | This alert triggers when data is successfully sent to a destination. | N/A | N/A | N/A |
-| Destination Flow Run Failure | This alert triggers when an error occurs while sending data to a destination. | N/A | N/A | N/A |
+| I/O Event subscription | Alert rule | Description |
+| --- | --- | --- |
+| Destination Flow Run Info | Destination Flow Run Start | This alert triggers when a destination flow run starts processing data. |
+| Destination Flow Run Info | Destination Flow Run Success | This alert triggers when data is successfully sent to a destination. |
+| Destination Flow Run Delays, Failures and Errors | Destination Flow Run Delay | This alert triggers when a destination flow run takes longer than 150 minutes to process. |
+| Destination Flow Run Delays, Failures and Errors | Destination Flow Run Failure | This alert triggers when an error occurs while sending data to a destination. |
 
 {style="table-layout:auto"}
 
