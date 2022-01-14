@@ -142,6 +142,11 @@ The details page also displays a list of identities that failed and identities t
 
 ## Monitoring Segment Jobs dashboard {#monitoring-segment-jobs-dashboard}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Segment Jobs"
+>abstract="The segment jobs dashboard contains information on the evaluation and export jobs for all your segments."
+
 To access the [!UICONTROL Segment Jobs] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Segment Jobs]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the segment evaluation and export jobs.
 
 ![Segment jobs monitoring dashboard](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
@@ -169,7 +174,7 @@ To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring
 
 Use the [!UICONTROL Destinations] dashboard to get an overall idea of the health of your activation flows. Start by getting insights on an aggregated level for all batch and streaming destinations and then drill down into detailed views for dataflows, dataflow runs, and activated segments for an in-depth look at your activation data. The screens in the [!UICONTROL Monitoring] dashboard provide actionable insights through metrics and error descriptions to help you troubleshoot any problems that might arise in your activation scenarios.
 
-At the center of the dashboard is the [!UICONTROL Activation] panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to streaming destinations, as well as on the failed batch flow runs to batch destinations.
+At the center of the dashboard is the [!UICONTROL Activation] panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to streaming destinations, as well as on the failed batch dataflow runs to batch destinations.
 
 ![Streaming and batch activation graphs](../assets/ui/monitor-destinations/dashboard-graph.png)
 
@@ -178,14 +183,14 @@ By default, the data displayed contains the activation information from the last
 
 >[!NOTE]
 >
->The following screenshot shows the activation rate and batch flow runs for the last 30 days instead of the last 24 hours. You can adjust the time frame by selecting **[!UICONTROL Last 30 days]**.
+>The following screenshot shows the activation rate and batch dataflow runs for the last 30 days instead of the last 24 hours. You can adjust the time frame by selecting **[!UICONTROL Last 30 days]**.
 
 ![Change lookback date range for activated destinations](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
 Use the arrow icon (![arrow icon](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) to expand or dismiss the cards at the top of the screen, which show at-a-glance information about the activation details, based on the destination type - streaming or batch:
 
 - **[!UICONTROL Streaming activation rate]**: Represents the percentage of received identities that have either been successfully activated or skipped. The formula used to calculate this percentage is described further above on this page, in the [Dataflow runs for streaming destinations](#dataflow-runs-for-streaming-destinations) section.
-- **[!UICONTROL Batch failed flow runs]**: Represents the number of failed flow runs in the selected time interval.
+- **[!UICONTROL Batch failed dataflow runs]**: Represents the number of failed dataflow runs in the selected time interval.
 
 ![Show or dismiss cards at top of page](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
 
@@ -219,7 +224,7 @@ A list of dataflows appears, sorted by the last dataflow run. You can see additi
 
 ![All dataflows highlighted in the monitoring dashboard](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
-Once you select a dataflow for further inspection, the dataflow details page contains a toggle which allows you to see the activated data in the dataflow, broken down by flow runs or segments.
+Once you select a dataflow for further inspection, the dataflow details page contains a toggle which allows you to see the activated data in the dataflow, broken down by dataflow runs or segments.
 
 ### Dataflow runs view {#dataflow-runs-view}
 
@@ -247,7 +252,7 @@ For example, you are activating a segment called "Loyalty Members in California"
 >
 >Note the current limitations related to segment-level metrics:
 >- The segment-level view is currently only available for batch destinations.
->- Segment level metrics are currently recorded for successful flow runs only. They are not recorded for failed flow runs and excluded records.
+>- Segment level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records.
 
 ![Segments in dataflow panel](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
@@ -256,7 +261,7 @@ Use the filter button ![filter](../assets/ui/monitor-destinations/filter-add.png
 
 ### Dataflow runs page {#dataflow-runs-page}
 
-The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, profiles received, identities activated, identities excluded, identities failed, activation rate, and status. To see more details about a specific dataflow run, select the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside the dataflow run start time.
+The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, profiles received, identities activated, identities excluded, identities failed, activation rate, and status. To see more details about a specific dataflow run, select the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside the dataflow run start time to see the dataflow run details page.
 
 ![Dataflow runs filter in monitoring dashboard](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 
