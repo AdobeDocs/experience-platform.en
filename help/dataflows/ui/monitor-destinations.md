@@ -215,15 +215,15 @@ Additionally, you can enter a destination into the search bar to isolate to a si
 
 If you want to view all existing dataflows across all destinations, select **[!UICONTROL Dataflows]**.
 
-A list of dataflows appears, grouped on a per-destination basis. You can see additional details for a specific dataflow by locating the destination you want to monitor, selecting the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside it, and then subsequently selecting the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside the dataflow you want more information about.
+A list of dataflows appears, sorted by the last dataflow run. You can see additional details for a specific dataflow by locating the destination you want to monitor, selecting the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside it, and then subsequently selecting the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside the dataflow you want more information about.
 
 ![All dataflows highlighted in the monitoring dashboard](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
 Once you select a dataflow for further inspection, the dataflow details page contains a toggle which allows you to see the activated data in the dataflow, broken down by flow runs or segments.
 
-### Flow runs view {#dataflow-runs-view}
+### Dataflow runs view {#dataflow-runs-view}
 
-When **[!UICONTROL Flow runs]** is selected, you can see a list of flow runs for the selected dataflow and further information about each run.
+When **[!UICONTROL Dataflow runs]** is selected, you can see a list of dataflow runs for the selected dataflow and further information about each run.
 
 >[!INFO]
 >
@@ -258,7 +258,7 @@ Use the filter button ![filter](../assets/ui/monitor-destinations/filter-add.png
 
 The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, profiles received, identities activated, identities excluded, identities failed, activation rate, and status. To see more details about a specific dataflow run, select the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside the dataflow run start time.
 
-![Dataflows filter in monitoring dashboard](../assets/ui/monitor-destinations/dashboard-dataflows-filter.png)
+![Dataflow runs filter in monitoring dashboard](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 
 ### Dataflow run details page {#dataflow-run-details-page}
 
