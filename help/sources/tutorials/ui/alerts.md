@@ -4,13 +4,13 @@ description: You can subscribe to alerts when creating a dataflow, to receive al
 title: Subscribe to in-context alerts in the UI
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 ---
-# Subscribe to alert messages to monitor your sources dataflows in the UI
+# Subscribe to alerts for sources dataflows in the UI
 
 Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../../../observability/api/overview.md) in order to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
 
-You can subscribe to alerts when creating a dataflow, to receive alert messages regarding the status, success, or failure of your flow run.
+You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run.
 
-This document provides steps on how to subscribe to alerts and receive alert messages for your flow runs.
+This document provides steps on how to subscribe receive alerts messages for your sources dataflows
 
 ## Getting started
 
