@@ -38,22 +38,33 @@ You can enable alerts for your dataflows during the *Dataflow detail* step of th
 
 ![dataflow-detail](../../images/tutorials/alerts/dataflow-detail.png)
 
-The available alerts sources dataflows are:
+The available alerts for sources dataflows are:
 
 | Alerts | Description |
 | --- | --- |
-| Sources Dataflow Run Start | A source flow run has started. |
-| Sources Dataflow Run Success | Data was successfully ingested from a source connection. |
-| Sources Dataflow Run Failure | An error occurred when ingesting data from a source connection. |
-| Sources Dataflow Lack of Ingestion | No sources flow ingestion in the allowed threshold. |
+| Sources Dataflow Run Start | This alert sends you a message when your source dataflow has started. |
+| Sources Dataflow Run Success | This alert sends you a message when data from your source is successfully ingested to Platform. |
+| Sources Dataflow Run Failure | This alert sends you a message if an error occurs in your dataflow. |
+| Sources Dataflow Lack of Ingestion | This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Platform. |
 
 Select the alerts you would like to subscribe to and then select **[!UICONTROL Next]** to review and finish your dataflow.
 
 ![select-alerts](../../images/tutorials/alerts/select-alerts.png)
 
+See the following guides for detailed steps on creating a sources dataflow in the UI:
+
+* [Advertising](./dataflow/advertising.md)
+* [Cloud storage](./dataflow/batch/cloud-storage.md)
+* [CRM](./dataflow/crm.md)
+* [Database](./dataflow/databases.md)
+* [E-commerce](./dataflow/ecommerce.md)
+* [Marketing automation](./dataflow/marketing-automation.md)
+* [Payments](./dataflow/payments.md)
+* [Protocols](./dataflow/protocols.md)
+
 ## Receive alerts
 
-Once your dataflow runs, you can start receiving alerts through both the UI or email.
+Once your dataflow runs, you can receive alerts through the UI or by email.
 
 ### In the UI
 
@@ -65,7 +76,7 @@ The notifications panel appears, displaying a list of status updates on the data
 
 ![alert-window](../../images/tutorials/alerts/alert-window.png)
 
-You can hover on an alert message to mark them as read or you can select the clock icon to remind you with alerts in five minutes, ten minutes, one hour, or tomorrow.
+You can hover on an alert message to mark them as read or you can select the clock icon to set future reminders on the status of your dataflow.
 
 ![remind-me](../../images/tutorials/alerts/remind-me.png)
 
@@ -73,7 +84,7 @@ Select the alert message to see specific information on your dataflow.
 
 ![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
 
-The *Dataflow run overview* page appears... The upper half of the screen displays an overview on your dataflow, including information on its attributes, corresponding dataflow run ID, and high-level error summary.
+The *Dataflow run overview* page appears. The upper half of the screen displays an overview on your dataflow, including information on its attributes, corresponding dataflow run ID, and high-level error summary.
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
@@ -85,18 +96,24 @@ For more information on handling dataflow errors, see the guide on [monitoring s
 
 ### By email
 
-Alerts for your dataflows are also delivered to you by email.
+Alerts for your dataflows are also delivered to you by email. Select the dataflow name in the email body to see more information on your dataflow.
 
 ![email](../../images/tutorials/alerts/email.png)
+
+Similar to the UI alert, the *Dataflow run overview* page appears, providing you with an interface to investigate any errors associated with your dataflow.
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
 ## Subscribe and unsubscribe to alerts
 
-You can subscribe to more alerts or unsubscribe from established alerts for an existing dataflow in the *Dataflows* page. Locate the dataflow you create from the list and then select the ellipses (`...`) to see a dropdown menu of options.
+You can subscribe to more alerts or unsubscribe from established alerts for an existing dataflow in the *Dataflows* page. Locate the dataflow you create from the list and then select the ellipses (`...`) to see a dropdown menu of options. Next, select **[!UICONTROL Subscribe alerts]** to modify the alert settings of your dataflow.
 
 ![options](../../images/tutorials/alerts/options.png)
 
-Select [!UICONTROL Subscribe alerts] to modify the alert settings of your dataflow.
+A pop-up window appears, providing you with a list of sources alerts. Select any alerts you want to subscribe to or deselect alerts that you want to unsubscribe from. When finished, select **[!UICONTROL Save]**.
 
 ![save](../../images/tutorials/alerts/save.png)
+
+## Next steps
+
+This document provided a step-by-step guide on how to subscribe to in-context alerts for your sources dataflows. For more information, see the [alerts UI guide](../../../observability/alerts/ui.md).
