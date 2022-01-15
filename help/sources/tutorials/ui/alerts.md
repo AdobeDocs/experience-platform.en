@@ -2,8 +2,6 @@
 keywords: Experience Platform;home;popular topics; alerts
 description: You can subscribe to alerts when creating a dataflow, to receive alert messages regarding the status, success, or failure of your flow run.
 title: Subscribe to in-context alerts in the UI
-hide: true
-hidefromtoc: true
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 ---
 # Subscribe to alert messages to monitor your sources dataflows in the UI
