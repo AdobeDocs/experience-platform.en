@@ -12,29 +12,33 @@ This document provides steps on how to perform various operations related to san
 
 ## View sandboxes
 
-In the Platform UI, select **[!UICONTROL Sandboxes]** in the left navigation to open the [!UICONTROL Sandboxes] dashboard. The dashboard lists all available sandboxes for your organization, including the sandbox type (production or development) and state (active, creating, deleted, or failed).
+In the Platform UI, select **[!UICONTROL Sandboxes]** in the left navigation and then select **[!UICONTROL Browse]** to open the [!UICONTROL Sandboxes] dashboard. The dashboard lists all available sandboxes for your organization, including their respective types, (production or development).
 
 ![](../images/ui/view-sandboxes.png)
 
 ## Switch between sandboxes
 
-The **sandbox switcher** control at the top-left of the screen displays the currently active sandbox.
+The sandbox indicator is located within the top header of the Platform UI and displays the title of the sandbox that you are currently in, its region, and its type.
 
 ![](../images/ui/sandbox-switcher.png)
 
-To switch between sandboxes, select the sandbox switcher and select the desired sandbox from the dropdown list.
+To switch between sandboxes, select the sandbox indicator and select the desired sandbox from the dropdown list.
 
 ![](../images/ui/switcher-menu.png)
 
-Once a sandbox is selected, the screen refreshes with the selected sandbox now featured in the sandbox switcher.
+Once a sandbox is selected, the screen refreshes and transports you to the sandbox you selected.
 
 ![](../images/ui/switched.png)
+
+<!--
 
 ## Search for a sandbox
 
 You can navigate through the list of sandboxes available to you by using the search function from the sandbox switcher menu. Type in the name of the sandbox you would like to access to filter through all sandboxes available to your organization.
 
 ![](../images/ui/sandbox-search.png)
+
+-->
 
 ## Create a new sandbox
 
