@@ -10,7 +10,7 @@ Adobe Experience Platform allows you to subscribe to event-based alerts regardin
 
 You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run.
 
-This document provides steps on how to subscribe receive alerts messages for your sources dataflows
+This document provides steps on how to subscribe receive alerts messages for your sources dataflows.
 
 ## Getting started
 
@@ -32,7 +32,7 @@ This document requires a working understanding of the following components of Ad
 >
 >You must enable instant notifications of emails for your Platform account in order to receive email-based alert notifications for your dataflows.
 
-You can enable alerts for your dataflows during the *Dataflow detail* step of the sources workflow in the sources workspace.
+You can enable alerts for your dataflows during the [!UICONTROL Dataflow detail] step of the sources workflow in the sources workspace.
 
 ![dataflow-detail](../../images/tutorials/alerts/dataflow-detail.png)
 
@@ -82,11 +82,11 @@ Select the alert message to see specific information on your dataflow.
 
 ![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
 
-The *Dataflow run overview* page appears. The upper half of the screen displays an overview on your dataflow, including information on its attributes, corresponding dataflow run ID, and high-level error summary.
+The [!UICONTROL Dataflow run overview] page appears. The upper half of the screen displays an overview on your dataflow, including information on its attributes, corresponding dataflow run ID, and high-level error summary.
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
-The lower half of the page displays any *Dataflow run errors* that ocurred during the dataflow run stage. From here, you can preview error diagnostics or use the [!DNL Data Access] API to download error diagnostics or the file manifest that corresponds to your dataflow.
+The lower half of the page displays any [!UICONTROL Dataflow run errors] that ocurred during the dataflow run stage. From here, you can preview error diagnostics or use the [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) to download error diagnostics or the file manifest that corresponds to your dataflow.
 
 ![dataflow-run-errors](../../images/tutorials/alerts/dataflow-run-error.png)
 
@@ -98,13 +98,13 @@ Alerts for your dataflows are also delivered to you by email. Select the dataflo
 
 ![email](../../images/tutorials/alerts/email.png)
 
-Similar to the UI alert, the *Dataflow run overview* page appears, providing you with an interface to investigate any errors associated with your dataflow.
+Similar to the UI alert, the [!UICONTROL Dataflow run overview] page appears, providing you with an interface to investigate any errors associated with your dataflow.
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
 ## Subscribe and unsubscribe to alerts
 
-You can subscribe to more alerts or unsubscribe from established alerts for an existing dataflow in the *Dataflows* page. Locate the dataflow you create from the list and then select the ellipses (`...`) to see a dropdown menu of options. Next, select **[!UICONTROL Subscribe alerts]** to modify the alert settings of your dataflow.
+You can subscribe to more alerts or unsubscribe from established alerts for an existing dataflow in the [!UICONTROL Dataflows] page. Locate the dataflow you create from the list and then select the ellipses (`...`) to see a dropdown menu of options. Next, select **[!UICONTROL Subscribe alerts]** to modify the alert settings of your dataflow.
 
 ![options](../../images/tutorials/alerts/options.png)
 
