@@ -24,7 +24,7 @@ This tutorial workflow relies on several Adobe Experience Platform services as p
 
 As part of the initial setup, Bodea's IT department needs to create an XDM schema to ensure that their data follows a standard format when being brought into Platform, and is actionable across different Platform services and Adobe Experience Cloud products (such as Adobe Analytics and Adobe Target). 
 
->![WARNING]
+>[!WARNING]
 >
 >You must follow the ingestion patterns as described in the relevant sources documentation linked to throughout this tutorial. Other field mapping methods are not guaranteed to work.
 
