@@ -106,6 +106,12 @@ Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of
 
 ![preview-screen](../../../../images/tutorials/create/local/preview-screen.png)
 
+![clear-all](../../../../images/tutorials/create/local/clear-all.png)
+
+![mapping-interface](../../../../images/tutorials/create/local/mapping-interface.png)
+
+
+
 
 During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results. When finished, select **[!UICONTROL Close]**.
 
