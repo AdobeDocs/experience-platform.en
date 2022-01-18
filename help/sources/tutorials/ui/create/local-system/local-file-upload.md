@@ -72,21 +72,43 @@ When finished, select **[!UICONTROL Next]**.
 
 ![delimiter](../../../../images/tutorials/create/local/delimiter.png)
 
-### Mapping
+## Mapping
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-![mapping-interface](../../../../images/tutorials/create/local/mapping-interface.png)
+![map-csv-to-xdm](../../../../images/tutorials/create/local/map-csv-to-xdm.png)
 
-#### Preview data
+### Top panel
 
 Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
 
-![preview-mapping](../../../../images/tutorials/create/local/preview-mapping.png)
+![top-panel](../../../../images/tutorials/create/local/top-panel.png)
+
+![second-panel](../../../../images/tutorials/create/local/second-panel.png)
+
+![search](../../../../images/tutorials/create/local/search.png)
+
+![filter](../../../../images/tutorials/create/local/filter.png)
+
+![fields-with-errors](../../../../images/tutorials/create/local/fields-with-errors.png)
+
+![add-new-field](../../../../images/tutorials/create/local/add-new-field.png)
+
+![select-new-field](../../../../images/tutorials/create/local/select-new-field.png)
+
+![map-target-field](../../../../images/tutorials/create/local/map-target-field.png)
+
+![manual-mapping](../../../../images/tutorials/create/local/manual-mapping.png)
+
+![create-calculated-field](../../../../images/tutorials/create/local/create-calculated-field.png)
+
+![preview-data](../../../../images/tutorials/create/local/preview-data.png)
+
+![preview-screen](../../../../images/tutorials/create/local/preview-screen.png)
+
 
 During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results. When finished, select **[!UICONTROL Close]**.
 
-![preview-panel](../../../../images/tutorials/create/local/preview-panel.png)
 
 #### Add calculated field
 
