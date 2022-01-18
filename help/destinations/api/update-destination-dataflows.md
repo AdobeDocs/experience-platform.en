@@ -343,7 +343,7 @@ To update your dataflow's name and description, perform a PATCH request to the [
 
 >[!IMPORTANT]
 >
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update. The etag value updates with every successful update of a dataflow.
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a dataflow.
 
 **API format**
 
@@ -398,12 +398,12 @@ A successful response returns your flow ID and an updated etag. You can verify t
 
 When enabled, a dataflow exports profiles to the destination. Dataflows are enabled by default, but can be disabled to pause the profile exports.
 
-You can enable or disable an existing destination dataflow by making a PATCH request to the [!DNL Flow Service] API and providing an updated value for the `state` property.
+You can enable or disable an existing destination dataflow by making a POST request to the [!DNL Flow Service] API and providing state that you want to update the flow to.
 
 **API format**
 
 ```http
-PATCH /flows/{FLOW_ID}
+POST /flows/{FLOW_ID}/action?op=enable or disable
 ```
 
 **Request**
@@ -411,46 +411,24 @@ PATCH /flows/{FLOW_ID}
 The following request updates your dataflow's state to enabled.
 
 ```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=enable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/state",
-                "value": "enabled"
-            }
-]'
 ```
 
 The following request updates your dataflow's state to disabled.
 
 ```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=disable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/state",
-                "value": "disabled"
-            }
-]'
 ```
-
-| Property | Description |
-| --------- | ----------- |
-| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. |
-| `path` | Defines the part of the flow that is to be updated. |
-| `value` | The new value you want to update your parameter with. |
 
 **Response**
 
