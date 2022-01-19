@@ -36,21 +36,19 @@ The [!UICONTROL Dataflow detail] page allows you to select whether you want to i
 
 To ingest your CSV data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu.
 
-![select-existing-dataset](../../../../images/tutorials/create/local/select-existing-dataset.png)
-
 With a dataset selected, provide a name for your dataflow and an optional description.
 
 During this process, you can also enable [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion]. [!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md) for more information.
 
-![dataflow-detail-existing](../../../../images/tutorials/create/local/dataflow-detail-existing.png)
+![existing-dataset](../../../../images/tutorials/create/local/existing-dataset.png)
 
 ### Use a new dataset
 
 To ingest your CSV data into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu.
 
-![select-new-dataset](../../../../images/tutorials/create/local/select-new-dataset.png)
-
 With a schema selected, provide a name for your dataflow and an optional description, and then apply the [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion] settings you want for your dataflow. When finished, select **[!UICONTROL Next]**.
+
+![new-dataset](../../../../images/tutorials/create/local/new-dataset.png)
 
 ### Select data
 
@@ -76,9 +74,11 @@ When finished, select **[!UICONTROL Next]**.
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-![map-csv-to-xdm](../../../../images/tutorials/create/local/map-csv-to-xdm.png)
+Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapping interface, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
-For comprehensive steps on using the mapping interface, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
+Once your mapping sets are ready, select **[!UICONTROL Finish]** and allow for a few moments for the new dataflow to be created.
+
+![mapping](../../../../images/tutorials/create/local/mapping.png)
 
 ## Monitor data ingestion
 
