@@ -342,7 +342,7 @@ END$$;
 
 Query Service provides for the logical organization of Experience Platform data by using database and schema constructs. Tables are used to define the relations between data-points meaning that the data is not physically moved but the system still allows for data sharing. The same data asset is thereby available in various schemas without physically moving data assets.
 
-Fact tables are used to point to other fact tables through primary and foreign key relationships using the ALTER keyword. Below is an example of ALTER TABLE being used to associate two data assets to this type of link.
+Fact tables are used to point to other fact tables through primary and foreign key relationships using the ALTER keyword. Below is an example of the ALTER TABLE syntax being used to associate two data assets.
 
 ```SQL
 CREATE DATABASE dg1;
