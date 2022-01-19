@@ -47,7 +47,7 @@ ALTER VIEW v1  SET SCHEMA databaseA.schema1;
 
 ## Accessing data assets from the data container
 
-By appropriately qualifying the database name, any [!DNL PostgreSQL] client can connect to any of the data organization you have created using the SHOW keyword. For more information on the SHOW keyword please see the [SQL Syntax SHOW documentation](../sql/syntax.md#show).
+By appropriately qualifying the database name, any [!DNL PostgreSQL] client can connect to any of the data structures you have created using the SHOW keyword. For more information on the SHOW keyword please see the [SQL Syntax SHOW documentation](../sql/syntax.md#show).
 
 When you make a [!DNL PostgreSQL] connection using `dbname="all"`, you can access any database and schema that you have created to logically organize your data. The following examples demonstrate the accessibility of this organizational structure. 
 
@@ -63,7 +63,7 @@ databaseB
 databaseC
 ```
 
-Listing all schema under `dbname="all"` displays three schema related to two databases.
+Listing all schema under `dbname="all"` displays three schemas related to two databases.
 
 ```SQL
 SHOW SCHEMAS;
@@ -120,7 +120,7 @@ dataset3| table
 
 ## Update or Remove data assets from a data container
 
-As the amount of data assets in you IMS organization (or sandbox) grows, it becomes necessary to update or remove data assets from a data container. Individual assets can be removed from the organization container by referencing the appropriate database and schema name using dot notation. The table and view (`t1` and `v1` respectively) added to `databaseA` in the first example, are removed using the syntax in the following example.
+As the amount of data assets in your IMS organization (or sandbox) grows, it becomes necessary to update or remove data assets from a data container. Individual assets can be removed from the organization container by referencing the appropriate database and schema name using dot notation. The table and view (`t1` and `v1` respectively) added to `databaseA` in the first example, are removed using the syntax in the following example.
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
@@ -152,5 +152,13 @@ DROP DATABASE databaseA;
 There are three important differences to note when removing a schema:
 
 - The DROP function does not physically delete any tables.
-- If the schema contains references and mode is RESTRICT, an exception will be thrown. 
-- If the schema contains references and mode is CASCADE, you must remove the references to the table one at a time from the schema. The schema can then be deleted but it will **not** delete any tables. 
+- If the schema contains references and the mode is RESTRICT, an exception will be thrown. 
+- If the schema contains references and the mode is CASCADE, you must remove the references to the table one at a time from the schema. The schema can then be deleted but it will **not** delete any tables. 
+
+```sql
+DROP SCHEMA databaseA.schema2;
+```
+
+## Next steps
+
+By reading this document, you now have a better understanding of the best practices regarding the organization and structure of your data assets for use with Adobe Experience Platform Query Service. It is recommended to continue learning about Query Service best practices by reading about [data deduplication documentation](./deduplication.md).
