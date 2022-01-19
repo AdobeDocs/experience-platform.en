@@ -56,4 +56,4 @@ feature: Web SDK
   * [Web SDK extension release notes](extension/web-sdk-ext-release-notes.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
-* [Blog Posts](blog-posts.md)
+* [Resources](resources.md)
