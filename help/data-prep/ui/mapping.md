@@ -49,14 +49,14 @@ Select **[!UICONTROL All source fields]** to see a dropdown menu of filtering op
 
 The filtering options are:
 
-| Property | Description |
+| Source fields | Description |
 | --- | --- |
-| Fields with errors | This setting displays all mapping sets with errors. |
-| Required fields | This setting displays all mapping sets defined as required. |
-| Identity fields | This setting displays all mapping sets with fields marked as identity. |
-| Mapped fields | This setting displays all mapping sets with both source and target XDM fields mapped. |
-| Unmapped fields | This setting displays all unmapped fields. |
-| All source fields | This setting displays all source fields, regardless of whether they are mapped or not. |
+| [!UICONTROL All source fields] | This option displays all of the source fields of your source  schema. This option is displayed by default. |
+| [!UICONTROL Required fields] | This option filters the source schema to only display the fields required to complete the mapping. |
+| [!UICONTROL Identity fields] | This option filters the source schema to only display the fields marked for Identity. |
+| [!UICONTROL Mapped fields] | This option filters the source schema to only display the fields that have already been mapped. |
+| [!UICONTROL Unmapped fields] | This option filters the source schema to only display the fields that have yet to be mapped. |
+| [!UICONTROL Fields with recommendation] | This option filters the source schema to only display the fields that contain mapping recommendations. |
 
 Select **[!UICONTROL Fields with errors]** to see all mapping sets with errors.
 
