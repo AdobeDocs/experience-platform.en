@@ -14,7 +14,11 @@ Before continuing with this document, it is recommended to have a good understan
 
 ## Organizing data in Query Service
 
-Use standard SQL syntax to create a database to act as a container for the logical organization of your data. A database can contain one or more schemas and each schema can then have one or more references to a physical dataset. These references include any relationships or associations between the datasets. The following example (slightly truncated for brevity) demonstrates this methodology where `databaseA` contains schema `schema1`. 
+Adobe Experience Platform Query Service allows you to logically organize your data using standard SQL syntax. It is recommended to create a database to act as a container for your data points. A database can contain one or more schemas, and each schema can then have one or more references to a physical dataset. These references include any relationships or associations between the datasets. 
+
+See the [Query Editor user guide](../ui/user-guide.md) for detailed guidance on how to use the Query Service UI to create SQL queries. 
+
+The following example (slightly truncated for brevity) demonstrates this methodology where `databaseA` contains schema `schema1`. 
 
 ```SQL
 CREATE DATABASE databaseA;
@@ -27,7 +31,8 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 
 ## Associating data assets to a schema
 
-Once a schema has been created to act as a container for the data assets, each dataset can be associated with any schema using standard SQL ALTER TABLE syntax.
+Once a schema has been created to act as a container for the data assets, each dataset can be associated with any other schema in the database by using standard SQL ALTER TABLE syntax.
+
 The following example demonstrates how to add data assets to the logical container `databaseA.schema1` created in the previous example.
 
 ```SQL
@@ -42,11 +47,9 @@ ALTER VIEW v1  SET SCHEMA databaseA.schema1;
 
 ## Accessing data assets from the data container
 
-By appropriately qualifying the database name, any [!DNL PostgreSQL] client can connect to any of the data organization you have created using the SHOW keyword. For more information on the SHOW keyword please see the [SQL Syntax SHOW documetation](../sql/syntax.md#show).
+By appropriately qualifying the database name, any [!DNL PostgreSQL] client can connect to any of the data organization you have created using the SHOW keyword. For more information on the SHOW keyword please see the [SQL Syntax SHOW documentation](../sql/syntax.md#show).
 
-When you make a [!DNL PostgreSQL] connection using `dbname="all"`, you can access any database and schema that you have created to logically organize your data.
-
-The following examples demonstrate the accessibility of this organizational structure.
+When you make a [!DNL PostgreSQL] connection using `dbname="all"`, you can access any database and schema that you have created to logically organize your data. The following examples demonstrate the accessibility of this organizational structure. 
 
 Listing all databases under `dbname="all"` displays three available databases.
 
@@ -60,7 +63,7 @@ databaseB
 databaseC
 ```
 
-Listing all schema under  `dbname="all"` displays three schema related to two databases.
+Listing all schema under `dbname="all"` displays three schema related to two databases.
 
 ```SQL
 SHOW SCHEMAS;
@@ -70,6 +73,49 @@ database       | schema
 databaseA      | schema1
 databaseA      | schema2
 databaseB      | schema3
+```
+
+You can access every associated schema by connecting to a specific database. As shown in the example below, connecting to `databaseA` allows you to list all the associated schemas.
+
+```sql
+SHOW DATABASES;
+  
+name     
+---------
+databaseA
+ 
+
+SHOW SCHEMAS;
+  
+database       | schema
+----------------------
+databaseA      | schema1
+databaseA      | schema2
+```
+
+You can access every table associated with a specific schema connected to a database by using dot notation. All associated tables can then be shown even when they are in unrelated datasets. This is demonstrated in the example below.
+
+```sql
+SHOW DATABASES;
+  
+name     
+---------
+databaseA
+
+
+SHOW SCHEMAS;
+  
+database       | schema
+----------------------
+databaseA      | schema1
+
+
+SHOW tables;
+name       | type
+----------------------
+dataset1| table
+dataset2| table
+dataset3| table
 ```
 
 ## Updating/Removing data assets from a data container
