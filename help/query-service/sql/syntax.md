@@ -338,13 +338,11 @@ EXCEPTION
 END$$;
 ```
 
-## Datagroups
+## Data asset organization
 
-Datagroups are a common component of Decision Support Systems (DSS) that support decision-making activities for computerized information.
+Query Service provides for the logical organization of Experience Platform data by using database and schema constructs. Tables are used to define the relations between data-points meaning that the data is not physically moved but the system still allows for data sharing. The same data asset is thereby available in various schemas without physically moving data assets.
 
-Query Service provides constructs to create databases, schemas, and tables and defines relations between them using relationship tables tables. A relationship is defined between datasets using dimension tables to contain primary keys, and Fact tables that contain foreign keys and point to the dimension table. Both store their information in either a column or attribute.
-
-Fact tables can point to other fact tables through primary and foreign key relationships using the ALTER keyword. Below is an example of this type of link.
+Fact tables are used to point to other fact tables through primary and foreign key relationships using the ALTER keyword. Below is an example of ALTER TABLE being used to associate two data assets to this type of link.
 
 ```SQL
 CREATE DATABASE dg1;
@@ -354,6 +352,8 @@ CREATE view v1 ...;
 ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
+
+See the guide on [logical organization of data assets](../best-practices/organize-data-assets.md) for more a detailed explanation on Query Service best practices.
 
 ## [!DNL Spark] SQL commands 
 
