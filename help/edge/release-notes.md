@@ -6,6 +6,12 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
 # Release notes
 
+## Version 2.8.0 - January 19, 2022
+
+* Support shadow DOM selectors for personalization.
+* Renamed personalization event types. (`display` and `click` become `decisioning.propositionDisplay` and `decisioning.propositionInteract`)
+* Fixed an issue where HTML offers with inline script tags added the script tags twice to the page even though the script was only run once.
+
 ## Version 2.7.0 - October 26, 2021
 
 * Expose additional information from Experience Edge in the return value from `sendEvent`, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](fundamentals/tracking-events.md)
