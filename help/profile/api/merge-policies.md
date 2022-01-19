@@ -137,7 +137,7 @@ A profile fragment is the profile information for just one identity out of the l
 Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 
 * **`timestampOrdered`**: (default) Give priority to the profile which was updated last. Using this merge type, the `data` attribute is not required.
-* **`dataSetPrecedence`** : Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
+* **`dataSetPrecedence`**: Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
   * **`order`**: When "dataSetPrecedence" is used, an `order` array must be supplied with a list of datasets. Any datasets not included in the list will not be merged. In other words, datasets must be explicitly listed to be merged into a profile. The `order` array lists the IDs of the datasets in order of priority.
 
 #### Example `attributeMerge` object using `dataSetPrecedence` type
@@ -145,7 +145,7 @@ Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 ```json
     "attributeMerge": {
         "type": "dataSetPrecedence",
-        "order" : [
+        "order": [
             "dataSetId_2", 
             "dataSetId_3", 
             "dataSetId_1", 
@@ -477,12 +477,12 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Loyalty members ordered by ID",
-    "identityGraph" : {
+    "identityGraph": {
         "type": "none"
     },
-    "attributeMerge" : {
+    "attributeMerge": {
         "type":"dataSetPrecedence",
-        "order" : [
+        "order": [
             "5b76f86b85d0e00000be5c8b",
             "5b76f8d787a6af01e2ceda18"
         ]
@@ -582,7 +582,7 @@ curl -X PATCH \
 
 |Property|Description|
 |---|---|
-|`op`|Specifies the operation to take. Examples of other PATCH operations can be found in the [JSON Patch documentation](http://jsonpatch.com)|
+|`op`|Specifies the operation to take. Examples of other PATCH operations can be found in the [JSON Patch documentation](https://datatracker.ietf.org/doc/html/rfc6902)|
 |`path`|The path of the field to update. Accepted values are: "/name", "/identityGraph.type", "/attributeMerge.type", "/schema.name", "/version", "/default", "/isActiveOnEdge"|
 |`value`|The value to set the specified field to.|
 

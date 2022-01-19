@@ -21,10 +21,10 @@ With a plan in place, these guides can help you understand the extension develop
 * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start.
 * The [Introduction to Extensions](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) YouTube playlist walks through the process of creating extension packages.
 * [Understanding JSON Schema](https://spacetelescope.github.io/understanding-json-schema/index.html#) article.
-* [JSON Lint/Validator](http://jsonlint.com/).
+* [JSON Lint/Validator](https://jsonlint.com/).
 * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome extension to highlight & print JSON & JSONP.
 * [jsonschema.net](https://jsonschema.net/#/editor) editor to help create JSON schema from your object.
-* [JSON Schema Validator](http://www.jsonschemavalidator.net/) An online, interactive JSON Schema validator.
+* [JSON Schema Validator](https://www.jsonschemavalidator.net) An online, interactive JSON Schema validator.
 
 ## Tools
 
@@ -47,6 +47,6 @@ There are example extensions on GitHub you can review or use as starter projects
 
 ## Slack workspace
 
-You can request access to the Slack community workspace where extension authors can support each other using this [request form](http://join.launchdevelopers.chat).
+You can request access to the Slack community workspace where extension authors can support each other using this [request form](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
 **Please note**: while there are members of Adobe in this Slack workspace, it is a community resource not sponsored by or moderated by Adobe.
