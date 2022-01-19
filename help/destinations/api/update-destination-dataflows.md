@@ -5,6 +5,7 @@ title: Update destination dataflows using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for updating a destination dataflow. Learn how to enable or disable the dataflow, update its basic information, or add and remove segments and attributes using the Flow Service API.
+exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
 ---
 # Update destination dataflows using the Flow Service API
 
