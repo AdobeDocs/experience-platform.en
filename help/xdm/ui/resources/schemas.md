@@ -126,8 +126,6 @@ If you want to add a custom field to a standard field group, refer to the [secti
 
 If you do not want to alter any existing field groups, you can add additional fields by [creating a new custom field group](./field-groups.md#create) instead.
 
-See the section on [adding new custom fields to field groups](./field-groups.md#create) for more information.
-
 ## Add individual fields to a schema {#add-individual-fields}
 
 The Schema Editor allows you to add individual fields directly to a schema if you want to avoid adding an entire field group for a specific use case. You can [add individual fields from standard field groups](#add-standard-fields) or [add your own custom fields](#add-custom-fields) instead.
