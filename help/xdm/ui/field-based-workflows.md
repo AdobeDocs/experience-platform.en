@@ -9,7 +9,7 @@ exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
 
 >[!IMPORTANT]
 >
->The workflows described in this document are currently in beta and your organization may not have access to them yet. The functionality described in this documentation is subject to change.
+>The workflows described in this beta document are now generally available in Adobe Experience Platform. For the latest guidance on field-based workflows in the Schema Editor, refer to the [schemas UI guide](./resources/schemas.md) instead. This guide will soon be removed.
 
 Adobe Experience Platform provides a robust set of standardized [field groups](../schema/composition.md#field-group) for use in Experience Data Model (XDM) schemas. The structure and semantics behind these field groups are carefully tailored to meet a wide variety of segmentation use cases and other downstream applications in Platform. You can also define your own custom field groups to address unique business needs.
 
