@@ -156,6 +156,6 @@ When finished, select **[!UICONTROL Finish]** to proceed.
 
 ## Next steps
 
-
+By reading this document, you have successfully mapped a CSV file to a target XDM schema using the mapping interface in Platform UI. For more information, see the [Data Prep overview](../home.md).
 
 
