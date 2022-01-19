@@ -166,7 +166,7 @@ Start typing in the name of the field you wish to add, and the system automatica
 
 ![New field](../../images/ui/resources/schemas/custom-field-search.png)
 
-From here, provide a display name and data type for the field. Under **[!UICONTROL Assign field group]**, you must select a field group for the new field to be associated with. Start typing in the name of the field group, and if you have previously [created custom field groups](./resources/field-groups.md#create) they will appear in the dropdown list. Alternatively, you can type a unique name into the field to create a new field group instead.
+From here, provide a display name and data type for the field. Under **[!UICONTROL Assign field group]**, you must select a field group for the new field to be associated with. Start typing in the name of the field group, and if you have previously [created custom field groups](./field-groups.md#create) they will appear in the dropdown list. Alternatively, you can type a unique name into the field to create a new field group instead.
 
 ![Select field group](../../images/ui/resources/schemas/select-field-group.png)
 
@@ -178,7 +178,7 @@ When finished, select **[!UICONTROL Apply]**.
 
 ![Apply field](../../images/ui/resources/schemas/apply-field.png)
 
-The new field is added to the canvas, and is namespaced under your [tenant ID](../api/getting-started.md#know-your-tenant_id) to avoid conflicts with standard XDM fields. The field group that you associated the new field with also appears under **[!UICONTROL Field groups]** in the left rail. 
+The new field is added to the canvas, and is namespaced under your [tenant ID](../../api/getting-started.md#know-your-tenant_id) to avoid conflicts with standard XDM fields. The field group that you associated the new field with also appears under **[!UICONTROL Field groups]** in the left rail. 
 
 ![Tenant ID](../../images/ui/resources/schemas/tenantId.png)
 
