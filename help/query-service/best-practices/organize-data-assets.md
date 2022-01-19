@@ -118,14 +118,39 @@ dataset2| table
 dataset3| table
 ```
 
-## Updating/Removing data assets from a data container
+## Update or Remove data assets from a data container
 
-Individual assets can be removed from the organization container by referencing the appropriate database and schema name.
+As the amount of data assets in you IMS organization (or sandbox) grows, it becomes necessary to update or remove data assets from a data container. Individual assets can be removed from the organization container by referencing the appropriate database and schema name using dot notation. The table and view (`t1` and `v1` respectively) added to `databaseA` in the first example, are removed using the syntax in the following example.
 
-### Removing data assets
+```sql
+ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
+ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema1;
+```
 
-The DROP TABLE syntax only physically removes the data asset from the data lake if and only a single reference remains in all logical container.
+### Remove data assets
 
-### Removing logical data asset container
+The [DROP TABLE](../sql/syntax.md#drop-table) function only physically removes a data asset from the data lake when a single reference to the table exists across all databases in your Organization.
 
-The database and schema acting as the logical data asset containers can be removed using standard sql functions.
+```sql
+DROP TABLE databaseA.schema2.t1;
+```
+
+### Remove a data asset container
+
+Both the database and schema can also be removed using standard SQL functions. 
+
+#### Remove a database
+
+If there are other references to data assets associated with the database, the function will throw an error when attempting to remove the database.
+
+```sql
+DROP DATABASE databaseA;
+```
+
+#### Remove a schema
+
+There are three important differences to note when removing a schema:
+
+- The DROP function does not physically delete any tables.
+- If the schema contains references and mode is RESTRICT, an exception will be thrown. 
+- If the schema contains references and mode is CASCADE, you must remove the references to the table one at a time from the schema. The schema can then be deleted but it will **not** delete any tables. 
