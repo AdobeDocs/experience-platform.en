@@ -22,6 +22,12 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Connection parameters {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_rsa"
+>title="RSA public key"
+>abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a Base64 encoded string."
+>text="Learn more in documentation"
+
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
