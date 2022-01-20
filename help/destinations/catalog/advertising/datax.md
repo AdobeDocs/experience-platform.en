@@ -39,13 +39,13 @@ The Taxonomy resource defines an extension over the Base DataX Metadata structur
 
   >>(Base DataX Metadata)<<
 
-        "extensions" : { "action" :
-        {string}, "incrementalData" :
+        "extensions": { "action":
+        {string}, "incrementalData":
         {
                 "taxonomyId": {string}
                 },
-                "links" : [{
-                "rel"   : "https://datax.yahooapis.com/rels/fullTaxonomy", "title" : "Full
+                "links": [{
+                "rel": "https://datax.yahooapis.com/rels/fullTaxonomy", "title": "Full
                 Taxonomy post processing",
                 "href": {string}
                 ]

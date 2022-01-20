@@ -22,7 +22,7 @@ This guide requires a working understanding of the following components of Adobe
 - [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Monitor dataflows in the Destinations workspace
+## Monitor dataflows in the Destinations workspace {#monitor-dataflows-in-the-destinations-workspace}
 
 In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
 
@@ -34,12 +34,30 @@ See the following table for more information on statuses:
 
 | Status | Description |
 | ------ | ----------- |
-| Enabled | The `Enabled` status indicates that a dataflow is active and is ingesting data according to the schedule it was provided. |
-| Disabled | The `Disabled` status indicates that a dataflow is inactive and is not ingesting any data. |
+| Enabled | The `Enabled` status indicates that a dataflow is active and is exporting data according to the schedule it was provided. |
+| Disabled | The `Disabled` status indicates that a dataflow is inactive and is not exporting any data. |
 | Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
 | Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
 
-### Dataflow runs for streaming destinations
+### Dataflow runs for streaming destinations {#dataflow-runs-for-streaming-destinations}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesactivated"
+>title="Identities activated"
+>abstract="The count of individual profile identities successfully activated to the selected destination."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesexcluded"
+>title="Identities excluded"
+>abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="Identities failed"
+>abstract="The count of individual profile identities which failed for the selected destination. Please check error diagnostics for details."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
 
 For streaming destinations, the [!UICONTROL Dataflow runs] tab provides an hourly update for metric data on your dataflow runs. The most prominent statistics labelled are for identities.
 
@@ -59,11 +77,11 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow to process.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
-- **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded for activation based on missing attributes and consent violation.
+- **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
 - **[!UICONTROL Identities failed]** The total number of profile identities that are not activated to the destination due to errors.
 - **[!UICONTROL Activation rate]**: The percentage of received identities that have either been successfully activated or skipped. The following formula demonstrates how this value is calculated:
 ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
-- **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the identities for the corresponding dataflow run were ingested within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
+- **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the identities for the corresponding dataflow run were exported within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
 To view the details of a particular dataflow run, select the run's start time from the list. 
 
@@ -75,12 +93,23 @@ The details page also displays a list of identities that failed and identities t
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### Dataflow runs for batch destinations
+### Dataflow runs for batch destinations {#dataflow-runs-for-batch-destinations}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="Dataflow run details"
+>abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received"
+>title="Profiles received"
+>abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
 
 For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
 - **[!UICONTROL Identities activated]**: The count of individual profile identities successfully activated to the selected destination.
-- **[!UICONTROL Identities excluded]**: The count of individual profile identities excluded for activation for the selected destination, based on missing attributes and consent violation.
+- **[!UICONTROL Identities excluded]**: The count of individual profile identities excluded from activation for the selected destination, based on missing attributes and consent violation.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
@@ -90,8 +119,8 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Processing time]**: The amount of time it took for the dataflow run to be processed.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
-- **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded for activation based on missing attributes and consent violation.
-- **[!UICONTROL Status]**: Represents the state the dataflow is in. This can be one of three states: [!UICONTROL Success], [!UICONTROL Failed], and [!UICONTROL Processing]. [!UICONTROL Success] means that the dataflow is active and is ingesting data according to its provided schedule. [!UICONTROL Failed] means that the activation of data has been suspended due to errors. [!UICONTROL Processing] means that the dataflow is not yet active and is generally encountered when a new dataflow is created.
+- **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
+- **[!UICONTROL Status]**: Represents the state the dataflow is in. This can be one of three states: [!UICONTROL Success], [!UICONTROL Failed], and [!UICONTROL Processing]. [!UICONTROL Success] means that the dataflow is active and is exporting data according to its provided schedule. [!UICONTROL Failed] means that the activation of data has been suspended due to errors. [!UICONTROL Processing] means that the dataflow is not yet active and is generally encountered when a new dataflow is created.
 
 To view details of a specific dataflow run, select the run's start time from the list. 
 
@@ -101,8 +130,8 @@ To view details of a specific dataflow run, select the run's start time from the
 
 The details page for a dataflow, in addition to the details shown on the dataflows list, displays more specific information about the dataflow:
 
-- **[!UICONTROL Size of data]**: The size of the dataflow that is being ingested.
-- **[!UICONTROL Total files]**: The total number of files ingested in the dataflow.
+- **[!UICONTROL Size of data]**: The size of the dataflow that is being exported.
+- **[!UICONTROL Total files]**: The total number of files exported in the dataflow.
 - **[!UICONTROL Last updated]**: The time the dataflow run was last updated.
 
 ![](../assets/ui/monitor-destinations/dataflow-batch.png)
@@ -113,8 +142,17 @@ The details page also displays a list of identities that failed and identities t
 
 ## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
 
-To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)
-) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_activation"
+>title="Activation"
+>abstract="The destination activation contains information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Segment Jobs"
+>abstract="The segment jobs dashboard contains information on the evaluation and export jobs for all your segments."
+
+To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 
 At the center of the dashboard is the Activation panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to destinations.
 

@@ -1,8 +1,6 @@
 ---
 title: Use a text editor in your local environment to create a destination documentation page
-seo-title: Use a text editor in your local environment to create a destination documentation page
-description: The instructions on this page show you how to use a text editor to work in your local environment to author documentation and submit a pull request.
-seo-description: The instructions on this page show you how to use a text editor to work in your local environment to author documentation and submit a pull request.
+description: The instructions on this page show you how to use a text editor to work in your local environment to author a documentation page for your Experience Platform destination and submit it for review.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
 ---
 # Use a text editor in your local environment to create a destination documentation page {#local-authoring}
@@ -19,9 +17,9 @@ The instructions on this page show you how to use a text editor to work in your 
 ## Connect to GitHub and set up your local authoring environment {#set-up-environment}
 
 1. In your browser, navigate to `https://github.com/AdobeDocs/experience-platform.en`
-2. To [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) the repository, click **Fork** as shown in the screenshot.
+2. To [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) the repository, click **Fork** as shown below. This creates a copy of the Experience Platform repository in your own GitHub account.
 
-   ![Fork Adobe documentation repository](./assets/ssd-fork-repo.png)
+   ![Fork Adobe documentation repository](./assets/ssd-fork-repository.gif)
 
 3. Clone the repository to your local machine. Select **Code > HTTPS > Open with GitHub Desktop**, as shown below. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed. For further reference, read [Create a local clone of the repository](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) in the Adobe contributor guide.
 
@@ -40,6 +38,10 @@ The instructions on this page show you how to use a text editor to work in your 
 
 ## Submit your documentation for review {#submit-review}
 
+>[!TIP]
+>
+>Note that there is nothing you can break here. By following the instructions in this section, you are simply suggesting a documentation update. Your suggested update will be approved or edited by the Adobe Experience Platform documentation team.
+
 1.  In GitHub Desktop, create a working branch for your updates and select **Publish branch** to publish the branch to GitHub.
 
    ![New branch local](./assets/new-branch-local.gif)
@@ -52,11 +54,11 @@ The instructions on this page show you how to use a text editor to work in your 
 
    ![Push your commit](./assets/push-local-to-remote.png)
 
-1. In the GitHub web interface, open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Make sure the branch you worked on is selected and select **Pull request**.
+1. In the GitHub web interface, open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Make sure the branch you worked on is selected and select **Contribute > Open pull request**.
 
-   ![Create pull request](./assets/ssd-create-pull-request-1.png)
+   ![Create pull request](./assets/ssd-create-pull-request-1.gif)
 
-1. Make sure that the base and compare branches are correct. Add a note to the PR, describing your update, and select **Create pull request**. This opens a PR to merge the working branch of your fork into the master branch of the Adobe repository. 
+1. Make sure that the base and compare branches are correct. Add a note to the PR, describing your update, and select **Create pull request**. This opens a PR to merge the working branch of your fork into the master branch of the Adobe repository.
    >[!TIP]
    >
    >Leave the **Allow edits by maintainers** checkbox selected so that the Adobe documentation team can make edits to the PR. 

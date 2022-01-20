@@ -2,12 +2,11 @@
 title: Event Types in the Adobe Experience Platform Web SDK Extension
 description: Learn about how to use event types provided by the Adobe Experience Platform Web SDK extension in Adobe Experience Platform Launch.
 solution: Experience Platform
-feature: Web SDK
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
 ---
 # Event types
 
-This page describes the Adobe Experience Platform event types provided by the Adobe Experience Platform Web SDK tag extension. These are used to [build rules](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html) and should not be confused with the [`eventType` field in XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html).
+This page describes the Adobe Experience Platform event types provided by the Adobe Experience Platform Web SDK tag extension. These are used to [build rules](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) and should not be confused with the [`eventType` field in XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html).
 
 ## [!UICONTROL Send event complete]
 

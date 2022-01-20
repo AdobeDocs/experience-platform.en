@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Input and Output in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: The following document outlines the different input and outputs utilized in Attribution AI.
@@ -12,10 +12,13 @@ The following document outlines the different input and outputs utilized in [!DN
 
 ## [!DNL Attribution AI] input data
 
-Attribution AI works by analyzing one of the following datasets to calculate algorithmic scores:
+Attribution AI works by analyzing the following datasets to calculate algorithmic scores:
 
-- Consumer Experience Event (CEE) dataset
 - Adobe Analytics datasets using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Experience Event (EE) dataset
+- Consumer Experience Event (CEE) dataset
+
+You can add multiple datasets from different sources if each of the datasets shares the same identity type (namespace) such as an ECID. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
 
 >[!IMPORTANT]
 >
@@ -77,7 +80,7 @@ Minimum length of data required = training window + lookback window
 >
 > The minimum length of data required for an application with default configurations is: 2 quarters (180 days) + 56 days = 236 days.
 
-Example : 
+Example: 
 
 - You want to attribute conversion events that have happened within the last 90 days (3 months) and track all the touchpoints that have happened within 4 weeks prior the conversion event. The input data duration should span over the past 90 days + 28 days (4 weeks). The training window is 90 days and the lookback window is 28 days totaling 118 days.
 
@@ -128,7 +131,7 @@ The following table outlines the schema fields in the raw scores example output:
 | skuId (String) | True | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. <br> **Example:** MJ-03-XS-Black |
 | timestamp (DateTime) | True | Timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
 | passThrough (Object) | True | Additional Score dataset Columns specified by user while configuring the model. |
-| commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city : San Jose |
+| commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city: San Jose |
 | customerProfile (Object) | False | Identity details of the user used to build the model. |
 | identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
 | id (String) | True | Identity ID of the user such as cookie ID or AAID or MCID etc. <br> **Example:** 17348762725408656344688320891369597404 |

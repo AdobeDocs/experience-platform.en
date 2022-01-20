@@ -3,72 +3,86 @@ title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 ---
-
 # Adobe Experience Platform release notes 
 
-**Release date: August 25, 2021**
+**Release date: November 17, 2021**
+
+## New features
+
+New features in Adobe Experience Platform:
+
+- [Real-time Customer Data Platform B2B Edition](#B2B)
+- [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](#ad-hoc-activation)
+
+## Updates to existing features
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Destinations](#destinations)
-- [Observability Insights](#observability)
-- [Real-time Customer Profile](#profile)
-- [Sources](#sources)
+- [Attribution AI](#attribution-ai)
+- [Customer AI](#customer-ai)
 
-## Destinations {#destinations}
+### Real-time Customer Data Platform B2B Edition {#B2B}
 
-Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+**Release date: November 12, 2021**
 
-**New destinations**
+Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
-| Destination | Description |
-| ----------- | ----------- |
-| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | The Airship Attributes destination, previously in beta, is now generally available. |
-| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | The Airship Tags destination, previously in beta, is now generally available. |
-| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | The Braze destination, previously in beta, is now generally available. |
-| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | With the Pinterest Customer List destination, you can create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest. |
-| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform. |
-| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX is an aggregate Verizon Media/Yahoo infrastructure that hosts various components that enable Verizon Media/Yahoo to exchange data with its external partners in a secure, automated and scalable manner.|
+There are improvements to a variety of Adobe Experience Platform capabilities that distinguish Real-time CDP B2B Edition from its B2C counterpart. They include improvements to the Experience Data Model (XDM) for B2B use cases, upgrades to identity resolution and profile segmentation, as well as a custom-built connector and destination for Marketo Engage. The Marketo connector allows B2B brands to connect their industry-leading B2B engagement data with behavioral information in order to nurture leads and enhance account-based marketing operations.
 
-**New features**
+-[New B2B and B2P editions](#editions)
+-[New Marketo data source and destination connectors](#marketo)
+-[Standard B2B XDM](#XDM)
 
-| Feature | Description |
-| --- | --- |
-| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform Destination SDK is a suite of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The configurations are stored in Experience Platform and can be retrieved via API for additional updates. |
-| [Usability improvements to Destinations](../../destinations/ui/activation-overview.md) | Usability improvements to destinations enable marketers to seamlessly activate segments to existing destinations. |
+### New B2B and B2P editions {#editions}
 
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+New B2B and B2P editions that bring B2B data and functionality to both Real-time CDP and Platform Activation products are available for purchase.
 
-## Observability Insights {#observability}
+To learn more about Real-time CDP B2B Edition see the [overview](../../rtcdp/overview.md).
 
-Observability Insights allows you to monitor Platform activities through the use of statistical metrics and event notifications.
+### New Marketo data source and destination connectors {#marketo}
 
-**New Features**
+New Marketo data source and destination connectors stream Marketo data into Platform and Platform audiences back to Marketo. Available for all Platform users.
 
-| Feature | Description |
-| --- | --- |
-| Alerts | You can now subscribe to important alerts related to workflows running on Platform. After subscribing to specific alert rules, you will receive in-UI notifications and emails when an important lifecycle event happens (such as successful data ingestion) or if there are issues that need your attention (such as an ingestion flow failing or a segment job taking longer than expected). For more information, see the [alerts overview](../../observability/alerts/overview.md). |
+| Feature  | Description |
+|----------|-------------|
+| Marketo Engage source connector | The [Marketo Engage source connector](../../sources/connectors/adobe-applications/marketo/marketo.md) allows marketers to seamlessly ingest data from one or more Marketo instances into their Adobe Experience Platform instance and provides a complete solution for lead management and B2B marketers. |
+| Marketo Engage Destination      | The [Marketo destination](../../destinations/catalog/adobe/marketo-engage.md) enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists. |
 
-See the [Observability Insights overview](../../observability/home.md) for more information on the service.
+### Standard B2B XDM {#XDM}
 
-## Real-time Customer Profile {#profile}
+Standard B2B XDM classes, field groups, and data types are available for all Platform users.
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+| Feature   | Description  |
+|-----------|--------------|
+| Standard B2B XDM classes | Real-time Customer Data Platform B2B Edition provides several standard XDM that capture details about essential B2B data entities, such as accounts, opportunities, campaigns, and more. |
 
-| Feature | Description |
-| ------- | ----------- |
-|Browse profiles by merge policy or identity| When browsing profiles in Experience Platform, you can now browse by merge policy to preview 20 sample profiles based on the selected merge policy. You can also browse by identity in order to search for a specific profile using an identity namespace and related identity value. For more information, see the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).|
+See the [Schemas in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentation to learn more about capturing B2B data entities.
 
-To learn more about Real-time Customer Profile, including tutorials and best practices for working with profile data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
+### (Beta) Activate audience segments to batch destinations via the ad-hoc activation API {#ad-hoc-activation}
 
-## Sources {#sources}
+The ad-hoc activation API allows marketers to programmatically activate audience segments to destinations, in a fast and efficient manner, for situations where immediate activation is required. Ad-hoc audience activation is only supported by [batch file-based destinations](../../destinations/destination-types.md#file-based) and is currently in beta. For more information, see the [ad-hoc activation API documentation](../../destinations/api/ad-hoc-activation-api.md).
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+### Attribution AI {#attribution-ai}
 
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 
-| Feature | Description |
-| ------- | ----------- |
-| Local file upload source connector | The file ingestion category has been renamed to local system, allowing you to bring local files directly to Platform using the local file upload connector. Data ingested through this connector can be monitored through the Monitoring Dashboard. See the [local file upload source overview](../../sources/connectors/local-system/local-file-upload.md) for more information. |
+| Feature   | Description   |
+|-----------|---------------|
+| Support for multiple datasets | Attribution AI can now easily ingest multiple datasets directly in the UI without the need to map and stitch each dataset. This new time-saving capability provides more powerful and accurate scores with richer data from multiple datasets. |
+| Media channel and campaign field mapping | Attribution AI now supports the mapping of media channel and campaign fields. Media channel mapping between datasets improves the insights derived from Attribution AI and helps provide clearer results that are easy to interpret. |
 
-To learn more about sources, see the [sources overview](../../sources/home.md).
+For more information on Attribution AI, please see the [Attribution AI documentation](../../intelligent-services/attribution-ai/overview.md).
+
+### Customer AI {#customer-ai}
+
+Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
+
+**Updated features**
+
+| Feature   | Description |
+|-----------|-------------|
+| Support for multiple datasets | Customer AI can now easily ingest multiple datasets directly in the UI without the need to map and stitch each dataset. This new time-saving capability provides more powerful and accurate scores with richer data from multiple datasets.  |
+| Custom profile attributes     | Customer AI now supports defining custom profile dataset fields (with timestamps) in your data in addition to standard event fields. Using this option allows you to add additional profile attributes that you deem influential which may improve the quality of your model and provide more accurate results. |
+
+For more information on Customer AI, please see the [Customer AI documentation](../../intelligent-services/customer-ai/overview.md).
+

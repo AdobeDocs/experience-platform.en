@@ -122,9 +122,13 @@ The event triggers if a custom event type occurs. Named JavaScript functions tha
 
 The event triggers if a specified data element changes. You must provide a name for the data element. You can select the data element by either typing its name into the text field, or selecting the data element icon to the right side of the text field and choosing from a list provided within the dialog that appears.
 
-#### Direct Call
+#### Direct Call {#direct-call-event}
 
-The direct-call event bypasses event detection and lookup systems. Direct-call rules are ideal for situations where you want to tell Platform exactly what is happening. Also, they are ideal when Platform cannot detect an event in the DOM, such as with Adobe Flash. Specify the `_satellite.track` string in the identifier text field.
+A direct call event bypasses event detection and lookup systems. Direct call rules are ideal for situations where you want to tell the system exactly what is happening. Also, they are ideal when the system cannot detect an event in the DOM.
+
+When defining a direct call event, you must specify a string that will act as this event's identifier. If a [trigger direct call action](#direct-call-action) containing the same identifier is fired, then any direct call event rules listening for that identifier will run.
+
+![Screenshot of a Direct Call event in the Data Collection UI](../../../images/extensions/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -213,7 +217,13 @@ Specify the cookie name and value that must exist for an event to trigger an act
 
 #### Custom Code
 
-Specify any custom code that must exist as a condition of the event. Use the built-in code editor to enter the custom code.
+Specify any custom code that must exist as a condition of the event.
+
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
+
+Use the built-in code editor to enter the custom code:
 
 1. Select **[!UICONTROL Open Editor]**.
 1. Type the custom code.
@@ -530,6 +540,10 @@ This section describes the action types available in the Core extension.
 
 ### Custom Code
 
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
+
 Provide the code that runs after the event is triggered and conditions are evaluated.
 
 1. Name the action code.
@@ -610,6 +624,14 @@ setTimeout(function() {
 </script>
 ```
 
+### Trigger Direct Call {#direct-call-action}
+
+This action triggers all rules that use a specific [direct call event](#direct-call-event). When configuring the action, you must provide the identifier string for the direct call event you want to trigger. Optionally, you can also pass data to the direct call event via a `detail` object, which can contain a custom set of key-value pairs.
+
+![Screenshot of a Trigger Direct Call action in the Data Collection UI](../../../images/extensions/core/direct-call-action.png)
+
+The action maps directly to the [`track` method](../../../ui/client-side/satellite-object.md?lang=en#track) in the `satellite` object, which can be accessed by client-side code.
+
 ## Core extension data element types
 
 Data element types are determined by the extension. There is no limit to the types that can be created.
@@ -633,6 +655,10 @@ Any constant string value that can be then referenced in actions or conditions.
 `string`
 
 ### Custom code
+
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
 
 Custom JavaScript can be entered into the UI by selecting  Open Editor and inserting code into the editor window.
 
@@ -703,6 +729,61 @@ Local storage gives browsers a way to store information from page to page ([http
 
 Use the provided field to specify the value you created for a local storage item, such as `lastProductViewed.`
 
+### Merged Objects
+
+Select multiple data elements that will each provide an object. These objects will be deeply (recursively) merged together to produce a new object. The source objects will not be modified. If a property is found at the same location on multiple source objects, the value from the latter object will be used. If a source property value is `undefined`, it will not override a value from a prior source object. If arrays are found at the same location on multiple source objects, the arrays will be concatenated.
+
+As an example, assume you select a data element which provides the following object:
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+Assume you also select another data element which provides the following object:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+The result of the Merged Objects data element would be the following object:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
+
 ### Page info
 
 Use these data points to capture page info for use in your rule logic or to send information to Analytics or external tracking systems.
@@ -769,3 +850,36 @@ Some common use cases include:
 * If this is the landing page for the visit, populate an Analytics metric
 * Show a new offer to the visitor after X number of Session Counts
 * Display a newsletter sign up if this is a first time visitor
+
+### Conditional value
+
+A wrapper for the [Value Comparison](#value-comparison-value-comparison) condition. Based on the result of the comparison, will return one of the two available values in the form. Can thereby handle "If... Then... Else..." scenarios without the need for extra rules.
+
+### Runtime environment
+
+Allows you to select one of the following variables:
+
+* Environment stage - Returns `_satellite.environment.stage` to differentiate between development/staging/production environments.
+* Library build date - Returns `turbine.buildInfo.buildDate` which contains the same value like `_satellite.buildInfo.buildDate`.
+* Property name - Returns `_satellite.property.name` to get the name of the Launch property.
+* Property ID - Returns `_satellite.property.id` to get the ID of the Launch property
+* Rule name - Returns `event.$rule.name` containing the name of the executed rule.
+* Rule ID - Returns `event.$rule.id` containing the ID of the executed rule.
+* Event type - Returns `event.$type` containing the type of event that triggered the rule.
+* Event detail payload - Returns `event.detail` containing the payload of a Custom Event or Direct Call Rule.
+* Direct call identifier - Returns `event.identifier` containing the identifier of a Direct Call Rule.
+
+### Device Attributes
+
+Returns one of the following visitor device attributes:
+
+* Browser window size
+* Screen size
+
+### JavaScript Tools
+
+It is a wrapper for common JavaScript operations. It receives a data element as an input. It returns the result of one of the following transformations of the data element value:
+
+* Basic string manipulation (replace, substring, regex match, first and last index, split, slice)
+* Basic array operations (slice, join, pop, shift)
+* Basic universal operations (slice, length)

@@ -9,6 +9,22 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 >
 >Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
+## November 15, 2021
+
+**Accept ES6 code in Tags** – Extensions and custom code containing ES6 code can now be used in Tags. In the extension catalog you will see an ES6+ label inside the card of each extension that contains ES6 code. IE10 and IE11 do not support ES6 code. Before using ES6 code in your Tags libraries, do your due dilligence.
+
+**Using Terser as JavaScript compressor** – Uglifier was replaced with Terser. Starting from this release, all Tags libraries are minified by Terser.
+
+## October 21, 2021
+
+**Send data to authenticated endpoints in event forwarding** – Using secrets, you can send data to endpoints that require the following authentication protocols:
+
+* **[!UICONTROL Token]**: A single string of characters representing an authentication token value.
+* **[!UICONTROL Simple HTTP]**: Contains two string attributes for a username and password.
+* **[!UICONTROL OAuth2]**: Contains several attributes to support the [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) spec.
+
+For more information, see the guides on [managing secrets in the Data Collection UI](../ui/event-forwarding/secrets.md) or [managing secrets in the Reactor API](../api/guides/secrets.md).
+
 ## July 19, 2021
 
 **Adjustments to "Manage Properties" right** - The Manage Properties right encountered an issue where a user had the permission to create a new property but could not see it after it was created (as outlined in the community thread [here](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). A fix is now live with permissions being enforced as described in the article.

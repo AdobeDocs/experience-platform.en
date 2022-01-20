@@ -33,6 +33,7 @@ In order for [!DNL Flow Service] to connect to [!DNL SFTP], you must provide val
 | Credential | Description |
 | ---------- | ----------- |
 | `host` | The name or IP address associated with your [!DNL SFTP] server. |
+| `port` | The SFTP server port you're connecting to. If unprovided, the value defaults to `22`. |
 | `username` | The username with access to your [!DNL SFTP] server. |
 | `password` | The password for your [!DNL SFTP] server. |
 | `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
@@ -49,7 +50,7 @@ A base connection retains information between your source and Platform, includin
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL SFTP] authentication credentials as part of the request parameters.
 
-### Create an [!DNL SFTP] connection using basic authentication
+### Create an [!DNL SFTP] base connection using basic authentication
 
 To create an [!DNL SFTP] base connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `host`, `userName`, and `password`.
 
@@ -107,7 +108,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-### Create an [!DNL SFTP] connection using SSH public key authentication
+### Create an [!DNL SFTP] base connection using SSH public key authentication
 
 To create an [!DNL SFTP] base connection using SSH public key authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `host`, `userName`, `privateKeyContent`, and `passPhrase`.
 
@@ -173,4 +174,4 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Next steps
 
-By following this tutorial, you have created an [!DNL SFTP] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md) or [ingest Parquet data using the Flow Service API](../../cloud-storage-parquet.md).
+By following this tutorial, you have created an [!DNL SFTP] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md).

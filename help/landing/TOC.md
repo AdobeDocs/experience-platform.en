@@ -9,6 +9,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 
 * [Platform overview](home.md)
 * [Platform overview (Video)](video/platform-overview.md)
+* [Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [A customer experience powered by Platform (Video)](video/customer-experience.md)
 * [Behind the scenes of a customer experience powered by Platform (Video)](video/customer-experience-bts.md)
 * Getting started {#getting-started}
@@ -30,8 +31,12 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * Platform documentation {#documentation}
   * [Overview](documentation/overview.md)
   * [Language support](documentation/language-support.md)
-* Platform in the Adobe ecosystem {#ecosystem}
-  * [Application Services](application-services.md)
+* Application services built on Platform {#ecosystem}
+  * [Overview](application-services.md)
+  * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+  * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+  * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
+  * [Real-time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
   * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Governance, privacy, and security {#governance-privacy-security}

@@ -49,7 +49,7 @@ You can use the generic template to [create a new audience template](./audience-
 
 The Adobe engineering team can work with you to expand the generic template with custom fields if your use cases requires it.
 
-## Template examples {#template-examples}
+## Configuration examples {#configuration-examples}
 
 This section includes three examples of generic audience metadata configurations, for your reference, along with descriptions of the main sections of the configuration. Notice how the url, headers, request and response body differ between the three example configurations. This is due to the different specifications of the three sample platforms' marketing API.
 
@@ -60,7 +60,7 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
 |`create` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically create segments/audiences in your platform and sync the information back to Adobe Experience Platform. |
 |`update` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically update segments/audiences in your platform and sync the information back to Adobe Experience Platform. |
 |`delete` | Includes all required components (URL, HTTP method, headers, request and response body) to make an HTTP call to your API, to programmatically delete segments/audiences in your platform. |
-|`validations` | Runs validations for any fields in the template configuration before making a call to the partner API. For example, you could validate that the user's account ID is input correctly. |
+|`validate` | Runs validations for any fields in the template configuration before making a call to the partner API. For example, you could validate that the user's account ID is input correctly. |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
    "lastModifiedDate":"2021-07-27T21:25:42.763478Z",
    "metadataTemplate":{
       "create":{
-         "url":"https://api.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
          "httpMethod":"POST",
          "headers":[
             {
@@ -113,7 +113,7 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
          ]
       },
       "update":{
-         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"PUT",
          "headers":[
             {
@@ -150,7 +150,7 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
          ]
       },
       "delete":{
-         "url":"https://adsapi.moviestar.com/v1/segments/{{segment.alias}}",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"DELETE",
          "headers":[
             {

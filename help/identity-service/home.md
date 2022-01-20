@@ -29,7 +29,6 @@ Before diving into the details of [!DNL Identity Service], here is a brief summa
 | Identity namespace | An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes “name<span>@email.com” as an email address or “443522” as a numeric CRM ID. Identity namespaces are used to look up individual identities and provide the context for identity values. This allows you to determine that two [!DNL Profile] fragments that contain different primary IDs, but share the same value for the `email` identity namespace, are in fact, the same individual. See the [identity namespace overview](./namespaces.md) for more information. |
 | Identity graph | An identity graph is a map of relationships between different identities, allowing you to visualize and better understand which customer identities are stitched together, and how. See the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information. |
 | Personally Identifiable Information (PII) | PII is information that can directly identify a customer, such as an email address or a phone number. PII values are often used to match. a customer's multiple identities across different systems. |
-| Unique identity | A unique identity is an identity that exists only in a particular sandbox. |
 | Unknown or anonymous identities | Unknown or anonymous identities are indicators that isolate devices without identifying the actual person using the device. Unknown and anonymous identities include information such as a visitor's IP address and cookie ID. Although unknown and anonymous identities can provide behavioral data, they are limited until a customer supplies their PII. |
 
 ## What is [!DNL Identity Service]?
@@ -71,7 +70,7 @@ Understanding your customer across multiple devices and channels starts by recog
 
 An identity graph is a map of relationships between different identity namespaces, allowing you to visualize and better understand what customer identities are stitched together, and how. See the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information.
 
-The following video is intended to support your understanding of identities and identity graphs. It covers the three capabilities of identity collection, identity graphs, and the API. It also describes how deterministic and probabilistic algorithms are used to construct private identity graphs, and discusses their role along with third-party graphs and the Adobe Experience Platform Identity Service Co-Op Graph.
+The following video is intended to support your understanding of identities and identity graphs.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 

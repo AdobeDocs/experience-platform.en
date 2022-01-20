@@ -15,8 +15,8 @@ This document covers the structure and intended use of the fields provided by th
 
 This document requires a working understanding of XDM and the use of the schemas in [!DNL Experience Platform]. Please review the following documentation before continuing:
 
-* [XDM System overview](http://www.adobe.com/go/xdm-home-en)
-* [Basics of schema composition](http://www.adobe.com/go/xdm-schema-best-practices-en)
+* [XDM System overview](https://www.adobe.com/go/xdm-home-en)
+* [Basics of schema composition](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Data type structure {#structure}
 
@@ -124,7 +124,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 `collect` represents the customer's consent for having their data collected.
 
 ```json
-"collect" : {
+"collect": {
   "val": "y"
 }
 ```
@@ -140,7 +140,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 `adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device.
 
 ```json
-"adID" : {
+"adID": {
   "val": "y"
 }
 ```
@@ -156,7 +156,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 `share` represents the customer's consent for whether their data can be shared with (or sold to) second or third parties.
 
 ```json
-"share" : {
+"share": {
   "val": "y"
 }
 ```
@@ -248,7 +248,7 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 
 In order to use the [!UICONTROL Consents and Preferences] data type to ingest consent data from your customers, you must create a dataset based on a schema that contains that data type.
 
-See the tutorial on [creating a schema in the UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign data types to fields. Once you have created a schema containing a field with the [!UICONTROL Consents and Preferences] data type, refer to the the section on [creating a dataset](../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
+See the tutorial on [creating a schema in the UI](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign data types to fields. Once you have created a schema containing a field with the [!UICONTROL Consents and Preferences] data type, refer to the the section on [creating a dataset](../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
 
 >[!IMPORTANT]
 >
@@ -270,10 +270,12 @@ The following table outlines the accepted values for `val`:
 
 | Value | Title|  Description |
 | --- | --- | --- |
-| `y` | Yes | The customer has opted in for the consent or preference. In other words, they **do** consent to the use of their data as indicated by the consent or preference in question. |
-| `n` | No | The customer has opted out of the consent or preference. In other words, they **do not** consent to the use of their data as indicated by the consent or preference in question. |
+| `y` | Yes (opt-in) | The customer has opted in for the consent or preference. In other words, they **do** consent to the use of their data as indicated by the consent or preference in question. |
+| `n` | No (opt-out) | The customer has opted out of the consent or preference. In other words, they **do not** consent to the use of their data as indicated by the consent or preference in question. |
 | `p` | Pending verification  | The system has not yet received a final consent or preference value. This is most often used as part of a consent that requires two-step verification. For example, if a customer opts into receiving emails, that consent is set to `p` until they select a link in an email to verify that they have provided the correct email address, at which point the consent would be updated to `y`.<br><br>If this consent or preference does not use a two-set verification process, then the `p` choice may instead be used to indicate that the customer has not yet responded to the consent prompt. For example, you can automatically set the value to `p` on the first page of a website, before the customer has responded to the consent prompt. In jurisdictions that do not require explicit consent, you may also use it to indicate that the customer has not explicitly opted out (in other words, consent is assumed). |
 | `u` | Unknown | The customer's consent or preference information is unknown. |
+| `dy` | Default of Yes (opt-in) | The customer has not provided a consent value themselves, and is treated as an opt-in ("Yes") by default. In other words, consent is assumed until the customer indicates otherwise.<br><br>Note that if laws or changes to your company's privacy policy result in changes to the defaults of some or all users, you must manually update all profiles containing default values. |
+| `dn` | Default of No (opt-out) | The customer has not provided a consent value themselves, and is treated as an opt-out ("No") by default. In other words, the customer is assumed to have denied consent until they indicate otherwise.<br><br>Note that if laws or changes to your company's privacy policy result in changes to the defaults of some or all users, you must manually update all profiles containing default values. |
 | `LI` | Legitimate Interest | The legitimate business interest to collect and process this data for the specified purpose outweighs the potential harm it poses to the individual. |
 | `CT` | Contract | The collection of data for the specified purpose is required to meet contractual obligations with the individual. |
 | `CP` | Compliance with a Legal Obligation | The collection of data for the specified purpose is required to meet the legal obligations of the business. |

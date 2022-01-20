@@ -12,9 +12,9 @@ Adobe Experience Platform provides native connectivity for cloud providers like 
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Amazon Kinesis] in real time.
 
-## IP address allow list
-
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+>[!NOTE]
+>
+>The scale factor for [!DNL Kinesis] must be increased if you need to ingest high volume data. Currently, maximum volume of data that you can bring from your [!DNL Kinesis] account to Platform is 4000 records per second. To scale up and ingest higher volume data, please contact your Adobe representative.
 
 ## Prerequisites
 

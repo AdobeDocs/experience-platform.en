@@ -54,6 +54,16 @@ Once you have created an ERD to identify the essential entities you would like t
 
 The sections below provide further guidance for how to sort your entities into the above categories.
 
+#### Mutable and immutable data
+
+A primary way of sorting between entity categories is whether the data being captured is mutable or not.
+
+Attributes belonging to profiles or lookup entities are typically mutable. For example, a customer's preferences might change over time, and the parameters of a subscription plan can be updated depending on market trends.
+
+By contrast, event data is typically immutable. Since events are attached to a specific timestamp, the "system snapshot" that an event provides does not change. For example, an event can capture a customer's preferences when they checkout a cart, and does not change even if the customer's preferences end up changing later on. Event data cannot be changed after it has been recorded.
+
+To summarize, profiles and lookup entities contain mutable attributes and represent the most current information about the subjects they capture, while events are immutable records of the system at a specific time.
+
 #### Customer attributes
 
 If an entity contains any attributes related to an individual customer, it is most likely a profile entity. Examples of customer attributes include:
@@ -159,6 +169,7 @@ The second approach would be to use event schemas to represent subscriptions. Th
 **Cons**
 
 * Segmentation becomes more complex for the original intended use case (identifying the status of customers' most recent subscriptions). The segment now needs additional logic to flag the last subscription event for a customer in order to check its status.
+* Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Profile TTL](../../profile/apply-ttl.md) for more information.
 
 ## Create schemas based on your categorized entities
 
