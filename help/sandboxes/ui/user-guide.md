@@ -12,33 +12,23 @@ This document provides steps on how to perform various operations related to san
 
 ## View sandboxes
 
-In the Platform UI, select **[!UICONTROL Sandboxes]** in the left navigation and then select **[!UICONTROL Browse]** to open the [!UICONTROL Sandboxes] dashboard. The dashboard lists all available sandboxes for your organization, including their respective types, (production or development).
+In the Platform UI, select **[!UICONTROL Sandboxes]** in the left navigation and then select **[!UICONTROL Browse]** to open the [!UICONTROL Sandboxes] dashboard. The dashboard lists all available sandboxes for your organization, including their respective types (production or development).
 
-![](../images/ui/view-sandboxes.png)
+![view-sandboxes](../images/ui/view-sandboxes.png)
 
 ## Switch between sandboxes
 
-The sandbox indicator is located within the top header of the Platform UI and displays the title of the sandbox that you are currently in, its region, and its type.
+The sandbox indicator is located in the top header of the Platform UI and displays the title of the sandbox that you are currently in, its region, and its type.
 
-![](../images/ui/sandbox-switcher.png)
+![sandbox-indicator](../images/ui/sandbox-indicator.png)
 
 To switch between sandboxes, select the sandbox indicator and select the desired sandbox from the dropdown list.
 
-![](../images/ui/switcher-menu.png)
+![switcher-interface](../images/ui/switcher-interface.png)
 
-Once a sandbox is selected, the screen refreshes and transports you to the sandbox you selected.
+Once a sandbox is selected, the screen refreshes and updates to the sandbox you selected.
 
-![](../images/ui/switched.png)
-
-<!--
-
-## Search for a sandbox
-
-You can navigate through the list of sandboxes available to you by using the search function from the sandbox switcher menu. Type in the name of the sandbox you would like to access to filter through all sandboxes available to your organization.
-
-![](../images/ui/sandbox-search.png)
-
--->
+![sandbox-switched](../images/ui/sandbox-switched.png)
 
 ## Create a new sandbox
 
@@ -52,19 +42,21 @@ Use the following video for a quick overview on how to use Sandboxes in Experien
 
 To create a new sandbox, select **[!UICONTROL Create sandbox]** on the top-right corner of the screen.
 
-![create](../images/ui/create.png)
+![create-sandbox](../images/ui/create-sandbox.png)
 
 The **[!UICONTROL Create sandbox]** dialog box appears. If you are creating a development sandbox, select **[!UICONTROL Development]** in the dropdown panel. To create a new production sandbox, select **[!UICONTROL Production]**.
 
-![type](../images/ui/type.png)
+![sandbox-type](../images/ui/sandbox-type.png)
 
 After selecting the type, provide your sandbox with a name and a title. The title is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox name is an all-lowercase identifier for use in API calls and should therefore be unique and concise. The sandbox name must begin with a letter, have a maximum of 256 characters, and consist only of alphanumeric characters and hyphens (-).
 
 When finished, select **[!UICONTROL Create]**.
 
-![info](../images/ui/info.png)
+![sandbox-info](../images/ui/sandbox-info.png)
 
 Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of "[!UICONTROL Creating]". New sandboxes take approximately 30 seconds to be provisioned by the system, after which their status changes to "[!UICONTROL Active]".
+
+![new-sandbox](../images/ui/new-sandbox.png)
 
 ## Reset a sandbox
 
