@@ -94,7 +94,7 @@ databaseA      | schema1
 databaseA      | schema2
 ```
 
-Dot notation allows you to access every table associated with a specific schema connected to your chosen database. By connecting to `DBNAME = databaseA.schema1;`, all tables associated with that specific schema are shown. This provides information on which dataset contains which table.
+Dot notation allows you to access every table associated with a specific schema connected to your chosen database. By connecting to `DBNAME = databaseA.schema1;`, all tables associated with that specific schema (`schema1`) are shown. This provides information on which dataset contains which table.
 
 ```sql
 SHOW DATABASES;
