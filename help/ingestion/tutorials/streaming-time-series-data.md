@@ -311,11 +311,13 @@ Ingesting time series data to a streaming connection can be done either with or 
 
 The example request below ingests time series data with a missing source name to Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
 
->[!IMPORTANT]
+Both `xdmEntity._id` and `xdmEntity.timestamp` are required fields for time-series data. The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID of the person or device whose record it is.
+
+You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp` for the record in a way that remains consistent if the record ever needs to be re-ingested. Ideally, your source system will contain these values. If an ID is not available, consider concatenating values of other fields in the record to create a unique value that can be consistently regenerated from the record on re-ingestion.
+
+>[!NOTE]
 >
->You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use the UUID function in Data Prep. More information about the UUID function can be found in the [Data Prep functions guide](../../data-prep/functions.md). The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID Of the person or device whose record it is. The person or device ID will be specific in any attributes that is assigned as a person or device identifier of the schema.
->
->Both `xdmEntity._id` and `xdmEntity.timestamp` are the only required fields for time-series data. Additionally, the following API call does **not** require any authentication headers.
+>The following API call does **not** require any authentication headers.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
