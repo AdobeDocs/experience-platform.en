@@ -313,7 +313,7 @@ The example request below ingests time series data with a missing source name to
 
 Both `xdmEntity._id` and `xdmEntity.timestamp` are required fields for time-series data. The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID of the person or device whose record it is.
 
-You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp` for the record in a way that remains consistent if the record ever needs to be re-ingested. Ideally your source system will contain these values. If an ID is not available, consider concatenating values of other fields in the record to create a unique value which can be consistently regenerated from the record on re-ingestion.
+You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp` for the record in a way that remains consistent if the record ever needs to be re-ingested. Ideally, your source system will contain these values. If an ID is not available, consider concatenating values of other fields in the record to create a unique value that can be consistently regenerated from the record on re-ingestion.
 
 >[!NOTE]
 >
