@@ -24,6 +24,10 @@ When the segment export schedule differs from the segmentation schedule, the pro
 
 See the [Segmentation Service documentation](../segmentation/home.md) for more details.
 
+**I received a profile update to my HTTP API, Amazon Kinesis, or Azure Event Hubs destination with all these other segments that I did not map to the destination. Is this a bug?**
+
+No, this is the expected behavior. While profile exports are triggered by changes to the mapped segments (and by other conditions unrelated to segment membership), the data export contains other segments that a profile is a member of. For more information, read the [profile export behavior](/help/destinations/catalog/streaming/http-destination.md) section.
+
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 **What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?**
