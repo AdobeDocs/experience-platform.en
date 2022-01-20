@@ -6,7 +6,7 @@ description: This document outlines a logical means of organizing data for ease 
 
 This document provides guidance on best practices for organizing data assets for use with Adobe Experience Platform Query Service. It covers how to structure your data as well as information on how to access, update, and delete this information.
 
-Query Service uses databases and schema constructs to facilitate the logical organization of Experience Platform data. Tables are used to define the relations between data-points. This means that even though the data is not physically moved, the system still allows for data sharing to occur. A key benefit of this approach is that the same data asset is available in various schemas without physically moving data assets.
+It is important to logically organize your data assets within the Adobe Experience Platform data lake from the outset. This enables proper data management as the amount of your data assets within the sandbox grows. Query Service enables you to logically group data assets in a sandbox using the SQL constructs of databases and schemas. This method of organization allows for the sharing of data assets between schemas without the need to move physically move them.
 
 ## Getting started
 
@@ -14,7 +14,7 @@ Before continuing with this document, you should have a good understanding of [Q
 
 ## Organizing data in Query Service
 
-Adobe Experience Platform Query Service allows you to logically organize your data using standard SQL syntax. You should start by creating a database to act as a container for your data points. A database can contain one or more schemas, and each schema can then have one or more references to a physical dataset. These references include any relationships or associations between the datasets. 
+The following examples demonstrate the constructs available to you through Adobe Experience Platform Query Service to logically organize your data using standard SQL syntax. You should start by creating a database to act as a container for your data points. A database can contain one or more schemas, and each schema can then have one or more references to a dataset (datasets, views, temp tables, etc). These references include any relationships or associations between the datasets. 
 
 See the [Query Editor user guide](../ui/user-guide.md) for detailed guidance on how to use the Query Service UI to create SQL queries. 
 
@@ -31,7 +31,7 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 
 ## Associating data assets to a schema
 
-Once a schema has been created to act as a container for the data assets, each dataset can be associated with any other schema in the database by using standard SQL ALTER TABLE syntax.
+Once a schema has been created to act as a container for the data assets, each dataset can be associated with one or more schemas in the database by using standard SQL ALTER TABLE syntax.
 
 The following example demonstrates how to add data assets to the logical container `databaseA.schema1` created in the previous example.
 
@@ -49,7 +49,8 @@ ALTER VIEW v1  SET SCHEMA databaseA.schema1;
 
 By appropriately qualifying the database name, any [!DNL PostgreSQL] client can connect to any of the data structures you have created using the SHOW keyword. For more information on the SHOW keyword please see the [SHOW section within the SQL syntax documentation](../sql/syntax.md#show).
 
-When you make a [!DNL PostgreSQL] connection using `dbname="all"`, you can access any database and schema that you have created to logically organize your data. The following examples demonstrate the accessibility of this organizational structure. 
+When you make a [!DNL PostgreSQL] connection using `dbname="all"`, you can access **any** database and schema that you have created to logically organize your data. 
+<!-- The following examples demonstrate the accessibility of this organizational structure.  -->
 
 Listing all databases under `dbname="all"` displays three available databases.
 
@@ -63,7 +64,7 @@ databaseB
 databaseC
 ```
 
-Listing all schema under `dbname="all"` displays three schemas related to two databases.
+Listing all schema under `dbname="all"` displays the three schemas related to every database in the sandbox.
 
 ```SQL
 SHOW SCHEMAS;
@@ -75,7 +76,7 @@ databaseA      | schema2
 databaseB      | schema3
 ```
 
-You can access every associated schema by connecting to a specific database. As shown in the example below, connecting to `databaseA` allows you to list all the associated schemas.
+When you make a [!DNL PostgreSQL] connection using `dbname="databaseA"`, you can access any schema associated with that specific database, as shown in the example below.
 
 ```sql
 SHOW DATABASES;
@@ -93,7 +94,7 @@ databaseA      | schema1
 databaseA      | schema2
 ```
 
-You can access every table associated with a specific schema connected to a database by using dot notation. All associated tables can then be shown even when they are in unrelated datasets. This is demonstrated in the example below.
+Dot notation allows you to access every table associated with a specific schema connected to your chosen database. By connecting to `DBNAME = databaseA.schema1;`, all tables associated with that specific schema are shown. This provides information on which dataset contains which table.
 
 ```sql
 SHOW DATABASES;
