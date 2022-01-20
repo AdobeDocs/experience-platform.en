@@ -50,6 +50,30 @@ AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
 ```
 
+### How do I change the time zone to and from a UTC Timestamp?
+
+Query Service standardizes persisted data in Adobe Experience Platform using the UTC (Coordinated Universal Time) timestamp format. An example of the UTC format is `2021-12-22T19:52:05Z`
+
+Query Service supports built-in Spark SQL functions to convert a given timestamp and render that time as a timestamp in UTC or return it to another format. 
+
+Both the `to_utc_timestamp()` and the `from_utc_timestamp()` methods take two parameters (timestamp, timezone). These variables are the date in year-month-day format and the continent and city separated by a `/`.
+
+#### Convert to the UTC timestamp
+
+The `to_utc_timestamp()` method interprets its given timestamp and time zone parameters into their equivalent in UTC format. For example, the time zone in Seoul, South Korea is UTC/GMT +9 hours. By providing a date only timestamp, the method converts the timestamp and timezone into the UTC format, in this case 3pm the previous day as Seoul is nine hours ahead.
+
+```SQL
+SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
+```
+
+The query returns the following timestamp.
+
+```
+2021-08-30 15:00:00
+```
+
+As another example, if the given timestamp was `2021-07-14 12:40:00.0` for the `Asia/Seoul` timezone, the returned UTC timestamp would be `2021-07-14 03:40:00.0`
+
 ### How should I filter my time-series data?
 
 When querying with time-series data, you should use the timestamp filter whenever possible for more accurate analysis.
