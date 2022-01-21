@@ -24,6 +24,10 @@ You must also have a Power BI account to follow this tutorial. To create an acco
 
 ![Power BI Admin portal create workspace settings.](../images/power-bi/create-workspace-settings.png)
 
+>[!NOTE]
+>
+>In order for the Dashboards tab to appear in the left navigation of the Platform UI, and the Dashboard Inventory view to be visible, you must have access to any one of the Profile, Segmentaiton or Destination dashboards as part of your Platform licence. 
+
 ## Install the Power BI application integration
 
 Within the Platform UI, select **[!UICONTROL Dashboards]** in the left navigation to open the [!UICONTROL Dashboards] workspace. The [!UICONTROL Browse] tab displays a list of currently available dashboard views. To learn more about viewing available dashboards, see the [inventory documentation](../inventory.md). 
@@ -32,7 +36,7 @@ Next, select the **[!UICONTROL Integrations]** tab. The Power BI application int
 
 >[!NOTE]
 >
->The [!UICONTROL Install] button is grayed out unless you have both Query Service Manage and Manage Sandboxes permissions.
+>The [!UICONTROL Install] button is disabled unless you have both Query Service Manage and Manage Sandboxes permissions.
 
 ![Power BI details screen with Install button highlighted.](../images/power-bi/details-screen.png)
 
@@ -42,7 +46,7 @@ The first step in the installation process is to provide non-expiring credential
 
 #### Create new credentials {#create-new-credentials}
 
-There are two required fields when generating new credentials: [!UICONTROL Name], and [!UICONTROL Assigned to]. The [!UICONTROL Assigned to] field relates to the email address associated with your Power BI account. 
+There are two required fields when generating new credentials: [!UICONTROL Name] and [!UICONTROL Assigned to]. The [!UICONTROL Assigned to] field relates to the email address associated with your Power BI account. 
 
 ![Power BI generate new credentials screen.](../images/power-bi/generate-new-credentials.png)
 
@@ -56,7 +60,7 @@ After generating non-expiring credentials for the first time, a JSON file is dow
 
 #### Use existing credentials {#use-existing-credentials}
 
-A JSON credential file can also be uploaded to pass validation. These JSON files holding the non-expiring credential values are downloaded to the local machine when a non-expiring credential is created.
+A JSON credential file can also be uploaded to pass validation. These JSON files holding the non-expiring credential values are downloaded to the local machine being used when a non-expiring credential is created.
 
 >[!IMPORTANT]
 >
@@ -122,7 +126,7 @@ Through the use of custom widgets, you can add custom attributes to your data mo
 
 ### Create a custom widget
 
-Custom widgets are created through the Widget Library. See the [Widget Library overview](../customize/widget-library.md) for an introduction to the feature, and the tutorial for [creating a custom widget](../customize/custom-widgets.md) for specific instructions.
+Custom widgets are created through the Widget Library. See the [Widget Library overview](../customize/widget-library.md) for an introduction to the feature and the [tutorial for creating a custom widget](../customize/custom-widgets.md) for specific instructions.
 
 >[!IMPORTANT]
 >
