@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
 title: Data Prep UI Guide
-description: This document provides steps on how to use data prep functions in the Platform UI to map CSV files to an XDM schema.
+description: This document provides directions on how to use data prep functions in the Platform UI to map CSV files to an XDM schema.
 ---
 # Data Prep UI Guide
 
-This document provides steps on how to use data prep functions in the Adobe Experience Platform user interface to map CSV files to an XDM schema.
+This document provides directions on how to use data prep functions in the Adobe Experience Platform user interface to map CSV files to an XDM schema.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Platform:
+This tutorial requires a working understanding of the following Platform components:
 
 * [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
   * [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
@@ -17,6 +17,54 @@ This tutorial requires a working understanding of the following components of Pl
 * [Identity Service](../../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+
+## Dataflow detail
+
+>[!TIP]
+>
+>You can access dataflow detail by selecting any source from the sources catalog. For more information, see the [sources overview](../../sources/home.md).
+
+Before you can map your CSV data to an XDM schema, you must first establish the details of your dataflow.
+
+The [!UICONTROL Dataflow detail] page allows you to select whether you want to ingest your CSV data into an existing target dataset or a new target dataset. An existing dataset comes with a pre-built target schema to map your data to, while a new dataset requires you to select an existing schema, or create a new schema, to map your data to.
+
+### Use an existing target dataset
+
+To ingest your CSV data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu.
+
+With a dataset selected, provide a name for your dataflow and an optional description.
+
+During this process, you can also enable [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion]. [!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md) for more information.
+
+![existing-dataset](../images/ui/mapping/existing-dataset.png)
+
+### Use a new target dataset
+
+To ingest your CSV data into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu.
+
+With a schema selected, provide a name for your dataflow and an optional description, and then apply the [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion] settings you want for your dataflow. When finished, select **[!UICONTROL Next]**.
+
+![new-dataset](../images/ui/mapping/new-dataset.png)
+
+## Select Data
+
+The [!UICONTROL Select data] step appears, providing you an interface to upload your local files and preview their structure and contents. Select **[!UICONTROL Choose files]** to upload a CSV file from your local system. Alternatively, you can drag and drop the CSV file you want to upload into the [!UICONTROL Drag and drop files] panel.
+
+>[!TIP]
+>
+>Only CSV files are currently supported by local file upload. The maximum file size for each file is 1 GB.
+
+![choose-files](../images/ui/mapping/choose-files.png)
+
+Once your file is uploaded, the preview interface updates to display the contents and structure of the file.
+
+![preview-sample-data](../images/ui/mapping/preview-sample-data.png)
+
+Depending on your file, you can select a column delimiter such as tabs, commas, pipes, or a custom column delimiter for your source data. Select the **[!UICONTROL Delimiter]** dropdown arrow and then select the appropriate delimiter from the menu.
+
+When finished, select **[!UICONTROL Next]**.
+
+![delimiter](../images/ui/mapping/delimiter.png)
 
 ## Mapping
 
@@ -30,10 +78,10 @@ The mapping interface includes a dashboard that provides information on the heal
 
 | Property | Description |
 | --- | --- |
-| Mapped fields | Displays the total number of source fields that have been mapped to a target XDM field, regardless of errors. |
-| Required fields | Displays the number of required mapping fields. |
-| Identity fields | Displays the total number of mapping sets defined as identity. These mapping sets are represented by a fingerprint icon. |
-| Errors | Displays the number of erroneous mapping sets. |
+| [!UICONTROL Mapped fields] | Displays the total number of source fields that have been mapped to a target XDM field, regardless of errors. |
+| [!UICONTROL Required fields] | Displays the number of required mapping fields. |
+| [!UICONTROL Identity fields] | Displays the total number of mapping sets defined as identity. These mapping sets are represented by a fingerprint icon. |
+| [!UICONTROL Errors] | Displays the number of erroneous mapping sets. |
 
 ![top-panel](../images/ui/mapping/top-panel.png)
 
@@ -51,7 +99,7 @@ The filtering options are:
 
 | Source fields | Description |
 | --- | --- |
-| [!UICONTROL All source fields] | This option displays all of the source fields of your source  schema. This option is displayed by default. |
+| [!UICONTROL All source fields] | This option displays all of the source fields of your source schema. This option is displayed by default. |
 | [!UICONTROL Required fields] | This option filters the source schema to only display the fields required to complete the mapping. |
 | [!UICONTROL Identity fields] | This option filters the source schema to only display the fields marked for Identity. |
 | [!UICONTROL Mapped fields] | This option filters the source schema to only display the fields that have already been mapped. |
@@ -104,9 +152,9 @@ The **[!UICONTROL Create calculated field]** panel appears. The left dialog box 
 
 | Tab | Description |
 | --- | ----------- |
-| Function | The functions tab lists the functions available to transform the data. To learn more about the functions you can use within calculated fields, please read the guide on [using Data Prep (Mapper) functions](../functions.md). |
-| Field | The fields tab lists fields and attributes available in the source schema. |
-| Operator | The operators tab lists the operators that are available to transform the data. |
+| [!UICONTROL Function] | The functions tab lists the functions available to transform the data. To learn more about the functions you can use within calculated fields, please read the guide on [using Data Prep (Mapper) functions](../functions.md). |
+| [!UICONTROL Field] | The fields tab lists fields and attributes available in the source schema. |
+| [!UICONTROL Operator] | The operators tab lists the operators that are available to transform the data. |
 
 ![tabs](../images/ui/mapping/tabs.png)
 
@@ -161,5 +209,3 @@ By reading this document, you have successfully mapped a CSV file to a target XD
 * [Data Prep overview](../home.md)
 * [Sources overview](../../sources/home.md)
 * [Monitor sources dataflows in the UI](../../dataflows/ui/monitor-sources.md)
-
-
