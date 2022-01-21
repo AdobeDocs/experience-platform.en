@@ -83,9 +83,9 @@ See [Activate audience data to streaming profile export destinations](../../ui/a
 
 In the [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) step, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
 
-## Product considerations {#feature-considerations}
+## Product considerations {#product-considerations}
 
-At this time, Adobe does not provide any static IPs that you can allowlist for the HTTP API destination.  Experience Platform does not stream out data through a fixed set of static IPs.
+Experience Platform does not stream out data to HTTP endpoints through a fixed set of static IPs. Therefore, Adobe cannot provide a list of static IPs that you can allowlist for the HTTP API destination.  
 
 ## Profile export behavior {#profile-export-behavior}
 
@@ -99,28 +99,31 @@ In all the cases described above, only the profiles where relevant updates have 
 
 Note that the all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
-### What triggers an update and what is included in the profile export
+### What triggers an update and what is included in the export {#what-triggers-export-what-is-included}
 
 Regarding the data that is exported for a given profile, it is important to understand the two different concepts of *what triggers a data export to your HTTP API destination* and *which data is included in the export*.
 
+|What triggers a destination export | What is included in the destination export |
+|---------|----------|
+|<ul><li>Mapped attributes and segments serve as the trigger for a destination update. This means that if any mapped segments change states (from null to realized or from realized/existing to exiting) or any mapped attributes are updated, a destination export would be triggered.</li><li>Since identities cannot currently be mapped to HTTP API destinations, changes in any identity on a given profile also serve as a trigger for destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it is the same value. This means that an overwrite on an attribute is considered a change even if the value itself has not changed.</li></ul> | <ul><li>All segments (with the latest membership status), no matter if they are mapped in the dataflow or not, are included in the `segmentMembership` object.</li><li>All identities in the `identityMap` object are included as well (Experience Platform currently does not support identity mapping in the HTTP API destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
+
+{style="table-layout:fixed"}
+
 For example, consider this dataflow to an HTTP destination where three segments are selected in the dataflow, and four attributes are mapped to the destination.  
+
+![HTTP API destination dataflow](/help/destinations/assets/catalog/http/profile-behavior-example.png)
+
+<!--
 
 ![HTTP API destination dataflow](/help/destinations/assets/catalog/http/dataflow-destination.png)
 
 ![Mapped attributes](/help/destinations/assets/catalog/http/mapped-attributes.png)
 
-A profile export to the destination can be triggered by a profile qualifying for or exiting one of the *three mapped segments*. However, in the data export, in the `segmentMembership` object (see [Exported Data](#exported-data) section below), other unmapped segments might appear, if that particular profile is a member of them. If a profile qualifies for the Customer with DeLorean Cars segment but is also a member of the Watched "Back to the Future" movie and Science fiction fans segments, then these other two segments will also be present in the `segmentMembership` object of the data export, even though it is not mapped in the dataflow.
+-->
 
-From a profile attributes point of view, any changes to the four attributes mapped above triggers a destination export and any of the four mapped attributes present on the profile will be present in the data export.
+A profile export to the destination can be triggered by a profile qualifying for or exiting one of the *three mapped segments*. However, in the data export, in the `segmentMembership` object (see [Exported Data](#exported-data) section below), other unmapped segments might appear, if that particular profile is a member of them. If a profile qualifies for the Customer with DeLorean Cars segment but is also a member of the Watched "Back to the Future" movie and Science fiction fans segments, then these other two segments will also be present in the `segmentMembership` object of the data export, even though these are not mapped in the dataflow.
 
-The table below provides at-a-glance information for your reference: 
-
-
-|What triggers a destination export | What is included in the destination export |
-|---------|----------|
-|<ul><li>Mapped attributes and segments serve as the trigger for a destination update. This means that if any mapped segments change states (from null to realized or from realized/existing to exiting) or any mapped attributes are updated, a destination export would be triggered.</li><li>Since identities cannot currently be mapped to HTTP API destinations, changes in any identity on a given profile also serve as a trigger for destination exports.</li><li>A change for an attribute is defined as any update on the attribute, whether or not it’s the same value, i.e. an overwrite on an attribute is considered a change even if the value itself hasn’t changed.</li></ul> | <ul><li>All segments (with the latest membership status), no matter if they’re mapped or not, will be sent in the `segmentMembership` object.</li><li>All identities in the `identityMap` object will be sent as well (Experience Platform currently does not support identity mapping in the HTTP API destination).</li><li>Only the mapped attributes are included in the destination export.</li></ul> |
-
-{style="table-layout:fixed"}
+From a profile attributes point of view, any changes to the four attributes mapped above trigger a destination export and any of the four mapped attributes present on the profile will be present in the data export.
 
 <!--
 
