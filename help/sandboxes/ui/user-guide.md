@@ -74,13 +74,9 @@ A dialog box appears prompting you to confirm your choice. Select **[!UICONTROL 
 
 ![reset-warning](../images/ui/reset-warning.png)
 
-In the final confirmation window, enter the name of the sandbox in the dialog box and select **[!UICONTROL Reset]**
+In the final confirmation window, enter the name of the sandbox in the dialog box and select **[!UICONTROL Reset]**.
 
 ![reset-confirm](../images/ui/reset-confirm.png)
-
-After a few moments, a confirmation box appears on the bottom of the screen to confirm a successful reset.
-
-![success](../images/ui/success.png)
 
 ### Warnings
 
@@ -116,7 +112,7 @@ A dialog box appears prompting you to confirm your choice. Select **[!UICONTROL 
 
 ![delete-warning](../images/ui/delete-warning.png)
 
-In the final confirmation window, enter the name of the sandbox in the dialog box and select  **[!UICONTROL Continue]**
+In the final confirmation window, enter the name of the sandbox in the dialog box and select  **[!UICONTROL Continue]**.
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
