@@ -111,7 +111,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 For example, consider this dataflow to an HTTP destination where three segments are selected in the dataflow, and four attributes are mapped to the destination.  
 
-![HTTP API destination dataflow](/help/destinations/assets/catalog/http/profile-behavior-example.png)
+![HTTP API destination dataflow](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 <!--
 
