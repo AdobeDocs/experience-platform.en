@@ -5,7 +5,7 @@ description: This document provides steps on how to use data prep functions in t
 ---
 # Data Prep UI Guide
 
-This document provides steps on how to use data prep functions in the Platform UI to map CSV files to an XDM schema.
+This document provides steps on how to use data prep functions in the Adobe Experience Platform user interface to map CSV files to an XDM schema.
 
 ## Getting started
 
@@ -156,6 +156,10 @@ When finished, select **[!UICONTROL Finish]** to proceed.
 
 ## Next steps
 
-By reading this document, you have successfully mapped a CSV file to a target XDM schema using the mapping interface in Platform UI. For more information, see the [Data Prep overview](../home.md).
+By reading this document, you have successfully mapped a CSV file to a target XDM schema using the mapping interface in Platform UI. See the following documents for more information:
+
+* [Data Prep overview](../home.md)
+* [Sources overview](../../sources/home.md)
+* [Monitor sources dataflows in the UI](../../dataflows/ui/monitor-sources.md)
 
 
