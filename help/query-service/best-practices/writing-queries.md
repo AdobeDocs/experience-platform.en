@@ -306,7 +306,7 @@ Query Service supports data deduplication, or the removal of duplicate rows from
 
 ## Time zone computations in Query Service
 
-Query Service standardizes persisted data in Adobe Experience Platform using the UTC timestamp format. For more information on how to translate your time zone requirement to and from a UTC timestamp, please see the [Query Service timezone guide](./time-zone.md).
+Query Service standardizes persisted data in Adobe Experience Platform using the UTC timestamp format. For more information on how to translate your time zone requirement to and from a UTC timestamp, please see the [FAQ section on how to change the time zone to and from a UTC Timestamp](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
 
 ## Next steps
 
