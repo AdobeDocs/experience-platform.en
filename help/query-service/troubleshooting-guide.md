@@ -174,6 +174,10 @@ SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ```
 
+### How can I download my query results as a CSV file?
+
+This is not a feature that Query Service offers directly. However, if the [!DNL PostgreSQL] client used to connect to the database server has the capability, the response of a SELECT query can be written and downloaded as a CSV file. Please refer to the documentation of the utility or third-party tool that you are using for clarification on this process.
+
 ## REST API errors
 
 | HTTP status code | Description | Possible causes |

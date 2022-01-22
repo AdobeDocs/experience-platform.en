@@ -94,7 +94,7 @@ A successful response returns HTTP status 200 with a list of schedules for the s
 | `children.type` | The type of job as a string. The two supported types are "batch_segmentation" and "export". |
 | `children.properties` | An object containing additional properties related to the schedule. |
 | `children.properties.segments` | Using `["*"]` ensures all segments are included. |
-| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
+| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
 | `children.state` | A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
 
 ## Create a new schedule {#create}
@@ -136,7 +136,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Required.** The type of job as a string. The two supported types are "batch_segmentation" and "export". |
 | `properties` | **Required.** An object containing additional properties related to the schedule. |
 | `properties.segments` | **Required when `type` equals "batch_segmentation".** Using `["*"]` ensures all segments are included. |
-| `schedule` | *Optional.* A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. <br><br>If this string is not supplied, a system-generated schedule will be automatically generated. |
+| `schedule` | *Optional.* A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. <br><br>If this string is not supplied, a system-generated schedule will be automatically generated. |
 | `state` | *Optional.* A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
 
 **Response**
@@ -225,7 +225,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | `type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
 | `properties` | An object containing additional properties related to the schedule. |
 | `properties.segments` | Using `["*"]` ensures all segments are included. |
-| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
+| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
 | `state` | A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
 
 ## Update details for a specific schedule {#update}
@@ -236,7 +236,7 @@ The PATCH request allows you to update either the [state](#update-state) or the 
 
 ### Update schedule state {#update-state}
 
-You can use a JSON Patch operation to update the state of the schedule. To update the state, you declare the `path` property as `/state` and set the `value` to either `active` or `inactive`. For more information about JSON Patch, please read the [JSON Patch](http://jsonpatch.com/) documentation.
+You can use a JSON Patch operation to update the state of the schedule. To update the state, you declare the `path` property as `/state` and set the `value` to either `active` or `inactive`. For more information about JSON Patch, please read the [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) documentation.
 
 **API format**
 
@@ -277,7 +277,7 @@ A successful response returns HTTP status 204 (No Content).
 
 ### Update cron schedule {#update-schedule}
 
-You can use a JSON Patch operation to update the cron schedule. To update the schedule, you declare the `path` property as `/schedule` and set the `value` to a valid cron schedule. For more information about JSON Patch, please read the [JSON Patch](http://jsonpatch.com/) documentation. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
+You can use a JSON Patch operation to update the cron schedule. To update the schedule, you declare the `path` property as `/schedule` and set the `value` to a valid cron schedule. For more information about JSON Patch, please read the [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) documentation. For more information about cron schedules, please read the [cron expression format](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
 
 **API format**
 
