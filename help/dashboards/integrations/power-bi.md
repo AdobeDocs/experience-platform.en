@@ -15,7 +15,7 @@ Before continuing with this tutorial it is recommended to have a good understand
 
 To install the Power BI application integration, users must first have acquired the following Platform permissions:
 
-- Manage Query Service Integration
+- Manage Queries
 - Manage Sandboxes
 
 To learn how to assign these permissions, please read the [access control](../../access-control/home.md) documentation.
@@ -52,7 +52,7 @@ There are two required fields when generating new credentials: [!UICONTROL Name]
 
 >[!IMPORTANT]
 >
->Creating non-expiring credentials requires you to have certain permissions and roles assigned. The necessary permissions are Manage Sandboxes, Manage Queries, and Manage Query Service Integration. The required roles are Adobe Experience Platform admin and developer roles. To learn how to assign these permissions, please read the [access control](../../access-control/home.md) documentation.
+>Creating non-expiring credentials requires you to have certain permissions and roles assigned. The necessary permissions are Manage Sandboxes and Manage Query Service Integration. The required roles are Adobe Experience Platform admin and developer roles. To learn how to assign these permissions, please read the [access control](../../access-control/home.md) documentation.
 
 To learn more about generating non-expiring Query Service credentials, please refer to the [non-expiring credentials guide](../../query-service/ui/credentials.md#non-expiring-credentials).
 
