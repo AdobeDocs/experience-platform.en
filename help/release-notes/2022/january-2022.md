@@ -30,7 +30,7 @@ Adobe Experience Platform is built to enrich digital experience applications on 
 
 | Feature | Description |
 | --- | --- |
-| Sandboxes UI enhancements | The sandbox indicator is now integrated within the header for all Platform UI applications, displaying information on the sandbox name, region, and type. For more information, see the [sandbox UI guide](../../sandboxes/ui/user-guide.md). |
+| Sandboxes UI enhancements | The sandbox indicator is now integrated within the header for all Platform UI applications. The sandbox indicator displays the sandbox name, region, and type and also allows you to access a dropdown menu to switch between sandboxes. For more information, see the [sandbox UI guide](../../sandboxes/ui/user-guide.md). |
 
 For more information on sandboxes, please see the [sandboxes overview](../../sandboxes/home.md).
 
