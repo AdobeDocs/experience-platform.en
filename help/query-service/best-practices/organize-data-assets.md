@@ -4,9 +4,9 @@ description: This document outlines a logical means of organizing data for ease 
 ---
 # Organize data assets in Query Service
 
-This document provides guidance on best practices for organizing data assets for use with Adobe Experience Platform Query Service. It covers how to structure your data as well as information on how to access, update, and delete this information.
+This document provides guidance on best practices for organizing data assets including, datasets, views, and temp tables for use with Adobe Experience Platform Query Service. It covers how to structure your data as well as information on how to access, update, and delete this information.
 
-It is important to logically organize your data assets within the Adobe Experience Platform data lake from the outset. This enables proper data management as the amount of your data assets within the sandbox grows. Query Service enables you to logically group data assets in a sandbox using the SQL constructs of databases and schemas. This method of organization allows for the sharing of data assets between schemas without the need to move physically move them.
+It is important to logically organize your data assets within the Adobe Experience Platform data lake. This provides a coherent data structure as the amount of data assets within the sandbox grows. Query Service enables you to logically group data assets in a sandbox using the SQL constructs of databases and schemas. This method of organization allows for the sharing of data assets between schemas without the need to move physically move them.
 
 ## Getting started
 
@@ -14,7 +14,7 @@ Before continuing with this document, you should have a good understanding of [Q
 
 ## Organizing data in Query Service
 
-The following examples demonstrate the constructs available to you through Adobe Experience Platform Query Service to logically organize your data using standard SQL syntax. You should start by creating a database to act as a container for your data points. A database can contain one or more schemas, and each schema can then have one or more references to a dataset (datasets, views, temp tables, etc). These references include any relationships or associations between the datasets. 
+The following examples demonstrate the constructs available to you through Adobe Experience Platform Query Service to logically organize your data using standard SQL syntax. You should start by creating a database to act as a container for your data points. A database can contain one or more schemas, and each schema can then have one or more references to a data asset (datasets, views, temp tables, etc). These references include any relationships or associations between the datasets. 
 
 See the [Query Editor user guide](../ui/user-guide.md) for detailed guidance on how to use the Query Service UI to create SQL queries. 
 
@@ -33,7 +33,7 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 
 Once a schema has been created to act as a container for the data assets, each dataset can be associated with one or more schemas in the database by using standard SQL ALTER TABLE syntax.
 
-The following example demonstrates how to add data assets to the logical container `databaseA.schema1` created in the previous example.
+The following example adds `dataset1`, `dataset2`, `dataset3` and `v1` to the `databaseA.schema1` container created in the previous example.
 
 ```SQL
 ALTER TABLE dataset1 SET SCHEMA databaseA.schema1;
@@ -49,8 +49,7 @@ ALTER VIEW v1  SET SCHEMA databaseA.schema1;
 
 By appropriately qualifying the database name, any [!DNL PostgreSQL] client can connect to any of the data structures you have created using the SHOW keyword. For more information on the SHOW keyword please see the [SHOW section within the SQL syntax documentation](../sql/syntax.md#show).
 
-When you make a [!DNL PostgreSQL] connection using `dbname="all"`, you can access **any** database and schema that you have created to logically organize your data. 
-<!-- The following examples demonstrate the accessibility of this organizational structure.  -->
+"all" is the default database name that contains every database and schema container in a sandbox. When you make a [!DNL PostgreSQL] connection using `dbname="all"`, you can access **any** database and schema that you have created to logically organize your data. 
 
 Listing all databases under `dbname="all"` displays three available databases.
 
