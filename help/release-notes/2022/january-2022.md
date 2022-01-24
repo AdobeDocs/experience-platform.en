@@ -11,7 +11,6 @@ Updates to existing features in Adobe Experience Platform:
 - [Data Prep](#data-prep)
 - [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation)
-- [Sources](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -44,16 +43,3 @@ For more information on sandboxes, please see the [sandboxes overview](../../san
 | Segment Match | Segment Match is a data collaboration service that allows for two or more Platform users to exchange data, based on common identifiers, in a secure, governed, and privacy-friendly manner. For more information, see the [Segment Match overview](../../segmentation/ui/segment-match/overview.md). |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
-
-
-## Sources {#sources}
-
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
-
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
-
-| Feature | Description |
-| --- | --- |
-| In-context alerts for sources dataflows | You can now subscribe to receive alert messages regarding the status of your dataflows during the ingestion workflow. For more information, see the guide on [subscribing to sources alerts in the UI](../../sources/tutorials/ui/alerts.md). |
-
-To learn more about sources, see the [sources overview](../../sources/home.md).
