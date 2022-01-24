@@ -99,7 +99,13 @@ The **[!UICONTROL Profiles count trend]** widget displays the total number of me
 
 See the [section on merge policies earlier in this document](#merge-policies) to learn more.
 
-![](../images/profiles/profile-count-trend.png)
+The **[!UICONTROL Profile count trend]** widget displays a 'captions' button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog.
+
+![Profile overview tab displaying the Profiles count trend widget with the captions button highlighted.](../images/profiles/profile-count-trend-captions.png)
+
+A machine learning model automatically generates captions for describing the key trends and important events by analyzing the chart and the data.
+
+![The automatic captions dialog for the Profiles count trend widget.](../images/profiles/profiles-count-trends-automatic-captions-dialog.png)
 
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 

@@ -26,6 +26,12 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Connection parameters {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_sftp_rsa"
+>title="RSA public key"
+>abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a Base64 encoded string."
+>text="Learn more in documentation"
+
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * **Host**: The address of your SFTP storage location
