@@ -125,6 +125,12 @@ The details page also displays a list of identities that failed and identities t
 ### Dataflow runs for batch destinations {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received"
+>title="Profiles received"
+>abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_batch"
 >title="Dataflow run details"
 >abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
