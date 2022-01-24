@@ -34,7 +34,7 @@ To ingest your CSV data into an existing dataset, select **[!UICONTROL Existing 
 
 With a dataset selected, provide a name for your dataflow and an optional description.
 
-During this process, you can also enable [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion]. [!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md) for more information.
+During this process, you can also enable [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion]. [!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../ingestion/batch-ingestion/partial.md) for more information.
 
 ![existing-dataset](../images/ui/mapping/existing-dataset.png)
 
