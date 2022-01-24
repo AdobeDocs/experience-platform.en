@@ -184,7 +184,7 @@ Select the lightbulb icon in the target field that you want to adjust.
 
 ![mapping-recc](../images/ui/mapping/mapping-recc.png)
 
-The [!UICONTROL Mapping recommendations] pop up panel appears, displaying a list of recommended target fields that can be mapped to a particular source field.
+The [!UICONTROL Mapping recommendations] pop up panel appears, displaying a list of recommended target fields that can be mapped to a particular source field. By default the first recommendation is automatically applied.
 
 Sometimes, more than one recommendation is available for the source schema. When this happens, the mapping card displays the most prominent recommendation, followed by an icon  that contains the number of additional recommendations available. Selecting the light bulb icon will show a list of the additional recommendations. You can choose one of the alternate recommendations by selecting the checkbox next to the recommendation you want to map to instead.
 
