@@ -6,15 +6,14 @@ description: The latest release notes for Adobe Experience Platform.
 
 **Release date: January 26, 2021**
 
-## Updates to existing features
-
 Updates to existing features in Adobe Experience Platform:
 
 - [Data Prep](#data-prep)
 - [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation)
+- [Sources](#sources)
 
-### [!DNL Data Prep] {#data-prep}
+## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -22,21 +21,39 @@ Updates to existing features in Adobe Experience Platform:
 
 | Feature | Description |
 | --- | --- |
-| Consolidated mapping experience | |
+| Consolidated mapping experience | The new mapping interface in the Platform UI, provides you with a consistent mapping experience to take advantage of intelligent mapping recommendations, manually configure mapping rules, and debug any errors that occur to your mapping sets. For more information, see the [[!DNL Data Prep] UI guide](../../data-prep/ui/mapping.md). |
 
-See the [[!DNL Data Prep] overview](../../data-prep/home.md) to learn more about this service.
+For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
-## Segmentation Service {#segmentation}
+## Sandboxes {#sandboxes}
 
-Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
-
-[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
-
-**New features**
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 | Feature | Description |
 | --- | --- |
-| Segment Match | |
+| Sandboxes UI enhancements | The sandbox indicator is now integrated within the header for all Platform UI applications, displaying information on the sandbox name, region, and type. For more information, see the [sandbox UI guide](../../sandboxes/ui/user-guide.md). |
 
+For more information on sandboxes, please see the [sandboxes overview](../../sandboxes/home.md).
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+| Feature | Description |
+| --- | --- |
+| Segment Match | Segment Match is a data collaboration service that allows for two or more Platform users to exchange data, based on common identifiers, in a secure, governed, and privacy-friendly manner. For more information, see the [Segment Match overview](../../segmentation/ui/segment-match/overview.md). |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
+
+
+## Sources {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+| Feature | Description |
+| --- | --- |
+| In-context alerts for sources dataflows | You can now subscribe to receive alert messages regarding the status of your dataflows during the ingestion workflow. For more information, see the guide on [subscribing to sources alerts in the UI](../../sources/tutorials/ui/alerts.md). |
+
+To learn more about sources, see the [sources overview](../../sources/home.md).
