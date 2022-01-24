@@ -124,7 +124,7 @@ In addition, if a custom field is added to a standard field group, that field gr
 
 If you want to add a custom field to a standard field group, refer to the [section below](#custom-fields-for-standard-groups) for specific instructions. If you are adding fields to a custom field group, refer to section on [editing custom field groups](./field-groups.md) in the field groups UI guide.
 
-If you do not want to alter any existing field groups, you can add additional fields by [creating a new custom field group](./field-groups.md#create) instead.
+If you do not want to alter any existing field groups, you can [create a new custom field group](./field-groups.md#create) to define additional fields instead.
 
 ## Add individual fields to a schema {#add-individual-fields}
 
@@ -194,9 +194,17 @@ If the schema you are working on has an object-type field provided by a standard
 >
 >Any fields added to a field group in one schema will also appear in all other schemas that employ that same field group. In addition, if a custom field is added to a standard field group, that field group will be converted to a custom field group and the original standard field group will no longer be available.
 
-Select the plus (**+**) icon next to the root of the object and provide the details of the custom field in the right rail.
+To start, select the plus (**+**) icon next to the root of the object provided by the standard field group.
 
 ![Add field to standard object](../../images/ui/resources/schemas/add-field-to-standard-object.png)
+
+A warning message appears, prompting you to confirm whether you want to convert the standard field group. Select **[!UICONTROL Continue creating field group]** to proceed.
+
+![Confirm field group conversion](../../images/ui/resources/schemas/confirm-field-group-conversion.png)
+
+The canvas reappears with an untitled placeholder for the new field. Note that the name of the standard field group has been appended with "([!UICONTROL Extended])" to indicate that it has been modified from the original version. From here, use the controls in the right rail to define the field's properties.
+
+![Field added to standard object](../../images/ui/resources/schemas/standard-field-group-converted.png)
 
 After applying your changes, the new field appears under your tenant ID namespace within the standard object. This nested namespace prevents field-name conflicts within the field group itself in order to avoid breaking changes in other schemas that use the same field group.
 
