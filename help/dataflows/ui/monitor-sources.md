@@ -148,6 +148,11 @@ Select **[!UICONTROL Identities]** to see ingestion in the [!UICONTROL Identitie
 >abstract="Identity processing contains information on records ingested to Identity service, including the number of identities added, graphs created and graphs updated. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_identity"
+>title="Dataflow run details"
+>abstract="The Dataflow run details page displays more information on your Identity dataflow run, including its IMS Org ID and dataflow run ID."
+
 The [!UICONTROL Identity processing] page contains information on records ingested to [!DNL Identity Service], including number of identities added, graphs created, and graphs updated.
 
 Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow run start time to see more information on your [!DNL Identity] dataflow run.
@@ -185,6 +190,11 @@ From the [!UICONTROL Identity processing] page, select **[!UICONTROL Profiles]**
 >title="Profile processing"
 >abstract="Profile processing contains information on records ingested to Profile service, including the number of profile fragments created, profile fragments updated and the total number of profile fragments."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_profile"
+>title="Dataflow run details"
+>abstract="The Dataflow run details page displays more information on your Profile dataflow run, including its IMS Org ID and dataflow run ID."
 
 The [!UICONTROL Profile processing] page contains information on records ingested to [!DNL Profile], including number of profile fragments created, profile fragments updated, and the total number of profile fragments.
 
