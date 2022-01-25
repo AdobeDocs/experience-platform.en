@@ -265,9 +265,9 @@ The dataflow runs page displays information on your dataflow runs, including the
 
 When you drill down into the dataflow runs page from the [segment-level view](#segment-level-view), you have the option of filtering the dataflow runs by the following options:
 
-* **[!UICONTROL Dataflow runs with failed identities]**: For the selected segment, this option lists all the dataflow runs that failed for activation. To inspect why identities in a certain dataflow run failed, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
-* **[!UICONTROL Dataflow runs with skipped identities]**: For the selected segment, this option lists all the dataflow runs where some of the identities were not fully activated and some profiles were skipped. To inspect why identities in a certain dataflow run were skipped, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
-* **[!UICONTROL Dataflow runs with activated identities]**: For the selected segment, this option lists all the dataflow runs that have identities which were successfully activated.
+- **[!UICONTROL Dataflow runs with failed identities]**: For the selected segment, this option lists all the dataflow runs that failed for activation. To inspect why identities in a certain dataflow run failed, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
+- **[!UICONTROL Dataflow runs with skipped identities]**: For the selected segment, this option lists all the dataflow runs where some of the identities were not fully activated and some profiles were skipped. To inspect why identities in a certain dataflow run were skipped, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
+- **[!UICONTROL Dataflow runs with activated identities]**: For the selected segment, this option lists all the dataflow runs that have identities which were successfully activated.
 
 ![Filtering dataflow runs for segments](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
