@@ -29,13 +29,29 @@ To increase the rate of speed of ingestion on the Platform side, Platform must i
 
 ## Use a virtual network to connect to [!DNL Event Hubs] to Platform
 
-You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) and then select **Try It** from the REST API panel. Next, authenticate your [!DNL Azure] account using your credentials and then select the [!DNL Event Hubs] namespace, resource group, and subscription that you want to bring to Platform.
+You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) and follow the steps listed below:
 
-Once set up, update the **request body** with the JSON that corresponds to your network region, from the list below:
+* Select **Try It** from the REST API panel; 
+* Authenticate your [!DNL Azure] account using your credentials in the same browser;
+* Select the [!DNL Event Hubs] namespace, resource group, and subscription that you want to bring to Platform and then select **RUN**;
+* In the JSON body that appears, add the following Platform subnet under `virtualNetworkRules` inside `properties`:
 
->[!TIP]
+
+>[!IMPORTANT]
 >
->You must make a backup of your existing firewall IP filtering rules as they will be deleted after this call.
+>You must make a backup of the JSON body that you receive, prior to updating `virtualNetworkRules` with the Platform subnet as it contains your existing IP filtering rules. Otherwise, the rules will be deleted after the call.
+
+
+```json
+{
+    "subnet": {
+        "id": "/subscriptions/93f21779-b1fd-49ee-8547-2cdbc979a44f/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_va7_network_10_19_144_0_22/subnets/ethos_12_prod_va7_network_10_19_144_0_22"
+    },
+    "ignoreMissingVnetServiceEndpoint": true
+}
+```
+
+See the list below for different regions of Platform subnets:
 
 ### VA7: North America
 
