@@ -31,7 +31,7 @@ The following alert rules are specific to [Identity Service](../../identity-serv
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
 | Identity Ingestion Info | Identity Service Flow Run Start | This alert triggers when an Identity Service flow run starts processing data. In other words, ingested data is being loaded from the Data Lake into Identity Service. |
-| Identity Ingestion Info | Identity Service Flow Run Success | This alert triggers when data is successfully ingested into Identity Service. |
+| Identity Ingestion Info | Identity Service Flow Run Success | This alert triggers when data is successfully loaded from the Data Lake into Identity Service. |
 | Identity Ingestion Delays, Failures and Errors | Identity Service Flow Run Delay | This alert triggers when an Identity Service flow run takes longer than 150 minutes to process. |
 | Identity Ingestion Delays, Failures and Errors | Identity Service Flow Run Failure | This alert triggers when an error occurs while ingesting data into Identity Service. |
 
@@ -44,8 +44,8 @@ The following alert rules are specific to [Real-time Customer Profile](../../pro
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
 | Profile Ingestion Info | Profile Flow Run Start | This alert triggers when a Profile flow run starts processing data. |
-| Profile Ingestion Info | Profile Flow Run Success | This alert triggers when data is successfully ingested into Profile. |
-| Profile Ingestion Delays, Failures and Errors | Profile Flow Run Delay | This alert triggers when a Real-time Customer Profile flow run takes longer than 150 minutes to process. |
+| Profile Ingestion Info | Profile Flow Run Success | This alert triggers when data is successfully loaded into Profile from the Data Lake. |
+| Profile Ingestion Delays, Failures and Errors | Profile Flow Run Delay | This alert triggers when loading data from the Data Lake into Profile takes longer than 150 minutes to process. |
 | Profile Ingestion Delays, Failures and Errors | Profile Flow Run Failure | This alert triggers when an error occurs while ingesting data into Profile. |
 
 {style="table-layout:auto"}
@@ -56,11 +56,11 @@ The following alert rules are specific to [Segmentation Service](../../segmentat
 
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
-| Segment Evaluation Job Info | Segment Job Start | This alert triggers when a segment starts processing data. |
-| Segment Evaluation Job Info | Segment Job Success | This alert triggers when a segment job completes successfully. |
-| Segment Evaluation Job Delays, Failures and Errors | Segment Job Delay | This alert triggers when a segment jobs takes longer than 150 minutes to complete. |
-| Segment Evaluation Job Delays, Failures and Errors | Segment Job Failure | This alert triggers when a segment job results in an error. |
-| Segment Evaluation Job Delays, Failures and Errors | Segment Definition Disabled | This alert triggers when a segment definition is disabled. |
+| Segment Evaluation Job Info | Segment Job Start | This alert triggers when a segment evaluation job starts processing data. |
+| Segment Evaluation Job Info | Segment Job Success | This alert triggers when a segment evaluation job completes successfully. |
+| Segment Evaluation Job Delays, Failures and Errors | Segment Job Delay | This alert triggers when a segment evaluation jobs takes longer than 150 minutes to complete. |
+| Segment Evaluation Job Delays, Failures and Errors | Segment Job Failure | This alert triggers when a segment evaluation job results in an error. |
+| Segment Evaluation Job Delays, Failures and Errors | Segment Definition Disabled | This alert triggers when a segment definition is disabled due to internal error. This automatically triggers a war room for an Adobe engineering team to investigate the issue. This alert is only intended to be informative and does not require any action from you. |
 
 {style="table-layout:auto"}
 
@@ -70,10 +70,10 @@ The following alert rules are specific to [destinations](../../destinations/home
 
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
-| Destination Flow Run Info | Destination Flow Run Start | This alert triggers when a destination flow run starts processing data. |
-| Destination Flow Run Info | Destination Flow Run Success | This alert triggers when data is successfully sent to a destination. |
-| Destination Flow Run Delays, Failures and Errors | Destination Flow Run Delay | This alert triggers when a destination flow run takes longer than 150 minutes to process. |
-| Destination Flow Run Delays, Failures and Errors | Destination Flow Run Failure | This alert triggers when an error occurs while sending data to a destination. |
+| Destination Flow Run Info | Destination Flow Run Start | This alert triggers when a destination flow run starts activating a segment. |
+| Destination Flow Run Info | Destination Flow Run Success | This alert triggers when a segment is successfully activated to a destination. |
+| Destination Flow Run Delays, Failures and Errors | Destination Flow Run Delay | This alert triggers when a destination flow run takes longer than 150 minutes to activate a segment. |
+| Destination Flow Run Delays, Failures and Errors | Destination Flow Run Failure | This alert triggers when an error occurs while activating a segment to a destination. |
 
 {style="table-layout:auto"}
 
