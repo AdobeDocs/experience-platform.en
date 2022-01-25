@@ -56,6 +56,7 @@ See the following guides for detailed steps on creating a sources dataflow in th
 * [CRM](./dataflow/crm.md)
 * [Database](./dataflow/databases.md)
 * [E-commerce](./dataflow/ecommerce.md)
+* [Local files](./create/local-system/local-file-upload.md)
 * [Marketing automation](./dataflow/marketing-automation.md)
 * [Payments](./dataflow/payments.md)
 * [Protocols](./dataflow/protocols.md)
