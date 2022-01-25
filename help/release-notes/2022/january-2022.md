@@ -20,7 +20,7 @@ Updates to existing features in Adobe Experience Platform:
 
 | Feature | Description |
 | --- | --- |
-| Consolidated mapping experience | The new mapping interface in the Platform UI, provides you with a consistent mapping experience to take advantage of intelligent mapping recommendations, manually configure mapping rules, and debug any errors that occur to your mapping sets. For more information, see the [[!DNL Data Prep] UI guide](../../data-prep/ui/mapping.md). |
+| Consolidated mapping experience | The new mapping interface in the Platform UI, provides you with a consistent mapping experience to take advantage of intelligent mapping recommendations, manually configure mapping rules, and debug any errors that occur to your mapping sets. For more information, see the [[!DNL Data Prep] UI guide](../../data-prep/home.md). |
 
 For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
