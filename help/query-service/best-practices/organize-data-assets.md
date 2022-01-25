@@ -6,7 +6,7 @@ description: This document outlines a logical means of organizing data for ease 
 
 This document provides guidance on best practices for organizing data assets including, datasets, views, and temporary tables for use with Adobe Experience Platform Query Service. It covers how to structure your data as well as information on how to access, update, and delete this information.
 
-It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
+It is important to logically organize your data assets within the Platform [!DNL Data Lake] as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
 
 ## Getting started
 
@@ -131,7 +131,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### Remove data assets
 
-The [DROP TABLE](../sql/syntax.md#drop-table) function only physically removes a data asset from the data lake when a single reference to the table exists across all databases in your IMS Organization.
+The [DROP TABLE](../sql/syntax.md#drop-table) function only physically removes a data asset from the [!DNL Data Lake] when a single reference to the table exists across all databases in your IMS Organization.
 
 ```sql
 DROP TABLE databaseA.schema2.t1;
