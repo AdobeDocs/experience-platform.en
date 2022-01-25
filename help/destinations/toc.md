@@ -26,6 +26,7 @@ feature: Destinations
         * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
         * [Activate audience data to profile request destinations (Beta)](./ui/activate-profile-request-destinations.md)
+        * [Configure same page and next page personalization using Experience Platform edge destinations](./ui/configure-personalization-destinations.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Edit activation flows](./ui/edit-activation.md)
