@@ -4,9 +4,9 @@ description: This document outlines a logical means of organizing data for ease 
 ---
 # Organize data assets in Query Service
 
-This document provides guidance on best practices for organizing data assets including, datasets, views, and temp tables for use with Adobe Experience Platform Query Service. It covers how to structure your data as well as information on how to access, update, and delete this information.
+This document provides guidance on best practices for organizing data assets including, datasets, views, and temporary tables for use with Adobe Experience Platform Query Service. It covers how to structure your data as well as information on how to access, update, and delete this information.
 
-It is important to logically organize your data assets within the Adobe Experience Platform data lake. This provides a coherent data structure as the amount of data assets within the sandbox grows. Query Service enables you to logically group data assets in a sandbox using the SQL constructs of databases and schemas. This method of organization allows for the sharing of data assets between schemas without the need to move physically move them.
+It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
 
 ## Getting started
 
@@ -14,11 +14,11 @@ Before continuing with this document, you should have a good understanding of [Q
 
 ## Organizing data in Query Service
 
-The following examples demonstrate the constructs available to you through Adobe Experience Platform Query Service to logically organize your data using standard SQL syntax. You should start by creating a database to act as a container for your data points. A database can contain one or more schemas, and each schema can then have one or more references to a data asset (datasets, views, temp tables, etc). These references include any relationships or associations between the datasets. 
+The following examples demonstrate the constructs available to you through Adobe Experience Platform Query Service to logically organize your data using standard SQL syntax. You should start by creating a database to act as a container for your data points. A database can contain one or more schemas, and each schema can then have one or more references to a data asset (datasets, views, temporary tables, etc). These references include any relationships or associations between the datasets. 
 
 See the [Query Editor user guide](../ui/user-guide.md) for detailed guidance on how to use the Query Service UI to create SQL queries. 
 
-The following example (slightly truncated for brevity) demonstrates this methodology where `databaseA` contains schema `schema1`. 
+The following SQL constructs to logically organize datasets in an sandbox are supported.
 
 ```SQL
 CREATE DATABASE databaseA;
@@ -28,6 +28,8 @@ CREATE view v1 ...;
 ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
+
+The example (slightly truncated for brevity) demonstrates this methodology where `databaseA` contains schema `schema1`. 
 
 ## Associating data assets to a schema
 
@@ -120,11 +122,11 @@ dataset3| table
 
 ## Update or remove data assets from a data container
 
-As the amount of data assets in your IMS Organization (or sandbox) grows, it becomes necessary to update or remove data assets from a data container. Individual assets can be removed from the organization container by referencing the appropriate database and schema name using dot notation. The table and view (`t1` and `v1` respectively) added to `databaseA` in the first example, are removed using the syntax in the following example.
+As the amount of data assets in your IMS Organization (or sandbox) grows, it becomes necessary to update or remove data assets from a data container. Individual assets can be removed from the organization container by referencing the appropriate database and schema name using dot notation. The table and view (`t1` and `v1` respectively) added to `databaseA.schema1` in the first example, are removed using the syntax in the following example.
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
-ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema1;
+ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 ```
 
 ### Remove data assets
@@ -149,11 +151,11 @@ DROP DATABASE databaseA;
 
 #### Remove a schema
 
-There are three important differences to note when removing a schema:
+There are three important considerations to note when removing a schema:
 
-- The DROP function does not physically delete any tables.
-- If the schema contains references and the mode is RESTRICT, an exception will be thrown. 
-- If the schema contains references and the mode is CASCADE, you must remove the references to the table one at a time from the schema. The schema can then be deleted but it will **not** delete any tables. 
+- Removing a schema does not physically delete any data assets such as tables, views or temporary tables.
+- If there are any data assets referenced in the target schema and the mode is RESTRICT, an exception will be thrown. 
+- If there are any data assets referenced in the target schema and the mode is CASCADE, the system removes all data assets referenced by the schema container and then deletes the schema container. 
 
 ```sql
 DROP SCHEMA databaseA.schema2;
