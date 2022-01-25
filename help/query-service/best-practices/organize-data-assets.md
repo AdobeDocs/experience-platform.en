@@ -18,7 +18,7 @@ The following examples demonstrate the constructs available to you through Adobe
 
 See the [Query Editor user guide](../ui/user-guide.md) for detailed guidance on how to use the Query Service UI to create SQL queries. 
 
-The following SQL constructs to logically organize datasets in an sandbox are supported.
+The following SQL constructs to logically organize datasets in a sandbox are supported.
 
 ```SQL
 CREATE DATABASE databaseA;
