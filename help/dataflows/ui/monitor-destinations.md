@@ -142,11 +142,6 @@ The details page also displays a list of identities that failed and identities t
 
 ## Monitoring Segment Jobs dashboard {#monitoring-segment-jobs-dashboard}
 
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Segment Jobs"
->abstract="The segment jobs dashboard contains information on the evaluation and export jobs for all your segments."
-
 To access the [!UICONTROL Segment Jobs] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Segment Jobs]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the segment evaluation and export jobs.
 
 ![Segment jobs monitoring dashboard](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
