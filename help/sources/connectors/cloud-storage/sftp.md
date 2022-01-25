@@ -31,7 +31,63 @@ The following is a list of constraints you must account for when naming your clo
 
 ### [!DNL Windows] users
 
+- Select **Apps**
+- Select **Optional features**
+- Search for **Open SSH Client**
+- Open **Powershell** and run the following command:
+
+```shell
+PS C:\Users\jane> ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\jane/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\jane/.ssh/id_rsa.
+Your public key has been saved in C:\Users\jane/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:osJ6Lg0TqK8nekNQyZGMoYwfyxNc+Wh0hYBtBylXuGk jane@LAPTOP-FUJT1JEC
+The key's randomart image is:
++---[RSA 3072]----+
+|.=.*+B.o.        |
+|=.O.O +          |
+|+o+= B           |
+|+o +E .          |
+|.o=o  . S        |
+|+... . .         |
+| *o .            |
+|o.B.             |
+|=O..             |
++----[SHA256]-----+
+```
+
 ### [!DNL Mac] users
+
+- Open **Terminal** and run the following command:
+
+```shell
+ssh-keygen -t rsa -f ~/Documents/id_rsa
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/jane/Documents/id_rsa.
+Your public key has been saved in /Users/jane/Documents/id_rsa.pub.
+The key fingerprint is:
+SHA256:s49PCaO4a0Ee8I7OOeSyhQAGc+pSUQnRii9+5S7pp1M jane@jane-macOS
+The key's randomart image is:
++---[RSA 2048]----+
+|o ==..           |
+|.+..o            |
+|oo.+             |
+|=.. +            |
+|oo = .  S        |
+|+.+ +E . = .     |
+|o*..*.. . o      |
+|.o*=.+   +       |
+|.oo=Oo  ..o      |
++----[SHA256]-----+
+```
+
+- Encode private key with Base64 encoding
 
 ## Connect SFTP to [!DNL Platform]
 
