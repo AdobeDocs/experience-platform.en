@@ -286,12 +286,6 @@ The dataflow run errors view displays a list of identities that failed and ident
 
 When **[!UICONTROL Segments]** is selected, you see a list of the segments which were activated in the selected dataflow run. This screen includes segment-level information about the identities activated, identities excluded, as well as the status and the time of the last dataflow run.
 
->[!IMPORTANT]
->
->Note the current limitations related to segment-level metrics in the dataflow run details view:
->- If the dataflow run that you are analyzing failed, segment-level information is not available.
->- If all profile records in the segments are excluded for some reason, such as missing required mapping attributes, segment-level information is not available.
-
 ![Dataflow run - segments view](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
 ## Next steps {#next-steps}
