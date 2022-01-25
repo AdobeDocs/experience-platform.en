@@ -118,10 +118,10 @@ The documentation below provides information on how to connect [!DNL Event Hubs]
 
 ### Using APIs
 
-- [Create a Event Hubs source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
-- [Collect streaming data using the Flow Service API](../../tutorials/api/collect/streaming.md)
+* [Create a Event Hubs source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
+* [Collect streaming data using the Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### Using the UI
 
-- [Create a Event Hubs source connection in the UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+* [Create a Event Hubs source connection in the UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
+* [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
