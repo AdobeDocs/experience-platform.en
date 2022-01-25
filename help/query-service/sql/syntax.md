@@ -339,9 +339,9 @@ END;
 
 ## Data asset organization
 
-Query Service provides logical organization of Experience Platform data by using database and schema constructs. Tables are used to define the relations between data-points meaning that the data is not physically moved but the system still allows for data sharing. The same data asset is available in various schemas without physically moving data assets.
+It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
 
-Fact tables are used to point to other fact tables through primary and foreign key relationships using the ALTER keyword. Below is an example of the ALTER TABLE syntax being used to associate two data assets.
+The following SQL constructs using standard SQL syntax are supported for you to logically organize your data.
 
 ```SQL
 CREATE DATABASE dg1;
