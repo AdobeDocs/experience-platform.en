@@ -131,6 +131,11 @@ The details page also displays a list of identities that failed and identities t
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="Dataflow run details"
+>abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
+
+>[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_batch"
 >title="Dataflow run details"
 >abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
