@@ -6,13 +6,17 @@ topic-legacy: ui guide
 description: Edge segmentation is the ability to evaluate segments in Platform instantaneously on the edge, enabling same page and next page personalization use cases.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 ---
-# Edge segmentation UI guide (beta)
+# Edge segmentation UI guide
 
->[!IMPORTANT] 
+>[!NOTE] 
 >
->Edge segmentation is currently in beta. The documentation and the functionality are subject to change.
+>If you created edge segments during the beta, these segments will continue to be operational.
 
 Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously [on the edge](../../edge/home.md), enabling same page and next page personalization use cases. 
+
+>[!IMPORTANT]
+>
+> The edge data will be stored in an edge server location closest to where it was collected and may be stored in a location other than one designated as the hub (or principal) Adobe Experience Platform data center.
 
 ## Edge segmentation query types
 
