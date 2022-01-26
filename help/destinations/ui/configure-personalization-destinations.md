@@ -5,8 +5,8 @@ type: Tutorial
 seo-title: Configure personalization destinations for same-page and next-page personalization.
 description: Learn how to configure personalization destinations for same-page and next-page personalization.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
+exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
 ---
-
 # Configure personalization destinations for same-page and next-page personalization
 
 ## Overview {#overview}
