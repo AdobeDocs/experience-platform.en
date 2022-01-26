@@ -11,6 +11,8 @@ Adobe Experience Platform Destination SDK supports several authentication types:
 
 * Bearer authentication
 * Amazon S3
+* Azure connection string
+* Azure service principal
 * SFTP with SSH key
 * SFTP with password
 * OAuth 2 with authorization code
@@ -41,19 +43,40 @@ To set up Amazon S3 authentication for your destinations, configure the `custome
 
    "customerAuthenticationConfigurations":[
       {
-         "authType":"S3",
-         "s3AccessKey":"string",
-         "s3SecretKey":"string"
+         "authType":"S3"
       }
    ]
 
 ```
 
+## Azure connection string {#blob}
 
-|Parameter | Type | Description| Required|
-|---------|----------|------|----|
-|`s3AccessKey` | String | Your Amazon S3 access key |Yes|
-|`s3SecretKey` | String | Your Amazon S3 secret key |Yes|
+To set up [!DNL Azure Blob] authentication for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+
+```json
+
+   "customerAuthenticationConfigurations":[
+     {
+        "authType":"AZURE_CONNECTION_STRING"
+     }
+  ]
+
+```
+
+## Azure service principal {#adls}
+
+To set up [!DNL Azure Data Lake Storage] (ADLS) for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+
+```json
+
+   "customerAuthenticationConfigurations":[
+     {
+        "authType":"AZURE_SERVICE_PRINCIPAL"
+     }
+  ]
+
+```
+
 
 ## SFTP authentication with SSH key {#sftp-ssh}
 
@@ -63,22 +86,11 @@ To set up SFTP authentication with SSH key for your destinations, configure the 
 
    "customerAuthenticationConfigurations":[
       {
-         "authType":"SFTP_WITH_SSH_KEY",
-         "domain":"string",
-         "port":22,
-         "username":"string",
-         "sshKey":"base64 encoded string"
+         "authType":"SFTP_WITH_SSH_KEY"
       }
    ]
 
 ```
-
-|Parameter | Type | Description| Required|
-|---------|----------|------|----|
-|`domain` | String | Your SFTP domain |Yes|
-|`port` | Integer | Your destination's SFTP port. Default port is 22. |No|
-|`username` | String | Your SFTP username |Yes|
-|`sshKey` | String | Your base64-encoded SSH key |Yes|
 
 ## SFTP authentication with password {#sftp-password}
 
@@ -88,22 +100,11 @@ To set up SFTP authentication with password for your destinations, configure the
 
    "customerAuthenticationConfigurations":[
       {
-         "authType":"SFTP_WITH_PASSWORD",
-         "domain":"string",
-         "port":22,
-         "username":"string",
-         "password":"string"
+         "authType":"SFTP_WITH_PASSWORD"
       }
    ]
 
 ```
-
-|Parameter | Type | Description| Required|
-|---------|----------|------|----|
-|`domain` | String | Your SFTP domain |Yes|
-|`port` | Integer | Your destination's SFTP port. Default port is 22. |No|
-|`username` | String | Your SFTP username |Yes|
-|`password` | String | Your SFTP password |Yes|
 
 ## OAuth 2 authentication {#oauth2}
 
