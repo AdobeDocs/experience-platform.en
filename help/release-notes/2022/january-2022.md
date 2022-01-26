@@ -8,11 +8,12 @@ description: The latest release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Alerts](#alerts)
-- [Data Prep](#data-prep)
-- [Sandboxes](#sandboxes)
-- [Segmentation Service](#segmentation)
-- [Sources](#sources)
+- [Alerts {#alerts}](#alerts-alerts)
+- [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+- [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
+- [Query Service {#query-service}](#query-service-query-service)
+- [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
+- [Segmentation Service {#segmentation}](#segmentation-service-segmentation)
 
 ## Alerts {#alerts}
 
@@ -37,6 +38,29 @@ For more information on alerts in Platform, refer to the [alerts overview](../..
 | Consolidated mapping experience | The new mapping interface in the Platform UI provides you with a consistent mapping experience to take advantage of intelligent mapping recommendations, manually configure mapping rules, and debug any errors that occur to your mapping sets. For more information, see the [[!DNL Data Prep] UI guide](../../data-prep/ui/mapping.md). |
 
 For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## [!DNL Dashboards] {#dashboards}
+
+[!DNL Dashboards] does pretty things.
+
+| Feature | Description |
+|---------|-------------|
+|   Intelligent Captions      | A machine learning algorithm automatically provides insights on your profile and audience data, and illustrates patterns and trends over a 30-90 day, or 12-month period. The captions include information on <ul><li>Overall shape and statistics</li><li>Trends and abrupt changes</li><li>Seasonal patterns</li><li>Unexpected anomalies</li></ul> More information can be found on the [profiles dashboards](../../dashboards/guides/profiles.md#profiles-count-trend) and [segments dashboards](../../dashboards/guides/segments.md#audience-size-trend) documentation. |
+|   Dashboards Inventory      |  Access the pre-configured reports of profile, segments, and destinations dashboards including any installed integrations such as PowerBI, in a centralized location. For more information, see the [[!DNL Dashboards] overview](../../dashboards/home.md). |
+|  PowerBI Report Templates   |   Build, customize or extend metrics from the profile, segments, and destination reporting data models using new PowerBI charts. The automated installation workflow allows you to share your marketing insights across your organization from within the PowerBI environment. For more information, see the [[!DNL Dashboards] overview](../../dashboards/home.md). |
+
+For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
+
+## Query Service {#query-service}
+
+[!DNL Query Service] allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+
+| Feature              | Description           |
+|----------------------|-----------------------|
+| Anonymous Block      | The anonymous block SQL construct allows you to break down large scale data preparation jobs in Query Service into smaller tasks, then reuse and execute them in sequence for incremental data loading. For more information, see the [Query Service overview](../../query-service/home.md). |
+| Dataset Organization | Provides a coherent, logical data structure to organize your data assets for use with Query Service as the amount of data assets within the sandbox grows. For more information, see the [Query Service overview](../../query-service/home.md). |
+
+For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
 
 ## Sandboxes {#sandboxes}
 
