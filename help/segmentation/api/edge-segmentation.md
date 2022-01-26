@@ -12,7 +12,7 @@ exl-id: effce253-3d9b-43ab-b330-943fb196180f
 >
 >The following document states how to perform edge segmentation using the API. For information performing edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md). 
 >
->If you created edge segments during the beta, these segments will continue to be operational.
+>Edge segmentation is now generally available to all Platform users. If you created edge segments during the beta, these segments will continue to be operational.
 
 Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 
