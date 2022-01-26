@@ -125,7 +125,11 @@ This is an example configuration of a fictional streaming destination, Moviestar
 
 ```
 
-### Batch configuration example {#batch-example-configuration}
+### File-based configuration example {#batch-example-configuration}
+
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 This is an example configuration of a fictional batch destination, which has endpoints in four locations on the globe. The destination belongs to the email marketing category.
 

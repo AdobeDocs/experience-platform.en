@@ -37,6 +37,9 @@ The server and template specs can be configured in Adobe Experience Platform Des
 
 ### File-based Amazon S3 example configuration {#s3-example}
 
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 ```json
 {
@@ -65,6 +68,10 @@ The server and template specs can be configured in Adobe Experience Platform Des
 ```
 
 ### File-based SFTP destination example configuration {#sftp-example}
+
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 ```json
 {
@@ -99,6 +106,10 @@ The server and template specs can be configured in Adobe Experience Platform Des
 
 ### File-based ADLS destination example configuration {#adls-example}
 
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+
 ```json
 {
    "name":"ADLS destination server",
@@ -121,6 +132,10 @@ The server and template specs can be configured in Adobe Experience Platform Des
 ```
 
 ### File-based Azure Blob destination example configuration {#blob-example}
+
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 ```json
 {
@@ -148,6 +163,10 @@ The server and template specs can be configured in Adobe Experience Platform Des
 ```
 
 ### File-based DLZ destination example configuration {#dlz-example}
+
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 ```json
 {

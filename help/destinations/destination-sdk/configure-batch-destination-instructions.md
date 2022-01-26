@@ -7,6 +7,10 @@ exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 
 ## Overview {#overview}
 
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+
 This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destinations/destination-types.md#file-based). The steps are laid out in sequential order below.
 
 ## Prerequisites {#prerequisites}

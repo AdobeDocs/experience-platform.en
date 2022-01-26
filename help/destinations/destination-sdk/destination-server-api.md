@@ -77,6 +77,10 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## Create configuration for an SFTP destination server {#create-sftp-config}
 
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+
 You can create a new SFTP destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
@@ -154,6 +158,10 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## Create configuration for an Amazon S3 destination server {#create-s3-config}
 
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+
 You can create a new Amazon S3 destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
@@ -220,6 +228,10 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## Create configuration for an Azure Blob destination server {#create-blob-config}
 
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+
 You can create a new Azure Blob S3 destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
@@ -285,6 +297,10 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## Create configuration for an Azure Data Lake Storage destination server {#create-adls-config}
 
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+
 You can create a new Amazon S3 destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
@@ -343,6 +359,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 
 ## Create configuration for a DLZ destination server {#create-dlz-config}
+
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 You can create a new DLZ destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 

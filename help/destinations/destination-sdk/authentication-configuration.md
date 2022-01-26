@@ -10,11 +10,11 @@ exl-id: 33eaab24-f867-4744-b424-4ba71727373c
 Adobe Experience Platform Destination SDK supports several authentication types:
 
 * Bearer authentication
-* Amazon S3
-* Azure connection string
-* Azure service principal
-* SFTP with SSH key
-* SFTP with password
+* Amazon S3 authentication (beta)
+* Azure connection string (beta)
+* Azure service principal (beta)
+* SFTP with SSH key (beta)
+* SFTP with password (beta)
 * OAuth 2 with authorization code
 * OAUth 2 with password grant
 * OAuth 2 with client credentials grant
@@ -35,7 +35,11 @@ To set up bearer type authentication for your destinations, configure the `custo
 
 ```
 
-## Amazon S3 authentication {#s3}
+## Amazon S3 authentication (beta) {#s3}
+
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 To set up Amazon S3 authentication for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -49,7 +53,11 @@ To set up Amazon S3 authentication for your destinations, configure the `custome
 
 ```
 
-## Azure connection string {#blob}
+## Azure connection string (beta) {#blob}
+
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 To set up [!DNL Azure Blob] authentication for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -63,7 +71,11 @@ To set up [!DNL Azure Blob] authentication for your destinations, configure the 
 
 ```
 
-## Azure service principal {#adls}
+## Azure service principal (beta) {#adls}
+
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 To set up [!DNL Azure Data Lake Storage] (ADLS) for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -78,7 +90,11 @@ To set up [!DNL Azure Data Lake Storage] (ADLS) for your destinations, configure
 ```
 
 
-## SFTP authentication with SSH key {#sftp-ssh}
+## SFTP authentication with SSH key (beta) {#sftp-ssh}
+
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 To set up SFTP authentication with SSH key for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -92,7 +108,11 @@ To set up SFTP authentication with SSH key for your destinations, configure the 
 
 ```
 
-## SFTP authentication with password {#sftp-password}
+## SFTP authentication with password (beta) {#sftp-password}
+
+>[!IMPORTANT]
+>
+>File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 To set up SFTP authentication with password for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
