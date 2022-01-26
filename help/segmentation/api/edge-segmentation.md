@@ -18,7 +18,7 @@ Edge segmentation is the ability to evaluate segments in Adobe Experience Platfo
 
 >[!IMPORTANT]
 >
-> The edge data will be stored in an edge server location closest to where it was collected and may be stored in a location other than one designated as the hub (or principal) Adobe Experience Platform data center.
+> The edge data will be stored in an edge server location closest to where it was collected and may be stored in a location other than the one designated as the hub (or principal) Adobe Experience Platform data center.
 
 ## Getting started
 
