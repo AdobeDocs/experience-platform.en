@@ -133,12 +133,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
 |`destinationServerType` | String | *Required.* Supported values: <ul><li>`URL_BASED`</li><li>`FILE_BASED_S3`</li><li>`FILE_BASED_SFTP`</li><li>`FILE_BASED_AZURE_BLOB`</li><li>`FILE_BASED_ADLS_GEN2`</li><li>`FILE_BASED_DLZ`</li></ul> |
 |`fileBasedSftpDestination.filenameSuffix.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
-|`fileBasedSftpDestination.filenameSuffix.value` | String |  |
+|`fileBasedSftpDestination.filenameSuffix.value` | String | |
 |`fileBasedSftpDestination.rootDirectory.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>|
 |`fileBasedSftpDestination.rootDirectory.value` | String ||
 |`fileBasedSftpDestination.moveToWhenCompleted.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>|
 |`fileBasedSftpDestination.moveToWhenCompleted.value` | String ||
-|`fileBasedSftpDestination.port` | String ||
+|`fileBasedSftpDestination.port` | Integer | *Required*.|
 |`fileBasedSftpDestination.encryptionMode` | String | Use `PGP` or `NONE`.|
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 ||||
@@ -342,7 +342,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 
-## Create configuration for a DLZ destination server {#create-adls-config}
+## Create configuration for a DLZ destination server {#create-dlz-config}
 
 You can create a new DLZ destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
