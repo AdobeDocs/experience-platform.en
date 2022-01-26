@@ -2,9 +2,9 @@
 keywords: personalization; target; destination; personalizationo destinations; configure personalization destinations; same page; next page;
 title: Configure personalization destinations for same-page and next-page personalization
 type: Tutorial
-seo-title: Configure personalization destinations for same-page and next-page personalization
-description: Learn how to configure personalization destinations for same-page and next-page personalization
-seo-description: Configure personalization destinations for same-page and next-page personalization
+seo-title: Configure personalization destinations for same-page and next-page personalization.
+description: Learn how to configure personalization destinations for same-page and next-page personalization.
+seo-description: Configure personalization destinations for same-page and next-page personalization.
 ---
 
 # Configure personalization destinations for same-page and next-page personalization
