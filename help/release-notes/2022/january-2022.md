@@ -12,6 +12,7 @@ Updates to existing features in Adobe Experience Platform:
 - [Alerts](#alerts)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Dashboards]](#dashboards)
+- [[!DNL Destinations]](#destinations)
 - [Query Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation)
@@ -54,30 +55,34 @@ For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] ove
 
 For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
-<!--
-
 ## [!DNL Destinations] {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
+**New or updated features**
+
 | Feature | Description |
 | ----------- | ----------- |
-| Placeholder for next-hit personalization | Description |
-| Placeholder for batch monitoring | Description |
-| Placeholder for re-introducing scheduling in the UI | Description |
-| Placeholder for Marketo destination update | Description |
+| Same-page and next-page personalization | The same-page and next-page personalization feature provides a shared, targetable view of users for applications on the Experience Edge, for consistency between marketing and customer channels. This personalization is possible through the [Adobe Target connection](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization connection](../../destinations/catalog/personalization/custom-personalization.md). To configure your same-page or next-page personalization campaigns, see the [dedicated tutorial](../../destinations/ui/configure-personalization-destinations.md). |
+| Marketo destination enhancements | Experience Platform customers who use Marketo Engage can maximize their Marketo database with the new ability to push net-new person records into Marketo Engage from Experience Platform via the [Marketo destination connector](/help/destinations/catalog/adobe/marketo-engage.md). When sending audience segments from Experience Platform to Marketo Engage, people within the segment that don’t already exist in your Marketo Engage database can be automatically added to it. For more information, read [Push an Adobe Experience Platform Segment to a Marketo Static List](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (step 9 in the tutorial indicates how to push net-new person records into Marketo). |
 
+<!--
+
+| Feature | Description |
+| ----------- | ----------- |
+| Batch destination monitoring and segment-level metrics | The destination monitoring functionality is now expanded from streaming destinations to also include batch destinations and segment-level metrics for your activation dataflows. For more information, read monitoring destinations dashboard, monitoring segment jobs dashboard, and segment-level view. |
+| Schedule editing in the UI for existing batch activation dataflows | This release introduces the option to edit the schedule of your existing activation dataflows to batch destinations. For more information, read [activate profile data to batch profile destinations](/help/destinations/ui/activate-batch-profile-destinations.md).  |
+
+-->
 
 **New destinations**
 
 | Destination | Description |
 | ----------- | ----------- |
-| Placeholder for Target | Description |
-| Placeholder for Custom Personalization | Description |
+| [Adobe Target connection](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target is an application that provides real-time, AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more. Adobe Target is a personalization connection in Adobe Experience Platform. |
+| [Custom personalization connection](../../destinations/catalog/personalization/custom-personalization.md) | This personalization connection provides a way to retrieve segment information from Adobe Experience Platform to external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites. |
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
-
--->
 
 ## Query Service {#query-service}
 
