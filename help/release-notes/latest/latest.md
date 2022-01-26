@@ -54,6 +54,31 @@ For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] ove
 
 For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
+<!--
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+| Feature | Description |
+| ----------- | ----------- |
+| Placeholder for next-hit personalization | Description |
+| Placeholder for batch monitoring | Description |
+| Placeholder for re-introducing scheduling in the UI | Description |
+| Placeholder for Marketo destination update | Description |
+
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| Placeholder for Target | Description |
+| Placeholder for Custom Personalization | Description |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+-->
+
 ## Query Service {#query-service}
 
 [!DNL Query Service] allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
