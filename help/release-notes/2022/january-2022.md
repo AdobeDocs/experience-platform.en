@@ -4,7 +4,7 @@ description: The latest release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: January 26, 2021**
+**Release date: January 26, 2022**
 
 Updates to existing features in Adobe Experience Platform:
 
@@ -25,6 +25,7 @@ Experience Platform allows you to subscribe to event-based alerts for various Pl
 | Feature | Description |
 | --- | --- |
 | New alert rules | Several new alert rules are now available for workflows related to data ingestion, identities, profiles, segmentation, and activation. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
+| In-context alerts for sources dataflows | You can now subscribe to receive alert messages regarding the status of your dataflows during the ingestion workflow. For more information, see the guide on [subscribing to sources alerts in the UI](../../sources/tutorials/ui/alerts.md). |
 
 For more information on alerts in Platform, refer to the [alerts overview](../../observability/alerts/overview.md).
 
