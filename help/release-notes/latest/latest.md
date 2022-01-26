@@ -62,7 +62,7 @@ For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overv
 
 | Feature | Description |
 | ----------- | ----------- |
-| Placeholder for next-hit personalization | Description |
+| Same-page and next-page personalization | The same-page and next-page personalization feature provides a shared, targetable view of users for applications on the Experience Edge, for consistency between marketing and customer channels. This personalization is possible through the [Adobe Target connection](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization connection](../../destinations/catalog/personalization/custom-personalization.md). To configure your same-page or next-page personalization campaigns, see the [dedicated tutorial](../../destinations/ui/configure-personalization-destinations.md.md). |
 | Placeholder for batch monitoring | Description |
 | Placeholder for re-introducing scheduling in the UI | Description |
 | Placeholder for Marketo destination update | Description |
@@ -72,8 +72,8 @@ For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overv
 
 | Destination | Description |
 | ----------- | ----------- |
-| Placeholder for Target | Description |
-| Placeholder for Custom Personalization | Description |
+| [Adobe Target connection](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target is an application that provides real-time, AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more. Adobe Target is a personalization connection in Adobe Experience Platform. |
+| [Custom personalization connection](../../destinations/catalog/personalization/custom-personalization.md) | This personalization connection provides a way to retrieve segment information from Adobe Experience Platform to external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites. |
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
