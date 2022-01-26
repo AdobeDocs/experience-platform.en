@@ -1,8 +1,8 @@
 ---
 title: View Configured Dashboards
 description: View a list of your organization's configured dashboards within the Experience Platform UI.
+exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
 ---
-
 # View configured dashboards
 
 If your organization has multiple dashboards available within Adobe Experience Platform, you can review these dashboards within the user interface (UI).

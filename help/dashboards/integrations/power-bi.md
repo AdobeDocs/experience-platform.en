@@ -1,8 +1,8 @@
 ---
 title: Power BI Report Templates for Platform Dashboards
 description: Use report templates to explore Experience Platform data using Power BI.
+exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 ---
-
 # Power BI report templates for dashboards
 
 The Power BI report template feature allows you to create compelling reports populated with data from Adobe Experience Platform. The streamlined installation process automatically installs standard widgets for Real-time Customer Profile, segmentation, and destinations. The installation also connects Power BI to your data models so you can easily customize and extend your report templates. These reports can be shared across your entire organization without the recipients needing credentials for your IMS Organization on Platform.

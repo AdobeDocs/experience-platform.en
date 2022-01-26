@@ -1,6 +1,7 @@
 ---
 title: Best Practices for Data Asset Organization in Query Service
 description: This document outlines a logical means of organizing data for ease of use with Query Service.
+exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
 ---
 # Organize data assets in Query Service
 
