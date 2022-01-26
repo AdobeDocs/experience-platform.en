@@ -8,12 +8,11 @@ description: The latest release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
-  - [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
-  - [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
-  - [Segmentation Service {#segmentation}](#segmentation-service-segmentation)
-  - [Query Service {#query-service}](#query-service-query-service)
+- [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+- [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
+- [Query Service {#query-service}](#query-service-query-service)
+- [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
+- [Segmentation Service {#segmentation}](#segmentation-service-segmentation)
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -39,6 +38,17 @@ For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overv
 
 For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
 
+## Query Service {#query-service}
+
+[!DNL Query Service] allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+
+| Feature              | Description           |
+|----------------------|-----------------------|
+| Anonymous Block      | The anonymous block SQL construct allows you to break down large scale data preparation jobs in Query Service into smaller tasks, then reuse and execute them in sequence for incremental data loading. For more information, see the [Query Service overview](../../query-service/home.md). |
+| Dataset Organization | Provides a coherent, logical data structure to organize your data assets for use with Query Service as the amount of data assets within the sandbox grows. For more information, see the [Query Service overview](../../query-service/home.md). |
+
+For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
+
 ## Sandboxes {#sandboxes}
 
 Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
@@ -58,14 +68,3 @@ For more information on sandboxes, please see the [sandboxes overview](../../san
 | Segment Match | Segment Match is a data collaboration service that allows for two or more Platform users to exchange data, based on common identifiers, in a secure, governed, and privacy-friendly manner. For more information, see the [Segment Match overview](../../segmentation/ui/segment-match/overview.md). |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
-
-## Query Service {#query-service}
-
-[!DNL Query Service] allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
-
-| Feature | Description |
-| --- | --- |
-| Anonymous Block  | The anonymous block SQL construct allows you to break down large scale data preparation jobs in Query Service into smaller tasks, then reuse and execute them in sequence for incremental data loading. For more information, see the [Query Service overview](../../query-service/home.md).   |
-| Dataset Organization  |  Provides a coherent, logical data structure to organize your data assets for use with Query Service as the amount of data assets within the sandbox grows. For more information, see the [Query Service overview](../../query-service/home.md). |
-
-For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
