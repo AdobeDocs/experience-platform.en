@@ -113,11 +113,11 @@ feature: Destinations
         * [Braze connection](./catalog/mobile-engagement/braze.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
-        * [Adobe Target connection (Beta)](./catalog/personalization/adobe-target-connection.md)
+        * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
         * [Adobe Target v2 extension](./catalog/personalization/adobe-target-v2.md)
         * [Beemray extension](./catalog/personalization/beemray.md)
-        * [Custom personalization connection (Beta)](./catalog/personalization/custom-personalization.md)
+        * [Custom personalization connection](./catalog/personalization/custom-personalization.md)
         * [D&B Visitor Intelligence extension](./catalog/personalization/dnb.md)
         * [Experience Cloud ID Service extension](./catalog/personalization/adobe-ecid.md)
         * [Gainsight extension](./catalog/personalization/gainsight.md)
