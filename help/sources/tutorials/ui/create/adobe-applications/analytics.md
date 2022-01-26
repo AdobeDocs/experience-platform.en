@@ -128,7 +128,7 @@ The following documentation provides further resources on understanding Data Pre
 
 * [Data Prep overview](../../../../../data-prep/home.md)
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
-* [Add calculated fields](../../../../../data-prep/calculated-fields.md)
+* [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
 ### Provide dataflow details
 
