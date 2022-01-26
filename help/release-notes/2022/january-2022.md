@@ -8,11 +8,25 @@ description: The latest release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
-- [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
-- [Query Service {#query-service}](#query-service-query-service)
-- [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
-- [Segmentation Service {#segmentation}](#segmentation-service-segmentation)
+- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
+  - [Alerts {#alerts}](#alerts-alerts)
+  - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+  - [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
+  - [Query Service {#query-service}](#query-service-query-service)
+  - [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
+  - [Segmentation Service {#segmentation}](#segmentation-service-segmentation)
+
+## Alerts {#alerts}
+
+Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
+**Updated features**
+
+| Feature         | Description     |
+|-----------------|-----------------|
+| New alert rules | Several new alert rules are now available for workflows related to data ingestion, identities, profiles, segmentation, and activation. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
+
+For more information on alerts in Platform, refer to the [alerts overview](../../observability/alerts/overview.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
