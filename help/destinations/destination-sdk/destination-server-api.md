@@ -15,7 +15,7 @@ This page lists and describes all the API operations that you can perform using 
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
-## Create configuration for a destination server {#create}
+## Create configuration for a streaming destination server {#create}
 
 You can create a new destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
@@ -64,6 +64,334 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`destinationServerType` | String | *Required.* Supported values: <ul><li>`URL_BASED`</li><li>`FILE_BASED_S3`</li><li>`FILE_BASED_SFTP`</li><li>`FILE_BASED_AZURE_BLOB`</li><li>`FILE_BASED_ADLS_GEN2`</li><li>`FILE_BASED_DLZ`</li></ul> |
 |`urlBasedDestination.url.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
 |`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
+|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+|`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
+|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](./message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](./message-format.md#attributes) transformation. </li></ul> |
+|`httpTemplate.contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
+
+{style="table-layout:auto"}
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
+## Create configuration for an SFTP destination server {#create-sftp-config}
+
+You can create a new SFTP destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
+
+**API format**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**Request**
+
+The following request creates a new destination server configuration, configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/destination-servers` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"SFTP destination server",
+   "destinationServerType":"FILE_BASED_SFTP",
+   "fileBasedSftpDestination":{
+      "filenameSuffix":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":""
+      },
+      "rootDirectory":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":""
+      },
+      "moveToWhenCompleted":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":""
+      },
+      "port":"<INT>",
+      "encryptionMode":"<PGP/NONE>"
+   },
+   "httpTemplate":{
+      "httpMethod":"POST",
+      "requestBody":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if input.profile.segmentMembership.ups is not empty %} , \"AEPSegments\": { \"add\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"realized\" or segment.value.status == \"existing\" %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ], \"remove\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"exited\" %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
+      },
+      "contentType":"application/json"
+   }
+}
+```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
+|`destinationServerType` | String | *Required.* Supported values: <ul><li>`URL_BASED`</li><li>`FILE_BASED_S3`</li><li>`FILE_BASED_SFTP`</li><li>`FILE_BASED_AZURE_BLOB`</li><li>`FILE_BASED_ADLS_GEN2`</li><li>`FILE_BASED_DLZ`</li></ul> |
+|`fileBasedSftpDestination.filenameSuffix.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
+|`fileBasedSftpDestination.filenameSuffix.value` | String |  |
+|`fileBasedSftpDestination.rootDirectory.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>|
+|`fileBasedSftpDestination.rootDirectory.value` | String ||
+|`fileBasedSftpDestination.moveToWhenCompleted.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>|
+|`fileBasedSftpDestination.moveToWhenCompleted.value` | String ||
+|`fileBasedSftpDestination.port` | String ||
+|`fileBasedSftpDestination.encryptionMode` | String | Use `PGP` or `NONE`.|
+|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+||||
+|`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
+|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](./message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](./message-format.md#attributes) transformation. </li></ul> |
+|`httpTemplate.contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
+
+{style="table-layout:auto"}
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
+## Create configuration for an Amazon S3 destination server {#create-s3-config}
+
+You can create a new Amazon S3 destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
+
+**API format**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**Request**
+
+The following request creates a new destination server configuration, configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/destination-servers` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"S3 destination server",
+   "destinationServerType":"FILE_BASED_S3",
+   "fileBasedS3Destination":{
+      "bucket":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":""
+      },
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":""
+      },
+   "httpTemplate":{
+      "httpMethod":"POST",
+      "requestBody":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if input.profile.segmentMembership.ups is not empty %} , \"AEPSegments\": { \"add\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"realized\" or segment.value.status == \"existing\" %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ], \"remove\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"exited\" %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
+      },
+      "contentType":"application/json"
+   }
+}
+```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
+|`destinationServerType` | String | *Required.* Supported values: <ul><li>`URL_BASED`</li><li>`FILE_BASED_S3`</li><li>`FILE_BASED_SFTP`</li><li>`FILE_BASED_AZURE_BLOB`</li><li>`FILE_BASED_ADLS_GEN2`</li><li>`FILE_BASED_DLZ`</li></ul> |
+|`fileBasedS3Destination.bucket.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
+|`fileBasedS3Destination.bucket.value` | String |  |
+|`fileBasedS3Destination.path.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
+|`fileBasedS3Destination.path.value` | String |  |
+|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+||||
+|`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
+|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](./message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](./message-format.md#attributes) transformation. </li></ul> |
+|`httpTemplate.contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
+
+{style="table-layout:auto"}
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
+## Create configuration for an Azure Blob destination server {#create-blob-config}
+
+You can create a new Azure Blob S3 destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
+
+**API format**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**Request**
+
+The following request creates a new destination server configuration, configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/destination-servers` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Blob destination server",
+   "destinationServerType":"FILE_BASED_AZURE_BLOB",
+   "fileBasedAzureBlobDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":""
+      },
+      "container":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":""
+      },
+   "httpTemplate":{
+      "httpMethod":"POST",
+      "requestBody":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if input.profile.segmentMembership.ups is not empty %} , \"AEPSegments\": { \"add\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"realized\" or segment.value.status == \"existing\" %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ], \"remove\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"exited\" %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
+      },
+      "contentType":"application/json"
+   }
+}
+```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
+|`destinationServerType` | String | *Required.* Supported values: <ul><li>`URL_BASED`</li><li>`FILE_BASED_S3`</li><li>`FILE_BASED_SFTP`</li><li>`FILE_BASED_AZURE_BLOB`</li><li>`FILE_BASED_ADLS_GEN2`</li><li>`FILE_BASED_DLZ`</li></ul> |
+|`fileBasedAzureBlobDestination.path.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
+|`fileBasedAdlsGen2Destination.path.value` | String |  |
+|`fileBasedAzureBlobDestination.container.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
+|`fileBasedAdlsGen2Destination.container.value` | String |  |
+|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+|`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
+|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](./message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](./message-format.md#attributes) transformation. </li></ul> |
+|`httpTemplate.contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
+
+{style="table-layout:auto"}
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
+## Create configuration for an Azure Data Lake Storage destination server {#create-adls-config}
+
+You can create a new Amazon S3 destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
+
+**API format**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**Request**
+
+The following request creates a new destination server configuration, configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/destination-servers` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"ADLS destination server",
+   "destinationServerType":"FILE_BASED_ADLS_GEN2",
+   "fileBasedAdlsGen2Destination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":""
+      },
+   "httpTemplate":{
+      "httpMethod":"POST",
+      "requestBody":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if input.profile.segmentMembership.ups is not empty %} , \"AEPSegments\": { \"add\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"realized\" or segment.value.status == \"existing\" %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ], \"remove\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"exited\" %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
+      },
+      "contentType":"application/json"
+   }
+}
+```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
+|`destinationServerType` | String | *Required.* Supported values: <ul><li>`URL_BASED`</li><li>`FILE_BASED_S3`</li><li>`FILE_BASED_SFTP`</li><li>`FILE_BASED_AZURE_BLOB`</li><li>`FILE_BASED_ADLS_GEN2`</li><li>`FILE_BASED_DLZ`</li></ul> |
+|`fileBasedAdlsGen2Destination.path.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
+|`fileBasedAdlsGen2Destination.path.value` | String |  |
+|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+|`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
+|`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](./message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](./message-format.md#attributes) transformation. </li></ul> |
+|`httpTemplate.contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
+
+{style="table-layout:auto"}
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
+## Create configuration for a DLZ destination server {#create-adls-config}
+
+You can create a new DLZ destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
+
+**API format**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**Request**
+
+The following request creates a new destination server configuration, configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/destination-servers` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"DLZ destination server",
+   "destinationServerType":"FILE_BASED_DLZ",
+   "fileBasedDlzDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":""
+      },
+   "useCase": "<From adobe Rep>,
+   "httpTemplate":{
+      "httpMethod":"POST",
+      "requestBody":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if input.profile.segmentMembership.ups is not empty %} , \"AEPSegments\": { \"add\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"realized\" or segment.value.status == \"existing\" %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ], \"remove\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"exited\" %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
+      },
+      "contentType":"application/json"
+   }
+}
+```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
+|`destinationServerType` | String | *Required.* Supported values: <ul><li>`URL_BASED`</li><li>`FILE_BASED_S3`</li><li>`FILE_BASED_SFTP`</li><li>`FILE_BASED_AZURE_BLOB`</li><li>`FILE_BASED_ADLS_GEN2`</li><li>`FILE_BASED_DLZ`</li></ul> |
+|`fileBasedDlzDestination.path.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
+|`fileBasedAdlsGen2Destination.path.value` | String |  |
+|`useCase`|String||
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 |`httpTemplate.requestBody.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
 |`httpTemplate.requestBody.value` | String | *Required.* This string is the character-escaped version that transforms the data of Platform customers to the format your service expects. <br> <ul><li> For information on how to write the template, read the [Using templating section](./message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). </li><li> For an example of a simple transformation, refer to the [Profile Attributes](./message-format.md#attributes) transformation. </li></ul> |
