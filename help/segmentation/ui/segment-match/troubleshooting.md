@@ -7,10 +7,6 @@ exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
 ---
 # [!DNL Segment Match] frequently asked questions (Beta)
 
->[!IMPORTANT]
->
->Segment Match is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
-
 This guide provides answers to privacy and legal questions often asked about Adobe Experience Platform Segment Match.
 
 ## What data is shared during the estimate overlaps and how can Adobe ensure me that these metrics are obtained securely? 
