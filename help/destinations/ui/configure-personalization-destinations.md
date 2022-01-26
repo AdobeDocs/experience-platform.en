@@ -1,19 +1,19 @@
 ---
-keywords: personalization; target; destination; personalizationo destinations; configure personalization destinations;
-title: Configure personalization destinations for next-hit personalization use cases
+keywords: personalization; target; destination; personalizationo destinations; configure personalization destinations; same page; next page;
+title: Configure personalization destinations for same-page and next-page personalization
 type: Tutorial
-seo-title: Configure personalization destinations for next-hit personalization use cases
-description: Learn how to configure Adobe Experience Platform and Adobe Target for next-hit personalization use cases.
-seo-description: Learn how to configure Adobe Experience Platform and Adobe Target for next-hit personalization use cases.
+seo-title: Configure personalization destinations for same-page and next-page personalization
+description: Learn how to configure personalization destinations for same-page and next-page personalization
+seo-description: Configure personalization destinations for same-page and next-page personalization
 ---
 
-# Configure same page and next page personalization using Experience Platform edge destinations
+# Configure personalization destinations for same-page and next-page personalization
 
 ## Overview {#overview}
 
 Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) to enable customers to create and target audience segments at high scale, in real time.
 
-This capability helps you configure same page and next page personalization use cases.
+This capability helps you configure same-page and next-page personalization use cases.
 
 This article provides step-by-step instructions on how to configure Experience Platform and your personalization destinations for these use cases.
 
