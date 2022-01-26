@@ -106,7 +106,7 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | Data Governance | [!UICONTROL Apply Data Usage Labels] | Access to read, create, and delete usage labels. |
 | Data Governance | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
 | Data Governance | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
-| Data Governance | [!UICONTROL View Audit Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Platform activities. |
+| Data Governance | [!UICONTROL View User Activity Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Platform activities. |
 | [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Read-only access to view the license usage dashboard. |
 | [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Add custom attributes that are not yet in the data warehouse. |
 | [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. |

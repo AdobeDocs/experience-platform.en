@@ -24,6 +24,7 @@ feature: Queries
   - [Generating datasets from query results](ui/create-datasets.md)
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
+  - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
   - [Data deduplication](best-practices/deduplication.md)
   - [Sample Experience Event queries](best-practices/experience-event-queries.md)
   - [Sample Adobe Analytics queries](best-practices/adobe-analytics.md)

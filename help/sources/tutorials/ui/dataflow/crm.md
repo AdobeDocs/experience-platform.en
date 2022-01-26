@@ -71,13 +71,11 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 ![select-schema](../../../images/tutorials/dataflow/crm/select-schema.png)
 
-Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For more information on mapper functions and calculated fields, refer to either the [Data Prep functions guide](../../../../data-prep/functions.md) or the [calculated fields guide](../../../../data-prep/calculated-fields.md).
+Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md)
 
-<!--
 >[!TIP]
 >
 >If you are using the [!DNL Salesforce] source as part of B2B CDP, refer to the [[!DNL Salesforce] field mapping tables](../../../connectors/adobe-applications/mapping/salesforce.md) for a guide on the appropriate mapping sets between [!DNL Salesforce] source fields and XDM target fields.
--->
 
 Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
