@@ -6,11 +6,7 @@ topic-legacy: overview
 description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 ---
-# (Beta) [!DNL Segment Match] overview
-
->[!IMPORTANT]
->
->Segment Match is currently in beta. The documentation and the functionality are subject to change.
+# [!DNL Segment Match] overview
 
 Adobe Experience Platform Segment Match is a segment-sharing service that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. [!DNL Segment Match] uses Platform privacy standards and personal identifiers such as hashed emails, hashed phone numbers, and device identifiers like IDFAs and GAIDs.
 
