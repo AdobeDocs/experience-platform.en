@@ -44,6 +44,10 @@ In addition, the `include` array of the request payload must include the product
 
 The following request creates a new privacy job under the GDPR for a single customer's data in the [!DNL Identity] store. Two identity values are provided for the customer in the `userIDs` array; one using the standard `Email` identity namespace, and the other using an `ECID` namespace, It also includes the product value for [!DNL Identity] (`Identity`) in the `include` array:
 
+>[!TIP]
+>
+>When deleting a custom namespace using the API, you must specify the identity symbol as the namespace, instead of the display name.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
@@ -83,6 +87,10 @@ curl -X POST \
 ```
 
 ### Using the UI
+
+>[!TIP]
+>
+>When deleting a custom namespace using the UI, you must specify the identity symbol as the namespace, instead of the display name. Furthermore, you cannot delete custom namespaces in the UI for non-production sandboxes.
 
 When creating job requests in the UI, be sure to select **[!UICONTROL Identity]** under **[!UICONTROL Products]** in order to process jobs for data stored in [!DNL Identity Service].
 

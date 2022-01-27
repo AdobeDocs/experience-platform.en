@@ -1,22 +1,18 @@
 ---
 keywords: custom personalization; destination; experience platform custom destination;
-title: Custom personalization connection (Beta)
-description: This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrive segment information from Adobe Experience Platform. This destinatination provides real-time 1:1 and personalization based on a user profile's segment membership.
+title: Custom personalization connection
+description: This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrieve segment information from Adobe Experience Platform. This destination provides real-time personalization based on user profile segment membership.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 ---
-# Custom personalization connection (Beta) {#custom-personalization-connection} 
+# Custom personalization connection {#custom-personalization-connection} 
 
 ## Overview {#overview}
-
->[!IMPORTANT]
->
->The Custom personalization connection in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 
 This destination provides a way to retrieve segment information from Adobe Experience Platform to external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites.
 
 ## Prerequisites {#prerequisites}
 
-This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md). You must be using this SDK to use this destination.
+This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md) or the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). You must be using one of these SDKs to use this destination.
 
 ## Export type {#export-type}
 
@@ -67,12 +63,10 @@ Here is a sample value for the `event.destinations` variable:
       "alias":"personalizationAlias",
       "segments":[
          {
-            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          },
          {
-            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          }
       ]
    }
