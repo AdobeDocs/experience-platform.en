@@ -82,7 +82,7 @@ In the final confirmation window, enter the name of the sandbox in the dialog bo
 
 >[!WARNING]
 >
->You cannot delete the default production sandbox. However, a user-created production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service] can be deleted after a warning message.
+>You cannot delete the default production sandbox. However, any user-created production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service] can be deleted after a warning message.
 
 Deleting a production or development sandbox permanently removes all resources associated with that sandbox, including permissions.
 
