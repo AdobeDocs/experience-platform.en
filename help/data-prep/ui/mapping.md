@@ -75,18 +75,18 @@ The **[!UICONTROL mapping]** interface provides you with a comprehensive tool to
 
 ### Understanding the mapping interface
 
-The mapping interface includes a dashboard that provides information on the health of your mapping sets within the context of the ingestion workflow. The dashboard displays the following details regarding your mapping sets:
+The mapping interface includes a dashboard that provides information on the health of your mapping fields within the context of the ingestion workflow. The dashboard displays the following details regarding your mapping fields:
 
 | Property | Description |
 | --- | --- |
 | [!UICONTROL Mapped fields] | Displays the total number of source fields that have been mapped to a target XDM field, regardless of errors. |
 | [!UICONTROL Required fields] | Displays the number of required mapping fields. |
-| [!UICONTROL Identity fields] | Displays the total number of mapping sets defined as identity. These mapping sets are represented by a fingerprint icon. |
-| [!UICONTROL Errors] | Displays the number of erroneous mapping sets. |
+| [!UICONTROL Identity fields] | Displays the total number of mapping fields defined as identity. These mapping fields are represented by a fingerprint icon. |
+| [!UICONTROL Errors] | Displays the number of erroneous mapping fields. |
 
 ![top-panel](../images/ui/mapping/top-panel.png)
 
-The mapping interface also provides a panel of options that you can choose from to better interact or filter through your mapping sets.
+The mapping interface also provides a panel of options that you can choose from to better interact or filter through your mapping fields.
 
 ![second-panel](../images/ui/mapping/second-panel.png)
 
@@ -107,11 +107,11 @@ The filtering options are:
 | [!UICONTROL Unmapped fields] | This option filters the source schema to only display the fields that have yet to be mapped. |
 | [!UICONTROL Fields with recommendation] | This option filters the source schema to only display the fields that contain mapping recommendations. |
 
-Select **[!UICONTROL Fields with errors]** to see all mapping sets with errors.
+Select **[!UICONTROL Fields with errors]** to see all mapping fields with errors.
 
 ![filter](../images/ui/mapping/filter.png)
 
-An isolated view of erroneous mapping sets appears, allowing you to address errors through intelligent mapping recommendations or through the manual mapping tree.
+An isolated view of erroneous mapping fields appears, allowing you to address errors through intelligent mapping recommendations or through the manual mapping tree.
 
 ![fields-with-errors](../images/ui/mapping/fields-with-errors.png)
 
@@ -171,13 +171,13 @@ During the preview, the identity column is prioritized as the first field, as it
 
 ![preview-screen](../images/ui/mapping/preview-screen.png)
 
-To remove all mapping sets, select **[!UICONTROL Clear all mappings]**.
+To remove all mapping fields, select **[!UICONTROL Clear all mappings]**.
 
 ![clear-all](../images/ui/mapping/clear-all.png)
 
 ### Using the mapping interface
 
-Platform automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases or fix any duplicated mapping sets to clear any errors.
+Platform automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases or fix any duplicated mapping fields to clear any errors.
 
 ![mapping-interface](../images/ui/mapping/mapping-interface.png)
 
@@ -195,7 +195,7 @@ Alternatively, you can select **[!UICONTROL Select manually]** to manually use t
 
 ![recc-panel](../images/ui/mapping/recc-panel.png)
 
-The target schema mapping interface appears in the same view as your mapping sets, allowing you to modify mapping pairs within the same screen. Select the target field that fits your use case or fixes your errors.
+The target schema mapping interface appears in the same view as your mapping fields, allowing you to modify mapping pairs within the same screen. Select the target field that fits your use case or fixes your errors.
 
 ![select-target-field](../images/ui/mapping/select-target-field.png)
 
