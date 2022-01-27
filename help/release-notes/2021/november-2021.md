@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 ---
 # Adobe Experience Platform release notes 
 
@@ -84,4 +85,3 @@ Customer AI available in Real-time Customer Data Platform, is used to generate c
 | Custom profile attributes     | Customer AI now supports defining custom profile dataset fields (with timestamps) in your data in addition to standard event fields. Using this option allows you to add additional profile attributes that you deem influential which may improve the quality of your model and provide more accurate results. |
 
 For more information on Customer AI, please see the [Customer AI documentation](../../intelligent-services/customer-ai/overview.md).
-
