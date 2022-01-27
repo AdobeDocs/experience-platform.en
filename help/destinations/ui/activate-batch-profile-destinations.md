@@ -45,7 +45,7 @@ Use the check boxes to the left of the segment names to select the segments that
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Schedule"
->abstract="File export type (full files or incremental files) and scheduling cannot be changed once the segment has been saved."
+>abstract="Set the file export type (full files or incremental files) and the export frequency."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Learn more in documentation"
 
 [!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
