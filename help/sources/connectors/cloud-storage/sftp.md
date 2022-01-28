@@ -36,15 +36,15 @@ The [!DNL SFTP] source supports authentication using [!DNL Base64]-encoded OpenS
 If you are using a [!DNL Windows] machine, select **Apps** from the **Settings** menu and then select **Optional features**. If **OpenSSH Client** is already pre-installed in your machine, then it will be included in the **Installed features** list under **Optional features**. If not, then you must open **Powershell** and run the following command to generate your private key:
 
 ```shell
-PS C:\Users\bhavn> ssh-keygen -t rsa
+PS C:\Users\lucy> ssh-keygen -t rsa
 Generating public/private rsa key pair.
-Enter file in which to save the key (C:\Users\bhavn/.ssh/id_rsa):
+Enter file in which to save the key (C:\Users\lucy/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in C:\Users\bhavn/.ssh/id_rsa.
-Your public key has been saved in C:\Users\bhavn/.ssh/id_rsa.pub.
+Your identification has been saved in C:\Users\lucy/.ssh/id_rsa.
+Your public key has been saved in C:\Users\lucy/.ssh/id_rsa.pub.
 The key fingerprint is:
-SHA256:osJ6Lg0TqK8nekNQyZGMoYwfyxNc+Wh0hYBtBylXuGk bhavn@LAPTOP-FUJT1JEC
+SHA256:osJ6Lg0TqK8nekNQyZGMoYwfyxNc+Wh0hYBtBylXuGk lucy@LAPTOP-FUJT1JEC
 The key's randomart image is:
 +---[RSA 3072]----+
 |.=.*+B.o.        |
@@ -62,7 +62,7 @@ The key's randomart image is:
 Next, run the following command while providing the file path of the private key, to encode your private key in [!DNL Base64]:
 
 ```shell
-C:\Users\bhavn> [convert]::ToBase64String((Get-Content -path "C:\Users\bhavn\.ssh\id_rsa" -Encoding byte)) > C:\Users\bhavn\.ssh\id_rsa_base64
+C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
 ```
 
 The above command saves the [!DNL Base64]-encoded private key in the file path you designated. You can then use that private key to authenticate to [!DNL SFTP] and connect to Platform.
