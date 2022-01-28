@@ -44,11 +44,11 @@ Follow the instructions on [creating a merge policy](../../profile/merge-policie
 
 After you have created the [!DNL Active-On-Edge] merge policy, you must create a new segment in Platform.
 
-Follow the [segment builder](../../segmentation/ui/segment-builder.md) guide to create your new segment, and make sure to [assign it](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created at step 3.
+Follow the [segment builder](../../segmentation/ui/segment-builder.md) guide to create your new segment, and make sure to [assign it](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created in step 3.
 
 ## Step 5: Activate the segment to your destination
 
-The last step of the configuration process is to activate the segment that you created at step 4 to the destination that you created at step 2.
+The last step of the configuration process is to activate the segment that you created in step 4 to the destination that you created in step 2.
 
 To do this, follow this [activation tutorial](../ui/activate-profile-request-destinations.md).
 
