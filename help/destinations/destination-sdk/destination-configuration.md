@@ -131,7 +131,7 @@ This is an example configuration of a fictional streaming destination, Moviestar
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-This is an example configuration of a fictional batch destination, which has endpoints in four locations on the globe. The destination belongs to the email marketing category.
+This is an example configuration of a fictional file-based destination. The destination belongs to the email marketing category.
 
 ```json
 {
@@ -142,7 +142,7 @@ This is an example configuration of a fictional batch destination, which has end
     "maxIdentityAttributes": "500",
     "customerAuthenticationConfigurations":[
       {
-         "authType":"BEARER"
+         "authType":"S3"
       }
    ],
     "customerEncryptionConfigurations": [],
@@ -180,7 +180,7 @@ This is an example configuration of a fictional batch destination, which has end
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en",
+        "documentationLink": "http://www.adobe.com/go/destinations-email-marketing-en",
         "category": "emailMarketing",
         "connectionType": "Server-to-server",
         "frequency": "Batch"
@@ -283,17 +283,29 @@ When you configure the bearer authentication type, users are required to input t
 
 **Amazon S3 authentication**
 
+>[!IMPORTANT]
+>
+>This authentication configuration only applies to file-based destinations. The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+
 When you configure the Amazon S3 authentication type, users are required to input the S3 credentials.
 
 ![UI render with S3 authentication](assets/s3-authentication-ui.png)
 
 **SFTP with password authentication**
 
+>[!IMPORTANT]
+>
+>This authentication configuration only applies to file-based destinations. The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+
 When you configure the SFTP with password authentication type, users are required to input the SFTP username and password, as well as the SFTP domain and port (default port is 22).
 
 ![UI render with SFTP with password authentication](assets/sftp-password-authentication-ui.png)
 
 **SFTP with SSH key authentication**
+
+>[!IMPORTANT]
+>
+>This authentication configuration only applies to file-based destinations. The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 When you configure the SFTP with SSH key authentication type, users are required to input the SFTP username and SSH key, as well as the SFTP domain and port (default port is 22).
 
@@ -315,7 +327,7 @@ Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 auth
 
 ## Customer data fields {#customer-data-fields}
 
-This section allows partners to introduce custom fields. In the example configuration above, `customerDataFields` requires users to select an endpoint in the authentication flow and indicate their customer ID with the destination. The configuration is reflected in the authentication flow as shown below:
+This section allows partners to introduce custom fields. In the example configurations above, `customerDataFields` requires users to select an endpoint in the authentication flow and indicate their customer ID with the destination. The configuration is reflected in the authentication flow as shown below:
 
 ![Custom field authentication flow](./assets/custom-field-authentication-flow.png)
 
@@ -365,7 +377,7 @@ For batch destinations, use the parameters in `batchConfig` to describe the conf
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`allowMandatoryFieldSelection`|Boolean|Set to `true` to allow customers to specify which profile attributes are mandatory. Default value is `false`.|
+|`allowMandatoryFieldSelection`|Boolean|Set to `true` to allow customers to specify which profile attributes are mandatory. Default value is `false`. See [Mandatory attributes](../ui/activate-batch-profile-destinations.md) for more information. |
 |`allowJoinKeyFieldSelection`|Boolean|Set to `true` to allow customers to specify join keys. Default value is `false`. |
 |`defaultExportMode`|Enum|Defines the default file export mode. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br> Default value is `DAILY_FULL_EXPORT`.|
 |`allowedExportModes`|List|Defines the file export modes available to customers. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul>|

@@ -1,15 +1,15 @@
 ---
 description: This page lists and describes the steps to configure a file-based destination using Destination SDK.
-title: Use Destination SDK to configure a file-based destination
+title: (Beta) Use Destination SDK to configure a file-based destination
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 ---
-# Use Destination SDK to configure a file-based destination
+# (Beta) Use Destination SDK to configure a file-based destination
 
 ## Overview {#overview}
 
 >[!IMPORTANT]
 >
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+>The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [file-based destination](../../destinations/destination-types.md#file-based). The steps are laid out in sequential order below.
 
@@ -62,7 +62,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
 
-Shown below is an example configuration for a destination template, created by using the `/destinations` API endpoint. For more information about this template, refer to [Destination configuration](./destination-configuration.md).
+Shown below is an example of a destination configuration, created by using the `/destinations` API endpoint. For more information about this template, refer to [Destination configuration](./destination-configuration.md).
 
 To connect the server and template configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
 
@@ -200,19 +200,19 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 
 * If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [Authentication configuration](./authentication-configuration.md#when-to-use).
 
-## Step 6: Test your destination {#test-destination}
+<!-- ## Step 6: Test your destination {#test-destination}
 
 After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
 
 As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
 
 * [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
-* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
 
-## Step 7: Publish your destination {#publish-destination}
+## Step 6: Publish your destination {#publish-destination}
 
 After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
-## Step 8: Document your destination {#document-destination}
+## Step 7: Document your destination {#document-destination}
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).

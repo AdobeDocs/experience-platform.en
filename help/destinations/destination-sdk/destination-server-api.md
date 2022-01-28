@@ -17,7 +17,7 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Create configuration for a streaming destination server {#create}
 
-You can create a new destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
+You can create a new destination server configuration for a streaming destination by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
 
@@ -61,7 +61,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Parameter | Type | Description |
 | -------- | ----------- | ----------- |
 |`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
-|`destinationServerType` | String | *Required.* Supported values: <ul><li>`URL_BASED`</li><li>`FILE_BASED_S3`</li><li>`FILE_BASED_SFTP`</li><li>`FILE_BASED_AZURE_BLOB`</li><li>`FILE_BASED_ADLS_GEN2`</li><li>`FILE_BASED_DLZ`</li></ul> |
+|`destinationServerType` | String | *Required.* Supported values: <ul><li>`URL_BASED` for streaming destinations</li><li>`FILE_BASED_S3` for connections to Amazon S3</li><li>`FILE_BASED_SFTP` for connections to SFTP servers</li><li>`FILE_BASED_AZURE_BLOB` for connections to Azure Blob Storage</li><li>`FILE_BASED_ADLS_GEN2` for connections to Azure Data Lake Storage</li><li>`FILE_BASED_DLZ` for connections to Azure data landing zones</li></ul> |
 |`urlBasedDestination.url.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
 |`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 |`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
@@ -295,13 +295,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 
-## Create configuration for an Azure Data Lake Storage destination server {#create-adls-config}
+## Create configuration for an Azure Data Lake Storage (ADLS) destination server {#create-adls-config}
 
 >[!IMPORTANT]
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-You can create a new Amazon S3 destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
+You can create a new ADLS destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
 
@@ -358,11 +358,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 
-## Create configuration for a DLZ destination server {#create-dlz-config}
+## Create configuration for a Data Landing Zone (DLZ) destination server {#create-dlz-config}
 
 >[!IMPORTANT]
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+
+[!DNL Data Landing Zone] ([!DNL DLZ]) is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you to access a secure, cloud-based file storage facility to bring files into Platform. See
 
 You can create a new DLZ destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 

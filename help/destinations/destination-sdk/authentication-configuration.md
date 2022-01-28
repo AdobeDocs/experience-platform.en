@@ -23,7 +23,7 @@ You can configure the authentication information for your destination via the `c
 
 ## Bearer authentication {#bearer}
 
-To set up bearer type authentication for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+To set up bearer type authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
 ```json
 
