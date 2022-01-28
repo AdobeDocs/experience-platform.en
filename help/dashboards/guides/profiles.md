@@ -129,6 +129,38 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ![](../images/profiles/identity-overlap.png)
 
+## Profile efficacy widgets
+
+Adobe provides multiple widgets to asses the completeness of the ingested profiles available for your data analysis.
+
+To learn more about each of teh profile efficacy widgets, select the name of a widget from the following list:
+
+* [[!UICONTROL Attribute Completeness across profiles]](#attribute-completeness-across-profiles)
+* [[!UICONTROL Attribute Uniqueness across profiles]](#attribute-uniqueness-across-profiles)
+* [[!UICONTROL Attribute Quality Assessment]](#attribute-quality-assessment)
+* [[!UICONTROL Profile Completeness]](#profile-completeness)
+* [[!UICONTROL Profile Completeness Trend]](#profile-completeness-trend)
+
+### [!UICONTROL Attribute Completeness across profiles] {#attribute-completeness-across-profiles}
+
+Percentage of non-empty/NULL value for an attribute across all profiles i.e. Total number of non-empty values/Total number of profiles.
+
+### [!UICONTROL Attribute Uniqueness across profiles] {#attribute-uniqueness-across-profiles}
+
+Unique values for an attribute across all profiles.
+
+### [!UICONTROL Attribute Quality Assessment] {#attribute-quality-assessment}
+
+This widget shows the completeness and cardinality of each profile attribute as of the last processing date. 
+
+### [!UICONTROL Profile Completeness] {#profile-completeness}
+
+Histogram of profile completeness which is defined as the percentage of non-empty attributes per profile.
+
+### [!UICONTROL Profile Completeness Trend] {#profile-completeness-trend}
+
+Stacked trend chart of profile completeness arranged in 4 categories (0-25%, 25-50%, 50-75%, 75-100%).
+
 ## Next steps
 
 By following this document you should now be able to locate the Profiles dashboard and understand the metrics displayed in the available widgets. To learn more about working with [!DNL Profile] data in the Experience Platform UI, please refer to the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).
