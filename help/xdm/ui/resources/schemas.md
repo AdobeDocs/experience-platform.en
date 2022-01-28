@@ -193,6 +193,10 @@ If the schema you are working on has an object-type field provided by a standard
 >[!WARNING]
 >
 >Any fields added to a field group in one schema will also appear in all other schemas that employ that same field group. In addition, if a custom field is added to a standard field group, that field group will be converted to a custom field group and the original standard field group will no longer be available.
+>
+>If you participated in the beta for this feature, you will receive a dialog informing you of the standard field groups that you have previously customized. Once you select **[!UICONTROL Acknowledge]**, the listed resources are converted to custom field groups.
+>
+>![Confirmation dialog to convert standard field groups](../../images/ui/resources/schemas/beta-extension-confirmation.png)
 
 To start, select the plus (**+**) icon next to the root of the object provided by the standard field group.
 
