@@ -106,6 +106,33 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ![](../images/segments/profiles-by-identity.png)
 
+## Segment efficacy widgets
+
+Adobe provides multiple widgets to asses the completeness of the segments available for your data analysis.
+
+To learn more about each of the segment efficacy widgets, select the name of a widget from the following list:
+
+* [[!UICONTROL Recently Activated Segments by Destination]](#recently-activated-segments-by-destination)
+* [[!UICONTROL Audience Size Trends by Segments Linked to a Destination]](#audience-size-trends-by-segments-linked-to-a-destination)
+* [[!UICONTROL Segments not Linked to Destination by Identity]](#segments-not-linked-to-destination-by-identity)
+* [[!UICONTROL Segments Linked to Destination by Identity]](#segments-linked-to-destination-by-identity)
+
+### [!UICONTROL Recently Activated Segments by Destination] {#recently-activated-segments-by-destination}
+
+Displays the top five most recently activated segments according to a destination.
+
+### [!UICONTROL Audience Size Trends by Segments Linked to a Destination] {#audience-size-trends-by-segments-linked-to-a-destination}
+
+Illustrates an audience trend for a segment mapped to a destination over the past 30 days, 90 days, and 12 months.
+
+### [!UICONTROL Segments not Linked to Destination by Identity] {#segments-not-linked-to-destination-by-identity}
+
+Lists the top five segments by identity count for a given destination and identity. 
+
+### [!UICONTROL Segments Linked to Destination by Identity] {#segments-linked-to-destination-by-identity}
+
+List the top five **mapped** segments by identity count for a given destination and identity. 
+
 ## Next steps
 
 By following this document you should now be able to locate the segment dashboard and select a segment to view. You should also understand the metrics displayed in the available widgets. To learn more about working with segments in the Experience Platform UI, please refer to the [Segmentation Service UI guide](../../segmentation/ui/overview.md).
