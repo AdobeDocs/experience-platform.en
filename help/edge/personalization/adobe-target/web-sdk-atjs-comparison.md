@@ -279,6 +279,32 @@ TODO: DOCUMENT HOW TO SEND A DISPLAY NOTIFICATION AND UPDATE EXAMPLES ABOVE!!!
 [Learn more](../rendering-personalization-content.md#manually-rendering-content)
 
 
+
+## How to apply the Target activities
+
+
+**Using at.js**
+
+You can apply the Target activities using the `applyOffers` function: `adobe.target.applyOffer(options)`
+
+Example:
+
+```javascript
+adobe.target.getOffers({...})
+  .then(response => adobe.target.applyOffers({ response: response }))
+  .then(() => console.log("Success"))
+  .catch(error => console.log("Error", error));
+```
+
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en)
+
+
+**Using Web SDK**
+
+This feature is not supported yet.
+
+
+
 ## How to track events
 
 **Using at.js**
@@ -512,3 +538,29 @@ alloy("sendEvent", {
 **Using at.js**
 
 **Using Web SDK**
+
+
+## How to set Target Global Settings
+
+**Using at.js**
+
+You can override settings in the at.js library using `targetGlobalSettings()`, rather than configuring the settings in the Target Standard/Premium UI or by using REST APIs.
+
+This function can be defined before at.js is loaded or in Administration > Implementation > Edit at.js Settings > Code Settings > Library Header.
+
+Example:
+
+```javascript
+window.targetGlobalSettings = {  
+   timeout: 200, // using custom timeout  
+   visitorApiTimeout: 500, // using custom API timeout  
+   enabled: document.location.href.indexOf('https://www.adobe.com') >= 0 // enabled ONLY on adobe.com  
+};
+```
+
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+
+
+**Using Web SDK**
+
+This feature is not supported yet.
