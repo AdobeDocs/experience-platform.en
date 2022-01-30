@@ -564,3 +564,42 @@ window.targetGlobalSettings = {
 **Using Web SDK**
 
 This feature is not supported yet.
+
+
+## How to update Target Profile
+
+
+**Using at.js**
+
+TODO: Populate this section
+
+
+**Using Web SDK**
+
+To update a Target profile, use the `sendEvent` command and set the `data.__adobe.target` property, prefixing the key names using `profile`.
+
+Example:
+
+```javascript
+alloy("sendEvent", {
+  renderDecisions: true,
+  data: {
+    __adobe: {
+      target: {
+        "profile.gender": "female",
+        "profile.age": 30
+      }
+    }
+  }
+});
+```
+
+
+## How do I debug my Target implementation
+
+TODO: Populate
+
+**Using at.js**
+
+**Using Web SDK**
+
