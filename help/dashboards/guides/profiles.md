@@ -37,6 +37,26 @@ You can modify the appearance of the [!UICONTROL Profiles] dashboard by selectin
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
 
+## (Alpha) Profile efficiency insights {#profile-efficiency-insights}
+
+>[!IMPORTANT]
+>
+>The profile efficiency insight functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
+
+The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data thorough the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
+
+[The profile efficacy view.](../images/profiles/attributes-quality-assessment.png)
+
+See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
+
+The layout of this dashboard is also customizable by selecting the [!UICONTROL Modify Dashboard](../customize/modify.md) button.
+
+## Browse profiles {#browse-profiles}
+
+The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your IMS Organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and segments 
+
+To learn more about the profile viewing capabilities provided in the Platform UI please see the documentation on [browsing profiles in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+
 ## Merge policies {#merge-policies}
 
 The metrics displayed in the [!UICONTROL Profiles] dashboard are based on merge policies being applied to your Real-time Customer Profile data. When data is brought together from multiple sources to create the customer profile, it is possible for the data to contain conflicting values (for example, one dataset may list a customer as "single" while another dataset may list the customer as "married"). It is the job of the merge policy to determine which data to prioritize and display as part of the profile.
@@ -50,6 +70,14 @@ The dashboard will automatically select a merge policy to display, but you can c
 >The dropdown menu shows only merge policies related to the XDM Individual Profile Class, however if your organization has created multiple merge policies, it may mean that you will need to scroll in order to view the complete list of available merge policies.
 
 ![](../images/profiles/select-merge-policy.png)
+
+## Union Schemas
+
+The [!UICONTROL Union Schema] tab displays the union schema for a specific XDM class. Union schemas for different XDM classes can be viewed by selecting the [!UICONTROL **Class**] dropdown.
+
+Union schemas are composed of multiple schemas that share the same class and have been enabled for Profile. The union schema enables you to see an amalgamation of every field contained within each schema that shares the same class.
+
+See the union schema UI guide to learn more about [viewing union schemas within the Platform UI](../../profile/ui/union-schema.md#view-union-schemas).
 
 ## Widgets and metrics
 
@@ -129,37 +157,54 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ![](../images/profiles/identity-overlap.png)
 
-## Profile efficacy widgets
+## (Alpha) Profile efficacy widgets {#profile-efficacy-widgets}
 
-Adobe provides multiple widgets to asses the completeness of the ingested profiles available for your data analysis.
+>[!IMPORTANT]
+>
+>The profile efficiency widgets are currently in alpha and are not available to all users. The documentation and the functionality are subject to change.
 
-To learn more about each of teh profile efficacy widgets, select the name of a widget from the following list:
+Adobe provides multiple widgets to asses the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
 
-* [[!UICONTROL Attribute Completeness across profiles]](#attribute-completeness-across-profiles)
-* [[!UICONTROL Attribute Uniqueness across profiles]](#attribute-uniqueness-across-profiles)
-* [[!UICONTROL Attribute Quality Assessment]](#attribute-quality-assessment)
-* [[!UICONTROL Profile Completeness]](#profile-completeness)
-* [[!UICONTROL Profile Completeness Trend]](#profile-completeness-trend)
+To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
-### [!UICONTROL Attribute Completeness across profiles] {#attribute-completeness-across-profiles}
+* [[!UICONTROL Attribute quality assessment]](#attribute-quality-assessment)
+* [[!UICONTROL Profile completeness]](#profile-completeness)
+* [[!UICONTROL Profile completeness trend]](#profile-completeness-trend)
 
-Percentage of non-empty/NULL value for an attribute across all profiles i.e. Total number of non-empty values/Total number of profiles.
+### (Alpha) [!UICONTROL Attribute quality assessment] {#attribute-quality-assessment}
 
-### [!UICONTROL Attribute Uniqueness across profiles] {#attribute-uniqueness-across-profiles}
+This widget shows the completeness and cardinality of each profile attribute since the last processing date. This information is presented as a table with four columns where each row in the table represents a single attribute.
 
-Unique values for an attribute across all profiles.
+| Column  | Description  |
+|---|---|
+| Attribute  | The name of the attribute.  |
+| Profiles  | The number of profiles that have this attribute and are filled with non-null values.  |
+| Completeness  | This percentage is determined by the total number of profiles that have this attribute and are filled with non-null values. The number is calculated by dividing the the total number of profiles by the total number of non-empty values in the profiles for that attribute.  |
+| Cardinality  | The total number of **unique** non-null values of this attribute. It is measured across all profiles. |
 
-### [!UICONTROL Attribute Quality Assessment] {#attribute-quality-assessment}
+![The attributes quality assessment widget](../images/profiles/attributes-quality-assessment.png)
 
-This widget shows the completeness and cardinality of each profile attribute as of the last processing date. 
+### (Alpha) [!UICONTROL Profiles by completeness] {#profile-completeness}
 
-### [!UICONTROL Profile Completeness] {#profile-completeness}
+This widget creates a histogram of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
 
-Histogram of profile completeness which is defined as the percentage of non-empty attributes per profile.
+This widget shows the proportion of profiles that are of high, medium, or low completeness.There are three levels of completeness are configured by default: 
 
-### [!UICONTROL Profile Completeness Trend] {#profile-completeness-trend}
+* High completeness: profiles have more than 70% attributes filled. 
+* Medium completeness: profiles have less than 70% and more than 30% attributes filled. 
+* Low completeness: profiles have less than 30% attributes filled. 
 
-Stacked trend chart of profile completeness arranged in 4 categories (0-25%, 25-50%, 50-75%, 75-100%).
+![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
+
+### (Alpha) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
+
+This widget creates a stacked trend chart of profile completeness over time. It categorizes the profile completeness as high, medium, or low completeness since the the last processing date.
+
+The x-axis represents time, the y-axis represents the number of profiles, and the colors represent the three levels of profile completeness. 
+
+High-completeness profiles have more than 70% attributes filled. Low-completeness profiles have less than 30% attributes filled. The remaining profiles are medium-completeness profiles. 
+
+![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png)
 
 ## Next steps
 
