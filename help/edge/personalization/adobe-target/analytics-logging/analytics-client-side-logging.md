@@ -206,22 +206,19 @@ function getAnalyticsPayload(proposition) {
   }
   return proposition.scopeDetails.characteristics.analyticsToken;
 }
-
 ```
 A proposition can have different type of items, and we differentiate them by `item.schema`.
 These are the Form Based Composer based Activities proposition item schema that we support: 
 ```javascript
-
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
 var MEASUREMENT_SCHEMA = "https://ns.adobe.com/personalization/measurement";
 var JSON_SCHEMA = "https://ns.adobe.com/personalization/json-content-item";
-
+var REDIRECT_SCHEMA = "https://ns.adobe.com/personalization/redirect-item"
 ```
 HTML_SCHEMA and JSON_SCHEMA are the schemas that reflect the type of the offer, while MEASUREMENT_SCHEMA reflects the metrics that needs to be applied on the page.
 
 Let us take closer a look on how we can process and collect the data to send the display and interaction events and Analytics hit.
 ```javascript
-
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
 var MEASUREMENT_SCHEMA = "https://ns.adobe.com/personalization/measurement";
 var JSON_SCHEMA = "https://ns.adobe.com/personalization/json-content-item";
