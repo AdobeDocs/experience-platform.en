@@ -603,3 +603,12 @@ TODO: Populate
 
 **Using Web SDK**
 
+
+## How do I use Target Recommendations
+
+TODO: Populate
+
+**Using at.js**
+
+**Using Web SDK**
+
