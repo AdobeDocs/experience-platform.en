@@ -59,7 +59,7 @@ The following filters are available for audit events in the UI:
 | --- | --- |
 | [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
 | [!UICONTROL Action] | Filter by action. Currently only [!UICONTROL Create] and [!UICONTROL Delete] actions can be filtered. |
-| [!UICONTROL Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
+| [!UICONTROL Access Control Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
 | [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. |
 
 To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
