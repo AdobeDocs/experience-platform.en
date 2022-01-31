@@ -179,59 +179,200 @@ Once you have gathered the required artifacts, copy and paste the connection spe
         "isPreview": true,
         "isBeta": true,
         "category": {
-          "key": "{CATEGORY}"
+          "key": "protocols"
         },
         "icon": {
-          "key": "{ICON}"
+          "key": "genericRestIcon"
         },
         "description": {
-          "key": "{DESCRIPTION}"
+          "key": "genericRestDescription"
         },
         "label": {
-          "key": "{LABEL}"
+          "key": "genericRestLabel"
         }
-      },
-      "urlParams": {
-        "path": "{RESOURCE_PATH}",
-        "method": "{GET_or_POST}",
-        "queryParams": "{QUERY_PARAMS}"
-      },
-      "headerParams": "{HEADER_VALUES}",
-      "bodyParams": "{BODY_PARAMS_USED_IF_METHOD_IS_POST}",
-      "contentPath": {
-        "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
-        "skipAttributes": [],
-        "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
-      },
-      "explodeEntityPath": {
-        "path": "{PATH_SHOULD_POINT_TO_COLLECTION_OF_RECORDS}",
-        "skipAttributes": [],
-        "overrideWrapperAttribute": "{OVERRIDE_ATTRIBUTES}"
-      },
-      "paginationParams": {
-        "type": "{OFFSET_OR_POINTER}",
-        "limitName": "{NUMBER_OF_RECORDS_ATTRIBUTE_NAME}",
-        "limitValue": "{NUMBER_OF_RECORDS_PER_PAGE}",
-        "offSetName": "{OFFSET_ATTRIBUTE_NAME_REQUIRED_IN_CASE_OF_OFFSET BASED_PAGINATION}",
-        "pointerName": "{POINTER_PATH_REQUIRED_IN__CASE_OF_POINTER BASED_PAGINATION}"
-      },
-      "scheduleParams": {
-        "scheduleStartParamName": "{START_TIME_PARAMETER_NAME}",
-        "scheduleEndParamName": "{END_TIME_PARAMETER_NAME}",
-        "scheduleStartParamFormat": "{DATE_TIME_FORMAT_FOR_START_TIME}",
-        "scheduleEndParamFormat": "{END_TIME_FORMAT_FOR_START_TIME}"
       }
     },
     "spec": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
-      "description": "Define user input parameters to fetch resource values.",
+      "description": "defines static and user input parameters to fetch resource values.",
       "properties": {
-        "listId": {
-          "type": "string",
-          "description": "listId for which members need to fetch."
+        "urlParams": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Enter resource path",
+              "example": "/3.0/reports/campaignId/email-activity"
+            },
+            "method": {
+              "type": "string",
+              "description": "Http method type.",
+              "enum": [
+                "GET",
+                "POST"
+              ]
+            },
+            "queryParams": {
+              "type": "object",
+              "description": "query parameters in json format",
+              "example": "{'key':'value','key1':'value1'} in JSON format"
+            }
+          },
+          "required": [
+            "path",
+            "method"
+          ]
+        },
+        "headerParams": {
+          "type": "object",
+          "description": "header parameters in json format",
+          "example": "{'user':'c26f50c88dc035610e6753f807e28e9','x-api-key':'apiKey'}"
+        },
+        "contentPath": {
+          "type": "object",
+          "description": "Params required for main collection content.",
+          "properties": {
+            "path": {
+              "description": "path to main content.",
+              "type": "string",
+              "example": "$.emails"
+            },
+            "skipAttributes": {
+              "type": "array",
+              "description": "list of attributes that needs to be skipped while fattening the array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "keepAttributes": {
+              "type": "array",
+              "description": "list of attributes that needs to be kept while fattening the array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "overrideWrapperAttribute": {
+              "type": "string",
+              "description": "rename root content path node.",
+              "example": "email"
+            }
+          },
+          "required": [
+            "path"
+          ]
+        },
+        "explodeEntityPath": {
+          "type": "object",
+          "description": "Params required for sub-array content.",
+          "properties": {
+            "path": {
+              "description": "path to sub-array content.",
+              "type": "string",
+              "example": "$.email.activity"
+            },
+            "skipAttributes": {
+              "type": "array",
+              "description": "list of attributes that needs to be skipped while fattening sub-array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "keepAttributes": {
+              "type": "array",
+              "description": "list of attributes that needs to be kept while fattening the sub-array.",
+              "example": "[total_items]",
+              "items": {
+                "type": "string"
+              }
+            },
+            "overrideWrapperAttribute": {
+              "type": "string",
+              "description": "rename root content path node.",
+              "example": "activity"
+            }
+          },
+          "required": [
+            "path"
+          ]
+        },
+        "paginationParams": {
+          "type": "object",
+          "description": "Params required to fetch data using pagination.",
+          "properties": {
+            "type": {
+              "description": "Pagination fetch type.",
+              "type": "string",
+              "enum": [
+                "OFFSET",
+                "POINTER"
+              ]
+            },
+            "limitName": {
+              "type": "string",
+              "description": "limit property name",
+              "example": "limit or count"
+            },
+            "limitValue": {
+              "type": "integer",
+              "description": "number of records per page to fetch.",
+              "example": "limit=10 or count=10"
+            },
+            "offsetName": {
+              "type": "string",
+              "description": "offset property name",
+              "example": "offset"
+            },
+            "pointerPath": {
+              "type": "string",
+              "description": "pointer property name",
+              "example": "pointer"
+            }
+          },
+          "required": [
+            "type",
+            "limitName",
+            "limitValue"
+          ]
+        },
+        "scheduleParams": {
+          "type": "object",
+          "description": "Params required to fetch data for batch schedule.",
+          "properties": {
+            "scheduleStartParamName": {
+              "type": "string",
+              "description": "order property name to get the order by date."
+            },
+            "scheduleEndParamName": {
+              "type": "string",
+              "description": "order property name to get the order by date."
+            },
+            "scheduleStartParamFormat": {
+              "type": "string",
+              "description": "order property name to get the order by date.",
+              "example": "yyyy-MM-ddTHH:mm:ssZ"
+            },
+            "scheduleEndParamFormat": {
+              "type": "string",
+              "description": "order property name to get the order by date.",
+              "example": "yyyy-MM-ddTHH:mm:ssZ"
+            }
+          },
+          "required": [
+            "scheduleStartParamName",
+            "scheduleEndParamName"
+          ]
         }
-      }
+      },
+      "required": [
+        "urlParams",
+        "contentPath",
+        "paginationParams",
+        "scheduleParams"
+      ]
     }
   },
   "exploreSpec": {
