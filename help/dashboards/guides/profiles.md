@@ -188,7 +188,7 @@ This widget shows the completeness and cardinality of each profile attribute sin
 
 This widget creates a histogram of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
 
-This widget shows the proportion of profiles that are of high, medium, or low completeness.There are three levels of completeness are configured by default: 
+This widget shows the proportion of profiles that are of high, medium, or low completeness. There are three levels of completeness are configured by default: 
 
 * High completeness: profiles have more than 70% attributes filled. 
 * Medium completeness: profiles have less than 70% and more than 30% attributes filled. 
@@ -202,7 +202,11 @@ This widget creates a stacked trend chart of profile completeness over time. It 
 
 The x-axis represents time, the y-axis represents the number of profiles, and the colors represent the three levels of profile completeness. 
 
-High-completeness profiles have more than 70% attributes filled. Low-completeness profiles have less than 30% attributes filled. The remaining profiles are medium-completeness profiles. 
+The three levels of completeness are:
+
+* High completeness: profiles have more than 70% attributes filled. 
+* Medium completeness: profiles have less than 70% and more than 30% attributes filled. 
+* Low completeness: profiles have less than 30% attributes filled.
 
 ![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png)
 
