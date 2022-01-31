@@ -49,7 +49,7 @@ The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness o
 
 See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
 
-The layout of this dashboard is also customizable by selecting the [!UICONTROL Modify Dashboard](../customize/modify.md) button.
+The layout of this dashboard is also customizable by selecting the [**[!UICONTROL Modify dashboard]**](../customize/modify.md) button.
 
 ## Browse profiles {#browse-profiles}
 
