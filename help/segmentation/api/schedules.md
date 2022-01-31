@@ -269,7 +269,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 | Property | Description |
 | -------- | ----------- |
 | `path` | The path of the value you want to patch. In this case, since you are updating the schedule's state, you need to set the value of `path` to "/state". |
-| `value` | The updated value of the schedule's state. This value can either be set as "active" or "inactive" to activate or deactivate the schedule. |
+| `value` | The updated value of the schedule's state. This value can either be set as "active" or "inactive" to activate or deactivate the schedule. Please note that you **cannot** disable a schedule if the IMS Organization has been enabled for streaming. |
 
 **Response**
 
