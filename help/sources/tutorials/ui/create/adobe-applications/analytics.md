@@ -27,6 +27,8 @@ It is important to understand the following key terms used throughout this docum
 * **Custom attribute**: Custom attributes are any attribute in the custom variable hierarchy in [!DNL Analytics]. Custom attributes are used within an Adobe Analytics implementation to capture specific information into a Report Suite, and they can differ in their use from Report Suite to Report Suite. Custom attributes include eVars, props, and lists. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on eVars.
 * **Any attribute in Custom field groups**: Attributes that originate from field groups created by customers are all user-defined and are considered to be neither standard nor custom attributes.
 * **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on friendly names.
+* **Defaut schema**:
+* **Custom schema**:
 
 ## Create a source connection with Adobe Analytics
 
@@ -55,6 +57,16 @@ The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTRO
 >[!IMPORTANT]
 >
 >The Data Prep support feature for the [!DNL Analytics] source is in beta.
+
+Before you can map your [!DNL Analytics] data to target XDM schema, you must first select whether you are using a default schema or a custom schema.
+
+A default schema creates a new schema on your behalf. To use a default select, select [!UICONTROL Default schema].
+
+![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+
+With a custom schema, you can choose any available schema for your [!DNL Analytics] data, as long as that schema as [!DNL Analytics field group].
+
+![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 The [!UICONTROL Mapping] page provides an interface to map source fields to their appropriate target schema fields. From here, you can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
 
