@@ -50,7 +50,7 @@ Select **[!UICONTROL Refresh credentials]** and allow for a few seconds for your
 
 >[!TIP]
 >
->Your [!DNL Data Landing Zone] credentials are set to auto-expire after 90 days and you must use new credentials to re-connect to [!DNL Data Landing Zone] after expiration. You can still continue to work with existing dataflows with your new credentials.
+>Your [!DNL Data Landing Zone] credentials are set to auto-expire after 90 days and you must use new credentials to re-connect to [!DNL Data Landing Zone] after expiration. Your dataflows in Platform are not affected by expiring credentials and you can still continue working with new and existing dataflows with your new credentials.
 
 ![view-credentials](../../../../images/tutorials/create/dlz/credentials.png)
 
