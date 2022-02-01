@@ -8,10 +8,6 @@ exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 ---
 # Create a [!DNL Snowflake] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL Snowflake] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 This tutorial provides steps for creating a [!DNL Snowflake] source connector using the Adobe Experience Platform user interface.
 
 ## Getting started
