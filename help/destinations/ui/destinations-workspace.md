@@ -68,7 +68,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 >
 > * Select the three dots in the [!UICONTROL Name] column and use the ![Activate segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]** button to send segments to that destination.
 > * Select the three dots in the [!UICONTROL Name] column and use the ![Delete button](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** button to [remove](delete-destinations.md) an existing connection to a destination.
-> * Select the three dots in the [!UICONTROL Name] column and use the ![Monitoring button](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Monitoring]** button to view activation infomation for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Select the three dots in the [!UICONTROL Name] column and use the ![View in monitoring button](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]** button to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
 
