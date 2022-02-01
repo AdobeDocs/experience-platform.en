@@ -1,5 +1,8 @@
+
 # Client Side Analytics Logging
+
 ## Overview
+
 Adobe Experience Platform Web SDK allows the customers to collect the Target related Analytics data on the client side. `Analytics Client Side Logging` means that the data that needs to be shared with Analytics will be returned to client side, so that the customer could collect it and share it with Analytics.
 This option is used by the customers that want to collect the Analytics data by themselves and send it to Analytics:
 - using Data Insertion API
@@ -102,6 +105,7 @@ This is the A4T payload that needs to be included as a `tnta` tag into the `Adob
 #Implementation
 
 ## Form Based Composer based Activities
+
 Form Based Composer Based Activities give the customer full control over the execution of the propositions.
 Here you can find how to implement them using Adobe Experience Platform Web SDK - [Manually render personalized content](../../rendering-personalization-content.md).
 
