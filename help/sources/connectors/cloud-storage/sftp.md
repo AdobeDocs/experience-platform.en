@@ -33,7 +33,7 @@ The [!DNL SFTP] source supports authentication using [!DNL Base64]-encoded OpenS
 
 ### [!DNL Windows] users
 
-If you are using a [!DNL Windows] machine, select **Apps** from the **Settings** menu and then select **Optional features**. If **OpenSSH Client** is already pre-installed in your machine, then it will be included in the **Installed features** list under **Optional features**. If not, then you must open **Powershell** and run the following command to generate your private key:
+If you are using a [!DNL Windows] machine, select **Apps** from the **Settings** menu and then select **Optional features**. If **OpenSSH Client** is already pre-installed in your machine, then it will be included in the **Installed features** list under **Optional features**. If not installed, select **Install** and then open **[!DNL Powershell]** and run the following command to generate your private key:
 
 ```shell
 PS C:\Users\lucy> ssh-keygen -t rsa
