@@ -8,7 +8,7 @@ If customer uses Analytics reporting, Adobe Target has to communicate to Analyti
 - which conversion has been reached
 
 Adobe Experience Platform Web SDK supports two types of Analytics logging used for A4T:
-- [Server Side Analytics Logging]()
-- [Client Side Analytics Logging]()
+- [Server Side Analytics Logging](analytics-server-side-logging.md)
+- [Client Side Analytics Logging](analytics-client-side-logging.md)
 
   ![](../assets/analytics-logging.png)

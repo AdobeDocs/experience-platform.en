@@ -102,15 +102,15 @@ This is an example of a `interact` response when `Analytics Client Side Logging`
 If the proposition is for an activity that has Analytics reporting then it will have a `scopeDetails.characteristics.analyticsToken`.
 This is the A4T payload that needs to be included as a `tnta` tag into the `Adobe Analytics Data Insertion API` call.
 
-#Implementation
+# Implementation
 
 ## Form Based Composer based Activities
 
 Form Based Composer Based Activities give the customer full control over the execution of the propositions.
 Here you can find how to implement them using Adobe Experience Platform Web SDK - [Manually render personalized content](../../rendering-personalization-content.md).
 
-When the customer requests propositions for a specific decision scope, the proposition returned will contain its analytics token.
-We advise that the customer chain the AEP WEB SDK `sendEvent` command and iterate through the returned propositions to execute them. At the same time they can collect the analytics tokens.
+When the customer requests propositions for a specific decision scope, the proposition returned will contain its Analytics token.
+We advise that the customer chain the AEP WEB SDK `sendEvent` command and iterate through the returned propositions to execute them. At the same time they should collect the Analytics tokens.
 This is how you can trigger a `sendEvent` for a form based composer based activity scope:
 
 ```javascript
@@ -126,7 +126,7 @@ alloy("sendEvent", {
   }
 ).then(function(results) {
   for (proposition of results.propositions) {
-    //execute the propositions and collect the analytics payload
+    //execute the propositions and collect the Analytics payload
   }
 });
 ```
@@ -204,7 +204,7 @@ This is a sample of the propositions that can be returned in `results.propositio
 ]
 ```
 
-This is how you can extract the analytics token from a proposition:
+This is how you can extract the Analytics token from a proposition:
 
 ```javascript
 function getAnalyticsPayload(proposition) {
@@ -247,19 +247,107 @@ alloy("sendEvent", {
     }
   }
 ).then(function(results) {
-  var executedPropositions = [];
   var analyticsPayload = new Set();
   for (proposition of results.propositions) {
     for (item of proposition) {
       if (item.schema === HTML_SCHEMA) {
         // 1. apply offer
         // 2. collect executed propositions and send the `decisioning.propositionDisplay` notification event
-        // 3. collect the analytics payloads
+        // 3. collect the Analytics payloads
         analyticsPayload.add(getAnalyticsPayload(proposition));
       }
     }
   }
-  
-  // send the page view Analytics hit with collected analytics payload
+  // send the page view Analytics hit with collected Analytics payload
 });
 ```
+
+
+## VEC Based Composer based Activities
+
+The VEC Based Composer based Activities offers are for activities that were authored using VEC. 
+These types of offers can be completely handled by the Adobe Experience Platform Web SDK. 
+Here are more details on how to use this feature: [Automatically rendering content](../../rendering-personalization-content.md)
+
+When `Client Side Analytics Logging` is enabled the customer should also collect the Analytics Payload. We advise that the
+customer chain the `sendEvent` command and iterate the propositions to filter propositions that Adobe Experience Platform Web SDK
+have attempted to render. Take a look at the example bellow:
+
+```javascript
+alloy("sendEvent", {
+    "renderDecisions": true,
+    "xdm": {
+      "web": {
+        "webPageDetails": {
+          "name": "Home Page"
+        }
+      }
+    }
+  }
+).then(function (results) {
+  var analyticsPayload = new Set();
+  for (proposition of results.propositions) {
+    var renderAttempted = proposition.renderAttempted;
+
+    if (renderAttempted !== true) {
+      return;
+    }
+
+    var analyticsPayload = getAnalyticsPayload(proposition);
+
+    if (analyticsPayload === undefined) {
+      return;
+    }
+
+    analyticsPayloads.add(analyticsPayload);
+  }
+  var analyticsPayloadsToken = concatenateAnalyticsPayloads(analyticsPayloads);
+  // send the page view Analytics hit with collected Analytics payload
+});
+```
+One thing to mention is that Analytics token that is passed in the Analytics hit is a `String` that contain a set of tokens delimited by `,`. 
+Here is an example of how to concatenate the Analytics payloads array:
+
+```javascript
+var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
+  if (analyticsPayloads.size > 1) {
+    return [].concat(_toConsumableArray(analyticsPayloads)).join(',');
+  }
+  return [].concat(_toConsumableArray(analyticsPayloads)).join();
+};
+
+```
+
+## Conversions
+
+Using Adobe Target activities the customer can set up different measurements on the page:
+- automatically attached to the DOM (VEC authored Activities)
+- manually attached to the DOM
+
+Both types are a delayed end user interaction on the web page. We recommend collecting the Analytics payloads using the `onBeforeEventSend` Adobe Experience Platform Web SDK hook.
+The `onBeforeEventSend` hook should be configured in the `configure` command, and it is going to be reflected across entire DataStream Configuration events.
+Here is a sample:
+
+```javascript
+alloy("configure", {
+  edgeConfigId: "datastream configuration ID",
+  orgId: "adobe ORG ID",
+  onBeforeEventSend: function (options) {
+    var xdm = options.xdm;
+    var eventType = xdm.eventType;
+    if (eventType === "decisioning.propositionInteract") {
+      (function () {
+        var analyticsPayloads = new Set();
+        var propositions = xdm._experience.decisioning.propositions;
+        propositions.forEach(function (proposition) {
+          if (proposition.scopeDetails.characteristics.analyticsToken !== undefined) {
+            analyticsPayloads.add(proposition.scopeDetails.characteristics.analyticsToken);
+          }
+        });
+        // concatenate the analytics payload set and trigger the Analytics click hit
+      })();
+    }
+  }
+});
+```
+
