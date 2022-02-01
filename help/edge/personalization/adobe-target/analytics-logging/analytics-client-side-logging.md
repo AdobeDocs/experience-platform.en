@@ -1,12 +1,15 @@
 # Client Side Analytics Logging
 ## Overview
 Adobe Experience Platform Web SDK allows the customers to collect the Target related Analytics data on the client side. `Analytics Client Side Logging` means that the data that needs to be shared with Analytics will be returned to client side, so that the customer could collect it and share it with Analytics.
-So that thee Analytics reporting works properly it is customer responsibility to send the Target related Analytics data in the Analytics hit.
+This option is used by the customers that want to collect the Analytics data by themselves and send it to Analytics:
+- using Data Insertion API
+- via AppMeasurement.js library - not supported yet
+For the Analytics reporting to work properly, the customer has to send the A4T related data retrieved from the `sendEvent` command in the Analytics hit.
 `Analytics Client Side Logging` is enabled when Analytics is disabled in the customers datastream configuration. Check the screenshot below for an example.
 
 ![](../assets/datastreams-config.png)
 
-When Target Upstream computes propositions response it will check if `Analytics Client Side Logging` is enabled then it will add to each proposition an Analytics token.
+When Target Edge computes propositions response it will check if `Analytics Client Side Logging` is enabled then it will add to each proposition an Analytics token.
 
 The flow looks similar to this:
 ![](../assets/alloy-client-side-analytics-logging.png)
@@ -92,18 +95,20 @@ This is an example of a `interact` response when `Analytics Client Side Logging`
     ]
 }
 ```
+
 If the proposition is for an activity that has Analytics reporting then it will have a `scopeDetails.characteristics.analyticsToken`.
 This is the A4T payload that needs to be included as a `tnta` tag into the `Adobe Analytics Data Insertion API` call.
 
 #Implementation
 
 ## Form Based Composer based Activities
-Form Based Composer Based Activities give the customer full control on the execution of the propositions.
+Form Based Composer Based Activities give the customer full control over the execution of the propositions.
 Here you can find how to implement them using Adobe Experience Platform Web SDK - [Manually render personalized content](../../rendering-personalization-content.md).
 
 When the customer requests propositions for a specific decision scope, the proposition returned will contain its analytics token.
 We advise that the customer chain the AEP WEB SDK `sendEvent` command and iterate through the returned propositions to execute them. At the same time they can collect the analytics tokens.
 This is how you can trigger a `sendEvent` for a form based composer based activity scope:
+
 ```javascript
 alloy("sendEvent", {
     "decisionScopes": ["a4t-test"],
@@ -121,7 +126,9 @@ alloy("sendEvent", {
   }
 });
 ```
+
 This is a sample of the propositions that can be returned in `results.propositions`:
+
 ```javascript
 [
   {
@@ -192,7 +199,9 @@ This is a sample of the propositions that can be returned in `results.propositio
   }
 ]
 ```
+
 This is how you can extract the analytics token from a proposition:
+
 ```javascript
 function getAnalyticsPayload(proposition) {
   if(proposition === unefined) {
@@ -207,35 +216,22 @@ function getAnalyticsPayload(proposition) {
   return proposition.scopeDetails.characteristics.analyticsToken;
 }
 ```
+
 A proposition can have different type of items, and we differentiate them by `item.schema`.
 These are the Form Based Composer based Activities proposition item schema that we support: 
+
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
 var MEASUREMENT_SCHEMA = "https://ns.adobe.com/personalization/measurement";
 var JSON_SCHEMA = "https://ns.adobe.com/personalization/json-content-item";
 var REDIRECT_SCHEMA = "https://ns.adobe.com/personalization/redirect-item"
 ```
+
 HTML_SCHEMA and JSON_SCHEMA are the schemas that reflect the type of the offer, while MEASUREMENT_SCHEMA reflects the metrics that needs to be applied on the page.
 
 Let us take closer a look on how we can process and collect the data to send the display and interaction events and Analytics hit.
+
 ```javascript
-var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
-var MEASUREMENT_SCHEMA = "https://ns.adobe.com/personalization/measurement";
-var JSON_SCHEMA = "https://ns.adobe.com/personalization/json-content-item";
-
-function getAnalyticsPayload(proposition) {
-  if(proposition === unefined) {
-    return;
-  }
-  if(proposition.scopeDetails === undefined) {
-    return;
-  }
-  if(proposition.scopeDetails.characteristics === undefined) {
-    return;
-  }
-  return proposition.scopeDetails.characteristics.analyticsToken;
-}
-
 alloy("sendEvent", {
     "decisionScopes": ["a4t-test"],
     "xdm": {
@@ -252,55 +248,14 @@ alloy("sendEvent", {
   for (proposition of results.propositions) {
     for (item of proposition) {
       if (item.schema === HTML_SCHEMA) {
-        // apply offer
-        document.getElementById("form-based-offer-container").innerHTML = item.data.content;
-        // collect executed propositions
-        executedPropositions.push({
-          id: proposition.id,
-          scope: proposition.scope,
-          scopeDetails: proposition.scopeDetails
-        });
+        // 1. apply offer
+        // 2. collect executed propositions and send the `decisioning.propositionDisplay` notification event
+        // 3. collect the analytics payloads
         analyticsPayload.add(getAnalyticsPayload(proposition));
-      }
-      
-      if (item.schema === MEASUREMENT_SCHEMA) {
-        // add metric to the DOM element
-        var button = document.getElementById("form-based-click-metric");
-
-        button.addEventListener("click", function (event) {
-          var executedPropositions = [{
-            id: proposition.id,
-            scope: proposition.scope,
-            scopeDetails: proposition.scopeDetails
-          }];
-          var analyticsPayload = getAnalyticsPayload(proposition);
-          getECID().then(function (identity) {
-            return triggerAnalyticsHit({ analyticsPayloads: analyticsPayload, identity: identity });
-          });
-
-          alloy("sendEvent", {
-            "xdm": {
-              "eventType": "decisioning.propositionInteract",
-              "_experience": {
-                "decisioning": {
-                  "propositions": executedPropositions
-                }
-              }
-            }
-          });
-        });
       }
     }
   }
-  alloy("sendEvent", {
-    "xdm": {
-      "eventType": "decisioning.propositionDisplay",
-      "_experience": {
-        "decisioning": {
-          "propositions": executedPropositions
-        }
-      }
-    }
-  });
+  
+  // send the page view Analytics hit with collected analytics payload
 });
 ```
