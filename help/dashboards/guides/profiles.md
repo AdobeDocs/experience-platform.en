@@ -45,7 +45,7 @@ Please refer to the [modifying dashboards](../customize/modify.md) and [widget l
 
 The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data thorough the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
 
-[The profile efficacy view.](../images/profiles/attributes-quality-assessment.png)
+[The profile efficacy dashboard.](../images/profiles/attributes-quality-assessment.png)
 
 See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
 
@@ -73,7 +73,7 @@ The dashboard will automatically select a merge policy to display, but you can c
 
 ## Union Schemas
 
-The [!UICONTROL Union Schema] tab displays the union schema for a specific XDM class. Union schemas for different XDM classes can be viewed by selecting the [!UICONTROL **Class**] dropdown.
+The [!UICONTROL Union Schema] dashboard displays the union schema for a specific XDM class. Union schemas for different XDM classes can be viewed by selecting the [!UICONTROL **Class**] dropdown.
 
 Union schemas are composed of multiple schemas that share the same class and have been enabled for Profile. The union schema enables you to see an amalgamation of every field contained within each schema that shares the same class.
 
