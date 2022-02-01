@@ -58,11 +58,11 @@ The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTRO
 
 Before you can map your [!DNL Analytics] data to target XDM schema, you must first select whether you are using a default schema or a custom schema.
 
-A default schema creates a new schema on your behalf, containing the [!DNL Analytics field group]. To use a default schema, select **[!UICONTROL Default schema]**.
+A default schema creates a new schema on your behalf, containing the [!DNL Analytics] field group. To use a default schema, select **[!UICONTROL Default schema]**.
 
 ![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
 
-With a custom schema, you can choose any available schema for your [!DNL Analytics] data, as long as that schema has [!DNL Analytics field group]. To use a custom schema, select **[!UICONTROL Custom schema]**.
+With a custom schema, you can choose any available schema for your [!DNL Analytics] data, as long as that schema has [!DNL Analytics] field group. To use a custom schema, select **[!UICONTROL Custom schema]**.
 
 ![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
