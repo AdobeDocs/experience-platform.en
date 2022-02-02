@@ -69,10 +69,10 @@ window.adobe.target.init(window, document, {
   "serverState": {},
   "decisioningMethod": "server-side",
   "legacyBrowserSupport":  false
-}
+});
 ```
 
-[Learn more]()
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
 
 
 **Configuring the Web SDK**
@@ -101,9 +101,6 @@ There are many options that can be set during configuration. All options can be 
 
 ## How to request and automatically render Page Load Target offers
 
-TODO: MENTION THAT THE SDK WILL AUTO SEND NOTIFICATIONS
-
-
 **Using at.js**
 
 Using at.js 2.x, if you enable the setting `pageLoadEnabled`, the library will trigger a call to Target Edge with `execute -> pageLoad`. If all the settings are set to the default values, no custom coding is necessary.Once at.js is added to the page and loaded by the browser, a Target Edge call will be executed.
@@ -114,7 +111,7 @@ Using at.js 2.x, if you enable the setting `pageLoadEnabled`, the library will t
 
 Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) can be retrieved and rendered automatically by the SDK.
 
-To request and automatically render Target offers, use the `sendEvent` command and set the `renderDecisions` option to `true`. Doing so forces the SDK to automatically render any personalized content that’s eligible for automatic rendering.
+To request and automatically render Target offers, use the `sendEvent` command and set the `renderDecisions` option to `true`. Doing so forces the SDK to automatically render any personalized content that’s eligible for automatic rendering. 
 
 Example:
 
@@ -133,13 +130,88 @@ alloy("sendEvent", {
   }
 });
 ```
+AEP WEB SDK automatically sends a notification with the offers that were executed by the WEB SDK, this is an example of how a notification request payload looks like:
+
+```json
+{
+  "events": [{
+      "xdm": {
+        "_experience": {
+          "decisioning": {
+            "propositions": [
+              {
+                "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+                "scope": "cart",
+                "scopeDetails": {
+                  "decisionProvider": "TGT",
+                  "activity": {
+                    "id": "127019"
+                  },
+                  "experience": {
+                    "id": "0"
+                  },
+                  "strategies": [
+                    {
+                      "step": "entry",
+                      "algorithmID": "0",
+                      "trafficType": "0"
+                    },
+                    {
+                      "step": "display",
+                      "algorithmID": "0",
+                      "trafficType": "0"
+                    }
+                  ],
+                  "characteristics": {
+                    "eventToken": "bKMxJ8dCR1XlPfDCx+2vSGqipfsIHvVzTQxHolz2IpSCnQ9Y9OaLL2gsdrWQTvE54PwSz67rmXWmSnkXpSSS2Q=="
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "eventType": "display",
+        "web": {
+          "webPageDetails": {
+            "viewName": "cart",
+            "URL": "https://alloyio.com/personalizationSpa/cart"
+          },
+          "webReferrer": {
+            "URL": ""
+          }
+        },
+        "device": {
+          "screenHeight": 800,
+          "screenWidth": 1280,
+          "screenOrientation": "landscape"
+        },
+        "environment": {
+          "type": "browser",
+          "browserDetails": {
+            "viewportWidth": 1280,
+            "viewportHeight": 284
+          }
+        },
+        "placeContext": {
+          "localTime": "2021-12-10T15:50:34.467+02:00",
+          "localTimezoneOffset": -120
+        },
+        "timestamp": "2021-12-10T13:50:34.467Z",
+        "implementationDetails": {
+          "name": "https://ns.adobe.com/experience/alloy",
+          "version": "2.6.2",
+          "environment": "browser"
+        }
+      }
+    }
+  ]
+}
+```
 
 [Learn more](../rendering-personalization-content.md)
 
 
 ## How to request and NOT automatically render Page Load Target offers
-
-TODO: LINK TO THE TRACKING EVENTS SECTION
 
 **Using at.js**
 
@@ -169,17 +241,14 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-TODO: NEED MORE INFO AROUND EACH EXAMPLE
-[Learn more]()
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
 
 
 **Using Web SDK**
 
-TODO: We need to document the `decisionsScope` somewhere.
+Execute a `sendEvent` command with a special scope under `decisionScopes`: `__view__`. We use this scope as a signal to fetch all the page-load activities from Target and prefetch all views. The Web SDK will also try to evaluate all the VEC view based activities. Disabling view prefetching is not supported in the Web SDK yet.
 
-Execute a `sendEvent` command with a special scope under `decisionScopes`: `__view__`. We use this scope as a signal to fetch all the page-load activities from Target. The Web SDK will also try to evaluate all the VEC view based activities. Disabling view prefetching is not supported in the Web SDK yet.
-
-To access any personalization content, you may provide a callback function, which will be called after the SDK receives a successful response from the server. Your callback is provided a result object, which may contain a propositions property containing any returned personalization content.
+To access any personalization content, you may provide a callback function, which will be called after the SDK receives a successful response from the server. Your callback is provided a result object, which may contain propositions property containing any returned personalization content.
 
 Example:
 
@@ -189,7 +258,33 @@ alloy("sendEvent", {
     decisionScopes: ["__view__"]
   }).then(function(result) {
     if (result.propositions) {
-      // Manually render propositions and send "display" event
+      result.propositions.forEach(proposition => {
+        proposition.items.forEach(item => {
+          if (item.schema === HTML_SCHEMA) {
+            // manually apply offer
+            document.getElementById("form-based-offer-container").innerHTML =
+              item.data.content;
+            const executedPropositions = [
+              {
+                id: proposition.id,
+                scope: proposition.scope,
+                scopeDetails: proposition.scopeDetails
+              }
+            ];
+          // manually send the display notification event, so that Target/Analytics impressions aare increased
+            alloy("sendEvent",{
+              "xdm": {
+                "eventType": "decisioning.propositionDisplay",
+                "_experience": {
+                  "decisioning": {
+                    "propositions": executedPropositions
+                  }
+                }
+              }
+            });
+          }
+        });
+      });
     }
   });
 ```
@@ -232,49 +327,126 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Learn more]()
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
 
 
 **Using Web SDK**
 
 You can fetch Form Based Composer based activities by using the `sendEvent` command and passing the mbox names under the `decisionScopes` option. The `sendEvent` command will return a promise that gets resolved with an object containing the requested activities / propositions:
+This is how the `propositions` array looks like:
+
+```javascript
+[
+  {
+    "id": "AT:eyJhY3Rpdml0eUlkIjoiNDM0Njg5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+    "scope": "hero-banner",
+    "scopeDetails": {
+      "decisionProvider": "TGT",
+      "activity": {
+        "id": "434689"
+      },
+      "experience": {
+        "id": "0"
+      },
+      "strategies": [
+        {
+          "algorithmID": "0",
+          "trafficType": "0"
+        }
+      ],
+      "characteristics": {
+        "eventToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw=="
+      }
+    },
+    "items": [
+      {
+        "id": "1184844",
+        "schema": "https://ns.adobe.com/personalization/html-content-item",
+        "meta": {
+          "geo.state": "bucuresti",
+          "activity.id": "434689",
+          "experience.id": "0",
+          "activity.name": "a4t test form based activity",
+          "offer.id": "1184844",
+          "profile.tntId": "04608610399599289452943468926942466370-pybgfJ"
+        },
+        "data": {
+          "id": "1184844",
+          "format": "text/html",
+          "content": "<div> analytics impressions </div>"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AT:eyJhY3Rpdml0eUlkIjoiNDM0Njg5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+    "scope": "hero-banner",
+    "scopeDetails": {
+      "decisionProvider": "TGT",
+      "activity": {
+        "id": "434689"
+      },
+      "characteristics": {
+        "eventToken": "E0gb6q1+WyFW3FMbbQJmrg=="
+      }
+    },
+    "items": [
+      {
+        "id": "434689",
+        "schema": "https://ns.adobe.com/personalization/measurement",
+        "data": {
+          "type": "click",
+          "format": "application/vnd.adobe.target.metric"
+        }
+      }
+    ]
+  }
+]
+```
 
 Example:
 
 ```javascript
 alloy("sendEvent", {
-    xdm: {...},
-    decisionScopes: ["hero-banner"]
-  }).then(function(result) {
-    if (result.propositions) {
-      // Format of result.propositions:
-      /*
-        [
-            {
-                "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
-                "scope": "hero-banner",
-                "items": [
-                {
-                    "id": "11223344",
-                    "schema": "https://ns.adobe.com/personalization/html-content-item",
-                    "data": {
-                        "content": "<div>50% off your order!</div>",
-                        "id": "4433222",
-                        "format": "text/html"
-                    },
-                    "meta": {...}
-                }
-                ],
-                "scopeDetails": {...},
-                "renderAttempted": false
-            }
-        ]
-      */
-    }
-  });
-```
+  xdm: { ...},
+  decisionScopes: ["hero-banner"]
+}).then(function (result) {
+  var propositions = result.propositions;
 
-TODO: DOCUMENT HOW TO SEND A DISPLAY NOTIFICATION AND UPDATE EXAMPLES ABOVE!!!
+  if (propositions) {
+    // Find the discount proposition, if it exists.
+    for (var i = 0; i < propositions.length; i++) {
+      var proposition = propositions[i];
+      for (var j = 0; j < proposition.items; j++) {
+        var item = proposition.items[j];
+        if (item.schema === HTML_SCHEMA) {
+          // apply offer
+          document.getElementById("form-based-offer-container").innerHTML =
+            item.data.content;
+          const executedPropositions = [
+            {
+              id: proposition.id,
+              scope: proposition.scope,
+              scopeDetails: proposition.scopeDetails
+            }
+          ];
+
+          alloy("sendEvent", {
+            "xdm": {
+              "eventType": "decisioning.propositionDisplay",
+              "_experience": {
+                "decisioning": {
+                  "propositions": executedPropositions
+                }
+              }
+            }
+          });
+        }
+      }
+    }
+  }
+});
+```
 
 [Learn more](../rendering-personalization-content.md#manually-rendering-content)
 
@@ -329,7 +501,7 @@ Example 2:
 adobe.target.sendNotifications({ 
     request: {
        notifications: [{
-          ...
+          ...,
           mbox: {
             name: "some-mbox"
           },
@@ -412,8 +584,53 @@ alloy("sendEvent", {
   }
 });
 ```
+Example 2 - Track a `decisioning.propositionInteract` event after a click metric occurs:
 
-TODO: EXAMPLE 2 FOR CLICK TRACKING
+```javascript
+
+alloy("sendEvent", {
+  xdm: { ...},
+  decisionScopes: ["hero-banner"]
+}).then(function (result) {
+  var propositions = result.propositions;
+
+  if (propositions) {
+    // Find the discount proposition, if it exists.
+    for (var i = 0; i < propositions.length; i++) {
+      var proposition = propositions[i];
+      for (var j = 0; j < proposition.items; j++) {
+        var item = proposition.items[j];
+
+        if (item.schema === "https://ns.adobe.com/personalization/measurement") {
+          // add metric to the DOM element
+          const button = document.getElementById("form-based-click-metric");
+
+          button.addEventListener("click", event => {
+            const executedPropositions = [
+              {
+                id: proposition.id,
+                scope: proposition.scope,
+                scopeDetails: proposition.scopeDetails
+              }
+            ];
+            // send the click track event
+            alloy("sendEvent", {
+              "xdm": {
+                "eventType": "decisioning.propositionInteract",
+                "_experience": {
+                  "decisioning": {
+                    "propositions": executedPropositions
+                  }
+                }
+              }
+            });
+          });
+        }
+      }
+    }
+  }
+});
+```
 
 [Learn more](../rendering-personalization-content.md#manually-rendering-content)
 
@@ -438,7 +655,7 @@ adobe.target.triggerView("homeView")
 
 **Using Web SDK**
 
-In order to trigger or signal a single page application View Change, set the `web.webPageDetails.viewName` property under the `xdm` option of the `sendEvent` command.
+In order to trigger or signal a single page application View Change, set the `web.webPageDetails.viewName` property under the `xdm` option of the `sendEvent` command. The AEP WEB SDK will check the view cache, if there are offers for the `viewName` specified in `sendEvent` it will execute them and send a display notification event.
 
 Example:
 
@@ -472,7 +689,7 @@ Example:
 ```javascript
 document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) { 
   console.log("Request succeeded", e.detail); 
-}; 
+}); 
 ```
 
 
@@ -530,23 +747,198 @@ alloy("sendEvent", {
 
 **Using at.js**
 
-**Using Web SDK**
+Using at.js you can manage flicker by setting `bodyHidingEnabled: true` so that at.js is the one that would take care of 
+pre-hiding the personalized containers before it fetches and applies the DOM changes. 
+The page sections that contains personalized content can be pre-hidden by overriding at.js `bodyHiddenStyle`.
+By default `bodyHiddenStyle` hides the whole HTML `body`.
+Both settings can be overridden using `window.targetGlobalSettings`. `window.targetGlobalSettings` should be placed before loading at.js.
 
+**Using Web SDK**
+Using Web SDK the customer can set up their pre-hiding style in the configure command, like in the example bellow:
+
+```javascript
+alloy("configure", {
+  edgeConfigId: "configurationId",
+  orgId: "orgId@AdobeOrg",
+  debugEnabled: true,
+  prehidingStyle: "body { opacity: 0 !important }"
+});
+
+```
+
+When loading the Web SDK async we recommend that the following snippet is injected in the page before Web SDK is injected:
+
+```html
+<script>
+  !function(e,a,n,t){
+  if (a) return;
+  var i=e.head;if(i){
+  var o=e.createElement("style");
+  o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),
+  setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
+  (document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 3000);
+</script>
+```
 
 ## How is A4T being handled
 
 **Using at.js**
+There are 2 types of A4T logging that are supported using at.js:
+- Analytics Client Side Logging
+- Analytics Server Side Logging
+
+### Analytics Client Side Logging
+
+Example 1: Using Target Global Setting
+
+Analytics Client Side Logging can be enabled by setting `analyticsLogging: client_side` in the at.js settings or by overriding the `window.targetglobalSettings` object.
+When this option is set up, the format of the payload that is returned looks like the following:
+
+```json
+{
+  "analytics": {
+    "payload": {
+      "pe": "tnt",
+      "tnta": "167169:0:0|0|100,167169:0:0|2|100,167169:0:0|1|100"
+    }
+  }
+}
+```
+
+The payload can then be forwarded to Analytics via the Data Insertion API.
+ 
+Example 2: Configuring it in every `getOffers` function:
+
+```javascript
+adobe.target.getOffers({
+      request: {
+        experienceCloud: {
+          analytics: {
+            logging: "client_side"
+          }
+        },
+        prefetch: {
+          mboxes: [{
+            index: 0,
+            name: "a1-serverside-xt"
+          }]
+        }
+      }
+    })
+    .then(console.log)
+```
+This is how the response payload looks like: 
+
+```json
+{
+  "prefetch": {
+    "mboxes": [{
+      "index": 0,
+      "name": "a1-serverside-xt",
+      "options": [{
+        "content": "<img src=\"http://s7d2.scene7.com/is/image/TargetAdobeTargetMobile/L4242-xt-usa?tm=1490025518668&fit=constrain&hei=491&wid=980&fmt=png-alpha\"/>",
+        "type": "html",
+        "eventToken": "n/K05qdH0MxsiyH4gX05/2qipfsIHvVzTQxHolz2IpSCnQ9Y9OaLL2gsdrWQTvE54PwSz67rmXWmSnkXpSSS2Q==",
+        "responseTokens": {
+          "profile.memberlevel": "0",
+          "geo.city": "bucharest",
+          "activity.id": "167169",
+          "experience.name": "USA Experience",
+          "geo.country": "romania"
+        }
+      }],
+      "analytics": {
+        "payload": {
+          "pe": "tnt",
+          "tnta": "167169:0:0|0|100,167169:0:0|2|100,167169:0:0|1|100"
+        }
+      }
+    }]
+  }
+}
+
+```
+The Analytics payload (`tnta` token) should be included in the Analytics hit using [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+
+### Analytics Server Side Logging
+
+Analytics Server Side Logging can be enabled by setting `analyticsLogging: server_side` in the at.js settings or by overriding the `window.targetglobalSettings` object.
+Then the data flows as following:
+
+![](assets/a4t-server-side-atjs.png)
+
+[Learn More](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=en)
 
 **Using Web SDK**
+Web SDK also supports:
+- Analytics Client Side logging
+- Analytics Server Side logging
+
+### Analytics Client Side Logging
+
+Analytics Client Side Logging is enabled when Adobe Analytics is disabled for that DataStream configuration. 
+
+![](assets/analytics-disabled-datastream-config.png)
+
+The customer has access to the Analytics token (`tnta`) that needs to be shared with Analytics using [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 
+in by chaining the `sendEvent` command and iterate through the resulting propositions array.
+
+Example:
+```javascript
+alloy("sendEvent", {
+    "renderDecisions": true,
+    "xdm": {
+      "web": {
+        "webPageDetails": {
+          "name": "Home Page"
+        }
+      }
+    }
+  }
+).then(function (results) {
+  var analyticsPayloads = new Set();
+  for (var i = 0; i < results.propositions.length; i++) {
+    var proposition = results.propositions[i];
+    var renderAttempted = proposition.renderAttempted;
+
+    if (renderAttempted === true) {
+      var analyticsPayload = getAnalyticsPayload(proposition);
+      if (analyticsPayload !== undefined) {
+        analyticsPayloads.add(analyticsPayload);
+      }
+    }
+  }
+  var analyticsPayloadsToken = concatenateAnalyticsPayloads(analyticsPayloads);
+  // send the page view Analytics hit with collected Analytics payload using Data Insertion API
+});
+```
+
+Here is a diagram to show how data flows when Analytics Client Side is enabled:
+
+![](assets/analytics-client-side-logging.png)
+
+### Analytics Server Side Logging
+
+Analytics Server Side Logging is enabled when Analytics is enabled for that DataStream configuration.
+
+![](assets/analytics-enabled-datastream-config.png)
+
+When Server Side Analytics Logging is enabled the A4T payload that needs to be shared with Analytics so that the Analytics reporting show 
+correct impressions and conversions is shared at the Experience Edge level, so that the customer doesn't have to do any additional processing.
+
+Here is how data flows into our systems when Server Side Analytics Logging is enabled:
+
+![](assets/analytics-server-side-logging.png)
+
 
 
 ## How to set Target Global Settings
 
 **Using at.js**
 
-You can override settings in the at.js library using `targetGlobalSettings()`, rather than configuring the settings in the Target Standard/Premium UI or by using REST APIs.
+You can override settings in the at.js library using `window.targetGlobalSettings`, rather than configuring the settings in the Target Standard/Premium UI or by using REST APIs.
 
-This function can be defined before at.js is loaded or in Administration > Implementation > Edit at.js Settings > Code Settings > Library Header.
+The override should be defined before at.js is loaded or in Administration > Implementation > Edit at.js Settings > Code Settings > Library Header.
 
 Example:
 
@@ -563,16 +955,44 @@ window.targetGlobalSettings = {
 
 **Using Web SDK**
 
-This feature is not supported yet.
+This feature is not supported.
 
-
-## How to update Target Profile
-
+## How to update Target Profile attributes
 
 **Using at.js**
 
-TODO: Populate this section
+Example 1:
 
+```javascript
+adobe.target.getOffer({
+   mbox: "target-global-mbox",
+   params: {
+     "profile.name": "test",
+     "profile.gender": "female"
+   },
+   success: console.log,
+   error: console.error
+});
+```
+
+Example 2:
+
+```javascript
+adobe.target.getOffers({
+    request: {
+      execute: {
+        pageLoad: {
+          profileParameters: {
+            name: "test",
+            gender: "female"
+          }
+        }
+    }
+  }
+})
+.then(console.log)
+.catch(console.error);
+```
 
 **Using Web SDK**
 
@@ -597,18 +1017,77 @@ alloy("sendEvent", {
 
 ## How do I debug my Target implementation
 
-TODO: Populate
-
 **Using at.js**
+
+At.js exposes these debugging features:
+- Mbox Disable - disable Target from fetching and rendering to check if the page is broken without Target interactions
+- Mbox Debug - at.js logs every action
+- Target Trace - with a mbox trace token generated in Bullseye a trace object with details that participated in the decisioning process is available under `window.___target_trace` object
+
+Note: All these debugging features are available with enhanced capabilities in [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 **Using Web SDK**
 
+With Web SDK the customer has more debugging capabilities:
+- using Griffon
+- Web SDK debug enabled
+- use Web SDK monitoring hooks
+- use Adobe Experience Platform Debugger
+- Target Trace
 
 ## How do I use Target Recommendations
 
-TODO: Populate
+Example 1:
 
-**Using at.js**
+```javascript
+adobe.target.getOffer({
+   mbox: "target-global-mbox",
+   params: {
+     "entity.productName": "T-shirt",
+     "entity.productId": "1234"
+   },
+   success: console.log,
+   error: console.error
+});
+```
+
+Example 2:
+
+```javascript
+adobe.target.getOffers({
+    request: {
+      execute: {
+        pageLoad: {
+          parameters: {
+            "entity.productName": "T-shirt",
+            "entity.productId": "1234"
+          }
+        }
+    }
+  }
+})
+.then(console.log)
+.catch(console.error);
+```
 
 **Using Web SDK**
+
+To send Recommendation data, use the `sendEvent` command and set the `data.__adobe.target` property, prefixing the key names using `entity`.
+
+Example:
+
+```javascript
+alloy("sendEvent", {
+  renderDecisions: true,
+  data: {
+    __adobe: {
+      target: {
+        "entity.productName": "T-shirt",
+        "entity.productId": "1234"
+      }
+    }
+  }
+});
+```
+
 
