@@ -746,6 +746,7 @@ alloy("sendEvent", {
 
 
 **Using at.js**
+
 Using at.js you can manage flicker by setting `bodyHidingEnabled: true` so that at.js is the one that would take care of 
 pre-hiding the personalized containers before it fetches and applies the DOM changes. 
 The page sections that contains personalized content can be pre-hidden by overriding at.js `bodyHiddenStyle`.
@@ -753,7 +754,31 @@ By default `bodyHiddenStyle` hides the whole HTML `body`.
 Both settings can be overridden using `window.targetGlobalSettings`. `window.targetGlobalSettings` should be placed before loading at.js.
 
 **Using Web SDK**
+Using Web SDK the customer can set up their pre-hiding style in the configure command, like in the example bellow:
 
+```javascript
+alloy("configure", {
+  edgeConfigId: "configurationId",
+  orgId: "orgId@AdobeOrg",
+  debugEnabled: true,
+  prehidingStyle: "body { opacity: 0 !important }"
+});
+
+```
+
+When loading the Web SDK async we recommend that the following snippet is injected in the page before Web SDK is injected:
+
+```html
+<script>
+  !function(e,a,n,t){
+  if (a) return;
+  var i=e.head;if(i){
+  var o=e.createElement("style");
+  o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),
+  setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
+  (document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 3000);
+</script>
+```
 
 ## How is A4T being handled
 
@@ -765,8 +790,10 @@ There are 2 types of A4T logging that are supported using at.js:
 ### Analytics Client Side Logging
 
 Example 1: Using Target Global Setting
+
 Analytics Client Side Logging can be enabled by setting `analyticsLogging: client_side` in the at.js settings or by overriding the `window.targetglobalSettings` object.
 When this option is set up, the format of the payload that is returned looks like the following:
+
 ```json
 {
   "analytics": {
@@ -777,9 +804,11 @@ When this option is set up, the format of the payload that is returned looks lik
   }
 }
 ```
+
 The payload can then be forwarded to Analytics via the Data Insertion API.
  
 Example 2: Configuring it in every `getOffers` function:
+
 ```javascript
 adobe.target.getOffers({
       request: {
@@ -799,6 +828,7 @@ adobe.target.getOffers({
     .then(console.log)
 ```
 This is how the response payload looks like: 
+
 ```json
 {
   "prefetch": {
@@ -828,8 +858,10 @@ This is how the response payload looks like:
 }
 
 ```
+The Analytics payload (`tnta` token) should be included in the Analytics hit using [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 ### Analytics Server Side Logging
+
 Analytics Server Side Logging can be enabled by setting `analyticsLogging: server_side` in the at.js settings or by overriding the `window.targetglobalSettings` object.
 Then the data flows as following:
 
@@ -838,6 +870,66 @@ Then the data flows as following:
 [Learn More](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=en)
 
 **Using Web SDK**
+Web SDK also supports:
+- Analytics Client Side logging
+- Analytics Server Side logging
+
+### Analytics Client Side Logging
+
+Analytics Client Side Logging is enabled when Adobe Analytics is disabled for that DataStream configuration. 
+
+![](assets/analytics-disabled-datastream-config.png)
+
+The customer has access to the Analytics token (`tnta`) that needs to be shared with Analytics using [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 
+in by chaining the `sendEvent` command and iterate through the resulting propositions array.
+
+Example:
+```javascript
+alloy("sendEvent", {
+    "renderDecisions": true,
+    "xdm": {
+      "web": {
+        "webPageDetails": {
+          "name": "Home Page"
+        }
+      }
+    }
+  }
+).then(function (results) {
+  var analyticsPayloads = new Set();
+  for (var i = 0; i < results.propositions.length; i++) {
+    var proposition = results.propositions[i];
+    var renderAttempted = proposition.renderAttempted;
+
+    if (renderAttempted === true) {
+      var analyticsPayload = getAnalyticsPayload(proposition);
+      if (analyticsPayload !== undefined) {
+        analyticsPayloads.add(analyticsPayload);
+      }
+    }
+  }
+  var analyticsPayloadsToken = concatenateAnalyticsPayloads(analyticsPayloads);
+  // send the page view Analytics hit with collected Analytics payload using Data Insertion API
+});
+```
+
+Here is a diagram to show how data flows when Analytics Client Side is enabled:
+
+![](assets/analytics-client-side-logging.png)
+
+### Analytics Server Side Logging
+
+Analytics Server Side Logging is enabled when Analytics is enabled for that DataStream configuration.
+
+![](assets/analytics-enabled-datastream-config.png)
+
+When Server Side Analytics Logging is enabled the A4T payload that needs to be shared with Analytics so that the Analytics reporting show 
+correct impressions and conversions is shared at the Experience Edge level, so that the customer doesn't have to do any additional processing.
+
+Here is how data flows into our systems when Server Side Analytics Logging is enabled:
+
+![](assets/analytics-server-side-logging.png)
+
 
 
 ## How to set Target Global Settings
@@ -924,7 +1016,9 @@ alloy("sendEvent", {
 
 
 ## How do I debug my Target implementation
+
 **Using at.js**
+
 At.js exposes these debugging features:
 - Mbox Disable - disable Target from fetching and rendering to check if the page is broken without Target interactions
 - Mbox Debug - at.js logs every action
@@ -942,6 +1036,7 @@ With Web SDK the customer has more debugging capabilities:
 - Target Trace
 
 ## How do I use Target Recommendations
+
 Example 1:
 
 ```javascript
