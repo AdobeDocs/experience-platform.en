@@ -56,6 +56,16 @@ The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTRO
 >
 >The Data Prep support feature for the [!DNL Analytics] source is in beta.
 
+Before you can map your [!DNL Analytics] data to target XDM schema, you must first select whether you are using a default schema or a custom schema.
+
+A default schema creates a new schema on your behalf, containing the [!DNL Analytics] field group. To use a default schema, select **[!UICONTROL Default schema]**.
+
+![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+
+With a custom schema, you can choose any available schema for your [!DNL Analytics] data, as long as that schema has [!DNL Analytics] field group. To use a custom schema, select **[!UICONTROL Custom schema]**.
+
+![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
+
 The [!UICONTROL Mapping] page provides an interface to map source fields to their appropriate target schema fields. From here, you can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
 
 >[!TIP]
