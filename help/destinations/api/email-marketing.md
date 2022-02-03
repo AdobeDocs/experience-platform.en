@@ -65,7 +65,7 @@ You can find accompanying reference documentation for all the API calls in this 
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 
-![Destination steps overview step 1](../assets/api/email-marketing/step1.png)
+![Destination steps overview step 1](../assets/api/batch-destination/step1.png)
 
 As a first step, you should decide which destination to activate data to. To begin with, perform a call to request a list of available destinations that you can connect and activate segments to. Perform the following GET request to the `connectionSpecs` endpoint to return a list of available destinations:
 
@@ -102,7 +102,7 @@ A successful response contains a list of available destinations and their unique
 
 ## Connect to your [!DNL Experience Platform] data {#connect-to-your-experience-platform-data}
 
-![Destination steps overview step 2](../assets/api/email-marketing/step2.png)
+![Destination steps overview step 2](../assets/api/batch-destination/step2.png)
 
 Next, you must connect to your [!DNL Experience Platform] data, so you can export profile data and activate it in your preferred destination. This consists of two substeps which are described below.
 
@@ -198,7 +198,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ## Connect to batch destination {#connect-to-batch-destination}
 
-![Destination steps overview step 3](../assets/api/email-marketing/step3.png)
+![Destination steps overview step 3](../assets/api/batch-destination/step3.png)
 
 In this step, you are setting up a connection to your desired batch cloud storage or email marketing destination. This consists of two substeps which are described below.
 
@@ -319,7 +319,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ## Create a dataflow {#create-dataflow}
 
-![Destination steps overview step 4](../assets/api/email-marketing/step4.png)
+![Destination steps overview step 4](../assets/api/batch-destination/step4.png)
 
 Using the flow spec, source connection, and target connection IDs that you obtained in the previous steps, you can now create a dataflow between your [!DNL Experience Platform] data and the destination where you will export data files. Think of this step as constructing the pipeline, through which data will later flow, between [!DNL Experience Platform] and your desired destination.
 
@@ -389,7 +389,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 ## Activate data to your new destination {#activate-data}
 
-![Destination steps overview step 5](../assets/api/email-marketing/step5.png)
+![Destination steps overview step 5](../assets/api/batch-destination/step5.png)
 
 Having created all the connections and the dataflow, now you can activate your profile data to the destination platform. In this step, you select which segments and which profile attributes to export to the destination.
 
@@ -491,7 +491,7 @@ Look for a 202 OK response. No response body is returned. To validate that the r
 
 ## Validate the dataflow {#validate-dataflow}
 
-![Destination steps overview step 6](../assets/api/email-marketing/step6.png)
+![Destination steps overview step 6](../assets/api/batch-destination/step6.png)
 
 As a final step in the tutorial, you should validate that the segments and profile attributes have indeed been correctly mapped to the dataflow.
 
