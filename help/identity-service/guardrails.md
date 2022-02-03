@@ -13,8 +13,6 @@ The following Experience Platform services are involved with modeling Identity d
 
 * [Identities](home.md): Bridge identities from disparate data sources as they are ingested into Platform.
 * [[!DNL Real-time Customer Profile]](../profile/home.md): Create unified consumer profiles using data from multiple sources.
-* [Schemas](../xdm/home.md): Experience Data Model (XDM) schemas are the standardized framework by which Platform organizes customer experience data.
-* [Segments](../segmentation/home.md): The segmentation engine within Platform is used to create segments from your customer profiles based on customer behaviors and attributes.
 
 ## Data model limits
 
