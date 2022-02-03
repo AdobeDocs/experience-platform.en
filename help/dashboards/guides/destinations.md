@@ -88,25 +88,31 @@ Adobe provides multiple widgets to asses the completeness of the segments availa
 To learn more about each of the segment efficacy widgets, select the name of a widget from the following list:
 
 * [[!UICONTROL Recently Activated Segments by Destination]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Audience Size Trends by Segments Linked to a Destination]](#audience-size-trends-by-segments-linked-to-a-destination)
+* [[!UICONTROL Audience Size Trends]](#audience-size-trends)
 * [[!UICONTROL Segments not Linked to Destination by Identity]](#segments-not-linked-to-destination-by-identity)
-* [[!UICONTROL Segments Linked to Destination by Identity]](#segments-linked-to-destination-by-identity)
+* [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 
 ### [!UICONTROL Recently Activated Segments by Destination] {#recently-activated-segments-by-destination}
 
-Displays the top five most recently activated segments according to a destination.
+Displays the top five most recently activated segments according to a destination. It provides a similar function to XXX but the data displayed only applies to the selected destination.
 
-### [!UICONTROL Audience Size Trends by Segments Linked to a Destination] {#audience-size-trends-by-segments-linked-to-a-destination}
+### [!UICONTROL Audience Size Trends] {#audience-size-trends}
 
-Illustrates an audience trend for a segment mapped to a destination over the past 30 days, 90 days, and 12 months.
+The Audience size trend widget depicts the relationship of the profile count over a time period for a segment that has been mapped to that destination account. The widget uses a line graph to illustrate the number of profiles contained in the segment that are being sent on a daily basis to the 'destination account'.
+A time period of the past 30 days, 90 days, or 12 months of the audience trend can be adjusted using the first dropdown menu.
+The second dropdown menu lists every available segment that can be sent to the ‘destination account’ chosen at the top of the dashboard. 
 
 ### [!UICONTROL Segments not Linked to Destination by Identity] {#segments-not-linked-to-destination-by-identity}
 
 Lists the top five segments by identity count for a given destination and identity. 
 
-### [!UICONTROL Segments Linked to Destination by Identity] {#segments-linked-to-destination-by-identity}
+### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
 
-List the top five **mapped** segments by identity count for a given destination and identity. 
+This widget provides a top five list of **mapped** segments. The list is ordered from high to low according to the number of source IDs contained within the segments. The destination ID to be counted is selected from the dropdown menu below the widget title. The destination IDs available from the drop down in the widget will change according to the destination account filter chosen at the top of the overview dashboard.
+
+<!-- 1345 -> great opportunity for a tooltip on that Widget to explain that It is destination ID in the dropdown and source ID in the counted column. -->
+
+The Mapped segments by identity widget highlights at a glance, the likelihood of successfully targeting profile opportunities for a campaign within the chosen destination. An efficient targeted campaign does not depend on the number of profiles sent to the destination but rather the number of source IDs that are likely to be matched with the destination IDs to provide useful and actionable data.  
 
 ## Next steps
 
