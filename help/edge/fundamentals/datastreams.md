@@ -19,7 +19,7 @@ You can create and manage datastreams in the Data Collection UI by selecting **[
 
 >[!NOTE]
 >
->While you can access the [!UICONTROL Datastreams] tab regardless of whether you use Platform's tag management capabilities, you must have developer permissions to manage datastreams themselveså. See the [user permissions](../../tags/ui/administration/user-permissions.md) article in the tags documentation for more details.
+>While you can access the [!UICONTROL Datastreams] tab regardless of whether you use Platform's tag management capabilities, you must have developer permissions to manage datastreams themselves. See the [user permissions](../../tags/ui/administration/user-permissions.md) article in the tags documentation for more details.
 
 Create a datastream by clicking on **[!UICONTROL New Datastream]** in the top-right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment. Available settings are detailed below.
 
