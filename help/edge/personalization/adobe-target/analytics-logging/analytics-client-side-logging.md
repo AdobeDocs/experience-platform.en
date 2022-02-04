@@ -3,7 +3,8 @@
 
 ## Overview
 
-Adobe Experience Platform Web SDK allows the customers to collect the Target related Analytics data on the client side. `Analytics Client Side Logging` means that the data that needs to be shared with Analytics will be returned to client side, so that the customer could collect it and share it with Analytics.
+Adobe Experience Platform Web SDK allows the customers to collect the Target related Analytics data on the client side. 
+`Analytics Client Side Logging` means that the data that needs to be shared with Analytics will be returned to client side, so that the customers are able to collect it and share it with Analytics.
 This option is used by the customers that want to collect the Analytics data by themselves and send it to Analytics:
 - using Data Insertion API
 - via AppMeasurement.js library - not supported yet
@@ -100,7 +101,7 @@ This is an example of a `interact` response when `Analytics Client Side Logging`
 ```
 
 If the proposition is for an activity that has Analytics reporting then it will have a `scopeDetails.characteristics.analyticsToken`.
-This is the A4T payload that needs to be included as a `tnta` tag into the `Adobe Analytics Data Insertion API` call.
+This is the A4T payload that needs to be included as a `tnta` tag into the [Adobe Analytics Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
 
 # Implementation
 
@@ -110,6 +111,7 @@ Form Based Composer Based Activities give the customer full control over the exe
 Here you can find how to implement them using Adobe Experience Platform Web SDK - [Manually render personalized content](../../rendering-personalization-content.md).
 
 When the customer requests propositions for a specific decision scope, the proposition returned will contain its Analytics token.
+
 We advise that the customer chain the AEP WEB SDK `sendEvent` command and iterate through the returned propositions to execute them. At the same time they should collect the Analytics tokens.
 This is how you can trigger a `sendEvent` for a form based composer based activity scope:
 
@@ -125,13 +127,14 @@ alloy("sendEvent", {
     }
   }
 ).then(function(results) {
-  for (proposition of results.propositions) {
+  for (var i = 0; i < results.propositions.length; i++) {
+    var proposition = propositions[i];
     //execute the propositions and collect the Analytics payload
   }
 });
 ```
 
-This is a sample of the propositions that can be returned in `results.propositions`:
+This is an example of what `results.propositions` might contain:
 
 ```javascript
 [
@@ -204,11 +207,11 @@ This is a sample of the propositions that can be returned in `results.propositio
 ]
 ```
 
-This is how you can extract the Analytics token from a proposition:
+This is a sample function on how you can extract the Analytics token from a proposition:
 
 ```javascript
 function getAnalyticsPayload(proposition) {
-  if(proposition === unefined) {
+  if(proposition === undefined) {
     return;
   }
   if(proposition.scopeDetails === undefined) {
@@ -222,7 +225,7 @@ function getAnalyticsPayload(proposition) {
 ```
 
 A proposition can have different type of items, and we differentiate them by `item.schema`.
-These are the Form Based Composer based Activities proposition item schema that we support: 
+These are the Form Based Composer based Activities proposition item schemas that we support: 
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -231,9 +234,13 @@ var JSON_SCHEMA = "https://ns.adobe.com/personalization/json-content-item";
 var REDIRECT_SCHEMA = "https://ns.adobe.com/personalization/redirect-item"
 ```
 
-HTML_SCHEMA and JSON_SCHEMA are the schemas that reflect the type of the offer, while MEASUREMENT_SCHEMA reflects the metrics that needs to be applied on the page.
+`HTML_SCHEMA` and `JSON_SCHEMA` are the schemas that reflect the type of the offer, while `MEASUREMENT_SCHEMA` reflects the metrics that should be attached to a DOM element.
 
-Let us take closer a look on how we can process and collect the data to send the display and interaction events and Analytics hit.
+This is an example of:
+- how we process an event that fetches Form-Based Composer based activity offers
+- when we apply the content changes to the page
+- how to send the `decisioning.propositionDisplay` notification event
+- how to collect the Analytics tokens and send the Analytics Hit using [Adobe Analytics Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 ```javascript
 alloy("sendEvent", {
@@ -253,8 +260,7 @@ alloy("sendEvent", {
       if (item.schema === HTML_SCHEMA) {
         // 1. apply offer
         // 2. collect executed propositions and send the `decisioning.propositionDisplay` notification event
-        // 3. collect the Analytics payloads
-        analyticsPayload.add(getAnalyticsPayload(proposition));
+        // 3. collect the Analytics tokens
       }
     }
   }
@@ -262,10 +268,11 @@ alloy("sendEvent", {
 });
 ```
 
+A working example you can find here: [AEP WEB SDK repo](https://github.com/adobe/alloy).
 
 ## VEC Based Composer based Activities
 
-The VEC Based Composer based Activities offers are for activities that were authored using VEC. 
+The VEC Based Composer based Activities offers are the offers that were authored using VEC. 
 These types of offers can be completely handled by the Adobe Experience Platform Web SDK. 
 Here are more details on how to use this feature: [Automatically rendering content](../../rendering-personalization-content.md)
 
@@ -285,12 +292,15 @@ alloy("sendEvent", {
     }
   }
 ).then(function (results) {
-  var analyticsPayload = new Set();
-  for (proposition of results.propositions) {
+  var analyticsPayloads = new Set();
+  
+  for (var i = 0; i < results.propositions.length; i++) {
+  
+    var proposition = propositions[i];
     var renderAttempted = proposition.renderAttempted;
 
     if (renderAttempted !== true) {
-      return;
+      continue;
     }
 
     var analyticsPayload = getAnalyticsPayload(proposition);
