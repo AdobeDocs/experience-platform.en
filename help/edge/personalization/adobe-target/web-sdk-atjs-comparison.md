@@ -1110,3 +1110,17 @@ alloy("sendEvent", {
 
 **Using Web SDK**
 
+
+## How do I enable A4T for click events in SPA
+
+**Using at.js**
+
+**Using Web SDK**
+
+
+## How do I prefetch mboxes
+
+**Using at.js**
+
+**Using Web SDK**
+
