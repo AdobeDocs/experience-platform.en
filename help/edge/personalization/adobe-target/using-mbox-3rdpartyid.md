@@ -14,7 +14,7 @@ When a visitor logs in to a company’s site, the company typically creates an I
 
 # How to use `mbox3rdPartyId` with the Web SDK
 
-### Step 1: Configure the `Target Third Party ID Namespace` in your Datastream, using the ID Namespace you would like to use as an mbox 3rd party ID. 
+### Step 1: Configure the `Target Third Party ID Namespace` in your [Datastream](../../fundamentals/datastreams.md), using the ID Namespace you would like to use as an mbox 3rd party ID. 
 [Learn more about ID namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
 
 ![](assets/mbox3rdpartyid.png)
