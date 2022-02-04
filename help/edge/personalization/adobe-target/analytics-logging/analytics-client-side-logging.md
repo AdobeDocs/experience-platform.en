@@ -107,9 +107,9 @@ This is an example of a `interact` response when `Analytics Client Side Logging`
 If the proposition is for an activity that has Analytics reporting then it will have a `scopeDetails.characteristics.analyticsToken`.
 This is the A4T payload that needs to be included as a `tnta` tag into the [Adobe Analytics Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
 
-# Implementation
+## Implementation
 
-## Form Based Composer based Activities
+### Form Based Composer based Activities
 
 Form Based Composer Based Activities give the customer full control over the execution of the propositions.
 Here you can find how to implement them using Adobe Experience Platform Web SDK - [Manually render personalized content](../../rendering-personalization-content.md).
@@ -275,7 +275,7 @@ alloy("sendEvent", {
 
 A full working example you can be found here: [AEP WEB SDK repo](https://github.com/adobe/alloy).
 
-## Visual Experience Composer Based composed Activities
+### Visual Experience Composer Based composed Activities
 
 The VEC Based Composer based Activities offers are the offers that were authored using Visual Experience Composer. 
 These types of offers can be completely handled by the Adobe Experience Platform Web SDK. 
@@ -316,6 +316,7 @@ alloy("sendEvent", {
   // send the page view Analytics hit with collected Analytics payload
 });
 ```
+
 One thing to mention is that Analytics token that is passed in the Analytics hit is a `String` that contain a set of tokens delimited by `,`. 
 Here is an example of how to concatenate the Analytics tokens array:
 
@@ -329,7 +330,7 @@ var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyti
 
 ```
 
-## Click Track events
+### Click Track events
 
 Using Adobe Target activities the customer can set up different metrics on the page:
 - automatically attached to the DOM (VEC authored Activities)
