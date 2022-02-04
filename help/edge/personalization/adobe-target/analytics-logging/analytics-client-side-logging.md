@@ -337,6 +337,7 @@ Using Adobe Target activities the customer can set up different metrics on the p
 
 Both types are a delayed end user interaction on the web page. We recommend collecting the Analytics payloads using the `onBeforeEventSend` Adobe Experience Platform Web SDK hook.
 The `onBeforeEventSend` hook should be configured in the `configure` command, and it is going to be reflected across entire DataStream Configuration events.
+
 Here is a sample:
 
 ```javascript
