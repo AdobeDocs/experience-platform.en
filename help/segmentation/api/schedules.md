@@ -364,7 +364,7 @@ In a cron expression string, the first field represents the seconds, the second 
 | ---------- | -------- | --------------- | -------------------------- |
 | Seconds | Yes | 0-59 | `, - * /` |
 | Minutes | Yes | 0-59 | `, - * /` |
-| Hours | Yes | 0-23 | `, - * /`
+| Hours | Yes | 0-23 | `, - * /` |
 | Day of month | Yes | 1-31 | `, - * ? / L W` |
 | Month | Yes | 1-12, JAN-DEC | `, - * /` |
 | Day of week | Yes | 1-7, SUN-SAT | `, - * ? / L #` |
