@@ -8,4 +8,4 @@ Adobe Experience Platform Web SDK improves the A4T functionality, since there is
 ![](../assets/datastream-config-enabled-analytics.png)
 
 This is how data flows when Server Side Analytics Logging is enabled:
-![](../assets/alloy-analytics-server-side-logging.png)
+![](../assets/analytics-server-side-logging.png)

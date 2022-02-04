@@ -5,18 +5,22 @@
 
 Adobe Experience Platform Web SDK allows the customers to collect the Target related Analytics data on the client side. 
 `Analytics Client Side Logging` means that the data that needs to be shared with Analytics will be returned to client side, so that the customers are able to collect it and share it with Analytics.
-This option is used by the customers that want to collect the Analytics data by themselves and send it to Analytics:
-- using Data Insertion API
-- via AppMeasurement.js library - not supported yet
+This option is used by the customers that want to collect the Analytics data by themselves and send it to Analytics. This can be achieved using:
+- Data Insertion API
+- AppMeasurement.js
+
+NOTE: The AppMeasurement.js route is not fully working, but it will be available in the near future.
+
 For the Analytics reporting to work properly, the customer has to send the A4T related data retrieved from the `sendEvent` command in the Analytics hit.
-`Analytics Client Side Logging` is enabled when Analytics is disabled in the customers datastream configuration. Check the screenshot below for an example.
+We consider `Analytics Client Side Logging` is enabled when Analytics is disabled in the customers datastream configuration. Check the screenshot below for an example.
 
 ![](../assets/datastreams-config.png)
 
 When Target Edge computes propositions response it will check if `Analytics Client Side Logging` is enabled then it will add to each proposition an Analytics token.
 
 The flow looks similar to this:
-![](../assets/alloy-client-side-analytics-logging.png)
+
+![](../assets/analytics-client-side-logging.png)
 
 This is an example of a `interact` response when `Analytics Client Side Logging` is enabled:
 
@@ -207,7 +211,7 @@ This is an example of what `results.propositions` might contain:
 ]
 ```
 
-This is a sample function on how you can extract the Analytics token from a proposition:
+This is a sample function, showing how we can extract the Analytics token from a proposition:
 
 ```javascript
 function getAnalyticsPayload(proposition) {
@@ -236,11 +240,12 @@ var REDIRECT_SCHEMA = "https://ns.adobe.com/personalization/redirect-item"
 
 `HTML_SCHEMA` and `JSON_SCHEMA` are the schemas that reflect the type of the offer, while `MEASUREMENT_SCHEMA` reflects the metrics that should be attached to a DOM element.
 
-This is an example of:
-- how we process an event that fetches Form-Based Composer based activity offers
-- when we apply the content changes to the page
-- how to send the `decisioning.propositionDisplay` notification event
-- how to collect the Analytics tokens and send the Analytics Hit using [Adobe Analytics Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Here are the steps that have to be executed when using Form Base Composer based activities with AEP Web SDK:
+1. Send event that fetches Form-Based Composer based activity offers 
+2. Apply the content changes to the page 
+3. Send the `decisioning.propositionDisplay` notification event 
+4. Collect the Analytics tokens
+5. Send the Analytics Hit using [Adobe Analytics Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 ```javascript
 alloy("sendEvent", {
@@ -268,15 +273,15 @@ alloy("sendEvent", {
 });
 ```
 
-A working example you can find here: [AEP WEB SDK repo](https://github.com/adobe/alloy).
+A full working example you can be found here: [AEP WEB SDK repo](https://github.com/adobe/alloy).
 
-## VEC Based Composer based Activities
+## Visual Experience Composer Based composed Activities
 
-The VEC Based Composer based Activities offers are the offers that were authored using VEC. 
+The VEC Based Composer based Activities offers are the offers that were authored using Visual Experience Composer. 
 These types of offers can be completely handled by the Adobe Experience Platform Web SDK. 
 Here are more details on how to use this feature: [Automatically rendering content](../../rendering-personalization-content.md)
 
-When `Client Side Analytics Logging` is enabled the customer should also collect the Analytics Payload. We advise that the
+When auto rendering is enabled the customer can collect the Analytics tokens from the propositions that were executed on the page. We advise that the
 customer chain the `sendEvent` command and iterate the propositions to filter propositions that Adobe Experience Platform Web SDK
 have attempted to render. Take a look at the example bellow:
 
@@ -299,38 +304,34 @@ alloy("sendEvent", {
     var proposition = propositions[i];
     var renderAttempted = proposition.renderAttempted;
 
-    if (renderAttempted !== true) {
-      continue;
+    if (renderAttempted === true) {
+      var analyticsPayload = getAnalyticsPayload(proposition);
+      
+      if (analyticsPayload !== undefined) {
+        analyticsPayloads.add(analyticsPayload);
+      }
     }
-
-    var analyticsPayload = getAnalyticsPayload(proposition);
-
-    if (analyticsPayload === undefined) {
-      return;
-    }
-
-    analyticsPayloads.add(analyticsPayload);
   }
   var analyticsPayloadsToken = concatenateAnalyticsPayloads(analyticsPayloads);
   // send the page view Analytics hit with collected Analytics payload
 });
 ```
 One thing to mention is that Analytics token that is passed in the Analytics hit is a `String` that contain a set of tokens delimited by `,`. 
-Here is an example of how to concatenate the Analytics payloads array:
+Here is an example of how to concatenate the Analytics tokens array:
 
 ```javascript
 var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
   if (analyticsPayloads.size > 1) {
-    return [].concat(_toConsumableArray(analyticsPayloads)).join(',');
+    return [].concat(analyticsPayloads).join(',');
   }
-  return [].concat(_toConsumableArray(analyticsPayloads)).join();
+  return [].concat(analyticsPayloads).join();
 };
 
 ```
 
-## Conversions
+## Click Track events
 
-Using Adobe Target activities the customer can set up different measurements on the page:
+Using Adobe Target activities the customer can set up different metrics on the page:
 - automatically attached to the DOM (VEC authored Activities)
 - manually attached to the DOM
 
@@ -342,20 +343,18 @@ Here is a sample:
 alloy("configure", {
   edgeConfigId: "datastream configuration ID",
   orgId: "adobe ORG ID",
-  onBeforeEventSend: function (options) {
-    var xdm = options.xdm;
-    var eventType = xdm.eventType;
+  onBeforeEventSend: function(options) {
+    const xdm = options.xdm;
+    const eventType = xdm.eventType;
     if (eventType === "decisioning.propositionInteract") {
-      (function () {
-        var analyticsPayloads = new Set();
-        var propositions = xdm._experience.decisioning.propositions;
-        propositions.forEach(function (proposition) {
-          if (proposition.scopeDetails.characteristics.analyticsToken !== undefined) {
-            analyticsPayloads.add(proposition.scopeDetails.characteristics.analyticsToken);
-          }
-        });
-        // concatenate the analytics payload set and trigger the Analytics click hit
-      })();
+      const analyticsPayloads = new Set();
+      const propositions = xdm._experience.decisioning.propositions;
+
+      for (var i = 0; i < propositions.length; i++) {
+        var proposition = propositions[i];
+        analyticsPayloads.add(getAnalyticsPayload(proposition));
+      }
+      // trigger the Analytics hit
     }
   }
 });
