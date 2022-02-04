@@ -1037,6 +1037,8 @@ With Web SDK the customer has more debugging capabilities:
 
 ## How do I use Target Recommendations
 
+**Using at.js**
+
 Example 1:
 
 ```javascript
@@ -1070,6 +1072,9 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=en)
+
+
 **Using Web SDK**
 
 To send Recommendation data, use the `sendEvent` command and set the `data.__adobe.target` property, prefixing the key names using `entity`.
@@ -1090,4 +1095,18 @@ alloy("sendEvent", {
 });
 ```
 
+
+## How do I use third party IDs
+
+**Using at.js**
+
+**Using Web SDK**
+
+
+
+## How do I set property tokens
+
+**Using at.js**
+
+**Using Web SDK**
 
