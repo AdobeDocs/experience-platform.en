@@ -3,6 +3,7 @@ keywords: delete destination account, destination accounts, how to delete accoun
 title: Delete destination accounts
 type: Tutorial
 description: This tutorial lists the steps to delete destination accounts in the Adobe Experience Platform UI
+exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
 ---
 # Delete destination accounts
 
