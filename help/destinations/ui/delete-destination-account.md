@@ -40,6 +40,6 @@ Follow the steps below to delete existing destination accounts.
 
 ## Next steps
 
-By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to delete existing accounts.
+By following this tutorial, you have successfully used the destinations workspace to delete existing accounts.
 
 For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, please refer to the tutorial on [deleting connections using the Flow Service API](../api/delete-destination-account.md)
