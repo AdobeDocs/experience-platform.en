@@ -100,6 +100,20 @@ A successful response contains a list of available destinations and their unique
 }
 ```
 
+For your reference, the table below contains the connection specs for commonly used batch destinations:
+
+| Destination | Connection spec ID |
+---------|----------|
+| Adobe Campaign | 0b23e41a-cb4a-4321-a78f-3b654f5d7d97 |
+| Amazon S3 | 4890fc95-5a1f-4983-94bb-e060c08e3f81 |
+| Azure Blob | e258278b-a4cf-43ac-b158-4fa0ca0d948b |
+| Oracle Eloqua | c1e44b6b-e7c8-404b-9031-58f0ef760604 |
+| Oracle Responsys | a5e28ddf-e265-426e-83a1-9d03a3a6822b |
+| Salesforce Marketing Cloud | f599a5b3-60a7-4951-950a-cc4115c7ea27 |
+| SFTP | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 |
+
+{style="table-layout:auto"}
+
 ## Connect to your [!DNL Experience Platform] data {#connect-to-your-experience-platform-data}
 
 ![Destination steps overview step 2](../assets/api/batch-destination/step2.png)
@@ -107,8 +121,7 @@ A successful response contains a list of available destinations and their unique
 Next, you must connect to your [!DNL Experience Platform] data, so you can export profile data and activate it in your preferred destination. This consists of two substeps which are described below.
 
 1. First, you must perform a call to authorize access to your data in [!DNL Experience Platform], by setting up a base connection.
-2. Then, using the base connection ID, perform another call in which you create a source connection, which establishes the connection to your [!DNL Experience Platform] data.
-
+2. Then, using the base connection ID, perform another call in which you create a *source connection*, which establishes the connection to your [!DNL Experience Platform] data.
 
 ### Authorize access to your data in [!DNL Experience Platform]
 
@@ -137,8 +150,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Profile Store - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Response**
 
@@ -203,7 +215,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 In this step, you are setting up a connection to your desired batch cloud storage or email marketing destination. This consists of two substeps which are described below.
 
 1. First, you must perform a call to authorize access to the destination platform, by setting up a base connection.
-2. Then, using the base connection ID, you will make another call in which you create a target connection, which specifies the location in your storage account where the exported data files will be delivered, as well as the format of the data that will be exported.
+2. Then, using the base connection ID, you will make another call in which you create a *target connection*, which specifies the location in your storage account where the exported data files will be delivered, as well as the format of the data that will be exported.
 
 ### Authorize access to the batch destination {#authorize-access-to-batch-destination}
 
@@ -239,7 +251,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for your desired batch destination. You obtained this ID in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
 *   `{S3 or SFTP}`: fill in the desired connection type for this destination. In the [destination catalog](../catalog/overview.md), scroll to your preferred destination to see if S3 and/or SFTP connection types are supported. 
 *   `{ACCESS_ID}`: Your access ID for your [!DNL Amazon] S3 storage location.
 *   `{SECRET_KEY}`: Your secret key for your [!DNL Amazon] S3 storage location.
@@ -374,6 +386,14 @@ curl -X POST \
 *   `{FLOW_SPEC_ID}`: Use the flow spec ID for the batch destination that you want to connect to. To retrieve the flow spec ID, perform a GET operation on the `flowspecs` endpoint, as shown in the [flow specs API reference documentation](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In the response, look for `upsTo` and copy the corresponding ID of the batch destination that you want to connect to. For example, for Adobe Campaign, look for `upsToCampaign` and copy the `id` parameter.
 *   `{SOURCE_CONNECTION_ID}`: Use the source connection ID you obtained in the step [Connect to your Experience Platform](#connect-to-your-experience-platform-data).
 *   `{TARGET_CONNECTION_ID}`: Use the target connection ID you obtained in the step [Connect to batch destination](#connect-to-batch-destination).
+
+For your reference, the table below contains the flow spec IDs for commonly used batch destinations:
+
+| Destination | Flow spec ID |
+---------|----------|
+| All cloud storage destinations (Amazon S3, SFTP, Azure Blob) and Oracle Eloqua | 71471eba-b620-49e4-90fd-23f1fa0174d8 |
+| Oracle Responsys | 51d675ce-e270-408d-91fc-22717bdf2148 |
+| Salesforce Marketing Cloud | 493b2bd6-26e4-4167-ab3b-5e910bba44f0 |
 
 **Response**
 
@@ -523,28 +543,154 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 The returned response should include in the `transformations` parameter the segments and profile attributes that you submitted in the previous step. A sample `transformations` parameter in the response could look like below:
 
 ```json
-"transformations": [
-    {
-        "name": "GeneralTransform",
-        "params": {
-            "profileSelectors": {
-                "selectors": []
-            },
-            "segmentSelectors": {
-                "selectors": [
-                    {
-                        "type": "PLATFORM_SEGMENT",
-                        "value": {
-                            "name": "Men over 50",
-                            "description": "",
-                            "id": "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02"
-                        }
-                    }
-                ]
-            }
-        }
-    }
-],
+"transformations":[
+   {
+      "name":"GeneralTransform",
+      "params":{
+         "profileSelectors":{
+            "selectors":[
+               {
+                  "type":"JSON_PATH",
+                  "value":{
+                     "path":"homeAddress.countryCode",
+                     "operator":"EXISTS",
+                     "mapping":{
+                        "sourceType":"text/x.schema-path",
+                        "source":"homeAddress.countryCode",
+                        "destination":"homeAddress.countryCode",
+                        "identity":false,
+                        "primaryIdentity":false,
+                        "functionVersion":0,
+                        "copyModeMapping":false,
+                        "sourceAttribute":"homeAddress.countryCode",
+                        "destinationXdmPath":"homeAddress.countryCode"
+                     }
+                  }
+               },
+               {
+                  "type":"JSON_PATH",
+                  "value":{
+                     "path":"person.name.firstName",
+                     "operator":"EXISTS",
+                     "mapping":{
+                        "sourceType":"text/x.schema-path",
+                        "source":"person.name.firstName",
+                        "destination":"person.name.firstName",
+                        "identity":false,
+                        "primaryIdentity":false,
+                        "functionVersion":0,
+                        "copyModeMapping":false,
+                        "sourceAttribute":"person.name.firstName",
+                        "destinationXdmPath":"person.name.firstName"
+                     }
+                  }
+               },
+               {
+                  "type":"JSON_PATH",
+                  "value":{
+                     "path":"person.name.lastName",
+                     "operator":"EXISTS",
+                     "mapping":{
+                        "sourceType":"text/x.schema-path",
+                        "source":"person.name.lastName",
+                        "destination":"person.name.lastName",
+                        "identity":false,
+                        "primaryIdentity":false,
+                        "functionVersion":0,
+                        "copyModeMapping":false,
+                        "sourceAttribute":"person.name.lastName",
+                        "destinationXdmPath":"person.name.lastName"
+                     }
+                  }
+               },
+               {
+                  "type":"JSON_PATH",
+                  "value":{
+                     "path":"personalEmail.address",
+                     "operator":"EXISTS",
+                     "mapping":{
+                        "sourceType":"text/x.schema-path",
+                        "source":"personalEmail.address",
+                        "destination":"personalEmail.address",
+                        "identity":false,
+                        "primaryIdentity":false,
+                        "functionVersion":0,
+                        "copyModeMapping":false,
+                        "sourceAttribute":"personalEmail.address",
+                        "destinationXdmPath":"personalEmail.address"
+                     }
+                  }
+               },
+               {
+                  "type":"JSON_PATH",
+                  "value":{
+                     "path":"segmentMembership.status",
+                     "operator":"EXISTS",
+                     "mapping":{
+                        "sourceType":"text/x.schema-path",
+                        "source":"segmentMembership.status",
+                        "destination":"segmentMembership.status",
+                        "identity":false,
+                        "primaryIdentity":false,
+                        "functionVersion":0,
+                        "copyModeMapping":false,
+                        "sourceAttribute":"segmentMembership.status",
+                        "destinationXdmPath":"segmentMembership.status"
+                     }
+                  }
+               }
+            ],
+            "mandatoryFields":[
+               "person.name.firstName",
+               "person.name.lastName"
+            ],
+            "primaryFields":[
+               {
+                  "fieldType":"ATTRIBUTE",
+                  "attributePath":"personalEmail.address"
+               }
+            ]
+         },
+         "segmentSelectors":{
+            "selectors":[
+               {
+                  "type":"PLATFORM_SEGMENT",
+                  "value":{
+                     "id":"9f7d37fd-7039-4454-94ef-2b0cd6c3206a",
+                     "name":"Interested in Mountain Biking",
+                     "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                     "exportMode":"DAILY_FULL_EXPORT",
+                     "schedule":{
+                        "frequency":"ONCE",
+                        "startDate":"2021-12-20",
+                        "startTime":"17:00"
+                     },
+                     "createTime":"1640016962",
+                     "updateTime":"1642534355"
+                  }
+               },
+               {
+                  "type":"PLATFORM_SEGMENT",
+                  "value":{
+                     "id":"25768be6-ebd5-45cc-8913-12fb3f348613",
+                     "name":"Loyalty Segment",
+                     "filenameTemplate":"%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+                     "exportMode":"FIRST_FULL_THEN_INCREMENTAL",
+                     "schedule":{
+                        "frequency":"EVERY_6_HOURS",
+                        "startDate":"2021-12-22",
+                        "endDate":"2021-12-31",
+                        "startTime":"17:00"
+                     },
+                     "createTime":"1640016962",
+                     "updateTime":"1642534355"
+                  }
+               }
+            ]
+         }
+      }
+   }
+]
 ```
 
 ## Next steps
