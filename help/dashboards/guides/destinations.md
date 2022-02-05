@@ -81,38 +81,56 @@ For more information on working with segments in Experience Platform, please beg
 
 ![](../images/destinations/recently-activated-segments.png)
 
-## (Alpha) Segment efficacy widgets
+## (Alpha) Optional destination widgets
 
 Adobe provides multiple widgets to asses the completeness of the segments available for your data analysis.
 
-To learn more about each of the segment efficacy widgets, select the name of a widget from the following list:
+To learn more about each of the optional segment widgets, select the name of a widget from the following list:
 
-* [[!UICONTROL Recently Activated Segments by Destination]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Audience Size Trends]](#audience-size-trends)
-* [[!UICONTROL Segments not Linked to Destination by Identity]](#segments-not-linked-to-destination-by-identity)
+* [[!UICONTROL Recently activated segments by destination]](#recently-activated-segments-by-destination)
+* [[!UICONTROL Audience size trend]](#audience-size-trends)
+* [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 
-### [!UICONTROL Recently Activated Segments by Destination] {#recently-activated-segments-by-destination}
+### [!UICONTROL Recently activated segments by destination] {#recently-activated-segments-by-destination}
 
-Displays the top five most recently activated segments according to a destination. It provides a similar function to XXX but the data displayed only applies to the selected destination.
+The [!UICONTROL Recently activated segments by destination] widget displays the top five most recently activated segments in descending order according to the destination chosen in the overview dropdown. It provides a similar function to [!UICONTROL Recently activated segments] widget but the data displayed **only** applies to the selected destination.
 
-### [!UICONTROL Audience Size Trends] {#audience-size-trends}
+This widget contains two metrics, the segment name, and the date that the segment was last activated to the destination. The data displayed is correct as of the last daily snapshot. 
 
-The Audience size trend widget depicts the relationship of the profile count over a time period for a segment that has been mapped to that destination account. The widget uses a line graph to illustrate the number of profiles contained in the segment that are being sent on a daily basis to the 'destination account'.
+You can view the segment's details by selecting the name of a segment from the list shown.
+
+[Recently activated segments by destination widget.](../images/destinations/recently-activated-segments-by-destination.png)
+
+### [!UICONTROL Audience size trend] {#audience-size-trend}
+
+The [!UICONTROL Audience size trend] widget depicts the relationship of the profile count over a time period for a segment that has been mapped to that destination account. The widget uses a line graph to illustrate the number of profiles contained in the segment that are being sent on a daily basis to the destination account.
 A time period of the past 30 days, 90 days, or 12 months of the audience trend can be adjusted using the first dropdown menu.
-The second dropdown menu lists every available segment that can be sent to the ‘destination account’ chosen at the top of the dashboard. 
+The second dropdown menu lists every available segment that can be sent to the destination account chosen at the top of the dashboard. 
 
-### [!UICONTROL Segments not Linked to Destination by Identity] {#segments-not-linked-to-destination-by-identity}
+[Audience size trend widget.](../images/destinations/audience-size-trend.png)
 
-Lists the top five segments by identity count for a given destination and identity. 
+### [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
+
+This widget highlights segments that are the most beneficial to map to the chosen destination account based on the chosen ID. The [!UICONTROL Unmapped segments by identity] widget lists the top five **unmapped** segments ranked by descending identity count for a given destination and identity. 
+
+The destination ID dropdown filters your available segments. The filter IDs listed in the dropdown change depending on the destination account selected at the top of the overview page.
+
+The identities column counts the number of source IDs within the segment that could map to the ID chosen in the widget ID dropdown. 
+
+<!-- This requires a tooltip on to explain that it is a destination ID in the dropdown. -->
+
+[Unmapped segments by identity widget.](../images/destinations/unmapped-segments-by-identity.png)
 
 ### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
 
 This widget provides a top five list of **mapped** segments. The list is ordered from high to low according to the number of source IDs contained within the segments. The destination ID to be counted is selected from the dropdown menu below the widget title. The destination IDs available from the drop down in the widget will change according to the destination account filter chosen at the top of the overview dashboard.
 
-<!-- 1345 -> great opportunity for a tooltip on that Widget to explain that It is destination ID in the dropdown and source ID in the counted column. -->
+<!-- This requires a tooltip to explain that it is destination ID in the dropdown and source ID in the counted column. -->
 
-The Mapped segments by identity widget highlights at a glance, the likelihood of successfully targeting profile opportunities for a campaign within the chosen destination. An efficient targeted campaign does not depend on the number of profiles sent to the destination but rather the number of source IDs that are likely to be matched with the destination IDs to provide useful and actionable data.  
+[Mapped segments by identity widget.](../images/destinations/mapped-segments-by-identity.png)
+
+The [!UICONTROL Mapped segments by identity] widget highlights at a glance, the likelihood of successfully targeting profile opportunities for a campaign within the chosen destination. An efficient targeted campaign does not depend on the number of profiles sent to the destination but rather the number of source IDs that are likely to be matched with the destination IDs to provide useful and actionable data.  
 
 ## Next steps
 
