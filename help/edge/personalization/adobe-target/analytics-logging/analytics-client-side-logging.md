@@ -3,9 +3,9 @@
 
 ## Overview
 
-Adobe Experience Platform Web SDK allows the customers to collect the Target related Analytics data on the client side. 
+Adobe Experience Platform Web SDK allows you to collect the Target related Analytics data on the client side. 
 `Analytics Client Side Logging` means that the data that needs to be shared with Analytics will be returned to client side, so that the customers are able to collect it and share it with Analytics.
-This option is used by the customers that want to collect the Analytics data by themselves and send it to Analytics. This can be achieved using:
+This option is used by the customers who want to collect the Analytics data by themselves and send it to Analytics. This can be achieved using:
 - Data Insertion API
 - AppMeasurement.js
 
