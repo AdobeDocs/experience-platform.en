@@ -14,7 +14,7 @@ This document provides answers to frequently asked questions about Attribution A
 
 Loading errors in Google Chrome's incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
 
-<img src='.\images\faq\error.PNG' width=500 /><br />
+<img src='./images/faq/error.PNG' width=500 /><br />
 
 ### Recommended fix
 
