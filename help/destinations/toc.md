@@ -151,7 +151,8 @@ feature: Destinations
     * Destination SDK functionality {#functionality}
       * [Configuration options](./destination-sdk/configuration-options.md)
       * [Destination configuration](./destination-sdk/destination-configuration.md)
-      * [Server and template specs](./destination-sdk/server-and-template-configuration.md)
+      * [Streaming destinations server and template specs](./destination-sdk/server-and-template-configuration.md)
+      * [File-based destinations server and file specs](./destination-sdk/server-and-file-configuration.md)
       * [Message format](./destination-sdk/message-format.md)
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
       * Authentication {#authentication}
