@@ -272,8 +272,8 @@ This is an example configuration of a fictional file-based destination. The dest
 |`name` | String | Indicates the title of your destination in the Experience Platform catalog. |
 |`description` | String | Provide a description for your destination card in the Experience Platform destinations catalog. Aim for no more than 4-5 sentences. |
 |`status` | String | Indicates the lifecycle status of the destination card. Accepted values are `TEST`, `PUBLISHED`, and `DELETED`. Use `TEST` when you first configure your destination. |
-|`maxProfileAttributes`||Indicates the maximum number of profile attributes customers can select for the destination. Default value is `9000`.|
-|`maxIdentityAttributes`||Indicates the maximum number of identity namespaces customers can select for the destination. Default value is `1000`.|
+|`maxProfileAttributes`|String|Indicates the maximum number of profile attributes customers can select for the destination. Default value is `9000`.|
+|`maxIdentityAttributes`|String|Indicates the maximum number of identity namespaces customers can select for the destination. Default value is `1000`.|
 
 {style="table-layout:auto"}
 

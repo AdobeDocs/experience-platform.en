@@ -89,11 +89,11 @@ The server specs for file-based destinations can be configured in Adobe Experien
 |`destinationServerType`|String|Set this value according to your destination platform. Supported values: <ul><li>`FILE_BASED_S3` for Amazon S3 destinations</li><li>`FILE_BASED_SFTP` for SFTP destinations</li><li>`FILE_BASED_ADLS_GEN2` for [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destinations</li><li>`FILE_BASED_AZURE_BLOB` for Azure Blob destinations</li><li>`FILE_BASED_DLZ` for [!DNL Data Landing Zone] destinations</ul>|
 |`fileBasedSftpDestination.filenameSuffix.templatingStrategy`| String| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`fileBasedSftpDestination.filenameSuffix.value`|||
-|`fileBasedSftpDestination.rootDirectory.templatingStrategy`| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
+|`fileBasedSftpDestination.rootDirectory.templatingStrategy`|String| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`fileBasedSftpDestination.rootDirectory.value`|String|||
-|`fileBasedSftpDestination.moveToWhenCompleted.templatingStrategy`| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
+|`fileBasedSftpDestination.moveToWhenCompleted.templatingStrategy`|String| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`fileBasedSftpDestination.moveToWhenCompleted.value`|String|||
-|`port`|Integer||
+|`port`|Integer|The SFTP file server port.|
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
 |`qos`|String||
 
@@ -182,6 +182,7 @@ The server specs for file-based destinations can be configured in Adobe Experien
     }
 }
 ```
+
 |Parameter|Type|Description|
 |---|---|---|
 |`name`|String|The name of your destination connection.|
@@ -192,6 +193,8 @@ The server specs for file-based destinations can be configured in Adobe Experien
 |`qos`|String||
 
 ## File-based destinations file configuration {#file-configuration}
+
+This section describes the file formatting settings for the exported files.
 
 ```json
 "fileConfigurations": {
@@ -264,16 +267,16 @@ The server specs for file-based destinations can be configured in Adobe Experien
 |---|---|---|---|
 |`compression.value`|Optional|Compression codec to use when saving data to file. Supported values: `none`, `bzip2`, `gzip`, `lz4`, `snappy`, and `deflate`.|`none`|
 |`fileType.value`|Optional|Specifies the output file format. Supported values: `csv`, `parquet`, and `json`.|`csv`|
-|`Quote`|Optional|Sets a single character used for escaping quoted values where the separator can be part of the value.|`u0000`|
-|`quoteAll`|Optional|Indicates whether all values should always be enclosed in quotes. Default is to only escape values containing a quote character.|`false`|
-|`escape`|Optional|Sets a single character used for escaping quotes inside an already quoted value.|`\`|
-|`escapeQuotes`|Optional|Indicates whether values containing quotes should always be enclosed in quotes. Default is to escape all values containing a quote character.|`true`|
-|`header`|Optional|Indicates whether to write the names of columns as the first line.|`true`|
-|`ignoreLeadingWhiteSpace`|Optional|Indicates whether to trim leading white spaces from values.|`true`|
-|`ignoreTrailingWhiteSpace`|Optional|Indicates whether to trim trailing whitespaces from values.|`true`|
-|`nullValue`|Optional|Sets the string representation of a null value. |`""`|
-|`dateFormat`|Optional|Indicates the date format.|`yyyy-MM-dd`|
-|`timestampFormat`|Optional|Sets the string that indicates a timestamp format.|`yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]`|
-|`charToEscapeQuoteEscaping`|Optional|Sets a single character used for escaping the escape for the quote character.|`\` when the escape and quote characters are different. `\0` when the escape and quote character are the same.|
-|`emptyValue`|Optional|Sets the string representation of an empty value.|`""`|
-|`lineSep`|Optional|Defines the line separator that should be used for writing. Maximum length is 1 character.|`\n`|
+|`csvOptions.quote.value`|Optional|Sets a single character used for escaping quoted values where the separator can be part of the value.|`u0000`|
+|`csvOptions.quoteAll.value`|Optional|Indicates whether all values should always be enclosed in quotes. Default is to only escape values containing a quote character.|`false`|
+|`csvOptions.escape.value`|Optional|Sets a single character used for escaping quotes inside an already quoted value.|`\`|
+|`csvOptions.escapeQuotes.value`|Optional|Indicates whether values containing quotes should always be enclosed in quotes. Default is to escape all values containing a quote character.|`true`|
+|`csvOptions.header.value`|Optional|Indicates whether to write the names of columns as the first line.|`true`|
+|`csvOptions.ignoreLeadingWhiteSpace.value`|Optional|Indicates whether to trim leading white spaces from values.|`true`|
+|`csvOptions.ignoreTrailingWhiteSpace.value`|Optional|Indicates whether to trim trailing whitespaces from values.|`true`|
+|`csvOptions.nullValue.value`|Optional|Sets the string representation of a null value. |`""`|
+|`csvOptions.dateFormat.value`|Optional|Indicates the date format.|`yyyy-MM-dd`|
+|`csvOptions.timestampFormat.value`|Optional|Sets the string that indicates a timestamp format.|`yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]`|
+|`csvOptions.charToEscapeQuoteEscaping.value`|Optional|Sets a single character used for escaping the escape for the quote character.|`\` when the escape and quote characters are different. `\0` when the escape and quote character are the same.|
+|`csvOptions.emptyValue.value`|Optional|Sets the string representation of an empty value.|`""`|
+|`csvOptions.lineSep.value`|Optional|Defines the line separator that should be used for writing. Maximum length is 1 character.|`\n`|
