@@ -85,7 +85,6 @@ You can create a new SFTP destination server configuration by making a POST requ
 
 **API format**
 
-
 ```http
 POST /authoring/destination-servers
 ```
