@@ -146,7 +146,7 @@ curl -X POST \
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can provide to include more information on your source connection. |
 | `baseConnectionId` | The base connection ID of your [!DNL PubSub] source that was generated in the previous step. |
-| `connectionSpec.id` | The fixed connection specification ID for [!DNL PubSub]. This ID is : `70116022-a743-464a-bbfe-e226a7f8210c` |
+| `connectionSpec.id` | The fixed connection specification ID for [!DNL PubSub]. This ID is: `70116022-a743-464a-bbfe-e226a7f8210c` |
 | `data.format` | The format of the [!DNL PubSub] data that you want to ingest. Currently, the only supported data format is `json`. |
 | `params.topicId` | The topic ID defines the specific named resource which messages are sent by publishers |
 | `params.subscriptionId` | The subscription ID defines the specific named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application. |

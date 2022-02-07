@@ -323,7 +323,6 @@ statementList:
 Below is an example using anonymous block.
 
 ```sql
-$$
 BEGIN
    SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
@@ -335,8 +334,25 @@ EXCEPTION
   WHEN OTHER THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
-END$$;
+END;
 ```
+
+## Data asset organization
+
+It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
+
+The following SQL constructs using standard SQL syntax are supported for you to logically organize your data.
+
+```SQL
+CREATE DATABASE dg1;
+CREATE SCHEMA dg1.schema1;
+CREATE table t1 ...;
+CREATE view v1 ...;
+ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
+ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
+```
+
+See the guide on [logical organization of data assets](../best-practices/organize-data-assets.md) for more a detailed explanation on Query Service best practices.
 
 ## [!DNL Spark] SQL commands 
 
@@ -575,7 +591,7 @@ SHOW DateStyle;
 
 ### COPY
 
-The `COPY` command dumps the output of any `SELECT` query to a specified location. The user must have access to this location for this command to succeed.
+The `COPY` command duplicates the output of any `SELECT` query to a specified location. The user must have access to this location for this command to succeed.
 
 ```sql
 COPY query

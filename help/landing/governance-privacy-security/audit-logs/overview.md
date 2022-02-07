@@ -33,7 +33,7 @@ The following table outlines which actions on which resources are recorded by au
 
 When the feature is enabled for your organization, audit logs are automatically collected as activity occurs. You do not need to manually enable log collection.
 
-In order to view and export audit logs, you must have the "View Audit Logs" access control permission granted (found under the "Data Governance" category). To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../access-control/home.md).
+In order to view and export audit logs, you must have the **[!UICONTROL View User Activity Log]** access control permission granted (found under the [!UICONTROL Data Governance] category). To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../access-control/home.md).
 
 ## Managing audit logs in the UI
 
@@ -59,7 +59,7 @@ The following filters are available for audit events in the UI:
 | --- | --- |
 | [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
 | [!UICONTROL Action] | Filter by action. Currently only [!UICONTROL Create] and [!UICONTROL Delete] actions can be filtered. |
-| [!UICONTROL Access Control Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
+| [!UICONTROL Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
 | [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. |
 
 To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.

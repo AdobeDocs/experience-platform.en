@@ -318,7 +318,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Machine-learning model**: A machine-learning model is an instance of a machine-learning recipe that is trained using historical data and configurations to solve for a business use case. In Adobe Experience Platform Data Science Workspace, machine-learning models are called recipes.
 
-**Mandatory attribute**: A user enabled checkbox that ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.
+**Mandatory attribute**: A user-enabled checkbox that ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.
 
 **Mapping**: Data mapping is the process of mapping source data fields to related target fields in a destination. 
 
