@@ -213,13 +213,6 @@ A: Confirm with Justin
         "monitoringSupported": true,
         "frequency": "Batch"
     },
-    "aggregation": {
-        "aggregationType": "BEST_EFFORT",
-        "bestEffortAggregation": {
-            "maxUsersPerRequest": 10,
-            "splitUserById": false
-        }
-    },
     "destinationDelivery": [
         {
             "deliveryMatchers": [
@@ -241,7 +234,7 @@ A: Confirm with Justin
     },
     "batchConfig": {
         "allowMandatoryFieldSelection": true,
-        "allowJoinKeyFieldSelection": true, // confirm what these are with Justin - dedupe keys?
+        "allowDedupeKey": true, // confirm what these are with Justin - dedupe keys?
         "defaultExportMode": "DAILY_FULL_EXPORT",
         "allowedExportMode": [
             "DAILY_FULL_EXPORT",
@@ -263,7 +256,6 @@ A: Confirm with Justin
 ```
 
 ## Step 3: Create message transformation template - use templating language to specify the message output format {#create-transformation-template}
-
 
 <!-- 
 

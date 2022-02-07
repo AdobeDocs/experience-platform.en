@@ -240,8 +240,8 @@ This section describes the file formatting settings for the exported files.
                 "value": ""
             },
             "dateFormat": {
-                "templatingStrategy": "NONE",
-                "value": "yyyy-MM-dd"
+                "templatingStrategy": "PEBBLE_V1",
+                "value": "{{customerData.dateFormat}}"
             },
             "timestampFormat": {
                 "templatingStrategy": "NONE",
@@ -267,7 +267,7 @@ This section describes the file formatting settings for the exported files.
 |---|---|---|---|
 |`compression.value`|Optional|Compression codec to use when saving data to file. Supported values: `none`, `bzip2`, `gzip`, `lz4`, `snappy`, and `deflate`.|`none`|
 |`fileType.value`|Optional|Specifies the output file format. Supported values: `csv`, `parquet`, and `json`.|`csv`|
-|`csvOptions.quote.value`|Optional|Sets a single character used for escaping quoted values where the separator can be part of the value.|`u0000`|
+|`csvOptions.quote.value`|Optional|Sets a single character used for escaping quoted values where the separator can be part of the value.|`null`|
 |`csvOptions.quoteAll.value`|Optional|Indicates whether all values should always be enclosed in quotes. Default is to only escape values containing a quote character.|`false`|
 |`csvOptions.escape.value`|Optional|Sets a single character used for escaping quotes inside an already quoted value.|`\`|
 |`csvOptions.escapeQuotes.value`|Optional|Indicates whether values containing quotes should always be enclosed in quotes. Default is to escape all values containing a quote character.|`true`|

@@ -21,7 +21,6 @@ You can create a new destination server configuration for a streaming destinatio
 
 **API format**
 
-
 ```http
 POST /authoring/destination-servers
 ```
