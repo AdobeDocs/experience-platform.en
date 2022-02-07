@@ -453,6 +453,7 @@ The following response returns HTTP status 200 with a list of audience metadata 
 }
 
 ```
+
 ## Retrieve a specific audience template {#get}
 
 You can retrieve detailed information about a specific audience template by making a GET request to the `/authoring/audience-templates` endpoint and providing the instance ID of the audience template you want to retrieve.
