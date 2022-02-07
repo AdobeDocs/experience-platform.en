@@ -127,6 +127,15 @@ This is an example configuration of a fictional streaming destination, Moviestar
 
 ### File-based configuration example {#batch-example-configuration}
 
+
+<!--
+
+Review the entire example for batch.
+
+Need correct value for connectionType.
+
+-->
+
 >[!IMPORTANT]
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
@@ -372,6 +381,17 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 {style="table-layout:auto"}
 
 ## Batch configuration {#batch-configuration}
+
+<!--
+
+what are join keys or where could I find out more about them?
+
+Are these in any way related to deduplication keys? if they're the same, let's link to https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#deduplication-keys for more context
+
+A: 
+
+
+-->
 
 For batch destinations, use the parameters in `batchConfig` to describe the configuration of the file-based destination that you are about to create.
 

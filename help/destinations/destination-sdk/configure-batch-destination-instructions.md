@@ -21,11 +21,11 @@ Before advancing to the steps illustrated below, please read the [Destination SD
 
 ![Illustrated steps of using Destination SDK endpoints](./assets/destination-sdk-steps.png)
 
-## Step 1: Create a server and template configuration {#create-server-template-configuration}
+## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
-Start by creating a server and template configuration using the `/destinations-server` endpoint (read [API reference](./destination-server-api.md)). For more information about the server and template configuration, refer to [Server and template specs](./configuration-options.md#server-and-template) in the reference section.
+Start by creating a server and file configuration using the `/destinations-server` endpoint (read [API reference](./destination-server-api.md)).
 
-Shown below is an example configuration. Note that the message transformation template in the `requestBody.value` parameter is addressed in step 3, [Create transformation template](./configure-destination-instructions.md#create-transformation-template).
+Shown below is an example configuration.
 
 **API format**
 
@@ -35,43 +35,233 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ```json
 {
-   "name":"Amazon S3 destination server",
-   "destinationServerType":"FILE_BASED_S3",
-   "fileBasedS3Destination":{
-      "bucket":{
-         "templatingStrategy":"PEBBLE_V1",
-         "value":""
-      },
-      "path":{
-         "templatingStrategy":"PEBBLE_V1",
-         "value":""
-      },
-      "httpTemplate":{
-         "httpMethod":"POST",
-         "requestBody":{
-            "templatingStrategy":"PEBBLE_V1",
-            "value":"{ \"attributes\": [ {% for ns in [\"external_id\", \"yourdestination_id\"] %} {% if input.profile.identityMap[ns] is not empty and first_namespace_encountered %} , {% endif %} {% set first_namespace_encountered = true %} {% for identity in input.profile.identityMap[ns]%} { \"{{ ns }}\": \"{{ identity.id }}\" {% if input.profile.segmentMembership.ups is not empty %} , \"AEPSegments\": { \"add\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"realized\" or segment.value.status == \"existing\" %} {% if added_segment_found %} , {% endif %} {% set added_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ], \"remove\": [ {% for segment in input.profile.segmentMembership.ups %} {% if segment.value.status == \"exited\" %} {% if removed_segment_found %} , {% endif %} {% set removed_segment_found = true %} \"{{ destination.segmentAliases[segment.key] }}\" {% endif %} {% endfor %} ] } {% set removed_segment_found = false %} {% set added_segment_found = false %} {% endif %} {% if input.profile.attributes is not empty %} , {% endif %} {% for attribute in input.profile.attributes %} \"{{ attribute.key }}\": {% if attribute.value is empty %} null {% else %} \"{{ attribute.value.value }}\" {% endif %} {% if not loop.last%} , {% endif %} {% endfor %} } {% if not loop.last %} , {% endif %} {% endfor %} {% endfor %} ] }"
-         },
-         "contentType":"application/json"
-      }
-   }
+    "name": "S3 destination",
+    "destinationServerType": "FILE_BASED_S3",
+    "fileBasedS3Destination": {
+        "bucket": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.bucket}}"
+        },
+        "path": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.path}}"
+        }
+    },
+    "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    },
+    "qos": {
+        "name": "freeform"
+    }
 }
-
-
 ```
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
 
 Shown below is an example of a destination configuration, created by using the `/destinations` API endpoint. For more information about this template, refer to [Destination configuration](./destination-configuration.md).
 
-To connect the server and template configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
+To connect the server and file configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
 
 **API format**
-
 
 ```http
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ``` 
+
+<!--
+
+This example needs to be fully reviewed and updated for batch.
+
+Q: Does aggregation apply to batch?
+A: Confirm with Justin
+
+-->
+
+
+```json
+
+{
+    "name": "S3 Line seperator",
+    "description": "S3 line seperator",
+    "releaseNotes": "Test release S3",
+    "status": "TEST",
+    "customerAuthenticationConfigurations": [
+        {
+            "authType": "S3"
+        }
+    ],
+    "customerEncryptionConfigurations": [],
+    "customerDataFields": [
+        {
+            "name": "bucket",
+            "title": "Select S3 Bucket",
+            "description": "Select S3 Bucket",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": false,
+            "hidden": false
+        },
+        {
+            "name": "path",
+            "title": "S3 path",
+            "description": "Select S3 Bucket",
+            "type": "string",
+            "isRequired": true,
+            "pattern": "^[A-Za-z]+$",
+            "readOnly": false,
+            "hidden": false
+        },
+        {
+            "name": "compression",
+            "title": "Select compression",
+            "description": "Select compressiont",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": false,
+            "enum": [
+                "GZIP",
+                "NONE",
+                "bzip2",
+                "lz4",
+                "snappy",
+                "deflate"
+            ]
+        },
+        {
+            "name": "fileType",
+            "title": "Select a fileType",
+            "description": "Select fileType",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": false,
+            "hidden": false,
+            "enum": [
+                "csv",
+                "json",
+                "parquet"
+            ],
+            "default": "csv"
+        }
+    ],
+    "uiAttributes": {
+        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "category": "S3",
+        "iconUrl": "https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
+        "connectionType": "S3",
+        "flowRunsSupported": true,
+        "monitoringSupported": true,
+        "frequency": "Batch"
+    },
+    "aggregation": {
+        "aggregationType": "BEST_EFFORT",
+        "bestEffortAggregation": {
+            "maxUsersPerRequest": 10,
+            "splitUserById": false
+        }
+    },
+    "destinationDelivery": [
+        {
+            "deliveryMatchers": [
+                {
+                    "type": "SOURCE",
+                    "value": [
+                        "batch"
+                    ]
+                }
+            ],
+            "authenticationRule": "CUSTOMER_AUTHENTICATION",
+            "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d" // the instance ID of the destination server created
+        }
+    ],
+    "schemaConfig": {
+        "profileRequired": true,
+        "segmentRequired": true,
+        "identityRequired": true
+    },
+    "batchConfig": {
+        "allowMandatoryFieldSelection": true,
+        "allowJoinKeyFieldSelection": true, // confirm what these are with Justin - dedupe keys?
+        "defaultExportMode": "DAILY_FULL_EXPORT",
+        "allowedExportMode": [
+            "DAILY_FULL_EXPORT",
+            "FIRST_FULL_THEN_INCREMENTAL"
+        ],
+        "allowedScheduleFrequency": [
+            "DAILY",
+            "EVERY_3_HOURS",
+            "EVERY_6_HOURS",
+            "EVERY_8_HOURS",
+            "EVERY_12_HOURS",
+            "ONCE"
+        ],
+        "defaultFrequency": "DAILY",
+        "defaultStartTime": "00:00"
+    },
+    "backfillHistoricalProfileData": true
+}
+```
+
 
 ```json
 {
@@ -109,10 +299,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
       }
    ],
    "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "documentationLink":"http://www.adobe.com/go/destinations-s3-en",
       "category":"mobile",
-      "connectionType":"Server-to-server",
-      "frequency":"Streaming"
+      "connectionType":"",
+      "frequency":""
    },
    "identityNamespaces":{
       "external_id":{
@@ -178,11 +368,30 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Step 3: Create message transformation template - use templating language to specify the message output format {#create-transformation-template}
 
+
+<!-- 
+
+Do we have any new documentation on templating within the Batch Destination SDK context? How does templating work for Batch Destination SDK? Asking to make sure if we should link to the same pages we use for streaming templating.
+
+To validate Monday
+
+-->
+
 Based on the payloads that your destination supports, you must create a template that transforms the format of the exported data from Adobe XDM format into a format supported by your destination. See template examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](./message-format.md#using-templating) and use the [template authoring tool](./create-template.md) provided by Adobe.
 
 Once you have crafted a message transformation template that works for you, add it to the server and template configuration you created in step 1.
 
 ## Step 4: Create audience metadata configuration {#create-audience-metadata-configuration}
+
+
+<!-- 
+
+In a streaming context, the audience metadata configuration was only required for some destinations. Is this the same for batch Destination SDK?
+
+We are starting the paragraph with "For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination.". Is this statement valid in a Batch Destination SDK context as well?
+
+-->
+
 
 For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](./audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
 
@@ -199,6 +408,14 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
    * [SFTP authentication with password](authentication-configuration.md#sftp-password)
 
 * If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [Authentication configuration](./authentication-configuration.md#when-to-use).
+
+
+<!--
+
+Do we need testing step for batch? Are testing tools available?
+
+-->
+
 
 <!-- ## Step 6: Test your destination {#test-destination}
 

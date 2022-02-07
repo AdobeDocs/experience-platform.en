@@ -28,6 +28,9 @@ POST /authoring/audience-templates
 
 **Request**
 
+// notify works only for batch
+
+
 The following request creates a new audience metadata template, configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/audience-templates` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
 
 ```shell
@@ -315,6 +318,14 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 ```
 
 
+
+// need to add createDestination and deleteDestination
+
+
+
+
+
+
 ## Retrieve a list of audience templates {#retrieve-list}
 
 You can retrieve a list of all audience templates for your IMS Organization by making a GET request to the `/authoring/audience-templates` endpoint.
@@ -447,6 +458,9 @@ The following response returns HTTP status 200 with a list of audience metadata 
 }
 
 ```
+^^^ add notify for batch
+
+
 
 ## Retrieve a specific audience template {#get}
 
