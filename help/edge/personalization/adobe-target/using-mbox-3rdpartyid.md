@@ -2,7 +2,6 @@
 title: Real-time profile syncing for mbox3rdPartyId
 description: Learn how to use mbox3rdPartyId with the Adobe Experience Platform Web SDK.
 keywords: personalization;target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
-exl-id: 
 ---
 
 # What is `mbox3rdPartyId`
