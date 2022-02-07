@@ -194,7 +194,7 @@ A successful response returns HTTP status 200 with details of your newly created
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-You can create a new Azure Blob S3 destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
+You can create a new Azure Blob destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
 

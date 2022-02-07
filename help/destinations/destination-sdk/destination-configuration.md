@@ -142,78 +142,87 @@ Need correct value for connectionType.
 
 This is an example configuration of a fictional file-based destination. The destination belongs to the email marketing category.
 
+
 ```json
 {
-    "name": "GorillaMail Destination",
-    "description": "GorillaMail Destination",
-    "status": "TEST",
+    "name": "Amazon S3 destination",
+    "description": "Amazon S3 destination is a fictional destination, used for this example.",
+    "releaseNotes": "Test",
+    "status": "Test",
     "maxProfileAttributes": "2000",
     "maxIdentityAttributes": "500",
-    "customerAuthenticationConfigurations":[
-      {
-         "authType":"S3"
-      }
-   ],
+    "customerAuthenticationConfigurations": [
+        {
+            "authType": "S3"
+        }
+    ],
     "customerEncryptionConfigurations": [],
     "customerDataFields": [
         {
-            "name": "accInstance",
-            "title": "Select Instance",
-            "description": "Select a GorillaMail Instance.",
+            "name": "bucket",
+            "title": "Amazon S3 bucket name",
+            "description": "Enter the Amazon S3 Bucket name that will host the exported files.",
             "type": "string",
             "isRequired": true,
-            "readOnly": true,
-            "hidden": false,
-            "dynamicEnum": {
-                "destinationServerId": "30d0f829-1bed-44ef-bd1c-c5323dff69b1",
-                "authenticationRule": "IMS_AUTHENTICATION",
-                "value": "accInstances"
-            }
+            "readOnly": false,
+            "hidden": false
         },
         {
-            "name": "accTargetMapping",
-            "title": "Select Target Mapping",
-            "description": "Select a GorillaMail Target Mapping.",
+            "name": "path",
+            "title": "Amazon S3 path",
+            "description": "Enter Amazon S3 folder path",
             "type": "string",
             "isRequired": true,
-            "readOnly": true,
+            "pattern": "^[A-Za-z]+$",
+            "readOnly": false,
+            "hidden": false
+        },
+        {
+            "name": "compression",
+            "title": "Select compression type",
+            "description": "Select the file compression type used by the exported files.",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": false,
+            "enum": [
+                "GZIP",
+                "NONE",
+                "bzip2",
+                "lz4",
+                "snappy",
+                "deflate"
+            ]
+        },
+        {
+            "name": "fileType",
+            "title": "Select a file format",
+            "description": "Select the file format to be used by the exported files.",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": false,
             "hidden": false,
-            "dynamicEnum": {
-                "queryParams": [
-                    "accInstance"
-                ],
-                "destinationServerId": "676c3dcd-73ab-4bcc-907c-29fe5edda48e",
-                "authenticationRule": "IMS_AUTHENTICATION",
-                "value": "accTargetMappings"
-            }
+            "enum": [
+                "csv",
+                "json",
+                "parquet"
+            ],
+            "default": "csv"
         }
     ],
     "uiAttributes": {
-        "documentationLink": "http://www.adobe.com/go/destinations-email-marketing-en",
-        "category": "emailMarketing",
-        "connectionType": "Server-to-server",
+        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "category": "S3",
+        "iconUrl": "https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
+        "connectionType": "S3",
+        "flowRunsSupported": true,
+        "monitoringSupported": true,
         "frequency": "Batch"
     },
-    "segmentMappingConfig": {
-        "mapExperiencePlatformSegmentName": false,
-        "mapExperiencePlatformSegmentId": false,
-        "mapUserInput": false,
-        "audienceTemplateId": "e091f36a-a849-4b6a-9c79-18405fa08ead"
-    },
     "aggregation": {
-        "aggregationType": "CONFIGURABLE_AGGREGATION",
-        "configurableAggregation": {
-            "aggregationPolicyId": null,
-            "aggregationKey": {
-                "includeSegmentId": true,
-                "includeSegmentStatus": true,
-                "includeIdentity": false,
-                "oneIdentityPerGroup": false,
-                "groups": null
-            },
-            "splitUserById": true,
-            "maxBatchAgeInSecs": 360,
-            "maxNumEventsInBatch": 100
+        "aggregationType": "BEST_EFFORT",
+        "bestEffortAggregation": {
+            "maxUsersPerRequest": 10,
+            "splitUserById": false
         }
     },
     "destinationDelivery": [
@@ -226,29 +235,20 @@ This is an example configuration of a fictional file-based destination. The dest
                     ]
                 }
             ],
-            "authenticationRule": "NONE",
-            "destinationServerId": "99848e42-b2ca-41eb-aa93-abf2104f7b28"
+            "authenticationRule": "CUSTOMER_AUTHENTICATION",
+            "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d" // the instance ID of the destination server created
         }
     ],
-    "inputSchemaId": "4b8f51a3b10c43e1bcc18592e36ce0c7",
     "schemaConfig": {
         "profileRequired": true,
         "segmentRequired": true,
-        "identityRequired": true,
-        "dynamicSchemaConfig": {
-            "dynamicEnum": {
-                "destinationServerId": "3a696db6-e7e9-48cb-a657-17489850a315",
-                "authenticationRule": "IMS_AUTHENTICATION",
-                "value": "accSchema",
-                "responseFormat": "SCHEMA"
-            }
-        }
+        "identityRequired": true
     },
     "batchConfig": {
         "allowMandatoryFieldSelection": true,
-        "allowJoinKeyFieldSelection": true,
+        "allowJoinKeyFieldSelection": true, // confirm what these are with Justin - dedupe keys?
         "defaultExportMode": "DAILY_FULL_EXPORT",
-        "allowedExportModes": [
+        "allowedExportMode": [
             "DAILY_FULL_EXPORT",
             "FIRST_FULL_THEN_INCREMENTAL"
         ],
@@ -256,19 +256,16 @@ This is an example configuration of a fictional file-based destination. The dest
             "DAILY",
             "EVERY_3_HOURS",
             "EVERY_6_HOURS",
-            "EVERY_12_HOURS",
             "EVERY_8_HOURS",
-            "ONCE",
-            "EVERY_HOUR"
+            "EVERY_12_HOURS",
+            "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00",
+        "defaultStartTime": "00:00"
     },
-    "destConfigId": "401bba59-d687-47dd-8128-61947fe32333",
     "backfillHistoricalProfileData": true
 }
 ```
-
 
 |Parameter | Type | Description|
 |---------|----------|------|

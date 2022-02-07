@@ -25,7 +25,7 @@ Before advancing to the steps illustrated below, please read the [Destination SD
 
 Start by creating a server and file configuration using the `/destinations-server` endpoint (read [API reference](./destination-server-api.md)).
 
-Shown below is an example configuration.
+Shown below is an example configuration for an [!DNL Amazon S3] destination. To configure other types of file-based destinations, see their corresponding [server configurations](server-and-file-configuration.md).
 
 **API format**
 
@@ -142,10 +142,10 @@ A: Confirm with Justin
 ```json
 
 {
-    "name": "S3 Line seperator",
-    "description": "S3 line seperator",
-    "releaseNotes": "Test release S3",
-    "status": "TEST",
+    "name": "Amazon S3 destination",
+    "description": "Amazon S3 destination is a fictional destination, used for this example.",
+    "releaseNotes": "Test",
+    "status": "Test",
     "customerAuthenticationConfigurations": [
         {
             "authType": "S3"
@@ -155,8 +155,8 @@ A: Confirm with Justin
     "customerDataFields": [
         {
             "name": "bucket",
-            "title": "Select S3 Bucket",
-            "description": "Select S3 Bucket",
+            "title": "Amazon S3 bucket name",
+            "description": "Enter the Amazon S3 Bucket name that will host the exported files.",
             "type": "string",
             "isRequired": true,
             "readOnly": false,
@@ -164,8 +164,8 @@ A: Confirm with Justin
         },
         {
             "name": "path",
-            "title": "S3 path",
-            "description": "Select S3 Bucket",
+            "title": "Amazon S3 path",
+            "description": "Enter Amazon S3 folder path",
             "type": "string",
             "isRequired": true,
             "pattern": "^[A-Za-z]+$",
@@ -174,8 +174,8 @@ A: Confirm with Justin
         },
         {
             "name": "compression",
-            "title": "Select compression",
-            "description": "Select compressiont",
+            "title": "Select compression type",
+            "description": "Select the file compression type used by the exported files.",
             "type": "string",
             "isRequired": true,
             "readOnly": false,
@@ -190,8 +190,8 @@ A: Confirm with Justin
         },
         {
             "name": "fileType",
-            "title": "Select a fileType",
-            "description": "Select fileType",
+            "title": "Select a file format",
+            "description": "Select the file format to be used by the exported files.",
             "type": "string",
             "isRequired": true,
             "readOnly": false,
@@ -262,110 +262,6 @@ A: Confirm with Justin
 }
 ```
 
-
-```json
-{
-   "name":"Amazon S3 destination",
-   "description":"Amazon S3 destination is a fictional destination, used for this example.",
-   "status":"TEST",
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"S3",
-         "s3AccessKey":"string",
-         "s3SecretKey":"string"
-      }
-   ],
-   "customerDataFields":[
-      {
-         "name":"endpointsInstance",
-         "type":"string",
-         "title":"Select Endpoint",
-         "description":"Select your endpoint in the dropdown list.",
-         "isRequired":true,
-         "enum":[
-            "US",
-            "EU",
-            "APAC",
-            "NZ"
-         ]
-      },
-      {
-         "name":"customerID",
-         "type":"string",
-         "title":"Destination Customer ID",
-         "description":"Your customer ID in the destination (e.g. abcdef).",
-         "isRequired":true,
-         "pattern":""
-      }
-   ],
-   "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-s3-en",
-      "category":"mobile",
-      "connectionType":"",
-      "frequency":""
-   },
-   "identityNamespaces":{
-      "external_id":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
-      },
-      "another_id":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
-      }
-   },
-   "segmentMappingConfig":{
-      "mapExperiencePlatformSegmentName":false,
-      "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
-      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },   
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "aggregationPolicyId":null,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":true,
-            "groups":null
-         },
-         "splitUserById":true,
-         "maxBatchAgeInSecs":360,
-         "maxNumEventsInBatch":100
-      }
-   },
-   "batchConfig": {
-        "allowMandatoryFieldSelection": true,
-        "allowJoinKeyFieldSelection": true,
-        "defaultExportMode": "DAILY_FULL_EXPORT",
-        "allowedExportModes": [
-            "DAILY_FULL_EXPORT",
-            "FIRST_FULL_THEN_INCREMENTAL"
-        ],
-        "allowedScheduleFrequency": [
-            "DAILY",
-            "EVERY_3_HOURS",
-            "EVERY_6_HOURS",
-            "EVERY_12_HOURS",
-            "EVERY_8_HOURS",
-            "ONCE",
-            "EVERY_HOUR"
-        ],
-        "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00",
-    },
-   "destinationDelivery":[
-      {
-         "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
-      }
-   ]
-}
-
-```
-
 ## Step 3: Create message transformation template - use templating language to specify the message output format {#create-transformation-template}
 
 
@@ -404,6 +300,8 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 * If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK:
    * [OAuth 2 authentication](./oauth2-authentication.md)
    * [Amazon S3 authentication](authentication-configuration.md#s3)
+   * [Azure connection string (beta)](authentication-configuration.md#blob)
+   * [Azure service principal (beta)](authentication-configuration.md#adls)
    * [SFTP authentication with SSH key](authentication-configuration.md#sftp-ssh)
    * [SFTP authentication with password](authentication-configuration.md#sftp-password)
 

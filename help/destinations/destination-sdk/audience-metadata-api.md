@@ -28,9 +28,6 @@ POST /authoring/audience-templates
 
 **Request**
 
-// notify works only for batch
-
-
 The following request creates a new audience metadata template, configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/audience-templates` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
 
 ```shell
