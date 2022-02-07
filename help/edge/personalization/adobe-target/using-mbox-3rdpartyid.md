@@ -15,14 +15,14 @@ When a visitor logs in to a company’s site, the company typically creates an I
 
 ### Step 1: Configure the `Target Third Party ID Namespace`
 
-Configure the `Target Third Party ID Namespace` in your [Datastream](../../fundamentals/datastreams.md), using the ID Namespace you would like to use as an mbox 3rd party ID. 
+Configure the `Target Third Party ID Namespace` in your [Datastream](../../fundamentals/datastreams.md), using the ID Namespace you want to use as an mbox 3rd party ID. 
 [Learn more about ID namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
 
 ![](assets/mbox3rdpartyid.png)
 
 ### Step 2: Send the `mbox3rdpartyId` to Target
 
-Send the `mbox3rdpartyId` to Target in the `sendEvent` command, using the ID namespace that you have configured in Step 1.
+Send the `mbox3rdpartyId` to Target in the `sendEvent` command, using the ID namespace that you configured in Step 1.
 [Learn more about sending IDs](../../identity/overview.md#syncing-identities)
 
 ```javascript
