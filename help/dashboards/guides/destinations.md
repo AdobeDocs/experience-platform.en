@@ -118,15 +118,11 @@ The destination ID dropdown filters your available segments. The filter IDs list
 
 The identities column counts the number of source IDs within the segment that could map to the ID chosen in the widget ID dropdown. 
 
-<!-- This requires a tooltip on to explain that it is a destination ID in the dropdown. -->
-
 [Unmapped segments by identity widget.](../images/destinations/unmapped-segments-by-identity.png)
 
 ### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
 
 This widget provides a top five list of **mapped** segments. The list is ordered from high to low according to the number of source IDs contained within the segments. The destination ID to be counted is selected from the dropdown menu below the widget title. The destination IDs available from the drop-down in the widget will change according to the destination account filter chosen at the top of the overview dashboard.
-
-<!-- This requires a tooltip to explain that it is destination ID in the dropdown and source ID in the counted column. -->
 
 [Mapped segments by identity widget.](../images/destinations/mapped-segments-by-identity.png)
 
