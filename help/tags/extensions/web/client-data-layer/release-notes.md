@@ -26,7 +26,7 @@ The following functionality is provided by the extension on initial release:
   * Listening to a specific event pushed
   * All events can be listened to on different scopes
 * Data elements:
-  * Computed State : Global or Specific state
+  * Computed State: Global or Specific state
   * Data Layer Size
 * Actions:
   * Reset the data layer size (keeping the latest Computed State)
