@@ -3,7 +3,7 @@ solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK Help
 breadcrumb-title: Web SDK Guide
-user-guide-description: Interact with Experience Cloud services through the Edge Network.
+user-guide-description: Interact with Experience Cloud services through the Edge network.
 feature: Web SDK
 ---
 
