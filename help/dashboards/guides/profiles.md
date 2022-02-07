@@ -49,7 +49,7 @@ The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness o
 
 See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
 
-The layout of this dashboard is also customizable by selecting the [**[!UICONTROL Modify dashboard]**](../customize/modify.md) button.
+The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab.
 
 ## Browse profiles {#browse-profiles}
 
@@ -71,11 +71,11 @@ The dashboard will automatically select a merge policy to display, but you can c
 
 ![](../images/profiles/select-merge-policy.png)
 
-## Union Schemas
+## Union schemas
 
-The [!UICONTROL Union Schema] dashboard displays the union schema for a specific XDM class. Union schemas for different XDM classes can be viewed by selecting the [!UICONTROL **Class**] dropdown.
+The [!UICONTROL Union Schema] dashboard displays the union schema for a specific XDM class. By selecting the [!UICONTROL **Class**] dropdown, you can view the union schemas for different XDM classes.
 
-Union schemas are composed of multiple schemas that share the same class and have been enabled for Profile. The union schema enables you to see an amalgamation of every field contained within each schema that shares the same class.
+Union schemas are composed of multiple schemas that share the same class and have been enabled for Profile. They enable you to see in a single view, an amalgamation of every field contained within each schema that shares the same class.
 
 See the union schema UI guide to learn more about [viewing union schemas within the Platform UI](../../profile/ui/union-schema.md#view-union-schemas).
 
@@ -188,11 +188,11 @@ This widget shows the completeness and cardinality of each profile attribute sin
 
 This widget creates a histogram of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
 
-This widget shows the proportion of profiles that are of high, medium, or low completeness. There are three levels of completeness are configured by default: 
+This widget shows the proportion of profiles that are of high, medium, or low completeness. By default, there are three levels of completeness configured: 
 
-* High completeness: profiles have more than 70% attributes filled. 
-* Medium completeness: profiles have less than 70% and more than 30% attributes filled. 
-* Low completeness: profiles have less than 30% attributes filled. 
+* High completeness: Profiles have more than 70% attributes filled. 
+* Medium completeness: Profiles have less than 70% and more than 30% attributes filled. 
+* Low completeness: Profiles have less than 30% attributes filled. 
 
 ![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
 
@@ -204,9 +204,9 @@ The x-axis represents time, the y-axis represents the number of profiles, and th
 
 The three levels of completeness are:
 
-* High completeness: profiles have more than 70% attributes filled. 
-* Medium completeness: profiles have less than 70% and more than 30% attributes filled. 
-* Low completeness: profiles have less than 30% attributes filled.
+* High completeness: Profiles have more than 70% attributes filled. 
+* Medium completeness: Profiles have less than 70% and more than 30% attributes filled. 
+* Low completeness: Profiles have less than 30% attributes filled.
 
 ![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png)
 

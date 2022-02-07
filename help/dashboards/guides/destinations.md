@@ -83,7 +83,7 @@ For more information on working with segments in Experience Platform, please beg
 
 ## (Alpha) Optional destination widgets
 
-Adobe provides multiple widgets to assess the completeness of the segments available for your data analysis. These widgets are **not** added to the destinations dashboard by default. To enable them, you must [modify your dashboard](../customize/modify.md). Please refer to the documentation for detailed instructions on how to do this.
+Adobe provides multiple widgets to assess the completeness of the segments available for your data analysis. These widgets are **not** added to the destinations dashboard by default. To learn how to enable these optional widgets, please read the guide on [modifying your dashboard](../customize/modify.md).
 
 To learn more about each of these optional widgets, select the name of a widget from the following list:
 
@@ -94,9 +94,9 @@ To learn more about each of these optional widgets, select the name of a widget 
 
 ### [!UICONTROL Recently activated segments by destination] {#recently-activated-segments-by-destination}
 
-The **[!UICONTROL Recently activated segments by destination]** widget displays the top five most recently activated segments in descending order according to the destination chosen in the overview dropdown. It provides a similar function to [!UICONTROL Recently activated segments] widget but the data displayed **only** applies to the selected destination.
+The **[!UICONTROL Recently activated segments by destination]** widget displays the top five most recently activated segments in descending order according to the destination chosen in the overview dropdown. It is similar to the [!UICONTROL Recently activated segments] widget, but the data displayed **only** applies to the selected destination.
 
-This widget contains two metrics, the segment name, and the date that the segment was last activated to the destination. The data displayed is correct as of the last daily snapshot. 
+This widget contains two metrics: the segment name and the date that the segment was last activated to the destination. The data displayed is correct as of the last daily snapshot. 
 
 You can view a segment's details by selecting the name of a segment from the list shown.
 
@@ -105,14 +105,16 @@ You can view a segment's details by selecting the name of a segment from the lis
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
 The **[!UICONTROL Audience size trend]** widget depicts the relationship of the profile count over a period of time for a segment that has been mapped to that destination account. The widget uses a line graph to illustrate the number of profiles contained in the segment, that are being sent to the destination account daily.
+
 A time period for the audience trend over the past 30 days, 90 days, or 12 months, can be adjusted using the first dropdown menu.
+
 The second dropdown menu lists every available segment that can be sent to the destination account chosen at the top of the dashboard. 
 
 [Audience size trend widget.](../images/destinations/audience-size-trend.png)
 
 ### [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
 
-This widget highlights segments that are the most beneficial to map to the chosen destination account based on the chosen ID. The **[!UICONTROL Unmapped segments by identity]** widget lists the top five **unmapped** segments ranked by descending identity count for a given destination and identity. 
+The **[!UICONTROL Unmapped segments by identity]** widget lists the top five **unmapped** segments ranked by descending identity count for a given destination and identity. It highlights segments that are the most beneficial to map to the chosen destination account based on the chosen ID.
 
 The destination ID dropdown filters your available segments. The filter IDs listed in the dropdown change depending on the destination account selected at the top of the overview page.
 
