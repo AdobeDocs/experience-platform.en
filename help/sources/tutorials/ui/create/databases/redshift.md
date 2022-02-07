@@ -37,6 +37,10 @@ For more information about getting started, refer to [this [!DNL Redshift] docum
 
 ## Connect your [!DNL Redshift] account
 
+>[!NOTE]
+>
+>The default encoding standard for [!DNL Redshift] is Unicode. This cannot be changed.
+
 Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Redshift] account to [!DNL Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
