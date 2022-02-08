@@ -312,15 +312,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ```
 
-
-
-// need to add createDestination and deleteDestination
-
-
-
-
-
-
 ## Retrieve a list of audience templates {#retrieve-list}
 
 You can retrieve a list of all audience templates for your IMS Organization by making a GET request to the `/authoring/audience-templates` endpoint.
