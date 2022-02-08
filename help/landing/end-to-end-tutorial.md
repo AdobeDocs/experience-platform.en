@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform end-to-end example workflow
+title: Adobe Experience Platform End-to-End Example Workflow
 topic-legacy: getting started
 description: Adobe Experience Platform enables organizations to centralize and standardize customer data before applying data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
