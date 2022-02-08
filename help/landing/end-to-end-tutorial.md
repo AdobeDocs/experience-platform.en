@@ -60,7 +60,7 @@ In order to use Platform to evaluate your data, you will first need to ingest yo
 
 If you use Amazon S3 as your source connector, you can follow the instructions in either the API tutorial on [creating an Amazon S3 connector](../sources/tutorials/api/create/cloud-storage/s3.md) or the UI tutorial on [creating an Amazon S3 connector](../sources/tutorials/ui/create/cloud-storage/s3.md) to learn how to create, connect to, and ingest data within the connector.
 
-For more detailed instructions on source connectors, please read the [source connectors overview](../sources/home.md). To learn more about Flow Service, the API which sources is based off of, please read the [Flow Service API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+For more detailed instructions on source connectors, please read the [source connectors overview](../sources/home.md). To learn more about Flow Service, the API which sources are based off of, please read the [Flow Service API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Evaluate your data
 
@@ -68,7 +68,7 @@ After ingesting your data into Platform through a source connector, you can eval
 
 ### Create a segment definition
 
-Firstly, you will need to create a segment definition to cluster your individuals to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the API tutorial on [creating a segment](../segmentation/tutorials/create-a-segment.md) or the UI guide on using the [Segment Builder](../segmentation/ui/segment-builder.md).
+Firstly, you will need to create a segment definition to cluster your customers to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the UI guide on using the [Segment Builder](../segmentation/ui/segment-builder.md) or the API tutorial on [creating a segment](../segmentation/tutorials/create-a-segment.md).
 
 Ensure that once you've created a segment definition, that you keep note of the segment definition ID.
 
