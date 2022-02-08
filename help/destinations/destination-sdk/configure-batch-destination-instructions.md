@@ -234,7 +234,7 @@ A: Confirm with Justin
     },
     "batchConfig": {
         "allowMandatoryFieldSelection": true,
-        "allowDeduplicationKeyFieldSelection": true,
+        "allowDedupeKeyFieldSelection": true,
         "defaultExportMode": "DAILY_FULL_EXPORT",
         "allowedExportMode": [
             "DAILY_FULL_EXPORT",

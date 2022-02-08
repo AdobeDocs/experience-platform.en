@@ -133,7 +133,7 @@ You can configure the functionality described in this document by using the `/au
     },
     "batchConfig": {
         "allowMandatoryFieldSelection": true,
-        "allowDeduplicationKeyFieldSelection": true,
+        "allowDedupeKeyFieldSelection": true,
         "defaultExportMode": "DAILY_FULL_EXPORT",
         "allowedExportMode": [
             "DAILY_FULL_EXPORT",
@@ -344,7 +344,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 ```json
 "batchConfig": {
         "allowMandatoryFieldSelection": true,
-        "allowDeduplicationKeyFieldSelection": true,
+        "allowDedupeKeyFieldSelection": true,
         "defaultExportMode": "DAILY_FULL_EXPORT",
         "allowedExportMode": [
             "DAILY_FULL_EXPORT",
@@ -368,7 +368,7 @@ For batch destinations, use the parameters in `batchConfig` to describe the conf
 |Parameter | Type | Description|
 |---------|----------|------|
 |`allowMandatoryFieldSelection`|Boolean|Set to `true` to allow customers to specify which profile attributes are mandatory. Default value is `false`. See [Mandatory attributes](../ui/activate-batch-profile-destinations.md) for more information. |
-|`allowDeduplicationKeyFieldSelection`|Boolean|Set to `true` to allow customers to specify deduplication keys. Default value is `false`. |
+|`allowDedupeKeyFieldSelection`|Boolean|Set to `true` to allow customers to specify deduplication keys. Default value is `false`. |
 |`defaultExportMode`|Enum|Defines the default file export mode. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br> Default value is `DAILY_FULL_EXPORT`.|
 |`allowedExportModes`|List|Defines the file export modes available to customers. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul>|
 |`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
