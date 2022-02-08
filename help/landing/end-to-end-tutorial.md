@@ -1,6 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
-solution: Experience Platform
 title: Adobe Experience Platform end-to-end example workflow
 topic-legacy: getting started
 description: Adobe Experience Platform enables organizations to centralize and standardize customer data before applying data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
