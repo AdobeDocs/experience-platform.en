@@ -122,9 +122,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    },
     "fileConfigurations": {
        // see File-based destinations file configuration
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```
@@ -142,7 +139,6 @@ A successful response returns HTTP status 200 with details of your newly created
 You can create a new Amazon S3 destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
-
 
 ```http
 POST /authoring/destination-servers
@@ -175,9 +171,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
     },
     "fileConfigurations": {
        // see File-based destinations file configuration
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```
@@ -228,9 +221,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    },
   "fileConfigurations": {
        // see File-based destinations file configuration
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```
@@ -277,9 +267,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    },
   "fileConfigurations": {
        // see File-based destinations file configuration
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```
@@ -329,9 +316,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    },
    "fileConfigurations": {
        // see File-based destinations file configuration
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```

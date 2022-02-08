@@ -89,7 +89,6 @@ To set up [!DNL Azure Data Lake Storage] (ADLS) for your destinations, configure
 
 ```
 
-
 ## SFTP authentication with SSH key (beta) {#sftp-ssh}
 
 >[!IMPORTANT]

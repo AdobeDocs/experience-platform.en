@@ -224,7 +224,7 @@ A: Confirm with Justin
                 }
             ],
             "authenticationRule": "CUSTOMER_AUTHENTICATION",
-            "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d" // the instance ID of the destination server created
+            "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d"
         }
     ],
     "schemaConfig": {
@@ -234,7 +234,7 @@ A: Confirm with Justin
     },
     "batchConfig": {
         "allowMandatoryFieldSelection": true,
-        "allowDedupeKey": true, // confirm what these are with Justin - dedupe keys?
+        "allowDeduplicationKeyFieldSelection": true,
         "defaultExportMode": "DAILY_FULL_EXPORT",
         "allowedExportMode": [
             "DAILY_FULL_EXPORT",
@@ -280,7 +280,6 @@ We are starting the paragraph with "For some destinations, Destination SDK requi
 
 -->
 
-
 For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](./audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
@@ -298,13 +297,6 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
    * [SFTP authentication with password](authentication-configuration.md#sftp-password)
 
 * If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [Authentication configuration](./authentication-configuration.md#when-to-use).
-
-
-<!--
-
-Do we need testing step for batch? Are testing tools available?
-
--->
 
 
 <!-- ## Step 6: Test your destination {#test-destination}

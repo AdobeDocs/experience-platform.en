@@ -150,7 +150,8 @@ feature: Destinations
     * [Getting started](./destination-sdk/getting-started.md)
     * Destination SDK functionality {#functionality}
       * [Configuration options](./destination-sdk/configuration-options.md)
-      * [Destination configuration](./destination-sdk/destination-configuration.md)
+      * [Streaming destination configuration](./destination-sdk/destination-configuration.md)
+      * [File-based destination configuration](./destination-sdk/batch-destination-configuration.md)
       * [Streaming destinations server and template specs](./destination-sdk/server-and-template-configuration.md)
       * [File-based destinations server and file specs](./destination-sdk/server-and-file-configuration.md)
       * [Message format](./destination-sdk/message-format.md)

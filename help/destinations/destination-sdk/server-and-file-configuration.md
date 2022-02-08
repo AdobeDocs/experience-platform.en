@@ -31,9 +31,6 @@ The server specs for file-based destinations can be configured in Adobe Experien
     },
     "fileConfigurations": {
        // see File-based destinations file configuration
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```
@@ -46,7 +43,6 @@ The server specs for file-based destinations can be configured in Adobe Experien
 |`fileBasedS3Destination.bucket.value`|String|The name of the [!DNL Amazon S3] bucket to be used by this destination.|
 |`fileBasedS3Destination.path.templatingStrategy`|String| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`fileBasedS3Destination.path.value`|String|The path to the destination folder that will host the exported files.|
-|`qos`||
 
 ## File-based SFTP destination server spec {#sftp-example}
 
@@ -76,9 +72,6 @@ The server specs for file-based destinations can be configured in Adobe Experien
    },
     "fileConfigurations": {
        // see File-based destinations file configuration
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```
@@ -95,7 +88,6 @@ The server specs for file-based destinations can be configured in Adobe Experien
 |`fileBasedSftpDestination.moveToWhenCompleted.value`|String|||
 |`port`|Integer|The SFTP file server port.|
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
-|`qos`|String||
 
 ## File-based [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destination destination server spec {#adls-example}
 
@@ -111,9 +103,6 @@ The server specs for file-based destinations can be configured in Adobe Experien
    },
   "fileConfigurations": {
        // see File-based destinations file configuration
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```
@@ -124,7 +113,6 @@ The server specs for file-based destinations can be configured in Adobe Experien
 |`destinationServerType`|String|Set this value according to your destination platform. Supported values: <ul><li>`FILE_BASED_S3` for Amazon S3 destinations</li><li>`FILE_BASED_SFTP` for SFTP destinations</li><li>`FILE_BASED_ADLS_GEN2` for [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destinations</li><li>`FILE_BASED_AZURE_BLOB` for Azure Blob destinations</li><li>`FILE_BASED_DLZ` for [!DNL Data Landing Zone] destinations</ul>|
 |`fileBasedAdlsGen2Destination.path.templatingStrategy`|String| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>|
 |`fileBasedAdlsGen2Destination.path.value`|String|The path to the destination folder that will host the exported files.|
-|`qos`|String||
 
 ## File-based [!DNL Azure Blob Storage] destination server spec {#blob-example}
 
@@ -144,9 +132,6 @@ The server specs for file-based destinations can be configured in Adobe Experien
    },
   "fileConfigurations": {
        // see File-based destinations file configuration
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```
@@ -159,7 +144,6 @@ The server specs for file-based destinations can be configured in Adobe Experien
 |`fileBasedAzureBlobDestination.path.value`|String|The path to the destination folder that will host the exported files.|
 |`fileBasedAzureBlobDestination.container.templatingStrategy`|String| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`fileBasedAzureBlobDestination.container.value`|String|The name of the [!DNL Azure Blob Storage] container to be used by this destination.|
-|`qos`|String||
 
 ## File-based [!DNL Data Landing Zone] ([!DNL DLZ]) destination server spec {#dlz-example}
 
@@ -176,9 +160,6 @@ The server specs for file-based destinations can be configured in Adobe Experien
    },
    "fileConfigurations": {
        // see File-based destinations file configuration
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```
@@ -190,7 +171,6 @@ The server specs for file-based destinations can be configured in Adobe Experien
 |`fileBasedDlzDestination.path.templatingStrategy`|String| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`fileBasedDlzDestination.path.value`|String|The path to the destination folder that will host the exported files.|
 |`useCase`|String||
-|`qos`|String||
 
 ## File-based destinations file configuration {#file-configuration}
 
@@ -240,8 +220,8 @@ This section describes the file formatting settings for the exported files.
                 "value": ""
             },
             "dateFormat": {
-                "templatingStrategy": "PEBBLE_V1",
-                "value": "{{customerData.dateFormat}}"
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
             },
             "timestampFormat": {
                 "templatingStrategy": "NONE",

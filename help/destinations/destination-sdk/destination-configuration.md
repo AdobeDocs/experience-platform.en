@@ -1,9 +1,9 @@
 ---
 description: This configuration allows you to indicate basic information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
-title: Destination configuration options for Destination SDK
+title: Streaming destination configuration options for Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
 ---
-# Destination configuration {#destination-configuration}
+# Streaming destination configuration {#destination-configuration}
 
 ## Overview {#overview}
 
@@ -13,11 +13,7 @@ This configuration also connects the other configurations required for your dest
 
 You can configure the functionality described in this document by using the `/authoring/destinations` API endpoint. Read [Destinations API endpoint operations](./destination-configuration-api.md) for a complete list of operations you can perform on the endpoint.
 
-## Example configurations {#example-configurations}
-
-Below are two examples of destination configurations, one for a streaming destination, and one for a batch destination. The sections further below break down how these configurations are constructed.
-
-### Streaming configuration example {#example-configuration}
+## Streaming configuration example {#example-configuration}
 
 This is an example configuration of a fictional streaming destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category.
 
@@ -121,150 +117,6 @@ This is an example configuration of a fictional streaming destination, Moviestar
    },
    "backfillHistoricalProfileData":true
 }
-
-
-```
-
-### File-based configuration example {#batch-example-configuration}
-
-
-<!--
-
-Review the entire example for batch.
-
-Need correct value for connectionType.
-
--->
-
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
-
-This is an example configuration of a fictional file-based destination. The destination belongs to the email marketing category.
-
-
-```json
-{
-    "name": "Amazon S3 destination",
-    "description": "Amazon S3 destination is a fictional destination, used for this example.",
-    "releaseNotes": "Test",
-    "status": "Test",
-    "maxProfileAttributes": "2000",
-    "maxIdentityAttributes": "10",
-    "customerAuthenticationConfigurations": [
-        {
-            "authType": "S3"
-        }
-    ],
-    "customerEncryptionConfigurations": [],
-    "customerDataFields": [
-        {
-            "name": "bucket",
-            "title": "Amazon S3 bucket name",
-            "description": "Enter the Amazon S3 Bucket name that will host the exported files.",
-            "type": "string",
-            "isRequired": true,
-            "readOnly": false,
-            "hidden": false
-        },
-        {
-            "name": "path",
-            "title": "Amazon S3 path",
-            "description": "Enter Amazon S3 folder path",
-            "type": "string",
-            "isRequired": true,
-            "pattern": "^[A-Za-z]+$",
-            "readOnly": false,
-            "hidden": false
-        },
-        {
-            "name": "compression",
-            "title": "Select compression type",
-            "description": "Select the file compression type used by the exported files.",
-            "type": "string",
-            "isRequired": true,
-            "readOnly": false,
-            "enum": [
-                "GZIP",
-                "NONE",
-                "bzip2",
-                "lz4",
-                "snappy",
-                "deflate"
-            ]
-        },
-        {
-            "name": "fileType",
-            "title": "Select a file format",
-            "description": "Select the file format to be used by the exported files.",
-            "type": "string",
-            "isRequired": true,
-            "readOnly": false,
-            "hidden": false,
-            "enum": [
-                "csv",
-                "json",
-                "parquet"
-            ],
-            "default": "csv"
-        }
-    ],
-    "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
-        "category": "S3",
-        "iconUrl": "https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
-        "connectionType": "S3",
-        "flowRunsSupported": true,
-        "monitoringSupported": true,
-        "frequency": "Batch"
-    },
-    "aggregation": {
-        "aggregationType": "BEST_EFFORT",
-        "bestEffortAggregation": {
-            "maxUsersPerRequest": 10,
-            "splitUserById": false
-        }
-    },
-    "destinationDelivery": [
-        {
-            "deliveryMatchers": [
-                {
-                    "type": "SOURCE",
-                    "value": [
-                        "batch"
-                    ]
-                }
-            ],
-            "authenticationRule": "CUSTOMER_AUTHENTICATION",
-            "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d" // the instance ID of the destination server created
-        }
-    ],
-    "schemaConfig": {
-        "profileRequired": true,
-        "segmentRequired": true,
-        "identityRequired": true
-    },
-    "batchConfig": {
-        "allowMandatoryFieldSelection": true,
-        "allowJoinKeyFieldSelection": true, // confirm what these are with Justin - dedupe keys?
-        "defaultExportMode": "DAILY_FULL_EXPORT",
-        "allowedExportMode": [
-            "DAILY_FULL_EXPORT",
-            "FIRST_FULL_THEN_INCREMENTAL"
-        ],
-        "allowedScheduleFrequency": [
-            "DAILY",
-            "EVERY_3_HOURS",
-            "EVERY_6_HOURS",
-            "EVERY_8_HOURS",
-            "EVERY_12_HOURS",
-            "ONCE"
-        ],
-        "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
-    },
-    "backfillHistoricalProfileData": true
-}
 ```
 
 |Parameter | Type | Description|
@@ -272,8 +124,6 @@ This is an example configuration of a fictional file-based destination. The dest
 |`name` | String | Indicates the title of your destination in the Experience Platform catalog. |
 |`description` | String | Provide a description for your destination card in the Experience Platform destinations catalog. Aim for no more than 4-5 sentences. |
 |`status` | String | Indicates the lifecycle status of the destination card. Accepted values are `TEST`, `PUBLISHED`, and `DELETED`. Use `TEST` when you first configure your destination. |
-|`maxProfileAttributes`|String|Indicates the maximum number of profile attributes customers can select for the destination. Default value is `2000`.|
-|`maxIdentityAttributes`|String|Indicates the maximum number of identity namespaces customers can select for the destination. Default value is `10`.|
 
 {style="table-layout:auto"}
 
@@ -281,43 +131,13 @@ This is an example configuration of a fictional file-based destination. The dest
 
 This section in the destinations configuration generates the [Configure new destination](/help/destinations/ui/connect-destination.md) page in the Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination. Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as follows:
 
-**Bearer authentication**
+### Bearer authentication
 
 When you configure the bearer authentication type, users are required to input the bearer token that they obtain from your destination.
 
 ![UI render with bearer authentication](assets/bearer-authentication-ui.png)
 
-**Amazon S3 authentication**
-
->[!IMPORTANT]
->
->This authentication configuration only applies to file-based destinations. The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
-
-When you configure the Amazon S3 authentication type, users are required to input the S3 credentials.
-
-![UI render with S3 authentication](assets/s3-authentication-ui.png)
-
-**SFTP with password authentication**
-
->[!IMPORTANT]
->
->This authentication configuration only applies to file-based destinations. The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
-
-When you configure the SFTP with password authentication type, users are required to input the SFTP username and password, as well as the SFTP domain and port (default port is 22).
-
-![UI render with SFTP with password authentication](assets/sftp-password-authentication-ui.png)
-
-**SFTP with SSH key authentication**
-
->[!IMPORTANT]
->
->This authentication configuration only applies to file-based destinations. The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
-
-When you configure the SFTP with SSH key authentication type, users are required to input the SFTP username and SSH key, as well as the SFTP domain and port (default port is 22).
-
-![UI render with SFTP with SSH key authentication](assets/sftp-key-authentication-ui.png)
-
-**OAuth 2 authentication**
+### OAuth 2 authentication
 
 Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Custom Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md).
 
@@ -327,7 +147,7 @@ Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 auth
 |Parameter | Type | Description|
 |---------|----------|------|
 |`customerAuthenticationConfigurations` | String | Indicates the configuration used to authenticate Experience Platform customers to your server. See `authType` below for accepted values. |
-|`authType` | String | Accepted values are:<ul><li>`BEARER`. If your destination supports bearer authentication, set `"authType":"Bearer"` and  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`OAUTH2`. If your destination supports OAuth 2 authentication, set `"authType":"OAUTH2"` and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`S3`. If your destination supports Amazon S3 authentication, set `"authType":"S3"` and add the required fields for Amazon S3, as shown in the [Destination SDK authentication configuration page](./authentication-configuration.md#s3). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`SFTP_WITH_SSH_KEY`. If your destination supports SFTP authentication with SSH key, set `"authType":"SFTP_WITH_SSH_KEY"` and add the required fields for SFTP with SSH key, as shown in the [Destination SDK authentication configuration page](./authentication-configuration.md#sftp-ssh).  Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`SFTP_WITH_PASSWORD`. If your destination supports SFTP authentication with password, set `"authType":"SFTP_WITH_PASSWORD"` and add the required fields for SFTP with password, as shown in the [Destination SDK authentication configuration page](./authentication-configuration.md#sftp-password). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li></ul> |
+|`authType` | String | Accepted values for streaming destinations are:<ul><li>`BEARER`. If your destination supports bearer authentication, set `"authType":"Bearer"` and  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`OAUTH2`. If your destination supports OAuth 2 authentication, set `"authType":"OAUTH2"` and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li>|
 
 {style="table-layout:auto"}
 
@@ -374,53 +194,6 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
-
-{style="table-layout:auto"}
-
-## Batch configuration {#batch-configuration}
-
-<!--
-
-what are join keys or where could I find out more about them?
-
-Are these in any way related to deduplication keys? if they're the same, let's link to https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#deduplication-keys for more context
-
-A: 
-
-
--->
-
-For batch destinations, use the parameters in `batchConfig` to describe the configuration of the file-based destination that you are about to create.
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`allowMandatoryFieldSelection`|Boolean|Set to `true` to allow customers to specify which profile attributes are mandatory. Default value is `false`. See [Mandatory attributes](../ui/activate-batch-profile-destinations.md) for more information. |
-|`allowJoinKeyFieldSelection`|Boolean|Set to `true` to allow customers to specify join keys. Default value is `false`. |
-|`defaultExportMode`|Enum|Defines the default file export mode. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br> Default value is `DAILY_FULL_EXPORT`.|
-|`allowedExportModes`|List|Defines the file export modes available to customers. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul>|
-|`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_HOUR`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
-|`defaultFrequency`|Enum|Defines the default file export frequency.Supported values:<ul><li>`ONCE`</li><li>`EVERY_HOUR`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br> Default value is `DAILY`.|
-|`defaultStartTime`|String|Defines the default start time for the file export. Uses 24-hour file format. Default value is "00:00".|
-
-## Identities and attributes {#identities-and-attributes}
-
-The parameters in this section determine which identities your destination accepts. This configuration also populates the target identities and attributes in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
-
-You must indicate which [!DNL Platform] identities customers are able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Platform] identity namespaces that customers can map to identity namespaces in your destination. You can also indicate if customers can map custom namespaces to identities supported by your destination.
-
-Identity namespaces do not require a 1-to-1 correspondence between [!DNL Platform] and your destination.
-For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or they can map the same [!DNL Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
-
-Read more in the [Identity Namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en).
-
-![Render target identities in the UI](./assets/target-identities-ui.png) 
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`acceptsAttributes` | Boolean | Indicates if your destination accepts standard profile attributes. Usually, these attributes are highlighted in partners' documentation. |
-|`acceptsCustomNamespaces` | Boolean | Indicates if customers can set up custom namespaces in your destination. |
-|`allowedAttributesTransformation` | String | *Not shown in example configuration*. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. In this object, you can define the transformation that needs to be applied (for example, transform the email to lowercase, then hash). For an example, see `requiredTransformation` in the [destination configuration API reference](./destination-configuration-api.md#update). |
-|`acceptedGlobalNamespaces` | - | Used for cases when your platform accepts [standard identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (for example, IDFA), so you can restrict Platform users to only selecting these identity namespaces. |
 
 {style="table-layout:auto"}
 
