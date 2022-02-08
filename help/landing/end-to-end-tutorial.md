@@ -82,13 +82,13 @@ To evaluate a segment definition on an ongoing basis, you will need to create an
 
 ## Export your evaluated data to a dataset
 
-After either creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation by creating a segment export job. A segment export job is an asynchronous task that sends information about the evaluated segment job's audiences to a dataset. 
+After either creating your one-time segment job or your ongoing schedule, you can export the results by creating a segment export job. A segment export job is an asynchronous task that sends information about the evaluated segment job's audiences to a dataset. 
 
 Before creating an export job, you will first need to create a dataset to export the data to. To learn how to create a dataset, please read the create a target dataset step in the tutorial on [evaluating a segment](../segmentation/tutorials/evaluate-a-segment.md#create-dataset), ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job. To learn how to create an export job, you can follow the instructions in the API guide on the [export jobs endpoint](../segmentation/api/export-jobs.md).
 
 ## Export your evaluated data to a destination
 
-Alternatively, after creating your one-time segment job or your ongoing schedule, you can export the results of this segmentation to a destination. A destination is an endpoint, such as an Adobe application on an external service, where an audience can be activated and delivered. A full list of available destinations can be found in the [destinations overview](../destinations/home.md).
+Alternatively, after creating your one-time segment job or your ongoing schedule, you can export the results to a destination. A destination is an endpoint, such as an Adobe application on an external service, where an audience can be activated and delivered. A full list of available destinations can be found in the [destinations overview](../destinations/home.md).
 
 To learn how to activate your segment definition to a destination, please read the activate data to your new destination step in the tutorial on [connecting to destinations and activating data](../destinations/api/email-marketing.md#activate-data).
 
