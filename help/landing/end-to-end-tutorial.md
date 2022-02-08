@@ -48,13 +48,17 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 - Content-Type: application/json
 
-Additional headers may be required to complete specific requests. The correct headers are shown in each of the examples within this document. Please pay special attention to the sample requests in order to ensure that all required headers are included. 
+Additional headers may be required to complete specific requests. The correct headers are shown in each of the examples within this document. Please pay special attention to the sample requests in order to ensure that all required headers are included.
+
+### Create an XDM schema
+
+Please note that when you ingest your data, you will need to create an XDM schema for the data to be formatted into. To learn how to best create an XDM schema, please read the guide on the [basics of schema composition](../xdm/schema/composition.md).
 
 ## Ingest your data into Platform
 
 In order to use Platform to evaluate your data, you will first need to ingest your data into the system. You can ingest your data by using one of the various sources provided by Platform, such as [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). A full list of available sources can be found in the [source connectors overview](../sources/home.md).
 
-If you use Amazon S3 as your source connector, you can follow the instructions in either the API tutorial on [creating an Amazon S3 connector](../sources/tutorials/api/create/cloud-storage/s3.md) or the UI tutorial on [creating an Amazon S3 connector](../sources/tutorials/ui/create/cloud-storage/s3.md) to learn how to create, connect to, and ingest data within the connector. Please note that when you ingest your data, you will need to create an XDM schema for the data to be formatted into. To learn how to best create an XDM schema, please read the guide on the [basics of schema composition](../xdm/schema/composition.md).
+If you use Amazon S3 as your source connector, you can follow the instructions in either the API tutorial on [creating an Amazon S3 connector](../sources/tutorials/api/create/cloud-storage/s3.md) or the UI tutorial on [creating an Amazon S3 connector](../sources/tutorials/ui/create/cloud-storage/s3.md) to learn how to create, connect to, and ingest data within the connector.
 
 For more detailed instructions on source connectors, please read the [source connectors overview](../sources/home.md). To learn more about Flow Service, the API which sources is based off of, please read the [Flow Service API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
