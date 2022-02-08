@@ -162,7 +162,7 @@ A successful response returns the details of the merge policy.
     "attributeMerge": {
         "type":"dataSetPrecedence", 
         "data": {
-            "order" : ["5b95b155419ec801e6eee780", "5b7c86968f7b6501e21ba9df"]
+            "order": ["5b95b155419ec801e6eee780", "5b7c86968f7b6501e21ba9df"]
         }
     },
     "default": false,

@@ -245,7 +245,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                 "format": "CSV",
                 "schema": null
             },
-            "params" : {}
+            "params": {}
 }'
 ```
 

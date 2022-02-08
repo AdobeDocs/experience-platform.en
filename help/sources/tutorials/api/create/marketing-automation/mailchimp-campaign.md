@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Create a dataflow for MailChimp Campaign using the Flow Service API
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp Campaign using the Flow Service API.
+exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
 ---
 # Create a dataflow for [!DNL MailChimp Campaign] using the Flow Service API
 
@@ -96,7 +97,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL MailChimp] :
+The following request creates a base connection for [!DNL MailChimp]:
 
 ```shell
 curl -X POST \

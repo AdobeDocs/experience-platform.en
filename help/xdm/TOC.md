@@ -12,15 +12,16 @@ feature: Schemas
 * Schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
   * [Best practices for data modeling](schema/best-practices.md)
+  * [Sensitive and personal data](./schema/sensitive-and-personal-data.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [Namespacing in XDM](./schema/namespaces.md)
-  * [XDM field dictionary](schema/field-dictionary.md)
   * Industry data models {#industries}
     * [Overview](./schema/industries/overview.md)
     * [Retail](./schema/industries/retail.md)
     * [Financial services](./schema/industries/financial.md)
     * [Telecommunications](./schema/industries/telecom.md)
     * [Travel and hospitality](./schema/industries/travel-hospitality.md)
+  * [XDM field dictionary](schema/field-dictionary.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -34,7 +35,7 @@ feature: Schemas
     * [XDM Business Opportunity Person Relation](./classes/b2b/business-opportunity-person-relation.md)
     * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
     * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
-* Schema field groups {#field-groups}
+* Field groups {#field-groups}
   * Profile field groups {#profile}
     * [Demographic Details](./field-groups/profile/demographic-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
@@ -149,6 +150,7 @@ feature: Schemas
   * [Define a schema relationship in the API](tutorials/relationship-api.md)
   * [Define a schema relationship in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
+  * [Extend a soft enum field (API)](tutorials/extend-soft-enum.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

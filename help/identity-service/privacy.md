@@ -2,8 +2,8 @@
 keywords: Experience Platform;home;popular topics
 title: Privacy Request Processing in Identity Service
 description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by numerous privacy regulations. This document covers essential concepts related to processing privacy requests for Identity Service.
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 ---
-
 # Privacy request processing in [!DNL Identity Service]
 
 Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and [!DNL California Consumer Privacy Act] (CCPA).
@@ -44,6 +44,10 @@ In addition, the `include` array of the request payload must include the product
 
 The following request creates a new privacy job under the GDPR for a single customer's data in the [!DNL Identity] store. Two identity values are provided for the customer in the `userIDs` array; one using the standard `Email` identity namespace, and the other using an `ECID` namespace, It also includes the product value for [!DNL Identity] (`Identity`) in the `include` array:
 
+>[!TIP]
+>
+>When deleting a custom namespace using the API, you must specify the identity symbol as the namespace, instead of the display name.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
@@ -83,6 +87,10 @@ curl -X POST \
 ```
 
 ### Using the UI
+
+>[!TIP]
+>
+>When deleting a custom namespace using the UI, you must specify the identity symbol as the namespace, instead of the display name. Furthermore, you cannot delete custom namespaces in the UI for non-production sandboxes.
 
 When creating job requests in the UI, be sure to select **[!UICONTROL Identity]** under **[!UICONTROL Products]** in order to process jobs for data stored in [!DNL Identity Service].
 

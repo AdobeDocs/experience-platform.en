@@ -14,6 +14,9 @@ feature: Destinations
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
     * [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
+    * [Update destination dataflows](./api/update-destination-dataflows.md)
+    * [Delete destination accounts](./api/delete-destination-account.md)
+    * [Delete destination dataflows](./api/delete-destination-dataflow.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
@@ -22,7 +25,8 @@ feature: Destinations
         * [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
-        * [Activate audience data to profile request destinations (Beta)](./ui/activate-profile-request-destinations.md)
+        * [Activate audience data to profile request destinations](./ui/activate-profile-request-destinations.md)
+        * [Configure personalization destinations for same-page and next-page personalization](./ui/configure-personalization-destinations.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Edit activation flows](./ui/edit-activation.md)
@@ -30,7 +34,6 @@ feature: Destinations
     * [Monitor dataflows](./ui/monitor-dataflows.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
-    * [ (Alpha) HTTP connection](./catalog/http-destination.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
@@ -110,11 +113,11 @@ feature: Destinations
         * [Braze connection](./catalog/mobile-engagement/braze.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
-        * [Adobe Target connection (Beta)](./catalog/personalization/adobe-target-connection.md)
+        * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
         * [Adobe Target v2 extension](./catalog/personalization/adobe-target-v2.md)
         * [Beemray extension](./catalog/personalization/beemray.md)
-        * [Custom personalization connection (Beta)](./catalog/personalization/custom-personalization.md)
+        * [Custom personalization connection](./catalog/personalization/custom-personalization.md)
         * [D&B Visitor Intelligence extension](./catalog/personalization/dnb.md)
         * [Experience Cloud ID Service extension](./catalog/personalization/adobe-ecid.md)
         * [Gainsight extension](./catalog/personalization/gainsight.md)
@@ -126,6 +129,8 @@ feature: Destinations
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
+    * Streaming destinations {#streaming}
+        * [ (Beta) HTTP API connection](./catalog/streaming/http-destination.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
