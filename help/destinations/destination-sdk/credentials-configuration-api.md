@@ -5,9 +5,6 @@ exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
 ---
 # Credentials endpoint API operations {#credentials}
 
-// add new credential types for batch
-
-
 >[!IMPORTANT]
 >
 >**API endpoint**: `platform.adobe.io/data/core/activation/authoring/credentials`

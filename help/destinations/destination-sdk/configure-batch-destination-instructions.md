@@ -110,9 +110,6 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
                 "value": "\n"
             }
         }
-    },
-    "qos": {
-        "name": "freeform"
     }
 }
 ```
@@ -128,16 +125,6 @@ To connect the server and file configuration in step 1 to this destination confi
 ```http
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ``` 
-
-<!--
-
-This example needs to be fully reviewed and updated for batch.
-
-Q: Does aggregation apply to batch?
-A: Confirm with Justin
-
--->
-
 
 ```json
 

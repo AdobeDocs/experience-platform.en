@@ -278,6 +278,7 @@ This section allows partners to introduce custom fields. In the example above, `
         }
     ],
 ```
+
 The configuration is reflected in the authentication flow as shown below:
 
 ![Custom field authentication flow](assets/custom-batch-authentication-flow.png)
@@ -291,7 +292,6 @@ The configuration is reflected in the authentication flow as shown below:
 |`isRequired` | Boolean | Indicates if this field is required in the destination setup workflow. |
 |`pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. |
 |`enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user.|
-
 
 {style="table-layout:auto"}
 
@@ -320,7 +320,6 @@ This section refers to the UI elements in the configuration above that Adobe sho
 |`flowRunsSupported`|String||
 |`monitoringSupported`|String||
 |`frequency` | String | Refers to the type of data export supported by the destination. Supported values: <ul><li>`Streaming` for streaming destinations</li><li>`Batch` for file-based destinations</li></ul>|
-
 
 {style="table-layout:auto"}
 
@@ -367,8 +366,8 @@ For batch destinations, use the parameters in `batchConfig` to describe the conf
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`allowMandatoryFieldSelection`|Boolean|Set to `true` to allow customers to specify which profile attributes are mandatory. Default value is `false`. See [Mandatory attributes](../ui/activate-batch-profile-destinations.md) for more information. |
-|`allowDedupeKeyFieldSelection`|Boolean|Set to `true` to allow customers to specify deduplication keys. Default value is `false`. |
+|`allowMandatoryFieldSelection`|Boolean|Set to `true` to allow customers to specify which profile attributes are mandatory. Default value is `false`. See [Mandatory attributes](../ui/activate-batch-profile-destinations.md#mandatory-attributes) for more information. |
+|`allowDedupeKeyFieldSelection`|Boolean|Set to `true` to allow customers to specify deduplication keys. Default value is `false`.  See [Deduplication keys](../ui/activate-batch-profile-destinations.md#deduplication-keys) for more information. |
 |`defaultExportMode`|Enum|Defines the default file export mode. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br> Default value is `DAILY_FULL_EXPORT`.|
 |`allowedExportModes`|List|Defines the file export modes available to customers. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul>|
 |`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
