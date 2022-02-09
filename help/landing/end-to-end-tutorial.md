@@ -22,37 +22,9 @@ This end-to-end workflow uses multiple Adobe Experience Platform services. The f
 - [Datasets](../catalog/datasets/overview.md): The storage and management construct for data persistence in [!DNL Experience Platform].
 - [Destinations](../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
+## Create an XDM schema
 
-### Reading sample API calls
-
-This developer guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](./troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
-
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
-
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../sandboxes/home.md). 
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-- Content-Type: application/json
-
-Additional headers may be required to complete specific requests. The correct headers are shown in each of the examples within this document. Please pay special attention to the sample requests in order to ensure that all required headers are included.
-
-### Create an XDM schema
-
-Please note that when you ingest your data, you will need to create an XDM schema for the data to be formatted into. To learn how to best create an XDM schema, please read the guide on the [basics of schema composition](../xdm/schema/composition.md).
+When you ingest your data, you will need to create an XDM schema for the data to be formatted into. To learn how to best create an XDM schema, please read the guide on the [basics of schema composition](../xdm/schema/composition.md).
 
 ## Ingest your data into Platform
 
