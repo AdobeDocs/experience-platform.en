@@ -85,11 +85,9 @@ For more information on working with segments in Experience Platform, please beg
 
 >[!IMPORTANT]
 >
->The following destinations widgets are currently in alpha and are not available to all users. The documentation and the functionality are subject to change.
+>The following destinations widgets are currently in alpha and are not available to all users. The documentation and the functionality are subject to change. These widgets are **not** added to the destinations dashboard by default. To learn how to enable these optional widgets, please read the guide on [modifying your dashboard](../customize/modify.md).
 
-Adobe provides multiple widgets to assess the completeness of the segments available for your data analysis. These widgets are **not** added to the destinations dashboard by default. To learn how to enable these optional widgets, please read the guide on [modifying your dashboard](../customize/modify.md).
-
-To learn more about each of these optional widgets, select the name of a widget from the following list:
+Adobe provides multiple widgets to assess the completeness of the segments available for your data analysis. To learn more about each of these optional widgets, select the name of a widget from the following list:
 
 * [[!UICONTROL Recently activated segments by destination]](#recently-activated-segments-by-destination)
 * [[!UICONTROL Audience size trend]](#audience-size-trends)
