@@ -20,8 +20,8 @@ The following Experience Platform services are involved with modeling Identity d
 | --- | --- | --- |
 | Number of identities in a graph | 150 | The identity graph will not be updated once the limit is reached. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
-| Number of custom namespaces | None |
-| Number of graphs | None |
+| Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
+| Number of graphs | None | There are no limits to the number of identity graphs you can create. |
 
 ## Next steps
 
