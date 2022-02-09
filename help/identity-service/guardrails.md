@@ -16,12 +16,12 @@ The following Experience Platform services are involved with modeling Identity d
 
 ## Data model limits
 
-| Guardrail | Limit | Description |
+| Guardrail | Limit | Notes |
 | --- | --- | --- |
 | Number of identities in a graph | 150 | The identity graph will not be updated once the limit is reached. |
-| Number of links to an identity | 100 | The identity will be marked invalid after the limit is reached. |
-| Number of identities in an XDM record | 20 |
-| Batch failure rate | 10% | If 10% of the batch records fail, then the entire batch will result in failure. |
+| Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
+| Number of custom namespaces | None |
+| Number of graphs | None |
 
 ## Next steps
 
