@@ -101,6 +101,21 @@ You can configure the functionality described in this document by using the `/au
                 "parquet"
             ],
             "default": "csv"
+        },
+        {
+            "name": "destinationInstance",
+            "title": "Select a destination instance",
+            "description": "Select a destination instance.",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": false,
+            "hidden": false,
+            "dynamicEnum": {
+                "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d",
+                "authenticationRule": "IMS_AUTHENTICATION",
+                "value": "accInstance",
+                "responseFormat": "NAME_VALUE"
+            },
         }
     ],
     "uiAttributes": {
@@ -127,6 +142,14 @@ You can configure the functionality described in this document by using the `/au
         }
     ],
     "schemaConfig": {
+        "dynamicSchemaConfig":{
+            "dynamicEnum": {
+                "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d",
+                "authenticationRule": "IMS_AUTHENTICATION",
+                "value": "accSchema",
+                "responseFormat": "SCHEMA"
+            },
+        },
         "profileRequired": true,
         "segmentRequired": true,
         "identityRequired": true
@@ -275,7 +298,22 @@ This section allows partners to introduce custom fields. In the example above, `
                 "parquet"
             ],
             "default": "csv"
-        }
+        },
+        {
+            "name": "destinationInstance",
+            "title": "Select a destination instance",
+            "description": "Select a destination instance.",
+            "type": "string",
+            "isRequired": true,
+            "readOnly": false,
+            "hidden": false,
+            "dynamicEnum": {
+                "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d",
+                "authenticationRule": "IMS_AUTHENTICATION",
+                "value": "accInstance",
+                "responseFormat": "NAME_VALUE"
+            },
+        },
     ],
 ```
 
@@ -292,6 +330,11 @@ The configuration is reflected in the authentication flow as shown below:
 |`isRequired` | Boolean | Indicates if this field is required in the destination setup workflow. |
 |`pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. |
 |`enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user.|
+|`dynamicEnum` | String | Renders the custom field as a dropdown menu and lists the options available to the user. Use `dynamicEnum` when your custom fields are controlled via an API.|
+|`dynamicEnum.destinationServerId` |String|||
+|`dynamicEnum.authenticationRule`|String|||
+|`dynamicEnum.value`|String|||
+|`dynamicEnum.responseFormat`|String|||
 
 {style="table-layout:auto"}
 
@@ -329,9 +372,29 @@ This section refers to the UI elements in the configuration above that Adobe sho
 
 Use the parameters in `schemaConfig` to enable the mapping step of the destination activation workflow. By using the parameters described below, you can determine if Experience Platform users can map profile attributes and/or identities to the desired schema on your destination's side.
 
+```json
+"schemaConfig": {
+        "dynamicSchemaConfig":{
+            "dynamicEnum": {
+                "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d",
+                "authenticationRule": "IMS_AUTHENTICATION",
+                "value": "accSchema",
+                "responseFormat": "SCHEMA"
+            },
+        },
+        "profileRequired": true,
+        "segmentRequired": true,
+        "identityRequired": true
+    },
+```
+
 |Parameter | Type | Description|
 |---------|----------|------|
 |`profileFields` | Array | *Not shown in example configuration above.* When you add predefined `profileFields`, Experience Platform users have the option of mapping Platform attributes to the predefined attributes on your destination's side. |
+|`dynamicSchemaConfig.dynamicEnum.destinationServerId`|String|*Used when creating a destination with a partner-defined schema*. The destination server ID used when creating the destination server.|
+|`dynamicSchemaConfig.dynamicEnum.authenticationRule`|String|*Used when creating a destination with a partner-defined schema*|
+|`dynamicSchemaConfig.dynamicEnum.value`|String|*Used when creating a destination with a partner-defined schema*|
+|`dynamicSchemaConfig.dynamicEnum.responseFormat`|String|*Used when creating a destination with a partner-defined schema*|
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
