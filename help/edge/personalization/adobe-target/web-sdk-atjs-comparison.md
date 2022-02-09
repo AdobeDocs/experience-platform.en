@@ -1099,16 +1099,118 @@ alloy("sendEvent", {
 ## How do I use third party IDs
 
 **Using at.js**
+Using at.js there are multiple ways of sending `mbox3rdPartyId`, using `getOffer` or `getOffers`:
+
+Example 1:
+
+```javascript
+adobe.target.getOffer({
+  mbox:"test",
+  params:{
+    "mbox3rdPartyId": "1234"
+  },
+  success: console.log,
+  error: console.error
+});
+```
+
+Example 2:
+
+```javascript
+adobe.target.getOffers({
+    request: {
+      id:{
+        thirdPartyId: "1234"
+      },
+      execute: {
+        pageLoad: {}
+    }
+  }
+})
+.then(console.log)
+.catch(console.error);
+```
+
+Or there is a way to set up the `mbox3rdPartyId` either in `targetPageParams` or `targetPageParamsAll`.
+When setting it in `targetPageParams`, it will be sent in the requests for `target-global-mbox` also known as `pag-lLoad`. 
+The recommendation is to be set using `targetPageParamsAll` as it will be sent in every target request.
+The advantage of using `targetPageParamsAll` is that you can define the `mbox3rdPartyId` on the page once and this will ensure that all the target requests have the right `mbox3rdPartyId`.
+
+```javascript
+window.targetPageParamsAll = function() {
+      return {
+        "mbox3rdPartyId": "1234"
+      };
+    };
+```
+
+```javascript
+window.targetPageParams = function() {
+  return {
+    "mbox3rdPartyId": "1234"
+  };
+};
+```
+
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=en)
+
+
 
 **Using Web SDK**
 
+Web SDK supports Target Third Party ID. However, it requires a few more steps. Before diving into the solution, we should talk a little bit about `identityMap`.
+Identity Map allows the customers to send multiple identities. All the identities are namespaced. Each namespace can have one or more identities. A particular identity can be marked as primary.
+With this knowledge in mind we can see what are the necessary steps to set up web sdk to use Target Third Party ID.
+1. Set up the namespace that will contain the Target Third Party ID in the Data Stream Configuration view:
 
+![](assets/mbox-3-party-id-setup.png)
+
+3. Send that identity namespace in every sendEvent command like this:
+
+```javascript
+alloy("sendEvent", {
+  "renderDecisions": true,
+  "xdm": {
+    "identityMap": {
+      "TGT3PID": [
+        {
+          "id": "1234",
+          "primary": true
+        }
+      ]
+    }
+  }
+});
+```
 
 ## How do I set property tokens
 
 **Using at.js**
 
+Using at.js there are 2 ways of setting up the property tokens, either using `targetPageParams` or `targetPageParamsAll`. Using `targetPageParams` adds the property token to the `target-global-mbox` call, but using `targetPageParamsAll` adds the token to all the target calls:
+
+Example 1:
+```javascript
+   window.targetPageParamsAll = function() {
+      return {
+        "at_property": "1234"
+      };
+    };
+```
+Example 2:
+```javascript
+window.targetPageParams = function() {
+      return {
+        "at_property": "1234"
+      };
+    };
+```
+
 **Using Web SDK**
+
+Using Web SDK the customers are able to set up the property at a higher level, when setting up the Data Stream configuration, under Adobe Target namespace:
+![](assets/at-property-setup.png)
+This means every Target call for that specific Data Stream configuration is going to contain that property token.
 
 
 ## How do I enable A4T for click events in SPA
@@ -1122,5 +1224,32 @@ alloy("sendEvent", {
 
 **Using at.js**
 
+This functionality is available only in at.js 2.x. at.js 2.x has a new function named `getOffers`. `getOffers` allow customers to prefetch content for one or more mboxes. Here is an example:
+
+```javascript
+adobe.target.getOffers({
+    request: {
+      prefetch: {
+        mboxes: [{
+          index: 0,
+          name: "test-mbox",
+          parameters: {
+            ...
+          },
+          profileParameters: {
+            ...
+          }
+        }]
+    }
+  }
+})
+.then(console.log)
+.catch(console.error);
+```
+
+NOTE: It is highly advised to ensure that every `mbox` in the `mboxes` array has its own index. Usually the first mbox has `index=0`, the next one `index=1`, etc. 
+
 **Using Web SDK**
+
+This functionality is currently not supported in AEP Web SDK.
 
