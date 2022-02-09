@@ -16,12 +16,26 @@ The following Experience Platform services are involved with modeling Identity d
 
 ## Data model limits
 
+### Static limits
+
+The following table outlines static limits applied to identity data.
+
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
 | Number of identities in a graph | 150 | The identity graph will not be updated once the limit is reached. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of graphs | None | There are no limits to the number of identity graphs you can create. |
+| Number of characters for a namespace display name or identity symbol | None | There are no limits to the number of characters of a namespace display name or identity symbol. |
+
+### Identity value validation
+
+The following table outlines existing rules you must follow to ensure a successful validation of your identity value.
+
+| Namespace | Validation rule | System behavior when rule is violated |
+| --- | --- | --- |
+| ECID | The identity value of an ECID must be exactly 38 characters. | If the identity value of ECID is not exactly 38 characters, then the record is skipped. |
+| Non-ECID | The identity value cannot exceed 1024 characters. | If the identity value exceeds 1024 characters, then the record is skipped. |
 
 ## Next steps
 
