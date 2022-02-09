@@ -92,7 +92,7 @@ To learn more about each of these optional widgets, select the name of a widget 
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 
-### [!UICONTROL Recently activated segments by destination] {#recently-activated-segments-by-destination}
+### (Alpha) [!UICONTROL Recently activated segments by destination] {#recently-activated-segments-by-destination}
 
 The **[!UICONTROL Recently activated segments by destination]** widget displays the top five most recently activated segments in descending order according to the destination chosen in the overview dropdown. It is similar to the [!UICONTROL Recently activated segments] widget, but the data displayed **only** applies to the selected destination.
 
@@ -102,7 +102,7 @@ You can view a segment's details by selecting the name of a segment from the lis
 
 [Recently activated segments by destination widget.](../images/destinations/recently-activated-segments-by-destination.png)
 
-### [!UICONTROL Audience size trend] {#audience-size-trend}
+### (Alpha) [!UICONTROL Audience size trend] {#audience-size-trend}
 
 The **[!UICONTROL Audience size trend]** widget depicts the relationship of the profile count over a period of time for a segment that has been mapped to that destination account. The widget uses a line graph to illustrate the number of profiles contained in the segment, that are being sent to the destination account daily.
 
@@ -112,7 +112,7 @@ The second dropdown menu lists every available segment that can be sent to the d
 
 [Audience size trend widget.](../images/destinations/audience-size-trend.png)
 
-### [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
+### (Alpha) [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
 
 The **[!UICONTROL Unmapped segments by identity]** widget lists the top five **unmapped** segments ranked by descending identity count for a given destination and identity. It highlights segments that are the most beneficial to map to the chosen destination account based on the chosen ID.
 
@@ -122,7 +122,7 @@ The identities column counts the number of source IDs within the segment that co
 
 [Unmapped segments by identity widget.](../images/destinations/unmapped-segments-by-identity.png)
 
-### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
+### (Alpha) [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
 
 This widget provides a top five list of **mapped** segments. The list is ordered from high to low according to the number of source IDs contained within the segments. The destination ID to be counted is selected from the dropdown menu below the widget title. The destination IDs available from the drop-down in the widget will change according to the destination account filter chosen at the top of the overview dashboard.
 
