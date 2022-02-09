@@ -22,14 +22,14 @@ If you prefer to use the user interface in Platform to connect a destination and
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 *   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-*   [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within [!DNL Experience Platform].
+*   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-time Customer Profile] data.
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to activate data to batch destinations in Platform.
 
 ### Gather required credentials {#gather-required-credentials}
 
-To complete the steps in this tutorial, you should have the following credentials ready, depending on the type of destinations that you are connecting and activating segments to.
+To complete the steps in this tutorial, you should have the following credentials ready, depending on the type of destination that you are connecting and activating segments to.
 
 * For [!DNL Amazon] S3 connections: `accessId`, `secretKey`
 * For SFTP connections: `domain`, `port`, `username`, `password` or `ssh key` (depending on the connection method to the FTP location)
@@ -61,7 +61,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### API reference documentation {#api-reference-documentation}
 
-You can find accompanying reference documentation for all the API calls in this tutorial. Refer to the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the API reference documentation in parallel.
+You can find accompanying reference documentation for all the API operations in this tutorial. Refer to the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the API reference documentation in parallel.
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 
@@ -384,7 +384,7 @@ curl -X POST \
 ```
 
 *   `{FLOW_SPEC_ID}`: Use the flow spec ID for the batch destination that you want to connect to. To retrieve the flow spec ID, perform a GET operation on the `flowspecs` endpoint, as shown in the [flow specs API reference documentation](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In the response, look for `upsTo` and copy the corresponding ID of the batch destination that you want to connect to. For example, for Adobe Campaign, look for `upsToCampaign` and copy the `id` parameter.
-*   `{SOURCE_CONNECTION_ID}`: Use the source connection ID you obtained in the step [Connect to your Experience Platform](#connect-to-your-experience-platform-data).
+*   `{SOURCE_CONNECTION_ID}`: Use the source connection ID you obtained in the step [Connect to your Experience Platform data](#connect-to-your-experience-platform-data).
 *   `{TARGET_CONNECTION_ID}`: Use the target connection ID you obtained in the step [Connect to batch destination](#connect-to-batch-destination).
 
 For your reference, the table below contains the flow spec IDs for commonly used batch destinations:
@@ -397,7 +397,7 @@ For your reference, the table below contains the flow spec IDs for commonly used
 
 **Response**
 
-A successful response returns the ID (`id`) of the newly created dataflow and an `etag`. Note down both values. as you will them in the next step, to activate segments and export data files.
+A successful response returns the ID (`id`) of the newly created dataflow and an `etag`. Note down both values as you will need them in the next step, to activate segments and export data files.
 
 ```json
 {
@@ -695,7 +695,8 @@ The returned response should include in the `transformations` parameter the segm
 
 ## Next steps
 
-By following this tutorial, you have successfully connected Platform to one of your preferred batch cloud storage or email marketing destinations and set up a dataflow to the respective destination to export data files. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details:
+By following this tutorial, you have successfully connected Platform to one of your preferred batch cloud storage or email marketing destinations and set up a dataflow to the respective destination to export data files. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
 
-*   [Destinations overview](../home.md)
-*   [Destinations Catalog overview](../catalog/overview.md)
+* [Destinations overview](../home.md)
+* [Destinations Catalog overview](../catalog/overview.md)
+* [Update destination dataflows using the Flow Service API](../api/update-destination-dataflows.md)
