@@ -196,7 +196,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
       "clientSecret":"string",
       "url":"string",
       "header":"string"
-   }
+   },
+   "S3"
+
 }
 ```
 

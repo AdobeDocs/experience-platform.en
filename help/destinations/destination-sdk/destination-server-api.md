@@ -105,15 +105,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
    "fileBasedSftpDestination":{
-      "filenameSuffix":{
-         "templatingStrategy":"PEBBLE_V1",
-         "value":""
-      },
       "rootDirectory":{
-         "templatingStrategy":"PEBBLE_V1",
-         "value":""
-      },    
-      "moveToWhenCompleted":{
          "templatingStrategy":"PEBBLE_V1",
          "value":""
       }, 

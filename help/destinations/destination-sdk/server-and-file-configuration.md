@@ -51,17 +51,9 @@ The server specs for file-based destinations can be configured in Adobe Experien
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
    "fileBasedSftpDestination":{
-      "filenameSuffix":{
-         "templatingStrategy":"PEBBLE_V1",
-         "value":"{{customerData.filenameSuffix}}"
-      },
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
-      },    
-      "moveToWhenCompleted":{
-         "templatingStrategy":"PEBBLE_V1",
-         "value":"{{customerData.moveToWhenCompleted}}"
       },
       "hostName":{
          "templatingStrategy":"PEBBLE_V1",
@@ -80,12 +72,8 @@ The server specs for file-based destinations can be configured in Adobe Experien
 |---|---|---|
 |`name`|String|The name of your destination connection.|
 |`destinationServerType`|String|Set this value according to your destination platform. Supported values: <ul><li>`FILE_BASED_S3` for Amazon S3 destinations</li><li>`FILE_BASED_SFTP` for SFTP destinations</li><li>`FILE_BASED_ADLS_GEN2` for [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destinations</li><li>`FILE_BASED_AZURE_BLOB` for Azure Blob destinations</li><li>`FILE_BASED_DLZ` for [!DNL Data Landing Zone] destinations</ul>|
-|`fileBasedSftpDestination.filenameSuffix.templatingStrategy`| String| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
-|`fileBasedSftpDestination.filenameSuffix.value`|||
 |`fileBasedSftpDestination.rootDirectory.templatingStrategy`|String| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
-|`fileBasedSftpDestination.rootDirectory.value`|String|||
-|`fileBasedSftpDestination.moveToWhenCompleted.templatingStrategy`|String| *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
-|`fileBasedSftpDestination.moveToWhenCompleted.value`|String|||
+|`fileBasedSftpDestination.rootDirectory.value`|String|The root directory of the destination storage.|
 |`port`|Integer|The SFTP file server port.|
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
 

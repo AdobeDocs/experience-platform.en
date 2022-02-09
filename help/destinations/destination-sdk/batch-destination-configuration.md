@@ -331,10 +331,10 @@ The configuration is reflected in the authentication flow as shown below:
 |`pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. |
 |`enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user.|
 |`dynamicEnum` | String | Renders the custom field as a dropdown menu and lists the options available to the user. Use `dynamicEnum` when your custom fields are controlled via an API.|
-|`dynamicEnum.destinationServerId` |String|||
-|`dynamicEnum.authenticationRule`|String|||
-|`dynamicEnum.value`|String|||
-|`dynamicEnum.responseFormat`|String|||
+|`dynamicEnum.destinationServerId` |String| The destination server ID used when creating the destination server.|
+|`dynamicEnum.authenticationRule`|String||
+|`dynamicEnum.value`|String|*Used when creating a destination with a partner-defined schema.* Defines the name of your custom schema.|
+|`dynamicEnum.responseFormat`|String||
 
 {style="table-layout:auto"}
 
@@ -349,7 +349,7 @@ The configuration is reflected in the authentication flow as shown below:
         "flowRunsSupported": true,
         "monitoringSupported": true,
         "frequency": "Batch"
-    },
+    }
 ```
 
 This section refers to the UI elements in the configuration above that Adobe should use for your destination in the Adobe Experience Platform user interface. See below:
@@ -358,10 +358,10 @@ This section refers to the UI elements in the configuration above that Adobe sho
 |---------|----------|------|
 |`documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en` |
 |`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
-|`iconUrl`|String||
+|`iconUrl`|String|The address where you hosted the icon to be displayed in the destinations Catalog card.|
 |`connectionType` | String | The type of connection, depending on the destination. Supported values: <ul><li>`S3`</li><li></li><li></li><li></li></ul> |
-|`flowRunsSupported`|String||
-|`monitoringSupported`|String||
+|`flowRunsSupported`|Boolean| Indicates whether the destination connection is included in the flow runs UI.|
+|`monitoringSupported`|Boolean|Indicates whether the destination connection is included in the monitoring UI.|
 |`frequency` | String | Refers to the type of data export supported by the destination. Supported values: <ul><li>`Streaming` for streaming destinations</li><li>`Batch` for file-based destinations</li></ul>|
 
 {style="table-layout:auto"}
@@ -392,9 +392,9 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 |---------|----------|------|
 |`profileFields` | Array | *Not shown in example configuration above.* When you add predefined `profileFields`, Experience Platform users have the option of mapping Platform attributes to the predefined attributes on your destination's side. |
 |`dynamicSchemaConfig.dynamicEnum.destinationServerId`|String|*Used when creating a destination with a partner-defined schema*. The destination server ID used when creating the destination server.|
-|`dynamicSchemaConfig.dynamicEnum.authenticationRule`|String|*Used when creating a destination with a partner-defined schema*|
-|`dynamicSchemaConfig.dynamicEnum.value`|String|*Used when creating a destination with a partner-defined schema*|
-|`dynamicSchemaConfig.dynamicEnum.responseFormat`|String|*Used when creating a destination with a partner-defined schema*|
+|`dynamicSchemaConfig.dynamicEnum.authenticationRule`|String|*Used when creating a destination with a partner-defined schema.*|
+|`dynamicSchemaConfig.dynamicEnum.value`|String|*Used when creating a destination with a partner-defined schema.* Defines the name of your custom schema.|
+|`dynamicSchemaConfig.dynamicEnum.responseFormat`|String|*Used when creating a destination with a partner-defined schema.* Value is always `SCHEMA`.|
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
