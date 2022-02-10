@@ -61,8 +61,8 @@ Once you have selected the file you want to upload, you must then identify the [
 
 | [!DNL Blob] types | Description |
 | --- | --- |
-| Block [!DNL Blob] |
-| Append [!DNL Blob] |
+| Block [!DNL Blob] | Block [!DNL Blobs] are optimized for uploading large amounts of data in an efficient manner. Block [!DNL Blobs] are the default option for [!DNL Data Landing Zone]. |
+| Append [!DNL Blob] | Append [!DNL Blobs] are optimized for appending data to the end of the file. |
 
 ![upload-files](../../images/tutorials/create/dlz/upload-files.png)
 
