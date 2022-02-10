@@ -107,7 +107,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "fileBasedSftpDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":""
+         "value":"{{customerData.rootDirectory}}"
       }, 
       "port": 22,
       "encryptionMode" : "PGP"
@@ -204,11 +204,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "fileBasedAzureBlobDestination":{
       "path":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":""
+         "value":"{{customerData.path}}"
       },
       "container":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":""
+         "value":"{{customerData.container}}"
       }
    },
   "fileConfigurations": {
@@ -254,7 +254,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "fileBasedAdlsGen2Destination":{
       "path":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":""
+         "value":"{{customerData.path}}"
       }
    },
   "fileConfigurations": {
@@ -302,7 +302,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "fileBasedDlzDestination":{
       "path":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":""
+         "value":"{{customerData.path}}"
       },
       "useCase": "Your use case"
    },
