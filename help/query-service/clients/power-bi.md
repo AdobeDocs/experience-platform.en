@@ -44,9 +44,9 @@ Additionally, you can select your **[!DNL Data Connectivity mode]**. Select **[!
 
 To learn more about **[!DNL Import]** mode, please read the section on [previewing and importing a table](#preview). To learn more about **[!DNL DirectQuery]** mode, please read the section on [creating SQL statements](#create). 
 
-## Use a custom queries to import a nested field
+## Manage nested objects in Power BI
 
-Power BI and other third party tools like Tableau do not currently allow users to import nested fields. A custom query can present a flattened view of nested data for use with Power BI analytics.
+Power BI and other third party tools like Tableau do not currently allow users to import nested objects such as Platform's XDM objects. Power BI does provide a custom query option you can use to create a flattened view of nested data.
 
 From the PostgreSQL database popover, select **[!UICONTROL Advanced options]** to enter a custom SQL query in the **[!UICONTROL SQL statement]** section. This query should flatten your JSON name-value pairs into a table format.
 
