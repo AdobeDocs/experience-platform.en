@@ -186,7 +186,7 @@ This widget shows the completeness and cardinality of each profile attribute sin
 
 ### (Alpha) [!UICONTROL Profiles by completeness] {#profile-completeness}
 
-This widget creates a histogram of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
+This widget creates a circle chart of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
 
 This widget shows the proportion of profiles that are of high, medium, or low completeness. By default, there are three levels of completeness configured: 
 
@@ -198,7 +198,7 @@ This widget shows the proportion of profiles that are of high, medium, or low co
 
 ### (Alpha) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
 
-This widget creates a stacked trend chart of profile completeness over time. It categorizes the profile completeness as high, medium, or low completeness since the the last processing date.
+This widget creates a stacked column chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
 
 The x-axis represents time, the y-axis represents the number of profiles, and the colors represent the three levels of profile completeness. 
 
