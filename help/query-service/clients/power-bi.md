@@ -42,7 +42,17 @@ You can now enter values for the server and database. For more information on fi
 
 Additionally, you can select your **[!DNL Data Connectivity mode]**. Select **[!DNL Import]** to display a list of all available tables, or select **[!DNL DirectQuery]** to directly create a query. 
 
-To learn more about **[!DNL Import]** mode, please read the section on [previewing and importing a table](#preview). To learn more about **[!DNL DirectQuery]** mode, please read the section on [creating SQL statements](#create). Select **[!DNL OK]** after confirming your database details.
+To learn more about **[!DNL Import]** mode, please read the section on [previewing and importing a table](#preview). To learn more about **[!DNL DirectQuery]** mode, please read the section on [creating SQL statements](#create). 
+
+## Use a custom queries to import a nested field
+
+Power BI and other third party tools like Tableau do not currently allow users to import nested fields. A custom query can present a flattened view of nested data for use with Power BI analytics.
+
+From the PostgreSQL database popover, select **[!UICONTROL Advanced options]** to enter a custom SQL query in the **[!UICONTROL SQL statement]** section. This query should flatten your JSON name-value pairs into a table format.
+
+After you have entered your customized query you can continue with connecting your database. 
+
+Select **[!DNL OK]** after confirming your database details.
 
 ![](../images/clients/power-bi/connectivity-mode.png)
 
