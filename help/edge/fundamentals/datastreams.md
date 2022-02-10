@@ -7,21 +7,79 @@ exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 
 # Configure a datastream
 
-The configuration for Adobe Experience Platform Web SDK is split between two places. The [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client, like the `edgeDomain`. Datastreams handle all other configurations for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the server side configuration. This allows you to update the configuration without having to make code changes on your website. 
+A datastream represents the server-side configuration when implementing the Adobe Experience Platform Web SDK. While the [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client (such as the `edgeDomain`), datastreams handle all other configurations for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the datastream. This allows you to update the server-side configuration without having to make code changes on your website. 
 
-Your organization must be provisioned for this feature. Please contact your Customer Success Manager (CSM) to get put on the allowlist.
+This document covers the steps for configuring a datastream in the Data Collection UI. 
 
-## Create a datastream configuration
+>[!NOTE]
+>
+>Your organization must be provisioned for this feature in order to access it in the UI. If you do not have access, please contact your Customer Success Manager (CSM) to get put on the allowlist.
+
+## Access the [!UICONTROL Datastreams] workspace
 
 You can create and manage datastreams in the Data Collection UI by selecting **[!UICONTROL Datastreams]** in the left navigation.
 
-![datastreams tool navigation](../images/datastreams/config.png)
+![Datastreams tab in the Data Collection UI](../images/datastreams/datastreams-tab.png)
 
 >[!NOTE]
 >
 >While you can access the [!UICONTROL Datastreams] tab regardless of whether you use Platform's tag management capabilities, you must have developer permissions to manage datastreams themselves. See the [user permissions](../../tags/ui/administration/user-permissions.md) article in the tags documentation for more details.
 
-Create a datastream by clicking on **[!UICONTROL New Datastream]** in the top-right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment. Available settings are detailed below.
+The [!UICONTROL Datastreams] tab displays a list of existing datastreams, including their friendly name, ID, and last modified date. To edit or delete a datastream, select the "more" icon (**...**) for the datastream in question.
+
+![Options to edit or delete and existing datastream](../images/datastreams/edit-datastream.png)
+
+## Create a new datastream
+
+To create a datastream, start by selecting **[!UICONTROL New Datastream]**.
+
+![Select New Datastream](../images/datastreams/new-datastream-button.png)
+
+The [!UICONTROL New Datastream] workflow appears, starting at the configuration step. From here, you must provide a name and optional description for the datastream.
+
+If you are configuring this datastream for use in Experience Platform, you must also select an event schema to represent the data you plan on ingesting.
+
+![Basic configuration for a datastream](../images/datastreams/configure.png)
+
+>[!IMPORTANT]
+>
+>The rest of this section focuses on the steps to map data to a selected Platform event schema. If you are not configuring your datastream for Platform, select **[!UICONTROL Save]** before proceeding to the next section on [adding services to the datastream](#add-services).
+
+### Select data
+
+If you chose to map your data to a schema, the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform. You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead.
+
+If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
+
+![JSON sample of expected incoming data](../images/datastreams/select-data.png)
+
+### Mapping
+
+The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Platform. To get started, select **[!UICONTROL Add new mapping]** to create a new mapping row.
+
+![Adding a new mapping](../images/datastreams/add-new-mapping.png)
+
+Select the source icon (![Source icon](../images/datastreams/source-icon.png)) and a dialog appears, allowing you to select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
+
+![Selecting the field to be mapped in the source schema](../images/datastreams/source-mapping.png)
+
+Next, select the schema icon (![Schema icon](../images/datastreams/schema-icon.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
+
+![Selecting the field to be mapped in the target schema](../images/datastreams/target-mapping.png)
+
+The mapping page reappears with the completed field mapping shown. The **[!UICONTROL Mapping progress]** section updates to reflect the total number of fields that have been successfully mapped.
+
+![Field successfully mapped with progress reflected](../images/datastreams/field-mapped.png)
+
+Continue following the above steps to map the rest of the fields to the target schema. While you do not have to map all available source fields, any fields in the target schema that are set as required must have a source field mapped to them in order to complete the mapping. The **[!UICONTROL Required fields]** counter indicates how many required fields are not yet mapped in the current configuration.
+
+Once the required fields count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
+
+![Mapping complete](../images/datastreams/mapping-complete.png)
+
+## View datastream details {#view-details}
+
+After you provide a name and a description, you are asked for the default settings for each environment. Available settings are detailed below.
 
 When creating a datastream, three environments are automatically created with identical settings. These three environments are *dev*, *stage*, and *prod*. They match the three default environments for tags. When you build a tag library to a dev environment, the library automatically uses the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
 
@@ -29,21 +87,25 @@ The ID used in the SDK as the `edgeConfigId` is a composite ID that specifies th
 
 Below are the available settings for each configuration environment. Most sections can be enabled or disabled. When disabled, your settings are saved but are not active.
 
-## [!UICONTROL Third Party ID] settings
+## Add services to a datastream {#add-services}
+
+![Select Add Service to continue](../images/datastreams/add-service.png)
+
+### [!UICONTROL Third Party ID] settings
 
 The third party ID section is the only section that is always on. It has two available settings: "[!UICONTROL Third Party ID Sync Enabled]" and "[!UICONTROL Third Party ID Sync Container ID]".
 
 ![Identity section of the configuration UI](../images/datastreams/edge_configuration_identity.png)
 
-### [!UICONTROL Third Party ID Sync Enabled]
+#### [!UICONTROL Third Party ID Sync Enabled]
 
 Controls whether or not the SDK performs identity syncs with 3rd-party partners.
 
-### [!UICONTROL Third Party ID Sync Container ID]
+#### [!UICONTROL Third Party ID Sync Container ID]
 
 ID syncs can be grouped into containers to allow different ID syncs to be run at different times. This controls which container of ID syncs is run for a given configuration ID.
 
-## Adobe Experience Platform settings
+### Adobe Experience Platform settings
 
 The settings listed here enable you to send data to Adobe Experience Platform. You should only enable this section if you have purchased the Adobe Experience Platform.
 
@@ -58,7 +120,7 @@ The settings listed here enable you to send data to Adobe Experience Platform. Y
 | [!UICONTROL Edge Segmentation] | Select this checkbox to enable [edge segmentation](../../segmentation/ui/edge-segmentation.md) for this datastream. When the Platform Web SDK sends data through an edge-segmentation-enabled datastream, any updated segment memberships for the profile in question are sent back in the response.<br><br>This option can be used in combination with [!UICONTROL Personalization Destinations] for [next-page personalization use cases](../../destinations/ui/configure-personalization-destinations.md). |
 | [!UICONTROL Personalization Destinations] | When used in combination with the [!UICONTROL Edge Segmentation] checkbox, this option allows the datastream to connect to personalization engines like Adobe Target. Refer to the destinations documentation for specific steps on [configuring personalization destinations](../../destinations/ui/configure-personalization-destinations.md). |
 
-## Adobe Target settings
+### Adobe Target settings
 
 To configure Adobe Target, you must provide a client code. The other fields are optional.
 
@@ -68,42 +130,42 @@ To configure Adobe Target, you must provide a client code. The other fields are 
 >
 >The Organization associated with the client code must match the organization where the configuration ID is created.
 
-### [!UICONTROL Client Code]
+#### [!UICONTROL Client Code]
 
 The unique ID for a target account. To find this, you can navigate to [!UICONTROL Adobe Target] > [!UICONTROL Setup]> [!UICONTROL Implementation] > [!UICONTROL edit settings] next to the [!UICONTROL download] button for either [!UICONTROL at.js] or [!UICONTROL mbox.js]
 
-### [!UICONTROL Property Token]
+#### [!UICONTROL Property Token]
 
 [!DNL Target] allows customers to control permissions through the use of properties. Details can be found in the [Enterprise Permissions](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) section of the [!DNL Target] documentation.
 
 The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
 
-### [!UICONTROL Target Environment ID]
+#### [!UICONTROL Target Environment ID]
 
 [Environments](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) in Adobe Target help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with each environment.
 
 Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` datastream environments to keep things simple. However, if you already have Adobe Target environments defined, you can use those.
 
-## Adobe Audience Manager settings
+### Adobe Audience Manager settings
 
 All that is needed to send data to Adobe Audience Manager is to enable this section. The other settings are optional but encouraged.
 
 ![Adobe Audience Manage settings block](../images/datastreams/edge_configuration_aam.png)
 
-### [!UICONTROL Cookie Destinations Enabled]
+#### [!UICONTROL Cookie Destinations Enabled]
 
 Allows the SDK to share segment information via [Cookie Destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from [!DNL Audience Manager].
 
-### [!UICONTROL URL Destinations Enabled]
+#### [!UICONTROL URL Destinations Enabled]
 
 Allows the SDK to share segment information via [URL Destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). These are configured in [!DNL Audience Manager].
 
-## Adobe Analytics settings
+### Adobe Analytics settings
 
 Controls whether data is sent to Adobe Analytics. Additional details are in the [Analytics Overview](../data-collection/adobe-analytics/analytics-overview.md).
 
 ![Adobe Analytics settings Block](../images/datastreams/edge_configuration_aa.png)
 
-### [!UICONTROL Report Suite ID]
+#### [!UICONTROL Report Suite ID]
 
 The report suite can be found in the Adobe Analytics Admin section under [!UICONTROL Admin > ReportSuites]. If multiple report suites are specified, then data is copied to each report suite.
