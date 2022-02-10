@@ -4,7 +4,7 @@
 ## Overview
 
 Adobe Experience Platform Web SDK allows you to collect the Target related Analytics data on the client side. 
-`Analytics Client Side Logging` means that the data that needs to be shared with Analytics will be returned to client side, so that the customers are able to collect it and share it with Analytics.
+`Analytics Client Side Logging` means that the data that needs to be shared with Analytics will be returned client side, so that the customers are able to collect it and share it with Analytics.
 This option is used by the customers who want to collect the Analytics data by themselves and send it to Analytics. This can be achieved using:
 - Data Insertion API
 - AppMeasurement.js
@@ -16,7 +16,7 @@ We consider `Analytics Client Side Logging` is enabled when Analytics is disable
 
 ![](../assets/datastreams-config.png)
 
-When Target Edge computes propositions response it will check if `Analytics Client Side Logging` is enabled then it will add to each proposition an Analytics token.
+When Target Edge computes propositions response it will check if `Analytics Client Side Logging` is enabled then it will add an Analytics token to each proposition.
 
 The flow looks similar to this:
 
@@ -105,7 +105,7 @@ This is an example of a `interact` response when `Analytics Client Side Logging`
 ```
 
 If the proposition is for an activity that has Analytics reporting then it will have a `scopeDetails.characteristics.analyticsToken`.
-This is the A4T payload that needs to be included as a `tnta` tag into the [Adobe Analytics Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
+This is the A4T payload that needs to be included as a `tnta` tag in the [Adobe Analytics Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
 
 ## Implementation
 
@@ -273,7 +273,7 @@ alloy("sendEvent", {
 });
 ```
 
-A full working example you can be found here: [AEP WEB SDK repo](https://github.com/adobe/alloy).
+A full working example can be found here: [AEP WEB SDK repo](https://github.com/adobe/alloy).
 
 ### Visual Experience Composer Based composed Activities
 
@@ -283,7 +283,7 @@ Here are more details on how to use this feature: [Automatically rendering conte
 
 When auto rendering is enabled the customer can collect the Analytics tokens from the propositions that were executed on the page. We advise that the
 customer chain the `sendEvent` command and iterate the propositions to filter propositions that Adobe Experience Platform Web SDK
-have attempted to render. Take a look at the example bellow:
+have attempted to render. Take a look at the example below:
 
 ```javascript
 alloy("sendEvent", {
