@@ -150,7 +150,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+| Property | Description |
+| --------- | ----------- |
+|`name`| Provide a name for the base connection to the Experience Platform Profile Store |
+|`description` | Optionally, you can provide a description for the base connection. |
+| `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
 
 **Response**
 
@@ -195,8 +199,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-*   `{BASE_CONNECTION_ID}`: Use the ID you have obtained in the previous step.
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for [!DNL Profile Store] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+| Property | Description |
+| --------- | ----------- |
+|`name`| Provide a name for the source connection to the Experience Platform Profile Store |
+|`description` | Optionally, you can provide a description for the source connection. |
+| `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
+| `baseConnectionId`| Use the base connection ID you have obtained in the previous step..|
+| `data.format`| `CSV` is currently the only supported file export format.|
 
 **Response**
 
@@ -242,7 +251,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "version": "1.0"
     },
     "auth": {
-        "specName": "{S3 or SFTP}",
+        "specName": "{S3}",
         "params": {
             "accessId": "{ACCESS_ID}",
             "secretKey": "{SECRET_KEY}"
@@ -251,10 +260,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for your desired batch destination. You obtained this ID in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
-*   `{S3 or SFTP}`: fill in the desired connection type for this destination. In the [destination catalog](../catalog/overview.md), scroll to your preferred destination to see if S3 and/or SFTP connection types are supported. 
-*   `{ACCESS_ID}`: Your access ID for your [!DNL Amazon] S3 storage location.
-*   `{SECRET_KEY}`: Your secret key for your [!DNL Amazon] S3 storage location.
+| Property | Description |
+| --------- | ----------- |
+|`name`| Provide a name for the base connection to the batch destination. |
+|`description` | Optionally, you can provide a description for the base connection. |
+| `connectionSpec.id`| Use the connection spec ID for your desired batch destination. You obtained this ID in the step [Get the list of available destinations](#get-the-list-of-available-destinations).|
+| `auth.specname`| Indicates the authentication format for the destination. To find out the specName for your destination, perform a [GET call to the connection specs endpoint](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), providing the connection spec of your desired destination. Look for the parameter `authSpec.name` in the response. <br> For example, for Adobe Campaign destinations, you can use any of `S3`, `SFTP with Password`, or `SFTP with SSH Key`. |
+| `params`| Depending on the destination that you are connecting to, you must provide different required authentication parameters. For Amazon S3 connections, you must provide your access ID and secret key to your Amazon S3 storage location. <br> To find out the required parameters for your destination, perform a [GET call to the connection specs endpoint](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), providing the connection spec of your desired destination. Look for the parameter `authSpec.spec.required` in the response. |
 
 **Response**
 
@@ -314,10 +326,17 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-*   `{BASE_CONNECTION_ID}`: Use the base connection ID you obtained in the step above.
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
-*   `{BUCKETNAME}`: Your [!DNL Amazon] S3 bucket, where Platform will deposit the data export.
-*   `{FILEPATH}`: The path in your [!DNL Amazon] S3 bucket directory where Platform will deposit the data export.
+| Property | Description |
+| --------- | ----------- |
+|`name`| Provide a name for the target connection to the batch destination. |
+|`description` | Optionally, you can provide a description for the target connection. |
+| `baseConnectionId`| Use the ID of the base connection you created in the step above.|
+| `connectionSpec.id`| Use the connection spec ID for your desired batch destination. You obtained this ID in the step [Get the list of available destinations](#get-the-list-of-available-destinations).|
+| `params`| Depending on the destination that you are connecting to, you must provide different required parameters to your storage location. For Amazon S3 connections, you must provide your access ID and secret key to your Amazon S3 storage location. <br> To find out the required parameters for your destination, perform a [GET call to the connection specs endpoint](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), providing the connection spec of your desired destination. Look for the parameter `targetSpec.spec.required` in the response. |
+| `params.mode`| Depending on the supported mode for your destination, you must provide a different value here. To find out the required parameters for your destination, perform a [GET call to the connection specs endpoint](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), providing the connection spec of your desired destination. Look for the parameter `targetSpec.spec.properties.mode.enum` in the response and select the desired mode.   |
+| `params.bucketName`| For S3 connections, provide the name of the bucket where files will be exported. |
+| `params.path`| For S3 connections, provide the file path in your storage location where files will be exported. |
+| `params.format`| `CSV` is currently the only supported file export type. |
 
 **Response**
 
@@ -383,9 +402,14 @@ curl -X POST \
     }
 ```
 
-*   `{FLOW_SPEC_ID}`: Use the flow spec ID for the batch destination that you want to connect to. To retrieve the flow spec ID, perform a GET operation on the `flowspecs` endpoint, as shown in the [flow specs API reference documentation](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In the response, look for `upsTo` and copy the corresponding ID of the batch destination that you want to connect to. For example, for Adobe Campaign, look for `upsToCampaign` and copy the `id` parameter.
-*   `{SOURCE_CONNECTION_ID}`: Use the source connection ID you obtained in the step [Connect to your Experience Platform data](#connect-to-your-experience-platform-data).
-*   `{TARGET_CONNECTION_ID}`: Use the target connection ID you obtained in the step [Connect to batch destination](#connect-to-batch-destination).
+ Property | Description |
+| --------- | ----------- |
+|`name`| Provide a name for the dataflow you are creating. |
+|`description` | Optionally, you can provide a description for the dataflow. |
+| `flowSpec.Id`| Use the flow spec ID for the batch destination that you want to connect to. To retrieve the flow spec ID, perform a GET operation on the `flowspecs` endpoint, as shown in the [flow specs API reference documentation](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). In the response, look for `upsTo` and copy the corresponding ID of the batch destination that you want to connect to. For example, for Adobe Campaign, look for `upsToCampaign` and copy the `id` parameter.|
+| `sourceConnectionIds`| Use the source connection ID you obtained in the step [Connect to your Experience Platform data](#connect-to-your-experience-platform-data).|
+| `targetConnectionIds`| Use the target connection ID you obtained in the step [Connect to batch destination](#connect-to-batch-destination).|
+| `transformations`| In the next step, you will populate this section with the segments and profile attributes to be activated. |
 
 For your reference, the table below contains the flow spec IDs for commonly used batch destinations:
 
@@ -449,7 +473,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                     "frequency": "ONCE",
                     "startDate": "2021-12-20",
                     "startTime": "17:00"
-                },   
+                } 
             }
         }
     },
@@ -472,7 +496,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
             }
         }
     },
-        {
+{
         "op": "add",
         "path": "/transformations/0/params/profileSelectors/selectors/-",
         "value": {
@@ -488,6 +512,10 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 | Property | Description |
 | --------- | ----------- |
+|`{DATAFLOW_ID}`| In the URL, use the ID of the dataflow that you created in the previous step. |
+|`{ETAG}` | Use the etag that you obtained in the previous step. |
+| `{SEGMENT_ID}`| Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, see [retrieve a segment definition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
+| `{PROFILE_ATTRIBUTE}`| For example, `"person.lastName"` |
 | `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add a segment to a dataflow, use the `add` operation. |
 | `path` | Defines the part of the flow that is to be updated. When adding a segment to a dataflow, use the path specified in the example. |
 | `value` | The new value you want to update your parameter with. |
@@ -499,11 +527,6 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `frequency` | Mandatory. <br> <ul><li>For the `"DAILY_FULL_EXPORT"` export mode, you can select `ONCE` or `DAILY`.</li><li>For the `"FIRST_FULL_THEN_INCREMENTAL"` export mode, you can select `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul>   |
 | `endDate` | Not applicable when selecting `"exportMode":"DAILY_FULL_EXPORT"` and `"frequency":"ONCE"`. <br> Sets the date when segment members stop being exported to the destination. |
 | `startTime` | Mandatory. Select the time when files containing members of the segment should be generated and exported to your destination. |
-
-*   `{DATAFLOW_ID}`: Use the dataflow that you obtained in the previous step.
-*   `{ETAG}`: Use the etag that you obtained in the previous step.
-*   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, see [retrieve a segment definition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference.
-*   `{PROFILE_ATTRIBUTE}`: For example, `"person.lastName"`
 
 **Response**
 
