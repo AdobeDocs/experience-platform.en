@@ -41,5 +41,7 @@ You can define network access controls through your network firewall. By specify
 - `20.37.193.0/25`
 - `20.37.193.128/26`
 - `20.37.198.224/29`
+- `20.53.45.0/24`
+- `20.53.46.0/26`
 - `40.79.163.80/28`
 - `40.79.171.160/28`
