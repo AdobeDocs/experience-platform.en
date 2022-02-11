@@ -144,7 +144,7 @@ This service controls whether and how data is sent to Adobe Audience Manager. Al
 >
 >Sandboxes are virtual partitions in Adobe Experience Platform that allow you to isolate your data and implementations from others in your organization. Once a datastream is created, its sandbox cannot be changed. For more details about the role of sandboxes in Experience Platform, see the [sandboxes documentation](../../sandboxes/home.md). 
 
-The settings listed here enable you to send data to Adobe Experience Platform.
+This service controls whether and how data is sent to Adobe Experience Platform.
 
 ![Adobe Experience Platform settings block](../images/datastreams/platform-config.png)
 
@@ -158,35 +158,25 @@ The settings listed here enable you to send data to Adobe Experience Platform.
 
 ### Adobe Target settings
 
-To configure Adobe Target, you must provide a client code. The other fields are optional.
+This service controls whether and how data is sent to Adobe Target.
 
 ![Adobe Target settings block](../images/datastreams/target-config.png)
 
->[!NOTE]
->
->The Organization associated with the client code must match the organization where the configuration ID is created.
+| Setting | Description |
+| --- | --- |
+| [!UICONTROL Property Token] | [!DNL Target] allows customers to control permissions through the use of properties. For more information on properties, see the guide on [configuring enterprise permissions](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) section of the [!DNL Target] documentation.<br><br>The property token can be found in the Adobe Target UI under [!UICONTROL Setup] > [!UICONTROL Properties]. |
+| [!UICONTROL Target Environment ID] | [Environments in Adobe Target](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with this datastream.<br><br>Best practice is to set this differently for each of your `dev`, `stage`, and `prod` datastream environments to keep things simple. However, if you already have Adobe Target environments defined, you can use those. |
+| [!UICONTROL Target Third Party ID namespace] | The identity namespace for the `mbox3rdPartyId` you want to use for this datastream. See the guide on [implementing `mbox3rdPartyId` with the Web SDK](../personalization/adobe-target/using-mbox-3rdpartyid.md) for more information. |
 
-#### [!UICONTROL Client Code]
+### [!UICONTROL Event Forwarding] settings
 
-The unique ID for a target account. To find this, you can navigate to [!UICONTROL Adobe Target] > [!UICONTROL Setup]> [!UICONTROL Implementation] > [!UICONTROL edit settings] next to the [!UICONTROL download] button for either [!UICONTROL at.js] or [!UICONTROL mbox.js]
+![Event Forwarding section of the configuration UI](../images/datastreams/event-forwarding-config.png)
 
-#### [!UICONTROL Property Token]
-
-[!DNL Target] allows customers to control permissions through the use of properties. Details can be found in the [Enterprise Permissions](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) section of the [!DNL Target] documentation.
-
-The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
-
-#### [!UICONTROL Target Environment ID]
-
-[Environments](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) in Adobe Target help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with each environment.
-
-Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` datastream environments to keep things simple. However, if you already have Adobe Target environments defined, you can use those.
-
-### [!UICONTROL Third Party ID] settings
+### [!UICONTROL Third Party ID Sync] settings
 
 The third party ID section is the only section that is always on. It has two available settings: "[!UICONTROL Third Party ID Sync Enabled]" and "[!UICONTROL Third Party ID Sync Container ID]".
 
-![Identity section of the configuration UI](../images/datastreams/third-party-id-sync-config.png)
+![Third Party ID Sync section of the configuration UI](../images/datastreams/third-party-id-sync-config.png)
 
 #### [!UICONTROL Third Party ID Sync Enabled]
 
