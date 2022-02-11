@@ -1,0 +1,384 @@
+---
+title: Client-Side Logging for A4T Data in the Platform Web SDK
+description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
+---
+# Client-side logging for A4T data in the Platform Web SDK
+
+The Adobe Experience Platform Web SDK allows you to collect [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) data on the client side of your web application.
+
+Client-side logging means that relevant Target data is returned on the client side, allowing you to collect it and share it with Analytics. This option should be enabled if you intend to manually send data to Analytics using the [Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
+
+>[!NOTE]
+>
+>A method for performing this using [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) is currently under development and will be available in the near future.
+
+This document covers the steps for setting up client-side A4T logging for the Web SDK and provides some implementation examples for common use cases.
+
+## Prerequisites
+
+This tutorial assumes that are familiar with the fundamental concepts and processes related to using the Web SDK for personalization purposes. Please review the following documentation if you require an introduction:
+
+* [Configuring the Web SDK](../../../fundamentals/configuring-the-sdk.md)
+* [Sending events](../../../fundamentals/tracking-events.md)
+* [Rendering personalization content](../../rendering-personalization-content.md)
+
+## Set up Analytics client-side logging
+
+The following subsections outline how to enable Analytics client-side logging for your SDK implementation.
+
+### Enable Analytics client-side logging
+
+To consider Analytics client-side logging enabled for your implementation, you must disable the Adobe Analytics configuration in your [datastream](../../../fundamentals/datastreams.md).
+
+![Analytics datastream configuration disabled](../assets/disable-analytics-datastream.png)
+
+### Retrieve A4T data from the SDK and send to Analytics
+
+In order for this reporting method to work properly, you must send the A4T related data retrieved from the [`sendEvent` command](../../../fundamentals/tracking-events.md) in the Analytics hit.
+
+When Target Edge computes a propositions response, it checks if Analytics client-side logging is enabled (i.e. if Analytics is disabled in your datastream). If client-side logging is enabled, the system adds an Analytics token to each proposition in the response.
+
+The flow looks similar to this:
+
+![Client-side logging flow](../assets/analytics-client-side-logging.png)
+
+The following is an example of an `interact` response when Analytics client-side logging is enabled. If the proposition is for an activity that has Analytics reporting, it will have a `scopeDetails.characteristics.analyticsToken` property.
+
+```json
+{
+  "requestId": "1234",
+  "handle": [
+    {
+      "payload": [
+        {
+          "id": "AT:eyJhY3Rpdml0eUlkIjoiNDM0Njg5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+          "scope": "a4t-test",
+          "scopeDetails": {
+            "decisionProvider": "TGT",
+            "activity": {
+              "id": "434689"
+            },
+            "experience": {
+              "id": "0"
+            },
+            "strategies": [
+              {
+                "algorithmID": "0",
+                "trafficType": "0"
+              }
+            ],
+            "characteristics": {
+              "eventToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+              "analyticsToken": "434689:0:0|2,434689:0:0|1"
+            }
+          },
+          "items": [
+            {
+              "id": "1184844",
+              "schema": "https://ns.adobe.com/personalization/html-content-item",
+              "meta": {
+                "geo.state": "bucuresti",
+                "activity.id": "434689",
+                "experience.id": "0",
+                "activity.name": "a4t test form based activity",
+                "offer.id": "1184844",
+                "profile.tntId": "04608610399599289452943468926942466370-pybgfJ"
+              },
+              "data": {
+                "id": "1184844",
+                "format": "text/html",
+                "content": "<div> analytics impressions </div>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "AT:eyJhY3Rpdml0eUlkIjoiNDM0Njg5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+          "scope": "a4t-test",
+          "scopeDetails": {
+            "decisionProvider": "TGT",
+            "activity": {
+              "id": "434689"
+            },
+            "characteristics": {
+              "eventToken": "E0gb6q1+WyFW3FMbbQJmrg==",
+              "analyticsToken": "434689:0:0|32767"
+            }
+          },
+          "items": [
+            {
+              "id": "434689",
+              "schema": "https://ns.adobe.com/personalization/measurement",
+              "data": {
+                "type": "click",
+                "format": "application/vnd.adobe.target.metric"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "personalization:decisions",
+      "eventIndex": 0
+    }
+  ]
+}
+```
+
+This is the A4T payload that needs to be included as a `tnta` tag in the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
+
+>[!IMPORTANT]
+>
+>Note that the some `analyticsToken` properties can contain multiple tokens, concatenated as a single comma-delineated string.
+>
+>In the implementation examples provided in the next section, you will often be interatively collecting multiple Analytics tokens. To concatenate an array of Analytics tokens, you can use a function similar to the following:
+>
+>```javascript
+>var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
+>  if (analyticsPayloads.size > 1) {
+>    return [].concat(analyticsPayloads).join(',');
+>  }
+>  return [].concat(analyticsPayloads).join();
+>};
+>```
+
+## Implementation examples
+
+The following subsections demonstrate how to implement Analytics client-side logging for common use cases.
+
+### Form-Based Experience Composer activities {#form-based-composer}
+
+You can use the Web SDK to control the execution of propositions from [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) activities.
+
+When you request propositions for a specific decision scope, the proposition returned contains its appropriate Analytics token. Best practice is to chain the Platform Web SDK `sendEvent` command and iterate through the returned propositions to execute them while collecting the Analytics tokens at the same time.
+
+You can trigger a `sendEvent` command for a Form-Based Experience Composer activity scope like so:
+
+```javascript
+alloy("sendEvent", {
+    "decisionScopes": ["a4t-test"],
+    "xdm": {
+      "web": {
+        "webPageDetails": {
+          "name": "Home Page"
+        }
+      }
+    }
+  }
+).then(function(results) {
+  for (var i = 0; i < results.propositions.length; i++) {
+    //Execute the propositions and collect the Analytics payload
+  }
+});
+```
+
+From here, you must implement code to execute the propositions and construct a payload that will ultimately be sent to Analytics. This is an example of what `results.propositions` might contain:
+
+```json
+[
+  {
+    "id": "AT:eyJhY3Rpdml0eUlkIjoiNDM0Njg5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+    "scope": "a4t-test",
+    "scopeDetails": {
+      "decisionProvider": "TGT",
+      "activity": {
+        "id": "434689"
+      },
+      "experience": {
+        "id": "0"
+      },
+      "strategies": [
+        {
+          "algorithmID": "0",
+          "trafficType": "0"
+        }
+      ],
+      "characteristics": {
+        "eventToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+        "analyticsToken": "434689:0:0|2,434689:0:0|1"
+      }
+    },
+    "items": [
+      {
+        "id": "1184844",
+        "schema": "https://ns.adobe.com/personalization/html-content-item",
+        "meta": {
+          "geo.state": "bucuresti",
+          "activity.id": "434689",
+          "experience.id": "0",
+          "activity.name": "a4t test form based activity",
+          "offer.id": "1184844",
+          "profile.tntId": "04608610399599289452943468926942466370-pybgfJ"
+        },
+        "data": {
+          "id": "1184844",
+          "format": "text/html",
+          "content": "<div> analytics impressions </div>"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AT:eyJhY3Rpdml0eUlkIjoiNDM0Njg5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+    "scope": "a4t-test",
+    "scopeDetails": {
+      "decisionProvider": "TGT",
+      "activity": {
+        "id": "434689"
+      },
+      "characteristics": {
+        "eventToken": "E0gb6q1+WyFW3FMbbQJmrg==",
+        "analyticsToken": "434689:0:0|32767"
+      }
+    },
+    "items": [
+      {
+        "id": "434689",
+        "schema": "https://ns.adobe.com/personalization/measurement",
+        "data": {
+          "type": "click",
+          "format": "application/vnd.adobe.target.metric"
+        }
+      }
+    ]
+  }
+]
+```
+
+To extract the Analytics token from a proposition, you can implement a function similar to the following:
+
+```javascript
+function getAnalyticsPayload(proposition) {
+  if(proposition === undefined) {
+    return;
+  }
+  if(proposition.scopeDetails === undefined) {
+    return;
+  }
+  if(proposition.scopeDetails.characteristics === undefined) {
+    return;
+  }
+  return proposition.scopeDetails.characteristics.analyticsToken;
+}
+```
+
+A proposition can have different types of items, as indicated by `schema` property of the item in question. There are four supported proposition item schemas supported for Form-Based Experience Composer activities: 
+
+```javascript
+var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
+var MEASUREMENT_SCHEMA = "https://ns.adobe.com/personalization/measurement";
+var JSON_SCHEMA = "https://ns.adobe.com/personalization/json-content-item";
+var REDIRECT_SCHEMA = "https://ns.adobe.com/personalization/redirect-item";
+```
+
+`HTML_SCHEMA` and `JSON_SCHEMA` are the schemas that reflect the type of the offer, while `MEASUREMENT_SCHEMA` reflects the metrics that should be attached to a DOM element.
+
+#### Implementation summary
+
+In summary, the following steps must be executed when performing Form-Based Experience Composer activities with the Platform Web SDK:
+
+1. Send an event that fetches Form-Based Experience Composer activity offers.
+2. Apply the content changes to the page.
+3. Send the `decisioning.propositionDisplay` notification event.
+4. Collect the Analytics tokens from the SDK response and construct a payload for the Analytics hit.
+5. Send the payload to Analytics using the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+
+```javascript
+alloy("sendEvent", {
+    "decisionScopes": ["a4t-test"],
+    "xdm": {
+      "web": {
+        "webPageDetails": {
+          "name": "Home Page"
+        }
+      }
+    }
+  }
+).then(function(results) {
+  var analyticsPayload = new Set();
+  for (proposition of results.propositions) {
+    for (item of proposition) {
+      if (item.schema === HTML_SCHEMA) {
+        // 1. Apply offer
+        // 2. Collect executed propositions and send the decisioning.propositionDisplay notification event
+        // 3. Collect the Analytics tokens
+      }
+    }
+  }
+  // Send the page view Analytics hit with the collected Analytics payload to the Data Insertion API
+});
+```
+
+### Visual Experience Composer activities
+
+The Platform Web SDK allows you to handle offers that were authored using [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+
+>[!NOTE]
+>
+>The steps for implementing this use case are very similar to the steps for [Form-Based Experience Composer activities](#form-based-composer). Please review the previous section for further details.
+
+When auto rendering is enabled, you can collect the Analytics tokens from the propositions that were executed on the page. Best practice is to chain the Platform Web SDK `sendEvent` command and iterate through the returned propositions to filter those that the Web SDK has attempted to render. The following example shows how this can be done:
+
+```javascript
+alloy("sendEvent", {
+    "renderDecisions": true,
+    "xdm": {
+      "web": {
+        "webPageDetails": {
+          "name": "Home Page"
+        }
+      }
+    }
+  }
+).then(function (results) {
+  var analyticsPayloads = new Set();
+  
+  for (var i = 0; i < results.propositions.length; i++) {
+  
+    var proposition = propositions[i];
+    var renderAttempted = proposition.renderAttempted;
+
+    if (renderAttempted === true) {
+      var analyticsPayload = getAnalyticsPayload(proposition);
+      
+      if (analyticsPayload !== undefined) {
+        analyticsPayloads.add(analyticsPayload);
+      }
+    }
+  }
+  var analyticsPayloadsToken = concatenateAnalyticsPayloads(analyticsPayloads);
+  // Send the page view Analytics hit with collected Analytics payload to the Data Insertion API
+});
+```
+
+### Using `onBeforeEventSend` to handle page metrics
+
+Using Adobe Target activities, you can set up different metrics on the page, either manually attached to the DOM or automatically attached to the DOM (VEC authored Activities). Both types are a delayed end-user interaction on the web page.
+
+To account for this, the best practice is to collect Analytics payloads using the `onBeforeEventSend` Adobe Experience Platform Web SDK hook. The `onBeforeEventSend` hook should be configured using the `configure` command, and will be reflected across all events that are sent through the datastream.
+
+The following is an example how how `onBeforeEventSent` can be configured to trigger Analytics hits:
+
+```javascript
+alloy("configure", {
+  edgeConfigId: "datastream configuration ID",
+  orgId: "adobe ORG ID",
+  onBeforeEventSend: function(options) {
+    const xdm = options.xdm;
+    const eventType = xdm.eventType;
+    if (eventType === "decisioning.propositionInteract") {
+      const analyticsPayloads = new Set();
+      const propositions = xdm._experience.decisioning.propositions;
+
+      for (var i = 0; i < propositions.length; i++) {
+        var proposition = propositions[i];
+        analyticsPayloads.add(getAnalyticsPayload(proposition));
+      }
+      // Trigger the Analytics hit
+    }
+  }
+});
+```
+
+## Next steps
+
+This guide covered client-side logging for A4T data in the Web SDK. See the guide on [server-side logging](./client-side.md) for more information on how to handle A4T data on the Platform Edge Network.
