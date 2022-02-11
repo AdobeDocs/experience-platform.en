@@ -402,7 +402,7 @@ curl -X POST \
     }
 ```
 
- Property | Description |
+| Property | Description |
 | --------- | ----------- |
 |`name`| Provide a name for the dataflow you are creating. |
 |`description` | Optionally, you can provide a description for the dataflow. |
