@@ -4,7 +4,6 @@ description: Learn how to configure the Datatstreams.
 keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
-
 # Configure a datastream
 
 A datastream represents the server-side configuration when implementing the Adobe Experience Platform Web and Mobile SDKs. While the [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client (such as the `edgeDomain`), datastreams handle all other configurations for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the datastream. This allows you to update the server-side configuration without having to make code changes on your website. 
@@ -41,15 +40,17 @@ To create a datastream, start by selecting **[!UICONTROL New Datastream]**.
 
 The datastream creation workflow appears, starting at the configuration step. From here, you must provide a name and optional description for the datastream.
 
-If you are configuring this datastream for use in Experience Platform, you must also select an [event-based Experience Data Model (XDM) schema](../../xdm/classes/experienceevent.md) to represent the data you plan on ingesting.
+If you are configuring this datastream for use in Experience Platform and are using the Platform Web SDK, you must also select an [event-based Experience Data Model (XDM) schema](../../xdm/classes/experienceevent.md) to represent the data you plan on ingesting.
 
 ![Basic configuration for a datastream](../images/datastreams/configure.png)
 
->[!IMPORTANT]
->
->The rest of this section focuses on the steps to map data to a selected Platform event schema. If you are not configuring your datastream for Platform, select **[!UICONTROL Save]** before proceeding to the next section on [adding services to the datastream](#add-services).
+The rest of this section focuses on the steps to map data to a selected Platform event schema. If you are using the Mobile SDK or are otherwise not configuring your datastream for Platform, select **[!UICONTROL Save]** before proceeding to the next section on [adding services to the datastream](#add-services).
 
 ### [!UICONTROL Select data]
+
+>[!IMPORTANT]
+>
+>This step is currently not supported for Mobile SDK implementations.
 
 If you chose to map your data to a schema, the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform. You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead.
 
@@ -58,6 +59,10 @@ If the JSON is valid, a preview schema is displayed in the right panel. Select *
 ![JSON sample of expected incoming data](../images/datastreams/select-data.png)
 
 ### [!UICONTROL Mapping]
+
+>[!IMPORTANT]
+>
+>This step is currently not supported for Mobile SDK implementations.
 
 The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Platform. To get started, select **[!UICONTROL Add new mapping]** to create a new mapping row.
 
@@ -106,6 +111,10 @@ On the details page of a datastream, select **[!UICONTROL Add Service]** to star
 On the next screen, use the dropdown menu to select a service to configure for this datastream. Only the services that you have access to will appear in this list.
 
 ![Select a service from the list](../images/datastreams/service-selection.png)
+
+Select the desired service, fill in the configuration options that appear, and then select **[!UICONTROL Save]** to add the service to the datastream. All added services appear in the details view for the datastream.
+
+![Services added to a datastream](../images/datastreams/services-added.png)
 
 The subsections below describe the configuration options for each service.
 
@@ -170,7 +179,18 @@ This service controls whether and how data is sent to Adobe Target.
 
 ### [!UICONTROL Event Forwarding] settings
 
+This service controls whether and how data is sent to [event forwarding](../../tags/ui/event-forwarding/overview.md).
+
 ![Event Forwarding section of the configuration UI](../images/datastreams/event-forwarding-config.png)
+
+| Setting | Description |
+| --- | --- |
+| [!UICONTROL Launch Property] | **(Required)** The event forwarding property that you want to send data to. |
+| [!UICONTROL Launch Environment] | **(Required)** The environment within the selected property that you want to send data to. |
+
+>[!NOTE]
+>
+>You can select **[!UICONTROL Manually enter IDs]** to type in the property and environment names instead of using the dropdown menus.
 
 ### [!UICONTROL Third Party ID Sync] settings
 
@@ -178,10 +198,10 @@ The third party ID section is the only section that is always on. It has two ava
 
 ![Third Party ID Sync section of the configuration UI](../images/datastreams/third-party-id-sync-config.png)
 
-#### [!UICONTROL Third Party ID Sync Enabled]
+| Setting | Description |
+| --- | --- |
+| [!UICONTROL Third Party ID Sync Container ID] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. This controls which container of ID syncs is run for this datastream. |
 
-Controls whether or not the SDK performs identity syncs with 3rd-party partners.
+## Next steps
 
-#### [!UICONTROL Third Party ID Sync Container ID]
-
-ID syncs can be grouped into containers to allow different ID syncs to be run at different times. This controls which container of ID syncs is run for a given configuration ID.
+This guide covered how to configure a datastream in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../collection/e2e.md#install-sdk).
