@@ -1,6 +1,6 @@
 ---
 title: Insert Into Use in Query Service
-description: This tutorial document provides guidance on best practices for using the INSERT INTO keywords in Query Service for use with nested data fields within XDM schemas.
+description: This tutorial document provides guidance on best practices for using the INSERT INTO statement in Query Service for use with nested data fields within XDM schemas.
 ---
 # Use INSERT INTO to update nested data fields
 
@@ -12,11 +12,11 @@ Adobe Experience Platform Query Service provides a PostgreSQL interface to run S
 
 This tutorial requires an understanding of the Query Editor tool to write, validate, and run queries for customer experience data within the Experience Platform user interface (UI). Full information on how to run queries though the UI can be found in the [Query Editor UI guide](../ui/user-guide.md).
 
-More information on the syntax used in this documents examples can be found in the [SQL syntax reference documentation](./syntax.md).
+More information on the syntax used in this documents examples can be found in the [SQL syntax reference documentation](./syntax.md). The syntax of the `INSERT INTO` statement can be found in the [INSERT INTO section](./syntax.md#insert-into).
 
 ## Nested datasets
 
-To demonstrate the versatility of the data types supported by Query Service for use with nested data fields, this document will cover the creation of datasets with complex types including nested structures and then update these structures using the INSERT INTO keyword.
+To demonstrate the versatility of the data types supported by Query Service for use with nested data fields, this document will cover the creation of datasets with complex types including nested structures and then update these structures using the INSERT INTO statement.
 
 In the initial dataset `final_subscription_test2`, the struct datatype is used to contain both the the `subscription` field, and the `userid` which is unique to each user. The `subscription` field describes the product subscriptions for a user. There can be multiple subscriptions but it can only contain the information for one subscription per row. 
 
@@ -68,7 +68,7 @@ CREATE TABLE final_subscription_test2 with(schema='Final_subscription') AS (
 
 ## Dataset insertion
 
-After the dataset was created, the incremental data was added into the dataset using the following SQL.
+After the dataset has been created, the INSERT INTO SELECT statement is used to copy data from one table and insert it into another table. The INSERT INTO SELECT statement requires that the data types in source and target tables match. The incremental data is then added into the target dataset using the following SQL.
 
 ```sql
 INSERT INTO final_subscription_test
@@ -98,7 +98,7 @@ INSERT INTO final_subscription_test
              ) 
              GROUP BY user,subsid,offer_id
              ORDER BY user ASC
-       ) group by userid)
+       ) GROUP BY userid)
 ```
 
 <!-- Is this a suitable generic example of the sql above? -->
