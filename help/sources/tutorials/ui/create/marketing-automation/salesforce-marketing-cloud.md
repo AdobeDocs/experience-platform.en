@@ -32,7 +32,7 @@ In order to access your [!DNL Salesforce Marketing Cloud] account on Platform, y
 
 | Credential | Description |
 | ---------- | ----------- |
-| `host` | The host server of your application. This is often your subdomain. |
+| `host` | The host server of your application. This is often your subdomain. **Note:** When entering your `host` value, you only need to specify the subdomain and not the entire URL. For example, if your host URL is `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, then you only need to enter `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` as your host value. |
 | `clientId` | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
 | `clientSecret` | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
 
