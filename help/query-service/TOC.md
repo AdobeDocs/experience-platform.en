@@ -37,6 +37,7 @@ feature: Queries
   - [Spark SQL functions](sql/spark-sql-functions.md)
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
+  - [INSERT INTO tutorial](sql/insert-into.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
   - [Aqua Data Studio](clients/aqua-data-studio.md)

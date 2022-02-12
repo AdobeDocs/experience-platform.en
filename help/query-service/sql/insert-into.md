@@ -1,0 +1,118 @@
+---
+title: Insert Into Use in Query Service
+description: This tutorial document provides guidance on best practices for using the INSERT INTO keywords in Query Service for use with nested data fields within XDM schemas.
+---
+
+# Use INSERT INTO to update nested data fields
+
+This document provides instruction on how to process or transform datasets with complex data types, including nested data structures.
+
+Adobe Experience Platform Query Service provides a PostgreSQL interface to run SQL queries on all the datasets managed by Experience Platform. 
+Platform supports the use of either primitive or complex data types, such as struct or arrays, in table columns. Datasets can also contain nested structures where the column data type can be as complex as an array of nested structures or a map of maps wherein the value of a key-value pair can be a structure with multiple levels of nesting. 
+
+## Nested datasets
+
+To demonstrate the versatility of the data types supported by Query Service for use with nested data fields, this document will cover the creation of datasets with complex types including nested structures and then update these structures using the INSERT INTO keyword.
+
+In the initial dataset `final_subscription_test2`, the struct datatype is used to contain both the the `subscription` field, and the `userid` which is unique to each user.  The `subscription` field describes the product subscriptions for a user. There can be multiple subscriptions but it can only contain the information for one subscription per row. 
+
+The dataset will be updated to contain a CustomerService field that contains all the subscriptions for the user. This will be held in an array of `struct(subscription)`.
+
+The schema for the dataset to be created is seen in the image below.
+
+![A diagram of the final_subscription schema.](../images/sql/final-subscription-schema.png)
+
+## Create a dataset
+
+Adobe Experience Platform Query service provides the Create Table as Select (CTAS) functionality to create a table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table. The new dataset is a copy of `Final_subscription`.
+
+<!-- Can we please have better table names for this example -->
+
+The following example demonstrates the SQL used to create the `final_subscription_test2` dataset.
+
+```sql
+create table final_subscription_test2 with(schema='Final_subscription') AS (
+        select struct(userid, collect_set(subscription) as subscription) as _americasprofessionalservices3 from(
+            SELECT user as userid,
+                   struct( last(eventtime) as last_eventtime,
+                           last(status) as last_status,
+                           offer_id, 
+                           subsid as subscription_id)
+                   as subscription
+             FROM (
+                   SELECT _americasprofessionalservices3.msftidentities.userid user
+                        , _americasprofessionalservices3.subscription.subscription_id subsid
+                        , _americasprofessionalservices3.subscription.subscription_status status
+                        , _americasprofessionalservices3.subscription.offer_id offer_id
+                        , TIMESTAMP eventtime
+ 
+                   FROM
+                        xbox_subscription_event
+                   UNION   
+                   SELECT _americasprofessionalservices3.msftidentities.userid user
+                        , _americasprofessionalservices3.subscription.subscription_id subsid
+                        , _americasprofessionalservices3.subscription.subscription_status status
+                        , _americasprofessionalservices3.subscription.offer_id offer_id
+                        , timestamp eventtime
+                   FROM
+                        office365_subscription_event
+             ) 
+             GROUP BY user,subsid,offer_id
+             ORDER BY user ASC
+       ) group by userid
+ )
+```
+
+## Dataset insertion
+
+After the dataset was created, the incremental data was added into the dataset using the following SQL.
+
+```sql
+INSERT INTO final_subscription_test
+      SELECT struct(userid, collect_set(subscription) AS subscription) AS _americasprofessionalservices3 FROM(
+            SELECT user AS userid,
+                   struct( last(eventtime) AS last_eventtime,
+                           last(status) AS last_status,
+                           offer_id, 
+                           subsid AS subscription_id)
+                   AS subscription
+             FROM  SELECT _americasprofessionalservices3.msftidentities.userid user
+                        , _americasprofessionalservices3.subscription.subscription_id subsid
+                        , _americasprofessionalservices3.subscription.subscription_status status
+                        , _americasprofessionalservices3.subscription.offer_id offer_id
+                        , TIMESTAMP eventtime
+ 
+                   FROM
+                        xbox_subscription_event
+                   UNION   
+                   SELECT _americasprofessionalservices3.msftidentities.userid user
+                        , _americasprofessionalservices3.subscription.subscription_id subsid
+                        , _americasprofessionalservices3.subscription.subscription_status status
+                        , _americasprofessionalservices3.subscription.offer_id offer_id
+                        , timestamp eventtime
+                   FROM
+                        office365_subscription_event
+             ) 
+             GROUP BY user,subsid,offer_id
+             ORDER BY user ASC
+       ) group by userid
+ )
+```
+
+<!-- Is this a suitable generic example of the sql above? -->
+```sql
+INSERT INTO [dataset]
+SELECT
+      struct(
+      [source field1] as [target field in schema],
+      [source field2] as [target field in schema],
+      [source field3] as [target field in schema],
+      [source field4]as [target field in schema]
+      )
+      [tenant name]
+FROM [dataset]
+GROUP BY [source field1],[source field2],[source field3]
+ORDER BY [source field1] ASC.
+```
+
+
