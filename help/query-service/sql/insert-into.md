@@ -12,7 +12,7 @@ Adobe Experience Platform Query Service provides a PostgreSQL interface to run S
 
 This tutorial requires an understanding of the Query Editor tool to write, validate, and run queries for customer experience data within the Experience Platform user interface (UI). Full information on how to run queries though the UI can be found in the [Query Editor UI guide](../ui/user-guide.md).
 
-More information on the syntax used in this documents examples can be found in the [SQL syntax reference documentation](./syntax.md). 
+More information on the syntax used in this documents examples can be found in the [SQL syntax reference documentation](./syntax.md).
 
 ## Nested datasets
 
@@ -104,6 +104,7 @@ INSERT INTO final_subscription_test
 ```
 
 <!-- Is this a suitable generic example of the sql above? -->
+
 ```sql
 INSERT INTO [dataset]
 SELECT
