@@ -18,10 +18,6 @@ There are two ways you can delete destinations from the [!DNL Platform] [!DNL UI
 * [Delete destinations from the [!UICONTROL Browse] tab](#delete-browse-tab)
 * [Delete destinations from the destination details page](#delete-destination-details-page)
 
->[!IMPORTANT]
->
->While you can delete existing *connections to destinations*, as described in this article, Platform does not currently allow you to delete existing *[destination accounts](/help/destinations/ui/destinations-workspace.md#accounts)*.
-
 ## Delete destinations from the Browse tab{#delete-browse-tab}
 
 Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
@@ -40,7 +36,6 @@ Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
 4. Select **[!UICONTROL Delete]** to confirm the removal of the destination connection.
 
     ![Confirm delete destination](../assets/ui/delete-destinations/delete-destinations-confirm.png)
-
 
 ## Delete destinations from the destination details page{#delete-destination-details-page}
 
@@ -65,7 +60,6 @@ Follow the steps below to delete a destination from the destination details page
    * If the destination does not have existing dataflows, you are taken to an empty page where you can start activating audiences.
 
         ![Destination details](../assets/ui/delete-destinations/destination-details-empty.png)
-
 
 4. Select **[!UICONTROL Delete]** in the right rail.
 
