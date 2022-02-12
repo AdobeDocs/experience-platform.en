@@ -63,8 +63,7 @@ CREATE TABLE final_subscription_test2 with(schema='Final_subscription') AS (
              ) 
              GROUP BY user,subsid,offer_id
              ORDER BY user ASC
-       ) GROUP BY userid
- )
+       ) GROUP BY userid)
 ```
 
 ## Dataset insertion
@@ -99,8 +98,7 @@ INSERT INTO final_subscription_test
              ) 
              GROUP BY user,subsid,offer_id
              ORDER BY user ASC
-       ) group by userid
- )
+       ) group by userid)
 ```
 
 <!-- Is this a suitable generic example of the sql above? -->
