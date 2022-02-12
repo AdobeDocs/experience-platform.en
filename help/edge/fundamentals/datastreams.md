@@ -204,4 +204,4 @@ The third party ID section is the only section that is always on. It has two ava
 
 ## Next steps
 
-This guide covered how to configure a datastream in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../collection/e2e.md#install-sdk).
+This guide covered how to configure a datastream in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../collection/e2e.md#install).
