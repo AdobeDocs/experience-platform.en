@@ -171,8 +171,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
                 "NONE",
                 "bzip2",
                 "lz4",
-                "snappy",
-                "deflate"
+                "snappy"
             ]
         },
         {

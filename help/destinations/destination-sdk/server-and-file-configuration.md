@@ -233,7 +233,7 @@ This section describes the file formatting settings for the exported files.
 
 |Field|Required/Optional|Description|Default value|
 |---|---|---|---|
-|`compression.value`|Optional|Compression codec to use when saving data to file. Supported values: `none`, `bzip2`, `gzip`, `lz4`, `snappy`, and `deflate`.|`none`|
+|`compression.value`|Optional|Compression codec to use when saving data to file. Supported values: `none`, `bzip2`, `gzip`, `lz4`, and `snappy`.|`none`|
 |`fileType.value`|Optional|Specifies the output file format. Supported values: `csv`, `parquet`, and `json`.|`csv`|
 |`csvOptions.quote.value`|Optional|Sets a single character used for escaping quoted values where the separator can be part of the value.|`null`|
 |`csvOptions.quoteAll.value`|Optional|Indicates whether all values should always be enclosed in quotes. Default is to only escape values containing a quote character.|`false`|

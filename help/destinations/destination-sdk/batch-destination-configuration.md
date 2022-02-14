@@ -83,8 +83,8 @@ You can configure the functionality described in this document by using the `/au
                 "NONE",
                 "bzip2",
                 "lz4",
-                "snappy",
-                "deflate"
+                "snappy"
+                
             ]
         },
         {
@@ -280,8 +280,7 @@ This section allows partners to introduce custom fields. In the example above, `
                 "NONE",
                 "bzip2",
                 "lz4",
-                "snappy",
-                "deflate"
+                "snappy"
             ]
         },
         {
