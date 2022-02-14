@@ -1209,7 +1209,9 @@ Example 1:
       };
     };
 ```
+
 Example 2:
+
 ```javascript
 window.targetPageParams = function() {
       return {
