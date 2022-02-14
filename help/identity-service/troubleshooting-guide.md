@@ -116,7 +116,7 @@ Internal solutions|Preferred|Common
 
 ## Why can't I access the identity graph page or APIs?
 
-Your Platform administrator must provision you with the `view-identity-graph` permission in order for you to view identity graph data. Without this permission, you will receive a permission denied message on the identity graph viewer page and when calling Platform APIs.
+Your Platform administrator must provision you with the `view-identity-graph` permission in order for you to view identity graph data. Without this permission, you will receive a permission denied message on the identity graph viewer page and when calling Platform APIs. See the [access control overvew](../access-control/home.md) for more information on permissions.
 
 ## Troubleshooting
 
