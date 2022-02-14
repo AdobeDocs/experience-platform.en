@@ -1,15 +1,13 @@
 ---
 title: Comparing at.js to the Platform Web SDK
-description: Learn how the at.js features compare to the Web SDK's
+description: Learn how the at.js features compare to the Web SDKs
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;system diagram;diagram
-exl-id: 
 ---
 # Comparing the at.js library to the Web SDK
 
 >[!IMPORTANT]
 >
 >This guide assumes you are NOT using Adobe Tags, and using at.js 2.x
-
 
 ## Installing the libraries
 
