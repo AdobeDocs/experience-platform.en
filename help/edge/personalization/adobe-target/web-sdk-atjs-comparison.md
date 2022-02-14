@@ -105,7 +105,7 @@ There are many options that can be set during configuration. All options can be 
 
 Using at.js 2.x, if you enable the setting `pageLoadEnabled`, the library will trigger a call to Target Edge with `execute -> pageLoad`. If all the settings are set to the default values, no custom coding is necessary.Once at.js is added to the page and loaded by the browser, a Target Edge call will be executed.
 
-[Learn more]()
+<!--[Learn more]()-->
 
 **Using Web SDK**
 
@@ -130,6 +130,7 @@ alloy("sendEvent", {
   }
 });
 ```
+
 AEP WEB SDK automatically sends a notification with the offers that were executed by the WEB SDK, this is an example of how a notification request payload looks like:
 
 ```json
@@ -521,8 +522,8 @@ adobe.target.sendNotifications({
 
 You can track events and user actions by calling the `sendEvent` command, populating the `_experience.decisioning.propositions` XDM fieldgroup, and setting the `eventType` to one of 2 values:
 
-- `decisioning.propositionDisplay`: Signals the rendering of the Target activity.
-- `decisioning.propositionInteract`: Signals a user interaction with the activity, like a mouse click.
+* `decisioning.propositionDisplay`: Signals the rendering of the Target activity.
+* `decisioning.propositionInteract`: Signals a user interaction with the activity, like a mouse click.
 
 The `_experience.decisioning.propositions` XDM fieldgroup is an array of objects. The properties of each object are derived from the `result.propositions` that gets returned in the `sendEvent` command: `{ id, scope, scopeDetails }`
 
@@ -584,6 +585,7 @@ alloy("sendEvent", {
   }
 });
 ```
+
 Example 2 - Track a `decisioning.propositionInteract` event after a click metric occurs:
 
 ```javascript
@@ -783,9 +785,11 @@ When loading the Web SDK async we recommend that the following snippet is inject
 ## How is A4T being handled
 
 **Using at.js**
+
 There are 2 types of A4T logging that are supported using at.js:
-- Analytics Client Side Logging
-- Analytics Server Side Logging
+
+* Analytics Client Side Logging
+* Analytics Server Side Logging
 
 ### Analytics Client Side Logging
 
@@ -827,6 +831,7 @@ adobe.target.getOffers({
     })
     .then(console.log)
 ```
+
 This is how the response payload looks like: 
 
 ```json
@@ -858,6 +863,7 @@ This is how the response payload looks like:
 }
 
 ```
+
 The Analytics payload (`tnta` token) should be included in the Analytics hit using [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 ### Analytics Server Side Logging
@@ -870,9 +876,11 @@ Then the data flows as following:
 [Learn More](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=en)
 
 **Using Web SDK**
+
 Web SDK also supports:
-- Analytics Client Side logging
-- Analytics Server Side logging
+
+* Analytics Client Side logging
+* Analytics Server Side logging
 
 ### Analytics Client Side Logging
 
@@ -884,6 +892,7 @@ The customer has access to the Analytics token (`tnta`) that needs to be shared 
 in by chaining the `sendEvent` command and iterate through the resulting propositions array.
 
 Example:
+
 ```javascript
 alloy("sendEvent", {
     "renderDecisions": true,
@@ -1020,20 +1029,22 @@ alloy("sendEvent", {
 **Using at.js**
 
 At.js exposes these debugging features:
-- Mbox Disable - disable Target from fetching and rendering to check if the page is broken without Target interactions
-- Mbox Debug - at.js logs every action
-- Target Trace - with a mbox trace token generated in Bullseye a trace object with details that participated in the decisioning process is available under `window.___target_trace` object
+
+* Mbox Disable - disable Target from fetching and rendering to check if the page is broken without Target interactions
+* Mbox Debug - at.js logs every action
+* Target Trace - with a mbox trace token generated in Bullseye a trace object with details that participated in the decisioning process is available under `window.___target_trace` object
 
 Note: All these debugging features are available with enhanced capabilities in [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 **Using Web SDK**
 
 With Web SDK the customer has more debugging capabilities:
-- using Griffon
-- Web SDK debug enabled
-- use Web SDK monitoring hooks
-- use Adobe Experience Platform Debugger
-- Target Trace
+
+* using Griffon
+* Web SDK debug enabled
+* use Web SDK monitoring hooks
+* use Adobe Experience Platform Debugger
+* Target Trace
 
 ## How do I use Target Recommendations
 
@@ -1094,7 +1105,6 @@ alloy("sendEvent", {
   }
 });
 ```
-
 
 ## How do I use third party IDs
 
@@ -1161,11 +1171,12 @@ window.targetPageParams = function() {
 Web SDK supports Target Third Party ID. However, it requires a few more steps. Before diving into the solution, we should talk a little bit about `identityMap`.
 Identity Map allows the customers to send multiple identities. All the identities are namespaced. Each namespace can have one or more identities. A particular identity can be marked as primary.
 With this knowledge in mind we can see what are the necessary steps to set up web sdk to use Target Third Party ID.
+
 1. Set up the namespace that will contain the Target Third Party ID in the Data Stream Configuration view:
 
-![](assets/mbox-3-party-id-setup.png)
-
-3. Send that identity namespace in every sendEvent command like this:
+  ![](assets/mbox-3-party-id-setup.png)
+  
+1. Send that identity namespace in every sendEvent command like this:
 
 ```javascript
 alloy("sendEvent", {
@@ -1190,6 +1201,7 @@ alloy("sendEvent", {
 Using at.js there are 2 ways of setting up the property tokens, either using `targetPageParams` or `targetPageParamsAll`. Using `targetPageParams` adds the property token to the `target-global-mbox` call, but using `targetPageParamsAll` adds the token to all the target calls:
 
 Example 1:
+
 ```javascript
    window.targetPageParamsAll = function() {
       return {
