@@ -4,7 +4,7 @@ description: This tutorial document provides guidance on best practices for usin
 ---
 # Use INSERT INTO to update nested data fields
 
-This document provides instruction on how to process or transform datasets with complex data types, including nested data structures.
+This document provides instruction on how to process or transform datasets with complex data types, including nested data structures. This is important for third party clients connected to query service that do not supported nested data types.
 
 Adobe Experience Platform Query Service provides a PostgreSQL interface to run SQL queries on all the datasets managed by Experience Platform. Platform supports the use of either primitive or complex data types in table columns, such as struct or arrays. Datasets can also contain nested structures where the column data type can be as complex as an array of nested structures, or a map of maps wherein the value of a key-value pair can be a structure with multiple levels of nesting. 
 
