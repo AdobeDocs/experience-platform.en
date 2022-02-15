@@ -15,6 +15,7 @@ Built on RESTful APIs, Platform exposes the full functionality of the system to 
 This end-to-end workflow uses multiple Adobe Experience Platform services. The following is a list of the services that are used in this workflow with links to their overviews:
 
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../xdm/schema/best-practices.md).
+– [[!DNL Identity Service]](../identity-service/home.md): Provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems.
 - [Sources](../sources/home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] allows you to divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups.
 - [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
@@ -23,7 +24,9 @@ This end-to-end workflow uses multiple Adobe Experience Platform services. The f
 
 ## Create an XDM schema
 
-When you ingest your data, you will need to create an XDM schema for the data to be formatted into. To learn how to best create an XDM schema, please read the guide on the [basics of schema composition](../xdm/schema/composition.md).
+When you ingest your data, you will need to create an XDM schema for the data to be formatted into. To learn how to best create an XDM schema, please read the tutorial on [creating a schema using the Schema Editor](../xdm/schema/tutorials/create-schema-ui.md).
+
+The above tutorial shows how to set identity fields for your schemas. An identity field represents a field that can be used to identify an individual person related to a record or time-series event. Identity fields are a crucial component in how customer identity graphs are constructed in Platform, which ultimately affects how Real-time Customer Profile merges disparate data fragments together to gain a complete view of the customer. For more details on how to view identity graphs in Platform, see the tutorial on [how to use the identity graph viewer](../identity-service/ui/identity-graph-viewer.md).
 
 ## Ingest your data into Platform
 
