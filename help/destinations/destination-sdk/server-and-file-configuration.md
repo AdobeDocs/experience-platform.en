@@ -164,6 +164,10 @@ The server specs for file-based destinations can be configured in Adobe Experien
 
 This section describes the file formatting settings for the exported files.
 
+>[!NOTE]
+>
+>The `fileConfigurations` section is not mandatory when setting up a new destination server. If you don't pass any values in the API call for the CSV options, the default ones from the table below will be used.
+
 ```json
 "fileConfigurations": {
         "compression": {

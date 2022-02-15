@@ -83,7 +83,8 @@ You can configure the functionality described in this document by using the `/au
                 "NONE",
                 "bzip2",
                 "lz4",
-                "snappy"
+                "snappy",
+                "deflate"
                 
             ]
         },
