@@ -47,7 +47,7 @@ Certain interactions in your experience applications can result in multiple rela
 
 [Adobe Experience Platform Data Prep](../../data-prep/home.md) allows you to map, transform, and validate data to and from XDM. Using the available [mapping functions](../../data-prep/functions.md) provided by the service you can invoke logical operators to prioritize, transform, and/or consolidate data from multi-event records when being ingested into Experience Platform. In the example above, you could designate `eventType` as a calculated field that would prioritize a "product view" over a "page view" whenever they both occur.
 
-If you are manually ingesting data into Platform via the UI, see the guide on [calculated fields](../../data-prep/calculated-fields.md) for specific steps on how to create calculated fields.
+If you are manually ingesting data into Platform via the UI, see the guide on [calculated fields](../../data-prep/ui/mapping.md#calculated-fields) for specific steps on how to create calculated fields.
 
 If you are streaming data to Platform using a source connection, you can configure the source to utilize calculated fields instead. Refer to the [documentation for your particular source](../../sources/home.md) for instructions on how to implement calculated fields when configuring the connection.
 
@@ -112,6 +112,10 @@ The following table outlines the accepted values for `eventType`, along with the
 |`directMarketing.emailDelivered` | An email was successfully delivered to person's email service |
 |`directMarketing.emailOpened` | A person opened a marketing email. |
 |`directMarketing.emailUnsubscribed` | A person unsubscribed from a marketing email. |
+|`inappmessageTracking.dismiss` | An in-app message was dismissed. |
+|`inappmessageTracking.display` | An in-app message was displayed. |
+|`inappmessageTracking.interact` | An in-app message was interacted with. |
+|`leadOperation.callWebhook` | A webhook was called in response to a lead. |
 |`leadOperation.convertLead` | A lead was converted. |
 |`leadOperation.interestingMoment` | An interesting moment was recorded for a person. |
 |`leadOperation.newLead` | A lead was created. |

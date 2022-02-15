@@ -1,18 +1,14 @@
 ---
 keywords: target personalization; destination; experience platform target destination;adobe target destination;
-title: Adobe Target connection (Beta)
-description: Adobe Target is an application that provides real-time, 1:1 , and AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more.
+title: Adobe Target connection
+description: Adobe Target is an application that provides real-time, AI-powered personalization and experimentation capabilities in all inbound customer interactions across websites, mobile apps, and more.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 ---
-# Adobe Target connection (Beta) {#adobe-target-connection}
+# Adobe Target connection {#adobe-target-connection}
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
->The Adobe Target connection in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
-
-Adobe Target is an application that provides real-time, 1:1 , AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more.
+Adobe Target is an application that provides real-time, AI-powered personalization and experimentation capabilities in all inbound customer interactions across websites, mobile apps, and more.
 
 Adobe Target is a personalization connection in Adobe Experience Platform.
 
@@ -31,6 +27,10 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 A home rental and sales company wants to personalize their home page with a banner, based on customer segment qualifications in Adobe Experience Platform. The company can select what audiences should get a personalized experience and send those to Adobe Target as targeting criteria for their Target offer.
 
 ## Connect to the destination {#connect}
+
+>[!IMPORTANT]
+>
+>Before creating an [!DNL Adobe Target] connection, we recommend that you read our guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"

@@ -337,6 +337,23 @@ EXCEPTION
 END;
 ```
 
+## Data asset organization
+
+It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
+
+The following SQL constructs using standard SQL syntax are supported for you to logically organize your data.
+
+```SQL
+CREATE DATABASE dg1;
+CREATE SCHEMA dg1.schema1;
+CREATE table t1 ...;
+CREATE view v1 ...;
+ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
+ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
+```
+
+See the guide on [logical organization of data assets](../best-practices/organize-data-assets.md) for more a detailed explanation on Query Service best practices.
+
 ## [!DNL Spark] SQL commands 
 
 The sub-section below covers the Spark SQL commands supported by Query Service.
