@@ -28,6 +28,10 @@ A home rental and sales company wants to personalize their home page with a bann
 
 ## Connect to the destination {#connect}
 
+>[!IMPORTANT]
+>
+>Before creating an [!DNL Adobe Target] connection, we recommend that you read our guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
+
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="About datastream IDs"
