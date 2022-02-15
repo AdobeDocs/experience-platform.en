@@ -47,10 +47,11 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 {
   "consents": {
     "collect": {
-      "val": "y",
+      "val": "VI",
     },
     "adID": {
-      "val": "VI"
+      "idType": "IDFA",
+      "val": "y"
     },
     "share": {
       "val": "y",
@@ -92,10 +93,11 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 ```json
 "consents": {
   "collect": {
-    "val": "y",
+    "val": "VI",
   },
   "adID": {
-    "val": "VI"
+    "idType": "IDFA",
+    "val": "y"
   },
   "share": {
     "val": "y",
@@ -137,16 +139,18 @@ The following JSON shows an example of the type of data that the [!UICONTROL Con
 
 ### `adID`
 
-`adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device.
+`adID` represents the customer's consent for whether an advertiser ID can be used to link the customer across apps on this device.
 
 ```json
 "adID": {
+  "idType": "IDFA",
   "val": "y"
 }
 ```
 
 | Property | Description |
 | --- | --- |
+| `idType` | The ad ID type, either `IDFA` for Apple's ID for Advertisers or `GAID` for Google's Advertiser ID, also known as Android Advertiser ID (AAID). |
 | `val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
 
 {style="table-layout:auto"}
