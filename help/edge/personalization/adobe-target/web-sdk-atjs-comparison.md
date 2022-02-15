@@ -1,6 +1,6 @@
 ---
-title: Comparing at.js to the Platform Web SDK
-description: Learn how the at.js features compare to the Web SDKs
+title: Comparing at.js to the Experience Platform Web SDK
+description: Learn how the at.js features compare to Experience Platform Web SDK
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;system diagram;diagram
 ---
 # Comparing the at.js library to the Web SDK
@@ -123,7 +123,7 @@ alloy("sendEvent", {
 });
 ```
 
-AEP WEB SDK automatically sends a notification with the offers that were executed by the WEB SDK, this is an example of how a notification request payload looks like:
+Experience Platform Web SDK automatically sends a notification with the offers that were executed by the WEB SDK, this is an example of how a notification request payload looks like:
 
 ```json
 {
@@ -634,7 +634,7 @@ adobe.target.triggerView("homeView")
 
 ### Using Web SDK
 
-In order to trigger or signal a single page application View Change, set the `web.webPageDetails.viewName` property under the `xdm` option of the `sendEvent` command. The AEP WEB SDK will check the view cache, if there are offers for the `viewName` specified in `sendEvent` it will execute them and send a display notification event.
+In order to trigger or signal a single page application View Change, set the `web.webPageDetails.viewName` property under the `xdm` option of the `sendEvent` command. The Web SDK will check the view cache, if there are offers for the `viewName` specified in `sendEvent` it will execute them and send a display notification event.
 
 **Example**
 
