@@ -85,7 +85,7 @@ The console output provided in the Query Service UI is a more human readable for
 
 ### Convert from the UTC timestamp
 
-The `from_utc_timestamp()` method interprets the given timestamp **from your local timezone** and provides the equivalent timestamp of the desired region in UTC format. In the example below, the hour is 2:40PM in the local timezone. The Seoul timezone passed as a variable is nine hours ahead of the local timezone.
+The `from_utc_timestamp()` method interprets the given timestamp **from your local timezone** and provides the equivalent timestamp of the desired region in UTC format. In the example below, the hour is 2:40PM in the user's local timezone. The Seoul timezone passed as a variable is nine hours ahead of the local timezone.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
