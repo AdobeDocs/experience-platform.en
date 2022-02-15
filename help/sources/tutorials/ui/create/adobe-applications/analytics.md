@@ -58,11 +58,11 @@ The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTRO
 
 Before you can map your [!DNL Analytics] data to target XDM schema, you must first select whether you are using a default schema or a custom schema.
 
-A default schema creates a new schema on your behalf, containing the [!DNL Analytics] field group. To use a default schema, select **[!UICONTROL Default schema]**.
+A default schema creates a new schema on your behalf, containing the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a default schema, select **[!UICONTROL Default schema]**.
 
 ![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
 
-With a custom schema, you can choose any available schema for your [!DNL Analytics] data, as long as that schema has [!DNL Analytics] field group. To use a custom schema, select **[!UICONTROL Custom schema]**.
+With a custom schema, you can choose any available schema for your [!DNL Analytics] data, as long as that schema has the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a custom schema, select **[!UICONTROL Custom schema]**.
 
 ![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
@@ -70,7 +70,7 @@ The [!UICONTROL Mapping] page provides an interface to map source fields to thei
 
 >[!TIP]
 >
->Only schemas that have the [!DNL Analytics] template field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your Report Suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
+>Only schemas that have the [!DNL Adobe Analytics ExperienceEvent Template] field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your Report Suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
