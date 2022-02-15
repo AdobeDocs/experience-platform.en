@@ -12,9 +12,9 @@ This document covers the steps for connecting Power BI with Adobe Experience Pla
 
 >[!NOTE]
 >
-> This guide assumes you already have access to [!DNL Power BI] and are familiar with how to navigate its interface. More information about [!DNL Power BI] can be found in the [official [!DNL Power BI] documentation](https://docs.microsoft.com/en-us/power-bi/).
+> This guide assumes you already have access to the [!DNL Power BI] desktop app and are familiar with how to navigate its interface. More information about [!DNL Power BI] can be found in the [official [!DNL Power BI] documentation](https://docs.microsoft.com/en-us/power-bi/).
 >
-> Additionally, Power BI is **only** available on Windows devices.
+> Additionally, the Power BI desktop application is **only** available on Windows devices.
 
 After installing Power BI, you will need to install `Npgsql`, a .NET driver package for PostgreSQL. More information about Npgsql can be found in the [Npgsql documentation](https://www.npgsql.org/doc/index.html).
 
@@ -36,7 +36,11 @@ Input PostgreSQL in the search bar and select **[!DNL PostgreSQL database]**, fo
 
 ![](../images/clients/power-bi/get-data.png)
 
-You can now enter values for the server and database. The server is your host name suffixed with a colon and the port number. For example, `made-up.platform-query.adobe.io:80`. An example of a database might be `prod:all`.
+The PostgreSQl database dialog appears. Enter values for your desired server and database. 
+
+>[!TIP] 
+>
+>The server is your host name suffixed with a colon and the port number. For example, `made-up.platform-query.adobe.io:80`. An example of a database might be `prod:all`.
 
 For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
@@ -86,7 +90,7 @@ Once authentication is complete, a preview of the flattened data in table form a
 
 ![The flattened imported table in the power BI dashboard.](../images/clients/power-bi/imported-table-preview.png)
 
-The table fields are now available for editing and exporting from the Power BI Desktop app. 
+The visualizations are now available for editing and exporting from the Power BI Desktop app. 
 
 ## Create SQL statements {#create}
 
