@@ -124,7 +124,7 @@ You can retry or refresh a secret exchange from the editing screen. This process
 | Secret type | Retry protocol |
 | --- | --- |
 | [!UICONTROL Token] | Select **[!UICONTROL Exchange Secret]** to retry the secret exchange. This control is only available when there is an environment attached to the secret. |
-| [!UICONTROL HTTP] | If there is no environment attached to the secret, select **[!UICONTROL Exchange Secret]** to exchange the credential to base64. If an environment is attached, select elect **[!UICONTROL Exchange and Deploy Secret]** to exchange to base64 and deploy the secret to Cloudfare. |
+| [!UICONTROL HTTP] | If there is no environment attached to the secret, select **[!UICONTROL Exchange Secret]** to exchange the credential to base64. If an environment is attached, select elect **[!UICONTROL Exchange and Deploy Secret]** to exchange to base64 and deploy the secret. |
 | [!UICONTROL OAuth2] | Select **[!UICONTROL Generate Token]** to exchange the credentials and return an access token from the authentication provider. |
 
 ## Delete a secret
