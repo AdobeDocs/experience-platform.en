@@ -63,13 +63,13 @@ Query Service supports built-in Spark SQL functions to convert a given timestamp
 
 #### Convert to the UTC timestamp
 
-The `to_utc_timestamp()` method interprets its given timestamp from the timezone you provide and converts it in UTC format **to your local timezone**. For example, the time zone in Seoul, South Korea is UTC/GMT +9 hours. By providing a date only timestamp, the method converts the timestamp and timezone into the UTC format, in this case 3pm the previous day as Seoul is nine hours ahead.
+The `to_utc_timestamp()` method interprets the given parameters and converts it **to the timestamp of your local timezone** in UTC format. For example, the time zone in Seoul, South Korea is UTC/GMT +9 hours. By providing a date only timestamp, the method uses a default value of midnight in the morning. The timestamp and timezone are converted into the UTC format from the time of that region to a UTC timestamp of your local region.
 
 ```SQL
 SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
 ```
 
-The query returns the local time in Seoul using the following timestamp.
+The query returns a timestamp in the users local time. In this case 3pm the previous day as Seoul is nine hours ahead.
 
 ```
 2021-08-30 15:00:00
@@ -85,13 +85,13 @@ The console output provided in the Query Service UI is a more human readable for
 
 ### Convert from the UTC timestamp
 
-The `from_utc_timestamp()` method interprets the given timestamp **from your local timezone** and provides the equivalent timestamp of the desired region in UTC format. In the example below, the hour is 2:40PM in the user's local timezone. The Seoul timezone passed as a variable is nine hours ahead of the local timezone.
+The `from_utc_timestamp()` method interprets the given parameters **from the timestamp of your local timezone** and provides the equivalent timestamp of the desired region in UTC format. In the example below, the hour is 2:40PM in the user's local timezone. The Seoul timezone passed as a variable is nine hours ahead of the local timezone.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
 ```
 
-The query returns a timestamp in UTC format of the local time for the timezone passed as a parameter. The result is nine hours ahead of the timezone that ran the query.
+The query returns a timestamp in UTC format for the timezone passed as a parameter. The result is nine hours ahead of the timezone that ran the query.
 
 ```
 8/31/2021, 11:40 PM
