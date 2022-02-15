@@ -26,17 +26,19 @@ Under "[!DNL Npgsql GAC Installation]" on the custom setup screen, select **[!DN
 
 To ensure that npgsql has properly installed, please restart your computer before proceeding to the next steps.
 
-## Connect [!DNL Power BI] to [!DNL Query Service]
+## Connect [!DNL Power BI] to [!DNL Query Service] {#connect-power-bi}
 
 To connect [!DNL Power BI] to [!DNL Query Service], open [!DNL Power BI] and select **[!DNL Get Data]** in the top menu ribbon.
 
 ![](../images/clients/power-bi/open-power-bi.png)
 
-Select **[!DNL PostgreSQL database]**, followed by **[!DNL Connect]**.
+Input PostgreSQL in the search bar and select **[!DNL PostgreSQL database]**, followed by **[!DNL Connect]**.
 
 ![](../images/clients/power-bi/get-data.png)
 
-You can now enter values for the server and database. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+You can now enter values for the server and database. The server is your host name suffixed with a colon and the port number. For example, `made-up.platform-query.adobe.io:80`. An example of a database might be `prod:all`.
+
+For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
 **[!DNL Server]** is the host found under the connection details. For production, add port `:80` to the end of the host string. **[!DNL Database]** can be either "all" or a dataset table name. 
 
@@ -44,31 +46,47 @@ Additionally, you can select your **[!DNL Data Connectivity mode]**. Select **[!
 
 To learn more about **[!DNL Import]** mode, please read the section on [previewing and importing a table](#preview). To learn more about **[!DNL DirectQuery]** mode, please read the section on [creating SQL statements](#create). 
 
-## Manage nested objects in Power BI
-
-Power BI and other third party tools like Tableau do not currently allow users to import nested objects such as Platform's XDM objects. Power BI does provide a custom query option you can use to create a flattened view of nested data.
-
-From the PostgreSQL database popover, select **[!UICONTROL Advanced options]** to enter a custom SQL query in the **[!UICONTROL SQL statement]** section. This query should flatten your JSON name-value pairs into a table format.
-
-After you have entered your customized query you can continue with connecting your database. 
-
 Select **[!DNL OK]** after confirming your database details.
 
 ![](../images/clients/power-bi/connectivity-mode.png)
 
+### Authentication
+
 A prompt asking for your username, password, and application settings appears. Fill in these details, then select **[!DNL Connect]** to continue to the next step.
+
+>[!TIP]
+>
+> The username in this case is your Organization ID and the password is your authentication token.
 
 ![](../images/clients/power-bi/import-mode.png)
 
 ## Preview and import a table {#preview}
 
-If you've selected **[!DNL Import]** mode, a dialog appears, displaying a list of all the available tables. Select the table you want to preview, followed by **[!DNL Load]** to bring the dataset into [!DNL Power BI].
+You can import tables for use with the Power BI dashboard app as is, or use the [!UICONTROL Advanced options] to create a custom query and manage nested data objects. See the [Manage nested objects in Power BI](#manage-nested-objects-in-power-bi) section for more details.
+
+To import a table, input the server and database details [as described above](#connect-power-bi) and select **[!DNL Import]** from the [!UICONTROL Data Connectivity mode], followed by **[!UICONTROL Ok]**. A dialog appears, displaying a list of all the available tables. Select the table you want to preview, followed by **[!DNL Load]** to bring the dataset into [!DNL Power BI].
 
 ![](../images/clients/power-bi/preview-table.png)
 
 The table is now imported into Power BI. 
 
 ![](../images/clients/power-bi/import-table.png)
+
+### Manage nested objects in Power BI
+
+Power BI and other third party tools like Tableau do not currently allow users to import nested objects such as Platform's XDM objects. Power BI does provide a custom query option you can use to access these nested fields by creating a flattened view of the data. Power BI then loads this flattened view of the previously nested data as a normal table.
+
+From the PostgreSQL database popover, select **[!UICONTROL Advanced options]** to enter a custom SQL query in the **[!UICONTROL SQL statement]** section. This query should flatten your JSON name-value pairs into a table format.
+
+![Data connectivity mode advanced options to create a custom SQL statement.](../images/clients/power-bi/custom-sql-statement.png)
+
+After you have entered your customized query, select **[!UICONTROL OK]** to continue with connecting your database. See the [Authentication](#authentication) section above for guidance on connecting a database from this part of the workflow.
+
+Once authentication is complete, a preview of the flattened data in table form appears in the Power BI Desktop dashboard. The server and database name are listed at the top of the dialog. Select **[!UICONTROL Load]** to complete the import process.
+
+![The flattened imported table in the power BI dashboard.](../images/clients/power-bi/imported-table-preview.png)
+
+The table fields are now available for editing and exporting from the Power BI Desktop app. 
 
 ## Create SQL statements {#create}
 
