@@ -5,17 +5,17 @@ keywords: target;adobe target;activity.id;experience.id;renderDecisions;decision
 ---
 # Comparing the at.js library to the Web SDK
 
->[!IMPORTANT]
->
->This guide assumes you are NOT using Adobe Tags, and using at.js 2.x
+## Overview
+
+This article provides an overview of the differences between the `at.js` library and the Experience Plaform Web SDK.
 
 ## Installing the libraries
 
-**Installing at.js**
+### Installing at.js
 
 We allow our customers to download the library directly from Adobe Experience Cloud, Implementation tab. The at.js library is customized with settings that the customer has like: clientCode, imsOrgId, etc.
 
-**Installing the Web SDK**
+### Installing the Web SDK
 
 The prebuilt version is available on a CDN. You can reference the library on the CDN directly on your page, or download and host it on your own infrastructure. It is available in minified and unminified formats. The unminified version is helpful for debugging purposes.
 
@@ -23,16 +23,14 @@ URL structure: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR a
 
 For example:
 
-
 * Minified: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
 * Un-minified: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
 
 [Learn more](../../fundamentals/installing-the-sdk.md)
 
-
 ## Configuring the libraries
 
-**Configuring at.js**
+### Configuring at.js
 
 At the end of every at.js file, you'll find a section where we instantiate and pass a setting object. It is customizable, at download we populate that section with current customer settings.
 
@@ -73,9 +71,7 @@ window.adobe.target.init(window, document, {
 [Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
 
 
-**Configuring the Web SDK**
-
-TODO: GO INTO DETAILS FOR EACH SETTING
+### Configuring the Web SDK
 
 Configuration for the SDK is done with the `configure` command.
 
@@ -99,13 +95,11 @@ There are many options that can be set during configuration. All options can be 
 
 ## How to request and automatically render Page Load Target offers
 
-**Using at.js**
+### Using at.js
 
 Using at.js 2.x, if you enable the setting `pageLoadEnabled`, the library will trigger a call to Target Edge with `execute -> pageLoad`. If all the settings are set to the default values, no custom coding is necessary.Once at.js is added to the page and loaded by the browser, a Target Edge call will be executed.
 
-<!--[Learn more]()-->
-
-**Using Web SDK**
+### Using Web SDK
 
 Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) can be retrieved and rendered automatically by the SDK.
 
@@ -209,10 +203,9 @@ AEP WEB SDK automatically sends a notification with the offers that were execute
 
 [Learn more](../rendering-personalization-content.md)
 
-
 ## How to request and NOT automatically render Page Load Target offers
 
-**Using at.js**
+### Using at.js
 
 There are two ways we could fire a call to Target Edge that will fetch offers for page-load.
 
@@ -242,10 +235,9 @@ adobe.target.getOffers({
 
 [Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
 
+### Using Web SDK
 
-**Using Web SDK**
-
-Execute a `sendEvent` command with a special scope under `decisionScopes`: `__view__`. We use this scope as a signal to fetch all the page-load activities from Target and prefetch all views. The Web SDK will also try to evaluate all the VEC view based activities. Disabling view prefetching is not supported in the Web SDK yet.
+Execute a `sendEvent` command with a special scope under `decisionScopes`: `__view__`. We use this scope as a signal to fetch all the page-load activities from Target and prefetch all views. The Web SDK will also try to evaluate all the VEC view based activities. Disabling view prefetching is not currently supported in the Web SDK.
 
 To access any personalization content, you may provide a callback function, which will be called after the SDK receives a successful response from the server. Your callback is provided a result object, which may contain propositions property containing any returned personalization content.
 
@@ -294,7 +286,7 @@ alloy("sendEvent", {
 ## How to request specific Form Based Target mboxes
 
 
-**Using at.js**
+### Using at.js
 
 You can fetch Form Based Composer activities using the `getOffer` function:
 
@@ -329,7 +321,7 @@ adobe.target.getOffers({
 [Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
 
 
-**Using Web SDK**
+### Using Web SDK
 
 You can fetch Form Based Composer based activities by using the `sendEvent` command and passing the mbox names under the `decisionScopes` option. The `sendEvent` command will return a promise that gets resolved with an object containing the requested activities / propositions:
 This is how the `propositions` array looks like:
@@ -449,12 +441,9 @@ alloy("sendEvent", {
 
 [Learn more](../rendering-personalization-content.md#manually-rendering-content)
 
-
-
 ## How to apply the Target activities
 
-
-**Using at.js**
+### Using at.js
 
 You can apply the Target activities using the `applyOffers` function: `adobe.target.applyOffer(options)`
 
@@ -469,23 +458,20 @@ adobe.target.getOffers({...})
 
 [Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en)
 
+### Using Web SDK
 
-**Using Web SDK**
-
-This feature is not supported yet.
-
-
+This feature is not currently supported in Web SDK.
 
 ## How to track events
 
-**Using at.js**
+### Using at.js
 
 You can track events by using the `trackEvent` function or using `sendNotifications`.
 
 This function fires a request to report user actions, such as clicks and conversions. It does not deliver activities in the response.
 
 
-Example 1:
+**Example 1**
 
 ```javascript
 adobe.target.trackEvent({ 
@@ -494,7 +480,7 @@ adobe.target.trackEvent({
 });
 ```
 
-Example 2:
+**Example 2**
 
 ```javascript
 adobe.target.sendNotifications({ 
@@ -511,12 +497,9 @@ adobe.target.sendNotifications({
 });
 ```
 
-
 [Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=en)
 
-
-
-**Using Web SDK**
+### Using Web SDK
 
 You can track events and user actions by calling the `sendEvent` command, populating the `_experience.decisioning.propositions` XDM fieldgroup, and setting the `eventType` to one of 2 values:
 
@@ -525,7 +508,7 @@ You can track events and user actions by calling the `sendEvent` command, popula
 
 The `_experience.decisioning.propositions` XDM fieldgroup is an array of objects. The properties of each object are derived from the `result.propositions` that gets returned in the `sendEvent` command: `{ id, scope, scopeDetails }`
 
-Example 1 - Track a `decisioning.propositionDisplay` event after rendering an activity:
+**Example 1 - Track a `decisioning.propositionDisplay` event after rendering an activity**
 
 ```javascript
 alloy("sendEvent", {
@@ -584,7 +567,7 @@ alloy("sendEvent", {
 });
 ```
 
-Example 2 - Track a `decisioning.propositionInteract` event after a click metric occurs:
+**Example 2 - Track a `decisioning.propositionInteract` event after a click metric occurs**
 
 ```javascript
 
@@ -634,30 +617,26 @@ alloy("sendEvent", {
 
 [Learn more](../rendering-personalization-content.md#manually-rendering-content)
 
-
-
 ## How to trigger a view change in a Single Page Application
 
-
-**Using at.js**
+### Using at.js
 
 Use the `adobe.target.triggerView` function. This function can be called whenever a new page is loaded or when a component on a page is re-rendered. adobe.target.triggerView() should be implemented for single page applications (SPAs) in order to use the Visual Experience Composer (VEC) to create A/B Tests and Experience Targeting (XT) activities. If adobe.target.triggerView() is not implemented on the site, the VEC cannot be utilized for SPA.
 
-Example:
+**Example**
 
 ```javascript
 adobe.target.triggerView("homeView")
 ```
 
-
 [Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=en)
 
 
-**Using Web SDK**
+### Using Web SDK
 
 In order to trigger or signal a single page application View Change, set the `web.webPageDetails.viewName` property under the `xdm` option of the `sendEvent` command. The AEP WEB SDK will check the view cache, if there are offers for the `viewName` specified in `sendEvent` it will execute them and send a display notification event.
 
-Example:
+**Example**
 
 ```javascript
 alloy("sendEvent", {
@@ -674,17 +653,15 @@ alloy("sendEvent", {
 
 [Learn more](./spa-implementation.md#implementing-xdm-views)
 
-
 ## How to leverage Response Tokens
 
 Personalization content returned from Adobe Target includes [response tokens](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), which are details about the activity, offer, experience, user profile, geo information, and more. These details can be shared with third-party tools or used for debugging. Response tokens can be configured in the Adobe Target user interface.
 
-
-**Using at.js**
+### Using at.js
 
 Use at.js custom events to listen for the Target response and read the response tokens.
 
-Example:
+**Example**
 
 ```javascript
 document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) { 
@@ -692,11 +669,10 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-
 [Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
 
 
-**Using Web SDK**
+### Using Web SDK
 
 >[!IMPORTANT]
 >
@@ -704,7 +680,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 
 The Response Tokens are returned as part of the `propositions` that are exposed in the result of the `sendEvent` command. Each proposition contains an array of `items`, and each item will have a `meta` object populated with Response Tokens if they are enabled in the Target admin UI. [Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
 
-Example:
+**Example**
 
 ```javascript
 alloy("sendEvent", {
@@ -741,11 +717,9 @@ alloy("sendEvent", {
 
 [Learn more](./accessing-response-tokens.md)
 
-
 ## How to manage flicker
 
-
-**Using at.js**
+### Using at.js
 
 Using at.js you can manage flicker by setting `bodyHidingEnabled: true` so that at.js is the one that would take care of 
 pre-hiding the personalized containers before it fetches and applies the DOM changes. 
@@ -753,7 +727,8 @@ The page sections that contains personalized content can be pre-hidden by overri
 By default `bodyHiddenStyle` hides the whole HTML `body`.
 Both settings can be overridden using `window.targetGlobalSettings`. `window.targetGlobalSettings` should be placed before loading at.js.
 
-**Using Web SDK**
+### Using Web SDK
+
 Using Web SDK the customer can set up their pre-hiding style in the configure command, like in the example bellow:
 
 ```javascript
@@ -763,7 +738,6 @@ alloy("configure", {
   debugEnabled: true,
   prehidingStyle: "body { opacity: 0 !important }"
 });
-
 ```
 
 When loading the Web SDK async we recommend that the following snippet is injected in the page before Web SDK is injected:
@@ -782,16 +756,16 @@ When loading the Web SDK async we recommend that the following snippet is inject
 
 ## How is A4T being handled
 
-**Using at.js**
+### Using at.js
 
 There are 2 types of A4T logging that are supported using at.js:
 
 * Analytics Client Side Logging
 * Analytics Server Side Logging
 
-### Analytics Client Side Logging
+#### Analytics Client Side Logging
 
-Example 1: Using Target Global Setting
+**Example 1: Using Target Global Setting**
 
 Analytics Client Side Logging can be enabled by setting `analyticsLogging: client_side` in the at.js settings or by overriding the `window.targetglobalSettings` object.
 When this option is set up, the format of the payload that is returned looks like the following:
@@ -864,7 +838,7 @@ This is how the response payload looks like:
 
 The Analytics payload (`tnta` token) should be included in the Analytics hit using [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
-### Analytics Server Side Logging
+#### Analytics Server Side Logging
 
 Analytics Server Side Logging can be enabled by setting `analyticsLogging: server_side` in the at.js settings or by overriding the `window.targetglobalSettings` object.
 Then the data flows as following:
@@ -873,14 +847,14 @@ Then the data flows as following:
 
 [Learn More](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=en)
 
-**Using Web SDK**
+### Using Web SDK
 
 Web SDK also supports:
 
 * Analytics Client Side logging
 * Analytics Server Side logging
 
-### Analytics Client Side Logging
+#### Analytics Client Side Logging
 
 Analytics Client Side Logging is enabled when Adobe Analytics is disabled for that DataStream configuration. 
 
@@ -889,7 +863,7 @@ Analytics Client Side Logging is enabled when Adobe Analytics is disabled for th
 The customer has access to the Analytics token (`tnta`) that needs to be shared with Analytics using [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 
 in by chaining the `sendEvent` command and iterate through the resulting propositions array.
 
-Example:
+**Example**
 
 ```javascript
 alloy("sendEvent", {
@@ -924,7 +898,7 @@ Here is a diagram to show how data flows when Analytics Client Side is enabled:
 
 ![](assets/analytics-client-side-logging.png)
 
-### Analytics Server Side Logging
+#### Analytics Server Side Logging
 
 Analytics Server Side Logging is enabled when Analytics is enabled for that DataStream configuration.
 
@@ -937,11 +911,9 @@ Here is how data flows into our systems when Server Side Analytics Logging is en
 
 ![](assets/analytics-server-side-logging.png)
 
-
-
 ## How to set Target Global Settings
 
-**Using at.js**
+### Using at.js
 
 You can override settings in the at.js library using `window.targetGlobalSettings`, rather than configuring the settings in the Target Standard/Premium UI or by using REST APIs.
 
@@ -959,16 +931,15 @@ window.targetGlobalSettings = {
 
 [Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
 
+### Using Web SDK
 
-**Using Web SDK**
-
-This feature is not supported.
+This feature is not supported in Web SDK.
 
 ## How to update Target Profile attributes
 
-**Using at.js**
+### Using at.js
 
-Example 1:
+**Example 1**
 
 ```javascript
 adobe.target.getOffer({
@@ -982,7 +953,7 @@ adobe.target.getOffer({
 });
 ```
 
-Example 2:
+**Example 2**
 
 ```javascript
 adobe.target.getOffers({
@@ -1001,11 +972,11 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-**Using Web SDK**
+### Using Web SDK
 
 To update a Target profile, use the `sendEvent` command and set the `data.__adobe.target` property, prefixing the key names using `profile`.
 
-Example:
+**Example**
 
 ```javascript
 alloy("sendEvent", {
@@ -1021,34 +992,11 @@ alloy("sendEvent", {
 });
 ```
 
-
-## How do I debug my Target implementation
-
-**Using at.js**
-
-At.js exposes these debugging features:
-
-* Mbox Disable - disable Target from fetching and rendering to check if the page is broken without Target interactions
-* Mbox Debug - at.js logs every action
-* Target Trace - with a mbox trace token generated in Bullseye a trace object with details that participated in the decisioning process is available under `window.___target_trace` object
-
-Note: All these debugging features are available with enhanced capabilities in [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-
-**Using Web SDK**
-
-With Web SDK the customer has more debugging capabilities:
-
-* using Griffon
-* Web SDK debug enabled
-* use Web SDK monitoring hooks
-* use Adobe Experience Platform Debugger
-* Target Trace
-
 ## How do I use Target Recommendations
 
-**Using at.js**
+### Using at.js
 
-Example 1:
+**Example 1**
 
 ```javascript
 adobe.target.getOffer({
@@ -1062,7 +1010,7 @@ adobe.target.getOffer({
 });
 ```
 
-Example 2:
+**Example 2**
 
 ```javascript
 adobe.target.getOffers({
@@ -1084,11 +1032,11 @@ adobe.target.getOffers({
 [Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=en)
 
 
-**Using Web SDK**
+### Using Web SDK
 
 To send Recommendation data, use the `sendEvent` command and set the `data.__adobe.target` property, prefixing the key names using `entity`.
 
-Example:
+**Example**
 
 ```javascript
 alloy("sendEvent", {
@@ -1106,10 +1054,11 @@ alloy("sendEvent", {
 
 ## How do I use third party IDs
 
-**Using at.js**
+### Using at.js
+
 Using at.js there are multiple ways of sending `mbox3rdPartyId`, using `getOffer` or `getOffers`:
 
-Example 1:
+**Example 1**
 
 ```javascript
 adobe.target.getOffer({
@@ -1122,7 +1071,7 @@ adobe.target.getOffer({
 });
 ```
 
-Example 2:
+**Example 2**
 
 ```javascript
 adobe.target.getOffers({
@@ -1162,9 +1111,7 @@ window.targetPageParams = function() {
 
 [Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=en)
 
-
-
-**Using Web SDK**
+### Using Web SDK
 
 Web SDK supports Target Third Party ID. However, it requires a few more steps. Before diving into the solution, we should talk a little bit about `identityMap`.
 Identity Map allows the customers to send multiple identities. All the identities are namespaced. Each namespace can have one or more identities. A particular identity can be marked as primary.
@@ -1194,11 +1141,11 @@ alloy("sendEvent", {
 
 ## How do I set property tokens
 
-**Using at.js**
+### Using at.js
 
 Using at.js there are 2 ways of setting up the property tokens, either using `targetPageParams` or `targetPageParamsAll`. Using `targetPageParams` adds the property token to the `target-global-mbox` call, but using `targetPageParamsAll` adds the token to all the target calls:
 
-Example 1:
+**Example 1**
 
 ```javascript
    window.targetPageParamsAll = function() {
@@ -1208,7 +1155,7 @@ Example 1:
     };
 ```
 
-Example 2:
+**Example 2**
 
 ```javascript
 window.targetPageParams = function() {
@@ -1218,12 +1165,11 @@ window.targetPageParams = function() {
     };
 ```
 
-**Using Web SDK**
+### Using Web SDK
 
 Using Web SDK the customers are able to set up the property at a higher level, when setting up the Data Stream configuration, under Adobe Target namespace:
 ![](assets/at-property-setup.png)
 This means every Target call for that specific Data Stream configuration is going to contain that property token.
-
 
 ## How do I enable A4T for click events in SPA
 
@@ -1234,7 +1180,7 @@ This means every Target call for that specific Data Stream configuration is goin
 
 ## How do I prefetch mboxes
 
-**Using at.js**
+### Using at.js
 
 This functionality is available only in at.js 2.x. at.js 2.x has a new function named `getOffers`. `getOffers` allow customers to prefetch content for one or more mboxes. Here is an example:
 
@@ -1261,7 +1207,28 @@ adobe.target.getOffers({
 
 NOTE: It is highly advised to ensure that every `mbox` in the `mboxes` array has its own index. Usually the first mbox has `index=0`, the next one `index=1`, etc. 
 
-**Using Web SDK**
+### Using Web SDK
 
-This functionality is currently not supported in AEP Web SDK.
+This functionality is currently not supported in Web SDK.
 
+## How do I debug my Target implementation
+
+### Using at.js
+
+At.js exposes these debugging features:
+
+* Mbox Disable - disable Target from fetching and rendering to check if the page is broken without Target interactions
+* Mbox Debug - at.js logs every action
+* Target Trace - with a mbox trace token generated in Bullseye a trace object with details that participated in the decisioning process is available under `window.___target_trace` object
+
+Note: All these debugging features are available with enhanced capabilities in [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+
+### Using Web SDK
+
+You have multiple debugging capabilities when using Web SDK:
+
+* Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* [Web SDK debug enabled](../../../edge/fundamentals/debugging.md)
+* Use [Web SDK monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* Use [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=en)
+* Target Trace
