@@ -1171,13 +1171,6 @@ Using Web SDK the customers are able to set up the property at a higher level, w
 ![](assets/at-property-setup.png)
 This means every Target call for that specific Data Stream configuration is going to contain that property token.
 
-## How do I enable A4T for click events in SPA
-
-**Using at.js**
-
-**Using Web SDK**
-
-
 ## How do I prefetch mboxes
 
 ### Using at.js
