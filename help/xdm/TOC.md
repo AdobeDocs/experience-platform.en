@@ -49,6 +49,7 @@ feature: Schemas
     * [XDM Business Person Components](./field-groups/profile/business-person-components.md)
     * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
   * Event field groups {#event}
+    * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
     * [Channel Details](./field-groups/event/channel-details.md)
     * [Commerce Details](./field-groups/event/commerce-details.md)
@@ -89,6 +90,7 @@ feature: Schemas
   * [Geo Shape](./data-types/geo-shape.md)
   * [Identity](./data-types/identity.md)
   * [Impressions](./data-types/impressions.md)
+  * [Key Value Pair](./data-types/key-value-pair.md)
   * [Marketing](./data-types/marketing.md)
   * [Measure](./data-types/measure.md)
   * [Order](./data-types/order.md)
