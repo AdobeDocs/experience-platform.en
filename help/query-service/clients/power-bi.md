@@ -36,17 +36,19 @@ Input PostgreSQL in the search bar and select **[!DNL PostgreSQL database]**, fo
 
 ![](../images/clients/power-bi/get-data.png)
 
-The PostgreSQl database dialog appears. Enter values for your desired server and database. 
+The PostgreSQl database dialog appears. Enter values for your server and database. 
 
->[!TIP] 
->
->The server is your host name suffixed with a colon and the port number. For example, `made-up.platform-query.adobe.io:80`. An example of a database might be `prod:all`.
+To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). 
 
-For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+![Experience Platform Queries Credentials Dashboard with credentials highlighted.](../images/clients/power-bi/query-service-credentials-page.png)
 
-**[!DNL Server]** is the host found under the connection details. For production, add port `:80` to the end of the host string. **[!DNL Database]** can be either "all" or a dataset table name. 
+In the Power BI **[!DNL Server]** text field, enter the value for host found in the Query Service Credentials section. For production, add port `:80` to the end of the host string. For example, `made-up.platform-query.adobe.io:80`.
 
-Additionally, you can select your **[!DNL Data Connectivity mode]**. Select **[!DNL Import]** to display a list of all available tables, or select **[!DNL DirectQuery]** to directly create a query. 
+The Power BI **[!DNL Database]** text field can be either "all" or a dataset table name. For example, `prod:all`.
+
+### Data Connectivity mode
+
+Next, you can select your **[!DNL Data Connectivity mode]**. Select **[!DNL Import]** followed by **Ok**, to display a list of all available tables, or select **[!DNL DirectQuery]** to directly create a query. 
 
 To learn more about **[!DNL Import]** mode, please read the section on [previewing and importing a table](#preview). To learn more about **[!DNL DirectQuery]** mode, please read the section on [creating SQL statements](#create). 
 
@@ -60,15 +62,15 @@ A prompt asking for your username, password, and application settings appears. F
 
 >[!TIP]
 >
-> The username in this case is your Organization ID and the password is your authentication token.
+> The username in this case is your Organization ID and the password is your authentication token. Both can be found on the Query Service credentials page.
 
 ![](../images/clients/power-bi/import-mode.png)
 
 ## Preview and import a table {#preview}
 
-You can import tables for use with the Power BI dashboard app as is, or use the [!UICONTROL Advanced options] to create a custom query and manage nested data objects. See the [Manage nested objects in Power BI](#manage-nested-objects-in-power-bi) section for more details.
+You can import tables for use with the Power BI desktop application as is, or use the [!UICONTROL Advanced options] to create a custom query and manage nested data objects. See the [Manage nested objects in Power BI](#manage-nested-objects-in-power-bi) section for more details.
 
-To import a table, input the server and database details [as described above](#connect-power-bi) and select **[!DNL Import]** from the [!UICONTROL Data Connectivity mode], followed by **[!UICONTROL Ok]**. A dialog appears, displaying a list of all the available tables. Select the table you want to preview, followed by **[!DNL Load]** to bring the dataset into [!DNL Power BI].
+To import a table, enter the server and database details [as described above](#connect-power-bi) and select **[!DNL Import]** from the [!UICONTROL Data Connectivity mode], followed by **[!UICONTROL Ok]**. A dialog appears, displaying a list of all the available tables. Select the table you want to preview, followed by **[!DNL Load]** to bring the dataset into [!DNL Power BI].
 
 ![](../images/clients/power-bi/preview-table.png)
 
