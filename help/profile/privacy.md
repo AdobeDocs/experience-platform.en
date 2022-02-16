@@ -132,6 +132,10 @@ When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Ser
 >While a successful delete request removes the collected attribute data for a customer (or set of customers), the request does not remove the associations established in the identity graph.
 >
 >For example, a delete request that uses a customer's `email_id` and `customer_id` removes all attribute data stored under those IDs. However, any data which is thereafter ingested under the same `customer_id` will still be associated with the appropriate `email_id`, as the association still exists.
+>
+>Additionally, Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. If you are using the UI to confirm whether your privacy requests are being processed, ensure that you are using a policy with "[!DNL None]" as its [!UICONTROL ID stitching] type. In other words, you cannot use a merge policy where [!UICONTROL ID stitching] is set to "[!UICONTROL Private graph]".
+>
+>![](./images/privacy/no-id-stitch.png)
 
 In future releases, [!DNL Platform] will send confirmation to [!DNL Privacy Service] after data has been physically deleted.
 
