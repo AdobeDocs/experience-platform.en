@@ -241,7 +241,7 @@ POST /connections
 
 **Request**
 
-The request below establishes a base connection to Adobe Campaign destinations. Depending on the storage location where you want to export files to (Amazon S3, SFTP, Azure Blob), keep the appropriate auth spec and delete the others.
+The request below establishes a base connection to Adobe Campaign destinations. Depending on the storage location where you want to export files to (Amazon S3, SFTP, Azure Blob), keep the appropriate `auth` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -352,7 +352,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Example request to connect to Oracle Eloqua destinations
 
-The request below establishes a base connection to Oracle Eloqua destinations. Depending on the storage location where you want to export files to, keep the appropriate auth spec and delete the others.
+The request below establishes a base connection to Oracle Eloqua destinations. Depending on the storage location where you want to export files to, keep the appropriate `auth` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -393,7 +393,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Example request to connect to Oracle Responsys destinations
 
-The request below establishes a base connection to Oracle Responsys destinations. Depending on the storage location where you want to export files to, keep the appropriate auth spec and delete the others.
+The request below establishes a base connection to Oracle Responsys destinations. Depending on the storage location where you want to export files to, keep the appropriate `auth` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -434,7 +434,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Example request to connect to Salesforce Marketing Cloud destinations
 
-The request below establishes a base connection to Salesforce Marketing Cloud destinations. Depending on the storage location where you want to export files to, keep the appropriate auth spec and delete the others.
+The request below establishes a base connection to Salesforce Marketing Cloud destinations. Depending on the storage location where you want to export files to, keep the appropriate `auth` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -524,7 +524,7 @@ A successful response contains the base connection's unique identifier (`id`). S
 
 ### Specify storage location and data format {#specify-storage-location-data-format}
 
-[!DNL Adobe Experience Platform] exports data for batch email marketing and cloud storage destinations in the form of [!DNL CSV] files.
+[!DNL Adobe Experience Platform] exports data for batch email marketing and cloud storage destinations in the form of [!DNL CSV] files. In this step, you can determine the path in your storage location where the files will be exported.
 
 >[!IMPORTANT]
 > 
@@ -540,6 +540,8 @@ POST /targetConnections
 
 **Request**
 
+The request below establishes a target connection to Adobe Campaign destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -551,7 +553,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "description": "Connection to Adobe Campaign",
     "baseConnectionId": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
-        "id": "{CONNECTION_SPEC_ID}",
+        "id": "0b23e41a-cb4a-4321-a78f-3b654f5d7d97",
         "version": "1.0"
     },
     "data": {
@@ -563,12 +565,253 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     },
     "params": {
         "mode": "S3",
-        "bucketName": "{BUCKETNAME}",
+        "bucketName": "{BUCKET_NAME}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+    "params": {
+        "mode": "AZURE_BLOB",
+        "container": "{CONTAINER}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+    "params": {
+        "mode": "FTP",
+        "remotePath": "{REMOTE_PATH}",
+        "format": "CSV"
+    }        
+}'
+```
+
++++ Example request to set up storage location for Amazon S3 destinations
+
+The request below establishes a target connection to Amazon S3 destinations, to determine where the exported files will land in your storage location.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Amazon S3",
+    "description": "Connection to Amazon S3",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "4890fc95-5a1f-4983-94bb-e060c08e3f81",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "Cloud Storage",
+        "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
         "format": "CSV"
     }
 }'
 ```
+
++++
+
++++ Example request to set up storage location for Azure Blob destinations
+
+The request below establishes a target connection to Azure Blob destinations, to determine where the exported files will land in your storage location.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Azure Blob",
+    "description": "Connection to Azure Blob",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "e258278b-a4cf-43ac-b158-4fa0ca0d948b",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "Cloud Storage",
+        "container": "{CONTAINER}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+}'
+```
+
++++
+
++++ Example request to set up storage location for Oracle Eloqua destinations
+
+The request below establishes a target connection to Oracle Eloqua destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Oracle Eloqua",
+    "description": "Connection to Oracle Eloqua",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "c1e44b6b-e7c8-404b-9031-58f0ef760604",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "S3",
+        "bucketName": "{BUCKET_NAME}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+    "params": {
+        "mode": "FTP",
+        "remotePath": "{REMOTE_PATH}",
+        "format": "CSV"
+    }        
+}'
+```
+
++++
+
++++ Example request to set up storage location for Oracle Responsys destinations
+
+The request below establishes a target connection to Oracle Responsys destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Oracle Responsys",
+    "description": "Connection to Oracle Responsys",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "a5e28ddf-e265-426e-83a1-9d03a3a6822b",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "S3",
+        "bucketName": "{BUCKET_NAME}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+    "params": {
+        "mode": "FTP",
+        "remotePath": "{REMOTE_PATH}",
+        "format": "CSV"
+    }        
+}'
+```
+
++++
+
++++ Example request to set up storage location for Salesforce Marketing Cloud destinations
+
+The request below establishes a target connection to Salesforce Marketing Cloud destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for Salesforce Marketing Cloud",
+    "description": "Connection to Salesforce Marketing Cloud",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "f599a5b3-60a7-4951-950a-cc4115c7ea27",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "S3",
+        "bucketName": "{BUCKET_NAME}",
+        "path": "{FILEPATH}",
+        "format": "CSV"
+    }
+    "params": {
+        "mode": "FTP",
+        "remotePath": "{REMOTE_PATH}",
+        "format": "CSV"
+    }        
+}'
+```
+
++++
+
++++ Example request to set up storage location for SFTP destinations
+
+The request below establishes a target connection to SFTP destinations, to determine where the exported files will land in your storage location.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "TargetConnection for SFTP",
+    "description": "Connection to SFTP",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "json",
+        "schema": {
+            "id": "1.0",
+            "version": "1.0"
+        }
+    },
+    "params": {
+        "mode": "Cloud Storage",
+        "remotePath": "{REMOTE_PATH}",
+    }
+}'
+```
+
++++
+
 
 | Property | Description |
 | --------- | ----------- |
@@ -596,9 +839,9 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ![Destination steps overview step 4](../assets/api/batch-destination/step4.png)
 
-Using the flow spec, source connection, and target connection IDs that you obtained in the previous steps, you can now create a dataflow between your [!DNL Experience Platform] data and the destination where you will export data files. Think of this step as constructing the pipeline, through which data will later flow, between [!DNL Experience Platform] and your desired destination.
+Using the flow spec, source connection, and target connection IDs that you obtained in the previous steps, you can now create a dataflow between your [!DNL Experience Platform] data and the destination where you will export data files. Think of this step as constructing the pipeline through which data will later flow between [!DNL Experience Platform] and your desired destination.
 
-To create a dataflow, perform a POST request, as shown below, while providing the values mentioned below within the payload.
+To create a dataflow, perform a POST request as shown below, while providing the values mentioned below within the payload.
 
 **API format**
 
@@ -679,7 +922,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 ![Destination steps overview step 5](../assets/api/batch-destination/step5.png)
 
-Having created all the connections and the dataflow, now you can activate your profile data to the destination platform. In this step, you select which segments and which profile attributes to export to the destination.
+Having created all the connections and the dataflow, you now can activate your profile data to the destination platform. In this step, you select which segments and which profile attributes to export to the destination.
 
 You can also determine the file naming format of the exported files and which attributes should be used as [deduplication keys](../ui/activate-batch-profile-destinations.md#mandatory-keys) or [mandatory attributes](../ui/activate-batch-profile-destinations.md#mandatory-attributes). In this step, you can also determine the schedule to send data to the destination.
 
