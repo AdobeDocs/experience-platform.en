@@ -9,15 +9,15 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 ---
 # Connect to batch destinations and activate data using the Flow Service API
 
-This tutorial demonstrates how to use the Flow Service API to create a batch [cloud storage](../catalog/cloud-storage/overview.md) or [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your new created destination, and export data to your newly created destination via CSV files.
+This tutorial demonstrates how to use the Flow Service API to create a batch [cloud storage](../catalog/cloud-storage/overview.md) or [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your newly created destination, and export data to your newly created destination via CSV files.
 
 This tutorial uses the Adobe Campaign destination in all examples, but the steps are identical for all batch cloud storage and email marketing destinations.
 
 ![Overview - the steps to create a destination and activate segments](../assets/api/email-marketing/overview.png)
 
-If you prefer to use the user interface in Platform to connect a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) tutorials.
+If you prefer to use the Platform user interface to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) tutorials.
 
-## Get started {#get-started}
+## Getting started {#get-started}
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -25,15 +25,20 @@ This guide requires a working understanding of the following components of Adobe
 *   [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-time Customer Profile] data.
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to activate data to batch destinations in Platform.
+The following sections provide additional information that you need to know in order to activate data to batch destinations in Platform.
 
 ### Gather required credentials {#gather-required-credentials}
 
 To complete the steps in this tutorial, you should have the following credentials ready, depending on the type of destination that you are connecting and activating segments to.
 
 * For [!DNL Amazon] S3 connections: `accessId`, `secretKey`
-* For SFTP connections: `domain`, `port`, `username`, `password` or `ssh key` (depending on the connection method to the FTP location)
-* For [!DNL Azure Blob] connections: `path`, `container`
+* For [!DNL Amazon] S3 connections to [!DNL Adobe Campaign]: `accessId`, `secretKey`
+* For SFTP connections: `domain`, `port`, `username`, `password` or `sshKey` (depending on the connection method to the FTP location)
+* For [!DNL Azure Blob] connections: `connectionString`
+
+>[!NOTE]
+>
+>The credentials `accessId`, `secretKey` for Amazon S3 connections and `accessId`, `secretKey` for Amazon S3 connections to Adobe Campaign are identical.
 
 ### Reading sample API calls {#reading-sample-api-calls}
 
@@ -100,16 +105,16 @@ A successful response contains a list of available destinations and their unique
 }
 ```
 
-For your reference, the table below contains the connection specs for commonly used batch destinations:
+For your reference, the table below contains the connection spec IDs for commonly used batch destinations:
 
 | Destination | Connection spec ID |
 ---------|----------|
-| Adobe Campaign | 0b23e41a-cb4a-4321-a78f-3b654f5d7d97 |
-| Amazon S3 | 4890fc95-5a1f-4983-94bb-e060c08e3f81 |
-| Azure Blob | e258278b-a4cf-43ac-b158-4fa0ca0d948b |
-| Oracle Eloqua | c1e44b6b-e7c8-404b-9031-58f0ef760604 |
-| Oracle Responsys | a5e28ddf-e265-426e-83a1-9d03a3a6822b |
-| Salesforce Marketing Cloud | f599a5b3-60a7-4951-950a-cc4115c7ea27 |
+| [!DNL Adobe Campaign] | 0b23e41a-cb4a-4321-a78f-3b654f5d7d97 |
+| [!DNL Amazon S3] | 4890fc95-5a1f-4983-94bb-e060c08e3f81 |
+| [!DNL Azure Blob] | e258278b-a4cf-43ac-b158-4fa0ca0d948b |
+| [!DNL Oracle Eloqua] | c1e44b6b-e7c8-404b-9031-58f0ef760604 |
+| [!DNL Oracle Responsys] | a5e28ddf-e265-426e-83a1-9d03a3a6822b |
+| [!DNL Salesforce Marketing Cloud] | f599a5b3-60a7-4951-950a-cc4115c7ea27 |
 | SFTP | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 |
 
 {style="table-layout:auto"}
@@ -152,7 +157,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Property | Description |
 | --------- | ----------- |
-|`name`| Provide a name for the base connection to the Experience Platform Profile Store |
+|`name`| Provide a name for the base connection to the Experience Platform Profile Store. |
 |`description` | Optionally, you can provide a description for the base connection. |
 | `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
 
@@ -201,10 +206,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Property | Description |
 | --------- | ----------- |
-|`name`| Provide a name for the source connection to the Experience Platform Profile Store |
+|`name`| Provide a name for the source connection to the Experience Platform Profile Store. |
 |`description` | Optionally, you can provide a description for the source connection. |
 | `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
-| `baseConnectionId`| Use the base connection ID you have obtained in the previous step..|
+| `baseConnectionId`| Use the base connection ID you have obtained in the previous step.|
 | `data.format`| `CSV` is currently the only supported file export format.|
 
 **Response**
@@ -236,6 +241,8 @@ POST /connections
 
 **Request**
 
+The request below establishes a base connection to Adobe Campaign destinations. Depending on the storage location where you want to export files to (Amazon S3, SFTP, Azure Blob), keep the appropriate auth spec and delete the others.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -247,18 +254,255 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "name": "S3 Connection for Adobe Campaign",
     "description": "summer advertising campaign",
     "connectionSpec": {
-        "id": "{_CONNECTION_SPEC_ID}",
+        "id": "0b23e41a-cb4a-4321-a78f-3b654f5d7d97",
         "version": "1.0"
     },
     "auth": {
-        "specName": "{S3}",
+        "specName": "S3",
         "params": {
             "accessId": "{ACCESS_ID}",
             "secretKey": "{SECRET_KEY}"
         }
     }
+    "auth": {
+        "specName": "SFTP with Password",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+        }
+    }
+    "auth": {
+        "specName": "SFTP with SSH Key",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "sshKey": "{SSH_KEY}"
+        }
+    }        
+    "auth": {
+        "specName": "Azure Blob",
+        "params": {
+            "connectionString": "{AZURE_BLOB_CONNECTION_STRING}"
+        }
+    }    
 }'
 ```
+
++++ Example request to connect to Amazon S3 destinations
+
+The request below establishes a base connection to Amazon S3 destinations.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to Amazon S3",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "4890fc95-5a1f-4983-94bb-e060c08e3f81",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "Access Key",
+        "params": {
+            "s3AccessKey": "{AMAZON_S3_ACCESS_KEY}",
+            "s3SecretKey": "{AMAZON_S3_SECRET_KEY}"
+        }
+    }
+}'
+```
+
++++
+
++++ Example request to connect to Azure Blob destinations
+
+The request below establishes a base connection to Azure Blob destinations.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to Azure Blob",
+    "description": "Summer advertising campaign",
+    "connectionSpec": {
+        "id": "e258278b-a4cf-43ac-b158-4fa0ca0d948b",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "ConnectionString",
+        "params": {
+            "connectionString": "{AZURE_BLOB_CONNECTION_STRING}"
+        }
+    }
+}'
+```
+
++++
+
++++ Example request to connect to Oracle Eloqua destinations
+
+The request below establishes a base connection to Oracle Eloqua destinations. Depending on the storage location where you want to export files to, keep the appropriate auth spec and delete the others.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to Eloqua destination",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "c1e44b6b-e7c8-404b-9031-58f0ef760604",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "SFTP with Password",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+        }
+    }
+    "auth": {
+        "specName": "SFTP with SSH Key",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "sshKey": "{SSH_KEY}"
+        }
+    }    
+}'
+```
+
++++
+
++++ Example request to connect to Oracle Responsys destinations
+
+The request below establishes a base connection to Oracle Responsys destinations. Depending on the storage location where you want to export files to, keep the appropriate auth spec and delete the others.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to Responsys destination",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "a5e28ddf-e265-426e-83a1-9d03a3a6822b",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "SFTP with Password",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+        }
+    }
+    "auth": {
+        "specName": "SFTP with SSH Key",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "sshKey": "{SSH_KEY}"
+        }
+    }    
+}'
+```
+
++++
+
++++ Example request to connect to Salesforce Marketing Cloud destinations
+
+The request below establishes a base connection to Salesforce Marketing Cloud destinations. Depending on the storage location where you want to export files to, keep the appropriate auth spec and delete the others.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to Salesforce Marketing Cloud",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "f599a5b3-60a7-4951-950a-cc4115c7ea27",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "SFTP with Password",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+        }
+    }
+    "auth": {
+        "specName": "SFTP with SSH Key",
+        "params": {
+            "domain": "{DOMAIN}",
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "sshKey": "{SSH_KEY}"
+        }
+    }    
+}'
+```
+
++++
+
++++ Example request to connect to SFTP with password destinations
+
+The request below establishes a base connection to SFTP destinations.
+
+```shell
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Connect to SFTP with password",
+    "description": "summer advertising campaign",
+    "connectionSpec": {
+        "id": "64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0",
+        "version": "1.0"
+    },
+    "auth": {
+        "specName": "Basic Authentication for sftp",
+        "params": {
+            "host": "{HOST}",
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
+        }
+    }
+}'
+```
+
++++
 
 | Property | Description |
 | --------- | ----------- |
@@ -530,7 +774,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Response**
 
-Look for a 202 OK response. No response body is returned. To validate that the request was correct, see the next step, [Validate the dataflow](#validate-dataflow).
+Look for a 202 Accepted response. No response body is returned. To validate that the request was correct, see the next step, [Validate the dataflow](#validate-dataflow).
 
 ## Validate the dataflow {#validate-dataflow}
 
