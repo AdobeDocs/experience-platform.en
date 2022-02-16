@@ -52,24 +52,24 @@ LIMIT 100;
 
 ### How do I change the time zone to and from a UTC Timestamp?
 
-Query Service standardizes persisted data in Adobe Experience Platform using the UTC (Coordinated Universal Time) timestamp format. An example of the UTC format is `2021-12-22T19:52:05Z`
+Adobe Experience Platform persists data in UTC (Coordinated Universal Time) timestamp format. An example of the UTC format is `2021-12-22T19:52:05Z`
 
-Query Service supports built-in Spark SQL functions to convert a given timestamp to and from UTC format. Both the `to_utc_timestamp()` and the `from_utc_timestamp()` methods take two parameters: timestamp and timezone. 
+Query Service supports built-in SQL functions to convert a given timestamp to and from UTC format. Both the `to_utc_timestamp()` and the `from_utc_timestamp()` methods take two parameters: timestamp and timezone. 
 
 | Parameter  | Description  |
 |---|---|
-| Timestamp  | The timestamp can be written in either UTC format or simple `{year-month-day}` format. If no time is provided, the default value is midnight in the morning of the given day.  |
-| Timezone  |  The timezone is written in a `{continent/city})` format. It must be one of the recognized timezone codes as found in the [public-domain tz database](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+| Timestamp  | The timestamp can be written in either UTC format or simple `{year-month-day}` format. If no time is provided, the default value is midnight on the morning of the given day.  |
+| Timezone  |  The timezone is written in a `{continent/city})` format. It must be one of the recognized timezone codes as found in the [public-domain TZ database](https://data.iana.org/time-zones/tz-link.html#tzdb). |
 
 #### Convert to the UTC timestamp
 
-The `to_utc_timestamp()` method interprets the given parameters and converts it **to the timestamp of your local timezone** in UTC format. For example, the time zone in Seoul, South Korea is UTC/GMT +9 hours. By providing a date only timestamp, the method uses a default value of midnight in the morning. The timestamp and timezone are converted into the UTC format from the time of that region to a UTC timestamp of your local region.
+The `to_utc_timestamp()` method interprets the given parameters and converts it **to the timestamp of your local timezone** in UTC format. For example, the time zone in Seoul, South Korea is UTC/GMT +9 hours. By providing a date-only timestamp, the method uses a default value of midnight in the morning. The timestamp and timezone are converted into the UTC format from the time of that region to a UTC timestamp of your local region.
 
 ```SQL
 SELECT to_utc_timestamp('2021-08-31', 'Asia/Seoul');
 ```
 
-The query returns a timestamp in the users local time. In this case 3pm the previous day as Seoul is nine hours ahead.
+The query returns a timestamp in the user's local time. In this case, 3PM the previous day as Seoul is nine hours ahead.
 
 ```
 2021-08-30 15:00:00
@@ -77,7 +77,7 @@ The query returns a timestamp in the users local time. In this case 3pm the prev
 
 As another example, if the given timestamp was `2021-07-14 12:40:00.0` for the `Asia/Seoul` timezone, the returned UTC timestamp would be `2021-07-14 03:40:00.0`
 
-The console output provided in the Query Service UI is a more human readable format:
+The console output provided in the Query Service UI is a more human-readable format:
 
 ```
 8/30/2021, 3:00 PM
