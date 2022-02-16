@@ -5,7 +5,7 @@ exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 ---
 # [!UICONTROL Key Value Pair] data type
 
-[!UICONTROL Key Value Pair] is a standard Experience Data Model (XDM) data type that a generic key-value pair.
+[!UICONTROL Key Value Pair] is a standard Experience Data Model (XDM) data type that captures the details of a generic key-value pair. This data type is used in the [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension] field group](../field-groups/event/analytics-full-extension.md) to describe the array items of a list variable.
 
 ![Key Value Pair Structure](../images/data-types/key-value-pair.png)
 
