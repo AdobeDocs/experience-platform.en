@@ -37,7 +37,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
     "spec": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
-      "description": "defines static and user input parameters to fetch resource values.",
+      "description": "Defines static and user input parameters to fetch resource values.",
       "properties": {
         "urlParams": {
           "type": "object",
@@ -57,7 +57,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
             },
             "queryParams": {
               "type": "object",
-              "description": "query parameters in json format",
+              "description": "The query parameters in json format",
               "example": "{'key':'value','key1':'value1'} in JSON format"
             }
           },
@@ -68,21 +68,21 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
         },
         "headerParams": {
           "type": "object",
-          "description": "header parameters in json format",
+          "description": "The header parameters in json format",
           "example": "{'user':'c26f50c88dc035610e6753f807e28e9','x-api-key':'apiKey'}"
         },
         "contentPath": {
           "type": "object",
-          "description": "Params required for main collection content.",
+          "description": "The parameters required for main collection content.",
           "properties": {
             "path": {
-              "description": "path to main content.",
+              "description": "The path to the main content.",
               "type": "string",
               "example": "$.emails"
             },
             "skipAttributes": {
               "type": "array",
-              "description": "list of attributes that needs to be skipped while fattening the array.",
+              "description": "The list of attributes that needs to be skipped while fattening the array.",
               "example": "[total_items]",
               "items": {
                 "type": "string"
@@ -90,7 +90,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
             },
             "keepAttributes": {
               "type": "array",
-              "description": "list of attributes that needs to be kept while fattening the array.",
+              "description": "The list of attributes that needs to be kept while fattening the array.",
               "example": "[total_items]",
               "items": {
                 "type": "string"
@@ -98,7 +98,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
             },
             "overrideWrapperAttribute": {
               "type": "string",
-              "description": "rename root content path node.",
+              "description": "The new name to be used for the root content path node.",
               "example": "email"
             }
           },
@@ -108,16 +108,16 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
         },
         "explodeEntityPath": {
           "type": "object",
-          "description": "Params required for sub-array content.",
+          "description": "The parameters required for the sub-array content.",
           "properties": {
             "path": {
-              "description": "path to sub-array content.",
+              "description": "The path to the sub-array content.",
               "type": "string",
               "example": "$.email.activity"
             },
             "skipAttributes": {
               "type": "array",
-              "description": "list of attributes that needs to be skipped while fattening sub-array.",
+              "description": "The list of attributes that needs to be skipped while fattening sub-array.",
               "example": "[total_items]",
               "items": {
                 "type": "string"
@@ -125,7 +125,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
             },
             "keepAttributes": {
               "type": "array",
-              "description": "list of attributes that needs to be kept while fattening the sub-array.",
+              "description": "The list of attributes that needs to be kept while fattening the sub-array.",
               "example": "[total_items]",
               "items": {
                 "type": "string"
@@ -133,7 +133,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
             },
             "overrideWrapperAttribute": {
               "type": "string",
-              "description": "rename root content path node.",
+              "description": "The new name to be used for the  root content path node.",
               "example": "activity"
             }
           },
@@ -143,10 +143,10 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
         },
         "paginationParams": {
           "type": "object",
-          "description": "Params required to fetch data using pagination.",
+          "description": "The parameters required to fetch data using pagination.",
           "properties": {
             "type": {
-              "description": "Pagination fetch type.",
+              "description": "The pagination fetch type.",
               "type": "string",
               "enum": [
                 "OFFSET",
@@ -155,23 +155,23 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
             },
             "limitName": {
               "type": "string",
-              "description": "limit property name",
+              "description": "The limit property name",
               "example": "limit or count"
             },
             "limitValue": {
               "type": "integer",
-              "description": "number of records per page to fetch.",
+              "description": "The number of records to fetch per page.",
               "example": "limit=10 or count=10"
             },
             "offsetName": {
               "type": "string",
-              "description": "offset property name",
+              "description": "The offset property name",
               "example": "offset"
             },
             "pointerPath": {
               "type": "string",
-              "description": "pointer property name",
-              "example": "pointer"
+              "description": "The path to pointer property",
+              "example": "$.paging.next"
             }
           },
           "required": [
@@ -182,24 +182,24 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
         },
         "scheduleParams": {
           "type": "object",
-          "description": "Params required to fetch data for batch schedule.",
+          "description": "The parameters required to fetch data for batch schedule.",
           "properties": {
             "scheduleStartParamName": {
               "type": "string",
-              "description": "order property name to get the order by date."
+              "description": "The order property name to get the order by date."
             },
             "scheduleEndParamName": {
               "type": "string",
-              "description": "order property name to get the order by date."
+              "description": "The order property name to get the order by date."
             },
             "scheduleStartParamFormat": {
               "type": "string",
-              "description": "order property name to get the order by date.",
+              "description": "The order property name to get the order by date.",
               "example": "yyyy-MM-ddTHH:mm:ssZ"
             },
             "scheduleEndParamFormat": {
               "type": "string",
-              "description": "order property name to get the order by date.",
+              "description": "The order property name to get the order by date.",
               "example": "yyyy-MM-ddTHH:mm:ssZ"
             }
           },
