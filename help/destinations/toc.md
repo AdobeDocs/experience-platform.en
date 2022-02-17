@@ -12,7 +12,7 @@ feature: Destinations
 * [Destination types and categories](./destination-types.md)
 * API tutorials {#api}
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
-    * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
+    * [Connect to batch cloud storage and email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
     * [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
     * [Update destination dataflows](./api/update-destination-dataflows.md)
     * [Delete destination accounts](./api/delete-destination-account.md)

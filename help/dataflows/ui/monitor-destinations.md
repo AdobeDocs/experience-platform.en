@@ -197,7 +197,7 @@ The details page also displays a list of identities that failed and identities t
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="Segment Jobs"
->abstract="The segment jobs dashboard contains information on the evaluation and export jobs for all your segments."
+>abstract="The segment jobs view contains information on the evaluation and export jobs for all your segments."
 
 To access the [!UICONTROL Segment Jobs] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Segment Jobs]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the segment evaluation and export jobs.
 
@@ -220,7 +220,7 @@ The following metrics are available for segment jobs:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="The destination activation contains information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities."
+>abstract="The destination activation view contains information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities."
 
 To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 
