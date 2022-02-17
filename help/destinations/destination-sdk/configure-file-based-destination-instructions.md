@@ -252,10 +252,10 @@ If you use an audience metadata configuration, you must connect it to the destin
 Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
 
 * If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK:
-   * [OAuth 2 authentication](./oauth2-authentication.md)
+
    * [Amazon S3 authentication](authentication-configuration.md#s3)
-   * [Azure connection string (beta)](authentication-configuration.md#blob)
-   * [Azure service principal (beta)](authentication-configuration.md#adls)
+   * [Azure connection string](authentication-configuration.md#blob)
+   * [Azure service principal](authentication-configuration.md#adls)
    * [SFTP authentication with SSH key](authentication-configuration.md#sftp-ssh)
    * [SFTP authentication with password](authentication-configuration.md#sftp-password)
 
