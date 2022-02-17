@@ -10,11 +10,11 @@ exl-id: 33eaab24-f867-4744-b424-4ba71727373c
 Adobe Experience Platform Destination SDK supports several authentication types:
 
 * Bearer authentication
-* Amazon S3 authentication (beta)
-* Azure connection string (beta)
-* Azure service principal (beta)
-* SFTP with SSH key (beta)
-* SFTP with password (beta)
+* (Beta) Amazon S3 authentication
+* (Beta) Azure connection string
+* (Beta) Azure service principal
+* (Beta) SFTP with SSH key
+* (Beta) SFTP with password
 * OAuth 2 with authorization code
 * OAUth 2 with password grant
 * OAuth 2 with client credentials grant
@@ -35,7 +35,7 @@ To set up bearer type authentication for your destination, configure the `custom
 
 ```
 
-## Amazon S3 authentication (beta) {#s3}
+## (Beta) Amazon S3 authentication {#s3}
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ To set up Amazon S3 authentication for your destinations, configure the `custome
 
 ```
 
-## Azure connection string (beta) {#blob}
+## (Beta) Azure connection string {#blob}
 
 >[!IMPORTANT]
 >
@@ -71,7 +71,7 @@ To set up [!DNL Azure Blob] authentication for your destinations, configure the 
 
 ```
 
-## Azure service principal (beta) {#adls}
+## (Beta) Azure service principal {#adls}
 
 >[!IMPORTANT]
 >
@@ -89,7 +89,7 @@ To set up [!DNL Azure Data Lake Storage] (ADLS) for your destinations, configure
 
 ```
 
-## SFTP authentication with SSH key (beta) {#sftp-ssh}
+## (Beta) SFTP authentication with SSH key {#sftp-ssh}
 
 >[!IMPORTANT]
 >
@@ -107,7 +107,7 @@ To set up SFTP authentication with SSH key for your destinations, configure the 
 
 ```
 
-## SFTP authentication with password (beta) {#sftp-password}
+## (Beta) SFTP authentication with password {#sftp-password}
 
 >[!IMPORTANT]
 >

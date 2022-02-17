@@ -161,7 +161,7 @@ The server specs for file-based destinations can be configured in Adobe Experien
 
 ## File-based destinations file configuration {#file-configuration}
 
-This section describes the file formatting settings for the exported files.
+This section describes the file formatting settings for the exported CSV files.
 
 >[!NOTE]
 >

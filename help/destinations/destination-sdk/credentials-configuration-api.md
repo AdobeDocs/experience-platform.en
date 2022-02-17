@@ -317,16 +317,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ```
 
-
-
-
-
 ## Retrieve a specific credentials configuration {#get}
 
 You can retrieve detailed information about a specific credentials configuration by making a GET request to the `/authoring/credentials` endpoint and providing the instance ID of the credentials configuration you want to update.
 
 **API format**
-
 
 ```http
 GET /authoring/credentials/{INSTANCE_ID}
@@ -367,7 +362,6 @@ A successful response returns HTTP status 200 with detailed information about th
    }
 }
 ```
-
 
 ## Delete a specific credentials configuration {#delete}
 
