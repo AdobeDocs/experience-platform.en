@@ -18,7 +18,7 @@ This guide requires that you already have access to the Power BI desktop app and
 >
 > The Power BI desktop application is **only** available on Windows devices.
 
-Adobe Experience Platform credentials are also required for authentication to connect the Power BI client. Instructions on how to find these are provided later in the document.
+Access to the Queries workspace in the Experience Platform UI is necessary to acquire the credentials required for authentication. Please contact your IMS Organization administrator if you do not currently have access to the Queries workspace. 
 
 After installing Power BI, you will need to install `Npgsql`, a .NET driver package for PostgreSQL. More information about Npgsql can be found in the [Npgsql documentation](https://www.npgsql.org/doc/index.html).
 
@@ -52,7 +52,7 @@ The **[!DNL Database]** field can be either "all" or a dataset table name. For e
 
 ### Data Connectivity mode
 
-Next, you can select your **[!DNL Data Connectivity mode]**. Select **[!DNL Import]** followed by **[!DNL OK]**, to display a list of all available tables or select **[!DNL DirectQuery]** to query the data source directly without importing or copying data directly into Power BI. 
+Next, you can select your **[!DNL Data Connectivity mode]**. Select **[!DNL Import]** followed by **[!DNL OK]** to display a list of all available tables, or select **[!DNL DirectQuery]** to query the data source directly without importing or copying data directly into Power BI. 
 
 To learn more about **[!DNL Import]** mode, please read the section on [importing a table](#import). To learn more about **[!DNL DirectQuery]** mode, please read the section on [querying a dataset without importing data](#direct-query). 
 
@@ -70,13 +70,13 @@ Fill in these details, then select **[!DNL Connect]** to continue to the next st
 
 ## Import a table {#import}
 
-By selecting the **[!DNL Import]** **[!DNL Data Connectivity mode]**, the full dataset is imported which allows you to use the selected tables and columns within the Power BI desktop application as-is.
+By selecting the **[!DNL Import]** [!DNL Data Connectivity mode], the full dataset is imported which allows you to use the selected tables and columns within the Power BI desktop application as-is.
 
 >[!IMPORTANT]
 >
 >To see data changes that have occurred since the initial import, you must refresh the data within Power BI by importing the full dataset again.
 
-To import a table, enter the server and database details [as described above](#connect-power-bi) and select **[!DNL Import]** from the [!DNL Data Connectivity mode], followed by **[!DNL OK]**. A dialog appears, displaying a list of all the available tables. Select the table you want to preview, followed by **[!DNL Load]** to bring the dataset into Power BI.
+To import a table, enter the server and database details [as described above](#connect-power-bi) and select the **[!DNL Import]** [!DNL Data Connectivity mode], followed by **[!DNL OK]**. A dialog appears, displaying a list of all the available tables. Select the table you want to preview, followed by **[!DNL Load]** to bring the dataset into Power BI.
 
 ![](../images/clients/power-bi/preview-table.png)
 
@@ -88,7 +88,7 @@ The table is now imported into Power BI.
 
 Power BI and other third-party tools like Tableau do not currently allow users to import nested objects, such as XDM objects in Platform. To account for this, Power BI allows you to use custom SQL to access these nested fields and create a flattened view of the data. Power BI then loads this flattened view of the previously nested data as a normal table.
 
-From the PostgreSQL database popover, select **[!DNL Advanced options]** to enter a custom SQL query in the **[!DNL SQL statement]** section. This custom query could be used to flatten your JSON name-value pairs into a table format.
+From the PostgreSQL database popover, select **[!DNL Advanced options]** to enter a custom SQL query in the **[!DNL SQL statement]** section. This custom query should be used to flatten your JSON name-value pairs into a table format.
 
 ![Data connectivity mode advanced options to create a custom SQL statement.](../images/clients/power-bi/custom-sql-statement.png)
 
@@ -102,9 +102,9 @@ The visualizations are now available for editing and exporting from the Power BI
 
 ## Query the dataset without importing data {#direct-query}
  
-The **[!DNL DirectQuery]** [!DNL Data Connectivity mode] queries the data source directly without importing or copying data directly into the Power BI Desktop. Using this connection mode, Power BI Desktop users can refresh all visualizations with current data through the UI. Although, the time required to produce or refresh the visualization will vary depending on the performance of the underlying data source.
+The **[!DNL DirectQuery]** [!DNL Data Connectivity mode] queries the data source directly without importing or copying data into the Power BI Desktop. Using this connection mode, you can refresh all visualizations with current data through the UI. However, the time required to produce or refresh the visualization will vary depending on the performance of the underlying data source.
 
-To use this [!DNL Data Connectivity mode], select the **[!DNL DirectQuery]** toggle then **[!DNL Advanced options]** to enter a custom SQL query in the **[!DNL SQL statement]** section. Ensure that the checkbox labelled **[!DNL Include relationship columns]** is selected. Once you have completed your query, select **[!DNL OK]** to continue.
+To use this [!DNL Data Connectivity mode], select the **[!DNL DirectQuery]** toggle then **[!DNL Advanced options]** to enter a custom SQL query in the **[!DNL SQL statement]** section. Ensure that **[!DNL Include relationship columns]** is selected. Once you have completed your query, select **[!DNL OK]** to continue.
 
 ![](../images/clients/power-bi/direct-query-mode.png)
 
@@ -114,4 +114,4 @@ A preview of your query appears. Select **[!DNL Load]** to see the results of th
 
 ## Next steps
 
-By reading this document, you better understand how to connect to the Power BI Desktop app and the different data connection modes available. For more information on how to write and run queries, refer to the [guidance for query execution](../best-practices/writing-queries.md).
+By reading this document, you should now understand how to connect to the Power BI Desktop app and the different data connection modes available. For more information on how to write and run queries, refer to the [guidance for query execution](../best-practices/writing-queries.md).
