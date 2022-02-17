@@ -66,7 +66,7 @@ Before creating an export job, you will first need to create a dataset to export
 
 Alternatively, after creating your one-time segment job or your ongoing schedule, you can export the results to a destination. A destination is an endpoint, such as an Adobe application on an external service, where an audience can be activated and delivered. A full list of available destinations can be found in the [destinations catalog](../destinations/catalog/overview.md).
 
-To learn how to activate your segment definition to a destination, please read the step on [activating data to a destination](../destinations/api/email-marketing.md#activate-data) in the tutorial on connecting destinations and activating data.
+To learn how to activate your segment to a destination, please read the step on [activating data to a destination](../destinations/api/email-marketing.md#activate-data) in the tutorial on connecting destinations and activating data. For instructions on how to activate data to batch or email marketing destinations, see the tutorial on [how to activate audience data to batch profile export destinations using the Platform UI](../destinations/ui/activate-batch-profile-destinations.md) and the [guide on how to connect to batch destinations and activate data using the Flow Service API](../destinations/api/connect-activate-batch-destinations.md).
 
 ## Monitor your flow of data
 
