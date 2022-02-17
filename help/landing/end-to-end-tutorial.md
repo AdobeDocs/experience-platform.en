@@ -64,9 +64,15 @@ Before creating an export job, you will first need to create a dataset to export
 
 ## Export your evaluated data to a destination
 
-Alternatively, after creating your one-time segment job or your ongoing schedule, you can export the results to a destination. A destination is an endpoint, such as an Adobe application on an external service, where an audience can be activated and delivered. A full list of available destinations can be found in the [destinations overview](../destinations/home.md).
+Alternatively, after creating your one-time segment job or your ongoing schedule, you can export the results to a destination. A destination is an endpoint, such as an Adobe application on an external service, where an audience can be activated and delivered. A full list of available destinations can be found in the [destinations catalog](../destinations/catalog/overview.md).
 
-To learn how to activate your segment definition to a destination, please read the step on [activating data to a destination](../destinations/api/email-marketing.md#activate-data) in the tutorial on connecting destinations and activating data.
+To learn how to activate your segment to a destination, please read the step on [activating data to a destination](../destinations/api/email-marketing.md#activate-data) in the tutorial on connecting destinations and activating data. For instructions on how to activate data to batch or email marketing destinations, see the tutorial on [how to activate audience data to batch profile export destinations using the Platform UI](../destinations/ui/activate-batch-profile-destinations.md) and the [guide on how to connect to batch destinations and activate data using the Flow Service API](../destinations/api/connect-activate-batch-destinations.md).
+
+## Monitor your flow of data
+
+Platform allows you to track flow of data by utilizing dataflows, which is a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and [!DNL Real-time Customer Profile] before ultimately being activated to destinations. The monitoring dashboard provides you with a visual representation of the journey of a dataflow. To learn how to monitor dataflows within the Platform UI, see the tutorials on [monitoring dataflows for sources](../dataflows/ui/monitor-sources.md) and [monitoring dataflows for destinations](../dataflows/ui/monitor-destinations.md).
+
+You can monitor Platform activities through the use of statistical metrics and event notifications by using [!DNL Observability Insights]. You can subscribe to alert notifications through Platform UI or send them to a configure webhook. For more details on how to view, enable, disable, and subscribe to available alerts from the Experience Platform UI, see the [Alerts UI guide](../observability/alerts/ui.md). For details on how to receive alerts through webhooks, see the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md).
 
 ## Next steps
 
