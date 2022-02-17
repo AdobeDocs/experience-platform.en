@@ -23,6 +23,7 @@ feature: Web SDK
   * [Supported use cases](fundamentals/supported-use-cases.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
+  * [Tracking ECIDs](identity/tracking.md)
 * Data collection {#data-collection}
   * [Automatically collected information](data-collection/automatic-information.md)
   * [Track links](data-collection/track-links.md)
