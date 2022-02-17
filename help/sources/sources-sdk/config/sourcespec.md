@@ -58,7 +58,6 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
             "queryParams": {
               "type": "object",
               "description": "The query parameters in json format",
-              "example": "{'key':'value','key1':'value1'} in JSON format"
             }
           },
           "required": [
@@ -69,7 +68,6 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
         "headerParams": {
           "type": "object",
           "description": "The header parameters in json format",
-          "example": "{'user':'c26f50c88dc035610e6753f807e28e9','x-api-key':'apiKey'}"
         },
         "contentPath": {
           "type": "object",
