@@ -329,7 +329,6 @@ This section allows partners to introduce custom fields. In the example below, `
 |`dynamicEnum.destinationServerId` |String| The destination server ID used when creating the destination server.|
 |`dynamicEnum.value`|String|*Used when creating a destination with a partner-defined schema.* Defines the name of your custom schema.|
 
-
 {style="table-layout:auto"}
 
 ## UI attributes {#ui-attributes}
