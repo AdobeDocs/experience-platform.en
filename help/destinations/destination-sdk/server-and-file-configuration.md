@@ -1,7 +1,6 @@
 ---
 description: The server specs for file-based destinations can be configured in Adobe Experience Platform Destination SDK via the common endpoint `/authoring/destination-servers`.
 title: Configuration options for file-based destination server specs
-exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
 ---
 # Configuration options for file-based destination server specs
 
