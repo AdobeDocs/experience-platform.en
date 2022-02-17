@@ -35,7 +35,7 @@ This tutorial requires a working understanding of the following components of Ad
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Source ingestion"
->abstract="Sources processing contains information on data activity status and metrics in data lake service, including records ingested and records failed. Review the metric definition guide to learn more about metrics and graphs."
+>abstract="The Source ingestion view contains information on data activity status and metrics in data lake service, including records ingested and records failed. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -145,7 +145,7 @@ Select **[!UICONTROL Identities]** to see ingestion in the [!UICONTROL Identitie
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Identity processing"
->abstract="Identity processing contains information on records ingested to Identity service, including the number of identities added, graphs created and graphs updated. Review the metric definition guide to learn more about metrics and graphs."
+>abstract="The Identity processing view contains information on records ingested to Identity service, including the number of identities added, graphs created and graphs updated. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -188,7 +188,7 @@ From the [!UICONTROL Identity processing] page, select **[!UICONTROL Profiles]**
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Profile processing"
->abstract="Profile processing contains information on records ingested to Profile service, including the number of profile fragments created, profile fragments updated and the total number of profile fragments."
+>abstract="The Profile processing view contains information on records ingested to Profile service, including the number of profile fragments created, profile fragments updated and the total number of profile fragments."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
