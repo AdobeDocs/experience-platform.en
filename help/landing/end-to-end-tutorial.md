@@ -68,6 +68,10 @@ Alternatively, after creating your one-time segment job or your ongoing schedule
 
 To learn how to activate your segment definition to a destination, please read the step on [activating data to a destination](../destinations/api/email-marketing.md#activate-data) in the tutorial on connecting destinations and activating data.
 
+## Monitor your flow of data
+
+Platform allows you to track flow of data by utilizing dataflows, which is a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and [!DNL Real-time Customer Profile] before ultimately being activated to destinations. The monitoring dashboard provides you with a visual representation of the journey of a dataflow. To learn how to monitor dataflows within the Platform UI, see the tutorials on [monitoring dataflows for sources](../dataflows/ui/monitor-sources.md) and [monitoring dataflows for destinations](../dataflows/ui/monitor-destinations.md).
+
 ## Next steps
 
 By reading this tutorial, you have been introduced to a high level overview for a simple end-to-end flow for Platform. To learn more about Adobe Experience Platform, please read the [Platform overview](./home.md). To learn more about using the Platform API and the Platform UI, please read the [Platform UI guide](./ui-guide.md) and the [Platform API guide](./api-guide.md) respectively.
