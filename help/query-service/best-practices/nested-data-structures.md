@@ -12,7 +12,7 @@ Query Service provides a PostgreSQL interface to run SQL queries on all datasets
 
 This tutorial requires an understanding of the Query Editor tool to write, validate, and run queries within the Experience Platform user interface (UI). Full information on how to run queries through the UI can be found in the [Query Editor UI guide](../ui/user-guide.md).
 
-You are recommended to have a good understanding of the INSERT INTO and CTAS syntax. Specific information on their use can be found in the [INSERT INTO](../sql/syntax#insert-into) and [CTAS](../sql/syntax.md#create-table-as-select) sections of the [SQL syntax reference documentation](../sql/syntax.md).
+You are recommended to have a good understanding of the INSERT INTO and CTAS syntax. Specific information on their use can be found in the [INSERT INTO](../sql/syntax.md#insert-into) and [CTAS](../sql/syntax.md#create-table-as-select) sections of the [SQL syntax reference documentation](../sql/syntax.md).
 
 ## Create a dataset
 
