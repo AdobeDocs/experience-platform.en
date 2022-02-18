@@ -40,7 +40,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must prov
 | `connectionString` | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
-For more information about getting started, refer to this [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
+For more information about getting started, refer to this [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 ## Create a base connection
 

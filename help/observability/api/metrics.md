@@ -276,7 +276,7 @@ The following table outlines metrics for [!DNL Real-time Customer Profile].
 | timeseries.profiles.dataset.batchsuccess.count | Number of [!DNL Profile] batches ingested for a dataset or for all datasets. | Dataset ID |
 | timeseries.profiles.dataset.batchfailed.count | Number of [!DNL Profile] batches failed for one dataset or for all datasets. | Dataset ID |
 | platform.ups.ingest.streaming.request.m1_rate | Incoming Request rate. | IMS Org (**Required**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Ingestion success rate. | IMS Org (**Required**) |
+| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | Ingestion success rate. | IMS Org (**Required**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | Rate of new records ingested for a dataset. | Dataset ID (**Required**) |
 | platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Rate of out-of-order timestamped records for create request for a dataset. | Dataset ID (**Required**) |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Timestamp for last create record request for a dataset.| Dataset ID (**Required**) |
