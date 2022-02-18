@@ -357,7 +357,7 @@ This section refers to the UI elements in the configuration above that Adobe sho
 |`connectionType` | String | The type of connection, depending on the destination. Supported values: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`AWS Kinesis`</li><li>`Azure EventHub`</li><li>`Http Sink`</li><li>`S3`</li><li>`SFTP`</li><li>`ODI`</li></ul>|
 |`flowRunsSupported`|Boolean| Indicates whether the destination connection is included in the [flow runs UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard). When setting this to `true`: <ul><li>The **[!UICONTROL Last dataflow run date]** and **[!UICONTROL Last dataflow run status]** are displayed in the destination browse page.</li><li>The **[!UICONTROL Dataflow runs]** and **[!UICONTROL Activation data]** tabs are displayed in the destination view page.</li></ul>|
 |`monitoringSupported`|Boolean|Indicates whether the destination connection is included in the [monitoring UI](../ui/destinations-workspace.md#browse). When setting this to `true`, the **[!UICONTROL View in monitoring]** option is displayed in the destination browse page.| 
-|`frequency` | String | Refers to the type of data export supported by the destination. Supported values: <ul><li>`Streaming` for streaming destinations</li><li>`Batch` for file-based destinations</li></ul>|
+|`frequency` | String | Refers to the type of data export supported by the destination. Set to `Batch` for file-based destinations.|
 
 {style="table-layout:auto"}
 
