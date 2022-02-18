@@ -18,7 +18,7 @@ This guide requires that you already have access to the Power BI desktop app and
 >
 > The Power BI desktop application is **only** available on Windows devices.
 
-Access to the Queries workspace in the Experience Platform UI is necessary to acquire the credentials required for authentication. Please contact your IMS Organization administrator if you do not currently have access to the Queries workspace. 
+To acquire the necessary credentials for connecting Power BI to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your IMS Organization administrator if you do not currently have access to the Queries workspace. 
 
 After installing Power BI, you will need to install `Npgsql`, a .NET driver package for PostgreSQL. More information about Npgsql can be found in the [Npgsql documentation](https://www.npgsql.org/doc/index.html).
 
