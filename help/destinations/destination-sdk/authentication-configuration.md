@@ -7,6 +7,8 @@ exl-id: 33eaab24-f867-4744-b424-4ba71727373c
 
 ## Supported authentication types {#supported-authentication-types}
 
+The authentication configuration that you select determines how Experience Platform authenticates to your destination, in the Platform UI.
+
 Adobe Experience Platform Destination SDK supports several authentication types:
 
 * Bearer authentication
@@ -19,113 +21,120 @@ Adobe Experience Platform Destination SDK supports several authentication types:
 * OAUth 2 with password grant
 * OAuth 2 with client credentials grant
 
-You can configure the authentication information for your destination via the `customerAuthenticationConfigurations` parameters of the `/destinations` endpoint. Refer to the [customer authentication configurations section](./destination-configuration.md#customer-authentication-configurations) in the destination configuration article and the sections below for specifics around the configurations for each authentication type.
+You can configure the authentication information for your destination via the `customerAuthenticationConfigurations` parameters of the `/destinations` endpoint.
+
+Refer to the following sections for authentication configuration details for each type of destination:
+
+* [Authentication configurations for streaming destinations](destination-configuration.md#customer-authentication-configurations)
+* [Authentication configurations for file-based destinations](file-based-destination-configuration.md#customer-authentication-configurations)
 
 ## Bearer authentication {#bearer}
+
+Bearer authentication is supported for streaming destinations in Experience Platform.
 
 To set up bearer type authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
 ```json
-
    "customerAuthenticationConfigurations":[
       {
          "authType":"BEARER"
       }
    ]
-
 ```
 
-## (Beta) Amazon S3 authentication {#s3}
+## (Beta) [!DNL Amazon S3] authentication {#s3}
+
+[!DNL Amazon S3] authentication is supported for file-based destinations in Experience Platform.
 
 >[!IMPORTANT]
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-To set up Amazon S3 authentication for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+To set up Amazon S3 authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
 ```json
-
    "customerAuthenticationConfigurations":[
       {
          "authType":"S3"
       }
    ]
-
 ```
 
-## (Beta) Azure connection string {#blob}
+## (Beta) [!DNL Azure Blob Storage] {#blob}
+
+[!DNL Azure Blob Storage] authentication is supported for file-based destinations in Experience Platform.
 
 >[!IMPORTANT]
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-To set up [!DNL Azure Blob] authentication for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+To set up [!DNL Azure Blob] authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
 ```json
-
    "customerAuthenticationConfigurations":[
      {
         "authType":"AZURE_CONNECTION_STRING"
      }
   ]
-
 ```
 
-## (Beta) Azure service principal {#adls}
+## (Beta) [!DNL Azure Data Lake Storage] {#adls}
+
+[!DNL Azure Data Lake Storage] authentication is supported for file-based destinations in Experience Platform.
 
 >[!IMPORTANT]
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-To set up [!DNL Azure Data Lake Storage] (ADLS) for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+To set up [!DNL Azure Data Lake Storage] (ADLS) authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
 ```json
-
    "customerAuthenticationConfigurations":[
      {
         "authType":"AZURE_SERVICE_PRINCIPAL"
      }
   ]
-
 ```
 
-## (Beta) SFTP authentication with SSH key {#sftp-ssh}
+## (Beta) [!DNL SFTP] authentication with [!DNL SSH] key {#sftp-ssh}
+
+[!DNL SFTP] authentication with [!DNL SSH] key is supported for file-based destinations in Experience Platform.
 
 >[!IMPORTANT]
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-To set up SFTP authentication with SSH key for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+To set up SFTP authentication with SSH key for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
 ```json
-
    "customerAuthenticationConfigurations":[
       {
          "authType":"SFTP_WITH_SSH_KEY"
       }
    ]
-
 ```
 
-## (Beta) SFTP authentication with password {#sftp-password}
+## (Beta) [!DNL SFTP] authentication with password {#sftp-password}
+
+[!DNL SFTP] authentication with password is supported for file-based destinations in Experience Platform.
 
 >[!IMPORTANT]
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-To set up SFTP authentication with password for your destinations, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+To set up SFTP authentication with password for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
 ```json
-
    "customerAuthenticationConfigurations":[
       {
          "authType":"SFTP_WITH_PASSWORD"
       }
    ]
-
 ```
 
-## OAuth 2 authentication {#oauth2}
+## [!DNL OAuth 2] authentication {#oauth2}
+
+[!DNL OAuth 2] authentication is supported for streaming destinations in Experience Platform.
 
 For information how to set up the various supported OAuth 2 flows, as well as for custom OAuth 2 support, read the Destination SDK documentation on [OAuth 2 authentication](./oauth2-authentication.md).
 

@@ -21,7 +21,7 @@ This process delivers user data as a series of HTTP messages to your destination
 |---|---|---|
 |`name` | String | *Required.* Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
 |`destinationServerType` | String | *Required.* Set to `URL_BASED` for streaming destinations.|
-|`templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
+|`templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if you are using a macro instead of a fixed value in the `value` field. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to. |
 
 {style="table-layout:auto"}
@@ -38,15 +38,6 @@ The template spec allows you to configure how to format the exported message to 
 >[!TIP]
 >
 >Adobe offers a [developer tool](./create-template.md) that helps you create and test a message transformation template. 
-
-|Parameter | Type | Description|
-|---|---|---|
-|`httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-|`templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
-|`value` | String | *Required.* This string is the character-escaped version that transforms Platform customers' data to the format your service expects. <br> For information how to write the template, read the [Using templating section](./message-format.md#using-templating). <br> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). <br> For an example of a simple transformation, refer to the [Profile Attributes](./message-format.md#attributes) transformation. |
-|`contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
-
-{style="table-layout:auto"}
 
 ## Streaming destination example configuration  {#example-configuration}
 
@@ -71,3 +62,12 @@ The template spec allows you to configure how to format the exported message to 
    }
 }
 ```
+
+|Parameter | Type | Description|
+|---|---|---|
+|`httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. Options are `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+|`templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
+|`value` | String | *Required.* This string is the character-escaped version that transforms Platform customers' data to the format your service expects. <br> For information how to write the template, read the [Using templating section](./message-format.md#using-templating). <br> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). <br> For an example of a simple transformation, refer to the [Profile Attributes](./message-format.md#attributes) transformation. |
+|`contentType` | String | *Required.* The content type that your server accepts. This value is most likely `application/json`. |
+
+{style="table-layout:auto"}

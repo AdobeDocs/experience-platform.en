@@ -115,7 +115,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
 
-Shown below is an example of a destination configuration, created by using the `/destinations` API endpoint. For more information about this template, refer to [Destination configuration](./destination-configuration.md).
+Shown below is an example of a destination configuration, created by using the `/destinations` API endpoint. For more information about this configuration, refer to [Destination configuration](./file-based-destination-configuration.md).
 
 To connect the server and file configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
 
@@ -247,17 +247,17 @@ For some destinations, Destination SDK requires that you configure an audience m
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
 
-## Step 4: Create credentials configuration / Set up authentication {#set-up-authentication}
+## Step 4: Set up authentication {#set-up-authentication}
 
 Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
 
-* If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK:
-
-   * [Amazon S3 authentication](authentication-configuration.md#s3)
-   * [Azure connection string](authentication-configuration.md#blob)
-   * [Azure service principal](authentication-configuration.md#adls)
-   * [SFTP authentication with SSH key](authentication-configuration.md#sftp-ssh)
-   * [SFTP authentication with password](authentication-configuration.md#sftp-password)
+* If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK for file-based destinations:
+  
+  * [Amazon S3 authentication](authentication-configuration.md#s3)
+  * [Azure connection string](authentication-configuration.md#blob)
+  * [Azure service principal](authentication-configuration.md#adls)
+  * [SFTP authentication with SSH key](authentication-configuration.md#sftp-ssh)
+  * [SFTP authentication with password](authentication-configuration.md#sftp-password)
 
 * If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [Authentication configuration](./authentication-configuration.md#when-to-use).
 

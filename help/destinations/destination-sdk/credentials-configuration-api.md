@@ -11,6 +11,11 @@ exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
 
 This page lists and describes all the API operations that you can perform using the `/authoring/credentials` API endpoint.
 
+For a description of the functionality supported by this endpoint, read:
+
+* [Streaming destination configuration](destination-configuration.md) for the functionality you can configure for streaming destinations.
+* [File-based destination configuration](file-based-destination-configuration.md) for the functionality you can configure for file-based destinations.
+
 ## When to use the `/credentials` API endpoint {#when-to-use}
 
 >[!IMPORTANT]
@@ -148,7 +153,6 @@ You can create a new credentials configuration by making a POST request to the `
 
 **API format**
 
-
 ```http
 POST /authoring/credentials
 ```
@@ -197,8 +201,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
       "url":"string",
       "header":"string"
    },
-   "S3"
-
 }
 ```
 

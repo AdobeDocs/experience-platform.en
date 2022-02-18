@@ -65,10 +65,317 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
 
 {style="table-layout:auto"}
 
-### First example {#example-1}
+### Streaming example 1 {#example-1}
+
+```json
+{
+   "instanceId":"34ab9cc2-2536-44a5-9dc5-b2fea60b3bd6",
+   "createdDate":"2021-07-26T19:30:52.012490Z",
+   "lastModifiedDate":"2021-07-27T21:25:42.763478Z",
+   "metadataTemplate":{
+      "create":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "httpMethod":"POST",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}",
+                     "source_type":"FIRST_PARTY",
+                     "ad_account_id":"{{customerData.accountId}}",
+                     "retention_in_days":180
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "update":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
+         "httpMethod":"PUT",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "segments":[
+                  {
+                     "id":"{{segment.alias}}",
+                     "name":"{{segment.name}}",
+                     "description":"{{segment.description}}"
+                  }
+               ]
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{body.segments[0].segment.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "delete":{
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
+         "httpMethod":"DELETE",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{oauth2ServiceAccessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{root}}",
+               "name":"message"
+            }
+         ]
+      },
+      "name":"Moviestar destination audience template - Example 1"
+   }
+}
+```
+
+### Streaming example 2 {#example-2}
 
 ```json
 
+{
+   "instanceId":"12c78017-5af3-4d4e-8f9c-d330c547c482",
+   "createdDate":"2021-07-20T13:27:37.029490Z",
+   "lastModifiedDate":"2021-07-20T18:53:03.622306Z",
+   "metadataTemplate":{
+      "create":{
+         "url":"https://api.moviestar.com/v1.0/{{customerData.accountId}}/customaudiences?fields=name,description,account_id&subtype=CUSTOM&name={{segment.name}}&customer_file_source={{segment.metadata.customer_file_source}}&access_token={{authData.accessToken}}",
+         "httpMethod":"POST",
+         "headers":[
+            {
+               "value":"application/x-www-form-urlencoded",
+               "header":"Content-Type"
+            }
+         ],
+         "responseFields":[
+            {
+               "value":"{{response.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{error.message}}",
+               "name":"message"
+            }
+         ]
+      },
+      "update":{
+         "url":"https://api.moviestar.com/v1.0/{{segment.alias}}?field=name,description,account_id&access_token={{authData.accessToken}}&customerAudienceId={{segment.alias}}&&name={{segment.name}}&description={{segment.description}}&customer_file_source={{segment.metadata.customer_file_source}}",
+         "httpMethod":"POST",
+         "headers":[
+            {
+               "value":"application/x-www-form-urlencoded",
+               "header":"Content-Type"
+            }
+         ],
+         "responseFields":[
+            {
+               "value":"{{response.id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{error.message}}",
+               "name":"message"
+            }
+         ]
+      },
+      "delete":{
+         "url":"https://api.moviestar.com/v1.0/{{segment.alias}}?fields=name,description,account_id&access_token={{authData.accessToken}}&customerAudienceId={{segment.alias}}",
+         "httpMethod":"DELETE",
+         "headers":[
+            {
+               "value":"application/x-www-form-urlencoded",
+               "header":"Content-Type"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{error.message}}",
+               "name":"message"
+            }
+         ]
+      },
+      "validate":{
+         "url":"https://api.moviestar.com/v1.0/permissions?access_token={{authData.accessToken}}",
+         "httpMethod":"GET",
+         "headers":[
+            {
+               "value":"application/x-www-form-urlencoded",
+               "header":"Content-Type"
+            }
+         ],
+         "responseFields":[
+            {
+               "value":"{{response.data[0].permission}}",
+               "name":"Id"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{error.message}}",
+               "name":"message"
+            }
+         ]
+      }
+   }
+}
+
+```
+
+### Streaming example 3 {#example-3}
+
+```json
+{
+   "instanceId":"12a3238f-b509-4a40-b8fb-0a5006e7901d",
+   "createdDate":"2021-07-20T13:30:30.843054Z",
+   "lastModifiedDate":"2021-07-21T16:33:05.787472Z",
+   "metadataTemplate":{
+      "create":{
+         "url":"https://api.moviestar.com/v2/dmpSegments",
+         "httpMethod":"POST",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{authData.accessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "name":"{{segment.name}}",
+               "type":"USER",
+               "account":"{{customerData.accountId}}",
+               "accessPolicy":"PRIVATE",
+               "destinations":[
+                  {
+                     "destination":"MOVIESTAR"
+                  }
+               ],
+               "sourcePlatform":"ADOBE"
+            }
+         },
+         "responseFields":[
+            {
+               "value":"{{headers.x-moviestar-id}}",
+               "name":"externalAudienceId"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{message}}",
+               "name":"message"
+            }
+         ]
+      },
+      "update":{
+         "url":"https://api.moviestar.com/v2/dmpSegments/{{segment.alias}}",
+         "httpMethod":"POST",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{authData.accessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "requestBody":{
+            "json":{
+               "patch":{
+                  "$set":{
+                     "name":"{{segment.name}}"
+                  }
+               }
+            }
+         },
+         "responseErrorFields":[
+            {
+               "value":"{{message}}",
+               "name":"message"
+            }
+         ]
+      },
+      "delete":{
+         "url":"https://api.moviestar.com/v2/dmpSegments/{{segment.alias}}",
+         "httpMethod":"DELETE",
+         "headers":[
+            {
+               "value":"application/json",
+               "header":"Content-Type"
+            },
+            {
+               "value":"Bearer {{authData.accessToken}}",
+               "header":"Authorization"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "value":"{{message}}",
+               "name":"message"
+            }
+         ]
+      },
+      "name":"Moviestar audience template - Third example"
+   }
+}
+```
+
+
+### File-based example {#example-file-based}
+
+```json
 {
    "instanceId":"34ab9cc2-2536-44a5-9dc5-b2fea60b3bd6",
    "createdDate":"2021-07-26T19:30:52.012490Z",
@@ -210,259 +517,6 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
       "name":"Moviestar destination audience template - Example 1"
    }
 }
-
-
-```
-
-### Second example {#example-2}
-
-```json
-
-{
-   "instanceId":"12c78017-5af3-4d4e-8f9c-d330c547c482",
-   "createdDate":"2021-07-20T13:27:37.029490Z",
-   "lastModifiedDate":"2021-07-20T18:53:03.622306Z",
-   "metadataTemplate":{
-      "create":{
-         "url":"https://api.moviestar.com/v1.0/{{customerData.accountId}}/customaudiences?fields=name,description,account_id&subtype=CUSTOM&name={{segment.name}}&customer_file_source={{segment.metadata.customer_file_source}}&access_token={{authData.accessToken}}",
-         "httpMethod":"POST",
-         "headers":[
-            {
-               "value":"application/x-www-form-urlencoded",
-               "header":"Content-Type"
-            }
-         ],
-         "responseFields":[
-            {
-               "value":"{{response.id}}",
-               "name":"externalAudienceId"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "value":"{{error.message}}",
-               "name":"message"
-            }
-         ]
-      },
-      "update":{
-         "url":"https://api.moviestar.com/v1.0/{{segment.alias}}?field=name,description,account_id&access_token={{authData.accessToken}}&customerAudienceId={{segment.alias}}&&name={{segment.name}}&description={{segment.description}}&customer_file_source={{segment.metadata.customer_file_source}}",
-         "httpMethod":"POST",
-         "headers":[
-            {
-               "value":"application/x-www-form-urlencoded",
-               "header":"Content-Type"
-            }
-         ],
-         "responseFields":[
-            {
-               "value":"{{response.id}}",
-               "name":"externalAudienceId"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "value":"{{error.message}}",
-               "name":"message"
-            }
-         ]
-      },
-      "delete":{
-         "url":"https://api.moviestar.com/v1.0/{{segment.alias}}?fields=name,description,account_id&access_token={{authData.accessToken}}&customerAudienceId={{segment.alias}}",
-         "httpMethod":"DELETE",
-         "headers":[
-            {
-               "value":"application/x-www-form-urlencoded",
-               "header":"Content-Type"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "value":"{{error.message}}",
-               "name":"message"
-            }
-         ]
-      },
-      "validate":{
-         "url":"https://api.moviestar.com/v1.0/permissions?access_token={{authData.accessToken}}",
-         "httpMethod":"GET",
-         "headers":[
-            {
-               "value":"application/x-www-form-urlencoded",
-               "header":"Content-Type"
-            }
-         ],
-         "responseFields":[
-            {
-               "value":"{{response.data[0].permission}}",
-               "name":"Id"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "value":"{{error.message}}",
-               "name":"message"
-            }
-         ]
-      },
-      "notify":{
-         "url":"https://api.moviestar.com/v1.0/permissions?access_token={{authData.accessToken}}",
-         "httpMethod":"GET",
-         "headers":[
-            {
-               "value":"application/x-www-form-urlencoded",
-               "header":"Content-Type"
-            }
-         ],
-         "responseFields":[
-            {
-               "value":"{{response.data[0].permission}}",
-               "name":"Id"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "value":"{{error.message}}",
-               "name":"message"
-            }
-         ]
-      },
-   }
-}
-
-```
-
-### Third example {#example-3}
-
-```json
-
-{
-   "instanceId":"12a3238f-b509-4a40-b8fb-0a5006e7901d",
-   "createdDate":"2021-07-20T13:30:30.843054Z",
-   "lastModifiedDate":"2021-07-21T16:33:05.787472Z",
-   "metadataTemplate":{
-      "create":{
-         "url":"https://api.moviestar.com/v2/dmpSegments",
-         "httpMethod":"POST",
-         "headers":[
-            {
-               "value":"application/json",
-               "header":"Content-Type"
-            },
-            {
-               "value":"Bearer {{authData.accessToken}}",
-               "header":"Authorization"
-            }
-         ],
-         "requestBody":{
-            "json":{
-               "name":"{{segment.name}}",
-               "type":"USER",
-               "account":"{{customerData.accountId}}",
-               "accessPolicy":"PRIVATE",
-               "destinations":[
-                  {
-                     "destination":"MOVIESTAR"
-                  }
-               ],
-               "sourcePlatform":"ADOBE"
-            }
-         },
-         "responseFields":[
-            {
-               "value":"{{headers.x-moviestar-id}}",
-               "name":"externalAudienceId"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "value":"{{message}}",
-               "name":"message"
-            }
-         ]
-      },
-      "update":{
-         "url":"https://api.moviestar.com/v2/dmpSegments/{{segment.alias}}",
-         "httpMethod":"POST",
-         "headers":[
-            {
-               "value":"application/json",
-               "header":"Content-Type"
-            },
-            {
-               "value":"Bearer {{authData.accessToken}}",
-               "header":"Authorization"
-            }
-         ],
-         "requestBody":{
-            "json":{
-               "patch":{
-                  "$set":{
-                     "name":"{{segment.name}}"
-                  }
-               }
-            }
-         },
-         "responseErrorFields":[
-            {
-               "value":"{{message}}",
-               "name":"message"
-            }
-         ]
-      },
-      "notify":{
-         "url":"https://api.moviestar.com/v2/dmpSegments/{{segment.alias}}",
-         "httpMethod":"POST",
-         "headers":[
-            {
-               "value":"application/json",
-               "header":"Content-Type"
-            },
-            {
-               "value":"Bearer {{authData.accessToken}}",
-               "header":"Authorization"
-            }
-         ],
-         "requestBody":{
-            "json":{
-               "patch":{
-                  "$set":{
-                     "name":"{{segment.name}}"
-                  }
-               }
-            }
-         },
-         "responseErrorFields":[
-            {
-               "value":"{{message}}",
-               "name":"message"
-            }
-         ]
-      },
-      "delete":{
-         "url":"https://api.moviestar.com/v2/dmpSegments/{{segment.alias}}",
-         "httpMethod":"DELETE",
-         "headers":[
-            {
-               "value":"application/json",
-               "header":"Content-Type"
-            },
-            {
-               "value":"Bearer {{authData.accessToken}}",
-               "header":"Authorization"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "value":"{{message}}",
-               "name":"message"
-            }
-         ]
-      },
-      "name":"Moviestar audience template - Third example"
-   }
-}
-
 ```
 
 Find descriptions of all parameters in the template in the reference documentation [Audience metadata endpoint API operations](./audience-metadata-api.md).

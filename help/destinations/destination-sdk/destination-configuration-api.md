@@ -15,7 +15,7 @@ This page lists and describes all the API operations that you can perform using 
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
-## Create configuration for a destination {#create}
+## Create configuration for a streaming destination {#create}
 
 You can create a new destination configuration by making a POST request to the `/authoring/destinations` endpoint.
 
