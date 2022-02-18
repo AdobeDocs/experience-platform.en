@@ -12,11 +12,11 @@ Query Service provides a PostgreSQL interface to run SQL queries on all datasets
 
 This tutorial requires an understanding of the Query Editor tool to write, validate, and run queries within the Experience Platform user interface (UI). Full information on how to run queries through the UI can be found in the [Query Editor UI guide](../ui/user-guide.md).
 
-You are recommended to have a good understanding of the INSERT INTO and CTAS syntax. Specific information on their use can be found in the [INSERT INTO](../sql/syntax.md#insert-into) and [CTAS](../sql/syntax.md#create-table-as-select) sections of the [SQL syntax reference documentation](../sql/syntax.md).
+You should also have a good understanding of the `INSERT INTO` and `CTAS` syntax. Specific information on their use can be found in the [`INSERT INTO`](../sql/syntax.md#insert-into) and [`CTAS`](../sql/syntax.md#create-table-as-select) sections of the [SQL syntax reference documentation](../sql/syntax.md).
 
 ## Create a dataset
 
-Adobe Experience Platform Query service provides the Create Table As Select (CTAS) functionality to create a table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table. The new dataset is a copy of `Final_subscription`.
+Query service provides the Create Table As Select (`CTAS`) functionality to create a table based on the output of a `SELECT` statement. `CTAS` is the simplest and fastest way to create a copy of a table. The new dataset is a copy of `Final_subscription`.
 
 The schema for the dataset to be created is seen in the image below.
 
@@ -26,7 +26,7 @@ The following example demonstrates the SQL used to create the `final_subscriptio
 
 ```sql
 CREATE TABLE final_subscription_test2 with(schema='Final_subscription') AS (
-        SELECT struct(userid, collect_set(subscription) AS subscription) AS _americasprofessionalservices3 FROM(
+        SELECT struct(userid, collect_set(subscription) AS subscription) AS _lumaservices3 FROM(
             SELECT user AS userid,
                    struct( last(eventtime) AS last_eventtime,
                            last(status) AS last_status,
@@ -34,19 +34,19 @@ CREATE TABLE final_subscription_test2 with(schema='Final_subscription') AS (
                            subsid AS subscription_id)
                    AS subscription
              FROM (
-                   SELECT _americasprofessionalservices3.msftidentities.userid user
-                        , _americasprofessionalservices3.subscription.subscription_id subsid
-                        , _americasprofessionalservices3.subscription.subscription_status status
-                        , _americasprofessionalservices3.subscription.offer_id offer_id
+                   SELECT _lumaservices3.msftidentities.userid user
+                        , _lumaservices3.subscription.subscription_id subsid
+                        , _lumaservices3.subscription.subscription_status status
+                        , _lumaservices3.subscription.offer_id offer_id
                         , TIMESTAMP eventtime
  
                    FROM
                         xbox_subscription_event
                    UNION   
-                   SELECT _americasprofessionalservices3.msftidentities.userid user
-                        , _americasprofessionalservices3.subscription.subscription_id subsid
-                        , _americasprofessionalservices3.subscription.subscription_status status
-                        , _americasprofessionalservices3.subscription.offer_id offer_id
+                   SELECT _lumaservices3.msftidentities.userid user
+                        , _lumaservices3.subscription.subscription_id subsid
+                        , _lumaservices3.subscription.subscription_status status
+                        , _lumaservices3.subscription.offer_id offer_id
                         , TIMESTAMP eventtime
                    FROM
                         office365_subscription_event
@@ -60,30 +60,30 @@ In the initial dataset `final_subscription_test2`, the struct datatype is used t
 
 ## Use INSERT INTO to update nested data fields
 
-After the `final_subscription_test2` dataset has been created, the INSERT INTO SELECT statement is used to copy data from one table and insert it into another table. The INSERT INTO SELECT statement requires that the data types in source and target tables match. The incremental data is then added into the target dataset using the following SQL.
+After the `final_subscription_test2` dataset has been created, the `INSERT INTO` `SELECT` statement is used to copy data from one table and insert it into another table. The `INSERT INTO` `SELECT` statement requires that the data types in source and target tables match. The incremental data is then added into the target dataset using the following SQL.
 
 ```sql
 INSERT INTO final_subscription_test
-      SELECT struct(userid, collect_set(subscription) AS subscription) AS _americasprofessionalservices3 FROM(
+      SELECT struct(userid, collect_set(subscription) AS subscription) AS _lumaservices3 FROM(
             SELECT user AS userid,
                    struct( last(eventtime) AS last_eventtime,
                            last(status) AS last_status,
                            offer_id, 
                            subsid AS subscription_id)
                    AS subscription
-             FROM  SELECT _americasprofessionalservices3.msftidentities.userid user
-                        , _americasprofessionalservices3.subscription.subscription_id subsid
-                        , _americasprofessionalservices3.subscription.subscription_status status
-                        , _americasprofessionalservices3.subscription.offer_id offer_id
+             FROM  SELECT _lumaservices3.msftidentities.userid user
+                        , _lumaservices3.subscription.subscription_id subsid
+                        , _lumaservices3.subscription.subscription_status status
+                        , _lumaservices3.subscription.offer_id offer_id
                         , TIMESTAMP eventtime
  
                    FROM
                         xbox_subscription_event
                    UNION   
-                   SELECT _americasprofessionalservices3.msftidentities.userid user
-                        , _americasprofessionalservices3.subscription.subscription_id subsid
-                        , _americasprofessionalservices3.subscription.subscription_status status
-                        , _americasprofessionalservices3.subscription.offer_id offer_id
+                   SELECT _lumaservices3.msftidentities.userid user
+                        , _lumaservices3.subscription.subscription_id subsid
+                        , _lumaservices3.subscription.subscription_status status
+                        , _lumaservices3.subscription.offer_id offer_id
                         , timestamp eventtime
                    FROM
                         office365_subscription_event
@@ -93,7 +93,7 @@ INSERT INTO final_subscription_test
        ) GROUP BY userid)
 ```
 
-The INSERT INTO example follows this format:
+The `INSERT INTO` example follows this format:
 
 ```sql
 INSERT INTO [dataset]
@@ -118,16 +118,16 @@ The following tables illustrate the structure of the `final_subscription_test2` 
 
 | Column | Type  |
 |--------|-------|
-| `_americasprofessionalservices3`  | final_subscription_test2__americasprofessionalservices3 |
+| `_lumaservices3`  | final_subscription_test2__lumaservices3 |
 
-By examining the next column `final_subscription_test2__americasprofessionalservices3` the available fields are shown below.
+By examining the next column `final_subscription_test2__lumaservices3` the available fields are shown below.
 
 | Column  | Type  |
 |---------|-------|
 | `userid`  | text  |
-| `subscription`  | _americasprofessionalservices3_subscription_e[] |
+| `subscription`  | _lumaservices3_subscription_e[] |
 
-`subscription` is another complex data type. By examining the `_americasprofessionalservices3_subscription_e[]` array the following columns are exposed.
+`subscription` is another complex data type. By examining the `_lumaservices3_subscription_e[]` array the following columns are exposed.
 
 | Column  | Type  |
 |---------|-------|
@@ -136,31 +136,31 @@ By examining the next column `final_subscription_test2__americasprofessionalserv
 | `offer_id` |  text  |
 | `subscription_id` | text  |
 
-To query the nested fields of the subscription, you must first separate the elements of the `_americasprofessionalservices3_subscription_e[]` array into multiple rows and return the results. The following SQL example returns the active subscription for a user based on `userid`. 
+To query the nested fields of the subscription, you must first separate the elements of the `_lumaservices3_subscription_e[]` array into multiple rows and return the results. The following SQL example returns the active subscription for a user based on `userid`. 
 
 ```sql
 SELECT userid, subs AS active_subscription FROM (
-    SELECT _americasprofessionalservices3.userid AS userid, explode(_americasprofessionalservices3.subscription) AS subs 
+    SELECT _lumaservices3.userid AS userid, explode(_lumaservices3.subscription) AS subs 
     FROM final_subscription_test2
 )
 WHERE subs.last_status='Active';
 ```
 
-The problem with this example is that it only allows for one active user subscription. Realistically, there can be many active subscriptions for a single user. The following example modifies the previous query to allow for multiple simultaneous active subscriptions.
+This simplified example solution however, only allows for one active user subscription. Realistically, there can be many active subscriptions for a single user. The following example modifies the previous query to allow for multiple simultaneous active subscriptions.
 
 ```sql
 SELECT userid, collect_list(subs) AS active_subscriptions FROM (
      SELECT
-          _americasprofessionalservices3.userid AS userid,
-          explode(_americasprofessionalservices3.subscription) AS subs
+          _lumaservices3.userid AS userid,
+          explode(_lumaservices3.subscription) AS subs
      FROM final_subscription_test2
      )
 WHERE subs.last_status='Active' 
 GROUP BY userid ;
 ```
 
-However, the `collect_list` for active subscriptions in this example does not guarantee that the output will be in the same order as the source. To create a list of active subscriptions for a user, you must use GROUP BY or shuffling to aggregate the results of the list.
+Despite the growing complexity of this SQL example, the `collect_list` for active subscriptions does not guarantee that the output will be in the same order as the source. To create a list of active subscriptions for a user, you must use GROUP BY or shuffling to aggregate the results of the list.
 
-## Next Steps
+## Next steps
 
-By reading this document, you now understand how to use the INSERT INTO statement to process or transform datasets that use complex data types. Please see the [queries execution guidance](./writing-queries.md) for more information about running SQL queries on datasets within the Data Lake. 
+By reading this document, you now understand how to use the `INSERT INTO` statement to process or transform datasets that use complex data types. Please see the [queries execution guidance](./writing-queries.md) for more information about running SQL queries on datasets within the Data Lake. 

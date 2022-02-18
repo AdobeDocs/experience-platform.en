@@ -224,9 +224,9 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 > 
 > The `SELECT` statement **must not** be enclosed in parentheses (). Additionally, the schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement. You can provide a `SNAPSHOT` clause to read incremental deltas into the target table.
 
-Most fields in a real XDM schema are not found at the root level and SQL does not permit the use of dot notation. To achieve a realistic result using nested fields, you must map each field in your INSERT INTO path.
+Most fields in a real XDM schema are not found at the root level and SQL does not permit the use of dot notation. To achieve a realistic result using nested fields, you must map each field in your `INSERT INTO` path.
 
-To INSERT INTO nested paths, use the following syntax:
+To `INSERT INTO` nested paths, use the following syntax:
 
 ```sql
 INSERT INTO [dataset]
@@ -236,7 +236,7 @@ SELECT struct([source field1] as [target field in schema],
 FROM [dataset]
 ```
 
-A more realistic INSERT INTO example would be:
+**Example**
 
 ```sql
 INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCity, Country as SupplierCountry) _Adobe FROM OnlineCustomers;
