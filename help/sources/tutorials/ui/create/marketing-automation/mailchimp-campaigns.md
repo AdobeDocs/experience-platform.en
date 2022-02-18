@@ -49,9 +49,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the [!UICONTROL Marketing automation] category, select **[!UICONTROL Mailchimp Campaign]**, and then select **[!UICONTROL Add data]**.
 
-![catalog](../../../../images/tutorials/create/mailchimp-campaign/catalog.png)
-
-![catalog](../../../../images/tutorials/create/zoho/catalog.png)
+![catalog](../../../../images/tutorials/create/mailchimp-campaigns/catalog.png)
 
 The **[!UICONTROL Connect Mailchimp Campaigns account]** page appears. On this page, you can select whether you are accessing an existing account, or opting to create a new account.
 
@@ -59,23 +57,25 @@ The **[!UICONTROL Connect Mailchimp Campaigns account]** page appears. On this p
 
 To use an existing account, select the [!DNL Mailchimp Campaigns] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![existing](../../../../images/tutorials/create/mailchimp-campaign/existing.png)
+![existing](../../../../images/tutorials/create/mailchimp-campaigns/existing.png)
 
 ### New account
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and a description for your [!DNL Mailchimp Campaigns] source connection details.
 
+![new](../../../../images/tutorials/create/mailchimp-campaigns/new.png)
+
 #### Authenticate using OAuth 2
 
 To use OAuth 2, select [!UICONTROL OAuth 2 Refresh Code], provide values for your host, authorization test URL, and access token and then select **[!UICONTROL Connect to source]**. Allow for a few moments for your credentials to validate, and then select **[!UICONTROL Next]** to proceed.
 
-![oauth](../../../../images/tutorials/create/mailchimp-campaign/oauth.png)
+![oauth](../../../../images/tutorials/create/mailchimp-campaigns/oauth.png)
 
 #### Authenticate using basic authentication
 
 To use basic authentication, select [!UICONTROL Basic authentication], provide values for your host, username, and password, and then select **[!UICONTROL Connect to source]**. Allow for a few moments for your credentials to validate, and then select **[!UICONTROL Next]** to proceed.
 
-![basic](../../../../images/tutorials/create/mailchimp-campaign/basic.png)
+![basic](../../../../images/tutorials/create/mailchimp-campaigns/basic.png)
 
 ### Select [!DNL Mailchimp Campaigns] data
 
@@ -83,7 +83,11 @@ Once your source is authenticated, you must then provide the `campaignId` that c
 
 In the [!UICONTROL Select data] page, enter your `campaignId` and then select **[!UICONTROL Explore]**.
 
+![explore](../../../../images/tutorials/create/mailchimp-campaigns/explore.png)
+
 The page updates into an interactive schema tree that allows you to explore and inspect the hierarchy of your data. Select **[!UICONTROL Next]** to proceed.
+
+![select-data](../../../../images/tutorials/create/mailchimp-campaigns/select-data.png)
 
 ## Next steps
 

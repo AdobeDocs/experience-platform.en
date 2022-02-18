@@ -51,8 +51,6 @@ Under the [!UICONTROL Marketing automation] category, select **[!UICONTROL Mailc
 
 ![catalog](../../../../images/tutorials/create/mailchimp-members/catalog.png)
 
-![catalog](../../../../images/tutorials/create/zoho/catalog.png)
-
 The **[!UICONTROL Connect Mailchimp Campaigns account]** page appears. On this page, you can select whether you are accessing an existing account, or opting to create a new account.
 
 ### Existing account
@@ -64,6 +62,9 @@ To use an existing account, select the [!DNL Mailchimp Members] account you want
 ### New account
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and a description for your [!DNL Mailchimp Members] source connection details.
+
+![new](../../../../images/tutorials/create/mailchimp-members/new.png)
+
 
 #### Authenticate using OAuth 2
 
@@ -79,11 +80,15 @@ To use basic authentication, select [!UICONTROL Basic authentication], provide v
 
 ### Select [!DNL Mailchimp Members] data
 
-Once your source is authenticated, you must then provide the `campaignId` that corresponds with your [!DNL Mailchimp Members] account.
+Once your source is authenticated, you must then provide the `listId` that corresponds with your [!DNL Mailchimp Members] account.
 
-In the [!UICONTROL Select data] page, enter your `campaignId` and then select **[!UICONTROL Explore]**.
+In the [!UICONTROL Select data] page, enter your `listId` and then select **[!UICONTROL Explore]**.
+
+![explore](../../../../images/tutorials/create/mailchimp-members/explore.png)
 
 The page updates into an interactive schema tree that allows you to explore and inspect the hierarchy of your data. Select **[!UICONTROL Next]** to proceed.
+
+![select-data](../../../../images/tutorials/create/mailchimp-members/select-data.png)
 
 ## Next steps
 
