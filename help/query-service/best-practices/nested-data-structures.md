@@ -12,7 +12,7 @@ Query Service provides a PostgreSQL interface to run SQL queries on all datasets
 
 This tutorial requires an understanding of the Query Editor tool to write, validate, and run queries within the Experience Platform user interface (UI). Full information on how to run queries through the UI can be found in the [Query Editor UI guide](../ui/user-guide.md).
 
-You are recommended to have a good understanding of the INSERT INTO and CTAS syntax. Specific information on their use can be found in the [INSERT INTO](./syntax.md#insert-into) and [CTAS](./syntax.md#) sections of the [SQL syntax reference documentation](./syntax.md).
+You are recommended to have a good understanding of the INSERT INTO and CTAS syntax. Specific information on their use can be found in the [INSERT INTO](../sql/syntax#insert-into) and [CTAS](../sql/syntax.md#create-table-as-select) sections of the [SQL syntax reference documentation](../sql/syntax.md).
 
 ## Create a dataset
 
@@ -20,7 +20,7 @@ Adobe Experience Platform Query service provides the Create Table As Select (CTA
 
 The schema for the dataset to be created is seen in the image below.
 
-![A diagram of the final_subscription schema.](../images/sql/final-subscription-schema.png)
+![A diagram of the final_subscription schema.](../images/best-practices/final-subscription-schema.png)
 
 The following example demonstrates the SQL used to create the `final_subscription_test2` dataset.
 
@@ -163,4 +163,4 @@ However, the `collect_list` for active subscriptions in this example does not gu
 
 ## Next Steps
 
-By reading this document, you now understand how to use the INSERT INTO statement to process or transform datasets that use complex data types. Please see the [queries execution guidance](../best-practices/writing-queries.md) for more information about running SQL queries on datasets within the Data Lake. 
+By reading this document, you now understand how to use the INSERT INTO statement to process or transform datasets that use complex data types. Please see the [queries execution guidance](./writing-queries.md) for more information about running SQL queries on datasets within the Data Lake. 
