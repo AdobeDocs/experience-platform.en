@@ -74,7 +74,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 
-## Create configuration for a file-based destination server {#create}
+## Create configuration for a file-based destination server {#create-file-based}
 
 ### Example: create configuration for an SFTP destination server
 
