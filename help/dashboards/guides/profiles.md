@@ -37,11 +37,11 @@ You can modify the appearance of the [!UICONTROL Profiles] dashboard by selectin
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
 
-## (Alpha) Profile efficiency insights {#profile-efficiency-insights}
+## (Beta) Profile efficiency insights {#profile-efficiency-insights}
 
 >[!IMPORTANT]
 >
->The profile efficiency insight functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
+>The profile efficiency insight functionality is currently in beta and are not available to all users. The documentation and the functionality are subject to change.
 
 The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data thorough the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
 
@@ -157,11 +157,11 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ![](../images/profiles/identity-overlap.png)
 
-## (Alpha) Profile efficacy widgets {#profile-efficacy-widgets}
+## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
 >[!IMPORTANT]
 >
->The profile efficiency widgets are currently in alpha and are not available to all users. The documentation and the functionality are subject to change.
+>The profile efficiency widgets are currently in Beta and are not available to all users. The documentation and the functionality are subject to change.
 
 Adobe provides multiple widgets to asses the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
 
@@ -171,7 +171,7 @@ To learn more about each of the profile efficacy widgets, select the name of a w
 * [[!UICONTROL Profile completeness]](#profile-completeness)
 * [[!UICONTROL Profile completeness trend]](#profile-completeness-trend)
 
-### (Alpha) [!UICONTROL Attribute quality assessment] {#attribute-quality-assessment}
+### (Beta) [!UICONTROL Attribute quality assessment] {#attribute-quality-assessment}
 
 This widget shows the completeness and cardinality of each profile attribute since the last processing date. This information is presented as a table with four columns where each row in the table represents a single attribute.
 
@@ -184,7 +184,7 @@ This widget shows the completeness and cardinality of each profile attribute sin
 
 ![The attributes quality assessment widget](../images/profiles/attributes-quality-assessment.png)
 
-### (Alpha) [!UICONTROL Profiles by completeness] {#profile-completeness}
+### (Beta) [!UICONTROL Profiles by completeness] {#profile-completeness}
 
 This widget creates a circle chart of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
 
@@ -196,7 +196,7 @@ This widget shows the proportion of profiles that are of high, medium, or low co
 
 ![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
 
-### (Alpha) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
+### (Beta) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
 
 This widget creates a stacked column chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
 
