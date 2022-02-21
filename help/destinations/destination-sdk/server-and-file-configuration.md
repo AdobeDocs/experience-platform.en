@@ -168,7 +168,7 @@ This section describes the file formatting settings for the exported `CSV` files
 
 >[!NOTE]
 >
->The `fileConfigurations` section is not mandatory when setting up a new destination server. If you don't pass any values in the API call for the CSV options, the default ones from the table below will be used.
+>CSV options are only supported when exporting CSV files. The `fileConfigurations` section is not mandatory when setting up a new destination server. If you don't pass any values in the API call for the CSV options, the default ones from the table below will be used.
 
 ```json
 "fileConfigurations": {
