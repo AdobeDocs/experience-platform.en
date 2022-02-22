@@ -10,7 +10,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
-- [[!DNL Identity Service]](#identity)
+- [Sources](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
 
