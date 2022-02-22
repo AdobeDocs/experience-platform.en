@@ -76,7 +76,7 @@ Identities represent the different facets of a profile. For example, if a profil
 
 A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
-- **[!UICONTROL Identities activated]**: The total count of profile identities that were created or updated for activation.
+- **[!UICONTROL Identities activated]**: The total count of profile identities that were activated to this destination. This metric includes identities that are added and removed from segments.
 - **[!UICONTROL Identities excluded]**:  The total number of profile identities that are skipped for activation based on missing attributes and consent violation.
 - **[!UICONTROL Identities failed]**: The total number of profile identities that are not activated to the destination due to errors.
 
