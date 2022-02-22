@@ -46,7 +46,7 @@ If you are configuring this datastream for use in Experience Platform and are us
 
 The rest of this section focuses on the steps to map data to a selected Platform event schema. If you are using the Mobile SDK or are otherwise not configuring your datastream for Platform, select **[!UICONTROL Save]** before proceeding to the next section on [adding services to the datastream](#add-services).
 
-### Data Prep for Data Collection
+### Data Prep for Data Collection {#data-prep}
 
 >[!IMPORTANT]
 >
