@@ -84,10 +84,10 @@ A list of individual runs and their particular metrics is displayed, along with 
 
 Each individual dataflow run shows the following details:
 
-- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
-- **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow run to process. 
-  - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour. 
-  - For dataflow runs which are still in a **[!UICONTROL processing]** state, the window to gather all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. After the window to process metrics closes, the dataflow run processing time is updated to one hour.
+- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. For streaming dataflow runs, if a dataflow run started for example at 10:30PM, the metric shows the start time as 10:00 PM in the UI.
+- **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow run to process.
+  - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour.
+  - For dataflow runs which are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. Then, once the processing window closes and the status of the dataflow run updates to **completed**, the displayed processing time is changed to one hour.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
