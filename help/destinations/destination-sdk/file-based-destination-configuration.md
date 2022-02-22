@@ -30,11 +30,7 @@ You can configure the functionality described in this document by using the `/au
          "authType":"S3"
       }
    ],
-   "customerEncryptionConfigurations":[
-      {
-         "encryptionAlgo":""
-      }
-   ],
+   "customerEncryptionConfigurations":[],
    "customerDataFields":[
       {
          "name":"bucket",
@@ -631,6 +627,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
       "profileRequired":true,
       "segmentRequired":true,
       "identityRequired":true
+}
 ```
 
 |Parameter | Type | Description|
