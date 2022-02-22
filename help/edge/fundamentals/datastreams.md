@@ -54,6 +54,10 @@ The rest of this section focuses on the steps to map data to a selected Platform
 
 If you chose to map your data to a schema, the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform. You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead.
 
+>[!NOTE]
+>
+>The JSON object must have a single root node `data` in order to pass validation.
+
 If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
 
 ![JSON sample of expected incoming data](../images/datastreams/select-data.png)
