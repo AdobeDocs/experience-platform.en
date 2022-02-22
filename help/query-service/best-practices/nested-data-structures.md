@@ -16,7 +16,7 @@ You should also have a good understanding of the `INSERT INTO` and `CTAS` syntax
 
 ## Create a dataset
 
-Query service provides the Create Table As Select (`CTAS`) functionality to create a table based on the output of a `SELECT` statement. The schema for the dataset to be created is seen in the image below.
+Query service provides the Create Table As Select (`CTAS`) functionality to create a table based on the output of a `SELECT` statement, or as in this case, by using a reference to an existing XDM schema in Adobe Experience Platform. Displayed below is the XDM schema for `Final_subscription` created for this example.
 
 ![A diagram of the final_subscription schema.](../images/best-practices/final-subscription-schema.png)
 
