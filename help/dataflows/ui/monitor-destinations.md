@@ -85,7 +85,9 @@ A list of individual runs and their particular metrics is displayed, along with 
 Each individual dataflow run shows the following details:
 
 - **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
-- **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow to process.
+- **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow run to process. 
+  - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour. 
+  - For dataflow runs which are still in a **[!UICONTROL processing]** state, the window to gather all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. After the window to process metrics closes, the dataflow run processing time is updated to one hour.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
