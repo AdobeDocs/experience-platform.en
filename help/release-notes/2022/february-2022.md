@@ -34,7 +34,7 @@ Adobe Experience Platform [!DNL Identity Service] helps you to gain a better vie
 
 | Feature | Description |
 | --- | --- |
-| New permission for `view-identity-graph` | You can now use the `view-identity-graph` permission to control whether users in your organization are able to view identity graph data. Users without this permission will be forbidden from accessing the identity graph viewer in the UI or when performing calls to the [!DNL Identity Service] API. |
+| New permission for `view-identity-graph` | You can now use the `view-identity-graph` permission to control whether users in your organization are able to view identity graph data. Users without this permission will be forbidden from accessing the identity graph viewer in the UI or when accessing [!DNL Identity Service] APIs which return identities. See the [access control overview](../../access-control/home.md) for more information on permissions. |
 
 For more general information on [!DNL Identity Service], refer to the [Identity Service overview](../../identity-service/home.md).
 
@@ -46,6 +46,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| Beta sources moving to GA | The following sources have been promoted from beta to GA: <ul><li>[[!DNL Mailchimp Campaigns] API](../../sources/connectors/databases/snowflake.md)</li><li>[[!DNL Mailchimp Members] API](../../sources/connectors/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/veeva.md)</li></ul> |
+| Beta sources moving to GA | The following sources have been promoted from beta to GA: <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
