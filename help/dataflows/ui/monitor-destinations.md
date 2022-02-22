@@ -42,24 +42,6 @@ See the following table for more information on statuses:
 ### Dataflow runs for streaming destinations {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesactivated"
->title="Identities activated"
->abstract="The count of individual profile identities successfully activated to the selected destination."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesexcluded"
->title="Identities excluded"
->abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesfailed"
->title="Identities failed"
->abstract="The count of individual profile identities which failed for the selected destination. Please check error diagnostics for details."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Dataflow run details"
 >abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
@@ -123,12 +105,6 @@ The details page also displays a list of identities that failed and identities t
 ![Dataflow records for streaming destinations](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### Dataflow runs for batch destinations {#dataflow-runs-for-batch-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profiles_received"
->title="Profiles received"
->abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
@@ -197,7 +173,7 @@ The details page also displays a list of identities that failed and identities t
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="Segment Jobs"
->abstract="The segment jobs dashboard contains information on the evaluation and export jobs for all your segments."
+>abstract="The segment jobs view contains information on the evaluation and export jobs for all your segments."
 
 To access the [!UICONTROL Segment Jobs] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Segment Jobs]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the segment evaluation and export jobs.
 
@@ -220,7 +196,7 @@ The following metrics are available for segment jobs:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="The destination activation contains information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities."
+>abstract="The destination activation view contains information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities."
 
 To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 
