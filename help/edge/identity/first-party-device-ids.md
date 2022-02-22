@@ -20,9 +20,7 @@ This guide assumes you are familiar with how identity data works for the Platfor
 
 First-party cookies are most effective when they are set using a customer-owned server that leverages a DNS A-record as opposed to a DNS CNAME. Using first-party device IDs,  you can set your own device IDs in cookies using DNS A-records. These IDs can then be sent to Adobe and used as seeds to generate ECIDs that will continue to be the primary identifiers in Adobe Experience Cloud applications. 
 
-If you are using [third-party data collection](./overview.md#third-party), the FPID must be included in the `identityMap`. See the section later in this document on [using FPIDs in `identityMap`](#identityMap) for more information.
-
-If you are using [first-party data collection](./overview.md#first-party), you can specify a cookie name in the datastream configuration that informs the Edge Network where the FPID cookie is located.
+To send an FPID for a website visitor to the Platform Edge Network, you must include the FPID in the `identityMap` for that visitor. See the section later in this document on [using FPIDs in `identityMap`](#identityMap) for more information.
 
 ## ID formatting requirements
 
@@ -181,7 +179,7 @@ The error response returned by Experience Edge in this case would be similar to 
 
 ## ID hierarchy
 
-When both an ECID and FPID are present, the ECID will be prioritized in identifying the user. This will ensure that when an existing ECID is present in the browser cookie store, it will continue to be the primary identifier and existing visitor counts do not risk being affected. For existing users, the FPID will not the primary identity until the ECID has either been deleted manually, it expires, or is deleted as as result of a browser policy.
+When both an ECID and FPID are present, the ECID will be prioritized in identifying the user. This will ensure that when an existing ECID is present in the browser cookie store, it will continue to be the primary identifier and existing visitor counts do not risk being affected. For existing users, the FPID will not become the primary identity until the ECID expires or is deleted as a result of a browser policy or manual process.
 
 Identities are prioritized in the following order:
 
