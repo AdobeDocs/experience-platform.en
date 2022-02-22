@@ -11,7 +11,7 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 
 This tutorial demonstrates how to use the Flow Service API to create a batch [cloud storage](../catalog/cloud-storage/overview.md) or [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your newly created destination, and export data to your newly created destination via CSV files.
 
-This tutorial uses the Adobe Campaign destination in all examples, but the steps are identical for all batch cloud storage and email marketing destinations.
+This tutorial uses the [!DNL Adobe Campaign] destination in all examples, but the steps are identical for all batch cloud storage and email marketing destinations.
 
 ![Overview - the steps to create a destination and activate segments](../assets/api/email-marketing/overview.png)
 
@@ -31,14 +31,14 @@ The following sections provide additional information that you need to know in o
 
 To complete the steps in this tutorial, you should have the following credentials ready, depending on the type of destination that you are connecting and activating segments to.
 
-* For [!DNL Amazon] S3 connections: `accessId`, `secretKey`
-* For [!DNL Amazon] S3 connections to [!DNL Adobe Campaign]: `accessId`, `secretKey`
+* For [!DNL Amazon S3] connections: `accessId`, `secretKey`
+* For [!DNL Amazon S3] connections to [!DNL Adobe Campaign]: `accessId`, `secretKey`
 * For SFTP connections: `domain`, `port`, `username`, `password` or `sshKey` (depending on the connection method to the FTP location)
 * For [!DNL Azure Blob] connections: `connectionString`
 
 >[!NOTE]
 >
->The credentials `accessId`, `secretKey` for Amazon S3 connections and `accessId`, `secretKey` for Amazon S3 connections to Adobe Campaign are identical.
+>The credentials `accessId`, `secretKey` for [!DNL Amazon S3] connections and `accessId`, `secretKey` for [!DNL Amazon S3] connections to [!DNL Adobe Campaign] are identical.
 
 ### Reading sample API calls {#reading-sample-api-calls}
 
@@ -94,7 +94,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-A successful response contains a list of available destinations and their unique identifiers (`id`). Store the value of the destination that you plan to use, as it will be required in further steps. For example, if you want to connect and deliver segments to Adobe Campaign, look for the following snippet in the response:
+A successful response contains a list of available destinations and their unique identifiers (`id`). Store the value of the destination that you plan to use, as it will be required in further steps. For example, if you want to connect and deliver segments to [!DNL Adobe Campaign], look for the following snippet in the response:
 
 ```json
 {
@@ -109,13 +109,13 @@ For your reference, the table below contains the connection spec IDs for commonl
 
 | Destination | Connection spec ID |
 ---------|----------|
-| [!DNL Adobe Campaign] | 0b23e41a-cb4a-4321-a78f-3b654f5d7d97 |
-| [!DNL Amazon S3] | 4890fc95-5a1f-4983-94bb-e060c08e3f81 |
-| [!DNL Azure Blob] | e258278b-a4cf-43ac-b158-4fa0ca0d948b |
-| [!DNL Oracle Eloqua] | c1e44b6b-e7c8-404b-9031-58f0ef760604 |
-| [!DNL Oracle Responsys] | a5e28ddf-e265-426e-83a1-9d03a3a6822b |
-| [!DNL Salesforce Marketing Cloud] | f599a5b3-60a7-4951-950a-cc4115c7ea27 |
-| SFTP | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 |
+| [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
+| [!DNL Amazon S3] | `4890fc95-5a1f-4983-94bb-e060c08e3f81` |
+| [!DNL Azure Blob] | `e258278b-a4cf-43ac-b158-4fa0ca0d948b` |
+| [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
+| [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
+| [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
+| SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
 {style="table-layout:auto"}
 
@@ -157,9 +157,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Property | Description |
 | --------- | ----------- |
-|`name`| Provide a name for the base connection to the Experience Platform Profile Store. |
+|`name`| Provide a name for the base connection to the Experience Platform [!DNL Profile Store]. |
 |`description` | Optionally, you can provide a description for the base connection. |
 | `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -206,11 +208,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Property | Description |
 | --------- | ----------- |
-|`name`| Provide a name for the source connection to the Experience Platform Profile Store. |
+|`name`| Provide a name for the source connection to the Experience Platform [!DNL Profile Store]. |
 |`description` | Optionally, you can provide a description for the source connection. |
 | `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
 | `baseConnectionId`| Use the base connection ID you have obtained in the previous step.|
 | `data.format`| `CSV` is currently the only supported file export format.|
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -241,7 +245,7 @@ POST /connections
 
 **Request**
 
-The request below establishes a base connection to Adobe Campaign destinations. Depending on the storage location where you want to export files to (Amazon S3, SFTP, Azure Blob), keep the appropriate `auth` specification and delete the others.
+The request below establishes a base connection to [!DNL Adobe Campaign] destinations. Depending on the storage location where you want to export files to ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]), keep the appropriate `auth` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -291,9 +295,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-+++ Example request to connect to Amazon S3 destinations
+See the example requests below to connect to other supported batch cloud storage and email marketing destinations.
 
-The request below establishes a base connection to Amazon S3 destinations.
++++ Example request to connect to [!DNL Amazon S3] destinations
+
+The request below establishes a base connection to [!DNL Amazon S3] destinations.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -321,9 +327,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Example request to connect to Azure Blob destinations
++++ Example request to connect to [!DNL Azure Blob] destinations
 
-The request below establishes a base connection to Azure Blob destinations.
+The request below establishes a base connection to [!DNL Azure Blob] destinations.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -350,9 +356,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Example request to connect to Oracle Eloqua destinations
++++ Example request to connect to [!DNL Oracle Eloqua] destinations
 
-The request below establishes a base connection to Oracle Eloqua destinations. Depending on the storage location where you want to export files to, keep the appropriate `auth` specification and delete the others.
+The request below establishes a base connection to [!DNL Oracle Eloqua] destinations. Depending on the storage location where you want to export files to, keep the appropriate `auth` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -391,9 +397,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Example request to connect to Oracle Responsys destinations
++++ Example request to connect to [!DNL Oracle Responsys] destinations
 
-The request below establishes a base connection to Oracle Responsys destinations. Depending on the storage location where you want to export files to, keep the appropriate `auth` specification and delete the others.
+The request below establishes a base connection to [!DNL Oracle Responsys] destinations. Depending on the storage location where you want to export files to, keep the appropriate `auth` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -432,9 +438,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Example request to connect to Salesforce Marketing Cloud destinations
++++ Example request to connect to [!DNL Salesforce Marketing Cloud] destinations
 
-The request below establishes a base connection to Salesforce Marketing Cloud destinations. Depending on the storage location where you want to export files to, keep the appropriate `auth` specification and delete the others.
+The request below establishes a base connection to [!DNL Salesforce Marketing Cloud] destinations. Depending on the storage location where you want to export files to, keep the appropriate `auth` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -512,6 +518,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `auth.specname`| Indicates the authentication format for the destination. To find out the specName for your destination, perform a [GET call to the connection specs endpoint](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), providing the connection spec of your desired destination. Look for the parameter `authSpec.name` in the response. <br> For example, for Adobe Campaign destinations, you can use any of `S3`, `SFTP with Password`, or `SFTP with SSH Key`. |
 | `params`| Depending on the destination that you are connecting to, you must provide different required authentication parameters. For Amazon S3 connections, you must provide your access ID and secret key to your Amazon S3 storage location. <br> To find out the required parameters for your destination, perform a [GET call to the connection specs endpoint](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), providing the connection spec of your desired destination. Look for the parameter `authSpec.spec.required` in the response. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response contains the base connection's unique identifier (`id`). Store this value as it is required in the next step to create a target connection.
@@ -540,7 +548,7 @@ POST /targetConnections
 
 **Request**
 
-The request below establishes a target connection to Adobe Campaign destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
+The request below establishes a target connection to [!DNL Adobe Campaign] destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -583,9 +591,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-+++ Example request to set up storage location for Amazon S3 destinations
+See the example requests below to set up a storage location for other supported batch cloud storage and email marketing destinations.
 
-The request below establishes a target connection to Amazon S3 destinations, to determine where the exported files will land in your storage location.
++++ Example request to set up a storage location for [!DNL Amazon S3] destinations
+
+The request below establishes a target connection to [!DNL Amazon S3] destinations, to determine where the exported files will land in your storage location.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -619,9 +629,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Example request to set up storage location for Azure Blob destinations
++++ Example request to set up a storage location for [!DNL Azure Blob] destinations
 
-The request below establishes a target connection to Azure Blob destinations, to determine where the exported files will land in your storage location.
+The request below establishes a target connection to [!DNL Azure Blob] destinations, to determine where the exported files will land in your storage location.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -655,9 +665,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Example request to set up storage location for Oracle Eloqua destinations
++++ Example request to set up a storage location for [!DNL Oracle Eloqua] destinations
 
-The request below establishes a target connection to Oracle Eloqua destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
+The request below establishes a target connection to [!DNL Oracle Eloqua] destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -696,9 +706,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Example request to set up storage location for Oracle Responsys destinations
++++ Example request to set up a storage location for [!DNL Oracle Responsys] destinations
 
-The request below establishes a target connection to Oracle Responsys destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
+The request below establishes a target connection to [!DNL Oracle Responsys] destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -737,9 +747,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Example request to set up storage location for Salesforce Marketing Cloud destinations
++++ Example request to set up a storage location for [!DNL Salesforce Marketing Cloud] destinations
 
-The request below establishes a target connection to Salesforce Marketing Cloud destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
+The request below establishes a target connection to [!DNL Salesforce Marketing Cloud] destinations, to determine where the exported files will land in your storage location. Depending on the storage location where you want to export files to, keep the appropriate `params` specification and delete the others.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -778,7 +788,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Example request to set up storage location for SFTP destinations
++++ Example request to set up a storage location for SFTP destinations
 
 The request below establishes a target connection to SFTP destinations, to determine where the exported files will land in your storage location.
 
@@ -824,6 +834,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.bucketName`| For S3 connections, provide the name of the bucket where files will be exported. |
 | `params.path`| For S3 connections, provide the file path in your storage location where files will be exported. |
 | `params.format`| `CSV` is currently the only supported file export type. |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -902,9 +914,9 @@ For your reference, the table below contains the flow spec IDs for commonly used
 
 | Destination | Flow spec ID |
 ---------|----------|
-| All cloud storage destinations (Amazon S3, SFTP, Azure Blob) and Oracle Eloqua | 71471eba-b620-49e4-90fd-23f1fa0174d8 |
-| Oracle Responsys | 51d675ce-e270-408d-91fc-22717bdf2148 |
-| Salesforce Marketing Cloud | 493b2bd6-26e4-4167-ab3b-5e910bba44f0 |
+| All cloud storage destinations ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]) and [!DNL Oracle Eloqua] | `71471eba-b620-49e4-90fd-23f1fa0174d8` |
+| [!DNL Oracle Responsys] | `51d675ce-e270-408d-91fc-22717bdf2148` |
+| [!DNL Salesforce Marketing Cloud] | `493b2bd6-26e4-4167-ab3b-5e910bba44f0` |
 
 **Response**
 
@@ -1014,6 +1026,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `frequency` | Mandatory. <br> <ul><li>For the `"DAILY_FULL_EXPORT"` export mode, you can select `ONCE` or `DAILY`.</li><li>For the `"FIRST_FULL_THEN_INCREMENTAL"` export mode, you can select `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul>   |
 | `endDate` | Not applicable when selecting `"exportMode":"DAILY_FULL_EXPORT"` and `"frequency":"ONCE"`. <br> Sets the date when segment members stop being exported to the destination. |
 | `startTime` | Mandatory. Select the time when files containing members of the segment should be generated and exported to your destination. |
+
+{style="table-layout:auto"}
 
 **Response**
 
