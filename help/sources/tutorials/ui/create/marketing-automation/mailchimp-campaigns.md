@@ -28,7 +28,7 @@ The [!DNL Mailchimp Campaigns] source supports both OAuth 2 Refresh Code and bas
 | Credentials | Description |
 | --- | --- |
 | Host | The root URL used to connect to MailChimp API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account. |
-| Authorization Test URL | The authorization Test URL is used to validate credentials when connecting [!DNL Mailchimp] to Platform. If unprovided, credentials are automatically checked during the source connection creation step instead. |
+| Authorization test URL | The authorization test URL is used to validate credentials when connecting [!DNL Mailchimp] to Platform. If this is not provided, credentials are automatically checked during the source connection creation step instead. |
 | Access Token | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
 For more information on using OAuth 2 to authenticate your [!DNL Mailchimp] account to Platform, see this [[!DNL Mailchimp] document on using OAuth 2](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
@@ -81,7 +81,7 @@ To use basic authentication, select [!UICONTROL Basic authentication], provide v
 
 Once your source is authenticated, you must then provide the `campaignId` that corresponds with your [!DNL Mailchimp Campaigns] account.
 
-In the [!UICONTROL Select data] page, enter your `campaignId` and then select **[!UICONTROL Explore]**.
+On the [!UICONTROL Select data] page, enter your `campaignId` and then select **[!UICONTROL Explore]**.
 
 ![explore](../../../../images/tutorials/create/mailchimp-campaigns/explore.png)
 
