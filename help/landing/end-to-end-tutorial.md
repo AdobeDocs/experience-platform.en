@@ -10,6 +10,8 @@ Adobe Experience Platform is the most powerful, flexible, and open system on the
 
 Built on RESTful APIs, Platform exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. Platform lets you derive a holistic view of your customers by ingesting your customer data, segmenting your data to the audiences you want to target, and activating these audiences to an external destination. The following tutorial shows an end-to-end workflow, showing all the steps from ingestion via sources to audience activation via destinations.
 
+![Experience Platform end-to-end workflow](./images/end-to-end-tutorial/end-to-end-flow.png)
+
 ## Getting started
 
 This end-to-end workflow uses multiple Adobe Experience Platform services. The following is a list of the services that are used in this workflow with links to their overviews:
@@ -72,7 +74,7 @@ For instructions on how to activate data to batch or email marketing destination
 
 Platform allows you to track flow of data by utilizing dataflows, which is a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and [!DNL Real-time Customer Profile] before ultimately being activated to destinations. The monitoring dashboard provides you with a visual representation of the journey of a dataflow. To learn how to monitor dataflows within the Platform UI, see the tutorials on [monitoring dataflows for sources](../dataflows/ui/monitor-sources.md) and [monitoring dataflows for destinations](../dataflows/ui/monitor-destinations.md).
 
-You can monitor Platform activities through the use of statistical metrics and event notifications by using [!DNL Observability Insights]. You can subscribe to alert notifications through Platform UI or send them to a configure webhook. For more details on how to view, enable, disable, and subscribe to available alerts from the Experience Platform UI, see the [Alerts UI guide](../observability/alerts/ui.md). For details on how to receive alerts through webhooks, see the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md).
+You can monitor Platform activities through the use of statistical metrics and event notifications by using [!DNL Observability Insights]. You can subscribe to alert notifications through Platform UI or send them to a configured webhook. For more details on how to view, enable, disable, and subscribe to available alerts from the Experience Platform UI, see the [Alerts UI guide](../observability/alerts/ui.md). For details on how to receive alerts through webhooks, see the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md).
 
 ## Next steps
 
