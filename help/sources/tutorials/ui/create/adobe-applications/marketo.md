@@ -108,7 +108,7 @@ You can enable alerts to receive notifications on the status of your dataflow. S
 
 ![alerts](../../../../images/tutorials/create/marketo/alerts.png)
 
-## Mapping Map your [!DNL Marketo] dataset source fields to target XDM fields
+## Map your [!DNL Marketo] dataset source fields to target XDM fields
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
@@ -129,7 +129,7 @@ Based on your needs, you can choose to map fields directly, or use data prep fun
 
 ![mapping](../../../../images/tutorials/create/marketo/mapping.png)
 
-Once your mapping sets are ready, select **[!UICONTROL Finish]** and allow for a few moments for the new dataflow to be created.
+Once your mapping sets are ready, select **[!UICONTROL Next]** and allow for a few moments for the new dataflow to be created.
 
 ## Review your dataflow
 
