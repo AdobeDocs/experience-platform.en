@@ -88,6 +88,10 @@ Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset
 
 [!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md) for more information.
 
+>[!IMPORTANT]
+>
+>The [!DNL Marketo] connector uses batch ingestion to ingest all historical records and uses streaming ingestion for real-time updates. This allows the connector to continue streaming while ingesting any erroneous records. Enable the **[!UICONTROL Partial ingestion]** toggle and then set the [!UICONTROL Error threshold %] to maximum to prevent the dataflow from failing.
+
 ![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
 ### Use a new dataset
@@ -103,8 +107,6 @@ With a schema selected, provide a name for your dataflow and an optional descrip
 You can enable alerts to receive notifications on the status of your dataflow. Select an alert from the list to subscribe to alerts. For more information on alerts, see the guide on [subscribing to sources alerts using the UI](../../alerts.md)
 
 ![alerts](../../../../images/tutorials/create/marketo/alerts.png)
-
-The [!DNL Marketo] connector uses batch ingestion to ingest all historical records and uses streaming ingestion for real-time updates. This allows the connector to continue streaming while ingesting any erroneous records. Enable the **[!UICONTROL Partial ingestion]** toggle and then set the [!UICONTROL Error threshold %] to maximum to prevent the dataflow from failing.
 
 ## Mapping Map your [!DNL Marketo] dataset source fields to target XDM fields
 
