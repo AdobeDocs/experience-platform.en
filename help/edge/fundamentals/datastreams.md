@@ -46,13 +46,23 @@ If you are configuring this datastream for use in Experience Platform and are us
 
 The rest of this section focuses on the steps to map data to a selected Platform event schema. If you are using the Mobile SDK or are otherwise not configuring your datastream for Platform, select **[!UICONTROL Save]** before proceeding to the next section on [adding services to the datastream](#add-services).
 
-### [!UICONTROL Select data]
+### Data Prep for Data Collection
 
 >[!IMPORTANT]
 >
->This step is currently not supported for Mobile SDK implementations.
+>Data Prep for Data Collection is currently not supported for Mobile SDK implementations.
 
-If you chose to map your data to a schema, the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform. You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead.
+Data Prep is an Experience Platform services that allows you to map, transform, and validate data to and from Experience Data Model (XDM). When configuring a Platform-enabled datastream, you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
+
+The subsections below cover the basic steps for mapping your data within the Data Collection UI. For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
+
+* [Data Prep overview](../../data-prep/home.md)
+* [Data Prep mapping functions](../../data-prep/functions.md)
+* [Handling data formats with Data Prep](../../data-prep/data-handling.md)
+
+#### [!UICONTROL Select data]
+
+Select **[!UICONTROL Save and Add Mapping]** after completing the [basic configuration step](#configure), and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform. You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead.
 
 >[!NOTE]
 >
@@ -62,11 +72,7 @@ If the JSON is valid, a preview schema is displayed in the right panel. Select *
 
 ![JSON sample of expected incoming data](../images/datastreams/select-data.png)
 
-### [!UICONTROL Mapping]
-
->[!IMPORTANT]
->
->This step is currently not supported for Mobile SDK implementations.
+#### [!UICONTROL Mapping]
 
 The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Platform. To get started, select **[!UICONTROL Add new mapping]** to create a new mapping row.
 
