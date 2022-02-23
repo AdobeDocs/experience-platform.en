@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
+exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 ---
 # Adobe Experience Platform release notes 
 
@@ -27,7 +28,6 @@ Platform provides a suite of technologies that allow you to collect client-side 
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
 
-
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
@@ -46,7 +46,7 @@ Delivering relevant digital experiences requires having a complete understanding
 
 Adobe Experience Platform [!DNL Identity Service] helps you gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
-**New features**
+**Updated features**
 
 | Feature | Description |
 | --- | --- |
@@ -59,6 +59,8 @@ For more general information on [!DNL Identity Service], refer to the [Identity 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**Updated features**
 
 | Feature | Description |
 | --- | --- |
