@@ -42,24 +42,6 @@ See the following table for more information on statuses:
 ### Dataflow runs for streaming destinations {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesactivated"
->title="Identities activated"
->abstract="The count of individual profile identities successfully activated to the selected destination."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesexcluded"
->title="Identities excluded"
->abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_dataflow_identitiesfailed"
->title="Identities failed"
->abstract="The count of individual profile identities which failed for the selected destination. Please check error diagnostics for details."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Dataflow run details"
 >abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
@@ -102,8 +84,10 @@ A list of individual runs and their particular metrics is displayed, along with 
 
 Each individual dataflow run shows the following details:
 
-- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
-- **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow to process.
+- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. For streaming dataflow runs, if a dataflow run started for example at 10:30PM, the metric shows the start time as 10:00 PM in the UI.
+- **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow run to process.
+  - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour.
+  - For dataflow runs which are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. Then, once the processing window closes and the status of the dataflow run updates to **completed**, the displayed processing time is changed to one hour.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
@@ -123,12 +107,6 @@ The details page also displays a list of identities that failed and identities t
 ![Dataflow records for streaming destinations](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### Dataflow runs for batch destinations {#dataflow-runs-for-batch-destinations}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profiles_received"
->title="Profiles received"
->abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
