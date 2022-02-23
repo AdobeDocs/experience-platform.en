@@ -1,7 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
-exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
 ---
 # Adobe Experience Platform release notes 
 
