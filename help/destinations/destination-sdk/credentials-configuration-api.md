@@ -99,16 +99,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
    "azureConnectionStringAuthentication":{
       "connectionString":"string"
    },
-   "azureEventHubAuthentication":{
-      "sasKeyName":"string",
-      "sasKey":"string",
-      "namespace":"string"
-   },
-   "awsClientRegionAuthentication":{
-      "accessKeyId":"string",
-      "secretKey":"string",
-      "region":"string"
-   },
    "basicAuthentication":{
       "url":"string",
       "username":"string",
@@ -135,11 +125,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 |`servicePrincipalId`|String|Azure Service Principal ID for Azure Data Lake Storage|
 |`servicePrincipalKey`|String|Azure Service Principal Key for Azure Data Lake Storage|
 |`connectionString`|String|Azure Blob Storage connection string|
-|`sasKeyName`|String||
-|`sasKey`|String||
-|`namespace`|String||
-|`accessKeyId`|String||
-|`region`|String||
 
 {style="table-layout:auto"}
 

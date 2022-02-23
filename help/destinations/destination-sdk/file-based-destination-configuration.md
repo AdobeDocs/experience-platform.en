@@ -1,8 +1,8 @@
 ---
 description: This configuration allows you to indicate basic information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
-title: File-based destination configuration options for Destination SDK
+title: (Beta) File-based destination configuration options for Destination SDK
 ---
-# File-based destination configuration {#destination-configuration}
+# (Beta) File-based destination configuration {#destination-configuration}
 
 ## Overview {#overview}
 
