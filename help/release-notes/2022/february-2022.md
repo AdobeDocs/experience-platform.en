@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
+exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 ---
 # Adobe Experience Platform release notes 
 
@@ -27,7 +28,6 @@ Platform provides a suite of technologies that allow you to collect client-side 
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
 
-
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
@@ -46,7 +46,7 @@ Delivering relevant digital experiences requires having a complete understanding
 
 Adobe Experience Platform [!DNL Identity Service] helps you gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
-**New features**
+**Updated features**
 
 | Feature | Description |
 | --- | --- |
