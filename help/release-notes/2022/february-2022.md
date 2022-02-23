@@ -8,9 +8,25 @@ description: The latest release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Data collection](#data-collection)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [Sources](#sources)
+
+## Data collection {#data-collection}
+
+Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Improved UI workflow for datastream configuration | The workflow for creating a new datastream in the Data Collection UI has been updated. When adding services to a datastream, only the services you have access to will be included in the list of options. See the guide on [configuring a datastream](../../edge/fundamentals/datastreams.md) for more information. |
+| Data Prep for Data Collection | If you are using the Adobe Experience Platform Web SDK, you can now leverage Data Prep capabilities to map your data to Experience Data Model (XDM) on the server side. See the section on [Data Prep for Data Collection](../../edge/fundamentals/datastreams.md#data-prep) in the datastreams guide for more information. |
+| First-party device IDs | You can now send your own device IDs to the Adobe Experience Platform Edge Network when collecting customer data using the Platform Web SDK, providing a workaround for recent browser restrictions on third-party cookie lifespans. See the guide on [first-party device IDs](../../edge/identity/first-party-device-ids.md) for more information. |
+
+For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
+
 
 ## [!DNL Data Prep] {#data-prep}
 
