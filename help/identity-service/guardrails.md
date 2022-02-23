@@ -16,6 +16,8 @@ The following Experience Platform services are involved with modeling Identity d
 
 ## Data model limits
 
+The tables below provide guidance on guardrails for static limits as well as validation rules to consider for identity namespaces.
+
 ### Static limits
 
 The following table outlines static limits applied to identity data.
