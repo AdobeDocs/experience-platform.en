@@ -91,6 +91,7 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition.. |
 | [!DNL Identities] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
 | [!DNL Identities] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
+| [!DNL Identities] | [!UICONTROL View Identity Graph] | Read-only access for identity graphs. |
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
 | [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Read-only access for sandboxes belonging to your organization. |
 | [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Ability to reset a sandbox. |

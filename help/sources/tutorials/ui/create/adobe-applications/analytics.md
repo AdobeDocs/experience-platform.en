@@ -52,10 +52,6 @@ The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTRO
 
 ### Mapping
 
->[!IMPORTANT]
->
->The Data Prep support feature for the [!DNL Analytics] source is in beta.
-
 Before you can map your [!DNL Analytics] data to target XDM schema, you must first select whether you are using a default schema or a custom schema.
 
 A default schema creates a new schema on your behalf, containing the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a default schema, select **[!UICONTROL Default schema]**.
