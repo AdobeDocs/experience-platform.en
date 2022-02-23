@@ -2,6 +2,8 @@
 title: First-party device IDs in the Platform Web SDK
 description: Learn how to configure first-party device IDs (FPIDs) for the Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
+hide: true
+hidefromtoc: true
 ---
 # First-party device IDs in the Platform Web SDK
 
