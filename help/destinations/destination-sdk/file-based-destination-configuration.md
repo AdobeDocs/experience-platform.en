@@ -622,7 +622,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 {style="table-layout:auto"}
 
-### Dynamic schema configuration in the mapping step {#schema-configuration}
+### Dynamic schema configuration in the mapping step {#dynamic-schema-configuration}
 
 Adobe Experience Platform Destination SDK supports partner-defined schemas. A partner-defined schema allows users to map profile attributes and identities to custom schemas defined by destination partners, similar to the [streaming destinations](destination-configuration.md#schema-configuration) workflow.
 
