@@ -126,7 +126,7 @@ The **[!UICONTROL Mapped segments by identity]** widget highlights at a glance, 
 
 ### Common audiences
 
-The **[!UICONTROL Common audiences]** widget provides a list of the top five segments activated across destination account chosen at the top of the page and the destination selected in the widget dropdown. The list of segments is ordered according to how recently they were activated. The most recently activated segment is displayed at the top. 
+The **[!UICONTROL Common audiences]** widget provides a list of the top five segments activated across the destination account chosen at the top of the page, and the destination selected in the widget dropdown. The list of segments is ordered according to how recently they were activated. The most recently activated segment is displayed at the top. 
 
 The [!UICONTROL AUDIENCE SIZE] column provides the total profile count of each listed segment.
 
