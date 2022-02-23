@@ -65,7 +65,7 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="File export options"
->abstract="Select Export full files to export a complete snapshot of all the profiles that qualify for the segment. Select Export incremental files to export only the profiles which qualified for the segment since the last export. The first incremental file export includes all profiles that qualify for the segment, acting as a backfill. Future incremental files include only the profiles which qualified for the segment since the first incremental file export."
+>abstract="Select **Export full files** to export a complete snapshot of all the profiles that qualify for the segment. Select **Export incremental files** to export only the profiles which qualified for the segment since the last export. <br> The first incremental file export includes all profiles that qualify for the segment, acting as a backfill. Future incremental files include only the profiles which qualified for the segment since the first incremental file export."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Export incremental files"
 
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
