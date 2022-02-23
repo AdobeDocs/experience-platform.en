@@ -42,6 +42,8 @@ Customer AI and Attribution AI natively support Adobe Analytics data. To use Ado
 
 Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Analytics as a data source followed by a dataset during your instance configuration. All of the required schema field groups and individual fields are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
 
+
+
 >[!IMPORTANT]
 >
 >The Adobe Analytics connector takes up to four weeks to backfill data. If you recently set up a connection you should verify that the dataset has the minimum length of data required for Customer or Attribution AI. Please review the historical data sections in [Customer AI](./customer-ai/input-output.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements), and verify you have enough data for your prediction goal.
