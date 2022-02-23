@@ -1,6 +1,7 @@
 ---
 title: Working with nested data structures in Query Service
 description: This document provides a working example for processing and transforming nested data fields using CTAS and INSERT INTO statements.
+exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
 ---
 # Working with nested data structures in Query Service
 
@@ -144,4 +145,4 @@ Despite the growing complexity of this SQL example, the `collect_list` for activ
 
 ## Next steps
 
-By reading this document, you now understand how to process or transform datasets that use complex data types in Adobe Experience Platform Query Service. Please see the [queries execution guidance](./writing-queries.md) for more information about running SQL queries on datasets within the Data Lake. 
+By reading this document, you now understand how to process or transform datasets that use complex data types in Adobe Experience Platform Query Service. Please see the [queries execution guidance](./writing-queries.md) for more information about running SQL queries on datasets within the Data Lake.
