@@ -180,7 +180,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 A successful response returns HTTP status 200 with details of your newly created destination configuration.
 
-## Create configuration for a file-based destination {#create}
+## Create configuration for a file-based destination {#create-file-based}
 
 You can create a new destination configuration by making a POST request to the `/authoring/destinations` endpoint.
 

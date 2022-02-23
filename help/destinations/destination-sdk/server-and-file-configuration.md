@@ -80,7 +80,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`port`|Integer|The SFTP file server port.|
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
 
-## File-based [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destination destination server spec {#adls-example}
+## File-based [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destination server spec {#adls-example}
 
 ```json
 {
@@ -241,16 +241,16 @@ This section describes the file formatting settings for the exported `CSV` files
 |---|---|---|---|
 |`compression.value`|Optional|Compression codec to use when saving data to file. Supported values: `none`, `bzip2`, `gzip`, `lz4`, and `snappy`.|`none`|
 |`fileType.value`|Optional|Specifies the output file format. Supported values: `csv`, `parquet`, and `json`.|`csv`|
-|`csvOptions.quote.value`|Optional|Sets a single character used for escaping quoted values where the separator can be part of the value.|`null`|
-|`csvOptions.quoteAll.value`|Optional|Indicates whether all values should always be enclosed in quotes. Default is to only escape values containing a quote character.|`false`|
-|`csvOptions.escape.value`|Optional|Sets a single character used for escaping quotes inside an already quoted value.|`\`|
-|`csvOptions.escapeQuotes.value`|Optional|Indicates whether values containing quotes should always be enclosed in quotes. Default is to escape all values containing a quote character.|`true`|
-|`csvOptions.header.value`|Optional|Indicates whether to write the names of columns as the first line.|`true`|
-|`csvOptions.ignoreLeadingWhiteSpace.value`|Optional|Indicates whether to trim leading white spaces from values.|`true`|
-|`csvOptions.ignoreTrailingWhiteSpace.value`|Optional|Indicates whether to trim trailing whitespaces from values.|`true`|
-|`csvOptions.nullValue.value`|Optional|Sets the string representation of a null value. |`""`|
-|`csvOptions.dateFormat.value`|Optional|Indicates the date format.|`yyyy-MM-dd`|
-|`csvOptions.timestampFormat.value`|Optional|Sets the string that indicates a timestamp format.|`yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]`|
-|`csvOptions.charToEscapeQuoteEscaping.value`|Optional|Sets a single character used for escaping the escape for the quote character.|`\` when the escape and quote characters are different. `\0` when the escape and quote character are the same.|
-|`csvOptions.emptyValue.value`|Optional|Sets the string representation of an empty value.|`""`|
-|`csvOptions.lineSep.value`|Optional|Defines the line separator that should be used for writing. Maximum length is 1 character.|`\n`|
+|`csvOptions.quote.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping quoted values where the separator can be part of the value.|`null`|
+|`csvOptions.quoteAll.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates whether all values should always be enclosed in quotes. Default is to only escape values containing a quote character.|`false`|
+|`csvOptions.escape.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping quotes inside an already quoted value.|`\`|
+|`csvOptions.escapeQuotes.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates whether values containing quotes should always be enclosed in quotes. Default is to escape all values containing a quote character.|`true`|
+|`csvOptions.header.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates whether to write the names of columns as the first line.|`true`|
+|`csvOptions.ignoreLeadingWhiteSpace.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates whether to trim leading white spaces from values.|`true`|
+|`csvOptions.ignoreTrailingWhiteSpace.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates whether to trim trailing whitespaces from values.|`true`|
+|`csvOptions.nullValue.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets the string representation of a null value. |`""`|
+|`csvOptions.dateFormat.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates the date format.|`yyyy-MM-dd`|
+|`csvOptions.timestampFormat.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets the string that indicates a timestamp format.|`yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]`|
+|`csvOptions.charToEscapeQuoteEscaping.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping the escape for the quote character.|`\` when the escape and quote characters are different. `\0` when the escape and quote character are the same.|
+|`csvOptions.emptyValue.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets the string representation of an empty value.|`""`|
+|`csvOptions.lineSep.value`|Optional|*Only for `"fileType.value": "csv"`*. Defines the line separator that should be used for writing. Maximum length is 1 character.|`\n`|

@@ -213,21 +213,7 @@ You can configure the functionality described in this document by using the `/au
             "parquet"
          ],
          "default":"csv"
-      },
-      {
-         "name": "destinationInstance",
-         "title": "Select a destination instance",
-         "description": "Select a destination instance.",
-         "type": "string",
-         "isRequired": true,
-         "readOnly": false,
-         "hidden": false,
-         "dynamicEnum": {
-             "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d",
-             "authenticationRule": "IMS_AUTHENTICATION",
-             "value": "accInstance",
-             "responseFormat": "NAME_VALUE"
-        }
+      }
    ],
    "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/YOURDESTINATION-en",
@@ -618,9 +604,7 @@ Through the `audienceTemplateId`, this section also ties together this configura
 
 ## Schema configuration in the mapping step {#schema-configuration}
 
-![Enable mapping step](./assets/enable-mapping-step.png)
-
-Use the parameters in `schemaConfig` to enable the mapping step of the destination activation workflow. By using the parameters described below, you can determine if Experience Platform users can map profile attributes and/or identities to the desired schema on your destination's side.
+Use the parameters in `schemaConfig` to enable the mapping step of the destination activation workflow. By using the parameters described below, you can determine if Experience Platform users can map profile attributes and/or identities to your file-based destination.
 
 ```json
 "schemaConfig":{
@@ -635,6 +619,40 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
+
+{style="table-layout:auto"}
+
+### Dynamic schema configuration in the mapping step {#schema-configuration}
+
+Adobe Experience Platform Destination SDK supports partner-defined schemas. A partner-defined schema allows users to map profile attributes and identities to custom schemas defined by destination partners, similar to the [streaming destinations](destination-configuration.md#schema-configuration) workflow.
+
+Use the parameters in  `dynamicSchemaConfig` to define your own schema that Platform profile attributes and/or identities can be mapped to.
+
+```json
+"schemaConfig":{
+   "dynamicSchemaConfig":{
+      "dynamicEnum": {
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"{{destinationServerId}}",
+         "value": "Schema Name",
+         "responseFormat": "SCHEMA"
+      }
+   },
+   "profileRequired":true,
+   "segmentRequired":true,
+   "identityRequired":true
+}
+```
+
+|Parameter | Type | Description|
+|---------|----------|------|
+|`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
+|`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
+|`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
+|`destinationServerId` | String | The `instanceId` of the [destination server configuration](./destination-server-api.md) used for this destination. |
+|`authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via any of the following methods: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [Credentials](./credentials-configuration-api.md) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
+|`value`|String|The name of the schema to be displayed in the Experience Platform user interface, in the mapping step.|
+|`responseFormat`|String|Always set to `SCHEMA` when defining a custom schema.|
 
 {style="table-layout:auto"}
 
