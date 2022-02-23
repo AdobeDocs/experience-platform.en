@@ -55,7 +55,7 @@ See the following table for more information on statuses:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Identities activated"
->abstract="The count of individual profile identities successfully activated to the selected destination."
+>abstract="The count of individual profile identities successfully activated to the selected destination. This metric includes identities that are added and removed from exported segments."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -76,7 +76,7 @@ Identities represent the different facets of a profile. For example, if a profil
 
 A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
-- **[!UICONTROL Identities activated]**: The total count of profile identities that were activated to this destination. This metric includes identities that are added and removed from segments.
+- **[!UICONTROL Identities activated]**: The total number of profile identities successfully activated to the selected destination. This metric includes identities that are added and removed from exported segments.
 - **[!UICONTROL Identities excluded]**:  The total number of profile identities that are skipped for activation based on missing attributes and consent violation.
 - **[!UICONTROL Identities failed]**: The total number of profile identities that are not activated to the destination due to errors.
 
@@ -89,7 +89,7 @@ Each individual dataflow run shows the following details:
   - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour.
   - For dataflow runs which are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. Then, once the processing window closes and the status of the dataflow run updates to **completed**, the displayed processing time is changed to one hour.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
-- **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
+- **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination as part of the dataflow run. This metric includes identities that are added and removed from exported segments.
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
 - **[!UICONTROL Identities failed]** The total number of profile identities that are not activated to the destination due to errors.
 - **[!UICONTROL Activation rate]**: The percentage of received identities that have either been successfully activated or skipped. The following formula demonstrates how this value is calculated:
@@ -127,7 +127,7 @@ The details page also displays a list of identities that failed and identities t
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identities activated"
->abstract="The count of individual profile identities successfully activated to the selected destination."
+>abstract="The count of individual profile identities successfully activated to the selected destination. This metric includes identities that are added and removed from exported segments."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -138,7 +138,7 @@ The details page also displays a list of identities that failed and identities t
 
 For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
-- **[!UICONTROL Identities activated]**: The count of individual profile identities successfully activated to the selected destination.
+- **[!UICONTROL Identities activated]**: The total number of profile identities successfully activated to the selected destination. This metric includes identities that are added and removed from exported segments.
 - **[!UICONTROL Identities excluded]**: The count of individual profile identities excluded from activation for the selected destination, based on missing attributes and consent violation.
 
 ![Dataflow runs view for batch destinations](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -148,7 +148,7 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
 - **[!UICONTROL Processing time]**: The amount of time it took for the dataflow run to be processed.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
-- **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
+- **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination as part of the dataflow run. This metric includes identities that are added and removed from exported segments.
 - **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded from activation based on missing attributes and consent violation.
 - **[!UICONTROL Status]**: Represents the state the dataflow is in. This can be one of three states: [!UICONTROL Success], [!UICONTROL Failed], and [!UICONTROL Processing]. [!UICONTROL Success] means that the dataflow is active and is exporting data according to its provided schedule. [!UICONTROL Failed] means that the activation of data has been suspended due to errors. [!UICONTROL Processing] means that the dataflow is not yet active and is generally encountered when a new dataflow is created.
 
