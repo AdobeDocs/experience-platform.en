@@ -1,7 +1,6 @@
 ---
 title: Key Value Pair Data Type
 description: This document provides an overview of the Key Value Pair Experience Data Model (XDM) data type.
-exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 ---
 # [!UICONTROL Key Value Pair] data type
 
