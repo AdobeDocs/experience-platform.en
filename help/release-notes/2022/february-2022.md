@@ -32,7 +32,7 @@ For more information on data collection in Platform, please see the [data collec
 
 [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-**Updated features**
+**New feature**
 
 | Feature | Description |
 | --- | --- |
@@ -59,6 +59,8 @@ For more general information on [!DNL Identity Service], refer to the [Identity 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**Updated features**
 
 | Feature | Description |
 | --- | --- |
