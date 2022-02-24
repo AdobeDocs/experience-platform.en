@@ -28,6 +28,10 @@ No. Turning off the auto-complete feature is not currently supported by the plat
 
 One potential causes is the auto-complete feature. The feature processes certain metadata commands that can occasionally slow the editor.
 
+### Can I use Postman for Query Service API?
+
+Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Watch the [Postman setup guide](https://video.tv.adobe.com/v/28832) for step by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with Postman. See the official documentation for [guidance on starting, running, and sharing Postman collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+
 ## Exporting Data {#exporting-data}
 
 This section includes information on exporting data to activated destinations.
