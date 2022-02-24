@@ -29,6 +29,7 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 The [!UICONTROL Select data] step appears, providing you with an interface to configure values for your [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping], and [!UICONTROL Schema name].
 
+#### Select campaign instance {#select-campaign-instance}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
@@ -36,14 +37,18 @@ The [!UICONTROL Select data] step appears, providing you with an interface to co
 >abstract="The name of the Adobe Campaign Classic environment that you want to use."
 >text="Learn more in documentation"
 
+#### Select campaign mapping {#select-campaign-mapping}
+
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
->title="Select target mapping"
+>title="Select campaign target mapping"
 >abstract="Target mappings are technical objects used by Campaign in order to deliver messages, and contain all the technical settings required to send deliveries (addresses, phone numbers, opt-in indicators, additional identifiers…)."
 >text="Learn more in documentation"
 
+#### Select campaign schema {#select-campaign-schema}
+
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
->title="Select schema name"
+>title="Select campaign schema name"
 >abstract="The name of the entity defined in the Adobe Campaign database."
 >text="Learn more in documentation"
