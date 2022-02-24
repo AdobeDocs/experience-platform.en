@@ -12,13 +12,21 @@ This document provides answers to frequently asked questions about Query Service
 
 The following list of answers to frequently asked questions about Query Service divided into the following categories:
 
-- [Query Service Editor](#query-service-editor)
+- [Query Editor](#query-editor)
 - [Exporting Data](#exporting-data)
 - [Third-party tools](#third-party-tools)
 
-## Query Service Editor {#query-service-editor}
+## Query Editor {#query-editor}
 
 This section includes information on performance, limits, and processes.
+
+### Can I turn off the auto-complete feature in the Query Service Editor?
+
+No. Turning off the auto-complete feature is not currently supported by the platform.
+
+### Why does the Query Editor sometimes become slow when I type in a query?
+
+One potential causes is the auto-complete feature. The feature processes certain metadata commands that can occasionally slow the editor.
 
 ## Exporting Data {#exporting-data}
 
