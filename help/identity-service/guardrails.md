@@ -2,6 +2,7 @@
 keywords: Experience Platform;identity;identity service;troubleshooting;guardrails;guidelines;limit;
 title: Guardrails for Identity Service
 description: This document provides information on use and rate limits for Identity Service data to help you optimize your use of the identity graph.
+exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
 ---
 # Guardrails for [!DNL Identity Service] data
 
