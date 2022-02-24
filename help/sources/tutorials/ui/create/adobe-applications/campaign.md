@@ -27,8 +27,6 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 ### Select data {#select-data}
 
-The [!UICONTROL Select data] step appears, providing you with an interface to configure values for your [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping], and [!UICONTROL Schema name].
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
 >title="ACC Instance"
@@ -46,3 +44,5 @@ The [!UICONTROL Select data] step appears, providing you with an interface to co
 >title="Schema name"
 >abstract="The name of the entity defined in the Adobe Campaign database."
 >text="Learn more in documentation"
+
+The [!UICONTROL Select data] step appears, providing you with an interface to configure values for your [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping], and [!UICONTROL Schema name].
