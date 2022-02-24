@@ -16,15 +16,15 @@ The following list of answers to frequently asked questions about Query Service 
 - [Exporting Data](#exporting-data)
 - [Third-party tools](#third-party-tools)
 
-## Query Service Editor {#query-service-editor)
+## Query Service Editor {#query-service-editor}
 
 This section includes information on performance, limits, and processes.
 
-## Exporting Data {#exporting-data)
+## Exporting Data {#exporting-data}
 
 This section includes information on exporting data to activated destinations.
 
-## Third-party tools {#third-party-tools)
+## Third-party tools {#third-party-tools}
 
 This section includes information on the use of third-party tools such as PSQL and Power BI. 
 
