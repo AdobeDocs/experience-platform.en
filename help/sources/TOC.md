@@ -175,6 +175,7 @@ feature: Sources
       - [Adobe Analytics (report-suite data)](tutorials/ui/create/adobe-applications/analytics.md)
       - [Adobe Analytics (classifications data)](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+      - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
     - Advertising {#create}
