@@ -238,6 +238,16 @@ You can configure the functionality described in this document by using the `/au
          "destinationServerId":"{{destinationServerId}}"
       }
    ],
+   "identityNamespaces": {
+        "adobe_id": {
+            "acceptsAttributes": true,
+            "acceptsCustomNamespaces": true
+        },
+        "mobile_id": {
+            "acceptsAttributes": true,
+            "acceptsCustomNamespaces": true
+        }
+    },
    "segmentMappingConfig":{
        "mapExperiencePlatformSegmentName":false,
        "mapExperiencePlatformSegmentId":false,
@@ -245,6 +255,17 @@ You can configure the functionality described in this document by using the `/au
        "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },
    "schemaConfig":{
+      "profileFields":[
+           {
+              "name":"phoneNo",
+              "title":"phoneNo",
+              "description":"This is a fixed attribute on your destination side that customers can map profile attributes to. For example, the phoneNumber value in Experience Platform could be phoneNo on your side.",
+              "type":"string",
+              "isRequired":false,
+              "readOnly":false,
+              "hidden":false
+           }
+        ],
       "profileRequired":true,
       "segmentRequired":true,
       "identityRequired":true
@@ -608,14 +629,25 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 ```json
 "schemaConfig":{
+      "profileFields":[
+           {
+              "name":"phoneNo",
+              "title":"phoneNo",
+              "description":"This is a fixed attribute on your destination side that customers can map profile attributes to. For example, the phoneNumber value in Experience Platform could be phoneNo on your side.",
+              "type":"string",
+              "isRequired":false,
+              "readOnly":false,
+              "hidden":false
+           }
+        ],
       "profileRequired":true,
       "segmentRequired":true,
       "identityRequired":true
-}
 ```
 
 |Parameter | Type | Description|
 |---------|----------|------|
+|`profileFields` | Array | When you add predefined `profileFields`, Experience Platform users have the option of mapping Platform attributes to the predefined attributes in your destination. |
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
