@@ -28,7 +28,7 @@ feature: Queries
   - [Working with nested data structures](best-practices/nested-data-structures.md)
   - [Data deduplication](best-practices/deduplication.md)
 - Sample Queries {#sample-queries}
-  - [Sample Experience Event queries](sample-queries/experience-event-queries.md)
+  - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
   - [Sample Adobe Target queries](sample-queries/adobe-target.md)
   - [Sample anonymous block queries](sample-queries/anonymous-block.md)

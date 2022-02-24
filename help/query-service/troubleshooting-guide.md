@@ -24,7 +24,7 @@ SELECT * FROM <table> WHERE 1=0
 
 This query returns only the metadata for the specified table.
 
-### How can I quickly iterate on a CTAS (Create Table as Select) query without materializing it?
+### How can I quickly iterate on a CTAS (Create Table As Select) query without materializing it?
 
 You can create temporary tables to quickly iterate and experiment on a query before materializing it for use. You can also use temporary tables to validate if a query is functional.
 
@@ -83,7 +83,7 @@ The console output provided in the Query Service UI is a more human-readable for
 8/30/2021, 3:00 PM
 ```
 
-### Convert from the UTC timestamp
+#### Convert from the UTC timestamp
 
 The `from_utc_timestamp()` method interprets the given parameters **from the timestamp of your local timezone** and provides the equivalent timestamp of the desired region in UTC format. In the example below, the hour is 2:40PM in the user's local timezone. The Seoul timezone passed as a variable is nine hours ahead of the local timezone.
 
