@@ -82,11 +82,19 @@ The [!UICONTROL Dataflow detail] page allows you to select whether you want to u
 
 ### Use an existing dataset
 
-To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu.
+To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu. Once you have selected a dataset, provide a name and a description for your dataflow.
 
-With a dataset selected, provide a name for your dataflow and an optional description.
+![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset for [!DNL Profile], allowing you to create a holistic view of an entity's attributes and behaviors. Data from all [!DNL Profile]-enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
+### Use a new dataset
+
+To ingest into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu. Once you have selected a schema, provide a name and a description for your dataflow.
+
+![new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+### Enable [!DNL Profile] and error diagnostics
+
+Next, select the **[!UICONTROL Profile dataset]** toggle to enable your dataset for [!DNL Profile]. This allows you to create a holistic view of an entity's attributes and behaviors. Data from all [!DNL Profile]-enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
 
 [!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md) for more information.
 
@@ -94,19 +102,13 @@ Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset
 >
 >The [!DNL Marketo] connector uses batch ingestion to ingest all historical records and uses streaming ingestion for real-time updates. This allows the connector to continue streaming while ingesting any erroneous records. Enable the **[!UICONTROL Partial ingestion]** toggle and then set the [!UICONTROL Error threshold %] to maximum to prevent the dataflow from failing.
 
-![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
-
-### Use a new dataset
-
-To ingest into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu.
-
-With a schema selected, provide a name for your dataflow and an optional description, and then apply the [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion] settings you want for your dataflow. When finished, select **[!UICONTROL Next]**.
-
-![new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
+![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
 
 ### Enable alerts
 
-You can enable alerts to receive notifications on the status of your dataflow. Select an alert from the list to subscribe to alerts. For more information on alerts, see the guide on [subscribing to sources alerts using the UI](../../alerts.md)
+You can enable alerts to receive notifications on the status of your dataflow. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to sources alerts using the UI](../../alerts.md).
+
+When you are finished providing details to your dataflow, select **[!UICONTROL Next]**.
 
 ![alerts](../../../../images/tutorials/create/marketo/alerts.png)
 
