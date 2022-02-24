@@ -688,6 +688,29 @@ Use the parameters in  `dynamicSchemaConfig` to define your own schema that Plat
 
 {style="table-layout:auto"}
 
+## Identities and attributes {#identities-and-attributes}
+
+The parameters in this section determine which identities your destination accepts. This configuration also populates the target identities and attributes in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
+
+
+```json
+"identityNamespaces": {
+        "adobe_id": {
+            "acceptsAttributes": true,
+            "acceptsCustomNamespaces": true
+        },
+        "mobile_id": {
+            "acceptsAttributes": true,
+            "acceptsCustomNamespaces": true
+        }
+    },
+```
+
+You must indicate which [!DNL Platform] identities customers are able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Platform] identity namespaces that customers can map to identity namespaces from your destination. You can also indicate if customers can map custom namespaces to identities supported by your destination.
+
+Identity namespaces do not require a 1-to-1 correspondence between [!DNL Platform] and your destination.
+For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or they can map the same [!DNL Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
+
 ## Batch configuration {#batch-configuration}
 
 This section refers to the file export settings in the configuration above that Adobe should use for your destination in the Adobe Experience Platform user interface.
