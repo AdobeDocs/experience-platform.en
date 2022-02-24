@@ -9,14 +9,15 @@ exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Alerts](#alerts)
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Dashboards]](#dashboards)
-- [[!DNL Destinations]](#destinations)
-- [Query Service](#query-service)
-- [Sandboxes](#sandboxes)
-- [Segmentation Service](#segmentation)
-- [Sources](#sources)
+- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
+  - [Alerts {#alerts}](#alerts-alerts)
+  - [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
+  - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+  - [[!DNL Destinations] {#destinations}](#dnl-destinations-destinations)
+  - [Query Service {#query-service}](#query-service-query-service)
+  - [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
+  - [Segmentation Service {#segmentation}](#segmentation-service-segmentation)
+  - [Sources {#sources}](#sources-sources)
 
 ## Alerts {#alerts}
 
@@ -85,7 +86,7 @@ For more general information on destinations, refer to the [destinations overvie
 
 | Feature | Description |
 | --- | --- |
-| Anonymous Block | The anonymous block SQL construct allows you to break down large scale data preparation jobs in Query Service into smaller tasks, then reuse and execute them in sequence for incremental data loading. For more information, see the [sample queries for anonymous block documentation](../../query-service/best-practices/anonymous-block.md). |
+| Anonymous Block | The anonymous block SQL construct allows you to break down large scale data preparation jobs in Query Service into smaller tasks, then reuse and execute them in sequence for incremental data loading. For more information, see the [sample queries for anonymous block documentation](../../query-service/sample-queries/anonymous-block.md). |
 | Dataset Organization | Provides a coherent, logical data structure to organize your data assets for use with Query Service as the amount of data assets within the sandbox grows. For more information, see the [organize data assets documentation](../../query-service/best-practices/organize-data-assets.md). |
 
 For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
