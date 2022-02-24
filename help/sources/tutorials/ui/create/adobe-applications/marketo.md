@@ -78,6 +78,8 @@ Select the dataset you wish to ingest first, then select **[!UICONTROL Next]**.
 
 The [!UICONTROL Dataflow detail] page allows you to select whether you want to use an existing dataset or a new dataset. During this process, you can also configure settings for [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion], and [!UICONTROL Alerts]. 
 
+![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
+
 ### Use an existing dataset
 
 To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu.
