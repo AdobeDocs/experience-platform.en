@@ -9,15 +9,14 @@ exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [Alerts {#alerts}](#alerts-alerts)
-  - [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
-  - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
-  - [[!DNL Destinations] {#destinations}](#dnl-destinations-destinations)
-  - [Query Service {#query-service}](#query-service-query-service)
-  - [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
-  - [Segmentation Service {#segmentation}](#segmentation-service-segmentation)
-  - [Sources {#sources}](#sources-sources)
+- [Alerts](#alerts)
+- [[!DNL Dashboards]](#dashboards)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
+- [Query Service](#query-service)
+- [Sandboxes](#sandboxes)
+- [Segmentation Service](#segmentation)
+- [Sources](#sources)
 
 ## Alerts {#alerts}
 

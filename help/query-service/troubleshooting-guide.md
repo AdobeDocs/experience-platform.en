@@ -10,9 +10,23 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 
 This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-## Frequently asked questions
+The following list of answers to frequently asked questions about Query Service divided into the following categories:
 
-The following is a list of answers to commonly asked questions about Query Service.
+- [Query Service Editor](#query-service-editor)
+- [Exporting Data](#exporting-data)
+- [Third-party tools](#third-party-tools)
+
+## Query Service Editor {#query-service-editor)
+
+This section includes information on performance, limits, and processes.
+
+## Exporting Data {#exporting-data)
+
+This section includes information on exporting data to activated destinations.
+
+## Third-party tools {#third-party-tools)
+
+This section includes information on the use of third-party tools such as PSQL and Power BI. 
 
 ### How can I get only the metadata for a query?
 
