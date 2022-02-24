@@ -25,30 +25,24 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Adobe Campaign Managed Services]** and then select **[!UICONTROL Add data]**.
 
-### Select data
+### Select data {#select-data}
 
 The [!UICONTROL Select data] step appears, providing you with an interface to configure values for your [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping], and [!UICONTROL Schema name].
 
-#### Select campaign instance {#select-campaign-instance}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
->title="Select campaign instance"
+>title="ACC Instance"
 >abstract="The name of the Adobe Campaign Classic environment that you want to use."
 >text="Learn more in documentation"
 
-#### Select campaign mapping {#select-campaign-mapping}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
->title="Select campaign target mapping"
+>title="Target mapping"
 >abstract="Target mappings are technical objects used by Campaign in order to deliver messages, and contain all the technical settings required to send deliveries (addresses, phone numbers, opt-in indicators, additional identifiers…)."
 >text="Learn more in documentation"
 
-#### Select campaign schema {#select-campaign-schema}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
->title="Select campaign schema name"
+>title="Schema name"
 >abstract="The name of the entity defined in the Adobe Campaign database."
 >text="Learn more in documentation"
