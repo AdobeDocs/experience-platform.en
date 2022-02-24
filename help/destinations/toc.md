@@ -150,8 +150,10 @@ feature: Destinations
     * [Getting started](./destination-sdk/getting-started.md)
     * Destination SDK functionality {#functionality}
       * [Configuration options](./destination-sdk/configuration-options.md)
-      * [Destination configuration](./destination-sdk/destination-configuration.md)
-      * [Server and template specs](./destination-sdk/server-and-template-configuration.md)
+      * [Streaming destination configuration](./destination-sdk/destination-configuration.md)
+      * [File-based destination configuration](./destination-sdk/file-based-destination-configuration.md)
+      * [Streaming destinations server and template specs](./destination-sdk/server-and-template-configuration.md)
+      * [File-based destinations server and file specs](./destination-sdk/server-and-file-configuration.md)
       * [Message format](./destination-sdk/message-format.md)
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
       * Authentication {#authentication}
@@ -174,6 +176,7 @@ feature: Destinations
         * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
     * Guides {#guides}
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
+      * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
     * Document your destination {#document-destination}
       * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)

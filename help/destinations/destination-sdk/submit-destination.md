@@ -31,6 +31,7 @@ Provide a description of the use cases that your destination solves for Experien
 ## Test results after using the test destination API
 
 Provide test results after using the [test destination API](./test-destination.md) endpoint to perform an HTTP call to your destination. This includes:
+
 * The complete API request (headers and body) made to your destination endpoint, using the testing API.
 * The API response received from your destination endpoint.
 
