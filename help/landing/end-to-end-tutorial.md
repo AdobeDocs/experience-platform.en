@@ -30,7 +30,7 @@ Before you ingest data into Platform, you must first create an XDM schema to des
 
 The above tutorial shows how to set identity fields for your schemas. An identity field represents a field that can be used to identify an individual person related to a record or time-series event. Identity fields are a crucial component in how customer identity graphs are constructed in Platform, which ultimately affects how Real-time Customer Profile merges disparate data fragments together to gain a complete view of the customer. For more details on how to view identity graphs in Platform, see the tutorial on [how to use the identity graph viewer](../identity-service/ui/identity-graph-viewer.md).
 
-You need to enable your schema for use in Real-time Customer Profile so that customer profiles can be constructed from the data based on your schema. To learn how to enable a schema, see the guide on [creating and editing schemas in the Platform UI](../xdm/ui/resources/schemas.md#profile).
+You need to enable your schema for use in Real-time Customer Profile so that customer profiles can be constructed from the data based on your schema. See the section on [enabling a schema for Profile](../xdm/ui/resources/schemas.md#profile) in the schemas UI guide for more information.
 
 ## Ingest your data into Platform
 
