@@ -11,7 +11,6 @@ feature: Access Control
 * [Access control overview](home.md)
 * Field Level Access Control {#flac}
   * [Overview](flac/overview.md)
-  * [Troubleshooting guide]
 * Access control UI {#ui}
   * [Overview](ui/overview.md)
   * [Select a product profile](ui/browse.md)

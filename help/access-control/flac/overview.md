@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;field level access control;FLAC
 title: Field Level Access Control overview
-description:
+description: This document provides information on Field Level Access Control in Adobe Experience Platform
 hide: true
 hidefromtoc: true
 ---
