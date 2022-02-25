@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mailchimp Connector Overview
 topic-legacy: overview
 description: Learn how to connect Mailchimp to Adobe Experience Platform using APIs or the user interface.
+exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
 ---
 # [!DNL Mailchimp] connector
-
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -21,9 +21,15 @@ The documentation below provides information on how to connect [!DNL Mailchimp] 
 ## Connect [!DNL Mailchimp Campaigns] to Platform
 
 * [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Platform using APIs](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
+
+<!--
 * [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+-->
 
 ## Connect [!DNL Mailchimp Members] to Platform
 
 * [Create a source connection to bring [!DNL Mailchimp Members] data to Platform using APIs](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
+
+<!--
 * [Create a source connection to bring [!DNL Mailchimp Members] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+-->

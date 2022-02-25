@@ -19,6 +19,10 @@ This page lists all the information you need to provide when submitting or updat
 * (For productized integrations only) a documentation PR (pull request), following the instructions described in the the [self-service documentation process](./docs-framework/documentation-instructions.md).
 * An image file which will be displayed as a logo for your destination card in the Experience Platform destinations catalog.
 
+>[!NOTE]
+>
+>Adobe's standard response time to review destination publish requests is 5 business days.
+
 You can find detailed information about each item in the sections below:
 
 ## Use case description
@@ -31,6 +35,7 @@ Provide a description of the use cases that your destination solves for Experien
 ## Test results after using the test destination API
 
 Provide test results after using the [test destination API](./test-destination.md) endpoint to perform an HTTP call to your destination. This includes:
+
 * The complete API request (headers and body) made to your destination endpoint, using the testing API.
 * The API response received from your destination endpoint.
 

@@ -4,8 +4,10 @@ solution: Experience Platform
 title: Create a MailChimp Members source connection using Platform UI
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp Members using Platform UI.
+hide: true
+hidefromtoc: true
+exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
 ---
-
 # Create a [!DNL Mailchimp Members] source connection using Platform UI
 
 This tutorial provides steps for creating a [!DNL Mailchimp] source connector to ingest [!DNL Mailchimp Members] data to Adobe Experience Platform using the user interface.
