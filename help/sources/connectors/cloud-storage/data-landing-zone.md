@@ -66,6 +66,39 @@ Once you have selected the file you want to upload, you must then identify the [
 
 ![upload-files](../../images/tutorials/create/dlz/upload-files.png)
 
+## Upload files to your [!DNL Data Landing Zone] using the command line interface
+
+You can also use the command line interface of your device and access upload files to your [!DNL Data Landing Zone].
+
+### Upload a file using Bash
+
+The following example uses Bash and cURL to upload a file to a [!DNL Data Landing Zone] with the [!DNL Azure Blob Storage] REST API:
+
+```shell
+# Set Azure Blob-related settings
+DATE_NOW=$(date -Ru | sed 's/\+0000/GMT/')
+AZ_VERSION="2018-03-28"
+AZ_BLOB_URL="<URL TO BLOB ACCOUNT>"
+AZ_BLOB_CONTAINER="<BLOB CONTAINER NAME>"
+AZ_BLOB_TARGET="${AZ_BLOB_URL}/${AZ_BLOB_CONTAINER}"
+AZ_SAS_TOKEN="<SAS TOKEN, STARTING WITH ? AND ENDING WITH %3D>"
+
+# Path to the file we wish to upload
+FILE_PATH="</PATH/TO/FILE>"
+FILE_NAME=$(basename "$FILE_PATH")
+
+# Execute HTTP PUT to upload file (remove '-v' flag to suppress verbose output)
+curl -v -X PUT \
+   -H "Content-Type: application/octet-stream" \
+   -H "x-ms-date: ${DATE_NOW}" \
+   -H "x-ms-version: ${AZ_VERSION}" \
+   -H "x-ms-blob-type: BlockBlob" \
+   --data-binary "@${FILE_PATH}" "${AZ_BLOB_TARGET}/${FILE_NAME}${AZ_SAS_TOKEN}"
+```
+
+### Upload a file using Python
+
+
 ## Connect [!DNL Data Landing Zone] to [!DNL Platform]
 
 The documentation below provides information on how to bring data from your [!DNL Data Landing Zone] container to Adobe Experience Platform using APIs or the user interface.
