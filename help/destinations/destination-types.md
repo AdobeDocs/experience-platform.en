@@ -1,7 +1,6 @@
 ---
 keywords: destinations;destination;destination types
 title: Destination types and categories
-seo-title: Destination types and categories
 description: Learn about the different types and categories of destinations in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
 ---

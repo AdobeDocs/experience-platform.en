@@ -2,9 +2,7 @@
 keywords: activate segment streaming destinations;activate segment streaming destinations;activate data
 title: Activate audience data to streaming segment export destinations
 type: Tutorial
-seo-title: Activate audience data to streaming segment export destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 ---
 # Activate audience data to streaming segment export destinations

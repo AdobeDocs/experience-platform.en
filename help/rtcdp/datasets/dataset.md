@@ -1,9 +1,7 @@
 ---
 keywords: datasets;rtcdp datasets
 title: Datasets in Real-time Customer Data Platform
-seo-title: Overview of datasets in Adobe Experience Platform
 description: Overview of datasets in Adobe Experience Platform
-seo-description: Overview of datasets in Adobe Experience Platform
 exl-id: 86df38d4-820a-4767-a9ed-3b50b2ae709c
 ---
 # Datasets in Real-time Customer Data Platform

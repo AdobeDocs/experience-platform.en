@@ -1,9 +1,7 @@
 ---
 keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
 title: Privacy in Real-time Customer Data Platform
-seo-title: Privacy in Real-time Customer Data Platform
 description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
-seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 ---
 # Privacy in Real-time Customer Data Platform
