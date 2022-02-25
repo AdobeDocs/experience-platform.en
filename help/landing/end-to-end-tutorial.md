@@ -40,9 +40,11 @@ If you use Amazon S3 as your source connector, you can follow the instructions i
 
 For more detailed instructions on source connectors, please read the [source connectors overview](../sources/home.md). To learn more about Flow Service, the API which sources are based off of, please read the [Flow Service API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
+Once your data is brought into Platform through the source connector, customer profiles are automatically created based on the identity data you configured in your XDM schema.
+
 ## Evaluate your data
 
-After ingesting your data into Platform through a source connector, you can evaluate your data by using segmentation. Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. To learn more about segmentation, please read the [segmentation service overview](../segmentation/home.md).
+Once you have successfully generated profiles from your ingested data, you can evaluate your data by using segmentation. Segmentation is the process of defining specific attributes or behaviors shared by a subset of individuals from your profile store, in order to distinguish a marketable group of people from your customer base. To learn more about segmentation, please read the [segmentation service overview](../segmentation/home.md).
 
 ### Create a segment definition
 
