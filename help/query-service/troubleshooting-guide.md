@@ -116,6 +116,64 @@ There are two ways to implement custom attribution:
 
 Yes, you can templatize queries through the use of prepared statements. Prepared statements can optimize performance, and avoid repetitiously re-parsing a query. See the [prepared statements documentation](./sql/prepared-statements.md) for more details.
 
+### How do I retrieve error logs for a query?
+
+To retrieve error logs for a query, you must first use the Query Service API to fetch the query log details. This allows you to find the specific query ID that you wish to investigate.  
+
+First, use the GET command to retrieve multiple queries. Information on how to make a call to the API can be found in the [sample API calls documentation](./api/queries.md#sample-api-calls).
+
+From the response, identify the query you want to investigate and make another GET request using its `queryid`. The response contains an `errors` array. An example of an `errors` array is shown below:
+
+```json
+'rowCount': 0,
+'errors': [
+       {'code': '58000',
+        'message': 'Batch query execution gets : [failed reason ErrorCode: 58000 Batch query execution gets : [Analysis error encountered. Reason: [sessionId: f055dc73-1fbd-4c9c-8645-efa609da0a7b Function [varchar] not defined.]]]',
+        'errorType': 'USER_ERROR'}],
+```
+
+The [Query Service API reference documentation](https://www.adobe.io/experience-platform-apis/references/query-service/) provides more information on all available endpoints.
+
+### What does "Error validating schema" mean?
+
+If you see the "Error validating schema"message, it means that the system is unable to locate a field within the schema. You should read the best practice document for [organizing data assests in Query Service](./best-practices/organize-data-assets.md) followed by the [Create Table As Select documentation](./sql/syntax.md#create-table-as-select).  
+
+The following example demonstrates the use of a CTAS syntax and a struct datatype:
+
+```sql
+CREATE TABLE table_name WITH (SCHEMA='schema_name')
+
+AS
+
+ SELECT '1' as _id,
+
+ STRUCT
+
+  ('2021-02-17T15:39:29.0Z' AS taskActualCompletionDate,
+
+    '2020-09-09T21:21:16.0Z' AS taskActualStartDate,
+
+    'Consulting' AS taskdesctiption,
+
+    '5f5937c10011e09b89666c52d9a8c564' AS taskguid,
+
+    'Partner Consulting Engagement' AS taskname, 
+
+    '2020-09-09T15:00:00.0Z' AS taskPlannedStartDate,
+
+    '2021-02-15T11:00:00.0Z' AS taskPlannedCompletionDate
+
+  ) AS _workfrontshared ;
+```
+
+<!-- Q) Why this example contain actual values? Does this scale? It seems very specific-->
+
+### How do I quickly process the new data coming into the system every day?
+
+The [SNAPSHOT](.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./sample-queries/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result it increases processing efficiency and can be used with both streaming and batch data processing.
+
+
+
 <!-- Below is original content -->
 
 ## Exporting Data {#exporting-data}
