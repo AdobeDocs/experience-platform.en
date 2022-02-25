@@ -62,6 +62,28 @@ One or more of the following solutions are recommended in case of queries timing
 
 No. Query Service has an autoscaling capability that ensures concurrent queries do not have any noticeable impact on the performance of the service.
 
+### How do I select a column from a hierarchical dataset? How do I find what those columns are?
+
+<!-- I need elaboration on this question. It needs to be reworded. Why do users need to 'select a column'? Does it mean how do i managed nested datasets? -->
+
+See the documentation for full guidance on [how to work with nested data structures](./best-practices/nested-data-structures.md) using the Query Editor or a third party client.
+
+The following steps provide guidance on how to display a tabular view of a dataset, including all nested fields and columns, in a flattened form through the UI:
+
+- After logging into Experience Platform, navigate to [!UICONTROL Datasets] in the left rail of the UI.
+- The datasets [!UICONTROL Browse] tab opens. Either use the search bar to refine the available options or select a dataset from the list displayed.
+- The [!UICONTROL Datasets activity] screen appears. Select [!UICONTROL Preview] to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](.md#preview-a-dataset)
+
+![The XDM schema and tabular view of the flattened data.](./images/troubleshooting/flattened-dataset.png)
+
+- Select any field from the schema to display its contents in a flattened column.
+
+### How do I speed up a query on a dataset that contains arrays?
+
+To improve the performance of queries on datasets containing arrays, you should [explode the array](https://spark.apache.org/docs/latest/api/sql/index.html#explode) as a [CTAS query](./sql/syntax.md#create-table-as-select) on runtime, and then explore it for further for opportunities to improve its processing time.
+
+<!-- Below is original content -->
+
 ## Exporting Data {#exporting-data}
 
 This section includes information on exporting data to activated destinations.
