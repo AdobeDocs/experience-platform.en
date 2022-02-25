@@ -322,13 +322,22 @@ Specify each level in the hierarchy.
 
 If desired, configure additional hierarchies.
 
+#### Page name
+
+This value refers to the name of a given page, and corresponds to the [`pageName` variable](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
+
+>[!IMPORTANT]
+>
+>In Adobe Experience Manager implementations, this variable tells AEM where to store the fetched Analytics report. To ensure that reports are properly persisted, the page name string must be formatted as a colon-separated path to the site.
+>
+>For example, a webpage at `content/we-retail/language-masters/en/men.html` should have page name value of `content:we-retail:language-masters:en:men`.
+
 #### Other information
 
 Specify other information used by your pages.
 
 These settings include:
 
-* Page Name
 * Page URL
 * Server
 * Channel
