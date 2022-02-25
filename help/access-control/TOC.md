@@ -10,13 +10,7 @@ feature: Access Control
 
 * [Access control overview](home.md)
 * Field Level Access Control {#flac}
-  * [Field Level Access Control Overview]
-  * FLAC API
-    * Getting started
-    * 
-  * Administration UI
-    * Getting started
-    *
+  * [Overview](flac/overview.md)
   * [Troubleshooting guide]
 * Access control UI {#ui}
   * [Overview](ui/overview.md)
