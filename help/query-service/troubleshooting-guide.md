@@ -72,7 +72,7 @@ The following steps provide guidance on how to display a tabular view of a datas
 
 - After logging into Experience Platform, navigate to [!UICONTROL Datasets] in the left rail of the UI.
 - The datasets [!UICONTROL Browse] tab opens. Either use the search bar to refine the available options or select a dataset from the list displayed.
-- The [!UICONTROL Datasets activity] screen appears. Select [!UICONTROL Preview] to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](.md#preview-a-dataset)
+- The [!UICONTROL Datasets activity] screen appears. Select [!UICONTROL Preview] to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
 
 ![The XDM schema and tabular view of the flattened data.](./images/troubleshooting/flattened-dataset.png)
 
@@ -81,6 +81,40 @@ The following steps provide guidance on how to display a tabular view of a datas
 ### How do I speed up a query on a dataset that contains arrays?
 
 To improve the performance of queries on datasets containing arrays, you should [explode the array](https://spark.apache.org/docs/latest/api/sql/index.html#explode) as a [CTAS query](./sql/syntax.md#create-table-as-select) on runtime, and then explore it for further for opportunities to improve its processing time.
+
+### Why is my CTAS query still processing after many hours for only a small number of rows?
+
+If the query has taken a long time on a very small dataset, please contact customer support.
+
+There can be any number of reasons for a query to be stuck while processing. To determine the exact cause requires an in-depth analysis on a case-by-case basis. [Contact Adobe customer support](#customer-support) to being this process.
+
+### How do I contact Adobe customer support? {#customer-support}
+
+[A complete list of Adobe customer support telephone numbers](https://helpx.adobe.com/ca/contact/phone.html) is available on the Adobe help page. Alternatively help can be found online by completing the following steps:
+
+- Navigate to [https://www.adobe.com/](https://www.adobe.com/) in your web browser.
+- On the right side of the top navigation bar, select **[!UICONTROL Sign In]**.
+- Use your Adobe ID and password that is registered with your Adobe license.
+- Select **[!UICONTROL Help & Support]** from the top navigation bar. 
+
+A dropdown banner appears containing a [!UICONTROL Help and support] section. Select **[!UICONTROL Contact us]** to open the Adobe Customer Care Virtual Assistant, or select **[!UICONTROL Enterprise support]** for dedicated help for large organizations.
+
+### How do I implement a sequential series of jobs, without executing subsequent jobs if the previous job does not completed successfully? 
+
+The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
+
+See the [anonymous block documentation](./sample-queries/anonymous-block.md) for more details.
+
+### How do I implement custom attribution in Query Service?
+
+There are two ways to implement custom attribution:
+
+1. Use a combination of existing [Adobe defined functions](./sql/adobe-defined-functions.md) to identify if the use-case needs are met. 
+1. If the previous suggestion doesn’t meet your use case, you should use a combination of [window functions](./sql/adobe-defined-functions.md#window-functions). Window functions look at all the events in a sequence. They also allow you to review the historic data and can be used in any combination.
+
+### Can I templatize my queries so that I can easily re-use them?
+
+Yes, you can templatize queries through the use of prepared statements. Prepared statements can optimize performance, and avoid repetitiously re-parsing a query. See the [prepared statements documentation](./sql/prepared-statements.md) for more details.
 
 <!-- Below is original content -->
 
