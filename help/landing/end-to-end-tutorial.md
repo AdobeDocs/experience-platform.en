@@ -86,4 +86,4 @@ You can also monitor Platform activities through the use of statistical metrics 
 
 ## Next steps
 
-By reading this tutorial, you have been given a basic introduction to a simple end-to-end flow for Platform. To learn more about Adobe Experience Platform, please read the [Platform overview](./home.md). To learn more about using the Platform API and the Platform UI, please read the [Platform UI guide](./ui-guide.md) and the [Platform API guide](./api-guide.md) respectively.
+By reading this tutorial, you have been given a basic introduction to a simple end-to-end flow for Platform. To learn more about Adobe Experience Platform, please read the [Platform overview](./home.md). To learn more about using the Platform UI and the Platform API, please read the [Platform UI guide](./ui-guide.md) and the [Platform API guide](./api-guide.md) respectively.
