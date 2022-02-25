@@ -112,6 +112,10 @@ The following table outlines the accepted values for `eventType`, along with the
 |`directMarketing.emailDelivered` | An email was successfully delivered to person's email service |
 |`directMarketing.emailOpened` | A person opened a marketing email. |
 |`directMarketing.emailUnsubscribed` | A person unsubscribed from a marketing email. |
+|`inappmessageTracking.dismiss` | An in-app message was dismissed. |
+|`inappmessageTracking.display` | An in-app message was displayed. |
+|`inappmessageTracking.interact` | An in-app message was interacted with. |
+|`leadOperation.callWebhook` | A webhook was called in response to a lead. |
 |`leadOperation.convertLead` | A lead was converted. |
 |`leadOperation.interestingMoment` | An interesting moment was recorded for a person. |
 |`leadOperation.newLead` | A lead was created. |

@@ -14,6 +14,7 @@ This page lists and describes all the API operations that you can perform using 
 After you have configured and tested your destination, you can submit it to Adobe for review and publishing.
 
 Use the publish destinations API endpoint to submit a publishing request when:
+
 * As a Destination SDK partner, you want to make your productized destination available across all Experience Platform organizations for all Experience Platform customers to use;
 * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes.
 
@@ -26,7 +27,6 @@ Before continuing, please review the [getting started guide](./getting-started.m
 You can submit a destination configuration for publishing by making a POST request to the `/authoring/destinations/publish` endpoint.
 
 **API format**
-
 
 ```http
 POST /authoring/destinations/publish
@@ -72,7 +72,6 @@ You can retrieve a list of all destinations submitted for publishing for your IM
 
 **API format**
 
-
 ```http
 GET /authoring/destinations/publish
 ```
@@ -94,7 +93,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 The following response returns HTTP status 200 with a list of destinations submitted for publishing that you have access to, based on the IMS Organization ID and sandbox name that you used. One `configId` corresponds to the publish request for one destination.
 
 ```json
-
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "publishDetailsList":[
@@ -109,7 +107,6 @@ The following response returns HTTP status 200 with a list of destinations submi
       }
    ]
 }
-    
 ```
 
 |Parameter | Type | Description|
@@ -127,7 +124,6 @@ The following response returns HTTP status 200 with a list of destinations submi
 You can update the allowed organizations in an existing destination publish request by making a PUT request to the `/authoring/destinations/publish` endpoint and providing the ID of the destination for which you want to update the allowed organizations. In the body of the call, provide the updated allowed organizations.
 
 **API format**
-
 
 ```http
 PUT /authoring/destinations/publish/{DESTINATION_ID}
@@ -165,7 +161,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 You can retrieve detailed information about a specific destination publish request by making a GET request to the `/authoring/destinations/publish` endpoint and providing the ID of the destination for which you want to retrieve the publishing status.
 
 **API format**
-
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}
