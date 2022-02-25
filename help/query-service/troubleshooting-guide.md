@@ -32,6 +32,36 @@ One potential causes is the auto-complete feature. The feature processes certain
 
 Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Watch the [Postman setup guide](https://video.tv.adobe.com/v/28832) for step by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with Postman. See the official documentation for [guidance on starting, running, and sharing Postman collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 
+### Is there a limit to the maximum number of rows returned from a query through the UI?
+
+Yes, Query service internally applies a limit of 50000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
+
+### Is there a data size limit for the resulting output from a query?
+
+No, there is no limit on data size. But, there is a query timeout limit of 10 minutes from an interactive session, and if the query is executed as a batch CTAS then a 10-minute timeout is not applicable. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
+
+### How do I bypass the limit on the output number of rows from a SELECT query?
+
+To bypass the output row limit, apply "LIMIT 0" in the query. For example:
+
+```sql
+SELECT * FROM customers LIMIT 0;
+```
+
+### How do I stop my queries from timing out in 10 minutes?
+
+One or more of the following solutions are recommended in case of queries timing out.
+
+- [Convert the query to a CTAS query](./sql/syntax.md#create-table-as-select) and schedule the run. Scheduling a run can be done either [through the UI](./ui/user-guide.md#scheduled-queries) or the [API](./api/scheduled-queries.md#create).
+- Execute the query on a smaller data chunk by applying additional [filter conditions](https://spark.apache.org/docs/latest/api/sql/index.html#filter).
+- [Execute the EXPLAIN command](./sql/syntax.md#explain) to gather more details.
+- Review the statistics of the data within the dataset.
+- Convert the query into a simplified form and re-run using [prepared statements](./sql/prepared-statements.md).
+
+### Is there any issue or impact on Query Service performance if multiple queries run simultaneously?
+
+No. Query Service has an autoscaling capability that ensures concurrent queries do not have any noticeable impact on the performance of the service.
+
 ## Exporting Data {#exporting-data}
 
 This section includes information on exporting data to activated destinations.
