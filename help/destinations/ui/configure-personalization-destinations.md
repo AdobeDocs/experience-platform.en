@@ -9,19 +9,29 @@ exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
 ---
 # Configure personalization destinations for same-page and next-page personalization
 
-## Overview {#overview}
-
 Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) to enable customers to create and target audience segments at high scale, in real time.
 
 This capability helps you configure same-page and next-page personalization use cases.
 
 This article provides step-by-step instructions on how to configure Experience Platform and your personalization destinations for these use cases.
 
-## Step 1: Configure an Experience Platform Web SDK datastream {#configure-datastream}
+Additionally, watch the video below for an overview of the end-to-end configuration process.
 
-The first step in configuring your personalization use case is to configure a [!DNL Web SDK datastream].
+>[!VIDEO](https://video.tv.adobe.com/v/340091/)
 
-Follow the instructions described in the [datastream configuration](../../edge/fundamentals/datastreams.md) documentation.
+>[!NOTE]
+>
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the configuration steps described in the sections below.
+
+## Step 1: Configure a datastream in the Data Collection UI {#configure-datastream}
+
+The first step in setting up your personalization destination is to configure a datastream for the Experience Platform Web SDK. This is done in the Data Collection UI. 
+
+When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]** make sure that both **[!UICONTROL Edge Segmentation]** and **[!UICONTROL Personalization Destinations]** are selected.
+
+![Datastream configuration](../assets/ui/configure-personalization-destinations/datastream-config.png)
+
+For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/fundamentals/datastreams.md).
 
 ## Step 2: Configure your personalization destination {#configure-destination}
 
