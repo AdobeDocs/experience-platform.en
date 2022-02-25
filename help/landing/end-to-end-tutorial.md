@@ -48,25 +48,25 @@ Once you have successfully generated profiles from your ingested data, you can e
 
 ### Create a segment definition
 
-Firstly, you will need to create a segment definition to cluster your customers to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the UI guide on using the [Segment Builder](../segmentation/ui/segment-builder.md) or the API tutorial on [creating a segment](../segmentation/tutorials/create-a-segment.md).
+To get started, you must create a segment definition to cluster your customers to create your target audience. A segment definition is a collection of rules that you can use to define the audience you want to target. To create a segment definition, you can follow the instructions in either the UI guide on using the [Segment Builder](../segmentation/ui/segment-builder.md) or the API tutorial on [creating a segment](../segmentation/tutorials/create-a-segment.md).
 
-Ensure that once you've created a segment definition, that you keep note of the segment definition ID.
+Once you've created a segment definition, ensure that you keep note of the segment definition ID.
 
 ### Evaluate your segment definition
 
 After creating your segment definition, you can either create a segment job to evaluate the segment as a one-time instance or create a schedule to evaluate the segment on an ongoing basis.
 
-To evaluate a segment definition on demand, you will need to create a segment job. A segment job is an asynchronous process that creates a new audience segment, based on the referred segment definition and merge policies. Merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be used to create the customer profile. To learn how to work with merge policies, see the [merge policies UI guide](../profile/merge-policies/ui-guide.md).
+To evaluate a segment definition on demand, you can create a segment job. A segment job is an asynchronous process that creates a new audience segment based on the referred segment definition and merge policies. A merge policy is a set of rules that Platform uses to determine what data will be used to create customer profiles, and which data will be prioritized when there are discrepancies between sources. To learn how to work with merge policies, see the [merge policies UI guide](../profile/merge-policies/ui-guide.md).
 
-Once the segment job is created and evaluated, you can get information about the segment, such as errors that may have occurred during processing or the size of your audience. To learn how to create a segment job, including all the details you need to provide, please read the [segment job developer guide](../segmentation/api/segment-jobs.md).
+Once the segment job is created and evaluated, you can get information about the segment, such as the size of your audience or errors that may have occurred during processing. To learn how to create a segment job, including all the details you need to provide, please read the [segment job developer guide](../segmentation/api/segment-jobs.md).
 
-To evaluate a segment definition on an ongoing basis, you will need to create and enable a schedule. A schedule is a tool that can be used to automatically run a segment job once a day at a specified time. To learn how to create and enable a schedule, you can follow the instructions in the API guide on the [schedules endpoint](../segmentation/api/schedules.md).
+To evaluate a segment definition on an ongoing basis, you can create and enable a schedule. A schedule is a tool that can be used to automatically run a segment job once a day at a specified time. To learn how to create and enable a schedule, you can follow the instructions in the API guide on the [schedules endpoint](../segmentation/api/schedules.md).
 
 ## Export your evaluated data to a dataset
 
-After either creating your one-time segment job or your ongoing schedule, you can export the results by creating a segment export job. A segment export job is an asynchronous task that sends information about the evaluated segment job's audiences to a dataset. 
+After either creating your one-time segment job or your ongoing schedule, you can export the results by creating a segment export job. A segment export job is an asynchronous task that sends information about the evaluated audience to a dataset.
 
-Before creating an export job, you will first need to create a dataset to export the data to. To learn how to create a dataset, please read the section on [creating a target dataset](../segmentation/tutorials/evaluate-a-segment.md#create-dataset) in the tutorial on evaluating a segment, ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job. To learn how to create an export job, you can follow the instructions in the API guide on the [export jobs endpoint](../segmentation/api/export-jobs.md).
+Before creating an export job, you must first create a dataset to export the data to. To learn how to create a dataset, please read the section on [creating a target dataset](../segmentation/tutorials/evaluate-a-segment.md#create-dataset) in the tutorial on evaluating a segment, ensuring you note the dataset ID after creation. After creating a dataset, you can create an export job. To learn how to create an export job, you can follow the instructions in the API guide on the [export jobs endpoint](../segmentation/api/export-jobs.md).
 
 ## Export your evaluated data to a destination
 
@@ -74,12 +74,12 @@ Alternatively, after creating your one-time segment job or your ongoing schedule
 
 For instructions on how to activate data to batch or email marketing destinations, see the tutorial on [how to activate audience data to batch profile export destinations using the Platform UI](../destinations/ui/activate-batch-profile-destinations.md) and the [guide on how to connect to batch destinations and activate data using the Flow Service API](../destinations/api/connect-activate-batch-destinations.md).
 
-## Monitor your flow of data
+## Monitor your Platform data activities
 
-Platform allows you to track flow of data by utilizing dataflows, which is a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and [!DNL Real-time Customer Profile] before ultimately being activated to destinations. The monitoring dashboard provides you with a visual representation of the journey of a dataflow. To learn how to monitor dataflows within the Platform UI, see the tutorials on [monitoring dataflows for sources](../dataflows/ui/monitor-sources.md) and [monitoring dataflows for destinations](../dataflows/ui/monitor-destinations.md).
+Platform allows you to track how data is being processed through the use of dataflows, which are representations of jobs that move data across Platform's various components. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and [!DNL Real-time Customer Profile] before ultimately being activated to destinations. The monitoring dashboard provides you with a visual representation of the journey of a dataflow. To learn how to monitor dataflows within the Platform UI, see the tutorials on [monitoring dataflows for sources](../dataflows/ui/monitor-sources.md) and [monitoring dataflows for destinations](../dataflows/ui/monitor-destinations.md).
 
-You can monitor Platform activities through the use of statistical metrics and event notifications by using [!DNL Observability Insights]. You can subscribe to alert notifications through Platform UI or send them to a configured webhook. For more details on how to view, enable, disable, and subscribe to available alerts from the Experience Platform UI, see the [Alerts UI guide](../observability/alerts/ui.md). For details on how to receive alerts through webhooks, see the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md).
+You can also monitor Platform activities through the use of statistical metrics and event notifications by using [!DNL Observability Insights]. You can subscribe to alert notifications through Platform UI or send them to a configured webhook. For more details on how to view, enable, disable, and subscribe to available alerts from the Experience Platform UI, see the [[!UICONTROL Alerts] UI guide](../observability/alerts/ui.md). For details on how to receive alerts through webhooks, see the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md).
 
 ## Next steps
 
-By reading this tutorial, you have been introduced to a high level overview for a simple end-to-end flow for Platform. To learn more about Adobe Experience Platform, please read the [Platform overview](./home.md). To learn more about using the Platform API and the Platform UI, please read the [Platform UI guide](./ui-guide.md) and the [Platform API guide](./api-guide.md) respectively.
+By reading this tutorial, you have been given a basic introduction to a simple end-to-end flow for Platform. To learn more about Adobe Experience Platform, please read the [Platform overview](./home.md). To learn more about using the Platform API and the Platform UI, please read the [Platform UI guide](./ui-guide.md) and the [Platform API guide](./api-guide.md) respectively.
