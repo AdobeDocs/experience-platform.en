@@ -166,13 +166,39 @@ AS
   ) AS _workfrontshared ;
 ```
 
-<!-- Q) Why this example contain actual values? Does this scale? It seems very specific-->
-
 ### How do I quickly process the new data coming into the system every day?
 
 The [SNAPSHOT](.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./sample-queries/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result it increases processing efficiency and can be used with both streaming and batch data processing.
 
+### Why is there a difference between the numbers shown in Profile UI and the numbers calculated from the profile export dataset? 
 
+The numbers displayed in the profile dashboard are accurate as of the last snapshot. The numbers generated in the profile export table are dependent entirely on the export query. As a result, querying the number of profiles that qualify for a particular segment is a common cause for this discrepancy.
+
+>[!NOTE]
+>
+>Querying includes historical data, whereas UI only displays the current profile data.
+
+### Why did my query return an empty subset, and what should I do?
+
+The most likely cause is that your query is too narrow in scope. You should systematically remove a section of the `WHERE` clause until you begin seeing some data.
+
+You can also confirm that your dataset contains data by using a small query such as: 
+
+```sql
+SELECT count(1) FROM myTableName
+```
+
+<!-- ### If I want to use [!DNL PSQL] to do a CTAS or INSERT INTO on experience event schema-based dataset, that’s enabled for the profile. Should those events become available in UPS?
+
+You can look at AEP - Query Service - Profile Aggregate to see how you can proceed to have them in UPS.
+
+>[!IMPORTANT]
+>
+>Please make sure that when you use this in implementation for the customer with the appropriate license. Standard AJO, CDP, CJA and Experience Platform licenses do not provide this capability. An Experience Platform Intelligence license is required for these workflows. -->
+
+### Can I sample my data?
+
+This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Platform UI dialogs once the feature is ready for release.
 
 <!-- Below is original content -->
 
