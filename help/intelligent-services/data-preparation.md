@@ -42,7 +42,11 @@ Customer AI and Attribution AI natively support Adobe Analytics data. To use Ado
 
 Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Analytics as a data source followed by a dataset during your instance configuration. All of the required schema field groups and individual fields are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
 
+In case you validate the data you get from Adobe Analytics, it may be different than that of Customer Journey Analytics. Please refer to [this](https://www.adobe.com/go/compare-aa-data-to-cja-data) documentation to understand or navigate through those differences. 
 
+You can use the following query to grab X values and modify it to find the values that you're looking to compare. 
+
+Refer to this documentation to learn more about how Platform and CJA use this data.
 
 >[!IMPORTANT]
 >
