@@ -98,6 +98,47 @@ curl -v -X PUT \
 
 ### Upload a file using Python
 
+The following example uses [!DNL Microsoft's] Python v12 SDK to upload a file to a [!DNL Data Landing Zone]:
+
+>[!TIP]
+>
+>While the example below uses the full SAS URI to connect to an [!DNL Azure Blob] container, you can use other methods and operations to authenticate. See this [[!DNL Microsoft] document on Python v12 SDK](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) for more information.
+
+```py
+import os
+from azure.storage.blob import ContainerClient
+
+try:
+    # Set Azure Blob-related settings
+    sasUri = "<SAS URI>"
+    srcFilePath = "<FULL PATH TO FILE>" 
+    srcFileName = os.path.basename(srcFilePath)
+
+    # Connect to container using SAS URI
+    containerClient = ContainerClient.from_container_url(sasUri)
+
+    # Upload file to Data Landing Zone with overwrite enabled
+    with open(srcFilePath, "rb") as fileToUpload:
+        containerClient.upload_blob(srcFileName, fileToUpload, overwrite=True)
+
+except Exception as ex:
+    print("Exception: " + ex.strerror)
+```
+
+### Upload a file using [!DNL AzCopy]
+
+The following example uses [!DNL Microsoft's] [!DNL AzCopy] utility to upload a file to a [!DNL Data Landing Zone]:
+
+>[!TIP]
+>
+>While the example below is using the `copy` command, you can use other commands and options to upload a file to your [!DNL Data Landing Zone], using [!DNL AzCopy]. See this [[!DNL Microsoft AzCopy] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) for more information.
+
+```bat
+set sasUri=<FULL SAS URI, PROPERLY ESCAPED>
+set srcFilePath=<PATH TO LOCAL FILE(S); WORKS WITH WILDCARD PATTERNS>
+
+azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
+```
 
 ## Connect [!DNL Data Landing Zone] to [!DNL Platform]
 
