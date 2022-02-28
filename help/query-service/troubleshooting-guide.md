@@ -66,7 +66,7 @@ No. Query Service has an autoscaling capability that ensures concurrent queries 
 
 <!-- I need elaboration on this question. It needs to be reworded. Why do users need to 'select a column'? Does it mean how do i managed nested datasets? -->
 
-See the documentation for full guidance on [how to work with nested data structures](./best-practices/nested-data-structures.md) using the Query Editor or a third party client.
+See the documentation for full guidance on [how to work with nested data structures](./best-practices/nested-data-structures.md) using the Query Editor or a third-party client.
 
 The following steps provide guidance on how to display a tabular view of a dataset, including all nested fields and columns, in a flattened form through the UI:
 
@@ -116,7 +116,7 @@ There are two ways to implement custom attribution:
 
 Yes, you can templatize queries through the use of prepared statements. Prepared statements can optimize performance, and avoid repetitiously re-parsing a query. See the [prepared statements documentation](./sql/prepared-statements.md) for more details.
 
-### How do I retrieve error logs for a query?
+### How do I retrieve error logs for a query? {#error-logs}
 
 To retrieve error logs for a query, you must first use the Query Service API to fetch the query log details. This allows you to find the specific query ID that you wish to investigate.  
 
@@ -168,7 +168,7 @@ AS
 
 ### How do I quickly process the new data coming into the system every day?
 
-The [SNAPSHOT](.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./sample-queries/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result it increases processing efficiency and can be used with both streaming and batch data processing.
+The [SNAPSHOT](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./sample-queries/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result it increases processing efficiency and can be used with both streaming and batch data processing.
 
 ### Why is there a difference between the numbers shown in Profile UI and the numbers calculated from the profile export dataset? 
 
@@ -200,15 +200,85 @@ You can look at AEP - Query Service - Profile Aggregate to see how you can proce
 
 This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Platform UI dialogs once the feature is ready for release.
 
-<!-- Below is original content -->
+### What helper functions are supported by Query Service?
+
+Query Service provides several built-in Spark SQL helper functions to extend SQL functionality. See the document for a complete list of the [Spark SQL functions supported by Query Service](./sql/spark-sql-functions.md).
+
+### What should I do if my scheduled query fails?
+
+Please check the logs to find out the details of the error. Please see the FAQ section on [finding errors within logs](#error-logs) for more details.
+
+<!--
+https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html?lang=en#scheduled-queries
+What do the instructions below mean?: 
+ -->
+
+<!-- Follow the steps as suggested below:- 
+- Go to log
+- Click on query
+- You will find the metadata along with the error -->
+
+### What does the "Session Limit Reached" error mean?
+
+<!-- Need more details for below -->
+
+"Session Limit Reached" means that the maximum number of Query Service sessions allowed in your organization has been reached. Please connect with your organization’s Adobe Experience Platform administrator.
+
+### How does the query log handle queries to a a deleted dataset? 
+
+Query Service never deletes query history. This means that any queries referencing a deleted dataset would return "No valid dataset" as a result.
 
 ## Exporting Data {#exporting-data}
 
-This section includes information on exporting data to activated destinations.
+This section provides information on exporting data and limits.
+
+### Is there a way to extract data from Query Service after query processing and save the results in a CSV file?
+
+Yes, data can be extracted from Query Service. There is also the option to store the results in CSV format via a SQL command. 
+
+Using a PSQL client, there are two ways to achieve this. You can use the `COPY TO` command or the following example statement format:
+
+```sql
+SELECT column1, column2 
+FROM <table_name>  
+\g <table_name>.out
+```
+
+### Can I extract the content of the final dataset that has been ingested through CTAS queries (assuming these are larger quantities of data such as Terabytes)? 
+
+No. There is currently no feature available for the extraction of ingested data.
 
 ## Third-party tools {#third-party-tools}
 
 This section includes information on the use of third-party tools such as PSQL and Power BI. 
+
+### Can I connect Query Service to a third-party tool? 
+
+Yes, you can connect multiple third-party desktop clients to Query Service. See the documentation for [full details about the available clients and how to connect them to Query service](./clients/overview.md).   
+
+### Is there a way to connect Query Service once for continuous use with the a third-party tool?
+
+Yes, third-party desktop clients can be connected to Query Service through a one-time setup of  non-expiring credentials. Non-expiring credentials can be generated by an authorized user and will receive them in a JSON file downloaded to their local machine. Full [guidance on how to create and download non-expiring credentials](./ui/credentials.md#non-expiring-credentials) can be found in the documentation.
+
+### What kind of third-party SQL editors can I connect to Query Service Editor?
+
+Any third-party SQL editor that is PSQL or [!DNL Postgres] client compliant can be connected to the Query Service Editor.
+
+### Can I connect the Power BI tool to Query Service?
+
+Yes, you can connect Power BI to Query Service.
+
+### Why do the dashboards take a long time to load when connected to Query Service?
+
+When the system is connected to Query Service, it is connected to an interactive or batch processing engine. This can result in a longer loading time to reflect processed data. 
+
+If you would like to improve user interactivity within the dashboards, you should implement a Business Intelligence (BI) server as a caching layer between Query Service and BI tools. Generally, most BI tools have an additional offering for a server.
+
+The purpose of adding the cache server layer is to cache the data from Query Service and utilize the same for dashboards and speed up the response. This occurs as the results for queries that are executed once in that day would be cached in the BI server. The caching server would then serves these results and for any user with the same query.
+
+### Is it possible to access the AEP query service using the pgAdmin connection tool? 
+
+No, pgAdmin connectivity is not supported. A [list of available third-party clients and instructions on how to connect them to Query Service](./clients/overview.md) can be found in the documentation.
 
 ### How can I get only the metadata for a query?
 
