@@ -121,157 +121,17 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in Platform, a target XDM schema must be created to structure the source data according to your needs. The target XDM schema is then used to create a Platform dataset in which the source data is contained. This target XDM schema also extends the [!DNL XDM Individual Profile] class.
+In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-**API format**
+For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../xdm/api/schemas.md).
 
-```http
-POST /tenant/schemas
-```
+## Create a target dataset {#target-dataset}
 
-**Request**
+A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
-The following example request creates an XDM schema that extends the XDM [!DNL Individual Profile] class.
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "type": "object",
-        "title": "Database target XDM schema",
-        "description": "Database target XDM schema",
-        "allOf": [
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile"
-            },
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
-            },
-            {
-                "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
-            }
-        ],
-        "meta:containerId": "tenant",
-        "meta:resourceType": "schemas",
-        "meta:xdmType": "object",
-        "meta:class": "https://ns.adobe.com/xdm/context/profile"
-    }'
-```
-
-**Response**
-
-A successful response returns details of the newly created schema including its unique identifier (`$id`). This ID is required in later steps to create a target dataset, mapping, and dataflow.
-
-```json
-{
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
-    "meta:altId": "_{TENANT_ID}.schemas.52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
-    "meta:resourceType": "schemas",
-    "version": "1.0",
-    "title": "Database target XDM schema",
-    "type": "object",
-    "description": "Database target XDM schema",
-    "allOf": [
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        }
-    ],
-    "refs": [
-        "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "imsOrg": "{IMS_ORG}",
-    "meta:extensible": false,
-    "meta:abstract": false,
-    "meta:extends": [
-        "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/xdm/common/auditable",
-        "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "meta:xdmType": "object",
-    "meta:registryMetadata": {
-        "repo:createdDate": 1612308675206,
-        "repo:lastModifiedDate": 1612308675206,
-        "xdm:createdClientId": "{CREATED_CLIENT_ID}",
-        "xdm:lastModifiedClientId": "{MODIFIEDD_CLIENT_ID}",
-        "xdm:createdUserId": "{CREATED_USER_ID}",
-        "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "7c5c09e62421e6b172c925f059ac524a99f348dd837b5f13abd77ee91aa6bb61",
-        "meta:globalLibVersion": "1.18.4"
-    },
-    "meta:class": "https://ns.adobe.com/xdm/context/profile",
-    "meta:containerId": "tenant",
-    "meta:sandboxId": "{SANDBOX_ID}",
-    "meta:sandboxType": "production",
-    "meta:tenantNamespace": "_{TENANT_ID}"
-}
-```
-
-## Create a target dataset
-
-A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/experience-platform-apis/references/catalog/), providing the ID of the target schema within the payload.
-
-**API format**
-
-```http
-POST /dataSets
-```
-
-**Request**
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/catalog/dataSets?requestDataSource=true' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Database target dataset",
-        "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
-            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
-        }
-    }'
-```
-
-| Property | Description |
-| -------- | ----------- |
-| `schemaRef.id` | The ID of the target XDM schema. |
-| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
-
-**Response**
-
-A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. The dataset ID is a read-only, system-generated string that is used to reference the dataset in API calls. Store the target dataset ID as it is required in later steps to create a target connection and a dataflow.
-
-```json
-[
-    "@/dataSets/6019e0e7c5dcf718db5ebc71"
-]
-```
+For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../catalog/api/create-dataset.md).
 
 ## Create a target connection {#target-connection}
 
