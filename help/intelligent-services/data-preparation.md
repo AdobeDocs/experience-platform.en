@@ -44,10 +44,9 @@ Once the source connector is streaming your data into Experience Platform, you a
 
 If and when you validate the data you get from Adobe Analytics, it may be different from that of Customer Journey Analytics. Please refer to [this](https://www.adobe.com/go/compare-aa-data-to-cja-data) documentation to understand or navigate through those differences. 
 
-Use the following query to grab X values and modify it to find the values that you're looking to compare. 
+Use the following query to fetch post values coming in from the Adobe Analytics source connector and modify them to find the mid values in AEP that you're looking to compare. 
 
-```
-SELECT channel.typeAtSource as typeAtSource, 
+```SELECT channel.typeAtSource as typeAtSource, 
        Count(_id) AS Records 
 FROM  df_hotel
 WHERE timestamp>=from_utc_timestamp('2021-05-15','UTC')
