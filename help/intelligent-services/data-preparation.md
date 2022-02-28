@@ -44,18 +44,17 @@ Once the source connector is streaming your data into Experience Platform, you a
 
 If and when you validate the data you get from Adobe Analytics, it may be different from that of Customer Journey Analytics. Please refer to [this](https://www.adobe.com/go/compare-aa-data-to-cja-data) documentation to understand or navigate through those differences. 
 
-You can use the following query to grab X values and modify it to find the values that you're looking to compare. 
+Use the following query to grab X values and modify it to find the values that you're looking to compare. 
 
 ```
-SELECT Substring(from_utc_timestamp(timestamp,'{timeZone}'), 1, 10) as Day, \ 
-        Count(_id) AS Records 
-        FROM  {dataset} \ 
-        WHERE timestamp>=from_utc_timestamp('{fromDate}','UTC') \ 
-        AND timestamp<from_utc_timestamp('{toDate}','UTC') \ 
-        AND timestamp IS NOT NULL \ 
-        AND enduserids._experience.aaid.id IS NOT NULL  \ 
-        GROUP BY Day \ 
-        ORDER BY Day;
+SELECT channel.typeAtSource as typeAtSource, 
+       Count(_id) AS Records 
+FROM  df_hotel
+WHERE timestamp>=from_utc_timestamp('2021-05-15','UTC')
+        AND timestamp<from_utc_timestamp('2022-01-10','UTC')
+        AND timestamp IS NOT NULL
+        AND enduserids._experience.aaid.id IS NOT NULL
+GROUP BY channel.typeAtSource
 ```        
 
 Refer to [this documentation](https://www.adobe.com/go/compare-aa-data-to-cja-data) to learn more about how Platform and CJA use this data.
