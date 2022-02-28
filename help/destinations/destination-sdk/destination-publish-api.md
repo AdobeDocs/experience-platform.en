@@ -47,17 +47,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "destinationAccess":"LIMITED",
-   "allowedOrgs":[
-      "xyz@AdobeOrg",
-      "lmn@AdobeOrg"
-   ]
+   "allowedOrgs":["*"]
 }
 ```
 
 |Parameter | Type | Description|
 |---------|----------|------|
 |`destinationId` | String | The destination ID of the destination configuration that you are submitting for publishing. Get the destination ID of a destination configuration by using the [destination configuration API reference](./destination-configuration-api.md#retrieve-list).  |
-|`destinationAccess` | String | `ALL` or `LIMITED`. Specify if you want your destination to appear in the catalog for all Experience Platform customers or just for certain organizations. <br> **Note**: If you use `LIMITED`, the destination will be published for your Experience Platform organization only. If you'd like to publish the destination to a subset of Experience Platform organizations for customer testing purposes, please reach out to Adobe support. |
+|`destinationAccess` | String | `ALL` or `LIMITED`. Specify if you want your destination to appear in the catalog for all Experience Platform customers or just for certain organizations. <br> **Important**: The `LIMITED` , the destination will be published for your Experience Platform organization only. If you'd like to publish the destination to a subset of Experience Platform organizations for customer testing purposes, please reach out to Adobe support. |
 |`allowedOrgs` | String | If you use `"destinationAccess":"LIMITED"`, specify the Experience Platform organizations for which the destination will be available. |
 
 {style="table-layout:auto"}
@@ -98,10 +95,7 @@ The following response returns HTTP status 200 with a list of destinations submi
    "publishDetailsList":[
       {
          "configId":"string",
-         "allowedOrgs":[
-            "xyz@AdobeOrg",
-            "lmn@AdobeOrg"
-         ],
+         "allowedOrgs":["*"],
          "status":"TEST",
          "publishedDate":"1630617746"
       }
@@ -149,10 +143,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "destinationAccess":"LIMITED",
-   "allowedOrgs":[
-      "abc@AdobeOrg",
-      "def@AdobeOrg"
-   ]
+   "allowedOrgs":["*"]
 }
 ```
 
@@ -190,10 +181,7 @@ A successful response returns HTTP status 200 with detailed information about th
    "publishDetailsList":[
       {
          "configId":"string",
-         "allowedOrgs":[
-            "xyz@AdobeOrg",
-            "lmn@AdobeOrg"
-         ],
+         "allowedOrgs":["*"],
          "status":"TEST",
          "publishedDate":"string"
       }
