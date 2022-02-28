@@ -24,6 +24,10 @@ When the segment export schedule differs from the segmentation schedule, the pro
 
 See the [Segmentation Service documentation](../segmentation/home.md) for more details.
 
+**When exporting segments to the Google destinations (Google Ads, Google Customer Match), why am I seeing extra numbers appended at the end of the segment names in the Google interface?**
+
+Google requires segment names to be unique. The numbers that you are seeing are [UNIX timestamps](https://www.unixtimestamp.com/) and they are appended to keep the segment names unique, if you mapped the same segment to multiple Google destinations.
+
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 **What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?**
