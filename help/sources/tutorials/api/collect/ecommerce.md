@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;Collect eCommerce data;eCommerce data
 solution: Experience Platform
-title: Collect eCommerce Data using Source Connectors and APIs
+title: Create a Dataflow for E-commerce Sources using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into Platform using source connectors and APIs.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 ---
-# Collect eCommerce data using source connectors and APIs
+# Create a dataflow for E-commerce sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a third-party **[!UICONTROL eCommerce]** system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from an e-commerce source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
-This tutorial requires you to have access to an **[!UICONTROL eCommerce]** system through a valid connection, as well as information about the file you wish to bring into [!DNL Platform] (including the file's path and structure). If you do not have this information, see the tutorial on [exploring an eCommerce system using the Flow Service API](../explore/ecommerce.md) before attempting this tutorial.
+This tutorial requires you to have access to an e-commerce system through a valid connection, as well as information about the file you wish to bring into [!DNL Platform] (including the file's path and structure). If you do not have this information, see the tutorial on [exploring an eCommerce system using the Flow Service API](../explore/ecommerce.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -89,9 +89,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `baseConnectionId`| The connection ID of your **[!UICONTROL eCommerce]** source. |
+| `baseConnectionId`| The connection ID of your e-commerce source. |
 | `params.path`| The path of the source file. |
-| `connectionSpec.id`| The connection specification ID of your **[!UICONTROL eCommerce]** source. |
+| `connectionSpec.id`| The connection specification ID of your e-commerce source. |
 
 **Response**
 
@@ -243,7 +243,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Look up dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an **[!UICONTROL eCommerce]** source.
+A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an e-commerce source.
 
 **API format**
 
@@ -555,7 +555,7 @@ curl -X POST \
 | `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
-| `transformations.params.mappingId`| The mapping ID associated with your **[!UICONTROL eCommerce]** source. |
+| `transformations.params.mappingId`| The mapping ID associated with your e-commerce source. |
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The `frequency` at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. An interval is not required when `frequency` is set as `once` and should be greater than or equal to `15` for other `frequency` values. |
@@ -577,7 +577,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data **[!UICONTROL eCommerce]** on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data e-commerce on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 *   [Real-time Customer Profile overview](../../../../profile/home.md)
 *   [Data Science Workspace overview](../../../../data-science-workspace/home.md)

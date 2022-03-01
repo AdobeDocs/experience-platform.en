@@ -1,21 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
-title: Collect Cloud Storage Data Using Source Connectors and APIs
+title: Create a Dataflow for Cloud Storage Sources Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform using source connectors and APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 ---
-# Collect cloud storage data using source connectors and APIs
+# Create a dataflow for cloud storage sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a cloud storage source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!NOTE]
+>
+>In order to create a dataflow, you must already have a valid base connection ID with any of the following cloud storage sources on Platform:<ul><li>[[!DNL Amazon S3]](../create/cloud-storage/s3.md)</li><li>[[!DNL Apache HDFS]](../create/cloud-storage/hdfs.md)</li><li>[[!DNL Azure Blob]](../create/cloud-storage/blob.md)</li><li>[[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)</li><li>[[!DNL FTP]](../create/cloud-storage/ftp.md)</li><li>[[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)</li><li>[[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)</li><li>[[!DNL SFTP]](../create/cloud-storage/sftp.md)</li></ul>
 
 ## Getting started
 
-This tutorial requires you to have access to a third-party cloud storage through a valid connection and information about the file you wish to bring into Platform, including the file's path and structure. If you do not have this information, see the tutorial on [exploring a third party cloud storage using the [!DNL Flow Service] API](../explore/cloud-storage.md) before attempting this tutorial.
-
-This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
+This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   - [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.

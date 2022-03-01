@@ -1,19 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;marketing automation system;Collect marketing automation data
 solution: Experience Platform
-title: Collect Marketing Automation Data Using Source Connectors and APIs
+title: Create a Dataflow for Marketing Automation Sources Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a marketing automation system and bringing them into Adobe Experience Platform using source connectors and APIs.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 ---
-# Collect marketing automation data using source connectors and APIs
+# Create a dataflow for marketing automation sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a third-party marketing automation system and ingesting it into Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a marketing automation source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!NOTE]
+>
+>In order to create a dataflow, you must already have a valid base connection ID with any of the following marketing automation sources on Platform:<ul><li>[[!DNL HubSpot]](../create/marketing-automation/hubspot.md)</li><li>[[!DNL Mailchimp Campaigns]](../create/marketing-automation/mailchimp-campaign.md)</li><li>[[!DNL Mailchimp Members]](../create/marketing-automation/mailchimp-members.md)</li><li>[[!DNL Salesforce Marketing Cloud]](../create/marketing-automation/salesforce-marketing-cloud.md)</li></ul>
 
 ## Getting started
-
-This tutorial requires you to have access to a third-party marketing automation system through a valid connection and information about the file you wish to bring into Platform, including the file's path and structure. If you do not have this information, see the tutorial on [exploring a third party marketing automation system using the Flow Service API](../explore/marketing-automation.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 

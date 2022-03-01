@@ -1,21 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics;collect customer success;customer success
 solution: Experience Platform
-title: Collect Data From A Customer Success System Using Source Connectors and APIs
+title: Create a Dataflow for Customer Success Sources Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Platform using source connectors and APIs.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 ---
-# Collect data from a customer success system using source connectors and APIs
+# Create a dataflow for customer success sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a third-party customer success system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a customer success source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!NOTE]
+>
+>In order to create a dataflow, you must already have a valid base connection ID with any of the following customer success sources on Platform:<ul><li>[[!DNL Salesforce Service Cloud]](../create/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL ServiceNow]](../create/customer-success/servicenow.md)</li></ul>
 
 ## Getting started
 
-This tutorial requires you to have access to a third-party customer success system through a valid connection and information about the file you wish to bring into [!DNL Platform], including the file's path and structure. If you do not have this information, see the tutorial on [exploring a database or NoSQL system using the Flow Service API](../explore/customer-success.md) before attempting this tutorial.
-
-This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
+This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.

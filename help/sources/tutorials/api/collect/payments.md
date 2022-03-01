@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
-title: Collect Payment Data Using Source Connectors and APIs
+title: Create a Dataflow for Payments Sources Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform using source connectors and APIs.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 ---
-# Collect payment data using source connectors and APIs
+# Create a dataflow for payments sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a third-party payments application and ingesting it into Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a payments source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 

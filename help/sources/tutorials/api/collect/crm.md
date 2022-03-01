@@ -1,19 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;crm;CRM
 solution: Experience Platform
-title: Collect CRM Data Through Source Connectors and APIs
+title: Create a Dataflow for CRM Sources Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party CRM system and bringing them in to Platform using source connectors and APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 ---
-# Collect CRM data using source connectors and APIs
+# Create a dataflow for CRM sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a third-party CRM and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a CRM source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!NOTE]
+>
+>In order to create a dataflow, you must already have a valid base connection ID with any of the following CRM sources on Platform:<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
 
 ## Getting started
-
-This tutorial requires you to have access to a third-party CRM system through a valid connection and information about the table you wish to bring into Platform, including the table's path and structure. If you do not have this information, see the tutorial on [exploring CRM systems using the Flow Service API](../explore/crm.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 

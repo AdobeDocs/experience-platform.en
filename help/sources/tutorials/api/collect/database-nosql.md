@@ -1,21 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics;database database;third party database
 solution: Experience Platform
-title: Collect Data From a Database Using Source Connectors and APIs
+title: Create a Dataflow for Database Sources Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a database and ingesting it into Platform using source connectors and APIs.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 ---
-# Collect data from a database using source connectors and APIs
+# Create a dataflow for database sources using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a third-party database and ingesting it into Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a database source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!NOTE]
+>
+>In order to create a dataflow, you must already have a valid base connection ID with any of the following cloud storage sources on Platform:<ul><li>[[!DNL Amazon Redshift]](../create/databases/redshift.md)</li><li>[[!DNL Apache Hive on Azure HDInsights]](../create/databases/hive.md)</li><li>[[!DNL Apache Spark on Azure HDInsights]](../create/databases/spark.md)</li><li>[[!DNL Azure Data Explorer]](../create/databases/data-explorer.md)</li><li>[[!DNL Azure Synapse Analytics]](../create/databases/synapse-analytics.md)</li><li>[[!DNL Azure Table Storage]](../create/databases/ats.md)</li><li>[[!DNL Couchbase]](../create/databases/couchbase.md)</li><li>[[!DNL Google BigQuery]](../create/databases/bigquery.md)</li><li>[[!DNL Greenplum]](../create/databases/greenplum.md)</li><li>[[!DNL HP Vertica]](../create/databases/hp-vertica.md)</li><li>[[!DNL IBM DB2]](../create/databases/ibm-db2.md)</li><li>[[!DNL MariaDB]](../create/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../create/databases/sql-server.md)</li><li>[[!DNL MySQL]](../create/databases/mysql.md)</li><li>[[!DNL Oracle]](../create/databases/oracle.md)</li><li>[[!DNL Phoenix]](../create/databases/phoenix.md)</li><li>[[!DNL PostgreSQL]](../create/databases/postgres.md)</li><li>[[!DNL Snowflake]](../create/databases/snowflake.md)</li></ul>
 
 ## Getting started
 
-This tutorial requires you to have a valid connection to a database, as well as information about the file you wish to bring into Platform (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a database using the Flow Service API](../explore/database-nosql.md) before attempting this tutorial.
-
-This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
+This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.

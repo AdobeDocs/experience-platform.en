@@ -1,19 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
 solution: Experience Platform
-title: Collect Protocols Data Using Source Connectors and APIs
+title: Create a Dataflow for Protocols Sources Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a protocols application and ingesting it into Platform using source connectors and APIs.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 ---
-# Collect protocols data using source connectors and APIs
+# Create a dataflow for protocols sources Using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a third-party protocol application and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+This tutorial covers the steps for retrieving data from a protocols source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!NOTE]
+>
+>In order to create a dataflow, you must already have a valid base connection ID with any of the following protocols sources on Platform:<ul><li>[Generic OData](../create/protocols/odata.md)</li><li>[Generic REST](../create/protocols/generic-rest.md)</li></ul>
 
 ## Getting started
 
-This tutorial requires you to have access to a protocol system through a valid base connection and information about the file you wish to bring into Platform, including the table's path and structure. If you do not have this information, see the tutorial on [exploring protocol systems using the Flow Service API](../explore/protocols.md) before attempting this tutorial.
+This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
