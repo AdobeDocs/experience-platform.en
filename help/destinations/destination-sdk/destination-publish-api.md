@@ -9,9 +9,9 @@ exl-id: 0564a132-42f4-478c-9197-9b051acf093c
 >
 >**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations/publish` 
 
-This page lists and describes all the API operations that you can perform using the `/authoring/destinations/publish` API endpoint. 
+This page lists and describes all the API operations that you can perform using the `/authoring/destinations/publish` API endpoint.
 
-After you have configured and tested your destination, you can submit it to Adobe for review and publishing.
+After you have configured and tested your destination, you can submit it to Adobe for review and publishing. Read [Submit for review a destination authored in Destination SDK](./submit-destination.md) for all the other steps you need to do as part of the destination submission process.
 
 Use the publish destinations API endpoint to submit a publishing request when:
 
@@ -46,7 +46,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -d '
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "destinationAccess":"LIMITED",
+   "destinationAccess":"ALL",
    "allowedOrgs":["*"]
 }
 ```
@@ -142,7 +142,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
  -d '
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "destinationAccess":"LIMITED",
+   "destinationAccess":"ALL",
    "allowedOrgs":["*"]
 }
 ```
