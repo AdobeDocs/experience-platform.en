@@ -221,34 +221,13 @@ To begin, find the desired field type and use the sample code provided to build 
   <tr>
     <td>[!UICONTROL Map]</td>
     <td></td>
-    <td>A map-type field is essentially an object-type field with an unconstrained set of keys. Like objects, maps have a <code>type</code> value of <code>object</code>, but their <code>meta:xdmType</code> is explicitly set to <code>map</code>.<br><br>A map <strong>must not</strong> define any properties. It <strong>must</strong> define a single <code>additionalProperties</code> schema to describe the type of values contained within the map (each map can only contain a single data type). Values may be any valid XDM <code>type</code> attribute, or a reference to another schema using a <code>$ref</code> attribute.<br/><br/>A map field with string-type values:
+    <td>A map-type field is essentially an object-type field with an unconstrained set of keys. Like objects, maps have a <code>type</code> value of <code>object</code>, but their <code>meta:xdmType</code> is explicitly set to <code>map</code>.<br><br>A map <strong>must not</strong> define any properties. It <strong>must</strong> define a single <code>additionalProperties</code> schema to describe the type of values contained within the map (each map can only contain a single data type). The <code>type</code> value must be either <code>string</code> or <code>integer</code>.<br/><br/>A map field with string-type values:
       <pre class="JSON language-JSON hljs">
 "sampleField": {
   "type": "object",
   "meta:xdmType": "map",
   "additionalProperties":{
     "type": "string"
-  }
-}</pre>
-    A map field with arrays of strings for values:
-      <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "meta:xdmType": "map",
-  "additionalProperties":{
-    "type": "array",
-    "items": {
-      "type": "string"
-    }
-  }
-}</pre>
-    A map field that references another data type:
-      <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "meta:xdmType": "map",
-  "additionalProperties":{
-    "$ref": "https://ns.adobe.com/xdm/data/paymentitem"
   }
 }</pre>
     See the section below for more information on creating custom map types in XDM.

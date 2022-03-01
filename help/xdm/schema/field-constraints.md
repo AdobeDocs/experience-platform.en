@@ -201,4 +201,4 @@ The sections below describe how each XDM type maps to other common serialization
 
 ## Defining XDM field types in the API {#define-fields}
 
-The Schema Registry API allows you to define custom fields through the use of formats and optional constraints. See the guide on [defining custom fields in the Schema Registry API](../tutorials/field-types-api.md) for more information.
+The Schema Registry API allows you to define custom fields through the use of formats and optional constraints. See the guide on [defining custom fields in the Schema Registry API](../tutorials/custom-fields-api.md) for more information.
