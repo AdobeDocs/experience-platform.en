@@ -136,31 +136,39 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ### [!UICONTROL Single Identity Profiles] (Beta) {#single-identity-profiles}
 
-First new one words
+Count of profiles that only have 1 type of ID type in their identity map.
 
 ![Single Identity Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
+<!--  -->
+
 ### [!UICONTROL Single Identity Profiles Trend] (Beta) {#single-identity-profiles-trend}
 
-Second new one words
+Trend of count of profiles that only have 1 type of ID type in their identity map.
 
 ![Single Identity Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
+<!--  -->
+
 ### [!UICONTROL Single Identity Profiles by Identity Type] (Beta) {#single-identity-profiles-by-identity-type}
 
-Third new one words
+Trend of count of profiles that only have 1 type of ID type in their identity map.
 
 ![Single Identity Profiles by Identity Type widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
+<!--  -->
+
 ### [!UICONTROL Unsegmented Profiles] (Beta) {#unsegmented-profiles}
 
-Fourth new one words
+Number of profiles not attached to any segment. Drilldown into efficacy for this set for deeper analysis, triage and action. 
 
 ![Unsegmented Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
+<!--  -->
+
 ### [!UICONTROL Unsegmented Profiles Trend] (Beta) {#unsegmented-profiles-trend}
 
-Fifth new one words
+Number of profiles not attached to any segment over time.
 
 ![Unsegmented Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
