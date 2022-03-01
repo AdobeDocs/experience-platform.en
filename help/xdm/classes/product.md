@@ -4,7 +4,7 @@ description: This document provides an overview of the Product class in Experien
 ---
 # [!UICONTROL Product] class
 
-"[!UICONTROL Product]" is a standard Experience Data Model (XDM) class that captures the minimum set of properties that define a product.
+In Experience Data Model (XDM), the [!UICONTROL Product] class captures the minimum set of properties that define a product.
 
 ![](../images/classes/product.png)
 

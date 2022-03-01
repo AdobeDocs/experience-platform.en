@@ -25,6 +25,7 @@ feature: Schemas
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
+  * [Policy](./classes/policy.md)
   * [Product](./classes/product.md)
   * [Segment definition](./classes/segment-definition.md)
   * B2B classes {#b2b}
@@ -66,6 +67,7 @@ feature: Schemas
     * [Lodging Reservation](./field-groups/event/lodging-reservation.md)
     * [Quote Request Details](./field-groups/event/quote-request-details.md)
     * [Reservation Details](./field-groups/event/reservation-details.md)
+    * [Support Site Search](./field-groups/event/support-site-search.md)
     * [Upgrade Details](./field-groups/event/upgrade-details.md)
     * [Upsell Details](./field-groups/event/upsell-details.md)
     * [Web Details](./field-groups/event/web-details.md)
@@ -99,6 +101,7 @@ feature: Schemas
   * [Geo Shape](./data-types/geo-shape.md)
   * [Identity](./data-types/identity.md)
   * [Impressions](./data-types/impressions.md)
+  * [Internal site search](./data-types/internal-site-search.md)
   * [Key Value Pair](./data-types/key-value-pair.md)
   * [Marketing](./data-types/marketing.md)
   * [Measure](./data-types/measure.md)
