@@ -42,9 +42,11 @@ Customer AI and Attribution AI natively support Adobe Analytics data. To use Ado
 
 Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Analytics as a data source followed by a dataset during your instance configuration. All of the required schema field groups and individual fields are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
 
-If and when you validate the data you get from Adobe Analytics, it may be different from that of Customer Journey Analytics. Please refer to [this](https://www.adobe.com/go/compare-aa-data-to-cja-data) documentation to understand or navigate through those differences. 
+When you validate the data from Adobe Analytics in Adobe Experience Platform, you may notice some discrepancies. The Analytics Source connector might drop rows during the transformation to an Experience Data Model (XDM) schema. There can be multiple reasons for the whole row to be unfit for transformation which include missing timestamps, missing personIDs, invalid or large person IDs, invalid analytic values, and more. 
 
-Use the following query to fetch post values coming in from the Adobe Analytics source connector and modify them to find the mid values in AEP that you're looking to compare. 
+For more information and examples, visit the documentation for [comparing Adobe Analytics and Customer Journey Analytics data](https://www.adobe.com/go/compare-aa-data-to-cja-data). Customer Journey Analytics uses data from Experience Platform, therefore the examples apply to Intelligent Services.  
+
+Use the following query to fetch post values coming in from the Adobe Analytics source connector and modify them to find the mid values in Platform that you're looking to compare. 
 
 ```SELECT channel.typeAtSource as typeAtSource, 
        Count(_id) AS Records 
@@ -56,7 +58,7 @@ WHERE timestamp>=from_utc_timestamp('2021-05-15','UTC')
 GROUP BY channel.typeAtSource
 ```        
 
-Refer to [this documentation](https://www.adobe.com/go/compare-aa-data-to-cja-data) to learn more about how Platform and CJA use this data.
+Refer to the documentation for [comparing Adobe Analytics and Customer Journey Analytics data](https://www.adobe.com/go/compare-aa-data-to-cja-data) to learn about how Platform uses this data.
 
 >[!IMPORTANT]
 >
