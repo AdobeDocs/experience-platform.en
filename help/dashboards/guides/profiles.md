@@ -138,31 +138,31 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 First new one words
 
-![Single Identity Profiles widget.]()
+![Single Identity Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
 ### [!UICONTROL Single Identity Profiles Trend] (Beta) {#single-identity-profiles-trend}
 
 Second new one words
 
-![Single Identity Profiles Trend widget.]()
+![Single Identity Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
 ### [!UICONTROL Single Identity Profiles by Identity Type] (Beta) {#single-identity-profiles-by-identity-type}
 
 Third new one words
 
-![Single Identity Profiles by Identity Type widget.]()
+![Single Identity Profiles by Identity Type widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
 ### [!UICONTROL Unsegmented Profiles] (Beta) {#unsegmented-profiles}
 
 Fourth new one words
 
-![Unsegmented Profiles widget.]()
+![Unsegmented Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
 ### [!UICONTROL Unsegmented Profiles Trend] (Beta) {#unsegmented-profiles-trend}
 
 Fifth new one words
 
-![Unsegmented Profiles Trend widget.]()
+![Unsegmented Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
 ## Next steps
 
