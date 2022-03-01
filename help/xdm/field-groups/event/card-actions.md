@@ -15,7 +15,7 @@ description: This document provides an overview of the Card Actions schema field
 | `cardCancelled` | Integer | Tracks when a card has been cancelled. |
 | `cardControlsLocked` | Integer | Tracks when a card's controls have been locked. |
 | `cardControlsUnlocked` | Integer | Tracks when a card's controls have been unlocked. |
-| `cardID` | String | The identifier for the card being activated. This might be different from the card number. |
+| `cardID` | String | The identifier for the card being activated. This value might be different from the card number. |
 | `cardLocked` | Integer | Tracks when a card has been locked. |
 | `cardOrderNew` | Integer | Tracks when a card has been requested. |
 | `cardOrderType` | String | The type of card order associated with a card order event.|
