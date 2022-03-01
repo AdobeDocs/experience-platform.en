@@ -68,6 +68,11 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Profiles count trend]](#profiles-count-trend)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
+* [[!UICONTROL Single Identity Profiles] (Beta)](#single-identity-profiles)
+* [[!UICONTROL Single Identity Profiles Trend] (Beta)](#single-identity-profiles-trend)
+* [[!UICONTROL Single Identity Profiles by Identity Type] (Beta)](#single-identity-profiles-by-identity-type)
+* [[!UICONTROL Unsegmented Profiles] (Beta)](#unsegmented-profiles)
+* [[!UICONTROL Unsegmented Profiles] Trend (Beta)](#unsegmented-profiles-trend)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -128,6 +133,36 @@ For more information on profile fragments, begin by reading the section on [prof
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+### [!UICONTROL Single Identity Profiles] (Beta) {#single-identity-profiles}
+
+First new one words
+
+![Single Identity Profiles widget.]()
+
+### [!UICONTROL Single Identity Profiles Trend] (Beta) {#single-identity-profiles-trend}
+
+Second new one words
+
+![Single Identity Profiles Trend widget.]()
+
+### [!UICONTROL Single Identity Profiles by Identity Type] (Beta) {#single-identity-profiles-by-identity-type}
+
+Third new one words
+
+![Single Identity Profiles by Identity Type widget.]()
+
+### [!UICONTROL Unsegmented Profiles] (Beta) {#unsegmented-profiles}
+
+Fourth new one words
+
+![Unsegmented Profiles widget.]()
+
+### [!UICONTROL Unsegmented Profiles Trend] (Beta) {#unsegmented-profiles-trend}
+
+Fifth new one words
+
+![Unsegmented Profiles Trend widget.]()
 
 ## Next steps
 
