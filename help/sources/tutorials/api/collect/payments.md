@@ -11,11 +11,13 @@ exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 
 This tutorial covers the steps for retrieving data from a payments source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
+>[!NOTE]
+>
+>In order to create a dataflow, you must already have a valid [!DNL PayPal] base connection ID. If you do not have this ID, then see the steps on how to [create a [!DNL PayPal] base connection](../create/payments/paypal.md) before attempting to do this tutorial.
+
 ## Getting started
 
-This tutorial requires you to have access to a payment application through a valid connection, as well as information about the file you wish to bring into Platform (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a payments application using the Flow Service API](../explore/payments.md) before attempting this tutorial.
-
-This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
+This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.

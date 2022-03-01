@@ -11,11 +11,13 @@ exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 
 This tutorial covers the steps for retrieving data from an e-commerce source and bringing them to Platform using [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
+>[!NOTE]
+>
+>In order to create a dataflow, you must already have a valid [!DNL Shopify] base connection ID. If you do not have this ID, then see the steps on how to [create a [!DNL Shopify] base connection](../create/ecommerce/shopify.md) before attempting to do this tutorial.
+
 ## Getting started
 
-This tutorial requires you to have access to an e-commerce system through a valid connection, as well as information about the file you wish to bring into [!DNL Platform] (including the file's path and structure). If you do not have this information, see the tutorial on [exploring an eCommerce system using the Flow Service API](../explore/ecommerce.md) before attempting this tutorial.
-
-This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
+This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.

@@ -11,11 +11,13 @@ exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 
 This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
 
+>[!NOTE]
+>
+>In order to create a dataflow, you must already have a valid [!DNL Google AdWords] base connection ID. If you do not have this ID, then see the steps on how to [create a [!DNL Google AdWords] base connection](../create/advertising/ads.md) before attempting to do this tutorial.
+
 ## Getting started
 
-This tutorial requires you to have information about the file you wish to bring into Platform, including the file's path and structure. If you do not have this information, see the tutorial on [exploring a advertising application using the Flow Service API](../../api/create/advertising/ads.md) before attempting this tutorial.
-
-This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
+This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
