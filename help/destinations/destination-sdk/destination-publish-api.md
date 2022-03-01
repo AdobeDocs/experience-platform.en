@@ -11,7 +11,7 @@ exl-id: 0564a132-42f4-478c-9197-9b051acf093c
 
 This page lists and describes all the API operations that you can perform using the `/authoring/destinations/publish` API endpoint.
 
-After you have configured and tested your destination, you can submit it to Adobe for review and publishing. Read [Submit for review a destination authored in Destination SDK](./submit-destination.md) for all the other steps you need to do as part of the destination submission process.
+After you have configured and tested your destination, you can submit it to Adobe for review and publishing. Read [Submit for review a destination authored in Destination SDK](./submit-destination.md) for all the other steps you must do as part of the destination submission process.
 
 Use the publish destinations API endpoint to submit a publishing request when:
 
@@ -73,7 +73,7 @@ GET /authoring/destinations/publish
 
 **Request**
 
-The following request will retrieve the list of destinations submitted for publishing that you have access to, based on IMS Organization and sandbox configuration.
+The following request retrieves the list of destinations submitted for publishing that you have access to, based on IMS Organization and sandbox configuration.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
