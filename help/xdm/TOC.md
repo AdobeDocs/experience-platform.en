@@ -25,6 +25,7 @@ feature: Schemas
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
+  * [Product](./classes/product.md)
   * [Segment definition](./classes/segment-definition.md)
   * B2B classes {#b2b}
     * [XDM Business Account](./classes/b2b/business-account.md)
@@ -36,7 +37,7 @@ feature: Schemas
     * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
     * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
 * Field groups {#field-groups}
-  * Profile field groups {#profile}
+  * XDM Individual Profile {#profile}
     * [Demographic Details](./field-groups/profile/demographic-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
     * [IdentityMap](./field-groups/profile/identitymap.md)
@@ -48,7 +49,7 @@ feature: Schemas
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
     * [XDM Business Person Components](./field-groups/profile/business-person-components.md)
     * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
-  * Event field groups {#event}
+  * XDM ExperienceEvent {#event}
     * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
     * [Channel Details](./field-groups/event/channel-details.md)
@@ -64,6 +65,9 @@ feature: Schemas
     * [Upgrade Details](./field-groups/event/upgrade-details.md)
     * [Upsell Details](./field-groups/event/upsell-details.md)
     * [Web Details](./field-groups/event/web-details.md)
+  * Product {#product}
+    * [Product Catalog](./field-groups/product/product-catalog.md)
+    * [Product Category](./field-groups/product/product-category.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
   * [Application](./data-types/application.md)

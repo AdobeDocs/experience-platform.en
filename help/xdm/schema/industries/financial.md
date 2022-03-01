@@ -26,3 +26,13 @@ Use the following legend to interpret this ERD:
 >[!NOTE]
 >
 >The Experience Event entity includes an "_ID" field, which represents the unique identifier (`_id`) attribute provided by the XDM ExperienceEvent class. See the reference document on [XDM ExperienceEvent](../../classes/experienceevent.md) for more details on what is expected for this value.
+
+## [!UICONTROL Financial services] use cases
+
+The following table outlines the recommended classes and schema field groups for several common financial use cases.
+
+| Use case | Recommended classes and field groups |
+| --- | --- |
+<!-- | Drive personalization at scale for Preferred Segments through omnichannel reporting insights and automating Journeys to increase enrollment to Preferred Rewards program. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Commerce Details](../../field-groups/event/commerce-details.md)</li><li>[Web Details](../../field-groups/event/web-details.md)</li></ul></li><li>**Product** (custom class)\*:<ul><li>Product (custom field group)\*</li></ul></li></ul> |
+| Optimize Cross channel personalization across online and offline channels | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Commerce Details](../../field-groups/event/commerce-details.md)</li><li>[Web Details](../../field-groups/event/web-details.md)</li></ul></li><li>**Product** (custom class)\*:<ul><li>Product (custom field group)\*</li></ul></li></ul> |
+| Drive New Revenue Opportunities​: Using insights gained from cross-channel behavior analysis, identify patterns of product usage that could lead to new product offers | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Commerce Details](../../field-groups/event/commerce-details.md)</li><li>[Web Details](../../field-groups/event/web-details.md)</li></ul></li><li>**Product** (custom class)\*:<ul><li>Product (custom field group)\*</li></ul></li></ul> | -->
