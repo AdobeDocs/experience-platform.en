@@ -19,6 +19,8 @@ In Experience Data Model (XDM), the [!UICONTROL Product] class captures the mini
 | `productName` | String | The name of the product. |
 | `productRating` | String | The customer review rating of the product.|
 
+{style="table-layout:auto"}
+
 ## Compatible field groups {#field-groups}
 
 Adobe provides several standard field groups for use with the [!DNL XDM Individual Profile] class. The following is a list of some commonly used field groups for the class:
