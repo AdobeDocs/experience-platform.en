@@ -29,7 +29,7 @@ feature: Web SDK
   * [Track links](data-collection/track-links.md)
   * [Collect commerce and products data](data-collection/collect-commerce-data.md)
   * Adobe Analytics {#adobe-analytics}
-    * [Overview](data-collection/adobe-analytics/analytics-overview.md)
+    * [Using Adobe Analytics with Platform Web SDK](data-collection/adobe-analytics/analytics-overview.md)
     * [Mapping Analytics variables](data-collection/adobe-analytics/manually-mapping-variables.md)
     * [Automatically mapped variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
     * [Sending data to Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)

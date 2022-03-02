@@ -9,10 +9,6 @@ exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
 ---
 # Create a [!DNL Google PubSub] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL Google PubSub] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 This tutorial provides steps for creating a [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]") using the Platform user interface.
 
 ## Getting started
