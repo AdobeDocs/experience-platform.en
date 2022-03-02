@@ -26,3 +26,5 @@ In Experience Data Model (XDM), the [!UICONTROL Policy] class captures the minim
 | `name` | [!UICONTROL String] | The name of the insurance policy. |
 | `startDate` | [!UICONTROL DateTime] | The date when the insurance policy coverage starts (or started). |
 | `type` | [!UICONTROL String] | The type of insurance policy, such as home, automobile, renter, or boat. |
+
+{style="table-layout:auto"}
