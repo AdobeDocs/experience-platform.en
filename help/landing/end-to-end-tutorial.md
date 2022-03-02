@@ -36,7 +36,7 @@ You need to enable your schema for use in Real-time Customer Profile so that cus
 
 Once you have created an XDM schema, you can start bringing your data into the system. 
 
-All data brought into Platform using batch ingestion is uploaded to individual datasets. Before this data can be used by [!DNL Real-time Customer Profile], the dataset in question has to be specifically configured. For complete instructions on how to enable a dataset for Profile, see the [Platform UI guide](../catalog/datasets/user-guide.md#enable-profile) and the [API tutorial](../profile/tutorials/dataset-configuration.md). Once the dataset has been configured, you can start ingesting data into it.
+All data brought into Platform is stored to individual datasets upon ingestion. A dataset is a collection of data records that map to a specific XDM schema. Before your data can be used by [!DNL Real-time Customer Profile], the dataset in question has to be specifically configured. For complete instructions on how to enable a dataset for Profile, see the [Datasets UI guide](../catalog/datasets/user-guide.md#enable-profile) and the [dataset configuration API tutorial](../profile/tutorials/dataset-configuration.md). Once the dataset has been configured, you can start ingesting data into it.
 
 Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storages, databases, and many others. For instance, you can ingest your data by using [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). A full list of available sources can be found in the [source connectors overview](../sources/home.md).
 
@@ -44,9 +44,9 @@ If you use Amazon S3 as your source connector, you can follow the instructions i
 
 For more detailed instructions on source connectors, please read the [source connectors overview](../sources/home.md). To learn more about Flow Service, the API which sources are based off of, please read the [Flow Service API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-Once your data is brought into Platform through the source connector, customer profiles are automatically created based on the identity data you configured in your XDM schema.
+Once your data is brought into Platform through the source connector and stored in your Profile-enabled dataset, customer profiles are automatically created based on the identity data you configured in your XDM schema.
 
-When uploading data to a new dataset for the first time, or as part of a process involving a new ETL or data source, it is recommended to carefully check the data to ensure it has been uploaded correctly and customer profiles have been created. For more information on how to access customer profiles in the Platform UI, see the [Real-time Customer Profile UI guide](../profile/ui/user-guide.md). For the details on how to access profiles using the Real-time Customer Profile API, see the guide on [using the entities endpoint](../profile/api/entities.md).
+When uploading data to a new dataset for the first time, or when setting up a new ETL process or data source, it is recommended to carefully check the data to ensure it has been uploaded correctly and that the generated profiles contain the data you expect. For more information on how to access customer profiles in the Platform UI, see the [Real-time Customer Profile UI guide](../profile/ui/user-guide.md). For the details on how to access profiles using the Real-time Customer Profile API, see the guide on [using the entities endpoint](../profile/api/entities.md).
 
 ## Evaluate your data
 
