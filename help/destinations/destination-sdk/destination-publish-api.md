@@ -46,7 +46,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -d '
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "destinationAccess":"ALL",
+   "destinationAccess":"ALL"
 }
 ```
 
@@ -92,8 +92,12 @@ The following response returns HTTP status 200 with a list of destinations submi
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "publishDetailsList":[
       {
-         "configId":"string",
-         "status":"TEST",
+         "configId":"123cs780-ce29-434f-921e-4ed6ec2a6c35",
+         "allowedOrgs": [
+            "*"
+         ],    
+         "status":"PUBLISHED",
+         "destinationType": "PUBLIC",
          "publishedDate":"1630617746"
       }
    ]
@@ -104,8 +108,10 @@ The following response returns HTTP status 200 with a list of destinations submi
 |---------|----------|------|
 |`destinationId` | String | The destination ID of the destination configuration that you have submitted for publishing. |
 |`publishDetailsList.configId` | String | The unique ID of the destination publish request for your submitted destination. |
-|`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`.|
-|`publishDetailsList.publishedDate` | String | The date when the destination was submitted for publishing, in epoch time. |
+|`publishDetailsList.allowedOrgs` | String | Returns the Experience Platform organizations for which the destination is available. <br> <ul><li> For `"destinationType": "PUBLIC"`, this parameter returns `"*"`, which means that the destination is available for all Experience Platform organizations.</li><li> For `"destinationType": "DEV"`, this parameter returns the Organization ID of the organization which you used to author and test the destination.</li></ul>|
+|`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinations with the value `PUBLISHED` are live and can be used by Experience Platform customers.|
+|`publishDetailsList.destinationType` | String | The type of destination. Values can be `DEV` and `PUBLIC`. `DEV` corresponds to the destination in your Experience Platform organization. `PUBLIC` corresponds to the destination that you have submitted for publishing. Think of these two options in Git terms, where the `DEV` version represents your local authoring branch and the `PUBLIC` version represents the remote main branch.|
+|`publishDetailsList.publishedDate` | String | The date when the destination was submitted for publishing, in epoch time.|
 
 {style="table-layout:auto"}
 
@@ -142,9 +148,30 @@ A successful response returns HTTP status 200 with detailed information about th
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "publishDetailsList":[
       {
-         "configId":"string",
+         "configId":"ab41387c0-4772-4709-a3ce-6d5fee654520",
+         "allowedOrgs":[
+            "716543205DB85F7F0A495E5B@AdobeOrg"
+         ],
          "status":"TEST",
-         "publishedDate":"string"
+         "destinationType":"DEV"
+      },
+      {
+         "configId":"cd568c67-f25e-47e4-b9a2-d79297a20b27",
+         "allowedOrgs":[
+            "*"
+         ],
+         "status":"DEPRECATED",
+         "destinationType":"PUBLIC",
+         "publishedDate":1630525501009
+      },
+      {
+         "configId":"ef6f07154-09bc-4bee-8baf-828ea9c92fba",
+         "allowedOrgs":[
+            "*"
+         ],
+         "status":"PUBLISHED",
+         "destinationType":"PUBLIC",
+         "publishedDate":1630531586002
       }
    ]
 }
