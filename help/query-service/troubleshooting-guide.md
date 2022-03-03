@@ -22,34 +22,48 @@ This section includes information on performance, limits, and processes.
 
 ### Can I turn off the auto-complete feature in the Query Service Editor?
 
++++Answer
 No. Turning off the auto-complete feature is not currently supported by the platform.
++++
 
 ### Why does the Query Editor sometimes become slow when I type in a query?
 
++++Answer
 One potential cause is the auto-complete feature. The feature processes certain metadata commands that can occasionally slow the editor during query editing.
++++
 
 ### Can I use Postman for the Query Service API?
 
++++Answer
 Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Watch the [Postman setup guide](https://video.tv.adobe.com/v/28832) for step-by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with Postman. See the official documentation for [guidance on starting, running, and sharing Postman collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++
 
 ### Is there a limit to the maximum number of rows returned from a query through the UI?
 
++++Answer
 Yes, Query service internally applies a limit of 50000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
++++
 
 ### Is there a data size limit for the resulting output from a query?
 
++++Answer
 No, there is no limit on data size. But, there is a query timeout limit of 10 minutes from an interactive session, and if the query is executed as a batch CTAS then a 10-minute timeout is not applicable. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
++++
 
 ### How do I bypass the limit on the output number of rows from a SELECT query?
 
++++Answer
 To bypass the output row limit, apply "LIMIT 0" in the query. For example:
 
 ```sql
 SELECT * FROM customers LIMIT 0;
 ```
 
++++
+
 ### How do I stop my queries from timing out in 10 minutes?
 
++++Answer
 One or more of the following solutions are recommended in case of queries timing out.
 
 - [Convert the query to a CTAS query](./sql/syntax.md#create-table-as-select) and schedule the run. Scheduling a run can be done either [through the UI](./ui/user-guide.md#scheduled-queries) or the [API](./api/scheduled-queries.md#create).
@@ -57,13 +71,17 @@ One or more of the following solutions are recommended in case of queries timing
 - [Execute the EXPLAIN command](./sql/syntax.md#explain) to gather more details.
 - Review the statistics of the data within the dataset.
 - Convert the query into a simplified form and re-run using [prepared statements](./sql/prepared-statements.md).
++++
 
 ### Is there any issue or impact on Query Service performance if multiple queries run simultaneously?
 
++++Answer
 No. Query Service has an autoscaling capability that ensures concurrent queries do not have any noticeable impact on the performance of the service.
++++
 
 ### How do I find a column name from a hierarchical dataset?
 
++++Answer
 The following steps describe how to display a tabular view of a dataset through the UI, including all nested fields and columns in a flattened form.
 
 - After logging into Experience Platform, navigate to [!UICONTROL Datasets] in the left rail of the UI.
@@ -80,19 +98,25 @@ The following steps describe how to display a tabular view of a dataset through 
 ![The column name of a nested dataset highlighted in the UI.](./images/troubleshooting/column-name.png)
 
 See the documentation for full guidance on [how to work with nested data structures](./best-practices/nested-data-structures.md) using the Query Editor or a third-party client.
++++
 
 ### How do I speed up a query on a dataset that contains arrays?
 
++++Answer
 To improve the performance of queries on datasets containing arrays, you should [explode the array](https://spark.apache.org/docs/latest/api/sql/index.html#explode) as a [CTAS query](./sql/syntax.md#create-table-as-select) on runtime, and then explore it for further for opportunities to improve its processing time.
++++
 
 ### Why is my CTAS query still processing after many hours for only a small number of rows?
 
++++Answer
 If the query has taken a long time on a very small dataset, please contact customer support.
 
 There can be any number of reasons for a query to be stuck while processing. To determine the exact cause requires an in-depth analysis on a case-by-case basis. [Contact Adobe customer support](#customer-support) to being this process.
++++
 
 ### How do I contact Adobe customer support? {#customer-support}
 
++++Answer
 [A complete list of Adobe customer support telephone numbers](https://helpx.adobe.com/ca/contact/phone.html) is available on the Adobe help page. Alternatively, help can be found online by completing the following steps:
 
 - Navigate to [https://www.adobe.com/](https://www.adobe.com/) in your web browser.
@@ -101,26 +125,34 @@ There can be any number of reasons for a query to be stuck while processing. To 
 - Select **[!UICONTROL Help & Support]** from the top navigation bar. 
 
 A dropdown banner appears containing a [!UICONTROL Help and support] section. Select **[!UICONTROL Contact us]** to open the Adobe Customer Care Virtual Assistant, or select **[!UICONTROL Enterprise support]** for dedicated help for large organizations.
++++
 
 ### How do I implement a sequential series of jobs, without executing subsequent jobs if the previous job does not complete successfully? 
 
++++Answer
 The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
 
 See the [anonymous block documentation](./sample-queries/anonymous-block.md) for more details.
++++
 
 ### How do I implement custom attribution in Query Service?
 
++++Answer
 There are two ways to implement custom attribution:
 
 1. Use a combination of existing [Adobe defined functions](./sql/adobe-defined-functions.md) to identify if the use-case needs are met. 
 1. If the previous suggestion doesn’t meet your use case, you should use a combination of [window functions](./sql/adobe-defined-functions.md#window-functions). Window functions look at all the events in a sequence. They also allow you to review the historic data and can be used in any combination.
++++
 
 ### Can I templatize my queries so that I can easily re-use them?
 
++++Answer
 Yes, you can templatize queries through the use of prepared statements. Prepared statements can optimize performance, and avoid repetitiously re-parsing a query. See the [prepared statements documentation](./sql/prepared-statements.md) for more details.
++++
 
 ### How do I retrieve error logs for a query? {#error-logs}
 
++++Answer
 To retrieve error logs for a specific query, you must first use the Query Service API to fetch the query log details. The HTTP response contains the query IDs that are required to investigate a query error.  
 
 First, use the GET command to retrieve multiple queries. Information on how to make a call to the API can be found in the [sample API calls documentation](./api/queries.md#sample-api-calls).
@@ -151,9 +183,11 @@ A successful response returns HTTP status 200 and contains the `errors` array. T
 ```
 
 The [Query Service API reference documentation](https://www.adobe.io/experience-platform-apis/references/query-service/) provides more information on all available endpoints.
++++
 
 ### What does "Error validating schema" mean?
 
++++Answer
 The "Error validating schema" message means that the system is unable to locate a field within the schema. You should read the best practice document for [organizing data assets in Query Service](./best-practices/organize-data-assets.md) followed by the [Create Table As Select documentation](./sql/syntax.md#create-table-as-select).  
 
 The following example demonstrates the use of a CTAS syntax and a struct datatype:
@@ -182,8 +216,11 @@ AS SELECT '1' as _id,
   ) AS _workfront ;
 ```
 
++++
+
 ### How do I quickly process the new data coming into the system every day?
 
++++Answer
 The [SNAPSHOT](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./sample-queries/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
 
 ### Why is there a difference between the numbers shown in Profile UI and the numbers calculated from the profile export dataset? 
@@ -193,9 +230,11 @@ The numbers displayed in the profile dashboard are accurate as of the last snaps
 >[!NOTE]
 >
 >Querying includes historical data, whereas UI only displays the current profile data.
++++
 
 ### Why did my query return an empty subset, and what should I do?
 
++++Answer
 The most likely cause is that your query is too narrow in scope. You should systematically remove a section of the `WHERE` clause until you begin seeing some data.
 
 You can also confirm that your dataset contains data by using a small query such as: 
@@ -204,30 +243,43 @@ You can also confirm that your dataset contains data by using a small query such
 SELECT count(1) FROM myTableName
 ```
 
++++
+
 ### Can I sample my data?
 
++++Answer
 This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Platform UI dialogs once the feature is ready for release.
++++
 
 ### What helper functions are supported by Query Service?
 
++++Answer
 Query Service provides several built-in Spark SQL helper functions to extend SQL functionality. See the document for a complete list of the [Spark SQL functions supported by Query Service](./sql/spark-sql-functions.md).
++++Answer
 
 ### What should I do if my scheduled query fails?
 
++++Answer
 Please check the logs to find out the details of the error. Please see the FAQ section on [finding errors within logs](#error-logs) for more details.
 
 See the documentation for guidance on how to perform [scheduled queries in the UI](./ui/user-guide.md#scheduled-queries) and through [the API](./api/scheduled-queries.md). 
++++
 
 ### What does the "Session Limit Reached" error mean?
 
++++Answer
 "Session Limit Reached" means that the maximum number of Query Service sessions allowed for your organization has been reached. Please connect with your organization’s Adobe Experience Platform administrator.
++++
 
 ### How does the query log handle queries relating to a deleted dataset? 
 
++++Answer
 Query Service never deletes query history. This means that any queries referencing a deleted dataset would return "No valid dataset" as a result.
++++
 
 ### How can I get only the metadata for a query?
 
++++Answer
 To get only the metadata for a query, you can run a query that returns zero rows, as follows:
 
 ```sql
@@ -235,9 +287,11 @@ SELECT * FROM <table> WHERE 1=0
 ```
 
 This query returns only the metadata for the specified table.
++++
 
 ### How can I quickly iterate on a CTAS (Create Table As Select) query without materializing it?
 
++++Answer
 You can create temporary tables to quickly iterate and experiment on a query before materializing it for use. You can also use temporary tables to validate if a query is functional.
 
 For example, you can create a temporary table:
@@ -262,19 +316,24 @@ AND timestamp < TO_TIMESTAMP('2021-01-21 13:00:00')
 LIMIT 100;
 ```
 
++++
+
 ### How do I change the time zone to and from a UTC Timestamp?
 
++++Answer
 Adobe Experience Platform persists data in UTC (Coordinated Universal Time) timestamp format. An example of the UTC format is `2021-12-22T19:52:05Z`
 
 Query Service supports built-in SQL functions to convert a given timestamp to and from UTC format. Both the `to_utc_timestamp()` and the `from_utc_timestamp()` methods take two parameters: timestamp and timezone. 
 
-| Parameter | Description                                                                                                                                                                                               |
-|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Timestamp | The timestamp can be written in either UTC format or simple `{year-month-day}` format. If no time is provided, the default value is midnight on the morning of the given day.                             |
+| Parameter | Description   |
+|-----------|---------------|
+| Timestamp | The timestamp can be written in either UTC format or simple `{year-month-day}` format. If no time is provided, the default value is midnight on the morning of the given day. |
 | Timezone  | The timezone is written in a `{continent/city})` format. It must be one of the recognized timezone codes as found in the [public-domain TZ database](https://data.iana.org/time-zones/tz-link.html#tzdb). |
++++
 
 #### Convert to the UTC timestamp
 
++++Answer
 The `to_utc_timestamp()` method interprets the given parameters and converts it **to the timestamp of your local timezone** in UTC format. For example, the time zone in Seoul, South Korea is UTC/GMT +9 hours. By providing a date-only timestamp, the method uses a default value of midnight in the morning. The timestamp and timezone are converted into the UTC format from the time of that region to a UTC timestamp of your local region.
 
 ```SQL
@@ -295,8 +354,11 @@ The console output provided in the Query Service UI is a more human-readable for
 8/30/2021, 3:00 PM
 ```
 
++++
+
 #### Convert from the UTC timestamp
 
++++Answer
 The `from_utc_timestamp()` method interprets the given parameters **from the timestamp of your local timezone** and provides the equivalent timestamp of the desired region in UTC format. In the example below, the hour is 2:40PM in the user's local timezone. The Seoul timezone passed as a variable is nine hours ahead of the local timezone.
 
 ```SQL
@@ -309,8 +371,11 @@ The query returns a timestamp in UTC format for the timezone passed as a paramet
 8/31/2021, 11:40 PM
 ```
 
++++
+
 ### How should I filter my time-series data?
 
++++Answer
 When querying with time-series data, you should use the timestamp filter whenever possible for more accurate analysis.
 
 >[!NOTE]
@@ -328,8 +393,11 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
        AND timestamp < To_timestamp('2021-01-21 13:00:00')
 ```
 
++++
+
 ### How do I correctly use the `CAST` operator to convert my timestamps in SQL queries?
 
++++Answer
 When using the `CAST` operator to convert a timestamp, you need to include both the date **and** time.
 
 For example, missing the time component, as shown below, will result in an error:
@@ -346,12 +414,17 @@ SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 ```
 
++++
+
 ### Should I use wildcards, such as * to get all the rows from my datasets?
 
++++Answer
 You cannot use wildcards to get all the data from your rows, as Query Service should be treated as a **columnar-store** rather than a traditional row-based store system.
++++
 
 ### Should I use `NOT IN` in my SQL query?
 
++++Answer
 The `NOT IN` operator is often used to retrieve rows that are not found in another table or SQL statement. This operator can slow down performance and may return unexpected results if the columns that are being compared accept `NOT NULL`, or you have large numbers of records.
 
 Instead of using `NOT IN`, you can use either `NOT EXISTS` or `LEFT OUTER JOIN`.
@@ -384,6 +457,8 @@ LEFT OUTER JOIN T2 ON T1.ID = T2.ID
 WHERE T2.ID IS NULL
 ```
 
++++
+
 ## REST API errors
 
 | HTTP status code | Description           | Possible causes            |
@@ -414,10 +489,13 @@ WHERE T2.ID IS NULL
 
 ## Exporting Data {#exporting-data}
 
++++Answer
 This section provides information on exporting data and limits.
++++
 
 ### Is there a way to extract data from Query Service after query processing and save the results in a CSV file?
 
++++Answer
 Yes. Data can be extracted from Query Service and there is also the option to store the results in CSV format via a SQL command. 
 
 There are two ways to save the results of a query when using a PSQL client. You can use the `COPY TO` command or create a statement using the following format:
@@ -429,39 +507,56 @@ FROM <table_name>
 ```
 
 [Guidance on the use of the `COPY TO` command](./sql/syntax.md#copy) can be fond in the SQL syntax reference documentation.
++++
 
 ### Can I extract the content of the final dataset that has been ingested through CTAS queries (assuming these are larger quantities of data such as Terabytes)? 
 
++++Answer
 No. There is currently no feature available for the extraction of ingested data.
++++
 
 ## Third-party tools {#third-party-tools}
 
-This section includes information on the use of third-party tools such as PSQL and Power BI. 
++++Answer
+This section includes information on the use of third-party tools such as PSQL and Power BI.
++++
 
 ### Can I connect Query Service to a third-party tool? 
 
-Yes, you can connect multiple third-party desktop clients to Query Service. See the documentation for [full details about the available clients and how to connect them to Query service](./clients/overview.md).   
++++Answer
+Yes, you can connect multiple third-party desktop clients to Query Service. See the documentation for [full details about the available clients and how to connect them to Query service](./clients/overview.md).
++++
 
 ### Is there a way to connect Query Service once for continuous use with a third-party tool?
 
++++Answer
 Yes, third-party desktop clients can be connected to Query Service through a one-time setup of non-expiring credentials. Non-expiring credentials can be generated by an authorized user and will receive them in a JSON file downloaded to their local machine. Full [guidance on how to create and download non-expiring credentials](./ui/credentials.md#non-expiring-credentials) can be found in the documentation.
++++
 
 ### What kind of third-party SQL editors can I connect to Query Service Editor?
 
-Any third-party SQL editor that is PSQL or [!DNL Postgres] client compliant can be connected to the Query Service Editor.
++++Answer
+Any third-party SQL editor that is PSQL or [!DNL Postgres] client compliant can be connected to the Query Service Editor. See the documentation for [connecting clients to Query Service](./clients/overview.md) for a list of available instructions.
++++
 
 ### Can I connect the Power BI tool to Query Service?
 
-Yes, you can connect Power BI to Query Service. See the documentation for [instructions on connecting the Power BI desktop app to Query Service](./clients/power-bi.md). 
++++Answer
+Yes, you can connect Power BI to Query Service. See the documentation for [instructions on connecting the Power BI desktop app to Query Service](./clients/power-bi.md).
++++
 
 ### Why do the dashboards take a long time to load when connected to Query Service?
 
++++Answer
 When the system is connected to Query Service, it is connected to an interactive or batch processing engine. This can result in longer loading times to reflect the processed data. 
 
 If you would like to improve the response times for your dashboards, you should implement a Business Intelligence (BI) server as a caching layer between Query Service and BI tools. Generally, most BI tools have an additional offering for a server.
 
 The purpose of adding the cache server layer is to cache the data from Query Service and utilize the same for dashboards to speed up the response. This is possible as the results for queries that are executed would be cached in the BI server each day. The caching server then serves these results for any user with the same query to decrease latency. Please refer to the documentation of the utility or third-party tool that you are using for clarification on this setup.
++++
 
 ### Is it possible to access Query Service using the pgAdmin connection tool? 
 
++++Answer
 No, pgAdmin connectivity is not supported. A [list of available third-party clients and instructions on how to connect them to Query Service](./clients/overview.md) can be found in the documentation.
++++
