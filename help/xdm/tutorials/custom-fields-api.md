@@ -246,8 +246,7 @@ In order to support "map-like" data efficiently in XDM, objects may be annotated
 Ensure that you are only using map-type fields when absolutely necessary, as they carry the following performance drawbacks:
 
 * Response time from Adobe Experience Platform Query Service degrades from three seconds to ten seconds for 100 million records
-* First-order maps must be limited to fewer than 16 or else risk further degradation
-* Maps beyond first-order maps lead to a tenfold degradation in Query Service performance
+* Maps must have fewer than 16 keys or else risk further degradation
 
 The Platform user interface also has limitations in how it can extract the keys of map-type fields. Whereas object-type fields can be expanded, maps are displayed as a single field instead.
 
