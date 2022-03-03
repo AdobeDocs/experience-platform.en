@@ -10,7 +10,7 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 
 This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-The following list of answers to frequently asked questions about Query Service divided into the following categories:
+The following list of answers to frequently asked questions is divided into the following categories:
 
 - [General](#general)
 - [Exporting Data](#exporting-data)
@@ -26,11 +26,11 @@ No. Turning off the auto-complete feature is not currently supported by the plat
 
 ### Why does the Query Editor sometimes become slow when I type in a query?
 
-One potential causes is the auto-complete feature. The feature processes certain metadata commands that can occasionally slow the editor.
+One potential cause is the auto-complete feature. The feature processes certain metadata commands that can occasionally slow the editor during query editing.
 
 ### Can I use Postman for the Query Service API?
 
-Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Watch the [Postman setup guide](https://video.tv.adobe.com/v/28832) for step by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with Postman. See the official documentation for [guidance on starting, running, and sharing Postman collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Watch the [Postman setup guide](https://video.tv.adobe.com/v/28832) for step-by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with Postman. See the official documentation for [guidance on starting, running, and sharing Postman collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 
 ### Is there a limit to the maximum number of rows returned from a query through the UI?
 
@@ -93,7 +93,7 @@ There can be any number of reasons for a query to be stuck while processing. To 
 
 ### How do I contact Adobe customer support? {#customer-support}
 
-[A complete list of Adobe customer support telephone numbers](https://helpx.adobe.com/ca/contact/phone.html) is available on the Adobe help page. Alternatively help can be found online by completing the following steps:
+[A complete list of Adobe customer support telephone numbers](https://helpx.adobe.com/ca/contact/phone.html) is available on the Adobe help page. Alternatively, help can be found online by completing the following steps:
 
 - Navigate to [https://www.adobe.com/](https://www.adobe.com/) in your web browser.
 - On the right side of the top navigation bar, select **[!UICONTROL Sign In]**.
@@ -102,7 +102,7 @@ There can be any number of reasons for a query to be stuck while processing. To 
 
 A dropdown banner appears containing a [!UICONTROL Help and support] section. Select **[!UICONTROL Contact us]** to open the Adobe Customer Care Virtual Assistant, or select **[!UICONTROL Enterprise support]** for dedicated help for large organizations.
 
-### How do I implement a sequential series of jobs, without executing subsequent jobs if the previous job does not completed successfully? 
+### How do I implement a sequential series of jobs, without executing subsequent jobs if the previous job does not complete successfully? 
 
 The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
 
@@ -184,7 +184,7 @@ AS SELECT '1' as _id,
 
 ### How do I quickly process the new data coming into the system every day?
 
-The [SNAPSHOT](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./sample-queries/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result it increases processing efficiency and can be used with both streaming and batch data processing.
+The [SNAPSHOT](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./sample-queries/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
 
 ### Why is there a difference between the numbers shown in Profile UI and the numbers calculated from the profile export dataset? 
 
@@ -222,7 +222,7 @@ See the documentation for guidance on how to perform [scheduled queries in the U
 
 "Session Limit Reached" means that the maximum number of Query Service sessions allowed for your organization has been reached. Please connect with your organization’s Adobe Experience Platform administrator.
 
-### How does the query log handle queries to a a deleted dataset? 
+### How does the query log handle queries relating to a deleted dataset? 
 
 Query Service never deletes query history. This means that any queries referencing a deleted dataset would return "No valid dataset" as a result.
 
@@ -339,7 +339,7 @@ SELECT * FROM ABC
 WHERE timestamp = CAST('07-29-2021' AS timestamp)
 ```
 
-A correct usage of the `CAST` operator is shown below:
+The correct usage of the `CAST` operator is shown below:
 
 ```sql
 SELECT * FROM ABC
@@ -376,7 +376,7 @@ WHERE NOT EXISTS
 (SELECT ID FROM T2 WHERE T1.ID = T2.ID)
 ```
 
-Alternatively, if you are using the `LEFT OUTER JOIN` operator, you can replicate using he `NOT IN` operator by using the following query:
+Alternatively, if you are using the `LEFT OUTER JOIN` operator, you can replicate using the `NOT IN` operator by using the following query:
 
 ```sql
 SELECT T1.ID FROM T1
@@ -420,7 +420,7 @@ This section provides information on exporting data and limits.
 
 Yes. Data can be extracted from Query Service and there is also the option to store the results in CSV format via a SQL command. 
 
-Using a PSQL client, there are two ways to achieve this. You can use the `COPY TO` command or the following example statement format:
+There are two ways to save the results of a query when using a PSQL client. You can use the `COPY TO` command or create a statement using the following format:
 
 ```sql
 SELECT column1, column2 
@@ -428,9 +428,7 @@ FROM <table_name>
 \g <table_name>.out
 ```
 
-<!-- ### How can I download my query results as a CSV file?
-
-This is not a feature that Query Service offers directly. However, if the [!DNL PostgreSQL] client used to connect to the database server has the capability, the response of a SELECT query can be written and downloaded as a CSV file. Please refer to the documentation of the utility or third-party tool that you are using for clarification on this process. -->
+[Guidance on the use of the `COPY TO` command](./sql/syntax.md#copy) can be fond in the SQL syntax reference documentation.
 
 ### Can I extract the content of the final dataset that has been ingested through CTAS queries (assuming these are larger quantities of data such as Terabytes)? 
 
@@ -444,9 +442,9 @@ This section includes information on the use of third-party tools such as PSQL a
 
 Yes, you can connect multiple third-party desktop clients to Query Service. See the documentation for [full details about the available clients and how to connect them to Query service](./clients/overview.md).   
 
-### Is there a way to connect Query Service once for continuous use with the a third-party tool?
+### Is there a way to connect Query Service once for continuous use with a third-party tool?
 
-Yes, third-party desktop clients can be connected to Query Service through a one-time setup of  non-expiring credentials. Non-expiring credentials can be generated by an authorized user and will receive them in a JSON file downloaded to their local machine. Full [guidance on how to create and download non-expiring credentials](./ui/credentials.md#non-expiring-credentials) can be found in the documentation.
+Yes, third-party desktop clients can be connected to Query Service through a one-time setup of non-expiring credentials. Non-expiring credentials can be generated by an authorized user and will receive them in a JSON file downloaded to their local machine. Full [guidance on how to create and download non-expiring credentials](./ui/credentials.md#non-expiring-credentials) can be found in the documentation.
 
 ### What kind of third-party SQL editors can I connect to Query Service Editor?
 
@@ -454,15 +452,15 @@ Any third-party SQL editor that is PSQL or [!DNL Postgres] client compliant can 
 
 ### Can I connect the Power BI tool to Query Service?
 
-Yes, you can connect Power BI to Query Service.
+Yes, you can connect Power BI to Query Service. See the documentation for [instructions on connecting the Power BI desktop app to Query Service](./clients/power-bi.md). 
 
 ### Why do the dashboards take a long time to load when connected to Query Service?
 
-When the system is connected to Query Service, it is connected to an interactive or batch processing engine. This can result in a longer loading time to reflect processed data. 
+When the system is connected to Query Service, it is connected to an interactive or batch processing engine. This can result in longer loading times to reflect the processed data. 
 
-If you would like to improve user interactivity within the dashboards, you should implement a Business Intelligence (BI) server as a caching layer between Query Service and BI tools. Generally, most BI tools have an additional offering for a server.
+If you would like to improve the response times for your dashboards, you should implement a Business Intelligence (BI) server as a caching layer between Query Service and BI tools. Generally, most BI tools have an additional offering for a server.
 
-The purpose of adding the cache server layer is to cache the data from Query Service and utilize the same for dashboards and speed up the response. This occurs as the results for queries that are executed once in that day would be cached in the BI server. The caching server would then serves these results and for any user with the same query.
+The purpose of adding the cache server layer is to cache the data from Query Service and utilize the same for dashboards to speed up the response. This is possible as the results for queries that are executed would be cached in the BI server each day. The caching server then serves these results for any user with the same query to decrease latency. Please refer to the documentation of the utility or third-party tool that you are using for clarification on this setup.
 
 ### Is it possible to access Query Service using the pgAdmin connection tool? 
 
