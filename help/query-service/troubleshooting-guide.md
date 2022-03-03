@@ -41,13 +41,13 @@ Yes, you can visualize and interact with all Adobe API services using Postman (a
 ### Is there a limit to the maximum number of rows returned from a query through the UI?
 
 +++Answer
-Yes, Query service internally applies a limit of 50000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
+Yes, Query service internally applies a limit of 50,000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
 +++
 
 ### Is there a data size limit for the resulting output from a query?
 
 +++Answer
-No, there is no limit on data size. But, there is a query timeout limit of 10 minutes from an interactive session, and if the query is executed as a batch CTAS then a 10-minute timeout is not applicable. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
+No. There is no limit on data size, but there is a query timeout limit of 10 minutes from an interactive session. If the query is executed as a batch CTAS then a 10-minute timeout is not applicable. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
 +++
 
 ### How do I bypass the limit on the output number of rows from a SELECT query?
@@ -84,12 +84,12 @@ No. Query Service has an autoscaling capability that ensures concurrent queries 
 +++Answer
 The following steps describe how to display a tabular view of a dataset through the UI, including all nested fields and columns in a flattened form.
 
-- After logging into Experience Platform, navigate to [!UICONTROL Datasets] in the left rail of the UI.
+- After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left rail of the UI to navigate to [!UICONTROL Datasets] dashboard.
 - The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
 
 ![A dataset highlighted in the Platform UI.](./images/troubleshooting/dataset-selection.png)
 
-- The [!UICONTROL Datasets activity] screen appears. Select [!UICONTROL Preview] to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
+- The [!UICONTROL Datasets activity] screen appears. Select [!UICONTROL Preview dataset] to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
 
 ![The XDM schema and tabular view of the flattened data.](./images/troubleshooting/dataset-preview.png)
 
@@ -121,8 +121,13 @@ There can be any number of reasons for a query to be stuck while processing. To 
 
 - Navigate to [https://www.adobe.com/](https://www.adobe.com/) in your web browser.
 - On the right side of the top navigation bar, select **[!UICONTROL Sign In]**.
+
+![The Adobe website with sign in highlighted.](./images/troubleshooting/adobe-sign-in.png)
+
 - Use your Adobe ID and password that is registered with your Adobe license.
 - Select **[!UICONTROL Help & Support]** from the top navigation bar. 
+
+![The top navigation bar dropdown menu with help and support highlighted.](./images/troubleshooting/help-and-support.png)
 
 A dropdown banner appears containing a [!UICONTROL Help and support] section. Select **[!UICONTROL Contact us]** to open the Adobe Customer Care Virtual Assistant, or select **[!UICONTROL Enterprise support]** for dedicated help for large organizations.
 +++
@@ -141,7 +146,7 @@ See the [anonymous block documentation](./sample-queries/anonymous-block.md) for
 There are two ways to implement custom attribution:
 
 1. Use a combination of existing [Adobe defined functions](./sql/adobe-defined-functions.md) to identify if the use-case needs are met. 
-1. If the previous suggestion doesn’t meet your use case, you should use a combination of [window functions](./sql/adobe-defined-functions.md#window-functions). Window functions look at all the events in a sequence. They also allow you to review the historic data and can be used in any combination.
+1. If the previous suggestion does not satisfy your use case, you should use a combination of [window functions](./sql/adobe-defined-functions.md#window-functions). Window functions look at all the events in a sequence. They also allow you to review the historic data and can be used in any combination.
 +++
 
 ### Can I templatize my queries so that I can easily re-use them?
@@ -155,7 +160,7 @@ Yes, you can templatize queries through the use of prepared statements. Prepared
 +++Answer
 To retrieve error logs for a specific query, you must first use the Query Service API to fetch the query log details. The HTTP response contains the query IDs that are required to investigate a query error.  
 
-First, use the GET command to retrieve multiple queries. Information on how to make a call to the API can be found in the [sample API calls documentation](./api/queries.md#sample-api-calls).
+Use the GET command to retrieve multiple queries. Information on how to make a call to the API can be found in the [sample API calls documentation](./api/queries.md#sample-api-calls).
 
 From the response, identify the query you want to investigate and make another GET request using its `id` value. Full instructions can be found in the [retrieve a query by ID documentation](./api/queries.md#retrieve-a-query-by-id). 
 
@@ -221,10 +226,12 @@ AS SELECT '1' as _id,
 ### How do I quickly process the new data coming into the system every day?
 
 +++Answer
-The [SNAPSHOT](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./sample-queries/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
+The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./sample-queries/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
++++
 
 ### Why is there a difference between the numbers shown in Profile UI and the numbers calculated from the profile export dataset? 
 
++++Answer
 The numbers displayed in the profile dashboard are accurate as of the last snapshot. The numbers generated in the profile export table are dependent entirely on the export query. As a result, querying the number of profiles that qualify for a particular segment is a common cause for this discrepancy.
 
 >[!NOTE]
@@ -254,15 +261,15 @@ This feature is currently a work-in-progress. Details will be made available in 
 ### What helper functions are supported by Query Service?
 
 +++Answer
-Query Service provides several built-in Spark SQL helper functions to extend SQL functionality. See the document for a complete list of the [Spark SQL functions supported by Query Service](./sql/spark-sql-functions.md).
-+++Answer
+Query Service provides several built-in SQL helper functions to extend SQL functionality. See the document for a complete list of the [SQL functions supported by Query Service](./sql/spark-sql-functions.md).
++++
 
 ### What should I do if my scheduled query fails?
 
 +++Answer
-Please check the logs to find out the details of the error. Please see the FAQ section on [finding errors within logs](#error-logs) for more details.
+First, check the logs to find out the details of the error. The FAQ section on [finding errors within logs](#error-logs) provides more information on how to do this.
 
-See the documentation for guidance on how to perform [scheduled queries in the UI](./ui/user-guide.md#scheduled-queries) and through [the API](./api/scheduled-queries.md). 
+You should also check the documentation for guidance on how to perform [scheduled queries in the UI](./ui/user-guide.md#scheduled-queries) and through [the API](./api/scheduled-queries.md). 
 +++
 
 ### What does the "Session Limit Reached" error mean?
@@ -280,13 +287,12 @@ Query Service never deletes query history. This means that any queries referenci
 ### How can I get only the metadata for a query?
 
 +++Answer
-To get only the metadata for a query, you can run a query that returns zero rows, as follows:
+You can run a query that returns zero rows to get only the metadata in response. This example query returns only the metadata for the specified table.
 
 ```sql
 SELECT * FROM <table> WHERE 1=0
 ```
 
-This query returns only the metadata for the specified table.
 +++
 
 ### How can I quickly iterate on a CTAS (Create Table As Select) query without materializing it?
@@ -329,6 +335,7 @@ Query Service supports built-in SQL functions to convert a given timestamp to an
 |-----------|---------------|
 | Timestamp | The timestamp can be written in either UTC format or simple `{year-month-day}` format. If no time is provided, the default value is midnight on the morning of the given day. |
 | Timezone  | The timezone is written in a `{continent/city})` format. It must be one of the recognized timezone codes as found in the [public-domain TZ database](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+
 +++
 
 #### Convert to the UTC timestamp
