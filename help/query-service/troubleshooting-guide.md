@@ -336,11 +336,8 @@ Query Service supports built-in SQL functions to convert a given timestamp to an
 | Timestamp | The timestamp can be written in either UTC format or simple `{year-month-day}` format. If no time is provided, the default value is midnight on the morning of the given day. |
 | Timezone  | The timezone is written in a `{continent/city})` format. It must be one of the recognized timezone codes as found in the [public-domain TZ database](https://data.iana.org/time-zones/tz-link.html#tzdb). |
 
-+++
-
 #### Convert to the UTC timestamp
 
-+++Answer
 The `to_utc_timestamp()` method interprets the given parameters and converts it **to the timestamp of your local timezone** in UTC format. For example, the time zone in Seoul, South Korea is UTC/GMT +9 hours. By providing a date-only timestamp, the method uses a default value of midnight in the morning. The timestamp and timezone are converted into the UTC format from the time of that region to a UTC timestamp of your local region.
 
 ```SQL
@@ -361,11 +358,8 @@ The console output provided in the Query Service UI is a more human-readable for
 8/30/2021, 3:00 PM
 ```
 
-+++
-
 #### Convert from the UTC timestamp
 
-+++Answer
 The `from_utc_timestamp()` method interprets the given parameters **from the timestamp of your local timezone** and provides the equivalent timestamp of the desired region in UTC format. In the example below, the hour is 2:40PM in the user's local timezone. The Seoul timezone passed as a variable is nine hours ahead of the local timezone.
 
 ```SQL
@@ -377,8 +371,6 @@ The query returns a timestamp in UTC format for the timezone passed as a paramet
 ```
 8/31/2021, 11:40 PM
 ```
-
-+++
 
 ### How should I filter my time-series data?
 
@@ -496,9 +488,8 @@ WHERE T2.ID IS NULL
 
 ## Exporting Data {#exporting-data}
 
-+++Answer
 This section provides information on exporting data and limits.
-+++
+
 
 ### Is there a way to extract data from Query Service after query processing and save the results in a CSV file?
 
