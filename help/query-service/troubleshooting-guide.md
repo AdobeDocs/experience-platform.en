@@ -12,11 +12,11 @@ This document provides answers to frequently asked questions about Query Service
 
 The following list of answers to frequently asked questions about Query Service divided into the following categories:
 
-- [Query Editor](#query-editor)
+- [General](#general)
 - [Exporting Data](#exporting-data)
 - [Third-party tools](#third-party-tools)
 
-## Query Editor {#query-editor}
+## General Query Service questions {#general}
 
 This section includes information on performance, limits, and processes.
 
@@ -28,7 +28,7 @@ No. Turning off the auto-complete feature is not currently supported by the plat
 
 One potential causes is the auto-complete feature. The feature processes certain metadata commands that can occasionally slow the editor.
 
-### Can I use Postman for Query Service API?
+### Can I use Postman for the Query Service API?
 
 Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Watch the [Postman setup guide](https://video.tv.adobe.com/v/28832) for step by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with Postman. See the official documentation for [guidance on starting, running, and sharing Postman collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 
@@ -62,21 +62,24 @@ One or more of the following solutions are recommended in case of queries timing
 
 No. Query Service has an autoscaling capability that ensures concurrent queries do not have any noticeable impact on the performance of the service.
 
-### How do I select a column from a hierarchical dataset? How do I find what those columns are?
+### How do I find a column name from a hierarchical dataset?
 
-<!-- I need elaboration on this question. It needs to be reworded. Why do users need to 'select a column'? Does it mean how do i managed nested datasets? -->
-
-See the documentation for full guidance on [how to work with nested data structures](./best-practices/nested-data-structures.md) using the Query Editor or a third-party client.
-
-The following steps provide guidance on how to display a tabular view of a dataset, including all nested fields and columns, in a flattened form through the UI:
+The following steps describe how to display a tabular view of a dataset through the UI, including all nested fields and columns in a flattened form.
 
 - After logging into Experience Platform, navigate to [!UICONTROL Datasets] in the left rail of the UI.
-- The datasets [!UICONTROL Browse] tab opens. Either use the search bar to refine the available options or select a dataset from the list displayed.
+- The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
+
+![A dataset highlighted in the Platform UI.](./images/troubleshooting/dataset-selection.png)
+
 - The [!UICONTROL Datasets activity] screen appears. Select [!UICONTROL Preview] to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![The XDM schema and tabular view of the flattened data.](./images/troubleshooting/flattened-dataset.png)
+![The XDM schema and tabular view of the flattened data.](./images/troubleshooting/dataset-preview.png)
 
-- Select any field from the schema to display its contents in a flattened column.
+- Select any field from the schema to display its contents in a flattened column. The name of the column is displayed above its contents on the right side of the page. You should copy this name to use for querying this dataset.
+
+![The column name of a nested dataset highlighted in the UI.](./images/troubleshooting/column-name.png)
+
+See the documentation for full guidance on [how to work with nested data structures](./best-practices/nested-data-structures.md) using the Query Editor or a third-party client.
 
 ### How do I speed up a query on a dataset that contains arrays?
 
@@ -118,34 +121,47 @@ Yes, you can templatize queries through the use of prepared statements. Prepared
 
 ### How do I retrieve error logs for a query? {#error-logs}
 
-To retrieve error logs for a query, you must first use the Query Service API to fetch the query log details. This allows you to find the specific query ID that you wish to investigate.  
+To retrieve error logs for a specific query, you must first use the Query Service API to fetch the query log details. The HTTP response contains the query IDs that are required to investigate a query error.  
 
 First, use the GET command to retrieve multiple queries. Information on how to make a call to the API can be found in the [sample API calls documentation](./api/queries.md#sample-api-calls).
 
-From the response, identify the query you want to investigate and make another GET request using its `queryid`. The response contains an `errors` array. An example of an `errors` array is shown below:
+From the response, identify the query you want to investigate and make another GET request using its `id` value. Full instructions can be found in the [retrieve a query by ID documentation](./api/queries.md#retrieve-a-query-by-id). 
+
+A successful response returns HTTP status 200 and contains the `errors` array. The response has been shortened for brevity.
 
 ```json
-'rowCount': 0,
-'errors': [
-       {'code': '58000',
-        'message': 'Batch query execution gets : [failed reason ErrorCode: 58000 Batch query execution gets : [Analysis error encountered. Reason: [sessionId: f055dc73-1fbd-4c9c-8645-efa609da0a7b Function [varchar] not defined.]]]',
-        'errorType': 'USER_ERROR'}],
+{
+    "isInsertInto": false,
+    "request": {
+                "dbName": "prod:all",
+                "sql": "SELECT *\nFROM\n  accounts\nLIMIT 10\n"
+            },
+    "clientId": "8c2455819a624534bb665c43c3759877",
+    "state": "SUCCESS",
+    "rowCount": 0,
+    "errors": [{
+      'code': '58000', 
+      'message': 'Batch query execution gets : [failed reason ErrorCode: 58000 Batch query execution gets : [Analysis error encountered. Reason: [sessionId: f055dc73-1fbd-4c9c-8645-efa609da0a7b Function [varchar] not defined.]]]', 
+      'errorType': 'USER_ERROR'
+      }],
+    "isCTAS": false,
+    "version": 1,
+    "id": "343388b0-e0dd-4227-a75b-7fc945ef408a",
+}
 ```
 
 The [Query Service API reference documentation](https://www.adobe.io/experience-platform-apis/references/query-service/) provides more information on all available endpoints.
 
 ### What does "Error validating schema" mean?
 
-If you see the "Error validating schema"message, it means that the system is unable to locate a field within the schema. You should read the best practice document for [organizing data assests in Query Service](./best-practices/organize-data-assets.md) followed by the [Create Table As Select documentation](./sql/syntax.md#create-table-as-select).  
+The "Error validating schema" message means that the system is unable to locate a field within the schema. You should read the best practice document for [organizing data assets in Query Service](./best-practices/organize-data-assets.md) followed by the [Create Table As Select documentation](./sql/syntax.md#create-table-as-select).  
 
 The following example demonstrates the use of a CTAS syntax and a struct datatype:
 
 ```sql
 CREATE TABLE table_name WITH (SCHEMA='schema_name')
 
-AS
-
- SELECT '1' as _id,
+AS SELECT '1' as _id,
 
  STRUCT
 
@@ -153,17 +169,17 @@ AS
 
     '2020-09-09T21:21:16.0Z' AS taskActualStartDate,
 
-    'Consulting' AS taskdesctiption,
+    'Consulting' AS taskdescription,
 
-    '5f5937c10011e09b89666c52d9a8c564' AS taskguid,
+    '5f6527c10011e09b89666c52d9a8c564' AS taskguide,
 
-    'Partner Consulting Engagement' AS taskname, 
+    'Stakeholder Consulting Engagement' AS taskname, 
 
     '2020-09-09T15:00:00.0Z' AS taskPlannedStartDate,
 
     '2021-02-15T11:00:00.0Z' AS taskPlannedCompletionDate
 
-  ) AS _workfrontshared ;
+  ) AS _workfront ;
 ```
 
 ### How do I quickly process the new data coming into the system every day?
@@ -188,14 +204,6 @@ You can also confirm that your dataset contains data by using a small query such
 SELECT count(1) FROM myTableName
 ```
 
-<!-- ### If I want to use [!DNL PSQL] to do a CTAS or INSERT INTO on experience event schema-based dataset, that’s enabled for the profile. Should those events become available in UPS?
-
-You can look at Query Service - Profile Aggregate to see how you can proceed to have them in UPS.
-
->[!IMPORTANT]
->
->Please make sure that when you use this in implementation for the customer with the appropriate license. Standard AJO, CDP, CJA and Experience Platform licenses do not provide this capability. An Experience Platform Intelligence license is required for these workflows. -->
-
 ### Can I sample my data?
 
 This feature is currently a work-in-progress. Details will be made available in [release notes](../release-notes/latest/latest.md) and through Platform UI dialogs once the feature is ready for release.
@@ -208,21 +216,11 @@ Query Service provides several built-in Spark SQL helper functions to extend SQL
 
 Please check the logs to find out the details of the error. Please see the FAQ section on [finding errors within logs](#error-logs) for more details.
 
-<!--
-https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html?lang=en#scheduled-queries
-What do the instructions below mean?: 
- -->
-
-<!-- Follow the steps as suggested below:- 
-- Go to log
-- Click on query
-- You will find the metadata along with the error -->
+See the documentation for guidance on how to perform [scheduled queries in the UI](./ui/user-guide.md#scheduled-queries) and through [the API](./api/scheduled-queries.md). 
 
 ### What does the "Session Limit Reached" error mean?
 
-<!-- Need more details for below -->
-
-"Session Limit Reached" means that the maximum number of Query Service sessions allowed in your organization has been reached. Please connect with your organization’s Adobe Experience Platform administrator.
+"Session Limit Reached" means that the maximum number of Query Service sessions allowed for your organization has been reached. Please connect with your organization’s Adobe Experience Platform administrator.
 
 ### How does the query log handle queries to a a deleted dataset? 
 
