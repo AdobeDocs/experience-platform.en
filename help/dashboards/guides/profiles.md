@@ -142,7 +142,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 The [!UICONTROL Single Identity Profiles] widget provides a count of your organization's profiles that are unauthenticated and only have one type of ID type that creates their identity. This ID type can either be an email or ECID. The profile count is generated from the most recent snapshot.
 
-![Single Identity Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
+![Single Identity Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
 
 <!--  -->
 
@@ -150,7 +150,7 @@ The [!UICONTROL Single Identity Profiles] widget provides a count of your organi
 
 The [!UICONTROL Single Identity Profiles Trend] widget illustrates the count trend of profiles over a set period of time that only have one type of ID type in their identity map. The periods available are 30 days, six months, and one year which is chosen from a dropdown menu. The count is reflected in a line graph with profile count on the Y-axis and time on the X-axis.
 
-![Single Identity Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
+![Single Identity Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
 
 <!--   -->
 
@@ -158,7 +158,7 @@ The [!UICONTROL Single Identity Profiles Trend] widget illustrates the count tre
 
 The [!UICONTROL Single Identity Profiles by Identity Type] widget provides a breakdown of all single identity profiles by their respective source namespace identifiers. The visualization uses a bar chart with the five most common namespace identifiers on the Y-axis, and the profile count on the X-axis. This widget helps you to understand which namespaces are dominating the single-channel behavior of the customer.
 
-![Single Identity Profiles by Identity Type widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
+![Single Identity Profiles by Identity Type widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
 
 <!--  -->
 
@@ -168,7 +168,7 @@ The [!UICONTROL Unsegmented Profiles] widget provides a total number of all prof
 
 <!-- Need to elaborate: Drilldown into efficacy for this set for deeper analysis, triage, and action.  -->
 
-![Unsegmented Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
+![Unsegmented Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
 
 <!--  -->
 
@@ -176,7 +176,7 @@ The [!UICONTROL Unsegmented Profiles] widget provides a total number of all prof
 
 The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, six months, and one-year periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the Y-axis and time on the X-axis.
 
-![Unsegmented Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
+![Unsegmented Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
 
 ## Next steps
 
