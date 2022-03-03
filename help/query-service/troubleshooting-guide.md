@@ -237,6 +237,7 @@ The numbers displayed in the profile dashboard are accurate as of the last snaps
 >[!NOTE]
 >
 >Querying includes historical data, whereas UI only displays the current profile data.
+
 +++
 
 ### Why did my query return an empty subset, and what should I do?
