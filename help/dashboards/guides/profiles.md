@@ -164,9 +164,9 @@ The [!UICONTROL Single Identity Profiles by Identity Type] widget provides a bre
 
 ### [!UICONTROL Unsegmented Profiles] (Beta) {#unsegmented-profiles}
 
-The [!UICONTROL Unsegmented Profiles] widget provides a total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot. The widget conveys the quantity of profiles that represent an opportunity for activation, and can also indicate the opportunity to expunge profiles that do not provide adequate ROI.
+The [!UICONTROL Unsegmented Profiles] widget provides a total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot. This number represents an opportunity for profile activation across the organization, and can also indicate the opportunity to expunge profiles that do not provide adequate ROI.
 
-<!-- Need to elaborate: Drilldown into efficacy for this set for deeper analysis, triage and action.  -->
+<!-- Need to elaborate: Drilldown into efficacy for this set for deeper analysis, triage, and action.  -->
 
 ![Unsegmented Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
@@ -174,7 +174,7 @@ The [!UICONTROL Unsegmented Profiles] widget provides a total number of all prof
 
 ### [!UICONTROL Unsegmented Profiles Trend] (Beta) {#unsegmented-profiles-trend}
 
-The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be vizulalised over 30 days, six months, and one year periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the Y-axis and time on the X-axis.
+The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, six months, and one-year periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the Y-axis and time on the X-axis.
 
 ![Unsegmented Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.md)
 
