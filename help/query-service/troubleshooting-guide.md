@@ -23,7 +23,7 @@ This section includes information on performance, limits, and processes.
 ### Can I turn off the auto-complete feature in the Query Service Editor?
 
 +++Answer
-No. Turning off the auto-complete feature is not currently supported by the platform.
+No. Turning off the auto-complete feature is not currently supported by the editor.
 +++
 
 ### Why does the Query Editor sometimes become slow when I type in a query?
@@ -41,7 +41,7 @@ Yes, you can visualize and interact with all Adobe API services using Postman (a
 ### Is there a limit to the maximum number of rows returned from a query through the UI?
 
 +++Answer
-Yes, Query service internally applies a limit of 50,000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
+Yes, Query Service internally applies a limit of 50,000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
 +++
 
 ### Is there a data size limit for the resulting output from a query?
@@ -84,7 +84,7 @@ No. Query Service has an autoscaling capability that ensures concurrent queries 
 +++Answer
 The following steps describe how to display a tabular view of a dataset through the UI, including all nested fields and columns in a flattened form.
 
-- After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left rail of the UI to navigate to [!UICONTROL Datasets] dashboard.
+- After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left navigation of the UI to navigate to [!UICONTROL Datasets] dashboard.
 - The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
 
 ![A dataset highlighted in the Platform UI.](./images/troubleshooting/dataset-selection.png)
@@ -145,14 +145,14 @@ See the [anonymous block documentation](./sample-queries/anonymous-block.md) for
 +++Answer
 There are two ways to implement custom attribution:
 
-1. Use a combination of existing [Adobe defined functions](./sql/adobe-defined-functions.md) to identify if the use-case needs are met. 
+1. Use a combination of existing [Adobe-defined functions](./sql/adobe-defined-functions.md) to identify if the use-case needs are met. 
 1. If the previous suggestion does not satisfy your use case, you should use a combination of [window functions](./sql/adobe-defined-functions.md#window-functions). Window functions look at all the events in a sequence. They also allow you to review the historic data and can be used in any combination.
 +++
 
 ### Can I templatize my queries so that I can easily re-use them?
 
 +++Answer
-Yes, you can templatize queries through the use of prepared statements. Prepared statements can optimize performance, and avoid repetitiously re-parsing a query. See the [prepared statements documentation](./sql/prepared-statements.md) for more details.
+Yes, you can templatize queries through the use of prepared statements. Prepared statements can optimize performance and avoid repetitiously re-parsing a query. See the [prepared statements documentation](./sql/prepared-statements.md) for more details.
 +++
 
 ### How do I retrieve error logs for a query? {#error-logs}
