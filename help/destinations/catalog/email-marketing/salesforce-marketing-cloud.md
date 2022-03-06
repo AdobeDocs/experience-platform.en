@@ -12,7 +12,7 @@ exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
 
 To send segment data to [!DNL Salesforce Marketing Cloud], you must first [connect the destination](#connect-destination) in Platform, and then [set up a data import](#import-data-into-salesforce) from your storage location into [!DNL Salesforce Marketing Cloud].
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [audience activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).
 

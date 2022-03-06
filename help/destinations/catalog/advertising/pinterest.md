@@ -33,7 +33,7 @@ In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinati
 
 {style="table-layout:auto"}
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Pinterest Customer List destination.
 

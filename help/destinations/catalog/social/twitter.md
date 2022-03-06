@@ -28,7 +28,7 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 
 {style="table-layout:auto"}
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers used in the Twitter Custom Audiences destination.
 

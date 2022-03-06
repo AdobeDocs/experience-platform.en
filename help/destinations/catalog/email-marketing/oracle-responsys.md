@@ -12,7 +12,7 @@ exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
 
 To send segment data to [!DNL Oracle Responsys], you must first [connect to the destination](#connect-destination) in Adobe Experience Platform, and then [set up a data import](#import-data-into-responsys) from your storage location into [!DNL Oracle Responsys].
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [audience activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).
 

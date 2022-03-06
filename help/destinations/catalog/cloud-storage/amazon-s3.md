@@ -10,11 +10,13 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 
 Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets.
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-segment-streaming-destinations.md#mapping).
 
 ![Amazon S3 profile-based export type](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+
+**Batch frequency**: this destination exports data  
 
 ## Connect to the destination {#connect}
 

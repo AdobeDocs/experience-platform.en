@@ -67,7 +67,7 @@ Verizon Media supports the activation of identities described in the table below
 
 {style="table-layout:auto"}
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (Email) used in the Verizon Media destination.
 

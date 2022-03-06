@@ -12,7 +12,7 @@ Adobe Campaign is a set of solutions that help you personalize and deliver campa
 
 To send segment data to Adobe Campaign, you must first [connect the destination](#connect-destination) in Adobe Experience Platform, and then [set up a data import](#import-data-into-campaign) from your storage location into Adobe Campaign.
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the **[!UICONTROL Select attributes]** step of the [audience activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).
 

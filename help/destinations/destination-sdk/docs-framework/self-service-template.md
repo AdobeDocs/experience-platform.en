@@ -45,7 +45,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 
 {style="table-layout:auto"}
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *YOURDESTINATION* destination.
 

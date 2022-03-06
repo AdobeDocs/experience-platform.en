@@ -24,7 +24,7 @@ As a marketer, I want to be able to use segments built off of [!DNL Microsoft Ad
 |---|---|
 |MAID|Microsoft Advertising ID|
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **[!DNL Segment Export]** - you are exporting all members of a segment (audience) to the [!DNL Microsoft Bing] destination.
 

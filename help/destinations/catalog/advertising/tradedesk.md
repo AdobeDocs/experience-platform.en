@@ -28,7 +28,7 @@ As a marketer, I want to be able to use segments built off of [!DNL Trade Desk I
 |IDFA|[!DNL Apple ID for Advertisers]|
 |The Trade Desk ID|Advertiser ID in The Trade Desk platform|
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **[!DNL Segment export]** - you are exporting all members of a segment (audience) to the destination.
 

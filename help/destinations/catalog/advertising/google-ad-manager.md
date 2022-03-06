@@ -31,7 +31,7 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 |MAID|Microsoft Advertising ID. This ID uniquely identifies devices running Windows 10.||
 |Amazon Fire TV ID|This ID uniquely identifies Amazon Fire TVs.||
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 

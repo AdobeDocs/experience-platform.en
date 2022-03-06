@@ -22,9 +22,10 @@ The destination enables marketers to push segments created in Adobe Experience P
 >
 >In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activate destination workflow, it is *mandatory* to map identities and *optional* to map attributes. Mapping Email and/or ECID from the Identity Namespace tab is the most important thing to do to ensure the person is matched in Marketo. Mapping Email ensures the highest match rate.
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
-Segment Export - you are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the Marketo Engage destination.
+**Segment Export**: you are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the Marketo Engage destination.
+**Streaming frequency**: this destination exports data 
 
 ## Set up destination and activate segments {#set-up}
 
