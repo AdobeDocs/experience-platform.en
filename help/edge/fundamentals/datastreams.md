@@ -1,6 +1,6 @@
 ---
 title: Configure your Datastream for the Experience Platform Web SDK
-description: Learn how to configure the Datatstreams. 
+description: Learn how to configure the Datastreams. 
 keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
