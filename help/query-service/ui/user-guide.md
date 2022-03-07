@@ -58,6 +58,10 @@ To minimize your development time, it is recommended that you develop your queri
 
 ![Image](../images/ui/query-editor/tables-auto.png)
 
+### Auto-complete toggle
+
+[!DNL Query Editor] automatically suggests potential key words for the query as you write it. 
+
 ### Error detection
 
 [!DNL Query Editor] automatically validates a query as you write it, providing generic SQL validation and specific execution validation. If a red underline appears below the query (as shown in the image below), it represents an error within the query.
