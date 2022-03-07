@@ -45,7 +45,7 @@ For more information on data collection in Platform, please see the [data collec
 
 [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-**Updated features**
+**New feature**
 
 | Feature | Description |
 | --- | --- |
