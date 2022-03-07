@@ -4,8 +4,8 @@ title: Create an Adobe Campaign Managed Services source connection using Platfor
 description: Learn how to connect Adobe Experience Platform to Adobe Campaign Managed Services using Platform UI.
 hide: true
 hidefromtoc: true
+exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 ---
-
 # Create an Adobe Campaign Managed Services source connection using Platform UI
 
 This tutorial provides steps to create a source connector to bring your Adobe Campaign Managed Services data to Adobe Experience Platform.

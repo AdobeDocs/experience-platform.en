@@ -10,7 +10,6 @@ exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 Updates to existing features in Adobe Experience Platform:
 
 - [Data collection](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [Sources](#sources)
 
@@ -27,18 +26,6 @@ Platform provides a suite of technologies that allow you to collect client-side 
 | First-party device IDs | You can now send your own device IDs to the Adobe Experience Platform Edge Network when collecting customer data using the Platform Web SDK, providing a workaround for recent browser restrictions on third-party cookie lifespans. See the guide on [first-party device IDs](../../edge/identity/first-party-device-ids.md) for more information. |
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
-
-**New feature**
-
-| Feature | Description |
-| --- | --- |
-| [!DNL Data Prep] support for Adobe Analytics source connector | The Adobe Analytics source connector now supports Data Prep features, allowing you to map your Analytics report-suite data to a target XDM schema when creating a dataflow. See the tutorial on [creating an Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) for more information. |
-
-For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
 ## [!DNL Identity Service] {#identity}
 

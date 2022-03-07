@@ -1,8 +1,8 @@
 ---
 title: Product Catalog Schema Field Group
 description: This document provides an overview of the Product Catalog schema field group.
+exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
 ---
-
 # [!UICONTROL Product Catalog] schema field group
 
 [!UICONTROL Product Catalog] is a standard schema field group for the [[!UICONTROL Product] class](../../classes/product.md) which captures properties related to a product catalog.
