@@ -5,7 +5,11 @@ exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: February 23, 2022**
+**Release date: March 7, 2022**
+
+>[!NOTE]
+>
+>This release was shifted from the original date of February 23 to March 7.
 
 Updates to existing features in Adobe Experience Platform:
 
