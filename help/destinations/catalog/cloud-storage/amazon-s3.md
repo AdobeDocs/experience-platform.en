@@ -12,11 +12,12 @@ Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 st
 
 ## Export type and frequency {#export-type-frequency}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-segment-streaming-destinations.md#mapping).
+Item | Type | Notes |
+---------|----------|---------|
+| Export type | **Profile-based** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export frequency | **Batch** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours.|
 
 ![Amazon S3 profile-based export type](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
-
-**Batch frequency**: this destination exports data  
 
 ## Connect to the destination {#connect}
 

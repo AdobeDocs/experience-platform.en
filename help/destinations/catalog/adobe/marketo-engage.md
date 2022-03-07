@@ -24,8 +24,12 @@ The destination enables marketers to push segments created in Adobe Experience P
 
 ## Export type and frequency {#export-type-frequency}
 
-**Segment Export**: you are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the Marketo Engage destination.
-**Streaming frequency**: this destination exports data 
+Refer to the table below for information about the destination export type and frequency.
+
+Item | Type | Notes |
+---------|----------|---------|
+| Export type | **Segment export** | You are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the Marketo Engage destination.|
+| Export frequency | **Streaming** | Streaming destinations are "always on". This means that this is an API-based connection. Read more about streaming destinations.|
 
 ## Set up destination and activate segments {#set-up}
 

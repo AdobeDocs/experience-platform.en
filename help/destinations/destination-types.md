@@ -11,7 +11,7 @@ Read this page to understand the different types and categories of Adobe Experie
 
 ## Destination types
 
-In Adobe Experience Platform, we distinguish between two destination types - connections and extensions. There are two types of connection destinations, Profile Export destinations and Segment Export destinations. 
+In Adobe Experience Platform, we distinguish between two destination types - connections and extensions. There are two types of connection destinations, Profile Export destinations and Segment Export destinations.
 
 ![Types of destinations](./assets/destination-types/types-of-destinations.png)
 
@@ -24,15 +24,15 @@ In Adobe Experience Platform, we distinguish between two destination types - con
 Profile export destinations receive raw data, often with email address as the primary key. Experience Platform currently supports two types of profile export destinations:
 
 * [Streaming profile export destinations](#streaming-profile-export)
-* [File-based destinations](#file-based)
+* [Batch (file-based) destinations](#file-based)
 
 ### Streaming profile export destinations {#streaming-profile-export}
 
 Streaming profile export destinations receive segment and profile data as Experience Platform data streams. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) and [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md) are examples of such destinations.
 
-### File-based destinations {#file-based}
+### Batch (file-based) destinations {#file-based}
 
-File-based destinations receive `.csv` files containing profiles and/or attributes. [Amazon S3](catalog/cloud-storage/amazon-s3.md) is an example of destination where you can deposit files containing profile exports.
+File-based destinations receive `.csv` files containing profiles and/or attributes. [Amazon S3](catalog/cloud-storage/amazon-s3.md) is an example of a destination where you can export files containing profile exports.
 
 ## Streaming segment export destinations {#streaming-destinations}
 
