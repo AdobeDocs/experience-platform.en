@@ -1,6 +1,7 @@
 ---
 title: Financial Account Data Type
 description: This document provides an overview of the Financial Account XDM data type.
+exl-id: badf9b20-d397-4b46-b045-19c69806fe8e
 ---
 # [!UICONTROL Financial Account] data type
 
