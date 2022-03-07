@@ -64,7 +64,7 @@ The subsections below cover the basic steps for mapping your data within the Dat
 
 Select **[!UICONTROL Save and Add Mapping]** after completing the [basic configuration step](#configure), and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform. You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead.
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >The JSON object must have a single root node `data` in order to pass validation.
 
