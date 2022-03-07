@@ -19,6 +19,10 @@ This page lists all the information you need to provide when submitting or updat
 * (For productized integrations only) a documentation PR (pull request), following the instructions described in the the [self-service documentation process](./docs-framework/documentation-instructions.md).
 * An image file which will be displayed as a logo for your destination card in the Experience Platform destinations catalog.
 
+>[!NOTE]
+>
+>Adobe's standard response time to review destination publish requests is 5 business days.
+
 You can find detailed information about each item in the sections below:
 
 ## Use case description
