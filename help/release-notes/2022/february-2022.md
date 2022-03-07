@@ -5,14 +5,30 @@ exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: February 23, 2022**
+**Release date: March 7, 2022**
+
+>[!NOTE]
+>
+>This release was shifted from the original date of February 23 to March 7.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Dashboards]](#dashboards)
 - [Data collection](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [Sources](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important insights about your organization’s data, as captured during daily snapshots.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| New standard destinations widgets | The following standard widgets allow you to visualize different metrics related to your destinations.<ul><li>Recently activated segments by destination. This widget displays the top five most recently activated segments in descending order according to the chosen destination.</li><li>Audience size trend. This widget depicts the relationship of the profile count over a period of time for a segment that has been mapped to that destination account.</li><li>Unmapped segments by identity. This widget lists the top five unmapped segments ranked by descending identity count for a given destination and identity.</li><li>Mapped segments by identity. This widget lists the top five mapped segments. Segments are ordered from high to low according to their respective counts of source IDs that match the destination ID selected from the widget's dropdown menu.</li><li>Common audiences. This widget provides a list of the top five segments activated across the destination account chosen at the top of the page, and the destination selected in the widget dropdown.</li></ul> For more information on the available standard widgets, see the [destinations dashboard documentation.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+
+For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
 
 ## Data collection {#data-collection}
 
@@ -27,18 +43,6 @@ Platform provides a suite of technologies that allow you to collect client-side 
 | First-party device IDs | You can now send your own device IDs to the Adobe Experience Platform Edge Network when collecting customer data using the Platform Web SDK, providing a workaround for recent browser restrictions on third-party cookie lifespans. See the guide on [first-party device IDs](../../edge/identity/first-party-device-ids.md) for more information. |
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
-
-**New feature**
-
-| Feature | Description |
-| --- | --- |
-| [!DNL Data Prep] support for Adobe Analytics source connector | The Adobe Analytics source connector now supports Data Prep features, allowing you to map your Analytics report-suite data to a target XDM schema when creating a dataflow. See the tutorial on [creating an Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) for more information. |
-
-For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
 ## [!DNL Identity Service] {#identity}
 
