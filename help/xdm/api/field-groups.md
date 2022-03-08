@@ -226,7 +226,7 @@ When defining a new field group, it must include a `meta:intendedToExtend` attri
 
 >[!NOTE]
 >
->For details on how to define different field types to include in your field group, see the [field constraints guide](../schema/field-constraints.md#define-fields).
+>For details on how to define different field types to include in your field group, see the guide on [defining custom fields in the API](../tutorials/custom-fields-api.md#define-fields).
 
 ```SHELL
 curl -X POST \
