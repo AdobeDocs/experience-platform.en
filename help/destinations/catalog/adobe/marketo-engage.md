@@ -29,7 +29,7 @@ Refer to the table below for information about the destination export type and f
 Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **Segment export** | You are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the Marketo Engage destination.|
-| Export frequency | **Streaming** | Streaming destinations are "always on". This means that this is an API-based connection. Read more about streaming destinations.|
+| Export frequency | **Streaming** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 ## Set up destination and activate segments {#set-up}
 
