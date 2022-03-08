@@ -8,11 +8,11 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 
 ## Version 2.9.0 - March 10, 2022
 
-* Support setting cookie attribute `SameSite=None` and `Secure` for cookies returned from the Adobe Experience Edge.
-* Setting `SameSite=None` and `Secure` cookie attributes for destination and identity migration cookies when the page is secure.
-* Support tracking of control (default) Adobe Target experiences.
-* For single page applications, include the display notification with the view-change event when Adobe Target experiences are rendered.
-* Removed warning in console when no `eventType` is present.
+* Added support for setting `SameSite=None` and `Secure` cookie attributes for cookies returned from Adobe Experience Edge.
+* Added support for setting `SameSite=None` and `Secure` cookie attributes for destination and identity migration cookies when the page is secure.
+* Added support for tracking [!DNL control (default)] Adobe Target experiences.
+* For single page applications, the display notification is now included with the view-change event when Adobe Target experiences are rendered.
+* Removed console warning when no `eventType` is present.
 * Fixed an issue where the `propositions` property was only returned from a `sendEvent` command when experiences were requested from Adobe Target or retrieved from the cache. The `propositions` property will now always be defined as an array.
 
 ## Version 2.8.0 - January 19, 2022
