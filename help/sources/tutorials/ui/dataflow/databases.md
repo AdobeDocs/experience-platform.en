@@ -9,7 +9,7 @@ exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
 ---
 # Configure a dataflow for a database connection in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database account.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for a database source using Platform UI.
 
 ## Getting started
 
