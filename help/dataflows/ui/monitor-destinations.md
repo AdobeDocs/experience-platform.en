@@ -50,25 +50,21 @@ See the following table for more information on statuses:
 >id="platform_monitoring_profiles_received_streaming"
 >title="Profiles received"
 >abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Identities activated"
 >abstract="The count of individual profile identities successfully activated to the selected destination. This metric includes identities that are created, updated, and removed from exported segments."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="Identities excluded"
 >abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Identities failed"
 >abstract="The count of individual profile identities which failed for the selected destination. Please check error diagnostics for details."
->text="Learn more in documentation"
 
 For streaming destinations, the [!UICONTROL Dataflow runs] tab provides an hourly update for metric data on your dataflow runs. The most prominent statistics labelled are for identities.
 
@@ -118,19 +114,16 @@ The details page also displays a list of identities that failed and identities t
 >id="platform_monitoring_profiles_received_batch"
 >title="Profiles received"
 >abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identities activated"
 >abstract="The count of individual profile identities successfully activated to the selected destination. This metric includes identities that are created, updated, and removed from exported segments."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="Identities excluded"
 >abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
->text="Learn more in documentation"
 
 For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
