@@ -21,7 +21,6 @@ You can create a new audience template by making a POST request to the `/authori
 
 **API format**
 
-
 ```http
 POST /authoring/audience-templates
 ```
@@ -140,6 +139,31 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
                "value":"string"
             }
          ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
       }
    },
    "validations":[
@@ -177,7 +201,6 @@ A successful response returns HTTP status 200 with details of your newly created
 You can update an existing audience template by making a PUT request to the `/authoring/audience-templates` endpoint and providing the instance ID of the audience template you want to update. In the body of the call, provide the updated template.
 
 **API format**
-
 
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
@@ -288,7 +311,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 }
 
 ```
-
 
 ## Retrieve a list of audience templates {#retrieve-list}
 
@@ -428,7 +450,6 @@ The following response returns HTTP status 200 with a list of audience metadata 
 You can retrieve detailed information about a specific audience template by making a GET request to the `/authoring/audience-templates` endpoint and providing the instance ID of the audience template you want to retrieve.
 
 **API format**
-
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}

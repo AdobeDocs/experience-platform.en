@@ -2,8 +2,8 @@
 title: Real-time profile syncing for mbox3rdPartyId
 description: Learn how to use mbox3rdPartyId with the Adobe Experience Platform Web SDK.
 keywords: personalization;target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
+exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
 ---
-
 # What is `mbox3rdPartyId`
 
 The mbox3rdPartyId in Adobe Target is your company’s visitor ID, such as the membership ID for your company’s loyalty program.
@@ -39,5 +39,3 @@ alloy("sendEvent", {
   }
 });
 ```
-
-

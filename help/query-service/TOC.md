@@ -25,6 +25,7 @@ feature: Queries
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
+  - [Working with nested data structures](best-practices/nested-data-structures.md)
   - [Data deduplication](best-practices/deduplication.md)
   - [Sample Experience Event queries](best-practices/experience-event-queries.md)
   - [Sample Adobe Analytics queries](best-practices/adobe-analytics.md)
