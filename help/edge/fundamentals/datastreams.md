@@ -1,6 +1,6 @@
 ---
 title: Configure your Datastream for the Experience Platform Web SDK
-description: Learn how to configure the Datatstreams. 
+description: Learn how to configure the Datastreams. 
 keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
@@ -64,7 +64,7 @@ The subsections below cover the basic steps for mapping your data within the Dat
 
 Select **[!UICONTROL Save and Add Mapping]** after completing the [basic configuration step](#configure), and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform. You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead.
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >The JSON object must have a single root node `data` in order to pass validation.
 

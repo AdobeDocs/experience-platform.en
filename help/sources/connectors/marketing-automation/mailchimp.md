@@ -8,7 +8,6 @@ exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
 ---
 # [!DNL Mailchimp] connector
 
-
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. Support for marketing automation providers includes [!DNL Mailchimp].
