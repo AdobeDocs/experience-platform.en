@@ -1,6 +1,7 @@
 ---
 title: Define XDM Fields in the Schema Registry API
 description: Learn how to define different fields when creating custom Experience Data Model (XDM) resources in the Schema Registry API.
+exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
 ---
 # Define XDM fields in the Schema Registry API
 
