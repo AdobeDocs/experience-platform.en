@@ -1,9 +1,9 @@
 ---
-title: Sample Incremental Load Queries
+title: Incremental Load in Query Service
 description: The incremental load feature uses both anonymous block and snapshot features to provide a near real-time solution for moving data from the data lake to your data warehouse whilst ignoring matching data.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
 ---
-# Sample incremental data load queries
+# Incremental load in Query Service
 
 The incremental load design pattern is a solution for managing data. The pattern only processes information in the dataset that has been created or modified since the last load execution. 
 
@@ -13,7 +13,7 @@ This document provides a series of instructions to build a design pattern for in
 
 ## Getting started
 
-The SQL examples throughout this document require you to have an understanding of the anonymous block and snapshot capabilities. It is recommended that you read the [sample anonymous block queries](./anonymous-block.md) documentation and also the [snapshot clause](../sql/syntax.md#snapshot-clause) documentation.
+The SQL examples throughout this document require you to have an understanding of the anonymous block and snapshot capabilities. It is recommended that you read the [sample anonymous block queries](../sample-queries/anonymous-block.md) documentation and also the [snapshot clause](../sql/syntax.md#snapshot-clause) documentation.
 
 For guidance on any terminology used within this guide, refer to the [SQL syntax guide](../sql/syntax.md).
 
@@ -160,4 +160,4 @@ $$;
 
 ## Next steps
 
-By reading this document you should have a better understanding of how to use anonymous block and snapshot features to perform incremental loads and can apply this logic to your own specific queries. For general guidance on query execution, please read the [guide on query execution in Query Service](../best-practices/writing-queries.md).
+By reading this document you should have a better understanding of how to use anonymous block and snapshot features to perform incremental loads and can apply this logic to your own specific queries. For general guidance on query execution, please read the [guide on query execution in Query Service](./writing-queries.md).
