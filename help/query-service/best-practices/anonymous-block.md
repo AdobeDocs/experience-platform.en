@@ -1,9 +1,9 @@
 ---
-title: Sample Anonymous Block Queries
+title: Anonymous Block in Query Service
 description: The anonymous block is an SQL syntax supported by Adobe Experience Platform Query Service, which allows you to efficiently execute a sequence of queries
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
 ---
-# Sample queries for anonymous block
+# Anonymous block in Query Service
 
 Adobe Experience Platform Query Service supports anonymous blocks. The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
 
@@ -54,4 +54,4 @@ $$;
 
 By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. [For more information on query execution](./writing-queries.md), please read the guide on query execution in Query Service.
 
-For more samples of queries that can be used within Query Service, please read the guides on [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md), or [ExperienceEvent sample queries](./experience-event-queries.md).
+You should also read about [how anonymous block is used with the incremental load design pattern](./incremental-load.md) to increase query efficiency.
