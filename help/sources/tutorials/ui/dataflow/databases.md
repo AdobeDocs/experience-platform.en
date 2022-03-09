@@ -37,25 +37,25 @@ After creating your database account, the **[!UICONTROL Add data]** step appears
 
 Once you find the source data, select the table, then select **[!UICONTROL Next]**.
 
-![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
+![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
 ## Provide dataflow details
 
 The [!UICONTROL Dataflow detail] page allows you to select whether you want to use an existing dataset or a new dataset. During this process, you can also configure settings for [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion], and [!UICONTROL Alerts].
 
-![dataflow-detail](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
+![dataflow-detail](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
 ### Use an existing dataset
 
 To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu. Once you have selected a dataset, provide a name and a description for your dataflow.
 
-![existing-dataset]()
+![existing-dataset](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
 
 ### Use a new dataset
 
 To ingest into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu. Once you have selected a schema, provide a name and a description for your dataflow.
 
-![new-dataset]()
+![new-dataset](../../../images/tutorials/dataflow/table-based/new-dataset.png)
 
 ### Enable [!DNL Profile] and error diagnostics
 
@@ -63,7 +63,7 @@ Next, select the **[!UICONTROL Profile dataset]** toggle to enable your dataset 
 
 [!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md) for more information.
 
-![profile-and-errors]()
+![profile-and-errors](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
 
 ### Enable alerts
 
@@ -71,21 +71,17 @@ You can enable alerts to receive notifications on the status of your dataflow. S
 
 When you are finished providing details to your dataflow, select **[!UICONTROL Next]**.
 
-![alerts]()
+![alerts](../../../images/tutorials/dataflow/table-based/alerts.png)
 
 ## Map data fields to an XDM schema
 
 The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
 
-Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
+Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
 
->[!TIP]
->
->Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
+Once your source data is successfully mapped, select **[!UICONTROL Close]**.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
-
-Once your source data is mapped, select **[!UICONTROL Close]**.
+![mapping](../../../images/tutorials/dataflow/table-based/mapping.png)
 
 ## Schedule ingestion runs
 
@@ -95,23 +91,23 @@ The [!UICONTROL Scheduling] step appears, allowing you to configure an ingestion
 >
 >Interval and backfill are not visible during a one-time ingestion.
 
-![scheduling]()
+![scheduling](../../../images/tutorials/dataflow/table-based/scheduling.png)
 
-If you set your ingestion frequency to `Minute`, `Hour`, `Day`, or `Week`, then you can enable [!UICONTROL Backfill] to ingest historical data. Furthermore, a scheduled ingestion frequency also requires you to define a column for incremental ingestion of data. This column is used to differentiate between new and existing data. 
+If you set your ingestion frequency to `Minute`, `Hour`, `Day`, or `Week`, then you must set an interval to establish a set time frame between every ingestion. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
 
-![backfill]()
+During this step, you can also enable **backfill** and define a column for the incremental ingestion of data. Backfill is used to ingest historical data, while the column you define for incremental ingestion allows new data to be differentiated from existing data.
 
-The following table outlines the different configurable fields for scheduling:
+See the table below for more information on scheduling configurations.
 
 | Field | Description |
 | --- | --- |
 | Frequency | The frequency in which an ingestion happens. Selectable frequencies include `Once`, `Minute`, `Hour`, `Day`, and `Week`. |
 | Interval | An integer that sets the interval for the selected frequency. The interval's value should be a non-zero integer and should be set to greater than or equal to 15. |
 | Start time | A UTC timestamp indicating when the very first ingestion is set to occur. Start time must be greater than or equal to your current UTC time. |
-| Backfill | A boolean value that determines what data is initially ingested. If **[!UICONTROL Backfill]** is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If **[!UICONTROL Backfill]** is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
+| Backfill | A boolean value that determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
 | Load incremental data by | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 
-![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Review your dataflow
 
@@ -123,7 +119,7 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![](../../../images/tutorials/dataflow/databases/review.png)
+![review](../../../images/tutorials/dataflow/table-based/review.png)
 
 ## Monitor your dataflow
 
@@ -137,8 +133,10 @@ You can delete dataflows that are no longer necessary or were incorrectly create
 
 By following this tutorial, you have successfully created a dataflow to bring in data from an external database and gained insight on monitoring datasets. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
--   [[!DNL Real-time Customer Profile] overview](../../../../profile/home.md)
--   [[!DNL Data Science Workspace] overview](../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] overview](../../../../profile/home.md)
+* [[!DNL Data Science Workspace] overview](../../../../data-science-workspace/home.md)
+
+<!--
 
 ## Appendix
 
@@ -159,3 +157,5 @@ The **[!UICONTROL Properties]** column appears on the right-hand side of the scr
 ### Activate inbound data for [!DNL Profile] population
 
 Inbound data from your source connector can be used towards enriching and populating your [!DNL Real-time Customer Profile] data. For more information on populating your [!DNL Real-time Customer Profile] data, see the tutorial on [Profile population](../profile.md).
+
+-->
