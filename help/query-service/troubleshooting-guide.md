@@ -516,9 +516,7 @@ No. There is currently no feature available for the extraction of ingested data.
 
 ## Third-party tools {#third-party-tools}
 
-+++Answer
 This section includes information on the use of third-party tools such as PSQL and Power BI.
-+++
 
 ### Can I connect Query Service to a third-party tool? 
 
