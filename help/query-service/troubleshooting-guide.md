@@ -137,7 +137,7 @@ A dropdown banner appears containing a [!UICONTROL Help and support] section. Se
 +++Answer
 The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
 
-See the [anonymous block documentation](./sample-queries/anonymous-block.md) for more details.
+See the [anonymous block documentation](./best-practices/anonymous-block.md) for more details.
 +++
 
 ### How do I implement custom attribution in Query Service?

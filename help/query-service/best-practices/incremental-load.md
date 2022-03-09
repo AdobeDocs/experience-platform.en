@@ -13,7 +13,7 @@ This document provides a series of instructions to build a design pattern for in
 
 ## Getting started
 
-The SQL examples throughout this document require you to have an understanding of the anonymous block and snapshot capabilities. It is recommended that you read the [sample anonymous block queries](../sample-queries/anonymous-block.md) documentation and also the [snapshot clause](../sql/syntax.md#snapshot-clause) documentation.
+The SQL examples throughout this document require you to have an understanding of the anonymous block and snapshot capabilities. It is recommended that you read the [sample anonymous block queries](./anonymous-block.md) documentation and also the [snapshot clause](../sql/syntax.md#snapshot-clause) documentation.
 
 For guidance on any terminology used within this guide, refer to the [SQL syntax guide](../sql/syntax.md).
 

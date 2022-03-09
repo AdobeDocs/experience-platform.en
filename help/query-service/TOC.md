@@ -26,13 +26,13 @@ feature: Queries
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
   - [Working with nested data structures](best-practices/nested-data-structures.md)
+  - [Sample anonymous block queries](sample-queries/anonymous-block.md)
   - [Incremental loading](sample-queries/incremental-load.md)
   - [Data deduplication](best-practices/deduplication.md)
 - Sample Queries {#sample-queries}
   - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
   - [Sample Adobe Target queries](sample-queries/adobe-target.md)
-  - [Sample anonymous block queries](sample-queries/anonymous-block.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
