@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
-title: Configure a Dataflow for a Database Source Connection in the UI
+title: Create a Dataflow Using a Database Source in the UI
 topic-legacy: overview
 type: Tutorial
-description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database account.
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to create a new dataflow using your database account.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
 ---
-# Configure a dataflow for a database connection in the UI
+# Create a dataflow using a database source in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for a database source using Platform UI.
 
