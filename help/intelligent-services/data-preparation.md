@@ -42,11 +42,11 @@ Customer AI and Attribution AI natively support Adobe Analytics data. To use Ado
 
 Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Analytics as a data source followed by a dataset during your instance configuration. All of the required schema field groups and individual fields are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
 
-When you validate the data from Adobe Analytics in Adobe Experience Platform, you may notice some discrepancies. The Analytics Source connector might drop rows during the transformation to an Experience Data Model (XDM) schema. There can be multiple reasons for the whole row to be unfit for transformation which include missing timestamps, missing personIDs, invalid or large person IDs, invalid analytic values, and more. 
+If you compare the data flown through the Adobe Analytics source connector onto Adobe Experience Platform with Adobe Analytics data, you may notice some discrepancies. The Analytics Source connector might drop rows during the transformation to an Experience Data Model (XDM) schema. There can be multiple reasons for the whole row to be unfit for transformation which include missing timestamps, missing personIDs, invalid or large person IDs, invalid analytic values, and more.
 
-For more information and examples, visit the documentation for [comparing Adobe Analytics and Customer Journey Analytics data](https://www.adobe.com/go/compare-aa-data-to-cja-data). Customer Journey Analytics uses data from Experience Platform, therefore the examples apply to Intelligent Services.  
+For more information and examples, visit the documentation for [comparing Adobe Analytics and Customer Journey Analytics data](https://www.adobe.com/go/compare-aa-data-to-cja-data). This article is designed to help you diagnose and solve for those differences so that you and your team can use Adobe Experience Platform data for Intelligent Services unimpeded by concerns about data integrity.
 
-Use the following query to fetch post values coming in from the Adobe Analytics source connector and modify them to find the mid values in Platform that you're looking to compare. 
+In Adobe Experience Platform Query Services, run the following Total Records between start and end timestamp by channel.typeAtSource query to find the count by marketing channels.
 
 ```SELECT channel.typeAtSource as typeAtSource, 
        Count(_id) AS Records 
@@ -57,8 +57,6 @@ WHERE timestamp>=from_utc_timestamp('2021-05-15','UTC')
         AND enduserids._experience.aaid.id IS NOT NULL
 GROUP BY channel.typeAtSource
 ```        
-
-Refer to the documentation for [comparing Adobe Analytics and Customer Journey Analytics data](https://www.adobe.com/go/compare-aa-data-to-cja-data) to learn about how Platform uses this data.
 
 >[!IMPORTANT]
 >
