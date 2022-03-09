@@ -60,7 +60,13 @@ To minimize your development time, it is recommended that you develop your queri
 
 ### Auto-complete toggle
 
-[!DNL Query Editor] automatically suggests potential key words for the query as you write it. 
+[!DNL Query Editor] automatically suggests potential key words for the query as you write it. This feature can be disabled or enabled at any point by selecting the [!UICONTROL syntax auto-complete] toggle to the top right of the Query Editor. The auto-complete feature is enabled by default.
+
+![Query Editor with the syntax auto-complete toggle highlighted.](../images/ui/query-editor/auto-complete-toggle.png)
+
+>[!NOTE]
+>
+>Disabling this feature stops several metadata commands from being processed which can benefit the speed of the editor during query editing.
 
 ### Error detection
 
