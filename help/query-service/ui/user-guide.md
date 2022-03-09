@@ -58,7 +58,11 @@ To minimize your development time, it is recommended that you develop your queri
 
 ![Image](../images/ui/query-editor/tables-auto.png)
 
-### Auto-complete toggle
+### (Beta) Auto-complete toggle
+
+>[!IMPORTANT]
+>
+>The auto-complete toggle is currently in beta and are not available to all users. The documentation and the functionality are subject to change.
 
 [!DNL Query Editor] automatically suggests potential keywords for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point by selecting the [!UICONTROL syntax auto-complete] toggle to the top right of the Query Editor.
 
