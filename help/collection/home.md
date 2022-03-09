@@ -54,6 +54,10 @@ Platform Edge Network is a globally distributed, fast, and reliable network of s
 
 ![Event forwarding](./images/home/event-forwarding.png)
 
+>[!NOTE]
+>
+>Event forwarding is a paid feature that is only included as part of the Real-Time Customer Data Platform Connections offering.
+
 ## Next steps
 
 This document provided a high-level overview of how Platform's data collection technologies work to automate the process of sending your collected customer experience data to Adobe products and third-party destinations.
