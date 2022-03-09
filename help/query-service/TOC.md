@@ -26,7 +26,7 @@ feature: Queries
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
   - [Working with nested data structures](best-practices/nested-data-structures.md)
-  - [Sample anonymous block queries](best-practices/anonymous-block.md)
+  - [Anonymous block](best-practices/anonymous-block.md)
   - [Incremental loading](best-practices/incremental-load.md)
   - [Data deduplication](best-practices/deduplication.md)
 - Sample Queries {#sample-queries}
