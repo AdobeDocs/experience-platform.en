@@ -8,9 +8,9 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 
 ## Version 2.9.0 - March 10, 2022
 
-* Support tracking of control (default) Adobe Target experiences.
-* For single page applications, include the display notification with the view-change event when Adobe Target experiences are rendered.
-* Removed warning in console when no `eventType` is present.
+* Added support for tracking [!DNL control (default)] Adobe Target experiences.
+* For single page applications, the display notification is now included with the view-change event when Adobe Target experiences are rendered.
+* Removed console warning when no `eventType` is present.
 * Fixed an issue where the `propositions` property was only returned from a `sendEvent` command when experiences were requested from Adobe Target or retrieved from the cache. The `propositions` property will now always be defined as an array.
 * Fixed an issue where hidden containers were not shown when there was an error returned from the Adobe Experience Edge.
 * Fixed an issue where the interact events were not being counted in Adobe Target. This was fixed by adding the view name to the XDM at web.webPageDetails.viewName.
