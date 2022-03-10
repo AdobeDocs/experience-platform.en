@@ -38,6 +38,8 @@ The guardrails below generally apply to activation through all destination types
 | --- | --- | --- | --- |
 |Max # of audiences to a single destination | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
 |Max # of destinations | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile data* to destinations. Exporting event data is not supported at this time.|
+|Max # of destinations | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
 |Insert other guardrails | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
 
 {style="table-layout:auto"}
