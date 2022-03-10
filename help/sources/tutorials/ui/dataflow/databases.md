@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Create a Dataflow Using a Database Source in the UI
 topic-legacy: overview
 type: Tutorial
-description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to create a new dataflow using your database account.
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for a database source using Platform UI.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
 ---
 # Create a dataflow using a database source in the UI
@@ -33,7 +33,7 @@ After creating your database account, the **[!UICONTROL Add data]** step appears
 
 >[!NOTE]
 >
->The search source data option is available to all tabular-based source connectors excluding the Analytics, Classifications, Event Hubs, and Kinesis connectors.
+>The search source data option is available to all table-based sources excluding the Adobe Analytics, [!DNL Amazon Kinesis], and [!DNL Azure Event Hubs].
 
 Once you find the source data, select the table, then select **[!UICONTROL Next]**.
 
