@@ -40,7 +40,9 @@ The guardrails below generally apply to activation through all destination types
 |Max # of destinations | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
 |Insert other guardrails | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
 
-### Streaming Activation
+{style="table-layout:auto"}
+
+### Streaming activation
 
 The guardrails below apply to activation through streaming destinations.
 
