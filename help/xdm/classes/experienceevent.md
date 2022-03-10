@@ -47,7 +47,7 @@ Certain interactions in your experience applications can result in multiple rela
 
 [Adobe Experience Platform Data Prep](../../data-prep/home.md) allows you to map, transform, and validate data to and from XDM. Using the available [mapping functions](../../data-prep/functions.md) provided by the service you can invoke logical operators to prioritize, transform, and/or consolidate data from multi-event records when being ingested into Experience Platform. In the example above, you could designate `eventType` as a calculated field that would prioritize a "product view" over a "page view" whenever they both occur.
 
-If you are manually ingesting data into Platform via the UI, see the guide on [calculated fields guide](../../data-prep/calculated-fields.md) for specific steps on how to create calculated fields.
+If you are manually ingesting data into Platform via the UI, see the guide on [calculated fields](../../data-prep/ui/mapping.md#calculated-fields) for specific steps on how to create calculated fields.
 
 If you are streaming data to Platform using a source connection, you can configure the source to utilize calculated fields instead. Refer to the [documentation for your particular source](../../sources/home.md) for instructions on how to implement calculated fields when configuring the connection.
 
@@ -59,9 +59,13 @@ If you are streaming data to Platform using a source connection, you can configu
 
 Adobe provides several standard field groups for use with the [!DNL XDM ExperienceEvent] class. The following is a list of some commonly used field groups for the class:
 
+* [[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Balance Transfers]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL Card Actions]](../field-groups/event/card-actions.md)
 * [[!UICONTROL Channel Details]](../field-groups/event/channel-details.md)
 * [[!UICONTROL Commerce Details]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Deposit Details]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL Device Trade-In Details]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL Dining Reservation]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
@@ -69,6 +73,7 @@ Adobe provides several standard field groups for use with the [!DNL XDM Experien
 * [[!UICONTROL Flight Reservation]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 Consent]](../field-groups/event/iab.md)
 * [[!UICONTROL Lodging Reservation]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL Quote Request Details]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL Reservation Details]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
 
@@ -112,6 +117,10 @@ The following table outlines the accepted values for `eventType`, along with the
 |`directMarketing.emailDelivered` | An email was successfully delivered to person's email service |
 |`directMarketing.emailOpened` | A person opened a marketing email. |
 |`directMarketing.emailUnsubscribed` | A person unsubscribed from a marketing email. |
+|`inappmessageTracking.dismiss` | An in-app message was dismissed. |
+|`inappmessageTracking.display` | An in-app message was displayed. |
+|`inappmessageTracking.interact` | An in-app message was interacted with. |
+|`leadOperation.callWebhook` | A webhook was called in response to a lead. |
 |`leadOperation.convertLead` | A lead was converted. |
 |`leadOperation.interestingMoment` | An interesting moment was recorded for a person. |
 |`leadOperation.newLead` | A lead was created. |

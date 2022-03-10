@@ -316,7 +316,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to PATCH. |
 
 
 **Request**
@@ -368,7 +368,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to PATCH. |
 
 **Request**
 
@@ -423,7 +423,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to DELETE. |
 
 **Request**
 

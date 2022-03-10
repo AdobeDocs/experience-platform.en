@@ -42,6 +42,12 @@ Use the check boxes to the left of the segment names to select the segments that
 
 ## Schedule segment export {#scheduling}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule"
+>title="Schedule"
+>abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Learn more in documentation"
+
 [!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
 
 >[!IMPORTANT]
@@ -55,6 +61,12 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 ![Create schedule button](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Export full files {#export-full-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exportoptions"
+>title="File export options"
+>abstract="Select **Export full files** to export a complete snapshot of all the profiles that qualify for the segment. Select **Export incremental files** to export only the profiles which qualified for the segment since the last export. <br> The first incremental file export includes all profiles that qualify for the segment, acting as a backfill. Future incremental files include only the profiles which qualified for the segment since the first incremental file export."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Export incremental files"
 
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
 
@@ -71,10 +83,12 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
       >
       >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
-1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
-      >[!TIP]
+1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+
+      >[!IMPORTANT]
       >
-      > For daily exports, set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+      > When selecting an export interval, the last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10th.
+
 1. Select **[!UICONTROL Create]** to save the schedule.
 
  
@@ -99,13 +113,20 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
      >
      >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
-1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
-      >[!TIP]
+1. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+
+      >[!IMPORTANT]
       >
-      >Set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+      >The last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10th.
+
 1. Select **[!UICONTROL Create]** to save the schedule.
 
 ### Configure file names {#file-names}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_filename"
+>title="Configure file name"
+>abstract="For file-based destinations, a unique file name is generated per segment. Use the file name editor to create and edit a unique file name or keep the default name."
 
 The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
 
@@ -168,7 +189,7 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 >abstract="Select the XDM schema attributes that all exported profiles should include. Profiles without the mandatory key are not exported to the destination. Not selecting a mandatory key exports all qualified profiles regardless of their attributes."
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Learn more in documentation"
 
-A mandatory attribute is a user enabled checkbox which ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.​
+A mandatory attribute is a user-enabled checkbox which ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.​
 
 You can mark attributes as mandatory to ensure that [!DNL Platform] exports only the profiles that include the specific attribute. As a result, it can be used as an additional form of filtering. Marking an attribute as mandatory is **not** required.
 
@@ -340,7 +361,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 ## Verify segment activation {#verify}
 
 
-For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a tab-delimited `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
+For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 The files you would receive on three consecutive days could look like this:

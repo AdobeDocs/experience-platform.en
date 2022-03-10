@@ -19,7 +19,7 @@ The monitoring dashboard provides you with a visual representation of the journe
 
 This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring.
 
-## Getting started
+## Getting started {#getting-started}
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -30,7 +30,19 @@ This tutorial requires a working understanding of the following components of Ad
 * [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Aggregated monitoring view
+## Aggregated monitoring view {#aggregated-monitoring-view}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_source_ingestion"
+>title="Source ingestion"
+>abstract="The Source ingestion view contains information on data activity status and metrics in data lake service, including records ingested and records failed. Review the metric definition guide to learn more about metrics and graphs."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_ingestion"
+>title="Dataflow run details"
+>abstract="Sources processing contains information on data activity status and metrics in data lake service, including records ingested and records failed. Review the metric definition guide to learn more about metrics and graphs."
+>text="Learn more in documentation"
 
 In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
 
@@ -112,7 +124,7 @@ You can use the breadcrumb system at the top header to navigate your way back to
 
 ![breadcrumbs](../assets/ui/monitor-sources/breadcrumbs.png)
 
-## Cross-service monitoring
+## Cross-service monitoring {#cross-service-monitoring}
 
 The upper part of the dashboard contains a representation of the ingestion flow from the source-level, to [!DNL Identity Service], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that stage of ingestion. A green dot means an error-free ingestion, while a red dot means that an error occurred in that particular stage of ingestion.
 
@@ -128,7 +140,18 @@ Select **[!UICONTROL Identities]** to see ingestion in the [!UICONTROL Identitie
 
 ![sources](../assets/ui/monitor-sources/sources.png)
 
-### [!DNL Identity] metrics
+### [!DNL Identity] metrics {#identity-metrics}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_identity_processing"
+>title="Identity processing"
+>abstract="The Identity processing view contains information on records ingested to Identity service, including the number of identities added, graphs created and graphs updated. Review the metric definition guide to learn more about metrics and graphs."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_identity"
+>title="Dataflow run details"
+>abstract="The Dataflow run details page displays more information on your Identity dataflow run, including its IMS Org ID and dataflow run ID."
 
 The [!UICONTROL Identity processing] page contains information on records ingested to [!DNL Identity Service], including number of identities added, graphs created, and graphs updated.
 
@@ -160,7 +183,18 @@ From the [!UICONTROL Identity processing] page, select **[!UICONTROL Profiles]**
 
 ![select-profiles](../assets/ui/monitor-sources/select-profiles.png)
 
-### [!DNL Profile] metrics
+### [!DNL Profile] metrics {#profile-metrics}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profile_processing"
+>title="Profile processing"
+>abstract="The Profile processing view contains information on records ingested to Profile service, including the number of profile fragments created, profile fragments updated and the total number of profile fragments."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_profile"
+>title="Dataflow run details"
+>abstract="The Dataflow run details page displays more information on your Profile dataflow run, including its IMS Org ID and dataflow run ID."
 
 The [!UICONTROL Profile processing] page contains information on records ingested to [!DNL Profile], including number of profile fragments created, profile fragments updated, and the total number of profile fragments.
 
@@ -183,7 +217,7 @@ The [!UICONTROL Dataflow run details] page displays more information on your [!D
 
 ![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have successfully monitored the ingestion dataflow from the source-level, to [!DNL Identity Service], and to [!DNL Profile], using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
 

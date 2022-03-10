@@ -14,6 +14,13 @@ Personalization platforms collect data and insights from individual behaviors. T
 
 Currently, Platform supports the personalization destinations listed below. For information on how to connect to these destinations, see the individual links:
 
+**Connections**
+
+* [Adobe Target](adobe-target-connection.md)
+* [Custom personalization connection](custom-personalization.md)
+
+**Extensions**
+
 * [Adobe Target extension](adobe-target.md)
 * [Adobe Target v2 extension](adobe-target-v2.md)
 * [Beemray extension](beemray.md)

@@ -40,8 +40,9 @@ Since all three functions represent asynchronous processes, any retrieved identi
 To start using the [!DNL Privacy JS Library], you must install it onto your machine using one of the following methods:
 
 * Install using npm by running the following command: `npm install @adobe/adobe-privacy`
-* Install the [Adobe Privacy tag extension](../tags/extensions/web/privacy/overview.md) under the name `AdobePrivacy`
 * Download from the [Experience Cloud GitHub repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+
+You can also install the library through a tag extension in the Data Collection UI. See the overview on the [Adobe Privacy tag extension](../tags/extensions/web/privacy/overview.md) for more information.
 
 ## Instantiate the [!DNL Privacy JS Library]
 
@@ -58,7 +59,7 @@ var adobePrivacy = new AdobePrivacy({
 
 For a full list of supported parameters for different Adobe solutions, see the appendix section on supported [Adobe solution configuration parameters](#adobe-solution-configuration-parameters).
 
-## Code samples
+## Code samples {#samples}
 
 The following code samples demonstrate how to use the [!DNL Privacy JS Library] for several common scenarios, provided that you are not using tags.
 
@@ -164,32 +165,32 @@ If the code executes successfully, `validIDs` is populated with a list of retrie
 
 ## Next steps
 
-By reading this document, you have been introduced to the core functionalities of the [!DNL Privacy JS Library]. After using the library to retrieve a list of identities, you can use those identities to create data access and delete requests to the [!DNL Privacy Service] API. See the [Privacy Service developer guide](api/getting-started.md) for more information.
+By reading this document, you have been introduced to the core functionalities of the [!DNL Privacy JS Library]. After using the library to retrieve a list of identities, you can use those identities to create data access and delete requests to the [!DNL Privacy Service] API. See the [Privacy Service API guide](api/overview.md) for more information.
 
 ## Appendix
 
 This section contains supplemental information for using the [!DNL Privacy JS Library].
 
-### Adobe solution configuration parameters
+### Adobe solution configuration parameters {#config-params}
 
 The following is a list of the accepted configuration parameters for supported Adobe solutions, used when [instantiating an AdobePrivacy object](#instantiate-the-privacy-js-library).
+
+**All solutions**
+
+| Parameter | Description |
+| --- | --- |
+| `key` | A unique ID that identifies the user or data subject. This property is intended to be used for your own internal tracking purposes and is not used by Adobe. |
 
 **Adobe Analytics**
 
 | Parameter | Description |
 | --- | --- |
-| `cookieDomainPeriods` | The number periods in a domain for cookie tracking (default is 2). |
-| `dataCenter` | Adobe data collection data center. This should only be included if it is specified in your JavaScript web beacon. Potential values are: <ul><li>"d1": San Jose data center.</li><li>"d2": Dallas data center.</li></ul> |
-| `reportSuite` | Report Suite ID as specified in your JavaScript web beacon (for example, "s_code.js" or "dtm"). |
-| `trackingServer` | Data collection domain (non-SSL). This should only be included if it is specified in your JavaScript web beacon. |
-| `trackingServerSecure` | Data collection domain (SSL). This should only be included if it is specified in your JavaScript web beacon. |
-| `visitorNamespace` | Namespace used to group visitors. This should only be included if it is specified in your JavaScript web beacon. |
-
-**Adobe Target**
-
-| Parameter | Description |
-| --- | --- |
-| `clientCode` | Client code that identifies a client in Adobe Target System. |
+| `cookieDomainPeriods` | The number of periods in a domain used for cookie tracking (defaults to `2`, e.g. `.domain.com`). Do not define it here unless specified in your JavaScript web beacon.|
+| `dataCenter` | The Adobe data collection data center. This should only be included if it is specified in your JavaScript web beacon. Potential values are: <ul><li>`d1`: San Jose data center</li><li>`d2`: Dallas data center</li></ul> |
+| `reportSuite` | The Report Suite ID as specified in your JavaScript web beacon (for example, `s_code.js` or `dtm`). |
+| `trackingServer` | A non-SSL data collection domain. This should only be included if it is specified in your JavaScript web beacon. |
+| `trackingServerSecure` | An SSL data collection domain. This should only be included if it is specified in your JavaScript web beacon. |
+| `visitorNamespace` | The namespace used to group visitors. This should only be included if it is specified in your JavaScript web beacon. |
 
 **Adobe Audience Manager**
 
@@ -197,8 +198,14 @@ The following is a list of the accepted configuration parameters for supported A
 | --- | --- |
 | `aamUUIDCookieName` | Name of the first-party cookie containing the unique user ID returned from Adobe Audience Manager. |
 
-**Adobe ID Service (ECID)**
+**Adobe Experience Cloud Identity Service (ECID)**
 
 | Parameter | Description |
 | --- | --- |
 | `imsOrgID` | Your IMS Organization ID. |
+
+**Adobe Target**
+
+| Parameter | Description |
+| --- | --- |
+| `clientCode` | Client code that identifies a client in Adobe Target System. |

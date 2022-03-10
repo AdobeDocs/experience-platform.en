@@ -6,11 +6,7 @@ topic-legacy: overview
 description: This document provides an overview of the Marketo Engage source connector, including information about its authentication, mapping, and data latency.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
 ---
-# (Beta) [!DNL Marketo Engage] connector
-
->[!IMPORTANT]
->
->The [!DNL Marketo Engage] source in Adobe Experience Platform is currently in beta. The documentation and functionality are subject to change.
+# [!DNL Marketo Engage] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -25,6 +21,10 @@ This document provides an overview of the [!DNL Marketo] source connector, inclu
 In order to connect [!DNL Marketo] to Platform, you must first retrieve values for your `munchkinId`, `clientId`, and `clientSecret`.
 
 See the steps outlined in the [Authenticate your Marketo source connector](./marketo-auth.md) document to retrieve your credentials.
+
+## Set up Adobe Experience Cloud Audience Sharing
+
+Before you can establish mapping sets for [!DNL Marketo], you must first set up Adobe Experience Cloud Audience Sharing. For detailed steps on how to complete this, see the guide on [setting up Adobe Experience Cloud Audience Sharing for [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
 
 ## Experience Data Model (XDM)
 

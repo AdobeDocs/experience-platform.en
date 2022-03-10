@@ -103,9 +103,9 @@ Observability Insights allows you to expose key metrics in Adobe Experience Plat
 
 Occasionally it may be necessary to update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. This can be done through batch or streaming ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to configure a dataset for attribute updates, please refer to the tutorial for [enabling a dataset for Profile and upsert](../catalog/datasets/enable-upsert.md).
 
-## [!DNL Data governance] and [!DNL Privacy]
+## Data Governance and [!DNL Privacy]
 
-[!DNL Data governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
+Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
 
 As it relates to accessing data, data governance plays a key role within [!DNL Experience Platform] at various levels: 
 
@@ -113,7 +113,7 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 *   Data access policies 
 *   Access control on data for marketing actions
 
-[!DNL Data governance] is managed at several points. These include deciding what data is ingested into [!DNL Platform] and what data is accessible after ingestion for a given marketing action. For more information, begin by reading the [data governance overview](../data-governance/home.md).
+Data Governance is managed at several points. These include deciding what data is ingested into [!DNL Platform] and what data is accessible after ingestion for a given marketing action. For more information, begin by reading the [data governance overview](../data-governance/home.md).
 
 ### Handling opt-out and data privacy requests
 

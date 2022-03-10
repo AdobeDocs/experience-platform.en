@@ -12,31 +12,29 @@ This document provides steps on how to perform various operations related to san
 
 ## View sandboxes
 
-In the Platform UI, select **[!UICONTROL Sandboxes]** in the left navigation to open the [!UICONTROL Sandboxes] dashboard. The dashboard lists all available sandboxes for your organization, including the sandbox type (production or development) and state (active, creating, deleted, or failed).
+In the Platform UI, select **[!UICONTROL Sandboxes]** in the left navigation and then select **[!UICONTROL Browse]** to open the [!UICONTROL Sandboxes] dashboard. The dashboard lists all available sandboxes for your organization, including their respective types (production or development).
 
-![](../images/ui/view-sandboxes.png)
+![view-sandboxes](../images/ui/view-sandboxes.png)
 
 ## Switch between sandboxes
 
-The **sandbox switcher** control at the top-left of the screen displays the currently active sandbox.
+The sandbox indicator is located in the top header of the Platform UI and displays the title of the sandbox that you are currently in, its region, and its type.
 
-![](../images/ui/sandbox-switcher.png)
+![sandbox-indicator](../images/ui/sandbox-indicator.png)
 
-To switch between sandboxes, select the sandbox switcher and select the desired sandbox from the dropdown list.
+To switch between sandboxes, select the sandbox indicator and select the desired sandbox from the dropdown list.
 
-![](../images/ui/switcher-menu.png)
+![switcher-interface](../images/ui/switcher-interface.png)
 
-Once a sandbox is selected, the screen refreshes with the selected sandbox now featured in the sandbox switcher.
+Once a sandbox is selected, the screen refreshes and updates to the sandbox you selected.
 
-![](../images/ui/switched.png)
-
-## Search for a sandbox
-
-You can navigate through the list of sandboxes available to you by using the search function from the sandbox switcher menu. Type in the name of the sandbox you would like to access to filter through all sandboxes available to your organization.
-
-![](../images/ui/sandbox-search.png)
+![sandbox-switched](../images/ui/sandbox-switched.png)
 
 ## Create a new sandbox
+
+>[!NOTE]
+>
+>When a new sandbox is created, you must first add that new sandbox to your product profile in [Adobe Admin Console](https://adminconsole.adobe.com/) before you can start using the new sandbox. See the documentation on [managing permissions for a product profile](../../access-control/ui/permissions.md) for information on how to provision a sandbox to a product profile.
 
 Use the following video for a quick overview on how to use Sandboxes in Experience Platform.
 
@@ -44,25 +42,27 @@ Use the following video for a quick overview on how to use Sandboxes in Experien
 
 To create a new sandbox, select **[!UICONTROL Create sandbox]** on the top-right corner of the screen.
 
-![create](../images/ui/create.png)
+![create-sandbox](../images/ui/create-sandbox.png)
 
 The **[!UICONTROL Create sandbox]** dialog box appears. If you are creating a development sandbox, select **[!UICONTROL Development]** in the dropdown panel. To create a new production sandbox, select **[!UICONTROL Production]**.
 
-![type](../images/ui/type.png)
+![sandbox-type](../images/ui/sandbox-type.png)
 
 After selecting the type, provide your sandbox with a name and a title. The title is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox name is an all-lowercase identifier for use in API calls and should therefore be unique and concise. The sandbox name must begin with a letter, have a maximum of 256 characters, and consist only of alphanumeric characters and hyphens (-).
 
 When finished, select **[!UICONTROL Create]**.
 
-![info](../images/ui/info.png)
+![sandbox-info](../images/ui/sandbox-info.png)
 
 Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of "[!UICONTROL Creating]". New sandboxes take approximately 30 seconds to be provisioned by the system, after which their status changes to "[!UICONTROL Active]".
 
+![new-sandbox](../images/ui/new-sandbox.png)
+
 ## Reset a sandbox
 
->[!IMPORTANT]
+>[!WARNING]
 >
->The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
+>The following is a list of exceptions that can prevent you from resetting the default production sandbox or a user-created production sandbox: <ul><li>The default production sandbox cannot be reset if the identity graph hosted in the sandbox is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature.</li><li>The default production sandbox cannot be reset if the identity graph hosted in the sandbox is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).</li><li>The default production sandbox cannot be reset if it contains data for both CDA and PBD features.</li><li>A user-created production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service can be reset after a warning message.</li></ul>
 
 Resetting a production or development sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
@@ -74,37 +74,15 @@ A dialog box appears prompting you to confirm your choice. Select **[!UICONTROL 
 
 ![reset-warning](../images/ui/reset-warning.png)
 
-In the final confirmation window, enter the name of the sandbox in the dialog box and select **[!UICONTROL Reset]**
+In the final confirmation window, enter the name of the sandbox in the dialog box and select **[!UICONTROL Reset]**.
 
 ![reset-confirm](../images/ui/reset-confirm.png)
 
-After a few moments, a confirmation box appears on the bottom of the screen to confirm a successful reset.
-
-![success](../images/ui/success.png)
-
-### Warnings
-
-A default production sandbox that contains CDA data cannot be reset and returns the following warning.
-
-![cda](../images/ui/cda.png)
-
-A default production sandbox that contains PBD data also cannot be reset and returns the following warning.
-
-![pbd](../images/ui/pbd.png)
-
-A default production sandbox that contains data for both CDA and PBD also cannot be reset and returns the following warning.
-
-![both](../images/ui/both.png)
-
-You can reset a production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service]. Select [!UICONTROL Continue] to proceed with the reset.
-
-![both](../images/ui/seg.png)
-
 ## Delete a sandbox
 
->[!IMPORTANT]
+>[!WARNING]
 >
->The default production sandbox cannot be deleted.
+>You cannot delete the default production sandbox. However, any user-created production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service] can be deleted after a warning message.
 
 Deleting a production or development sandbox permanently removes all resources associated with that sandbox, including permissions.
 
@@ -116,13 +94,9 @@ A dialog box appears prompting you to confirm your choice. Select **[!UICONTROL 
 
 ![delete-warning](../images/ui/delete-warning.png)
 
-In the final confirmation window, enter the name of the sandbox in the dialog box and select  **[!UICONTROL Continue]**
+In the final confirmation window, enter the name of the sandbox in the dialog box and select  **[!UICONTROL Continue]**.
 
 ![delete-confirm](../images/ui/delete-confirm.png)
-
-A user-created production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service] can still be deleted after the following warning. 
-
-![seg](../images/ui/delete-seg.png)
 
 ## Next steps
 

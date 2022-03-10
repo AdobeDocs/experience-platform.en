@@ -53,7 +53,7 @@ Your [!DNL Admin Console] administrator must also add you as a user to the same 
 
 >[!NOTE]
 >
->If you are following this document from the [Privacy Service developer guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to [!DNL Privacy Service].
+>If you are following this document from the [Privacy Service API guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to [!DNL Privacy Service].
 
 After you have been given developer and user access to Platform through [!DNL Admin Console], the next step is to generate your `{IMS_ORG}` and `{API_KEY}` credentials in Adobe Developer Console. These credentials only need to be generated once and can be reused in future Platform API calls.
 
@@ -91,6 +91,12 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 ## Generate a JSON Web Token (JWT) {#jwt}
 
 The next step is to generate a JSON Web Token (JWT) based on your account credentials. This value is used to generate your `{ACCESS_TOKEN}` credential for use in Platform API calls, which must be regenerated every 24 hours.
+
+>[!IMPORTANT]
+>
+>For the purposes of this tutorial, the steps below outline how to generate a JWT within Developer Console. However, this generation method should only be used for testing and evaluation purposes.
+>
+>For regular use, the JWT must be generated automatically. For more information on how to programmatically generate JWTs, see the [service account authentication guide](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) on Adobe Developer.
 
 Select **[!UICONTROL Service Account (JWT)]** in the left navigation, then select **[!UICONTROL Generate JWT]**.
 

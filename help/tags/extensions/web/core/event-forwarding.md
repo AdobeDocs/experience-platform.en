@@ -1,6 +1,7 @@
 ---
 title: Core Event Forwarding Extension Overview
 description: Learn about the Core event forwarding extension in Adobe Experience Platform.
+feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
 ---
 # Core event forwarding extension overview

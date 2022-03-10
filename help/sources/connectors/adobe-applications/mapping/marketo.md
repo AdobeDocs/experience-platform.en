@@ -22,7 +22,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `eventType` | `eventType`|
 | `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
-| `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
+| `web.webPageDetails.URL` | `web.webPageDetails.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
 | `environment.ipV4` | `environment.ipV4`|
 | `search.keywords` | `search.keywords` |
@@ -337,7 +337,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 >[!NOTE]
 >
->The `to_object('ECID',arrays_to_objects('id',explode(ecids)))` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../data-prep/calculated-fields.md) for more information.
+>The `to_object('ECID',arrays_to_objects('id',explode(ecids)))` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../data-prep/ui/mapping.md#calculated-fields) for more information.
 
 ## Next steps
 

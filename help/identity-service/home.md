@@ -70,7 +70,7 @@ Understanding your customer across multiple devices and channels starts by recog
 
 An identity graph is a map of relationships between different identity namespaces, allowing you to visualize and better understand what customer identities are stitched together, and how. See the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information.
 
-The following video is intended to support your understanding of identities and identity graphs. It covers the three capabilities of identity collection, identity graphs, and the API. It also describes how deterministic and probabilistic algorithms are used to construct private identity graphs, and discusses their role along with third-party graphs and the Adobe Experience Platform Identity Service Co-Op Graph.
+The following video is intended to support your understanding of identities and identity graphs.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 

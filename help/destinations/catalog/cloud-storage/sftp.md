@@ -26,6 +26,12 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Connection parameters {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_sftp_rsa"
+>title="RSA public key"
+>abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a Base64 encoded string."
+>text="Learn more in documentation"
+
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * **Host**: The address of your SFTP storage location
@@ -39,7 +45,7 @@ Optionally, you can attach your RSA-formatted public key to add encryption to yo
 
 ## Exported data {#exported-data}
 
-For [!DNL SFTP] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
+For [!DNL SFTP] destinations, Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
 
 ## IP address allow list
 

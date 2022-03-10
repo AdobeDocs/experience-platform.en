@@ -122,9 +122,13 @@ The event triggers if a custom event type occurs. Named JavaScript functions tha
 
 The event triggers if a specified data element changes. You must provide a name for the data element. You can select the data element by either typing its name into the text field, or selecting the data element icon to the right side of the text field and choosing from a list provided within the dialog that appears.
 
-#### Direct Call
+#### Direct Call {#direct-call-event}
 
-The direct-call event bypasses event detection and lookup systems. Direct-call rules are ideal for situations where you want to tell Platform exactly what is happening. Also, they are ideal when Platform cannot detect an event in the DOM, such as with Adobe Flash. Specify the `_satellite.track` string in the identifier text field.
+A direct call event bypasses event detection and lookup systems. Direct call rules are ideal for situations where you want to tell the system exactly what is happening. Also, they are ideal when the system cannot detect an event in the DOM.
+
+When defining a direct call event, you must specify a string that will act as this event's identifier. If a [trigger direct call action](#direct-call-action) containing the same identifier is fired, then any direct call event rules listening for that identifier will run.
+
+![Screenshot of a Direct Call event in the Data Collection UI](../../../images/extensions/core/direct-call-event.png)
 
 #### Element Exists
 
@@ -213,7 +217,13 @@ Specify the cookie name and value that must exist for an event to trigger an act
 
 #### Custom Code
 
-Specify any custom code that must exist as a condition of the event. Use the built-in code editor to enter the custom code.
+Specify any custom code that must exist as a condition of the event.
+
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
+
+Use the built-in code editor to enter the custom code:
 
 1. Select **[!UICONTROL Open Editor]**.
 1. Type the custom code.
@@ -530,6 +540,10 @@ This section describes the action types available in the Core extension.
 
 ### Custom Code
 
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
+
 Provide the code that runs after the event is triggered and conditions are evaluated.
 
 1. Name the action code.
@@ -610,6 +624,14 @@ setTimeout(function() {
 </script>
 ```
 
+### Trigger Direct Call {#direct-call-action}
+
+This action triggers all rules that use a specific [direct call event](#direct-call-event). When configuring the action, you must provide the identifier string for the direct call event you want to trigger. Optionally, you can also pass data to the direct call event via a `detail` object, which can contain a custom set of key-value pairs.
+
+![Screenshot of a Trigger Direct Call action in the Data Collection UI](../../../images/extensions/core/direct-call-action.png)
+
+The action maps directly to the [`track` method](../../../ui/client-side/satellite-object.md?lang=en#track) in the `satellite` object, which can be accessed by client-side code.
+
 ## Core extension data element types
 
 Data element types are determined by the extension. There is no limit to the types that can be created.
@@ -633,6 +655,10 @@ Any constant string value that can be then referenced in actions or conditions.
 `string`
 
 ### Custom code
+
+>[!NOTE]
+>
+>ES6+ JavaScript is now supported in custom code. Note that some older browsers do not support ES6+. To understand the impact of using ES6+ functions, please test against all web browsers that should be supported.
 
 Custom JavaScript can be entered into the UI by selecting  Open Editor and inserting code into the editor window.
 

@@ -9,7 +9,7 @@ exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
 ---
 # Connect [!DNL Data Landing Zone] to Platform using the UI
 
-[!DNL Data Landing Zone] is a cloud-based data storage facility for temporary file storage provisioned with Adobe Experience Platform. [!DNL Data Landing Zone] is used solely for the ingress and egress of your data in and out of Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
+[!DNL Data Landing Zone] is a cloud-based data storage facility for temporary file storage provisioned with Adobe Experience Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
 
 This tutorial provides steps for creating a [!DNL Data Landing Zone] source connection using the Platform user interface.
 
@@ -47,6 +47,10 @@ In the [!UICONTROL Sources catalog], under the [!UICONTROL Cloud storage] catego
 A popover appears, displaying your container name, SAS token, storage account name, and SAS URI. 
 
 Select **[!UICONTROL Refresh credentials]** and allow for a few seconds for your updated credentials to be processed.
+
+>[!TIP]
+>
+>Your [!DNL Data Landing Zone] credentials are set to auto-expire after 90 days and you must use new credentials to re-connect to [!DNL Data Landing Zone] after expiration. Your dataflows in Platform are not affected by expiring credentials and you can still continue working with new and existing dataflows with your new credentials.
 
 ![view-credentials](../../../../images/tutorials/create/dlz/credentials.png)
 

@@ -3,11 +3,7 @@ title: XDM Business Person Details Schema Field Group
 description: This document provides an overview of the XDM Business Person Details schema field group.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 ---
-# [!UICONTROL XDM Business Person Details] schema field group (Beta)
-
->[!IMPORTANT]
->
->This field group is available as part of Real-time Customer Data Platform B2B Edition, which is currently in beta. The documentation and functionality are subject to change.
+# [!UICONTROL XDM Business Person Details] schema field group
 
 [!UICONTROL XDM Business Person Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) that captures information about an individual person in the context of a business-to-business (B2B) enterprise.
 

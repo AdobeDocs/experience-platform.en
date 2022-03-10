@@ -6,11 +6,7 @@ topic-legacy: overview
 description: Learn how to connect Veeva CRM to Adobe Experience Platform using APIs or the user interface.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
 ---
-# (Beta) [!DNL Veeva CRM]
-
->[!NOTE]
->
->The [!DNL Veeva CRM] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL Veeva CRM] source
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
