@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 
 ---
-# Guardrails for activtion data
+# Guardrails for activation data
 
 This page provides default use and rate limits with regard to activation behavior. When reviewing the following guardrails, it is assumed that you have correctly connected to destinations.
 
@@ -18,7 +18,7 @@ This page provides default use and rate limits with regard to activation behavio
 
 There are two types of default limits within this document:
 
-* **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance. 
+* **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance.
 
 * **Hard limit:** A hard limit provides an absolute maximum.
 
@@ -30,34 +30,43 @@ There are two types of default limits within this document:
 
 The following guardrails provide recommended limits when activating Real-time Customer Profile data. To learn more about ....., see the section on ... in the Appendix.
 
-Max # of audiences to a single destination
-Max # of destinations
+### General activation guardrails
+
+The guardrails below generally apply to activation through all destination types.
+
+| Guardrail | Limit | Limit Type | Description |
+| --- | --- | --- | --- |
+|Max # of audiences to a single destination | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Max # of destinations | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Insert other guardrails | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
 
 ### Streaming Activation
 
-number of activations per second
-Max size per record to activate
-
+The guardrails below apply to activation through streaming destinations.
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Guardrail | 20 | Soft or Hard| Description of the guardrail|
+|Number of activations per second | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Max size per record to activate | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Insert other guardrails | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
 
 {style="table-layout:auto"}
 
-### Batch Activation
+### Batch (file-based) activation
 
-Max # of records activated per minute
-Max size per file to activate
-Max size per record to activate
+The guardrails below apply to activation through batch file-based destinations.
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Guardrail | 20 | Soft or Hard| Description of the guardrail|
+|Max # of records activated per minute | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Max size per file to activate | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Max size per record to activate | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
 
 {style="table-layout:auto"}
 
 ### Ad-hoc activation
+
+The guardrails below apply to the ad-hoc activation method.
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
@@ -68,7 +77,7 @@ Max size per record to activate
 
 ### Destination Throttling
 
-Details on throttling thresholds or limitations for a given destination. 
+Details on throttling thresholds or limitations for given destinations.
 
 ## Appendix
 
@@ -76,9 +85,9 @@ This section provides additional details for the limits in this document.
 
 ### Retry policy
 
-Add information regarding the retry policy for destinations
+Add information regarding the retry policy for destinations.
 
-### Other guardrails
+## Guardrails for other Experience Platform services
 
 View guardrails information for other Experience Platform services
 
