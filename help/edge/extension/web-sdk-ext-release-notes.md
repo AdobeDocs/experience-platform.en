@@ -9,6 +9,8 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.10.0 - March 10, 2022
 
+* Update the prehiding snippet that is available to copy on the configuration page to work with the updated Adobe Target VEC editor.
+
 Contains version 2.9.0 of the Adobe Experience Platform Web SDK library.
 
 ## Version 2.9.0 - January 19, 2022
