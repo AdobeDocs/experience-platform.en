@@ -8,9 +8,9 @@ description: Learn about the premium CDN feature for tags and how it can be used
 >
 >The premium CDN feature for tags is currently in beta and your organization may not have access to it yet. This documentation is subject to change.
 
-When you install a [tag library](./libraries.md) on your website, the assets for that library are delivered from an Adobe-managed host at runtime (`https://assets.adobedtm.com`). However, depending on the geographic regions your website operates under, you may be subject to legal regulations that restrict the top-level domains (TLDs) that content can be delivered from. 
+When you use an [Adobe-managed host](./hosts/managed-by-adobe-host.md) to deliver your Adobe Experience Platform tags assets on your website, these assets are distributed amongst various content delivery networks (CDNs) around the world to deliver the quickest download speed. However, there are certain regions that require all website assets to be replicated and hosted on a server within that region.
 
-To account for this, tags in Adobe Experience Platform provide a premium content delivery network (CDN) feature, which allows you deliver content to multiple regions through different TLDs.
+To account for this, tags in Experience Platform provides a premium CDN feature which allows you to deliver content to these special regions.
 
 Premium CDN support is a paid feature, and must be purchased by your organization in order to enable and use it. This guide covers how to configure and use this feature in the Data Collection UI after it has been purchased.
 
@@ -28,15 +28,21 @@ In the configuration dialog that appears, select the option for **[!UICONTROL Pr
 
 ## Rebuild and install tag libraries with updated embed codes
 
-Once you have enabled the premium CDN feature for the company, you must rebuild any libraries that you intend to publish in order to update their behavior accordingly.
+Enabling the premium CDN feature does not mean that your tag assets are immediately replicated and ready to use within the new regions. It only means that you can now choose when to opt in to this functionality.
 
-After rebuilding your libraries, the final step is to update the environment embed codes on the webpage. When the premium CDN feature is enabled, the install instructions for your tag environments update to include an embed code for each region. The screenshot below shows an embed code for the China region, which uses `.cn` as its TLD.
+>[!IMPORTANT]
+>
+>Libraries built before enabling premium CDN will continue to operate as-is exactly as they do today. This also applies to libraries not managed by Adobe, since [archived environments](./environments.md#archive) only use relative URLs for their asset paths. Please note that after you have enabled premium CDN, any library you build that is not managed by Adobe will behave as if the premium CDN feature is not enabled.
+
+Once you have enabled premium CDN and rebuilt any libraries that you wish to use from the new hosting regions, you can retrieve the new hosting region embed codes to add to your websites. 
+
+Visit the **[!UICONTROL Environments]** page  or view the environment install instructions from the library edit screen to find the new embed codes. Each new supported hosting region appears after the [!UICONTROL Standard] hosting region (used for areas in the world that are supported without premium CDN). The screenshot below shows an embed code for the China region, which uses `.cn` as its top-level domain (TLD).
 
 ![Embed code for the China region](../../images/ui/publishing/premium-cdn/embed-codes.png)
 
 >[!NOTE]
 >
->Since [archived environments](./environments.md#archive) only use relative URLs for their asset paths, their install instructions are not affected by the premium CDN feature being enabled.
+>The library embed code that is listed under Standard will continue to work as-is, as well as any Page Top or Page Bottom embed codes already on your websites.
 
 Choose the appropriate embed code for the webpage, and paste it within the `<head>` tag of your document. For more information using embed codes to install tag libraries, please refer to the [environments UI guide](./environments.md#installation).
 
