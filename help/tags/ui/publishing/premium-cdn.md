@@ -36,13 +36,13 @@ Enabling the premium CDN feature does not mean that your tag assets are immediat
 
 Once you have enabled premium CDN and rebuilt any libraries that you wish to use from the new hosting regions, you can retrieve the new hosting region embed codes to add to your websites. 
 
+>[!NOTE]
+>
+>The library embed code that is listed under the [!UICONTROL Standard] hosting region will continue to work as-is, as well as any Page Top or Page Bottom embed codes already on your websites.
+
 Visit the **[!UICONTROL Environments]** page  or view the environment install instructions from the library edit screen to find the new embed codes. Each new supported hosting region appears after the [!UICONTROL Standard] hosting region (used for areas in the world that are supported without premium CDN). The screenshot below shows an embed code for the China region, which uses `.cn` as its top-level domain (TLD).
 
 ![Embed code for the China region](../../images/ui/publishing/premium-cdn/embed-codes.png)
-
->[!NOTE]
->
->The library embed code that is listed under Standard will continue to work as-is, as well as any Page Top or Page Bottom embed codes already on your websites.
 
 Choose the appropriate embed code for the webpage, and paste it within the `<head>` tag of your document. For more information using embed codes to install tag libraries, please refer to the [environments UI guide](./environments.md#installation).
 
