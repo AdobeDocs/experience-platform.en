@@ -1,6 +1,7 @@
 ---
 title: Product Class
 description: This document provides an overview of the Product class in Experience Data Model (XDM).
+exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
 ---
 # [!UICONTROL Product] class
 
@@ -18,6 +19,8 @@ In Experience Data Model (XDM), the [!UICONTROL Product] class captures the mini
 | `productManufacturedDate` | DateTime | An [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) timestamp of when this product was created. |
 | `productName` | String | The name of the product. |
 | `productRating` | String | The customer review rating of the product.|
+
+{style="table-layout:auto"}
 
 ## Compatible field groups {#field-groups}
 

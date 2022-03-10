@@ -182,4 +182,4 @@ ORDER BY pageViews DESC;
 
 ## Next steps
 
-For more information on sample queries using Adobe Defined Functions (ADFs), please read the Adobe Defined Functions guide. For general guidance on query execution, please read the [guide on query execution in Query Service](./writing-queries.md).
+For more information on sample queries using Adobe Defined Functions (ADFs), please read the Adobe Defined Functions guide. For general guidance on query execution, please read the [guide on query execution in Query Service](../best-practices/writing-queries.md).

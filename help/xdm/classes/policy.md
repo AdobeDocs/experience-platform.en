@@ -1,6 +1,7 @@
 ---
 title: Policy Class
 description: This document provides an overview of the Policy class in Experience Data Model (XDM).
+exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
 ---
 # [!UICONTROL Policy] class
 
@@ -26,3 +27,5 @@ In Experience Data Model (XDM), the [!UICONTROL Policy] class captures the minim
 | `name` | [!UICONTROL String] | The name of the insurance policy. |
 | `startDate` | [!UICONTROL DateTime] | The date when the insurance policy coverage starts (or started). |
 | `type` | [!UICONTROL String] | The type of insurance policy, such as home, automobile, renter, or boat. |
+
+{style="table-layout:auto"}

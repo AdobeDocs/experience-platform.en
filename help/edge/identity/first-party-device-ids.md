@@ -2,8 +2,6 @@
 title: First-party device IDs in the Platform Web SDK
 description: Learn how to configure first-party device IDs (FPIDs) for the Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-hide: true
-hidefromtoc: true
 ---
 # First-party device IDs in the Platform Web SDK
 
@@ -21,36 +19,44 @@ This guide assumes you are familiar with how identity data works for the Platfor
 
 ## Using FPIDs
 
-First-party cookies are most effective when they are set using a customer-owned server that leverages a DNS A-record as opposed to a DNS CNAME. Using first-party device IDs,  you can set your own device IDs in cookies using DNS A-records. These IDs can then be sent to Adobe and used as seeds to generate ECIDs that will continue to be the primary identifiers in Adobe Experience Cloud applications. 
+FPIDs track visitors through the use of first-party cookies. First-party cookies are most effective when they are set using a server that leverages a DNS [A record](https://datatracker.ietf.org/doc/html/rfc1035) (for IPv4) or [AAAA record](https://datatracker.ietf.org/doc/html/rfc3596) (for IPv6), as opposed to a DNS CNAME or JavaScript code.
+
+>[!IMPORTANT]
+>
+>A records or AAAA records are only supported for setting and tracking cookies. The primary method for data collection is through a DNS CNAME. In other words, FPIDs are set using an A record or AAAA record, and are then sent to Adobe using a CNAME.
+>
+>The [Adobe-Managed Certificate Program](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) is also still supported for first-party data collection.
+
+Once an FPID cookie is set, its value can be fetched and sent to Adobe as event data is collected. Collected FPIDs are used as seeds to generate ECIDs, which continue to be the primary identifiers in Adobe Experience Cloud applications. 
 
 To send an FPID for a website visitor to the Platform Edge Network, you must include the FPID in the `identityMap` for that visitor. See the section later in this document on [using FPIDs in `identityMap`](#identityMap) for more information.
 
-## ID formatting requirements
+### ID formatting requirements
 
 The Platform Edge Network only accepts IDs that comply with the [UUIDv4 format](https://datatracker.ietf.org/doc/html/rfc4122). Device IDs that are not in UUIDv4 format will be rejected. 
 
 Generation of a UUID will almost always result in a unique, random ID, with the probability of a collision occurring being negligible. UUIDv4 cannot be seeded using IP addresses or any other personal identifiable information (PII). UUIDs are ubiquitous and libraries can be found for virtually every programming language to generate them.
 
-## Setting a cookie using a DNS A-record
+## Setting a cookie using your own server
 
-A variety of methods can be used to set a cookie in a way that will prevent it from being restricted due to browser policies: 
+When setting a cookie using a server that you own, a variety of methods can be used to prevent the cookie from being restricted due to browser policies: 
 
 * Generate cookies using server-side scripting languages
 * Set cookies in response to an API request made to a sub-domain or other endpoint on the site
 * Generate cookies using a CMS
 * Generate cookies using a CDN
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >Cookies set using JavaScript's `document.cookie` method will almost never be protected from browser policies that restrict cookie durations. 
 
-## When to set the cookie
+### When to set the cookie
 
 The FPID cookie should ideally be set before making any requests to the Edge Network. However, in scenarios where that is not possible, an ECID is still generated using existing methods and acts as the primary identifier as long as the cookie exists.
 
 Assuming the ECID is eventually impacted by a browser deletion policy, but the FPID is not, the FPID will become the primary identifier on the next visit and will be used to seed the ECID on each subsequent visit. 
 
-## Setting the expiration for the cookie
+### Setting the expiration for the cookie
 
 Setting the expiration of a cookie is something that should be carefully considered as you implement the FPID functionality. When making this decision, you should take into account the countries or regions in which your organization operates along with the laws and policies in each one of those regions. 
 

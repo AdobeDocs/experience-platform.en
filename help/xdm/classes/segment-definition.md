@@ -28,3 +28,5 @@ exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 | `segmentName` | **(Required)** A name for the segment definition. |
 | `segmentStatus` | The status of the segment from the external system. The following values are accepted: <ul><li>`ACTIVE`</li><li>`INACTIVE`</li><li>`DELETED`</li><li>`DRAFT`</li><li>`REVOKED`</li></ul> |
 | `version` | The latest version number of the segment definition. |
+
+{style="table-layout:auto"}

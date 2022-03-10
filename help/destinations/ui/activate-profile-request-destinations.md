@@ -19,7 +19,7 @@ To activate data to destinations, you must have successfully [connected to a des
 
 ### Segment merge policy {#merge-policy}
 
-Currently, profile request destinations only support the activation of segments that use the [default merge policy](../../segmentation/ui/segment-builder.md#merge-policies).
+Currently, profile request destinations only support the activation of segments that use the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default.
 
 ## Select your destination {#select-destination}
 
