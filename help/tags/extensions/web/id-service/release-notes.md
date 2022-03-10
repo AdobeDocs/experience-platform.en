@@ -12,7 +12,7 @@ exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 For release notes on the Experience Cloud Identity Service itself and not just the Adobe Experience Platform tag extension, please reference: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)
 
 
-## Mar 9,2022
+## Mar 9, 2022
 ### Experience Cloud ID Extension 5.4.0
 
 #### **Features**
@@ -28,11 +28,11 @@ For release notes on the Experience Cloud Identity Service itself and not just t
 
 #### **Features**
 
-* This version contains latest Visitor 5.3.0 which has the following new updates
+* This version contains the latest Visitor 5.3.0, which has the following new updates:
 
   * Updated algorithm to generate local ECID
-  * Latest Opt-In with `Secure` and `SameSite` flags for privacy cookie
-  * Fix for Firefox browser issue when a page is loaded in a child iFrame
+  * Latest Opt-In with `Secure` and `SameSite` flags for the privacy cookie
+  * Fix for a Firefox browser issue when a page is loaded in a child iFrame
 
 ## Jan 12, 2021
 
