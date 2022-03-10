@@ -17,10 +17,10 @@ For release notes on the Experience Cloud Identity Service itself and not just t
 
 #### **Features**
 
-* This version contains latest Visitor 5.4.0 which has the following new updates
+* This version contains the latest Visitor 5.4.0, which has the following updates:
 
-  * Ability to configure life time of `s_ecid` cookie using cookieLifetime config
-  * Update for Firefox browser issue when a page is loaded in a child iFrame
+  * Ability to configure the lifetime of the `s_ecid` cookie using cookieLifetime config
+  * Update for a Firefox browser issue that occurs when a page is loaded in a child iFrame
 
 ## Oct 10, 2021
 
