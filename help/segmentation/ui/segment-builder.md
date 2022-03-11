@@ -112,7 +112,7 @@ When selecting a value for the attribute, you will see a list of enum values tha
 
 ![](../images/ui/segment-builder/enum-list.png)
 
-If selecting a value from this list of enums, the value will be outlined with a solid border. However, you can select a value which is **not** from the list of enums. If you create your own value, it will be outlined with a dotted border, along with a warning that this value is not in the enum list.
+If selecting a value from this list of enums, the value will be outlined with a solid border. However, for fields that use `meta:enum` (soft) enums, you can also select a value which is **not** from the list of enums. If you create your own value, it will be outlined with a dotted border, along with a warning that this value is not in the enum list.
 
 ![](../images/ui/segment-builder/enum-warning.png)
 
