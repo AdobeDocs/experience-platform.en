@@ -19,7 +19,7 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 This tutorial requires a working understanding of the following components of Platform:
 
-* [Sources](../../../../home.md): Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sources](../../../home.md): Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
@@ -28,7 +28,7 @@ This tutorial requires a working understanding of the following components of Pl
 
 ## Add data
 
-After creating your database account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your database hierarchy.
+After creating your database source account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your database source account's table hierarchy.
 
 * The left half of the interface is a browser, displaying a list of data tables contained in your account. The interface also includes a search option that allows you to quickly identify the source data you intend to use.
 * The right half of the interface is a preview panel, allowing you to preview up to 100 rows of data.
