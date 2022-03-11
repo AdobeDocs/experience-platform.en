@@ -1,6 +1,7 @@
 ---
 title: Premium CDN support for tags
 description: Learn about the premium CDN feature for tags and how it can be used to deliver your content in multiple geographic regions.
+exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
 ---
 # Premium CDN support for tags (Beta)
 
