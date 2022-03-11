@@ -11,6 +11,8 @@ exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 
 In Adobe Experience Platform, you can edit various components of existing activation dataflows to destinations, like the exported segments and profile attributes, the export frequency, whether the activation dataflow is enabled or disabled, and more.
 
+## Edit dataflows {#edit-dataflows}
+
 Follow the steps below to edit existing activation dataflows:
 
 1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
@@ -32,9 +34,13 @@ Follow the steps below to edit existing activation dataflows:
       * [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md) (for example, Amazon S3 or Oracle Eloqua);
       * [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) (for example, HTTP API or Amazon Kinesis).
 
-    * Additionally, you can edit the destination dataflow name and description. 
+    * Additionally, you can edit the destination dataflow name and description.
     * You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start and pause all data exports to the destination.
 
     ![Destination details](../assets/ui/edit-activation/destination-details.png)
 
-5. Refer to [Activation overview](activation-overview.md) for details on how to activate new segments to your destinations.
+## Next steps {#next-steps}
+
+By following this tutorial, you have successfully used the **[!UICONTROL destinations]** workspace to update existing destination dataflows.
+
+For more information about destinations, refer to the [destinations overview](../catalog/overview.md).
