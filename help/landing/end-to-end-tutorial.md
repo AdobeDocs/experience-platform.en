@@ -10,7 +10,7 @@ Adobe Experience Platform is the most powerful, flexible, and open system on the
 
 Built on RESTful APIs, Platform exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. Platform lets you derive a holistic view of your customers by ingesting your customer data, segmenting your data to the audiences you want to target, and activating these audiences to an external destination. The following tutorial shows an end-to-end workflow, showing all the steps from ingestion via sources to audience activation via destinations.
 
-![Experience Platform end-to-end workflow](./images/end-to-end-tutorial/end-to-end-flow.png)
+![Experience Platform end-to-end workflow](./images/end-to-end-tutorial/platform-end-2-end-workflow.png)
 
 ## Getting started
 
