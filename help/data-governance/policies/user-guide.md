@@ -18,14 +18,18 @@ Adobe Experience Platform Data Governance provides a user interface that allows 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-- [Data Governance](../home.md)
-- [Data usage policies](./overview.md)
+* [Data Governance](../home.md)
+* [Data usage policies](./overview.md)
 
 ## View existing policies {#view-policies}
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Policies]** to open the **[!UICONTROL Policies]** workspace. In the **[!UICONTROL Browse]** tab, you can see a list of available policies, including their associated labels, marketing actions, and status.
 
 ![](../images/policies/browse-policies.png)
+
+If you have access to consent policies (currently in beta), select the **[!UICONTROL Consent policies]** toggle to view them in the [!UICONTROL Browse] tab.
+
+![](../images/policies/consent-policy-toggle.png)
 
 Select a listed policy to view its description and type. If a custom policy is selected, additional controls are displayed to edit, delete, or [enable/disable the policy](#enable).
 
@@ -36,6 +40,15 @@ Select a listed policy to view its description and type. If a custom policy is s
 To create a new custom data usage policy, select **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace.
 
 ![](../images/policies/create-policy-button.png)
+
+Depending on whether you are part of the beta for consent policies, one of the following will occur:
+
+* If you are not part of the beta, you are immediately brought to the workflow for [creating a data governance policy](#create-governance-policy).
+* If you are part of the beta, a dialog provides an additional option to [create a consent policy](#create-consent-policy).
+
+![](../images/policies/choose-policy-type.png)
+
+### Create a data governance policy {#create-governance-policy}
 
 The **[!UICONTROL Create policy]** workflow appears. Start by providing a name and a description for the new policy.
 
@@ -60,6 +73,43 @@ The **[!UICONTROL Review]** step appears, allowing you to review the details of 
 The **[!UICONTROL Browse]** tab reappears, which now lists the newly created policy in "Draft" status. To enable the policy, see the next section.
 
 ![](../images/policies/created-policy.png)
+
+### Create a consent policy (Beta) {#create-consent-policy}
+
+>[!IMPORTANT]
+>
+>Consent policies are currently in beta and your organization may not have access to them yet.
+
+If you chose to create a consent policy, a new screen appears that allows you to configure the new policy.
+
+![](../images/policies/consent-policy-dialog.png)
+
+In order to make use of consent policies, you must have consent attributes present in your profile data. See the guide on [consent processing in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) for detailed steps on how to include the required attributes in your union schema.
+
+Consent policies are comprised of two logical components:
+
+* **[!UICONTROL If]**: The condition that will trigger the policy check. This can be based on a certain marketing action being performed, the presence of certain data usage labels, or a combination of the two.
+* **[!UICONTROL Then]**: The consent attributes that must be present for a profile to be included in the action that triggered the policy.
+
+#### Configure conditions
+
+Under the **[!UICONTROL If]** section, select the marketing actions and/or data usage labels that should trigger this policy. Select **[!UICONTROL View all]** and **[!UICONTROL Select labels]** to view the full lists of available marketing actions and labels, respectively.
+
+Once you have added at least one condition, you can select **[!UICONTROL Add condition]** to continue adding further conditions as necessary, choosing the appropriate condition type from the dropdown.
+
+![](../images/policies/add-condition.png)
+
+If you select more than one condition, you can use the icon that appears between them to switch the conditional relationship between "AND" and "OR".
+
+![](../images/policies/and-or-selection.png)
+
+#### Select consent attributes
+
+Under the **[!UICONTROL Then]** section, select at least one consent attribute from the union schema. This is the attribute that must be present in order for profiles to be included in the action governed by this policy. You can choose one of the provided options from the list, or select **[!UICONTROL View all]** to choose the attribute directly from the union schema.
+
+When selecting the consent attribute, choose the values for the attribute that you want this policy to check for. 
+
+![](../images/policies/select-schema-field.png)
 
 ## Enable or disable a policy {#enable}
 
