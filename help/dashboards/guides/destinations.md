@@ -183,9 +183,11 @@ The [!UICONTROL Activated audiences by destination] widget provides the total nu
 
 ### [!UICONTROL Audience activation timeline] (#audience-activation-timeline)
 
-Description
+The [!UICONTROL Audience activation timeline] widget provides a list of up to 10 activated destinations where this segment was activated most recently. The data is provided in table format listing the destination name, the platform, and the activation date.
 
-<!-- ![PLACEHOLDER]() -->
+Select the destination name from the table to navigate to the [!UICONTROL Activation data] page. This page lists every segment that has been activated to the chosen destination.
+
+<!-- ![PLACEHOLDER No image available]() -->
 
 ## Next steps
 
