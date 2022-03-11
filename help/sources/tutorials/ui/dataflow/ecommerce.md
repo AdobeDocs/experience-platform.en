@@ -1,145 +1,127 @@
 ---
 keywords: Experience Platform;home;popular topics;eCommerce connector;eCommerce
 solution: Experience Platform
-title: Configure a Dataflow for an eCommerce Source Connection in the UI
+title: Create a Dataflow Using an E-Commerce Source in the UI
 topic-legacy: overview
 type: Tutorial
-description: A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your eCommerce account.
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps on how to create a dataflow for an e-commerce source using Platform UI.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
 ---
-# Configure a dataflow for an eCommerce connection in the UI
+# Create a dataflow using an e-commerce source in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your **[!UICONTROL eCommerce]** account.
-
-## Getting started
-
-This tutorial requires a working understanding of the following components of Adobe Experience Platform:
-
--   [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-    -   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    -   [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
--   [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-
-Additionally, this tutorial requires that you have already created an **[!UICONTROL eCommerce]** account. A list of tutorials for creating different **[!UICONTROL eCommerce]** connectors in the UI can be found in the [source connectors overview](../../../home.md).
-
-## Select data
-
-After creating your **[!UICONTROL eCommerce]** account, the **[!UICONTROL Select data]** step appears, providing an interactive interface for you to explore your file hierarchy.
-
-- The left half of the interface is a directory browser, displaying your server's files and directories.
-- The right half of the interface lets you preview up to 100 rows of data from a compatible file.
-
-You can use the **[!UICONTROL Search]** option on the top of the page to quickly identify the source data you intend to use.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a dataset in Adobe Experience Platform. This tutorial provides steps on how to create a dataflow for an e-commerce source using the Platform UI.
 
 >[!NOTE]
 >
->The search source data option is available to all tabular-based source connectors excluding the Analytics, Classifications, Event Hubs, and Kinesis connectors.
+>In order to create a dataflow, you must already have an authenticated account with an e-commerce source. A list of tutorials for creating different e-commerce source accounts in the UI can be found in the [sources overview](../../../home.md#ecommerce).
 
-Once you find the source data, select the directory, then select **[!UICONTROL Next]**.
+## Getting started
 
-![select-data](../../../images/tutorials/dataflow/ecommerce/select-data.png)
+This tutorial requires a working understanding of the following components of Platform:
 
-## Map data fields to an XDM schema
+* [Sources](../../../home.md): Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+  * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  * [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Data Prep]](../../../../data-prep/home.md): Allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-The **[!UICONTROL Mapping]** step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset.
+## Add data
 
-Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new dataset.
+After creating your e-commerce source account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your e-commerce source account's table hierarchy.
 
-### Use an existing dataset
+* The left half of the interface is a browser, displaying a list of data tables contained in your account. The interface also includes a search option that allows you to quickly identify the source data you intend to use.
+* The right half of the interface is a preview panel, allowing you to preview up to 100 rows of data.
 
-To ingest data into an existing dataset, select **[!UICONTROL Use existing dataset]**, then click the dataset icon.
-
-![use-existing-dataset](../../../images/tutorials/dataflow/ecommerce/use-existing-dataset.png)
-
-The **[!UICONTROL Select dataset]** dialog appears. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
-
-![select-existing-dataset](../../../images/tutorials/dataflow/ecommerce/select-existing-dataset.png)
-
-### Use a new dataset
-
-To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** and enter a name and description for the dataset in the fields provided.
-
-You can attach a schema field by entering a schema name in the **[!UICONTROL Select schema]** search bar. You can also select the drop down icon to see a list of existing schemas. Alternatively, you can select **[!UICONTROL Advanced search]** to access screen of existing schemas including their respective details.
-
-During this step, you can enable your dataset for [!DNL Real-time Customer Profile] and create a holistic view of an entity's attributes and behaviors. Data from all enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
-
-Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset for [!DNL Profile].
-
-![create-new-dataset](../../../images/tutorials/dataflow/ecommerce/new-dataset.png)
-
-The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to apply to the new dataset, then click **[!UICONTROL Done]**.
-
-![select-schema](../../../images/tutorials/dataflow/ecommerce/select-schema.png)
-
-Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
-
->[!TIP]
+>[!NOTE]
 >
->Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
+>The search source data option is available to all table-based sources excluding the Adobe Analytics, [!DNL Amazon Kinesis], and [!DNL Azure Event Hubs].
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+Once you find the source data, select the table, then select **[!UICONTROL Next]**.
 
-Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
-
-During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results.
-
-![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
-
-Once your source data is mapped, select **[!UICONTROL Close]**.
-
-## Schedule ingestion runs
-
-The **[!UICONTROL Scheduling]** step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. The following table outlines the different configurable fields for scheduling:
-
-| Field | Description |
-| --- | --- |
-| Frequency | Selectable frequencies include `Once`, `Minute`, `Hour`, `Day`, and `Week`. |
-| Interval | An integer that sets the interval for the selected frequency. |
-| Start time | A UTC timestamp indicating when the very first ingestion is set to occur. |
-| Backfill | A boolean value that determines what data is initially ingested. If **[!UICONTROL Backfill]** is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If **[!UICONTROL Backfill]** is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
-| Delta Column | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
-
-Dataflows are designed to automatically ingest data on a scheduled basis. Start by selecting the ingestion frequency. Next, set the interval to designate the period between two flow runs. The interval's value should be a non-zero integer and should be set to greater than or equal to 15.
-
-To set the start time for ingestion, adjust the date and time displayed in the start time box. Alternatively, you can select the calendar icon to edit the start time value. Start time must be greater than or equal to your current UTC time.
-
-Select **[!UICONTROL Load incremental data by]** to assign the delta column. This field provides a distinction between new and existing data.
-
-![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
-
-### Set up a one-time ingestion dataflow
-
-To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**.
-
->[!TIP]
->
->**[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
-
-Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
-
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
 ## Provide dataflow details
 
-The **[!UICONTROL Dataflow detail]** step appears, allowing you to name and give a brief description about your new dataflow.
+The [!UICONTROL Dataflow detail] page allows you to select whether you want to use an existing dataset or a new dataset. During this process, you can also configure settings for [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion], and [!UICONTROL Alerts].
 
-During this process, you can also enable **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]**. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. Once **[!UICONTROL Partial ingestion]** is enabled, drag the **[!UICONTROL Error threshold %]** dial to adjust the error threshold of the batch. Alternatively, you can manually adjust the threshold by selecting the input box. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
+![dataflow-detail](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
-Provide values for the dataflow and select **[!UICONTROL Next]**.
+### Use an existing dataset
 
-![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
+To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu. Once you have selected a dataset, provide a name and a description for your dataflow.
+
+![existing-dataset](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
+
+### Use a new dataset
+
+To ingest into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu. Once you have selected a schema, provide a name and a description for your dataflow.
+
+![new-dataset](../../../images/tutorials/dataflow/table-based/new-dataset.png)
+
+### Enable [!DNL Profile] and error diagnostics
+
+Next, select the **[!UICONTROL Profile dataset]** toggle to enable your dataset for [!DNL Profile]. This allows you to create a holistic view of an entity's attributes and behaviors. Data from all [!DNL Profile]-enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
+
+[!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md) for more information.
+
+![profile-and-errors](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
+
+### Enable alerts
+
+You can enable alerts to receive notifications on the status of your dataflow. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to sources alerts using the UI](../alerts.md).
+
+When you are finished providing details to your dataflow, select **[!UICONTROL Next]**.
+
+![alerts](../../../images/tutorials/dataflow/table-based/alerts.png)
+
+## Map data fields to an XDM schema
+
+The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
+
+Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
+
+Once your source data is successfully mapped, select **[!UICONTROL Next]**.
+
+![mapping](../../../images/tutorials/dataflow/table-based/mapping.png)
+
+## Schedule ingestion runs
+
+The [!UICONTROL Scheduling] step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. By default, scheduling is set to `Once`. To adjust your ingestion frequency, select **[!UICONTROL Frequency]** and then select an option from the dropdown menu.
+
+>[!TIP]
+>
+>Interval and backfill are not visible during a one-time ingestion.
+
+![scheduling](../../../images/tutorials/dataflow/table-based/scheduling.png)
+
+If you set your ingestion frequency to `Minute`, `Hour`, `Day`, or `Week`, then you must set an interval to establish a set time frame between every ingestion. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
+
+During this step, you can also enable **backfill** and define a column for the incremental ingestion of data. Backfill is used to ingest historical data, while the column you define for incremental ingestion allows new data to be differentiated from existing data.
+
+See the table below for more information on scheduling configurations.
+
+| Field | Description |
+| --- | --- |
+| Frequency | The frequency in which an ingestion happens. Selectable frequencies include `Once`, `Minute`, `Hour`, `Day`, and `Week`. |
+| Interval | An integer that sets the interval for the selected frequency. The interval's value should be a non-zero integer and should be set to greater than or equal to 15. |
+| Start time | A UTC timestamp indicating when the very first ingestion is set to occur. Start time must be greater than or equal to your current UTC time. |
+| Backfill | A boolean value that determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
+| Load incremental data by | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
+
+![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Review your dataflow
 
 The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
-- **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
-- **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
-- **[!UICONTROL Scheduling]**: Shows the active period, frequency, and interval of the ingestion schedule.
+* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+* **[!UICONTROL Scheduling]**: Shows the active period, frequency, and interval of the ingestion schedule.
 
-Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
+Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![review](../../../images/tutorials/dataflow/ecommerce/review.png)
+![review](../../../images/tutorials/dataflow/table-based/review.png)
 
 ## Monitor your dataflow
 
@@ -151,7 +133,15 @@ You can delete dataflows that are no longer necessary or were incorrectly create
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring in **[!UICONTROL eCommerce]** data and gained insight on monitoring datasets. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully created a dataflow to bring data from your e-commerce source to Platform. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
--   [[!DNL Real-time Customer Profile] overview](../../../../profile/home.md)
--   [[!DNL Data Science Workspace] overview](../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] overview](../../../../profile/home.md)
+* [[!DNL Data Science Workspace] overview](../../../../data-science-workspace/home.md)
+
+
+>[!WARNING]
+>
+> The Platform UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+>
+>[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
+
