@@ -102,14 +102,6 @@ After configuring a new datastream or selecting an existing one to view, the det
 
 ![Details page for a created datastream](../images/datastreams/view-details.png)
 
-When a datastream is created, three associated environments are automatically created with identical settings. These three environments are `dev`, `stage`, and `prod`, which correspond to the [default environments for tags](../../tags/ui/publishing/environments.md). When you build a tag library to a `dev` environment, the library automatically uses the `dev` environment from the datastream. You can freely edit the settings in individual environments to suit your needs.
-
-In SDK implementations, an `edgeConfigId` is a composite ID that specifies the datastream and the particular environment within that datastream. For example, to specify the `stage` environment for a datastream with ID `1c86778b-cdba-4684-9903-750e52912ad1`, use the `edgeConfigId` `1c86778b-cdba-4684-9903-750e52912ad1:stage`.
-
->[!IMPORTANT]
->
->If no environment is present in the composite ID, then the production environment (`prod`) is used.
-
 From the datastream details screen, you can [add services](#add-services) to enable capabilities from the Adobe Experience Cloud products you have access to.
 
 ## Add services to a datastream {#add-services}

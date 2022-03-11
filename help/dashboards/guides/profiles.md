@@ -163,7 +163,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 >
 >The profile efficacy widgets are currently in Beta and are not available to all users. The documentation and the functionality are subject to change.
 
-Adobe provides multiple widgets to asses the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
+Adobe provides multiple widgets to assess the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
 
 To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
@@ -179,7 +179,7 @@ This widget shows the completeness and cardinality of each profile attribute sin
 |---|---|
 | Attribute  | The name of the attribute.  |
 | Profiles  | The number of profiles that have this attribute and are filled with non-null values.  |
-| Completeness  | This percentage is determined by the total number of profiles that have this attribute and are filled with non-null values. The number is calculated by dividing the the total number of profiles by the total number of non-empty values in the profiles for that attribute.  |
+| Completeness  | This percentage is determined by the total number of profiles that have this attribute and are filled with non-null values. The number is calculated by dividing the total number of profiles by the total number of non-empty values in the profiles for that attribute.  |
 | Cardinality  | The total number of **unique** non-null values of this attribute. It is measured across all profiles. |
 
 ![The attributes quality assessment widget](../images/profiles/attributes-quality-assessment.png)
@@ -190,9 +190,9 @@ This widget creates a circle chart of profile completeness since the last proces
 
 This widget shows the proportion of profiles that are of high, medium, or low completeness. By default, there are three levels of completeness configured: 
 
-* High completeness: Profiles have more than 70% attributes filled. 
-* Medium completeness: Profiles have less than 70% and more than 30% attributes filled. 
-* Low completeness: Profiles have less than 30% attributes filled. 
+* High completeness: Profiles have more than 70% of attributes filled. 
+* Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
+* Low completeness: Profiles have less than 30% of attributes filled. 
 
 ![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
 
@@ -204,9 +204,9 @@ The x-axis represents time, the y-axis represents the number of profiles, and th
 
 The three levels of completeness are:
 
-* High completeness: Profiles have more than 70% attributes filled. 
-* Medium completeness: Profiles have less than 70% and more than 30% attributes filled. 
-* Low completeness: Profiles have less than 30% attributes filled.
+* High completeness: Profiles have more than 70% of attributes filled. 
+* Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
+* Low completeness: Profiles have less than 30% of attributes filled.
 
 ![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png)
 
