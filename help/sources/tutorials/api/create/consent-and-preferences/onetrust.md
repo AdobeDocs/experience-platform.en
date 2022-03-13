@@ -20,6 +20,11 @@ To read further about OneTrust, please visit https://www.onetrust.com/company/ab
 * *Needing to be aware of API key/client credentials generation through OneTrust website. See the [[!DNL OneTrust] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token) for detailed instructions on finding your access token.*
 * *To be aware of the OneTrust API specifications that is being shared to Adobe for data ingestion.*
 
+>[!IMPORTANT]
+>
+>The access token does not refresh automatically when expires because system-to-system refresh tokens are not supported by OneTrust.
+Therefore it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum life of an access token that can be configured is 1 Year *.
+
 ## Connect *ONETRUST* to Platform using the [!DNL Flow Service] API
 
 The following tutorial walks you through the steps to create a *ONETRUST* source connection and create a dataflow to bring *ONETRUST* data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
