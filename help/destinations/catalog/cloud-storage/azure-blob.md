@@ -21,11 +21,22 @@ This tutorial requires a working understanding of the following components of Ad
 
 If you already have a valid [!DNL Blob] destination, you may skip the remainder of this document and proceed to the tutorial on [activating segments to your destination](../../ui/activate-batch-profile-destinations.md).
 
+## Export type and frequency {#export-type-frequency}
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+
+{style="table-layout:auto"}
+
 ## Supported file formats {#file-formats}
 
 [!DNL Experience Platform] supports the following file format to be exported to [!DNL Blob]:
 
-* Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. Support for general DSV files will be provided in the future.
+* Comma-separated values (CSV): Support for exported data files is currently limited to comma-separated values.
 
 ## Connect to the destination {#connect}
 

@@ -12,10 +12,14 @@ Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 st
 
 ## Export type and frequency {#export-type-frequency}
 
+Refer to the table below for information about the destination export type and frequency.
+
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **Profile-based** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
 | Export frequency | **Batch** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+
+{style="table-layout:auto"}
 
 ![Amazon S3 profile-based export type](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
