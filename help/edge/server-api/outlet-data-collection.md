@@ -5,8 +5,80 @@ title: Outlet data collection
 
 # Outlet data collection
 
-## Adobe Experience Platform
+## Adobe Experience Platform {#aep}
 
-## Adobe Analytics
+To enable Experience Platform data collection, you must first [configure your datastream](../fundamentals/datastreams.md) to forward events into Experience Platform datasets.
 
-## Event forwarding
+Once configured, the datastream configuration should include settings for `com_adobe_experience_platform`, similar to these:
+
+
+```json
+{
+  // datastream config header
+
+  "settings": {
+    "com_adobe_experience_platform": {
+      "sandboxName": "prod",
+      "enabled": true,
+      "datasets": {
+        "event": {
+          "xdmSchema": "https://ns.adobe.com/atag/schemas/35a31609b6d3242736751df469ade031",
+          "datasetId": "5f67e6ad9501b0194b5aafb6"
+        }
+      }
+    }
+
+    // other settings
+  }
+}
+```
+
+## Adobe Analytics {#analytics}
+
+To enable Adobe Analytics data collection, you need first
+to [configure your datastream](../data-collection/adobe-analytics/analytics-overview.md) to forward events to Adobe Analytics.
+
+Adobe Analytics data collection works by translating XDM data into a format that Adobe Analytics can understand. See the following documentation for more details:
+
+* The common set of XDM values are [automatically converted](../data-collection/adobe-analytics/automatically-mapped-vars.md)
+* How to [manually map XDM values](../data-collection/adobe-analytics/manually-mapping-variables.md)
+
+Once enabled, the datastream configuration should include settings for `com_adobe_analytics`, similar to these:
+
+```javascript
+{
+  // datastream config header
+
+  "settings": {
+    "com_adobe_analytics": {
+      "enabled": true,
+      "reportSuites": [
+        "experience-edge-early-access-test"
+      ],
+      "listVarsDelimiter": ","
+    }
+
+    // other settings
+  }
+}
+```
+
+## Event forwarding {#event-forwarding}
+
+When enabled, the datastream configuration should include settings for `com_adobe_launch_ssf`, similar to these:
+
+```javascript
+{
+  // datastream config header
+
+  "settings": {
+    "com_adobe_launch_ssf": {
+      "enabled": true,
+      "environmentId": "EN456402a0cc034a09a431979f7e839dee",
+      "propertyId": "PRa062d841554a419e918f58bf09fdd233"
+    }
+
+    // other settings
+  }
+}
+```
