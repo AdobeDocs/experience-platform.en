@@ -1,15 +1,19 @@
 ---
-description: 
+description: Learn how the Edge Network Gateway API performs data collection in conjuction with other Adobe solutions
 title: Outlet data collection
 ---
 
 # Outlet data collection
 
+## Overview {#overview}
+
+The Edge Network Gateway API can perform data collection and send the collected data to other Adobe solutions.
+
 ## Adobe Experience Platform {#aep}
 
 To enable Experience Platform data collection, you must first [configure your datastream](../fundamentals/datastreams.md) to forward events into Experience Platform datasets.
 
-Once configured, the datastream configuration should include settings for `com_adobe_experience_platform`, similar to these:
+Once configured, the datastream configuration should include settings for `com_adobe_experience_platform`, as shown in the example below:
 
 
 ```json
@@ -43,7 +47,7 @@ Adobe Analytics data collection works by translating XDM data into a format that
 * The common set of XDM values are [automatically converted](../data-collection/adobe-analytics/automatically-mapped-vars.md)
 * How to [manually map XDM values](../data-collection/adobe-analytics/manually-mapping-variables.md)
 
-Once enabled, the datastream configuration should include settings for `com_adobe_analytics`, similar to these:
+Once enabled, the datastream configuration should include settings for `com_adobe_analytics`, as shown in the example below:
 
 ```javascript
 {
@@ -65,7 +69,7 @@ Once enabled, the datastream configuration should include settings for `com_adob
 
 ## Event forwarding {#event-forwarding}
 
-When enabled, the datastream configuration should include settings for `com_adobe_launch_ssf`, similar to these:
+When enabled, the datastream configuration should include settings for `com_adobe_launch_ssf`, as shown in the example below:
 
 ```javascript
 {

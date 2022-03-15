@@ -1,5 +1,5 @@
 ---
-description: Learn how to configure authentication for Experience Edge Server-to-Server API
+description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Gateway API
 title: Authentication
 ---
 
@@ -7,18 +7,20 @@ title: Authentication
 
 ## Overview 
 
-[!DNL Experience Edge] handles both authenticated and unauthenticated data collection, depending on the source of events and the API collection domain.
+The [!DNL Experience Edge Network Gateway API] handles both authenticated and unauthenticated data collection, depending on the source of events and the API collection domain.
 
-For each request, Konductor verifies the datastream [*access_type* setting](https://git.corp.adobe.com/experience-edge/blackbird/blob/master/manifests/src/main/resources/schemas/apiv2/edge/datastreams/v1/edgeSettings.json#L13-L18). Using this setting, a customer can configure a datastream to accept only authenticated data, or both authenticated and non-authenticated (_mixed_, which is the default)
+For each request, [!DNL Experience Edge Network Gateway API] verifies the datastream [*access_type* setting](https://git.corp.adobe.com/experience-edge/blackbird/blob/master/manifests/src/main/resources/schemas/apiv2/edge/datastreams/v1/edgeSettings.json#L13-L18).
 
-Below is a summary of the behavior, based on the *access_type* configuration and the endpoint on which the request is received:
+Using this setting, customers can configure a datastream to accept either authenticated data, or both authenticated and unauthenticated data. By default, both types of data are accepted.
 
-| access_type     | edge.adobedc.net              | server.adobedc.net    |
+Below is a summary of the behavior, based on the `access_type` configuration and the endpoint on which the request is received.
+
+| `access_type`     | edge.adobedc.net              | server.adobedc.net    |
 |-----------------|-------------------------------|-----------------------|
-| mixed (default) | doesn't authenticate request  | authenticates request |
-| authenticated   | authenticates request         | authenticates request |
+| mixed (default) | Does not authenticate request  | Authenticates request |
+| authenticated   | Authenticates request         | Authenticates request |
 
-API calls coming from a (private) server on **`server.adobedc.net` should always be authenticated**.
+API calls coming from a private server on `server.adobedc.net` should always be authenticated.
 
 
 ## Step 1: Prerequisites {#prerequisites}

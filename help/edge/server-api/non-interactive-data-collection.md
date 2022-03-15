@@ -1,13 +1,13 @@
 ---
-description: 
-title: Single-event data collection
+description: Learn how the Edge Network Gateway API performs non-interactive data collection
+title: Non-interactive data collection
 ---
 
 # Non-interactive data collection
 
 ## Overview {#overview}
 
-Send multiple events to be collected in your AEP dataset (or other outlets).
+Non-interactive event data collection endpoints are used to send multiple events to Experience Platform datasets or other outlets.
 
 Sending events in batch is recommended when end-user events are queued locally for a short period of time (e.g. when there’s no network connection).
 
@@ -30,61 +30,62 @@ POST /ee/v2/collect
 
 ```json
 curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId=$DATASTREAM_ID" \
--H "Authorization: Bearer $TOKEN" \
--H "x-gw-ims-org-id: $IMS_ORG_ID" \
--H "x-api-key: $API_KEY" \
+-H "Authorization: Bearer {ACCESS_TOKEN}" \
+-H "x-gw-ims-org-id: {IMS_ORG}" \
+-H "x-api-key: {API_KEY}" \
 -H "Content-Type: application/json" \
 --data-raw '{
-  "events": [
-    {
-      "xdm": {
-        "identityMap": {
-          "FPID": [
-            {
-              "id": "79bf8e83-f708-414b-b1ed-5789ff33bf0b",
-              "primary": "true"
-            }
-          ]
-        },
-        "eventType": "web.webpagedetails.pageViews",
-        "web": {
-          "webPageDetails": {
-            "URL": "https://alloystore.dev/",
-            "name": "home-demo-Home Page"
-          }
-        },
-        "timestamp": "2021-08-09T14:09:20.859Z"
+   "events":[
+      {
+         "xdm":{
+            "identityMap":{
+               "FPID":[
+                  {
+                     "id":"79bf8e83-f708-414b-b1ed-5789ff33bf0b",
+                     "primary":"true"
+                  }
+               ]
+            },
+            "eventType":"web.webpagedetails.pageViews",
+            "web":{
+               "webPageDetails":{
+                  "URL":"https://alloystore.dev/",
+                  "name":"home-demo-Home Page"
+               }
+            },
+            "timestamp":"2021-08-09T14:09:20.859Z"
+         },
+         "data":{
+            "prop1":"custom value"
+         }
       },
-      "data": {
-        "prop1": "custom value"
+      {
+         "xdm":{
+            "identityMap":{
+               "FPID":[
+                  {
+                     "id":"871e8460-a329-4e96-a5b6-ff359fb0afb9",
+                     "primary":"true"
+                  }
+               ]
+            },
+            "eventType":"web.webinteraction.linkClicks",
+            "web":{
+               "webInteraction":{
+                  "linkClicks":{
+                     "value":1
+                  }
+               },
+               "name":"My Custom Link",
+               "URL":"https://myurl.com"
+            },
+            "timestamp":"2021-08-09T14:09:20.859Z"
+         }
       }
-    },
-    {
-      "xdm": {
-        "identityMap": {
-          "FPID": [
-            {
-              "id": "871e8460-a329-4e96-a5b6-ff359fb0afb9",
-              "primary": "true"
-            }
-          ]
-        },
-        "eventType": "web.webinteraction.linkClicks",
-        "web": {
-          "webInteraction": {
-            "linkClicks": {
-              "value": 1
-            }
-          },
-          "name": "My Custom Link",
-          "URL": "https://myurl.com"
-        },
-        "timestamp": "2021-08-09T14:09:20.859Z"
-      }
-    }
-  ]
+   ]
 }'
 ```
+
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Yes | Datastream ID. |
@@ -94,11 +95,11 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId=$DATASTREAM_
 
 ## Response {#response}
 
-A successful response returns one of the following statuses:
+A successful response returns one of the following statuses, and a `requestID` if none was provided in the requst.
 
-* `202 Accepted` when the request was successfully processed
-* `204 No Content` when the request was successfully processed and the `silent` parameter was set to `true`.
-* `400 Bad Request` when the request was not properly formed (e.g., the mandatory primary identity was not found)
+* `202 Accepted` when the request was successfully processed;
+* `204 No Content` when the request was successfully processed and the `silent` parameter was set to `true`;
+* `400 Bad Request` when the request was not properly formed (e.g., the mandatory primary identity was not found).
 
 ```json
 {
