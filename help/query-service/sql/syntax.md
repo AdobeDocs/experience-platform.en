@@ -210,14 +210,37 @@ INSERT INTO table_name select_query
 
 **Example**
 
+>[!NOTE]
+>
+>The following is a contrived example and simply for instructional purposes. 
+
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
->[!NOTE] 
+>[!INFO]
+> 
 > The `SELECT` statement **must not** be enclosed in parentheses (). Additionally, the schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement. You can provide a `SNAPSHOT` clause to read incremental deltas into the target table.
+
+Most fields in a real XDM schema are not found at the root level and SQL does not permit the use of dot notation. To achieve a realistic result using nested fields, you must map each field in your `INSERT INTO` path.
+
+To `INSERT INTO` nested paths, use the following syntax:
+
+```sql
+INSERT INTO [dataset]
+SELECT struct([source field1] as [target field in schema],
+[source field2] as [target field in schema],
+[source field3] as [target field in schema]) [tenant name]
+FROM [dataset]
+```
+
+**Example**
+
+```sql
+INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCity, Country as SupplierCountry) _Adobe FROM OnlineCustomers;
+```
 
 ## DROP TABLE
 
@@ -336,6 +359,23 @@ EXCEPTION
     SELECT 'ERROR';
 END;
 ```
+
+## Data asset organization
+
+It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
+
+The following SQL constructs using standard SQL syntax are supported for you to logically organize your data.
+
+```SQL
+CREATE DATABASE dg1;
+CREATE SCHEMA dg1.schema1;
+CREATE table t1 ...;
+CREATE view v1 ...;
+ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
+ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
+```
+
+See the guide on [logical organization of data assets](../best-practices/organize-data-assets.md) for more a detailed explanation on Query Service best practices.
 
 ## [!DNL Spark] SQL commands 
 

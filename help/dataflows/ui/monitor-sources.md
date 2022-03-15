@@ -35,13 +35,13 @@ This tutorial requires a working understanding of the following components of Ad
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Source ingestion"
->abstract="Sources processing contains information on data activity status and metrics in data lake service, including records ingested and records failed. <br> Review the metric definition guide to learn more about metrics and graphs."
+>abstract="The Source ingestion view contains information on data activity status and metrics in data lake service, including records ingested and records failed. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="Dataflow run details"
->abstract="Sources processing contains information on data activity status and metrics in data lake service, including records ingested and records failed. <br> Review the metric definition guide to learn more about metrics and graphs."
+>abstract="Sources processing contains information on data activity status and metrics in data lake service, including records ingested and records failed. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
 
 In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
@@ -145,8 +145,13 @@ Select **[!UICONTROL Identities]** to see ingestion in the [!UICONTROL Identitie
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Identity processing"
->abstract="Identity processing contains information on records ingested to Identity service, including the number of identities added, graphs created and graphs updated. <br> Review the metric definition guide to learn more about metrics and graphs."
+>abstract="The Identity processing view contains information on records ingested to Identity service, including the number of identities added, graphs created and graphs updated. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_identity"
+>title="Dataflow run details"
+>abstract="The Dataflow run details page displays more information on your Identity dataflow run, including its IMS Org ID and dataflow run ID."
 
 The [!UICONTROL Identity processing] page contains information on records ingested to [!DNL Identity Service], including number of identities added, graphs created, and graphs updated.
 
@@ -183,8 +188,13 @@ From the [!UICONTROL Identity processing] page, select **[!UICONTROL Profiles]**
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Profile processing"
->abstract="Profile processing contains information on records ingested to Profile service, including the number of profile fragments created, profile fragments updated and the total number of profile fragments."
+>abstract="The Profile processing view contains information on records ingested to Profile service, including the number of profile fragments created, profile fragments updated and the total number of profile fragments."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_profile"
+>title="Dataflow run details"
+>abstract="The Dataflow run details page displays more information on your Profile dataflow run, including its IMS Org ID and dataflow run ID."
 
 The [!UICONTROL Profile processing] page contains information on records ingested to [!DNL Profile], including number of profile fragments created, profile fragments updated, and the total number of profile fragments.
 

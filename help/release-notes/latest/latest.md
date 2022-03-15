@@ -1,88 +1,84 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: November 17, 2021**
+**Release date: March 7, 2022**
 
-## New features
-
-New features in Adobe Experience Platform:
-
-- [Real-time Customer Data Platform B2B Edition](#B2B)
-- [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](#ad-hoc-activation)
-
-## Updates to existing features
+>[!NOTE]
+>
+>This release was shifted from the original date of February 23 to March 7.
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Attribution AI](#attribution-ai)
-- [Customer AI](#customer-ai)
+- [[!DNL Dashboards]](#dashboards)
+- [[!DNL Data collection]](#data-collection)
+- [[!DNL Destinations]](#destinations)
+- [[!DNL Identity Service]](#identity)
+- [[!DNL Sources]](#sources)
 
-### Real-time Customer Data Platform B2B Edition {#B2B}
+## [!DNL Dashboards] {#dashboards}
 
-**Release date: November 12, 2021**
-
-Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
-
-There are improvements to a variety of Adobe Experience Platform capabilities that distinguish Real-time CDP B2B Edition from its B2C counterpart. They include improvements to the Experience Data Model (XDM) for B2B use cases, upgrades to identity resolution and profile segmentation, as well as a custom-built connector and destination for Marketo Engage. The Marketo connector allows B2B brands to connect their industry-leading B2B engagement data with behavioral information in order to nurture leads and enhance account-based marketing operations.
-
--[New B2B and B2P editions](#editions)
--[New Marketo data source and destination connectors](#marketo)
--[Standard B2B XDM](#XDM)
-
-### New B2B and B2P editions {#editions}
-
-New B2B and B2P editions that bring B2B data and functionality to both Real-time CDP and Platform Activation products are available for purchase.
-
-To learn more about Real-time CDP B2B Edition see the [overview](../../rtcdp/overview.md).
-
-### New Marketo data source and destination connectors {#marketo}
-
-New Marketo data source and destination connectors stream Marketo data into Platform and Platform audiences back to Marketo. Available for all Platform users.
-
-| Feature  | Description |
-|----------|-------------|
-| Marketo Engage source connector | The [Marketo Engage source connector](../../sources/connectors/adobe-applications/marketo/marketo.md) allows marketers to seamlessly ingest data from one or more Marketo instances into their Adobe Experience Platform instance and provides a complete solution for lead management and B2B marketers. |
-| Marketo Engage Destination      | The [Marketo destination](../../destinations/catalog/adobe/marketo-engage.md) enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists. |
-
-### Standard B2B XDM {#XDM}
-
-Standard B2B XDM classes, field groups, and data types are available for all Platform users.
-
-| Feature   | Description  |
-|-----------|--------------|
-| Standard B2B XDM classes | Real-time Customer Data Platform B2B Edition provides several standard XDM that capture details about essential B2B data entities, such as accounts, opportunities, campaigns, and more. |
-
-See the [Schemas in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) documentation to learn more about capturing B2B data entities.
-
-### (Beta) Activate audience segments to batch destinations via the ad-hoc activation API {#ad-hoc-activation}
-
-The ad-hoc activation API allows marketers to programmatically activate audience segments to destinations, in a fast and efficient manner, for situations where immediate activation is required. Ad-hoc audience activation is only supported by [batch file-based destinations](../../destinations/destination-types.md#file-based) and is currently in beta. For more information, see the [ad-hoc activation API documentation](../../destinations/api/ad-hoc-activation-api.md).
-
-### Attribution AI {#attribution-ai}
-
-Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
-
-| Feature   | Description   |
-|-----------|---------------|
-| Support for multiple datasets | Attribution AI can now easily ingest multiple datasets directly in the UI without the need to map and stitch each dataset. This new time-saving capability provides more powerful and accurate scores with richer data from multiple datasets. |
-| Media channel and campaign field mapping | Attribution AI now supports the mapping of media channel and campaign fields. Media channel mapping between datasets improves the insights derived from Attribution AI and helps provide clearer results that are easy to interpret. |
-
-For more information on Attribution AI, please see the [Attribution AI documentation](../../intelligent-services/attribution-ai/overview.md).
-
-### Customer AI {#customer-ai}
-
-Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important insights about your organization’s data, as captured during daily snapshots.
 
 **Updated features**
 
-| Feature   | Description |
-|-----------|-------------|
-| Support for multiple datasets | Customer AI can now easily ingest multiple datasets directly in the UI without the need to map and stitch each dataset. This new time-saving capability provides more powerful and accurate scores with richer data from multiple datasets.  |
-| Custom profile attributes     | Customer AI now supports defining custom profile dataset fields (with timestamps) in your data in addition to standard event fields. Using this option allows you to add additional profile attributes that you deem influential which may improve the quality of your model and provide more accurate results. |
+| Feature | Description |
+| --- | --- |
+| New standard destinations widgets | The following standard widgets allow you to visualize different metrics related to your destinations.<ul><li>Recently activated segments by destination. This widget displays the top five most recently activated segments in descending order according to the chosen destination.</li><li>Audience size trend. This widget depicts the relationship of the profile count over a period of time for a segment that has been mapped to that destination account.</li><li>Unmapped segments by identity. This widget lists the top five unmapped segments ranked by descending identity count for a given destination and identity.</li><li>Mapped segments by identity. This widget lists the top five mapped segments. Segments are ordered from high to low according to their respective counts of source IDs that match the destination ID selected from the widget's dropdown menu.</li><li>Common audiences. This widget provides a list of the top five segments activated across the destination account chosen at the top of the page, and the destination selected in the widget dropdown.</li></ul> For more information on the available standard widgets, see the [destinations dashboard documentation.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
 
-For more information on Customer AI, please see the [Customer AI documentation](../../intelligent-services/customer-ai/overview.md).
+For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
 
+## Data collection {#data-collection}
+
+Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Improved UI workflow for datastream configuration | The workflow for creating a new datastream in the Data Collection UI has been updated. When adding services to a datastream, only the services you have access to will be included in the list of options. See the guide on [configuring a datastream](../../edge/fundamentals/datastreams.md) for more information. |
+| Data Prep for Data Collection | If you are using the Adobe Experience Platform Web SDK, you can now leverage Data Prep capabilities to map your data to Experience Data Model (XDM) on the server side. See the section on [Data Prep for Data Collection](../../edge/fundamentals/datastreams.md#data-prep) in the datastreams guide for more information. |
+| First-party device IDs | You can now send your own device IDs to the Adobe Experience Platform Edge Network when collecting customer data using the Platform Web SDK, providing a workaround for recent browser restrictions on third-party cookie lifespans. See the guide on [first-party device IDs](../../edge/identity/first-party-device-ids.md) for more information. |
+
+For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+| (Beta) Destination SDK support for file-based destinations | [Destination SDK support for file-based destinations](../../destinations/destination-sdk/file-based-destination-configuration.md) is currently in private beta and is only available to a select number of partners and customers. The functionality and associated documentation are subject to change before general availability release.<br><br>Contact your Adobe account representative to learn how to access the feature. Adobe-internal account representatives should reach out to the Experience Platform destinations product and engineering teams to discuss supported use cases. <br><br> In the beta phase of Destination SDK support for file-based destinations, beta partners and customers can use the [Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to build private destinations to benefit from the following functionality: <ul><li>Create a file-based (batch) destination via Amazon S3, SFTP servers, Azure Blob, Azure Data Lake Storage, Data Landing Zone storage.</li><li>Configure and set default file export scheduling and frequency options.</li><li>Configure and set options to format your exported CSV files (delimiters, escape characters, and other options).</li><li>Ability to set and edit custom file headers.</li><li>Ability to receive event notifications about the export of files and segments.</li><li>Ability to export additional file types such as CSV, TSV, JSON, Parquet.</li></ul>  <br>To get started with the new functionality, read [(Beta) Use Destination SDK to configure a file-based destination](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> The functionality to create private or productized *streaming* destinations by using Destination SDK is already available to all Experience Platform customers and partners. Read the guide on how to [use Destination SDK to configure a streaming destination](/help/destinations/destination-sdk/configure-destination-instructions.md) for details. |
+
+## [!DNL Identity Service] {#identity}
+
+Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
+
+Adobe Experience Platform [!DNL Identity Service] helps you gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| New permission for `view-identity-graph` | You can now use the `view-identity-graph` permission to control whether users in your organization are able to view identity graph data. Users without this permission will be forbidden from accessing the identity graph viewer in the UI or when accessing [!DNL Identity Service] APIs which return identities. See the [access control overview](../../access-control/home.md) for more information on permissions. |
+
+For more general information on [!DNL Identity Service], refer to the [Identity Service overview](../../identity-service/home.md).
+
+## Sources {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Beta sources moving to GA | The following sources have been promoted from beta to GA: <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
+
+To learn more about sources, see the [sources overview](../../sources/home.md).

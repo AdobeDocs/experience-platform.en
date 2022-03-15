@@ -6,13 +6,19 @@ topic-legacy: ui guide
 description: Edge segmentation is the ability to evaluate segments in Platform instantaneously on the edge, enabling same page and next page personalization use cases.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 ---
-# Edge segmentation UI guide (beta)
+# Edge segmentation UI guide
 
->[!IMPORTANT] 
+>[!NOTE] 
 >
->Edge segmentation is currently in beta. The documentation and the functionality are subject to change.
+>Edge segmentation is now generally available to all Platform users. If you created edge segments during the beta, these segments will continue to be operational.
 
 Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously [on the edge](../../edge/home.md), enabling same page and next page personalization use cases. 
+
+>[!IMPORTANT]
+>
+> The edge data will be stored in an edge server location closest to where it was collected and may be stored in a location other than the one designated as the hub (or principal) Adobe Experience Platform data center.
+>
+> Additionally, the edge segmentation engine will only honor requests on the edge where there is **one** primary marked identity, which is consistent with non-edge-based primary identities.
 
 ## Edge segmentation query types
 
@@ -32,7 +38,7 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 | Single event that refers to a profile | Any segment definition that refers to one or more profile attributes and a single incoming event with no time restriction. | People who live in the USA that visited the homepage. |
 | Negated single event with a profile attribute | Any segment definition that refers to a negated single incoming event and one or more profile attributes | People who live in the USA and have **not** visited the homepage. | 
 | Single event within a 24-hour time window | Any segment definition that refers to a single incoming event within 24 hours. | People who visited the homepage in the last 24 hours. |
-| Single event with a profile attribute within a 24-hour time window | Any segment definition that refers to one or more profile attributes and a negated single incoming event within 24 hours. | People who live in the USA that visited the homepage in the last 24 hours. |
+| Single event with a profile attribute within a 24-hour time window | Any segment definition that refers to one or more profile attributes and a single incoming event within 24 hours. | People who live in the USA that visited the homepage in the last 24 hours. |
 | Negated single event with a profile attribute within a 24-hour time window | Any segment definition that refers to one or more profile attributes and a negated single incoming event within 24 hours. | People who live in the USA and have **not** visited the homepage in the last 24 hours. |
 | Frequency event within a 24-hour time window | Any segment definition that refers to an event that takes place a certain number of times within a time window of 24 hours. | People who visited the homepage **at least** five times in the last 24 hours. |
 | Frequency event with a profile attribute within a 24-hour time window | Any segment definition that refers to one or more profile attributes and an event that takes place a certain number of times within a time window of 24 hours. | People from the USA who visited the homepage **at least** five times in the last 24 hours. |

@@ -7,13 +7,9 @@ description: Learn how to activate the audience data you have in Adobe Experienc
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 ---
-# Activate audience data to profile request destinations (Beta)
+# Activate audience data to profile request destinations
 
 ## Overview {#overview}
-
->[!IMPORTANT]
->
->Profile request destinations in Adobe Experience Platform are currently in Beta. The documentation and functionality are subject to change.
 
 This article explains the workflow required to activate audience data in Adobe Experience Platform profile request destinations. Examples of profile request destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections.
 
@@ -23,7 +19,7 @@ To activate data to destinations, you must have successfully [connected to a des
 
 ### Segment merge policy {#merge-policy}
 
-Currently, profile request destinations only support the activation of segments that use the [default merge policy](../../segmentation/ui/segment-builder.md#merge-policies).
+Currently, profile request destinations only support the activation of segments that use the [Active-on-Edge Merge Policy](../../segmentation/ui/segment-builder.md#merge-policies) set as default.
 
 ## Select your destination {#select-destination}
 
