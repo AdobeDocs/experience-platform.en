@@ -24,11 +24,11 @@ The following table outlines which actions on which resources are recorded by au
 | [Data type](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Create</li><li>Update</li><li>Reset</li><li>Delete</li></ul> |
 | [Destination](../../../destinations/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset Activate</li><li>Dataset Remove</li><li>Profile Activate</li><li>Profile Remove</li></ul> |
-| [Segment]() | <ul><li>Create</li><li>Delete</li><li>Segment Activate</li><li>Segment Remove</li></ul> |
-| [Merge policy]() | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Computed attributes]() | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Product profile]() | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Account]() | <ul><li>Create</li><li>Update</li><li>Delete</li>
+| Segment | <ul><li>Create</li><li>Delete</li><li>Segment Activate</li><li>Segment Remove</li></ul> |
+| Merge policy | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| Computed attributes | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| Product profile | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| Account | <ul><li>Create</li><li>Update</li><li>Delete</li>
 
 ## Access to audit logs
 
