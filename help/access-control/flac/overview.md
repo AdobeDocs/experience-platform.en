@@ -8,7 +8,9 @@ exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 ---
 # Field level access control overview
 
-Field level access control for Adobe Experience Platform allows you to configure user access to specific field elements of Experience Platform including Experience Data Model (XDM) schemas, Profile attributes, and segments. This allows you to better manage access to sensitive data and personally identifiable information (PII) and also restrict access to this type of data.
+Field level access control allows you to configure user access to specific field elements of Adobe Experience Platform including Experience Data Model (XDM) schemas, Profile attributes, and segments. This allows you to better manage access to sensitive personal data (SPD) and personally identifiable information (PII) and also restrict access to this type of data.
+
+Through field level access control, administrators of your organization can control users' access to both SPD and PII across all Platform workflows and resources.
 
 ## Understanding field level access control
 
@@ -16,18 +18,22 @@ Field level access control involves the following components:
 
 ### Labels
 
-* Labels
-* Label repository
-* Schema field labelling
-* Segment labelling
-* Role labelling
+What are labels?
 
 ### Roles
 
-* Roles
-* Configuring roles
+What are roles?
 
 ### Permissions
 
-* Permissions
-* Configuring permissions
+What are permissions?
+
+## Field level access control in Platform
+
+### XDM
+
+### Identity Service
+
+### Profile
+
+### Segmentation Service
