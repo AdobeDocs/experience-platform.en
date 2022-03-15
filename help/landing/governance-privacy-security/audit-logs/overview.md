@@ -3,11 +3,7 @@ title: Audit Logs Overview
 description: Learn how audit logs allow you to see who did what actions in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 ---
-# Audit logs (Beta)
-
->[!IMPORTANT]
->
->The audit logs feature in Adobe Experience Platform is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+# Audit logs
 
 In order to increase the transparency and visibility of activities performed in the system, Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of "audit logs". These logs form an audit trail that can help with troubleshooting issues on Platform, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.
 
@@ -21,13 +17,18 @@ The following table outlines which actions on which resources are recorded by au
 
 | Resource | Actions |
 | --- | --- |
-| [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-time Customer Profile](../../../profile/home.md)</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-time Customer Profile](../../../profile/home.md)</li><li>Disable for Profile</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for Profile</li></ul> |
 | [Class](../../../xdm/schema/composition.md#class) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Field group](../../../xdm/schema/composition.md#field-group) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Data type](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Create</li><li>Update</li><li>Reset</li><li>Delete</li></ul> |
-| [Destination](../../../destinations/home.md) | <ul><li>Activate</li></ul> |
+| [Destination](../../../destinations/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset Activate</li><li>Dataset Remove</li><li>Profile Activate</li><li>Profile Remove</li></ul> |
+| [Segment]() | <ul><li>Create</li><li>Delete</li><li>Segment Activate</li><li>Segment Remove</li></ul> |
+| [Merge policy]() | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Computed attributes]() | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Product profile]() | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Account]() | <ul><li>Create</li><li>Update</li><li>Delete</li>
 
 ## Access to audit logs
 
@@ -41,7 +42,7 @@ You can view audit logs for different Experience Platform features within the **
 
 ![Audit logs dashboard](../../images/audit-logs/audits.png)
 
-The system only displays audit logs from the last year. Any logs that exceed this limit are automatically removed from the system.
+The system only displays audit logs from the last three months. This can differ by event type. Any logs that exceed this limit are automatically removed from the system.
 
 Select an event from the list to view its details in the right rail.
 
@@ -59,8 +60,13 @@ The following filters are available for audit events in the UI:
 | --- | --- |
 | [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
 | [!UICONTROL Action] | Filter by action. Currently only [!UICONTROL Create] and [!UICONTROL Delete] actions can be filtered. |
+| [!UICONTROL User] | Enter the complete user ID (eg: johndoe@acme.com) to filter by user. |
 | [!UICONTROL Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
 | [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. |
+
+To filter by user, enter the complete user ID (eg: johndoe@acme.com).
+
+![User filter](../../images/audit-logs/user-filter.png)
 
 To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
 
