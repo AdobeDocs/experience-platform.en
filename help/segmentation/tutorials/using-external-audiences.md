@@ -40,6 +40,10 @@ To create an identity namespace, follow the instructions in the [identity namesp
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
+>[!NOTE]
+>
+>In order to start use custom namespaces with external audiences, you will need to create a support ticket. Please contact your Adobe representative for more details.
+
 ## Create a schema for the segment metadata
 
 After creating an identity namespace, you need to create a new schema for the segment you will create.
@@ -76,13 +80,68 @@ After creating the dataset, continue following the instructions in the [dataset 
 
 ## Set up and import audience data
 
-With the dataset enabled, data can now be sent into Platform either through the UI or using the Experience Platform APIs. To ingest this data into Platform, you will need to create a streaming connection.
+With the dataset enabled, data can now be sent into Platform either through the UI or using the Experience Platform APIs. You can ingest this data either through a batch or streaming connection.
+
+### Ingest data using a batch connection
+
+To create a batch connection, you can follow the instructions in the generic [local file upload UI guide](../../sources/tutorials/ui/create/local-system/local-file-upload.md). For a full list of available sources that you can use ingest data with, please read the [sources overview](../../sources/home.md).
+
+### Ingest data using a streaming connection
 
 To create a streaming connection, you can follow the instructions in either the [API tutorial](../../sources/tutorials/api/create/streaming/http.md) or the [UI tutorial](../../sources/tutorials/ui/create/streaming/http.md).
 
 Once you have created your streaming connection, you will have access to your unique streaming endpoint which you can send your data to. To learn how to send data to these endpoints, please read the [tutorial on streaming record data](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
 ![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+
+## Audience metadata structure
+
+After creating a connection, you can now ingest your data to Platform.
+
+A sample of the external audience payload's metadata can be seen below:
+
+```json
+{
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample External Audience"
+        }
+    },
+    "body": {
+        "xdmMeta": {
+            "schemaRef": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
+            }
+        },
+        "xdmEntity": {
+            "_id": "{SEGMENT_ID}",
+            "description": "Sample description",
+            "identityMap": {
+                "externalAudience": [{
+                    "id": "{}"
+                }]
+            },
+            "segmentName" : "{SEGMENT_NAME}",
+            "segmentStatus": "ACTIVE",
+            "version": "1.0"
+        }
+    }
+}
+```
+
+- `schemaRef`: The schema **must** refer to the previously created schema for the segment metadata.
+- `datasetId`: The dataset ID **must** refer to the previously created dataset for the schema you just created.
+- `xdmEntity._id`: The ID **must** refer to the same segment ID you are using as your external audience.
+- `xdmEntity.identityMap`: This section **must** contain the identity label used when creating the previously created namespace.
+- `externalAudience`: This is the label of the previously created identity namespace. So, for example, if you called your identity namespace "test-audience", you would use that as the key of the array instead. 
+- `segmentName`: The name of the segment that you want the external audience to be segmented by.
 
 ## Building segments using imported audiences
 
