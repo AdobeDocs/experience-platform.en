@@ -108,6 +108,14 @@ To add a new rule to your segment definition, drag a tile from the **[!UICONTROL
 >
 >The latest changes to Adobe Experience Platform have updated the usage of the `OR` and `AND` logical operators between events. These updates will not affect existing segments. However, all subsequent updates to existing segments and new segment creations will be affected by these changes. Please read the [time constants update](./segment-refactoring.md) for more information.
 
+When selecting a value for the attribute, you will see a list of enum values that the attribute can be.
+
+![](../images/ui/segment-builder/enum-list.png)
+
+If selecting a value from this list of enums, the value will be outlined with a solid border. However, for fields that use `meta:enum` (soft) enums, you can also select a value which is **not** from the list of enums. If you create your own value, it will be outlined with a dotted border, along with a warning that this value is not in the enum list.
+
+![](../images/ui/segment-builder/enum-warning.png)
+
 ### Adding audiences
 
 You can drag and drop an audience from the **[!UICONTROL Audience]** tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment rule.
