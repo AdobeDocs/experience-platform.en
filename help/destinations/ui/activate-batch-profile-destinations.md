@@ -45,7 +45,7 @@ Use the check boxes to the left of the segment names to select the segments that
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Schedule"
->abstract="Set the file export type (full files or incremental files) and the export frequency."
+>abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Learn more in documentation"
 
 [!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
@@ -65,7 +65,7 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="File export options"
->abstract="Select Export full files to export a complete snapshot of all the profiles that qualify for the segment. Select Export incremental files to export only the profiles which qualified for the segment since the last export. The first incremental file export includes all profiles that qualify for the segment, acting as a backfill. Future incremental files include only the profiles which qualified for the segment since the first incremental file export."
+>abstract="Select **Export full files** to export a complete snapshot of all the profiles that qualify for the segment. Select **Export incremental files** to export only the profiles which qualified for the segment since the last export. <br> The first incremental file export includes all profiles that qualify for the segment, acting as a backfill. Future incremental files include only the profiles which qualified for the segment since the first incremental file export."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Export incremental files"
 
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
@@ -127,7 +127,6 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 >id="platform_destinations_activate_filename"
 >title="Configure file name"
 >abstract="For file-based destinations, a unique file name is generated per segment. Use the file name editor to create and edit a unique file name or keep the default name."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="Learn more in documentation"
 
 The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
 

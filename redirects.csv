@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/privacy/api/jobs.html,https://experienceleague.adobe.com/docs/experience-platform/privacy/api/privacy-jobs.html
 https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-match.html,https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-match/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/b2b-release-notes.html,https://experienceleague.adobe.com/docs/experience-platform/release-notes/2021/november-2021.html
 https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html,https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension-configuration.html
@@ -230,7 +231,7 @@ https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/d
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/dest-tutorials/connect-destination.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/dest-tutorials/activate-destinations.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/api-tutorials/streaming-destinations-api-tutorial.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/api/streaming-destinations.html
-https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/api-tutorials/email-marketing-api.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/api/email-marketing.html
+https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/api-tutorials/email-marketing-api.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/api/connect-activate-batch-destinations.html
 https://experienceleague.adobe.com/docs/experience-platform/tutorials/authentication.html,https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html
 https://experienceleague.adobe.com/docs/experience-platform/tutorials/home.html,https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/tutorials/data-access.html,https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
@@ -319,3 +320,7 @@ https://experienceleague.adobe.com/docs/experience-platform/destinations/destina
 https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/functionality/oauth2-authentication.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/functionality/authentication/oauth2-authentication.html
 https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/http-destination.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/streaming/http-destination.html
 https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/create-a-recipe.html,https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/create-a-model.html
+https://experienceleague.adobe.com/docs/experience-platform/destinations/api/email-marketing.html,https://experienceleague.adobe.com/docs/experience-platform/destinations/api/connect-activate-batch-destinations.html
+https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/experience-event.html,https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/experience-event.html
+https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/adobe-analytics.html,https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-analytics.html
+https://experienceleague.adobe.com/docs/experience-platform/query/best-practices/adobe-target.html,https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-target.html

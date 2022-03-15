@@ -23,6 +23,19 @@ To connect to this destination, follow the steps described in the [destination c
 ### Connection parameters {#parameters}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_bucket"
+>title="Bucket name"
+>abstract="Must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1)."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_folderpath"
+>title="Folder path"
+>abstract="Must contain only characters A-Z, a-z, 0-9 and can include the following special characters: `/!-_.'()"^[]+$%.*"`. To create a folder per segment file, insert the macro /%SEGMENT_NAME% or /%SEGMENT_ID% or /%SEGMENT_NAME%/%SEGMENT_ID% into the text field. Macros can only be inserted at the end of the folder path. View macro examples in the documentation."
+>text="Learn more in documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="Use macros to create a folder in your storage location"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="RSA public key"
 >abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a Base64 encoded string."

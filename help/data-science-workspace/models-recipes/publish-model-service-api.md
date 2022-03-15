@@ -208,7 +208,7 @@ POST /mlServices
 **Request**
 
 ```SHELL
-curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices' 
+curl -X POST 'https://platform.adobe.io/data/sensei/mlServices' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
   -H 'x-gw-ims-org-id: {IMS_ORG}' 

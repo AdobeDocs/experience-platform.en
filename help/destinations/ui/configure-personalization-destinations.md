@@ -15,6 +15,14 @@ This capability helps you configure same-page and next-page personalization use 
 
 This article provides step-by-step instructions on how to configure Experience Platform and your personalization destinations for these use cases.
 
+Additionally, watch the video below for an overview of the end-to-end configuration process.
+
+>[!VIDEO](https://video.tv.adobe.com/v/340091/)
+
+>[!NOTE]
+>
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the configuration steps described in the sections below.
+
 ## Step 1: Configure a datastream in the Data Collection UI {#configure-datastream}
 
 The first step in setting up your personalization destination is to configure a datastream for the Experience Platform Web SDK. This is done in the Data Collection UI. 
