@@ -1,7 +1,11 @@
 ---
-description: 
 title: Troubleshooting
+description: Learn how to troubleshoot errors when using the Edge Network Gateway API
+seo-description: Learn how to troubleshoot errors when using the Edge Network Gateway API
+keywords: edge network;gateway;api;troubleshoot;errors;griffon
 ---
+
+# Troubleshooting
 
 Experience Edge APIs allows you to capture debug information from services, as your events are processed through the Experience Edge data collection pipeline.
 
@@ -9,4 +13,3 @@ The same mechanism which is used by the [Experience Edge Debugger](https://exper
 
 Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon), you can create a debugging session ID and that you can further use in the Experience Edge requests to trace events.
 
-Similarly, you can use _Tools -> Logs -> Edge -> Start trace_ from Experience Edge Debugger.

@@ -1,6 +1,8 @@
 ---
-description: Learn about the possible errors you might encounter when performing API requests to the Edge Network Gateway.
 title: Error handling
+description: Learn about the possible errors you might encounter when performing API requests to the Edge Network Gateway.
+seo-description:  Learn about the possible errors you might encounter when performing API requests to the Edge Network Gateway.
+keywords: error;code;handling;edge;network;gateway;api
 ---
 
 # Error handling

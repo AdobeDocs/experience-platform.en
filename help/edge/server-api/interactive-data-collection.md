@@ -1,6 +1,8 @@
 ---
-description: Learn how the Edge Network Gateway API performs interactive data collection
 title: Interactive data collection
+description: Learn how the Edge Network Gateway API performs interactive data collection
+seo-description: Learn how the Edge Network Gateway API performs interactive data collection
+keywords: data collection;collection;edge network gateway;api;interactive data collection
 ---
 
 # Interactive data collection

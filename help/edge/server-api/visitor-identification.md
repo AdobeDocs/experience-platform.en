@@ -1,6 +1,8 @@
 ---
-description: Learn how Edge Network Gateway API identifies visitors
 title: Visitor identification
+description: Learn how Edge Network Gateway API identifies visitors
+seo-description: Learn how Edge Network Gateway API identifies visitors
+keywords: edge network;gateway;api;visitor;identification
 ---
 
 # Visitor identification

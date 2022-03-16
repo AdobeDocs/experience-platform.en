@@ -1,11 +1,13 @@
 ---
-description: Learn how to configure authentication for Experience Edge Server-to-Server API
 title: Service level agreements and targets
+description: Learn how to configure authentication for Experience Edge Server-to-Server API
+seo-description: Learn how to configure authentication for Experience Edge Server-to-Server API
+keywords: data collection;collection;edge network gateway;api;sla;slt;service levels
 ---
 
 # Service level agreements and targets
 
-## Overview
+## Overview {#overview}
 
 Adobe will use commercially resonable efforts to make the Experience Edge Network available within a monthly uptime percentage of at least 99.9% for each region, during any monthly billing cycle.
 

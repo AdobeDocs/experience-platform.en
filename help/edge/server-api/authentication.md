@@ -1,6 +1,8 @@
 ---
-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Gateway API
 title: Authentication
+description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Gateway API
+seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Gateway API
+keywords: data collection; authentication; edge network gateway api; authorization
 ---
 
 # Authentication {#authentication}

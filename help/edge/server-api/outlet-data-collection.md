@@ -1,13 +1,15 @@
 ---
-description: Learn how the Edge Network Gateway API performs data collection in conjuction with other Adobe solutions
 title: Outlet data collection
+description: Learn how the Edge Network Gateway API performs data collection in conjuction with other Adobe solutions
+seo-description: Learn how the Edge Network Gateway API performs data collection in conjuction with other Adobe solutions
+keywords: data collection; outlet; analytics; edge network gateway api
 ---
 
 # Outlet data collection
 
 ## Overview {#overview}
 
-The Edge Network Gateway API can perform data collection and send the collected data to other Adobe solutions.
+The Edge Network Gateway API can send the collected data to other Adobe solutions, such as Adobe Experience Platform or Adobe Analytics. It can also forward events to third-party systems.
 
 ## Adobe Experience Platform {#aep}
 

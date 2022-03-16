@@ -1,9 +1,11 @@
 ---
+title: Data collection
 description: Learn how the Edge Network Gateway API structures the collected data
-title: Edge Network Gateway API data collection
+seo-description: Learn how the Edge Network Gateway API structures the collected data
+keywords: data collection;collection;edge network gateway;api;structure
 ---
 
-# Edge Network Gateway API data collection
+# Data collection
 
 The Edge Network Gateway API offers two types of data collection endpoints:
 

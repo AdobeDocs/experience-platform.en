@@ -1,6 +1,8 @@
 ---
+title: Retrieve personalization content from other Adobe solutions
 description: Learn how to use the Edge Network Gateway API to retrieve personalized content from Adobe personalization solutions
-title: Retrieve personalization content
+seo-description: Learn how to use the Edge Network Gateway API to retrieve personalized content from Adobe personalization solutions
+keywords: personalization; server api; edge network gateway; retrieve personalization
 ---
 
 # Retrieve personalization content from Adobe solutions

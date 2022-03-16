@@ -1,6 +1,8 @@
 ---
-description: Learn how the Edge Network Gateway API manages client state
 title: Client state management
+description: Learn how the Edge Network Gateway API manages client state
+seo-description: Learn how the Edge Network Gateway API manages client state
+keywords: client;state;management;edge;network;gateway;api
 ---
 
 # Client state management

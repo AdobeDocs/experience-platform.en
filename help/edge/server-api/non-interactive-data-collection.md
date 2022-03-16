@@ -1,6 +1,8 @@
 ---
-description: Learn how the Edge Network Gateway API performs non-interactive data collection
 title: Non-interactive data collection
+description: Learn how the Edge Network Gateway API performs non-interactive data collection
+seo-description: Learn how the Edge Network Gateway API performs non-interactive data collection
+keywords: data collection;collection;edge network gateway;api;noninteractive data collection
 ---
 
 # Non-interactive data collection
