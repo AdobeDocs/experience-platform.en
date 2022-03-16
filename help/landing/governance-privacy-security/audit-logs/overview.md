@@ -42,7 +42,7 @@ You can view audit logs for different Experience Platform features within the **
 
 ![Audit logs dashboard](../../images/audit-logs/audits.png)
 
-The system only displays audit logs from the last three months. This can differ by event type. Any logs that exceed this limit are automatically removed from the system.
+The system only displays audit logs from the last year. Any logs that exceed this limit are automatically removed from the system.
 
 Select an event from the list to view its details in the right rail.
 
