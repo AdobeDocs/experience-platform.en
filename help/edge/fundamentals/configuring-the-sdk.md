@@ -70,6 +70,16 @@ Populate this field with your first-party domain. For more details, please see t
 
 The domain is similar to `data.{customerdomain.com}` for a website at www.{customerdomain.com}.
 
+### `edgeBasePath` {#edge-base-path}
+
+Path after the edgeDomain used to commuincate and interact with Adobe services.  Often this would only change when not using the default production environment.
+
+| **Type** | **Required** | **Default Value** |
+| -------- | ------------ | ----------------- |
+| String   | No           | ee                |
+
+{style="table-layout:auto"}
+
 ### `orgId`
 
 | **Type** | **Required** | **Default Value** |
