@@ -138,8 +138,7 @@ The **[!UICONTROL Profiles added]** widget displays the total number of merged p
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profile_count_trend"
 >title="The Profiles count trend widget"
->abstract="This widget displays the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. <br>
-The number also depends on the selected merge policy being applied to your Profile data."
+>abstract="This widget displays the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months.<br>The number also depends on the selected merge policy being applied to your Profile data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="Learn more from documentation"
 
 The **[!UICONTROL Profiles count trend]** widget displays the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
