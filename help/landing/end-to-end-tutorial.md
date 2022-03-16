@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer
 title: Adobe Experience Platform End-to-End Example Workflow
 topic-legacy: getting started
 description: Learn the basic end-to-end workflow for Adobe Experience Platform at a high level.
+exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
 ---
 # Adobe Experience Platform end-to-end example workflow
 
