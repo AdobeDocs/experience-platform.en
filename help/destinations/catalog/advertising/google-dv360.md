@@ -46,7 +46,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
-### Allow-listing {allow-listing}
+### Allow-listing {#allow-listing}
 
 >[!NOTE]
 >
