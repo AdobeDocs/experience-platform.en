@@ -9,16 +9,16 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 ---
 # Update dataflows in the UI
 
-This tutorial provides you with steps on how to update an existing sources dataflow, including information on editing a dataflow schedule and mapping, using the [!UICONTROL Sources] workspace.
+This tutorial provides you with steps on how to update an existing dataflow, including its schedule and mapping, using the sources workspace.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-- [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Edit mapping
+## Update dataflows
 
 >[!NOTE]
 >
