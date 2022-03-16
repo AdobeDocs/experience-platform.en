@@ -50,7 +50,11 @@ Select an event from the list to view its details in the right rail.
 
 ### Filter audit logs
 
-Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results.
+>[!NOTE]
+>
+>Since this a new feature, the data displayed will only go back to Jan 2022.
+
+Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results. Only the last 1000 records will be displayed irrespective of the various filters selected.
 
 ![Filters](../../images/audit-logs/filters.png)
 
@@ -60,9 +64,9 @@ The following filters are available for audit events in the UI:
 | --- | --- |
 | [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
 | [!UICONTROL Action] | Filter by action. Currently only [!UICONTROL Create] and [!UICONTROL Delete] actions can be filtered. |
-| [!UICONTROL User] | Enter the complete user ID (eg: johndoe@acme.com) to filter by user. |
+| [!UICONTROL User] | Enter the complete user ID (e.g. johndoe@acme.com) to filter by user. |
 | [!UICONTROL Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
-| [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. |
+| [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. Data can be exported with a 90 day look-back period (e.g. 2021-12-15 to 2022-03-15). This can differ by event type. |
 
 To filter by user, enter the complete user ID (eg: johndoe@acme.com).
 
