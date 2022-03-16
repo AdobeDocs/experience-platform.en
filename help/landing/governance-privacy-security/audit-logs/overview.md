@@ -28,7 +28,7 @@ The following table outlines which actions on which resources are recorded by au
 | Merge policy | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | Computed attributes | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | Product profile | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| Account | <ul><li>Create</li><li>Update</li><li>Delete</li>
+| Account | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 
 ## Access to audit logs
 
