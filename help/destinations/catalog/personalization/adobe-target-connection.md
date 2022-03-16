@@ -22,7 +22,14 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 ## Export type and frequency {#export-type-frequency}
 
-**Profile request** - you are requesting all the segments that are mapped in the Adobe Target destination for a single profile.
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!DNL Profile request]** | You are requesting all the segments that are mapped in the Adobe Target destination for a single profile.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Use cases {#use-cases}
 

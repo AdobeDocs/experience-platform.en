@@ -44,7 +44,14 @@ Next, they can use their offline data including associated membership IDs and cu
 
 ## Export type and frequency {#export-type-frequency}
 
-**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Facebook destination.
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Facebook destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Facebook account prerequisites {#facebook-account-prerequisites}
 

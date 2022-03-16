@@ -30,7 +30,14 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 
 ## Export type and frequency {#export-type-frequency}
 
-**Segment Export** - you are exporting all members of a segment (audience) with the identifiers used in the Twitter Custom Audiences destination.
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers used in the Twitter Custom Audiences destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Use Cases {#use-cases}
 
