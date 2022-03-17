@@ -55,9 +55,27 @@ Once you have created a Key Vault, you can import an existing key or generate a 
 
 ![Generate a key](./assets/customer-managed-keys/view-keys.png)
 
+Use the provided form to configure the key you want to generate or import. When finished, select **[!DNL Create]**.
+
+![Configure key](./assets/customer-managed-keys/configure-key.png)
+
+The configured key appears in the list of keys for the vault.
+
+![Key added](./assets/customer-managed-keys/key-added.png)
+
 ## Register for the CMK app
 
-CMK App and Identity registration:
+Once you have your Key Vault configured, the next step is to register for the CMK application that will link to your Azure instance.
+
+>[!NOTE]
+>
+>Registering the CMK app requires you to make calls to Platform APIs. For details on how to gather the required authentication headers to make these calls, see the [Platform API authentication guide](../../landing/api-authentication.md).
+
+### Send a registration request
+
+To start the registration process, make a POST request to the app registration endpoint. This endpoint gathers your organization's identity information and generates an integration path 
+
+**Request**
 
 ```shell
 curl -X POST \
@@ -67,18 +85,87 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
+>[!NOTE]
+>
+>This endpoint does not accept a payload for POST requests.
+
+**Response**
+
+A successful response returns the details of the registration job, confirming that the process has started.
+
+```json
+{
+    "id": "5a6e59a0-f73c-43b4-adf3-289ac2a0a147",
+    "jobType": "CustomerPolicyJob",
+    "workflowType": "BYOK_APP_REGISTRATION",
+    "status": "CREATED",
+    "currentState": "CALL_PROVISIONING_ENDPOINT",
+    "recoverableState": true,
+    "doRetryCurrentState": true,
+    "retryCount": 3,
+    "retryDelayInSeconds": 5,
+    "jobData": {
+        "x-request-id": "FRbDemUrUxZvi4BrOzoAKQ0RjJTjWvkQ",
+        "userId": ""
+    },
+    "imsOrgId": "{IMS_ORG}",
+    "executionComplete": false,
+    "recovered": false,
+    "timeOutForCurrentStateInMins": 5,
+    "monitorJob": true,
+    "firstJobStateTimestamp": 0,
+    "startTime": 1647539834087,
+    "endTime": 0
+}
+```
+
+### Fetch and use the app authentication URL
+
+Once you have sent the initial registration request, make a GET request to the same endpoint to fetch the required authentication URL.
+
+**Request**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/infrastructure/manager/byok/app-registration \ 
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**Response**
+
+A successful response returns an `applicationRedirectUrl` property, containing the authentication URL.
+
+```json
+{
+    "id": "acpebae9422Kacpprovisioningbyok",
+    "name": "acpebae9422Kacpprovisioningbyok",
+    "applicationUri": "https://adobe.com/acpebae9422Kacpprovisioningbyok",
+    "applicationId": "e463a445-c6ac-4ca2-b36a-b5146fcf6a52",
+    "applicationRedirectUrl": "https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&client_id=e463a445-c6ac-4ca2-b36a-b5146fcf6a52&redirect_uri=https://adobe.com/acpebae9422Kacpprovisioningbyok&scope=user.read"
+}
+```
+
+Copy and paste the `applicationRedirectUrl` link into your browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your Azure instance.
+
+![Accept permission request](./assets/customer-managed-keys/app-permission.png)
+
 ## Install the CMK app to your Azure instance
 
-Provisioning team gives a login link to customer that lets them give consent to add the app service principal to their Azure instance
+After completing the authentication process, navigate back to your Azure Key Vault and select **[!DNL Access control]** in the left navigation. From here, select **[!DNL Add]** followed by **[!DNL Add role assignment]**.
 
-Add the service principal to the keyvault
-- Add role assignment
-- Key Vault Crypto Service Encryption User
-- Add Service principal to the role
+![Add role assignment](./assets/customer-managed-keys/add-role-assignment.png)
 
-API stuff goes here?
+The next screen prompts you to choose a role for this assignment. Select **[!DNL Key Vault Crypto Service Encryption User]** before selecting **[!DNL Next]** to continue.
 
-## Send the key URI to Adobe
+![Select role](./assets/customer-managed-keys/select-role.png)
+
+On the next screen, choose **[!DNL Select members]** to open a dialog in the right rail. Use the search bar to locate the service principal for the CMK application and select it from the list. When finished, select **[!DNL Save]**.
+
+## Send your key URI to Adobe
+
+After installing the CMK app on Azure, you can start sending your encryption key references to Adobe.
 
 ```shell
 curl -X POST \
