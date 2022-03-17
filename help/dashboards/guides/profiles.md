@@ -142,9 +142,9 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ### [!UICONTROL Single Identity Profiles] (Beta) {#single-identity-profiles}
 
-The [!UICONTROL Single Identity Profiles] widget provides a count of your organization's profiles that are unauthenticated and only have one type of ID type that creates their identity. This ID type can either be an email or ECID. The profile count is generated from the most recent snapshot.
+The [!UICONTROL Single Identity Profiles] widget provides a count of your organization's profiles that are unauthenticated and only have one type of ID type that creates their identity. This ID type can either be an email or ECID. The profile count is generated from the data contained in the most recent snapshot.
 
-![Single Identity Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
+![Single Identity Profiles widget.](../images/profiles/single-identity-profiles.png)
 
 <!--  -->
 
@@ -170,7 +170,7 @@ The [!UICONTROL Unsegmented Profiles] widget provides a total number of all prof
 
 <!-- Need to elaborate: Drilldown into efficacy for this set for deeper analysis, triage, and action.  -->
 
-![The Unsegmented Profiles widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
+![The Unsegmented Profiles widget.](../images/profiles/unsegmented-profiles.png)
 
 <!--  -->
 
@@ -178,13 +178,13 @@ The [!UICONTROL Unsegmented Profiles] widget provides a total number of all prof
 
 The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, six months, and one-year periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the Y-axis and time on the X-axis.
 
-![The Unsegmented Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
+![The Unsegmented Profiles Trend widget.](../images/profiles/unsegmented-profiles-trend.png)
 
 ### [!UICONTROL Unsegmented Profiles by Identity] (Beta) (#unsegmented-profiles-by-identity)
 
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity-mock.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
 
 ### [!UICONTROL Audience Size] (Beta) (#audience-size)
 
