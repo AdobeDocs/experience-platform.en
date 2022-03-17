@@ -163,15 +163,15 @@ In addition to using imported external audiences, you can also import external s
 
 To begin composing a schema, first select **[!UICONTROL Schemas]** on the left navigation bar, followed by the **[!UICONTROL Create schema]** in the top right corner of the Schemas workspace. From here, select **[!UICONTROL XDM Individual Profile]**.
 
-IMAGE
+![](../images/tutorials/external-audiences/create-schema-profile.png)
 
 Now that the schema has been created, you will need to add the segment membership field as part of the schema.
 
-IMAGE
+![](../images/tutorials/external-audiences/segment-membership-details.png)
 
 Additionally, ensure the schema is marked for **[!UICONTROL Profile]**. In order to this, you will need to mark a field as the primary identity.
 
-IMAGE
+![](../images/tutorials/external-audiences/external-segment-profile.png)
 
 ### Set up the database
 
