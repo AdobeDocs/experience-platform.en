@@ -157,13 +157,13 @@ The [!UICONTROL Destinations count] widget provides the total number of endpoint
 
 <!-- Select **View destinations** to navigate to the destinations browse tab, where the catalog of available destinations are displayed. -->
 
-![PLACEHOLDER The Destinations count widget.](../images/destinations/destinations-count.png)
+![The Destinations count widget.](../images/destinations/destinations-count.png)
 
 ### [!UICONTROL Destination status] (#destination-status)
 
-The [!UICONTROL Destination status] widget visualizes the relative split of enabled and disabled destinations within the system  using a donut chart. The exact number of destinations in their respective state is displayed next to the wording.
+The [!UICONTROL Destination status] widget visualizes the relative split of enabled and disabled destinations within the system  using a donut chart. The exact number of destinations in their respective state is displayed in a popover when hovering over the donut chart.
 
-![PLACEHOLDER The Destination status widget.](../images/destinations/destinations-status-mock.png)
+![The Destination status widget.](../images/destinations/destination-status.png)
 
 ### [!UICONTROL Activated audiences across all destinations] (#activated-audiences-across-all-destinations)
 
