@@ -51,8 +51,8 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Common audiences]](#common-audiences)
 * [[!UICONTROL Destinations count]](#destinations-count)
 * [[!UICONTROL Destination status]](#destination-status)
-* [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations)
-* [[!UICONTROL Activated audiences by destination]](#activated-audiences-by-destination)
+<!-- * [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations) -->
+<!-- * [[!UICONTROL Activated audiences by destination]](#activated-audiences-by-destination) -->
 * [[!UICONTROL Audience activation timeline]](#audience-activation-timeline)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
@@ -165,29 +165,21 @@ The [!UICONTROL Destination status] widget visualizes the relative split of enab
 
 ![The Destination status widget.](../images/destinations/destination-status.png)
 
-### [!UICONTROL Activated audiences across all destinations] (#activated-audiences-across-all-destinations)
+<!-- ### [!UICONTROL Activated audiences across all destinations] (#activated-audiences-across-all-destinations)
 
 The [!UICONTROL Activated audiences across all destinations] widget displays the total number of audiences that have been activated across all destinations. This metric is calculated purely by an audiences active status and is counted regardless of the number of profiles they contain or the sandbox they reside in.
 
-![PLACEHOLDER The Activated audiences across all destinations widget.](../images/destinations/activated-audiences-across-all-destinations.png)
+![PLACEHOLDER The Activated audiences across all destinations widget.](../images/destinations/activated-audiences-across-all-destinations.png) -->
 
-### [!UICONTROL Activated audiences by destination] (#activated-audiences-by-destination)
+<!-- ### [!UICONTROL Activated audiences by destination] (#activated-audiences-by-destination)
 
 The [!UICONTROL Activated audiences by destination] widget provides the total number of activated audiences for a destination.
 
-<!-- Select **Audiences** to navigate to the destinations [!UICONTROL Activation data] page, where all the segments connected to that destination are displayed. By selecting an audience from the list, you can see details relating to any connected activated audience.-->
+Select **Audiences** to navigate to the destinations [!UICONTROL Activation data] page, where all the segments connected to that destination are displayed. By selecting an audience from the list, you can see details relating to any connected activated audience.
 
-<!-- Is there a dropdown to change the destination? There must be. -->
+![PLACEHOLDER](../images/destinations/activated-audiences-by-destination.png) -->
 
-![PLACEHOLDER](../images/destinations/activated-audiences-by-destination.png)
-
-### [!UICONTROL Audience activation timeline] (#audience-activation-timeline)
-
-The [!UICONTROL Audience activation timeline] widget provides a list of up to 10 activated destinations where this segment was activated most recently. The data is provided in table format listing the destination name, the platform, and the activation date.
-
-Select the destination name from the table to navigate to the [!UICONTROL Activation data] page. This page lists every segment that has been activated to the chosen destination.
-
-<!-- ![PLACEHOLDER No image available]() -->
+<!-- Is there a dropdown to change the destination for the Activated audiences by destination widget? There must be. -->
 
 ## Next steps
 
