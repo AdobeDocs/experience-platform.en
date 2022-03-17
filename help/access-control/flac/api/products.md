@@ -6,6 +6,9 @@ description: The /products endpoint in the Field Level Access Control API allows
 ---
 # Products endpoint
 
+<!--
+Need a short and concise high-level overview of products here.
+-->
 The `/products` endpoint in the Field Level Access Control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your IMS Organization.
 
 ## Getting started

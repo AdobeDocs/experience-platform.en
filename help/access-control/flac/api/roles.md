@@ -6,6 +6,9 @@ description: The /roles endpoint in the Field Level Access Control API allows yo
 ---
 # Roles endpoint
 
+<!--
+Need a short and concise high-level overview of roles here.
+-->
 The /roles endpoint in the Field Level Access Control API allows you to  programmatically manage roles in your IMS Organization.
 
 ## Getting started
@@ -498,10 +501,11 @@ DELETE /roles/{ROLE_ID}
 
 | Parameter | Description |
 | --- | --- |
+| {ROLE_ID} | The ID of the role you want to delete. |
 
 **Request**
 
-The following request deletes role `{ROLE_ID}`.
+The following request deletes the role with the ID of `{ROLE_ID}`.
 
 ```shell
 curl -X DELETE \
