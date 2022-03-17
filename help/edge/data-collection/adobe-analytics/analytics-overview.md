@@ -14,7 +14,7 @@ Adobe Analytics automatically picks up the data you are sending if you have a re
 
 ## XDM field group
 
-To make it easier to capture the more common analytics metrics we also have an Analytics field group available for you to use. For more details on this schema please see the documenation for the [Adobe Analytics ExperienceEvent Full Extension schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/event/analytics-full-extension.html?lang=en)
+To make it easier to capture the most common Adobe Analytics metrics, we provide an Analytics field group that you can use. For more details on this schema, see the documenation for the [Adobe Analytics ExperienceEvent Full Extension schema field group](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## Automatically mapped data
 
