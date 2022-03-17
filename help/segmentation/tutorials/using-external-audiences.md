@@ -124,7 +124,7 @@ A sample of the external audience payload's metadata can be seen below:
             "_id": "{SEGMENT_ID}",
             "description": "Sample description",
             "identityMap": {
-                "externalAudience": [{
+                "{IDENTITY_NAMESPACE}": [{
                     "id": "{}"
                 }]
             },
@@ -136,12 +136,14 @@ A sample of the external audience payload's metadata can be seen below:
 }
 ```
 
-- `schemaRef`: The schema **must** refer to the previously created schema for the segment metadata.
-- `datasetId`: The dataset ID **must** refer to the previously created dataset for the schema you just created.
-- `xdmEntity._id`: The ID **must** refer to the same segment ID you are using as your external audience.
-- `xdmEntity.identityMap`: This section **must** contain the identity label used when creating the previously created namespace.
-- `externalAudience`: This is the label of the previously created identity namespace. So, for example, if you called your identity namespace "test-audience", you would use that as the key of the array instead. 
-- `segmentName`: The name of the segment that you want the external audience to be segmented by.
+| Property | Description |
+| -------- | ----------- |
+| `schemaRef` | The schema **must** refer to the previously created schema for the segment metadata. |
+| `datasetId` | The dataset ID **must** refer to the previously created dataset for the schema you just created. |
+| `xdmEntity._id` | The ID **must** refer to the same segment ID you are using as your external audience. |
+| `xdmEntity.identityMap` | This section **must** contain the identity label used when creating the previously created namespace. |
+| `{IDENTITY_NAMESPACE}` | This is the label of the previously created identity namespace. So, for example, if you called your identity namespace "externalAudience", you would use that as the key of the array. |
+| `segmentName` | The name of the segment that you want the external audience to be segmented by. |
 
 ## Building segments using imported audiences
 
@@ -152,3 +154,105 @@ Once the imported audiences have been set up, they can be used as part of the se
 ## Next steps
 
 Now that you can use external audiences in your segments, you can use the Segment Builder to create segments. To learn how to create segments, please read the [tutorial on creating segments](./create-a-segment.md).
+
+## Appendix
+
+In addition to using imported external audiences, you can also import external segment memberships to Platform.
+
+### Set up an external segment destination schema
+
+To begin composing a schema, first select **[!UICONTROL Schemas]** on the left navigation bar, followed by the **[!UICONTROL Create schema]** in the top right corner of the Schemas workspace. From here, select **[!UICONTROL XDM Individual Profile]**.
+
+IMAGE
+
+Now that the schema has been created, you will need to add the segment membership field as part of the schema.
+
+IMAGE
+
+Additionally, ensure the schema is marked for **[!UICONTROL Profile]**. In order to this, you will need to mark a field as the primary identity.
+
+IMAGE
+
+### Set up the database
+
+After creating your schema, you will need to create a dataset. 
+
+To create a dataset, follow the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#create). You'll want to follow the **[!UICONTROL Create dataset from schema]** option, using the schema you previously created.
+
+![](../images/tutorials/external-audiences/select-schema.png)
+
+After creating the dataset, continue following the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#enable-profile) to enable this dataset for Real-time Customer Profile.
+
+![](../images/tutorials/external-audiences/dataset-profile.png)
+
+## Set up and import audience data
+
+With the dataset enabled, data can now be sent into Platform either through the UI or using the Experience Platform APIs. You can ingest this data either through a batch or streaming connection.
+
+### Ingest data using a batch connection
+
+To create a batch connection, you can follow the instructions in the generic [local file upload UI guide](../../sources/tutorials/ui/create/local-system/local-file-upload.md). For a full list of available sources that you can use ingest data with, please read the [sources overview](../../sources/home.md).
+
+### Ingest data using a streaming connection
+
+To create a streaming connection, you can follow the instructions in either the [API tutorial](../../sources/tutorials/api/create/streaming/http.md) or the [UI tutorial](../../sources/tutorials/ui/create/streaming/http.md).
+
+Once you have created your streaming connection, you will have access to your unique streaming endpoint which you can send your data to. To learn how to send data to these endpoints, please read the [tutorial on streaming record data](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+
+![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+
+## Segment metadata structure
+
+After creating a connection, you can now ingest your data to Platform.
+
+A sample of the external audience segment's metadata can be seen below:
+
+```json
+{
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample External Segment"
+        }
+    },
+    "body": {
+        "xdmMeta": {
+            "schemaRef": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
+            }
+        },
+        "xdmEntity": {
+            "_id": "{SEGMENT_ID}",
+            "description": "Sample description",
+            "{TENANT_NAME}": {
+                "identities": {
+                    "accountId": "sample-id"
+                }
+            },
+            "personId" : "sample-name",
+            "segmentMembership": {
+                "{IDENTITY_NAMESPACE}": {
+                    "{EXTERNAL_IDENTITY}": {
+                        "status": "realized",
+                        "lastQualificationTime": "2022-03-14T:00:00:00Z"
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `schemaRef` | The schema **must** refer to the previously created schema for the segment metadata. |
+| `datasetId` | The dataset ID **must** refer to the previously created dataset for the schema you just created. |
+| `xdmEntity._id` | A suitable ID that is used to uniquely identify the record within the dataset. |
+| `{TENANT_NAME}.identities` | This section is used to connect the custom identities' field group with the users you previously imported. |
+| `segmentMembership.{IDENTITY_NAMESPACE}` | This is the label of the previously created identity namespace. So, for example, if you called your identity namespace "externalAudience", you would use that as the key of the array. |
