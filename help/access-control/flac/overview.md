@@ -27,6 +27,10 @@ Field level access control involves the following components:
 
 ## Field level access control in Platform
 
+The following sections provide information on how field level access control is integrated to other components of Platform:
+
+### Access control
+
 ### XDM
 
 ### Identity Service
