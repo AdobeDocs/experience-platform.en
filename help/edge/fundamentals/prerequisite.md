@@ -8,7 +8,7 @@ exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
 
 To use the Adobe Experience Platform Web SDK, you must first:
 
-- Have your organization provisioned for this feature. If you would like to get access, please fill out the following [form](https://adobe.ly/websdkaccess) and Adobe will provision you with access to Datatstreams and Adobe Experience Platform (if needed). Please note that Adobe will provision you with the necessary access to use in a limited fashion with the SDK at no extra charge. 
+- Have your organization provisioned for this feature. If you would like to get access, please fill out the following [form](https://adobe.ly/websdkaccess) and Adobe will provision you with access to Datastreams and Adobe Experience Platform (if needed). Please note that Adobe will provision you with the necessary access to use in a limited fashion with the SDK at no extra charge. 
 - Having 1st-party domain (CNAME) enabled is recommended. If you already have a CNAME for Adobe Analytics, you should use that one. Testing in development works without a CNAME, but Adobe recommends having one before you go to production. Although a CNAME implementation does not provide any benefits in terms of cookie lifetime, it can prevent certain ad blockers and less-common browsers from blocking SDK requests. In those cases, using a CNAME might prevent your data collection from being disrupted for users employing these tools.
 
 >[!IMPORTANT]

@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes the steps to configure a file-based destination using Destination SDK.
 title: (Beta) Use Destination SDK to configure a file-based destination
+exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
 ---
 # (Beta) Use Destination SDK to configure a file-based destination
 
