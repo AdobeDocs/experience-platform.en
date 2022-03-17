@@ -6,13 +6,15 @@ description: The /roles endpoint in the Field Level Access Control API allows yo
 ---
 # Roles endpoint
 
+The /roles endpoint in the Field Level Access Control API allows you to  programmatically manage roles in your IMS Organization.
+
 ## Getting started
 
 The API endpoint used in this guide is part of the Field Level Access Control API. Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of roles {#list}
 
-You can list all existing roles belonging to your IMS Organization, by making a GET request to the `/roles` endpoint.
+You can list all existing roles belonging to your IMS Organization by making a GET request to the `/roles` endpoint.
 
 **API format**
 
@@ -21,10 +23,12 @@ GET /roles?{QUERY_PARAMS}
 ```
 
 | Parameter | Description |
-| --------- | ----------- |
+| --- | --- |
 | `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md#query) for more information. |
 
 **Request**
+
+The following request retrieves a list of roles belonging to your IMS Organization.
 
 ```shell
 curl -X GET \
@@ -35,6 +39,8 @@ curl -X GET \
 ```
 
 **Response**
+
+A successful response returns a list of roles in your organization, including information on their respective role type, permission sets, and subject attributes.
 
 ```json
 {
@@ -93,7 +99,19 @@ curl -X GET \
 
 You can look up an individual role by making a GET request that includes the corresponding `roleId` in the request path.
 
+**API format**
+
+```http
+GET /roles/{ROLE_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| {ROLE_ID} |
+
 **Request**
+
+The following request retrieves information for {ROLE_ID}.
 
 ```shell
 curl -X GET \
@@ -104,6 +122,8 @@ curl -X GET \
 ```
 
 **Response**
+
+A successful response returns details for {ROLE_ID}, including information on its role type, permission sets, and subject attributes.
 
 ```json
 {
@@ -138,9 +158,68 @@ curl -X GET \
 
 ## Look up subjects by role ID
 
+You can also retrieve subjects by making a GET request to the `/roles` endpoint while providing a {ROLE_ID}.
+
+**API format**
+
+```http
+GET /roles/{ROLE_ID}/subjects
+```
+
+| Parameter | Description |
+| --- | --- |
+| {ROLE_ID} |
+
+**Request**
+
+The following request retrieves subjects associated with {ROLE_ID}.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Response**
+
+A successful response returns the subjects associated with the queried role ID, including the corresponding subject ID and subject type.
+
+```json
+{
+  "subjects": [
+    {
+      "subjectId": "string",
+      "subjectType": "user"
+    }
+  ],
+  "_page": {
+    "limit": 0,
+    "count": 0
+  },
+  "_links": {
+    "next": {
+      "href": "string",
+      "templated": true
+    },
+    "page": {
+      "href": "string",
+      "templated": true
+    }
+  }
+}
+```
+
 ## Create a role {#create}
 
 To create a new role, make a POST request to the `/roles` endpoint while providing values for your role's name, description, and role type.
+
+**API format**
+
+```http
+POST /roles/
+```
 
 **Request**
 
@@ -158,6 +237,8 @@ curl -X POST \
 ```
 
 **Response**
+
+A successful response returns your newly created role, with its corresponding role ID, as well as information on its role type, permission sets, and subject attributes.
 
 ```json
 {
@@ -194,6 +275,17 @@ curl -X POST \
 
 You can update a role's properties by making a PATCH request to the `/roles` endpoint while providing the corresponding `roleId` and values for the operations you want to apply.
 
+**API format**
+
+```http
+PATCH /roles/{ROLE_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| {ROLE_ID} |
+
+
 **Request**
 
 ```shell
@@ -213,7 +305,15 @@ curl -X PATCH \
   }'
 ```
 
+| Operations | Description |
+| --- | --- |
+| `op` |
+| `path` |
+| `value` |
+
 **Response**
+
+A successful response returns the updated role, including new values for the properties you chose to update.
 
 ```json
 {
@@ -248,8 +348,169 @@ curl -X PATCH \
 
 ## Update a role by role ID {#put}
 
+You can update a role by making a PUT request to the `/roles` endpoint and specifying the `roleId` that corresponds to the role you want to update.
 
+**API format**
+
+```http
+PUT /roles/{ROLE_ID}
+```
+
+**Request**
+
+The following request updates the name, description, and role type for role ID: `{ROLE_ID}`.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -d'{
+    "name": "string",
+    "description": "string",
+    "roleType": "user-defined"
+  }'
+```
+
+| Parameter | Description |
+| --- | --- |
+| `name` |
+| `description` |
+| `roleType` |
+
+**Response**
+
+A successful returns your updated role, including new values for its name, description, and role type.
+
+```json
+{
+  "id": "string",
+  "name": "string",
+  "description": "string",
+  "roleType": "user-defined",
+  "permissionSets": [
+    "string"
+  ],
+  "sandboxes": [
+    "string"
+  ],
+  "subjectAttributes": {
+    "additionalProp1": [
+      "string"
+    ],
+    "additionalProp2": [
+      "string"
+    ],
+    "additionalProp3": [
+      "string"
+    ]
+  },
+  "createdBy": "string",
+  "createdAt": 0,
+  "modifiedBy": "string",
+  "modifiedAt": 0,
+  "etag": "string"
+}
+```
 
 ## Update subject by role ID
 
+To update the subjects associated with a role ID, make a PATCH request to the `/roles` endpoint while providing the `roleId` of the subjects you want to update.
+
+**API format**
+
+```http
+PATCH /roles/{ROLE_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| {ROLE_ID} |
+
+**Request**
+
+The following request updates the subjects associated with `{ROLE_ID}`.
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -d'{
+    "operations": [
+      {
+        "op": "add",
+        "path": "string",
+        "value": "string"
+      }
+    ]
+  }'
+```
+
+| Operations | Description |
+| --- | --- |
+| `op` |
+| `path` |
+| `value` |
+
+**Response**
+
+A successful response returns the updated subjects associated with `{ROLE_ID}`.
+
+```json
+{
+  "subjects": [
+    {
+      "subjectId": "string",
+      "subjectType": "user"
+    }
+  ],
+  "_page": {
+    "limit": 0,
+    "count": 0
+  },
+  "_links": {
+    "next": {
+      "href": "string",
+      "templated": true
+    },
+    "page": {
+      "href": "string",
+      "templated": true
+    }
+  }
+}
+```
+
 ## Delete a role {#delete}
+
+To delete a role, make a DELETE request to the `/roles` endpoint while specifying the ID of the role you want to delete.
+
+**API format**
+
+```http
+DELETE /roles/{ROLE_ID}
+```
+
+| Paramater | Description |
+| --- | --- |
+
+**Request**
+
+The following request deletes role `{ROLE_ID}`.
+
+```shell
+curl -X DELETE \
+  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Response**
+
+A successful response returns HTTP status 204 (No Content) and a blank body.
+
+You can confirm the deletion by attempting a lookup (GET) request to the role. You will receive an HTTP status 404 (Not Found) because the role has been removed from the administration.
