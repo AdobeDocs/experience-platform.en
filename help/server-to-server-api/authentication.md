@@ -57,7 +57,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 To configure dataset write permissions, go to the [Admin Console](https://adminconsole.adobe.com), locate the product profile attached to your API key, and set the following permissions:
 
-* In the [!UICONTROL Sandboxes] section, select the datastream sandbox
+* In the [!UICONTROL Sandboxes] section, select the datastream sandbox.
 * In the [!UICONTROL Data Management] section, select the **[!UICONTROL Manage Datasets]** permission.
 
 
@@ -65,10 +65,10 @@ To configure dataset write permissions, go to the [Admin Console](https://adminc
 
 | Error code | Error message | Description |
 | --- | --- | --- |
-| `EXEG-0500-401` | Invalid authorization token | This error message is displayed in any of the following situations:  <ul><li>The `authorization` header value is missing</li><li>The `authorization` header value does not include the required `Bearer` token</li><li>The provided authorization token has an invalid format</li><li>The datastream requires authentication but the request is missing required headers</li></ul> |
-| `EXEG-0501-401` | Invalid user authorization token | This error message is displayed in any of the following situations: <ul><li>The API call is missing the required `x-user-token` header</li><li>The provided user token has an invalid format</li></ul> |
+| `EXEG-0500-401` | Invalid authorization token | This error message is displayed in any of the following situations:  <ul><li>The `authorization` header value is missing.</li><li>The `authorization` header value does not include the required `Bearer` token.</li><li>The provided authorization token has an invalid format.</li><li>The datastream requires authentication but the request is missing required headers.</li></ul> |
+| `EXEG-0501-401` | Invalid user authorization token | This error message is displayed in any of the following situations: <ul><li>The API call is missing the required `x-user-token` header.</li><li>The provided user token has an invalid format.</li></ul> |
 | `EXEG-0502-401` | Invalid authorization token | This error message is displayed when the provided authorization token has a valid format (JWT), but its signature is invalid. Check the [authentication tutorial](../../landing/api-authentication.md) to learn how to get a valid JWT token. |
 | `EXEG-0503-401` | Invalid authorization token | This error message is displayed when the provided authorization token is expired. Go through the [authentication tutorial](../../landing/api-authentication.md) to generate a new token. |
-| `EXEG-0504-401` | Required product context is missing | This error message is displayed in any of the following situations:  <ul><li>The developer account does not have access to Adobe Experience Platform product context</li><li>The company account is not yet entitled to Adobe Experinece Platform</li></ul>|
+| `EXEG-0504-401` | Required product context is missing | This error message is displayed in any of the following situations:  <ul><li>The developer account does not have access to Adobe Experience Platform product context.</li><li>The company account is not yet entitled to Adobe Experinece Platform.</li></ul>|
 | `EXEG-0505-401` | Required authorization token scope is missing | This error applies only to service account authentication. The error message is displayed when the the service authorization token included in the call belongs to a service account which does not have access to the `acp.foundation` IMS scope.|
 | `EXEG-0506-401` | Sandbox not accessible for write | This error message is displayed when the developer account does not have `WRITE` access to the Experience Platform sandbox in which the data-stream is defined. |

@@ -5,7 +5,7 @@ seo-description: Learn how the Edge Network Gateway API performs data collection
 keywords: data collection; outlet; analytics; edge network gateway api
 ---
 
-# Outlet data collection
+# Data collection with other Adobe solutions
 
 ## Overview {#overview}
 
