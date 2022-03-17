@@ -53,7 +53,6 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Destination status]](#destination-status)
 <!-- * [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations) -->
 <!-- * [[!UICONTROL Activated audiences by destination]](#activated-audiences-by-destination) -->
-* [[!UICONTROL Audience activation timeline]](#audience-activation-timeline)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
