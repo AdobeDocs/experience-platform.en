@@ -12,7 +12,20 @@ These endpoints are outlined below. Please visit the individual endpoint guides 
 
 ## Roles
 
+<!--
+Need a short and concise high-level overview of roles here.
+-->
+
+See the [roles endpoint guide](./roles.md) for more information on working with roles in the API.
+
 ## Products
+
+<!--
+Need a short and concise high-level overview of products here.
+-->
+
+See the [products endpoint guide](./products.md) for more information on working with products and their corresponding permission categories and permission sets in the API.
+
 
 ## Next steps
 

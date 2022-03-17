@@ -19,12 +19,8 @@ You can retrieve a list of entitled products by making a GET request to the `/pr
 **API format**
 
 ```http
-GET /products?{QUERY_PARAMS}
+GET /products/
 ```
-
-| Parameters | Description |
-| --- | --- |
-| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md#query) for more information. |
 
 **Request**
 
@@ -66,7 +62,7 @@ GET /products/{PRODUCT_ID}/categories
 
 | Parameter | Description |
 | --- | --- |
-| {PRODUCT_ID} | 
+| {PRODUCT_ID} | The ID of the product associated with the permission categories you want to look up. |
 
 **Request**
 
@@ -106,7 +102,7 @@ GET /products/{PRODUCT_ID}/permission-sets
 
 | Parameter | Description |
 | --- | --- |
-| {PRODUCT_ID} | 
+| {PRODUCT_ID} | The ID of the product associated with the permission sets you want to look up. |
 
 **Request**
 

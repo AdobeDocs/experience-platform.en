@@ -19,12 +19,8 @@ You can list all existing roles belonging to your IMS Organization by making a G
 **API format**
 
 ```http
-GET /roles?{QUERY_PARAMS}
+GET /roles/
 ```
-
-| Parameter | Description |
-| --- | --- |
-| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md#query) for more information. |
 
 **Request**
 
@@ -107,11 +103,11 @@ GET /roles/{ROLE_ID}
 
 | Parameter | Description |
 | --- | --- |
-| {ROLE_ID} |
+| {ROLE_ID} | The ID of the role that you want to look up. |
 
 **Request**
 
-The following request retrieves information for {ROLE_ID}.
+The following request retrieves information for `{ROLE_ID}`.
 
 ```shell
 curl -X GET \
@@ -123,7 +119,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns details for {ROLE_ID}, including information on its role type, permission sets, and subject attributes.
+A successful response returns details for the queried role ID, including information on its role type, permission sets, and subject attributes.
 
 ```json
 {
@@ -168,11 +164,11 @@ GET /roles/{ROLE_ID}/subjects
 
 | Parameter | Description |
 | --- | --- |
-| {ROLE_ID} |
+| {ROLE_ID} | The ID of the role associated to the subjects you want to look up. |
 
 **Request**
 
-The following request retrieves subjects associated with {ROLE_ID}.
+The following request retrieves subjects associated with `{ROLE_ID}`.
 
 ```shell
 curl -X GET \
@@ -236,6 +232,12 @@ curl -X POST \
   }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `name` | The name of your role. Ensure that the name of your role is descriptive as you can use this to look up information on your role. |
+| `description` | (Optional) A descriptive value that you can include to provide more information on your role. |
+| `roleType` |
+
 **Response**
 
 A successful response returns your newly created role, with its corresponding role ID, as well as information on its role type, permission sets, and subject attributes.
@@ -273,7 +275,7 @@ A successful response returns your newly created role, with its corresponding ro
 
 ## Update a role {#patch}
 
-You can update a role's properties by making a PATCH request to the `/roles` endpoint while providing the corresponding `roleId` and values for the operations you want to apply.
+You can update a role's properties by making a PATCH request to the `/roles` endpoint while providing the corresponding role ID and values for the operations you want to apply.
 
 **API format**
 
@@ -283,7 +285,7 @@ PATCH /roles/{ROLE_ID}
 
 | Parameter | Description |
 | --- | --- |
-| {ROLE_ID} |
+| {ROLE_ID} | The ID of the role that you want to update. |
 
 
 **Request**
@@ -307,9 +309,9 @@ curl -X PATCH \
 
 | Operations | Description |
 | --- | --- |
-| `op` |
-| `path` |
-| `value` |
+| `op` | The operation call used to define the action needed to update the role. Operations include: `add`, `replace`, and `remove`. |
+| `path` | The path of the parameter to be updated. |
+| `value` | The new value you want to update your parameter with. |
 
 **Response**
 
@@ -348,7 +350,7 @@ A successful response returns the updated role, including new values for the pro
 
 ## Update a role by role ID {#put}
 
-You can update a role by making a PUT request to the `/roles` endpoint and specifying the `roleId` that corresponds to the role you want to update.
+You can update a role by making a PUT request to the `/roles` endpoint and specifying the role ID that corresponds to the role you want to update.
 
 **API format**
 
@@ -416,7 +418,7 @@ A successful returns your updated role, including new values for its name, descr
 
 ## Update subject by role ID
 
-To update the subjects associated with a role ID, make a PATCH request to the `/roles` endpoint while providing the `roleId` of the subjects you want to update.
+To update the subjects associated with a role, make a PATCH request to the `/roles` endpoint while providing the role ID of the subjects you want to update.
 
 **API format**
 
@@ -426,7 +428,7 @@ PATCH /roles/{ROLE_ID}
 
 | Parameter | Description |
 | --- | --- |
-| {ROLE_ID} |
+| {ROLE_ID} | The ID of role associated with the subjects you want to update. |
 
 **Request**
 
@@ -451,13 +453,13 @@ curl -X PATCH \
 
 | Operations | Description |
 | --- | --- |
-| `op` |
-| `path` |
-| `value` |
+| `op` | The operation call used to define the action needed to update the role. Operations include: `add`, `replace`, and `remove`. |
+| `path` | The path of the parameter to be updated. |
+| `value` | The new value you want to update your parameter with. |
 
 **Response**
 
-A successful response returns the updated subjects associated with `{ROLE_ID}`.
+A successful response returns the updated subjects associated with the queried role ID.
 
 ```json
 {
@@ -494,7 +496,7 @@ To delete a role, make a DELETE request to the `/roles` endpoint while specifyin
 DELETE /roles/{ROLE_ID}
 ```
 
-| Paramater | Description |
+| Parameter | Description |
 | --- | --- |
 
 **Request**
