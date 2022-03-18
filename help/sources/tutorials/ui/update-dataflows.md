@@ -20,9 +20,11 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Update dataflows
 
+<!-- 
 >[!NOTE]
 >
 >The edit mapping feature is currently not supported for the following sources: Adobe Analytics, Adobe Audience Manager, HTTP API, and [!DNL Marketo Engage].
+-->
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. Select **[!UICONTROL Dataflows]** from the top header to view a list of existing dataflows.
 
@@ -44,7 +46,7 @@ A dropdown menu appears, providing you with options to update the dataflow you s
 
 Select **[!UICONTROL Edit source]** to update its mapping.
 
-![edit-dataflow](../../images/tutorials/update-dataflows/edit-dataflow.png)
+![update-dataflow](../../images/tutorials/update-dataflows/update-dataflow.png)
 
 The [!UICONTROL Add data] step appears. Select the appropriate data format to review the contents of your selected data and then select **[!UICONTROL Next]** to proceed.
 
