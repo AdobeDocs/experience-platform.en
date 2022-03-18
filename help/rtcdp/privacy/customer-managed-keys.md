@@ -8,28 +8,22 @@ description: Learn how to set up your own encryption keys for data stored in Rea
 >
 >This feature is currently in beta and your organization may not have access to it yet. The documentation and functionality are subject to change.
 
-All data stored on Adobe Experience Platform is stored in a Microsoft Azure Data Lake and encrypted at rest using system-level keys. In Real-Time Customer Data Platform (Real-Time CDP), you can opt to use your own encryption keys instead, giving you greater control over your data security.
+All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. In Real-Time Customer Data Platform (Real-Time CDP), you can opt to use your own encryption keys instead, giving you greater control over your data security.
 
 This document covers the process for enabling the customer-managed keys (CMK) feature in Real-Time CDP.
 
 ## Process summary
 
-The process for setting up CMK involves multiple teams:
+After your organization purchases CMK, the process for setting up the feature can be summarized as follows:
 
-| Team | Role |
-| --- | --- |
-| Security team | A team from your organization, responsible for instantiating key vaults and corresponding keys. |
-| Adobe customer support team | Responsible for gathering information from the security team and creates a corresponding ticket for the provisioning team. |
-| Adobe provisioning team | Responsible for changing the subscription/resource groups from system-managed keys to CMK. |
+1. [Create an Azure Key Vault](#create-key-vault), then [generate or import an encryption key](#generate-or-import-key) that will ultimately be shared with Adobe.
+1. Use API calls to [register the CMK app](#register-app) with your Azure tenant.
+1. [Assign the service principal for the CMK app](#assign-to-role) to an appropriate role for the key vault. 
+1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe).
 
-Each of the above teams collaborate to perform the following steps:
+Once the setup process is complete, you can grant or revoke access to ingested Platform data by enabling and disabling the encryption key in Azure.
 
-1. After your organization purchases this feature, the Adobe provisioning team configures the CMK app and identities for your organization.
-1. Your security team sets up an Azure Key Vault that grants Adobe services access to its stored encryption keys.
-1. The Adobe customer support team works with the provisioning team to configure CMK for your organization in the provisioning system
-1. Your security team applies CMK to existing and new resources in your Platform implementation
-
-## Create an Azure Key Vault
+## Create an Azure Key Vault {#create-key-vault}
 
 CMK only supports keys from a Microsoft Azure Key Vault. If you do not have a Key Vault set up already, you can [create a free account](https://azure.microsoft.com/en-us/free/) and follow the steps below to set one up.
 
@@ -49,7 +43,7 @@ Once you arrive at the **[!DNL Review + create]** step, you can review the detai
 
 ![Basic config for the key vault](./assets/customer-managed-keys/finish-creation.png)
 
-## Generate a key
+## Generate or import a key {#generate-or-import-key}
 
 Once you have created a Key Vault, you can import an existing key or generate a new one. Navigate to the **[!DNL Keys]** tab and select **[!DNL Generate/Import]**.
 
@@ -63,7 +57,7 @@ The configured key appears in the list of keys for the vault.
 
 ![Key added](./assets/customer-managed-keys/key-added.png)
 
-## Register for the CMK app
+## Register the CMK app {#register-app}
 
 Once you have your Key Vault configured, the next step is to register for the CMK application that will link to your Azure instance.
 
@@ -73,7 +67,7 @@ Once you have your Key Vault configured, the next step is to register for the CM
 
 ### Send a registration request
 
-To start the registration process, make a POST request to the app registration endpoint. This endpoint gathers your organization's identity information and generates an integration path 
+To start the registration process, make a POST request to the app registration endpoint. This endpoint gathers your organization's identity information and generates an integration path.
 
 **Request**
 
@@ -147,11 +141,11 @@ A successful response returns an `applicationRedirectUrl` property, containing t
 }
 ```
 
-Copy and paste the `applicationRedirectUrl` link into your browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your Azure instance.
+Copy and paste the `applicationRedirectUrl` link into your browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your Azure tenant.
 
 ![Accept permission request](./assets/customer-managed-keys/app-permission.png)
 
-## Install the CMK app to your Azure instance
+## Assign the CMK app to a role {#assign-to-role}
 
 After completing the authentication process, navigate back to your Azure Key Vault and select **[!DNL Access control]** in the left navigation. From here, select **[!DNL Add]** followed by **[!DNL Add role assignment]**.
 
@@ -163,9 +157,19 @@ The next screen prompts you to choose a role for this assignment. Select **[!DNL
 
 On the next screen, choose **[!DNL Select members]** to open a dialog in the right rail. Use the search bar to locate the service principal for the CMK application and select it from the list. When finished, select **[!DNL Save]**.
 
-## Send your key URI to Adobe
+## Send your key URI to Adobe {#send-to-adobe}
 
-After installing the CMK app on Azure, you can start sending your encryption key references to Adobe.
+After installing the CMK app on Azure, you can start sending your encryption key identifiers to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
+
+![Select key](./assets/customer-managed-keys/select-key.png)
+
+Select the latest version of the key and its details page appears. From here, select the copy icon for the **[!UICONTROL Key Identifier]** field to copy the URI to your clipboard.
+
+![Copy key URL](./assets/customer-managed-keys/copy-key-url.png)
+
+Once you have obtained the key identifier, you can send it using a POST request to the CMK configuration endpoint.
+
+**Request**
 
 ```shell
 curl -X POST \
@@ -179,10 +183,97 @@ curl -X POST \
         "imsOrgId": "{IMS_ORG}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
-          "keyVaultUri": "https://byok-mi-keyvault.vault.azure.net",
+          "keyVaultUri": "https://adobecmkexample1.vault.azure.net/keys/adobeCMK-key/02cee357ad5d4c72b2b04881fdffd626",
           "keyName": "key1"
         }
       }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `name` | A name for the configuration. |
+| `type` | The configuration type. Must be set to `BYOK_CONFIG`. |
+| `imsOrgId` | Your IMS Organization ID. This must be the same value as provided under the `x-gw-ims-org-id` header. |
+| `configData` | Contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultUri`: The key identifier URI that you copied earlier.</li><li>`keyName`: A name for the key.</li></ul> |
+
+**Response**
+
+A successful response returns the details of the configuration job.
+
+```json
+{
+  "id": "042db66e-3525-4a2b-b9de-703f21294425",
+  "jobType": "CustomerPolicyJob",
+  "workflowType": "BYOK_CONFIG",
+  "status": "CREATED",
+  "currentState": "CALL_PROVISIONING_ENDPOINT",
+  "recoverableState": true,
+  "doRetryCurrentState": true,
+  "retryCount": 3,
+  "retryDelayInSeconds": 5,
+  "jobData": {
+    "x-request-id": "oh6TPkZSgf3DNgHLWm6CezFf0pafIOwZ",
+    "userId": "",
+    "config": {
+      "name": "config1",
+      "type": "BYOK_CONFIG",
+      "status": "NEW",
+      "configData": {
+        "providerType": "AZURE_KEYVAULT",
+        "keyVaultUri": "https://adobecmkexample1.vault.azure.net/keys/adobeCMK-key/02cee357ad5d4c72b2b04881fdffd626",
+        "keyName": "key1"
+      },
+      "imsOrgId": "{IMS_ORG}"
+    }
+  },
+  "imsOrgId": "{IMS_ORG}",
+  "executionComplete": false,
+  "recovered": false,
+  "timeOutForCurrentStateInMins": 5,
+  "monitorJob": true,
+  "firstJobStateTimestamp": 0,
+  "startTime": 1647624472445,
+  "endTime": 0
+}
+```
+
+The job should should complete processing within a minute. To check the status of the job, you can make a GET request.
+
+**Request**
+
+The request path appends a `config1` namespace and must contain a `configType` parameter set to `BYOK_CONFIG`.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/infrastructure/manager/customer/config/config1?configType=BYOK_CONFIG \ 
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**Response**
+
+A successful response returns the status of the job. A complete job contains a `status` value of `COMPLETED`.
+
+```json
+{
+  "name": "config1",
+  "type": "BYOK_CONFIG",
+  "status": "COMPLETED",
+  "configData": {
+    "keyVaultUri": "https://adobecmkexample1.vault.azure.net/keys/adobeCMK-key/02cee357ad5d4c72b2b04881fdffd626",
+    "keyName": "key1",
+    "providerType": "AZURE_KEYVAULT"
+  },
+  "imsOrgId": "{IMS_ORG}",
+  "subscriptionId": "undefined",
+  "id": "282397ed-ab19-47fb-9bf2-057270d401aa",
+  "rowType": "BYOK_KEY"
+}
+```
+
 ## Next steps
+
+By completing the above steps, you have successfully enabled CMK for your organization. All data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your Azure Key Vault. If you want to revoke Platform access to your data, you can disable the key within Azure.
+
+After disabling a key, it takes 5-10 minutes for data to no longer by accessible in Platform. When enabling a previously disabled key, it takes 45-50 minutes for data to become available again.
