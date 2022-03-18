@@ -25,7 +25,7 @@ Once the setup process is complete, you can grant or revoke access to ingested P
 
 ## Create an Azure Key Vault {#create-key-vault}
 
-CMK only supports keys from a Microsoft Azure Key Vault. If you do not have a Key Vault set up already, you can [create a free account](https://azure.microsoft.com/en-us/free/) and follow the steps below to set one up.
+CMK only supports keys from a Microsoft Azure Key Vault. If you do not have a key vault set up already, you can [create a free account](https://azure.microsoft.com/en-us/free/) and follow the steps below to set one up.
 
 Log in to the Azure portal and use the search bar to locate **[!DNL Key vaults]** under the list of services.
 
@@ -45,7 +45,7 @@ Once you arrive at the **[!DNL Review + create]** step, you can review the detai
 
 ## Generate or import a key {#generate-or-import-key}
 
-Once you have created a Key Vault, you can import an existing key or generate a new one. Navigate to the **[!DNL Keys]** tab and select **[!DNL Generate/Import]**.
+Once you have created a key vault, you can import an existing key or generate a new one. Navigate to the **[!DNL Keys]** tab and select **[!DNL Generate/Import]**.
 
 ![Generate a key](./assets/customer-managed-keys/view-keys.png)
 
@@ -59,7 +59,7 @@ The configured key appears in the list of keys for the vault.
 
 ## Register the CMK app {#register-app}
 
-Once you have your Key Vault configured, the next step is to register for the CMK application that will link to your Azure instance.
+Once you have your key vault configured, the next step is to register for the CMK application that will link to your Azure tenant.
 
 >[!NOTE]
 >
@@ -237,7 +237,7 @@ A successful response returns the details of the configuration job.
 }
 ```
 
-The job should should complete processing within a minute. To check the status of the job, you can make a GET request.
+The job should should complete processing within a few minutes. To check the status of the job, you can make a GET request.
 
 **Request**
 
