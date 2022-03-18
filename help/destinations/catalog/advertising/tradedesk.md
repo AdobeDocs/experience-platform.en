@@ -28,9 +28,18 @@ As a marketer, I want to be able to use segments built off of [!DNL Trade Desk I
 |IDFA|[!DNL Apple ID for Advertisers]|
 |The Trade Desk ID|Advertiser ID in The Trade Desk platform|
 
-## Export type {#export-type}
+{style="table-layout:auto"}
 
-**[!DNL Segment export]** - you are exporting all members of a segment (audience) to the destination.
+## Export type and frequency {#export-type-frequency}
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) to the destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Prerequisites {#prerequisites}
 
