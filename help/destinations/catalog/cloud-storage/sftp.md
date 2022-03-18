@@ -38,14 +38,31 @@ To connect to this destination, follow the steps described in the [destination c
 >title="RSA public key"
 >abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a Base64 encoded string."
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_sftp_ssh"
+>title="SSH key"
+>abstract="The SSH key requires a Base64 string."
+
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
-* **Host**: The address of your SFTP storage location
-* **Username**: The username to log into your SFTP storage location
-* **Password**: The password to log into your SFTP storage location
-* **[!UICONTROL Name]**: enter a name that will help you identify this destination.
-* **[!UICONTROL Description]**: enter a description of this destination.
-* **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
+If you select the **[!UICONTROL Basic authentication]** type to connect to your SFTP location:
+
+* **[!UICONTROL Host]**: The address of your SFTP storage location;
+* **[!UICONTROL Username]**: The username to log into your SFTP storage location;
+* **[!UICONTROL Password]**: The password to log into your SFTP storage location.
+
+If you select the **[!UICONTROL SFTP with SSH key]** authentication type to connect to your SFTP location:
+
+* **[!UICONTROL Domain]**: Fill in the IP address or the domain name of your SFTP account
+* **[!UICONTROL Port]**: The port used by your SFTP storage location;
+* **[!UICONTROL Username]**: The username to log into your SFTP storage location;
+* **[!UICONTROL SSH Key]**: The SSH key to log into your SFTP storage location.
+
+After establishing the authentication connection to the SFTP location, provide the following information for the destination:
+
+* **[!UICONTROL Name]**: enter a name that will help you identify this destination in the Experience Platform user interface;
+* **[!UICONTROL Description]**: enter a description for this destination;
+* **[!UICONTROL Folder path]**: enter the path to the folder in your SFTP location where the files will be exported.
 
 Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
 
