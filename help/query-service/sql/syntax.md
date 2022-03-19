@@ -203,10 +203,10 @@ The `INSERT INTO` command is defined as follows:
 INSERT INTO table_name select_query
 ```
 
-**Parameters**
-
-- `table_name`: The name of the table that you want to insert the query into.
-- `select_query`: A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries).
+| Parameters | Description |
+| ----- | ----- |
+| `table_name` | The name of the table that you want to insert the query into. |
+| `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
 
 **Example**
 
