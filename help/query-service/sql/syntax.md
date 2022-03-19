@@ -250,9 +250,9 @@ The `DROP TABLE` command drops an existing table and deletes the directory assoc
 DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-**Parameters**
-
--  `IF EXISTS`: If this is specified, no exception is thrown if the table does **not** exist.
+| Parameters | Description |
+| ----- | ------ |
+| `IF EXISTS` | If this is specified, no exception is thrown if the table does **not** exist. |
 
 ## DROP DATABASE
 
