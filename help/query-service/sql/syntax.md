@@ -175,11 +175,11 @@ The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query:
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-**Parameters**
-
-- `schema`: The title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query.
-- `rowvalidation`: (Optional) Specifies if the user wants row level validation of every new batches ingested for the newly created dataset. The default value is `true`.
-- `select_query`: A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries).
+| Parameters | Description |
+| ----- | ----- |
+| `schema` | The title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query. |
+| `rowvalidation` | (Optional) Specifies if the user wants row level validation of every new batches ingested for the newly created dataset. The default value is `true`. |
+| `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
 
 **Example**
 
