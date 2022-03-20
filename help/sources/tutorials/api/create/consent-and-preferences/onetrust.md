@@ -23,7 +23,7 @@ To read further about OneTrust, please visit https://www.onetrust.com/company/ab
 >[!IMPORTANT]
 >
 >The access token does not refresh automatically when expires because system-to-system refresh tokens are not supported by OneTrust.
-Therefore it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum life of an access token that can be configured is 1 Year *.
+Therefore it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum life of an access token that can be configured is 1 Year.
 
 ## Connect *ONETRUST* to Platform using the [!DNL Flow Service] API
 
@@ -127,6 +127,12 @@ curl -X GET \
 **Response**
 
 A successful response returns the structure of the queried file.
+
+>[!NOTE]
+>
+>The JSON response payload below is hidden for brevity. Select Click me to see the response payload.
+
++++Click me
 
 ```json
 {
@@ -6718,6 +6724,9 @@ A successful response returns the structure of the queried file.
 }
 ```
 
++++
+
+
 ### Create a source connection {#source-connection}
 
 You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
@@ -7050,6 +7059,12 @@ curl -X GET \
 **Response**
 
 A successful response returns details regarding your flow run, including information about its creation date, source and target connections, as well as the flow run's unique identifier (`id`).
+
+>[!NOTE]
+>
+>The JSON response payload below is hidden for brevity. Select Click me to see the response payload.
+
++++Click me
 
 ```json
 {
@@ -7560,6 +7575,8 @@ A successful response returns details regarding your flow run, including informa
     "_links": {}
 }
 ```
+
++++
 
 | Property | Description |
 | -------- | ----------- |
