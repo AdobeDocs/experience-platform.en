@@ -38,7 +38,7 @@ Select the source you wish to work with to see a list of its existing dataflows.
 
 A dropdown menu appears, providing you with options to update the dataflow you selected. From here, you can choose to update a dataflow's mapping sets and ingestion schedule. You can also select options to inspect the dataflow in the monitoring dashboard, subscribe to alerts, as well as disable or delete the dataflow.
 
-Top update your dataflow's information, select **[!UICONTROL Update dataflow]**.
+To update your dataflow's information, select **[!UICONTROL Update dataflow]**.
 
 ![update-dataflow](../../images/tutorials/update-dataflows/update-dataflow.png)
 
