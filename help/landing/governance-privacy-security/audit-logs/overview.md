@@ -28,7 +28,7 @@ The following table outlines which actions on which resources are recorded by au
 | [Merge policy](../../../profile/merge-policies/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Computed attribute](../../../profile/computed-attributes/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Product profile](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Account](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Account (Adobe)](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 
 ## Access to audit logs
 
@@ -52,7 +52,8 @@ Select an event from the list to view its details in the right rail.
 
 >[!NOTE]
 >
->Since this a new feature, the data displayed will only go back to Jan 2022.
+>Since this a new feature, the data displayed will go back to March 2022. Depending on the resource selected, earlier data may be available from Jan 2022.
+
 
 Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
 
