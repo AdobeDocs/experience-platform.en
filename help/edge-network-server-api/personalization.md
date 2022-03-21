@@ -1,13 +1,13 @@
 ---
 title: Retrieve personalization content from other Adobe solutions
-description: Learn how to use the Edge Network Gateway API to retrieve personalized content from Adobe personalization solutions
-seo-description: Learn how to use the Edge Network Gateway API to retrieve personalized content from Adobe personalization solutions
-keywords: personalization; server api; edge network gateway; retrieve personalization
+description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
+seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
+keywords: personalization; server api; Adobe Experience Platform Edge Network; retrieve personalization
 ---
 
 # Retrieve personalization content from Adobe solutions
 
-With the Experience Edge Gateway APIs you can retrieve personalized content from Adobe personalization solutions, including [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) and [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
+With the [!DNL Server API], you can retrieve personalized content from Adobe personalization solutions, including [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) and [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
 ## Terminology {#terminology}
 

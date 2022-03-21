@@ -1,15 +1,15 @@
 ---
 title: Interactive data collection
-description: Learn how the Edge Network Gateway API performs interactive data collection
-seo-description: Learn how the Edge Network Gateway API performs interactive data collection
-keywords: data collection;collection;edge network gateway;api;interactive data collection
+description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection
+seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection
+keywords: data collection;collection;experience platform edge network;api;interactive data collection
 ---
 
 # Interactive data collection
 
 ## Overview {#overview}
 
-Interactive data collection endpoints receive a single event and are used when the client expects a response to be returned by the Edge Network Gateway server. These endpoints can also return content from other Experience Edge services, while performing data collection.
+Interactive data collection endpoints receive a single event and are used when the client expects a response to be returned by the Adobe Experience Platform Edge Network server. These endpoints can also return content from other Experience Edge services, while performing data collection.
 
 The server response includes one or more `Handle` objects, as shown below.
 
@@ -56,9 +56,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId=$DATASTREAM
 
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| `configId` | `String` | Yes, for V1 APIs | Datastream ID. |
 | `dataStreamId` | `String` | Yes, for V2 APIs | Datastream ID. |
-| `requestId` | `String` | No | Provide a client random ID for correlating internal server requests. If none is provided, the Experience Edge Network Gateway will generate one and return it in the response.|
+| `requestId` | `String` | No | Provide a client random ID for correlating internal server requests. If none is provided, the Experience Adobe Experience Platform Edge Network will generate one and return it in the response.|
 
 ## Response {#response}
 

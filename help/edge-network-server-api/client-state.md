@@ -1,19 +1,19 @@
 ---
 title: Client state management
-description: Learn how the Edge Network Gateway API manages client state
-seo-description: Learn how the Edge Network Gateway API manages client state
+description: Learn how the Adobe Experience Platform Edge Network Server API manages client state
+seo-description: Learn how the Adobe Experience Platform Edge Network Server API manages client state
 keywords: client;state;management;edge;network;gateway;api
 ---
 
 # Client state management
 
-The Edge Network Gateway itself is stateless (it does not maintain its own session). However, there are certain use-cases which require client-side state persistency, such as:
+The Adobe Experience Platform Edge Network Server API itself is stateless (it does not maintain its own session). However, there are certain use-cases which require client-side state persistency, such as:
 
 * Consistent device identification (see [visitor identification](visitor-identification.md))
 * Collect and enforce user consent
 * Keeping personalization session ID
 
-The Edge Network Gateway uses a state management protocol, essentially delegating the storage aspect to its client/SDK. The Edge Network Gateway includes state entries in its response. For browsers, the entries are stored as cookies.
+The Server API uses a state management protocol, delegating the storage aspect to its client/SDK. The Server API includes state entries in its response. For browsers, the entries are stored as cookies.
 
 The client responsibility is to store and include them in all subsequent requests. The client must also take care of proper expiration for entries, as instructed by the gateway. When the entries were stored as cookies, the browser does all this work automatically.
 
@@ -22,7 +22,7 @@ point, which could lead to unexpected behavior for clients that use the state in
 
 ## Persisting client state as metadata
 
-The state returned by the Edge Network Gateway in the response body is a `Handle` object with the type `state:store`.
+The state returned by the [!DNL Server API] in the response body is a `Handle` object with the type `state:store`.
 
 ```json
 {
@@ -99,11 +99,11 @@ Here's an example of a request which passes in the client-side stored state:
 
 ## Persisting client state in browser cookies
 
-When working with browser clients, the Edge Network Gateway can automatically persist the entries as browser cookies. This allows transparent state storage support, since browsers respect the state management protocol by default.
+When working with browser clients, the Server API can automatically persist the entries as browser cookies. This allows transparent state storage support, since browsers respect the state management protocol by default.
 
 Almost all entries are materialized as first party cookies when enabled and supported (see the note below), but the gateway could also store some third party cookies when the third party `adobedc.demdex.net` domain is used.
 
-Since entries are always bound to a specific scope (device/application) by their definition, only the subset that is compatible with the current request context will be written by the Experience Edge Gateway. Unwritten entries are
+Since entries are always bound to a specific scope (device/application) by their definition, only the subset that is compatible with the current request context will be written by the Experience Edge Network. Unwritten entries are
 returned within a `state:store` handle.
 
 As a general rule, application scoped entries are always written as first party cookies, while device scoped entries are written as third-party cookies. The decision is completely transparent to the caller, the gateway decides which entries can be written, depending on the call context.
@@ -124,9 +124,9 @@ The caller must explicitly enable support for storing client state as cookies, v
 | Attribute | Type | Description |
 | --- | --- | --- |
 | `cookiesEnabled` | Boolean | When set, enables support for cookies. Default value is `false`. |
-| `domain`  | String | Required when `cookiesEnabled: true` The top-level domain on which the cookies should be written. The Edge Network Gateway will use this value to decide if state can be persisted as cookies. |
+| `domain`  | String | Required when `cookiesEnabled: true` The top-level domain on which the cookies should be written. The Adobe Experience Platform Edge Network will use this value to decide if state can be persisted as cookies. |
 
-Even if cookies support is enabled via the `cookiesEnabled` flag, the Edge Network Gateway will only write the state entries if the request top-level domain matches the `domain` specified by the caller. When there's a mismatch, entries are returned in a `state:store` handle.
+Even if cookies support is enabled via the `cookiesEnabled` flag, the Adobe Experience Platform Edge Network will only write the state entries if the request top-level domain matches the `domain` specified by the caller. When there's a mismatch, entries are returned in a `state:store` handle.
 
 The first-party cookies cannot be written (even if support is enabled) in the following cases:
 

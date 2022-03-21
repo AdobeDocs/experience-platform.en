@@ -1,17 +1,17 @@
 ---
 title: Authentication
-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Gateway API
-seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Gateway API
-keywords: data collection; authentication; edge network gateway api; authorization
+description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
+seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
+keywords: data collection; authentication; Adobe Experience Platform Edge Network api; authorization
 ---
 
 # Authentication {#authentication}
 
 ## Overview 
 
-The [!DNL Experience Edge Network Gateway API] handles both authenticated and unauthenticated data collection, depending on the source of events and the API collection domain.
+The [!DNL Adobe Experience Platform Edge Network Server API] handles both authenticated and unauthenticated data collection, depending on the source of events and the API collection domain.
 
-For each request, [!DNL Experience Edge Network Gateway API] verifies the datastream [*access_type* setting](https://git.corp.adobe.com/experience-edge/blackbird/blob/master/manifests/src/main/resources/schemas/apiv2/edge/datastreams/v1/edgeSettings.json#L13-L18).
+For each request, the [!DNL Server API] verifies the datastream `access_type` setting.
 
 Using this setting, customers can configure a datastream to accept either authenticated data, or both authenticated and unauthenticated data. By default, both types of data are accepted.
 
@@ -24,10 +24,9 @@ Below is a summary of the behavior, based on the `access_type` configuration and
 
 API calls coming from a private server on `server.adobedc.net` should always be authenticated.
 
-
 ## Step 1: Prerequisites {#prerequisites}
 
-Before you can make calls to the Adobe Experience Platform APIs, make sure you meet the following prerequisites:
+Before you can make calls to the [!DNL Server API], make sure you meet the following prerequisites:
 
 * You have an IMS Organization account with access to Adobe Experience Platform.
 * Your Experience Platform account has the `developer` and `user` roles enabled for the Adobe Experience Platform API product profile. Contact your [Admin Console](../../access-control/home.md) administrator to enable these roles for your account.

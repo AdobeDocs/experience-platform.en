@@ -1,7 +1,7 @@
 ---
 title: Visitor identification
-description: Learn how Edge Network Gateway API identifies visitors
-seo-description: Learn how Edge Network Gateway API identifies visitors
+description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
+seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 keywords: edge network;gateway;api;visitor;identification
 ---
 
@@ -9,7 +9,7 @@ keywords: edge network;gateway;api;visitor;identification
 
 ## Overview {#overview}
 
-The Edge Network Gateway API expects all user identities to be supplied in the `identityMap` field group. This field group is included in the AEP Web SDK `ExperienceEvent` mixin.
+The Adobe Experience Platform Edge Network Server API expects all user identities to be supplied in the `identityMap` field group. This field group is included in the AEP Web SDK `ExperienceEvent` mixin.
 
 ```json
 {

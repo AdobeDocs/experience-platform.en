@@ -1,7 +1,7 @@
 ---
 title: Error handling
-description: Learn about the possible errors you might encounter when performing API requests to the Edge Network Gateway.
-seo-description:  Learn about the possible errors you might encounter when performing API requests to the Edge Network Gateway.
+description: Learn about the possible errors you might encounter when performing API requests to the Adobe Experience Platform Edge Network Server API.
+seo-description:  Learn about the possible errors you might encounter when performing API requests to the Adobe Experience Platform Edge Network Server API.
 keywords: error;code;handling;edge;network;gateway;api
 ---
 
@@ -9,20 +9,20 @@ keywords: error;code;handling;edge;network;gateway;api
 
 ## Overview {#overview}
 
-API errors in Edge Network Gateway can have a variety of causes, internal (Edge Network Gateway itself) or external (input, configuration, or upstream related). 
+API errors in Adobe Experience Platform Edge Network Server API can have a variety of causes, internal (Edge Network itself) or external (input, configuration, or upstream related). 
 
 ## Error types {#error-types}
 
 | Error | Type | Description | Status code|
 | --- | --- | --- | --- |
-| `RequestProcessingError` | Internal | General purpose error issued by the Edge Network Gateway on unexpected circumstances. |`500`|
+| `RequestProcessingError` | Internal | General purpose error issued by the Adobe Experience Platform Edge Network on unexpected circumstances. |`500`|
 | `InputError` | External | Includes errors caused by malformed input, as well as entity validation errors. |`4xx`|
 | `ConfigurationError` | External | Server-side configuration errors. |`422`|
 | `UpstreamError` | External | Communication errors with upstream services.|`207 Multi-Status`|
 
 ## Severity
 
-Edge Network Gateway errors can also be split by severity:
+Server API errors can also be split by severity:
 
 * **Fatal errors** will halt the dispatch pipeline.
 * **Non-fatal errors** could signal a partial processing, while allowing for request processing to continue.
@@ -78,7 +78,7 @@ Non-fatal errors can be further broken down into:
 * Errors: issues that occurred while processing the request, but did not cause the entire request to be rejected (eg. a non-critical upstream failure).
 * Warnings: messages from upstream services which could signal that a partial processing of the request occurred.
 
-When encountering non-fatal errors (excluding warnings), the Edge Network Gateway will change the response status to `207 Multi-Status`.
+When encountering non-fatal errors (excluding warnings), the [!DNL Server API] will change the response status to `207 Multi-Status`.
 
 Warnings, on the other hand, are mostly informative, as they generally represent a potentially transient condition, which did not impact the request to full extent. One example here is a partial profile read in the segmentation engine, in which case the accuracy is impacted to some degree, but the functionality is still delivered.
 
@@ -118,8 +118,8 @@ Non-fatal errors are represented in the _Problem Details_ format, but are embedd
 |Error code|Description|
 |---|---|
 |`4xx Bad Request`| Most `4xx` errors, like 400, 403, 404, should not be retried on behalf of the client, except for `429`. These are client errors and will not succeed. The client must address the error before retrying the request.|
-|`429 Too Many Requests`| `429` HTTP response code indicates that the Edge Network Gateway or an upstream service is rate limiting the requests. In this case, the  In such a scenario the caller must respect the `Retry-After` response header. Any responses flowing back must carry the HTTP response code with a domain specific error code.|
+|`429 Too Many Requests`| `429` HTTP response code indicates that the Adobe Experience Platform Edge Network or an upstream service is rate limiting the requests. In this case, the  In such a scenario the caller must respect the `Retry-After` response header. Any responses flowing back must carry the HTTP response code with a domain specific error code.|
 |`500 Internal Server Error`| `500` errors are generic, catch-all errors. `500` errors must not be retried, except for `502` and `503`. Intermediaries must respond with a `500` error and may respond with a generic error code/message, or a more domain-specific error code/message.|
-|`502 Bad Gateway`| Indicates that the Edge Network Gateway received an invalid response from upstream servers. This can happen due to network issues between servers. The temporary network issue may resolve and thus a retry may resolve the issue, so recipients of `502` errors may retry the request after some time.|
+|`502 Bad Gateway`| Indicates that the Adobe Experience Platform Edge Network received an invalid response from upstream servers. This can happen due to network issues between servers. The temporary network issue may resolve and thus a retry may resolve the issue, so recipients of `502` errors may retry the request after some time.|
 |`503 Service Unavailable`| This error code indicates that the service is temporarily unavailable. This can happen during maintenance periods. Recipients of `503` errors may retry the request, but must respect the `Retry-After` header.|
-|`504 Gateway Timeout`| Indicates that Edge Network Gateway request to the upstream servers has timed-out. This can happen due to network issues between servers, DNS issues, or other network issues. The temporary network issues may be resolved after some time and a retry may solve the issue.|
+|`504 Gateway Timeout`| Indicates that Adobe Experience Platform Edge Network request to the upstream servers has timed-out. This can happen due to network issues between servers, DNS issues, or other network issues. The temporary network issues may be resolved after some time and a retry may solve the issue.|

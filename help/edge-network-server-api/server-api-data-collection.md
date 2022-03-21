@@ -1,20 +1,20 @@
 ---
 title: Data collection
-description: Learn how the Edge Network Gateway API structures the collected data
-seo-description: Learn how the Edge Network Gateway API structures the collected data
-keywords: data collection;collection;edge network gateway;api;structure
+description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
+seo-description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
+keywords: data collection;collection;Adobe Experience Platform Edge Network;api;structure
 ---
 
 # Data collection
 
-The Edge Network Gateway API offers two types of data collection endpoints:
+The [!DNL Server API] offers two types of data collection endpoints:
 
 1. [Interactive data collection endpoints](interactive-data-collection.md), used when the client expects a response to be returned by the server. These endpoints can also return content from other Experience Edge services, while performing data collection.
 2. [Non-interactive event data collection](non-interactive-data-collection.md), used when no response is expected from the server. These endpoints are used only for data collection.
 
 ## The `Event` object {#event-object}
 
-Data collected by the Edge Network Gateway API is structured in the `Event` object. The structure of this object is described below.
+Data collected by the [!DNL Server API] is structured in the `Event` object. The structure of this object is described below.
 
 | Attribute | Type | Description |
 | --- | --- | --- |

@@ -1,15 +1,15 @@
 ---
 solution: Experience Platform, Data Collection
 audience: user
-user-guide-title: Adobe Experience Platform Edge Network Gateway Server-to-Server API Help
-breadcrumb-title: Edge Network Gateway Server-to-Server API Guide
-user-guide-description: Interact with Experience Cloud services through the Edge network 
-feature: Edge Network Gateway Server-to-Server API
+user-guide-title: Adobe Experience Platform Edge Network Server API Help
+breadcrumb-title: Adobe Experience Platform Edge Network Server API Guide
+user-guide-description: Interact with Experience Cloud services through the Edge Network Server API 
+feature: Adobe Experience Platform Edge Network Server API
 ---
 
-# Edge Network Gateway Server-to-Server API {#edge}
+# Adobe Experience Platform Edge Network Server API {#edge}
 
-* Edge Network Gateway API {#server-api}
+* Edge Network Server API {#server-api}
   * [Overview](overview.md)
   * [Authentication](authentication.md)
   * [Visitor identification](visitor-identification.md)

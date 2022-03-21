@@ -1,8 +1,8 @@
 ---
 title: Non-interactive data collection
-description: Learn how the Edge Network Gateway API performs non-interactive data collection
-seo-description: Learn how the Edge Network Gateway API performs non-interactive data collection
-keywords: data collection;collection;edge network gateway;api;noninteractive data collection
+description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection
+seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection
+keywords: data collection;collection;adobe experience platform edge network;api;noninteractive data collection
 ---
 
 # Non-interactive data collection
@@ -13,14 +13,14 @@ Non-interactive event data collection endpoints are used to send multiple events
 
 Sending events in batch is recommended when end-user events are queued locally for a short period of time (e.g. when there’s no network connection).
 
-Batch events should not necessarily belong to the same end-user, meaning that events can hold different identities within their `identityMap` object. However, when an `ECID` identity is sent via a cookie or metadata (in Experience Edge accepted format), Experience Edge will read it and associate it with each event in the batch.
+Batch events should not necessarily belong to the same end-user, meaning that events can hold different identities within their `identityMap` object. However, when an `ECID` identity is sent via a cookie or metadata (in Edge Network accepted format), the Edge Network will read it and associate it with each event in the batch.
 
 Each event should include the corresponding `XDM` content that needs to be collected.
 
 >[!NOTE]
 >
->[Experience Edge Identity Protocol](visitor-identification.md#experience-edge-identity-protocol) (`ECID` generation) is not applicable for data collection requests, meaning that events sent to this API should already have at least one identity associated to them. For server datastreams (calls to `server.adobedc.net`), the API requires that each event contains an identity **explicitly set as primary**. For device datastreams, Experience Edge will attempt to set
-the `ECID` as primary, when it is present, and no other primary identity is explicitly set (assuring backwards compatibility for Collect V1 clients).
+>[Experience Edge Identity Protocol](visitor-identification.md#experience-edge-identity-protocol) (`ECID` generation) is not applicable for data collection requests, meaning that events sent to this API should already have at least one identity associated to them. For server datastreams (calls to `server.adobedc.net`), the API requires that each event contains an identity **explicitly set as primary**. For device datastreams, the Edge Network will attempt to set
+the `ECID` as primary, when it is present, and no other primary identity is explicitly set.
 
 ## API format {#api-format}
 
@@ -92,7 +92,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId=$DATASTREAM_
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Yes | Datastream ID. |
 | `requestId` | `String` | No | Provide an external request tracing ID. If none is provided, Experience Edge Gateway will generate one for you and return it back in the response body / headers.|
-| `silent` | `Boolean` | No | Optional boolean parameter indicating whether Experience Edge Network Gateway should return a `204 No Content` response with an empty payload or not. Critical errors are reported using the corresponding HTTP status code and payload.|
+| `silent` | `Boolean` | No | Optional boolean parameter indicating whether Experience Adobe Experience Platform Edge Network should return a `204 No Content` response with an empty payload or not. Critical errors are reported using the corresponding HTTP status code and payload.|
 
 
 ## Response {#response}

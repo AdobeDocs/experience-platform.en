@@ -57,7 +57,7 @@ feature: Web SDK
   * [Data element types](extension/data-element-types.md)
   * [Accessing the ECID](extension/accessing-the-ecid.md)
   * [Web SDK extension release notes](extension/web-sdk-ext-release-notes.md)
-* Edge Network Gateway API {#server-api}
+* Edge Network Server API {#server-api}
   * [Overview](server-api/overview.md)
   * [Authentication](server-api/authentication.md)
   * [Visitor identification](server-api/visitor-identification.md)
