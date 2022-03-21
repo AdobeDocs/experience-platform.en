@@ -1,6 +1,6 @@
 ---
 keywords: streaming; HTTP destination
-title: HTTP connection
+title: (Beta) HTTP connection
 keywords: streaming;
 title: HTTP API connection
 description: The HTTP API destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
