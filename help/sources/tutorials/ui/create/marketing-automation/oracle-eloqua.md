@@ -25,9 +25,9 @@ In order to connect [!DNL Oracle Eloqua] to Platform, you must provide values fo
 
 | Credential | Description |
 | --- | --- |
-| Endpoint |
-| Username |
-| Password |
+| Endpoint | The endpoint of your [!DNL Oracle Eloqua]. |
+| Username | The username of your [!DNL Oracle Eloqua] account. The username must be formatted as `siteName + \\ + username`, where `siteName` is the company name you used to log in to [!DNL Oracle Eloqua] and `username` is your username. For example, your log in username can be: `adobe\\emily`. |
+| Password | The password corresponding to your [!DNL Oracle Eloqua] username. |
 
 For more information on authentication credentials for [!DNL Oracle Eloqua], see the [[!DNL Oracle Eloqua] guide on authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
