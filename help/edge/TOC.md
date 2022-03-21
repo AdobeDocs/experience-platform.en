@@ -57,17 +57,6 @@ feature: Web SDK
   * [Data element types](extension/data-element-types.md)
   * [Accessing the ECID](extension/accessing-the-ecid.md)
   * [Web SDK extension release notes](extension/web-sdk-ext-release-notes.md)
-* Edge Network Server API {#server-api}
-  * [Overview](server-api/overview.md)
-  * [Authentication](server-api/authentication.md)
-  * [Visitor identification](server-api/visitor-identification.md)
-  * Data collection {#server-api-data-collection}
-    * [Single-event data collection](server-api/interactive-data-collection.md)
-    * [Batch event data collection](server-api/non-interactive-data-collection.md)
-  * [Error handling](server-api/error-handling.md)
-  * [Client state management](server-api/client-state.md)
-  * [Troubleshooting](server-api/troubleshooting.md)
-  * [Service level agreements and targets](server-api/sla-slt.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
 * [Resources](resources.md)
