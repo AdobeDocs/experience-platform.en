@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Adobe Experience Platform Edge Network Server API Help
 breadcrumb-title: Adobe Experience Platform Edge Network Server API Guide
 user-guide-description: Interact with Experience Cloud services through the Edge Network Server API 
-feature: Adobe Experience Platform Edge Network Server API
+feature: Data Collection
 ---
 
-# Adobe Experience Platform Edge Network Server API {#edge}
+# Adobe Experience Platform Edge Network Server API {#server-api}
 
 * Edge Network Server API {#server-api}
   * [Overview](overview.md)
