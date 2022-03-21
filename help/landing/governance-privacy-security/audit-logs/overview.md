@@ -24,11 +24,11 @@ The following table outlines which actions on which resources are recorded by au
 | [Data type](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Create</li><li>Update</li><li>Reset</li><li>Delete</li></ul> |
 | [Destination](../../../destinations/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset Activate</li><li>Dataset Remove</li><li>Profile Activate</li><li>Profile Remove</li></ul> |
-| Segment | <ul><li>Create</li><li>Delete</li><li>Segment Activate</li><li>Segment Remove</li></ul> |
-| Merge policy | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| Computed attributes | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| Product profile | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| Account | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Segment](../../../segmentation/home.md) | <ul><li>Create</li><li>Delete</li><li>Segment Activate</li><li>Segment Remove</li></ul> |
+| [Merge policy](../../../profile/merge-policies/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Computed attribute](../../../profile/computed-attributes/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Product profile](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Account](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 
 ## Access to audit logs
 
@@ -54,7 +54,7 @@ Select an event from the list to view its details in the right rail.
 >
 >Since this a new feature, the data displayed will only go back to Jan 2022.
 
-Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results. Only the last 1000 records will be displayed irrespective of the various filters selected.
+Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
 
 ![Filters](../../images/audit-logs/filters.png)
 
@@ -64,11 +64,11 @@ The following filters are available for audit events in the UI:
 | --- | --- |
 | [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
 | [!UICONTROL Action] | Filter by action. Currently only [!UICONTROL Create] and [!UICONTROL Delete] actions can be filtered. |
-| [!UICONTROL User] | Enter the complete user ID (e.g. johndoe@acme.com) to filter by user. |
+| [!UICONTROL User] | Enter the complete user ID (for example, `johndoe@acme.com`) to filter by user. |
 | [!UICONTROL Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
-| [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. Data can be exported with a 90 day look-back period (e.g. 2021-12-15 to 2022-03-15). This can differ by event type. |
+| [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. Data can be exported with a 90-day lookback period (for example, 2021-12-15 to 2022-03-15). This can differ by event type. |
 
-To filter by user, enter the complete user ID (eg: johndoe@acme.com).
+To filter by user, enter the complete user ID (for example, `johndoe@acme.com`).
 
 ![User filter](../../images/audit-logs/user-filter.png)
 
