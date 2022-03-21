@@ -190,4 +190,4 @@ After applying the change, the Schema Registry responds with the following when 
 
 ## Next steps
 
-This guide covered how to extend soft enums in the Schema Registry API. For more information on how to define different field types in the API, see the guide on [XDM field type constraints](../schema/field-constraints.md#define-fields).
+This guide covered how to extend soft enums in the Schema Registry API. See the guide on [defining custom fields in the API](./custom-fields-api.md) for more information on how to create different field types.
