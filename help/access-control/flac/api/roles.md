@@ -6,10 +6,7 @@ description: The /roles endpoint in the Field Level Access Control API allows yo
 ---
 # Roles endpoint
 
-<!--
-Need a short and concise high-level overview of roles here.
--->
-The /roles endpoint in the Field Level Access Control API allows you to  programmatically manage roles in your IMS Organization.
+Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need. The `/roles` endpoint in the Field Level Access Control API allows you to  programmatically manage roles in your IMS Organization.
 
 ## Getting started
 
