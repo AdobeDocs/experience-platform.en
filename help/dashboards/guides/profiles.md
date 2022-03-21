@@ -7,10 +7,6 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 ---
 # [!UICONTROL Profiles] dashboard
 
->[!IMPORTANT]
->
->Several of the widgets documented for the profiles dashboard are currently in beta and your organization may not have access to them yet. The functionality described in this documentation is subject to change.
-
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your [!DNL Real-time Customer Profile] data, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Profiles] dashboard in the UI and provides information regarding the metrics displayed in the dashboard.  
 
 For an overview of all of the Profile features within the Experience Platform user interface, please visit the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).
@@ -72,13 +68,13 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Profiles count trend]](#profiles-count-trend)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
-* [[!UICONTROL Single Identity Profiles] (Beta)](#single-identity-profiles)
-* [[!UICONTROL Single Identity Profiles Trend] (Beta)](#single-identity-profiles-trend)
-* [[!UICONTROL Single Identity Profiles by Identity Type] (Beta)](#single-identity-profiles-by-identity-type)
-* [[!UICONTROL Unsegmented Profiles] (Beta)](#unsegmented-profiles)
-* [[!UICONTROL Unsegmented Profiles] Trend (Beta)](#unsegmented-profiles-trend)
-* [[!UICONTROL Unsegmented Profiles by Identity] (Beta)](#unsegmented-profiles-by-identity)
-* [[!UICONTROL Audience Size] (Beta)](#audience-size)
+* [[!UICONTROL Single Identity Profiles]](#single-identity-profiles)
+* [[!UICONTROL Single Identity Profiles Trend]](#single-identity-profiles-trend)
+* [[!UICONTROL Single Identity Profiles by Identity Type]](#single-identity-profiles-by-identity-type)
+* [[!UICONTROL Unsegmented Profiles]](#unsegmented-profiles)
+* [[!UICONTROL Unsegmented Profiles] Trend](#unsegmented-profiles-trend)
+* [[!UICONTROL Unsegmented Profiles by Identity]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL Audience Size]](#audience-size)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -140,7 +136,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ![](../images/profiles/identity-overlap.png)
 
-### [!UICONTROL Single Identity Profiles] (Beta) {#single-identity-profiles}
+### [!UICONTROL Single Identity Profiles] {#single-identity-profiles}
 
 The [!UICONTROL Single Identity Profiles] widget provides a count of your organization's profiles that are unauthenticated and only have one type of ID type that creates their identity. This ID type can either be an email or ECID. The profile count is generated from the data contained in the most recent snapshot.
 
@@ -148,7 +144,7 @@ The [!UICONTROL Single Identity Profiles] widget provides a count of your organi
 
 <!--  -->
 
-### [!UICONTROL Single Identity Profiles Trend] (Beta) {#single-identity-profiles-trend}
+### [!UICONTROL Single Identity Profiles Trend] {#single-identity-profiles-trend}
 
 The [!UICONTROL Single Identity Profiles Trend] widget illustrates the count trend of profiles over a set period of time that only have one type of ID type in their identity map. The periods available are 30 days, six months, and one year which is chosen from a dropdown menu. The count is reflected in a line graph with profile count on the Y-axis and time on the X-axis.
 
@@ -156,7 +152,7 @@ The [!UICONTROL Single Identity Profiles Trend] widget illustrates the count tre
 
 <!--   -->
 
-### [!UICONTROL Single Identity Profiles by Identity Type] (Beta) {#single-identity-profiles-by-identity-type}
+### [!UICONTROL Single Identity Profiles by Identity Type] {#single-identity-profiles-by-identity-type}
 
 The [!UICONTROL Single Identity Profiles by Identity Type] widget provides a breakdown of all single identity profiles by their respective source namespace identifiers. The visualization uses a bar chart with the five most common namespace identifiers on the Y-axis, and the profile count on the X-axis. This widget helps you to understand which namespaces are dominating the single-channel behavior of the customer.
 
@@ -164,7 +160,7 @@ The [!UICONTROL Single Identity Profiles by Identity Type] widget provides a bre
 
 <!--  -->
 
-### [!UICONTROL Unsegmented Profiles] (Beta) {#unsegmented-profiles}
+### [!UICONTROL Unsegmented Profiles] {#unsegmented-profiles}
 
 The [!UICONTROL Unsegmented Profiles] widget provides a total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot. This number represents an opportunity for profile activation across the organization, and can also indicate the opportunity to expunge profiles that do not provide adequate ROI.
 
@@ -174,19 +170,19 @@ The [!UICONTROL Unsegmented Profiles] widget provides a total number of all prof
 
 <!--  -->
 
-### [!UICONTROL Unsegmented Profiles Trend] (Beta) {#unsegmented-profiles-trend}
+### [!UICONTROL Unsegmented Profiles Trend] {#unsegmented-profiles-trend}
 
 The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, six months, and one-year periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the Y-axis and time on the X-axis.
 
 ![The Unsegmented Profiles Trend widget.](../images/profiles/unsegmented-profiles-trend.png)
 
-### [!UICONTROL Unsegmented Profiles by Identity] (Beta) (#unsegmented-profiles-by-identity)
+### [!UICONTROL Unsegmented Profiles by Identity] (#unsegmented-profiles-by-identity)
 
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
 
-### [!UICONTROL Audience Size] (Beta) (#audience-size)
+### [!UICONTROL Audience Size] (#audience-size)
 
 The [!UICONTROL Audience Size] widget lists the top 20 segments by audience size from largest to smallest. The widget contains two columns. The first column is the name of the segment and the second is the total number of profiles that meet the criteria for that segment definition.
 
