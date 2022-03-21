@@ -37,6 +37,19 @@ For more information on enabling a dataset for [!DNL Profile] and [!DNL Identity
 | Real-time Customer Profile | < 1 minute |
 | Data Lake | < 60 minutes |
 
+## Request per seconds (RPS) guidance on streaming ingestion
+
+The table below displays guidance on the request per seconds limits for streaming ingestion.
+
+| RPS limit | Notes |
+| --- | --- |
+| 1000 requests per second | These can contain multiple messages, in the case of the `/collection/batch` endpoint. |
+| 10000 individual messages per second | If you are using the `/collection/batch` endpoint, then these messages can be grouped into fewer actual requests. |
+
+>[!IMPORTANT]
+>
+>When using synchronous validation, which is intended for debugging purposes, the enforced limit becomes **60 requests per minute**.
+
 ## Adobe Experience Platform extension
 
 You can use the Adobe Experience Platform extension to create a new streaming connection. The [!DNL Experience Platform] extension provides actions to send beacons formatted in [!DNL Experience Data Model] (XDM) for real-time ingestion to [!DNL Experience Platform]. Visit the [Experience Platform Extension](../../tags/extensions/web/sdk/overview.md) documentation for more information.
