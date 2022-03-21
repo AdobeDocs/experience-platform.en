@@ -28,10 +28,10 @@ The **[!UICONTROL Browse]** tab shows queries saved by users in your organizatio
 
 | Column | Description |
 | --- | --- |
-| Name | The query name created by the user. You can select on the name to open the query in the [!DNL Query Editor]. You can also use the search bar to search on the Name of a query. Searches are case sensitive. |
-| SQL | The first few characters of the SQL query. Hovering over the code displays the full query. |
-| Modified By | The last user who modified the query. Any user in your organization with access to [!DNL Query Service] can modify queries. |
-| Last Modified | The date and time of the last modification to the query, in the browser's time zone. |
+| **[!UICONTROL Name]** | The query name created by the user. You can select on the name to open the query in the [!DNL Query Editor]. You can also use the search bar to search on the Name of a query. Searches are case sensitive. |
+| **[!UICONTROL SQL]** | The first few characters of the SQL query. Hovering over the code displays the full query. |
+| **[!UICONTROL Modified By]** | The last user who modified the query. Any user in your organization with access to [!DNL Query Service] can modify queries. |
+| **[!UICONTROL Last Modified]** | The date and time of the last modification to the query, in the browser's time zone. |
 
 ## Log
 
