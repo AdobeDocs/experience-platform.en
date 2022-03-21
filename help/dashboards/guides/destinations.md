@@ -154,7 +154,7 @@ If a segment within the [!UICONTROL Mapped audience health] widget is deviating 
 
 The [!UICONTROL Destinations count] widget provides the total number of endpoints available where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. 
 
-<!-- Select **View destinations** to navigate to the destinations browse tab, where the catalog of available destinations are displayed. -->
+Below the total count, select **Destinations** to navigate to the destinations browse tab. This page lists all the destinations that you have established a connection with to date.
 
 ![The Destinations count widget.](../images/destinations/destinations-count.png)
 
