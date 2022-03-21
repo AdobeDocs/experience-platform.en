@@ -23,14 +23,14 @@ The following sections provide additional information that you need to know in o
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with [!DNL Zoho CRM], you must provide values for the following connection properties:
+In order for [!DNL Flow Service] to connect with [!DNL Oracle Eloqua], you must provide values for the following connection properties:
 
 | Credential | Description |
 | --- | --- |
-| `endpoint` |
-| `username` |
-| `password` |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Oracle Eloqua] is: ``. |
+| `endpoint` | The endpoint of your [!DNL Oracle Eloqua]. |
+| `username` | The username of your [!DNL Oracle Eloqua] account. The username must be formatted as `siteName + \\ + username`, where `siteName` is the company name you used to log in to [!DNL Oracle Eloqua] and `username` is your username. For example, your log in username can be: `adobe\\emily`. |
+| `password` | The password corresponding to your [!DNL Oracle Eloqua] username. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Oracle Eloqua] is: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 For more information on authentication credentials for [!DNL Oracle Eloqua], see the [[!DNL Oracle Eloqua] guide on authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
@@ -74,7 +74,7 @@ curl -X POST \
           }
       },
       "connectionSpec": {
-          "id": "",
+          "id": "35d6c4d8-c9a9-11eb-b8bc-0242ac130003",
           "version": "1.0"
       }
   }'
@@ -82,13 +82,13 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- |
-| `name` |
-| `description` |
+| `name` | The name of your [!DNL Oracle Eloqua] base connection. It is recommended to provide a descriptive name as you can use this value to look up your base connection. |
+| `description` | (Optional) A property that you can include to provide supplementary information on your base connection. |
 | `auth.specName` | The authentication type used for the connection. |
-| `auth.params.endpoint` |
-| `auth.params.username` |
-| `auth.params.password` |
-| `connectionSpec.id` |
+| `auth.params.endpoint` | The endpoint of your [!DNL Oracle Eloqua] server.  |
+| `auth.params.username` | The concatenated credential that includes the site name and username that corresponds with your [!DNL Oracle Eloqua] account. |
+| `auth.params.password` | The password that corresponds with your [!DNL Oracle Eloqua] account. |
+| `connectionSpec.id` | The connection spec ID of the [!DNL Oracle Eloqua] source. The value for this ID is: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 **Response**
 
