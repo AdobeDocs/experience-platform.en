@@ -45,8 +45,7 @@ Depending on whether you are part of the beta for consent policies, one of the f
 
 * If you are not part of the beta, you are immediately brought to the workflow for [creating a data governance policy](#create-governance-policy).
 * If you are part of the beta, a dialog provides an additional option to [create a consent policy](#consent-policy).
-
-![](../images/policies/choose-policy-type.png)
+  ![](../images/policies/choose-policy-type.png)
 
 ### Create a data governance policy {#create-governance-policy}
 
