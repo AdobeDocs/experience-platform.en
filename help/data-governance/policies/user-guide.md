@@ -44,7 +44,7 @@ To create a new custom data usage policy, select **[!UICONTROL Create policy]** 
 Depending on whether you are part of the beta for consent policies, one of the following will occur:
 
 * If you are not part of the beta, you are immediately brought to the workflow for [creating a data governance policy](#create-governance-policy).
-* If you are part of the beta, a dialog provides an additional option to [create a consent policy](#create-consent-policy).
+* If you are part of the beta, a dialog provides an additional option to [create a consent policy](#consent-policy).
 
 ![](../images/policies/choose-policy-type.png)
 
@@ -74,7 +74,7 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 
 ![](../images/policies/created-policy.png)
 
-### Create a consent policy (Beta) {#create-consent-policy}
+### Create a consent policy (Beta) {#consent-policy}
 
 >[!IMPORTANT]
 >
@@ -110,6 +110,22 @@ Under the **[!UICONTROL Then]** section, select at least one consent attribute f
 When selecting the consent attribute, choose the values for the attribute that you want this policy to check for. 
 
 ![](../images/policies/select-schema-field.png)
+
+After you have selected at least one consent attribute, the **[!UICONTROL Policy properties]** panel updates to show the estimated number of profiles that would be allowed under this policy, including the percentage of the total profile store. This estimation automatically updates as you adjust the policy configuration.
+
+![](../images/policies/audience-preview.png)
+
+To add further consent attributes to the policy, select **[!UICONTROL Add result]**.
+
+![](../images/policies/add-result.png)
+
+You can continue adding and adjusting conditions and consent attributes to the policy as needed. When you are satisfied with the configuration, provide a name and optional description for the policy before selecting **[!UICONTROL Save]**.
+
+![](../images/policies/name-and-save.png)
+
+The consent policy is now created, and its status is set to [!UICONTROL Disabled] by default. To enable the policy right away, select the **[!UICONTROL Status]** toggle in the right rail.
+
+![](../images/policies/enable-consent-policy.png)
 
 ## Enable or disable a policy {#enable}
 

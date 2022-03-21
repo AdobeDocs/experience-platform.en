@@ -28,7 +28,8 @@ The following diagram illustrates how policy enforcement is integrated into the 
 When a segment is first activated, [!DNL Policy Service] checks for policy violations based on the following factors:
 
 * The data usage labels applied to fields and datasets within the segment to be activated.
-* The marketing purpose of the destination. 
+* The marketing purpose of the destination.
+* (Beta) The consent attributes of the profiles included in the segment
 
 >[!NOTE]
 >
@@ -54,9 +55,9 @@ Each stage in the above timeline represents an entity that may contribute to a p
 
 | Data lineage stage | Role in policy enforcement |
 | --- | --- |
-| Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts. |
+| Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments. |
 | Merge policy | Merge policies are the rules that Platform uses to determine how data will be prioritized when merging together fragments from multiple datasets. Policy violations will occur if your merge policies are configured so that datasets with restricted labels are activated to a destination. See the [merge policies overview](../../profile/merge-policies/overview.md) for more information. |
-| Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. |
+| Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case.<br><br>If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments. |
 | Destination | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a data usage policy. In other words, the marketing use case you define for a destination determines which data usage policies are applicable to that destination. Policy violations will occur if you activate a segment whose usage labels are restricted by the target destination's applicable policies. |
 
 >[!IMPORTANT]
