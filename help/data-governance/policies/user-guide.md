@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;data governance;data usage pol
 solution: Experience Platform
 title: Manage Data Usage Policies in the UI
 topic-legacy: policies
-description: Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the Policies workspace in the Experience Platform user interface.
+description: Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions that you can perform in the Policies workspace in the Experience Platform user interface.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 ---
 # Manage data usage policies in the UI
 
-Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the **Policies** workspace in the [!DNL Experience Platform] user interface.
+Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions that you can perform in the **Policies** workspace in the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
@@ -41,10 +41,10 @@ To create a new custom data usage policy, select **[!UICONTROL Create policy]** 
 
 ![](../images/policies/create-policy-button.png)
 
-Depending on whether you are part of the beta for consent policies, one of the following will occur:
+Depending on whether you are part of the beta for consent policies, one of the following occurs:
 
 * If you are not part of the beta, you are immediately brought to the workflow for [creating a data governance policy](#create-governance-policy).
-* If you are part of the beta, a dialog provides an additional option to [create a consent policy](#consent-policy).
+* If you are part of the beta, a dialog provides an extra option to [create a consent policy](#consent-policy).
   ![](../images/policies/choose-policy-type.png)
 
 ### Create a data governance policy {#create-governance-policy}
@@ -128,7 +128,7 @@ The consent policy is now created, and its status is set to [!UICONTROL Disabled
 
 ## Enable or disable a policy {#enable}
 
-All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy through the API or UI.
+All data usage policies (including core policies provided by Adobe) are disabled by default. For an individual policy to be considered for enforcement, you must manually enable that policy through the API or UI.
 
 You can enable or disable policies from the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace. Select a custom policy from the list to display its details on the right. Under **[!UICONTROL Status]**, select the toggle button to enable or disable the policy.
 
@@ -168,7 +168,7 @@ If the marketing action is not being used by any existing usage policies, you ca
 
 >[!NOTE]
 >
->Attempting to delete a marketing action that is being used by an existing policy will cause an error message to appear, indicating that the delete attempt failed.
+>Attempting to delete a marketing action that is being used by an existing policy causes an error message to appear, indicating that the delete attempt failed.
 
 ![](../images/policies/delete-marketing-action.png)
 
