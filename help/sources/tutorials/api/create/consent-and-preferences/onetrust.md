@@ -4,23 +4,21 @@ solution: Experience Platform
 title: (Beta) Create a dataflow for a OneTrust source using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to OneTrust using the Flow Service API.
 ---
-# (Beta) Create a dataflow for a OneTrust source using the Flow Service API
+# (Beta) Create a dataflow for a [!DNL OneTrust] source using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a source connection and a dataflow to bring both historic and scheduled consent data from [[!DNL OneTrust]](https://www.onetrust.com/company/about-us/*) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring both historic and scheduled consent data from [[!DNL OneTrust]](https://my.onetrust.com/s/contactsupport?language=en_US) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!IMPORTANT]
 >
->This documentation page was created by the [!DNL OneTrust] team. For any inquiries or update requests, please contact them directly at *https://my.onetrust.com/s/contactsupport?language=en_US*.
+>This documentation page was created by the [!DNL OneTrust] team. For any inquiries or update requests, [please contact them directly](https://my.onetrust.com/s/contactsupport?language=en_US).
 
 ## Prerequisites
 
-Before you can connect [!DNL OneTrust] to Platform, you must retrieve your access token. For detailed instructions on finding your access token, see the [[!DNL OneTrust] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Before you can connect [!DNL OneTrust] to Platform, you must first retrieve your access token. For detailed instructions on finding your access token, see the [[!DNL OneTrust] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
 Furthermore, it is important to note that the [!DNL OneTrust] API specifications are being shared with Adobe for data ingestion.
 
->[!TIP]
->
->The access token does not refresh automatically when after it expires because system-to-system refresh tokens are not supported by [!DNL OneTrust]. Therefore it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum life of an access token that can be configured is 1 Year.
+The access token does not refresh automatically when after it expires because system-to-system refresh tokens are not supported by [!DNL OneTrust]. Therefore it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum life of an access token that can be configured is 1 Year.
 
 ## Connect [!DNL OneTrust] to Platform using the [!DNL Flow Service] API
 
