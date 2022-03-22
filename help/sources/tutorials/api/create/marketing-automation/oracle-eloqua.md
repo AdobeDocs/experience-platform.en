@@ -106,6 +106,6 @@ A successful response returns details of the newly created base connection, incl
 By following this tutorial, you have created an [!DNL Oracle Eloqua] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 
 * [Explore the structure and contents of a marketing automation source using the [!DNL Flow Service] API](../../explore/marketing-automation.md)
-* [Create a dataflow to bring marketing automation data to Platform using the [!DNL Flow Service] API](../../dataflow/marketing-automation.md)
+* [Create a dataflow to bring marketing automation data to Platform using the [!DNL Flow Service] API](../../collect/marketing-automation.md)
 
 
