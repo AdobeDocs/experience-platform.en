@@ -18,7 +18,7 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 >
 >Before creating a custom personalization connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Profile request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../edge/fundamentals/datastreams.md).
 
