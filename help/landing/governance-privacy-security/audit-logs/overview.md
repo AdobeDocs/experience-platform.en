@@ -52,7 +52,7 @@ Select an event from the list to view its details in the right rail.
 
 >[!NOTE]
 >
->Since this a new feature, the data displayed will go back to March 2022. Depending on the resource selected, earlier data may be available from Jan 2022.
+>Since this a new feature, the data displayed only goes back to March 2022. Depending on the resource selected, earlier data may be available from January 2022.
 
 
 Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
@@ -68,10 +68,6 @@ The following filters are available for audit events in the UI:
 | [!UICONTROL User] | Enter the complete user ID (for example, `johndoe@acme.com`) to filter by user. |
 | [!UICONTROL Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
 | [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. Data can be exported with a 90-day lookback period (for example, 2021-12-15 to 2022-03-15). This can differ by event type. |
-
-To filter by user, enter the complete user ID (for example, `johndoe@acme.com`).
-
-![User filter](../../images/audit-logs/user-filter.png)
 
 To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
 
