@@ -20,7 +20,7 @@ Select any category on the list to open the **[!UICONTROL Edit Permissions]** pa
 
 The **[!UICONTROL Edit Permissions]** page provides a workspace to add and remove permissions from the selected product profile. The left side of the screen displays a list of permission categories. Selecting a category changes the permissions that are displayed under **[!UICONTROL Available Permissions Items]**.
 
-For example, to update permissions for Profile Management, select **[!UICONTROL Profile Management]**.
+For example, to update permissions for Data Modeling, select **[!UICONTROL Data Modeling]**.
 
 ![profile-management](../images/profile-management.png)
 
