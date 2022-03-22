@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Documentation self-service template for the UI
+title: Self-service documentation template for the UI
 description: Learn how to create a YOURSOURCE source connection using the Adobe Experience Platform UI.
 hide: true
 hidefromtoc: true
@@ -9,7 +9,7 @@ hidefromtoc: true
 
 *As you go through this template, replace or delete all the paragraphs in italics (starting with this one).*
 
-*Start by updating the metadata (title and description) at the top of the page. Please ignore all instances of DNL on this page. This is a tag that helps our machine translation processes correctly translate the page into the multiple languages that we support. We will add tags to your documentation after you submit it.*
+*Start by updating the metadata (title and description) at the top of the page. Please ignore all instances of UICONTROL on this page. This is a tag that helps our machine translation processes correctly translate the page into the multiple languages that we support. We will add tags to your documentation after you submit it.*
 
 This tutorial provides steps for creating a *YOURSOURCE* source connector using the Platform user interface.
 
@@ -72,9 +72,9 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-*Workflows for the remaining steps of creating a dataflow are modularized. If there are any specific call outs you want to make regarding your source, please see the additional resources section below.*
+*Workflows for the remaining steps of creating a dataflow are modularized. If there are any specific call-outs you want to make regarding your source, please see the additional resources section below.*
 
-By following this tutorial, you have established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=en).
+By following this tutorial, you have established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Additional resources
 
