@@ -1,6 +1,7 @@
 ---
 title: Premium CDN support for tags
 description: Learn about the premium CDN feature for tags and how it can be used to deliver your content in multiple geographic regions.
+exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
 ---
 # Premium CDN support for tags (Beta)
 
@@ -14,21 +15,13 @@ To account for this, tags in Experience Platform provides a premium CDN feature 
 
 Premium CDN support is a paid feature, and must be purchased by your organization in order to enable and use it. This guide covers how to configure and use this feature in the Data Collection UI after it has been purchased.
 
-## Enable premium CDN for a company
+## Enable premium CDN for your organization
 
-Premium CDN is enabled at the company level, meaning that you must have company edit permissions to enable the feature.
-
-In the Data Collection UI, navigate to **[!UICONTROL Tags]** > **[!UICONTROL Companies]**. From here, select the company that you want to enable the feature for, then select **[!UICONTROL Configure]** .
-
-![Select a company to configure](../../images/ui/publishing/premium-cdn/configure-property.png)
-
-In the configuration dialog that appears, select the option for **[!UICONTROL Premium CDN Enabled]** before selecting **[!UICONTROL Save]** to confirm your changes.
-
-![Enable the premium CDN option](../../images/ui/publishing/premium-cdn/enable-premium-cdn.png)
+Premium CDN is enabled at the company level. Once your organization has purchased the premium CDN feature, an Adobe administrator will enable for your company in the Data Collection UI.
 
 ## Rebuild and install tag libraries with updated embed codes
 
-Enabling the premium CDN feature does not mean that your tag assets are immediately replicated and ready to use within the new regions. It only means that you can now choose when to opt in to this functionality.
+Once premium CDN is enabled, it does not mean that your tag assets are immediately replicated and ready to use within the new regions. It only means that you can now choose when to opt in to this functionality.
 
 >[!IMPORTANT]
 >
