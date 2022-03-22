@@ -30,21 +30,21 @@ Labels can only be applied to schemas, and cannot be added to the components tha
 
 To edit the labels for an individual field, you can select the field in the canvas and then select **[!UICONTROL Manage access]** in the right rail.
 
-![](../images/tutorials/labels/manage-access.png)
+![Select a field from the Schema Editor canvas](../images/tutorials/labels/manage-access.png)
 
 You can also select the **[!UICONTROL Labels]** tab, choose the desired field from the list, and select **[!UICONTROL Edit governance labels]** in the right rail.
 
-![](../images/tutorials/labels/select-field-on-labels-tab.png)
+![Select a field from the [!UICONTROL Labels] tab](../images/tutorials/labels/select-field-on-labels-tab.png)
 
 To edit the labels for the entire schema, select the pencil icon (![](../images/tutorials/labels/pencil-icon.png)) next to the schema's name under the **[!UICONTROL Labels]** tab.
 
-![](../images/tutorials/labels/select-schema-on-labels-tab.png)
+![Select the schema name from the [!UICONTROL Labels] tab](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
 ## Edit the labels for the schema or field
 
 A dialog appears that allows you to edit the labels for the selected field. If you selected an individual object-type field, the right rail lists the sub-fields that the applied labels will propagate to.
 
-![](../images/tutorials/labels/edit-labels.png)
+![Selected fields displayed](../images/tutorials/labels/edit-labels.png)
 
 >[!NOTE]
 >
@@ -52,19 +52,19 @@ A dialog appears that allows you to edit the labels for the selected field. If y
 
 Use the displayed list to select the labels you want to add to the schema or field. As labels are chosen, the **[!UICONTROL Applied labels]** section updates to show the labels that have been selected so far.
 
-![](../images/tutorials/labels/applied-labels.png)
+![Applied labels displayed](../images/tutorials/labels/applied-labels.png)
 
 To filter the displayed labels by type, select the desired category in the left rail. To create a new custom label, select **[!UICONTROL Create label]**.
 
-![](../images/tutorials/labels/filter-and-create-custom.png)
+![Filter displayed labels or create a new label](../images/tutorials/labels/filter-and-create-custom.png)
 
 Once you are satisfied with your chosen labels, select **[!UICONTROL Save]** to apply them to the field or schema.
 
-![](../images/tutorials/labels/save-labels.png)
+![Save the selected labels](../images/tutorials/labels/save-labels.png)
 
 The **[!UICONTROL Labels]** tab reappears, showing the applied labels for the schema.
 
-![](../images/tutorials/labels/field-labels-added.png)
+![Field labels applied](../images/tutorials/labels/field-labels-added.png)
 
 ## Next steps
 
