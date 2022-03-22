@@ -42,7 +42,7 @@ You can view audit logs for different Experience Platform features within the **
 
 ![Audit logs dashboard](../../images/audit-logs/audits.png)
 
-The system only displays audit logs from the last year. Any logs that exceed this limit are automatically removed from the system.
+Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only back for a maximum period of 365 days.
 
 Select an event from the list to view its details in the right rail.
 
