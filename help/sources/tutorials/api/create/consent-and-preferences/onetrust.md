@@ -87,6 +87,7 @@ A successful response returns the newly created base connection, including its u
 ### Explore your source {#explore}
 
 Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests.
+
 Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
 
 **API format**
@@ -105,8 +106,6 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-\
-
 
 **Request**
 
