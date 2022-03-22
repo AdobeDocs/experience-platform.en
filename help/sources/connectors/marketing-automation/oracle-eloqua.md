@@ -21,7 +21,7 @@ The documentation below provides information on how to connect [!DNL Oracle Eloq
 
 * [Create an Oracle Eloqua base connection using the Flow Service API](../../tutorials/api/create/marketing-automation/oracle-eloqua.md)
 * [Explore the data structure and contents of a marketing automation source using the Flow Service API](../../tutorials/api/explore/marketing-automation.md)
-- [Create a dataflow for a marketing automation source using the Flow Service API](../../tutorials/api/collect/marketing-automation.md)
+* [Create a dataflow for a marketing automation source using the Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connect [!DNL Oracle Eloqua] to Platform using the UI
 
