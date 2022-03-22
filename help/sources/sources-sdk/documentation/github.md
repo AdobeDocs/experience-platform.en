@@ -32,6 +32,10 @@ Once the fork is complete, select **master** and enter a name for your new branc
 
 In the GitHub folder structure of your forked repository, navigate your way to `experience-platform.en/help/sources/tutorials/api/create/` and then select the appropriate category for your source from the list. For example, if you are creating documentation for a new cloud storage source, select **cloud-storage**.
 
+>[!TIP]
+>
+>If you are creating documentation for the UI, then navigate your way to `experience-platform.en/help/sources/tutorials/ui/create/` and select the appropriate category for your source. To add your images, navigate to `experience-platform.en/help/sources/images/tutorials/create/sdk` then add your screenshots to the `sdk` folder.
+
 ![cloud-storage](../assets/cloud-storage.png)
 
 A folder of existing cloud storage sources appears. To add documentation for a new source, select **Add file** and then select **Create new file** from the dropdown menu that appears.
