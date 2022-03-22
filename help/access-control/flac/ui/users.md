@@ -23,4 +23,5 @@ Select the **[!UICONTROL Roles]** tab to view the roles the user is assigned to.
 ![enable-services](../../images/flac-users-roles.png)
 
 ## Next steps
+
 You have now learnt how to view user details and the roles they are currently added to.
