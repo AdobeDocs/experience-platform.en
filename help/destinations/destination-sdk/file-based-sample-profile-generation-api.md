@@ -113,6 +113,6 @@ A successful response returns HTTP status 200 with the specified number of sampl
 
 Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
 
-<!-- ## Next steps
+## Next steps
 
-After reading this document, you now know how to generate sample profiles to be used when [testing a message transformation template](./create-template.md) or when [testing if your destination is configured correctly](./test-destination.md). -->
+After reading this document, you now know how to generate sample profiles to be used when [testing your file-based destination](file-based-destination-testing-api.md).
