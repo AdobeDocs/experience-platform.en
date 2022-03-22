@@ -19,7 +19,7 @@ Before you can connect [!DNL OneTrust] to Platform, you must retrieve your acces
 
 Furthermore, it is important to note that the [!DNL OneTrust] API specifications are being shared with Adobe for data ingestion.
 
->[!IMPORTANT]
+>[!TIP]
 >
 >The access token does not refresh automatically when after it expires because system-to-system refresh tokens are not supported by [!DNL OneTrust]. Therefore it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum life of an access token that can be configured is 1 Year.
 
