@@ -76,6 +76,7 @@ feature: Sources
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
     - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
+    - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
@@ -135,6 +136,7 @@ feature: Sources
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
       - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
+      - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -230,6 +232,7 @@ feature: Sources
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - [Mailchimp Campaigns](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
       - [Mailchimp Members](tutorials/ui/create/marketing-automation/mailchimp-members.md)
+      - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
