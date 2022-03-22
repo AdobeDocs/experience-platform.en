@@ -8,7 +8,6 @@ description: Learn how to connect Adobe Experience Platform to OneTrust using th
 
 The following tutorial walks you through the steps to create a source connection and a dataflow to bring both historic and scheduled consent data from [[!DNL OneTrust]](https://www.onetrust.com/company/about-us/*) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-
 >[!IMPORTANT]
 >
 >This documentation page was created by the [!DNL OneTrust] team. For any inquiries or update requests, please contact them directly at *https://my.onetrust.com/s/contactsupport?language=en_US*.
@@ -25,13 +24,13 @@ Furthermore, it is important to note that the [!DNL OneTrust] API specifications
 
 ## Connect [!DNL OneTrust] to Platform using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a *ONETRUST* source connection and create a dataflow to bring *ONETRUST* data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL OneTrust] source connection and create a dataflow to bring [!DNL OneTrust] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Create a base connection {#base-connection}
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your *ONETRUST* authentication credentials as part of the request body.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL OneTrust] authentication credentials as part of the request body.
 
 **API format**
 
@@ -41,7 +40,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for *ONETRUST* :
+The following request creates a base connection for [!DNL OneTrust] :
 
 ```shell
 curl -X POST \
@@ -95,7 +94,7 @@ Use the following calls to find the path of the file you wish to bring into [!DN
 **API format**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}
 ```
 
 When performing GET requests to explore your source's file structure and contents, you must include the query parameters that are listed in the table below:
@@ -108,14 +107,14 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `list_id` string in base64. In the example below, `"list_id": "10c097ca71"` encoded in base64 equates to `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. We can ignore this paramater for now becasue the OneTrust API does not accept any default query parameters.|
+\
 
 
 **Request**
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/622124ca-6d18-47f7-999c-66f599955309/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/622124ca-6d18-47f7-999c-66f599955309/explore?objectType=rest&object=json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -6724,7 +6723,6 @@ A successful response returns the structure of the queried file.
 
 +++
 
-
 ### Create a source connection {#source-connection}
 
 You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
@@ -6737,7 +6735,7 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for *ONETRUST* :
+The following request creates a source connection for [!DNL OneTrust] :
 
 ```shell
 curl -X POST \
@@ -6766,9 +6764,9 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
-| `baseConnectionId` | The base connection ID of *ONETRUST*. This ID was generated in an earlier step. |
+| `baseConnectionId` | The base connection ID of [!DNL OneTrust]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
-| `data.format` | The format of the *ONETRUST* data that you want to ingest. Currently, the only supported data format is `json`. |
+| `data.format` | The format of the [!DNL OneTrust] data that you want to ingest. Currently, the only supported data format is `json`. |
 
 **Response**
 
@@ -6787,13 +6785,13 @@ In order for the source data to be used in Platform, a target schema must be cre
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
-For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
 ### Create a target dataset {#target-dataset}
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
-For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../../catalog/api/create-dataset.md).
 
 ### Create a target connection {#target-connection}
 
@@ -6809,7 +6807,7 @@ POST /targetConnections
 
 **Request**
 
-The following request creates a target connection for *ONETRUST* :
+The following request creates a target connection for [!DNL OneTrust] :
 
 ```shell
 curl -X POST \
@@ -6840,7 +6838,7 @@ curl -X POST \
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | The format of the *ONETRUST* data that you want to bring to Platform. |
+| `data.format` | The format of the [!DNL OneTrust] data that you want to bring to Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 
@@ -6930,7 +6928,6 @@ curl -X POST \
 | `xdmSchema` | The ID of the [target XDM schema](#target-schema) generated in an earlier step. |
 | `mappings.destinationXdmPath` | The destination XDM path where the source attribute is being mapped to. |
 | `mappings.sourceAttribute` | The source attribute that needs to be mapped to a destination XDM path. |
-| `mappings.identity` | A boolean value that designates whether the mapping set will be marked for [!DNL Identity Service]. |
 
 **Response**
 
@@ -6949,7 +6946,7 @@ A successful response returns details of the newly created mapping including its
 
 ### Create a flow {#flow}
 
-The last step towards bringing data from *ONETRUST* to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing data from [!DNL OneTrust] to Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)
