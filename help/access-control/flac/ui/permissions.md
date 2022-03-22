@@ -8,7 +8,30 @@ hidefromtoc: true
 
 # Manage permissions for a role
 
-Immediately after [creating a new role](#create-a-new-role), you are returned to the **[!UICONTROL Roles]** tab. If you are editing permissions for an existing role, select the role from the **[!UICONTROL Roles]** tab to open the role's details page.
+Immediately after [creating a new role](#create-a-new-role), you are returned to the **[!UICONTROL Roles]** tab. If you are editing permissions for an existing role, select the role from the **[!UICONTROL Roles]** tab. Alternatively, use the filter option to filter the results to find a role.
+
+## Filter roles
+
+Select the funnel icon (![Filter icon](../../images/icon.png)) to display a list of filter controls to help narrow results.
+
+![enable-services](../../images/flac-filters.png)
+
+The following filters are available for roles in the UI:
+
+| Filter | Description |
+| --- | --- |
+| [!UICONTROL Created between] | Select a start date and/or an end date to define a date range to filter results by. |
+| [!UICONTROL Created by] | Filter by role creator by selecting a user from the dropdown. |
+| [!UICONTROL Modified between] | Select a start date and/or an end date to define a date range to filter results by.  |
+| [!UICONTROL Modified by] | Filter by role modifier by selecting a user from the dropdown. |
+
+To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
+
+![enable-services](../../images/flac-clear-filters.png)
+
+## Role details
+
+Select the role select the role from the **[!UICONTROL Roles]** tab, which will open the role's details page.
 
 ![enable-services](../../images/flac-details.png)
 
@@ -65,26 +88,6 @@ Added users appear under **[!UICONTROL Users]** tab.
 To remove a user, select the **X** icon next to the users name, to remove the user from the role.
 
 ![enable-services](../../images/flac-remove-users.png)
-
-## Filter roles
-
-Select the funnel icon (![Filter icon](../../images/icon.png)) to display a list of filter controls to help narrow results.
-
-![enable-services](../../images/flac-filters.png)
-
-The following filters are available for roles in the UI:
-
-| Filter | Description |
-| --- | --- |
-| [!UICONTROL Created between] | Select a start date and/or an end date to define a date range to filter results by. |
-| [!UICONTROL Created by] | Filter by role creator by selecting a user from the dropdown. |
-| [!UICONTROL Modified between] | Select a start date and/or an end date to define a date range to filter results by.  |
-| [!UICONTROL Modified by] | Filter by role modifier by selecting a user from the dropdown. |
-
-To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
-
-![enable-services](../../images/flac-clear-filters.png)
-
 
 ## Next steps
 With permissions established, you can proceed to the next step to [manage users](users.md)
