@@ -22,8 +22,7 @@ To read further about OneTrust, please visit https://www.onetrust.com/company/ab
 
 >[!IMPORTANT]
 >
->The access token does not refresh automatically when expires because system-to-system refresh tokens are not supported by OneTrust.
-Therefore it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum life of an access token that can be configured is 1 Year.
+>The access token does not refresh automatically when expires because system-to-system refresh tokens are not supported by OneTrust. Therefore it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum life of an access token that can be configured is 1 Year.
 
 ## Connect *ONETRUST* to Platform using the [!DNL Flow Service] API
 
