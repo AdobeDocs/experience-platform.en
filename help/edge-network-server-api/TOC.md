@@ -11,6 +11,7 @@ feature: Data Collection
 
 * Edge Network Server API {#server-api}
   * [Overview](overview.md)
+  * [Guardrails](guardrails.md)
   * [Authentication](authentication.md)
   * [Visitor identification](visitor-identification.md)
   * Data collection {#server-api-data-collection}
@@ -19,4 +20,4 @@ feature: Data Collection
   * [Error handling](error-handling.md)
   * [Client state management](client-state.md)
   * [Troubleshooting](troubleshooting.md)
-  * [Service level agreements and targets](sla-slt.md)
+

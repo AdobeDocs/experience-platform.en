@@ -5,7 +5,7 @@ seo-description: Learn how to configure authentication for Adobe Experience Edge
 keywords: data collection;collection;Adobe Experience Platform Edge Network;api;sla;slt;service levels
 ---
 
-# Service level agreements and targets
+# Guardrails
 
 ## Overview {#overview}
 
