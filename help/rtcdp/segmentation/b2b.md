@@ -94,6 +94,10 @@ Find all the people who are a "Decision Maker" of any closed-lost opportunity, a
 
 ![UI displaying example 7 settings](../assets/segmentation/example-7.png)
 
-## Next steps
+### Example 8: Target related accounts {#related-accounts}
+
+Find all the people who work in a Human Resources (HR) department and are related to any account *or any one of the account's related accounts* that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the XDM Individual Profile class, XDM Business Account class, and XDM Business Opportunity class.
+
+## Next steps {#next-steps}
 
 After reading this overview, you now have an understanding of the segmentation possibilities that are available using Real-time CDP, B2B Edition. For more information about the Segmentation Service, please read the [Segmentation documentation](../../segmentation/home.md).
