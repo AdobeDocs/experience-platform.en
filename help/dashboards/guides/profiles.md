@@ -205,6 +205,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 The [!UICONTROL Audience Size] widget lists the top 20 segments by audience size from largest to smallest. The widget contains two columns. The first column is the name of the segment and the second is the total number of profiles that meet the criteria for that segment definition.
 
 ![The Audience Size widget](../images/profiles/audience-size.png)
+
 ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
 >[!IMPORTANT]
