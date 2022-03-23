@@ -19,17 +19,21 @@ Field level access control involves the following components:
 | Terminology | Definition |
 | --- | --- |
 | Attributes | Attributes are the identifiers that indicate the correlation between a user and the Platform resources that they have access to. |
-| Labels |
+| Labels | 
 | Permission sets | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | Policies | Policies are statements that bring attributes together to establish permissible and impermissible actions. Policies can either be local or global, and can override other policies. |
-| Resource | A resource is the asset or object that a subject can or cannot access. Resources can be files, applications, servers, or even APIs, |
+| Resource | A resource is the asset or object that a subject can or cannot access. Resources can be files, applications, servers, or even APIs. |
 | Roles | Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need. |
 | Subject | A subject is the user requesting access to a resource to perform an action. |
 | User groups | User groups are multiple users that have been grouped together and have the access to execute the same functions. |
 
 ## Permissions UI
 
+The Permissions UI in Adobe Experience Cloud provides a central location for managing field level access control configurations for subjects and resources in your organization. Through the Permissions UI, you can create and manage roles, as well as assign the desired resource permissions for these roles. The Permissions UI also allows you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the Permissions UI guide.
+
 ## Field level access control API
+
+The Field Level Access Control API allows you to programmatically manage roles, products, permission categories, and permission sets within Platform using APIs.
 
 ## Field level access control in Platform
 
@@ -41,16 +45,38 @@ The following sections provide information on how field level access control is 
 
 ### XDM
 
-Experience Data Model (XDM) is an open-source specification that is designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+Experience Data Model (XDM) is an open-source specification that is designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+With field level access control, you can:
+
+* Apply attributes to field groups and/or classes. This allows multiple schemas with the same field groups or classes, to have fields tagged with the same attributes, depending on the the configurations at the field group or class level;
+* Configure user access to specific XDM schema fields depending on the permission sets applied to roles assigned to users.
 
 ### Identity Service
 
 Adobe Experience Platform [!DNL Identity Service] helps you gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
+As part of field level access control, the `view-identity-graph` permission allows you to determine which users in your organization can access the identity graph through the user interface or APIs. For more information, see the guide on [using the identity graph viewer](../../identity-service/ui/identity-graph-viewer.md).
+
 ### Profile
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+With field level access control, you can:
+
+* Configure user access to specific Profile attributes by applying labels to XDM schema fields that contain the identity fields used for the identity graph;
+* Configure user access to Profile attributes that correspond to schema fields that have been labelled as PII fields;
+* Configure user access to Profile attributes while still restricting access to those that correspond to schema fields labelled as PII;
+* Configure user access to Profile attributes that correspond to schema fields labelled as sensitive data.
 
 ### Segmentation Service
 
 [!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+With field level access control, you can:
+
+* Control user access to specific segments by applying attributes to the corresponding fields in an XDM schema;
+* Access specific segments based on the permission sets applied to the role assigned to a user;
+* Configure whether users in your organization can access specific PII data by applying labels to segments that correspond to schema fields defined as PII;
+* Allow users in your organization to access all segments except for segments that correspond to schema fields labeled as PII;
+
