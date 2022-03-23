@@ -9,11 +9,11 @@ keywords: data collection; outlet; analytics; Adobe Experience Platform Edge Net
 
 ## Overview {#overview}
 
-Adobe Analytics data collection works by translating XDM data into a format that Adobe Analytics can understand. Several XDM fields are [automatically mapped](../data-collection/adobe-analytics/automatically-mapped-vars.md) to Analytics variables.
+Adobe Analytics data collection works by translating XDM data into a format that Adobe Analytics can understand. Several XDM fields are [automatically mapped](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) to Analytics variables.
 
-You can also [manually map XDM values](../data-collection/adobe-analytics/manually-mapping-variables.md) to legacy Analytics variables.
+You can also [manually map XDM values](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) to legacy Analytics variables.
 
-To enable Adobe Analytics to receive data from Server API, you need to [configure your datastream](../data-collection/adobe-analytics/analytics-overview.md) to forward events to Adobe Analytics.
+To enable Adobe Analytics to receive data from Server API, you need to [configure your datastream](../edge/data-collection/adobe-analytics/analytics-overview.md) to forward events to Adobe Analytics.
 
 Once enabled, the datastream configuration should include settings for `com_adobe_analytics`, as shown in the example below:
 
