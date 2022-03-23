@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sa
 solution: Experience Platform
 title: Sample Queries for Adobe Analytics Data
 topic-legacy: queries
-description: Data from selected Adobe Analytics report suites is transformed into XDM ExperienceEvents and ingested into Adobe Experience Platform as datasets for you. This document outlines a number of use cases where Adobe Experience Platform Query Service makes use of this data, and the included sample queries designed to work with your Adobe Analytics datasets.
+description: Data from selected Adobe Analytics report suites is transformed into XDM ExperienceEvents and ingested into Adobe Experience Platform as datasets. This document outlines a number of use cases where Query Service makes use of this data and includes sample queries designed to work with your Adobe Analytics datasets.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
 ---
 # Sample queries for Adobe Analytics data
@@ -114,7 +114,7 @@ ORDER BY Hour;
 
 ## Deduplication  
 
-[!DNL Query Service] supports data deduplication. See the [Data deduplication in Query Service documentation](../best-practices/deduplication.md) for information on how to generate new values at the time of querying [!DNL Experience Event] datasets.
+[!DNL Query Service] supports data deduplication. See the [Data deduplication in [!DNL Query Service] documentation](../best-practices/deduplication.md) for information on how to generate new values at the time of querying [!DNL Experience Event] datasets.
 
 ## Merchandising variables (product syntax)
 
@@ -122,7 +122,7 @@ The following sections provide XDM fields and sample queries that you can use to
 
 ### Product syntax
 
-In Adobe Analytics, custom product-level data can be collected through specially configured variables called merchandising variables. These are based on either an eVar or custom events. The difference between these variables and their standard use is that they represent a separate value for each product found on the hit rather than only a single value for the hit.
+In Adobe Analytics, custom product-level data can be collected through specially configured variables called merchandising variables. These are based on either an eVar or custom events. The difference between these variables and their typical use is that they represent a separate value for each product found on the hit rather than only a single value for the hit.
 
 These variables are referred to as product syntax merchandising variables. This allows for collection of information, such as a per product "discount amount" or information about the product's "location on page" in the customer's search results.
 
@@ -194,7 +194,7 @@ LIMIT 20
 
 ### Conversion syntax
 
-Another type of merchandising variables found in Adobe Analytics is conversion syntax. With product syntax, the value is collected at the same time as the product, but this requires the data to be present on the same page. There are scenarios where the data occurs on a page prior to the conversion or event of interest related to the product. For example, consider the use case for the product-finding method.
+Another type of merchandising variable that is found in Adobe Analytics is conversion syntax. With product syntax, the value is collected at the same time as the product, but this requires the data to be present on the same page. There are scenarios where the data occurs on a page prior to the conversion or event of interest related to the product. For example, consider the use case for the product-finding method.
 
 1. A user performs and internal search for "winter hat" which sets the Conversion Syntax enabled Merchandising eVar6 to "internal search:winter hat"
 2. The user clicks on "waffle beanie" and lands on the product detail page.  
