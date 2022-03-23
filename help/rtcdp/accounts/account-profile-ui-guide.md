@@ -130,6 +130,25 @@ The following information is available for each surfaced related account in the 
 | **[!UICONTROL Name]** | Indicates the list that does something, something. |
 | **[!UICONTROL Account source key]** | The date and time when the segment job started. |
 | **[!UICONTROL Homepage]** | The date and time when the segment job completed. |
-| **[!UICONTROL Address]** | The status of the completed job - success or failed.|  etc
+| **[!UICONTROL Address]** | The status of the completed job - success or failed.|  
 
-You can use the related accounts in this list for segmentation purposes. See an example here.
+etc
+
+You can use the related accounts in this list for segmentation purposes. See a [segmentation example](/help/rtcdp/segmentation/b2b.md#related-account) that uses related accounts.
+
+<!--
+
+In the context of account unification, customers may upload or ingest records from multiple data sources, so the same information might be duplicated in different places, with slight variations.
+
+You can use accounts and related accounts in segmentation. It depends on your use case. For example, you could use related accounts for email marketing or advertising campaigns.
+
+Uses parent account structure (deterministic)
+Hierarchical accounts (e.g. Amazon and AWS)
+
+Uses the website domain. If the 
+
+Fuzzy match of Name
+
+In segmentation you can use related accounts in your segments. Use related accounts or not. 
+
+-->
