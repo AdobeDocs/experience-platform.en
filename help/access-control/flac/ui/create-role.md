@@ -8,7 +8,7 @@ hidefromtoc: true
 
 # Create a new role 
 
-To start creating a new profile, select the **[!UICONTROL Roles]** tab in the sidebar and select **[!UICONTROL Create Role]**.
+To create a new role, select the **[!UICONTROL Roles]** tab in the sidebar and select **[!UICONTROL Create Role]**.
 
 ![new-profile](../../images/flac-new-role.png)
 
@@ -18,7 +18,7 @@ When finished, select **[!UICONTROL Confirm]**.
 
 ![create-new-product-profile](../../images/flac-create-new-role.png)
 
-The next screen prompts you to choose which resource permissions that exist in sandboxes to include in the role using the dropdown. When finished, select **[!UICONTROL Save and exit]**.
+Next, select the resource permissions that you would like to include in the role using the dropdown menu. When finished, select **[!UICONTROL Save and exit]**.
 
 ![enable-services](../../images/flac-add-role-permission.png)
 

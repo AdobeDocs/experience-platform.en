@@ -6,13 +6,13 @@ hide: true
 hidefromtoc: true
 ---
 
-# Select permissions
+# Field Level Access Control Permissions UI Guide
 
-In order to access field level access control permissions for [!DNL Experience Cloud] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Cloud]. While Adobe supports flexible administrator hierarchies for IMS Orgs, you must have system administrator, product administrator, or product profile administrator privileges to configure permissions. See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
+In order to access field level access control permissions for [!DNL Experience Cloud], you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Cloud]. While Adobe supports flexible administrator hierarchies for IMS Organizations, you must have system administrator, product administrator, or product profile administrator privileges to configure permissions. See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
 
 If you do not have admin privileges, contact your system administrator to gain access.
 
-Once you have admin privileges, go to [Adobe Experience Cloud](https://experience-qa.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for the IMS Org you have admin privileges for. This page shows the products that your IMS Org is subscribed to, along with other controls to add users and admins to the IMS Org as a whole. Select **[!UICONTROL Permissions]** to open the field level access control workspace for your Platform integration.
+Once you have admin privileges, go to [Adobe Experience Cloud](https://experience.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for the IMS Organization you have admin privileges for. This page shows the products that your IMS Org is subscribed to, along with other controls to add users and admins to the IMS Org as a whole. Select **[!UICONTROL Permissions]** to open the field level access control workspace for your Platform integration.
 
 ![select-product](../../images/flac-select-product.png)
 

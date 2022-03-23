@@ -31,7 +31,7 @@ To remove a filter, select the "X" on the pill icon for the filter in question, 
 
 ## Role details
 
-Select the role select the role from the **[!UICONTROL Roles]** tab, which will open the role's details page.
+Select the role from the **[!UICONTROL Roles]** tab, which will open the role's details page.
 
 ![enable-services](../../images/flac-details.png)
 
