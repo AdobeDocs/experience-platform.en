@@ -1,6 +1,7 @@
 ---
 title: Internal Site Search Data Type
 description: This document provides an overview of the Internal Site Search XDM data type.
+exl-id: 3cab9445-f641-4a44-9699-cd8a62da8a61
 ---
 # [!UICONTROL Internal Site Search] data type
 

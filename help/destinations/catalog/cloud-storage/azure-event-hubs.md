@@ -28,9 +28,16 @@ By using streaming destinations such as [!DNL Azure Event Hubs], you can easily 
 
 For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the [!DNL Azure Event Hubs] destination, you would receive this event in [!DNL Azure Event Hubs]. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [audience activation workflow](../../ui/activate-streaming-profile-destinations.md#select-attributes).
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
@@ -40,10 +47,11 @@ To connect to this destination, follow the steps described in the [destination c
 
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
-* **[!UICONTROL SAS Key Name]** and **[!UICONTROL SAS Key]**: Fill in your SAS key name and key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL SAS Key Name]**: The name of the authorization rule, which is also known as the SAS key name.
+* **[!UICONTROL SAS Key]**: The primary key of the Event Hubs namespace. The `sasPolicy` that the `sasKey` corresponds to must have **manage** rights configured in order for the Event Hubs list to be populated. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
-* **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Males interested in kitesurfing".
+* **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Customers interested in kitesurfing".
 * **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
 
 ## Activate segments to this destination {#activate}
