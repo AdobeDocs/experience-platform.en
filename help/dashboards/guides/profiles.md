@@ -164,7 +164,7 @@ The [!UICONTROL Unsegmented Profiles] widget provides a total number of all prof
 
 The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, six months, and one-year periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the Y-axis and time on the X-axis.
 
-![The Unsegmented Profiles Trend widget.](../images/profiles/unsegmented-profiles-trend.png)
+![The Unsegmented Profiles Trend widget. PLACEHOLDER](../images/profiles/unsegmented-profiles-trend.png)
 
 ### [!UICONTROL Unsegmented Profiles by Identity] (#unsegmented-profiles-by-identity)
 
