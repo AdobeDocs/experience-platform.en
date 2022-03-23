@@ -18,17 +18,17 @@ To learn more about how account profiles are created as part of the B2B workflow
 
 To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation. 
 
-![](images/b2b-account-browse.png)
+![Select Profiles in left navigation](images/b2b-account-browse.png)
 
 On the **[!UICONTROL Browse]** tab, you can explore account profiles using an account ID from a connected enterprise source or by entering source details directly.
 
-![](images/b2b-account-browse-by.png)
+![Use account ID to explore profiles](images/b2b-account-browse-by.png)
 
 ### Browse by [!UICONTROL Connected enterprise source] {#browse-by-connected-enterprise-source}
 
 To browse account profiles by a connected enterprise source, select **[!UICONTROL Connected enterprise source]** from the **[!UICONTROL Browse by]** dropdown, then choose a connected source using the selector button next to the **[!UICONTROL Source]** field.
 
-![](images/b2b-account-browse.png)
+![Browse account profiles by connected enterprise source](images/b2b-account-browse.png)
 
 This opens the **[!UICONTROL Select source]** dialog, where you can select a source based on the connections that your organization has established.
 
@@ -38,7 +38,7 @@ This opens the **[!UICONTROL Select source]** dialog, where you can select a sou
 
 To learn more about connecting enterprise sources, please refer to the [sources overview](../sources/sources-overview.md).
 
-![](images/b2b-account-select-source.png)
+![Select source workflow](images/b2b-account-select-source.png)
 
 You can choose a source by selecting the radio button next to the connection name, and then use **[!UICONTROL Select]** to return to the [!UICONTROL Browse] tab.
 
@@ -50,7 +50,7 @@ With a source selected, you must now enter an **[!UICONTROL Account ID]** relate
 >
 >The most common, standard syntax is the Marketo account ID appended by `.mkto_org` (for example, `1234567.mkto_org`). Marketo Account-Based Marketing customers may have additional values that can be found using the Marketo account ID appended by `.mkto_account`. If you are unsure of which syntax to use, please check with your Marketo administrator.
 
-![](images/b2b-account-browse-id.png)
+![Account ID selection](images/b2b-account-browse-id.png)
 
 ### Browse by [!UICONTROL Others] {#browse-by-others}
 
@@ -112,15 +112,19 @@ Each opportunity includes information such as the name of the opportunity, its a
 
 ## Related accounts tab {#related-accounts-tab}
 
-The **[!UICONTROL Related accounts]** tab provides information about accounts that are related to the account that you are browsing.
+The **[!UICONTROL Related accounts]** tab provides information about other accounts that may be related to the account that you are browsing. Get more information about the functionality in the [related accounts overview](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
 >[!NOTE]
 >
 >The [!UICONTROL Related accounts] tab displays a list of up to 30 related accounts associated with the account. For accounts with more than 30 related accounts, the system does what XXXXXXXXX.
 
-Daily-run machine learning jobs use a hierarchical algorithm to cluster similar account profiles into groups based on three factors: parent account link, web domain and account name. Each member of the account profile group will then be tagged with the Related Accounts list. You can view the list in the **Related Accounts** tab of Account Profile page, and use in segment definitions.
+Each related account includes information such as the account profile ID and name, its account source key, and further information related to homepage, address, parent account, phone, industry, and annual revenue.
 
 ![Related accounts tab](images/b2b-account-related-accounts.png)
+
+You can use the related accounts in this list for segmentation purposes. See a [segmentation example](/help/rtcdp/segmentation/b2b.md#related-account) that uses related accounts.
+
+<!--
 
 The following information is available for each surfaced related account in the list:
 
@@ -132,11 +136,6 @@ The following information is available for each surfaced related account in the 
 | **[!UICONTROL Homepage]** | The date and time when the segment job completed. |
 | **[!UICONTROL Address]** | The status of the completed job - success or failed.|  
 
-etc
-
-You can use the related accounts in this list for segmentation purposes. See a [segmentation example](/help/rtcdp/segmentation/b2b.md#related-account) that uses related accounts.
-
-<!--
 
 In the context of account unification, customers may upload or ingest records from multiple data sources, so the same information might be duplicated in different places, with slight variations.
 

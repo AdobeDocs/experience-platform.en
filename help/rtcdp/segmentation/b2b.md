@@ -94,9 +94,11 @@ Find all the people who are a "Decision Maker" of any closed-lost opportunity, a
 
 ![UI displaying example 7 settings](../assets/segmentation/example-7.png)
 
-### Example 8: Target related accounts {#related-accounts}
+### Example 8: Create a segment using related accounts {#related-accounts}
 
-Find all the people who work in a Human Resources (HR) department and are related to any account *or any one of the account's related accounts* that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the XDM Individual Profile class, XDM Business Account class, and XDM Business Opportunity class.
+Find all the people who work in a Human Resources (HR) department and are related to any account *or any one of the account's related accounts* that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM Business Opportunity] class.
+
+![UI displaying segmentation for related accounts](../assets/segmentation/segmentation-related-accounts.png)
 
 ## Next steps {#next-steps}
 
