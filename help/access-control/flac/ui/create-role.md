@@ -10,13 +10,13 @@ hidefromtoc: true
 
 To create a new role, select the **[!UICONTROL Roles]** tab in the sidebar and select **[!UICONTROL Create Role]**.
 
-![new-profile](../../images/flac-new-role.png)
+![new-profile](../../images/flac-ui/flac-new-role.png)
 
 The **[!UICONTROL Create a new role]** dialog appears, prompting you to enter a name, and an optional description. 
 
 When finished, select **[!UICONTROL Confirm]**.
 
-![create-new-product-profile](../../images/flac-create-new-role.png)
+![create-new-product-profile](../../images/flac-ui/flac-create-new-role.png)
 
 Next, select the resource permissions that you would like to include in the role using the dropdown menu. When finished, select **[!UICONTROL Save and exit]**.
 
@@ -24,7 +24,7 @@ Next, select the resource permissions that you would like to include in the role
 
 The new role is successfully created, and you are redirected to the **[!UICONTROL Roles]** page, where you will see the newly created role appear in the list. 
 
-![enable-services](../../images/flac-role-saved.png)
+![enable-services](../../images/flac-ui/flac-role-saved.png)
 
 See the sections on [managing permissions for a role](#manage-permissions-for-a-role) for more details on how to manage role permissions once they are created.
 
