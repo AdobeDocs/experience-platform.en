@@ -30,7 +30,11 @@ Once the fork is complete, select **master** and enter a name for your new branc
 
 ![create-branch](../assets/create-branch.png)
 
-In the GitHub folder structure of your forked repository, navigate your way to `experience-platform.en/help/sources/tutorials/api/create/` and then select the appropriate category for your source from the list. For example, if you are creating documentation for a new cloud storage source, select **cloud-storage**.
+In the GitHub folder structure of your forked repository, navigate to [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) and then select the appropriate category for your source from the list. For example, if you are creating documentation for a new cloud storage source, select **cloud-storage**.
+
+>[!TIP]
+>
+>If you are creating documentation for the UI, then navigate to [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) and select the appropriate category for your source. To add your images, navigate to [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) then add your screenshots to the `sdk` folder.
 
 ![cloud-storage](../assets/cloud-storage.png)
 
