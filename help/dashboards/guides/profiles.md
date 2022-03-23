@@ -142,15 +142,11 @@ The [!UICONTROL Single Identity Profiles] widget provides a count of your organi
 
 ![Single Identity Profiles widget.](../images/profiles/single-identity-profiles.png)
 
-<!--  -->
-
 ### [!UICONTROL Single Identity Profiles Trend] {#single-identity-profiles-trend}
 
 The [!UICONTROL Single Identity Profiles Trend] widget illustrates the count trend of profiles over a set period of time that only have one type of ID type in their identity map. The periods available are 30 days, six months, and one year which is chosen from a dropdown menu. The count is reflected in a line graph with profile count on the Y-axis and time on the X-axis.
 
 ![The Single Identity Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
-
-<!--   -->
 
 ### [!UICONTROL Single Identity Profiles by Identity Type] {#single-identity-profiles-by-identity-type}
 
@@ -158,17 +154,11 @@ The [!UICONTROL Single Identity Profiles by Identity Type] widget provides a bre
 
 ![The Single Identity Profiles by Identity Type widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
 
-<!--  -->
-
 ### [!UICONTROL Unsegmented Profiles] {#unsegmented-profiles}
 
 The [!UICONTROL Unsegmented Profiles] widget provides a total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot. This number represents an opportunity for profile activation across the organization, and can also indicate the opportunity to expunge profiles that do not provide adequate ROI.
 
-<!-- Need to elaborate: Drilldown into efficacy for this set for deeper analysis, triage, and action.  -->
-
 ![The Unsegmented Profiles widget.](../images/profiles/unsegmented-profiles.png)
-
-<!--  -->
 
 ### [!UICONTROL Unsegmented Profiles Trend] {#unsegmented-profiles-trend}
 
