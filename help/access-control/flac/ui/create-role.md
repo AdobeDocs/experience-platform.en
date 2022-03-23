@@ -20,7 +20,7 @@ When finished, select **[!UICONTROL Confirm]**.
 
 Next, select the resource permissions that you would like to include in the role using the dropdown menu. When finished, select **[!UICONTROL Save and exit]**.
 
-![enable-services](../../images/flac-add-role-permission.png)
+![enable-services](../../images/flac-ui/flac-add-role-permission.png)
 
 The new role is successfully created, and you are redirected to the **[!UICONTROL Roles]** page, where you will see the newly created role appear in the list. 
 

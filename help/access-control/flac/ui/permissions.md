@@ -91,4 +91,4 @@ To remove a user, select the **X** icon next to the users name, to remove the us
 
 ## Next steps
 
-With permissions established, you can proceed to the next step to [manage users](users.md)
+With permissions established, you can proceed to the next step to [manage users](users.md).
