@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
-description: 
+description: Use the [!UICONTROL Profile Enrichment] dashboard to understand if profile enrichment jobs ran on time and without any exceptions, and to track the relevant metrics for related accounts.
 solution: Experience Platform
 title: Monitor profile enrichment jobs
 type: Tutorial
