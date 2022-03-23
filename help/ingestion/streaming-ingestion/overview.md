@@ -43,12 +43,12 @@ The table below displays guidance on the request per seconds limits for streamin
 
 | RPS limit | Notes |
 | --- | --- |
-| 1000 requests per second | These can contain multiple messages, in the case of the `/collection/batch` endpoint. |
-| 10000 individual messages per second | If you are using the `/collection/batch` endpoint, then these messages can be grouped into fewer actual requests. |
+| 1000 requests per second | These can contain multiple messages when using `/collection/batch` endpoint. |
+| 10000 individual messages per second | The messages can be grouped into fewer actual requests when using the `/collection/batch` endpoint. |
 
 >[!IMPORTANT]
 >
->When using synchronous validation, which is intended for debugging purposes, the enforced limit becomes **60 requests per minute**.
+>The enforced limit becomes **60 requests per minute** when using synchronous validation as it is intended for debugging purposes.
 
 ## Adobe Experience Platform extension
 
