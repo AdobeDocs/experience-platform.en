@@ -37,20 +37,20 @@ All user identities should be supplied in the `identityMap` field group. This fi
 
 ## Device identifiers {#identifiers}
 
-There are multiple ways in which a device can be identified within Experience Edge. See the table below for an overview of the supported IDs.
+There are multiple ways in which a device can be identified within the Edge Network. See the table below for an overview of the supported IDs.
 
 | ID namespace | Managed by | Description |
 | --- | --- | --- |
-| `FPID` | Customer | `FPID` will be automatically encoded into an `ECID` by Experience Edge, therefore solutions which require an `ECID` will work as well.  <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies.|
+| `FPID` | Customer | `FPID` will be automatically encoded into an `ECID` by the Edge Network, therefore solutions which require an `ECID` will work as well.  <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies.|
 | `ECID` | Adobe | `ECID` is required when leveraging and integrating with Adobe Analytics and Adobe Audience Manager. <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies. |
-| `IDFA`/`GAID` | Experience Platform | Can identify users across applications, so these IDs are not encoded into `ECID` by Experience Edge. |
+| `IDFA`/`GAID` | Experience Platform | Can identify users across applications, so these IDs are not encoded into `ECID` by the Edge Network. |
 
 
 ## Experience Edge Identity Protocol {#experience-edge-identity-protocol}
 
 Device identities like `ECID` must be persisted on the client device and supplied on each request in the session and across sessions. Having stable device identities across multiple sessions improves the accuracy levels in your reports and allows delivering a consistent experience to the visitors.
 
-For all non-server interactions, Experience Edge will automatically perform the following actions:
+For all non-server interactions, the Edge Network will automatically perform the following actions:
 
 * Generate a new `ECID` when none is found on the request. This will automatically enhance the collected event with the new identity.
 * Return a `state:store` instruction to the caller with the `kndctr_{$IMS_ORG_ID|url-safe}_identity` entry, which contains:
@@ -112,7 +112,7 @@ The Edge Network response includes a `state:store` handle, which, in turn, inclu
 
 >[!NOTE]
 >
->The `kndctr_{$IMS_ORG_ID|url-safe}_` prefix is also used for other entries stored on the client device, and enables state isolation for complex integrations, which could involve multiple/different IMS organizations. While Experience Edge will filter the entries which can be used for a given datastream, in order to minimize the payload, the caller (SDK) should ideally ensure that only the relevant entries are sent.
+>The `kndctr_{$IMS_ORG_ID|url-safe}_` prefix is also used for other entries stored on the client device, and enables state isolation for complex integrations, which could involve multiple/different IMS organizations. While the Edge Network will filter the entries which can be used for a given datastream, in order to minimize the payload, the caller (SDK) should ideally ensure that only the relevant entries are sent.
 
 The caller must:
 
@@ -155,9 +155,9 @@ The caller must explicitly activate this functionality via the `meta.state.cooki
 >
 >The `meta.state.domain` is an optional value which a caller could supply, specifying the exact domain on which the cookies should be stored. When this is missing, Experience Edge can automatically infer the top-level domain from the request. Automatic client state management via browser cookies **should never be used** in a `server` interaction.
 
-## Experience Edge identity format {#ee-identity-format}
+## Edge Network identity format {#ee-identity-format}
 
-Experience Edge stores the device identity and additional metadata in the `kndctr_{$IMS_ORG_ID|url-safe}_` entry. The entire structure is represented in a binary format / [Protocol Buffers](https://github.com/protocolbuffers/protobuf), which is then encoded in URL-safe Base64 format.
+Edge Network stores the device identity and additional metadata in the `kndctr_{$IMS_ORG_ID|url-safe}_` entry. The entire structure is represented in a binary format / [Protocol Buffers](https://github.com/protocolbuffers/protobuf), which is then encoded in URL-safe Base64 format.
 
 ```protobuf
 syntax = "proto3";

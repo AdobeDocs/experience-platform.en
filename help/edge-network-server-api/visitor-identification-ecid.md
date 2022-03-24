@@ -13,11 +13,11 @@ The `ECID` is a universal and persistent device ID that identifies your visitors
 
 In a web context, this is also known as a first-party device identifier, as it is persisted in a cookie on the first-party domain (the customer's domain).
 
-The `ECID` is automatically managed by the Experience Edge Network and SDKs, for all non-server interactions. While the [!UICONTROL Experience Edge Identity Protocol] can be used for `server` datastreams as well, for simplicity, Adobe recommends using an `FPID` instead.
+The `ECID` is automatically managed by the Edge Network, for all non-server interactions. While the [!UICONTROL Experience Edge Identity Protocol] can be used for `server` datastreams as well, for simplicity, Adobe recommends using an `FPID` instead.
 
 ## Reading the `ECID` {#reading-ecid}
 
-While the `ECID` is entirely managed by Experience Edge, its value can be retrieved via an `identity.fetch` query:
+While the `ECID` is entirely managed by the Edge Network, its value can be retrieved via an `identity.fetch` query:
 
 ```json
 {
@@ -52,7 +52,7 @@ The server will respond with an `identity:result` handle which contains the `ECI
 }
 ```
 
-When used in the first request to Experience Edge, `identity.fetch` will return the new `ECID` value. For subsequent calls it will simply read and return the stored identity.
+When used in the first request to the Edge Network, `identity.fetch` will return the new `ECID` value. For subsequent calls it will simply read and return the stored identity.
 
 ## Visitor identification with `ECID`
 

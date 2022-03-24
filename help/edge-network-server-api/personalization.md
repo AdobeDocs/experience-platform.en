@@ -180,7 +180,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?configId=$DATASTREAM_ID"
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
 | `configId` | String | Yes | The datastream ID. |
-| `requestId` | String | No | Provide an external request tracing ID. If none is provided, Experience Edge Gateway will generate one for you and return it back in the response body / headers.|
+| `requestId` | String | No | Provide an external request tracing ID. If none is provided, the Edge Network will generate one for you and return it back in the response body / headers.|
 
 ### Response {#response}
 
@@ -304,7 +304,7 @@ curl -X POST "https://server.adobedc.net/ee/v1/collect?configId=$DATASTREAM_ID" 
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
 | `configId` | String | Yes | The datastream ID. |
-| `requestId` | String | No | Provide an external request tracing ID. If none is provided, Experience Edge Gateway will generate one for you and return it back in the response body / headers.|
+| `requestId` | String | No | Provide an external request tracing ID. If none is provided, the Edge Network will generate one for you and return it back in the response body / headers.|
 
 ### Response
 

@@ -7,7 +7,7 @@ keywords: data collection;collection;Adobe Experience Platform Edge Network;serv
 
 # Edge Network Server API overview
 
-The Adobe Experience Platform Edge Network is the orchestration layer of the Experience Edge architecture. This gateway provides an optimized way for customers to interact with any Adobe Experience Cloud or Adobe Experience Platform Edge services.
+The Adobe Experience Platform Edge Network provides an optimized way for customers to interact with any Adobe Experience Cloud or Adobe Experience Platform Edge services.
 
 The [!DNL Edge Network Server API] can be used for a variety of data collection, personalization, advertising and marketing use cases. The [!DNL Server API] can be used on servers, [!DNL IoT] devices, set-top boxes, and a variety of other devices.
 

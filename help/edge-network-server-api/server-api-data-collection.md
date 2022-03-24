@@ -9,7 +9,7 @@ keywords: data collection;collection;Adobe Experience Platform Edge Network;api;
 
 The [!DNL Server API] offers two types of data collection endpoints:
 
-1. [Interactive data collection endpoints](interactive-data-collection.md), used when the client expects a response to be returned by the server. These endpoints can also return content from other Experience Edge services, while performing data collection.
+1. [Interactive data collection endpoints](interactive-data-collection.md), used when the client expects a response to be returned by the server. These endpoints can also return content from other Edge Network services, while performing data collection.
 2. [Non-interactive event data collection](non-interactive-data-collection.md), used when no response is expected from the server. These endpoints are used only for data collection.
 
 ## The `Event` object {#event-object}

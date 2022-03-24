@@ -103,7 +103,7 @@ When working with browser clients, the Server API can automatically persist the 
 
 Almost all entries are materialized as first party cookies when enabled and supported (see the note below), but the gateway could also store some third party cookies when the third party `adobedc.demdex.net` domain is used.
 
-Since entries are always bound to a specific scope (device/application) by their definition, only the subset that is compatible with the current request context will be written by the Experience Edge Network. Unwritten entries are
+Since entries are always bound to a specific scope (device/application) by their definition, only the subset that is compatible with the current request context will be written by the Edge Network. Unwritten entries are
 returned within a `state:store` handle.
 
 As a general rule, application scoped entries are always written as first party cookies, while device scoped entries are written as third-party cookies. The decision is completely transparent to the caller, the gateway decides which entries can be written, depending on the call context.

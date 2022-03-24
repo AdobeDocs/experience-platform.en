@@ -90,8 +90,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId=$DATASTREAM_
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Yes | Datastream ID. |
-| `requestId` | `String` | No | Provide an external request tracing ID. If none is provided, Experience Edge Gateway will generate one for you and return it back in the response body / headers.|
-| `silent` | `Boolean` | No | Optional boolean parameter indicating whether Experience Adobe Experience Platform Edge Network should return a `204 No Content` response with an empty payload or not. Critical errors are reported using the corresponding HTTP status code and payload.|
+| `requestId` | `String` | No | Provide an external request tracing ID. If none is provided, the Edge Network will generate one for you and return it back in the response body / headers.|
+| `silent` | `Boolean` | No | Optional boolean parameter indicating whether the Edge Network should return a `204 No Content` response with an empty payload or not. Critical errors are reported using the corresponding HTTP status code and payload.|
 
 
 ## Response {#response}

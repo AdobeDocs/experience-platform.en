@@ -1,8 +1,8 @@
 ---
 title: Service level agreements and targets
-description: Learn how to configure authentication for Adobe Experience Edge Network Server API
-seo-description: Learn how to configure authentication for Adobe Experience Edge Network Server API
-keywords: data collection;collection;Adobe Experience Platform Edge Network;api;sla;slt;service levels
+description: Learn how to configure authentication for the Edge Network Server API
+seo-description: Learn how to configure authentication for the Edge Network Server API
+keywords: data collection;collection;edge network;api;sla;slt;service levels
 ---
 
 # Guardrails
