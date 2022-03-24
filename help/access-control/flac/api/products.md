@@ -6,9 +6,6 @@ description: The /products endpoint in the Field Level Access Control API allows
 ---
 # Products endpoint
 
-<!--
-Need a short and concise high-level overview of products here.
--->
 The `/products` endpoint in the Field Level Access Control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your IMS Organization.
 
 ## Getting started
@@ -45,9 +42,9 @@ A successful response returns a list of entitled products belonging to your IMS 
 {
   "products": [
     {
-      "id": "string",
-      "name": "string",
-      "serviceCode": "string"
+      "id": "acp",
+      "name": "Adobe Experience Platform",
+      "serviceCode": "acp"
     }
   ]
 }
@@ -87,7 +84,37 @@ A successful response returns the permission categories associated with the prod
 {
   "categories": [
     {
-      "name": "string"
+        "name": "Profile Management"
+    },
+    {
+        "name": "Data Ingestion"
+    },
+    {
+        "name": "Sandbox Administration"
+    },
+    {
+        "name": "Query Service"
+    },
+    {
+        "name": "Data Management"
+    },
+    {
+        "name": "Identity Management"
+    },
+    {
+        "name": "Data Modeling"
+    },
+    {
+        "name": "Data Science Workspace"
+    },
+    {
+        "name": "Dashboards"
+    },
+    {
+        "name": "Alerts"
+    },
+    {
+        "name": "Data Governance"
     }
   ]
 }
@@ -126,19 +153,60 @@ A successful response returns the permission sets associated with the product ID
 ```json
 {
   "permission-sets": [
-    {
-      "id": "string",
-      "name": "string",
-      "category": "string",
-      "permissions": [
-        {
-          "resource": "string",
-          "actions": [
-            "string"
+      {
+          "id": "manage-schemas",
+          "name": "Manage Schemas",
+          "category": "Data Modeling",
+          "permissions": [
+              {
+                  "resource": "schemas",
+                  "actions": [
+                      "read",
+                      "write",
+                      "delete"
+                  ]
+              },
+              {
+                  "resource": "schema-fields",
+                  "actions": [
+                      "read",
+                      "write",
+                      "delete"
+                  ]
+              },
+              {
+                  "resource": "sandboxes",
+                  "actions": [
+                      "view"
+                  ]
+              }
           ]
-        }
-      ]
-    }
+      },
+      {
+          "id": "view-schemas",
+          "name": "View Schemas",
+          "category": "Data Modeling",
+          "permissions": [
+              {
+                  "resource": "schemas",
+                  "actions": [
+                      "read"
+                  ]
+              },
+              {
+                  "resource": "schema-fields",
+                  "actions": [
+                      "read"
+                  ]
+              },
+              {
+                  "resource": "sandboxes",
+                  "actions": [
+                      "view"
+                  ]
+              }
+          ]
+      },
   ]
 }
 ```
