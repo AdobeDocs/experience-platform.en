@@ -116,38 +116,10 @@ The **[!UICONTROL Related accounts]** tab provides information about other accou
 
 >[!NOTE]
 >
->The [!UICONTROL Related accounts] tab displays a list of up to 30 related accounts associated with the account. For accounts with more than 30 related accounts, the system does what XXXXXXXXX.
+>The [!UICONTROL Related accounts] tab displays a list of up to 30 related accounts associated with the account. When there are more than 30 related accounts for an account, these are randomly placed into multiple groups, each capped at 30.
 
 Each related account includes information such as the account profile ID and name, its account source key, and further information related to homepage, address, parent account, phone, industry, and annual revenue.
 
 ![Related accounts tab](images/b2b-account-related-accounts.png)
 
 You can use the related accounts in this list for segmentation purposes. See a [segmentation example](/help/rtcdp/segmentation/b2b.md#related-account) that uses related accounts.
-
-<!--
-
-The following information is available for each surfaced related account in the list:
-
-| Metric | Description |
----------|----------|
-| **[!UICONTROL Profile ID]** | Indicates the profile ID of the related account shown for the account you are browsing. |
-| **[!UICONTROL Name]** | Indicates the list that does something, something. |
-| **[!UICONTROL Account source key]** | The date and time when the segment job started. |
-| **[!UICONTROL Homepage]** | The date and time when the segment job completed. |
-| **[!UICONTROL Address]** | The status of the completed job - success or failed.|  
-
-
-In the context of account unification, customers may upload or ingest records from multiple data sources, so the same information might be duplicated in different places, with slight variations.
-
-You can use accounts and related accounts in segmentation. It depends on your use case. For example, you could use related accounts for email marketing or advertising campaigns.
-
-Uses parent account structure (deterministic)
-Hierarchical accounts (e.g. Amazon and AWS)
-
-Uses the website domain. If the 
-
-Fuzzy match of Name
-
-In segmentation you can use related accounts in your segments. Use related accounts or not. 
-
--->
