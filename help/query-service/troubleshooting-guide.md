@@ -564,7 +564,7 @@ ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMe
 
 This error occurred because there was no return value for the query. This behavior has now been fixed to return the following message:
 
-```shell
+```text
 Query complete in {timeframe}. 0 rows returned. 
 ```
 
