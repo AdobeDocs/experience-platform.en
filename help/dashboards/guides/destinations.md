@@ -50,7 +50,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
 * [[!UICONTROL Destinations count]](#destinations-count)
-* [[!UICONTROL Destination status]](#destination-status)
+<!-- * [[!UICONTROL Destination status]](#destination-status) -->
 <!-- * [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations) -->
 <!-- * [[!UICONTROL Activated audiences by destination]](#activated-audiences-by-destination) -->
 
@@ -154,13 +154,13 @@ If a segment within the [!UICONTROL Mapped audience health] widget is deviating 
 
 The [!UICONTROL Destinations count] widget provides the total number of endpoints available where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. 
 
-Below the total count, select **Destinations** to navigate to the destinations browse tab. This page lists all the destinations that you have established a connection with to date.
+Below the total count, select **[!UICONTROL Destinations]** to navigate to the destinations browse tab. This page lists all the destinations that you have established a connection with to date.
 
 ![The Destinations count widget.](../images/destinations/destinations-count.png)
 
 ### [!UICONTROL Destination status] (#destination-status)
 
-The [!UICONTROL Destination status] widget visualizes the relative split of enabled and disabled destinations within the system  using a donut chart. The exact number of destinations in their respective state is displayed in a popover when you hover over the donut chart.
+The [!UICONTROL Destination status] widget visualizes the relative split of enabled and disabled destinations within the system using a donut chart. The exact number of destinations in their respective state is displayed in a popover when you hover over the donut chart.
 
 ![The Destination status widget.](../images/destinations/destination-status.png)
 
@@ -174,7 +174,7 @@ The [!UICONTROL Activated audiences across all destinations] widget displays the
 
 The [!UICONTROL Activated audiences by destination] widget provides the total number of activated audiences for a destination.
 
-Select **Audiences** to navigate to the destinations [!UICONTROL Activation data] page, where all the segments connected to that destination are displayed. By selecting an audience from the list, you can see details relating to any connected activated audience.
+Select **[!UICONTROL Audiences]** to navigate to the destinations [!UICONTROL Activation data] page, where all the segments connected to that destination are displayed. By selecting an audience from the list, you can see details relating to any connected activated audience.
 
 ![PLACEHOLDER](../images/destinations/activated-audiences-by-destination.png) -->
 
