@@ -157,15 +157,15 @@ Now that you can use external audiences in your segments, you can use the Segmen
 
 ## Appendix
 
-In addition to using imported external audiences, you can also import external segment memberships to Platform.
+In addition to using imported external audience metadata and using them for creating segments, you can also import external segment memberships to Platform.
 
-### Set up an external segment destination schema
+### Set up an external segment membership destination schema
 
 To begin composing a schema, first select **[!UICONTROL Schemas]** on the left navigation bar, followed by the **[!UICONTROL Create schema]** in the top right corner of the Schemas workspace. From here, select **[!UICONTROL XDM Individual Profile]**.
 
 ![](../images/tutorials/external-audiences/create-schema-profile.png)
 
-Now that the schema has been created, you will need to add the segment membership field as part of the schema.
+Now that the schema has been created, you will need to add the segment membership field group as part of the schema.
 
 ![](../images/tutorials/external-audiences/segment-membership-details.png)
 
@@ -173,7 +173,7 @@ Additionally, ensure the schema is marked for **[!UICONTROL Profile]**. In order
 
 ![](../images/tutorials/external-audiences/external-segment-profile.png)
 
-### Set up the database
+### Set up the dataset
 
 After creating your schema, you will need to create a dataset. 
 
@@ -185,7 +185,7 @@ After creating the dataset, continue following the instructions in the [dataset 
 
 ![](../images/tutorials/external-audiences/dataset-profile.png)
 
-## Set up and import audience data
+## Set up and import external audience membership data
 
 With the dataset enabled, data can now be sent into Platform either through the UI or using the Experience Platform APIs. You can ingest this data either through a batch or streaming connection.
 
@@ -201,11 +201,11 @@ Once you have created your streaming connection, you will have access to your un
 
 ![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
-## Segment metadata structure
+## Segment membership structure
 
 After creating a connection, you can now ingest your data to Platform.
 
-A sample of the external audience segment's metadata can be seen below:
+A sample of the external audience membership payload can be seen below:
 
 ```json
 {
@@ -217,7 +217,7 @@ A sample of the external audience segment's metadata can be seen below:
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",
         "source": {
-            "name": "Sample External Segment"
+            "name": "Sample External Audience Membership"
         }
     },
     "body": {
@@ -228,11 +228,11 @@ A sample of the external audience segment's metadata can be seen below:
             }
         },
         "xdmEntity": {
-            "_id": "{SEGMENT_ID}",
+            "_id": "{UNIQUE_ID}",
             "description": "Sample description",
             "{TENANT_NAME}": {
                 "identities": {
-                    "accountId": "sample-id"
+                    "{SCHEMA_IDENTITY}": "sample-id"
                 }
             },
             "personId" : "sample-name",
@@ -251,8 +251,8 @@ A sample of the external audience segment's metadata can be seen below:
 
 | Property | Description |
 | -------- | ----------- |
-| `schemaRef` | The schema **must** refer to the previously created schema for the segment metadata. |
-| `datasetId` | The dataset ID **must** refer to the previously created dataset for the schema you just created. |
+| `schemaRef` | The schema **must** refer to the previously created schema for the segment membership data. |
+| `datasetId` | The dataset ID **must** refer to the previously created dataset for the membership schema you just created. |
 | `xdmEntity._id` | A suitable ID that is used to uniquely identify the record within the dataset. |
 | `{TENANT_NAME}.identities` | This section is used to connect the custom identities' field group with the users you previously imported. |
-| `segmentMembership.{IDENTITY_NAMESPACE}` | This is the label of the previously created identity namespace. So, for example, if you called your identity namespace "externalAudience", you would use that as the key of the array. |
+| `segmentMembership.{IDENTITY_NAMESPACE}` | This is the label of the previously created custom identity namespace. So, for example, if you called your identity namespace "externalAudience", you would use that as the key of the array. |
