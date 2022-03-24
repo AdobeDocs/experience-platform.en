@@ -97,12 +97,12 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Single Identity Profiles]](#single-identity-profiles)
-* [[!UICONTROL Single Identity Profiles Trend]](#single-identity-profiles-trend)
-* [[!UICONTROL Single Identity Profiles by Identity Type]](#single-identity-profiles-by-identity-type)
+<!-- * [[!UICONTROL Single Identity Profiles Trend]](#single-identity-profiles-trend) -->
+<!-- * [[!UICONTROL Single Identity Profiles by Identity Type]](#single-identity-profiles-by-identity-type) -->
 * [[!UICONTROL Unsegmented Profiles]](#unsegmented-profiles)
 * [[!UICONTROL Unsegmented Profiles] Trend](#unsegmented-profiles-trend)
 * [[!UICONTROL Unsegmented Profiles by Identity]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL Audience Size]](#audience-size)
+<!-- * [[!UICONTROL Audience Size]](#audience-size) -->
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -136,7 +136,7 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 
 The **[!UICONTROL Profile count trend]** widget displays a 'captions' button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
-![The profile overview tab displaying the Profiles count trend widget with the captions button highlighted.](../images/profiles/profile-count-trend-captions.png)
+![The Profile overview tab displaying the Profiles count trend widget with the captions button highlighted.](../images/profiles/profile-count-trend-captions.png)
 
 A machine learning model automatically generates captions for describing the key trends and important events by analyzing the chart and the data.
 
@@ -170,17 +170,17 @@ The [!UICONTROL Single Identity Profiles] widget provides a count of your organi
 
 ![Single Identity Profiles widget.](../images/profiles/single-identity-profiles.png)
 
-### [!UICONTROL Single Identity Profiles Trend] {#single-identity-profiles-trend}
+<!-- ### [!UICONTROL Single Identity Profiles Trend] {#single-identity-profiles-trend}
 
-The [!UICONTROL Single Identity Profiles Trend] widget illustrates the count trend of profiles over a set period of time that only have one type of ID type in their identity map. The periods available are 30 days, six months, and one year which is chosen from a dropdown menu. The count is reflected in a line graph with profile count on the Y-axis and time on the X-axis.
+The [!UICONTROL Single Identity Profiles Trend] widget illustrates the count trend of profiles over a set period of time that only have one type of ID type in their identity map. The periods available are 30 days, six months, and one year which is chosen from a dropdown menu. The count is reflected in a line graph with profile count on the y-axis and time on the x-axis.
 
-![The Single Identity Profiles Trend widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
+![The Single Identity Profiles Trend widget.](../images/profiles/audience-size-trend.png) -->
 
-### [!UICONTROL Single Identity Profiles by Identity Type] {#single-identity-profiles-by-identity-type}
+<!-- ### [!UICONTROL Single Identity Profiles by Identity Type] {#single-identity-profiles-by-identity-type}
 
-The [!UICONTROL Single Identity Profiles by Identity Type] widget provides a breakdown of all single identity profiles by their respective source namespace identifiers. The visualization uses a bar chart with the five most common namespace identifiers on the Y-axis, and the profile count on the X-axis. This widget helps you to understand which namespaces are dominating the single-channel behavior of the customer.
+The [!UICONTROL Single Identity Profiles by Identity Type] widget provides a breakdown of all single identity profiles by their respective source namespace identifiers. The visualization uses a bar chart with the five most common namespace identifiers on the y-axis, and the profile count on the x-axis. This widget helps you to understand which namespaces are dominating the single-channel behavior of the customer.
 
-![The Single Identity Profiles by Identity Type widget. PLACEHOLDER](../images/profiles/audience-size-trend.png)
+![The Single Identity Profiles by Identity Type widget. PLACEHOLDER](../images/profiles/audience-size-trend.png) -->
 
 ### [!UICONTROL Unsegmented Profiles] {#unsegmented-profiles}
 
@@ -190,9 +190,9 @@ The [!UICONTROL Unsegmented Profiles] widget provides a total number of all prof
 
 ### [!UICONTROL Unsegmented Profiles Trend] {#unsegmented-profiles-trend}
 
-The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, six months, and one-year periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the Y-axis and time on the X-axis.
+The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, six months, and one-year periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the y-axis and time on the x-axis.
 
-![The Unsegmented Profiles Trend widget. PLACEHOLDER](../images/profiles/unsegmented-profiles-trend.png)
+![The Unsegmented Profiles Trend widget.](../images/profiles/unsegmented-profiles-trend.png)
 
 ### [!UICONTROL Unsegmented Profiles by Identity] (#unsegmented-profiles-by-identity)
 
@@ -200,11 +200,11 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
 
-### [!UICONTROL Audience Size] (#audience-size)
+<!-- ### [!UICONTROL Audience Size] (#audience-size)
 
 The [!UICONTROL Audience Size] widget lists the top 20 segments by audience size from largest to smallest. The widget contains two columns. The first column is the name of the segment and the second is the total number of profiles that meet the criteria for that segment definition.
 
-![The Audience Size widget](../images/profiles/audience-size.png)
+![The Audience Size widget](../images/profiles/audience-size.png) -->
 
 ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
