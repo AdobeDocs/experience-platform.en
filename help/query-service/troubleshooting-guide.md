@@ -562,7 +562,12 @@ The `history_meta()` method is used to access a snapshot from a dataset. Previou
 ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
 ```
 
-This error occurred because there was no return value for the query. This behavior has now been fixed to return that the data set is empty.
+This error occurred because there was no return value for the query. This behavior has now been fixed to return the following message:
+
+```shell
+Query complete in {timeframe}. 0 rows returned. 
+```
+
 +++
 
 ## REST API errors {#rest-api-errors}
