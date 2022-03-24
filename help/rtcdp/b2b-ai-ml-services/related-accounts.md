@@ -30,7 +30,7 @@ Daily-run machine learning jobs use a hierarchical algorithm to cluster similar 
 * web domain
 * account name
   
-Following a successful job processing, each member of the account profile group is tagged with the Related Accounts list. You can view the list in the **Related Accounts** tab of Account Profile page, and use in segment definitions.
+Following a successful job processing, each member of the account profile group is tagged with the Related Accounts list. You can view the list in the **Related Accounts** tab of Account Profile page, and use the related accounts in segment definitions.
 
 See more information about the [profile enrichment related accounts jobs](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
 
