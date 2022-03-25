@@ -375,6 +375,25 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 
 See the guide on [logical organization of data assets](../best-practices/organize-data-assets.md) for more a detailed explanation on Query Service best practices.
 
+## Table exists
+
+The `table_exists` SQL command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value. If the table does **not** exist, it returns a `false` value. If the table **does** exist, it returns a `true` value. 
+
+The following syntax defines the `table_exists` command:
+
+```SQL
+SELECT table_exists('your_table_name');
+```
+
+The `table_exists` command can be used to create an 'if/else' logic gate where one query uses a CTAS statement and the alternative query uses `INSERT INTO`. The example below has been shortened for brevity. 
+ 
+```SQL
+IF ( SELECT table_exists('your_table_name')) THEN 
+   INSERT INTO <> 
+   ELSE 
+     CREATE TABLE AS SELECT <>
+```
+
 ## [!DNL Spark] SQL commands 
 
 The sub-section below covers the Spark SQL commands supported by Query Service.
