@@ -30,7 +30,7 @@ feature: Destinations
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
-    * [Edit activation flows](./ui/edit-activation.md)
+    * [Edit activation dataflows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
     * [Monitor dataflows](./ui/monitor-dataflows.md)
 * Destinations catalog {#catalog}

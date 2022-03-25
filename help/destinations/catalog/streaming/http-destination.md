@@ -1,6 +1,6 @@
 ---
 keywords: streaming; HTTP destination
-title: HTTP connection
+title: (Beta) HTTP connection
 keywords: streaming;
 title: HTTP API connection
 description: The HTTP API destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
@@ -22,7 +22,18 @@ To send profile data to HTTP endpoints, you must first [connect to the destinati
 
 The HTTP destination is targeted towards customers who need to export XDM profile data and audience segments to generic HTTP endpoints.
 
-HTTP endpoints can be either customers' own systems  or third-party solutions.
+HTTP endpoints can be either customers' own systems or third-party solutions.
+
+## Export type and frequency {#export-type-frequency}
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Prerequisites {#prerequisites}
 

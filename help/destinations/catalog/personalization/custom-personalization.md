@@ -18,7 +18,7 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 >
 >Before creating a custom personalization connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
 **Profile request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../edge/fundamentals/datastreams.md).
 
@@ -42,7 +42,7 @@ Using a separate custom personalization destination for their ad server, the sam
 >id="platform_destinations_custom_personalization_datastream"
 >title="About datastream IDs"
 >abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream"
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
