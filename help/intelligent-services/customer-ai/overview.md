@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Customer AI overview
 topic-legacy: Customer AI Overview
