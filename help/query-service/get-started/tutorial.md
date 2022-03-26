@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;query service;Query service;query
 solution: Experience Platform
-title: Getting Started with Adobe Experience Platform Query Service
+title: Example Use Case for Adobe Experience Platform Query Service
 topic-legacy: tutorial
 description: An end-to-end example to demonstrate the versatility and benefits of Adobe Experience Platform Query Service.
 ---
@@ -21,10 +21,7 @@ This tutorial workflow relies on several Adobe Experience Platform services as p
 - [Segmentation](../../segmentation/home.md)
 - [Destinations](../../destinations/home.md)
 
-Once your organization is provisioned for Adobe Experience Platform, your administrator can grant you access to [!DNL Query Service].
 
-1. If you haven't already ingested your data into Adobe Experience Platform, then that is where you should start. Refer to the data ingestion documentation.
-1. After you have ingested your data into Adobe Experience Platform, you can begin working with [!DNL Query Service] using [Platform UI](ui/overview.md). For example, you can use Adobe Experience Platform's browser-based [[!DNL Query Editor]](ui/user-guide.md) to write, validate, and run queries.
 
 
 [!DNL Query Service] also provides a way to connect external tools to issue queries. For instructions on connecting a tool such as a Business Intelligence tool or a command line interface, please read [connect a tool](clients/overview.md).
