@@ -377,7 +377,7 @@ See the guide on [logical organization of data assets](../best-practices/organiz
 
 ## Table exists
 
-The `table_exists` SQL command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value. If the table does **not** exist, it returns a `false` value. If the table **does** exist, it returns a `true` value. 
+The `table_exists` SQL command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. 
 
 The following syntax defines the `table_exists` command:
 
@@ -385,7 +385,7 @@ The following syntax defines the `table_exists` command:
 SELECT table_exists('your_table_name');
 ```
 
-The `table_exists` command can be used to create an 'if/else' logic gate where one query uses a CTAS statement and the alternative query uses `INSERT INTO`. The example below has been shortened for brevity. 
+The `table_exists` command can be used to create an "if/else" logic gate where one query uses a CTAS statement and the alternative query uses `INSERT INTO`. The example below has been shortened for brevity. 
  
 ```SQL
 IF ( SELECT table_exists('your_table_name')) THEN 
