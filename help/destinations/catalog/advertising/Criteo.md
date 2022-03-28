@@ -15,7 +15,8 @@ _Criteo powers trusted and impactful advertising to bring richer experiences to 
 - You'll need your Criteo Advertiser ID (Ask your Criteo contact if you don't have this in hand)
 - Criteo only accepts SHA-256 and plain text emails (to be transformed into SHA-256 before sending). Please do not send any PII (Personal Identifiable Information such as individual's names or phone numbers)
 
-![](0.png)
+![Prerequisites](../../assets/catalog/advertising/criteo/criteo0.png)
+
 
 This is currently a beta product. Get in touch with your Criteo representative if you would like more details about what this means.
 
@@ -60,15 +61,18 @@ Steps to connect are as follows:
 
 1. Login to Adobe experience platform and connect to Criteo's destination
 
-![](1.jpeg)
+![Login](../../assets/catalog/advertising/criteo/criteo1.jpeg)
+
 
 2. You will be redirected to Criteo to authorize the connection. You may need to first login with your Criteo credentials :
 
-![](2.jpeg)
+![Auth1](../../assets/catalog/advertising/criteo/criteo2.jpeg)
 
-![](3.jpeg)
+![Auth2](../../assets/catalog/advertising/criteo/criteo3.jpeg)
 
-![](4.jpeg)
+![Auth3](../../assets/catalog/advertising/criteo/criteo4.jpeg)
+
+
 
 3. Fill out the details below marked with \*:
    1. Name : A name to help you recognize this destination in the future
@@ -76,7 +80,7 @@ Steps to connect are as follows:
    3. API Version: Preview
    4. Advertiser ID : Your Criteo advertiser ID
 
-![](5.jpeg)
+![Details](../../assets/catalog/advertising/criteo/criteo5.jpeg)
 
 ## Activate segments to this destination
 
