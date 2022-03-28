@@ -166,7 +166,7 @@ feature: Schemas
   * [Define a schema relationship in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
   * [Create an ad-hoc schema](tutorials/ad-hoc.md)
   * [Extend a soft enum field](tutorials/extend-soft-enum.md)
-  * [Deprecate an XDM field](tutorials/extend-soft-enum.md)
+  * [Deprecate an XDM field](tutorials/field-deprecation.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
