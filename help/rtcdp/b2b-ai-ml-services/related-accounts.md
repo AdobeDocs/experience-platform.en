@@ -10,17 +10,17 @@ description: Overview and more information about the related accounts feature in
 
 In the context of account unification, customers may upload or ingest records from multiple data sources, so the same information might be duplicated in different places, with slight variations.
 
-Furthermore, as account records are typically entered manually and the level of data hygiene varies by system, the same real world entity may be entered differently in different systems and may even have conflicting information. 
+Furthermore, as account records are typically entered manually and the level of data hygiene varies by system, the same real-world entity may be entered differently in different systems and may even have conflicting information.
 
-![Differing account inputs example](/help/rtcdp/b2b-ai-ml-services/assets/differening-account-input.png)
+![Differing account inputs example](/help/rtcdp/b2b-ai-ml-services/assets/different-account-input.png)
 
-The result is the information of a real world entity is scattered across different systems, and it has been a top challenge for B2B customers today to arrive accurate insights and take best actions on their selling targets.
+The result is that the information of a real-world entity is scattered across different systems, and it has been a top challenge for B2B customers today to arrive accurate insights and take best actions on their selling targets.
 
-With related accounts, Real-time CDP B2B now show you accounts that are similar to the account you are browsing.
+With related accounts, Real-time CDP B2B now shows you a list of accounts that are similar to the account you are browsing.
 
 ![Related accounts in the Experience Platform UI](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-Use this feature to view related account profiles for an account profile in the Experience Platform UI and then include related accounts in your segment definitions to broaden reach or apply wider criteria in your segments.
+Use this feature to view related account profiles for an account profile in the Experience Platform UI and then include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments.
 
 ## How it works {#how-it-works}
 
