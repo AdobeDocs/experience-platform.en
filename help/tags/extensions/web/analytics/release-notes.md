@@ -250,7 +250,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 * Migrated the tracking cookie name to the extension configuration.
 
-**Bug Fixes**:
+**Bug fixes**:
 
 * Fixed a bug so set variables don't crash when no trackerProperties object is available.
 
@@ -263,7 +263,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 * Updated Adobe Analytics extension to support AppMeasurement 2.9.
 * Added "Make tracker globally accessible" feature in the Adobe Analytics extension, which enables the tracker to be scoped globally under `windows.s`.
 
-**Bug Fixes**:
+**Bug fixes**:
 
 * Fixed a bug that caused list view to reset when returning from detail view
 * Fixed a few bugs to improve loading of resources in the revision selector
