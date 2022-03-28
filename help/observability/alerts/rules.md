@@ -21,6 +21,8 @@ The following alert rules are specific to [Data Ingestion](../../ingestion/home.
 | Source Flow Run Info | Sources Flow Run Success | This alert triggers when data is successfully ingested from a source connection. |
 | Source Flow Run Delays, Failures and Errors | Sources Flow Run Failure | This alert triggers when an error occurs while ingesting data from a source connection. |
 | Source Flow Run Delays, Failures and Errors | Ingestion Delay | This alert triggers when a batch ingestion flow run takes longer than 150 minutes to process. |
+| Source Flow Run Delays, Failures and Errors | Lack of Ingestion | This alert triggers when ingested records take longer than 30 minutes to process and is below a threshold of 1. |
+| Source Flow Run Delays, Failures and Errors | Ingestion Failure | This alert triggers when the total records exceeds a threshold of 0.5%. |
 
 {style="table-layout:auto"}
 
