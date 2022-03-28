@@ -112,7 +112,7 @@ Each opportunity includes information such as the name of the opportunity, its a
 
 ## Related accounts tab {#related-accounts-tab}
 
-The **[!UICONTROL Related accounts]** tab provides information about other accounts that may be related to the account that you are browsing. Get more information about the functionality in the [related accounts overview](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+The **[!UICONTROL Related accounts]** tab provides information about other accounts that may be related to the account that you are browsing. For in-depth information about the functionality, read the [related accounts overview](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
 >[!NOTE]
 >
@@ -122,4 +122,4 @@ Each related account includes information such as the account profile ID and nam
 
 ![Related accounts tab](images/b2b-account-related-accounts.png)
 
-You can use the related accounts in this list for segmentation purposes. See a [segmentation example](/help/rtcdp/segmentation/b2b.md#related-account) that uses related accounts.
+You can use the related accounts in this list for segmentation purposes. See a [segmentation example](/help/rtcdp/segmentation/b2b.md#related-account) to understand how to use related accounts to expand your reach in segment definitions.
