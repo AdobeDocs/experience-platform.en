@@ -155,11 +155,11 @@ A successful response returns the update details of the custom resource, with th
 
 ## Deprecate a standard field in a schema {#standard}
 
-Fields from standard classes, field groups, and data types cannot be deprecated directly. Instead, you can deprecate their use in the individual schemas that employ these standard resources through the use of a descriptor.
+Fields from standard classes, field groups, and data types cannot be deprecated directly. Instead, you can deprecate their use in the individual schemas that employ these standard resources by using a descriptor.
 
 ### Create a field deprecation descriptor {#create-descriptor}
 
-Make a POST request to the `/tenant/descriptors` endpoint to create a new descriptor for the schema fields you want to deprecate.
+To create a descriptor for the schema fields you want to deprecate, make a POST request to the `/tenant/descriptors` endpoint.
 
 **API format**
 
