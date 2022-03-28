@@ -26,11 +26,11 @@ Use this feature to view related account profiles for an account profile in the 
 
 Daily-run machine learning jobs use a hierarchical algorithm to cluster similar account profiles into groups based on three factors:
 
-* parent account link
-* web domain
-* account name
+* Parent account link
+* Web domain
+* Account name
   
-Following a successful job processing, each member of the account profile group is tagged with the Related Accounts list. You can view the list in the **Related Accounts** tab of Account Profile page, and use the related accounts in segment definitions.
+Following a successful job processing, each member of the account profile group is tagged with the Related Accounts list. You can view the list in the **Related Accounts** tab of the Account Profile page, and use the related accounts in segment definitions.
 
 See more information about the [profile enrichment related accounts jobs](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
 
