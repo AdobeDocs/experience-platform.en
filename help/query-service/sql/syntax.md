@@ -388,15 +388,15 @@ $$
 BEGIN
 
 #Set mytableexist to true if the table already exists.
-SET @mytableexist = SELECT table_exists('qstest1');
+SET @mytableexist = SELECT table_exists('target_table_name');
 
 #Create the table if it does not already exist (this is a one time operation).
-CREATE TABLE IF NOT EXISTS qstest1 AS
+CREATE TABLE IF NOT EXISTS target_table_name AS
   SELECT *
   FROM   profile_dim_date limit 10;
 
 #Insert data only if the table already exists. Check if @mytableexist = 'true'
- INSERT INTO qstest1               (
+ INSERT INTO target_table_name           (
                      select *
                      from   profile_dim_date
                      WHERE  @mytableexist = 'true' limit 20
