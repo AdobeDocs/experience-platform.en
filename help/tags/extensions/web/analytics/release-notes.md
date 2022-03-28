@@ -10,54 +10,62 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 >
 
+## February 28, 2022
+
+**Adobe Analytics Extension 1.9.0**
+
+**Bug fixes**:
+
+* Removed some debug statements in AppMeasurement.
+
 ## November 29, 2021
 
-### Adobe Analytics Extension 1.8.8
+**Adobe Analytics Extension 1.8.8**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Upgraded AppMeasurement to v2.22.3.
 
 ## September 16, 2021
 
-### Adobe Analytics Extension 1.8.7
+**Adobe Analytics Extension 1.8.7**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Upgraded AppMeasurement to v2.22.2.
 * Removed deprecated buildInfo.environment
 
 ## August 24, 2021
 
-### Adobe Analytics Extension 1.8.6
+**Adobe Analytics Extension 1.8.6**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Upgraded [AppMeasurement to v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * Updated fallback linkName to mirror Activity Map logic instead of using innerHTML.
 
 ## August 6, 2020
 
-### Adobe Analytics Extension 1.8.5
+**Adobe Analytics Extension 1.8.5**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * The incorrect cookie name in the AAM module settings was being set when the this field was left blank. This has now been corrected. 
 
-#### Features
+**Features**:
 
 * Updated [AppMeasurement to 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * Small UI change so the additional setting now appear collapsed in an accordion instead of a checkbox.
 
 ## June 2, 2020
 
-### Adobe Analytics Extension 1.8.4
+**Adobe Analytics Extension 1.8.4**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Fixed a bug where the shopping cart events (prodView, scAdd, scView, etc) were not showing up on the events dropdown. All of these should now be selectable from the dropdown. 
 
-#### Features
+**Features**:
 
 * You can now turn off the activity map in the extension without having to use custom code. The activity map loads as a separate module (much like the AAM module) and you can turn it off if you want.
 * Cleaned up the UI by minimizing hierarchy variables and other options.
@@ -65,26 +73,26 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 ## March 10, 2020
 
-### Adobe Analytics Extension 1.8.3
+**Adobe Analytics Extension 1.8.3**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Fixed a bug affecting the rule configuration that would throw an error when you tried to set variables if you were using a custom library and your report suites weren't configured in Analytics.
 * When creating an eVar, there was a bug that would not show you the option to "duplicate from" a prop or vice versa. This has now been fixed to mirror the behavior in previous versions. 
 
-#### Features
+**Features**:
 
 * Updated [AppMeasurement to 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 
 ## March 2, 2020
 
-### Adobe Analytics Extension 1.8.2
+**Adobe Analytics Extension 1.8.2**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Fixed an issue where the incorrect syntax was being used for numeric events and serialized currency
 
-#### Features
+**Features**:
 
 * Updated [AppMeasurement to 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 * Updated the DIL library in the Audience Manager module to 9.4
@@ -95,55 +103,55 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 ## November 13, 2019
 
-### Adobe Analytics Extension 1.8.1
+**Adobe Analytics Extension 1.8.1**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Fixed a bug where premium evars and props would not save.
 
 ## November 1, 2019
 
-### Adobe Analytics Extension 1.8.0
+**Adobe Analytics Extension 1.8.0**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Fixed a bug where a small number of customers could not see report suite options in drop down
 * Fixed a bug where some variables were not setting correctly when using ECID
 
-#### Features
+**Features**:
 
 * Numerically sorts evars, props, and events in Extension view
 * Made backend schema changes to support Magento context data
 
 ## September 6, 2019
 
-### Adobe Analytics Extension 1.7.8
+**Adobe Analytics Extension 1.7.8**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Fixed a bug where some users were not seeing report suite options in the dropdown
 * Fixed a bug where events were not firing correctly
 
 ## September 5, 2019
 
-### Adobe Analytics Extension 1.7.7
+**Adobe Analytics Extension 1.7.7**
 
-#### Features
+**Features**:
 
 * Updated AppMeasurement to 2.17
 * Updated Audience Management module to support DIL 9.3
 * Updated field widths to give you more space
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Fixed a bug for setting opt-in/opt-out
 * Fixed a bug where variables were not being set correctly when using ECID
 
 ## July 18, 2019
 
-### Adobe Analytics Extension 1.7.6
+**Adobe Analytics Extension 1.7.6**
 
-#### Features
+**Features**:
 
 * Updated the Adobe Analytics extension to support DIL 9.2 for Audience Manager
 
@@ -152,39 +160,39 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
  
 ## June 4, 2019
 
-### Adobe Analytics Extension 1.7.5
+**Adobe Analytics Extension 1.7.5**
 
-#### Features
+**Features**:
 
 * Updated the Adobe Analytics Extension to [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=en#version-2.14.0) which includes a fix to a known clearVars issue
 * Added an Exchange link to the extension. The Exchange listing can be reached by selecting the dropdown and choosing "extension info"
 
-#### Bug fixes
+**Bug fixes**:
 
 * Fixed a bug in the UI that showed the incorrect evar being deleted from a list
 * Fixed a bug that was requiring an SSL tracking server when trying to add multiple report suites. When adding multiple report suites a tracking server is required but the SSL tracking server field is optional. 
 
 ## April 15, 2019
 
-### Adobe Analytics Extension 1.7.4
+**Adobe Analytics Extension 1.7.4**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Rolled extension back after a bug was found in appMeasurement 2.13.0. appMeasurement 2.13.0 was causing an issue that wasn't sending the ECID, so if you installed 1.7.3 we recommend upgrading to 1.7.4 to avoid this problem. Note that the clearVars will continue until an updated version of appMeasurement is released
 
 ## April 12, 2019
 
-### Adobe Analytics Extension 1.7.3
+**Adobe Analytics Extension 1.7.3**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Updated the Adobe Analytics Extension to appMeasurement 2.13.0 which includes a fix to a known clearVars issue.
 
 ## March 21, 2019
 
-### Adobe Analytics Extension 1.7.2
+**Adobe Analytics Extension 1.7.2**
 
-#### Features
+**Features**:
 
 * Updated the Adobe Analytics extension to DIL 9.1.
 * Updated the Adobe Analytics extension to appMeasurement 2.12.
@@ -193,28 +201,28 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 ## March 7, 2019
 
-### Adobe Analytics Extension 1.7.1
+**Adobe Analytics Extension 1.7.1**
 
-#### Bug Fixes
+**Bug fixes**:
 
 * Rolled back the extension to version 1.6 after a bug was found in 1.7.
 
 ## February 11, 2019
 
-### Adobe Analytics Extension 1.6
+**Adobe Analytics Extension 1.6**
 
-#### Features
+**Features**:
 
 * Updated the Adobe Analytics extension to DIL 9.0, which will support opt-in.
 * Updated the Adobe Analytics extension to AppMeasurement 2.11 to support opt-in.
 
-#### Bug fixes
+**Bug fixes**:
 
 * Fixed a conflict with Prototype JS. The Analytics extension will now support standard prototype.js libraries.
 
 ## November 9, 2018
 
-### Adobe Analytics Extension 1.5.1
+**Adobe Analytics Extension 1.5.1**
 
 #### **Bug fixes**
 
@@ -222,7 +230,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 ## November 5, 2018
 
-### Adobe Analytics Extension 1.5
+**Adobe Analytics Extension 1.5**
 
 #### **Features**
 
@@ -236,7 +244,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 ## October 11, 2018
 
-### Adobe Analytics Extension 1.4
+**Adobe Analytics Extension 1.4**
 
 #### **Features**
 
@@ -248,7 +256,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 ## June 5, 2018
 
-### Adobe Analytics Extension 1.3
+**Adobe Analytics Extension 1.3**
 
 #### **Features**
 
@@ -263,7 +271,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 ## March 20, 2018
 
-### Adobe Analytics Extension 1.2
+**Adobe Analytics Extension 1.2**
 
 #### **Features**
 
@@ -272,7 +280,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 ## February 8, 2018
 
-### Adobe Analytics Extension 1.1
+**Adobe Analytics Extension 1.1**
 
 #### **Features**
 
