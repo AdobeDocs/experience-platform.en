@@ -379,19 +379,32 @@ See the guide on [logical organization of data assets](../best-practices/organiz
 
 The `table_exists` SQL command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. 
 
+By validating whether a table exists before running the statements, the `table_exists` feature simplifies the process of writing an anonymous block to cover both the `CREATE` and `INSERT INTO` use cases.
+
 The following syntax defines the `table_exists` command:
 
 ```SQL
-SELECT table_exists('your_table_name');
-```
+$$
+BEGIN
 
-The `table_exists` command can be used to create an "if/else" logic gate where one query uses a CTAS statement and the alternative query uses `INSERT INTO`. The example below has been shortened for brevity. 
- 
-```SQL
-IF ( SELECT table_exists('your_table_name')) THEN 
-   INSERT INTO <> 
-   ELSE 
-     CREATE TABLE AS SELECT <>
+#Set mytableexist to true if the table already exists.
+SET @mytableexist = SELECT table_exists('qstest1');
+
+#Create the table if it does not already exist (this is a one time operation).
+CREATE TABLE IF NOT EXISTS qstest1 AS
+  SELECT *
+  FROM   profile_dim_date limit 10;
+
+#Insert data only if the table already exists. Check if @mytableexist = 'true'
+ INSERT INTO qstest1               (
+                     select *
+                     from   profile_dim_date
+                     WHERE  @mytableexist = 'true' limit 20
+              ) ;
+EXCEPTION
+WHEN other THEN SELECT 'ERROR';
+
+END $$; 
 ```
 
 ## [!DNL Spark] SQL commands 
