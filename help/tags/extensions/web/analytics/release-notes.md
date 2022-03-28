@@ -224,7 +224,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 **Adobe Analytics Extension 1.5.1**
 
-#### **Bug fixes**
+**Bug fixes**
 
 * Downgraded the DIL module to 7.0 to fix an issue that was causing problems with analytics beacons not firing
 
@@ -232,13 +232,13 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 **Adobe Analytics Extension 1.5**
 
-#### **Features**
+**Features**
 
 * Updated the Adobe Analytics extension to support DIL 8.0 in Audience Manager
 * Separated the "Serialize from value" field into two, "Event ID" and "Event Value". This will fix the issue that was assigning a value instead of serializing an event
   * Please note: if you are using the current field to add an ID by using a string (ex. Event7=3:abc123) you will need to update your input to reflect the ID in the "Event ID" field
 
-#### **Bug fixes**
+**Bug fixes**
 
 * Fixed a bug that wasn't allowing the currency code to populate correctly
 
@@ -246,11 +246,11 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 **Adobe Analytics Extension 1.4**
 
-#### **Features**
+**Features**
 
 * Migrated the tracking cookie name to the extension configuration.
 
-#### **Bug Fixes**
+**Bug Fixes**
 
 * Fixed a bug so set variables don't crash when no trackerProperties object is available.
 
@@ -258,12 +258,12 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 **Adobe Analytics Extension 1.3**
 
-#### **Features**
+**Features**
 
 * Updated Adobe Analytics extension to support AppMeasurement 2.9.
 * Added "Make tracker globally accessible" feature in the Adobe Analytics extension, which enables the tracker to be scoped globally under `windows.s`.
 
-#### **Bug Fixes**
+**Bug Fixes**
 
 * Fixed a bug that caused list view to reset when returning from detail view
 * Fixed a few bugs to improve loading of resources in the revision selector
@@ -273,7 +273,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 **Adobe Analytics Extension 1.2**
 
-#### **Features**
+**Features**
 
 * Updates AppMeasurement.js to 2.8.0
 * Adds support for server-side forwarding
@@ -282,11 +282,11 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 
 **Adobe Analytics Extension 1.1**
 
-#### **Features**
+**Features**
 
 * AppMeasurement has been updated to version 2.6
 * The initialized Analytics tracker is now exposed through a shared module in the Adobe Experience Platform tag extension so other extensions can include code to interact with it.
 
-#### **Bug fixes**
+**Bug fixes**
 
 * Fixed an error in the Adobe Analytics Extension that caused "Error, missing Report Suite ID in AppMeasurement initialization" to appear in the browser console.
