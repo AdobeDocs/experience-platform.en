@@ -43,13 +43,13 @@ GET authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flow
 The following request calls your destination's REST API endpoint. The request is configured by the `{DESTINATION_INSTANCE_ID}` query parameter.
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/fd3449fb-b929-45c8-9f3d-06b9d6aac328/results?flowRunIds=30d34875-e7ba-4520-ab6e-5705e01dfb16,86c00ad7-443c-459a-855d-0e8cbee43c4f,12305c58-42a9-4230-8fad-1661ee49cb70' \
---header 'Content-Type: application/json' \
---header 'Accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
+curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/fd3449fb-b929-45c8-9f3d-06b9d6aac328/results?flowRunIds=30d34875-e7ba-4520-ab6e-5705e01dfb16,86c00ad7-443c-459a-855d-0e8cbee43c4f,12305c58-42a9-4230-8fad-1661ee49cb70' 
+--header 'Content-Type: application/json' 
+--header 'Accept: application/json'
+--header 'x-api-key: {API_KEY}'
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+--header 'x-gw-ims-org-id: {IMS_ORG}'
+--header 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ### Response

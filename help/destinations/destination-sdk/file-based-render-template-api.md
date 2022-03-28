@@ -16,11 +16,9 @@ This page lists and describes all the API operations that you can perform using 
 
 Before continuing, please review the [getting started guide](getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
-## Render exported profiles based on the message transformation template {#render-exported-data}
+## Render destination properties based on configured customer properties {#render-exported-data}
 
 You can render exported profiles by making a POST request to the `authoring/testing/template/render` endpoint and providing the destination ID of the destination configuration and the template you created using the [sample template API endpoint](./sample-template-api.md). 
-
-You can start by using a simple template that exports your raw profiles without applying any transformations and then move on to a more complex template, that applies transformations to profiles. The syntax for the simple template is: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
@@ -55,7 +53,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 | Parameter | Description |
 | -------- | ----------- |
 | `destinationId` | The destination instance ID of the destination that you are testing.| 
-| `templates`| The templated fields defined in your [destination server configuration](server-and-file-configuration.md). |
+| `templates`| The templated fields defined in your [destination server configuration](server-and-file-configuration.md). The keys in these key-value pairs are not using any reserved names. You should use key names that offer the most accurate meaning for the customer configuration.|
 
 ### Response
 

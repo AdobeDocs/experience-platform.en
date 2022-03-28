@@ -46,13 +46,13 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 The following request calls your destination's REST API endpoint. The request is configured by the `{DESTINATION_INSTANCE_ID}` query parameter.
 
 ```shell
-curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/fd3449fb-b929-45c8-9f3d-06b9d6aac328' \
---header 'Content-Type: application/json' \
---header 'Accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
+curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/fd3449fb-b929-45c8-9f3d-06b9d6aac328' 
+--header 'Content-Type: application/json' 
+--header 'Accept: application/json' 
+--header 'x-api-key: {API_KEY}' 
+--header 'Authorization: Bearer {ACCESS_TOKEN}' 
+--header 'x-gw-ims-org-id: {IMS_ORG}' 
+--header 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
 ### Response
@@ -84,6 +84,7 @@ A successful response returns HTTP status 200 along with the API response from y
 | -------- | ----------- |
 | `activations` | The list of segment activated to the destination, and their corresponding flow run ID.|
 | `inputProfiles` | Includes the profiles that were exported on the call to your destination. The profiles match your source schema.|
+|`results`| Includes the flow run IDs that you can use in a call to the [results API](file-based-destination-results-api.md), to test the activation results.|
 
 {style="table-layout:auto"}
 
@@ -150,6 +151,10 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }'
 ```
 
+|Property|Description|
+|---|---|
+|`profiles`| Array that can include one or multiple profiles.|
+
 ### Response
 
 A successful response returns HTTP status 200 along with the API response from your destination's REST API endpoint.
@@ -201,6 +206,10 @@ A successful response returns HTTP status 200 along with the API response from y
    ]
 }
 ```
+
+|Property| Description|
+|---|---|
+|`activations`| Includes the segment ID and flow run ID for each activated segment. The number of activation entries (and associated generated files) is equal to the number of segments mapped on the destination instance. <br><br> Example: If you mapped two segments to the destination instance, the `activations` array will contain two entries. Each activated segment will correspond to one exported file.|
 
 ## API error handling {#api-error-handling}
 

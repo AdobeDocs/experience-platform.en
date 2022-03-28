@@ -32,7 +32,7 @@ GET 'https://platform.adobe.io/data/core/activation/authoring/v1/sample-profiles
 | Query parameter | Description |
 | -------- | ----------- |
 | `destinationInstanceId` | The ID of the destination instance based on which you are generating sample profiles. |
-| `count` | *Optional*. The number of sample profiles that you are generating. The parameter can take values between `1 - 1000`. <br> If the count parameter is not specified, then the default number of generated profiles is determined by the `maxUsersPerRequest` value in the [destination server configuration](./destination-server-api.md#create). If this property is not defined, then Adobe will generate one sample profile. |
+| `count` | *Optional*. The number of sample profiles that you are generating. The parameter can take values between `1 - 1000`. If this property is not defined, then Adobe will generate one sample profile. |
 
 {style="table-layout:auto"}
 
@@ -42,17 +42,14 @@ GET 'https://platform.adobe.io/data/core/activation/authoring/v1/sample-profiles
 The following request generates sample profiles, configured by the `destinationInstanceId` query parameter.
 
 ```shell
-
-curl --location --request GET 'https://platform-stage.adobe.io/data/core/activation/authoring/v1/sample-profiles?destinationInstanceId=d3ab41ee-fe25-476a-9fba-4baff6c0acb5' \
---header 'Content-Type: application/json' \
---header 'Accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'Authorization: Bearer {TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG_ID}' \
---header 'x-sandbox-name: name' \
---header 'x-sandbox-id: sandbox-id' \
---data-raw ''
-
+curl --location --request GET 'https://platform-stage.adobe.io/data/core/activation/authoring/v1/sample-profiles?destinationInstanceId=d3ab41ee-fe25-476a-9fba-4baff6c0acb5' 
+--header 'Content-Type: application/json' 
+--header 'Accept: application/json' 
+--header 'x-api-key: {API_KEY}' 
+--header 'Authorization: Bearer {TOKEN}' 
+--header 'x-gw-ims-org-id: {IMS_ORG_ID}' 
+--header 'x-sandbox-name: name'
+--header 'x-sandbox-id: sandbox-id'
 ```
 
 ### Response
