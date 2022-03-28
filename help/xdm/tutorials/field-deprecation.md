@@ -1,6 +1,6 @@
 ---
 title: Deprecate an XDM Field
-description: Learn how to extend a soft enum field in the Schema Registry API.
+description: Learn how to deprecate Experience Data Model (XDM) fields in the Schema Registry API.
 ---
 # Deprecate an XDM field
 
