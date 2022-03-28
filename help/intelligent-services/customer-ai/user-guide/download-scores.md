@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;download scores;customer ai;popular topics;Export;export;customer ai download;customer ai scores
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Download Scores in Customer AI
 topic-legacy: Downloading scores

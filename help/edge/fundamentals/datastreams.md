@@ -12,7 +12,7 @@ This document covers the steps for configuring a datastream in the Data Collecti
 
 >[!NOTE]
 >
->Your organization must be provisioned for this feature in order to access it in the UI. If you do not have access, please contact your Customer Success Manager (CSM) to get put on the allowlist.
+>Your organization must be provisioned for this feature in order to access it in the UI. If you do not have access, please fill out the following [form](http://adobe.ly/websdkaccess) and we will grant you the necessary access.
 
 ## Access the [!UICONTROL Datastreams] workspace
 
@@ -44,6 +44,16 @@ If you are configuring this datastream for use in Experience Platform and are us
 
 ![Basic configuration for a datastream](../images/datastreams/configure.png)
 
+Select **[!UICONTROL Advanced Options]** to reveal additional controls to configure the datastream.
+
+![Advanced configuration options](../images/datastreams/advanced-options.png)
+
+| Setting | Description |
+| --- | --- |
+| [!UICONTROL Geo Location] | Determines whether GPS lookups occur based on the user's IP address. The default setting **[!UICONTROL None]** disables any GPS lookups, while the **[!UICONTROL City]** setting provides GPS coordinates to two decimal places. |
+| [!UICONTROL First Party ID Cookie] | When enabled, this setting tells the Edge Network to refer to a specified cookie when looking up a [first-party device ID](../identity/first-party-device-ids.md), rather than looking up this value in the Identity Map.<br><br>When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored. |
+| [!UICONTROL Third Party ID Sync] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. When enabled, this setting lets you specify which container of ID syncs is run for this datastream. |
+
 The rest of this section focuses on the steps to map data to a selected Platform event schema. If you are using the Mobile SDK or are otherwise not configuring your datastream for Platform, select **[!UICONTROL Save]** before proceeding to the next section on [adding services to the datastream](#add-services).
 
 ### Data Prep for Data Collection {#data-prep}
@@ -52,7 +62,7 @@ The rest of this section focuses on the steps to map data to a selected Platform
 >
 >Data Prep for Data Collection is currently not supported for Mobile SDK implementations.
 
-Data Prep is an Experience Platform services that allows you to map, transform, and validate data to and from Experience Data Model (XDM). When configuring a Platform-enabled datastream, you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
+Data Prep is an Experience Platform service that allows you to map, transform, and validate data to and from Experience Data Model (XDM). When configuring a Platform-enabled datastream, you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
 
 The subsections below cover the basic steps for mapping your data within the Data Collection UI. For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
 
@@ -193,16 +203,6 @@ This service controls whether and how data is sent to [event forwarding](../../t
 >[!NOTE]
 >
 >You can select **[!UICONTROL Manually enter IDs]** to type in the property and environment names instead of using the dropdown menus.
-
-### [!UICONTROL Third Party ID Sync] settings
-
-The third party ID section is the only section that is always on. It has two available settings: "[!UICONTROL Third Party ID Sync Enabled]" and "[!UICONTROL Third Party ID Sync Container ID]".
-
-![Third Party ID Sync section of the configuration UI](../images/datastreams/third-party-id-sync-config.png)
-
-| Setting | Description |
-| --- | --- |
-| [!UICONTROL Third Party ID Sync Container ID] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. This controls which container of ID syncs is run for this datastream. |
 
 ## Next steps
 
