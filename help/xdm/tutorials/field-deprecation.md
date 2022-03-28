@@ -10,7 +10,7 @@ In Experience Data Model (XDM), you can deprecate a field within a schema or cus
 
 This tutorial requires making calls to the Schema Registry API. Please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to make these API calls. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the `Accept` header and its possible values).
 
-## Deprecate a custom field
+## Deprecate a custom field {#custom}
 
 To deprecate a field in a custom class, field group, or data type, update the custom resource through a PUT or PATCH request and add the attribute `meta:status: deprecated` to the field in question.
 
@@ -153,11 +153,11 @@ A successful response returns the update details of the custom resource, with th
 }
 ```
 
-## Deprecate a standard field in a schema
+## Deprecate a standard field in a schema {#standard}
 
 Fields from standard classes, field groups, and data types cannot be deprecated directly. Instead, you can deprecate their use in the individual schemas that employ these standard resources through the use of a descriptor.
 
-### Create a field deprecation descriptor
+### Create a field deprecation descriptor {#create-descriptor}
 
 Make a POST request to the `/tenant/descriptors` endpoint to create a new descriptor for the schema fields you want to deprecate.
 
@@ -209,7 +209,7 @@ curl -X POST \
 }
 ```
 
-### Verify the deprecated field
+### Verify the deprecated field {#verify-deprecation}
 
 After the descriptor has been applied, you can verify whether the field has been deprecated by looking up the schema in question while using the appropriate `Accept` header.
 
