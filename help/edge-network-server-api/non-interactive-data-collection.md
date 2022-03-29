@@ -21,21 +21,23 @@ Each event should include the corresponding `XDM` content that needs to be colle
 >
 >[Experience Edge Identity Protocol](visitor-identification.md#experience-edge-identity-protocol) (`ECID` generation) is not applicable for data collection requests, meaning that events sent to this API should already have at least one identity associated to them. For server datastreams (calls to `server.adobedc.net`), the API requires that each event contains an identity **explicitly set as primary**. For device datastreams, the Edge Network will attempt to set the `ECID` as primary, when it is present, and no other primary identity is explicitly set.
 
-## API format {#api-format}
+## Non-interactive API call example {#example}
+
+### API format {#api-format}
 
 ```http
 POST /ee/v2/collect
 ```
 
-## Request {#request}
+### Request {#request}
 
-```json
+```shell
 curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId=$DATASTREAM_ID" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
 -H "x-gw-ims-org-id: {IMS_ORG}" \
 -H "x-api-key: {API_KEY}" \
 -H "Content-Type: application/json" \
---data-raw '{
+-d '{
    "events":[
       {
          "xdm":{
@@ -89,12 +91,12 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId=$DATASTREAM_
 
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Yes | Datastream ID. |
+| `dataStreamId` | `String` | Yes | The ID of the datastream used by the data collection endpoint. |
 | `requestId` | `String` | No | Provide an external request tracing ID. If none is provided, the Edge Network will generate one for you and return it back in the response body / headers.|
 | `silent` | `Boolean` | No | Optional boolean parameter indicating whether the Edge Network should return a `204 No Content` response with an empty payload or not. Critical errors are reported using the corresponding HTTP status code and payload.|
 
 
-## Response {#response}
+### Response {#response}
 
 A successful response returns one of the following statuses, and a `requestID` if none was provided in the requst.
 

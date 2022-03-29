@@ -17,8 +17,7 @@ The Server API uses a state management protocol, delegating the storage aspect t
 
 The client responsibility is to store and include them in all subsequent requests. The client must also take care of proper expiration for entries, as instructed by the gateway. When the entries were stored as cookies, the browser does all this work automatically.
 
-Although the state entries always have a plain `String` value (visible to the caller/SDK), we advise users to not consume or tamper with the values in any way. The value structure/format or even the name itself might change at any
-point, which could lead to unexpected behavior for clients that use the state internally. The state is intended to always be consumed by the gateway itself or other edge services.
+Although the state entries always have a plain `String` value (visible to the caller/SDK), you should not consume or tamper with the values in any way. The value structure/format or even the name itself might change at any point, which could lead to unexpected behavior for clients that use the state internally. The state is intended to always be consumed by the gateway itself or other edge services.
 
 ## Persisting client state as metadata
 
@@ -63,10 +62,10 @@ The state returned by the [!DNL Server API] in the response body is a `Handle` o
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| `key` | String | *Required*. The entry name. |
+| `key` | String | **Required**. The entry name. |
 | `value` | String | *Optional*. The entry value. |
-| `maxAge` | Integer | *Optinal* The entry time-to-live (TTL), in seconds. When missing, entries should be stored only for the current session. |
-| `attrs` | `Map<String, String>` | *Optional*. An optional list of entry attributes. For all secure connections, with a secure referer HTTP Header, the `SameSite` attribute is set to `None`. |
+| `maxAge` | Integer | *Optional* The entry time-to-live (TTL), in seconds. When missing, entries should be stored only for the current session. |
+| `attrs` | `Map<String, String>` | *Optional*. An optional list of entry attributes. For all secure connections with a secure referer HTTP header, the `SameSite` attribute is set to `None`. |
 
 
 To support multi-tagging (i.e. multiple SDK instances in the same property, which potentially reference different organizations), all state entries are automatically prefixed with `kndctr_` and the URL-safe organization ID.
@@ -124,22 +123,22 @@ The caller must explicitly enable support for storing client state as cookies, v
 | Attribute | Type | Description |
 | --- | --- | --- |
 | `cookiesEnabled` | Boolean | When set, enables support for cookies. Default value is `false`. |
-| `domain`  | String | Required when `cookiesEnabled: true` The top-level domain on which the cookies should be written. The Adobe Experience Platform Edge Network will use this value to decide if state can be persisted as cookies. |
+| `domain`  | String | Required when `cookiesEnabled: true`. The top-level domain on which the cookies should be written. The Edge Network will use this value to decide if state can be persisted as cookies. |
 
 Even if cookies support is enabled via the `cookiesEnabled` flag, the Adobe Experience Platform Edge Network will only write the state entries if the request top-level domain matches the `domain` specified by the caller. When there's a mismatch, entries are returned in a `state:store` handle.
 
 The first-party cookies cannot be written (even if support is enabled) in the following cases:
 
-1. The request is coming on the third-party `adobedc.demdex.net` domain.
-2. The request is coming on a first-party `CNAME` domain, different from the one specified by the caller in `meta.state.domain`.
+* The request is coming on the third-party `adobedc.demdex.net` domain.
+* The request is coming on a first-party `CNAME` domain, different from the one specified by the caller in `meta.state.domain`.
 
-## Cookie Security
+## Cookie security
 
 All cookies have the [Secure flag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#restrict_access_to_cookies) enabled whenever possible.
 
 All secure cookies have the [SameSite attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) set to `None`, meaning that cookies are sent in all contexts, both 1st party and cross-origin.
 
-* For the first-party cookies (`kndcrt_\*`), the `Secure` flag is only set when the request context is secure (HTTPS) and when referrer ([Referer HTTP Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)) is also HTTPS. If the referrer is not secure (HTTP), the `Secure` flag is omitted to permit the Web SDK to read them. A secure cookie cannot be read from an unsecure context.
+* For the first-party cookies (`kndcrt_*`), the `Secure` flag is only set when the request context is secure (HTTPS) and when referrer ([Referer HTTP Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer)) is also HTTPS. If the referrer is not secure (HTTP), the `Secure` flag is omitted to permit the Web SDK to read them. A secure cookie cannot be read from an unsecure context.
 * For the third-party cookie (demdex), the `Secure` flag is always set, since all requests are HTTPS, so the request context is secure, and this cookie is never read from JavaScript.
 
-The `Secure` flag is not present in the [metadata representation of cookies](#state-as-metadata). Only the `Samesite` attribute is included. In this case, it is the client's responsibility to correctly set the `Secure` flag whenever the `SameSite` attribute is present. Cookies with `SameSite=None` must also specify the `Secure` attribute, since they require a secure context (HTTPS).
+The `Secure` flag is not present in the [metadata representation of cookies](#state-as-metadata). Only the `SameSite` attribute is included. In this case, it is the client's responsibility to correctly set the `Secure` flag whenever the `SameSite` attribute is present. Cookies with `SameSite=None` must also specify the `Secure` attribute, since they require a secure context (HTTPS).

@@ -133,13 +133,13 @@ POST /ee/v2/interact
 
 ### Request {#request}
 
-```json
+```shell
 curl -X POST "https://server.adobedc.net/ee/v2/interact?configId=$DATASTREAM_ID" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
 -H "x-gw-ims-org-id: {IMS_ORG}" \
 -H "x-api-key: {API_KEY}" \
 -H "Content-Type: application/json" \
---data-raw '{
+-d '{
    "event":{
       "xdm":{
          "identityMap":{
@@ -254,7 +254,7 @@ POST /ee/v1/collect
 
 ### Request
 
-```json
+```shell
 curl -X POST "https://server.adobedc.net/ee/v1/collect?configId=$DATASTREAM_ID" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
 -H "x-gw-ims-org-id: {IMS_ORG}" \

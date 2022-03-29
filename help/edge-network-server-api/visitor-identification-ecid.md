@@ -9,11 +9,11 @@ keywords: edge network;gateway;api;visitor;identification;ecid
 
 ## Overview
 
-The `ECID` is a universal and persistent device ID that identifies your visitors across all Adobe Experience Cloud solutions, like Adobe Experience Platform, Adobe Target, Adobe Analytics or Adobe Audience Manager.
+The `ECID` is a universal and persistent device ID that identifies your visitors across all Adobe Experience Cloud solutions, like Adobe Experience Platform, Adobe Target, Adobe Analytics, or Adobe Audience Manager.
 
 In a web context, this is also known as a first-party device identifier, as it is persisted in a cookie on the first-party domain (the customer's domain).
 
-The `ECID` is automatically managed by the Edge Network, for all non-server interactions. While the [!UICONTROL Experience Edge Identity Protocol] can be used for `server` datastreams as well, for simplicity, Adobe recommends using an `FPID` instead.
+The `ECID` is automatically managed by the Edge Network, for all non-server interactions. While the [!UICONTROL Experience Edge Identity Protocol] can be used for `server` datastreams as well, for simplicity, use a [!DNL First-Party ID] (`FPID`) instead. See [visitor identification via FPID](visitor-identification-fpid.md) for more details.
 
 ## Reading the `ECID` {#reading-ecid}
 
@@ -58,17 +58,17 @@ When used in the first request to the Edge Network, `identity.fetch` will return
 
 There are two options to consistently identify visitors based on `ECID`.
 
-1. Store the `ECID` value in the cookie sent to the Edge Network, on each subsequent request.
-2. Include the `ECID` value in the `identityMap` of each subsequent request, in the `ECID` namespace.
+* Store the `ECID` value in the cookie sent to the Edge Network, on each subsequent request.
+* Include the `ECID` value in the `identityMap` of each subsequent request, in the `ECID` namespace.
 
 The initial request includes the query command to fetch an `ECID`. To ensure consistency in identifying the end-user, it requires that the `ECID` value returned in the initial response be written to a cookie on the end-user device.
 
 ### Initial request
 
 ```shell
-curl --location --request POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
---header 'Content-Type: application/json' \
---data-raw '{
+curl -X POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
+-H 'Content-Type: application/json' \
+-d '{
     "event": 
         {
             "xdm": {
@@ -143,10 +143,10 @@ The cookie containing the `ECID` is included in the request header. Thea header 
 * Cookie value: `MCMID|<ECID value from initial request>`
 
 ```shell
-curl --location --request POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
---header 'cookie: AMCV_53A16ACB5CC1D3760A495C99%40AdobeOrg=MCMID|24816829704426489597507966523344957799;' \
---header 'Content-Type: application/json' \
---data-raw '{
+curl -X POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
+-H 'cookie: AMCV_53A16ACB5CC1D3760A495C99%40AdobeOrg=MCMID|24816829704426489597507966523344957799;' \
+-H 'Content-Type: application/json' \
+-d '{
     "event": 
         {
             "xdm": {
@@ -202,9 +202,9 @@ curl --location --request POST 'https://edge.adobedc.net/ee/v2/interact?dataStre
 ### Subsequent request with `ECID` passed as `identityMap` field
 
 ```shell
-curl --location --request POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
---header 'Content-Type: application/json' \
---data-raw '{
+curl -X POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
+-H 'Content-Type: application/json' \
+-d '{
     "event": 
         {
             "xdm": {

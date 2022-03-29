@@ -35,22 +35,24 @@ Once enabled, the datastream configuration should include settings for `com_adob
 }
 ```
 
-## API format
+## Interacting with Adobe Analytics {#interacting-analytics}
+
+### API format {#format}
 
 ```http
 POST https://edge.adobedc.net/ee/v2/interact?
 ```
 
-## Request {#request}
+### Request {#request}
 
 The sample below includes several automatically mapped values from the `_experience.analytics` field group. It also includes JSON-based data layers. While these data layers cannot be mapped automatically, it is possible to use [Data Prep for Data Collection](../edge/fundamentals/datastreams.md#data-prep) to map these values to a schema that contains field groups referenced above.
 
 All values that users map to those fields will automatically map to the appropriate Analytics values, as if they were included in the API request.
 
 ```shell
-curl --location --request POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId=72e82be9-9e9c-4222-a439-8c53f677b0cd' \
---header 'Content-Type: application/json' \
---data-raw '{
+curl -X POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId=72e82be9-9e9c-4222-a439-8c53f677b0cd' \
+--H 'Content-Type: application/json' \
+--d '{
     "event": 
         {
             "xdm": {
@@ -143,7 +145,7 @@ curl --location --request POST 'https://edge.adobedc.net/ee/v2/interact?dataStre
 }'
 ```
 
-## Reponse {#response}
+### Reponse {#response}
 
 ```json
 {

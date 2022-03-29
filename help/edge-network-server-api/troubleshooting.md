@@ -11,5 +11,5 @@ The Adobe Experience Platform Edge Network Server API allows you to capture debu
 
 The same mechanism which is used by the [Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) enables you to debug API-based implementations.
 
-Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon), you can create a debugging session ID that you can further use in the Edge Network requests to trace events.
+Using [Project Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon), you can create a debugging session ID that you can further use in the Edge Network requests to trace events.
 

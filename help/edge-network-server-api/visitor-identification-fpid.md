@@ -9,8 +9,7 @@ keywords: edge network;gateway;api;visitor;identification;fpid
 
 ## Overview
 
-[!DNL First-party IDs] (`FPIDs`) are device IDs generated, managed, and stored by customers. This gives customers control over identifying user devices. By sending `FPIDs`, the Edge Network does not generate a brand new `ECID` for
-a request that does not contain one.
+[!DNL First-party IDs] (`FPIDs`) are device IDs generated, managed, and stored by customers. This gives customers control over identifying user devices. By sending `FPIDs`, the Edge Network does not generate a brand new `ECID` for a request that does not contain one.
 
 The `FPID` can be included in the API request body as part of the `identityMap` or it can be sent as a cookie.
 
@@ -32,7 +31,7 @@ The `ECID` obtained this way can be retrieved via an `identity.fetch` query:
 
 For requests that contain both a `FPID` and an `ECID`, the `ECID` already present in the request will take precedence over the one that could be generated from the `FPID`. Therefore, the Edge Network will use the `ECID` already provided and will not compute one from the given `FPID`.
 
-In terms of device IDs, it is recommended that `server` datastreams use `FPID` as device ID. Other identities (i.e `EMAIL`) can also be provided within the request body, but the Edge Network requires that a primary identity is explicitly supplied. Primary identity is the base identity to which profile data will be stored in.
+In terms of device IDs, the `server` datastreams should use `FPID` as device ID. Other identities (i.e `EMAIL`) can also be provided within the request body, but the Edge Network requires that a primary identity is explicitly supplied. Primary identity is the base identity to which profile data will be stored in.
 
 >[!NOTE]
 >
@@ -90,9 +89,9 @@ The error response returned by the Edge Network in this case is similar to the f
    "title":"No primary identity set in request (event)",
    "detail":"No primary identity found in the input event. Update the request accordingly to your schema and try again.",
    "report":{
-      "requestId":"<requestId>",
-      "configId":"<configId>",
-      "orgId":"<orgId>"
+      "requestId":"{REQUEST_ID}",
+      "configId":"{CONFIG_ID}",
+      "orgId":"{ORG_ID}"
    }
 }
 ```
@@ -104,10 +103,10 @@ To identify users via `FPID`, ensure that the `FPID` cookie has been sent prior 
 ## Request with `FPID` passed as cookie header
 
 ```shell
-curl --location --request POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
---header 'cookie: FPID=e98f38e6-6183-442d-8cd2-0e384f4c8aa8' \
---header 'Content-Type: application/json' \
---data-raw '{
+curl -X POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
+-H 'cookie: FPID=e98f38e6-6183-442d-8cd2-0e384f4c8aa8' \
+-H 'Content-Type: application/json' \
+-d '{
     "event": 
         {
             "xdm": {
@@ -165,9 +164,9 @@ curl --location --request POST 'https://edge.adobedc.net/ee/v2/interact?dataStre
 
 
 ```shell
-curl --location --request POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
---header 'Content-Type: application/json' \
---data-raw '{
+curl -X POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
+-H 'Content-Type: application/json' \
+-d '{
     "event": 
         {
             "xdm": {

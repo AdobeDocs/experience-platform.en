@@ -24,7 +24,7 @@ Below is a summary of the behavior, based on the `access_type` configuration and
 
 API calls coming from a private server on `server.adobedc.net` should always be authenticated.
 
-## Step 1: Prerequisites {#prerequisites}
+## Prerequisites {#prerequisites}
 
 Before you can make calls to the [!DNL Server API], make sure you meet the following prerequisites:
 
@@ -32,9 +32,9 @@ Before you can make calls to the [!DNL Server API], make sure you meet the follo
 * Your Experience Platform account has the `developer` and `user` roles enabled for the Adobe Experience Platform API product profile. Contact your [Admin Console](../access-control/home.md) administrator to enable these roles for your account.
 * You have an Adobe ID. If you do not have an Adobe ID, go to the [Adobe Developer Console](https://developer.adobe.com/console) and create a new account.
 
-## Step 2: Gather credentials {#credentials}
+## Gather credentials {#credentials}
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -52,7 +52,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-## Step 3: Configure dataset write permissions {#dataset-write-permissions}
+## Configure dataset write permissions {#dataset-write-permissions}
 
 To configure dataset write permissions, go to the [Admin Console](https://adminconsole.adobe.com), locate the product profile attached to your API key, and set the following permissions:
 
@@ -70,4 +70,4 @@ To configure dataset write permissions, go to the [Admin Console](https://adminc
 | `EXEG-0503-401` | Invalid authorization token | This error message is displayed when the provided authorization token is expired. Go through the [authentication tutorial](../landing/api-authentication.md) to generate a new token. |
 | `EXEG-0504-401` | Required product context is missing | This error message is displayed in any of the following situations:  <ul><li>The developer account does not have access to Adobe Experience Platform product context.</li><li>The company account is not yet entitled to Adobe Experinece Platform.</li></ul>|
 | `EXEG-0505-401` | Required authorization token scope is missing | This error applies only to service account authentication. The error message is displayed when the the service authorization token included in the call belongs to a service account which does not have access to the `acp.foundation` IMS scope.|
-| `EXEG-0506-401` | Sandbox not accessible for write | This error message is displayed when the developer account does not have `WRITE` access to the Experience Platform sandbox in which the data-stream is defined. |
+| `EXEG-0506-401` | Sandbox not accessible for write | This error message is displayed when the developer account does not have `WRITE` access to the Experience Platform sandbox in which the datastream is defined. |

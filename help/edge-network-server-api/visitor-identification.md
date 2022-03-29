@@ -54,10 +54,10 @@ For all non-server interactions, the Edge Network will automatically perform the
 
 * Generate a new `ECID` when none is found on the request. This will automatically enhance the collected event with the new identity.
 * Return a `state:store` instruction to the caller with the `kndctr_{$IMS_ORG_ID|url-safe}_identity` entry, which contains:
-  * the [ID value](#ee-identity-format)
-  * a `maxAge` value, in seconds, indicating how long the client persist the ID for
+  * The [ID value](#ee-identity-format)
+  * A `maxAge` value, in seconds, indicating how long the client persist the ID for
 
-For example, having the following request:
+For example, let's consider the following request:
 
 ```json
 {
@@ -116,8 +116,8 @@ The Edge Network response includes a `state:store` handle, which, in turn, inclu
 
 The caller must:
 
-* store this value on the client device
-* supply it on subsequent calls from that device in the request `meta.state.entries[]`, as shown below:
+* Store this value on the client device
+* Supply it on subsequent calls from that device in the request `meta.state.entries[]`, as shown below:
 
 ```json
 {

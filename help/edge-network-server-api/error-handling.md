@@ -30,10 +30,10 @@ Server API errors can also be split by severity:
 
 | Error | Type | Remarks |
 | --- | --- | --- |
-| `InputError` | Fatal | Happens when accepting the request, before dispatching it to upstreams. |
-| `ConfigurationError` | Fatal | Happens when accepting the request, before dispatching it to upstreams. |
 | `RequestProcessingError` | Fatal | Can happen at any point during request processing. |
-| `UpstreamError` | Non-Fatal | |
+| `InputError` | Fatal | Happens when accepting the request, before dispatching it upstream. |
+| `ConfigurationError` | Fatal | Happens when accepting the request, before dispatching it upstream. |
+| `UpstreamError` | Non-Fatal | Communication errors with upstream services.|
 
 ### Fatal errors {#fatal-errors}
 
@@ -75,8 +75,8 @@ All error objects have a `type`, `status`, `title`, `detail` and `report` messag
 
 Non-fatal errors can be further broken down into:
 
-* Errors: issues that occurred while processing the request, but did not cause the entire request to be rejected (eg. a non-critical upstream failure).
-* Warnings: messages from upstream services which could signal that a partial processing of the request occurred.
+* Errors: Issues that occurred while processing the request, but did not cause the entire request to be rejected (eg. a non-critical upstream failure).
+* Warnings: Messages from upstream services which could signal that a partial processing of the request occurred.
 
 When encountering non-fatal errors (excluding warnings), the [!DNL Server API] will change the response status to `207 Multi-Status`.
 

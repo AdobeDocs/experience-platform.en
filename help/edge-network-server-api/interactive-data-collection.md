@@ -13,15 +13,17 @@ Interactive data collection endpoints receive a single event and are used when t
 
 The server response includes one or more `Handle` objects, as shown below.
 
-## API format {#api-format}
+## API call example
+
+### API format {#format}
 
 ```http
 POST /ee/v2/interact
 ```
 
-## Request {#request}
+### Request {#request}
 
-```json
+```shell
 curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId=$DATASTREAM_ID" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
 -H "x-gw-ims-org-id: {IMS_ORG_ID}" \
@@ -59,7 +61,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId=$DATASTREAM
 | `dataStreamId` | `String` | Yes, for V2 APIs | Datastream ID. |
 | `requestId` | `String` | No | Provide a client random ID for correlating internal server requests. If none is provided, the Experience Adobe Experience Platform Edge Network will generate one and return it in the response.|
 
-## Response {#response}
+### Response {#response}
 
 A successful response returns HTTP status `200 OK`, with one or more `Handle` objects, depending on the real-time edge services enabled in the datastream configuration.
 
