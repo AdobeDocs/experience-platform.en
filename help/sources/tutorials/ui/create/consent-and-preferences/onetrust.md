@@ -8,24 +8,19 @@ description: Learn how to create a OneTrust source connection using the Adobe Ex
 ---
 # Create a [!DNL OneTrust] source connection in the UI
 
-This tutorial provides steps for creating a [!DNL OneTrust] source connector using the Platform user interface.
-
-## Overview
-
-*This describes how to create a live outbound connection to Adobe Experience Platform, to ingest both historic and scheduled consent data into Experience Platform through UI experience.
-To read further about OneTrust, please visit https://www.onetrust.com/company/about-us/*
+This tutorial provides steps for creating a [[!DNL OneTrust]](https://my.onetrust.com/s/contactsupport?language=en_US) source connector to ingest both historic and scheduled consent data into Adobe Experience Platform through the user interface.
 
 >[!IMPORTANT]
 >
->This documentation page was created by the [!DNL OneTrust] team. For any inquiries or update requests, please contact them directly at *https://my.onetrust.com/s/contactsupport?language=en_US*.
+>This documentation page was created by the [!DNL OneTrust] team. For any inquiries or update requests, [please contact them directly](https://my.onetrust.com/s/contactsupport?language=en_US).
 
 ## Prerequisites
 
-* *Needing to be aware of API key/client credentials generation through OneTrust website. See the [[!DNL OneTrust] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token) for detailed instructions on finding your access token.*
+Before you can connect [!DNL OneTrust] to Platform, you must first retrieve your access token. For detailed instructions on finding your access token, see the [[!DNL OneTrust] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
->[!IMPORTANT]
->
->The access token does not refresh automatically when expires because system-to-system refresh tokens are not supported by OneTrust. Therefore it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum life of an access token that can be configured is 1 Year.
+Furthermore, it is important to note that the [!DNL OneTrust] API specifications are being shared with Adobe for data ingestion.
+
+The access token does not refresh automatically when after it expires because system-to-system refresh tokens are not supported by [!DNL OneTrust]. Therefore it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum life of an access token that can be configured is 1 Year.
 
 ### Gather required credentials
 
@@ -65,9 +60,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-*Workflows for the remaining steps of creating a dataflow are modularized. If there are any specific call outs you want to make regarding your source, please see the additional resources section below.*
-
-By following this tutorial, you have established a connection to your *YOURSOURCE* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a connection to your [!DNL OneTrust] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/crm.md).
 
 ## Additional information
 
