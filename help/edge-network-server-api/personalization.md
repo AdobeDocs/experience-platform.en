@@ -17,10 +17,10 @@ Before working with Adobe personalization solutions, make sure to understand the
 * **Decision**: A decision (previously known as offer activity) informs the selection of an offer.
 * **Schema**: The schema of a decision informs the type of offer returned.
 * **Scope**: The scope of the decision.
-  * In Adobe Target, this is the `mBox`. The global `mBox` is the `__view__` scope
+  * In Adobe Target, this is the [!DNL mbox]. The [!DNL global mbox] is the `__view__` scope
   * For [!DNL Offer Decisioning], these are the Base64 encoded strings of JSON containing the activity and placement IDs you want the offer decisioning service to use to propose offers.
 
-## Query {#query}
+## `query` object {#query}
 
 Retrieving personalized content requires an explicit request query object for a request example. The query object has the following format:
 
@@ -107,7 +107,7 @@ The personalized content retrieved from personalization solutions is presented i
 | --- | --- | --- |
 | `payload.id` | String | The decision ID. |
 | `payload.scope` | String | The decision scope that resulted in the proposed offers. |
-| `payload.scopeDetails.decisionProvider`|||
+| `payload.scopeDetails.decisionProvider`|String| This will either be `TGT` if using Adobe Target or `ODE` if using [!DNL Offer Decisioning].|
 | `payload.scopeDetails.activity.id` | String | The unique ID of the offer activity. |
 | `payload.scopeDetails.experience.id` | String | The unique ID of the offer placement. |
 | `payload.scopeDetails.strategies.algorithmID` | String |  |
