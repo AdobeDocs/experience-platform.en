@@ -12,7 +12,7 @@ This document covers the steps for configuring a datastream in the Data Collecti
 
 >[!NOTE]
 >
->Your organization must be provisioned for this feature in order to access it in the UI. If you do not have access, please fill out the following [form](http://adobe.ly/websdkaccess) and we will grant you the necessary access.
+>Your organization must be provisioned for this feature in order to access it in the UI. Please fill out the following [form](https://adobe.ly/websdkaccess) to request the necessary access.
 
 ## Access the [!UICONTROL Datastreams] workspace
 
