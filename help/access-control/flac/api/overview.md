@@ -16,12 +16,7 @@ Roles define the access that an administrator, a specialist, or an end-user has 
 
 ## Products
 
-<!--
-Need a short and concise high-level overview of products here.
--->
-
-See the [products endpoint guide](./products.md) for more information on working with products and their corresponding permission categories and permission sets in the API.
-
+The `/products` endpoint in the Field Level Access Control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your IMS Organization. See the [products endpoint guide](./products.md) for more information on working with products and their corresponding permission categories and permission sets in the API.
 
 ## Next steps
 

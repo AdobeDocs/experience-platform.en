@@ -44,49 +44,44 @@ A successful response returns a list of roles in your organization, including in
 {
   "roles": [
     {
-      "id": "string",
-      "name": "string",
-      "description": "string",
+      "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
+      "name": "Administrator Role",
+      "description": "Role for administrator type of responsibilities and access",
       "roleType": "user-defined",
       "permissionSets": [
-        "string"
+        "manage-datasets",
+        "manage-schemas"
       ],
       "sandboxes": [
-        "string"
+        "prod"
       ],
       "subjectAttributes": {
-        "additionalProp1": [
-          "string"
-        ],
-        "additionalProp2": [
-          "string"
-        ],
-        "additionalProp3": [
-          "string"
+        "labels": [
+          "core/S1"
         ]
       },
-      "createdBy": "string",
-      "createdAt": 0,
-      "modifiedBy": "string",
-      "modifiedAt": 0,
-      "etag": "string"
+      "createdBy": "{CREATED_BY}",
+      "createdAt": 1648153201825,
+      "modifiedBy": "{MODIFIED_BY}",
+      "modifiedAt": 1648153201825,
+      "etag": null
     }
   ],
   "_page": {
-    "limit": 0,
-    "count": 0
+    "limit": 1,
+    "count": 1
   },
   "_links": {
     "next": {
-      "href": "string",
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
       "templated": true
     },
     "page": {
-      "href": "string",
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
       "templated": true
     },
     "subjects": {
-      "href": "string",
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
       "templated": true
     }
   }
@@ -113,7 +108,7 @@ The following request retrieves information for `{ROLE_ID}`.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
+  https://platform.adobe.io/data/foundation/access-control/administration/roles/3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -125,32 +120,27 @@ A successful response returns details for the queried role ID, including informa
 
 ```json
 {
-  "id": "string",
-  "name": "string",
-  "description": "string",
+  "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
+  "name": "Administrator Role",
+  "description": "Role for administrator type of responsibilities and access",
   "roleType": "user-defined",
   "permissionSets": [
-    "string"
+    "manage-datasets",
+    "manage-schemas"
   ],
   "sandboxes": [
-    "string"
+    "prod"
   ],
   "subjectAttributes": {
-    "additionalProp1": [
-      "string"
-    ],
-    "additionalProp2": [
-      "string"
-    ],
-    "additionalProp3": [
-      "string"
+    "labels": [
+      "core/S1"
     ]
   },
-  "createdBy": "string",
-  "createdAt": 0,
-  "modifiedBy": "string",
-  "modifiedAt": 0,
-  "etag": "string"
+  "createdBy": "{CREATED_BY}",
+  "createdAt": 1648153201825,
+  "modifiedBy": "{MODIFIED_BY}",
+  "modifiedAt": 1648153201825,
+  "etag": null
 }
 ```
 
@@ -170,11 +160,11 @@ GET /roles/{ROLE_ID}/subjects
 
 **Request**
 
-The following request retrieves subjects associated with `{ROLE_ID}`.
+The following request retrieves subjects associated with `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
+  https://platform.adobe.io/data/foundation/access-control/administration/roles/3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809/subjects \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -228,8 +218,8 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
   -d'{
-    "name": "Example Role Name",
-    "title": "Example Role Description",
+    "name": "Administrator Role",
+    "description": "Role for administrator type of responsibilities and access",
     "roleType": "user-defined"
   }'
 ```
@@ -246,32 +236,27 @@ A successful response returns your newly created role, with its corresponding ro
 
 ```json
 {
-  "id": "string",
-  "name": "string",
-  "description": "string",
+  "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
+  "name": "Administrator Role",
+  "description": "Role for administrator type of responsibilities and access",
   "roleType": "user-defined",
   "permissionSets": [
-    "string"
+    "manage-datasets",
+    "manage-schemas"
   ],
   "sandboxes": [
-    "string"
+    "prod"
   ],
   "subjectAttributes": {
-    "additionalProp1": [
-      "string"
-    ],
-    "additionalProp2": [
-      "string"
-    ],
-    "additionalProp3": [
-      "string"
+    "labels": [
+      "core/S1"
     ]
   },
-  "createdBy": "string",
-  "createdAt": 0,
-  "modifiedBy": "string",
-  "modifiedAt": 0,
-  "etag": "string"
+  "createdBy": "{CREATED_BY}",
+  "createdAt": 1648153201825,
+  "modifiedBy": "{MODIFIED_BY}",
+  "modifiedAt": 1648153201825,
+  "etag": null
 }
 ```
 
@@ -289,7 +274,6 @@ PATCH /roles/{ROLE_ID}
 | --- | --- |
 | {ROLE_ID} | The ID of the role that you want to update. |
 
-
 **Request**
 
 ```shell
@@ -302,8 +286,8 @@ curl -X PATCH \
     "operations": [
       {
         "op": "add",
-        "path": "string",
-        "value": "string"
+        "path": "/description",
+        "value": "Role with permission sets for admin type of access"
       }
     ]
   }'
@@ -321,32 +305,27 @@ A successful response returns the updated role, including new values for the pro
 
 ```json
 {
-  "id": "string",
-  "name": "string",
-  "description": "string",
+  "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
+  "name": "Administrator Role",
+  "description": "Role with permission sets for admin type of access",
   "roleType": "user-defined",
   "permissionSets": [
-    "string"
+    "manage-datasets",
+    "manage-schemas"
   ],
   "sandboxes": [
-    "string"
+    "prod"
   ],
   "subjectAttributes": {
-    "additionalProp1": [
-      "string"
-    ],
-    "additionalProp2": [
-      "string"
-    ],
-    "additionalProp3": [
-      "string"
+    "labels": [
+      "core/S1"
     ]
   },
-  "createdBy": "string",
-  "createdAt": 0,
-  "modifiedBy": "string",
-  "modifiedAt": 0,
-  "etag": "string"
+  "createdBy": "{CREATED_BY}",
+  "createdAt": 1648153201825,
+  "modifiedBy": "{MODIFIED_BY}",
+  "modifiedAt": 1648153201825,
+  "etag": null
 }
 ```
 
@@ -362,11 +341,11 @@ PUT /roles/{ROLE_ID}
 
 **Request**
 
-The following request updates the name, description, and role type for role ID: `{ROLE_ID}`.
+The following request updates the name, description, and role type for role ID: `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
+  https://platform.adobe.io/data/foundation/access-control/administration/roles/3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -389,32 +368,27 @@ A successful returns your updated role, including new values for its name, descr
 
 ```json
 {
-  "id": "string",
-  "name": "string",
-  "description": "string",
+  "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
+  "name": "Administrator Role",
+  "description": "Role with permission sets for admin type of access",
   "roleType": "user-defined",
   "permissionSets": [
-    "string"
+    "manage-datasets",
+    "manage-schemas"
   ],
   "sandboxes": [
-    "string"
+    "prod"
   ],
   "subjectAttributes": {
-    "additionalProp1": [
-      "string"
-    ],
-    "additionalProp2": [
-      "string"
-    ],
-    "additionalProp3": [
-      "string"
+    "labels": [
+      "core/S1"
     ]
   },
-  "createdBy": "string",
-  "createdAt": 0,
-  "modifiedBy": "string",
-  "modifiedAt": 0,
-  "etag": "string"
+  "createdBy": "{CREATED_BY}",
+  "createdAt": 1648153201825,
+  "modifiedBy": "{MODIFIED_BY}",
+  "modifiedAt": 1648153201825,
+  "etag": null
 }
 ```
 
