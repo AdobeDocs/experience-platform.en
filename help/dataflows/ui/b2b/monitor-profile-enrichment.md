@@ -7,7 +7,7 @@ type: Tutorial
 ---
 # Monitor profile enrichment jobs in the UI
 
-Use the [!UICONTROL Profile Enrichment] dashboard to understand if profile enrichment jobs for your B2B profiles ran on time and without any exceptions, and to track the relevant metrics for related accounts jobs.
+Use the [!UICONTROL Profile Enrichment] dashboard to understand if profile enrichment jobs ran and completed successfully, and to view the basic metrics to gauge the effectiveness of the enrichments.
 
 In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. In the view selector, select **B2B Flow** to see the dashboard elements specific to [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  The [!UICONTROL Monitoring] dashboard contains metrics and information on profile enrichment jobs for [related accounts](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
