@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
-solution: Experience Platform, Intelligent Services
+solution: Intelligent Services
 title: Getting Started with Content and Commerce AI
 topic-legacy: Getting started 
 description: Content and Commerce AI utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the authentication tutorial.
