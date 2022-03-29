@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Oracle Eloqua Connector Overview
 topic-legacy: overview
 description: Learn how to connect Oracle Eloqua to Adobe Experience Platform using APIs or the user interface.
+exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
 ---
 # [!DNL Oracle Eloqua] connector
 

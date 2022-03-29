@@ -5,7 +5,7 @@ type: Documentation
 description: This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your SFTP server, Amazon S3, or Azure Blob storage.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 ---
-# IP address allow list for cloud storage destinations {#ip-address-allow-list}
+# IP address allowlist for cloud storage destinations {#ip-address-allow-list}
 
 >[!IMPORTANT]
 >
@@ -14,11 +14,11 @@ exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 
 ## Overview {#overview}
 
-This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your [SFTP server](./sftp.md).
+This page provides IP ranges that you can add to your allowlist, to safely export data from Experience Platform to your [SFTP server](./sftp.md).
 
 You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
 
-Adobe recommends that you add the following IP ranges to an allow list prior to working with cloud storage destination connections. Failing to add your region-specific IP range to your allow list may lead to errors or non-performance when using the cloud storage destination connections.
+Adobe recommends that you add the following IP ranges to an allowlist prior to working with cloud storage destination connections. Failing to add your region-specific IP range to your allowlist may lead to errors or non-performance when using the cloud storage destination connections.
 
 ## Required for all customers
 
