@@ -17,7 +17,9 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 >[!NOTE]
 >
 >
->Segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
+>Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+>
+>Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
 
 ## Streaming segmentation query types {#query-types}
 

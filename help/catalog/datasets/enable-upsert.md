@@ -209,7 +209,7 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] },
+        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
       ]'
 ```
 
