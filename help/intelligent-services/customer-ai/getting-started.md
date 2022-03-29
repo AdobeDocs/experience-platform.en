@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Getting Started in Customer AI
 topic-legacy: Getting started

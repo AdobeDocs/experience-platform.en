@@ -254,7 +254,7 @@ The response downloads the file you requested in in your current directory. In t
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-The scores downloaded will be in Parquet format and will either need a [!DNL Spark]-shell or Parquet reader to view the scores. For raw score viewing, you can use [Apache Parquet tools](https://parquet.apache.org/documentation/latest/). Parquet tools can analyze the data with [!DNL Spark].
+The scores downloaded will be in Parquet format and will either need a [!DNL Spark]-shell or Parquet reader to view the scores. For raw score viewing, you can use [Apache Parquet tools](https://parquet.apache.org/docs/). Parquet tools can analyze the data with [!DNL Spark].
 
 ## Next steps
 
