@@ -70,7 +70,7 @@ Now, this schema is enabled for Profile, with the primary identification assigne
 
 After configuring the schema, you will need to create a dataset for the segment metadata. 
 
-To create a dataset, follow the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#create). You'll want to follow the **[!UICONTROL Create dataset from schema]** option, using the schema you previously created.
+To create a dataset, follow the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#create). You should follow the **[!UICONTROL Create dataset from schema]** option, using the schema you previously created.
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
@@ -165,11 +165,11 @@ To begin composing a schema, first select **[!UICONTROL Schemas]** on the left n
 
 ![](../images/tutorials/external-audiences/create-schema-profile.png)
 
-Now that the schema has been created, you will need to add the segment membership field group as part of the schema.
+Now that the schema has been created, you will need to add the segment membership field group as part of the schema. To do this, select [!UICONTROL Segment Membership Details], followed by [!UICONTROL Add field groups].
 
 ![](../images/tutorials/external-audiences/segment-membership-details.png)
 
-Additionally, ensure the schema is marked for **[!UICONTROL Profile]**. In order to this, you will need to mark a field as the primary identity.
+Additionally, ensure the schema is marked for **[!UICONTROL Profile]**. In order to do this, you will need to mark a field as the primary identity.
 
 ![](../images/tutorials/external-audiences/external-segment-profile.png)
 
@@ -177,7 +177,7 @@ Additionally, ensure the schema is marked for **[!UICONTROL Profile]**. In order
 
 After creating your schema, you will need to create a dataset. 
 
-To create a dataset, follow the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#create). You'll want to follow the **[!UICONTROL Create dataset from schema]** option, using the schema you previously created.
+To create a dataset, follow the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#create). You should follow the **[!UICONTROL Create dataset from schema]** option, using the schema you previously created.
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
