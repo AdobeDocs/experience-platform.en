@@ -176,25 +176,40 @@ A successful response returns the subjects associated with the queried role ID, 
 
 ```json
 {
-  "subjects": [
-    {
-      "subjectId": "string",
-      "subjectType": "user"
-    }
-  ],
+  "items": [
+      {
+          "roleId": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
+          "subjectType": "user",
+          "subjectId": "D4CB31EF61C1C9DB0A494206@AdobeID"
+      },
+      {
+          "roleId": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
+          "subjectType": "user",
+          "subjectId": "439157105459D7350A4C86DE@AdobeID"
+      },
+      {
+          "roleId": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
+          "subjectType": "user",
+          "subjectId": "121A32D35ADF96900A49403D@AdobeID"
+      },
+  ]
   "_page": {
     "limit": 0,
     "count": 0
   },
   "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
+      "self": {
+          "href": "/roles/{ROLE_ID}/subjects",
+          "templated": false,
+          "type": null,
+          "method": null
+      },
+      "page": {
+          "href": "/roles/{ROLE_ID}/subjects?limit={limit}&start={start}&orderBy={orderBy}&property={property}",
+          "templated": true,
+          "type": null,
+          "method": null
+      }
   }
 }
 ```
