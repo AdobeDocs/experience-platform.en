@@ -4,7 +4,7 @@ title: IP address allow list for streaming destinations
 type: Documentation
 description: This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your HTTP REST API endpoint.
 ---
-# IP address allow list for streaming destinations {#ip-address-allow-list}
+# IP address allowlist for streaming destinations {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
@@ -21,11 +21,11 @@ The IP ranges documented here apply to the following destinations:
 
 Outbound traffic from Experience Platform to these destinations always goes through the IPs listed on this page.
 
-This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your HTTP endpoint, [!DNL Amazon Kinesis], or [!DNL Azure Event Hubs] instance. This functionality is especially useful if your HTTP endpoint is located behind an enterprise firewall or if your company security and compliance standards require a list of IP ranges to be allow listed.
+This page provides IP ranges that you can add to your allowlist, to safely export data from Experience Platform to your HTTP endpoint, [!DNL Amazon Kinesis], or [!DNL Azure Event Hubs] instance. This functionality is especially useful if your HTTP endpoint is located behind an enterprise firewall or if your company security and compliance standards require a list of IP ranges to be allowlisted.
 
 You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
 
-Adobe recommends that you add the following IP ranges to an allow list prior to working with the destinations mentioned above on this page. Failing to add your region-specific IP range to your allow list may lead to errors or non-performance when using these streaming destinations.
+Adobe recommends that you add the following IP ranges to an allowlist prior to working with the destinations mentioned above on this page. Failing to add your region-specific IP range to your allowlist may lead to errors or non-performance when using these streaming destinations.
 
 ## VA7: US and Americas customers {#us-americas}
 
