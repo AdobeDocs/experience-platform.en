@@ -28,13 +28,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ All resources in [!DNL Experience Platform], including those belonging to the [!
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
-- Content-Type: `application/json`
+- `Content-Type: application/json`
 
 ### Sample failed batch
 
@@ -88,13 +88,13 @@ GET /batches/{BATCH_ID}/failed
 **Request**
 
 ```shell
-curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed" \
-  -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "Cache-Control: no-cache" \
-  -H "Content-Type: application/json" \
-  -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-sandbox-name: {SANDBOX_NAME}
+curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**
