@@ -9,17 +9,25 @@ description: This page provides IP ranges that you can add to your allow list, t
 >[!IMPORTANT]
 >
 > * Adobe recommends that you bookmark this page and revisit it every three months to check for the latest IP addresses. Adobe does not provide notification of new IP ranges.
-> * The list of IPs documented here *does not* apply to any destinations you build using [Destination SDK](/help/destinations/destination-sdk/overview.md).
+> * The list of IPs documented here *does not* apply to any destinations you build using [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Overview {#overview}
 
-This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your HTTP endpoint, by using the [HTTP API destination](./http-destination.md). This functionality is especially useful if your HTTP endpoint is located behind an enterprise firewall or if your company security and compliance standards require a list of IP ranges to be allow listed.
+The IP ranges documented here apply to the following destinations:
+
+* [HTTP API destination](./http-destination.md)
+* [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+* [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+
+Outbound traffic from Experience Platform to these destinations always goes through the IPs listed on this page.
+
+This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your HTTP endpoint, [!DNL Amazon Kinesis], or [!DNL Azure Event Hubs] instance. This functionality is especially useful if your HTTP endpoint is located behind an enterprise firewall or if your company security and compliance standards require a list of IP ranges to be allow listed.
 
 You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
 
-Adobe recommends that you add the following IP ranges to an allow list prior to working with HTTP API streaming destinations. Failing to add your region-specific IP range to your allow list may lead to errors or non-performance when using the HTTP API streaming destinations.
+Adobe recommends that you add the following IP ranges to an allow list prior to working with the destinations mentioned above on this page. Failing to add your region-specific IP range to your allow list may lead to errors or non-performance when using these streaming destinations.
 
-## VA7: US and Americas customers
+## VA7: US and Americas customers {#us-americas}
 
 * `20.186.185.239`
 * `40.70.154.136/29`
@@ -42,7 +50,7 @@ Adobe recommends that you add the following IP ranges to an allow list prior to 
 * `52.254.107.0/28`
 * `52.254.107.144/28`
 
-## NLD2: EMEA customers
+## NLD2: EMEA customers {#emea}
 
 `40.74.4.160/28`
 `40.74.6.128/28`
@@ -67,7 +75,7 @@ Adobe recommends that you add the following IP ranges to an allow list prior to 
 `51.105.144.81`
 `51.124.70.4`
 
-## AUS5: APAC customers
+## AUS5: APAC customers {#apac}
 
 `20.43.104.80/28`
 `20.43.104.16/28`
