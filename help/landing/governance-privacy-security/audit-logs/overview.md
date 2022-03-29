@@ -91,6 +91,10 @@ All actions that you can perform in the UI can also be done using API calls. See
 
 To learn how to manage audit logs for activities in Adobe Admin Console, refer to the following [document](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
-## Next steps
+## Next steps and additional resources
 
 This guide covered how to manage audit logs in Experience Platform. For more information on how to monitor Platform activities, see the documentation on [Observability Insights](../../../observability/home.md) and [monitoring data ingestion](../../../ingestion/quality/monitor-data-ingestion.md).
+
+To reinforce your understanding of audit logs in Experience Platform, watch the following video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
