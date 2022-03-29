@@ -25,7 +25,6 @@ You can start by using a simple template that exports your raw profiles without 
 >
 >* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. Refer to the [destination configuration API operations](./destination-configuration-api.md#retrieve-list).
 
-
 **API format**
 
 

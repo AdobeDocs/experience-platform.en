@@ -1,9 +1,9 @@
 ---
-solution: Experience Platform, Data Collection
+solution: Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK Help
 breadcrumb-title: Web SDK Guide
-user-guide-description: Interact with Experience Cloud services through the Edge Network.
+user-guide-description: Interact with Experience Cloud services through the Edge network.
 feature: Web SDK
 ---
 
@@ -23,12 +23,13 @@ feature: Web SDK
   * [Supported use cases](fundamentals/supported-use-cases.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
+  * [First-party device IDs](identity/first-party-device-ids.md)
 * Data collection {#data-collection}
   * [Automatically collected information](data-collection/automatic-information.md)
   * [Track links](data-collection/track-links.md)
   * [Collect commerce and products data](data-collection/collect-commerce-data.md)
   * Adobe Analytics {#adobe-analytics}
-    * [Overview](data-collection/adobe-analytics/analytics-overview.md)
+    * [Using Adobe Analytics with Platform Web SDK](data-collection/adobe-analytics/analytics-overview.md)
     * [Mapping Analytics variables](data-collection/adobe-analytics/manually-mapping-variables.md)
     * [Automatically mapped variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
     * [Sending data to Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
@@ -39,6 +40,8 @@ feature: Web SDK
     * [Overview](personalization/adobe-target/target-overview.md)
     * [Single-page application implementation](personalization/adobe-target/spa-implementation.md)
     * [Accessing response tokens](personalization/adobe-target/accessing-response-tokens.md)
+    * [Using mbox 3rd party ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
+    * [Comparing the at.js library to the Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
   * Offer Decisioning {#offer-decisioning}
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consent {#consent}

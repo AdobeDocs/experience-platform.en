@@ -12,7 +12,7 @@ feature: Destinations
 * [Destination types and categories](./destination-types.md)
 * API tutorials {#api}
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
-    * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
+    * [Connect to batch cloud storage and email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
     * [(Beta) Activate audience segments to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
     * [Update destination dataflows](./api/update-destination-dataflows.md)
     * [Delete destination accounts](./api/delete-destination-account.md)
@@ -29,7 +29,8 @@ feature: Destinations
         * [Configure personalization destinations for same-page and next-page personalization](./ui/configure-personalization-destinations.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
-    * [Edit activation flows](./ui/edit-activation.md)
+    * [Delete destination accounts](./ui/delete-destination-account.md)
+    * [Edit activation dataflows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
     * [Monitor dataflows](./ui/monitor-dataflows.md)
 * Destinations catalog {#catalog}
@@ -89,7 +90,7 @@ feature: Destinations
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
         * [(Beta) Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
-        * [IP address allow list](./catalog/cloud-storage/ip-address-allow-list.md)
+        * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
@@ -131,6 +132,7 @@ feature: Destinations
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
     * Streaming destinations {#streaming}
         * [ (Beta) HTTP API connection](./catalog/streaming/http-destination.md)
+        * [IP address allowlist for streaming destinations](./catalog/streaming/ip-address-allow-list.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
@@ -149,8 +151,10 @@ feature: Destinations
     * [Getting started](./destination-sdk/getting-started.md)
     * Destination SDK functionality {#functionality}
       * [Configuration options](./destination-sdk/configuration-options.md)
-      * [Destination configuration](./destination-sdk/destination-configuration.md)
-      * [Server and template specs](./destination-sdk/server-and-template-configuration.md)
+      * [Streaming destination configuration](./destination-sdk/destination-configuration.md)
+      * [(Beta) File-based destination configuration](./destination-sdk/file-based-destination-configuration.md)
+      * [Streaming destinations server and template specs](./destination-sdk/server-and-template-configuration.md)
+      * [(Beta) File-based destinations server and file specs](./destination-sdk/server-and-file-configuration.md)
       * [Message format](./destination-sdk/message-format.md)
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
       * Authentication {#authentication}
@@ -173,6 +177,7 @@ feature: Destinations
         * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
     * Guides {#guides}
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
+      * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
     * Document your destination {#document-destination}
       * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)

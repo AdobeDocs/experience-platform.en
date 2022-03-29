@@ -1,9 +1,9 @@
 ---
-title: Sample Incremental Load Queries
+title: Incremental Load in Query Service
 description: The incremental load feature uses both anonymous block and snapshot features to provide a near real-time solution for moving data from the data lake to your data warehouse whilst ignoring matching data.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
 ---
-# Sample incremental data load queries
+# Incremental load in Query Service
 
 The incremental load design pattern is a solution for managing data. The pattern only processes information in the dataset that has been created or modified since the last load execution. 
 
@@ -59,7 +59,7 @@ INSERT INTO
 >The `history_meta('source table name')` is a convenient method used to gain access to available snapshot in a dataset.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -80,7 +80,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END 
+$$;
 ```
 
 4 Use the incremental data load logic in the anonymous block example below to allow any new data from the source dataset (since the most recent timestamp), to be processed and appended to the destination table at a regular cadence. In the example, data changes to `DIM_TABLE_ABC` will be processed and appended to `DIM_TABLE_ABC_incremental`.
@@ -90,7 +91,7 @@ EXCEPTION
 > `_ID` is the Primary Key in both `DIM_TABLE_ABC_Incremental` and `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -111,7 +112,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 This logic can be applied to any table to perform incremental loads.
@@ -131,7 +133,7 @@ SET resolve_fallback_snapshot_on_failure=true;
 The entire code block looks as follows:
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -152,7 +154,8 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 ## Next steps

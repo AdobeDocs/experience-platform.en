@@ -304,8 +304,12 @@ LIMIT 50;
 
 Query Service supports data deduplication, or the removal of duplicate rows from data. For more information on deduplication, please read the [Query Service deduplication guide](./deduplication.md).
 
+## Time zone computations in Query Service
+
+Query Service standardizes persisted data in Adobe Experience Platform using the UTC timestamp format. For more information on how to translate your time zone requirement to and from a UTC timestamp, please see the [FAQ section on how to change the time zone to and from a UTC Timestamp](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
+
 ## Next steps
 
 By reading this document, you have been introduced to some important considerations when writing queries using [!DNL Query Service]. For more information on how to use the SQL syntax to write your own queries, please read the [SQL syntax documentation](../sql/syntax.md).
 
-For more samples of queries that can be used within Query Service, please read the guides on [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md), or [ExperienceEvent sample queries](./experience-event-queries.md).
+For more samples of queries that can be used within Query Service, please read the guides on [Adobe Analytics sample queries](../sample-queries/adobe-analytics.md), [Adobe Target sample queries](../sample-queries/adobe-target.md), or [ExperienceEvent sample queries](../sample-queries/experience-event.md).

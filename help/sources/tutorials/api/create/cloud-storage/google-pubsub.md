@@ -9,10 +9,6 @@ exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
 ---
 # Create a [!DNL Google PubSub] Source Connection Using the Flow Service API
 
->[!NOTE]
->
->The [!DNL Google PubSub] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 This tutorial walks you through the steps to connect [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started

@@ -14,7 +14,11 @@ This destination provides a way to retrieve segment information from Adobe Exper
 
 This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md) or the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). You must be using one of these SDKs to use this destination.
 
-## Export type {#export-type}
+>[!IMPORTANT]
+>
+>Before creating a custom personalization connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
+
+## Export type and frequency {#export-type-frequency}
 
 **Profile request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../edge/fundamentals/datastreams.md).
 
@@ -37,8 +41,8 @@ Using a separate custom personalization destination for their ad server, the sam
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
 >title="About datastream IDs"
->abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream."
+>abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream"
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -49,7 +53,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
 *  **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
-*  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details.
+*  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details.
 
 ## Activate segments to this destination {#activate}
 
@@ -57,7 +61,7 @@ Read [Activate profiles and segments to profile request destinations](../../ui/a
 
 ## Exported data {#exported-data}
 
-If you are using [Adobe Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](../../../edge/extension/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
+If you are using [Tags in Adobe Experience Platform](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](../../../edge/extension/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
 
 Here is a sample value for the `event.destinations` variable:
 
@@ -79,7 +83,7 @@ Here is a sample value for the `event.destinations` variable:
 ]
 ```
 
-If you are not using [Adobe Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality to see the exported data.
+If you are not using [Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality to see the exported data.
 
 The JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias of the application you are integrating with Adobe Experience Platform. The segment IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
 

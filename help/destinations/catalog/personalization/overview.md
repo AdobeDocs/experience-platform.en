@@ -16,8 +16,8 @@ Currently, Platform supports the personalization destinations listed below. For 
 
 **Connections**
 
-* [(Beta) Adobe Target](adobe-target-connection.md)
-* [(Beta) Custom personalization connection](custom-personalization.md)
+* [Adobe Target](adobe-target-connection.md)
+* [Custom personalization connection](custom-personalization.md)
 
 **Extensions**
 

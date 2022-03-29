@@ -35,9 +35,18 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 |MAID|Microsoft Advertising ID. This ID uniquely identifies devices running Windows 10.||
 |Amazon Fire TV ID|This ID uniquely identifies Amazon Fire TVs.||
 
-## Export type {#export-type}
+{style="table-layout:auto"}
 
-**Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
+## Export type and frequency {#export-type-frequency}
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) to the Google destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Prerequisites {#prerequisites}
 

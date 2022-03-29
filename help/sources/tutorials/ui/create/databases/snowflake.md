@@ -8,10 +8,6 @@ exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 ---
 # Create a [!DNL Snowflake] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL Snowflake] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 This tutorial provides steps for creating a [!DNL Snowflake] source connector using the Adobe Experience Platform user interface.
 
 ## Getting started
@@ -34,7 +30,7 @@ In order to access your Snowflake account on [!DNL Platform], you must provide t
 | Password | The password for the [!DNL Snowflake] user account. |
 | Connection string | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
-For more information about these values, refer to [this Snowflake document](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
+For more information about these values, refer to [this Snowflake document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 ## Connect your  Snowflake account
 

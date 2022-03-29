@@ -229,9 +229,7 @@ Currently, Platform only supports a single major version (`1`) for each schema. 
 
 ## XDM field constraints and best practices
 
-The fields of a schema are listed within its `properties` object. Each field is itself an object, containing attributes to describe and constrain the data that the field can contain. 
-
-More information about defining field types in the API can be found in the [field constraints guide](../schema/field-constraints.md) for this guide, including code samples and optional constraints for the most commonly used data types.
+The fields of a schema are listed within its `properties` object. Each field is itself an object, containing attributes to describe and constrain the data that the field can contain. Refer to the guide on [defining custom fields in the API](../tutorials/custom-fields-api.md) for code samples and optional constraints for the most commonly used data types.
 
 The following sample field illustrates a properly formatted XDM field, with further details on naming constraints and best practices provided below. These practices can also be applied when defining other resources that contain similar attributes.
 
@@ -257,8 +255,6 @@ The following sample field illustrates a properly formatted XDM field, with furt
     * Where a specific formatting of data is required, `examples` can be added as an array.
     * The field type may also be defined using any data type in the registry. See the section on [creating a data type](./data-types.md#create) in the data types endpoint guide for more information. 
 * The `description` explains the field and pertinent information regarding field data. It should be written in full sentences with clear language so that anyone accessing the schema can understand the intention of the field.
-
-See the document on [field constraints](../schema/field-constraints.md) for more information on how to define different field types in the API.
 
 ## Next steps
 

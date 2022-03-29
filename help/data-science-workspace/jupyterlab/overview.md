@@ -165,7 +165,7 @@ The customized *Launcher* provides you with useful notebook templates for their 
 | --- | --- |
 | Blank | An empty notebook file. |
 | Starter | A pre-filled notebook demonstrating data exploration using sample data. |
-| Retail Sales | A pre-filled notebook featuring the [retail sales recipe](https://adobe.ly/2wOgO3L) using sample data. |
+| Retail Sales | A pre-filled notebook featuring the [retail sales recipe](../pre-built-recipes/retail-sales.md) using sample data. |
 | Recipe Builder | A notebook template for creating a recipe in [!DNL JupyterLab]. It is pre-filled with code and commentary that demonstrates and describes the recipe creation process. Refer to the [notebook to recipe tutorial](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) for a detailed walkthrough. |
 | [!DNL Query Service] | A pre-filled notebook demonstrating the usage of [!DNL Query Service] directly in [!DNL JupyterLab] with provided sample workflows that analyzes data at scale. |
 | XDM Events | A pre-filled notebook demonstrating data exploration on postvalue Experience Event data, focusing on features common across the data structure. |
