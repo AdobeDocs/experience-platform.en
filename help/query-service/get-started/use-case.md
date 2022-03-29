@@ -7,18 +7,19 @@ description: An end-to-end example to demonstrate the versatility and benefits o
 ---
 # Example Query Service use case
 
-This document and accompanying video presentation provide a high-level end-to-end workflow demonstrating how Adobe Experience Platform Query Service benefits your organization's strategic business insights. This example browse abandonment use case illustrates the following key concepts:
+This document and accompanying video presentation provide a high-level end-to-end workflow demonstrating how Adobe Experience Platform Query Service benefits your organization's strategic business insights. This browse abandonment use case illustrates the following key concepts:
 
 * Why data processing is key to maximizing the potential of Adobe Experience Platform.
-* How to build the query depends on your existing data architecture.
-* How to ensure data quality to meet your needs and how to mitigate any shortfalls.
-* How to schedule a query to run at a certain frequency for use downstream in [!UICONTROL Segmentation] and [!UICONTROL Destinations] for personalization.
-* The ease of use for marketers to include these computed attributes in their own segments.
+* How building the query depends on your existing data architecture.
+* How to ensure data quality to meet your needs, and how to mitigate any shortfalls.
+* How to schedule a query to run at a set frequency for use downstream in [!UICONTROL Segmentation] and [!UICONTROL Destinations] for personalization.
+* The ease of use for marketers to include computed attributes in their own segments.
 
 ## Objectives
 
 This workflow demonstration relies on several Adobe Experience Platform services. If you want to follow along it is recommended to have a good understanding of the following features and services:
 
+* The [basics of Experience Data Model (XDM) schema composition](../../xdm/schema/composition.md)
 * How to [create datasets and ingest data](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
 * How to [ingest data using the Adobe Analytics Source connector](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
 * [Segmentation](../../segmentation/home.md)
@@ -57,9 +58,9 @@ The features provided by Query Service serve many purposes. You can use it to ac
 
 Query Service enables you to include constraints in your queries to simplify your segment building process. This improves data quality by ensuring the right data qualifies for your segments and creates more accurate audiences. Maintaining the quality of your query results in an accurate audience and helps with data reliability. You can also save your audience by creating schemas and custom tables based on computed attributes calculated by your query. A custom table can be enabled for profile and you can use these data points for segmentation and personalization. This makes it very easy for marketers who want to create a clear-cut audience of people.
 
-By including logic in your query that satisfies any recurring or static conditions you may have, Query Service extracts the burden of elaborate segmentation.
+Also, by including logic in your query that satisfies any recurring or static conditions you may have, Query Service extracts the burden of elaborate segmentation.
 
-Adobe Experience Platform provides a data repository and the necessary tools to activate your data in an efficient and reliable way. By keeping data inside Platform, it allows you to compute attributes while running other processes. This removes the need to export data to a third-party tool to manipulate, process, and re-ingest it. Which can greatly impact a project timeline when dealing with hundreds of attributes or campaigns. This gives marketers a single location to access their data and build out campaigns as well as a very dynamic means of segmenting and personalizing their messages.
+Adobe Experience Platform provides a data repository and the necessary tools to activate your data in an efficient and reliable way. By keeping data inside Platform, it allows you to compute attributes while running other processes and removes the need to export data to a third-party tools for manipulation and processing. Such processing overheads can greatly impact a project timeline when dealing with hundreds of attributes or campaigns. This gives marketers a single location to access their data and build out campaigns as well as a very dynamic means of segmenting and personalizing their messages.
 
 ## Next steps
 
