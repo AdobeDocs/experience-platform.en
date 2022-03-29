@@ -5,7 +5,7 @@ seo-description: Learn how to use the Edge Network Server API to interact with A
 keywords: data collection; outlet; analytics; Adobe Experience Platform Edge Network api;aep
 ---
 
-# Interacting with Adobe Analytics
+# Interacting with Adobe Experience Platform
 
 ## Overview {#overview}
 
