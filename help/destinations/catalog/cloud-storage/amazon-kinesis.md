@@ -39,6 +39,10 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
+## IP address allowlist {#ip-address-allowlist}
+
+To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the [!DNL Amazon Kinesis] destination. Refer to [IP address allow list for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
+
 ## Required [!DNL Amazon Kinesis] permissions {#required-kinesis-permission}
 
 To successfully connect and export data to your [!DNL Amazon Kinesis] streams, Experience Platform needs permissions for the following actions:
