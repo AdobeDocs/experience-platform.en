@@ -13,6 +13,8 @@ New features in Adobe Experience Platform:
 Updates to existing features in Adobe Experience Platform:
 
 - [Alerts](#alerts)
+- [[!DNL Dashboards]](#dashboards)
+- [[!DNL Query Service]](#query-service)
 - [Sources](#sources)
 
 ## [!DNL Audit Logs] {#audit-logs}
@@ -40,11 +42,54 @@ Experience Platform allows you to subscribe to event-based alerts for various Pl
 
 For more information on alerts in Platform, refer to the [alerts overview](../../observability/alerts/overview.md).
 
+## Dashboards {#dashbaords}
+
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important information about your organization’s data, as captured during daily snapshots.
+
+### Profile Dashboards
+
+The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. 
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+|   Unsegmented Profiles widget |  The widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information.   |
+|   Unsegmented Profiles Trend widget |  This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend can be visualized over 30 days, 90 days, and 12 month periods. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information.   |
+| Unsegmented Profiles by Identity widget |  This widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information.   |
+| Single identity profiles widget |  This widget provides a count of your organization's profiles that only have one type of ID type that creates their identity, either an email or ECID. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information.  |
+
+For more information on Profiles dashboards, refer to the [Profiles dashboards overview](../../dashboards/guides/profiles.md).
+
+### Destinations Dashboards
+
+The Destinations dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. 
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+|   Destinations count widget  |  The widget provides the total number of available endpoints where an audience can be activated and delivered to within the system. This number includes both active and inactive destinations. See the [destinations standard widget documentation](../../dashboards/guides/destinations.md#standard-widgets) for more information.  |
+
+For more information on Destinations dashboards in Platform, refer to the [Destinations dashboards overview](../../dashboards/guides/destinations.md).
+
+## Query Service {#query-service}
+
+[!DNL Query Service] allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+|  `table_exists`   |  The new feature command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. See the [SQL syntax documentation](../../query-service/sql/syntax.md) for more information.   |
+
+For more information on available features, refer to the [Query Service overview](../../query-service/home.md).
+
 ## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughout.
 
 **Updated features**
 
