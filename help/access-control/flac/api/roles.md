@@ -88,6 +88,17 @@ A successful response returns a list of roles in your organization, including in
 }
 ```
 
+| Property | Description |
+| --- | --- |
+| `id` | The ID that corresponds with the role. This ID is auto-generated. |
+| `name` | The name of your role. |
+| `description` | The description property provides additional information on your role. |
+| `roleType` |
+| `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
+| `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
+| `subjectAttributes` |  |
+| `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
+
 ## Look up a role {#lookup}
 
 You can look up an individual role by making a GET request that includes the corresponding `roleId` in the request path.
@@ -143,6 +154,17 @@ A successful response returns details for the queried role ID, including informa
   "etag": null
 }
 ```
+
+| Property | Description |
+| --- | --- |
+| `id` | The ID that corresponds with the role. This ID is auto-generated. |
+| `name` | The name of your role. |
+| `description` | The description property provides additional information on your role. |
+| `roleType` |
+| `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
+| `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
+| `subjectAttributes` |  |
+| `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Look up subjects by role ID
 
@@ -214,6 +236,12 @@ A successful response returns the subjects associated with the queried role ID, 
 }
 ```
 
+| Property | Description |
+| --- | --- |
+| `roleId` |
+| `subjectType` |
+| `subjectId` |
+
 ## Create a role {#create}
 
 To create a new role, make a POST request to the `/roles` endpoint while providing values for your role's name, description, and role type.
@@ -274,6 +302,17 @@ A successful response returns your newly created role, with its corresponding ro
   "etag": null
 }
 ```
+
+| Property | Description |
+| --- | --- |
+| `id` | The ID that corresponds with the role. This ID is auto-generated. |
+| `name` | The name of your role. |
+| `description` | The description property provides additional information on your role. |
+| `roleType` |
+| `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
+| `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
+| `subjectAttributes` |  |
+| `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Update a role {#patch}
 
@@ -344,6 +383,17 @@ A successful response returns the updated role, including new values for the pro
 }
 ```
 
+| Property | Description |
+| --- | --- |
+| `id` | The ID that corresponds with the role. This ID is auto-generated. |
+| `name` | The name of your role. |
+| `description` | The description property provides additional information on your role. |
+| `roleType` |
+| `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
+| `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
+| `subjectAttributes` |  |
+| `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
+
 ## Update a role by role ID {#put}
 
 You can update a role by making a PUT request to the `/roles` endpoint and specifying the role ID that corresponds to the role you want to update.
@@ -406,6 +456,17 @@ A successful returns your updated role, including new values for its name, descr
   "etag": null
 }
 ```
+
+| Property | Description |
+| --- | --- |
+| `id` | The ID that corresponds with the role. This ID is auto-generated. |
+| `name` | The name of your role. |
+| `description` | The description property provides additional information on your role. |
+| `roleType` |
+| `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
+| `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
+| `subjectAttributes` |  |
+| `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Update subject by role ID
 
@@ -476,6 +537,11 @@ A successful response returns the updated subjects associated with the queried r
   }
 }
 ```
+
+| Property | Description |
+| --- | --- |
+| `subjectId` |
+| `subjectType` |
 
 ## Delete a role {#delete}
 
