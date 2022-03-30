@@ -23,8 +23,6 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Account profile UI guide](accounts/account-profile-ui-guide.md)
 * Administration {#admin}
   * [Administration overview](administration/admin-overview.md)
-* B2B CDP AI/ML services {#b2b-cdp-ai-ml}
-  * [Related accounts](b2b-ai-ml-services/related-accounts.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
   * [Data quality on Platform](datasets/data-quality.md)
@@ -41,6 +39,8 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Profiles {#profile}
   * [Profile overview](profile/profile-overview.md)
   * [Profile browse](profile/profile-browse.md)
+* Real-time CDP B2B Edition AI/ML services {#b2b-cdp-ai-ml}
+  * [Related accounts](b2b-ai-ml-services/related-accounts.md)
 * Schemas {#schemas}
   * [Schemas overview](schemas/overview.md)
   * [Schemas in Real-time CDP B2B Edition](schemas/b2b.md)
