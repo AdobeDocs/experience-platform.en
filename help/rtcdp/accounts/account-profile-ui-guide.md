@@ -116,7 +116,8 @@ The **[!UICONTROL Related accounts]** tab provides information about other accou
 
 >[!NOTE]
 >
->The [!UICONTROL Related accounts] tab displays a list of up to 30 related accounts associated with the account. A Related accounts group can have maximum 30 account profiles. If more than 30 account profiles were found related, they are arbitrarily split into multiple groups, each having no more than 30 members. The Related accounts group of an account profile always includes itself.
+>* A Related accounts group can have maximum 30 account profiles. If more than 30 account profiles were found related, they are arbitrarily split into multiple groups, each having no more than 30 members. The Related accounts group of an account profile always includes itself.
+>* The [!UICONTROL Related accounts] tab currently displays a list of up to 25 related accounts associated with the account you are browsing. This is a limitation that will be addressed in a future update. Despite this UI limitation, when you use related accounts in segment definitions, for groups of 30 related account profiles all profiles are used for targeting.
 
 Each related account includes information such as the account profile ID and name, its account source key, and further information related to homepage, address, parent account, phone, industry, and annual revenue.
 
