@@ -59,10 +59,10 @@ The Profiles dashboard displays a snapshot of the attribute (record) data that y
 
 | Feature | Description |
 | --- | --- |
-|   Unsegmented Profiles widget |  The widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information.   |
-|   Unsegmented Profiles Trend widget |  This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend can be visualized over 30 days, 90 days, and 12 month periods. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information.   |
-| Unsegmented Profiles by Identity widget |  This widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information.   |
-| Single identity profiles widget |  This widget provides a count of your organization's profiles that only have one type of ID type that creates their identity, either an email or ECID. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information.  |
+| Unsegmented Profiles widget | The widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
+| Unsegmented Profiles Trend widget | This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend can be visualized over 30 days, 90 days, and 12 month periods. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
+| Unsegmented Profiles by Identity widget | This widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
+| Single identity profiles widget | This widget provides a count of your organization's profiles that only have one type of ID type that creates their identity, either an email or ECID. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ The Destinations dashboard displays a snapshot of the destinations that your org
 
 | Feature | Description |
 | --- | --- |
-|   Destinations count widget  |  The widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. See the [destinations standard widget documentation](../../dashboards/guides/destinations.md#standard-widgets) for more information.  |
+|  Destinations count widget | The widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. See the [destinations standard widget documentation](../../dashboards/guides/destinations.md#standard-widgets) for more information. |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 
 | Feature | Description |
 | --- | --- |
-|  `table_exists`   |  The new feature command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. See the [SQL syntax documentation](../../query-service/sql/syntax.md) for more information.   |
+| `table_exists` | The new feature command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. See the [SQL syntax documentation](../../query-service/sql/syntax.md) for more information. |
 
 {style="table-layout:auto"}
 
