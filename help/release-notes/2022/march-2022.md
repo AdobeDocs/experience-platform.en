@@ -44,9 +44,9 @@ B2B enterprises often have their customer information stored in multiple systems
 
 Read more about the feature in the following documentation pages:
 
-- Related accounts in Real-Time CDP B2B Edition overview (add link after merging the feature documentation PR)
-- Related accounts tab in the Account profile UI guide (add link after merging the feature documentation PR)
-- How to use related accounts in segment definitions (add link after merging the feature documentation PR)
+- [Related accounts in Real-Time CDP B2B Edition overview](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Related accounts tab in the Account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-account)
 
 To learn more about Real-time CDP B2B Edition, see the [overview](../../rtcdp/overview.md).
 
