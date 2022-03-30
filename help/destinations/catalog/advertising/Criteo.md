@@ -140,4 +140,4 @@ All Adobe Experience Platform destinations are compliant with data usage policie
 ## Additional resources
 
 - [Criteo Help Center](https://help.criteo.com/kb/en)
-- [Criteo Developer Portal](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes_)
+- [Criteo Developer Portal](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes)
