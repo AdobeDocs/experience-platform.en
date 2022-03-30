@@ -26,7 +26,7 @@ _Criteo_ supports the activation of identities described in the table below. Lea
 
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
-| email\_lc\_sha256 | Email addresses hashed with the SHA-256 algorithm | Both plain text and SHA-256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the  Apply transformation  option, to have Platform automatically hash the data on activation. |
+| email\_sha256 | Email addresses hashed with the SHA-256 algorithm | Both plain text and SHA-256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the  Apply transformation  option, to have Platform automatically hash the data on activation. |
 
 
 
@@ -113,7 +113,7 @@ The body of request sent by Adobe Destination Testing API is:
 
 
 
-And, the body received by Criteo Destination as followed:
+And, the body received by Criteo Destination is as follows:
 
 ```json
 { 
