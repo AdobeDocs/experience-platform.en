@@ -20,30 +20,25 @@ While not required for this guide, it is recommended that you also follow the tu
 
 To define new XDM fields in the UI, you must first open a schema within the [!DNL Schema Editor]. Depending on what schemas are currently available to you in the [!DNL Schema Library], you can choose to [create a new schema](../resources/schemas.md#create) or [select an existing schema to edit](../resources/schemas.md#edit).
 
-Once you have the [!DNL Schema Editor] open, controls to add or edit fields appear in the canvas. These controls appear next to the name of the schema, as well as any object-type fields that have been defined under the selected class or field group.
+Once you have the [!DNL Schema Editor] open, use the left rail to select the class or field group that you want to define fields for. If the resource is a custom resource defined by your organization, controls to add or edit fields appear in the canvas. These controls appear next to the name of the schema, as well as any object-type fields that have been defined under the selected class or field group.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
->[!WARNING]
+>[!NOTE]
 >
->If you attempt to add a field to an object that is provided by a standard field group, that field group will be converted to a custom field group and the original field group will no longer be available. See the section on [adding fields to standard field groups](../resources/schemas.md#custom-fields-for-standard-groups) in the schemas UI guide for more information.
+>If the class or field group you select is a core resource provided by Adobe, it cannot be edited and therefore the controls shown above will not appear. If the schema you want to add fields to is based on a core XDM class and does not contain any custom field groups, you can [create a new field group](../resources/field-groups.md#create) to add to the schema instead.
 
 To add a new field to the resource, select the **plus (+)** icon next to the schema's name in the canvas, or next to the object-type field that you want to define the field under.
 
 ![](../../images/ui/fields/overview/plus-icon.png)
 
-Depending on whether you are adding a field directly to a schema or its constituent class and field groups, the required steps to add the field will vary. The remainder of this document focuses on how to configure a field's properties regardless of where that field appears in the schema. For more information on the different ways that fields can be added to a schema, refer to the following sections in the schemas UI guide:
+## Define a field for a resource {#define}
 
-* [Add fields to field groups](../resources/schemas.md#add-fields)
-* [Add fields directly to a schema](../resources/schemas.md#add-individual-fields)
-
-## Define the properties of a field {#define}
-
-After selecting the **plus (+)** icon, a **[!UICONTROL New field]** appears in in the canvas, located within an object that is namespaced to your unique tenant ID (shown as `_tenantId` in the example below). All custom fields that are added to a schema  are automatically placed within this namespace to prevent conflicts with other fields from Adobe-provided classes and field groups.
+After selecting the **plus (+)** icon, a **[!UICONTROL New field]** appears in in the canvas, located within a root-level object that is namespaced to your unique tenant ID (shown as `_tenantId` in the example below). All fields that are added to a schema through custom classes and field groups are automatically placed within this namespace to prevent conflicts with other fields from Adobe-provided classes and field groups.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-In the right rail under **[!UICONTROL Field properties]**, you can configure the details of the new field. The following information is required for each field:
+In the right rail under **[!UICONTROL Field properties]**, you can configure the details of the new fields. The following information is required for each field:
 
 | Field property | Description |
 | --- | --- |
