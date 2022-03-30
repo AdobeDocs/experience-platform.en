@@ -79,6 +79,18 @@ The guardrails below apply to the ad-hoc activation method.
 
 {style="table-layout:auto"}
 
+### Edge destinations activation
+
+The guardrails below apply to activation through edge destinations.
+
+| Guardrail | Limit | Limit Type | Description |
+| --- | --- | --- | --- |
+|Max # of records activated per minute | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Max size per file to activate | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Max size per record to activate | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+
+{style="table-layout:auto"}
+
 ### Destination Throttling
 
 Details on throttling thresholds or limitations for given destinations.
