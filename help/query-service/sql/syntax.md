@@ -241,7 +241,7 @@ CREATE DATABASE [IF NOT EXISTS] db_name
 
 ## DROP DATABASE
 
-The `DROP DATABASE` command drops an existing database.
+The `DROP DATABASE` command deletes the database from an instance.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -607,7 +607,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 #### ADD SCHEMA
 
-The following SQL queries show examples of adding table to a database / schema.
+The following SQL query shows an example of adding a table to a database / schema.
 
 ```sql
 ALTER TABLE table_name ADD SCHEMA database_name.schema_name
@@ -620,7 +620,7 @@ ALTER TABLE table_name ADD SCHEMA database_name.schema_name
 
 #### REMOVE SCHEMA
 
-The following SQL queries show examples of removing table to a database / schema.
+The following SQL query shows an example of removing a table from a database / schema.
 
 ```sql
 ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
@@ -628,7 +628,7 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 
 >[!NOTE]
 >
-> DWH tables and views cannot be removed from physically linked DWH databases / schemas (its first parent).
+> DWH tables and views cannot be removed from physically linked DWH databases / schemas.
 
 
 **Parameters**
@@ -670,7 +670,7 @@ SHOW FOREIGN KEYS
 
 ### SHOW DATAGROUPS
 
-The `SHOW DATAGROUPS` command lists all the databases with their type and all the tables / views that are part of the database.
+The `SHOW DATAGROUPS` command returns a table of all associated databases. For each database the table includes schema, group type, child type, child name and child ID.
 
 ```sql
 SHOW DATAGROUPS
@@ -686,13 +686,17 @@ SHOW DATAGROUPS
 ```
 
 
-### SHOW DATAGROUPS FOR TABLE
+### SHOW DATAGROUPS FOR table
 
-The `SHOW DATAGROUPS` command lists all the databases with their type which contains table as the child.
+The `SHOW DATAGROUPS FOR` 'table_name' command returns a table of all associated databases that contain the parameter as its child. For each database the table includes schema, group type, child type, child name and child ID.
 
 ```sql
-SHOW DATAGROUPS FOR _table_demo2
+SHOW DATAGROUPS FOR 'table_name'
 ```
+
+**Parameters**
+
+- `table_name`: The name of the table that you want to find associated databases for.
 
 ```console
    Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
