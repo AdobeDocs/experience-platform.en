@@ -7,9 +7,7 @@ description: An overview and more information about the related accounts feature
 
 ## Overview {#overview}
 
-In the context of account unification, customers may upload or ingest records from multiple data sources, so the same information might be duplicated in different places, with slight variations.
-
-Furthermore, as account records are typically entered manually and the level of data hygiene varies by system, the same real-world entity may be entered differently in different systems and may even have conflicting information.
+B2B enterprises often have their customer information stored in multiple systems, each including only partial or even conflicting data for the same real-world business entity. This creates a massive challenge of arriving at an accurate view of their customers, therefore reducing the efficiency and effectiveness of their B2B marketing and sales efforts.
 
 | ID | Name | Website | Industry | State | Phone | Has open opportunity with amount > `$1 million` |
 |---|---|---|---|---|---|---|
@@ -21,9 +19,7 @@ Furthermore, as account records are typically entered manually and the level of 
 
 {style="table-layout:auto"}
 
-The result is that the information of a real-world entity is scattered across different systems, and it has been a top challenge for B2B customers today to arrive at accurate insights and take the best actions on their selling targets.
-
-With related accounts, Real-time CDP B2B now shows you a list of accounts that are similar to the account you are browsing.
+With related accounts, [!DNL Real-time CDP B2B] now shows you a list of accounts that are similar to the account you are browsing.
 
 ![Screen showing Related accounts in the Experience Platform UI.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
