@@ -48,11 +48,7 @@ Once you have the schema open in the editor, you can start [adding fields to the
 
 ## Add fields to a field group {#add-fields}
 
->[!NOTE]
->
->This section focuses on adding fields to custom field groups. For information on how to add custom fields to standard field groups, refer to the [schemas UI guide](./schemas.md#custom-fields-for-standard-groups).
-
-To add fields to a custom field group in the [!DNL Schema Editor], start by selecting the field group's name in the left rail, then select the **plus (+)** icon next to the schema's name in the canvas.
+To add fields to a field group in the [!DNL Schema Editor], start by selecting the field group's name in the left rail, then select the **plus (+)** icon next to the schema's name in the canvas.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
