@@ -1,8 +1,9 @@
 ---
 keywords: IP address, IP range, allow list destinations, allowlist, allowlist streaming destinations
-title: IP address allow list for streaming destinations 
+title: IP address allow list for streaming destinations
 type: Documentation
 description: This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your HTTP REST API endpoint.
+exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
 ---
 # IP address allowlist for streaming destinations {#ip-address-allowlist}
 
