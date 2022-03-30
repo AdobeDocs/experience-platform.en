@@ -7,7 +7,7 @@ keywords: client;state;management;edge;network;gateway;api
 
 # Client state management
 
-The Adobe Experience Platform Edge Network Server API itself is stateless (it does not maintain its own session). However, there are certain use-cases which require client-side state persistency, such as:
+The Edge Network Server API itself is stateless (it does not maintain its own session). However, there are certain use-cases which require client-side state persistency, such as:
 
 * Consistent device identification (see [visitor identification](visitor-identification.md))
 * Collect and enforce user consent

@@ -13,7 +13,7 @@ Adobe Analytics data collection works by translating XDM data into a format that
 
 You can also [manually map XDM values](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) to legacy Analytics variables.
 
-To enable Adobe Analytics to receive data from Server API, you need to [configure your datastream](../edge/data-collection/adobe-analytics/analytics-overview.md) to forward events to Adobe Analytics.
+To enable Adobe Analytics to receive data from Server API, you need to [configure your datastream](../edge/fundamentals/datastreams.md#adobe-analytics-settings) to forward events to Adobe Analytics.
 
 Once enabled, the datastream configuration should include settings for `com_adobe_analytics`, as shown in the example below:
 
@@ -25,7 +25,7 @@ Once enabled, the datastream configuration should include settings for `com_adob
     "com_adobe_analytics": {
       "enabled": true,
       "reportSuites": [
-        "experience-edge-early-access-test"
+        "test-report-suite"
       ],
       "listVarsDelimiter": ","
     }
@@ -115,7 +115,7 @@ curl -X POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId=72e82be9-9e9c
                 "siteSection": "Home"
             },
             "promos":{
-                "heroPromos": "puRse,sHoes,sungLAsses"
+                "heroPromos": "purse,shoes,sunglasses"
             },
             "customVariables": {
                 "testGroup": "orange/black theme"

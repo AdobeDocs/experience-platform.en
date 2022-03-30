@@ -59,7 +59,6 @@ To configure dataset write permissions, go to the [Admin Console](https://adminc
 * In the [!UICONTROL Sandboxes] section, select the datastream sandbox.
 * In the [!UICONTROL Data Management] section, select the **[!UICONTROL Manage Datasets]** permission.
 
-
 ## Troubleshooting authorization errors {#troubleshooting-authorization}
 
 | Error code | Error message | Description |

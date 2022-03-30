@@ -110,8 +110,6 @@ The personalized content retrieved from personalization solutions is presented i
 | `payload.scopeDetails.decisionProvider`|String| This will either be `TGT` if using Adobe Target or `ODE` if using [!DNL Offer Decisioning].|
 | `payload.scopeDetails.activity.id` | String | The unique ID of the offer activity. |
 | `payload.scopeDetails.experience.id` | String | The unique ID of the offer placement. |
-| `payload.scopeDetails.strategies.algorithmID` | String |  |
-| `payload.scopeDetails.strategies.trafficType` | String |  |
 | `items[].id` | String | The unique ID of the offer placement. |
 | `items[].data.id` | String | The ID of the proposed offer. |
 | `items[].data.schema` | String | The schema of the content associated with the proposed offer. |

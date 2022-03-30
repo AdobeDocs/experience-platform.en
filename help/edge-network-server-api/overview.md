@@ -20,7 +20,7 @@ The benefits of the [!DNL Server API] architecture include:
 * First-party data collection
 * Streamlined, server-side communication between services
  
-The [!DNL Server API] supports interactive and batch data collection, via 2 dedicated endpoints:
+The [!DNL Server API] supports interactive and batch data collection, via two dedicated endpoints:
 
 1. The interactive endpoint supports communication with Adobe Experience Platform and Adobe Experience Cloud services that support advanced segmentation, personalization and other marketing use cases.
 2. The batch endpoint will allow requests to be sent in batch when data needs to be onboarded without receiving a response from the applications being called. 
@@ -31,3 +31,7 @@ The [!DNL Server API] supports the following type of requests:
 * Unauthenticated requests via the `edge.adobedc.net` endpoint.
 
 This enables use cases that allow for secure, authenticated collection of sensitive data, according to your organization’s privacy policies. In addition to authentication, the Server API supports marking datastreams to accept only authenticated communication via the API.
+
+Watch the video below for a streamlined overview of the Server API.
+
+>[!VIDEO](https://video.tv.adobe.com/v/341448/)

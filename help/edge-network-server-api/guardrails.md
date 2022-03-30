@@ -54,6 +54,8 @@ All limits are applied and normalised over a **request unit (RU)**, defined as a
 
 ### Request units limits
 
+The table below shows the default limit values. If you need higher request unit limits, reach out to your account representative.
+
 | Endpoint | Requests units per second |
 | --- | --- |
 | `/v2/interact` | 4000 |
