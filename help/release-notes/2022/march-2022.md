@@ -69,7 +69,7 @@ The Destinations dashboard displays a snapshot of the destinations that your org
 
 | Feature | Description |
 | --- | --- |
-|   Destinations count widget  |  The widget provides the total number of available endpoints where an audience can be activated and delivered to within the system. This number includes both active and inactive destinations. See the [destinations standard widget documentation](../../dashboards/guides/destinations.md#standard-widgets) for more information.  |
+|   Destinations count widget  |  The widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. See the [destinations standard widget documentation](../../dashboards/guides/destinations.md#standard-widgets) for more information.  |
 
 For more information on Destinations dashboards in Platform, refer to the [Destinations dashboards overview](../../dashboards/guides/destinations.md).
 
