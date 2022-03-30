@@ -303,6 +303,121 @@ A successful response returns the structure of the queried file including table 
 }
 ```
 
+### Use `determineProperties` to auto-detect file property information of a Data Landing Zone
+
+You can use the `determineProperties` parameter to auto-detect property information on the file contents of your [!DNL Data Landing Zone] when exploring the structure and contents of your container.
+
+**API format**
+
+```http
+GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&determineProperties=true
+```
+
+| Parameter | Description | Example |
+| --- | --- | --- |
+| `determineProperties` | This query parameter allows the [!DNL Flow Service] API to detect information regarding the properties of your file, including information on file type, compression type, and column delimiter. | `true` |
+
+**Request**
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/26f526f2-58f4-4712-961d-e41bf1ccc0e8/explore?objectType=file&object=dlz-user-container/garageWeek/file1&preview=true&determineProperties=true' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+```json
+{
+    "properties": {
+        "fileType": "delimited",
+        "compressionType": "tarGzip",
+        "columnDelimiter": "~"
+    },
+    "format": "flat",
+    "schema": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "firstname",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "lastname",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "email",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "birthday",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            }
+        ]
+    },
+    "data": [
+        {
+            "birthday": "1313-0505-19731973",
+            "firstName": "Yvonne",
+            "id": "100",
+            "email": "Yvonne.Thilda@yopmail.com",
+            "lastName": "Thilda"
+        },
+        {
+            "birthday": "1515-1212-19731973",
+            "firstName": "Mary",
+            "id": "101",
+            "email": "Mary.Pillsbury@yopmail.com",
+            "lastName": "Pillsbury"
+        },
+        {
+            "birthday": "0505-1010-19751975",
+            "firstName": "Corene",
+            "id": "102",
+            "email": "Corene.Joeann@yopmail.com",
+            "lastName": "Joeann"
+        },
+        {
+            "birthday": "2727-0303-19901990",
+            "firstName": "Dari",
+            "id": "103",
+            "email": "Dari.Greenwald@yopmail.com",
+            "lastName": "Greenwald"
+        },
+        {
+            "birthday": "1717-0404-19651965",
+            "firstName": "Lucy",
+            "id": "199",
+            "email": "Lucy.Magdalen@yopmail.com",
+            "lastName": "Magdalen"
+        }
+    ]
+}
+```
+
+
 ## Create a source connection
 
 A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and the source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and IMS Organization.
