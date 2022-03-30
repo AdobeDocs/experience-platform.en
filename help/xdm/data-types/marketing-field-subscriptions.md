@@ -53,29 +53,31 @@ Some businesses allow customers to opt in for different subscriptions that are a
 The following JSON represents an example marketing field for a phone call marketing channel that contains a `subscriptions` map. Each key in the `subscriptions` object represents an individual subscription for the marketing channel. In turn, each subscription contains an opt-in value (`val`).
 
 ```json
-"phone-marketing-field": {
+"email-marketing-field": {
   "val": "y",
   "time": "2019-01-01T15:52:25+00:00",
   "subscriptions": {
     "loyalty-offers": {
       "val": "y",
       "type": "sales",
+      "topics": ["discounts", "early-access"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2019-01-01T15:52:25+00:00",
           "source": "website"
         }
       }
     },
-    "overdrawn-account": {
+    "newsletters": {
       "val": "y",
-      "type": "issues",
+      "type": "advertising",
+      "topics": ["hardware"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2021-01-01T08:32:53+07:00",
           "source": "website"
         },
-        "301-555-1527": {
+        "tparan@example.com": {
           "time": "2020-02-03T07:54:21+07:00",
           "source": "call center"
         }
@@ -87,7 +89,9 @@ The following JSON represents an example marketing field for a phone call market
 
 | Property | Description |
 | --- | --- |
+| `val` | The [consent value](#val) for the subscription. |
 | `type` | The subscription type. This can be any descriptive string, provided it is 15 characters or less. |
+| `topics` | An array of strings that represent the areas of interest a customer as subscribed to, which can be used to send them relevant content. |
 | `subscribers` | An optional map-type field that represents a set of identifiers (such as email addresses or phone numbers) that have subscribed to a particular subscription. Each key in this object represents the identifier in question, and contains two sub-properties: <ul><li>`time`: An ISO 8601 timestamp of when the identity subscribed, if applicable.</li><li>`source`: The source that the subscriber originated from. This can be any descriptive string, provided it is 15 characters or less.</li></ul> |
 
 {style="table-layout:auto"}
