@@ -145,7 +145,7 @@ You can upload files using the Small File Upload API. However, if your files are
 
 >[!INFO]
 >
->The examples below use the [Apache Parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](api-overview.md).
+>The examples below use the [Apache Parquet](https://parquet.apache.org/docs/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](api-overview.md).
 
 ### Small file upload
 
