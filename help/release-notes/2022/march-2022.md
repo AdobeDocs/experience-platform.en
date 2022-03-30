@@ -14,9 +14,9 @@ Updates to existing features in Adobe Experience Platform:
 
 - [Alerts](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [Experience Data Model (XDM)](#xdm)
 - [[!DNL Query Service]](#query-service)
 - [Sources](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## Audit Logs {#audit-logs}
 
@@ -64,6 +64,8 @@ The Profiles dashboard displays a snapshot of the attribute (record) data that y
 | Unsegmented Profiles by Identity widget |  This widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information.   |
 | Single identity profiles widget |  This widget provides a count of your organization's profiles that only have one type of ID type that creates their identity, either an email or ECID. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information.  |
 
+{style="table-layout:auto"}
+
 For more information on Profiles dashboards, refer to the [Profiles dashboards overview](../../dashboards/guides/profiles.md).
 
 ### Destinations Dashboards
@@ -76,9 +78,11 @@ The Destinations dashboard displays a snapshot of the destinations that your org
 | --- | --- |
 |   Destinations count widget  |  The widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. See the [destinations standard widget documentation](../../dashboards/guides/destinations.md#standard-widgets) for more information.  |
 
+{style="table-layout:auto"}
+
 For more information on Destinations dashboards in Platform, refer to the [Destinations dashboards overview](../../dashboards/guides/destinations.md).
 
-## Experience Data Model (XDM) {#xdm}
+<!-- ## Experience Data Model (XDM) {#xdm}
 
 Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
@@ -88,7 +92,7 @@ Experience Data Model (XDM) is an open-source specification that provides common
 
 {style="table-layout:auto"}
 
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## Query Service {#query-service}
 
@@ -99,6 +103,8 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 | Feature | Description |
 | --- | --- |
 |  `table_exists`   |  The new feature command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. See the [SQL syntax documentation](../../query-service/sql/syntax.md) for more information.   |
+
+{style="table-layout:auto"}
 
 For more information on available features, refer to the [Query Service overview](../../query-service/home.md).
 
