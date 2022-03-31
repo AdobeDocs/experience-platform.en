@@ -3,11 +3,11 @@ title: XDM Business Marketing List Class
 description: This document provides an overview of the XDM Business Marketing List class in Experience Data Model (XDM).
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
 ---
-# [!UICONTROL XDM Business Marketing List] class (Beta)
+# [!UICONTROL XDM Business Marketing List] class
 
 >[!IMPORTANT]
 >
->This class is available as part of Real-time Customer Data Platform B2B Edition, which is currently in beta. The documentation and functionality are subject to change.
+>This class is intended to be used by organizations with access to [Real-time Customer Data Platform B2B Edition](../../../rtcdp/b2b-overview.md). You must have access to Real-time CDP B2B Edition in order for this class to participate in [Real-time Customer Profile](../../../profile/home.md).
 
 [!UICONTROL XDM Business Marketing List] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a marketing list. Marketing lists allow you to prioritize on prospect clients who are most likely to buy your product.
 
@@ -21,5 +21,7 @@ exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
 | `marketingListDescription` | String  | A description for the marketing list. |
 | `marketingListID` | String  | A unique ID for the marketing list entity. |
 | `marketingListName` | String  | The name of the marketing list. |
+
+{style="table-layout:auto"}
 
 See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.

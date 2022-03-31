@@ -61,7 +61,9 @@ SELECT COUNT(*) AS num_events FROM (
 
 ## Purchases {#purchases}
 
-If you have duplicate purchases, you will likely wish to keep most of the Experience Event row, but ignore the fields tied to the purchase (such as the `commerce.orders` metric). Purchases contain a special field for the purchase ID, which is `commerce.order.purchaseID`.
+If you have duplicate purchases, you will likely wish to keep most of the [!DNL Experience Event] row, but ignore the fields tied to the purchase (such as the `commerce.orders` metric). Purchases contain a special field for the purchase ID, which is `commerce.order.purchaseID`.
+
+It is recommended to use `purchaseID` within the visitor scope, as it is the standard semantic field for purchase IDs within XDM. Visitor scope is recommended for removing duplicate purchase data because the query is faster than using global scope and it is unlikely that a purchase ID is duplicated across multiple visitor IDs.
 
 **Scope:** Visitor
 
@@ -80,7 +82,13 @@ SELECT *,
 FROM experience_events
 ```
 
+>[!NOTE]
+>
+>In some instances where the original Analytics data has duplicate purchase IDs across visitor IDs, you **may** need to run the purchase ID duplicate counting across all visitors. When the purchase ID is not present this method requires you to include a condition that instead uses the event ID to keep the query as fast as possible.
+
 ### Full example
+
+The example below uses a condition clause to use the event ID in the case that the purchase ID is not present.
 
 ```sql
 SELECT SUM(commerce.purchases.value) AS num_purchases FROM (

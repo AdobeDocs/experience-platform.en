@@ -8,9 +8,9 @@ exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 ---
 # Manage permissions for a product profile
 
-Immediately after [creating a new product profile](#create-a-new-product-profile), you are prompted to configure the profile's permissions. If you are editing permissions for an existing profile, select the profile from the **[!UICONTROL Product Profiles]** tab to open the profile's details page, then click **[!UICONTROL Permissions]**.
+Immediately after [creating a new product profile](#create-a-new-product-profile), you are prompted to configure the profile's permissions. If you are editing permissions for an existing profile, select the profile from the **[!UICONTROL Product Profiles]** tab to open the profile's details page, then select **[!UICONTROL Permissions]**.
 
-![profile-permissions](../images/profile-permissions.png)
+![permissions](../images/permissions.png)
 
 Permissions are divided into categories and listed on this page. The list displays the category name, the number of permissions it contains (and how many are active), and its description.
 
@@ -20,11 +20,13 @@ Select any category on the list to open the **[!UICONTROL Edit Permissions]** pa
 
 The **[!UICONTROL Edit Permissions]** page provides a workspace to add and remove permissions from the selected product profile. The left side of the screen displays a list of permission categories. Selecting a category changes the permissions that are displayed under **[!UICONTROL Available Permissions Items]**.
 
-![change-permissions-category](../images/change-permissions-category.png)
+For example, to update permissions for Data Modeling, select **[!UICONTROL Data Modeling]**.
 
-To add a permission, select the **plus (+)** icon next to the permission's name. Alternatively, you can select **[!UICONTROL Add all]** to add all permissions under the current category to the profile. Added permissions appear under **[!UICONTROL Included Permission Items]**.
+![profile-management](../images/profile-management.png)
 
-![add-permissions](../images/add-permissions.png)
+To add a permission, select the plus **(+)** icon next to the permission's name. Alternatively, you can select **[!UICONTROL Add all]** to add all permissions under the current category to the profile. Added permissions appear under **[!UICONTROL Included Permission Items]**.
+
+![add-permission](../images/add-permission.png)
 
 >[!NOTE]
 >
@@ -34,11 +36,11 @@ To remove a permission, select the **X** icon next to the permission's name, or 
 
 Continue going through the available categories and adding any desired permissions. When finished, select **[!UICONTROL Save]**.
 
-![permissions-finish](../images/permissions-finish.png)
+![remove-permisson](../images/remove-permission.png)
 
 The **[!UICONTROL Permissions]** tab for the product profile reappears, and shows that the selected permissions are now active.
 
-![added-permissions](../images/added-permissions.png)
+![permissions-updated](../images/permissions-updated.png)
 
 ## Next steps
 

@@ -16,6 +16,10 @@ The majority of [!DNL Real-time CDP] capabilities are powered by Adobe Experienc
 
 Legal privacy regulations such as the [!DNL General Data Protection Regulation] (GDPR) and the [!DNL California Consumer Privacy Act] (CCPA) give customers the right to request access to, or the deletion of, the personal data you collect from them. Since [!DNL Real-time CDP] leverages [!DNL Experience Platform] capabilities for data collection and storage, customer requests to access and delete their personal data should be managed within [!DNL Platform]. See the overview on [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) for more information.
 
+>[!IMPORTANT]
+>
+> Privacy requests submitted through Adobe Experience Platform Privacy Service for Adobe Marketo Engage apply to Real-time CDP B2B customers only.
+
 ## Opt-out capabilities
 
 [!DNL Real-time CDP] allows customers to opt out of having their personal data included in segmentation use cases. Customers' opt-out preferences are captured and stored by [!DNL Real-time Customer Profile], and can be enforced by excluding users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.

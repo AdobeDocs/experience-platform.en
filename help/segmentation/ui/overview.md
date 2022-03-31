@@ -17,7 +17,7 @@ Working with segment definitions requires an understanding of the various [!DNL 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] allows you to divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Enables the creation of customer profiles by bridging identities from disparate data sources being ingested into [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 
 It is also important to know two key terms that are used through this document and understand the difference between them:
 - **Segment definition**: The rule set used to describe key characteristics or behaviors of a target audience.
@@ -39,7 +39,7 @@ To learn more, visit the [segment dashboard guide](../../dashboards/guides/segme
 
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
-## Browse
+## Browse {#browse}
 
 Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your IMS Organization. 
 
@@ -47,7 +47,7 @@ Select the **[!UICONTROL Browse]** tab to see a list of all the segment definiti
 
 This view lists information about the segment definition including the breakdown, churn, profile count, evaluation method, created date, and last modified date.
 
-The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. 
+The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
@@ -193,7 +193,7 @@ More information about edge segmentation can be found in the [edge segmentation 
 >
 >Policy violations only apply if you are creating a segment that has been assigned to a destination.
 
-Once you are done creating your segment, the segment will be analyzed by Adobe Experience Platform Data Governance to ensure there are no policy violations within the segment. See the [[!DNL Data Governance] overview](../../data-governance/home.md) for more information.
+Once you are done creating your segment, the segment will be analyzed by Adobe Experience Platform Data Governance to ensure there are no policy violations within the segment. See the [Data Governance overview](../../data-governance/home.md) for more information.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 

@@ -26,7 +26,7 @@ Before starting this tutorial, please review the [developer guide](../api/gettin
 
 ## Define a marketing action {#define-action}
 
-In the [!DNL Data Governance] framework, a marketing action is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
+In the Data Governance framework, a marketing action is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 
 The first step in creating a data usage policy is to determine what marketing action the policy will evaluate. This can be done using one of the following options:
 

@@ -20,7 +20,7 @@ After logging into Adobe Experience Platform, you are on the [!UICONTROL Home] p
 
 ### Metrics
 
-The metrics dashboard provides cards that gives you information about datasets, profiles, segments, and destinations within your organization.
+The metrics dashboard provides cards that give you information about datasets, profiles, segments, and destinations within your organization.
 
 ![](images/user-guide/homepage-dashboard.png)
 
@@ -56,7 +56,7 @@ The **[!UICONTROL Recommended learning]** section provides links to useful docum
 
 The top navigation bar in the Platform UI displays the IMS Organization you are currently signed into, and provides several important controls.
 
-On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this at any time will bring you back to the Platform UI home screen.
+On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this logo at any time brings you back to the Platform UI home screen.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
@@ -64,11 +64,9 @@ On the left side of the navigation bar is the Adobe Experience Platform logo. Se
 
 The first item on the right side of the top navigation bar is the **IMS Organization switcher**. 
 
-![](./images/user-guide/homepage-ims-org.png)
-
-Selecting the switcher opens a dropdown menu of IMS Organizations you have access to, if any are available. Select a listed option to switch over to that IMS Organization.
-
 ![](./images/user-guide/homepage-ims-org-switcher.png)
+
+Selecting the switcher opens a dropdown menu of IMS Organizations you have access to, if any are available. To switch to another IMS Organization, select a listed option.
 
 ### Switch applications
 
@@ -86,7 +84,11 @@ In the **notifications section**, which is represented by the ![bell/Notificatio
 
 ### User profile
 
-The final item on the top navigation bar is the **user settings**, which is represented by the ![user settings/User Profile](images/user-guide/profile-icon.png) icon. Select this icon to edit your preferences or sign out.
+The final item on the top navigation bar is the **user settings**, represented by the ![user settings/User Profile](images/user-guide/profile-icon.png) icon. Select this icon to edit your preferences or sign out.
+
+You can toggle between the light and dark theme for the Platform interface with the switch located just below your name and email. Select the theme you prefer.
+
+![](images/theme.png)
 
 ### Sandboxes
 
@@ -96,9 +98,15 @@ Immediately below the top navigation bar is the sandbox bar. This bar shows whic
 
 The navigation on the left side of the screen lists all the different services supported in the Platform UI.
 
+Click the menu icon to show or hide the left navigation panel.
+
+![](images/user-guide/hidemenu.png)
+
+You can lock the navigation in the open position by clicking again after showing the panel.
+
 >[!IMPORTANT]
 >
->Some of the sections on the left navigation bar may not appear or be grayed out. This is because you do not have access to those features. If you believe you should have access to these sections, please contact your system administrator.
+>The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were disabled. If you believe you should have access to a section that does not appear, please contact your system administrator.
 
 ![](images/user-guide/homepage-left.png)
 
@@ -130,9 +138,9 @@ The **[!UICONTROL Requests]** section lets you create and manage privacy request
 
 The **[!UICONTROL Notebooks]** section provides access to JupyterLab, an interactive development environment that lets you explore, analyze, and model your data. To learn more about using the Notebooks section, please read the [JupyterLab user guide](../data-science-workspace/jupyterlab/overview.md). More information about Data Science Workspace can be found in the [Data Science Workspace overview](../data-science-workspace/home.md)
 
-The **[!UICONTROL Models]** section lets you leverage machine learning and artificial intelligence to create, develope, train, and tune models to make predictions. More information about the Models section can be found in the tutorial on [training and evaluate a model](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
+The **[!UICONTROL Models]** section lets you use machine learning and artificial intelligence to create, develop, train, and tune models to make predictions. More information about the Models section can be found in the tutorial on [training and evaluate a model](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-The **[!UICONTROL Services]** section lets you manage your published models for scheduled training and scoring, or leverage Adobe's Intelligent Services, a set of AI services that deliver real-time, personalized customer experiences. More information about the Services section can be found in the [Publishing a Model as a Service tutorial](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+The **[!UICONTROL Services]** section lets you manage your published models for scheduled training and scoring, or use Adobe's Intelligent Services, a set of AI services that deliver real-time, personalized customer experiences. More information about the Services section can be found in the [Publishing a Model as a Service tutorial](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### [!UICONTROL Data management]
 
@@ -146,11 +154,11 @@ The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ing
 
 ### [!UICONTROL Decisioning]
 
-Offer Decisioning is an Application Service integrated with Adobe Experience Platform. It allows you to leverage Experience Platform to deliver the best offer and experience to your customers across all touch points at the right time. To learn more about Offer Decisioning, including working with [!UICONTROL Offers] and [!UICONTROL Activities] visit the [Offer Decisioning documentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+Offer Decisioning is an Application Service integrated with Adobe Experience Platform. It allows you to use Experience Platform to deliver the best offer and experience to your customers across all touch points at the right time. To learn more about Offer Decisioning, including working with [!UICONTROL Offers] and [!UICONTROL Activities] visit the [Offer Decisioning documentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
 
 ### [!UICONTROL Administration]
 
-The Platform user interface (UI) provides a dashboard through which you can view important information about your organization's license usage, as captured during a daily snapshot. This can be accessed by selecting **[!UICONTROL License usage]** in the navigation. To learn more about the license usage dashboard, visit the [license usage dashboard guide](license-usage-dashboard.md).
+The Platform user interface (UI) provides a dashboard through which you can view important information about your organization's license usage, as captured during a daily snapshot. Access this dashboard by selecting **[!UICONTROL License usage]** in the navigation. To learn more about the license usage dashboard, visit the [license usage dashboard guide](license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >

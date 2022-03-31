@@ -58,16 +58,35 @@ For more information on destination categories and information on each destinati
 
 ## [!UICONTROL Accounts] {#accounts}
 
-The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations, and allows you to update existing connection details. See [Update accounts](update-accounts.md) for detailed instructions.
-
-## [!UICONTROL Browse] {#browse}
-
-The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled/Disabled]** toggle turned on set the destination to active or inactive, respectively. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
+The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations, and allows you to update or delete existing account details. See the table below for all the information you can get on each destination account.
 
 >[!TIP]
 >
-> * Select the three dots on the [!UICONTROL Name] column and use the ![Add segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]** button to send segments to that destination.
-> * Select the three dots on the [!UICONTROL Name] column and use the ![Delete destinations button](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** button to [remove](delete-destinations.md) an existing connection to a destination.
+> * Select the three dots in the [!UICONTROL Platform] column and use the ![Activate segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]** button to send segments to that destination.
+> * Select the three dots in the [!UICONTROL Platform] column and use the ![Edit details button](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Edit details]** button to [update](update-accounts.md) the details of an existing destination account.
+> * Select the three dots in the [!UICONTROL Platform] column and use the ![Delete button](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** button to [delete](delete-destination-account.md) an existing destination account.
+
+![Accounts tab](../assets/ui/workspace/destination-account-options.png)
+
+| Element | Description |
+|---|---|
+|[!UICONTROL Platform] | The destination for which you have set up the connection.|
+|[!UICONTROL Connection Type] | Represents the account connection type to your storage bucket or destination. Depending on the destination, authentication options are: <ul><li>For email marketing destinations: Can be S3, FTP, or Azure Blob.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li><li>OAuth 1 or OAuth 2 authentication</li><li>Bearer token authentication</li></ul>|
+|[!UICONTROL Username] | The username you selected in the [connect destination wizard](../catalog/email-marketing/overview.md#connect-destination).|
+|[!UICONTROL Destinations] | Represents the number of unique successful destination dataflows connected with basic information created for a destination.|
+|[!UICONTROL Authorized] | The date when the connection to this destination was authorized.|
+
+{style="table-layout:auto"}
+
+## [!UICONTROL Browse] {#browse}
+
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled/Disabled]** toggle turned on set the destination to active or inactive, respectively. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the [!UICONTROL Browse] tab:
+
+>[!TIP]
+>
+> * Select the three dots in the [!UICONTROL Name] column and use the ![Activate segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]** button to send segments to that destination.
+> * Select the three dots in the [!UICONTROL Name] column and use the ![Delete button](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** button to [remove](delete-destinations.md) an existing connection to a destination.
+> * Select the three dots in the [!UICONTROL Name] column and use the ![View in monitoring button](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]** button to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
 
@@ -80,8 +99,8 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 |[!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3, FTP, or [!DNL Azure Blob].</li><li>For real-time advertising destinations: Server-to-server.</li><li>For streaming destinations: Can be [!DNL Azure Event Hubs] or [!DNL Amazon Kinesis].</li></ul>|
 |[!UICONTROL Username] | The account credentials you selected for the destination flow.|
 |[!UICONTROL Activation Data] | Indicates the number of segments that are being activated to this destination. Select this control to find out more about the activated segments. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated segments.|
-|[!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created.|
-| [!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is being activated to this destination.|
+|[!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created. Select the up/down arrow symbol to sort the activation flows by newest first or oldest first.|
+| [!UICONTROL Status] | `Enabled` or `Disabled`. Indicates whether data is being activated to this destination.|
 
 Click on a destination row to bring up more information about the destination in the right rail.
 

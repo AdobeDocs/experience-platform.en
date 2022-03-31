@@ -55,7 +55,7 @@ For information on how to work with marketing actions and policies in the [!DNL 
 
 ## Next steps
 
-This document provided an introduction to data usage policies within the [!DNL Data Governance] framework. You can now continue to read the process documentation linked to throughout this guide to learn more about how to work with policies in the API and UI.
+This document provided an introduction to data usage policies within the Data Governance framework. You can now continue to read the process documentation linked to throughout this guide to learn more about how to work with policies in the API and UI.
 
 ## Appendix
 

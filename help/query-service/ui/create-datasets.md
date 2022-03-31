@@ -25,7 +25,7 @@ After a dataset is created, it can be accessed like any other dataset in the [!D
 
 >[!NOTE]
 >
->In a live implementation, you must apply [!DNL Data Governance] labels after the dataset is created. 
+>In a live implementation, you must apply Data Governance labels after the dataset is created. 
 
 ## Generate datasets with a pre-defined [!DNL Experience Data Model] schema
 

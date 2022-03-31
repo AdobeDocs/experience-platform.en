@@ -15,9 +15,13 @@ Illustrated below is how testing your destination fits into the [destination con
 
 ![Graphic of where the destination testing step fits into the destination configuration workflow](./assets/test-destination-step.png)
 
-## Destination testing tool {#destination-testing-tool}
+## Destination testing tool - Purpose and prerequisites {#destination-testing-tool}
 
-Use this tool to test your destination configuration by sending messages to the partner endpoint you provided in the [server configuration](./server-and-template-configuration.md).
+Use the destination testing tool to test your destination configuration by sending messages to the partner endpoint you provided in the [server configuration](./server-and-template-configuration.md).
+
+Before using the tool, make sure you:
+* Configure your destination by following the steps outlined in the [destination configuration workflow](./configure-destination-instructions.md) and 
+* Establish a connection to your destination, as detailed in [How to get the destination instance ID](./destination-testing-api.md#get-destination-instance-id).
 
 With this tool, after having configured your destination, you can:
 * Test if your destination is configured correctly;

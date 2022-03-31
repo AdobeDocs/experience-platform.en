@@ -1,16 +1,20 @@
 ---
-title: Sending Data to Adobe Analytics Using the Adobe Experience Platform Web SDK
+title: Using Adobe Analytics with Platform Web SDK
 description: Learn how to send data to Adobe Analytics with the Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
 ---
-# Sending data to Adobe Analytics
+# Using Adobe Analytics with Platform Web SDK
 
 The Adobe Experience Platform [!DNL Web SDK] can send data to Adobe Analytics. This works by translating `xdm` into a format the Adobe Analytics can use.
 
 ## Setup
 
 Adobe Analytics automatically picks up the data you are sending if you have a report suite mapped in the Customer Config UI. Here you can map one or more reportings to a given config. After a report suite is mapped, the data will automatically begin flowing.
+
+## XDM field group
+
+To make it easier to capture the most common Adobe Analytics metrics, we provide an Analytics field group that you can use. For more details on this schema, see the documenation for the [Adobe Analytics ExperienceEvent Full Extension schema field group](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## Automatically mapped data
 

@@ -54,14 +54,14 @@ To create a new batch, follow the steps in the [batch ingestion developer guide]
 ```json
 {
     "enableErrorDiagnostics": true,
-    "partialIngestionPercentage": 5
+    "partialIngestionPercent": 5
 }
 ```
 
 | Property | Description |
 | -------- | ----------- |
 | `enableErrorDiagnostics` | A flag that allows [!DNL Platform] to generate detailed error messages about your batch. |
-| `partialIngestionPercentage` | The percentage of acceptable errors before the entire batch will fail. So, in this example, a maximum of 5% of the batch can be errors, before it will fail. |
+| `partialIngestionPercent` | The percentage of acceptable errors before the entire batch will fail. So, in this example, a maximum of 5% of the batch can be errors, before it will fail. |
 
 
 ## Enable a batch for partial batch ingestion in the UI {#enable-ui}

@@ -8,7 +8,7 @@ exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 ---
 # [!DNL Privacy Service] UI overview
 
-Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. This document explores the [!DNL Privacy Service] UI. For information on using the API, please see the [Privacy Service developer guide](../api/getting-started.md). 
+Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. This document explores the [!DNL Privacy Service] UI. For information on using the API, please see the [Privacy Service API guide](../api/overview.md). 
 
 ## Log in to the [!DNL Privacy Service] UI
 

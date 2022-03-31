@@ -1,6 +1,6 @@
 ---
 keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Analyzing Attribution Scores Using Query Service
 topic-legacy: Attribution AI queries
 description: Learn how to use Adobe Experience Platform Query Service to analyze Attribution AI scores.

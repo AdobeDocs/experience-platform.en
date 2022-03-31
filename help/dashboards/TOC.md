@@ -3,13 +3,14 @@ audience: user
 user-guide-title: Adobe Experience Platform Dashboards Help
 breadcrumb-title: Dashboards Guide
 user-guide-description: Visualize Experience Platform data on customizable dashboards.
-feature: Data Management
+feature: Dashboards
 ---
 
 # Adobe Experience Platform Dashboards {#dashboards}
 
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
+* [Dashboards inventory](inventory.md)
 * [Download dashboards to PDF](download.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
@@ -23,5 +24,7 @@ feature: Data Management
   * [Standard widgets](customize/standard-widgets.md)
   * [Custom widgets](customize/custom-widgets.md)
   * [Edit schema](customize/edit-schema.md)
+* Application integrations {#integrations}
+  * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

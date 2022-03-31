@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;ui guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
 solution: Experience Platform
-title: Create a Streaming Connection Using the UI
+title: Create an HTTP API Streaming Connection Using the UI
 topic-legacy: tutorial
 type: Tutorial
 description: This UI guide will help you create a streaming connection using Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 ---
 
-# Create a streaming connection using the UI
+# Create an [!DNL HTTP API] streaming connection using the UI
 
 This tutorial provides steps for creating a streaming source connection using the [!UICONTROL Sources] workspace.
 
@@ -84,7 +84,8 @@ To use an existing dataset, select **[!UICONTROL Existing dataset]**. On the for
 
 ### Map standard fields
 
-Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For more information on mapper functions and calculated fields, refer to either the [Data Prep functions guide](../../../../../data-prep/functions.md) or the [calculated fields guide](../../../../../data-prep/calculated-fields.md).
+
+Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 To add a new source field, select **[!UICONTROL Add new mapping]**.
 

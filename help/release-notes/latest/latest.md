@@ -1,74 +1,145 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
-
 # Adobe Experience Platform release notes 
 
-**Release date: August 25, 2021**
+**Release date: March 30, 2022**
+
+New features in Adobe Experience Platform:
+
+- [Audit logs](#audit-logs)
+- [Related accounts in Real-Time CDP B2B Edition](#related-accounts)
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Destinations](#destinations)
-- [Observability Insights](#observability)
-- [Real-time Customer Profile](#profile)
+- [Alerts](#alerts)
+- [[!DNL Dashboards]](#dashboards)
+- [[!DNL Query Service]](#query-service)
 - [Sources](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
-## Destinations {#destinations}
+## Audit Logs {#audit-logs}
 
-Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-
-**New destinations**
-
-| Destination | Description |
-| ----------- | ----------- |
-| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | The Airship Attributes destination, previously in beta, is now generally available. |
-| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | The Airship Tags destination, previously in beta, is now generally available. |
-| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | The Braze destination, previously in beta, is now generally available. |
-| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | With the Pinterest Customer List destination, you can create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest. |
-| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform. |
-| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX is an aggregate Verizon Media/Yahoo infrastructure that hosts various components that enable Verizon Media/Yahoo to exchange data with its external partners in a secure, automated and scalable manner.|
+Experience Platform allows you to audit user activity for various services and capabilities. The audit logs provide information about who did what and when.
 
 **New features**
 
 | Feature | Description |
 | --- | --- |
-| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform Destination SDK is a suite of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The configurations are stored in Experience Platform and can be retrieved via API for additional updates. |
-| [Usability improvements to Destinations](../../destinations/ui/activation-overview.md) | Usability improvements to destinations enable marketers to seamlessly activate segments to existing destinations. |
+| Audit logs for Dataset, Schema, Class, Field group, Data type, Sandbox, Destination, Segment, Merge policy, Computed attribute, Product profile and Account (Adobe) | These are the resources which are recorded by audit logs. If the feature is enabled, the audit logs will be automatically collected as activity occurs. You do not need to manually enable log collection. |
+| Export audit logs | The audit logs can be downloaded as a `CSV` or `JSON` file. The generated files are saved directly to your machine.  |
 
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+{style="table-layout:auto"}
 
-## Observability Insights {#observability}
+For more information on audit logs in Platform, refer to the [audit logs overview](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-Observability Insights allows you to monitor Platform activities through the use of statistical metrics and event notifications.
+## Related accounts in Real-Time CDP B2B Edition {#related-accounts}
 
-**New Features**
+>[!NOTE]
+>
+>The Related accounts feature is available for customers of the Real-Time CDP B2B Edition only.
+
+B2B enterprises often have their customer information stored in multiple systems, each including only partial or even conflicting data for the same real-world business entity. This creates a massive challenge of arriving at an accurate view of their customers, therefore reducing the efficiency and effectiveness of their B2B marketing and sales efforts. With the release of related accounts, [!DNL Real-time CDP B2B] now shows you a list of accounts that are similar to the account you are browsing. You can include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments. 
+
+Read more about the feature in the following documentation pages:
+
+- [Related accounts in Real-Time CDP B2B Edition overview](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Related accounts tab in the Account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-accounts)
+
+To learn more about Real-time CDP B2B Edition, see the [overview](../../rtcdp/overview.md).
+
+## Alerts {#alerts}
+
+Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
+**Updated features**
 
 | Feature | Description |
 | --- | --- |
-| Alerts | You can now subscribe to important alerts related to workflows running on Platform. After subscribing to specific alert rules, you will receive in-UI notifications and emails when an important lifecycle event happens (such as successful data ingestion) or if there are issues that need your attention (such as an ingestion flow failing or a segment job taking longer than expected). For more information, see the [alerts overview](../../observability/alerts/overview.md). |
+| New alert rules | Two new alert rules are now available for sources related to data ingestion. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
 
-See the [Observability Insights overview](../../observability/home.md) for more information on the service.
+{style="table-layout:auto"}
 
-## Real-time Customer Profile {#profile}
+For more information on alerts in Platform, refer to the [alerts overview](../../observability/alerts/overview.md).
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+## Dashboards {#dashboards}
+
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important information about your organization’s data, as captured during daily snapshots.
+
+### Profile Dashboards
+
+The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. 
+
+**Updated features**
 
 | Feature | Description |
-| ------- | ----------- |
-|Browse profiles by merge policy or identity| When browsing profiles in Experience Platform, you can now browse by merge policy to preview 20 sample profiles based on the selected merge policy. You can also browse by identity in order to search for a specific profile using an identity namespace and related identity value. For more information, see the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).|
+| --- | --- |
+| Unsegmented Profiles widget | The widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
+| Unsegmented Profiles Trend widget | This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend can be visualized over 30 days, 90 days, and 12 month periods. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
+| Unsegmented Profiles by Identity widget | This widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
+| Single identity profiles widget | This widget provides a count of your organization's profiles that only have one type of ID type that creates their identity, either an email or ECID. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
 
-To learn more about Real-time Customer Profile, including tutorials and best practices for working with profile data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
+{style="table-layout:auto"}
+
+For more information on Profiles dashboards, refer to the [Profiles dashboards overview](../../dashboards/guides/profiles.md).
+
+### Destinations Dashboards
+
+The Destinations dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. 
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+|  Destinations count widget | The widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. See the [destinations standard widget documentation](../../dashboards/guides/destinations.md#standard-widgets) for more information. |
+
+{style="table-layout:auto"}
+
+For more information on Destinations dashboards in Platform, refer to the [Destinations dashboards overview](../../dashboards/guides/destinations.md).
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
+
+## Query Service {#query-service}
+
+[!DNL Query Service] allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| `table_exists` | The new feature command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. See the [SQL syntax documentation](../../query-service/sql/syntax.md) for more information. |
+
+{style="table-layout:auto"}
+
+For more information on available features, refer to the [Query Service overview](../../query-service/home.md).
 
 ## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughout.
+
+**Updated features**
 
 | Feature | Description |
-| ------- | ----------- |
-| Local file upload source connector | The file ingestion category has been renamed to local system, allowing you to bring local files directly to Platform using the local file upload connector. Data ingested through this connector can be monitored through the Monitoring Dashboard. See the [local file upload source overview](../../sources/connectors/local-system/local-file-upload.md) for more information. |
+| --- | --- |
+| New sources now available for B2B usage | You can now use all the available sources on Platform for B2B use cases. See the [sources catalog](../../sources/home.md) for a complete list of available sources. |
+| General availability of new [!DNL Oracle Eloqua] source | You can now use the [!DNL Oracle Eloqua] source to seamlessly ingest data from your [!DNL Oracle Eloqua] instance (account, campaign, contacts) to Platform. See the documentation on [creating an [!DNL Oracle Eloqua] source connection](../../sources/connectors/marketing-automation/oracle-eloqua.md) for more information. |
+| API enhancements for [!DNL Data Landing Zone] | The [!DNL Data Landing Zone] source now supports auto-detection of file properties when using the [!DNL Flow Service] API. See the documentation on [creating a [!DNL Data Landing Zone] source connection](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) for more information. |
+
+{style="table-layout:auto"}
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

@@ -15,7 +15,7 @@ This guide uses Platform-specific concepts, such as IMS Organization and sandbox
 
 ## Obtain required authentication credentials {#obtain-authentication-credentials}
 
-Destination SDK uses the [Adobe I/O](https://www.adobe.io/) gateway for authentication. To make API calls to Destination SDK endpoints, you must provide certain headers in your API calls. Work with the Adobe Exchange team to set up authentication for you to the [Adobe Developer Console](http://console.adobe.io/).
+Destination SDK uses the [Adobe I/O](https://www.adobe.io/) gateway for authentication. To make API calls to Destination SDK endpoints, you must provide certain headers in your API calls. Work with the Adobe Exchange team to set up authentication for you to the [Adobe Developer Console](https://developer.adobe.com/console).
 
 To successfully make calls to Destination SDK API endpoints, follow the [Experience Platform authentication tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Start the tutorial from the "[Generate an API key, IMS Org ID, and client secret](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)" step. The Adobe Exchange team will handle the previous steps for you. Completing the authentication tutorial provides the values for each of the required headers in Destination SDK API calls, as shown below:
 
@@ -67,4 +67,12 @@ For more information, read the following Experience Platform Access Control docu
 
 ## Next steps {#next-steps}
 
-By following the steps in this article, you obtained authentication credentials to Adobe I/O, a sandbox name, and the destination authoring access control permission. Next, you can set up a destination using Destination SDK. Read [Use Destination SDK to configure your destination](./configure-destination-instructions.md) for next steps.
+By following the steps in this article, you obtained authentication credentials to Adobe I/O, a sandbox name, and the destination authoring access control permission. Next, you can set up a destination using Destination SDK.
+
+* Read the following configuration guides, depending on your destination type:
+
+  * [Use Destination SDK to configure a streaming destination](./configure-destination-instructions.md)
+  * [(Beta) Use Destination SDK to configure a file-based destination](./configure-file-based-destination-instructions.md)
+
+* For all operations, refer to the [Destination Authoring API documentation](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
+* Use the [Destination Authoring API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) to configure your destination using the Destination SDK API endpoints. To get started with Postman, see the [steps for importing environments and collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) and a [video guide for creating the Postman environment](https://video.tv.adobe.com/v/28832).

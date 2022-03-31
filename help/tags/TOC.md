@@ -3,7 +3,8 @@ audience: user
 user-guide-title: Tags Help
 breadcrumb-title: Tags
 user-guide-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
-feature: Data Collection
+feature: Tags
+solution: Tags, Data Collection
 ---
 
 # Tags {#tags}
@@ -38,6 +39,7 @@ feature: Data Collection
   * [Libraries](./ui/publishing/libraries.md)
   * [Self-hosting libraries](./ui/publishing/hosts/self-hosting-libraries.md)
   * [Republish a library](./ui/publishing/republish.md)
+  * [Premium CDN support (Beta)](./ui/publishing/premium-cdn.md)
 * Client-side information {#client-side}
   * [Overview](./ui/client-side/overview.md)
   * [Asynchronous deployment](./ui/client-side/asynchronous-deployment.md)
@@ -46,8 +48,9 @@ feature: Data Collection
   * [Content Security Policy (CSP) support](./ui/client-side/content-security-policy.md)
   * [Subresource Integrity (SRI) support](./ui/client-side/sri.md)
 * Event forwarding {#event-forwarding}
-    * [Overview](./ui/event-forwarding/overview.md)
-    * [Getting started](./ui/event-forwarding/getting-started.md)
+  * [Overview](./ui/event-forwarding/overview.md)
+  * [Getting started](./ui/event-forwarding/getting-started.md)
+  * [Configuring secrets](./ui/event-forwarding/secrets.md)
 * Administration {#admin}
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
@@ -169,6 +172,7 @@ feature: Data Collection
     * [Notes](./api/endpoints/notes.md)
     * [Profile](./api/endpoints/profile.md)
     * [Search](./api/endpoints/search.md)
+    * [Secrets](./api/endpoints/secrets.md)
   * Guides {#guides}
     * [Delegate descriptor IDs](./api/guides/delegate-descriptor-ids.md)
     * [Encrypting values](./api/guides/encrypting-values.md)
@@ -178,6 +182,7 @@ feature: Data Collection
     * [Sorting responses](./api/guides/sorting.md)
     * [Relationships](./api/guides/relationships.md)
     * [Searching resources](./api/guides/search.md)
+    * [Secrets](./api/guides/secrets.md)
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * Release notes {#release-notes}

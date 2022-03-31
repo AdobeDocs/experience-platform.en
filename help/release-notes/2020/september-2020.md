@@ -12,7 +12,7 @@ exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Data Governance]](#governance)
+- [Data Governance](#governance)
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
@@ -20,7 +20,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## Data Governance {#governance}
 
 Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 

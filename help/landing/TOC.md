@@ -13,6 +13,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * [A customer experience powered by Platform (Video)](video/customer-experience.md)
 * [Behind the scenes of a customer experience powered by Platform (Video)](video/customer-experience-bts.md)
 * Getting started {#getting-started}
+  * [End-to-end example workflow](end-to-end-tutorial.md)
   * [Key capabilities (Video)](video/key-capabilities.md)
   * [Key use cases (Video)](video/platform-use-cases.md)
   * [Platform architecture (Video)](video/platform-architecture.md)
@@ -31,8 +32,12 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * Platform documentation {#documentation}
   * [Overview](documentation/overview.md)
   * [Language support](documentation/language-support.md)
-* Platform in the Adobe ecosystem {#ecosystem}
-  * [Application Services](application-services.md)
+* Application services built on Platform {#ecosystem}
+  * [Overview](application-services.md)
+  * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+  * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+  * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
+  * [Real-time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
   * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Governance, privacy, and security {#governance-privacy-security}
@@ -45,7 +50,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
       * [Overview](./governance-privacy-security/consent/iab/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
     * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
-  * Audit logs (Beta) {#audit-logs}
+  * Audit logs {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
 * [License usage dashboard](license-usage-dashboard.md)
 * [Troubleshooting guide](troubleshooting.md)

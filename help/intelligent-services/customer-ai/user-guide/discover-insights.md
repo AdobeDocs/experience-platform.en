@@ -1,6 +1,7 @@
 ---
 keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Discover Insights with Customer AI
 topic-legacy: Discovering insights
 description: This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface.
@@ -18,7 +19,7 @@ In order to utilize insights for Customer AI, you need to have a service instanc
 
 ## Service instance overview
 
-In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. The *Services* browser appears and displays available Intelligent Services. In the container for Customer AI, click **[!UICONTROL Open]**.
+In the [!DNL Adobe Experience Platform] UI, select **[!UICONTROL Services]** in the left navigation. The *Services* browser appears and displays available Intelligent Services. In the container for Customer AI, select **[!UICONTROL Open]**.
 
 ![Accessing your instance](../images/insights/navigate-to-service.png)
 
@@ -40,9 +41,11 @@ Next, the insights page for that service instance appears with the option to sel
 
 ![setup page](../images/insights/landing_page_insights.png)
 
-### Service instance details
+## Service instance details
 
 There are two ways to view service instance details: from the dashboard or within the service instance. 
+
+### Service instance dashboard
 
 To view an overview of the service instance details within the dashboard, select a service instance container, avoiding the hyperlink that is attached to the name. This opens a right rail that provides additional details. The controls contain the following:
 
@@ -61,15 +64,25 @@ To view an overview of the service instance details within the dashboard, select
 
 ![failed run message](../images/insights/failed-run.png)
 
-The second way to view additional details for a service instance is located within the insights page. You can click **[!UICONTROL Show more]** in the top-right to populate a drop down. Details are listed such as the score definition, when it was created, and the propensity type. For more information on any of the properties listed, please visit [Configuring a Customer AI instance](./configure.md).
+### Show more insights dropdown
+
+The second way to view additional details for a service instance is located within the insights page. Select **[!UICONTROL Show more]** in the top-right to populate a drop down. Details are listed such as the score definition, when it was created, the propensity type, and the datasets used. For more information on any of the properties listed, please visit [Configuring a Customer AI instance](./configure.md).
 
 ![show more](../images/insights/landing-show-more.png)
 
-![show more](../images/insights/show-more.png)
+### Customer AI dataset preview popover
+
+If more than one dataset is used by Customer AI, a hyperlink labeled **[!UICONTROL Multiple ]** followed by the number of datasets in brackets `()` is provided.
+
+![multiple datasets](../images/insights/insights-multi-datasets.png)
+
+Selecting the multiple datasets link opens the Customer AI dataset preview popover. Each color in the preview represents a dataset as shown by the color key to the left of the dataset columns. In this example, you can see that only **Dataset 1** contains the `PROP1` column.
+
+![show more](../images/insights/dataset-preview.png)
 
 ### Edit an instance
 
-To edit an instance, click **[!UICONTROL Edit]** in the top-right navigation.
+To edit an instance, select **[!UICONTROL Edit]** in the top-right navigation.
 
 ![click the edit button](../images/insights/edit-button.png)
 
@@ -79,7 +92,7 @@ The edit dialog box appears, allowing you to edit the name, description, status,
 
 ### More actions
 
-The **[!UICONTROL More actions]** button is located in the top-right navigation next to **[!UICONTROL Edit]**. Clicking **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
+The **[!UICONTROL More actions]** button is located in the top-right navigation next to **[!UICONTROL Edit]**. Selecting **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
 
 - **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the service instance set up. You can then modify the workflow to make minor tweaks and rename it as a new instance.
 - **[!UICONTROL Delete]**: Deletes the instance.
@@ -138,7 +151,7 @@ Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for l
 
 ![Create a segment](../images/insights/create-segment.png)
 
-The segment builder is used to define a segment. When selecting **[!UICONTROL Create Segment]** from the Insights page, Customer AI automatically adds the selected buckets information to the segment. To finish creating your segment, simply fill in the *Name* and *Description* containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, click **[!UICONTROL Save]** in the top-right.
+The segment builder is used to define a segment. When selecting **[!UICONTROL Create Segment]** from the Insights page, Customer AI automatically adds the selected buckets information to the segment. To finish creating your segment, simply fill in the **Name** and **Description** containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, select **[!UICONTROL Save]** in the top-right.
 
 >[!NOTE]
 >
@@ -146,7 +159,7 @@ The segment builder is used to define a segment. When selecting **[!UICONTROL Cr
 
 ![Segment fill in](../images/insights/segment-saving.png)
 
- To view your new segment in the Platform UI, click **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments. 
+ To view your new segment in the Platform UI, select **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments. 
 
  ![All your Segments](../images/insights/Segments-dashboard.png)
 

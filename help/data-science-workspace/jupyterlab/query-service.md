@@ -80,10 +80,10 @@ Before starting this tutorial, you must have the following prerequisites:
     target_day = "01"
     ```
 
-    -   `target_table` : Name of your [!DNL Adobe Analytics] dataset.
-    -   `target_year` : Specific year for which the target data is from.
-    -   `target_month` : Specific month for which the target is from.
-    -   `target_day` : Specific day for which the target data is from.
+    -   `target_table`: Name of your [!DNL Adobe Analytics] dataset.
+    -   `target_year`: Specific year for which the target data is from.
+    -   `target_month`: Specific month for which the target is from.
+    -   `target_day`: Specific day for which the target data is from.
 
     >[!NOTE]
     >

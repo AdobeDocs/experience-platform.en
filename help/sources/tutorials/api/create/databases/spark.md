@@ -74,9 +74,9 @@ curl -X POST \
         "auth": {
             "specName": "HDInsights Basic Authentication",
         "params": {
-            "host" :  "{HOST}",
-            "username" : "{USERNAME}",
-            "password" :"{PASSWORD}"
+            "host":  "{HOST}",
+            "username": "{USERNAME}",
+            "password":"{PASSWORD}"
             }
         },
         "connectionSpec": {

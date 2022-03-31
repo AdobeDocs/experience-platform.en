@@ -289,3 +289,11 @@ The following tables outline the available relationships for each resource type,
 | `property` | &#x2713; | | |
 | `origin` | &#x2713; | | |
 | `rule_components` | | | |
+
+### Secrets
+
+| Relationship | Required | Create by payload | Create by URL |
+| :--- | :---: | :---: | :---: |
+| `property` | &#x2713; | | &#x2713; |
+| `environment` | &#x2713; | &#x2713; | |
+

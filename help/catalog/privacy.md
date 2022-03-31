@@ -66,7 +66,7 @@ Once you have set the appropriate fields within the schema as identity fields, y
 >
 >This section assumes you know the unique URI ID value of your dataset's XDM schema. If you do not know this value, you can retrieve it by using the [!DNL Catalog Service] API. After reading the [getting started](./api/getting-started.md) section of the developer guide, follow the steps outlined in for [listing](./api/list-objects.md) or [looking up](./api/look-up-object.md) [!DNL Catalog] objects to find your dataset. The schema ID can be found under `schemaRef.id`
 >
-> This section includes calls to the Schema Registry API. For important information related to using the API, including knowing your `{TENANT_ID}` and the concept of containers, see the [getting started](../xdm/api/getting-started.md) section of the developer guide.
+>This section also assumes that you know how to make calls to the Schema Registry API. For important information related to using the API, including knowing your `{TENANT_ID}` and the concept of containers, see the [getting started](../xdm/api/getting-started.md) section of the API guide.
 
 You can add an identity descriptor to a dataset's XDM schema by making a POST request to the `/descriptors` endpoint in the [!DNL Schema Registry] API.
 
@@ -84,10 +84,10 @@ The following request defines an identity descriptor on an "email address" field
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '
       {
         "@type": "xdm:descriptorIdentity",
@@ -148,19 +148,19 @@ When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data L
 
 ### Using the API
 
-When creating job requests in the API, any `userIDs` that are provided must use a specific `namespace` and `type` depending on the data store they apply to. IDs for the [!DNL Data Lake] must use "unregistered" for their `type` value, and a `namespace` value that matches one the [privacy labels](#privacy-labels) that have been added to applicable datasets.
+When creating job requests in the API, any `userIDs` that are provided must use a specific `namespace` and `type` depending on the data store they apply to. IDs for the [!DNL Data Lake] must use `unregistered` for their `type` value, and a `namespace` value that matches one the [privacy labels](#privacy-labels) that have been added to applicable datasets.
 
 In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to the [!DNL Data Lake], the array must include the value `aepDataLake`.
 
-The following request creates a new privacy job for the [!DNL Data Lake], using the unregistered "email_label" namespace. It also includes the product value for the [!DNL Data Lake] in the `include` array:
+The following request creates a new privacy job for the [!DNL Data Lake], using the unregistered `email_label` namespace. It also includes the product value for the [!DNL Data Lake] in the `include` array:
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
@@ -192,6 +192,10 @@ curl -X POST \
     "regulation": "ccpa"
 }'
 ```
+
+>[!IMPORTANT]
+>
+>Platform processes privacy requests across all [sandboxes](../sandboxes/home.md) belonging to your organization. As a result, any `x-sandbox-name` header included in the request is ignored by the system.
 
 ## Delete request processing
 

@@ -356,9 +356,9 @@ Alternatively, if `destination.segmentPerBatch` had been set to `true`, the `des
 
 ```json
     "destination": {
-        "dataSetId" : "{DATASET_ID}",
+        "dataSetId": "{DATASET_ID}",
         "segmentPerBatch": true,
-        "batches" : [
+        "batches": [
             {
                 "segmentId": "segment1",
                 "segmentNs": "ups",

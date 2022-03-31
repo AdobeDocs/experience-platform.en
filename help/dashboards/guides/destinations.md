@@ -13,7 +13,7 @@ For an overview of destinations, as well as a catalog of all available destinati
 
 ## [!UICONTROL Destinations] dashboard data {#destinations-dashboard-data}
 
-The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations that your organization has enabled within Experience Profile. The data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the destinations dashboard is not updating in real time.
+The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. The data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the destinations dashboard is not updating in real-time.
 
 >[!NOTE]
 >
@@ -37,17 +37,23 @@ Please refer to the [modifying dashboards](../customize/modify.md) and [widget l
 
 ## Standard widgets
 
-Adobe provides multiple standard widgets that you can use to visualize different metrics related to your destinations. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
+Adobe provides multiple standard widgets that you can use to visualize different metrics related to your destinations and assess the completeness of the segments available for your data analysis. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
 * [[!UICONTROL Most used destinations]](#most-used-destinations)
 * [[!UICONTROL Recently created destinations]](#recently-created-destinations)
 * [[!UICONTROL Recently activated segments]](#recently-activated-segments)
+* [[!UICONTROL Recently activated segments by destination]](#recently-activated-segments-by-destination)
+* [[!UICONTROL Audience size trend]](#audience-size-trends)
+* [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
+* [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
+* [[!UICONTROL Common audiences]](#common-audiences)
+* [[!UICONTROL Destinations count]](#destinations-count)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
-The **[!UICONTROL Most used destinations]** widget displays your organization's top destinations by number of segments mapped, as of the last snapshot. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. 
+The **[!UICONTROL Most used destinations]** widget displays your organization's top destinations by the number of segments mapped, as of the last snapshot. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. 
 
 For example, if you configured a destination yesterday but have not mapped any segments to it, you would be able to see that the destination is currently underutilized.
 
@@ -80,6 +86,74 @@ Selecting the name of a segment from the list shown on the widget will take you 
 For more information on working with segments in Experience Platform, please begin by reading the [Segmentation Service overview](../../segmentation/home.md).
 
 ![](../images/destinations/recently-activated-segments.png)
+
+### [!UICONTROL Recently activated segments by destination] {#recently-activated-segments-by-destination}
+
+The **[!UICONTROL Recently activated segments by destination]** widget displays the top five most recently activated segments in descending order according to the destination chosen in the overview dropdown. It is similar to the [!UICONTROL Recently activated segments] widget, but the data displayed **only** applies to the selected destination.
+
+This widget contains two metrics: the segment name and the date that the segment was last activated to the destination. The data displayed is correct as of the last daily snapshot. 
+
+You can view a segment's details by selecting the name of a segment from the list shown.
+
+![Recently activated segments by destination widget.](../images/destinations/recently-activated-segments-by-destination.png)
+
+### [!UICONTROL Audience size trend] {#audience-size-trend}
+
+The **[!UICONTROL Audience size trend]** widget depicts the relationship of the profile count over a period of time for a segment that has been mapped to that destination account. The widget uses a line graph to illustrate the number of profiles contained in the segment, that are being sent to the destination account daily.
+
+A time period for the audience trend over the past 30 days, 90 days, or 12 months, can be adjusted using the first dropdown menu.
+
+The second dropdown menu lists every available segment that can be sent to the destination account chosen at the top of the dashboard. 
+
+![The audience size trend widget.](../images/destinations/audience-size-trend.png)
+
+### [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
+
+The **[!UICONTROL Unmapped segments by identity]** widget lists the top five **unmapped** segments ranked by descending identity count for a given destination and identity. It highlights segments that are the most beneficial to map to the chosen destination account based on the chosen ID.
+
+The destination ID dropdown filters your available segments. The filter IDs listed in the dropdown change depending on the destination account selected at the top of the overview page.
+
+The identities column counts the number of source IDs within the segment that could map to the ID chosen in the widget ID dropdown. 
+
+![The Unmapped segments by identity widget.](../images/destinations/unmapped-segments-by-identity.png)
+
+### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
+
+This widget provides a top five list of **mapped** segments. The list is ordered from high to low according to the number of source IDs contained within the segments. The destination ID to be counted is selected from the dropdown menu below the widget title. The destination IDs available from the drop-down in the widget will change according to the destination account filter chosen at the top of the overview dashboard.
+
+![The Mapped segments by identity widget.](../images/destinations/mapped-segments-by-identity.png)
+
+The **[!UICONTROL Mapped segments by identity]** widget highlights at a glance, the likelihood of successfully targeting profile opportunities for a campaign within the chosen destination. An efficient targeted campaign does not depend on the number of profiles sent to the destination but rather the number of source IDs that are likely to be matched with the destination IDs to provide useful and actionable data.  
+
+### Common audiences
+
+The **[!UICONTROL Common audiences]** widget provides a list of the top five segments activated across the destination account chosen at the top of the page, and the destination selected in the widget dropdown. The list of segments is ordered according to how recently they were activated. The most recently activated segment is displayed at the top. 
+
+The [!UICONTROL AUDIENCE SIZE] column provides the total profile count of each listed segment.
+
+![The Common audiences widget.](../images/destinations/common-audiences.png)
+
+### Mapped audience health
+
+The widget provides a list of up to 20 mapped segments whose total profile counts, as of the last daily snapshot, deviate by a factor of at least one standard deviation from the 30 days mean audience size mapped to that destination.
+
+In brief, it provides a calculated metric for the dispersion of audience sizes from the mean over the last 30 days. It compares whether today's audience size is outside of the historic standard deviation seen in the data over the past 30 days.
+
+All audience sizes in the system are sorted from high to low audience size, as indicated in the [!UICONTROL LATEST SIZE] column. 
+
+If your segment mapped profile count is outside one standard deviation from the average mapped profile size over the past 30 days, this indicates an anomaly in the system and it should be investigated.
+
+If a segment within the [!UICONTROL Mapped audience health] widget is deviating by a wide margin, you should refer to the audience size trend chart and locate the anomalous segment. The trend can provide further insight into your segment's health.   
+
+![The Mapped audience health widget.](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL Destinations count] (#destinations-count)
+
+The [!UICONTROL Destinations count] widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. 
+
+Below the total count, select **[!UICONTROL Destinations]** to navigate to the destinations browse tab. This page lists all the destinations that you have established a connection with to date.
+
+![The Destinations count widget.](../images/destinations/destinations-count.png)
 
 ## Next steps
 

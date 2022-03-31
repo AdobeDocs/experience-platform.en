@@ -71,7 +71,7 @@ curl -X POST \
         "auth": {
             "specName": "Anonymous Authentication",
         "params": {
-            "url" :  "{URL}"
+            "url":  "{URL}"
             }
         },
         "connectionSpec": {

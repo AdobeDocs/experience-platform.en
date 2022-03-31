@@ -10,7 +10,7 @@ exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
 
 Adobe Analytics is an industry-leading solution that empowers you to understand your customers as people and steer your business with customer intelligence. 
 
-Adobe Analytics is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100156.html).
+Adobe Analytics is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the [Adobe Analytics extension overview](/help/tags/extensions/web/analytics/overview.md) in the Tags documentation.
 
 This destination is a tag extension. For more information about how tags extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -36,7 +36,7 @@ Select the tag property in which you want to install the extension. You also hav
 
 The workflow takes you to the Data Collection UI to complete the installation. 
 
-For information about the extension configuration options, see the [Adobe Analytics extension page](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html) the tags documentation.
+For information about the extension configuration options, see the [Adobe Analytics extension page](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) the tags documentation.
 
 You can also install the extension directly in the [Data Collection UI](https://experience.adobe.com/#/data-collection/). See the guide on [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) for more information.
 

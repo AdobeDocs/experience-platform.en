@@ -175,11 +175,11 @@ The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query:
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-**Parameters**
-
- - `schema`: The title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query.
- - `rowvalidation`: (Optional) Specifies if the user wants row level validation of every new batches ingested for the newly created dataset. The default value is `true`.
-- `select_query`: A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries).
+| Parameters | Description |
+| ----- | ----- |
+| `schema` | The title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query. |
+| `rowvalidation` | (Optional) Specifies if the user wants row level validation of every new batches ingested for the newly created dataset. The default value is `true`. |
+| `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
 
 **Example**
 
@@ -203,12 +203,16 @@ The `INSERT INTO` command is defined as follows:
 INSERT INTO table_name select_query
 ```
 
-**Parameters**
-
-- `table_name`: The name of the table that you want to insert the query into.
-- `select_query`: A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries).
+| Parameters | Description |
+| ----- | ----- |
+| `table_name` | The name of the table that you want to insert the query into. |
+| `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
 
 **Example**
+
+>[!NOTE]
+>
+>The following is a contrived example and simply for instructional purposes. 
 
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
@@ -216,8 +220,27 @@ INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
->[!NOTE] 
+>[!INFO]
+> 
 > The `SELECT` statement **must not** be enclosed in parentheses (). Additionally, the schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement. You can provide a `SNAPSHOT` clause to read incremental deltas into the target table.
+
+Most fields in a real XDM schema are not found at the root level and SQL does not permit the use of dot notation. To achieve a realistic result using nested fields, you must map each field in your `INSERT INTO` path.
+
+To `INSERT INTO` nested paths, use the following syntax:
+
+```sql
+INSERT INTO [dataset]
+SELECT struct([source field1] as [target field in schema],
+[source field2] as [target field in schema],
+[source field3] as [target field in schema]) [tenant name]
+FROM [dataset]
+```
+
+**Example**
+
+```sql
+INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCity, Country as SupplierCountry) _Adobe FROM OnlineCustomers;
+```
 
 ## DROP TABLE
 
@@ -227,9 +250,9 @@ The `DROP TABLE` command drops an existing table and deletes the directory assoc
 DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-**Parameters**
-
--  `IF EXISTS`: If this is specified, no exception is thrown if the table does **not** exist.
+| Parameters | Description |
+| ------ | ------ |
+| `IF EXISTS` | If this is specified, no exception is thrown if the table does **not** exist. |
 
 ## CREATE DATABASE
 
@@ -247,9 +270,9 @@ The `DROP DATABASE` command deletes the database from an instance.
 DROP DATABASE [IF EXISTS] db_name
 ```
 
-**Parameters**
-
--  `IF EXISTS`: If this is specified, no exception is thrown if the database does **not** exist.
+| Parameters | Description|
+| ------ | ------ |
+| `IF EXISTS` | If this is specified, no exception is thrown if the database does **not** exist. |
 
 ## DROP SCHEMA
 
@@ -259,13 +282,11 @@ The `DROP SCHEMA` command drops an existing schema.
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 ```
 
-**Parameters**
-
--  `IF EXISTS`: If this is specified, no exception is thrown if the schema does **not** exist.
-
--  `RESTRICT`: Default value for the mode. If this is specified, the schema will only be dropped if it **doesn't** contain any tables.
-
--  `CASCADE`: If this is specified, the schema will be dropped along with all the tables present in the schema.
+| Parameters | Description|
+| ------ | ------ |
+| `IF EXISTS` | If this is specified, no exception is thrown if the schema does **not** exist. |
+| `RESTRICT` | Default value for the mode. If this is specified, the schema will only be dropped if it **doesn't** contain any tables. |
+| `CASCADE` | If this is specified, the schema will be dropped along with all the tables present in the schema. |
 
 ## CREATE VIEW
 
@@ -275,10 +296,10 @@ The following syntax defines a `CREATE VIEW` query:
 CREATE VIEW view_name AS select_query
 ```
 
-**Parameters**
-
-- `view_name`: The name of view to be created.
-- `select_query`: A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries).
+| Parameters | Description|
+| ------ | ------ |
+| `view_name` | The name of view to be created. |
+| `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
 
 **Example**
 
@@ -296,16 +317,102 @@ The following syntax defines a `DROP VIEW` query:
 DROP VIEW [IF EXISTS] view_name
 ```
 
-**Parameter**
-
--  `IF EXISTS`: If this is specified, no exception is thrown if the view does **not** exist.
-- `view_name`: The name of view to be deleted.
+| Parameters | Description|
+| ------ | ------ |
+| `IF EXISTS` | If this is specified, no exception is thrown if the view does **not** exist. |
+| `view_name` | The name of view to be deleted. |
 
 **Example**
 
 ```sql
 DROP VIEW v1
 DROP VIEW IF EXISTS v1
+```
+
+## Anonymous block
+
+An anonymous block consists of two sections: executable and exception-handling sections. In an anonymous block, the executable section is mandatory. However, the exception-handling section is optional.
+
+The following example shows how to create a block with one or more statements to be executed together:
+
+```sql
+BEGIN
+  statementList
+[EXCEPTION exceptionHandler]
+END
+
+exceptionHandler:
+      WHEN OTHER
+      THEN statementList
+
+statementList:
+    : (statement (';')) +
+```
+
+Below is an example using anonymous block.
+
+```sql
+BEGIN
+   SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
+   SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
+   SET @v_log_id = select now();
+   CREATE TABLE tracking_email_id_incrementally
+     AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
+
+EXCEPTION
+  WHEN OTHER THEN
+    DROP TABLE IF EXISTS tracking_email_id_incrementally;
+    SELECT 'ERROR';
+END;
+```
+
+## Data asset organization
+
+It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
+
+The following SQL constructs using standard SQL syntax are supported for you to logically organize your data.
+
+```SQL
+CREATE DATABASE dg1;
+CREATE SCHEMA dg1.schema1;
+CREATE table t1 ...;
+CREATE view v1 ...;
+ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
+ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
+```
+
+See the guide on [logical organization of data assets](../best-practices/organize-data-assets.md) for more a detailed explanation on Query Service best practices.
+
+## Table exists
+
+The `table_exists` SQL command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. 
+
+By validating whether a table exists before running the statements, the `table_exists` feature simplifies the process of writing an anonymous block to cover both the `CREATE` and `INSERT INTO` use cases.
+
+The following syntax defines the `table_exists` command:
+
+```SQL
+$$
+BEGIN
+
+#Set mytableexist to true if the table already exists.
+SET @mytableexist = SELECT table_exists('target_table_name');
+
+#Create the table if it does not already exist (this is a one time operation).
+CREATE TABLE IF NOT EXISTS target_table_name AS
+  SELECT *
+  FROM   profile_dim_date limit 10;
+
+#Insert data only if the table already exists. Check if @mytableexist = 'true'
+ INSERT INTO target_table_name           (
+                     select *
+                     from   profile_dim_date
+                     WHERE  @mytableexist = 'true' limit 20
+              ) ;
+EXCEPTION
+WHEN other THEN SELECT 'ERROR';
+
+END $$; 
 ```
 
 ## [!DNL Spark] SQL commands 
@@ -320,10 +427,10 @@ The `SET` command sets a property and either returns the value of an existing pr
 SET property_key = property_value
 ```
 
-**Parameters**
-
-- `property_key`: The name of the property that you want to list or alter.
-- `property_value`: The value that you want the property to be set as.
+| Parameters | Description|
+| ------ | ------ |
+| `property_key` | The name of the property that you want to list or alter. |
+| `property_value` | The value that you want the property to be set as. |
 
 To return the value for any setting, use `SET [property key]` without a `property_value`.
 
@@ -371,10 +478,10 @@ The `DECLARE` command allows a user to create a cursor, which can be used to ret
 DECLARE name CURSOR FOR query
 ```
 
-**Parameters**
-
-- `name`: The name of the cursor to be created.
-- `query`: A `SELECT` or `VALUES` command which provides the rows to be returned by the cursor. 
+| Parameters | Description|
+| ------ | ------ |
+| `name` | The name of the cursor to be created. |
+| `query` | A `SELECT` or `VALUES` command which provides the rows to be returned by the cursor. |
 
 ### EXECUTE
 
@@ -386,10 +493,10 @@ If the `PREPARE` statement that created the statement specified some parameters,
 EXECUTE name [ ( parameter ) ]
 ```
 
-**Parameters**
-
-- `name`: The name of the prepared statement to execute.
-- `parameter`: The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as determined when the prepared statement was created.  If there are multiple parameters for the prepared statement, they are separated by commas.
+| Parameters | Description|
+| ------ | ------ |
+| `name` | The name of the prepared statement to execute. |
+| `parameter` | The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as determined when the prepared statement was created.  If there are multiple parameters for the prepared statement, they are separated by commas. |
 
 ### EXPLAIN
 
@@ -406,11 +513,11 @@ ANALYZE
 FORMAT { TEXT | JSON }
 ```
 
-**Parameters**
-
-- `ANALYZE`: If the `option` contains `ANALYZE`, the run times and other statistics are shown. 
-- `FORMAT`: If the `option` contains `FORMAT`, it specifies the output format, which can be `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`.
-- `statement`: Any `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, or `CREATE MATERIALIZED VIEW AS` statement, whose execution plan you want to see.
+| Parameters | Description|
+| ------ | ------ |
+| `ANALYZE` | If the `option` contains `ANALYZE`, the run times and other statistics are shown. |
+| `FORMAT` | If the `option` contains `FORMAT`, it specifies the output format, which can be `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`. |
+| `statement` | Any `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, or `CREATE MATERIALIZED VIEW AS` statement, whose execution plan you want to see. |
 
 >[!IMPORTANT]
 >
@@ -440,10 +547,10 @@ The `FETCH` command retrieves rows using a previously created cursor.
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-**Parameters**
-
-- `num_of_rows`: The number of rows to fetch. 
-- `cursor_name`: The name of the cursor you're retrieving information from.
+| Parameters | Description|
+| ------ | ------ |
+| `num_of_rows` | The number of rows to fetch. |
+| `cursor_name` | The name of the cursor you're retrieving information from. |
 
 ### PREPARE {#prepare}
 
@@ -457,10 +564,10 @@ Optionally, you can specify a list of parameter data types. If a parameter's dat
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-**Parameters**
-
-- `name`: The name for the prepared statement.
-- `data_type`: The data types of the prepared statement's parameters. If a parameter's data type isn't listed, the type can be inferred from the context. If you need to add multiple data types, you can add them in a comma separated list.
+| Parameters | Description|
+| ------ | ------ |
+| `name` | The name for the prepared statement. |
+| `data_type` | The data types of the prepared statement's parameters. If a parameter's data type isn't listed, the type can be inferred from the context. If you need to add multiple data types, you can add them in a comma separated list. |
 
 ### ROLLBACK
 
@@ -493,13 +600,13 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-**Parameters**
-
 More information about the standard SELECT query parameters can be found in the [SELECT query section](#select-queries). This section will only list parameters that are exclusive to the `SELECT INTO` command.
 
-- `TEMPORARY` or `TEMP`: An optional parameter. If specified, the table that is created will be a temporary table.
-- `UNLOGGED`: An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-createtable.html).
-- `new_table`: The name of the table to be created. 
+| Parameters | Description|
+| ------ | ------ |
+| `TEMPORARY` or `TEMP` | An optional parameter. If specified, the table that is created will be a temporary table. |
+| `UNLOGGED` | An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `new_table` | The name of the table to be created. |
 
 **Example**
 
@@ -518,15 +625,10 @@ SHOW name
 SHOW ALL
 ```
 
-**Parameters**
-
-- `name`: The name of the runtime parameter you want information about. Possible values for the runtime parameter include the following values:
-    - `SERVER_VERSION`: This parameter shows the server's version number.
-    - `SERVER_ENCODING`: This parameter shows the server-side character set encoding.
-    - `LC_COLLATE`: This parameter shows the database's locale setting for collation (text ordering). 
-    - `LC_CTYPE`: This parameter shows the database's locale setting for character classification.
-    `IS_SUPERUSER`: This parameter shows if the current role has superuser privileges.
-- `ALL`: Show the values of all configuration parameters with descriptions.
+| Parameters | Description|
+| ------ | ------ |
+| `name` | The name of the runtime parameter you want information about. Possible values for the runtime parameter include the following values:<br>`SERVER_VERSION`: This parameter shows the server's version number.<br>`SERVER_ENCODING`: This parameter shows the server-side character set encoding.<br>`LC_COLLATE`: This parameter shows the database's locale setting for collation (text ordering).<br>`LC_CTYPE`: This parameter shows the database's locale setting for character classification.<br>`IS_SUPERUSER`: This parameter shows if the current role has superuser privileges. |
+| `ALL` | Show the values of all configuration parameters with descriptions. |
 
 **Example**
 
@@ -545,7 +647,7 @@ SHOW DateStyle;
 
 ### COPY
 
-The `COPY` command dumps the output of any `SELECT` query to a specified location. The user must have access to this location for this command to succeed.
+The `COPY` command duplicates the output of any `SELECT` query to a specified location. The user must have access to this location for this command to succeed.
 
 ```sql
 COPY query
@@ -553,10 +655,10 @@ COPY query
     [  WITH FORMAT 'format_name']
 ```
 
-**Parameters**
-
-- `query`: The query that you want to copy.
-- `format_name`: The format that you want to copy the query in. The `format_name` can be one of `parquet`, `csv`, or `json`. By default, the value is `parquet`.
+| Parameters | Description|
+| ------ | ------ |
+| `query` | The query that you want to copy. |
+| `format_name` | The format that you want to copy the query in. The `format_name` can be one of `parquet`, `csv`, or `json`. By default, the value is `parquet`. |
 
 >[!NOTE]
 >
@@ -583,13 +685,13 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name
 ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
 ```
 
-**Parameters**
-
-- `table_name`: The name of the table which you are editing.
-- `constraint_name`: The name of the constraint that you want to add or delete.
-- `column_name`: The name of the column that you are adding a constraint to.
-- `referenced_table_name`: The name of the table that is referenced by the foreign key.
-- `primary_column_name`: The name of the column that is referenced by the foreign key.
+| Parameters | Description|
+| ------ | ------ |
+| `table_name` | The name of the table which you are editing. |
+| `constraint_name` | The name of the constraint that you want to add or delete. |
+| `column_name` | The name of the column that you are adding a constraint to. |
+| `referenced_table_name` | The name of the table that is referenced by the foreign key. |
+| `primary_column_name` | The name of the column that is referenced by the foreign key. |
 
 >[!NOTE]
 >
@@ -633,9 +735,11 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 
 **Parameters**
 
-- `table_name`: The name of the table which you are editing.
-- `column_name`: The name of the column you want to add.
-- `data_type`: The data type of the column you want to add. Supported data types include the following: bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar.
+| Parameters | Description|
+| ------ | ------ |
+| `table_name` | The name of the table which you are editing. |
+| `column_name` | The name of the column you want to add. |
+| `data_type` | The data type of the column you want to add. Supported data types include the following: bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar. |
 
 ### SHOW PRIMARY KEYS
 

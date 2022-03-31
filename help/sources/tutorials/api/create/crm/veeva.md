@@ -7,11 +7,7 @@ type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Veeva CRM using the Flow Service API.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
 ---
-# (Beta) Create a [!DNL Veeva CRM] base connection using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL Veeva CRM] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# Create a [!DNL Veeva CRM] base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 

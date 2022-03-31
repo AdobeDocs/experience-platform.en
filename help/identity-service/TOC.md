@@ -10,6 +10,7 @@ feature: Identities
 
 - [Identity Service overview](home.md)
 - [Identity namespace overview](namespaces.md)
+- [Guardrails for Identity data](guardrails.md)
 - Identity Service API {#api}
   - [Getting Started](api/getting-started.md)
   - [Label a field as identity](api/label-identities.md)
@@ -21,7 +22,9 @@ feature: Identities
   - [List the native ID for an identity](api/list-native-id.md)
 - Identity Service UI {#ui}
   - [Identity graph viewer](ui/identity-graph-viewer.md)
+  - [Shared device detection](ui/shared-devices.md)
 - [ECID overview](ecid.md)
+- [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

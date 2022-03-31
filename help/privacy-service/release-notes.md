@@ -40,8 +40,8 @@ This document contains information about new features for Adobe Experience Platf
 | --- | --- |
 | [!DNL Privacy Service] rebranding | The formerly named "GDPR Service" has been rebranded to [!DNL Privacy Service] as the service has grown to support other regulations in addition to GDPR. |
 | New API endpoints | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs` |
-| New required `regulation` property | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Accepted values are `gdpr` and `ccpa`. See the document on [privacy jobs](api/privacy-jobs.md) in the [!DNL Privacy Service] developer guide for more information. |
-| Support for Adobe Primetime Authentication | [!DNL Privacy Service] now accepts access/delete requests from Adobe Primetime Authentication, using `primetimeAuthentication` as its product value. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
+| New required `regulation` property | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Accepted values are `gdpr` and `ccpa`. See the document on [privacy jobs](api/privacy-jobs.md) in the [!DNL Privacy Service] API guide for more information. |
+| Support for Adobe Primetime Authentication | [!DNL Privacy Service] now accepts access/delete requests from Adobe Primetime Authentication, using `primetimeAuthentication` as its product value. See the [Primetime Authentication documentation](https://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
 
 ### Enhancements
 

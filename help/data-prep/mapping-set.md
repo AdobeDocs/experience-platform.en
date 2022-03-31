@@ -27,9 +27,9 @@ The following JSON is an example of a typical mapping set:
 
 ```json
 {
-    "id" : "cbb0da769faa48fcb29e026a924ba29d",
-    "name" : "Demo Mapping Set",
-    "inputSchema" : {
+    "id": "cbb0da769faa48fcb29e026a924ba29d",
+    "name": "Demo Mapping Set",
+    "inputSchema": {
         "id": "a167ff2947ff447ebd8bcf7ef6756232",
         "version": 0
     },
@@ -44,8 +44,8 @@ The following JSON is an example of a typical mapping set:
             "sourceType": "ATTRIBUTE",
             "source": "Id",
             "destination": "_id",
-            "name" : "Id",
-            "description" : "Identifier field"
+            "name": "Id",
+            "description": "Identifier field"
         },
         {
             "sourceType": "ATTRIBUTE",

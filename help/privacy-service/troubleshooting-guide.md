@@ -70,7 +70,7 @@ You can retrieve details about a particular job by using the [!DNL Privacy Servi
 
 ### Using the API
 
-To retrieve the status of a particular job using the [!DNL Privacy Service] API, make a request to the root (`GET /`) endpoint, using the job's ID in the request path. For more details, see the section on [checking the status of a job](api/privacy-jobs.md#check-the-status-of-a-job) in the [!DNL Privacy Service] developer guide.
+To retrieve the status of a particular job using the [!DNL Privacy Service] API, make a request to the root (`GET /`) endpoint, using the job's ID in the request path. For more details, see the section on [checking the status of a job](api/privacy-jobs.md#check-the-status-of-a-job) in the [!DNL Privacy Service] API guide.
 
 ### Using the UI
 
@@ -84,7 +84,7 @@ The [!DNL Privacy Service] API and user interface both provide methods for downl
 
 Make a request to the root (`GET /`) endpoint in the [!DNL Privacy Service] API, using the ID of the job whose results you want to download in the request path. If the job's status is complete, the API will include a `downloadURL` attribute in the response body. This attribute contains a URL that you can paste into the address bar of your browser to download the ZIP file.
 
-For more details, see the section on [looking up a job by its ID](api/privacy-jobs.md#check-the-status-of-a-job) in the [!DNL Privacy Service] developer guide.
+For more details, see the section on [looking up a job by its ID](api/privacy-jobs.md#check-the-status-of-a-job) in the [!DNL Privacy Service] API guide.
 
 ### Using the UI
 
@@ -97,7 +97,7 @@ The following table outlines some common errors in [!DNL Privacy Service], with 
 | Error message | Description |
 | --- | --- |
 | User IDs were not found. | Some of the user IDs provided in the request could not be found and were skipped. Ensure that you are using the correct namespace(s) and ID values in the request payload. See the document on [providing identity data](./identity-data.md) for a more detailed explanation. |
-| Invalid Namespace | A provided identity namespace for a user ID was invalid. See the section on [standard identity namespaces](./api/appendix.md#standard-namespaces) in the [!DNL Privacy Service] developer guide appendix for a list of accepted namespaces. If you are using a custom namespace, ensure you are setting the ID's `type` property to "custom". |
+| Invalid Namespace | A provided identity namespace for a user ID was invalid. See the section on [standard identity namespaces](./api/appendix.md#standard-namespaces) in the [!DNL Privacy Service] API guide appendix for a list of accepted namespaces. If you are using a custom namespace, ensure you are setting the ID's `type` property to "custom". |
 | Partially Completed | The job completed successfully, but some data was not applicable for the given request and was skipped. |
 | The data is not in the required format. | One or more of the data values for the specified application was incorrectly formatted. Check the job details for more info. |
 | The IMS Org has not been provisioned. | This message occurs when your IMS Org has not been provisioned for [!DNL Privacy Service]. Contact your administrator for more information. |

@@ -16,8 +16,7 @@ This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience
 
 >[!IMPORTANT]
 >
->
-This tutorial requires you to have the unique base connection ID for your advertising source. If you do not have this ID, see the tutorial on [connecting an advertising source to Platform](../../api/create/advertising/ads.md) tutorial.
+>This tutorial requires you to have the unique base connection ID for your advertising source. If you do not have this ID, see the tutorial on [connecting an advertising source to Platform](../../api/create/advertising/ads.md) tutorial.
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 

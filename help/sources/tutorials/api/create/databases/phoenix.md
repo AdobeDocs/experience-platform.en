@@ -76,12 +76,12 @@ curl -X POST \
         "auth": {
             "specName": "Basic Authentication",
         "params": {
-            "host" :  "{HOST}",
-            "username" : "{USERNAME}",
-            "password" :"{PASSWORD}",
-            "port" : {PORT},
-            "httpPath" : "{PATH}",
-            "enableSsl" : {SSL}
+            "host":  "{HOST}",
+            "username": "{USERNAME}",
+            "password":"{PASSWORD}",
+            "port": {PORT},
+            "httpPath": "{PATH}",
+            "enableSsl": {SSL}
             }
         },
         "connectionSpec": {

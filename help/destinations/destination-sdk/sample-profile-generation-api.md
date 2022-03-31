@@ -9,25 +9,33 @@ exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
 >
 >**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
 
-This page lists and describes all the API operations that you can perform using the `/authoring/sample-profiles` API endpoint. 
+This page lists and describes all the API operations that you can perform using the `/authoring/sample-profiles` API endpoint.
 
-This API endpoint allows you to generate sample profiles to use: 
-* When testing a message transformation template. Read more in [Create and test a message transformation template](./create-template.md).
-* When testing if your destination is configured correctly. Read more in [Test your destination configuration](./test-destination.md).
+## Generate different profile types for different APIs {#different-profiles-different-apis}
 
-You can generate sample profiles based on either the Adobe XDM source schema, or the target schema supported by your destination. To understand the difference between Adobe XDM source schema and target schema, read the [Message format](./message-format.md) article. 
+>[!IMPORTANT]
+>
+>Use this API endpoint to generate sample profiles for two separate use cases. You can either: 
+>* generate profiles to use when [crafting and testing a message transformation template](./create-template.md) - by using *destination ID* as a query parameter.
+>* generate profiles to use when making calls to [test if your destination is configured correctly](./test-destination.md) - by using *destination instance ID* as a query parameter.
+
+You can generate sample profiles based on either the Adobe XDM source schema (to use when testing your destination), or the target schema supported by your destination (to use when crafting your template). To understand the difference between Adobe XDM source schema and target schema, read the overview section of the [Message format](./message-format.md) article.
+
+Note that the purposes for which the sample profiles can be used are not interchangeable. Profiles generated based on the *destination ID* can only be used to craft your message transformation templates and profiles generated based on the *destination instance ID* can only be used to test your destination endpoint. 
 
 ## Getting started with sample profile generation API operations {#get-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
-## Generate sample profiles based on the source schema {#generate-sample-profiles-source-schema}
+## Generate sample profiles based on the source schema to use when testing your destination {#generate-sample-profiles-source-schema}
 
 >[!IMPORTANT]
 >
 >Add the sample profiles generated here to HTTP calls when [testing your destination](./test-destination.md). 
 
 You can generate sample profiles based on the source schema by making a GET request to the `authoring/sample-profiles/` endpoint and providing the ID of a destination instance that you created based on the destination configuration that you want to test. 
+
+To get the ID of a destination instance, you must first create a connection in the Experience Platform UI to your destination before attempting to test your destination. Read the [activate destination tutorial](/help/destinations/ui/activation-overview.md) and see the tip below for how to get the destinations instance ID to use for this API.
 
 >[!TIP]
 >
@@ -176,7 +184,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 
 {style="table-layout:auto"}
 
-## Generate sample profiles based on the target schema {#generate-sample-profiles-target-schema}
+## Generate sample profiles based on the target schema to use when crafting a message transformation template {#generate-sample-profiles-target-schema}
 
 >[!IMPORTANT]
 >
@@ -366,7 +374,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 
 ## API error handling {#api-error-handling}
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
 
 ## Next steps
 

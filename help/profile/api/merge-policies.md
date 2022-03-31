@@ -30,6 +30,10 @@ While each organization can potentially have multiple merge policies per schema 
 >
 >When you set a new merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
 
+To ensure all profile consumers are working with the same view on edges, merge policies can be marked as active on edge. In order for a segment to be activated on edge (marked as an edge segment), it must be tied to a merge policy that is marked as active on edge. If a segment is **not** tied to a merge policy that is marked as active on edge, the segment will not be marked as active on edge, and will be marked as a streaming segment.
+
+Additionally, each IMS Organization can only have **one** merge policy that is active on edge. If a merge policy is active on edge, it can be used for other systems on edge, such as Edge Profile, Edge Segmentation, and Destinations on Edge. 
+
 ### Complete merge policy object
 
 The complete merge policy object represents a set of preferences controlling aspects of merging profile fragments. 
@@ -51,6 +55,7 @@ The complete merge policy object represents a set of preferences controlling asp
         "attributeMerge": {
             "type": "{ATTRIBUTE_MERGE_TYPE}"
         },
+        "isActiveOnEdge": "{BOOLEAN}",
         "default": "{BOOLEAN}",
         "updateEpoch": "{UPDATE_TIME}"
     }
@@ -61,11 +66,12 @@ The complete merge policy object represents a set of preferences controlling asp
 |`id`|The system generated unique identifier assigned at creation time|
 |`name`|Friendly name by which the merge policy can be identified in list views.|
 |`imsOrgId`|Organization ID to which this merge policy belongs|
+|`schema.name`|Part of the [`schema`](#schema) object, the `name` field contains the XDM schema class to which the merge policy relates. For more information on schemas and classes, please read the [XDM documentation](../../xdm/home.md).|
+|`version`|[!DNL Platform] maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
 |`identityGraph`|[Identity graph](#identity-graph) object indicating the identity graph from which related identities will be obtained. Profile fragments found for all related identities will be merged.|
 |`attributeMerge`|[Attribute merge](#attribute-merge) object indicating the manner by which the merge policy will prioritize profile attributes in the case of data conflicts.|
-|`schema.name`|Part of the [`schema`](#schema) object, the `name` field contains the XDM schema class to which the merge policy relates. For more information on schemas and classes, please read the [XDM documentation](../../xdm/home.md).|
+|`isActiveOnEdge`|Boolean value indicating if this merge policy can be used on edge. By default, this value is `false`.|
 |`default`|Boolean value indicating if this merge policy is the default for the specified schema.|
-|`version`|[!DNL Platform] maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
 |`updateEpoch`|Date of the last update to the merge policy.|
 
 **Example merge policy**
@@ -85,6 +91,7 @@ The complete merge policy object represents a set of preferences controlling asp
         "attributeMerge": {
             "type": "timestampOrdered"
         },
+        "isActiveOnEdge": false,
         "default": true,
         "updateEpoch": 1551660639
     }
@@ -130,7 +137,7 @@ A profile fragment is the profile information for just one identity out of the l
 Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 
 * **`timestampOrdered`**: (default) Give priority to the profile which was updated last. Using this merge type, the `data` attribute is not required.
-* **`dataSetPrecedence`** : Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
+* **`dataSetPrecedence`**: Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
   * **`order`**: When "dataSetPrecedence" is used, an `order` array must be supplied with a list of datasets. Any datasets not included in the list will not be merged. In other words, datasets must be explicitly listed to be merged into a profile. The `order` array lists the IDs of the datasets in order of priority.
 
 #### Example `attributeMerge` object using `dataSetPrecedence` type
@@ -138,7 +145,7 @@ Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 ```json
     "attributeMerge": {
         "type": "dataSetPrecedence",
-        "order" : [
+        "order": [
             "dataSetId_2", 
             "dataSetId_3", 
             "dataSetId_1", 
@@ -226,6 +233,7 @@ A successful response returns the details of the merge policy.
     "attributeMerge": {
         "type": "timestampOrdered"
     },
+    "isActiveOnEdge": "false",
     "default": false,
     "updateEpoch": 1551127597
 }
@@ -294,6 +302,7 @@ A successful response returns HTTP Status 207 (Multi-Status) and the details of 
             "attributeMerge": {
                 "type": "timestampOrdered"
             },
+            "isActiveOnEdge": true,
             "default": true,
             "updateEpoch": 1552086578
         },
@@ -321,6 +330,7 @@ A successful response returns HTTP Status 207 (Multi-Status) and the details of 
                     "5b76f8d787a6af01e2ceda18"
                 ]
             },
+            "isActiveOnEdge": false,
             "default": false,
             "updateEpoch": 1576099719
         }
@@ -345,6 +355,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 |`default`|A boolean value that filters results by whether or not the merge policies are the default for a schema class.|
 |`limit`|Specifies the page size limit to control the number of results that are included in a page. Default value: 20|
 |`orderBy`|Specifies the field by which to order results as in `orderBy=name` or `orderBy=+name` to sort by name in ascending order, or `orderBy=-name`, to sort in descending order. Omitting this value results in the default sorting of `name` in ascending order.|
+|`isActiveOnEdge`|A boolean values that filters results by whether or not the merge policies are active on edge.|
 |`schema.name`|Name of the schema for which to retrieve available merge policies.|
 |`identityGraph.type`|Filters results by the identity graph type. Possible values include "none" and "pdg" (Private graph).|
 |`attributeMerge.type`|Filters results by the attribute merge type used. Possible values include "timestampOrdered" and "dataSetPrecedence".|
@@ -398,6 +409,7 @@ A successful response returns a paginated list of merge policies that meet the c
             "attributeMerge": {
                 "type": "timestampOrdered"
             },
+            "isActiveOnEdge": true,
             "default": true,
             "updateEpoch": 1552086578
         },
@@ -425,6 +437,7 @@ A successful response returns a paginated list of merge policies that meet the c
                     "5b76f8d787a6af01e2ceda18"
                 ]
             },
+            "isActiveOnEdge": false,
             "default": false,
             "updateEpoch": 1576099719
         }
@@ -464,12 +477,12 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Loyalty members ordered by ID",
-    "identityGraph" : {
+    "identityGraph": {
         "type": "none"
     },
-    "attributeMerge" : {
+    "attributeMerge": {
         "type":"dataSetPrecedence",
-        "order" : [
+        "order": [
             "5b76f86b85d0e00000be5c8b",
             "5b76f8d787a6af01e2ceda18"
         ]
@@ -477,6 +490,7 @@ curl -X POST \
     "schema": {
         "name":"_xdm.context.profile"
     },
+    "isActiveOnEdge": true,
     "default": true
 }'
 ```
@@ -487,6 +501,7 @@ curl -X POST \
 |`identityGraph.type`|The identity graph type from which to obtain related identities to merge. Possible values: "none" or "pdg" (Private graph).|
 |`attributeMerge`|The manner by which to prioritize profile attribute values in the case of data conflicts.|
 | `schema`| The XDM schema class associated with the merge policy.|
+|`isActiveOnEdge`|Specifies whether this merge policy is active on edge.|
 | `default`|Specifies whether this merge policy is the default for the schema.|
 
 Refer to the [components of merge policies](#components-of-merge-policies) section for more information.
@@ -520,6 +535,7 @@ A successful response returns the details of the newly created merge policy.
             "5b76f8d787a6af01e2ceda18"
         ]
     },
+    "isActiveOnEdge": true,
     "default": true,
     "updateEpoch": 1551898378
 }
@@ -566,8 +582,8 @@ curl -X PATCH \
 
 |Property|Description|
 |---|---|
-|`op`|Specifies the operation to take. Examples of other PATCH operations can be found in the [JSON Patch documentation](http://jsonpatch.com)|
-|`path`|The path of the field to update. Accepted values are: "/name", "/identityGraph.type", "/attributeMerge.type", "/schema.name", "/version", "/default"|
+|`op`|Specifies the operation to take. Examples of other PATCH operations can be found in the [JSON Patch documentation](https://datatracker.ietf.org/doc/html/rfc6902)|
+|`path`|The path of the field to update. Accepted values are: "/name", "/identityGraph.type", "/attributeMerge.type", "/schema.name", "/version", "/default", "/isActiveOnEdge"|
 |`value`|The value to set the specified field to.|
 
 Refer to the [components of merge policies](#components-of-merge-policies) section for more information.
@@ -602,6 +618,7 @@ A successful response returns the details of the newly updated merge policy.
             "5b76f8d787a6af01e2ceda18"
         ]
     },
+    "isActiveOnEdge": true,
     "default": true,
     "updateEpoch": 1551898378
 }
@@ -650,6 +667,7 @@ curl -X PUT \
                 "5b76f8d787a6af01e2ceda18"
             ]
         },
+        "isActiveOnEdge": true,
         "default": true,
         "updateEpoch": 1551898378
     }'
@@ -661,10 +679,10 @@ curl -X PUT \
 |`identityGraph`|The identity graph from which to obtain related identities to merge.|
 |`attributeMerge`|The manner by which to prioritize profile attribute values in the case of data conflicts.|
 |`schema`| The XDM schema class associated with the merge policy.|
+|`isActiveOnEdge`|Specifies whether this merge policy is active on edge.|
 | `default`| Specifies whether this merge policy is the default for the schema.|
 
 Refer to the [components of merge policies](#components-of-merge-policies) section for more information.
-
 
 **Response**
 
@@ -695,6 +713,7 @@ A successful response returns the details of the updated merge policy.
             "5b76f8d787a6af01e2ceda18"
         ]
     },
+    "isActiveOnEdge": true,
     "default": true,
     "updateEpoch": 1551898378
 }
@@ -703,6 +722,10 @@ A successful response returns the details of the updated merge policy.
 ## Delete a merge policy
 
 A merge policy can be deleted by making a DELETE request to the `/config/mergePolicies` endpoint and including the ID of the merge policy that you wish to delete in the request path.
+
+>[!NOTE]
+>
+>If the merge policy has `isActiveOnEdge` set to true, the merge policy **cannot** be deleted. Use either the [PATCH](#edit-individual-merge-policy-fields) or [PUT](#overwrite-a-merge-policy) endpoints to update the merge policy before deleting it.
 
 **API format**
 

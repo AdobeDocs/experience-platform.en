@@ -142,7 +142,7 @@ curl -X POST \
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can provide to include more information on your source connection. |
 | `baseConnectionId` | The base connection ID of your [!DNL Kinesis] source that was generated in the previous step. |
-| `connectionSpec.id` | The fixed connection specification ID for [!DNL Kinesis]. This ID is : `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `connectionSpec.id` | The fixed connection specification ID for [!DNL Kinesis]. This ID is: `86043421-563b-46ec-8e6c-e23184711bf6` |
 | `data.format` | The format of the [!DNL Kinesis] data that you want to ingest. Currently, the only supported data format is `json`. |
 | `params.stream` | The name of the data stream to pull records from. |
 | `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw` and `xdm`. |

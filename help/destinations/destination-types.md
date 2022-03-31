@@ -11,7 +11,7 @@ Read this page to understand the different types and categories of Adobe Experie
 
 ## Destination types
 
-In Adobe Experience Platform, we distinguish between two destination types - connections and extensions. There are two types of connection destinations, Profile Export destinations and Segment Export destinations. 
+In Adobe Experience Platform, we distinguish between two destination types - connections and extensions. There are two types of connection destinations, Profile Export destinations and Segment Export destinations.
 
 ![Types of destinations](./assets/destination-types/types-of-destinations.png)
 
@@ -24,23 +24,23 @@ In Adobe Experience Platform, we distinguish between two destination types - con
 Profile export destinations receive raw data, often with email address as the primary key. Experience Platform currently supports two types of profile export destinations:
 
 * [Streaming profile export destinations](#streaming-profile-export)
-* [File-based destinations](#file-based)
+* [Batch (file-based) destinations](#file-based)
 
 ### Streaming profile export destinations {#streaming-profile-export}
 
 Streaming profile export destinations receive segment and profile data as Experience Platform data streams. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) and [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md) are examples of such destinations.
 
-### File-based destinations {#file-based}
+### Batch (file-based) destinations {#file-based}
 
-File-based destinations receive `.csv` files containing profiles and/or attributes. [Amazon S3](catalog/cloud-storage/amazon-s3.md) is an example of destination where you can deposit files containing profile exports.
+File-based destinations receive `.csv` files containing profiles and/or attributes. [Amazon S3](catalog/cloud-storage/amazon-s3.md) is an example of a destination where you can export files containing profile exports.
 
-## Streaming segment export destinations
+## Streaming segment export destinations {#streaming-destinations}
 
-Segment export destinations receive Experience Platform segment data. These destinations use segment IDs or user IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) and [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) are examples of such destinations.
+Segment export destinations receive Experience Platform segment data. These destinations use segment IDs or user IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), and  are examples of such destinations.
 
-## Profile export and segment export destinations - video overview
+## Profile export and segment export destinations - video overview {#video}
 
-The video below runs you through the particularities of the two types of destinations: 
+The video below runs you through the particularities of the two types of destinations:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
@@ -56,7 +56,7 @@ Tag extensions forward raw event data to several types of destinations. Think of
 
 ![Tag extensions compared to other destinations](./assets/common/launch-and-other-destinations.png)
 
-## When to use connections and extensions
+## When to use connections and extensions {#when-to-use}
 
 As a marketer, you could use a combination of connections and extensions to address your use cases.
 
@@ -64,7 +64,7 @@ Connections are useful when it’s necessary to leverage a complete centralized 
 
 Extensions are helpful when event data is used to trigger an action, or to conduct segmentation in an external environment. For example, if behavioral data needs to be forwarded to an external system without being joined to other data sources on file for a given user.
 
-## Destination categories
+## Destination categories {#categories}
 
 The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing action that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
 

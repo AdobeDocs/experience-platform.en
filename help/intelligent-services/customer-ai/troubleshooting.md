@@ -1,6 +1,7 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output;customer ai troubleshooting;customer ai errors
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Customer AI error troubleshooting
 topic-legacy: Getting started
 description: Find answers to common errors in Customer AI.
@@ -16,6 +17,18 @@ Customer AI displays errors when model training, scoring, and configuration fail
 In the event that **[!UICONTROL Failed]** or **[!UICONTROL Training issue]** is displayed, you can select the run status to open a side panel. The side panel  contains your **[!UICONTROL Last run status]** and **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** contains information on why the run failed. In the event that Customer AI is not able to provide details on your error, contact support with the error code thats provided.
 
 <img src='./images/errors/last-run-details.png' width=300 /><br />
+
+## Unable to access Customer AI in Chrome incognito
+
+Loading errors in Google Chrome's incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
+
+<img src='./images/errors/error.PNG' width=500 /><br />
+
+### Recommended fix
+
+To workaround this issue you need to add experience.adobe.com as a site that can always use cookies. Start by navigating to **chrome://settings/cookies**. Next, scroll down to the **Customized behaviors** section followed by selecting the **Add** button next to "sites that can always use cookies". In the popover that appears, copy and paste `[*.]experience.adobe.com` then select the **Including third-party cookies** on this site checkbox. Once complete, select **Add** and reload Customer AI in incognito.
+
+![recommended fix](./images/errors/cookies2.gif)
 
 ## Model quality is poor
 

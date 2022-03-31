@@ -234,8 +234,8 @@ alloy("sendEvent", {
   data: {
     __adobe: {
       target: {
-        "entity.id" : "123",
-        "entity.genre" : "Drama"
+        "entity.id": "123",
+        "entity.genre": "Drama"
       }
     }
   }

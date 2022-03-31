@@ -54,13 +54,23 @@ The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTRO
 
 >[!IMPORTANT]
 >
->The Data Prep support feature for the [!DNL Analytics] source is in beta.
+>Data Prep support for the [!DNL Analytics] source is currently in beta. The feature and documentation are subject to change.
+
+Before you can map your [!DNL Analytics] data to target XDM schema, you must first select whether you are using a default schema or a custom schema.
+
+A default schema creates a new schema on your behalf, containing the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a default schema, select **[!UICONTROL Default schema]**.
+
+![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+
+With a custom schema, you can choose any available schema for your [!DNL Analytics] data, as long as that schema has the [!DNL Adobe Analytics ExperienceEvent Template] field group. To use a custom schema, select **[!UICONTROL Custom schema]**.
+
+![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 The [!UICONTROL Mapping] page provides an interface to map source fields to their appropriate target schema fields. From here, you can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
 
 >[!TIP]
 >
->Only schemas that have the [!DNL Analytics] template field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your Report Suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
+>Only schemas that have the [!DNL Adobe Analytics ExperienceEvent Template] field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your Report Suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
@@ -128,7 +138,7 @@ The following documentation provides further resources on understanding Data Pre
 
 * [Data Prep overview](../../../../../data-prep/home.md)
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
-* [Add calculated fields](../../../../../data-prep/calculated-fields.md)
+* [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
 ### Provide dataflow details
 

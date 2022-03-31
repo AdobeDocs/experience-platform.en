@@ -10,7 +10,7 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 
 One of the core capabilities of Adobe Experience Platform is to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies. 
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
+Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
 ## Data governance roles
 
@@ -36,11 +36,11 @@ Marketers are the end point of data governance. They request data from the data 
 * Marketing Specialists and Experience Designers use data to design new customer experiences. 
 
 
-## [!DNL Data Governance] framework
+## Data Governance framework
 
-The [!DNL Data Governance] framework simplifies and streamlines the process of categorizing data and creating data usage policies. Once data labels have been applied and data usage policies are in place, marketing actions can be evaluated to ensure the correct use of data.
+The Data Governance framework simplifies and streamlines the process of categorizing data and creating data usage policies. Once data labels have been applied and data usage policies are in place, marketing actions can be evaluated to ensure the correct use of data.
 
-There are three key elements to the [!DNL Data Governance] framework: Labels, Policies, and Enforcement.
+There are three key elements to the Data Governance framework: Labels, Policies, and Enforcement.
 
 1. **Labels:** Classify data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and organization policies.
 1. **Policies:** Describe what kind(s) of marketing actions are allowed or not allowed to be taken on specific data.
@@ -48,9 +48,9 @@ There are three key elements to the [!DNL Data Governance] framework: Labels, Po
 
 ## Data usage labels
 
-[!DNL Data Governance] enables data stewards to apply usage labels at the dataset and field level to categorize data according to the type of policies that apply.
+Data Governance enables data stewards to apply usage labels at the dataset and field level to categorize data according to the type of policies that apply.
 
-The [!DNL Data Governance] framework includes predefined data usage labels that can be used to categorize data in three ways:
+The Data Governance framework includes predefined data usage labels that can be used to categorize data in three ways:
 
 ![Data Usage Label Categories](./images/overview/label-categories.png)
 
@@ -82,15 +82,15 @@ For more information on data usage policies and marketing actions, see the [poli
 
 ## Next steps
 
-This document provided a high-level introduction to [!DNL Data Governance] and the[!DNL Data Governance] framework. You can now continue to the [data usage labels user guide](labels/user-guide.md) and start adding usage labels to your experience data.
+This document provided a high-level introduction to Data Governance and theData Governance framework. You can now continue to the [data usage labels user guide](labels/user-guide.md) and start adding usage labels to your experience data.
 
 ## Appendix
 
-The following section provides additional information regarding [!DNL Data Governance].
+The following section provides additional information regarding Data Governance.
 
-### [!DNL Data Governance] terminology
+### Data Governance terminology
 
-The following table outlines key terms related to [!DNL Data Governance] and the[!DNL Data Governance] framework.
+The following table outlines key terms related to Data Governance and theData Governance framework.
 
 |Term|Definition |
 |---|---|
@@ -110,10 +110,10 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 
 ## Additional resources
 
-The following video is intended to support your understanding of the [!DNL Data Governance] framework.
+The following video is intended to support your understanding of the Data Governance framework.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-The following video provides an introduction to various [!DNL Data Governance] features in Experience Platform.
+The following video provides an introduction to various Data Governance features in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)

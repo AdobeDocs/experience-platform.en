@@ -25,16 +25,6 @@ Adobe provides a template tool that allows you to create and test the message te
 * Use the *sample template API* to get a sample template.
 * Use the *render template API* to render the sample template so you can compare the result against your destination's expected data format. After comparing the exported data against the data format expected by your destination, you can edit the template. This way, the exported data you generate matches the data format expected by your destination.
 
-## How to use the sample template API and render template API to create a template for your destination {#iterative-process}
-
-The process to get and test the template is iterative. Repeat the steps below until the exported profiles match your destination's expected data format.
-
-1. First, [get a sample template](./create-template.md#sample-template-api).
-2. Use the sample template as a starting point to create a draft of your own.
-3. Call the [render template API endpoint](./create-template.md#render-template-api) with your own template. Adobe generates sample profiles based on your schema and returns the result or any encountered errors.
-4. Compare the exported data against the data format expected by your destination. If needed, edit the template.
-5. Repeat this process until the exported profiles match your destination's expected data format.
-
 ## Steps to complete before creating the template {#prerequisites}
 
 Before you are ready to create the template, make sure you complete the steps below:
@@ -44,6 +34,20 @@ Before you are ready to create the template, make sure you complete the steps be
    * Use `maxUsersPerRequest` with a value greater than one if you want an API call to your destination to include multiple profiles, along with their segment qualifications, identities, and profile attributes. 
 2. [Create a destination configuration](./destination-configuration-api.md#create) and add the ID of the destination server configuration in `destinationDelivery.destinationServerId`.
 3. [Get the ID of the destination configuration](./destination-configuration-api.md#retrieve-list) that you just created, so you can use it in the template creation tool. 
+
+## How to use the sample template API and render template API to create a template for your destination {#iterative-process}
+
+>[!TIP]
+>
+>Before crafting and editing your message transformation template, you can start by calling the [render template API endpoint](./render-template-api.md#render-exported-data) with a simple template that exports your raw profiles without applying any transformations. The syntax for the simple template is: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
+
+The process to get and test the template is iterative. Repeat the steps below until the exported profiles match your destination's expected data format.
+
+1. First, [get a sample template](./create-template.md#sample-template-api).
+2. Use the sample template as a starting point to create a draft of your own.
+3. Call the [render template API endpoint](./create-template.md#render-template-api) with your own template. Adobe generates sample profiles based on your schema and returns the result or any encountered errors.
+4. Compare the exported data against the data format expected by your destination. If needed, edit the template.
+5. Repeat this process until the exported profiles match your destination's expected data format.
 
 ## Get a sample template using the Sample template API {#sample-template-api}
 
