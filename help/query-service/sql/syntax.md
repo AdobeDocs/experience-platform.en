@@ -256,7 +256,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREATE DATABASE
 
-The `CREATE DATABASE` command creates an adls database.
+The `CREATE DATABASE` command creates an ADLS database.
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -717,7 +717,7 @@ ALTER TABLE table_name ADD SCHEMA database_name.schema_name
 
 >[!NOTE]
 >
-> Adls tables and views cannot be added to DWH databases / schemas.
+> ADLS tables and views cannot be added to DWH databases / schemas.
 
 
 #### REMOVE SCHEMA
