@@ -2,7 +2,7 @@
 
 ## Overview
 
-_Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time._
+Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
 
 >[IMPORTANT]
 >
@@ -11,9 +11,9 @@ _Criteo powers trusted and impactful advertising to bring richer experiences to 
 
 ## Prerequisites
 
-- You need to have an administrator user account on [Criteo Management Center](https://marketing.criteo.com)
-- You'll need your Criteo Advertiser ID (Ask your Criteo contact if you don't have this in hand)
-- Criteo only accepts SHA-256 and plain text emails (to be transformed into SHA-256 before sending). Please do not send any PII (Personal Identifiable Information such as individual's names or phone numbers)
+- You need to have an administrator user account on [Criteo Management Center](https://marketing.criteo.com).
+- You'll need your Criteo Advertiser ID (Ask your Criteo contact if you don't have this in hand).
+- Criteo only accepts SHA-256 and plain text emails (to be transformed into SHA-256 before sending). Please do not send any PII (Personal Identifiable Information such as individual's names or phone numbers).
 
 ![Prerequisites](../../assets/catalog/advertising/criteo/criteo0.png)
 
@@ -22,7 +22,7 @@ This is currently a beta product. Get in touch with your Criteo representative i
 
 ## Supported identities
 
-_Criteo_ supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+Criteo supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
@@ -43,23 +43,20 @@ Refer to the table below for information about the destination export type and f
 
 To help you better understand how to use Criteo's destination, here are some goals that Adobe Experience Platform customers can achieve with Criteo.
 
-### Use case 1
-
-Get traffic
+### Use case 1 : Get traffic
 
 Showcase your business with relevant product offers and flexible creatives. With intelligent product recommendations, your ads will automatically feature the products most likely to trigger visits and engagement. Flexible targeting allows you to build audiences from Criteo's commerce data set or from your own prospect lists and Adobe CDP segments
 
-### Use case 2
-
-Increase website conversions
+### Use case 2 : Increase website conversions
 
 When visitors leave your website, remind them what they're missing with retargeting ads that increase conversions by showing special deals and hyper-relevant offers, wherever they go next. Connect your Adobe CDP segment to re-engage existing customers or target consumers similar to your most loyal shoppers.
 
+### Authenticate to Criteo
 ## Connect to Criteo
 
 Steps to connect are as follows:
 
-1. Login to Adobe experience platform and connect to Criteo's destination
+1. Login to Adobe Experience Platform and connect to Criteo's destination
 
 ![Login](../../assets/catalog/advertising/criteo/criteo1.jpeg)
 
