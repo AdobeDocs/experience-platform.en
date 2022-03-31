@@ -1,7 +1,7 @@
 ---
 title: Configure your Datastream for the Experience Platform Web SDK
 description: Learn how to configure the Datastreams. 
-keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
+keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;Data Prep for Data Collection;Data Prep;Mapper;XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
 # Configure a datastream
@@ -72,13 +72,78 @@ The subsections below cover the basic steps for mapping your data within the Dat
 
 #### [!UICONTROL Select data]
 
-Select **[!UICONTROL Save and Add Mapping]** after completing the [basic configuration step](#configure), and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform. You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead.
+Select **[!UICONTROL Save and Add Mapping]** after completing the [basic configuration step](#configure), and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform.
+
+You should construct this JSON object so that you can map it the properties in your data layer that you want to capture. Select the section below to view an example of a properly formatted JSON object.
+
++++Sample JSON file
+
+```json
+{
+  "data": {
+    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
+    "eventType": "view:load",
+    "timestamp": "2021-09-30T14:50:09.604Z",
+    "web": {
+      "webPageDetails": {
+        "siteSection": "Product section",
+        "server": "example.com",
+        "name": "product home",
+        "URL": "https://www.example.com"
+      },
+      "webReferrer": {
+        "URL": "https://www.adobe.com/index2.html",
+        "type": "external"
+      }
+    },
+    "commerce": {
+      "purchase": 1,
+      "order": {
+        "orderID": "1234"
+      }
+    },
+    "product": [
+      {
+        "productInfo": {
+          "productID": "123"
+        }
+      },
+      {
+        "productInfo": {
+          "productID": "1234"
+        }
+      }
+    ],
+    "reservation": {
+      "id": "anc45123xlm",
+      "name": "Embassy Suits",
+      "SKU": "12345-L",
+      "skuVariant": "12345-LG-R",
+      "priceTotal": "112.99",
+      "currencyCode": "USD",
+      "adults": 2,
+      "children": 3,
+      "productAddMethod": "PDP",
+      "_namespace": {
+        "test": 1,
+        "priceTotal": "112.99",
+        "category": "Overnight Stay"
+      },
+      "freeCancellation": false,
+      "cancellationFee": 20,
+      "refundable": true
+    }
+  }
+}
+```
+
++++
 
 >[!IMPORTANT]
 >
 >The JSON object must have a single root node `data` in order to pass validation.
 
-If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
+You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead. If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
 
 ![JSON sample of expected incoming data](../images/datastreams/select-data.png)
 
@@ -99,6 +164,12 @@ Next, select the schema icon (![Schema icon](../images/datastreams/schema-icon.p
 The mapping page reappears with the completed field mapping shown. The **[!UICONTROL Mapping progress]** section updates to reflect the total number of fields that have been successfully mapped.
 
 ![Field successfully mapped with progress reflected](../images/datastreams/field-mapped.png)
+
+>[!TIP]
+>
+>If you want to map an array of objects (in the source field) to an array of different objects (in the target field), add `[*]` after the array name in the source and destination field paths, as shown below.
+>
+>![Array object mapping](../images/datastreams/array-object-mapping.png)
 
 Continue following the above steps to map the rest of the fields to the target schema. While you do not have to map all available source fields, any fields in the target schema that are set as required must be mapped in order to complete this step. The **[!UICONTROL Required fields]** counter indicates how many required fields are not yet mapped in the current configuration.
 
