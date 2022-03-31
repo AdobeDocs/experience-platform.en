@@ -2,6 +2,7 @@
 title: Related accounts in Real-Time CDP B2B Edition
 type: Documentation
 description: An overview and more information about the related accounts feature in Experience Platform Real-time CDP B2B.
+exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 ---
 # Related accounts in Real-Time CDP B2B Edition
 
