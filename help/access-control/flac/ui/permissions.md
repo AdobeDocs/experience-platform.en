@@ -51,7 +51,7 @@ Select the labels from the list you would like to add to the role, then select *
 
 Added labels appear under **[!UICONTROL Labels]** tab.
 
-![flac-added-labels]](../../images/flac-ui/flac-added-labels.png)
+![flac-added-labels](../../images/flac-ui/flac-added-labels.png)
 
 To remove a label, select the **X** icon next to the labels's name, to remove the label from the role.
 
