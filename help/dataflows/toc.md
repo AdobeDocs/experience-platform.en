@@ -14,4 +14,6 @@ feature: Dataflows
 - UI guides {#ui}
   - [Monitor dataflows in destinations](./ui/monitor-destinations.md)
   - [Monitor dataflows in sources](./ui/monitor-sources.md)
+  - B2B monitoring {#b2b}
+    - [Monitor profile enrichment jobs](./ui/b2b/monitor-profile-enrichment.md)
 - [Flow Service API](https://www.adobe.io/experience-platform-apis/references/flow-service/)

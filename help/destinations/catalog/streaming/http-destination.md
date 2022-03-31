@@ -1,8 +1,7 @@
 ---
 keywords: streaming; HTTP destination
-title: (Beta) HTTP connection
+title: (Beta) HTTP API connection
 keywords: streaming;
-title: HTTP API connection
 description: The HTTP API destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 ---
@@ -57,8 +56,11 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-
 You can also use [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to set up an integration and send Experience Platform profile data to an HTTP endpoint.
+
+## IP address allowlist {#ip-address-allowlist}
+
+To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. Refer to [IP address allow list for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
 ## Connect to the destination {#connect-destination}
 
@@ -93,10 +95,6 @@ See [Activate audience data to streaming profile export destinations](../../ui/a
 ### Destination attributes {#attributes}
 
 In the [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) step, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
-
-## Product considerations {#product-considerations}
-
-Experience Platform does not stream out data to HTTP endpoints through a fixed set of static IPs. Therefore, Adobe cannot provide a list of static IPs that you can allowlist for the HTTP API destination.  
 
 ## Profile export behavior {#profile-export-behavior}
 

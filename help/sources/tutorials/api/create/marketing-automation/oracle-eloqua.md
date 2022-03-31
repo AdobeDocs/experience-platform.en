@@ -5,6 +5,7 @@ title: Create an Oracle Eloqua Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using the Flow Service API.
+exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 ---
 # Create an [!DNL Oracle Eloqua] base connection using the [!DNL Flow Service] API
 
@@ -107,5 +108,3 @@ By following this tutorial, you have created an [!DNL Oracle Eloqua] base connec
 
 * [Explore the structure and contents of a marketing automation source using the [!DNL Flow Service] API](../../explore/marketing-automation.md)
 * [Create a dataflow to bring marketing automation data to Platform using the [!DNL Flow Service] API](../../collect/marketing-automation.md)
-
-
