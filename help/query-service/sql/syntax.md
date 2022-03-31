@@ -254,9 +254,17 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 | ------ | ------ |
 | `IF EXISTS` | If this is specified, no exception is thrown if the table does **not** exist. |
 
+## CREATE DATABASE
+
+The `CREATE DATABASE` command creates an ADLS database.
+
+```sql
+CREATE DATABASE [IF NOT EXISTS] db_name
+```
+
 ## DROP DATABASE
 
-The `DROP DATABASE` command drops an existing database.
+The `DROP DATABASE` command deletes the database from an instance.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -374,6 +382,38 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
 See the guide on [logical organization of data assets](../best-practices/organize-data-assets.md) for more a detailed explanation on Query Service best practices.
+
+## Table exists
+
+The `table_exists` SQL command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. 
+
+By validating whether a table exists before running the statements, the `table_exists` feature simplifies the process of writing an anonymous block to cover both the `CREATE` and `INSERT INTO` use cases.
+
+The following syntax defines the `table_exists` command:
+
+```SQL
+$$
+BEGIN
+
+#Set mytableexist to true if the table already exists.
+SET @mytableexist = SELECT table_exists('target_table_name');
+
+#Create the table if it does not already exist (this is a one time operation).
+CREATE TABLE IF NOT EXISTS target_table_name AS
+  SELECT *
+  FROM   profile_dim_date limit 10;
+
+#Insert data only if the table already exists. Check if @mytableexist = 'true'
+ INSERT INTO target_table_name           (
+                     select *
+                     from   profile_dim_date
+                     WHERE  @mytableexist = 'true' limit 20
+              ) ;
+EXCEPTION
+WHEN other THEN SELECT 'ERROR';
+
+END $$; 
+```
 
 ## [!DNL Spark] SQL commands 
 
@@ -628,6 +668,7 @@ COPY query
 
 The `ALTER TABLE` command lets you add or drop primary or foreign key constraints as well as add columns to the table.
 
+
 #### ADD or DROP CONSTRAINT
 
 The following SQL queries show examples of adding or dropping constraints to a table. 
@@ -666,6 +707,34 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
+#### ADD SCHEMA
+
+The following SQL query shows an example of adding a table to a database / schema.
+
+```sql
+ALTER TABLE table_name ADD SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> ADLS tables and views cannot be added to DWH databases / schemas.
+
+
+#### REMOVE SCHEMA
+
+The following SQL query shows an example of removing a table from a database / schema.
+
+```sql
+ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> DWH tables and views cannot be removed from physically linked DWH databases / schemas.
+
+
+**Parameters**
+
 | Parameters | Description|
 | ------ | ------ |
 | `table_name` | The name of the table which you are editing. |
@@ -700,4 +769,43 @@ SHOW FOREIGN KEYS
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
+
+
+### SHOW DATAGROUPS
+
+The `SHOW DATAGROUPS` command returns a table of all associated databases. For each database the table includes schema, group type, child type, child name and child ID.
+
+```sql
+SHOW DATAGROUPS
+```
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                       |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   adls_db     | adls_scheema      | ADLS      | Data Lake Table      | adls_table1                                        | 6149ff6e45cfa318a76ba6d3
+   adls_db     | adls_scheema      | ADLS      | Data Warehouse Table | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view1                                         | c2e7ddac-d41c-40c5-a7dd-acd41c80c5e9
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view4                                         | b280c564-df7e-405f-80c5-64df7ea05fc3
+```
+
+
+### SHOW DATAGROUPS FOR table
+
+The `SHOW DATAGROUPS FOR` 'table_name' command returns a table of all associated databases that contain the parameter as its child. For each database the table includes schema, group type, child type, child name and child ID.
+
+```sql
+SHOW DATAGROUPS FOR 'table_name'
+```
+
+**Parameters**
+
+- `table_name`: The name of the table that you want to find associated databases for.
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   dwh_db_demo | schema2           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema1           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   qsaccel     | profile_aggs      | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
 ```
