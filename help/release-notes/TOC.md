@@ -9,6 +9,7 @@ user-guide-description: Monthly release notes for Adobe Experience Platform.
 
 * [Current Platform Release Notes](latest/latest.md)
 * 2022 {#2022}
+  * [March 2022](2022/march-2022.md)
   * [February 2022](2022/february-2022.md)
   * [January 2022](2022/january-2022.md)
 * 2021 {#2021}
