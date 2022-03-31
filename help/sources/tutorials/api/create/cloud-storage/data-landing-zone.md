@@ -240,7 +240,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the structure of the queried file including table names and data types.
+A successful response returns the structure of the queried file including file names and data types.
 
 ```json
 {
@@ -303,9 +303,20 @@ A successful response returns the structure of the queried file including table 
 }
 ```
 
-### Use `determineProperties` to auto-detect file property information of a Data Landing Zone
+### Use `determineProperties` to auto-detect file property information of a [!DNL Data Landing Zone]
 
-You can use the `determineProperties` parameter to auto-detect property information on the file contents of your [!DNL Data Landing Zone] when exploring the structure and contents of your container.
+You can use the `determineProperties` parameter to auto-detect property information of the file contents of your [!DNL Data Landing Zone] when making a GET call to explore the contents and structure of your source.
+
+#### Use case for `determineProperties`
+
+The following table outlines different scenarios you can encounter when using the `determineProperties` query parameter or manually providing information on your file.
+
+| `determineProperties` | `queryParams` | Response |
+| --- | --- | --- |
+| True | N/A | If `determineProperties` is provided as a query parameter, then the file properties detection occurs and the response returns a new `properties` key that includes information on file type, compression type, and column delimiter. |
+| N/A | True | If the values for file type, compression type, and column delimiter are manually provided as part of `queryParams`, then they are used to generate the schema and the same properties are returned as part of the response. |
+| True | True | If both options are done simultaneously, then an error is returned. |
+| N/A | N/A | If neither of the two options are provided, then an error is returned because there is no way to get properties for the response. |
 
 **API format**
 
@@ -329,6 +340,10 @@ curl -X GET \
 ```
 
 **Response**
+
+A successful response returns the structure of the queried file including file names and data types, as well as a `properties` key, containing information on `fileType`, `compressionType`, and `columnDelimiter`.
+
++++Click me
 
 ```json
 {
@@ -416,6 +431,14 @@ curl -X GET \
     ]
 }
 ```
+
++++
+
+| Property | Description |
+| --- | --- |
+| `properties.fileType` | The corresponding file type of the queried file. The supported file types are: <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
+| `properties.compressionType` | The corresponding compression type used for the queried file. The supported compression types are: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>tarGzip</li><li>`tar`</li></ul> |
+| `properties.columnDelimiter` | The corresponding column delimiter used for the queried file. Any single character value is a permissible column delimiter. The default value is a comma `(,)`. |
 
 
 ## Create a source connection
