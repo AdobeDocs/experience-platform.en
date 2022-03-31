@@ -307,7 +307,7 @@ A successful response returns the structure of the queried file including file n
 
 You can use the `determineProperties` parameter to auto-detect property information of the file contents of your [!DNL Data Landing Zone] when making a GET call to explore the contents and structure of your source.
 
-#### Use case for `determineProperties`
+#### `determineProperties` uses cases
 
 The following table outlines different scenarios you can encounter when using the `determineProperties` query parameter or manually providing information on your file.
 
@@ -363,14 +363,14 @@ A successful response returns the structure of the queried file including file n
                 }
             },
             {
-                "name": "firstname",
+                "name": "firstName",
                 "type": "string",
                 "xdm": {
                     "type": "string"
                 }
             },
             {
-                "name": "lastname",
+                "name": "lastName",
                 "type": "string",
                 "xdm": {
                     "type": "string"
@@ -396,37 +396,37 @@ A successful response returns the structure of the queried file including file n
         {
             "birthday": "1313-0505-19731973",
             "firstName": "Yvonne",
+            "lastName": "Thilda",
             "id": "100",
-            "email": "Yvonne.Thilda@yopmail.com",
-            "lastName": "Thilda"
+            "email": "Yvonne.Thilda@yopmail.com"
         },
         {
             "birthday": "1515-1212-19731973",
             "firstName": "Mary",
+            "lastName": "Pillsbury",
             "id": "101",
-            "email": "Mary.Pillsbury@yopmail.com",
-            "lastName": "Pillsbury"
+            "email": "Mary.Pillsbury@yopmail.com"
         },
         {
             "birthday": "0505-1010-19751975",
             "firstName": "Corene",
+            "lastName": "Joeann",
             "id": "102",
-            "email": "Corene.Joeann@yopmail.com",
-            "lastName": "Joeann"
+            "email": "Corene.Joeann@yopmail.com"
         },
         {
             "birthday": "2727-0303-19901990",
             "firstName": "Dari",
+            "lastName": "Greenwald",
             "id": "103",
-            "email": "Dari.Greenwald@yopmail.com",
-            "lastName": "Greenwald"
+            "email": "Dari.Greenwald@yopmail.com"
         },
         {
             "birthday": "1717-0404-19651965",
             "firstName": "Lucy",
+            "lastName": "Magdalen",
             "id": "199",
-            "email": "Lucy.Magdalen@yopmail.com",
-            "lastName": "Magdalen"
+            "email": "Lucy.Magdalen@yopmail.com"
         }
     ]
 }
@@ -436,7 +436,7 @@ A successful response returns the structure of the queried file including file n
 
 | Property | Description |
 | --- | --- |
-| `properties.fileType` | The corresponding file type of the queried file. The supported file types are: <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
+| `properties.fileType` | The corresponding file type of the queried file. The supported file types are: `delimited`, `json`, and `parquet`. |
 | `properties.compressionType` | The corresponding compression type used for the queried file. The supported compression types are: <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 | `properties.columnDelimiter` | The corresponding column delimiter used for the queried file. Any single character value is a permissible column delimiter. The default value is a comma `(,)`. |
 
