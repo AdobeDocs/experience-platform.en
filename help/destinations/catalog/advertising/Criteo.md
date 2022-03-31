@@ -1,3 +1,6 @@
+[!IMPORTANT]
+This is currently a beta product. Get in touch with your Criteo representative if you would like more details about what this means.
+
 # CRITEO DESTINATION
 
 ## Overview
@@ -18,7 +21,6 @@ Criteo powers trusted and impactful advertising to bring richer experiences to e
 ![Prerequisites](../../assets/catalog/advertising/criteo/criteo0.png)
 
 
-This is currently a beta product. Get in touch with your Criteo representative if you would like more details about what this means.
 
 ## Supported identities
 
