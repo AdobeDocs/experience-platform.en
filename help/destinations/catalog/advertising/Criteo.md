@@ -1,5 +1,6 @@
-[!IMPORTANT]
-This is currently a beta product. Get in touch with your Criteo representative if you would like more details about what this means.
+>[IMPORTANT]
+>
+>This is currently a beta product. Get in touch with your Criteo representative if you would like more details about what this means.
 
 # CRITEO DESTINATION
 
