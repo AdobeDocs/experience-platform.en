@@ -1,5 +1,5 @@
 ---
-solution: Intelligent Services
+solution: Experience Platform
 audience: user
 user-guide-title: Intelligent Services Help
 breadcrumb-title: Intelligent Services Guide
