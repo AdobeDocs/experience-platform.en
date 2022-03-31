@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
+exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 ---
 # Adobe Experience Platform release notes 
 
@@ -46,7 +47,7 @@ Read more about the feature in the following documentation pages:
 
 - [Related accounts in Real-Time CDP B2B Edition overview](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [Related accounts tab in the Account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-account)
+- [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 To learn more about Real-time CDP B2B Edition, see the [overview](../../rtcdp/overview.md).
 
