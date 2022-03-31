@@ -48,4 +48,4 @@ See the documentation for more information about the [how to find related accoun
 
 You can use accounts and related accounts in segmentation. The decision whether to use related accounts in your segment definitions depends on your marketing use case. For example, you could use related accounts for email marketing or advertising campaigns where you may accept a lower accuracy in exchange for a wider reach.
 
-See a [segmentation example](/help/rtcdp/segmentation/b2b.md#related-account) that uses related accounts.
+See a [segmentation example](/help/rtcdp/segmentation/b2b.md#related-accounts) that uses related accounts.
