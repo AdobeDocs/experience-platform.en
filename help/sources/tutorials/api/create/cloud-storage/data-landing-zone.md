@@ -437,7 +437,7 @@ A successful response returns the structure of the queried file including file n
 | Property | Description |
 | --- | --- |
 | `properties.fileType` | The corresponding file type of the queried file. The supported file types are: <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
-| `properties.compressionType` | The corresponding compression type used for the queried file. The supported compression types are: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>tarGzip</li><li>`tar`</li></ul> |
+| `properties.compressionType` | The corresponding compression type used for the queried file. The supported compression types are: <ul><li>`bzip2`</li><li>`gzip`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 | `properties.columnDelimiter` | The corresponding column delimiter used for the queried file. Any single character value is a permissible column delimiter. The default value is a comma `(,)`. |
 
 
