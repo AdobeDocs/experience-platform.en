@@ -87,18 +87,6 @@ The Profiles dashboard displays a snapshot of the attribute (record) data that y
 
 For more information on Profiles dashboards, refer to the [Profiles dashboards overview](../../dashboards/guides/profiles.md).
 
-## Data collection {#data-collection}
-
-Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| Global datastream settings | You can now configure several new global settings when configuring a datastream: geo location, first-party ID cookie, and third-party ID sync. See the section on [configuring a datastream](../../edge/fundamentals/datastreams.md#configure) in the Datastreams UI guide for more information. |
-
-For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
-
 ### Destinations Dashboards
 
 The Destinations dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. 
@@ -112,6 +100,18 @@ The Destinations dashboard displays a snapshot of the destinations that your org
 {style="table-layout:auto"}
 
 For more information on Destinations dashboards in Platform, refer to the [Destinations dashboards overview](../../dashboards/guides/destinations.md).
+
+## Data collection {#data-collection}
+
+Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Global datastream settings | You can now configure several new global settings when configuring a datastream: geo location, first-party ID cookie, and third-party ID sync. See the section on [configuring a datastream](../../edge/fundamentals/datastreams.md#configure) in the Datastreams UI guide for more information. |
+
+For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
