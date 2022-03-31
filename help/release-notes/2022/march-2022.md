@@ -16,6 +16,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [Alerts](#alerts)
 - [[!DNL Dashboards]](#dashboards)
+- [Data collection](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [Sources](#sources)
 <!-- - [Experience Data Model (XDM)](#xdm) -->
