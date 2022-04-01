@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;Db Visualizer;db visulaizer;connect to query service;
+keywords: Experience Platform;home;popular topics;query service;Query service;Db Visualizer;DbVisualizer;db visulaizer;connect to query service;
 solution: Experience Platform
-title: Connect Db Visualizer to Query Service
+title: Connect DbVisualizer to Query Service
 topic-legacy: connect
-description: This document walks through the steps for connecting Db Visualizer with Adobe Experience Platform Query Service.
+description: This document walks through the steps for connecting DbVisualizer with Adobe Experience Platform Query Service.
 ---
-# Connect Db Visualizer to Query Service
+# Connect [!DNL DbVisualizer] to Query Service
 
-This document covers the steps for connecting Db Visualizer Desktop with Adobe Experience Platform Query Service.
+This document covers the steps for connecting [!DNL DbVisualizer] Desktop with Adobe Experience Platform Query Service.
 
 ## Getting started
 
-This guide requires that you already have access to the Db Visualizer desktop app and are familiar with how to navigate its interface. To download the Db Visualizer Desktop app or for more information, see the [official Db Visualizer documentation](https://www.dbvis.com/download/).
+This guide requires that you already have access to the [!DNL DbVisualizer] desktop app and are familiar with how to navigate its interface. To download the [!DNL DbVisualizer] Desktop app or for more information, see the [official [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/).
 
 >[!NOTE]
 >
->There are Windows, macOS, and Linux versions of Db Visualizer. Screenshots in this guide were taken using the macOS desktop app. There may be minor discrepancies in the UI between the versions.
+>There are [!DNL Windows], [!DNL macOS], and [!DNL Linux] versions of [!DNL DbVisualizer]. Screenshots in this guide were taken using the [!DNL macOS] desktop app. There may be minor discrepancies in the UI between the versions.
 
-To acquire the necessary credentials for connecting Db Visualize to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your IMS Organization administrator if you do not currently have access to the Queries workspace. 
+To acquire the necessary credentials for connecting [!DNL  DbVisualizer] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your IMS Organization administrator if you do not currently have access to the Queries workspace. 
 
 ## Create a database connection {#connect-database}
 
-Once you have installed the desktop app on your local machine, start the app and select **Create a Database Connection** from the initial Db Visualizer menu. Then select **Create a Connection** in the panel to the right.
+Once you have installed the desktop app on your local machine, start the app and select **[!DNL Create a Database Connection]** from the initial [!DNL DbVisualizer] menu. Then select **[!DNL Create a Connection]** in the panel to the right.
 
-![The DB Visualizer main menu with "Create a Database Connection" highlighted.](../images/clients/dbvisualizer/create-db-connection.png)
+![The [!DNL DbVisualizer] main menu with "Create a Database Connection" highlighted.](../images/clients/dbvisualizer/create-db-connection.png)
 
 Use the search bar or select [!DNL PostgreSQL] from the driver name dropdown list. The Database Connection workspace appears.
 
 ![The driver name dropdown menu with [!DNL PostgreSQL] highlighted.](../images/clients/dbvisualizer/driver-name.png)
 
-From the Database Connection workspace, select the **Properties** tab, followed by the **Driver Properties** from the navigation sidebar.
+From the Database Connection workspace, select the **[!DNL Properties]** tab, followed by the **[!DNL Driver Properties]** from the navigation sidebar.
 
 ![The Database Connection workspace with the properties tab highlighted.](../images/clients/dbvisualizer/driver-properties.png)
 
@@ -45,25 +45,25 @@ The `PGHOST` and `user` values are taken from your Adobe Experience Platform cre
 
 ![Experience Platform Queries Credentials Dashboard with credentials highlighted.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
-Use the search bar to find each property then select the corresponding cell for the parameter's value. The cell will highlight in blue. Enter your Platform credential in the value field and select **Apply** to add the driver property.
+Use the search bar to find each property then select the corresponding cell for the parameter's value. The cell will highlight in blue. Enter your Platform credential in the value field and select **[!DNL Apply]** to add the driver property.
 
 >[!NOTE]
 >
->To add a second `user` profile, select `user` from the parameter column then select the blue + (plus) icon to add credentials for each user. Select **Apply** to add the driver property.
+>To add a second `user` profile, select `user` from the parameter column then select the blue + (plus) icon to add credentials for each user. Select **[!DNL Apply]** to add the driver property.
 
 The Edited column shows a check mark to denote that the parameter value has been updated.
 
 ## Authentication
 
-To require authentication in the form of a user ID and password each time a connection is established, select **Authentication** from the navigation sidebar under [!DNL PostgreSQL].
+To require a user ID and password-based authentication each time a connection is established, select **[!DNL Authentication]** from the navigation sidebar under [!DNL PostgreSQL].
 
-In the Connection Authentication panel, check both the **Require Userid** and **Require Password** checkboxes then select **Apply**. 
+In the Connection Authentication panel, check both the **[!DNL Require Userid]** and **[!DNL Require Password]** checkboxes then select **[!DNL Apply]**. 
 
 ![The Connection Authentication panel with the Userid and Password checkboxes highlighted.](../images/clients/dbvisualizer/connection-authentication.png)
 
 ## Connect to Platform
 
-To make a connection, select the **Connection** tab from the Database Connection workspace and enter your Experience Platform credentials for the following settings.
+To make a connection, select the **[!DNL Connection]** tab from the Database Connection workspace and enter your Experience Platform credentials for the following settings.
 
 - **Name**: You are recommended to provide a friendly name to recognize the connection. 
 - **Database Server**: This is your Experience Platform [!UICONTROL Host] credential. 
@@ -72,7 +72,7 @@ To make a connection, select the **Connection** tab from the Database Connection
 - **Database Userid**: This is your Platform Organization Id. The Userid will be in the format of `ORG_ID@AdobeOrg`. 
 - **Database Password**: This is an alphanumeric string found on the Query Service credentials dashboard.
 
-After you have input all relevant credentials, select **Connect**. 
+After you have input all relevant credentials, select **[!DNL Connect]**. 
 
 ![The Database Connection workspace with the Connection tab and connect button highlighted.](../images/clients/dbvisualizer/connect.png)
 
@@ -80,8 +80,8 @@ The connect dialog appears on the first occasion of the session.
 
 ![The connect dialog with the database userid and database password text fields are highlighted.](../images/clients/dbvisualizer/connect-dialog.png)
 
-Enter your Userid and Password and select **Connect**. A message appears in the log to confirm a successful connection.
+Enter your Userid and Password and select **[!DNL Connect]**. A message appears in the log to confirm a successful connection.
 
 ## Next steps
 
-Now that you have connected Db Visualizer with Query Service, you can use Db Visualizer to write queries. For more information on how to write and run queries, please read the guide on query execution.
+Now that you have connected [!DNL DbVisualizer] with Query Service, you can use [!DNL DbVisualizer] to write queries. For more information on how to write and run queries, please read the guide on query execution.
