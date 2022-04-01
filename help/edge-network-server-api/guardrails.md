@@ -67,7 +67,6 @@ The table below shows the default limit values. If you need higher request unit 
 | Payload format | Max size for a request | Max 8 KB request fragments |
 | --- | --- | --- |
 | JSON plain-text | 64 KB | 8 |
-| [JSON Smile](https://github.com/FasterXML/smile-format-specification) | 64 KB | 8 |
 
 
 >[!NOTE]
