@@ -53,8 +53,9 @@ Showcase your business with relevant product offers and flexible creatives. With
 
 When visitors leave your website, remind them what they're missing with retargeting ads that increase conversions by showing special deals and hyper-relevant offers, wherever they go next. Connect your Adobe CDP segment to re-engage existing customers or target consumers similar to your most loyal shoppers.
 
-### Authenticate to Criteo
 ## Connect to Criteo
+
+### Authenticate to Criteo
 
 Steps to connect are as follows:
 
