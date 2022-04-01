@@ -57,6 +57,7 @@ The step-by-step process to configure your source in Experience Platform is outl
   * See the guide on [configuring your source specifications](./config/sourcespec.md);
   * See the guide on [configuring your explore specifications](./config/explorespec.md);
 * To start documenting your source, see the [overview on creating documentation for Sources SDK](./documentation/doc-overview.md)
-  * You can use this [sources documentation template](./documentation/template.md) to structure your documentation;
+  * You can use this [sources API documentation template](./documentation/template.md) to structure your API documentation;
+  * You can use this [sources UI documentation template](./documentation/ui-template.md) to structure your UI documentation;
   * See the guide on [using the GitHub web interface](./documentation/github.md) for steps on how to create documentation using GitHub;
   * See the guide on [using a text editor](./documentation/text-editor.md) for steps on how to create documentation using your local machine.
