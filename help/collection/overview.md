@@ -26,7 +26,6 @@ The [!DNL Server API] supports interactive and batch data collection, via two de
 2. The batch endpoint will allow requests to be sent in batch when data needs to be onboarded without receiving a response from the applications being called. 
  
 The [!DNL Server API] supports the following type of requests:
-The [!DNL Server API] supports authenticated requests via [Adobe I/O](https://developer.adobe.com/), using the new `server.adobedc.net` endpoint.
 
 * Authenticated requests via [Adobe I/O](https://developer.adobe.com/), using the new `server.adobedc.net` endpoint.
 * Unauthenticated requests via the `edge.adobedc.net` endpoint.
