@@ -3,7 +3,7 @@ description: Use the [!UICONTROL Profile Enrichment] dashboard to understand if 
 solution: Experience Platform
 title: Monitor profile enrichment jobs
 type: Tutorial
-
+exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 ---
 # Monitor profile enrichment jobs in the UI
 
