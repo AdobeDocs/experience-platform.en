@@ -7,9 +7,9 @@ user-guide-description: Interact with Experience Cloud services through the Edge
 feature: Data Collection
 ---
 
-# Edge Network Server API {#server-api}
+# Edge Network Server API {#edge-network-server-api}
 
-* Edge Network Server API {#server-api}
+* Edge Network Server API {#edge-network-server-api}
   * [Overview](overview.md)
   * [Authentication](authentication.md)
   * Data collection {#server-api-data-collection}
