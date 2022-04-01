@@ -1,19 +1,19 @@
 ---
 title: Client state management
-description: Learn how the Adobe Experience Platform Edge Network Server API manages client state
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API manages client state
+description: Learn how the Adobe Experience Platform Edge Network manages client state
+seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: client;state;management;edge;network;gateway;api
 ---
 
 # Client state management
 
-The Edge Network Server API itself is stateless (it does not maintain its own session). However, there are certain use-cases which require client-side state persistency, such as:
+The Edge Network itself is stateless (it does not maintain its own session). However, there are certain use-cases which require client-side state persistency, such as:
 
 * Consistent device identification (see [visitor identification](visitor-identification.md))
 * Collect and enforce user consent
 * Keeping personalization session ID
 
-The Server API uses a state management protocol, delegating the storage aspect to its client/SDK. The Server API includes state entries in its response. For browsers, the entries are stored as cookies.
+The Edge Network uses a state management protocol, delegating the storage aspect to its client/SDK, and includes state entries in its responses. For browsers, the entries are stored as cookies.
 
 The client responsibility is to store and include them in all subsequent requests. The client must also take care of proper expiration for entries, as instructed by the gateway. When the entries were stored as cookies, the browser does all this work automatically.
 
@@ -21,7 +21,7 @@ Although the state entries always have a plain `String` value (visible to the ca
 
 ## Persisting client state as metadata
 
-The state returned by the [!DNL Server API] in the response body is a `Handle` object with the type `state:store`.
+The state returned by the [!DNL Edge Network] in the response body is a `Handle` object with the type `state:store`.
 
 ```json
 {
@@ -98,7 +98,7 @@ Here's an example of a request which passes in the client-side stored state:
 
 ## Persisting client state in browser cookies
 
-When working with browser clients, the Server API can automatically persist the entries as browser cookies. This allows transparent state storage support, since browsers respect the state management protocol by default.
+When working with browser clients, the Edge Network can automatically persist the entries as browser cookies. This allows transparent state storage support, since browsers respect the state management protocol by default.
 
 Almost all entries are materialized as first party cookies when enabled and supported (see the note below), but the gateway could also store some third party cookies when the third party `adobedc.demdex.net` domain is used.
 

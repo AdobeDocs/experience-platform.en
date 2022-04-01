@@ -24,33 +24,33 @@ POST /ee/v2/interact
 ### Request {#request}
 
 ```shell
-curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId=$DATASTREAM_ID" \
--H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-gw-ims-org-id: {IMS_ORG_ID}" \
--H "x-api-key: {API_KEY}" \
--H "Content-Type: application/json" \
---data-raw '{
-   "event":{
-      "xdm":{
-         "identityMap":{
-            "Email_LC_SHA256":[
+curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}" 
+-H "Authorization: Bearer {TOKEN}" 
+-H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-api-key: {API_KEY}" 
+-H "Content-Type: application/json" 
+-d '{
+   "event": {
+      "xdm": {
+         "identityMap": {
+            "Email_LC_SHA256": [
                {
-                  "id":"0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b",
-                  "primary":true
+                  "id": "0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b",
+                  "primary": true
                }
             ]
          },
-         "eventType":"web.webpagedetails.pageViews",
-         "web":{
-            "webPageDetails":{
-               "URL":"https://alloystore.dev/",
-               "name":"home-demo-Home Page"
+         "eventType": "web.webpagedetails.pageViews",
+         "web": {
+            "webPageDetails": {
+               "URL": "https://alloystore.dev/",
+               "name": "home-demo-Home Page"
             }
          },
-         "timestamp":"2021-08-09T14:09:20.859Z"
+         "timestamp": "2021-08-09T14:09:20.859Z"
       },
-      "data":{
-         "prop1":"custom value"
+      "data": {
+         "prop1": "custom value"
       }
    }
 }'
@@ -58,8 +58,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId=$DATASTREAM
 
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Yes, for V2 APIs | Datastream ID. |
-| `requestId` | `String` | No | Provide a client random ID for correlating internal server requests. If none is provided, the Experience Adobe Experience Platform Edge Network will generate one and return it in the response.|
+| `dataStreamId` | `String` | Yes. | Datastream ID. |
+| `requestId` | `String` | No | Provide a client random ID for correlating internal server requests. If none is provided, the Edge Network will generate one and return it in the response.|
 
 ### Response {#response}
 
@@ -67,28 +67,7 @@ A successful response returns HTTP status `200 OK`, with one or more `Handle` ob
 
 ```json
 {
-   "requestId":"f567a988-4b3c-45a6-9ed8-f283188a445e",
-   "handle":[
-      {
-         "payload":[
-            {
-               "collect":{
-                  "val":"y"
-               }
-            }
-         ],
-         "type":"consent:preferences"
-      },
-      {
-         "payload":[
-            {
-               "key":"kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_consent_check",
-               "value":"1",
-               "maxAge":7200
-            }
-         ],
-         "type":"state:store"
-      }
-   ]
+   "requestId": "c85402f5-83a1-4fb3-abdd-f4c17bf6dd49",
+   "handle": []
 }
 ```

@@ -7,16 +7,12 @@ user-guide-description: Interact with Experience Cloud services through the Edge
 feature: Data Collection
 ---
 
-# Adobe Experience Platform Edge Network Server API {#server-api}
+# Edge Network Server API {#server-api}
 
 * Edge Network Server API {#server-api}
   * [Overview](overview.md)
   * [Guardrails](guardrails.md)
   * [Authentication](authentication.md)
-  * Visitor identification {#visitor-identification}
-    * [Overview](visitor-identification.md)
-    * [Visitor identification via FPID](visitor-identification-fpid.md)
-    * [Visitor identification via ECID](visitor-identification-ecid.md)
   * Data collection {#server-api-data-collection}
     * [Single-event data collection](interactive-data-collection.md)
     * [Batch event data collection](non-interactive-data-collection.md)
@@ -25,6 +21,4 @@ feature: Data Collection
     * [Interacting with Adobe Experience Platform](interacting-experience-platform.md)
   * [Interacting with third-party solutions](interacting-third-party-solutions.md)
   * [Error handling](error-handling.md)
-  * [Client state management](client-state.md)
   * [Troubleshooting](troubleshooting.md)
-

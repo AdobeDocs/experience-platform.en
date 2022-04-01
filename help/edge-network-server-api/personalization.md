@@ -132,11 +132,11 @@ POST /ee/v2/interact
 ### Request {#request}
 
 ```shell
-curl -X POST "https://server.adobedc.net/ee/v2/interact?configId=$DATASTREAM_ID" \
--H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-gw-ims-org-id: {IMS_ORG}" \
--H "x-api-key: {API_KEY}" \
--H "Content-Type: application/json" \
+curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
+-H "Authorization: Bearer {TOKEN}"
+-H "x-gw-ims-org-id: {IMS_ORG_ID}"
+-H "x-api-key: {API_KEY}"
+-H "Content-Type: application/json"
 -d '{
    "event":{
       "xdm":{
@@ -247,18 +247,18 @@ Notifications with the right `id` for the corresponding scopes are required to b
 ### API format
 
 ```http
-POST /ee/v1/collect
+POST /v2/collect
 ```
 
 ### Request
 
 ```shell
-curl -X POST "https://server.adobedc.net/ee/v1/collect?configId=$DATASTREAM_ID" \
--H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-gw-ims-org-id: {IMS_ORG}" \
--H "x-api-key: {API_KEY}" \
--H "Content-Type: application/json" \
---data-raw '{
+url -X POST "https://server.adobedc.net/v2/collect?dataStreamId={DATASTREAM_ID}" 
+-H "Authorization: Bearer {TOKEN}" 
+-H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-api-key: {API_KEY}"
+-H "Content-Type: application/json"
+-d '{
    "events":[
       {
          "xdm":{
@@ -301,9 +301,20 @@ curl -X POST "https://server.adobedc.net/ee/v1/collect?configId=$DATASTREAM_ID" 
 
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| `configId` | String | Yes | The datastream ID. |
-| `requestId` | String | No | Provide an external request tracing ID. If none is provided, the Edge Network will generate one for you and return it back in the response body / headers.|
+| `dataStreamId` | `String` | Yes | The ID of the datastream used by the data collection endpoint. |
+| `requestId` | `String` | No | External external request tracing ID. If none is provided, the Edge Network will generate one for you and return it back in the response body / headers.|
+| `silent` | `Boolean` | No | Optional boolean parameter indicating whether the Edge Network should return a `204 No Content` response with an empty payload. Critical errors are reported using the corresponding HTTP status code and payload.|
 
 ### Response
 
-A successful request returns a `204 No Content` status.
+A successful response returns one of the following statuses, and a `requestID` if none was provided in the requst.
+
+* `202 Accepted` when the request was successfully processed;
+* `204 No Content` when the request was successfully processed and the `silent` parameter was set to `true`;
+* `400 Bad Request` when the request was not properly formed (e.g., the mandatory primary identity was not found).
+
+```json
+{
+  "requestId": "f567a988-4b3c-45a6-9ed8-f283188a445e"
+}
+```

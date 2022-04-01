@@ -9,17 +9,14 @@ keywords: edge network;gateway;api;visitor;identification
 
 ## Overview {#overview}
 
-The Edge Network Server API supports two types of visitor identification:
-
-* [Visitor identification via [!DNL FPID]](visitor-identification-fpid.md)
-* [Visitor identification via [!DNL ECID]](visitor-identification-ecid.md)
+The Edge Network Server API supports [visitor identification via First-Party ID ([!DNL FPID])](visitor-identification-fpid.md)
 
 All user identities should be supplied in the `identityMap` field group. This field group is included in the AEP Web SDK `ExperienceEvent` mixin.
 
 ```json
 {
    "identityMap":{
-      "ECID":[
+      "FPID":[
          {
             "id":"55613368189701342632255821452918751312",
             "authenticatedState":"ambiguous"
@@ -42,10 +39,13 @@ There are multiple ways in which a device can be identified within the Edge Netw
 | ID namespace | Managed by | Description |
 | --- | --- | --- |
 | `FPID` | Customer | `FPID` will be automatically encoded into an `ECID` by the Edge Network, therefore solutions which require an `ECID` will work as well.  <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies.|
-| `ECID` | Adobe | `ECID` is required when leveraging and integrating with Adobe Analytics and Adobe Audience Manager. <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies. |
 | `IDFA`/`GAID` | Experience Platform | Can identify users across applications, so these IDs are not encoded into `ECID` by the Edge Network. |
 
+<!--
+| `ECID` | Adobe | `ECID` is required when leveraging and integrating with Adobe Analytics and Adobe Audience Manager. <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies. |
+-->
 
+<!--
 ## Experience Edge Identity Protocol {#experience-edge-identity-protocol}
 
 Device identities like `ECID` must be persisted on the client device and supplied on each request in the session and across sessions. Having stable device identities across multiple sessions improves the accuracy levels in your reports and allows delivering a consistent experience to the visitors.
@@ -155,3 +155,4 @@ The caller must explicitly activate this functionality via the `meta.state.cooki
 >
 >The `meta.state.domain` is an optional value which a caller could supply, specifying the exact domain on which the cookies should be stored. When this is missing, Experience Edge can automatically infer the top-level domain from the request. Automatic client state management via browser cookies **should never be used** in a `server` interaction.
 
+-->

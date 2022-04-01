@@ -11,22 +11,8 @@ keywords: data collection; outlet; analytics; Adobe Experience Platform Edge Net
 
 Use the event forwarding capabilities of the Edge Network Server API to send collected data to non-Adobe solutions.
 
-## Event forwarding {#event-forwarding}
+## Configure datastream event forwarding {#event-forwarding}
 
-When enabled, the datastream configuration should include settings for `com_adobe_launch_ssf`, as shown in the example below:
+To enable third-party solutions to receive data from Server API, you need to [configure your datastream](../edge/fundamentals/datastreams.md#event-forwarding-settings) for event forwarding.
 
-```javascript
-{
-  // datastream config header
-
-  "settings": {
-    "com_adobe_launch_ssf": {
-      "enabled": true,
-      "environmentId": "EN456402a0cc034a09a431979f7e839dee",
-      "propertyId": "PRa062d841554a419e918f58bf09fdd233"
-    }
-
-    // other settings
-  }
-}
-```
+![Adobe Analytics Datastream Configuration](assets/event-forwarding-datastream.png)

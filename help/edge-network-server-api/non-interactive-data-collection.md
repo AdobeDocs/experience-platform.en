@@ -13,7 +13,10 @@ Non-interactive event data collection endpoints are used to send multiple events
 
 Sending events in batch is recommended when end-user events are queued locally for a short period of time (e.g. when there’s no network connection).
 
-Batch events should not necessarily belong to the same end-user, meaning that events can hold different identities within their `identityMap` object. However, when an `ECID` identity is sent via a cookie or metadata (in Edge Network accepted format), the Edge Network will read it and associate it with each event in the batch.
+Batch events should not necessarily belong to the same end-user, meaning that events can hold different identities within their `identityMap` object.
+
+
+<!-- However, when an `ECID` identity is sent via a cookie or metadata (in Edge Network accepted format), the Edge Network will read it and associate it with each event in the batch.
 
 Each event should include the corresponding `XDM` content that needs to be collected.
 
@@ -21,6 +24,7 @@ Each event should include the corresponding `XDM` content that needs to be colle
 >
 >[Experience Edge Identity Protocol](visitor-identification.md#experience-edge-identity-protocol) (`ECID` generation) is not applicable for data collection requests, meaning that events sent to this API should already have at least one identity associated to them. For server datastreams (calls to `server.adobedc.net`), the API requires that each event contains an identity **explicitly set as primary**. For device datastreams, the Edge Network will attempt to set the `ECID` as primary, when it is present, and no other primary identity is explicitly set.
 
+-->
 ## Non-interactive API call example {#example}
 
 ### API format {#api-format}
@@ -32,57 +36,57 @@ POST /ee/v2/collect
 ### Request {#request}
 
 ```shell
-curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId=$DATASTREAM_ID" \
--H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-gw-ims-org-id: {IMS_ORG}" \
--H "x-api-key: {API_KEY}" \
--H "Content-Type: application/json" \
+curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
+-H "Authorization: Bearer {TOKEN}" 
+-H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-api-key: {API_KEY}" 
+-H "Content-Type: application/json" 
 -d '{
-   "events":[
+   "events": [
       {
-         "xdm":{
-            "identityMap":{
-               "FPID":[
+         "xdm": {
+            "identityMap": {
+               "FPID": [
                   {
-                     "id":"79bf8e83-f708-414b-b1ed-5789ff33bf0b",
-                     "primary":"true"
+                     "id": "79bf8e83-f708-414b-b1ed-5789ff33bf0b",
+                     "primary": "true"
                   }
                ]
             },
-            "eventType":"web.webpagedetails.pageViews",
-            "web":{
-               "webPageDetails":{
-                  "URL":"https://alloystore.dev/",
-                  "name":"home-demo-Home Page"
+            "eventType": "web.webpagedetails.pageViews",
+            "web": {
+               "webPageDetails": {
+                  "URL": "https://alloystore.dev/",
+                  "name": "home-demo-Home Page"
                }
             },
-            "timestamp":"2021-08-09T14:09:20.859Z"
+            "timestamp": "2021-08-09T14:09:20.859Z"
          },
-         "data":{
-            "prop1":"custom value"
+         "data": {
+            "prop1": "custom value"
          }
       },
       {
-         "xdm":{
-            "identityMap":{
-               "FPID":[
+         "xdm": {
+            "identityMap": {
+               "FPID": [
                   {
-                     "id":"871e8460-a329-4e96-a5b6-ff359fb0afb9",
-                     "primary":"true"
+                     "id": "871e8460-a329-4e96-a5b6-ff359fb0afb9",
+                     "primary": "true"
                   }
                ]
             },
-            "eventType":"web.webinteraction.linkClicks",
-            "web":{
-               "webInteraction":{
-                  "linkClicks":{
-                     "value":1
+            "eventType": "web.webinteraction.linkClicks",
+            "web": {
+               "webInteraction": {
+                  "linkClicks": {
+                     "value": 1
                   }
                },
-               "name":"My Custom Link",
-               "URL":"https://myurl.com"
+               "name": "My Custom Link",
+               "URL": "https://myurl.com"
             },
-            "timestamp":"2021-08-09T14:09:20.859Z"
+            "timestamp": "2021-08-09T14:09:20.859Z"
          }
       }
    ]
