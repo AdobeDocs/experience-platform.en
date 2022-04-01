@@ -49,6 +49,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
+* [[!UICONTROL Destinations count]](#destinations-count)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
@@ -145,6 +146,14 @@ If your segment mapped profile count is outside one standard deviation from the 
 If a segment within the [!UICONTROL Mapped audience health] widget is deviating by a wide margin, you should refer to the audience size trend chart and locate the anomalous segment. The trend can provide further insight into your segment's health.   
 
 ![The Mapped audience health widget.](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL Destinations count] (#destinations-count)
+
+The [!UICONTROL Destinations count] widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. 
+
+Below the total count, select **[!UICONTROL Destinations]** to navigate to the destinations browse tab. This page lists all the destinations that you have established a connection with to date.
+
+![The Destinations count widget.](../images/destinations/destinations-count.png)
 
 ## Next steps
 
