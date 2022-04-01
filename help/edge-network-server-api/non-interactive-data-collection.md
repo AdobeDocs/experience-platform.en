@@ -25,6 +25,7 @@ Each event should include the corresponding `XDM` content that needs to be colle
 >[Experience Edge Identity Protocol](visitor-identification.md#experience-edge-identity-protocol) (`ECID` generation) is not applicable for data collection requests, meaning that events sent to this API should already have at least one identity associated to them. For server datastreams (calls to `server.adobedc.net`), the API requires that each event contains an identity **explicitly set as primary**. For device datastreams, the Edge Network will attempt to set the `ECID` as primary, when it is present, and no other primary identity is explicitly set.
 
 -->
+
 ## Non-interactive API call example {#example}
 
 ### API format {#api-format}
