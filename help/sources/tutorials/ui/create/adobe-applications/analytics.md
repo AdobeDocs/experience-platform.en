@@ -54,7 +54,7 @@ The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTRO
 
 >[!IMPORTANT]
 >
->Data Prep support for the [!DNL Analytics] source is currently in beta. The feature and documentation are subject to change.
+>Data Prep transformations may add latency to the overall dataflow. The additional latency added varies based on the complexity of the transformation logic. 
 
 Before you can map your [!DNL Analytics] data to target XDM schema, you must first select whether you are using a default schema or a custom schema.
 
