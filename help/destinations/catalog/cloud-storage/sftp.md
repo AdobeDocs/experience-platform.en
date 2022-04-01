@@ -57,6 +57,8 @@ If you select the **[!UICONTROL Basic authentication]** type to connect to your 
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
   * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
 
+    ![PGP key](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+
 
 If you select the **[!UICONTROL SFTP with SSH key]** authentication type to connect to your SFTP location:
 
@@ -69,6 +71,8 @@ If you select the **[!UICONTROL SFTP with SSH key]** authentication type to conn
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
   * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
 
+    ![PGP key](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+    
 #### Destination details {#destination-details}
 
 After establishing the authentication connection to the SFTP location, provide the following information for the destination:
