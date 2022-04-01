@@ -47,13 +47,16 @@ To help you better understand how to use Criteo's destination, here are some goa
 
 ### Use case 1 : Get traffic
 
-Showcase your business with relevant product offers and flexible creatives. With intelligent product recommendations, your ads will automatically feature the products most likely to trigger visits and engagement. Flexible targeting allows you to build audiences from Criteo's commerce data set or from your own prospect lists and Adobe CDP segments
+Showcase your business with relevant product offers and flexible creatives. With intelligent product recommendations, your ads will automatically feature the products most likely to trigger visits and engagement. Flexible targeting allows you to build audiences from Criteo's commerce data set or from your own prospect lists and Adobe CDP segments.
 
 ### Use case 2 : Increase website conversions
 
 When visitors leave your website, remind them what they're missing with retargeting ads that increase conversions by showing special deals and hyper-relevant offers, wherever they go next. Connect your Adobe CDP segment to re-engage existing customers or target consumers similar to your most loyal shoppers.
 
 ## Connect to Criteo
+
+To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en).
+
 
 ### Authenticate to Criteo
 
@@ -73,15 +76,17 @@ Steps to connect are as follows:
 ![Auth3](../../assets/catalog/advertising/criteo/criteo4.jpeg)
 
 
+### Connection parameters
+After authenticating to the destination, please fill in the following connection parameters.
 
-3. Fill out the details below marked with \*:
-   1. Name : A name to help you recognize this destination in the future
-   2. Description : A description to help you identify this destination in the future
-   3. API Version: Preview
-   4. Advertiser ID : Your Criteo advertiser ID
+1. Name : A name to help you recognize this destination in the future
+2. Description : A description to help you identify this destination in the future
+3. API Version: Preview
+4. Advertiser ID : Your Criteo advertiser ID
 
 ![Details](../../assets/catalog/advertising/criteo/criteo5.jpeg)
 
+The name you choose here would be the Audience name in Criteo Management Center and cannot be modified at later stage :
 
 ![Connection Parameters](../../assets/catalog/advertising/criteo/criteo6.png)
 
@@ -91,32 +96,9 @@ Read [Activate profiles and segments to streaming segment export destinations](h
 
 ## Exported data
 
-The body of request sent by Adobe Destination Testing API is:
-```json
-{ 
-    "profiles": [ 
-        { 
-            "segmentMembership": { 
-                "ups": { 
-                    "043ca8ba-3bad-4f9b-885e-5a80e61afce3": { 
-                        "lastQualificationTime": "2022-03-28T13:27:44.110638Z", 
-                        "status": "realized" 
-                    } 
-                } 
-            }, 
-            "identityMap": {}, 
-            "_exchangesandboxbravo": { 
-                "customValue": 1, 
-                "emailSha256": "1c8494bbc4968277345133cca6ba257b9b3431b8a84833a99613cf075a62a16d" 
-            } 
-        } 
-    ] 
-} 
-```
+The exported segments can be seen in Criteo management center : https://marketing.criteo.com/audience-manager/dashboard.
 
-
-
-And, the body received by Criteo Destination is as follows:
+The body received by Criteo Destination is as follows:
 
 ```json
 { 
