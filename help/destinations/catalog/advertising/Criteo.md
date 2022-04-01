@@ -82,7 +82,7 @@ Steps to connect are as follows:
 ![Details](../../assets/catalog/advertising/criteo/criteo5.jpeg)
 
 
-![Connection Parameters](../../assets/catalog/advertising/criteo/criteo6.jpeg)
+![Connection Parameters](../../assets/catalog/advertising/criteo/criteo6.png)
 
 ## Activate segments to this destination
 
