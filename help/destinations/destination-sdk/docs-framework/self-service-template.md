@@ -17,6 +17,22 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 >
 >This documentation page was created by the *YOURDESTINATION* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*
 
+## Use cases {#use-cases}
+
+To help you better understand how and when you should use the *YOURDESTINATION* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+
+### Use case #1
+
+*For mobile messaging platforms:*
+
+*A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
+
+### Use case #2
+
+*For social network platforms:*
+
+*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YOURDESTINATION, to display ads in their customers' social media feeds.*
+
 ## Prerequisites {#prerequisites}
 
 *Add information in this section about anything that customers need to be aware of before starting to set up the destination in the Adobe Experience Platform user interface. This can be about:*
@@ -60,31 +76,27 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-## Use cases {#use-cases}
-
-To help you better understand how and when you should use the *YOURDESTINATION* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
-
-### Use case #1
-
-*For mobile messaging platforms:*
-
-*A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
-
-### Use case #2
-
-*For social network platforms:*
-
-*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YOURDESTINATION, to display ads in their customers' social media feeds.*
-
 ## Connect to the destination {#connect}
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html).
+To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-### Connection parameters {#parameters}
+### Authenticate to destination {#authenticate}
 
-While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) this destination, you must provide the following information:
+*Add the fields that customers must fill in when authenticating to your destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below.*
 
-*Add the fields that customers must fill in when configuring a new destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below.*
+To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+
+![Sample screenshot showing how to authenticate to the destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+
+* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
+
+### Fill in destination details {#destination-details}
+
+*Add the fields that customers must fill in when configuring a new destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below.*
+
+To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
+
+![Sample screenshot showing how to fill in details for your destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -155,9 +167,9 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 -->
 
-## Exported data {#exported-data}
+## Exported data / Validate data export {#exported-data}
 
-*Add a note about how data is exported to your destination. This would help the customer make sure that they have correctly integrated with your destination. For example, you could provide a sample JSON like the one below.*
+*Add a note about how data is exported to your destination. This would help the customer make sure that they have correctly integrated with your destination. For example, you could provide a sample JSON like the one below. Or, you could provide screenshots an information from the destianation's interface that show how customers should expect segments to be populating in the destination platform.*
 
 ```
 {
