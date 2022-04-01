@@ -28,8 +28,9 @@ In order to connect [!DNL OneTrust] to Platform, you must provide values for eit
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| *API KEY* | *Need to generate API Key in OneTrust Platform to be able to connect to our platform.(Go to Settings>Access Management> Client Credentials> API Keys)* | *ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=* |
-| *CLIENT CREDENTIALS* | *Need to generate Client Credentials in OneTrust Platform to be able to connect to our platform.(Go to Settings>Access Management> Client Credentials> Client Credentials* | *eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQXBpIEtleSBVc2VyIiwidXNlcl9uYW1lIjoiMGI2ZDRlMjI3ZDAxNGM5YzkwZjdkOWE1NGZjOTVjOTVAYXBpLm9uZXRydXN0LmNvbSIsImxhbmd1YWdlSWQiOjEsInNlc3Npb25JZCI6ImRlOGEzZDUxLTFiMTYtNGM5ZS1hODNhLWZkZDUwOWI4YmNiZSIsInRlbmFudEd1aWQiOiIwYjZkNGUyMi03ZDAxLTRjOWMtOTBmNy1kOWE1NGZjOTVjOTUiLCJjbGllbnRfaWQiOiIzMWJiMjBmOGUzYjU0N2YwYjc1MzY2NWVjODMxNmFkYyIsIm9yZ0dyb3VwSWQiOiJjZjQzMTljMi03MmQ1LTRlMjgtOGIwNy1kY2FhMmI3YTBkYzUiLCJvcmdHcm91cEd1aWQiOiJjZjQzMTljMi03MmQ1LTRlMjgtOGIwNy1kY2FhMmI3YTBkYzUiLCJvdC1zY29wZXMiOiJBU1NFU1NNRU5ULEFTU0VTU01FTlRfUkVBRCxDT05TRU5ULENPTlNFTlRfUkVBRCxDT05UUk9MLENPT0tJRSxDT09LSUVfUkVBRCIsInNjb3BlIjpbInJlYWQiXSwidGVuYW50SWQiOjM2LCJndWlkIjoiMGRmY2RiMjItZGNlNS00NWI5LWJlYTctNmNmZTQwMGFkZDJkIiwiZXhwIjoxNjM5MjU5Nzg4LCJqdGkiOiIwNzE1OGVkYi1mZjdkLTRkZjktYjQxYS0xZTRhMjgzZmE3N2EiLCJlbWFpbCI6IjBiNmQ0ZTIyN2QwMTRjOWM5MGY3ZDlhNTRmYzk1Yzk1QGFwaS5vbmV0cnVzdC5jb20ifQ.Hrzgo-vEE073wxkXtJDLKGRjAr2iT4G3EsyISr7x1brLLUuAojWWEGO1ue4RWfntUjEDYC9UAxpMbuP2Xv5ymqUartufj6YwamAqKdGd9gijaoGTXSNvE6ALSCqGOz8owpjh10Qu7nmBnSfzvmkSAD0dJKofJGvGd6IUC21eAU9rcX16R7hbGdmvSWtX7pzjwrZ72CcnLtwCSg7-XJhNB24dY_-iaftBu_vsw3Lr6nddMOGMfXtUl8bPN_ptmXcF4bA-7y2Vw7xEKYVKreKuQsiMAJ2a2aKiRVmHE1RFbyp2R-Z2soqkUL_DQxKZMeU9ehX8NDcmZ_JmtzemgeaoPQ* |
+| Host | | |
+| Authorization Test URL | | |
+| Access Token | |
 
 
 For more information on these credentials, see the [!DNL OneTrust] authentication documentation. *[[!DNL OneTrust] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token)*.
@@ -40,11 +41,11 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Consent & Preferences* category, select [!DNL OneTrust], and then select **[!UICONTROL Add data]**.
+Under the *[!UICONTROL Consent & Preferences]* category, select [!DNL OneTrust Integration], and then select **[!UICONTROL Add data]**.
 
 ![catalog](../../../../images/tutorials/create/sdk/catalog.png)
 
-The **[!UICONTROL Connect YOURSOURCE account]** page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect OneTrust Integration account]** page appears. On this page, you can either use new credentials or existing credentials.
 
 ### Existing account
 
