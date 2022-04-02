@@ -25,16 +25,18 @@ The following items are required before you start configuring the destination.
 1. Finally select the **[!DNL Create API Key]** button.
     * Refer to the [Sendgrid documentation](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key), if you need guidance on what actions to perform. 
     * If you would like to programmatically generate your API Key, please refer to the [Sendgrid documentation](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
-
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-* Before activating data to the Sendgrid destination you should have created a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segment](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) in the [!DNL Adobe Experience Platform].
+* Before activating data to the Sendgrid destination you should have created a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segment](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) in the [!DNL Adobe Experience Platform]. Also see [limits](#limits).
 
 >[!IMPORTANT]
->* The Sendgrid API used for creating the mailing list from email profiles requires unique email addresses to be provided within each profile. This is irrespective of whether its usage as a value for *email* or *alternate email*. Because the Sendgrid connection supports mappings for both *email* and *alternate email* values please ensure that all email addresses used should be unique within each profile of the *Dataset* else when the email profiles are sent to Sendgrid it will result in an error and that email profile will not be present.
+>
+>* The Sendgrid API used for creating the mailing list from email profiles requires unique email addresses to be provided within each profile. This is irrespective of whether it is used as a value for *email* or *alternate email*. Because the Sendgrid connection supports mappings for both email and alternate email values, please ensure that all email addresses used should be unique within each profile of the *Dataset*. Otherwise, when the email profiles are sent to Sendgrid, this will result in an error and that email profile will not be present in the data export.
 
 >[!IMPORTANT]
->* Please note the functionality to remove profiles from Sendgrid when they are removed from segments is yet to be developed.
+>
+>* Currently, there is no functionality in place to remove profiles from Sendgrid when they are removed from segments in Experience Platform.
 
 ## Supported identities {#supported-identities}
 
@@ -42,7 +44,7 @@ The following items are required before you start configuring the destination.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|email |Email address|Note both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. If the Experience platform source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.<br/><br/> However as *Sendgrid* does not support hashed email addresses only plain text data without transformation is sent.|
+|email |Email address|Note both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. If the Experience platform source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.<br/><br/> Note that **Sendgrid** does not support hashed email addresses, so only plain text data without transformation is sent to the destination.|
 
 {style="table-layout:auto"}
 
@@ -69,18 +71,22 @@ Marketing teams using Sendgrid can create a mailing list within Sendgrid and pop
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). Steps specific to this destination are illustrated in detail below.
 
-1. Within the [!DNL Adobe Experience Platform] console, navigate to *Destinations*.
+1. Within the [!DNL Adobe Experience Platform] console, navigate to **Destinations**.
 
-1. Select the **Catalog** tab and search for *Sendgrid*. Then select **Activate Segments**.
+1. Select the **Catalog** tab and search for *Sendgrid*. Then select **Set up**. After the first time execution of the connection the button text changes to **Activate Segments**.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
 
-1. You are shown a wizard which assists you in configuring the Sendgrid destinationYou will be shown a wizard where the first screen is to choose a destination. For setting up this connector, let us create a new destination by selecting **Configure new destination**.
+1. You are shown a wizard which assists you in configuring the Sendgrid destination. Create the new destination by selecting **Configure new destination**.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/03.jpg)
 
-1. Select the **New Account** option and fill in the *Bearer Token* value. This value is the Sendgrid *API Key* we had previously copied in the [prerequisites section](#prerequisites).
+1. Select the **New Account** option and fill in the *Bearer Token* value. This value is the Sendgrid *API Key* previously copied in the [prerequisites section](#prerequisites).
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/04.jpg)
 
-1. Select **Connect to destination** which will check if the Sendgrid *API Key* we provided is valid and accordingly display a *Connected* status. If the **Connected** status is shown as green we are also shown the next [step](#parameters) to fill in additional information fields.
+1. Select **Connect to destination**. If the Sendgrid *API Key* you provided is valid, the UI displays a **Connected** status with a green check mark, you can then proceed to the next step to fill in additional information fields.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
 ### Connection parameters {#parameters}
@@ -89,6 +95,7 @@ While [setting up](https://experienceleague.adobe.com/docs/experience-platform/d
 
 *  **[!UICONTROL Name]**: The name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: An optional description that will help you identify this destination in the future.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ## Activate segments to this destination {#activate}
@@ -97,80 +104,85 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 Refer to the below images for details specific to this destination.
 
-* Select a segment that you setup from the list of available segments
-![](../../assets/catalog/email-marketing/sendgrid/11.png)
+1. Select a segment that you setup from the list of available segments
+<br/>
+![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
-* After selecting **Add new mapping** you are shown the mapping page to map the source fields to the Sendgrid API target fields.
+1. After selecting **Add new mapping** you are shown the mapping page to map the source fields to the Sendgrid API target fields.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/13.png)
-
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
-
-> [!IMPORTANT]
-> The **Source field** attribute *"Email"* should be mapped to the **Target field** attribute *"external_id"* as shown in the subsequent image.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
 
+1. >[!WARNING]
+   >
+   > Please ensure the **Source field** *Email* should be mapped to the **Target field** *external_id* as shown below.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
-* Similarly the remaining [!DNL Adobe Experience Platform] fields and attributes are mapped to the Sendgrid attributes.
+1. Similarly the remaining [!DNL Adobe Experience Platform] fields and attributes are mapped to the Sendgrid attributes.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-* A preview of some of the mappings is as below
-![](../../assets/catalog/email-marketing/sendgrid/19.jpg)
+1. The comprehensive list of supported mappings that can be set up for the [Sendgrid Marketing Contacts > Add or Update Contact API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) are listed below.
 
-* The comprehensive list of supported mappings that can be set up for the [Sendgrid Marketing Contacts API](https://api.sendgrid.com/v3/marketing/contacts) are listed below.
+    | Source Field | Target Field | Type | Description | Limits |
+    |---|---|---|---|---|
+    | xdm:<br/> homeAddress.street1 | xdm:<br/> address_line_1 | String | The first line of the address. | Max Length:<br/> 100 characters |
+    | xdm:<br/> homeAddress.street2 | xdm:<br/> address_line_2 | String | An optional second line for the address. | Max Length:<br/> 100 characters |
+    | xdm:<br/> _extconndev.alternate_emails | xdm:<br/> alternate_emails | Array of String | Additional emails associated with the contact. | <ul><li>Max: 5 items</li><li>Min: 0 items</li></ul> |
+    | xdm:<br/> homeAddress.city | xdm:<br/> city | String | The contact's city. | Max Length:<br/> 60 characters |
+    | xdm:<br/> homeAddress.country | xdm:<br/> country | String | The contact's country. Can be a full name or an abbreviation. | Max Length:<br/> 50 characters |
+    | identityMap:<br/> Email | Identity:<br/> external_id | String | The contact's primary email. This is required to be a valid email. | Max Length:<br/> 254 characters |
+    | xdm:<br/> person.name:firstName | xdm:<br/> first_name | String | The contact's name | Max Length:<br/> 50 characters |
+    | xdm:<br/> person.name:lastName | xdm:<br/> last_name | String | The contact's family name | Max Length:<br/> 50 characters |
+    | xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | String | The contact's ZIP code or other postal code. | |
+    | xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_province_region | String | The contact's state, province, or region. | Max Length:<br/> 50 characters|
 
-| Name | Field | Type | Description | Limits |
-|---|---|---|---|---|
-| contacts | - | Array of Objects | One or more contacts objects that you intend to add/insert. The available fields for a contact, including the required email field are described below. | Max: 30,000 items and Min: 2 items |
-| | address_line_1 | String | The first line of the address. | Max Length: 100 characters |
-| | address_line_2 | String | An optional second line for the address. | Max Length: 100 characters |
-| | alternate_emails | Array of String | Additional emails associated with the contact. | Max: 5 items and Min: 0 items |
-| | city | String | The contact's city. | MaxLength: 60 characters |
-| | country | String | The contact's country. Can be a full name or an abbreviation. | Max Length: 50 characters |
-| | email | String | The contact's primary email. This is a *mandatory* field and the value passed should be valid. | Max Length: 254 characters |
-| | first_name | String | The contact's name | Max Length: 50 characters |
-| | last_name | String | The contact's family name | Max Length: 50 characters |
-| | postal_code | String | The contact's ZIP code or other postal code. | |
-| | state_province_region | String | The contact's state, province, or region. | Max Length: 50 characters|
-| | line | String | The contact's Line account *(if any)* | |
-| | whatsapp | String | The contact's Whatsapp account *(if any)* | |
-| | facebook | String | The contact's Facebook account *(if any)* | |
-| | unique_name | String | | |
-| | phone_number | String | The contact’s phone number. | |
-
-* After completing the mappings, select **Next** to obtain a review screen indicating the audience and destination are connected.
+1. After completing the mappings, select **Next** to obtain a review screen indicating the audience and destination are connected.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/22.png)
 
-* Select **Finish** to complete the setup.
+1. Select **Finish** to complete the setup.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
 ## Validate data within Sendgrid {#validate}
 
 To validate that you have correctly set up the destination.
 
-1. Select **Destinations > Browse** to navigate to the list of destinations. 
+1. Select **Destinations > Browse** to navigate to the list of destinations.
+<br/> 
 ![](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
 1. Select the destination and ensure the status is **enabled**.
+<br/> 
 ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
 1. Switch to the **Activation data** tab, then select a **Segment Name**.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. Monitor the segment summary and check the count of profiles corresponds to the count created within the dataset.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
-1. The [Sendgrid Marketing Lists API](https://api.sendgrid.com/v3/marketing/lists) is used to create unique contact lists within Sendgrid  by joining the value of the *list_name* attribute and the timestamp of the data export. Navigate to the Sendgrid site and check if the new contact list conforming to the name pattern is created.
-
+1. The [Sendgrid Marketing Lists > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list) is used to create unique contact lists within Sendgrid by joining the value of the *list_name* attribute and the timestamp of the data export. Navigate to the Sendgrid site and check if the new contact list conforming to the name pattern is created.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
 1. Select the newly created contact list and check if the new email record from the dataset you created is being populated within the new contact list.
 
 1. Additionally also check a couple of emails to validate if the field mapping is correct.
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/31.jpg)
+<br/>
 ![](../../assets/catalog/email-marketing/sendgrid/32.jpg)
 
 ## Data usage and governance {#data-usage-governance}
@@ -180,9 +192,9 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Additional resources {#additional-resources}
 
 This Sendgrid destination leverages the below API's
-  * [Sendgrid Marketing Lists API](https://api.sendgrid.com/v3/marketing/lists) 
-  * [Sendgrid Marketing Contacts API](https://api.sendgrid.com/v3/marketing/contacts)
+  * [Sendgrid Marketing Lists > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list)
+  * [Sendgrid Marketing Contacts > Add or Update Contact API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)
 
 ### Limits
 
-* The [Sendgrid Marketing Contacts API](https://api.sendgrid.com/v3/marketing/contacts) can accept 30,000 contacts, or 6MB of data, whichever is lower.
+* The [Sendgrid Marketing Contacts > Add or Update Contact API](https://api.sendgrid.com/v3/marketing/contacts) can accept 30,000 contacts, or 6MB of data, whichever is lower.
