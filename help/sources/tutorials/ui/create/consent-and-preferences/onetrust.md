@@ -1,12 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;onetrust;OneTrust
 solution: Experience Platform
-title: Create a OneTrust Source Connection in the UI
+title: (Beta) Create a OneTrust Source Connection in the UI
 topic-legacy: overview
 type: Tutorial
 description: Learn how to create a OneTrust source connection using the Adobe Experience Platform UI.
 ---
-# Create a [!DNL OneTrust] source connection in the UI
+# (Beta) Create a [!DNL OneTrust] source connection in the UI
+
+>[!NOTE]
+>
+>The [!DNL OneTrust] source is in beta. Its features and documentation are subject to change. For information on using beta-labelled sources, see the [sources overview](../../../../home.md#terms-and-conditions).
 
 This tutorial provides steps for creating a [[!DNL OneTrust]](https://my.onetrust.com/s/contactsupport?language=en_US) source connection to ingest both historic and scheduled consent data into Adobe Experience Platform using the Platform user interface.
 
