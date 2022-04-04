@@ -1,6 +1,6 @@
 ---
 audience: user
-solution: Data Collection, Experience Platform
+solution: Data Collection
 user-guide-title: Edge Network Server API Documentation
 breadcrumb-title: Edge Network Server API Documentation
 user-guide-description: Learn what the Edge Network Server API is and how you can use it.
