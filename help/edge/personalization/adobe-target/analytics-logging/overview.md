@@ -8,7 +8,7 @@ When using Adobe Target for personalization, you can choose which system you wan
 
 If you are using Analytics reporting, Adobe Target has to communicate the following to Analytics:
 
-* Which Adobe Target activity your users have entered
+* Which Adobe Target activity your visitors have entered
 * Which experience they have seen
 * Which conversion has been reached
 

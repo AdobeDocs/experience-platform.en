@@ -124,13 +124,85 @@ The following is an example of an `interact` response when Analytics client-side
 }
 ```
 
-This is the A4T payload that needs to be included as a `tnta` tag in the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
+Alternatively, a proposition can also have the analytics tokens specified in `scopeDetails.characteristics.analyticsTokens` property.
+
+```json
+{
+  "requestId": "1234",
+  "handle": [
+    {
+      "payload": [
+        {
+          "id": "AT:eyJhY3Rpdml0eUlkIjoiNDM0Njg5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+          "scope": "a4t-test",
+          "scopeDetails": {
+            "decisionProvider": "TGT",
+            "activity": {
+              "id": "434689"
+            },
+            "experience": {
+              "id": "0"
+            },
+            "strategies": [
+              {
+                "algorithmID": "0",
+                "trafficType": "0"
+              }
+            ],
+            "characteristics": {
+              "eventTokens": {
+                "display": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+                "click": "E0gb6q1+WyFW3FMbbQJmrg=="
+              },
+              "analyticsTokens": {
+                "display": "434689:0:0|2,434689:0:0|1",
+                "click": "434689:0:0|32767"
+              }
+            }
+          },
+          "items": [
+            {
+              "id": "1184844",
+              "schema": "https://ns.adobe.com/personalization/html-content-item",
+              "meta": {
+                "geo.state": "bucuresti",
+                "activity.id": "434689",
+                "experience.id": "0",
+                "activity.name": "a4t test form based activity",
+                "offer.id": "1184844",
+                "profile.tntId": "04608610399599289452943468926942466370-pybgfJ"
+              },
+              "data": {
+                "id": "1184844",
+                "format": "text/html",
+                "content": "<div> analytics impressions </div>"
+              }
+            },
+            {
+              "id": "434689",
+              "schema": "https://ns.adobe.com/personalization/measurement",
+              "data": {
+                "type": "click",
+                "format": "application/vnd.adobe.target.metric"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "personalization:decisions",
+      "eventIndex": 0
+    }
+  ]
+}
+```
+
+All the values from `scopeDetails.characteristics.analyticsToken`, as well as `scopeDetails.characteristics.analyticsTokens.display` (for displayed content) and `scopeDetails.characteristics.analyticsTokens.click` (for click metrics) are the A4T payloads that need to be collected and included as `tnta` tag in the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
 
 >[!IMPORTANT]
 >
->Note that the some `analyticsToken` properties can contain multiple tokens, concatenated as a single comma-delineated string.
+>Note that some `analyticsToken`/`analyticsTokens` properties can contain multiple tokens, concatenated as a single comma-delineated string.
 >
->In the implementation examples provided in the next section, you will often be interatively collecting multiple Analytics tokens. To concatenate an array of Analytics tokens, you can use a function similar to the following:
+>In the implementation examples provided in the next section, multiple Analytics tokens are being collected iteratively. To concatenate an array of Analytics tokens, a function similar to the following can be used:
 >
 >```javascript
 >var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
@@ -240,28 +312,81 @@ From here, you must implement code to execute the propositions and construct a p
         }
       }
     ]
+  },
+  {
+    "id": "AT:eyJhY3Rpdml0eUlkIjoiNDM0Njg5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+    "scope": "a4t-test",
+    "scopeDetails": {
+      "decisionProvider": "TGT",
+      "activity": {
+        "id": "434688"
+      },
+      "experience": {
+        "id": "0"
+      },
+      "strategies": [
+        {
+          "algorithmID": "0",
+          "trafficType": "0"
+        }
+      ],
+      "characteristics": {
+        "eventTokens": {
+          "display": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
+          "click": "Tagb6q1+WyFW3FMbbQJrtg=="
+        },
+        "analyticsTokens": {
+          "display": "434688:0:0|2,434688:0:0|1",
+          "click": "434688:0:0|32767"
+        }
+      }
+    },
+    "items": [
+      {
+        "id": "1184845",
+        "schema": "https://ns.adobe.com/personalization/html-content-item",
+        "meta": {
+          "geo.state": "bucuresti",
+          "activity.id": "434688",
+          "experience.id": "0",
+          "activity.name": "a4t test form based activity 1",
+          "offer.id": "1184845"
+        },
+        "data": {
+          "id": "1184845",
+          "format": "text/html",
+          "content": "<div> analytics impressions 1</div>"
+        }
+      },
+      {
+        "id": "434688",
+        "schema": "https://ns.adobe.com/personalization/measurement",
+        "data": {
+          "type": "click",
+          "format": "application/vnd.adobe.target.metric"
+        }
+      }
+    ]
   }
 ]
 ```
 
-To extract the Analytics token from a proposition, you can implement a function similar to the following:
+To extract the Analytics token from a proposition with content items, you can implement a function similar to the following:
 
 ```javascript
-function getAnalyticsPayload(proposition) {
-  if(proposition === undefined) {
+function getDisplayAnalyticsPayload(proposition) {
+  if (!proposition || !proposition.scopeDetails || !proposition.scopeDetails.characteristics) {
     return;
   }
-  if(proposition.scopeDetails === undefined) {
-    return;
+  var characteristics = proposition.scopeDetails.characteristics;
+  if (characteristics.analyticsTokens) {
+    return characteristics.analyticsTokens.display;
   }
-  if(proposition.scopeDetails.characteristics === undefined) {
-    return;
-  }
-  return proposition.scopeDetails.characteristics.analyticsToken;
+  return characteristics.analyticsToken;
 }
 ```
 
-A proposition can have different types of items, as indicated by `schema` property of the item in question. There are four supported proposition item schemas supported for Form-Based Experience Composer activities: 
+A proposition can have different types of items, as indicated by `schema` property of the item in question. There are four proposition item schemas supported for Form-Based Experience Composer activities: 
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -272,15 +397,37 @@ var REDIRECT_SCHEMA = "https://ns.adobe.com/personalization/redirect-item";
 
 `HTML_SCHEMA` and `JSON_SCHEMA` are the schemas that reflect the type of the offer, while `MEASUREMENT_SCHEMA` reflects the metrics that should be attached to a DOM element.
 
+Analytics payloads for click metrics should be collected and sent to Analytics separately from content items, at the moment when the visitor actually clicks on the previously displayed content.
+
+The following helper function for getting the click metric A4T payloads will come in handy in this case:
+
+```javascript
+function getClickAnalyticsPayload(proposition) {
+  if (!proposition || !proposition.scopeDetails || !proposition.scopeDetails.characteristics) {
+    return;
+  }
+  var characteristics = proposition.scopeDetails.characteristics;
+  if (characteristics.analyticsTokens) {
+    return characteristics.analyticsTokens.click;
+  }
+  return characteristics.analyticsToken;
+}
+```
+
 #### Implementation summary
 
-In summary, the following steps must be executed when performing Form-Based Experience Composer activities with the Platform Web SDK:
+In summary, the following steps must be executed when applying Form-Based Experience Composer activities with the Platform Web SDK:
 
-1. Send an event that fetches Form-Based Experience Composer activity offers.
-2. Apply the content changes to the page.
-3. Send the `decisioning.propositionDisplay` notification event.
-4. Collect the Analytics tokens from the SDK response and construct a payload for the Analytics hit.
-5. Send the payload to Analytics using the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+1. Send an event that fetches Form-Based Experience Composer activity offers;
+2. Apply the content changes to the page;
+3. Send the `decisioning.propositionDisplay` notification event;
+4. Collect the Analytics display tokens from the SDK response and construct a payload for the Analytics hit;
+5. Send the payload to Analytics using the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
+6. If there are any click metrics in delivered propositions, click listeners should be setup so that when a click is performed:
+   1. Send the `decisioning.propositionInteract` notification event;
+   Note: `onBeforeEventSend` handler should be configured, so that when intercepting `decisioning.propositionInteract` events:
+      1. Collect the click Analytics tokens from `xdm._experience.decisioning.propositions`
+      2. Send the click Analytics hit with the collected Analytics payload via [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 
 ```javascript
 alloy("sendEvent", {
@@ -295,16 +442,23 @@ alloy("sendEvent", {
   }
 ).then(function(results) {
   var analyticsPayload = new Set();
-  for (proposition of results.propositions) {
-    for (item of proposition) {
+  results.propositions.forEach(function (proposition) {
+    proposition.items.forEach(function (item) {
       if (item.schema === HTML_SCHEMA) {
         // 1. Apply offer
         // 2. Collect executed propositions and send the decisioning.propositionDisplay notification event
-        // 3. Collect the Analytics tokens
+        // 3. Collect the display Analytics tokens
       }
-    }
-  }
-  // Send the page view Analytics hit with the collected Analytics payload to the Data Insertion API
+      if (item.schema === MEASUREMENT_SCHEMA) {
+        // Setup click listener, so that when clicked:
+        // 1. Collect clicked propositions and send the decisioning.propositionInteract notification event
+        // Note: onBeforeEventSend handler should be configured, so that when intercepting decisioning.propositionInteract events:
+        //   1. Collect the click Analytics tokens from xdm._experience.decisioning.propositions
+        //   2. Send the click Analytics hit with the collected Analytics payload via Data Insertion API
+      }
+    });
+  });
+  // Send the page view Analytics hit with the collected display Analytics payload via Data Insertion API
 });
 ```
 
@@ -338,7 +492,7 @@ alloy("sendEvent", {
     var renderAttempted = proposition.renderAttempted;
 
     if (renderAttempted === true) {
-      var analyticsPayload = getAnalyticsPayload(proposition);
+      var analyticsPayload = getDisplayAnalyticsPayload(proposition);
       
       if (analyticsPayload !== undefined) {
         analyticsPayloads.add(analyticsPayload);
@@ -346,7 +500,7 @@ alloy("sendEvent", {
     }
   }
   var analyticsPayloadsToken = concatenateAnalyticsPayloads(analyticsPayloads);
-  // Send the page view Analytics hit with collected Analytics payload to the Data Insertion API
+  // Send the page view Analytics hit with collected Analytics payload via Data Insertion API
 });
 ```
 
@@ -356,7 +510,7 @@ Using Adobe Target activities, you can set up different metrics on the page, eit
 
 To account for this, the best practice is to collect Analytics payloads using the `onBeforeEventSend` Adobe Experience Platform Web SDK hook. The `onBeforeEventSend` hook should be configured using the `configure` command, and will be reflected across all events that are sent through the datastream.
 
-The following is an example how how `onBeforeEventSent` can be configured to trigger Analytics hits:
+The following is an example of how `onBeforeEventSent` can be configured to trigger Analytics hits:
 
 ```javascript
 alloy("configure", {
@@ -371,7 +525,7 @@ alloy("configure", {
 
       for (var i = 0; i < propositions.length; i++) {
         var proposition = propositions[i];
-        analyticsPayloads.add(getAnalyticsPayload(proposition));
+        analyticsPayloads.add(getClickAnalyticsPayload(proposition));
       }
       // Trigger the Analytics hit
     }
