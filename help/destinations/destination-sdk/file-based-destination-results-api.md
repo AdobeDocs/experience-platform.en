@@ -64,16 +64,6 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
             "id":"25473b67-0801-418a-ab49-ed74ebf88137",
             "version":"1.0"
          },
-         "providerRefId":"67605eb662cdc1d34bf804d359163fd0",
-         "sandboxId":"becddb60-c64a-45ee-8ddb-60c64a45ee38",
-         "sandboxName":"PROD",
-         "createdAt":1646652233979,
-         "updatedAt":1646652279707,
-         "createdBy":"AepActivationService@AdobeID",
-         "updatedBy":"acp_foundation_connectors@AdobeID",
-         "createdClient":"AepActivationService",
-         "updatedClient":"acp_foundation_connectors",
-         "etag":"\"8603ccea-0000-0200-0000-6225eb770000\"",
          "metrics":{
             "durationSummary":{
                "startedAtUTC":1646652235124,

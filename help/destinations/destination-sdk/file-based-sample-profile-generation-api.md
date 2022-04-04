@@ -42,14 +42,14 @@ GET 'https://platform.adobe.io/data/core/activation/authoring/v1/sample-profiles
 The following request generates sample profiles, configured by the `destinationInstanceId` query parameter.
 
 ```shell
-curl --location --request GET 'https://platform-stage.adobe.io/data/core/activation/authoring/v1/sample-profiles?destinationInstanceId=d3ab41ee-fe25-476a-9fba-4baff6c0acb5' 
+curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/v1/sample-profiles?destinationInstanceId=d3ab41ee-fe25-476a-9fba-4baff6c0acb5' 
 --header 'Content-Type: application/json' 
 --header 'Accept: application/json' 
 --header 'x-api-key: {API_KEY}' 
 --header 'Authorization: Bearer {TOKEN}' 
 --header 'x-gw-ims-org-id: {IMS_ORG_ID}' 
---header 'x-sandbox-name: name'
---header 'x-sandbox-id: sandbox-id'
+--header 'x-sandbox-name: {SANDBOX_NAME}'
+--header 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 ### Response

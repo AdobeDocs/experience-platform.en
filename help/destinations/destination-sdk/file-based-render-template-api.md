@@ -26,7 +26,6 @@ You can render exported profiles by making a POST request to the `authoring/test
 
 ### API format
 
-
 ```http
 POST authoring/testing/template/render/destination
 ```
