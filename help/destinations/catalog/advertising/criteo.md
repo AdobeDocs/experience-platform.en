@@ -1,15 +1,13 @@
-> [IMPORTANT]
-> This is currently a beta product. Get in touch with your Criteo representative if you would like more details about what this means.
-
-# CRITEO DESTINATION
+# CRITEO CONNECTION
 
 ## Overview
 
-Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
-
 >[IMPORTANT]
 >
->This documentation page was created by Criteo. For any inquiries or update requests, please contact Criteo directly [here](https://marketing.criteo.com/).
+>This documentation page was created by Criteo. This is currently a beta product. For any inquiries or update requests, please contact Criteo directly [here](https://marketing.criteo.com/).
+
+Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
+
 
 
 ## Prerequisites
