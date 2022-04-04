@@ -3,8 +3,8 @@ title: Interacting with third-party solutions
 description: Learn how to use the Edge Network Server API to forward events to non-Adobe solutions
 seo-description: Learn how to use the Edge Network Server API to forward events to non-Adobe solutions
 keywords: data collection; outlet; analytics; Adobe Experience Platform Edge Network api;event forwarding
+exl-id: a8902b2a-fc9c-4087-a7eb-89b6cf9a6d29
 ---
-
 # Interacting with third-party solutions
 
 ## Overview {#overview}
