@@ -5,7 +5,7 @@ title: Connect DbVisualizer to Query Service
 topic-legacy: connect
 description: This document walks through the steps for connecting DbVisualizer with Adobe Experience Platform Query Service.
 ---
-# Connect [!DNL DbVisualizer] to Query Service
+# Connect [!DNL DbVisualizer] to Query Service {#connect-dbvisualizer}
 
 This document covers the steps for connecting [!DNL DbVisualizer] Desktop with Adobe Experience Platform Query Service.
 
@@ -41,9 +41,13 @@ The three required driver properties are seen in the table below.
 | `SSL` | This controls the use of SSL requirements. You **must** use the value "1" to enable this requirement. |
 | `user` | The username connected to the database is your Organization ID. It is an alphanumeric string ending in `@adobe.org` |
 
+### Query Service credentials
+
 The `PGHOST` and `user` values are taken from your Adobe Experience Platform credentials. To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). 
 
 ![Experience Platform Queries Credentials Dashboard with credentials highlighted.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+
+Query Service also offers non-expiring credentials to allow for a one-time set up with third part clients. See the documentation for [full instructions on how to generate and use non-expiring credentials](../ui/credentials.md#non-expiring-credentials).
 
 Use the search bar to find each property then select the corresponding cell for the parameter's value. The cell will highlight in blue. Enter your Platform credential in the value field and select **[!DNL Apply]** to add the driver property.
 
