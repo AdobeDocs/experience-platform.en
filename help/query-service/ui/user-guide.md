@@ -36,7 +36,7 @@ In the [!DNL Experience Platform] UI, select **[!UICONTROL Queries]** in the lef
 
 ![Image](../images/ui/query-editor/create-query.png)
   
-### Writing queries
+### Writing queries {#writing-queries}
 
 [!UICONTROL Query Editor] is organized to make writing queries as easy as possible. The screenshot below shows how the editor appears in the UI, with the **Play** button and SQL entry field highlighted.
 
