@@ -7,11 +7,11 @@ description: This document walks through the steps for connecting DbVisualizer w
 ---
 # Connect [!DNL DbVisualizer] to [!DNL Query Service] {#connect-dbvisualizer}
 
-This document covers the steps for connecting [!DNL DbVisualizer] Desktop with Adobe Experience Platform [!DNL Query Service].
+This document covers the steps for connecting the [!DNL DbVisualizer] database tool with Adobe Experience Platform [!DNL Query Service].
 
 ## Getting started
 
-This guide requires that you already have access to the [!DNL DbVisualizer] desktop app and are familiar with how to navigate its interface. To download the [!DNL DbVisualizer] Desktop app or for more information, see the [official [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/).
+This guide requires that you already have access to the [!DNL DbVisualizer] desktop app and are familiar with how to navigate its interface. To download the [!DNL DbVisualizer] desktop app or for more information, see the [official [!DNL DbVisualizer] documentation](https://www.dbvis.com/download/).
 
 >[!NOTE]
 >
@@ -88,4 +88,4 @@ Enter your Userid and Password and select **[!DNL Connect]**. A message appears 
 
 ## Next steps
 
-Now that you have connected [!DNL DbVisualizer] with [!DNL Query Service], you can use [!DNL DbVisualizer] to write queries. For more information on how to write and run queries, please read the guide on query execution.
+Now that you have connected [!DNL DbVisualizer] with [!DNL Query Service], you can use [!DNL DbVisualizer] to write queries. For more information on how to write and run queries, please read the [guide on query execution](../best-practices/writing-queries.md).
