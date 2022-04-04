@@ -5,9 +5,9 @@ title: Connect DbVisualizer to Query Service
 topic-legacy: connect
 description: This document walks through the steps for connecting DbVisualizer with Adobe Experience Platform Query Service.
 ---
-# Connect [!DNL DbVisualizer] to Query Service {#connect-dbvisualizer}
+# Connect [!DNL DbVisualizer] to [!DNL Query Service] {#connect-dbvisualizer}
 
-This document covers the steps for connecting [!DNL DbVisualizer] Desktop with Adobe Experience Platform Query Service.
+This document covers the steps for connecting [!DNL DbVisualizer] Desktop with Adobe Experience Platform [!DNL Query Service].
 
 ## Getting started
 
@@ -41,13 +41,13 @@ The three required driver properties are seen in the table below.
 | `SSL` | This controls the use of SSL requirements. You **must** use the value "1" to enable this requirement. |
 | `user` | The username connected to the database is your Organization ID. It is an alphanumeric string ending in `@adobe.org` |
 
-### Query Service credentials
+### [!DNL Query Service] credentials
 
 The `PGHOST` and `user` values are taken from your Adobe Experience Platform credentials. To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). 
 
 ![Experience Platform Queries Credentials Dashboard with credentials highlighted.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
-Query Service also offers non-expiring credentials to allow for a one-time set up with third part clients. See the documentation for [full instructions on how to generate and use non-expiring credentials](../ui/credentials.md#non-expiring-credentials).
+[!DNL Query Service] also offers non-expiring credentials to allow for a one-time setup with third part clients. See the documentation for [full instructions on how to generate and use non-expiring credentials](../ui/credentials.md#non-expiring-credentials).
 
 Use the search bar to find each property then select the corresponding cell for the parameter's value. The cell will highlight in blue. Enter your Platform credential in the value field and select **[!DNL Apply]** to add the driver property.
 
@@ -55,7 +55,7 @@ Use the search bar to find each property then select the corresponding cell for 
 >
 >To add a second `user` profile, select `user` from the parameter column then select the blue + (plus) icon to add credentials for each user. Select **[!DNL Apply]** to add the driver property.
 
-The [!DNL Edited] column shows a check mark to denote that the parameter value has been updated.
+The [!DNL Edited] column shows a checkmark to denote that the parameter value has been updated.
 
 ## Authentication
 
@@ -71,21 +71,21 @@ To make a connection, select the **[!DNL Connection]** tab from the Database Con
 
 - **Name**: You are recommended to provide a friendly name to recognize the connection. 
 - **Database Server**: This is your Experience Platform [!UICONTROL Host] credential. 
-- **Database Port**: The port for Query Service. You must use port 80 to connect with Query Service.
+- **Database Port**: The port for [!DNL Query Service]. You must use port 80 to connect with [!DNL Query Service].
 - **Database**: Use the credential `dbname` value `prod:all`.
 - **Database Userid**: This is your Platform Organization Id. The Userid will be in the format of `ORG_ID@AdobeOrg`. 
-- **Database Password**: This is an alphanumeric string found on the Query Service credentials dashboard.
+- **Database Password**: This is an alphanumeric string found on the [!DNL Query Service] credentials dashboard.
 
 After you have input all relevant credentials, select **[!DNL Connect]**. 
 
 ![The Database Connection workspace with the Connection tab and connect button highlighted.](../images/clients/dbvisualizer/connect.png)
 
-The connect dialog appears on the first occasion of the session. 
+The [!DNL Connect] dialog appears on the first occasion of the session. 
 
-![The connect dialog with the database userid and database password text fields are highlighted.](../images/clients/dbvisualizer/connect-dialog.png)
+![The Connect dialog with the database userid and database password text fields are highlighted.](../images/clients/dbvisualizer/connect-dialog.png)
 
 Enter your Userid and Password and select **[!DNL Connect]**. A message appears in the log to confirm a successful connection.
 
 ## Next steps
 
-Now that you have connected [!DNL DbVisualizer] with Query Service, you can use [!DNL DbVisualizer] to write queries. For more information on how to write and run queries, please read the guide on query execution.
+Now that you have connected [!DNL DbVisualizer] with [!DNL Query Service], you can use [!DNL DbVisualizer] to write queries. For more information on how to write and run queries, please read the guide on query execution.
