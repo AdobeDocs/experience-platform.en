@@ -55,7 +55,7 @@ Use the search bar to find each property then select the corresponding cell for 
 >
 >To add a second `user` profile, select `user` from the parameter column then select the blue + (plus) icon to add credentials for each user. Select **[!DNL Apply]** to add the driver property.
 
-The Edited column shows a check mark to denote that the parameter value has been updated.
+The [!DNL Edited] column shows a check mark to denote that the parameter value has been updated.
 
 ## Authentication
 
