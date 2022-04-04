@@ -46,27 +46,27 @@ The following request creates a base connection for [!DNL OneTrust] :
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "ONETRUST base connection",
-        "description": "ONETRUST base connection to authenticate to Platform",
-        "connectionSpec": {
-            "id": "cf16d886-c627-4872-9936-fb08d6cba8cc",
-            "version": "1.0"
-        },
-        "auth": {
-            "specName": "OAuth2 Refresh Code",
-            "params": {
-                "host": "{HOST}",
-                "accessToken": "{ACCESS_TOKEN_OT}"
-            }
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ONETRUST base connection",
+      "description": "ONETRUST base connection to authenticate to Platform",
+      "connectionSpec": {
+          "id": "cf16d886-c627-4872-9936-fb08d6cba8cc",
+          "version": "1.0"
+      },
+      "auth": {
+          "specName": "OAuth2 Refresh Code",
+          "params": {
+              "host": "{HOST}",
+              "accessToken": "{ACCESS_TOKEN_OT}"
+          }
+      }
+  }'
 ```
 
 | Property | Description |
@@ -76,6 +76,8 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
 | `auth.params.` | Contains the credentials required to authenticate your source. The root host and the access token to connect to the API.|
+| `auth.params.host` | The environment from which the [!DNL OneTrust] data needs to be pulled from. |
+| `auth.params.accessToken` | The access token that corresponds with your [!DNL OneTrust] account. |
 
 **Response**
 
@@ -6740,25 +6742,25 @@ The following request creates a source connection for [!DNL OneTrust] :
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "ONETRUST Source Connection",
-        "description": "ONETRUST Source Connection",
-        "baseConnectionId": "622124ca-6d18-47f7-999c-66f599955309",
-        "connectionSpec": {
-            "id": "cf16d886-c627-4872-9936-fb08d6cba8cc",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "json"
-        },
-        "params": {}
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ONETRUST Source Connection",
+      "description": "ONETRUST Source Connection",
+      "baseConnectionId": "622124ca-6d18-47f7-999c-66f599955309",
+      "connectionSpec": {
+          "id": "cf16d886-c627-4872-9936-fb08d6cba8cc",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "json"
+      },
+      "params": {}
+  }'
 ```
 
 | Property | Description |
@@ -6812,26 +6814,26 @@ The following request creates a target connection for [!DNL OneTrust] :
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "ONETRUST Target Connection",
-        "description": "ONETRUST Target Connection",
-        "connectionSpec": {
-            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "json"
-        },
-        "params": {
-            "dataSetId": "61f6ca3f33978c19486bb463"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ONETRUST Target Connection",
+      "description": "ONETRUST Target Connection",
+      "connectionSpec": {
+          "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "json"
+      },
+      "params": {
+          "dataSetId": "61f6ca3f33978c19486bb463"
+      }
+  }'
 ```
 
 | Property | Description |
@@ -6868,60 +6870,60 @@ POST /conversion/mappingSets
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/cfc8cee182e546c1fb35071185524b465e06bf1acb74f30d",
-        "xdmVersion": "1.0",
-        "id": null,
-        "mappings": [{
-                "sourceType": "ATTRIBUTE",
-                "source": "content.Identifier",
-                "destination": "_id",
-                "name": "id",
-                "description": "Identifier field"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "content.Identifier",
-                "destination": "_exchangesandboxbravo.Identifier"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "content.Language",
-                "destination": "_exchangesandboxbravo.Language",
-                "description": "Language field"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "content.CreatedDate",
-                "destination": "_exchangesandboxbravo.CreatedDate",
-                "description": "Created Date field"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "content.LastUpdatedDate",
-                "destination": "_exchangesandboxbravo.LastUpdatedDate",
-                "description": "Created Date field"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "content.DataElements",
-                "destination": "_exchangesandboxbravo.DataElements"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "content.Purposes",
-                "destination": "_exchangesandboxbravo.Purposes"
-            }
+  'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "version": 0,
+      "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/cfc8cee182e546c1fb35071185524b465e06bf1acb74f30d",
+      "xdmVersion": "1.0",
+      "id": null,
+      "mappings": [{
+              "sourceType": "ATTRIBUTE",
+              "source": "content.Identifier",
+              "destination": "_id",
+              "name": "id",
+              "description": "Identifier field"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.Identifier",
+              "destination": "_exchangesandboxbravo.Identifier"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.Language",
+              "destination": "_exchangesandboxbravo.Language",
+              "description": "Language field"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.CreatedDate",
+              "destination": "_exchangesandboxbravo.CreatedDate",
+              "description": "Created Date field"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.LastUpdatedDate",
+              "destination": "_exchangesandboxbravo.LastUpdatedDate",
+              "description": "Created Date field"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.DataElements",
+              "destination": "_exchangesandboxbravo.DataElements"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.Purposes",
+              "destination": "_exchangesandboxbravo.Purposes"
+          }
 
-        ]
-    }'
+      ]
+  }'
 ```
 
 | Property | Description |
@@ -6967,39 +6969,39 @@ POST /flows
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/flows' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "ONETRUST dataflow",
-        "description": "ONETRUST dataflow",
-        "flowSpec": {
-            "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-            "version": "1.0"
-        },
-        "sourceConnectionIds": [
-            "eb5833d3-230d-4700-80cc-bda396e7af8a"
-        ],
-        "targetConnectionIds": [
-            "495f761f-310a-4a7b-ae78-5b1152d74b38"
-        ],
-        "transformations": [
-            {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "a87f130e82f04d5188da01f087805c4b",
-                    "mappingVersion": "0"
-                }
-            }
-        ],
-        "scheduleParams": {
-            "startTime": "1625040887",
-            "frequency": "minute",
-            "interval": 15
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ONETRUST dataflow",
+      "description": "ONETRUST dataflow",
+      "flowSpec": {
+          "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
+          "version": "1.0"
+      },
+      "sourceConnectionIds": [
+          "eb5833d3-230d-4700-80cc-bda396e7af8a"
+      ],
+      "targetConnectionIds": [
+          "495f761f-310a-4a7b-ae78-5b1152d74b38"
+      ],
+      "transformations": [
+          {
+              "name": "Mapping",
+              "params": {
+                  "mappingId": "a87f130e82f04d5188da01f087805c4b",
+                  "mappingVersion": "0"
+              }
+          }
+      ],
+      "scheduleParams": {
+          "startTime": "1625040887",
+          "frequency": "minute",
+          "interval": 15
+      }
+  }'
 ```
 
 | Property | Description |
