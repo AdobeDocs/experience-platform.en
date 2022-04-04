@@ -9,7 +9,7 @@ exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 ---
 # Generate datasets from results in [!DNL Query Service]
 
-[!DNL Query Service] allows you to use queries to generate datasets in the [!DNL Data Lake] in order to use these datasets as input into more queries or in other services such as [!DNL Data Science Workspace], Real-time Customer Profile, or [!DNL Analysis Workspace].
+[!DNL Query Service] allows you to use queries to generate datasets in the [!DNL Data Lake]. These datasets can then be used as input for more queries or in other services such as [!DNL Data Science Workspace], Real-time Customer Profile, or [!DNL Analysis Workspace].
 
 ## Generate datasets from the Adobe Experience Platform user interface
 
@@ -19,7 +19,7 @@ To create datasets from the Adobe Experience Platform user interface (UI), follo
 
 2. In the Platform UI, navigate to **[!UICONTROL Queries]** followed by the **[!UICONTROL Browse]** tab and select the query you have created. For more details on how to view queries that were created and saved for your organization within the Platform UI, read the [[!DNL Query Service] overview](./overview.md#browse).
 
-3. In the [!UICONTROL Query details] panel, select **[!UICONTROL Output dataset]**.
+3. In the Query details panel, select **[!UICONTROL Output dataset]**.
 
     ![Select Output dataset](../images/ui/create-datasets/output-dataset.png)
 
