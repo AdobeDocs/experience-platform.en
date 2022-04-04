@@ -3,8 +3,8 @@ title: Visitor identification
 description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 keywords: edge network;gateway;api;visitor;identification
+exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
 ---
-
 # Visitor identification
 
 ## Overview {#overview}

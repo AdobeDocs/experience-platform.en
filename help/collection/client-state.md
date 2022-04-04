@@ -3,8 +3,8 @@ title: Client state management
 description: Learn how the Adobe Experience Platform Edge Network manages client state
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: client;state;management;edge;network;gateway;api
+exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
 ---
-
 # Client state management
 
 The Edge Network itself is stateless (it does not maintain its own session). However, there are certain use-cases which require client-side state persistency, such as:

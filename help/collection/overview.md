@@ -3,8 +3,8 @@ title: Edge Network Server API
 description: Learn what the Adobe Experience Platform Edge Network Server API is and how you can use it.
 seo-description: Learn what the Adobe Experience Platform Edge Network Server API is and how you can use it.
 keywords: data collection;collection;Adobe Experience Platform Edge Network;server api;
+exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
 ---
-
 # Edge Network Server API overview
 
 The Adobe Experience Platform Edge Network provides an optimized way for customers to interact with any Adobe Experience Cloud or Adobe Experience Platform Edge services.

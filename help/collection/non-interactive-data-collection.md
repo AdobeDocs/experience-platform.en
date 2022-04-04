@@ -3,8 +3,8 @@ title: Non-interactive data collection
 description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection
 seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection
 keywords: data collection;collection;adobe experience platform edge network;api;noninteractive data collection
+exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
 ---
-
 # Non-interactive data collection
 
 ## Overview {#overview}
