@@ -61,10 +61,3 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 ## Next steps
 
 By following this tutorial, you have established a connection to your [!DNL OneTrust] account. You can now continue on to the next tutorial and [configure a dataflow to bring consent data into Platform](../../dataflow/consent-and-preferences.md).
-
-## Additional information
-
->[!TIP]
->
->In the Mapping screen after selecting the target schema, we have a limitation of not being able to map any dynamic key-pair values as Object from OneTrust to the Experince platform.
->Here, we must specify those keys in the target schema to be able to map data during ingestion.
