@@ -12,9 +12,9 @@ feature: Data Collection
 
 - [Overview](overview.md)
 - [Authentication](authentication.md)
-  - Data collection {#data-collection}
-    - [Single-event data collection](interactive-data-collection.md)
-    - [Batch event data collection](non-interactive-data-collection.md)
+- Data collection {#data-collection}
+  - [Single-event data collection](interactive-data-collection.md)
+  - [Batch event data collection](non-interactive-data-collection.md)
 - Interacting with other Adobe solutions {#interacting-other-adobe-solutions}
   - [Interacting with Adobe Analytics](interacting-adobe-analytics.md)
   - [Interacting with Adobe Experience Platform](interacting-experience-platform.md)
