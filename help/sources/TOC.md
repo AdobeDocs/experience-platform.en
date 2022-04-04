@@ -42,6 +42,8 @@ feature: Sources
     - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
+  - Consent & Preferences {#consent}
+    - [OneTrust](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
@@ -103,6 +105,8 @@ feature: Sources
       - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
       - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
+    - Consent & Preferences {#consent}
+      - [OneTrust](tutorials/api/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
@@ -197,6 +201,8 @@ feature: Sources
       - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+    - Consent & Preferences {#consent}
+      - [OneTrust](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -244,6 +250,7 @@ feature: Sources
     - [Advertising connection dataflow](tutorials/ui/dataflow/advertising.md)
     - [Batch cloud storage connection dataflow](tutorials/ui/dataflow/batch/cloud-storage.md)
     - [Streaming cloud storage connection dataflow](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+    - [Consent & Preferences connection dataflow](tutorials/ui/dataflow/consent-and-preferences.md)
     - [CRM connection dataflow](tutorials/ui/dataflow/crm.md)
     - [Customer success connection dataflow](tutorials/ui/dataflow/customer-success.md)
     - [Database connection dataflow](tutorials/ui/dataflow/databases.md)
