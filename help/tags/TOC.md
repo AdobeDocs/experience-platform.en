@@ -4,7 +4,7 @@ user-guide-title: Tags Help
 breadcrumb-title: Tags
 user-guide-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
 feature: Tags
-solution: Data Collection, Experience Platform
+solution: Data Collection
 ---
 
 # Tags {#tags}
