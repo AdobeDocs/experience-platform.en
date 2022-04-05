@@ -12,7 +12,7 @@ exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 
 ![Google Customer Match destination in the Adobe Experience Platform UI](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## Use cases
+## Use cases {#use-cases}
 
 To help you better understand how and when to use the [!DNL Google Customer Match] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this feature.
 
@@ -42,9 +42,18 @@ Some destinations in Experience Platform have certain rules and obligations for 
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |user_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
-## Export type {#export-type}
+{style="table-layout:auto"}
 
-**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, and others) used in the [!DNL Google Customer Match] destination.
+## Export type and frequency {#export-type-frequency}
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, and others) used in the [!DNL Google Customer Match] destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
 
@@ -64,7 +73,7 @@ Customers with compliant accounts are automatically allow listed by Google.
 
 Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
 
-## Phone number hashing requirements {#phone-number-hashing-requirements}
+### Phone number hashing requirements {#phone-number-hashing-requirements}
 
 There are two methods to activate phone numbers in [!DNL Google Customer Match]:
 
@@ -75,7 +84,7 @@ There are two methods to activate phone numbers in [!DNL Google Customer Match]:
 >
 >Phone numbers ingested into the `Phone` namespace cannot be activated in [!DNL Google Customer Match].
 
-## Email hashing requirements {#hashing-requirements}
+### Email hashing requirements {#hashing-requirements}
 
 You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
 
@@ -91,7 +100,7 @@ To learn about ingesting email addresses in Experience Platform, see the [batch 
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
 
-## Using custom namespaces {#custom-namespaces}
+### Using custom namespaces {#custom-namespaces}
 
 Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information.
 
@@ -177,7 +186,7 @@ When configuring this destination, you may receive the following error:
 
 This error occurs when customer accounts do not comply with the [prerequisites](#google-account-prerequisites). To fix this issue, contact Google and make sure your account is allow-listed and is configured for a [!DNL Standard] or higher permission level. See the [Google Ads documentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) for details.
 
-## Extra resources {#additional-resources}
+## Additional resources {#additional-resources}
 
 * [Integrate Google Customer Match - Video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
 

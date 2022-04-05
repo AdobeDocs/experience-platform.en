@@ -23,20 +23,24 @@ This user guide requires a working understanding of the following components of 
 
 ## View datasets
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
+In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
 
 ![](../images/datasets/user-guide/browse-datasets.png)
 
-Click the name of a dataset to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
+By default, only the datasets that you have ingested into are shown. If you want to see the system-generated datasets, enable the **[!UICONTROL Show system datasets]** toggle. System-generated datasets are only used to process other components. For example, the system-generated profile export dataset is used to process the profile dashboard.
+
+![](../images/datasets/user-guide/system-datasets.png)
+
+Select the name of a dataset to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
 
 ![](../images/datasets/user-guide/dataset-activity-1.png)
 ![](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## Preview a dataset
 
-From the **[!UICONTROL Dataset activity]** screen, click **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
+From the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
 
-![](../images/datasets/user-guide/click-to-preview.png)
+![](../images/datasets/user-guide/select-preview.png)
 
 In the preview window, the hierarchical view of the schema for the dataset is shown on the right.
 
@@ -49,9 +53,9 @@ For more robust methods to access your data, [!DNL Experience Platform] provides
 
 ## Create a dataset {#create}
 
-To create a new dataset, start by clicking **[!UICONTROL Create dataset]** in the **[!UICONTROL Datasets]** dashboard.
+To create a new dataset, start by selecting **[!UICONTROL Create dataset]** in the **[!UICONTROL Datasets]** dashboard.
 
-![](../images/datasets/user-guide/click-to-create.png)
+![](../images/datasets/user-guide/select-create.png)
 
 In the next screen, you are presented with the following two options for creating a new dataset:
 
@@ -60,29 +64,29 @@ In the next screen, you are presented with the following two options for creatin
 
 ### Create a dataset with an existing schema {#schema}
 
-In the **[!UICONTROL Create dataset]** screen, click **[!UICONTROL Create dataset from schema]** to create a new empty dataset.
+In the **[!UICONTROL Create dataset]** screen, select **[!UICONTROL Create dataset from schema]** to create a new empty dataset.
 
 ![](../images/datasets/user-guide/create-dataset-schema.png)
 
-The **[!UICONTROL Select schema]** step appears. Browse the schema listing and select the schema that the dataset will adhere to before clicking **[!UICONTROL Next]**.
+The **[!UICONTROL Select schema]** step appears. Browse the schema listing and select the schema that the dataset will adhere to before selecting **[!UICONTROL Next]**.
 
 ![](../images/datasets/user-guide/select-schema.png)
 
-The **[!UICONTROL Configure dataset]** step appears. Provide the dataset with a name and optional description, then click **[!UICONTROL Finish]** to create the dataset.
+The **[!UICONTROL Configure dataset]** step appears. Provide the dataset with a name and optional description, then select **[!UICONTROL Finish]** to create the dataset.
 
 ![](../images/datasets/user-guide/configure-dataset-schema.png)
 
 ### Create a dataset with a CSV file {#csv}
 
-When a dataset is created using a CSV file, an ad hoc schema is created to provide the dataset with a structure that matches the provided CSV file. In the **[!UICONTROL Create dataset]** screen, click the box saying **[!UICONTROL Create dataset from CSV file]**.
+When a dataset is created using a CSV file, an ad hoc schema is created to provide the dataset with a structure that matches the provided CSV file. In the **[!UICONTROL Create dataset]** screen, select **[!UICONTROL Create dataset from CSV file]**.
 
 ![](../images/datasets/user-guide/create-dataset-csv.png)
 
-The **[!UICONTROL Configure]** step appears. Provide the dataset with a name and optional description, then click **[!UICONTROL Next]**.
+The **[!UICONTROL Configure]** step appears. Provide the dataset with a name and optional description, then select **[!UICONTROL Next]**.
 
 ![](../images/datasets/user-guide/configure-dataset-csv.png)
 
-The **[!UICONTROL Add data]** step appears. Upload the CSV file by either dragging and dropping it onto the center of your screen, or click **[!UICONTROL Browse]** to explore your file directory. The file can be up to ten gigabytes in size. Once the CSV file is uploaded, click **[!UICONTROL Save]** to create the dataset.
+The **[!UICONTROL Add data]** step appears. Upload the CSV file by either dragging and dropping it onto the center of your screen, or select **[!UICONTROL Browse]** to explore your file directory. The file can be up to ten gigabytes in size. Once the CSV file is uploaded, select **[!UICONTROL Save]** to create the dataset.
 
 >[!NOTE]
 >
@@ -99,7 +103,7 @@ Every dataset has the ability to enrich customer profiles with its ingested data
 
 For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
 
-To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** screen and click the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
+To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** screen and select the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
 
 >[!NOTE]
 >
@@ -113,7 +117,7 @@ Data usage labels allow you to categorize datasets and fields according to usage
 
 ## Delete a dataset
 
-You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]** screen. Then, click **[!UICONTROL Delete dataset]** to delete it. 
+You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]** screen. Then, slect **[!UICONTROL Delete dataset]** to delete it. 
 
 >[!NOTE]
 >
@@ -121,7 +125,7 @@ You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]*
 
 ![](../images/datasets/user-guide/delete-dataset.png)
 
-A confirmation box appears. Click **[!UICONTROL Delete]** to confirm the deletion of the dataset.
+A confirmation box appears. Select **[!UICONTROL Delete]** to confirm the deletion of the dataset.
 
 ![](../images/datasets/user-guide/confirm-delete.png)
 
@@ -133,15 +137,15 @@ You can delete a dataset from the [!DNL Profile] store only (leaving the data in
 
 ## Monitor data ingestion
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Monitoring]** in the left-navigation. The **[!UICONTROL Monitoring]** dashboard lets you view the statuses of inbound data from either batch or streaming ingestion. To view the statuses of individual batches, click either **[!UICONTROL Batch end-to-end]** or **[!UICONTROL Streaming end-to-end]**. The dashboards list all batch or streaming ingestion runs, including those that are successful, failed, or still in progress. Each listing provides details of the batch, including the batch ID, the name of the target dataset, and the number of records ingested. If the target dataset is enabled for [!DNL Profile], the number of ingested identity and profile records is also displayed.
+In the [!DNL Experience Platform] UI, slect **[!UICONTROL Monitoring]** in the left-navigation. The **[!UICONTROL Monitoring]** dashboard lets you view the statuses of inbound data from either batch or streaming ingestion. To view the statuses of individual batches, select either **[!UICONTROL Batch end-to-end]** or **[!UICONTROL Streaming end-to-end]**. The dashboards list all batch or streaming ingestion runs, including those that are successful, failed, or still in progress. Each listing provides details of the batch, including the batch ID, the name of the target dataset, and the number of records ingested. If the target dataset is enabled for [!DNL Profile], the number of ingested identity and profile records is also displayed.
 
 ![](../images/datasets/user-guide/batch-listing.png)
 
-You can click on an individual **[!UICONTROL Batch ID]** to access the **[!UICONTROL Batch overview]** dashboard and see details for the batch, including error logs should the batch fail to ingest.
+You can select on an individual **[!UICONTROL Batch ID]** to access the **[!UICONTROL Batch overview]** dashboard and see details for the batch, including error logs should the batch fail to ingest.
 
 ![](../images/datasets/user-guide/batch-overview.png)
 
-If you wish to delete the batch, you can do so by clicking **[!UICONTROL Delete batch]** found near the top right of the dashboard. Doing so will also remove its records from the dataset the batch was originally ingested to.
+If you wish to delete the batch, you can do so by selecting **[!UICONTROL Delete batch]** found near the top right of the dashboard. Doing so will also remove its records from the dataset the batch was originally ingested to.
 
 ![](../images/datasets/user-guide/delete-batch.png)
 

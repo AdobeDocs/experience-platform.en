@@ -1,6 +1,6 @@
 ---
 keywords: text classification;Text classification
-solution: Experience Platform, Intelligent Services
+solution: Experience Platform
 title: Text Classification in the Content and Commerce AI API
 topic-legacy: Developer guide
 description: The text classification service, when given a text fragment, can classify it into one or more labels. The classification can be single-label, multi-label, or hierarchical.
