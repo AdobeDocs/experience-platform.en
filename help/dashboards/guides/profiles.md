@@ -100,7 +100,7 @@ To learn more about each of the available standard widgets, select the name of a
 ### [!UICONTROL Profile count] {#profile-count}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profile_count"
+>id="platform_dashboards_profiles_profile_count"
 >title="The **Profile count** widget"
 >abstract="This widget displays the total number of merged profiles within the Profile Store at the time the snapshot was taken.<br>The number depends on the selected merge policy being applied to your Profile data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count" text="Learn more from documentation"
@@ -120,7 +120,7 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 ### [!UICONTROL Profiles added] {#profiles-added}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profile_added"
+>id="platform_dashboards_profiles_profiles_added"
 >title="The **Profiles added** widget"
 >abstract="This widget displays the total number of merged profiles added to the Profile Store at the time of the last snapshot.<br>The number depends on the selected merge policy being applied to your Profile data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-added" text="Learn more from documentation"
@@ -136,7 +136,7 @@ The **[!UICONTROL Profiles added]** widget displays the total number of merged p
 ### [!UICONTROL Profiles count trend] {#profiles-count-trend}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profile_count_trend"
+>id="platform_dashboards_profiles_profiles_count_trend"
 >title="The Profiles count trend widget"
 >abstract="This widget displays the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months.<br>The number also depends on the selected merge policy being applied to your Profile data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="Learn more from documentation"
@@ -156,7 +156,7 @@ A machine learning model automatically generates captions for describing the key
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profile_by_identity"
+>id="platform_dashboards_profiles_profiles_by_identity"
 >title="The Profiles by identity widget"
 >abstract="This widget displays the breakdown of all the merged profiles in your Profile Store by identities."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?#profiles-by-identity" text="Learn more from documentation"
@@ -172,7 +172,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profile_identity_overlap"
+>id="platform_dashboards_profiles_identity overlap"
 >title="The Identity overlap widget"
 >abstract="This widget displays a Venn diagram, showing the overlap of profiles in your Profile Store containing multiple identities."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?#identity-overlap" text="Learn more from documentation"
