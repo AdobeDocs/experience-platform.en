@@ -18,10 +18,10 @@ Sendgrid uses [[!DNL Bearer tokens]](https://experienceleague.adobe.com/docs/exp
 
 The following items are required before you start configuring the destination.
 
-1. You need to have a Sendgrid account. 
+1. You need to have a Sendgrid account.
     * Go to the Sendgrid [signup](https://signup.sendgrid.com/) page to register and create a Sendgrid account, if you do not have one already.
 1. After logging in to the Sendgrid portal, you also need to generate an API token.
-1. Navigate to the Sendgrid website and access the **[!DNL Settings]** > **[DNL! API Keys]** page. Alternatively, refer to the [Sendgrid documentation](https://app.sendgrid.com/settings/api_keys) to access the appropriate section in the Sendgrid app.
+1. Navigate to the Sendgrid website and access the **[!DNL Settings]** > **[!DNL API Keys]** page. Alternatively, refer to the [Sendgrid documentation](https://app.sendgrid.com/settings/api_keys) to access the appropriate section in the Sendgrid app.
 1. Finally, select the **[!DNL Create API Key]** button.
     * Refer to the [Sendgrid documentation](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key), if you need guidance on what actions to perform. 
     * If you would like to programmatically generate your API Key, please refer to the [Sendgrid documentation](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
@@ -158,7 +158,7 @@ To validate that you have correctly set up the destination.
 
 ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. Switch to the **[!Activation data]** tab, then select a segment name.
+1. Switch to the **[!DNL Activation data]** tab, then select a segment name.
 
 ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
@@ -187,8 +187,8 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Additional resources {#additional-resources}
 
 This Sendgrid destination leverages the below APIs:
-  * [Sendgrid Marketing Lists > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list)
-  * [Sendgrid Marketing Contacts > Add or Update Contact API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)
+* [Sendgrid Marketing Lists > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list)
+* [Sendgrid Marketing Contacts > Add or Update Contact API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)
 
 ### Limits {#limits}
 
