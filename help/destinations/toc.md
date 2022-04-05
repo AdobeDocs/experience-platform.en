@@ -105,6 +105,7 @@ feature: Destinations
         * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
         * [Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
+        * [Sendgrid connection](sendgrid.md)
     * Tag extensions {#launch-extensions}
         * [Tag extension overview](./catalog/launch-extensions/overview.md)  
     * Mobile engagement destinations {#mobile-engagement}
