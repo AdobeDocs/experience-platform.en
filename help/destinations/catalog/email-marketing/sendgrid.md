@@ -72,19 +72,19 @@ To connect to this destination, follow the steps described in the [destination c
 1. Within the [!DNL Adobe Experience Platform] console, navigate to **Destinations**.
 
 1. Select the **Catalog** tab and search for *Sendgrid*. Then select **Set up**. After you have established a connection to the destination, the UI label changes to **Activate Segments**.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/02-catalog.jpg)
 
 1. You are shown a wizard which assists you in configuring the Sendgrid destination. Create the new destination by selecting **Configure new destination**.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/03.jpg)
 
 1. Select the **New Account** option and fill in the **Bearer Token** value. This value is the Sendgrid *API Key* previously mentioned in the [prerequisites section](#prerequisites).
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/04.jpg)
 
 1. Select **Connect to destination**. If the Sendgrid *API Key* you provided is valid, the UI displays a **Connected** status with a green check mark, you can then proceed to the next step to fill in additional information fields.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
 ### Connection parameters {#parameters}
@@ -93,7 +93,7 @@ While [setting up](https://experienceleague.adobe.com/docs/experience-platform/d
 
 *  **[!UICONTROL Name]**: The name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: An optional description that will help you identify this destination in the future.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ## Activate segments to this destination {#activate}
@@ -103,29 +103,27 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 Refer to the below images for details specific to this destination.
 
 1. Select one or more segments to export to Sendgrid.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
 1. After selecting **Add new mapping**, you are shown the mapping page to map the source XDM fields to the Sendgrid API target fields.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/13.png)
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
 
 >[!WARNING]
 >
 > Please ensure the **Source field** *Email* should be mapped to the **Target field** *external_id* as shown below.
 
-<br/>
-
 ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
 1. Similarly, the remaining [!DNL Adobe Experience Platform] fields and attributes are mapped to the Sendgrid attributes.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
 1. The comprehensive list of supported mappings that can be set up for the [Sendgrid Marketing Contacts > Add or Update Contact API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) are listed below.
@@ -144,11 +142,11 @@ Refer to the below images for details specific to this destination.
     | xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_province_region | String | The contact's state, province, or region. | Max Length:<br/> 50 characters|
 
 1. After completing the mappings, select **[!UICONTROL Next]** to obtain a review screen indicating the audience and destination are connected.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/22.png)
 
 1. Select **[!UICONTROL Finish]** to complete the setup.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
 ## Validate the data export within Sendgrid {#validate}
@@ -156,33 +154,33 @@ Refer to the below images for details specific to this destination.
 To validate that you have correctly set up the destination.
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** to navigate to the list of destinations.
-<br/> 
+
 ![](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
-1. Select the destination and ensure the status is **[!UICONTROL enabled]**.
-<br/> 
+1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
+
 ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
 1. Switch to the **[!Activation data]** tab, then select a segment name.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. Monitor the segment summary and check the count of profiles corresponds to the count created within the dataset.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
 1. The [Sendgrid Marketing Lists > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list) is used to create unique contact lists within Sendgrid by joining the value of the *list_name* attribute and the timestamp of the data export. Navigate to the Sendgrid site and check if the new contact list conforming to the name pattern is created.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
 1. Select the newly created contact list and check if the new email record from the dataset you created is being populated within the new contact list.
 
 1. Additionally, also check a couple of emails to validate if the field mapping is correct.
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/31.jpg)
-<br/>
+
 ![](../../assets/catalog/email-marketing/sendgrid/32.jpg)
 
 ## Data usage and governance {#data-usage-governance}
