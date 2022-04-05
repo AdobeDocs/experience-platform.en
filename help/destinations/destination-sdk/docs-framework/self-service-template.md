@@ -15,7 +15,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *YOURDESTINATION* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*
+>This documentation page was created by the *YOURDESTINATION* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates, for example `support@yourdestination.com`.*
 
 ## Use cases {#use-cases}
 
@@ -169,7 +169,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Exported data / Validate data export {#exported-data}
 
-*Add a note about how data is exported to your destination. This would help the customer make sure that they have correctly integrated with your destination. For example, you could provide a sample JSON like the one below. Or, you could provide screenshots an information from the destianation's interface that show how customers should expect segments to be populating in the destination platform.*
+*Add a paragraph about how data is exported to your destination. This would help the customer make sure that they have correctly integrated with your destination. For example, you could provide a sample JSON like the one below. Or, you could provide screenshots and information from your destination's interface that show how customers should expect segments to be populating in the destination platform.*
 
 ```
 {
@@ -216,4 +216,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-*You can provide further links to your product documentation or any other resources you consider important for the customer to be successful.*
+*You can provide further links to your product documentation or any other resources that you consider important for the customer to be successful.*
