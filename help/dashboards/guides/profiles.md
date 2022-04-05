@@ -105,7 +105,7 @@ To learn more about each of the available standard widgets, select the name of a
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profile_count"
->title="The **Profile count** widget"
+>title="Profile count"
 >abstract="This widget displays the total number of merged profiles within the Profile Store at the time the snapshot was taken. The number depends on the selected merge policy being applied to your Profile data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count" text="Learn more from documentation"
 
@@ -125,7 +125,7 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profiles_added"
->title="The **Profiles added** widget"
+>title="Profiles added"
 >abstract="This widget displays the total number of merged profiles added to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-added" text="Learn more from documentation"
 
@@ -141,7 +141,7 @@ The **[!UICONTROL Profiles added]** widget displays the total number of merged p
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profiles_count_trend"
->title="The Profiles count trend widget"
+>title="Profiles count trend"
 >abstract="This widget displays the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. The number also depends on the selected merge policy being applied to your Profile data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="Learn more from documentation"
 
@@ -161,7 +161,7 @@ A machine learning model automatically generates captions for describing the key
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profiles_by_identity"
->title="The Profiles by identity widget"
+>title="Profiles by identity"
 >abstract="This widget displays the breakdown of all the merged profiles in your Profile Store by identities."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-by-identity" text="Learn more from documentation"
 
@@ -177,7 +177,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identity_overlap"
->title="The Identity overlap widget"
+>title="Identity overlap"
 >abstract="This widget displays a Venn diagram, showing the overlap of profiles in your Profile Store containing multiple identities."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#identity-overlap" text="Learn more from documentation"
 
@@ -276,7 +276,7 @@ The [!UICONTROL Attribute quality assessment] widget shows the completeness and 
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profile_completeness"
->title="The Profiles by completeness widget"
+>title="Profiles by completeness"
 >abstract="The **Profiles by completeness** donut chart displays the percentage of profile attributes that are filled with non-null values among all observed attributes. The data is accurate as of the last processing date."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness" text="Learn more from documentation"
 
@@ -294,7 +294,7 @@ This widget shows the proportion of profiles that are of high, medium, or low co
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profile_completeness_trend"
->title="The Profile completeness trend widget"
+>title="Profile completeness trend"
 >abstract="This widget creates a stacked column chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness-trend" text="Learn more from documentation"
 
