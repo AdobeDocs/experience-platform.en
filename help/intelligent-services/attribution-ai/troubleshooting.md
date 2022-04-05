@@ -1,10 +1,11 @@
 ---
 keywords: Experience Platform;getting started;attribution ai;popular topics;attribution ai input;attribution ai output;attribution ai troubleshooting;attribution ai errors
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Attribution AI
 title: Attribution AI error troubleshooting
 description: Find answers to common errors in Attribution AI.
 type: Documentation
+exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
 ---
 # Attribution AI error troubleshooting
 

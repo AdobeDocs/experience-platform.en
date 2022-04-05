@@ -28,9 +28,20 @@ By using streaming destinations such as [!DNL Azure Event Hubs], you can easily 
 
 For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the [!DNL Azure Event Hubs] destination, you would receive this event in [!DNL Azure Event Hubs]. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [audience activation workflow](../../ui/activate-streaming-profile-destinations.md#select-attributes).
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
+
+## IP address allowlist {#ip-address-allowlist}
+
+To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the [!DNL Azure Event Hubs] destination. Refer to [IP address allow list for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
 ## Connect to the destination {#connect}
 
