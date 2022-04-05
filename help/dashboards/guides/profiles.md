@@ -176,7 +176,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_identity overlap"
+>id="platform_dashboards_profiles_identity_overlap"
 >title="The Identity overlap widget"
 >abstract="This widget displays a Venn diagram, showing the overlap of profiles in your Profile Store containing multiple identities."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?#identity-overlap" text="Learn more from documentation"
@@ -191,25 +191,49 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ![](../images/profiles/identity-overlap.png)
 
-### [!UICONTROL Single Identity Profiles] {#single-identity-profiles}
+### [!UICONTROL Single identity profiles] {#single-identity-profiles}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_single_identity_profiles"
+>title="Single identity profiles"
+>abstract="This widget provides a count of your organization's profiles that only have one type of ID type that creates their identity. This ID type can either be an email or ECID."
+>additional-url=""
 
 The [!UICONTROL Single Identity Profiles] widget provides a count of your organization's profiles that only have one type of ID type that creates their identity. This ID type can either be an email or ECID. The profile count is generated from the data contained in the most recent snapshot.
 
 ![Single Identity Profiles widget.](../images/profiles/single-identity-profiles.png)
 
-### [!UICONTROL Unsegmented Profiles] {#unsegmented-profiles}
+### [!UICONTROL Unsegmented profiles] {#unsegmented-profiles}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_unsegmented_profiles"
+>title="Unsegmented profiles"
+>abstract="This widget provides the total number of all profiles not attached to any segment and represents the opportunity for profile activation across your organization."
+>additional-url=""
 
 The [!UICONTROL Unsegmented Profiles] widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. It also indicates the opportunity to expunge profiles that do not provide adequate ROI.
 
 ![The Unsegmented Profiles widget.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Unsegmented Profiles Trend] {#unsegmented-profiles-trend}
+### [!UICONTROL Unsegmented profiles trend] {#unsegmented-profiles-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_unsegmented_profiles_trend"
+>title="Unsegmented profiles trend"
+>abstract="This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods."
+>additional-url=""
 
 The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the y-axis and time on the x-axis.
 
 ![The Unsegmented Profiles Trend widget.](../images/profiles/unsegmented-profiles-trend.png)
 
-### [!UICONTROL Unsegmented Profiles by Identity] (#unsegmented-profiles-by-identity)
+### [!UICONTROL Unsegmented profiles by identity] (#unsegmented-profiles-by-identity)
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_profiles_unsegmented_profiles_by_identity"
+>title="Unsegmented profiles by identity"
+>abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
+>additional-url=""
 
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
@@ -253,7 +277,7 @@ The [!UICONTROL Attribute quality assessment] widget shows the completeness and 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profile_completeness"
 >title="The Profiles by completeness widget"
->abstract="The **Profiles by completeness** donut chart displays the percentage of profile attributes that are filled with non-null values among all observed attributes. The data is accurate as of the last processing date.
+>abstract="The **Profiles by completeness** donut chart displays the percentage of profile attributes that are filled with non-null values among all observed attributes. The data is accurate as of the last processing date."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness" text="Learn more from documentation"
 
 The [!UICONTROL Profiles by completeness] widget creates a donut chart of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
