@@ -69,7 +69,7 @@ To learn more about each of the available standard widgets, select the name of a
 ### [!UICONTROL Audience size] {#audience-size}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_segments_audience_size"
+>id="platform_dashboards_segments_audiencesize"
 >title="Audience size"
 >abstract="This widget displays the total number of merged profiles within the selected segment. This number depends on the merge policy applied to your data and is correct at the time of the most recent snapshot."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="Learn more from documentation"
@@ -83,7 +83,7 @@ For more information on fragments and merged profiles, please begin by reading t
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_segments_audience_size_trend"
+>id="platform_dashboards_segments_audiencesizetrend"
 >title="Audience size trend"
 >abstract="This widget provides information regarding the total number of profiles in the segment as captured during the daily snapshot, for the last 30 days, 90 days, or 12 months."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Learn more from documentation"
@@ -101,7 +101,7 @@ The **[!UICONTROL Audience size trend]** widget provides a [!UICONTROL Captions]
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_segments_identity_overlap"
+>id="platform_dashboards_segments_identityoverlap"
 >title="Identity overlap"
 >abstract="This widget shows the overlap of profiles in your segment containing both chosen identities. The circles display the relative size of each identity. The number of profiles containing both namespaces are represented by the overlap between the circles."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="Learn more from documentation"
@@ -119,7 +119,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_segments_profiles_by_identity"
+>id="platform_dashboards_segments_profilesbyidentity"
 >title="Profiles by identity"
 >abstract="This widget displays the breakdown of identities across every merged profile in your selected segment."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="Learn more from documentation"
