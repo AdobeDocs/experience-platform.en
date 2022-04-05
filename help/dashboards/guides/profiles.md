@@ -197,7 +197,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 >id="platform_dashboards_profiles_single_identity_profiles"
 >title="Single identity profiles"
 >abstract="This widget provides a count of your organization's profiles that only have one type of ID type that creates their identity. This ID type can either be an email or ECID."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#single-identity-profiles"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#single-identity-profiles" text="Learn more from documentation"
 
 The [!UICONTROL Single Identity Profiles] widget provides a count of your organization's profiles that only have one type of ID type that creates their identity. This ID type can either be an email or ECID. The profile count is generated from the data contained in the most recent snapshot.
 
@@ -209,7 +209,7 @@ The [!UICONTROL Single Identity Profiles] widget provides a count of your organi
 >id="platform_dashboards_profiles_unsegmented_profiles"
 >title="Unsegmented profiles"
 >abstract="This widget provides the total number of all profiles not attached to any segment and represents the opportunity for profile activation across your organization."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles" text="Learn more from documentation"
 
 The [!UICONTROL Unsegmented Profiles] widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. It also indicates the opportunity to expunge profiles that do not provide adequate ROI.
 
@@ -221,7 +221,7 @@ The [!UICONTROL Unsegmented Profiles] widget provides the total number of all pr
 >id="platform_dashboards_profiles_unsegmented_profiles_trend"
 >title="Unsegmented profiles trend"
 >abstract="This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-trend"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-trend" text="Learn more from documentation"
 
 The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the y-axis and time on the x-axis.
 
@@ -233,7 +233,7 @@ The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustr
 >id="platform_dashboards_profiles_unsegmented_profiles_by_identity"
 >title="Unsegmented profiles by identity"
 >abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-by-identity"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-by-identity" text="Learn more from documentation"
 
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
