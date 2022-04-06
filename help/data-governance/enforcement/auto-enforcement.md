@@ -29,7 +29,7 @@ When a segment is first activated, [!DNL Policy Service] checks for applicable p
 
 * The data usage labels applied to fields and datasets within the segment to be activated.
 * The marketing purpose of the destination.
-<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
+* (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies.
 
 >[!NOTE]
 >
@@ -51,16 +51,14 @@ In Experience Platform, policy enforcement is concerned with the following linea
 1. Groups of profiles are divided into **segments** based on common attributes.
 1. Segments are activated to downstream **destinations**.
 
-Each stage in the above timeline represents an entity that may contribute to a policy being violated, as outlined in the table below:
+Each stage in the above timeline represents an entity that may contribute to policy enforcement, as outlined in the table below:
 
 | Data lineage stage | Role in policy enforcement |
 | --- | --- |
-| Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts. |
+| Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to consent policies (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. |
 | Merge policy | Merge policies are the rules that Platform uses to determine how data will be prioritized when merging together fragments from multiple datasets. Policy violations will occur if your merge policies are configured so that datasets with restricted labels are activated to a destination. See the [merge policies overview](../../profile/merge-policies/overview.md) for more information. |
 | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. |
-| Destination | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a policy. In other words, the marketing use case you define for a destination determines which data usage policies and consent policies are applicable to that destination. Policy violations will occur if you activate a segment whose usage labels are restricted by the target destination's applicable policies. |
-<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
-<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| Destination | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a policy. In other words, the marketing action you define for a destination determines which data usage policies and consent policies are applicable to that destination.<br><br>Data usage policy violations occur if you activate a segment whose usage labels are restricted for the target destination's marketing action.<br><br>(Beta) When a segment is activated, any profiles that do not contain the required consent attributes for the marketing action (as defined by your consent policies) are excluded from the activated audience. |
 
 >[!IMPORTANT]
 >
@@ -70,15 +68,14 @@ Each stage in the above timeline represents an entity that may contribute to a p
 
 When policy violations occur, the resulting messages that appear in the UI provide useful tools for exploring the violation's contributing data lineage to help resolve the issue. More details are provided in the next section.
 
-## Policy violation messages {#enforcement}
+## Policy enforcement messages {#enforcement}
 
-<!-- (TO INCLUDE FOR PHASE 2)
 The sections below outline the different policy enforcement messages that appear in the Platform UI:
 
 * [Data usage policy violation](#data-usage-violation)
 * [Consent policy evaluation](#consent-policy-evaluation)
 
-### Data usage policy violation {#data-usage-violation} -->
+### Data usage policy violation {#data-usage-violation}
 
 If a policy violation occurs from attempting to activate a segment (or [making edits to an already activated segment](#policy-enforcement-for-activated-segments)) the action is prevented and a popover appears indicating that one or more policies have been violated. Once a violation has triggered, the **[!UICONTROL Save]** button is disabled for the entity you are modifying until the appropriate components are updated to comply with data usage policies.
 
@@ -102,7 +99,6 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 
 ![](../images/enforcement/list-view.png)
 
-<!-- (TO INCLUDE FOR PHASE 2)
 ### Consent policy evaluation (Beta) {#consent-policy-evaluation}
 
 >[!IMPORTANT]
@@ -114,7 +110,6 @@ If you have [created consent policies](../policies/user-guide.md#consent-policy)
 Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
 
 A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
- -->
 
 ## Policy enforcement for activated segments {#policy-enforcement-for-activated-segments}
 
