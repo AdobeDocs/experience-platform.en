@@ -13,6 +13,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * [A customer experience powered by Platform (Video)](video/customer-experience.md)
 * [Behind the scenes of a customer experience powered by Platform (Video)](video/customer-experience-bts.md)
 * Getting started {#getting-started}
+  * [End-to-end example workflow](end-to-end-tutorial.md)
   * [Key capabilities (Video)](video/key-capabilities.md)
   * [Key use cases (Video)](video/platform-use-cases.md)
   * [Platform architecture (Video)](video/platform-architecture.md)
@@ -49,7 +50,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
       * [Overview](./governance-privacy-security/consent/iab/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
     * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
-  * Audit logs (Beta) {#audit-logs}
+  * Audit logs {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
 * [License usage dashboard](license-usage-dashboard.md)
 * [Troubleshooting guide](troubleshooting.md)

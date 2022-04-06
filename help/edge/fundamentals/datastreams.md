@@ -1,7 +1,7 @@
 ---
-title: Configure your Datastream for the Experience Platform Web SDK
-description: Learn how to configure the Datastreams. 
-keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
+title: Configure a Datastream
+description: Connect your client-side Experience Platform SDK integration with Adobe products and third-party destinations.
+keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;Data Prep for Data Collection;Data Prep;Mapper;XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
 # Configure a datastream
@@ -12,7 +12,7 @@ This document covers the steps for configuring a datastream in the Data Collecti
 
 >[!NOTE]
 >
->Your organization must be provisioned for this feature in order to access it in the UI. If you do not have access, please contact your Customer Success Manager (CSM) to get put on the allowlist.
+>Your organization must be provisioned for this feature in order to access it in the UI. Please fill out the following [form](https://adobe.ly/websdkaccess) to request the necessary access.
 
 ## Access the [!UICONTROL Datastreams] workspace
 
@@ -44,6 +44,16 @@ If you are configuring this datastream for use in Experience Platform and are us
 
 ![Basic configuration for a datastream](../images/datastreams/configure.png)
 
+Select **[!UICONTROL Advanced Options]** to reveal additional controls to configure the datastream.
+
+![Advanced configuration options](../images/datastreams/advanced-options.png)
+
+| Setting | Description |
+| --- | --- |
+| [!UICONTROL Geo Location] | Determines whether GPS lookups occur based on the user's IP address. The default setting **[!UICONTROL None]** disables any GPS lookups, while the **[!UICONTROL City]** setting provides GPS coordinates to two decimal places. |
+| [!UICONTROL First Party ID Cookie] | When enabled, this setting tells the Edge Network to refer to a specified cookie when looking up a [first-party device ID](../identity/first-party-device-ids.md), rather than looking up this value in the Identity Map.<br><br>When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored. |
+| [!UICONTROL Third Party ID Sync] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. When enabled, this setting lets you specify which container of ID syncs is run for this datastream. |
+
 The rest of this section focuses on the steps to map data to a selected Platform event schema. If you are using the Mobile SDK or are otherwise not configuring your datastream for Platform, select **[!UICONTROL Save]** before proceeding to the next section on [adding services to the datastream](#add-services).
 
 ### Data Prep for Data Collection {#data-prep}
@@ -52,23 +62,94 @@ The rest of this section focuses on the steps to map data to a selected Platform
 >
 >Data Prep for Data Collection is currently not supported for Mobile SDK implementations.
 
-Data Prep is an Experience Platform services that allows you to map, transform, and validate data to and from Experience Data Model (XDM). When configuring a Platform-enabled datastream, you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
+Data Prep is an Experience Platform service that allows you to map, transform, and validate data to and from Experience Data Model (XDM). When configuring a Platform-enabled datastream, you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
 
-The subsections below cover the basic steps for mapping your data within the Data Collection UI. For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
+>[!NOTE]
+>
+>For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
+>
+>* [Data Prep overview](../../data-prep/home.md)
+>* [Data Prep mapping functions](../../data-prep/functions.md)
+>* [Handling data formats with Data Prep](../../data-prep/data-handling.md)
 
-* [Data Prep overview](../../data-prep/home.md)
-* [Data Prep mapping functions](../../data-prep/functions.md)
-* [Handling data formats with Data Prep](../../data-prep/data-handling.md)
+The subsections below cover the basic steps for mapping your data within the Data Collection UI. For a quick demonstration of these steps, refer to the following video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 #### [!UICONTROL Select data]
 
-Select **[!UICONTROL Save and Add Mapping]** after completing the [basic configuration step](#configure), and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform. You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead.
+Select **[!UICONTROL Save and Add Mapping]** after completing the [basic configuration step](#configure), and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform.
+
+You should construct this JSON object so that you can map it the properties in your data layer that you want to capture. Select the section below to view an example of a properly formatted JSON object.
+
++++Sample JSON file
+
+```json
+{
+  "data": {
+    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
+    "eventType": "view:load",
+    "timestamp": "2021-09-30T14:50:09.604Z",
+    "web": {
+      "webPageDetails": {
+        "siteSection": "Product section",
+        "server": "example.com",
+        "name": "product home",
+        "URL": "https://www.example.com"
+      },
+      "webReferrer": {
+        "URL": "https://www.adobe.com/index2.html",
+        "type": "external"
+      }
+    },
+    "commerce": {
+      "purchase": 1,
+      "order": {
+        "orderID": "1234"
+      }
+    },
+    "product": [
+      {
+        "productInfo": {
+          "productID": "123"
+        }
+      },
+      {
+        "productInfo": {
+          "productID": "1234"
+        }
+      }
+    ],
+    "reservation": {
+      "id": "anc45123xlm",
+      "name": "Embassy Suits",
+      "SKU": "12345-L",
+      "skuVariant": "12345-LG-R",
+      "priceTotal": "112.99",
+      "currencyCode": "USD",
+      "adults": 2,
+      "children": 3,
+      "productAddMethod": "PDP",
+      "_namespace": {
+        "test": 1,
+        "priceTotal": "112.99",
+        "category": "Overnight Stay"
+      },
+      "freeCancellation": false,
+      "cancellationFee": 20,
+      "refundable": true
+    }
+  }
+}
+```
+
++++
 
 >[!IMPORTANT]
 >
 >The JSON object must have a single root node `data` in order to pass validation.
 
-If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
+You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead. If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
 
 ![JSON sample of expected incoming data](../images/datastreams/select-data.png)
 
@@ -90,6 +171,12 @@ The mapping page reappears with the completed field mapping shown. The **[!UICON
 
 ![Field successfully mapped with progress reflected](../images/datastreams/field-mapped.png)
 
+>[!TIP]
+>
+>If you want to map an array of objects (in the source field) to an array of different objects (in the target field), add `[*]` after the array name in the source and destination field paths, as shown below.
+>
+>![Array object mapping](../images/datastreams/array-object-mapping.png)
+
 Continue following the above steps to map the rest of the fields to the target schema. While you do not have to map all available source fields, any fields in the target schema that are set as required must be mapped in order to complete this step. The **[!UICONTROL Required fields]** counter indicates how many required fields are not yet mapped in the current configuration.
 
 Once the required fields count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
@@ -101,14 +188,6 @@ Once the required fields count reaches zero and you are satisfied with your mapp
 After configuring a new datastream or selecting an existing one to view, the details page for that datastream appears. Here you can find further information about the datastream, including its ID.
 
 ![Details page for a created datastream](../images/datastreams/view-details.png)
-
-When a datastream is created, three associated environments are automatically created with identical settings. These three environments are `dev`, `stage`, and `prod`, which correspond to the [default environments for tags](../../tags/ui/publishing/environments.md). When you build a tag library to a `dev` environment, the library automatically uses the `dev` environment from the datastream. You can freely edit the settings in individual environments to suit your needs.
-
-In SDK implementations, an `edgeConfigId` is a composite ID that specifies the datastream and the particular environment within that datastream. For example, to specify the `stage` environment for a datastream with ID `1c86778b-cdba-4684-9903-750e52912ad1`, use the `edgeConfigId` `1c86778b-cdba-4684-9903-750e52912ad1:stage`.
-
->[!IMPORTANT]
->
->If no environment is present in the composite ID, then the production environment (`prod`) is used.
 
 From the datastream details screen, you can [add services](#add-services) to enable capabilities from the Adobe Experience Cloud products you have access to.
 
@@ -201,16 +280,6 @@ This service controls whether and how data is sent to [event forwarding](../../t
 >[!NOTE]
 >
 >You can select **[!UICONTROL Manually enter IDs]** to type in the property and environment names instead of using the dropdown menus.
-
-### [!UICONTROL Third Party ID Sync] settings
-
-The third party ID section is the only section that is always on. It has two available settings: "[!UICONTROL Third Party ID Sync Enabled]" and "[!UICONTROL Third Party ID Sync Container ID]".
-
-![Third Party ID Sync section of the configuration UI](../images/datastreams/third-party-id-sync-config.png)
-
-| Setting | Description |
-| --- | --- |
-| [!UICONTROL Third Party ID Sync Container ID] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. This controls which container of ID syncs is run for this datastream. |
 
 ## Next steps
 

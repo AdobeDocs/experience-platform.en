@@ -208,7 +208,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->This tutorial uses the [Apache Parquet](https://parquet.apache.org/documentation/latest/) file format for all its examples. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md) 
+>This tutorial uses the [Apache Parquet](https://parquet.apache.org/docs/) file format for all its examples. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md) 
 
 **Response**
 

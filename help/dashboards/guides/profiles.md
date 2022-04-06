@@ -96,6 +96,10 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Profiles count trend]](#profiles-count-trend)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
+* [[!UICONTROL Single Identity Profiles]](#single-identity-profiles)
+* [[!UICONTROL Unsegmented Profiles]](#unsegmented-profiles)
+* [[!UICONTROL Unsegmented Profiles] Trend](#unsegmented-profiles-trend)
+* [[!UICONTROL Unsegmented Profiles by Identity]](#unsegmented-profiles-by-identity)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -129,7 +133,7 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 
 The **[!UICONTROL Profile count trend]** widget displays a 'captions' button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
-![Profile overview tab displaying the Profiles count trend widget with the captions button highlighted.](../images/profiles/profile-count-trend-captions.png)
+![The Profile overview tab displaying the Profiles count trend widget with the captions button highlighted.](../images/profiles/profile-count-trend-captions.png)
 
 A machine learning model automatically generates captions for describing the key trends and important events by analyzing the chart and the data.
 
@@ -157,13 +161,37 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ![](../images/profiles/identity-overlap.png)
 
+### [!UICONTROL Single Identity Profiles] {#single-identity-profiles}
+
+The [!UICONTROL Single Identity Profiles] widget provides a count of your organization's profiles that only have one type of ID type that creates their identity. This ID type can either be an email or ECID. The profile count is generated from the data contained in the most recent snapshot.
+
+![Single Identity Profiles widget.](../images/profiles/single-identity-profiles.png)
+
+### [!UICONTROL Unsegmented Profiles] {#unsegmented-profiles}
+
+The [!UICONTROL Unsegmented Profiles] widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. It also indicates the opportunity to expunge profiles that do not provide adequate ROI.
+
+![The Unsegmented Profiles widget.](../images/profiles/unsegmented-profiles.png)
+
+### [!UICONTROL Unsegmented Profiles Trend] {#unsegmented-profiles-trend}
+
+The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the y-axis and time on the x-axis.
+
+![The Unsegmented Profiles Trend widget.](../images/profiles/unsegmented-profiles-trend.png)
+
+### [!UICONTROL Unsegmented Profiles by Identity] (#unsegmented-profiles-by-identity)
+
+The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
+
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
+
 ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
 >[!IMPORTANT]
 >
 >The profile efficacy widgets are currently in Beta and are not available to all users. The documentation and the functionality are subject to change.
 
-Adobe provides multiple widgets to asses the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
+Adobe provides multiple widgets to assess the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
 
 To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
@@ -179,7 +207,7 @@ This widget shows the completeness and cardinality of each profile attribute sin
 |---|---|
 | Attribute  | The name of the attribute.  |
 | Profiles  | The number of profiles that have this attribute and are filled with non-null values.  |
-| Completeness  | This percentage is determined by the total number of profiles that have this attribute and are filled with non-null values. The number is calculated by dividing the the total number of profiles by the total number of non-empty values in the profiles for that attribute.  |
+| Completeness  | This percentage is determined by the total number of profiles that have this attribute and are filled with non-null values. The number is calculated by dividing the total number of profiles by the total number of non-empty values in the profiles for that attribute.  |
 | Cardinality  | The total number of **unique** non-null values of this attribute. It is measured across all profiles. |
 
 ![The attributes quality assessment widget](../images/profiles/attributes-quality-assessment.png)
@@ -190,9 +218,9 @@ This widget creates a circle chart of profile completeness since the last proces
 
 This widget shows the proportion of profiles that are of high, medium, or low completeness. By default, there are three levels of completeness configured: 
 
-* High completeness: Profiles have more than 70% attributes filled. 
-* Medium completeness: Profiles have less than 70% and more than 30% attributes filled. 
-* Low completeness: Profiles have less than 30% attributes filled. 
+* High completeness: Profiles have more than 70% of attributes filled. 
+* Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
+* Low completeness: Profiles have less than 30% of attributes filled. 
 
 ![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
 
@@ -204,9 +232,9 @@ The x-axis represents time, the y-axis represents the number of profiles, and th
 
 The three levels of completeness are:
 
-* High completeness: Profiles have more than 70% attributes filled. 
-* Medium completeness: Profiles have less than 70% and more than 30% attributes filled. 
-* Low completeness: Profiles have less than 30% attributes filled.
+* High completeness: Profiles have more than 70% of attributes filled. 
+* Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
+* Low completeness: Profiles have less than 30% of attributes filled.
 
 ![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png)
 
