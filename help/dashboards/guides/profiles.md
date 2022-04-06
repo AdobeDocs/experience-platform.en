@@ -104,7 +104,7 @@ To learn more about each of the available standard widgets, select the name of a
 ### [!UICONTROL Profile count] {#profile-count}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_profile_count"
+>id="platform_dashboards_profiles_profilecount"
 >title="Profile count"
 >abstract="This widget displays the total number of merged profiles within the Profile Store at the time the snapshot was taken. The number depends on the selected merge policy being applied to your Profile data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count" text="Learn more from documentation"
@@ -124,9 +124,9 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 ### [!UICONTROL Profiles added] {#profiles-added}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_profiles_added"
+>id="platform_dashboards_profiles_profilesadded"
 >title="Profiles added"
->abstract="This widget displays the total number of merged profiles added to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
+>abstract="This widget displays the total number of merged profiles **added** to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-added" text="Learn more from documentation"
 
 The **[!UICONTROL Profiles added]** widget displays the total number of merged profiles added to the Profile Store at the time of the last snapshot. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. You can use the dropdown selector to view the profiles added over the last 30 days, 90 days, or 12 months.
@@ -140,7 +140,7 @@ The **[!UICONTROL Profiles added]** widget displays the total number of merged p
 ### [!UICONTROL Profiles count trend] {#profiles-count-trend}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_profiles_count_trend"
+>id="platform_dashboards_profiles_profilescounttrend"
 >title="Profiles count trend"
 >abstract="This widget displays the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. The number also depends on the selected merge policy being applied to your Profile data."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-count-trend" text="Learn more from documentation"
@@ -160,7 +160,7 @@ A machine learning model automatically generates captions for describing the key
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_profiles_by_identity"
+>id="platform_dashboards_profiles_profilesbyidentity"
 >title="Profiles by identity"
 >abstract="This widget displays the breakdown of all the merged profiles in your Profile Store by identities."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profiles-by-identity" text="Learn more from documentation"
@@ -176,14 +176,14 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_identity_overlap"
+>id="platform_dashboards_profiles_identityoverlap"
 >title="Identity overlap"
->abstract="This widget displays a Venn diagram, showing the overlap of profiles in your Profile Store containing multiple identities."
+>abstract="This widget uses a Venn diagram to display the overlap of profiles in your Profile Store that contain the two selected identities."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#identity-overlap" text="Learn more from documentation"
 
-The **[!UICONTROL Identity overlap]** widget displays a Venn diagram, or set diagram, showing the overlap of profiles in your Profile Store containing multiple identities. 
+The **[!UICONTROL Identity overlap]** widget uses a Venn diagram, or set diagram, to display the overlap of profiles in your Profile Store that contain the two selected identities.
 
-After using the dropdown menus on the widget to select the identities that you wish to compare, circles appear displaying the relative size of each identity, with the number of profiles containing both namespaces being represented by the size of the overlap between the circles. If a customer interacts with your brand on more than one channel, multiple identities will be associated with that individual customer, therefore it is likely that your organization will have multiple profiles containing fragments from more than one identity.
+Use the widget dropdown menus to select the identities that you wish to compare. Circles display the relative total count of profiles that contain each identity. The number of profiles containing both identities is represented by the size of the overlap between the circles. If a customer interacts with your brand on more than one channel, multiple identities will be associated with that individual customer, therefore it is likely that your organization will have multiple profiles containing fragments from more than one identity.
 
 For more information on profile fragments, begin by reading the section on [profile fragments vs merged profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) in the Real-time Customer Profile overview.
 
@@ -194,7 +194,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 ### [!UICONTROL Single identity profiles] {#single-identity-profiles}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_single_identity_profiles"
+>id="platform_dashboards_profiles_singleidentityprofiles"
 >title="Single identity profiles"
 >abstract="This widget provides a count of your organization's profiles that only have one type of ID type that creates their identity. This ID type can either be an email or ECID."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#single-identity-profiles" text="Learn more from documentation"
@@ -206,7 +206,7 @@ The [!UICONTROL Single Identity Profiles] widget provides a count of your organi
 ### [!UICONTROL Unsegmented profiles] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_unsegmented_profiles"
+>id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Unsegmented profiles"
 >abstract="This widget provides the total number of all profiles not attached to any segment and represents the opportunity for profile activation across your organization."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles" text="Learn more from documentation"
@@ -218,7 +218,7 @@ The [!UICONTROL Unsegmented Profiles] widget provides the total number of all pr
 ### [!UICONTROL Unsegmented profiles trend] {#unsegmented-profiles-trend}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_unsegmented_profiles_trend"
+>id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Unsegmented profiles trend"
 >abstract="This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-trend" text="Learn more from documentation"
@@ -230,7 +230,7 @@ The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustr
 ### [!UICONTROL Unsegmented profiles by identity] (#unsegmented-profiles-by-identity)
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_unsegmented_profiles_by_identity"
+>id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="Unsegmented profiles by identity"
 >abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-by-identity" text="Learn more from documentation"
@@ -250,7 +250,7 @@ Adobe provides multiple widgets to assess the completeness of the ingested profi
 To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
 * [[!UICONTROL Attribute quality assessment]](#attribute-quality-assessment)
-* [[!UICONTROL Profile completeness]](#profile-completeness)
+* [[!UICONTROL Profiles by completeness]](#profiles-by-completeness)
 * [[!UICONTROL Profile completeness trend]](#profile-completeness-trend)
 
 ### (Beta) [!UICONTROL Attribute quality assessment] {#attribute-quality-assessment}
@@ -272,10 +272,10 @@ The [!UICONTROL Attribute quality assessment] widget shows the completeness and 
 
 ![The attributes quality assessment widget](../images/profiles/attributes-quality-assessment.png)
 
-### (Beta) [!UICONTROL Profiles by completeness] {#profile-completeness}
+### (Beta) [!UICONTROL Profiles by completeness] {#profiles-by-completeness}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profile_completeness"
+>id="platform_dashboards_profiles_profilesbycompleteness"
 >title="Profiles by completeness"
 >abstract="The **Profiles by completeness** donut chart displays the percentage of profile attributes that are filled with non-null values among all observed attributes. The data is accurate as of the last processing date."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness" text="Learn more from documentation"
@@ -293,7 +293,7 @@ This widget shows the proportion of profiles that are of high, medium, or low co
 ### (Beta) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profile_completeness_trend"
+>id="platform_dashboards_profiles_profilecompletenesstrend"
 >title="Profile completeness trend"
 >abstract="This widget creates a stacked column chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness-trend" text="Learn more from documentation"
