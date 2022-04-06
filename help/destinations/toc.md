@@ -179,6 +179,8 @@ feature: Destinations
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
+    * Reference {#reference}
+      * [Supported transformation functions](./destination-sdk/supported-functions.md)
     * Document your destination {#document-destination}
       * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
