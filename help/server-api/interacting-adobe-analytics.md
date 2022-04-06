@@ -3,8 +3,8 @@ title: Interacting with Adobe Analytics
 description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: data collection; outlet; analytics; Adobe Experience Platform Edge Network api;analytics
+exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
 ---
-
 # Interacting with Adobe Analytics
 
 ## Overview {#overview}
