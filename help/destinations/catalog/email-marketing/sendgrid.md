@@ -95,7 +95,7 @@ While [setting up](https://experienceleague.adobe.com/docs/experience-platform/d
 
 ## Activate segments to this destination {#activate}
 
-Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination. 
+Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination. 
 
 Refer to the below images for details specific to this destination.
 
@@ -105,7 +105,7 @@ Refer to the below images for details specific to this destination.
 
 1. After selecting **Add new mapping**, you are shown the mapping page to map the source XDM fields to the Sendgrid API target fields.
 
-![](../../assets/catalog/email-marketing/sendgrid/13.png)
+![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
 
 ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
 
