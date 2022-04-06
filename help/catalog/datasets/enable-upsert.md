@@ -11,7 +11,7 @@ This tutorial covers the process of enabling a dataset with "upsert" capabilitie
 
 >[!NOTE]
 >
->The "upsert" workflow only works for **batch** ingestion. Streaming ingestion is **not** supported.
+>The upsert workflow only works for batch ingestion. Streaming ingestion is **not** supported.
 
 ## Getting started
 
@@ -100,11 +100,11 @@ A successful response shows an array containing the ID of the newly created data
 
 ## Configure an existing dataset {#configure-an-existing-dataset}
 
-The following steps cover how to configure an existing Profile-enabled dataset for update ("upsert") functionality. 
+The following steps cover how to configure an existing Profile-enabled dataset for update (upsert) functionality. 
 
 >[!NOTE]
 >
->In order to configure an existing Profile-enabled dataset for "upsert", you must first disable the dataset for Profile and then re-enable it alongside the `isUpsert` tag. If the existing dataset is not enabled for Profile, you can proceed directly to the steps for [enabling the dataset for Profile and upsert](#enable-the-dataset). If you are unsure, the following steps show you how to check if the dataset is enabled already.
+>In order to configure an existing Profile-enabled dataset for upsert, you must first disable the dataset for Profile and then re-enable it alongside the `isUpsert` tag. If the existing dataset is not enabled for Profile, you can proceed directly to the steps for [enabling the dataset for Profile and upsert](#enable-the-dataset). If you are unsure, the following steps show you how to check if the dataset is enabled already.
 
 ### Check if the dataset is enabled for Profile
 
