@@ -31,7 +31,7 @@ To view system-generated datasets, select the filter icon (![A filter icon.](./i
 
 ![The Datasets Browse tab with the filter icon highlighted.](./images/query/filter-datasets.png)
 
-A sidebar appears containing two toggles, [!UICONTROL Included in Profile], and [!UICONTROL Show system datasets]. Select the toggle for [!UICONTROL Show system datasets] to include system-generated datasets within the browsable list of datasets.
+A sidebar appears containing two toggles, [!UICONTROL Included in Profile] and [!UICONTROL Show system datasets]. Select the toggle for [!UICONTROL Show system datasets] to include system-generated datasets within the browsable list of datasets.
 
 ![The Datasets Browse tab with the Show system datasets toggle highlighted.](./images/query/show-system-datasets.png)
 
