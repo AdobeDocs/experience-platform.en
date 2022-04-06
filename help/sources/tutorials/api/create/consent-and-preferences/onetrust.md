@@ -1,38 +1,38 @@
 ---
 keywords: Experience Platform;home;popular topics;OneTrust
 solution: Experience Platform
-title: (Beta) Create a dataflow for a OneTrust source using the Flow Service API
-description: Learn how to connect Adobe Experience Platform to OneTrust using the Flow Service API.
+title: (Beta) Create a dataflow for a OneTrust Integration source using the Flow Service API
+description: Learn how to connect Adobe Experience Platform to OneTrust Integration using the Flow Service API.
 ---
-# (Beta) Create a dataflow for a [!DNL OneTrust] source using the [!DNL Flow Service] API
+# (Beta) Create a dataflow for a [!DNL OneTrust Integration] source using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
->The [!DNL OneTrust] source is in beta. Its features and documentation are subject to change. For information on using beta-labelled sources, see the [sources overview](../../../../home.md#terms-and-conditions).
+>The [!DNL OneTrust Integration] source is in beta. Its features and documentation are subject to change. For information on using beta-labelled sources, see the [sources overview](../../../../home.md#terms-and-conditions).
 
-The following tutorial walks you through the steps to create a source connection and a dataflow to bring both historic and scheduled consent data from [[!DNL OneTrust]](https://my.onetrust.com/s/contactsupport?language=en_US) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring both historic and scheduled consent data from [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!IMPORTANT]
 >
->This documentation page was created by the [!DNL OneTrust] team. For any inquiries or update requests, [please contact them directly](https://my.onetrust.com/s/contactsupport?language=en_US).
+>This documentation page was created by the [!DNL OneTrust Integration] team. For any inquiries or update requests, [please contact them directly](https://my.onetrust.com/s/contactsupport?language=en_US).
 
 ## Prerequisites
 
-Before you can connect [!DNL OneTrust] to Platform, you must first retrieve your access token. For detailed instructions on finding your access token, see the [[!DNL OneTrust] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Before you can connect [!DNL OneTrust Integration] to Platform, you must first retrieve your access token. For detailed instructions on finding your access token, see the [[!DNL OneTrust Integration] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
-Furthermore, it is important to note that the [!DNL OneTrust] API specifications are being shared with Adobe for data ingestion.
+Furthermore, it is important to note that the [!DNL OneTrust Integration] API specifications are being shared with Adobe for data ingestion.
 
-The access token does not refresh automatically after it expires because system-to-system refresh tokens are not supported by [!DNL OneTrust]. Therefore, it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum configurable lifespan for an access token is one year.
+The access token does not refresh automatically after it expires because system-to-system refresh tokens are not supported by [!DNL OneTrust Integration]. Therefore, it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum configurable lifespan for an access token is one year.
 
-## Connect [!DNL OneTrust] to Platform using the [!DNL Flow Service] API
+## Connect [!DNL OneTrust Integration] to Platform using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a [!DNL OneTrust] source connection and create a dataflow to bring [!DNL OneTrust] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL OneTrust Integration] source connection and create a dataflow to bring [!DNL OneTrust Integration] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Create a base connection {#base-connection}
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL OneTrust] authentication credentials as part of the request body.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL OneTrust Integration] authentication credentials as part of the request body.
 
 **API format**
 
@@ -42,7 +42,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL OneTrust] :
+The following request creates a base connection for [!DNL OneTrust Integration] :
 
 ```shell
 curl -X POST \
@@ -76,8 +76,8 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
 | `auth.params.` | Contains the credentials required to authenticate your source. The root host and the access token to connect to the API.|
-| `auth.params.host` | The environment from which the [!DNL OneTrust] data needs to be pulled from. |
-| `auth.params.accessToken` | The access token that corresponds with your [!DNL OneTrust] account. |
+| `auth.params.host` | The environment from which the [!DNL OneTrust Integration] data needs to be pulled from. |
+| `auth.params.accessToken` | The access token that corresponds with your [!DNL OneTrust Integration] account. |
 
 **Response**
 
@@ -6738,7 +6738,7 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for [!DNL OneTrust] :
+The following request creates a source connection for [!DNL OneTrust Integration] :
 
 ```shell
 curl -X POST \
@@ -6767,9 +6767,9 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
-| `baseConnectionId` | The base connection ID of [!DNL OneTrust]. This ID was generated in an earlier step. |
+| `baseConnectionId` | The base connection ID of [!DNL OneTrust Integration]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
-| `data.format` | The format of the [!DNL OneTrust] data that you want to ingest. Currently, the only supported data format is `json`. |
+| `data.format` | The format of the [!DNL OneTrust Integration] data that you want to ingest. Currently, the only supported data format is `json`. |
 
 **Response**
 
@@ -6810,7 +6810,7 @@ POST /targetConnections
 
 **Request**
 
-The following request creates a target connection for [!DNL OneTrust] :
+The following request creates a target connection for [!DNL OneTrust Integration] :
 
 ```shell
 curl -X POST \
@@ -6841,7 +6841,7 @@ curl -X POST \
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | The format of the [!DNL OneTrust] data that you want to bring to Platform. |
+| `data.format` | The format of the [!DNL OneTrust Integration] data that you want to bring to Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 
@@ -6949,7 +6949,7 @@ A successful response returns details of the newly created mapping including its
 
 ### Create a flow {#flow}
 
-The last step towards bringing data from [!DNL OneTrust] to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing data from [!DNL OneTrust Integration] to Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)

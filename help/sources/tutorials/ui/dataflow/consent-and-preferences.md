@@ -12,7 +12,7 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have an authenticated account with the [!DNL OneTrust] source. See the tutorial on [creating a [!DNL OneTrust] source connection in the UI](../../ui/create/consent-and-preferences/onetrust.md) for more information.
+>In order to create a dataflow, you must already have an authenticated account with the [!DNL OneTrust Integration] source. See the tutorial on [creating a [!DNL OneTrust Integration] source connection in the UI](../../ui/create/consent-and-preferences/onetrust.md) for more information.
 
 ## Getting started
 

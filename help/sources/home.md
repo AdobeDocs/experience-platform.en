@@ -60,7 +60,7 @@ Cloud storage sources can bring your own data into Platform without the need to 
 
 Experience Platform provides support for ingesting data from a third-party consent and preferences provider. See the following related documents for more information:
 
-- [[!DNL OneTrust]](connectors/consent-and-preferences/onetrust.md)
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
 
 
 ### Customer Relationship Management (CRM) {#crm}

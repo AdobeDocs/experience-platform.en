@@ -43,7 +43,7 @@ feature: Sources
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - Consent & Preferences {#consent}
-    - [OneTrust](connectors/consent-and-preferences/onetrust.md)
+    - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
@@ -106,7 +106,7 @@ feature: Sources
       - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
     - Consent & Preferences {#consent}
-      - [OneTrust](tutorials/api/create/consent-and-preferences/onetrust.md)
+      - [OneTrust Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
@@ -202,7 +202,7 @@ feature: Sources
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
     - Consent & Preferences {#consent}
-      - [OneTrust](tutorials/ui/create/consent-and-preferences/onetrust.md)
+      - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
