@@ -100,30 +100,25 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 Refer to the below images for details specific to this destination.
 
 1. Select one or more segments to export to Sendgrid.
-
 ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
-1. After selecting **Add new mapping**, you are shown the mapping page to map the source XDM fields to the Sendgrid API target fields.
-
+1. In the **[!UICONTROL Mapping]** step, after selecting **[!UICONTROL Add new mapping]**, you are shown the mapping page to map the source XDM fields to the Sendgrid API target fields. The images below demonstrate how to map identity namespaces between Experience Platform and Sendgrid. Please ensure the **[!UICONTROL Source field]** *Email* should be mapped to the **[!UICONTROL Target field]** *external_id* as shown below.
 ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
-
 ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
-
 ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
-
->[!WARNING]
->
-> Please ensure the **Source field** *Email* should be mapped to the **Target field** *external_id* as shown below.
-
 ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
-1. Similarly, the remaining [!DNL Adobe Experience Platform] fields and attributes are mapped to the Sendgrid attributes.
-
+1. Similarly, map the desired [!DNL Adobe Experience Platform] attributes that you want to export to the Sendgrid destination.
 ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-
 ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-1. The comprehensive list of supported mappings that can be set up for the [Sendgrid Marketing Contacts > Add or Update Contact API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) are listed below.
+1. After completing the mappings, select **[!UICONTROL Next]** to advance to the review screen.
+![](../../assets/catalog/email-marketing/sendgrid/22.png)
+
+1. Select **[!UICONTROL Finish]** to complete the setup.
+![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
+
+The comprehensive list of supported attribute mappings that can be set up for the [Sendgrid Marketing Contacts > Add or Update Contact API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) is below.
 
 | Source Field | Target Field | Type | Description | Limits |
 |---|---|---|---|---|
@@ -133,51 +128,35 @@ Refer to the below images for details specific to this destination.
 | xdm:<br/> homeAddress.city | xdm:<br/> city | String | The contact's city. | Max Length:<br/> 60 characters |
 | xdm:<br/> homeAddress.country | xdm:<br/> country | String | The contact's country. Can be a full name or an abbreviation. | Max Length:<br/> 50 characters |
 | identityMap:<br/> Email | Identity:<br/> external_id | String | The contact's primary email. This is required to be a valid email. | Max Length:<br/> 254 characters |
-| xdm:<br/> person.name:firstName | xdm:<br/> first_name | String | The contact's name | Max Length:<br/> 50 characters |
-| xdm:<br/> person.name:lastName | xdm:<br/> last_name | String | The contact's family name | Max Length:<br/> 50 characters |
+| xdm:<br/> person.name.firstName | xdm:<br/> first_name | String | The contact's name | Max Length:<br/> 50 characters |
+| xdm:<br/> person.name.lastName | xdm:<br/> last_name | String | The contact's family name | Max Length:<br/> 50 characters |
 | xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | String | The contact's ZIP code or other postal code. | |
 | xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_province_region | String | The contact's state, province, or region. | Max Length:<br/> 50 characters|
 
-1. After completing the mappings, select **[!UICONTROL Next]** to obtain a review screen indicating the audience and destination are connected.
-
-![](../../assets/catalog/email-marketing/sendgrid/22.png)
-
-1. Select **[!UICONTROL Finish]** to complete the setup.
-
-![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
-
 ## Validate the data export within Sendgrid {#validate}
 
-To validate that you have correctly set up the destination.
+To validate that you have correctly set up the destination, follow the steps below:
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** to navigate to the list of destinations.
-
 ![](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
 1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
-
 ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
 1. Switch to the **[!DNL Activation data]** tab, then select a segment name.
-
 ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
 1. Monitor the segment summary and check the count of profiles corresponds to the count created within the dataset.
-
 ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
 1. The [Sendgrid Marketing Lists > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list) is used to create unique contact lists within Sendgrid by joining the value of the *list_name* attribute and the timestamp of the data export. Navigate to the Sendgrid site and check if the new contact list conforming to the name pattern is created.
-
 ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
-
 ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
 1. Select the newly created contact list and check if the new email record from the dataset you created is being populated within the new contact list.
 
 1. Additionally, also check a couple of emails to validate if the field mapping is correct.
-
 ![](../../assets/catalog/email-marketing/sendgrid/31.jpg)
-
 ![](../../assets/catalog/email-marketing/sendgrid/32.jpg)
 
 ## Data usage and governance {#data-usage-governance}
