@@ -10,9 +10,9 @@ description: The Sendgrid destination allows you to export your first-party data
 
 [Sendgrid](https://www.sendgrid.com) is a popular customer communication platform for transactional and marketing emails.
 
-This [!DNL Adobe Experience Platform] [destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=en) leverages the [[!DNL Sendgrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), which allows you to export your first-party email profiles and activate them within a new Sendgrid segment for your business needs.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Sendgrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), which allows you to export your first-party email profiles and activate them within a new Sendgrid segment for your business needs.
 
-Sendgrid uses [[!DNL Bearer tokens]](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#generate-an-access-token) as an authentication mechanism to communicate with the Sendgrid API.
+Sendgrid uses API bearer tokens as an authentication mechanism to communicate with the Sendgrid API.
 
 ## Prerequisites {#prerequisites}
 
@@ -38,7 +38,7 @@ Before activating data to the Sendgrid destination, you must have a [schema](htt
 
 ## Supported identities {#supported-identities}
 
-Sendgrid supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+Sendgrid supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -161,7 +161,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 ## Data usage and governance {#data-usage-governance}
 
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
 
 ## Additional resources {#additional-resources}
 
