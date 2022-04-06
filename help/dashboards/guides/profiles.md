@@ -149,7 +149,7 @@ The **[!UICONTROL Profiles count trend]** widget displays the total number of me
 
 See the [section on merge policies earlier in this document](#merge-policies) to learn more.
 
-The **[!UICONTROL Profile count trend]** widget displays a 'captions' button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog.
+The **[!UICONTROL Profiles count trend]** widget displays a 'captions' button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
 ![The Profile overview tab displaying the Profiles count trend widget with the captions button highlighted.](../images/profiles/profile-count-trend-captions.png)
 
@@ -249,17 +249,17 @@ Adobe provides multiple widgets to assess the completeness of the ingested profi
 
 To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
-* [[!UICONTROL Attribute quality assessment]](#attribute-quality-assessment)
+* [[!UICONTROL Attribute quality assessment]](#attributes-quality-assessment)
 * [[!UICONTROL Profiles by completeness]](#profiles-by-completeness)
-* [[!UICONTROL Profile completeness trend]](#profile-completeness-trend)
+* [[!UICONTROL Profiles completeness trend]](#profiles-completeness-trend)
 
-### (Beta) [!UICONTROL Attribute quality assessment] {#attribute-quality-assessment}
+### (Beta) [!UICONTROL Attributes quality assessment] {#attributes-quality-assessment}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_attributequalityassessment"
->title="Attribute quality assessment"
+>id="platform_dashboards_profiles_attributesqualityassessment"
+>title="Attributes quality assessment"
 >abstract="This widget shows the completeness and cardinality of all profiles according to their attributes. The data is accurate to the last processing date. Column descriptions are available in the documentation."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#attribute-quality-assessment" text="Learn more from documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#attributes-quality-assessment" text="Learn more from documentation"
 
 The [!UICONTROL Attribute quality assessment] widget shows the completeness and cardinality of all profiles according to their attributes. The data is accurate to the last processing date. This information is presented as a table with four columns where each row in the table represents a single attribute.
 
@@ -290,11 +290,11 @@ This widget shows the proportion of profiles that are of high, medium, or low co
 
 ![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
 
-### (Beta) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
+### (Beta) [!UICONTROL Profiles completeness trend] {#profiles-completeness-trend}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profiles_profilecompletenesstrend"
->title="Profile completeness trend"
+>id="platform_dashboards_profiles_profilescompletenesstrend"
+>title="Profiles completeness trend"
 >abstract="This widget creates a stacked column chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness-trend" text="Learn more from documentation"
 
