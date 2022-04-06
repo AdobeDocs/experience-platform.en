@@ -13,7 +13,7 @@ description: Learn how to connect OneTrust Integration to Adobe Experience Platf
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Experience Platform provides support for ingesting data from a third-party consent and preferences program. Support for consent and preferences providers include [!DNL OneTrust Integration].
+Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. Support for consent and preferences providers include [!DNL OneTrust Integration].
 
 ## IP address allow list
 

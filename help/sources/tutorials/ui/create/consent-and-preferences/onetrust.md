@@ -14,17 +14,15 @@ description: Learn how to create a OneTrust source connection using the Adobe Ex
 
 This tutorial provides steps for creating a [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) source connection to ingest both historic and scheduled consent data into Adobe Experience Platform using the Platform user interface.
 
->[!IMPORTANT]
->
->This documentation page was created by the [!DNL OneTrust Integration] team. For any inquiries or update requests, [please contact them directly](https://my.onetrust.com/s/contactsupport?language=en_US).
-
 ## Prerequisites
 
-Before you can connect [!DNL OneTrust Integration] to Platform, you must first retrieve your access token. For detailed instructions on finding your access token, see the [[!DNL OneTrust Integration] OAuth 2 authentication guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+>[!IMPORTANT]
+>
+>The [!DNL OneTrust Integration] source connector and documentation were created by the [!DNL OneTrust Integration] team. For any inquiries or update requests, please contact the [[!DNL OneTrust] team](https://my.onetrust.com/s/contactsupport?language=en_US) directly.
 
-Furthermore, it is important to note that the [!DNL OneTrust Integration] API specifications are being shared with Adobe for data ingestion.
+Before you can connect [!DNL OneTrust Integration] to Platform, you must first retrieve your access token. For detailed instructions on finding your access token, see the [[!DNL OneTrust Integration] OAuth 2 guide](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
-The access token does not refresh automatically after it expires because system-to-system refresh tokens are not supported by [!DNL OneTrust Integration]. Therefore, it is necessary to make sure that the access tokens are updated in the connection before it expires. The maximum configurable lifespan for an access token is one year.
+The access token does not refresh automatically after it expires because system-to-system refresh tokens are not supported by [!DNL OneTrust]. Therefore, it is necessary to make sure that your access token is updated in the connection before it expires. The maximum configurable lifespan for an access token is one year. To learn more about updating your access token, see the [[!DNL OneTrust] document on managing your OAuth 2.0 client credentials](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
 ### Gather required credentials
 
@@ -39,6 +37,10 @@ In order to connect [!DNL OneTrust Integration] to Platform, you must provide va
 For more information on these credentials, see the [[!DNL OneTrust Integration] authentication documentation](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
 ## Connect your [!DNL OneTrust Integration] account
+
+>[!NOTE]
+>
+>The [!DNL OneTrust Integration] API specifications are being shared with Adobe for data ingestion.
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 

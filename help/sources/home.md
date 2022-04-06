@@ -58,7 +58,7 @@ Cloud storage sources can bring your own data into Platform without the need to 
 
 ### Consent and Preferences {#consent}
 
-Experience Platform provides support for ingesting data from a third-party consent and preferences provider. See the following related documents for more information:
+Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. See the following related documents for more information:
 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
 
