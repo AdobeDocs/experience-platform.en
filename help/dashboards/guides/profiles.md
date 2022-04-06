@@ -256,7 +256,7 @@ To learn more about each of the profile efficacy widgets, select the name of a w
 ### (Beta) [!UICONTROL Attribute quality assessment] {#attribute-quality-assessment}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_profile_attribute_quality_assessment"
+>id="platform_dashboards_profiles_attributequalityassessment"
 >title="Attribute quality assessment"
 >abstract="This widget shows the completeness and cardinality of all profiles according to their attributes. The data is accurate to the last processing date. Column descriptions are available in the documentation."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#attribute-quality-assessment" text="Learn more from documentation"
