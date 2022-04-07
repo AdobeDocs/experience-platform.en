@@ -18,7 +18,7 @@ This guide requires you to already have access to [!DNL Aqua Data Studio] and be
 >
 >There are [!DNL Windows] and [!DNL macOS] versions of [!DNL Aqua Data Studio]. Screenshots in this guide were taken using the [!DNL macOS] desktop app. There may be minor discrepancies in the UI between the versions.
 
-To acquire the necessary credentials for connecting [!DNL Aqua Data Studio] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your IMS Organization administrator if you do not currently have access to the Queries workspace. 
+To acquire the necessary credentials for connecting [!DNL Aqua Data Studio] to Experience Platform, you must have access to the [!UICONTROL Queries] workspace in the Platform UI. Please contact your IMS Organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace. 
 
 ## Register the server {#register-server}
 
@@ -42,7 +42,7 @@ To find your credentials, log in to the [!DNL Platform] UI and select **[!UICONT
 
 [!DNL Query Service] also offers non-expiring credentials to allow for a one-time setup with third-party clients. See the documentation for [full instructions on how to generate and use non-expiring credentials](../ui/credentials.md#non-expiring-credentials).
 
-### Setting ssl mode
+### Setting SSL mode
 
 Next, select the **[!DNL Driver]** tab. Under **[!DNL Parameters]**, set the value as `?sslmode=require`
 

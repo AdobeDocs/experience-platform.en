@@ -28,10 +28,10 @@ The **[!UICONTROL Browse]** tab shows queries saved by users in your organizatio
 
 | Column | Description |
 | --- | --- |
-| **[!UICONTROL NAME]** | The query name created by the user. You can select on the name to open the query in the [!DNL Query Editor]. You can also use the search bar to search on the Name of a query. Searches are case sensitive. |
+| **[!UICONTROL Name]** | The query name created by the user. You can select on the name to open the query in the [!DNL Query Editor]. You can also use the search bar to search on the Name of a query. Searches are case sensitive. |
 | **[!UICONTROL SQL]** | The first few characters of the SQL query. Hovering over the code displays the full query. |
-| **[!UICONTROL MODIFIED BY]** | The last user who modified the query. Any user in your organization with access to [!DNL Query Service] can modify queries. |
-| **[!UICONTROL LAST MODIFIED]** | The date and time of the last modification to the query, in the browser's time zone. |
+| **[!UICONTROL Modified by]** | The last user who modified the query. Any user in your organization with access to [!DNL Query Service] can modify queries. |
+| **[!UICONTROL Last modified]** | The date and time of the last modification to the query, in the browser's time zone. |
 
 ## Log
 
@@ -41,13 +41,13 @@ The **[!UICONTROL Log]** tab provides a list of queries that have previously bee
 
 | Column | Description |
 | --- | --- |
-| **[!UICONTROL NAME]** | The query name, consisting of the first several characters of the SQL query. Selecting the name opens the [!DNL Query Editor], allowing you to edit the query. You can use the search bar to search on the Name of a query. Searches are case sensitive. |
-| **[!UICONTROL CREATED BY]** | The name of the person who created the query. |
-| **[!UICONTROL CLIENT]** | The client used for the query. |
-| **[!UICONTROL DATASET]** | The input dataset used by the query. Select the dataset to go to the input dataset details screen. |
-|**[!UICONTROL STATUS]** | The current status of the query. |
-| **[!UICONTROL LAST RUN]** | When the query was run last. You can sort the list in either ascending or descending order by selecting the arrow over this column. |
-| **[!UICONTROL RUN TIME]** | The amount of time it took to run the query. |
+| **[!UICONTROL Name]** | The query name, consisting of the first several characters of the SQL query. Selecting the name opens the [!DNL Query Editor], allowing you to edit the query. You can use the search bar to search on the Name of a query. Searches are case sensitive. |
+| **[!UICONTROL Created by]** | The name of the person who created the query. |
+| **[!UICONTROL Client]** | The client used for the query. |
+| **[!UICONTROL Dataset]** | The input dataset used by the query. Select the dataset to go to the input dataset details screen. |
+|**[!UICONTROL Status]** | The current status of the query. |
+| **[!UICONTROL Last run]** | When the query was run last. You can sort the list in either ascending or descending order by selecting the arrow over this column. |
+| **[!UICONTROL Run time]** | The amount of time it took to run the query. |
 
 ## Credentials
 
