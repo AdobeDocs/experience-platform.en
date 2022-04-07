@@ -24,7 +24,7 @@ To acquire the necessary credentials for connecting [!DNL Aqua Data Studio] to E
 
 After installing [!DNL Aqua Data Studio], you must first register the server. From the main menu, select **[!DNL Server]**, followed by **[!DNL Register Server]**.
 
-![](../images/clients/aqua-data-studio/register-server.png)
+![The Server dropdown menu with Register Server highlighted.](../images/clients/aqua-data-studio/register-server.png)
 
 The **[!DNL Register Server]** dialog appears. Under the **[!DNL General]** tab, select **[!DNL PostgreSQL]** from the list on the left-hand side. In the dialog that appears, provide the following details for the server settings.
 
@@ -32,9 +32,9 @@ The **[!DNL Register Server]** dialog appears. Under the **[!DNL General]** tab,
 - **[!DNL Login Name]**: The login name is your Platform Organization ID. It takes the form of `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**: This is an alphanumeric string found on the [!DNL Query Service] credentials dashboard.
 - **[!DNL Host and Port]**: The host endpoint and its port for [!DNL Query Service]. You must use port 80 to connect with [!DNL Query Service].
-- **[!DNL Database]:** The database that will be used.
+- **[!DNL Database]:** The database that will be used. Use the value for the Platform UI credential `dbname`: `prod:all`.
 
-![](../images/clients/aqua-data-studio/register-server-general-tab.png)
+![The Aqua Data Studio General tab with the required input fields highlighted.](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] credentials
 
@@ -46,7 +46,7 @@ To find your credentials, log in to the [!DNL Platform] UI and select **[!UICONT
 
 Next, select the **[!DNL Driver]** tab. Under **[!DNL Parameters]**, set the value as `?sslmode=require`
 
-![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
+![The Aqua Data Studio Driver tab with the Parameters field highlighted.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
 After inputting your connection details, select **[!DNL Test Connection]** to ensure your credentials work properly. If your connection test is successful, select **[!DNL Save]** to register your server. A confirmation dialog appears confirming connection and the connection appears on the dashboard. You can now connect to the server and view its schema objects.
 
