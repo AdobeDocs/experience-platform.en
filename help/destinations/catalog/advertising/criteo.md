@@ -4,7 +4,7 @@
 
 >[IMPORTANT]
 >
->This documentation page was created by Criteo. This is currently a beta product. For any inquiries or update requests, please contact Criteo directly [here](https://marketing.criteo.com/).
+>This documentation page was created by Criteo. This is currently a beta product. For any inquiries or update requests, please contact Criteo directly [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
 
