@@ -20,7 +20,7 @@ The [!DNL Query Editor] enables you to write and execute queries without using a
 
 ![A zoomed in view of the [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
-## Browse
+## Browse {#browse}
 
 The **[!UICONTROL Browse]** tab shows queries saved by users in your organization. It is useful to think of these as query projects, as queries saved here may still be under construction. Queries displayed on the **[!UICONTROL Browse]** tab also display as run queries in the **[!UICONTROL Log]** tab if they have been previously executed by [!DNL Query Service].
 

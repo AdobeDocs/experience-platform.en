@@ -8,9 +8,9 @@ exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
 ---
 # Sample queries for Adobe Target data
 
-Data from Adobe Target is transformed into Experience Event XDM schema and ingested into Adobe Experience Platform as datasets for you. There are many use cases for Adobe Experience Platform Query Service with this data, and the following sample queries should work with your Adobe Target datasets.
+Data ingested from Adobe Target is transformed into Experience Event XDM schema and ingested into Adobe Experience Platform as datasets. Adobe Experience Platform Query Service facilitates many use cases for this data, and the following sample queries should work with your Adobe Target datasets.
 
-In Experience Platform, the name of auto-created dataset is "Adobe Target Experience Events". When using this dataset with queries, you should use the name `adobe_target_experience_events`.
+In Experience Platform, the name of an auto-created dataset is "Adobe Target Experience Events". When using this dataset with queries, use the name `adobe_target_experience_events`.
 
 ## High-level partial XDM field mapping
 

@@ -26,7 +26,7 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 - **[!UICONTROL PSQL command]**: A command that automatically has inserted all the relevant information for you to connect to Query Service using PSQL on the command line.
 - **[!UICONTROL Expires]**: The expiry date for the expiring credentials. The credentials expire 24 hours after they are generated.
 
-## Non-expiring credentials 
+## Non-expiring credentials {#non-expiring-credentials}
 
 You can use non-expiring credentials to set up a more permanent connection to an external client.
 
