@@ -52,6 +52,6 @@ The video below uses the [Adobe I/O access token generation collection](https://
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
-## Next Steps
+## Next steps
 
 This document introduced Postman environments, collections, and how to import collections. Now that you have Postman ready, visit the [Platform getting started guide](api-guide.md) for information on required headers, examples, and a list of [API guides](api-guide.md#api-guides) available for each Platform service.
