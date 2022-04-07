@@ -18,7 +18,7 @@ After installing PSQL on your computer, you are ready to connect PSQL with Query
 
 Under the **[!UICONTROL PSQL Command]** section, select the **[!UICONTROL Copy to clipboard]** icon (![Copy Icon](../images/clients/psql/copy-icon.png)) to copy the command string.
 
-![Image](../images/clients/psql/connect-bi.png)
+![The Queries dashboard Credentials tab with the copy icon highlighted.](../images/clients/psql/connect-bi.png)
 
 Paste the command string into a terminal or command-line window and press **Enter** on your keyboard.
 
