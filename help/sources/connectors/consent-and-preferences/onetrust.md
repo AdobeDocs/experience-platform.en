@@ -15,10 +15,6 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. Support for consent and preferences providers include [!DNL OneTrust Integration].
 
-## IP address allow list
-
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
-
 The documentation below provides information on how to connect [!DNL OneTrust Integration] to Platform using APIs or the user interface:
 
 ## Connect [!DNL OneTrust Integration] to Platform using APIs
