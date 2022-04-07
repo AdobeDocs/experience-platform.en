@@ -10,9 +10,17 @@ exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 
 This document covers the steps for connecting [!DNL Aqua Data Studio] with Adobe Experience Platform [!DNL Query Service].
 
+## Getting started
+
+This guide requires you to already have access to [!DNL Aqua Data Studio] and be familiar with how to navigate its interface. More information about [!DNL Aqua Data Studio] can be found in the [official [!DNL Aqua Data Studio] documentation](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1).
+
 >[!NOTE]
 >
-> This guide assumes you already have access to [!DNL Aqua Data Studio] and are familiar with how to navigate its interface. More information about [!DNL Aqua Data Studio] can be found in the [official [!DNL Aqua Data Studio] documentation](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1).
+>There are [!DNL Windows] and [!DNL macOS] versions of [!DNL Aqua Data Studio]. Screenshots in this guide were taken using the [!DNL macOS] desktop app. There may be minor discrepancies in the UI between the versions.
+
+To acquire the necessary credentials for connecting [!DNL Aqua Data Studio] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your IMS Organization administrator if you do not currently have access to the Queries workspace. 
+
+## Create a database connection {#connect-database}
 
 After installing [!DNL Aqua Data Studio], you must first register the server. From the main menu, select **[!DNL Server]**, followed by **[!DNL Register Server]**.
 
@@ -20,22 +28,27 @@ After installing [!DNL Aqua Data Studio], you must first register the server. Fr
 
 The **[!DNL Register Server]** dialog appears. Under the **[!DNL General]** tab, select **[!DNL PostgreSQL]** from the list on the left-hand side. In the dialog that appears, provide the following details for the server settings.
 
-- **[!DNL Name]**: The name of your connection.
-- **[!DNL Login Name and Password]**: The login credentials that will be used. The username takes the form of `ORG_ID@AdobeOrg`.
+- **[!DNL Name]**: The name of your connection. You are recommended to provide a friendly name to recognize the connection.
+- **[!DNL Login Name]**: The login name is your Platform Organization ID. It takes the form of `ORG_ID@AdobeOrg`.
+- **[!DNL Password]**: This is an alphanumeric string found on the [!DNL Query Service] credentials dashboard.
 - **[!DNL Host and Port]**: The host endpoint and its port for [!DNL Query Service]. You must use port 80 to connect with [!DNL Query Service].
 - **[!DNL Database]:** The database that will be used.
 
->[!NOTE]
->
->For more information on finding your login credentials, host, port, and database name, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
-
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
-Select the **[!DNL Driver]** tab. Under **[!DNL Parameters]**, set the value as `?sslmode=require`
+### [!DNL Query Service] credentials
+
+To find your credentials, log in to the [!DNL Platform] UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For complete directions to find your login credentials, host, port, and database name, please read the [credentials guide](../ui/credentials.md).
+
+[!DNL Query Service] also offers non-expiring credentials to allow for a one-time setup with third-party clients. See the documentation for [full instructions on how to generate and use non-expiring credentials](../ui/credentials.md#non-expiring-credentials).
+
+### Setting ssl mode
+
+Next, select the **[!DNL Driver]** tab. Under **[!DNL Parameters]**, set the value as `?sslmode=require`
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
-After inputting your connection details, select **[!DNL Test Connection]** to ensure your credentials work properly. If your connection is successful, select **[!DNL Save]** to register your server. The connection appears on the dashboard upon successful registration, confirming that you can now connect to the server and view its schema objects.
+After inputting your connection details, select **[!DNL Test Connection]** to ensure your credentials work properly. If your connection test is successful, select **[!DNL Save]** to register your server. A confirmation dialog appears confirming connection and the connection appears on the dashboard. You can now connect to the server and view its schema objects.
 
 ## Next steps
 
