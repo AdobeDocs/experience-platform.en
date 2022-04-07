@@ -20,7 +20,7 @@ This guide requires you to already have access to [!DNL Aqua Data Studio] and be
 
 To acquire the necessary credentials for connecting [!DNL Aqua Data Studio] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your IMS Organization administrator if you do not currently have access to the Queries workspace. 
 
-## Create a database connection {#connect-database}
+## Register the server {#register-server}
 
 After installing [!DNL Aqua Data Studio], you must first register the server. From the main menu, select **[!DNL Server]**, followed by **[!DNL Register Server]**.
 
