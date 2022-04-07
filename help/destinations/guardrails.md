@@ -14,7 +14,7 @@ This page provides default use and rate limits with regard to activation behavio
 >
 >Most customers do not exceed these default limits. If you would like to learn about custom limits, please contact your customer care representative.
 
-## Limit types
+## Limit types {#limit-types}
 
 There are two types of default limits within this document:
 
@@ -26,11 +26,11 @@ There are two types of default limits within this document:
 >
 >The limits outlined in this document are constantly being improved. Please check back regularly for updates. If you are interested in learning about custom limits, please contact your customer care representative.
 
-## Activation limits
+## Activation limits {#activation-limits}
 
 The following guardrails provide recommended limits when activating Real-time Customer Profile data. To learn more about ....., see the section on ... in the Appendix.
 
-### General activation guardrails
+### General activation guardrails {#general-activation-guardrails}
 
 The guardrails below generally apply to activation through all destination types.
 
@@ -44,7 +44,7 @@ The guardrails below generally apply to activation through all destination types
 
 {style="table-layout:auto"}
 
-### Streaming activation
+### Streaming activation {#streaming-activation}
 
 The guardrails below apply to activation through streaming destinations.
 
@@ -56,7 +56,7 @@ The guardrails below apply to activation through streaming destinations.
 
 {style="table-layout:auto"}
 
-### Batch (file-based) activation
+### Batch (file-based) activation {#batch-file-based-activation}
 
 The guardrails below apply to activation through batch file-based destinations.
 
@@ -68,7 +68,7 @@ The guardrails below apply to activation through batch file-based destinations.
 
 {style="table-layout:auto"}
 
-### Ad-hoc activation
+### Ad-hoc activation {#ad-hoc-activation}
 
 The guardrails below apply to the ad-hoc activation method.
 
@@ -79,7 +79,7 @@ The guardrails below apply to the ad-hoc activation method.
 
 {style="table-layout:auto"}
 
-### Edge destinations activation
+### Edge destinations activation {#edge-destinations-activation}
 
 The guardrails below apply to activation through edge destinations.
 
@@ -91,22 +91,29 @@ The guardrails below apply to activation through edge destinations.
 
 {style="table-layout:auto"}
 
-### Destination Throttling
+### Destination SDK guardrails {#destination-sdk-guardrails}
+
+[Destination SDK](/help/destinations/destination-sdk/overview.md) is a suite of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The guardrails below apply to the destinations you configure using Destination SDK.
+
+| Guardrail | Limit | Limit Type | Description |
+| --- | --- | --- | --- |
+| maxNumEventsInBatch | Minimum x and maximum y | Hard| Description of this limit.|
+
+### Destination Throttling {#destination-throttling}
 
 Details on throttling thresholds or limitations for given destinations.
 
-## Appendix
+## Appendix {#appendix}
 
 This section provides additional details for the limits in this document.
 
-### Retry policy
+### Retry policy {#retry-policy}
 
 Add information regarding the retry policy for destinations.
 
-## Guardrails for other Experience Platform services
+## Guardrails for other Experience Platform services {guardrails-other-services}
 
 View guardrails information for other Experience Platform services
 
 * Guardrails for [[!DNL Identity Service] data](/help/identity-service/guardrails.md)
 * Guardrails for [[!DNL Real-time Customer Profile] data](/help/profile/guardrails.md)
-
