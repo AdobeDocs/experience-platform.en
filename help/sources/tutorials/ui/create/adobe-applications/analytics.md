@@ -40,7 +40,7 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 ### Select data
 
-The **[!UICONTROL Analytics source add data]** provides you with a list of Analytics report suites to create a source connection with. A report suite can be ingested using only one active dataflow and cannot be used in two dataflows. Furthermore, a report suite must belong to the same region as the Platform sandbox instance. Report suites that are not selectable have already been ingested, either in this sandbox or in a different sandbox.
+The **[!UICONTROL Analytics source add data]** step provides you with a list of Analytics report suites to create a source connection with. A report suite can be ingested using only one active dataflow and cannot be used in two dataflows. Furthermore, a report suite must belong to the same region as the Platform sandbox instance. Report suites that are not selectable have already been ingested, either in this sandbox or in a different sandbox.
 
 To create an Analytics source connection, select a report suite and then select **[!UICONTROL Next]** to proceed.
 
