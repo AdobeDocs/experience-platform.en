@@ -80,19 +80,75 @@ Considering the message format, the corresponding transformations are as follows
 |`_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 |`personalEmail.address` | `attributes.external_id` | `external_id` |
 
-## Anatomy of a profile in Experience Platform
+## Profile structure in Experience Platform {#profile-structure}
 
-To understand the examples further below on the page, it is important to know what the structure of a profile is in Experience Platform.
+To understand the examples further below on the page, it is important to know the structure of a profile in Experience Platform.
 
 Profiles have 3 sections:
 
 * `segmentMembership` (always present on a profile)
-  * this section contains all the segments that are present on the profile. The segments can have one of 3 statuses: realized, existing, exited
-identityMap (always present)
-it will contain all the identities that are present on the profile and which were selected for dispatch by the client
-attributes (depending on the destination configuration, it might be present). Also, there seems to be a difference between predefined attributes and freeform attributes:
-for freeform attributes, they contain a ".value" path in the the attribute is present (see "lastName" attribute from example 1). If they aren't present on the profile, they won't contain the ".value" path (see "firstName" attribute from example 1).
-for predefined attributes, they won't have the ".value" path. All mapped attributes that are present on a profile will be present in the attributes map. The ones that are not will not be present (see Example 2 - the firstName attribute does not exist on the profile)
+  * this section contains all the segments that are present on the profile. The segments can have one of 3 statuses: `realized`, `existing`, `exited`.
+* `identityMap` (always present on a profile)
+  * this section contains all the identities that are present on the profile and which were mapped by 
+* attributes (depending on the destination configuration, these might be present on the profile). There is also a slight difference to note between predefined attributes and freeform attributes:
+  * for *freeform attributes*, these contain a `.value` path if the attribute is present on the profile (see the `lastName` attribute from example 1). If they aren't present on the profile, they won't contain the `.value` path (see `firstName` attribute from example 1).
+  * for *predefined attributes*, these do not contain a `.value` path. All mapped attributes that are present on a profile will be present in the attributes map. The ones that are not will not be present (see Example 2 - the firstName attribute does not exist on the profile).
+
+See below two examples of profiles in Experience Platform
+
+### Example 1 with `segmentMembership`, `identityMap` and attributes for freeform attributes {#example-1}
+
+```json
+{
+  "segmentMembership": {
+    "ups": {
+      "11111111-1111-1111-1111-111111111111": {
+        "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "mobileIds": [
+      {
+        "id": "e86fb215-0921-4537-bc77-969ff775752c"
+      }
+    ]
+  },
+  "attributes": {
+    "firstName": {
+    },
+    "lastName": {
+      "value": "lastName"
+    }
+  }
+}
+```
+
+### Example 2 with `segmentMembership`, `identityMap` and attributes for predefined attributes {#example-2}
+
+```json
+{
+  "segmentMembership": {
+    "ups": {
+      "11111111-1111-1111-1111-111111111111": {
+        "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "mobileIds": [
+      {
+        "id": "e86fb215-0921-4537-bc77-969ff775752c"
+      }
+    ]
+  },
+  "attributes": {
+    "lastName": "lastName"
+  }
+}
+```
 
 ## Using a templating language for the identity, attributes, and segment membership transformations {#using-templating}
 
