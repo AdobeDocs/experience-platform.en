@@ -163,6 +163,10 @@ You can manually add fields, functions, and operators using the expression edito
 
 ![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
 
+#### Import mapping rules {#import}
+
+You can reuse the mapping rules of an existing dataflow for your dataflow to reduce the manual configuration time of your data ingestion and limit mistakes. To reuse an existing mapping rule, select **[!UICONTROL Import mapping]**.
+
 Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
 
 ![preview-data](../images/ui/mapping/preview-data.png)
