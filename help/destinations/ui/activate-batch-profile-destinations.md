@@ -68,6 +68,16 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 >abstract="Select **Export full files** to export a complete snapshot of all the profiles that qualify for the segment. Select **Export incremental files** to export only the profiles which qualified for the segment since the last export. <br> The first incremental file export includes all profiles that qualify for the segment, acting as a backfill. Future incremental files include only the profiles which qualified for the segment since the first incremental file export."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Export incremental files"
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_aftersegmentevaluation"
+>title="Activate after segment evaluation"
+>abstract="Activation runs immediately after the daily segmentation job completes. This ensures that the most up-to-date profiles are exported. Need to move this popover to the new activation chaining section for correct linking."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_scheduled"
+>title="Scheduled activation"
+>abstract="Activation runs at a fixed time of the day. Need to move this popover to the new activation chaining section for correct linking."
+
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
 
 ![Export full files](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
