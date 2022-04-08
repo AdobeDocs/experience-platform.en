@@ -40,13 +40,13 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 ### Select data
 
-The **[!UICONTROL Analytics source add data]** step provides you with a list of Analytics report suite data to create a source connection with. A report suite can be ingested using only one active dataflow and cannot be used in two dataflows. Furthermore, a report suite must belong to the same region as the Platform sandbox instance that the source connection is being created in. A report suite that is not selectable has already been ingested, either in this sandbox or in a different sandbox.
+The **[!UICONTROL Analytics source add data]** step provides you with a list of [!DNL Analytics] report suite data to create a source connection with. A report suite can be ingested using only a single active dataflow. It cannot be used in multiple dataflows. Furthermore, a report suite must belong to the same region as the Platform sandbox instance in which the source connection is being created. A report suite that is not selectable has already been ingested, either in this sandbox or in a different sandbox.
 
-To create an Analytics source connection, select a report suite and then select **[!UICONTROL Next]** to proceed.
+To create an [!DNL Analytics] source connection, select a report suite and then select **[!UICONTROL Next]** to proceed.
 
 >[!NOTE]
 >
->Multiple in-bound connections can be made to bring in multiple report suites into the same sandbox. If the report suites have differing schemas for variables (such as eVars or events), they should be mapped to specific fields using [Data Prep](../../../../../data-prep/ui/mapping.md). Report suites can only be added to a single sandbox.
+>Multiple in-bound connections can be made to bring multiple report suites into the same sandbox. If the report suites have differing schemas for variables (such as eVars or events), they should be mapped to specific fields using [Data Prep](../../../../../data-prep/ui/mapping.md). Report suites can only be added to a single sandbox.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
