@@ -124,7 +124,7 @@ The following is an example of an `interact` response when Analytics client-side
 }
 ```
 
-Alternatively, a proposition can also have the analytics tokens specified in `scopeDetails.characteristics.analyticsTokens` property.
+Propositions for Form-based Experience Composer activities can contain both content and click metric items under the same proposition. Thus, instead of having a single analytics token for content display in `scopeDetails.characteristics.analyticsToken` property, these can have both a display and a click analytics token specified under `scopeDetails.characteristics.analyticsTokens` object, in `display` and `click` properties, correspondingly.
 
 ```json
 {
