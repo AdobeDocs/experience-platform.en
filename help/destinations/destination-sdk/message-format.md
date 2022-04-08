@@ -92,9 +92,9 @@ Profiles have 3 sections:
   * this section contains all the identities that are present on the profile and which were mapped by 
 * attributes (depending on the destination configuration, these might be present on the profile). There is also a slight difference to note between predefined attributes and freeform attributes:
   * for *freeform attributes*, these contain a `.value` path if the attribute is present on the profile (see the `lastName` attribute from example 1). If they aren't present on the profile, they won't contain the `.value` path (see `firstName` attribute from example 1).
-  * for *predefined attributes*, these do not contain a `.value` path. All mapped attributes that are present on a profile will be present in the attributes map. The ones that are not will not be present (see Example 2 - the firstName attribute does not exist on the profile).
+  * for *predefined attributes*, these do not contain a `.value` path. All mapped attributes that are present on a profile will be present in the attributes map. The ones that are not will not be present (see Example 2 - the `firstName` attribute does not exist on the profile).
 
-See below two examples of profiles in Experience Platform
+See below two examples of profiles in Experience Platform:
 
 ### Example 1 with `segmentMembership`, `identityMap` and attributes for freeform attributes {#example-1}
 
@@ -152,7 +152,7 @@ See below two examples of profiles in Experience Platform
 
 ## Using a templating language for the identity, attributes, and segment membership transformations {#using-templating}
 
-Adobe uses a templating language similar to [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) to transform the fields from the XDM schema into a format supported by your destination.
+Adobe uses [Pebble templates](https://pebbletemplates.io/), a templating language similar to [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), to transform the fields from the Experience Platform XDM schema into a format supported by your destination.
 
 This section provides several examples of how these transformations are made - from the input XDM schema, through the template, and outputting into payload formats accepted by your destination. The examples below are presented by increasing complexity, as follows:
 
@@ -1193,12 +1193,10 @@ The table below provides descriptions for the functions in the examples above.
 | `addedSegments(listOfSegments)` | Returns only the segments that have status `realized` or `existing`. |
 | `removedSegments(listOfSegments)` | Returns only the segments that have status `exited`. |
 
-<!--
+## Next steps {#next-steps}
 
-## What Adobe needs from you to set up your destination {#what-adobe-needs}
+After reading this document, you now know how data exported out of Experience Platform is transformed. Next, read the following pages to complete your knowledge about creating message transformation templates for your destination:
 
-Based on the transformations outlined in the sections above, Adobe needs the following information to set up your destination:
-
-* Considering *all* the fields that your platform can receive, Adobe needs the standard JSON schema that corresponds to your expected message format. Having the template allows Adobe to define transformations and to create a custom XDM schema for your company, which customers would use to export data to your destination.
-
--->
+* [Create and test a message transformation template](/help/destinations/destination-sdk/create-template.md)
+* [Render template API operations](/help/destinations/destination-sdk/render-template-api.md)
+* [Supported transformation functions in Destination SDK](/help/destinations/destination-sdk/supported-functions.md)
