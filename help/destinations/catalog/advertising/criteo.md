@@ -76,11 +76,12 @@ Steps to connect are as follows:
 
 ### Connection parameters
 After authenticating to the destination, please fill in the following connection parameters.
-
-1. Name : A name to help you recognize this destination in the future
-2. Description : A description to help you identify this destination in the future
-3. API Version: Preview
-4. Advertiser ID : Your Criteo advertiser ID
+| Field | Description | Required |
+| --- | --- | --- |
+| Name | A name to help you recognize this destination in the future. | Yes |
+| Description | A description to help you identify this destination in the future. | No |
+| API Version | Criteo API Version. Please select Preview. | Yes |
+| Advertiser ID | Criteo Advertiser of of your organization. Please contact your Criteo account manager to obtain this information. | Yes |
 
 ![Details](../../assets/catalog/advertising/criteo/criteo5.jpeg)
 
