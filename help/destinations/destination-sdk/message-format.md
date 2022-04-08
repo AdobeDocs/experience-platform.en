@@ -35,18 +35,15 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Source XDM schema (1)**: This item refers to the schema that customers use in Experience Platform. In Experience Platform, in the [mapping step](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) of the activate destination workflow, customers would map fields from their source schema to your destination's target schema (2).
+**Source XDM schema (1)**: This item refers to the schema that customers use in Experience Platform. In Experience Platform, in the [mapping step](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) of the activate destination workflow, customers map fields from their XDM schema to your destination's target schema (2).
 
-**Target XDM schema (2)**: Based on the JSON standard schema (3) of your destination's expected format, you can define profile attributes and identities in your target XDM schema. You can do this in the destinations configuration, in the [schemaConfig](./destination-configuration.md#schema-configuration) and [identityNamespaces](./destination-configuration.md#identities-and-attributes) objects.
+**Target XDM schema (2)**: Based on the JSON standard schema (3) of your destination's expected format and the attributes that your destination can interpret, you can define profile attributes and identities in your target XDM schema. You can do this in the destinations configuration, in the [schemaConfig](./destination-configuration.md#schema-configuration) and [identityNamespaces](./destination-configuration.md#identities-and-attributes) objects.
 
-**JSON standard schema of your destination profile attributes (3)**: This item represents a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on. You need a [message transformation template](./message-format.md#using-templating) to tailor the data exported out of Experience Platform to your expected format.
+**JSON standard schema of your destination profile attributes (3)**: This example represents a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on. You need a [message transformation template](./message-format.md#using-templating) to tailor the data exported out of Experience Platform to your expected format.
 
 Based on the schema transformations described above, here is how a profile configuration changes between the source XDM schema and a sample schema on the partner side:
 
 ![Transformations message example](./assets/transformations-with-examples.png)
-
-<br>&nbsp;
-
 
 ## Getting started - transforming three basic attributes {#getting-started}
 
@@ -82,6 +79,20 @@ Considering the message format, the corresponding transformations are as follows
 |`_your_custom_schema.firstName` |` attributes.first_name` | `first_name` |
 |`_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 |`personalEmail.address` | `attributes.external_id` | `external_id` |
+
+## Anatomy of a profile in Experience Platform
+
+To understand the examples further below on the page, it is important to know what the structure of a profile is in Experience Platform.
+
+Profiles have 3 sections:
+
+* `segmentMembership` (always present on a profile)
+  * this section contains all the segments that are present on the profile. The segments can have one of 3 statuses: realized, existing, exited
+identityMap (always present)
+it will contain all the identities that are present on the profile and which were selected for dispatch by the client
+attributes (depending on the destination configuration, it might be present). Also, there seems to be a difference between predefined attributes and freeform attributes:
+for freeform attributes, they contain a ".value" path in the the attribute is present (see "lastName" attribute from example 1). If they aren't present on the profile, they won't contain the ".value" path (see "firstName" attribute from example 1).
+for predefined attributes, they won't have the ".value" path. All mapped attributes that are present on a profile will be present in the attributes map. The ones that are not will not be present (see Example 2 - the firstName attribute does not exist on the profile)
 
 ## Using a templating language for the identity, attributes, and segment membership transformations {#using-templating}
 

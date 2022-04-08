@@ -8,16 +8,26 @@ title: Message format
 
 Experience Platform Destination SDK uses [Pebble templating functions](https://pebbletemplates.io/) to allow you to transform the data exported out of Experience Platform to your destination into the format you need. 
 
-There are some changes in Adobe's Pebble support has a couple of changes. Also, in addition to the out-of-the-box functions provided by Pebble, Adobe has created some additional functions that you can use.
+The Experience Platform implementation of Adobe's Pebble support has a couple of changes to the out-of-the box version provided by Pebble. Also, in addition to the out-of-the-box functions provided by Pebble, Adobe has created some additional functions that you can use.
 
 ## Prerequisites
 
-To understand the concepts and functions in this reference page, read the Message format document first. 
+To understand the concepts and functions in this reference page, read the Message format document first.
+
+Note also the anatomy of a profile in Experience Platform:
+
+Profiles have 3 sections:
+
+
 
 ## Supported Pebble functions
 
-From the Pebble tags section, we only support: "filter", "for", "if" and "set"
-We don't support "range"
+From the Pebble tags section, Adobe only supports: 
+* filter
+* for
+* if
+* set
+Adobe does not support range
 
 ## Functions added by Adobe
 
