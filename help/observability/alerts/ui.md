@@ -31,25 +31,25 @@ Select the ellipsis (**...**) next to a rule's name, and a dropdown displays con
 
 ![](../images/alerts/ui/disable-subscribe.png)
 
-## Email alerts
+## Add email alerts
 
-Alert notification can be delivered direct to your email. 
+Alert notifications can be delivered direct to your email. 
 
-Select the bell icon (![bell icon](../images/alerts/ui/bell-icon.png)) to display notifications and announcements.
+Select the bell icon (![bell icon](../images/alerts/ui/bell-icon.png)) located in the top ribbon on the right to display notifications and announcements.
 
-![](../images/alerts/ui/bell.png)
-
-Select the cog icon (![cog icon](../images/alerts/ui/cog-icon.png)) to edit preferences.
+In the dropdown that appears, select the cog icon (![cog icon](../images/alerts/ui/cog-icon.png)) to access the Experience Cloud preferences page.
 
 ![](../images/alerts/ui/edit-preferences.png)
 
-Your profile will be displayed. Select the **[!UICONTROL Notifications]** tab.
+The **Profile** tab is displayed. Select the **[!UICONTROL Notifications]** tab in the side bar menu, to access the email alerts preferences.
 
 ![](../images/alerts/ui/profile.png)
 
 Scroll to the **Emails** section at the bottom of the page and select **[!UICONTROL Instant notifications]** 
 
 ![](../images/alerts/ui/notifications.png)
+
+Any alerts that you are subscribed to will now be delivered to the email address that is connected to your Adobe ID account.
 
 ## View alert history
 
