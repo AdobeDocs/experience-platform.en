@@ -31,6 +31,26 @@ Select the ellipsis (**...**) next to a rule's name, and a dropdown displays con
 
 ![](../images/alerts/ui/disable-subscribe.png)
 
+## Email alerts
+
+Alert notification can be delivered direct to your email. 
+
+Select the bell icon (![bell icon](../images/alerts/ui/bell-icon.png)) to display notifications and announcements.
+
+![](../images/alerts/ui/bell.png)
+
+Select the cog icon (![cog icon](../images/alerts/ui/cog-icon.png)) to edit preferences.
+
+![](../images/alerts/ui/edit-preferences.png)
+
+Your profile will be displayed. Select the **[!UICONTROL Notifications]** tab.
+
+![](../images/alerts/ui/profile.png)
+
+Scroll to the **Emails** section at the bottom of the page and select **[!UICONTROL Instant notifications]** 
+
+![](../images/alerts/ui/notifications.png)
+
 ## View alert history
 
 The **[!UICONTROL History]** tab shows the history of received alerts for your organization, including the rule that triggered the alert, triggered date, and resolved date (if applicable).
