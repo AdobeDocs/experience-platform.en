@@ -73,7 +73,7 @@ https://pebbletemplates.io/wiki/filter/date/
 
 ## Functions added by Adobe {#functions-added-by-adobe}
 
-in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use for your data exports.
+In addition to the out-of-the-box functions provided by [!DNL Pebble], see below additional functions created by Adobe that you can use for your data exports.
 
 ### addedSegments and removedSegments functions {#addedsegments-removedsegments-functions}
 
@@ -133,6 +133,7 @@ added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %
 added: <111111><333333>; removed: <222222>
 
 ```
+<!--
 
 ### Added and removed segments filters {#added-and-removed-segmnts-filters}
 
@@ -186,6 +187,8 @@ added: {% for s in input.profile.segmentMembership.ups | added %}<{{s.key}}>{% e
 ```json
 added: <111111><333333>;|removed: <222222>;
 ```
+
+-->
 
 ## Next steps {#next-steps}
 
