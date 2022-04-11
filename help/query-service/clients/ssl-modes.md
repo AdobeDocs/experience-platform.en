@@ -30,11 +30,11 @@ The table below provides a breakdown of the different SSL modes available and th
 
 |  sslmode |  Eavesdropping protection | MITM protection  | Description  |
 |---|---|---|---|
-| `allow`  | Partial  | No  | I don't care about security, but I will pay the overhead of encryption if the server insists on it.  |
-| `prefer`  | Partial  | No  | I don't care about encryption, but I wish to pay the overhead of encryption if the server supports it.  |
-| `require`  | Yes  | No  | I want my data to be encrypted, and I accept the overhead. I trust that the network will make sure I always connect to the server I want.  |
-| `verify-ca`  | Yes  | Depends on CA-policy  |  I want my data encrypted, and I accept the overhead. I want to be sure that I connect to a server that I trust. |
-| `verify-full`  | Yes  | Yes  | I want my data encrypted, and I accept the overhead. I want to be sure that I connect to a server I trust, and that it's the one I specify.  |
+| `allow`  | Partial  | No  | Security is not a priority, speed and a low processing overhead are more important. This mode only opts for encryption if the server insists on it.  |
+| `prefer`  | Partial  | No  | Encryption is not required but the communication will be encrypted if the server supports it.  |
+| `require`  | Yes  | No  | Encryption is required on all communications. The network is trusted to connect to the correct server. Server SSL certificate validation is not required. |
+| `verify-ca`  | Yes  | Depends on CA-policy  | Encryption is required on all communications. Server validation is required before data is shared. |
+| `verify-full`  | Yes  | Yes  | Encryption is required on all communications. Server validation is required before data is shared.  |
 
 ## Why you must use SSL
 
@@ -50,9 +50,14 @@ To allow server certificate verification, you must place one or more root certif
 
 If you need stricter security control than `sslmode=require`, you can follow the steps highlighted to connect a third-party client to [!DNL Query Service] using `verify-full` SSL mode.
 
-1. Navigate to: [https://www.digicert.com/kb/digicert-root-certificates.htm](https://www.digicert.com/kb/digicert-root-certificates.htm)
-1. Search for `[!DNL DigiCert Global Root CA]` from the list of available root certificates.
-1. Select `[!DNL Download PEM]` to download the file to your local machine.
+>[!NOTE]
+>
+>DigiCert is a trusted global provider of high-assurance TLS/SSL, PKI, IoT and signing solutions.
+
+1. Navigate to [the list of available DigiCert root certificates](https://www.digicert.com/kb/digicert-root-certificates.htm)
+1. Search for '[!DNL DigiCert Global Root CA]' from the list of available certificates.
+1. Select [!DNL **Download PEM**] to download the file to your local machine.
+![The list of available DigiCert root certificates with Download PEM highlighted.](../images/clients/ssl-modes/digicert.png)
 1. Rename the security certificate file to `root.crt`.
 1. Copy the file to the [!DNL PostgreSQL] folder. The necessary file path is different depending on your operating system. If the folder does not already exist, create the folder. 
     - If you are using a [!DNL macOS] the path is: `/Users/<username>/.postgresql`
@@ -63,8 +68,6 @@ If you need stricter security control than `sslmode=require`, you can follow the
 >To find your `%appdata%` file location on a [!DNL Windows] operating system, press [!DNL Windows] key + 'R' and input `%appdata%` into the search field.
 
 After the `[!DNL DigiCert Global Root CA]` CRT file is available in your [!DNL PostgreSQL] folder, you can connect to [!DNL Query Service] using the `sslmode=verify-full` option.
-
-<!-- "If you have completed the steps shown above, then the Certificate Revocation List (CRL) entries are also checked as part of the server certificate verification. The location of the root certificate file and the CRL can be changed by setting the connection parameters `sslrootcert` and `sslcrl` or the environment variables `PGSSLROOTCERT` and `PGSSLCRL`. `sslcrldir` or the environment variable `PGSSLCRLDIR` can also be used to specify a directory containing CRL files." -->
 
 ## Next steps
 
