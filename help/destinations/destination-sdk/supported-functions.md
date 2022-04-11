@@ -8,13 +8,17 @@ title: Supported transformation functions in Destination SDK
 
 Experience Platform Destination SDK uses [[!DNL Pebble] templates](https://pebbletemplates.io/) to allow you to transform and filter the data exported out of Experience Platform to your destination into the format you need.
 
-The Experience Platform [!DNL Pebble] implementation has a couple of changes to the out-of-the box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
+The Experience Platform [!DNL Pebble] implementation has some changes, compared to the out-of-the box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
 
-## Prerequisites
+## Where to use {#where-to-use}
 
-To understand the concepts and functions in this reference page, read the [Message format](/help/destinations/destination-sdk/message-format.md) document first. You need to understand the [structure of a profile](/help/destinations/destination-sdk/message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and filter exported data.
+Use the supported functions and filters listed further below on this page when [creating a message transformation template](./create-template.md) for the data exported out of Experience Platform to your destination. The message transformation template is used in the [destination server configuration](./server-and-template-configuration.md) for streaming destinations.
 
-Before you advance to the functions documented below, review templating examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](/help/destinations/destination-sdk/message-format.md#using-templating). The examples in there start off very simple and increase in complexity. 
+## Prerequisites {#prerequisites}
+
+To understand the concepts and functions in this reference page, read the [Message format](/help/destinations/destination-sdk/message-format.md) document first. You need to understand the [structure of a profile](/help/destinations/destination-sdk/message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and filter the exported data.
+
+Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](/help/destinations/destination-sdk/message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
 
 ## Supported [!DNL Pebble] functions {#supported-functions}
 
@@ -24,13 +28,17 @@ From the [!DNL Pebble] tags section, Destination SDK only supports:
 * [if](https://pebbletemplates.io/wiki/tag/if/)
 * [set](https://pebbletemplates.io/wiki/tag/set/)
 
+>[!TIP]
+>
+>Using for is different when iterating through map or array elements
+
 From the [!DNL Pebble] filter section, Destination SDK supports `date` (shown in detail in an example further below), ADD OTHER SUPPORTED FUNCTIONS
 
 From the [!DNL Pebble] functions section, Adobe does *not* support the [range](https://pebbletemplates.io/wiki/function/range/) function.
 
 ## Example of how the `date` function is used {#date-function}
 
-To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below how the date function is used.
+To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below how the date function is used to transform the format of a timestamp.
 
 ### Use case {#use-case}
 
@@ -60,7 +68,7 @@ You want to change the `lastQualificationTime` timestamp from the default [ISO 8
 
 https://pebbletemplates.io/wiki/filter/date/ 
 
-## Functions added by Adobe
+## Functions added by Adobe {#functions-added-by-adobe}
 
 in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use for your data exports.
 
@@ -123,7 +131,7 @@ added: <111111><333333>; removed: <222222>
 
 ```
 
-### Added and removed filters
+### Added and removed filters 
 
 #### Use case
 
@@ -176,9 +184,9 @@ added: {% for s in input.profile.segmentMembership.ups | added %}<{{s.key}}>{% e
 added: <111111><333333>;|removed: <222222>;
 ```
 
-## Next steps
+## Next steps {#next-steps}
 
-You now know which [!DNL Pebble] functions and filters are supported in Destination SDK. Next, you should review the following pages:
+You now know which [!DNL Pebble] functions and filters are supported in Destination SDK, as well as how to use them to adjust the format of the exported data to fit your needs. Next, you should review the following pages:
 
 * [Create and test a message transformation template](/help/destinations/destination-sdk/create-template.md)
 * [Render template API operations](/help/destinations/destination-sdk/render-template-api.md)
