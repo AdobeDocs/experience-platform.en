@@ -30,7 +30,10 @@ From the [!DNL Pebble] tags section, Destination SDK only supports:
 
 >[!TIP]
 >
->Using for is different when iterating through map or array elements
+>Using `for` is different when iterating through *array* or *map* elements in a template. When you iterate through an array, you can obtain the element directly, when you iterate through a map, you obtain each map entry, which has a key and a corresponding value.
+>
+> * For array, think about the identities in an [identityMap](./message-format.md#identities) namespace, where you could iterate through elements such as identityMap.gaid, identityMap.email or similar.
+> * For map, think about [segmentMembership](./message-format.md#segment-membership).
 
 From the [!DNL Pebble] filter section, Destination SDK supports `date` (shown in detail in an example further below), ADD OTHER SUPPORTED FUNCTIONS
 
@@ -46,25 +49,25 @@ You want to change the `lastQualificationTime` timestamp from the default [ISO 8
 
 ### Example {#example}
 
-#### Input
+#### Input {#input}
 
 ```json
 2022-02-08T18:34:24.000+0000
 ```
 
-#### Format
+#### Format {#format}
 
 ```java
 {{ segment.value.lastQualificationTime | date(existingFormat="yyyy-MM-dd'T'HH:mm:sss.SSSX", format="yyyy-MM-dd'T'HH:mm:ssX") }}
 ```
 
-#### Output
+#### Output {#output}
 
 ```json
 "lastQualificationTime": "2022-02-21T18:34:24Z
 ```
 
-### Link in Pebble documentation
+### Link in Pebble documentation {#link-in-pebble-documentation}
 
 https://pebbletemplates.io/wiki/filter/date/ 
 
@@ -72,15 +75,15 @@ https://pebbletemplates.io/wiki/filter/date/
 
 in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use for your data exports.
 
-### addedSegments and removedSegments functions
+### addedSegments and removedSegments functions {#addedsegments-removedsegments-functions}
 
-#### Use case
+#### Use case {#use-case}
 
 These functions can be used on order to obtain a list of segments that were added to or removed from a profile.
 
-#### Example
+#### Example {#example}
 
-##### Input
+##### Input {#input}
 
 ```json
 
@@ -115,7 +118,7 @@ These functions can be used on order to obtain a list of segments that were adde
 
 ```
 
-##### Format
+##### Format {#format}
 
 ```java
 
@@ -123,7 +126,7 @@ added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %
 
 ```
 
-##### Output
+##### Output {#output}
 
 ```json
 
@@ -131,15 +134,15 @@ added: <111111><333333>; removed: <222222>
 
 ```
 
-### Added and removed filters 
+### Added and removed segments filters {#added-and-removed-segmnts-filters}
 
-#### Use case
+#### Use case {#use-case}
 
 These filters are similar to `addedSegments` and `removedSegments`, described above. The only difference is that they are implemented as filters as opposed to functions.
 
-#### Example
+#### Example {#example}
 
-##### Input
+##### Input {#input}
 
 ```json
 {
@@ -172,13 +175,13 @@ These filters are similar to `addedSegments` and `removedSegments`, described ab
 }
 ```
 
-##### Format
+##### Format {#format}
 
 ```java
 added: {% for s in input.profile.segmentMembership.ups | added %}<{{s.key}}>{% endfor %};|removed: {% for s in input.profile.segmentMembership.ups | removed %}<{{s.key}}>{% endfor %};
 ```
 
-##### Output
+##### Output {#output}
 
 ```json
 added: <111111><333333>;|removed: <222222>;
