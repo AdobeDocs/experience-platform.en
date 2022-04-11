@@ -38,7 +38,7 @@ To connect to this destination, follow the steps described in the [destination c
 >id="platform_destinations_connect_s3_folderpath"
 >title="Folder path"
 >abstract="Must contain only characters A-Z, a-z, 0-9 and can include the following special characters: `/!-_.'()"^[]+$%.*"`. To create a folder per segment file, insert the macro /%SEGMENT_NAME% or /%SEGMENT_ID% or /%SEGMENT_NAME%/%SEGMENT_ID% into the text field. Macros can only be inserted at the end of the folder path. View macro examples in the documentation."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="Use macros to create a folder in your storage location"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Use macros to create a folder in your storage location"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
