@@ -28,11 +28,13 @@ For more details on setting up the [!DNL Consumer Experience Event] (CEE) schema
 
 Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are mandatory for Attribution AI. 
 
->[!NOTE]
->
-> The following 9 columns are mandatory, additional columns are optional but recommended/necessary if you want to use the same data for other Adobe solutions such as [!DNL Customer AI] and [!DNL Journey AI].
+You can configure the touch points using any fields recommended below in the schema or selected dataset.
 
-| Mandatory columns | Needed for |
+<!-- >[!NOTE]
+>
+> The following 9 columns are optional but recommended/necessary if you want to use the same data for other Adobe solutions such as [!DNL Customer AI] and [!DNL Journey AI]. -->
+
+| Recommended columns | Needed for |
 | --- | --- |
 | Primary Identity Field | Touchpoint / Conversion |
 | Timestamp | Touchpoint / Conversion |
@@ -49,14 +51,6 @@ Typically, attribution is run on conversion columns such as order, purchases, an
 >[!TIP]
 >
 >If you are using Adobe Analytics data in your CEE schema, the touchpoint information for Analytics is typically stored in `channel.typeAtSource` (for example, `channel.typeAtSource = 'email'`).
-
-The columns below are not required but it is recommended that you include them in your CEE schema if you have the information available.
-
-**Additional recommended columns:**
-- web.webReferer
-- web.webInteraction
-- web.webPageDetails
-- xdm:productListItems
 
 ## Historical data {#data-requirements}
 
