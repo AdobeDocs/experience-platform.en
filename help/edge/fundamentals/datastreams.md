@@ -64,11 +64,17 @@ The rest of this section focuses on the steps to map data to a selected Platform
 
 Data Prep is an Experience Platform service that allows you to map, transform, and validate data to and from Experience Data Model (XDM). When configuring a Platform-enabled datastream, you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
 
-The subsections below cover the basic steps for mapping your data within the Data Collection UI. For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
+>[!NOTE]
+>
+>For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
+>
+>* [Data Prep overview](../../data-prep/home.md)
+>* [Data Prep mapping functions](../../data-prep/functions.md)
+>* [Handling data formats with Data Prep](../../data-prep/data-handling.md)
 
-* [Data Prep overview](../../data-prep/home.md)
-* [Data Prep mapping functions](../../data-prep/functions.md)
-* [Handling data formats with Data Prep](../../data-prep/data-handling.md)
+The subsections below cover the basic steps for mapping your data within the Data Collection UI. For a quick demonstration of these steps, refer to the following video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 #### [!UICONTROL Select data]
 
