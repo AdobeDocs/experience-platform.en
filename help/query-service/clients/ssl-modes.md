@@ -6,9 +6,9 @@ description: This document explains the SSL options available for third-party co
 ---
 # [!DNL Query Service] SSL options
 
-For increased security, Adobe Experience Platform [!DNL Query Service] provides native support for SSL connections to encrypt client/server communications. The different `sslmode` parameter values provide different levels of protection to cater for different security needs. By encrypting your data in motion with SSL certificates, it helps to prevent 'man-in-the-middle' (MITM) attacks, eavesdropping and impersonation.
+For increased security, Adobe Experience Platform [!DNL Query Service] provides native support for SSL connections to encrypt client/server communications. The different `sslmode` parameter values provide different levels of protection to cater to different security needs. By encrypting your data in motion with SSL certificates, it helps to prevent 'man-in-the-middle' (MITM) attacks, eavesdropping, and impersonation.
 
-Adobe Experience Platform assists you in your General Data Protection Regulation (GDPR) compliance journey by implementing a set of certified security processes and controls. See the [governance, privacy, and security documentation](../../landing/governance-privacy-security/overview.md) to learn more about how to control and monitor the collection and use of customer experience data. These documents detail the potential legal obligations and jurisdictions of your data operations, and the necessary organizational policies regarding your data usage. 
+Adobe Experience Platform assists you in your General Data Protection Regulation (GDPR) compliance journey by implementing a set of certified security processes and controls. See the [governance, privacy, and security documentation](../../landing/governance-privacy-security/overview.md) to learn more about how to control and monitor the collection and use of customer experience data. These documents detail the potential legal obligations and jurisdictions of your data operations and the necessary organizational policies regarding your data usage. 
 
 This document provides guidance on the available SSL options for third-party client connections to [!DNL Query Service] and how to connect using the `verify-full` SSL parameter value.
 
@@ -18,7 +18,7 @@ To acquire the necessary credentials for connecting a third-party client to Expe
 
 ## Available SSL options
 
-Due to the processing overhead of encryption and key-exchange in all SSL options, Platform supports various SSL options to best suit your data security needs. 
+Due to the processing overhead of encryption and key exchange in all SSL options, Platform supports various SSL options to best suit your data security needs. 
 
 When establishing a third-party connection to a Platform database, you are recommended to use `sslmode=require` at a minimum to ensure a secure connection for your data in motion. The `verify-full` SSL mode is recommended for use in most security-sensitive environments.
 
