@@ -147,7 +147,7 @@ If a segment within the [!UICONTROL Mapped audience health] widget is deviating 
 
 ![The Mapped audience health widget.](../images/destinations/mapped-audience-health.png)
 
-### [!UICONTROL Destinations count] (#destinations-count)
+### [!UICONTROL Destinations count] {#destinations-count}
 
 The [!UICONTROL Destinations count] widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. 
 
