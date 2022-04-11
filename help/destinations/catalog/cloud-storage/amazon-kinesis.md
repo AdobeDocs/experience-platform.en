@@ -1,6 +1,6 @@
 ---
 keywords: Amazon Kinesis;kinesis destination;kinesis
-title: Amazon Kinesis connection
+title: (Beta) Amazon Kinesis connection
 description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 ---
@@ -38,6 +38,10 @@ Refer to the table below for information about the destination export type and f
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
+
+## IP address allowlist {#ip-address-allowlist}
+
+To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the [!DNL Amazon Kinesis] destination. Refer to [IP address allow list for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
 ## Required [!DNL Amazon Kinesis] permissions {#required-kinesis-permission}
 
