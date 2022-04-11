@@ -15,10 +15,10 @@ The following document outlines the different input and outputs utilized in [!DN
 Attribution AI works by analyzing the following datasets to calculate algorithmic scores:
 
 - Adobe Analytics datasets using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Experience Event (EE) dataset
-- Consumer Experience Event (CEE) dataset
+- Experience Event (EE) datasets 
+- Consumer Experience Event (CEE) datasets
 
-You can add multiple datasets from different sources if each of the datasets shares the same identity type (namespace) such as an ECID. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
+You can add multiple datasets from different sources based on the identity map if each of the datasets shares the same identity type (namespace) such as an ECID. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
 
 >[!IMPORTANT]
 >
