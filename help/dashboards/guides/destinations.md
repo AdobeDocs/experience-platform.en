@@ -50,6 +50,10 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
 * [[!UICONTROL Destinations count]](#destinations-count)
+* [[!UICONTROL Destination status]](#destination-status)
+* [[!UICONTROL Active destinations by destination platform]](#active-destinations-by-destination-platform)
+* [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL Activated audiences]](#activated-audiences)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
@@ -154,6 +158,30 @@ The [!UICONTROL Destinations count] widget provides the total number of availabl
 Below the total count, select **[!UICONTROL Destinations]** to navigate to the destinations browse tab. This page lists all the destinations that you have established a connection with to date.
 
 ![The Destinations count widget.](../images/destinations/destinations-count.png)
+
+### [!UICONTROL Destination status] {#destination-status}
+
+Description words. The [!UICONTROL Destination status] widget displays the total number of enabled and disabled destinations as a doughnut chart.
+
+![The do-dah widget.](XXXXXXX.png)
+
+### [!UICONTROL Active destinations by destination platform] {#active-destinations-by-destination-platform}
+
+The [!UICONTROL Active destinations by destination platform] widget provides a two column table to show a list of active destination platforms and the total number of active destinations for each destination platform.
+
+![The Active destinations by destination platform widget.](XXXXXXX.png)
+
+### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
+
+The [!UICONTROL Activated audiences across all destinations] widget provides the total number of audiences activated across all destinations.
+
+![The Activated audiences across all destinations widget.](XXXXXXX.png)
+
+### [!UICONTROL Activated audiences] {#activated-audiences}
+
+The [!UICONTROL Activated audiences] widget provides the total number of audiences activated to the destination selected from the overview dropdown menu.
+
+![The Activated audiences widget.](XXXXXXX.png)
 
 ## Next steps
 
