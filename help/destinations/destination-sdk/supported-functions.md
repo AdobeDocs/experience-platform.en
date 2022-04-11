@@ -43,31 +43,31 @@ From the [!DNL Pebble] functions section, Adobe does *not* support the [range](h
 
 To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below how the date function is used to transform the format of a timestamp.
 
-### Use case {#use-case}
+### Use case
 
 You want to change the `lastQualificationTime` timestamp from the default [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) value that Experience Platform exports to another value preferred by your destination.
 
-### Example {#example}
+### Example
 
-#### Input {#input}
+#### Input
 
 ```json
 2022-02-08T18:34:24.000+0000
 ```
 
-#### Format {#format}
+#### Format
 
 ```java
 {{ segment.value.lastQualificationTime | date(existingFormat="yyyy-MM-dd'T'HH:mm:sss.SSSX", format="yyyy-MM-dd'T'HH:mm:ssX") }}
 ```
 
-#### Output {#output}
+#### Output
 
 ```json
 "lastQualificationTime": "2022-02-21T18:34:24Z
 ```
 
-### Link in Pebble documentation {#link-in-pebble-documentation}
+### Link in Pebble documentation
 
 https://pebbletemplates.io/wiki/filter/date/ 
 
@@ -77,13 +77,13 @@ In addition to the out-of-the-box functions provided by [!DNL Pebble], see below
 
 ### addedSegments and removedSegments functions {#addedsegments-removedsegments-functions}
 
-#### Use case {#use-case}
+#### Use case
 
 These functions can be used on order to obtain a list of segments that were added to or removed from a profile.
 
-#### Example {#example}
+#### Example
 
-##### Input {#input}
+##### Input
 
 ```json
 
@@ -118,7 +118,7 @@ These functions can be used on order to obtain a list of segments that were adde
 
 ```
 
-##### Format {#format}
+##### Format
 
 ```java
 
@@ -126,7 +126,7 @@ added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %
 
 ```
 
-##### Output {#output}
+##### Output
 
 ```json
 
