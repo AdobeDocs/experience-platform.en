@@ -107,9 +107,39 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 
 If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
 
-Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+Once you reach at the **[!UICONTROL Review]** step when [activating a destination](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
 
-A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
+![View applied policies button in the activate destination workflow](../images/enforcement/view-applied-policies.png)
+
+A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segments.
+
+![Consent policy check dialog in the Platform UI](../images/enforcement/consent-policy-check.png)
+
+The dialog shows the addressable audience for one segment at a time. To view the policy evaluation for a different segment, use the dropdown menu above the diagram to select one from the list.
+
+![Segment switcher in the policy check dialog](../images/enforcement/segment-switcher.png)
+
+Use the left rail to switch between the applicable consent policies for the selected segment. Policies that are not selected are represented in the "[!UICONTROL Other policies]" section of the diagram.
+
+![Policy switcher in the policy check dialog](../images/enforcement/policy-switcher.png)
+
+The diagram displays the overlap between three groups of profiles:
+
+1. Profiles that qualify for the selected segment
+1. Profiles that qualify for the selected consent policy
+1. Profiles that qualify for the other applicable consent policies for the segment (referred to as "[!UICONTROL Other policies]" in the diagram)
+
+The profiles that qualify for all three of the above groups represent the addressable audience for the selected segment, summarized in the right rail.
+
+![Summary section in the policy check dialog](../images/enforcement/summary.png)
+
+Hover over one of the audiences in the diagram to show the number of profiles it contains.
+
+![Highlighting a diagram section in the policy check dialog](../images/enforcement/highlight-segment.png)
+
+The addressable audience is represented by the central overlap of the diagram, and can be highlighted like the other sections.
+
+![Highlighting the addressable audience in the diagram](../images/enforcement/addressable-audience.png)
 
 ## Policy enforcement for activated segments {#policy-enforcement-for-activated-segments}
 
