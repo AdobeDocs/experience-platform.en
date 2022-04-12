@@ -18,7 +18,7 @@ Attribution AI works by analyzing the following datasets to calculate algorithmi
 - Experience Event (EE) datasets in general from Adobe Experience Platform schema
 - Consumer Experience Event (CEE) datasets
 
-You can now add multiple datasets from different sources based on the identity map (field) if each of the datasets shares the same identity type (namespace) such as an ECID. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
+You can now add multiple datasets from different sources based on the identity map (field) if each of the datasets shares the same identity type (namespace) such as an ECID. After you select an identity and a namespace, ID Column completeness metrics appear which indicate the volume of data being stitched. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
 
 The channel information is not always mapped by default. In some cases, if the mediaChannel (field) is blank, then you would not be able to  "continue" until you map a field to mediaChannel. If the channel is detected in the dataset, it is then mapped to mediaChannel by default.
 
