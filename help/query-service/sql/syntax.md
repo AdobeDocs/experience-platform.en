@@ -415,6 +415,27 @@ WHEN other THEN SELECT 'ERROR';
 END $$; 
 ```
 
+## Inline {#inline}
+
+The inline function separates the elements of an array of structs and generates the values into a table. It can only be placed in the `SELECT` list or a `LATERAL VIEW`.
+
+The inline function **cannot** be placed in a select list where there are other generator functions.
+
+By default, the columns produced are named “col1”, “col2”, and so on. If the expression is `NULL` then no rows are produced.
+
+**Example**
+
+```sql
+> SELECT inline(array(struct(1, 'a'), struct(2, 'b'))), 'Spark SQL';
+```
+
+The example returns the following:
+
+```text
+1  a Spark SQL
+2  b Spark SQL
+```
+
 ## [!DNL Spark] SQL commands 
 
 The sub-section below covers the Spark SQL commands supported by Query Service.
