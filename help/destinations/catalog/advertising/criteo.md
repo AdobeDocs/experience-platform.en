@@ -8,7 +8,7 @@ description: Criteo powers trusted and impactful advertising to bring richer exp
 
 ## Overview {#overview}
 
->[IMPORTANT]
+>[!IMPORTANT]
 >
 >This documentation page was created by Criteo. This is currently a beta product. For any inquiries or update requests, please contact Criteo directly [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
