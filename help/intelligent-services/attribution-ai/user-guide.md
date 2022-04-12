@@ -86,11 +86,11 @@ In order for multiple datasets to join on one another, you must select an identi
 
 To select an identity, select the underlined value located in the identity column. The select an identity popover appears.
 
-![select same namespace](./images/user-guide/identity-type.png)
+![select same namespace](./images/user-guide/aai-identity-map.png)
 
 In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and be more useful in individual predictions. This means you would select `EMAIL (personalEmail.address)` as your identity.
 
-![Dataset key not selected](./images/user-guide/select-identity.png)
+![Dataset key not selected](./images/user-guide/aai-identity-namespace.png)
 
 >[!NOTE]
 >
@@ -116,9 +116,9 @@ There are three different types of input data used for defining events:
 
 ### Define conversion events {#define-conversion-events}
 
-In order to define a conversion event, you need to give the event a name and select the event type by selecting the **Enter Field Name** dropdown menu. 
+In order to define a conversion event, you need to give the event a name and select the event type by selecting the dataset and field from the **Select a dataset and field** dropdown menu. 
 
-![yes dropdown](./images/user-guide/conversion_event_2.png)
+![yes dropdown](./images/user-guide/define-conversion-events.png)
 
 Once an event is selected, a new dropdown appears to its right. The second dropdown is used to provide further context to your event through the use of operations. For this conversion event, the default operation *exists* is used.
 
