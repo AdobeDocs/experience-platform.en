@@ -1224,5 +1224,5 @@ You have multiple debugging capabilities when using Web SDK:
 * Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
 * [Web SDK debug enabled](../../../edge/fundamentals/debugging.md)
 * Use [Web SDK monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Use [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=en)
+* Use [Adobe Experience Platform Debugger](../../../debugger/home.md)
 * Target Trace
