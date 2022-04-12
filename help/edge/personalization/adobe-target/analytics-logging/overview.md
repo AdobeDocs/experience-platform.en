@@ -4,8 +4,8 @@ description: Learn how to control the collection of Adobe Analytics for Target (
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
 keywords: a4t;logging;analytics;sdk;web sdk;
+exl-id: f1c90ccd-48a9-4668-b2ac-eacd5bec0b91
 ---
-
 # Adobe Analytics for Target (A4T) logging in the Platform Web SDK
 
 When using Adobe Target for personalization, you can choose which system you want to use for performance measurement. Each [Target activity](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) allows you to select between Target reporting and Adobe Analytics reporting. 
