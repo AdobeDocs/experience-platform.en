@@ -105,7 +105,7 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 >
 >Consent policies are currently in beta and your organization may not have access to them yet.
 
-If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies affect the percentage of profiles are included in the activation.
+If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies affect the percentage of profiles that are included in the activation.
 
 #### Pre-activation evaluation
 
