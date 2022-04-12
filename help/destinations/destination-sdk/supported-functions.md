@@ -1,22 +1,22 @@
 ---
-description: Experience Platform Destination SDK uses Pebble templates to allow you to transform and filter the data exported out of Experience Platform to your destination into the format you need.
+description: Experience Platform Destination SDK uses Pebble templates, allowing you to transform the data exported out of Experience Platform to your destination into the format you need.
 title: Supported transformation functions in Destination SDK
 ---
 # Supported transformation functions in Destination SDK
 
 ## Overview {#overview}
 
-Experience Platform Destination SDK uses [[!DNL Pebble] templates](https://pebbletemplates.io/) to allow you to transform and filter the data exported out of Experience Platform to your destination into the format you need.
+Experience Platform Destination SDK uses [[!DNL Pebble] templates](https://pebbletemplates.io/), allowing you to transform the data exported out of Experience Platform to your destination into the format you need.
 
 The Experience Platform [!DNL Pebble] implementation has some changes, compared to the out-of-the box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
 
 ## Where to use {#where-to-use}
 
-Use the supported functions and filters listed further below on this page when [creating a message transformation template](./create-template.md) for the data exported out of Experience Platform to your destination. The message transformation template is used in the [destination server configuration](./server-and-template-configuration.md) for streaming destinations.
+Use the supported functions and listed further below on this page when [creating a message transformation template](./create-template.md) for the data exported out of Experience Platform to your destination. The message transformation template is used in the [destination server configuration](./server-and-template-configuration.md) for streaming destinations.
 
 ## Prerequisites {#prerequisites}
 
-To understand the concepts and functions in this reference page, read the [Message format](/help/destinations/destination-sdk/message-format.md) document first. You need to understand the [structure of a profile](/help/destinations/destination-sdk/message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and filter the exported data.
+To understand the concepts and functions in this reference page, read the [Message format](/help/destinations/destination-sdk/message-format.md) document first. You need to understand the [structure of a profile](/help/destinations/destination-sdk/message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and the exported data.
 
 Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](/help/destinations/destination-sdk/message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
 
@@ -52,7 +52,7 @@ You want to change the `lastQualificationTime` timestamp from the default [ISO 8
 #### Input
 
 ```json
-2022-02-08T18:34:24.000+0000
+"lastQualificationTime": "2022-02-08T18:34:24.000+0000"
 ```
 
 #### Format
@@ -64,7 +64,7 @@ You want to change the `lastQualificationTime` timestamp from the default [ISO 8
 #### Output
 
 ```json
-"lastQualificationTime": "2022-02-21T18:34:24Z
+"lastQualificationTime": "2022-02-21T18:34:24Z"
 ```
 
 ### Link in Pebble documentation
@@ -193,7 +193,7 @@ added: <111111><333333>;|removed: <222222>;
 
 ## Next steps {#next-steps}
 
-You now know which [!DNL Pebble] functions and filters are supported in Destination SDK, as well as how to use them to adjust the format of the exported data to fit your needs. Next, you should review the following pages:
+You now know which [!DNL Pebble] functions are supported in Destination SDK, as well as how to use them to adjust the format of the exported data to fit your needs. Next, you should review the following pages:
 
 * [Create and test a message transformation template](/help/destinations/destination-sdk/create-template.md)
 * [Render template API operations](/help/destinations/destination-sdk/render-template-api.md)
