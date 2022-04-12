@@ -105,7 +105,9 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 >
 >Consent policies are currently in beta and your organization may not have access to them yet.
 
-If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies affect the percentage of profiles are included in the activation.
+
+#### Pre-activation evaluation
 
 Once you reach at the **[!UICONTROL Review]** step when [activating a destination](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
 
@@ -140,6 +142,12 @@ Hover over one of the audiences in the diagram to show the number of profiles it
 The addressable audience is represented by the central overlap of the diagram, and can be highlighted like the other sections.
 
 ![Highlighting the addressable audience in the diagram](../images/enforcement/addressable-audience.png)
+
+#### Flow run enforcement
+
+When data is activated to a destination, the flow run details show the number of identities that were excluded due to active consent policies.
+
+![Excluded identities metrics for a dataflow run](../images/enforcement/dataflow-run-enforcement.png)
 
 ## Policy enforcement for activated segments {#policy-enforcement-for-activated-segments}
 
