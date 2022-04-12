@@ -22,7 +22,7 @@ You can now add multiple datasets from different sources based on the identity m
 
 The channel information is not always mapped by default. In some cases, if the mediaChannel (field) is blank, then you would not be able to  "continue" until you map a field to mediaChannel. If the channel is detected in the dataset, it is then mapped to mediaChannel by default.
 
-After you map the channel field, continue to the 'Define events' step where you can select the conversion events, touchpoint events and specific fields from individual datasets.
+After you map the channel field, continue to the 'Define events' step where you can select the conversion events, touchpoint events and choose specific fields from individual datasets.
 
 >[!IMPORTANT]
 >
