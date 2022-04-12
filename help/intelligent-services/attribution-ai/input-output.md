@@ -15,10 +15,12 @@ The following document outlines the different input and outputs utilized in [!DN
 Attribution AI works by analyzing the following datasets to calculate algorithmic scores:
 
 - Adobe Analytics datasets using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Experience Event (EE) datasets 
+- Experience Event (EE) datasets in general from Adobe Experience Platform schema
 - Consumer Experience Event (CEE) datasets
 
-You can add multiple datasets from different sources based on the identity map if each of the datasets shares the same identity type (namespace) such as an ECID. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
+You can now add multiple datasets from different sources based on the identity map (field) if each of the datasets shares the same identity type (namespace) such as an ECID. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
+
+The channel information is not always mapped by default. In some cases, if the mediaChannel is blank, then you would not be able to  "continue" until you map a field to mediaChannel. Of course, if the channel is detected in the dataset, it would be mapped to mediaChannel by default and then you can continue to the next step.
 
 >[!IMPORTANT]
 >
