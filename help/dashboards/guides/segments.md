@@ -65,6 +65,10 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audience size trend]](#audience-size-trend)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+* [[!UICONTROL Audience activation order]](#audience-activation-order)
+* [[!UICONTROL Audience size trend]](#audience-size-trend)
+* [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
+* [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
 
 ### [!UICONTROL Audience size] {#audience-size}
 
@@ -105,6 +109,32 @@ The **[!UICONTROL Profiles by identity]** widget displays the breakdown of ident
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
 ![](../images/segments/profiles-by-identity.png)
+
+### [!UICONTROL Audience activation order] {#audience-activation-order}
+
+The [!UICONTROL Audience activation order] widget provides a three column table that lists up to 10 audiences, the name of the audience, and the activation date of the audience. The list is ordered from high to low according to recency.
+
+![The Audience activation order widget.]()
+
+### [!UICONTROL Audience size trend] {#audience-size-trend}
+
+The [!UICONTROL Audience size trend] widget provides a line graph illustration for the total number of profiles that meet the criteria of **any** segment definition over a given period of time. The audience size trend can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected in the y-axis and time on the x-axis.
+
+![The Audience size trend widget.]()
+
+### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
+
+This widget provides a line graph illustration of the difference in total number of profiles that qualified for a given segment between the most recent daily snapshots. The segment chosen for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected in the y-axis and time on the x-axis.
+
+![The Audience size change trend widget.]()
+
+### [!UICONTROL Audience size trend by identity] {#audience-size-trend-by-identity}
+
+This widgets illustrates the audience size trend for a particular segment based on a specific identity chosen from the widget dropdown menu. The segment used for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
+
+<!-- I don't understand the functionality of this one specifically -->
+
+![The Audience size trend by identity widget.]()
 
 ## Next steps
 

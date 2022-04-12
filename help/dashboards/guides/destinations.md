@@ -53,7 +53,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Destination status]](#destination-status)
 * [[!UICONTROL Active destinations by destination platform]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations)
-* [[!UICONTROL Activated audiences]](#activated-audiences)
+<!-- * [[!UICONTROL Activated audiences]](#activated-audiences) -->
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
@@ -161,9 +161,9 @@ Below the total count, select **[!UICONTROL Destinations]** to navigate to the d
 
 ### [!UICONTROL Destination status] {#destination-status}
 
-Description words. The [!UICONTROL Destination status] widget displays the total number of enabled and disabled destinations as a doughnut chart.
+The [!UICONTROL Destination status] widget displays the total number of enabled and disabled destinations as a doughnut chart.
 
-![The do-dah widget.](XXXXXXX.png)
+![The Destination status widget.](XXXXXXX.png)
 
 ### [!UICONTROL Active destinations by destination platform] {#active-destinations-by-destination-platform}
 
@@ -177,11 +177,11 @@ The [!UICONTROL Activated audiences across all destinations] widget provides the
 
 ![The Activated audiences across all destinations widget.](XXXXXXX.png)
 
-### [!UICONTROL Activated audiences] {#activated-audiences}
+<!-- ### [!UICONTROL Activated audiences] {#activated-audiences}
 
 The [!UICONTROL Activated audiences] widget provides the total number of audiences activated to the destination selected from the overview dropdown menu.
 
-![The Activated audiences widget.](XXXXXXX.png)
+![The Activated audiences widget.](XXXXXXX.png) -->
 
 ## Next steps
 

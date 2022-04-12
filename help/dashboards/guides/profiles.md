@@ -100,6 +100,10 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Unsegmented Profiles]](#unsegmented-profiles)
 * [[!UICONTROL Unsegmented Profiles] Trend](#unsegmented-profiles-trend)
 * [[!UICONTROL Unsegmented Profiles by Identity]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL Audiences mapped status]](#audiences-mapped-status)
+* [[!UICONTROL Audiences size]](#audiences-size)
+* [[!UICONTROL Single identity profiles change trend]](#single-identity-profiles-change-trend)
+* [[!UICONTROL Single identity profiles by identity type]](#single-identity-profiles-by-identity-type)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -184,6 +188,31 @@ The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustr
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
+
+### [!UICONTROL Audiences mapped status] {#audience-size}
+
+The [!UICONTROL Audience size] widget displays the total number of both mapped and unmapped audiences as a doughnut chart. The numbers calculated are dependant on the chosen merge policy. 
+
+![The Audiences mapped status widget.](XXXXXXX.png)
+
+### [!UICONTROL Audiences size] {#audiences-size}
+
+The [!UICONTROL Audiences size] widget provides a two column table that lists of up to 20 segments and the total number of audiences contained in each segment. The list is ordered from high to low according to total number of audiences. The total audience size number is dependant on the merge policy applied.
+
+![The Audiences size widget.]()
+
+### [!UICONTROL Single identity profiles change trend] {#single-identity-profiles-change-trend}
+
+The [!UICONTROL Single identity profiles change trend] widget depicts the difference in total number of profiles with only a single identity over a period of time. The widget uses a line graph to illustrate the trend in total numbers of single identity profiles. The depicted time period can be adjusted using the dropdown menu to cover the past 30 days, 90 days, or 12 months.
+
+![The Single identity profiles change trend widget.]()
+
+### [!UICONTROL Single identity profiles by identity type] {#single-identity-profiles-by-identity-type}
+
+
+The [!UICONTROL Single identity profiles by identity type] widget uses a bar chart to illustrate the total number of profiles with a single identifier by the five most commonly occurring identities. 
+
+![The Single identity profiles by identity type widget.]()
 
 ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
