@@ -61,15 +61,15 @@ Steps to connect are as follows:
 
 1. Log in to Adobe Experience Platform and connect to the Criteo destination.
   
-    ![Log in](../../assets/catalog/advertising/criteo/connect-destination.jpeg)
+    ![Log in](../../assets/catalog/advertising/criteo/connect-destination.png)
 
 1. You will be redirected to Criteo to authorize the connection. You may need to first log in with your Criteo credentials:
 
-    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-1.jpeg)
+    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-1.png)
     
-    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-2.jpeg)
+    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-2.png)
     
-    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-3.jpeg)
+    ![Criteo login](../../assets/catalog/advertising/criteo/log-in-3.png)
 
 
 ### Connection parameters {#connection-parameters}
