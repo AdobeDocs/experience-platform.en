@@ -31,17 +31,15 @@ Select the ellipsis (**...**) next to a rule's name, and a dropdown displays con
 
 ![](../images/alerts/ui/disable-subscribe.png)
 
-## Add email alerts
+## Enable email alerts
 
 Alert notifications can be delivered direct to your email. 
 
-Select the bell icon (![bell icon](../images/alerts/ui/bell-icon.png)) located in the top ribbon on the right to display notifications and announcements.
-
-In the dropdown that appears, select the cog icon (![cog icon](../images/alerts/ui/cog-icon.png)) to access the Experience Cloud preferences page.
+Select the bell icon (![bell icon](../images/alerts/ui/bell-icon.png)) located in the top ribbon on the right to display notifications and announcements. In the dropdown that appears, select the cog icon (![cog icon](../images/alerts/ui/cog-icon.png)) to access the Experience Cloud preferences page.
 
 ![](../images/alerts/ui/edit-preferences.png)
 
-The **Profile** tab is displayed. Select the **[!UICONTROL Notifications]** tab in the side bar menu, to access the email alerts preferences.
+The **Profile** tab is displayed. Select the **[!UICONTROL Notifications]** in the left navigation to access the email alerts preferences.
 
 ![](../images/alerts/ui/profile.png)
 
