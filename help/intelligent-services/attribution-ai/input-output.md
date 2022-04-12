@@ -20,7 +20,9 @@ Attribution AI works by analyzing the following datasets to calculate algorithmi
 
 You can now add multiple datasets from different sources based on the identity map (field) if each of the datasets shares the same identity type (namespace) such as an ECID. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
 
-The channel information is not always mapped by default. In some cases, if the mediaChannel is blank, then you would not be able to  "continue" until you map a field to mediaChannel. Of course, if the channel is detected in the dataset, it is mapped to mediaChannel by default. From here, yous can continue to the next step.
+The channel information is not always mapped by default. In some cases, if the mediaChannel (field) is blank, then you would not be able to  "continue" until you map a field to mediaChannel. If the channel is detected in the dataset, it is then mapped to mediaChannel by default.
+
+After you map the channel field, continue to the 'Define events' step where you can select the conversion events, touchpoint events and specific fields from individual datasets.
 
 >[!IMPORTANT]
 >
