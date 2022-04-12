@@ -1,6 +1,6 @@
 ---
 audience: user
-solution: Data Collection, Experience Platform
+solution: Data Collection
 user-guide-title: Adobe Experience Platform Data Collection
 breadcrumb-title: Data Collection Guide
 user-guide-description: Enable client-side data collection for Adobe Experience Platform Edge Network.
