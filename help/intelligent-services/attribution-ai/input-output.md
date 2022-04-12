@@ -20,9 +20,9 @@ Attribution AI works by analyzing the following datasets to calculate algorithmi
 
 You can now add multiple datasets from different sources based on the identity map (field) if each of the datasets shares the same identity type (namespace) such as an ECID. After you select an identity and a namespace, ID Column completeness metrics appear which indicate the volume of data being stitched. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
 
-The channel information is not always mapped by default. In some cases, if the mediaChannel (field) is blank, then you would not be able to  "continue" until you map a field to mediaChannel. If the channel is detected in the dataset, it is then mapped to mediaChannel by default.
+The channel information is not always mapped by default. In some cases, if the mediaChannel (field) is blank, you would not be able to  "continue" until you map a field to mediaChannel. If the channel is detected in the dataset, it is mapped to mediaChannel by default.
 
-After you map the channel field, continue to the 'Define events' step where you can select the conversion events, touchpoint events and choose specific fields from individual datasets.
+After you map the channel field, continue to the 'Define events' step where you can select the conversion events, touchpoint events, and choose specific fields from individual datasets.
 
 >[!IMPORTANT]
 >
@@ -33,10 +33,6 @@ For more details on setting up the [!DNL Consumer Experience Event] (CEE) schema
 Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are mandatory for Attribution AI. 
 
 You can configure the touch points using any fields recommended below in the schema or selected dataset.
-
-<!-- >[!NOTE]
->
-> The following 9 columns are optional but recommended/necessary if you want to use the same data for other Adobe solutions such as [!DNL Customer AI] and [!DNL Journey AI]. -->
 
 | Recommended columns | Needed for |
 | --- | --- |
