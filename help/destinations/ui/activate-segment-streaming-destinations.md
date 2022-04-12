@@ -75,7 +75,7 @@ Some segment streaming destinations require you to select source attributes or i
 >id="platform_destinations_activate_applytransformation"
 >title="Apply transformation"
 >abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="Learn more in documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="Learn more in documentation"
 
 When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
 
