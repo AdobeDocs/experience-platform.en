@@ -52,4 +52,4 @@ The **[!UICONTROL Configuration]** tab reappears, showing that the live embed co
 
 ## Next steps
 
-This tutorial covered how to locally switch embed codes for testing purposes using Platform Debugger. Refer to the [Platform Debugger documentation](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html) for more information on its various capabilities.
+This tutorial covered how to locally switch embed codes for testing purposes using Platform Debugger. Refer to the [Platform Debugger documentation](../../../debugger/home.md) for more information on its various capabilities.
