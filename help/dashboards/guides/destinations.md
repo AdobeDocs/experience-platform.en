@@ -45,7 +45,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Recently created destinations]](#recently-created-destinations)
 * [[!UICONTROL Recently activated segments]](#recently-activated-segments)
 * [[!UICONTROL Recently activated segments by destination]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Audience size trend]](#audience-size-trends)
+* [[!UICONTROL Audience size trend]](#audience-size-trend)
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
