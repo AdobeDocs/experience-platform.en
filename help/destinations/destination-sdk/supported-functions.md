@@ -52,7 +52,9 @@ You want to change the `lastQualificationTime` timestamp from the default [ISO 8
 #### Input
 
 ```json
+{
 "lastQualificationTime": "2022-02-08T18:34:24.000+0000"
+}
 ```
 
 #### Format
@@ -64,7 +66,9 @@ You want to change the `lastQualificationTime` timestamp from the default [ISO 8
 #### Output
 
 ```json
+{
 "lastQualificationTime": "2022-02-21T18:34:24Z"
+}
 ```
 
 ### Link in Pebble documentation
@@ -73,9 +77,9 @@ https://pebbletemplates.io/wiki/filter/date/
 
 ## Functions added by Adobe {#functions-added-by-adobe}
 
-In addition to the out-of-the-box functions provided by [!DNL Pebble], see below additional functions created by Adobe that you can use for your data exports.
+In addition to the out-of-the-box functions provided by [!DNL Pebble], see below the additional functions created by Adobe that you can use for your data exports.
 
-### addedSegments and removedSegments functions {#addedsegments-removedsegments-functions}
+### `addedSegments` and `removedSegments` functions {#addedsegments-removedsegments-functions}
 
 #### Use case
 
