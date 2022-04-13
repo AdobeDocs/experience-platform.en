@@ -242,14 +242,14 @@ In order to support "map-like" data efficiently in XDM, objects may be annotated
 
 XDM places the following restrictions on the use of this storage hint:
 
-* Map types MUST be of type `object`
-* Map types MUST NOT have properties defined (in other words, they define "empty" objects)
+* Map types MUST be of type `object`.
+* Map types MUST NOT have properties defined (in other words, they define "empty" objects).
 * Map types MUST include an `additionalProperties.type` field that describes the values that may be placed within the map, either `string` or `integer`.
 
 Ensure that you are only using map-type fields when absolutely necessary, as they carry the following performance drawbacks:
 
-* Response time from Adobe Experience Platform Query Service degrades from three seconds to ten seconds for 100 million records
-* Maps must have fewer than 16 keys or else risk further degradation
+* Response time from Adobe Experience Platform Query Service degrades from three seconds to ten seconds for 100 million records.
+* Maps must have fewer than 16 keys or else risk further degradation.
 
 The Platform user interface also has limitations in how it can extract the keys of map-type fields. Whereas object-type fields can be expanded, maps are displayed as a single field instead.
 
