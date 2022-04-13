@@ -107,6 +107,10 @@ The second dropdown menu lists every available segment that can be sent to the d
 
 ![The audience size trend widget.](../images/destinations/audience-size-trend.png)
 
+The **[!UICONTROL Audience size trend]** widget provides a [!UICONTROL Captions] button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog. A machine learning model automatically generates captions to describe the key trends and important events by analyzing the chart and segment data.
+
+![The automatic captions dialog for the Audience size trend widget.](../images/destinations/audience-size-trend-captions.png)
+
 ### [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
 
 The **[!UICONTROL Unmapped segments by identity]** widget lists the top five **unmapped** segments ranked by descending identity count for a given destination and identity. It highlights segments that are the most beneficial to map to the chosen destination account based on the chosen ID.
