@@ -53,6 +53,8 @@ The availability of these metrics and the specific definition of each of these m
 |<ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL UP TO 50M</li></ul>|[Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)|
 |<ul><li>AEP:OD INTELLIGENCE</li></ul>|[Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html)|
 
+{style="table-layout:auto"}
+
 ### Using the license usage dashboard on Platform UI
 
 Platform UI provides a dashboard through which you can view a snapshot of your organization’s license-related data for Platform. The data in the dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. Essentially, the snapshot is neither an approximation nor a sample of data, and the dashboard is not updating in real-time.
@@ -87,6 +89,8 @@ Ingestion filters allow you to bring in only the data that is needed for your us
 | Web SDK and Mobile SDK data exclusion | There are two types of data collected by Web and Mobile SDK: data that is collected automatically and data that is explicitly collected by your developer. To better manage license compliance, you can disable automatic data collection in the configuration of the SDK through the context setting. Custom data can also be removed or not set by your developer. See the guide on [configuring SDK fundamentals](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) for more information. |
 | Server-side forwarding data exclusion | If you are sending data to Platform using server-side forwarding, you can exclude what data is sent by either removing the mapping in a rule action to exclude it across all events, or by adding conditions to the rule so that data only fires for certain events. See the documentation on [events and conditions](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) for more information. |
 
+{style="table-layout:auto"}
+
 ### [!DNL Data Lake] TTL
 
 The [!DNL Data Lake] TTL (time-to-live) capability allows you to specify an expiration for your behavioral data in the [!DNL Data Lake]. This allows you to remove data whose value has diminished after a certain time  for analytics and data science use cases.
@@ -118,6 +122,8 @@ The Profile Store is composed of the following components:
 | Time-series data (Behavior) | **Time-series data** provides information about a user behavior. Represented by the standard schema class Experience Data Model (XDM) [!DNL ExperienceEvent], time-series data can describe events such as items being added to a cart, links being clicked, and videos viewed. The value of behavioral data diminishes quickly over time. |
 | Identity namespace (identities) | As customer data comes together, it is merged into a single profile through the use of **identity namespaces**, and the ability to stich these identities together as more information becomes known about the user. See the [identity namespaces overview](../identity-service/namespaces.md) for more information. |
 | Profile Store composition reports | There are a number of reports available to help you understand the composition of the Profile Store. These reports help you make informed decisions about how and where to set your Profile TTLs to better optimize your license usage:<ol><li>**Dataset Overlap Report API**: Exposes the datasets that contribute the most to your Addressable Audience. You can use this report to identify which [!DNL ExperienceEvent] datasets to set a TTL for.</li><li>**Identity Overlap Report API**: Exposes the identity namespaces that contribute the most to your Addressable Audience.</li><li>**Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply.</li></ol> |
+
+{style="table-layout:auto"}
 
 #### [!DNL ExperienceEvent] Dataset TTL
 
@@ -181,3 +187,5 @@ The following table outlines the list of currently available features at your di
 | [Dataset Overlap Report API](../profile/tutorials/dataset-overlap-report.md) | Outputs the datasets that contributes the most to your Addressable Audience |
 | [Unknown Profiles Report API](../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | Outputs the impact of apply pseudonymous TTL for different time thresholds |
 | [Identity Overlap Report API](../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Outputs the identity namespaces that contribute the most to your Addressable Audience |
+
+{style="table-layout:auto"}
