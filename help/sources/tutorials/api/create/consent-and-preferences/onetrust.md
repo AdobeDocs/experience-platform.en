@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;OneTrust
 solution: Experience Platform
 title: (Beta) Create a dataflow for a OneTrust Integration source using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to OneTrust Integration using the Flow Service API.
+exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
 ---
 # (Beta) Create a dataflow for a [!DNL OneTrust Integration] source using the [!DNL Flow Service] API
 
@@ -7780,4 +7781,3 @@ curl -X DELETE \
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
 You can confirm the deletion by attempting a lookup (GET) request to the connection.
-

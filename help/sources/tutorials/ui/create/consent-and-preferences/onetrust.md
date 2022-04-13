@@ -5,6 +5,7 @@ title: (Beta) Create a OneTrust Source Connection in the UI
 topic-legacy: overview
 type: Tutorial
 description: Learn how to create a OneTrust source connection using the Adobe Experience Platform UI.
+exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
 ---
 # (Beta) Create a [!DNL OneTrust Integration] source connection in the UI
 
