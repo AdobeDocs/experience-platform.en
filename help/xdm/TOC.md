@@ -165,7 +165,7 @@ feature: Schemas
   * [Define a schema relationship in the API](tutorials/relationship-api.md)
   * [Define a schema relationship in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
-  * [Extend a soft enum field (API)](tutorials/extend-soft-enum.md)
+  * [Add suggested values to a field (API)](tutorials/suggested-values.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
