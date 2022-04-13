@@ -57,7 +57,7 @@ To learn more about each of the available standard widgets, select the name of a
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="Most used destinations"
->abstract="This widget displays your organization's most active destinations by the number of segments mapped. These numbers are accurate at the time of the last snapshot."
+>abstract="This widget displays your organization's most active destinations by the number of segments mapped. These numbers are accurate at the time of the last snapshot. This ranking provides insight into which destinations are currently most used while highlighting those that may be underutilized."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#most-used-destinations" text="Learn more from documentation"
 
 The **[!UICONTROL Most used destinations]** widget displays your organization's top destinations by the number of segments mapped, as of the last snapshot. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. 
@@ -127,7 +127,7 @@ You can view a segment's details by selecting the name of a segment from the lis
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
 >title="Audience size trend"
->abstract="This widget illustrates the number of profiles contained in the segment, that are being sent to the destination account daily. The dropdown menu can be used to adjust the time period for the audience trend to cover the past 30 days, 90 days, or 12 months."
+>abstract="This widget illustrates the number of profiles contained in the segment, that is being sent to the destination account daily. The first dropdown menu adjusts the time period for the audience trend. The second widget dropdown menu selects the segment for analysis. The destination is chosen from the overview dropdown."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#audience-size-trend" text="Learn more from documentation"
 
 The **[!UICONTROL Audience size trend]** widget depicts the relationship of the profile count over a period of time for a segment that has been mapped to that destination account. The widget uses a line graph to illustrate the number of profiles contained in the segment, that are being sent to the destination account daily.
