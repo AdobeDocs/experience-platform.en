@@ -42,6 +42,10 @@ feature: Web SDK
     * [Accessing response tokens](personalization/adobe-target/accessing-response-tokens.md)
     * [Using mbox 3rd party ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
     * [Comparing the at.js library to the Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
+    * Analytics for Target (A4T) logging {#a4t}
+      * [Overview](personalization/adobe-target/analytics-logging/overview.md)
+      * [Client-side logging](personalization/adobe-target/analytics-logging/client-side.md)
+      * [Server-side logging](personalization/adobe-target/analytics-logging/server-side.md)
   * Offer Decisioning {#offer-decisioning}
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consent {#consent}
