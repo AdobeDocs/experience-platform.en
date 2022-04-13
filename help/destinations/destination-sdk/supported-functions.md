@@ -32,7 +32,7 @@ From the [!DNL Pebble] tags section, Destination SDK only supports:
 >
 >Using `for` is different when iterating through *array* or *map* elements in a template. When you iterate through an array, you can obtain the element directly, when you iterate through a map, you obtain each map entry, which has a key and a corresponding value.
 >
-> * For array, think about the identities in an [identityMap](./message-format.md#identities) namespace, where you could iterate through elements such as identityMap.gaid, identityMap.email or similar.
+> * For array, think about the identities in an [identityMap](./message-format.md#identities) namespace, where you could iterate through elements such as `identityMap.gaid`, `identityMap.email` or similar.
 > * For map, think about [segmentMembership](./message-format.md#segment-membership).
 
 From the [!DNL Pebble] filter section, Destination SDK supports all functions. An example further below shows how the `date` function can be used within Destination SDK.
