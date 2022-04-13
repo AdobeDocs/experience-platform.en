@@ -417,11 +417,15 @@ END $$;
 
 ## Inline {#inline}
 
-The inline function separates the elements of an array of structs and generates the values into a table. It can only be placed in the `SELECT` list or a `LATERAL VIEW`.
+The `inline` function separates the elements of an array of structs and generates the values into a table. It can only be placed in the `SELECT` list or a `LATERAL VIEW`.
 
-The inline function **cannot** be placed in a select list where there are other generator functions.
+The `inline` function **cannot** be placed in a select list where there are other generator functions.
 
 By default, the columns produced are named “col1”, “col2”, and so on. If the expression is `NULL` then no rows are produced.
+
+>[!TIP]
+>
+>Column names can be renamed using the `RENAME` command.
 
 **Example**
 
@@ -435,6 +439,25 @@ The example returns the following:
 1  a Spark SQL
 2  b Spark SQL
 ```
+
+The following real life example further demonstrates the concept and application of the `inline` function. The data model for the example is illustrated in the image below.
+
+![A schema diagram for the productListItems](../images/sql/productListItems.png)
+
+**Example**
+
+```sql
+select inline(productListItems) from source_dataset limit 10;
+```
+
+The values taken from the `source_dataset` are used to populate the target table.
+
+|         SKU         |  _experience                      | quantity | priceTotal   |
+|---------------------+-----------------------------------+----------+--------------|
+| product-id-1        | ("("("(A,pass,B,NULL)")")")       |     5    |  10.5        |
+| product-id-5        | ("("("(A, pass, B,NULL)")")")     |          |              |
+| product-id-2        | ("("("(AF, C, D,NULL)")")")       |      6   |  40          |
+| product-id-4        | ("("("(BM, pass, NA,NULL)")")")   |     3    |  12          |
 
 ## [!DNL Spark] SQL commands 
 
