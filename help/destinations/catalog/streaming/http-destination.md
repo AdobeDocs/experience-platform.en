@@ -1,17 +1,17 @@
 ---
 keywords: streaming; HTTP destination
-title: (Beta) HTTP API connection
+title: HTTP API connection
 keywords: streaming;
 description: The HTTP API destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 ---
-# (Beta) HTTP API connection
+# HTTP API connection
+
+## Overview {#overview}
 
 >[!IMPORTANT]
 >
->The HTTP API destination in Platform is currently in beta. The documentation and the functionality are subject to change.
-
-## Overview {#overview}
+> This destination is available only to Real-Time Customer Data Platform Ultimate customers. (add link to product description)
 
 The HTTP API destination is an [!DNL Adobe Experience Platform] streaming destination that helps you send profile data to third-party HTTP endpoints.
 
@@ -19,7 +19,7 @@ To send profile data to HTTP endpoints, you must first [connect to the destinati
 
 ## Use cases {#use-cases}
 
-The HTTP destination is targeted towards customers who need to export XDM profile data and audience segments to generic HTTP endpoints.
+The HTTP API destination is targeted towards customers who need to export XDM profile data and audience segments to generic HTTP endpoints.
 
 HTTP endpoints can be either customers' own systems or third-party solutions.
 
@@ -36,16 +36,11 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
->[!IMPORTANT]
->
->Contact your Adobe representatives or Adobe Customer Care if you would like to enable the HTTP API destination beta functionality for your company.
-
 To use the HTTP API destination to export data out of Experience Platform, you must meet the following prerequisites:
 
 * You must have an HTTP endpoint that supports REST API.
 * Your HTTP endpoint must support the Experience Platform profile schema. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. Refer to the [exported data](#exported-data) section for an example of the Experience Platform output schema.
 * Your HTTP endpoint must support headers.
-* Your HTTP endpoint must support [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentication. This requirement is valid while the HTTP API destination is in the beta phase.
 * The client credential needs to be included in the body of POST requests to your endpoint, as shown in the example below.
 
 ```shell
@@ -62,31 +57,54 @@ You can also use [Adobe Experience Platform Destination SDK](/help/destinations/
 
 To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. Refer to [IP address allow list for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
+## Supported authentication types {#supported-authentication-types}
+
+The HTTP API destination supports several authentication types:
+
+* HTTP endpoint with no authentication
+* [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentication with the body form, with client ID, client secret and grant type in the body of the HTTP request, as shown in the example below.
+
+```shell
+curl --location --request POST '<YOUR_API_ENDPOINT>' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=<CLIENT_ID>' \
+--data-urlencode 'client_secret=<CLIENT_SECRET>'
+```
+
+* [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) with basic authorization, with an authorization header which contains URL-encoded client ID and client secret
+
 ## Connect to the destination {#connect-destination}
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). When connecting to this destination, you must provide the following information:
 
-### Connection parameters {#parameters}
+### Authentication information {#authentication-information}
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+If you select the **[!UICONTROL OAuth 2]** authentication type to connect to your HTTP endpoint:
 
-* **[!UICONTROL httpEndpoint]**: the [!DNL URL] of the HTTP endpoint that you want to send the profile data to.
-  * Optionally, you can add query parameters to the [!UICONTROL httpEndpoint] [!DNL URL].
+![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 authentication](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+
 * **[!UICONTROL authEndpoint]**: the [!DNL URL] of the HTTP endpoint used for [!DNL OAuth2] authentication.
 * **[!UICONTROL Client ID]**: the [!DNL clientID] parameter used in the [!DNL OAuth2] client credentials.
 * **[!UICONTROL Client Secret]**: the [!DNL clientSecret] parameter used in the [!DNL OAuth2] client credentials.
 
-  >[!NOTE]
-  >
-  >Only [!DNL OAuth2] client credentials are currently supported.
+If you select the **[!UICONTROL Bearer token]** authentication type to connect to your HTTP endpoint:
 
-* **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
-* **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
-* **[!UICONTROL Custom Headers]**: enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
+![Image of the UI screen where you can connect to the HTTP API destination, using bearer token authentication](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
-  >[!IMPORTANT]
-  >
-  >The current implementation requires at least one custom header. This limitation will be resolved in a future update.
+* **[!UICONTROL Bearer token]**: insert the bearer token to authenticate to your HTTP location.
+
+### Destination details {#destination-details}
+
+After establishing the authentication connection to the HTTP endpoint, provide the following information for the destination:
+
+* **[!UICONTROL Name]**: Enter a name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: Enter a description that will help you identify this destination in the future.
+* **[!UICONTROL Headers]**: Enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the segments you are exporting. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL httpEndpoint]**: The URL of the HTTP endpoint that you want to send the profile data to.
+* **[!UICONTROL Query parameters]**: Optionally, you can add query parameters to the HTTP endpoint URL. Format the query parameters you use like this: `parameter1=value&parameter2=value`
+* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the timestamp when the segments were exported. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 
 ## Activate segments to this destination {#activate}
 
@@ -125,6 +143,10 @@ For example, consider this dataflow to an HTTP destination where three segments 
 A profile export to the destination can be determined by a profile qualifying for or exiting one of the *three mapped segments*. However, in the data export, in the `segmentMembership` object (see [Exported Data](#exported-data) section below), other unmapped segments might appear, if that particular profile is a member of them. If a profile qualifies for the Customer with DeLorean Cars segment but is also a member of the Watched "Back to the Future" movie and Science fiction fans segments, then these other two segments will also be present in the `segmentMembership` object of the data export, even though these are not mapped in the dataflow.
 
 From a profile attributes point of view, any changes to the four attributes mapped above will determine a destination export and any of the four mapped attributes present on the profile will be present in the data export.
+
+## Historical data backfill {#historical-data-backfill}
+
+When you add a new segment to an existing destination, or you create a new destination with a few segments, Experience Platform exports historical data to the destination. Profiles which qualified for the segment *before* the segment was added to the destination are exported to the destination.  
 
 ## Exported data {#exported-data}
 
@@ -183,3 +205,31 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destinat
 }
 
 ```
+
+Note further examples of exported data, depending on the UI settings you select:
+
++++ The JSON below includes segment names in the export
+
+```json
+
+add a sample call which includes segment names in the export
+
+```
+
++++
+
++++ The JSON below includes segment timestamps in the export
+
+```json
+
+add a sample call which includes segment timestamps in the export
+
+```
+
++++
+
+## Limits and retry policy {#limits-retry-policy}
+
+Note the maximum supported requests per second for a dataflow to a destination: 
+
+Note that in case of failed requests to your HTTP API destination, Experience Platform applies the following retry mechanism: 

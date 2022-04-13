@@ -85,10 +85,10 @@ feature: Destinations
         * [Yext Conversion Tracking extension](./catalog/analytics/yext.md)
     * Cloud storage destinations {#cloud-storage}
         * [Cloud Storage destinations overview](./catalog/cloud-storage/overview.md)
-        * [(Beta) Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
+        * [Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 connection](./catalog/cloud-storage/amazon-s3.md)
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
-        * [(Beta) Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
+        * [Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Data Management Platform destinations {#data-management}
@@ -131,7 +131,7 @@ feature: Destinations
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
     * Streaming destinations {#streaming}
-        * [ (Beta) HTTP API connection](./catalog/streaming/http-destination.md)
+        * [HTTP API connection](./catalog/streaming/http-destination.md)
         * [IP address allowlist for streaming destinations](./catalog/streaming/ip-address-allow-list.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)

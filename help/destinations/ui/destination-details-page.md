@@ -73,7 +73,7 @@ The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to
 
 >[!NOTE]
 >
->Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
 
 ![Dataflow runs view](../assets/ui/details-page/dataflow-runs.png)
 
