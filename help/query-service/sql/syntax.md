@@ -440,7 +440,7 @@ The example returns the following:
 2  b Spark SQL
 ```
 
-The following real life example further demonstrates the concept and application of the `inline` function. The data model for the example is illustrated in the image below.
+The following real-life example further demonstrates the concept and application of the `inline` function. The data model for the example is illustrated in the image below.
 
 ![A schema diagram for the productListItems](../images/sql/productListItems.png)
 
