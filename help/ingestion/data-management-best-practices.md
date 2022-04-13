@@ -15,7 +15,7 @@ This document outlines best practices to follow and tools you can use to better 
 
 Platform is primarily composed of two data repositories: the [!DNL Data Lake] and the Profile Store.
 
-The **[!DNL Data Lake]** is where all Platform data is first ingested into and primarily serves the following purposes:
+The **[!DNL Data Lake]** primarily serves the following purposes:
 
 * Acts as the staging area for onboarding data into Platform;
 * Acts as the long-term data storage for all Platform data;
@@ -32,7 +32,7 @@ The **Profile Store** is where customer profiles are created and primarily serve
 
 ## License usage entitlements {#license-usage-entitlements}
 
-When you license Platform, you are provided with two license usage entitlements:
+When you license Platform, you are provided with license usage entitlements that vary depending on SKU:
 
 **[!DNL Addressable Audience]** - the total number of customer profiles that you can create in Platform, including both known and pseudonymous profiles.
 
@@ -59,7 +59,21 @@ The availability of these metrics and the specific definition of each of these m
 
 Platform UI provides a dashboard through which you can view a snapshot of your organization’s license-related data for Platform. The data in the dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. Essentially, the snapshot is neither an approximation nor a sample of data, and the dashboard is not updating in real-time.
 
-For more information, see the guide on [using the license usage dashboard on Platform UI](../dashboards/guides/license-usage.md).
+For more information, see the guide on [using the license usage dashboard on Platform UI](../dashboards/guides/license-usage.md#license-usage-dashboard-data).
+
+## Staying within your [!DNL Addressable Audience] license entitlement limits
+
+You can adhere to the following guidance to better manage your date usage and stay within your [!DNL Addressable Audience] license entitlement limits:
+
+* Apply [ingestion filters](#ingestion-filters) to data entering Platform (both [!DNL Data Lake] and Profile Service);
+* Apply retention rules to Profile Store data;
+* Apply retention rules to [!DNL Data Lake] data.
+
+For guidance on better managing your data and staying within your [!DNL Profile Richness] entitlement limits, see the following:
+
+* Limit the number of [!DNL Addressable Audience];
+* Limit the amount of data you have stored in the [!DNL Data Lake];
+* Limit the amount of data you have in the Profile Store.
 
 ## Understanding your data
 
@@ -73,11 +87,29 @@ There are three dimensions to consider in understanding the value of your data:
 | Timespan | Represents the length of time that ingested data continues to stay valuable. | Offline purchases - moderate in volume and fidelity, but may be valuable for long periods of time. |
 | Fidelity | Represents how rich the data is with information. | Customer accounts - low in volume, but high in fidelity. Can be valuable beyond the lifetime of a customer. |
 
-## Data Management tools
+## Data Management tools {#data-management-tools}
 
-The following section outlines tools at your disposal to help better manage your license usage entitlements and maximize the capabilities of Platform.
+There are two central scenarios to consider when ensuring that your data usage remains within your license entitlement limits:
 
-### Ingestion filters
+### What data to bring into Platform?
+
+Data can be ingested into one or multiple systems in Platform, namely the [!DNL Data Lake] and/or the Profile Store. This means that different data can exist in both systems for a variety of different use cases. For example, you may want to hold historical data in the [!DNL Data Lake], but not in the Profile Store. You have the ability to select which data to send to the Profile Store by enabling a dataset for Profile ingestion.
+
+>[!NOTE]
+>
+>Your access to the [!DNL Data Lake] can depend on the product SKU that you purchased. For more information on product SKUs, see the table on [license usage entitlements](#license-usage-entitlements).
+
+### What data to keep?
+
+You can apply both data ingestion filters and expiration rules (also known as Time-To-Live "TTL") to remove data that has become obsolete for your use cases. Typically, behavioral data (such as Analytics data) consumes significantly more storage than record data (such as CRM data). For example, many Platform users have upwards of up to 90% of profiles being populated by behavioral data alone, in comparison to that of record data. Therefore, managing your behavioral data is critical in ensuring compliance within your license entitlements.
+
+There are a number of tools that you can leverage to stay within your license usage entitlements:
+
+* [Ingestion filters](#ingestion-filters)
+* [[!DNL Data Lake] TTL](#data-lake-ttl)
+* [Profile Service TTL](#profile-service-ttl)
+
+### Ingestion filters {#ingestion-filters}
 
 Ingestion filters allow you to bring in only the data that is needed for your use cases and filters out all events that are not required.
 
@@ -91,7 +123,7 @@ Ingestion filters allow you to bring in only the data that is needed for your us
 
 {style="table-layout:auto"}
 
-### [!DNL Data Lake] TTL
+### [!DNL Data Lake] TTL {#data-lake-ttl}
 
 The [!DNL Data Lake] TTL (time-to-live) capability allows you to specify an expiration for your behavioral data in the [!DNL Data Lake]. This allows you to remove data whose value has diminished after a certain time  for analytics and data science use cases.
 
@@ -108,8 +140,7 @@ For example, if you determine that clickstream data isn't valuable for your use 
 >
 >The [!DNL Data Lake] TTL functionality is only available for SKUs that include [!DNL Data Lake] storage. For more information on product SKUs, see the table on  [license usage entitlements](#license-usage-entitlements).
 
-
-### Profile Service TTL
+### Profile Service TTL {#profile-service-ttl}
 
 The Profile Service TTL (time-to-live) capability allows you to apply TTL on data in the profile store. Doing so allows the system to automatically remove data that has diminished value over time.
 
