@@ -1,22 +1,22 @@
 ---
-description: Experience Platform Destination SDK uses Pebble templates, allowing you to transform the data exported out of Experience Platform to your destination into the format you need.
+description: Experience Platform Destination SDK uses Pebble templates, allowing you to transform the data exported from Experience Platform into the format required by your destination.
 title: Supported transformation functions in Destination SDK
 ---
 # Supported transformation functions in Destination SDK
 
 ## Overview {#overview}
 
-Experience Platform Destination SDK uses [[!DNL Pebble] templates](https://pebbletemplates.io/), allowing you to transform the data exported out of Experience Platform to your destination into the format you need.
+Experience Platform Destination SDK uses [[!DNL Pebble] templates](https://pebbletemplates.io/), allowing you to transform the data exported from Experience Platform into the format required by your destination.
 
 The Experience Platform [!DNL Pebble] implementation has some changes, compared to the out-of-the box version provided by [!DNL Pebble]. Also, in addition to the out-of-the-box functions provided by [!DNL Pebble], Adobe has created some additional functions that you can use with Destination SDK.
 
 ## Where to use {#where-to-use}
 
-Use the supported functions and listed further below on this page when [creating a message transformation template](./create-template.md) for the data exported out of Experience Platform to your destination. The message transformation template is used in the [destination server configuration](./server-and-template-configuration.md) for streaming destinations.
+Use the supported functions listed further below on this page when [creating a message transformation template](./create-template.md) for the data exported out of Experience Platform to your destination. The message transformation template is used in the [destination server configuration](./server-and-template-configuration.md) for streaming destinations.
 
 ## Prerequisites {#prerequisites}
 
-To understand the concepts and functions in this reference page, read the [Message format](/help/destinations/destination-sdk/message-format.md) document first. You need to understand the [structure of a profile](/help/destinations/destination-sdk/message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and the exported data.
+To understand the concepts and functions in this reference page, read the [message format](/help/destinations/destination-sdk/message-format.md) document first. You need to understand the [structure of a profile](/help/destinations/destination-sdk/message-format.md#profile-structure) in Experience Platform before you can use [!DNL Pebble] templates to transform and the exported data.
 
 Before you advance to the functions documented below, review the templating examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](/help/destinations/destination-sdk/message-format.md#using-templating). The examples in there start off very simple and increase in complexity.
 
@@ -30,10 +30,10 @@ From the [!DNL Pebble] tags section, Destination SDK only supports:
 
 >[!TIP]
 >
->Using `for` is different when iterating through *array* or *map* elements in a template. When you iterate through an array, you can obtain the element directly, when you iterate through a map, you obtain each map entry, which has a key and a corresponding value.
+>Using `for` is different when iterating through *array* or *map* elements in a template. When you iterate through an array, you can obtain the element directly. When you iterate through a map, you obtain each map entry, which has a key-value pair.
 >
-> * For array, think about the identities in an [identityMap](./message-format.md#identities) namespace, where you could iterate through elements such as `identityMap.gaid`, `identityMap.email` or similar.
-> * For map, think about [segmentMembership](./message-format.md#segment-membership).
+> * For an example of an array element, think about the identities in an [identityMap](./message-format.md#identities) namespace, where you could iterate through elements such as `identityMap.gaid`, `identityMap.email`, or similar.
+> * For an example of a map element, think about [segmentMembership](./message-format.md#segment-membership).
 
 From the [!DNL Pebble] filter section, Destination SDK supports all functions. An example further below shows how the `date` function can be used within Destination SDK.
 
@@ -41,7 +41,7 @@ From the [!DNL Pebble] functions section, Adobe does *not* support the [range](h
 
 ## Example of how the `date` function is used {#date-function}
 
-To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below how the date function is used to transform the format of a timestamp.
+To exemplify how [!DNL Pebble] functions are used in Destination SDK, see below how the date function ([link in Pebble documentation](https://pebbletemplates.io/wiki/filter/date/)) is used to transform the format of a timestamp.
 
 ### Use case
 
@@ -71,10 +71,6 @@ You want to change the `lastQualificationTime` timestamp from the default [ISO 8
 }
 ```
 
-### Link in Pebble documentation
-
-https://pebbletemplates.io/wiki/filter/date/ 
-
 ## Functions added by Adobe {#functions-added-by-adobe}
 
 In addition to the out-of-the-box functions provided by [!DNL Pebble], see below the additional functions created by Adobe that you can use for your data exports.
@@ -90,7 +86,6 @@ These functions can be used on order to obtain a list of segments that were adde
 ##### Input
 
 ```json
-
 {
   "identityMap": {
     "myIdNamespace": [
@@ -119,23 +114,18 @@ These functions can be used on order to obtain a list of segments that were adde
     }
   }
 }
-
 ```
 
 ##### Format
 
 ```java
-
 added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}; removed: {% for s in removedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}
-
 ```
 
 ##### Output
 
 ```json
-
 added: <111111><333333>; removed: <222222>
-
 ```
 
 <!--
