@@ -25,7 +25,7 @@ The following table outlines static limits applied to identity data.
 
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
-| Number of identities in a graph | 150 | The identity graph will not be updated once the limit is reached. |
+| Number of identities in a graph | 150 | The limit is applied at the sandbox level. The identity graph will not be updated once the limit is reached. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of graphs | None | There are no limits to the number of identity graphs you can create. |
