@@ -78,7 +78,7 @@ In the dataset preview is a dataset completeness percentage value. This value pr
 
 ### Select an identity {#identity}
 
-In order for multiple datasets to join on one another, you must select an identity type (also known as an "identity namespace") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
+You can now join multiple datasets to one another based on the identity map (field). You must select an identity type (also known as an "identity namespace") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
 
 >[!IMPORTANT]
 >
@@ -127,6 +127,8 @@ Once an event is selected, a new dropdown appears to its right. The second dropd
 >A string under your *conversion name* is updated as you define your event.
 
 ![no dropdown](./images/user-guide/conversion_event_1.png)
+
+Next, select a combined or individual dataset from the **Select a dataset and field** dropdown menu.
 
 The **[!UICONTROL Add event]** and **[!UICONTROL Add Group]** buttons are used to further define your conversion. Depending on the conversion you are defining, you may need to use the **[!UICONTROL Add event]** and **[!UICONTROL Add group]** buttons to provide further context.
 

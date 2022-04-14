@@ -145,7 +145,6 @@ Next, select a field within the **[!UICONTROL Structure]** window of the UI, the
 
 ![Pick a Schema](./images/input-output/field_properties.png)
 
-
 ### Aggregated attribution scores {#aggregated-attribution-scores}
 
 Aggregated scores can be downloaded in CSV format from the Platform UI if the date range is less than 30 days.
