@@ -108,7 +108,7 @@ The details page also displays a list of identities that failed and identities t
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Dataflow run details"
 >abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=en#dataflow-runs-for-streaming-destinations" text="Dataflow runs for streaming destinations"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Dataflow runs for streaming destinations"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"

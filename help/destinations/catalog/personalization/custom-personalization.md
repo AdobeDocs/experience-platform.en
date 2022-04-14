@@ -24,17 +24,27 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 ## Use cases {#use-cases}
 
-This destination shares audiences with ad servers and non-Adobe personalization applications, to be used in real-time, for deciding which advertisement users should see on a website.
+The [!DNL Custom personalization connection] enables you to use your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), while also leveraging Experience Platform Edge Network data collection & segmentation capabilities, to power a deeper customer personalization experience.
 
-### Use Case #1
+The use cases described below include both site personalization and targeted on-site advertising.
 
-**Personalizing a home page**
+To enable these use cases, customers need a quick, streamlined way of retrieving segment information from Experience Platform and sending this information to their designated systems that they configured as custom personalization connections in the Experience Platform UI.
 
-A home rental and sales website wants to personalize their home page based on segment qualifications in Adobe Experience Platform. The company can select what audiences should get a personalized experience and map those to the custom personalization destination that had been set up for their non-Adobe personalization application as targeting criteria.
+These systems can be external personalization platforms, content management systems, ad servers, and other applications running across customers' web and mobile properties.
 
-**Targeted on-site advertising**
+### Same-page personalization {#same-page}
 
-Using a separate custom personalization destination for their ad server, the same website can target on-site advertising using a different set of segments from Adobe Experience Platform as targeting criteria.
+A user visits a page of your website. The customer can use the current page visit information (for example, referring URL, browser language, embedded product info) to select the next action / decision (for example, personalization), using the custom personalization connection for non-Adobe platforms (for example, [!DNL Pega], [!DNL Optimizely], etc.).
+
+### Next-page personalization {#next-page}
+
+A user visits Page A on your website. Based on this interaction, the user has qualified for a set of segments. The user then clicks on a link that takes them from Page A to Page B. The segments that the user had qualified for during the previous interaction on Page A, together with the profile updates determined by the current website visit, will be used to power the next action / decision (for example, which advertising banner to display to the visitor, or, in case of A/B testing, which version of the page to display).
+
+### Next-session personalization {#next-session}
+
+A user visits several pages on your website. Based on these interactions, the user has qualified for a set of segments. The user then terminates the current browsing session.
+
+The following day, the user returns to the same customer website. The segments they had qualified for during the previous interaction with all the visited website pages, together with the profile updates determined by the current website visit, will be used to select the next action / decision (for example, which advertising banner to display to the visitor, or, in case of A/B testing, which version of the page to display).
 
 ## Connect to the destination {#connect}
 
