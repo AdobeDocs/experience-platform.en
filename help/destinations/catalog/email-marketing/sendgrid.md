@@ -2,8 +2,8 @@
 keywords: email;Email;e-mail;email destinations;sendgrid;sendgrid destination
 title: SendGrid connection
 description: The SendGrid destination allows you to export your first-party data and activate it within SendGrid for your business needs.
+exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 ---
-
 # [!DNL SendGrid] connection
 
 ## Overview {#overview}
