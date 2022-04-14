@@ -20,3 +20,115 @@ This guide requires a working understanding of the following components of Adobe
   - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
 - [Segmentation](../../segmentation/home.md): Segmentation allows you to create segments and audiences from your Real-time Customer Profile data. 
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+
+## Monitoring segments dashboard {#monitoring-segments-dashboard}
+
+To access the Segments dashboard, select Monitoring in the left navigation. Once on the Monitoring page, select Segments. The dashboard contains metrics for both segments and segment jobs. By default, the dashboard will show the segment metrics for the last 24 hours.
+
+IMAGE
+
+The following metrics are available for this dashboard view:
+
+| Metric | Description |
+| ------ | ----------- |
+| Segment name | The name of the segment |
+| Last evaluation timestamp | |
+| Last evaluation status | |
+| Last evaluation profiles | |
+| Last activation timestamp | |
+| Last activation status | | 
+| Last activation identities | |
+| Last activation destination | |
+
+You can filter to a specific segment and view its segment jobs by selecting the filter icon.
+
+IMAGE
+
+The filtered segment dashboard appears. This dashboard displays the time and status of the last evaluation and export jobs run, a graph showing the profile count of the segment evaluation, and metrics for the segment jobs that were run. By default, the dashboard will show segment job metrics for the last 24 hours.
+
+IMAGE
+
+The following metrics are available for this dashboard view:
+
+| Metric | Description |
+| ------ | ----------- |
+| Job start | |
+| Type | |
+| Job complete | |
+| Processing time | |
+| Job status | |
+| Profile count | |
+| Identity count | |
+| Destination name | |
+
+You can further filter to a specific segment job and see its details by selecting the filter icon. There are two different kinds of segment jobs that can be filtered on: activation jobs and evaluation jobs:
+
+### Activation job details {#activation-job-details}
+
+The activation job dataflow run details page shows information on the run's metrics, dataflow run errors, and segments that are related to the segment job. By default, the details page shows the dataflow run errors.
+
+IMAGE
+
+The following metrics are available for this dashboard view:
+
+| Metric | Description |
+| ------ | ----------- |
+| Profiles received | |
+| Identities activated | |
+| Identities excluded | |
+| Size of data | |
+| Total files | |
+| Status | |
+| Dataflow run start | |
+| Dataflow run end | |
+| Dataflow run ID | |
+| IMS org ID | |
+| Destination name | |
+
+Underneath the metrics, a toggle to display between the dataflow run errors and the segments is displayed.
+
+Under the dataflow run errors section, the details page shows the identities failed and the identities excluded. Within this errors section, details about the error code and number of identities failed or excluded.
+
+IMAGE
+
+Under the segments section a list of segments that belong to the activation job are shown. You can filter the list of segments by name by using the search bar. 
+
+For the segments section, the following metrics are available:
+
+| Metric | Description | 
+| ------ | ----------- |
+| Name | |
+| Identities activated | |
+| Identities excluded | |
+| Last dataflow run status | |
+| Last dataflow run date | |
+
+### Evaluation job details {#evaluation-job-details}
+
+The evaluation job dataflow run details page shows information on the run's metrics and segments that are related to the segment job.
+
+IMAGE
+
+The following metrics are available for this dashboard view:
+
+| Metric | Description |
+| ------ | ----------- |
+| Total profiles | |
+| Status | |
+| Job start | |
+| Job end | |
+| Job type | |
+| Evaluation type | |
+| Job ID | |
+| IMS org ID | |
+| Segment name| |
+| Segment ID | |
+
+Under the segments section a list of segments that belong to the activation job are shown. You can filter the list of segments by name by using the search bar. 
+
+For the segments section, the following metrics are available:
+
+| Metric | Description | 
+| ------ | ----------- |
+| Name | |
+| Profile count | |
