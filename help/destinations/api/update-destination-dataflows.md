@@ -633,6 +633,11 @@ A successful response returns your flow ID and an updated etag. You can verify t
     "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
 }
 ```
++++
+
+Example of how activation chaining is added to a segment export frequency
+
++++
 
 ## Add a profile attribute to a dataflow {#add-profile-attribute}
 

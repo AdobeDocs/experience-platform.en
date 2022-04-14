@@ -101,7 +101,12 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 1. Select **[!UICONTROL Create]** to save the schedule.
 
- 
+#### Considerations of using the **[!UICONTROL After segment evaluation]** option {#after-segment-evaluation}
+
+Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily batch segmentation jobs complete. This ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.
+
+![Image showing the after segment evaluation option selected in the activation flow for batch destinations](/help/destinations/assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
+
 ### Export incremental files {#export-incremental-files}
 
 Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of all profile qualifications for the selected segment, and subsequent files are incremental profile qualifications since the previous export.

@@ -989,6 +989,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "exportMode": "DAILY_FULL_EXPORT",
                 "schedule": {
                     "frequency": "ONCE",
+                    "triggerType": "AFTER_SEGMENT_EVAL",
                     "startDate": "2021-12-20",
                     "startTime": "17:00"
                 },   
