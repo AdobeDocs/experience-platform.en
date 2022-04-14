@@ -11,7 +11,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 
 >[!IMPORTANT]
 >
-> This destination is available only to Real-Time Customer Data Platform Ultimate customers. (add link to product description)
+> This destination is available only to [Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
 The HTTP API destination is an [!DNL Adobe Experience Platform] streaming destination that helps you send profile data to third-party HTTP endpoints.
 
@@ -41,15 +41,6 @@ To use the HTTP API destination to export data out of Experience Platform, you m
 * You must have an HTTP endpoint that supports REST API.
 * Your HTTP endpoint must support the Experience Platform profile schema. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. Refer to the [exported data](#exported-data) section for an example of the Experience Platform output schema.
 * Your HTTP endpoint must support headers.
-* The client credential needs to be included in the body of POST requests to your endpoint, as shown in the example below.
-
-```shell
-curl --location --request POST '<YOUR_API_ENDPOINT>' \
---header 'Content-Type: application/x-www-form-urlencoded' \
---data-urlencode 'grant_type=client_credentials' \
---data-urlencode 'client_id=<CLIENT_ID>' \
---data-urlencode 'client_secret=<CLIENT_SECRET>'
-```
 
 You can also use [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to set up an integration and send Experience Platform profile data to an HTTP endpoint.
 
@@ -80,31 +71,60 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authentication information {#authentication-information}
 
-If you select the **[!UICONTROL OAuth 2]** authentication type to connect to your HTTP endpoint:
+#### Bearer token authentication {#bearer-token-authentication}
 
-![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 authentication](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+If you select the **[!UICONTROL Bearer token]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
-* **[!UICONTROL authEndpoint]**: the [!DNL URL] of the HTTP endpoint used for [!DNL OAuth2] authentication.
-* **[!UICONTROL Client ID]**: the [!DNL clientID] parameter used in the [!DNL OAuth2] client credentials.
-* **[!UICONTROL Client Secret]**: the [!DNL clientSecret] parameter used in the [!DNL OAuth2] client credentials.
-
-If you select the **[!UICONTROL Bearer token]** authentication type to connect to your HTTP endpoint:
-
-![Image of the UI screen where you can connect to the HTTP API destination, using bearer token authentication](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![Image of the UI screen where you can connect to the HTTP API destination, using bearer token authentication](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Bearer token]**: insert the bearer token to authenticate to your HTTP location.
+
+#### No authentication {#no-authentication}
+
+If you select the **[!UICONTROL None]** authentication type to connect to your HTTP endpoint:
+
+![Image of the UI screen where you can connect to the HTTP API destination, using no authentication](../../assets/catalog/http/http-api-authentication-none.png)
+
+When you select this authentication open, you only need to select **[!UICONTROL Connect to destination]** and the connection to your endpoint is established.
+
+#### OAuth 2 Password authentication {#oauth-2-password-authentication}
+
+If you select the **[!UICONTROL OAuth 2 Password]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
+
+![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Password authentication](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+
+* **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
+* **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
+* **[!UICONTROL Client Secret]**: The [!DNL client secret] that your system assigns to Adobe Experience Platform.
+* **[!UICONTROL Username]**: The username to access your HTTP endpoint.
+* **[!UICONTROL Password]**: The password to access your HTTP endpoint.
+
+#### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
+
+If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
+
+![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+
+* **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
+* **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
+* **[!UICONTROL Client Secret]**: The [!DNL client secret] that your system assigns to Adobe Experience Platform.
+* **[!UICONTROL Client Credentials Type]**: Select the type of OAuth2 Client Credentials grant supported by your endpoint:
+  * **[!UICONTROL Body Form Encoded]**: Add description here
+  * **[!UICONTROL Basic Authorization]**: Add description here
 
 ### Destination details {#destination-details}
 
 After establishing the authentication connection to the HTTP endpoint, provide the following information for the destination:
 
+![Image of the UI screen showing completed fields for the HTTP destination details](../../assets/catalog/http/http-api-destination-details.png)
+
 * **[!UICONTROL Name]**: Enter a name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: Enter a description that will help you identify this destination in the future.
 * **[!UICONTROL Headers]**: Enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the segments you are exporting. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
-* **[!UICONTROL httpEndpoint]**: The URL of the HTTP endpoint that you want to send the profile data to.
+* **[!UICONTROL HTTP Endpoint]**: The URL of the HTTP endpoint that you want to send the profile data to.
 * **[!UICONTROL Query parameters]**: Optionally, you can add query parameters to the HTTP endpoint URL. Format the query parameters you use like this: `parameter1=value&parameter2=value`
-* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the timestamp when the segments were exported. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the segments you are exporting. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 
 ## Activate segments to this destination {#activate}
 
@@ -206,30 +226,51 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destinat
 
 ```
 
-Note further examples of exported data, depending on the UI settings you select:
+Note further examples of exported data, depending on the UI settings you select in the connect destination flow:
 
-+++ The JSON below includes segment names in the export
++++ The data export sample below includes segment names in the `segmentMembership` section
 
 ```json
-
-add a sample call which includes segment names in the export
-
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
 ```
 
 +++
 
-+++ The JSON below includes segment timestamps in the export
++++ The data export sample below includes segment timestamps in the `segmentMembership` section
 
 ```json
-
-add a sample call which includes segment timestamps in the export
-
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
 ```
 
 +++
 
 ## Limits and retry policy {#limits-retry-policy}
 
-Note the maximum supported requests per second for a dataflow to a destination: 
+In 95% of cases, Experience Platform offers a throughput guarantee of less than 10 minutes for successfully sent messages with a rate of mess than 10.000 requests per second.
 
-Note that in case of failed requests to your HTTP API destination, Experience Platform applies the following retry mechanism: 
+Note that there is currently no way for customers to control the output rate of requests going out of Experience Platform.
+
+In case of failed requests to your HTTP API destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint. 

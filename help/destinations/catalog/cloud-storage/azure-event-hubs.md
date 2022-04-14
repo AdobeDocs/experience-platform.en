@@ -10,7 +10,7 @@ exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 
 >[!IMPORTANT]
 >
-> This destination is available only to Real-Time Customer Data Platform Ultimate customers. (add link to product description)
+> This destination is available only to [Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
 [!DNL Azure Event Hubs] is a big data streaming platform and event ingestion service. It can receive and process millions of events per second. Data sent to an event hub can be transformed and stored by using any real-time analytics provider or batching/storage adapters.
 
@@ -45,15 +45,37 @@ To meet customers' security and compliance requirements, Experience Platform pro
 
 ## Connect to the destination {#connect}
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). When connecting to this destination, you must provide the following information:
 
-### Connection parameters {#parameters}
+### Authentication information {#authentication-information}
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+#### Standard authentication {#standard-authentication}
+
+![Image of the UI screen showing completed fields for the Azure Event Hubs standard authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
+
+If you select the **[!UICONTROL Standard authentication]** type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
 * **[!UICONTROL SAS Key Name]**: The name of the authorization rule, which is also known as the SAS key name.
 * **[!UICONTROL SAS Key]**: The primary key of the Event Hubs namespace. The `sasPolicy` that the `sasKey` corresponds to must have **manage** rights configured in order for the Event Hubs list to be populated. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+
+#### Shared Access Signature (SAS) authentication {#sas-authentication}
+
+![Image of the UI screen showing completed fields for the Azure Event Hubs standard authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
+
+If you select the **[!UICONTROL Standard authentication]** type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
+
+* **[!UICONTROL SAS Key Name]**: The name of the authorization rule, which is also known as the SAS key name.
+* **[!UICONTROL SAS Key]**: The primary key of the Event Hubs namespace. The `sasPolicy` that the `sasKey` corresponds to must have **manage** rights configured in order for the Event Hubs list to be populated. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+
+### Destination details {#destination-details}
+
+After establishing the authentication connection to the Azure Event Hubs destination, provide the following information for the destination:
+
+![Image of the UI screen showing completed fields for the Azure Event Hubs destination details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
+
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Customers interested in kitesurfing".
 * **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.

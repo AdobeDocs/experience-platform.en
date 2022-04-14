@@ -10,7 +10,7 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 
 >[!IMPORTANT]
 >
-> This destination is available only to Real-Time Customer Data Platform Ultimate customers. (add link to product description)
+> This destination is available only to [Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
 The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] allows you to collect and process large streams of data records in real time.
 
@@ -88,10 +88,23 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Connection parameters {#parameters}
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). When connecting to this destination, you must provide the following information:
+
+### Authentication information {#authentication-information}
+
+Input the fields below and select **[!UICONTROL Connect to destination]**:
+
+![Image of the UI screen showing completed fields for the Amazon Kinesis authentication details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
+* **Region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
+
+### Destination details {#destination-details}
+
+After establishing the authentication connection to the Amazon Kinesis destination, provide the following information for the destination:
+
+![Image of the UI screen showing completed fields for the Amazon Kinesis destination details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+
 * **Name**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].
 * **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Platform will export data to this stream.
