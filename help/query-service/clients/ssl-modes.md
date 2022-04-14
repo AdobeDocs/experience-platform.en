@@ -1,28 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;Query service;query service;connect;connect to query service;SSL;ssl;sslmode;
-solution: Experience Platform
-title: Query Service SSL options
-description: This document explains the SSL options available for third-party connections to Query Service and how to connect using verify-full SSL mode.
+title: Query Service SSL Options
+description: Learn about SSL support for third-party connections to Adobe Experience Platform Query Service, and how to connect using verify-full SSL mode.
 ---
 # [!DNL Query Service] SSL options
 
-For increased security, Adobe Experience Platform [!DNL Query Service] provides native support for SSL connections to encrypt client/server communications. The different `sslmode` parameter values provide different levels of protection to cater to different security needs. By encrypting your data in motion with SSL certificates, it helps to prevent 'man-in-the-middle' (MITM) attacks, eavesdropping, and impersonation.
-
-Adobe Experience Platform assists you in your General Data Protection Regulation (GDPR) compliance journey by implementing a set of certified security processes and controls. See the [governance, privacy, and security documentation](../../landing/governance-privacy-security/overview.md) to learn more about how to control and monitor the collection and use of customer experience data. These documents detail the potential legal obligations and jurisdictions of your data operations and the necessary organizational policies regarding your data usage. 
-
-This document provides guidance on the available SSL options for third-party client connections to [!DNL Query Service] and how to connect using the `verify-full` SSL parameter value.
+For increased security, Adobe Experience Platform [!DNL Query Service] provides native support for SSL connections to encrypt client/server communications. This document covers the available SSL options for third-party client connections to [!DNL Query Service] and how to connect using the `verify-full` SSL parameter value.
 
 ## Prerequisites
 
-To acquire the necessary credentials for connecting a third-party client to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your IMS Organization administrator if you do not currently have access to the Queries workspace.
+This document assumes that you have already downloaded a third-party desktop client application for use with your Platform data. Specific instructions on how to incorporate SSL security when connecting with a third-party client are found in their respective connection guide documentation. For a list of all [!DNL Query Service] supported clients, see the [client connections overview](./overview.md).
 
 ## Available SSL options
 
-Due to the processing overhead of encryption and key exchange in all SSL options, Platform supports various SSL options to best suit your data security needs. 
+Platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange. 
 
-When establishing a third-party connection to a Platform database, you are recommended to use `sslmode=require` at a minimum to ensure a secure connection for your data in motion. The `verify-full` SSL mode is recommended for use in most security-sensitive environments.
-
-The table below provides a breakdown of the different SSL modes available and the level of protection they provide.
+The different `sslmode` parameter values provide different levels of protection. By encrypting your data in motion with SSL certificates, it helps to prevent "man-in-the-middle" (MITM) attacks, eavesdropping, and impersonation. The table below provides a breakdown of the different SSL modes available and the level of protection they provide.
 
 >[!NOTE]
 >
@@ -34,41 +27,45 @@ The table below provides a breakdown of the different SSL modes available and th
 | `prefer`  | Partial  | No  | Encryption is not required but the communication will be encrypted if the server supports it.  |
 | `require`  | Yes  | No  | Encryption is required on all communications. The network is trusted to connect to the correct server. Server SSL certificate validation is not required. |
 | `verify-ca`  | Yes  | Depends on CA-policy  | Encryption is required on all communications. Server validation is required before data is shared. |
-| `verify-full`  | Yes  | Yes  | Encryption is required on all communications. Server validation is required before data is shared.  |
+| `verify-full`  | Yes  | Yes  | Encryption is required on all communications. Server validation is required before data is shared. This requires you to setup a root certificate in your PostgreSQL home directory. [Details are provided below](#instructions).  |
 
-## Why you must use SSL
+When establishing a third-party connection to a Platform database, you are recommended to use `sslmode=require` at a minimum to ensure a secure connection for your data in motion. The `verify-full` SSL mode is recommended for use in most security-sensitive environments.
+
+## Set up a root certificate for sever verification {#root-certificate}
 
 To ensure a secure connection, SSL usage must be configured on both the client and the server before the connection is made. If the SSL is only configured on the server, the client might send sensitive information such as passwords before it is established that the server requires high security.
 
 By default, [!DNL PostgreSQL] does not perform any verification of the server certificate. To verify the server's identity and ensure a secure connection before any sensitive data is sent (as part of the SSL `verify-full` mode), you must place a root (self-signed) certificate on your local machine (`root.crt`) and a leaf certificate signed by the root certificate on the server.
 
-If the `sslmode` parameter is set to `verify-full`, libpq will verify that the server is trustworthy by checking the certificate chain up to the root certificate stored on the client. It then verifies that the server host name matches the name stored in the server certificate.
+If the `sslmode` parameter is set to `verify-full`, libpq will verify that the server is trustworthy by checking the certificate chain up to the root certificate stored on the client. It then verifies that the hostname matches the name stored in the server certificate.
 
 To allow server certificate verification, you must place one or more root certificates (`root.crt`) in the [!DNL PostgreSQL] file in your home directory. The file path would be similar to `~/.postgresql/root.crt`.
 
-## Enable verify-full SSL mode for use with a third-party [!DNL Query Service] connection 
+## Enable verify-full SSL mode for use with a third-party [!DNL Query Service] connection {#instructions}
 
 If you need stricter security control than `sslmode=require`, you can follow the steps highlighted to connect a third-party client to [!DNL Query Service] using `verify-full` SSL mode.
 
 >[!NOTE]
 >
->DigiCert is a trusted global provider of high-assurance TLS/SSL, PKI, IoT and signing solutions.
+>There are many options available to attain an SSL certificate. Due to a growing trend in rogue certificates, DigiCert is used in this guide as they are a trusted global provider of high-assurance TLS/SSL, PKI, IoT, and signing solutions. 
 
 1. Navigate to [the list of available DigiCert root certificates](https://www.digicert.com/kb/digicert-root-certificates.htm)
-1. Search for '[!DNL DigiCert Global Root CA]' from the list of available certificates.
+1. Search for "[!DNL DigiCert Global Root CA]" from the list of available certificates.
 1. Select [!DNL **Download PEM**] to download the file to your local machine.
 ![The list of available DigiCert root certificates with Download PEM highlighted.](../images/clients/ssl-modes/digicert.png)
 1. Rename the security certificate file to `root.crt`.
 1. Copy the file to the [!DNL PostgreSQL] folder. The necessary file path is different depending on your operating system. If the folder does not already exist, create the folder. 
-    - If you are using a [!DNL macOS] the path is: `/Users/<username>/.postgresql`
-    - If you are using a [!DNL Windows] machine the path is: `%appdata%\postgresql`
+    - If you are using macOS, the path is: `/Users/<username>/.postgresql`
+    - If you are using Windows, the path is: `%appdata%\postgresql`
 
 >[!TIP]
 >
->To find your `%appdata%` file location on a [!DNL Windows] operating system, press [!DNL Windows] key + 'R' and input `%appdata%` into the search field.
+>To find your `%appdata%` file location on a Windows operating system, press ⊞ **Win + R** and input `%appdata%` into the search field.
 
-After the `[!DNL DigiCert Global Root CA]` CRT file is available in your [!DNL PostgreSQL] folder, you can connect to [!DNL Query Service] using the `sslmode=verify-full` option.
+After the [!DNL DigiCert Global Root CA] CRT file is available in your [!DNL PostgreSQL] folder, you can connect to [!DNL Query Service] using the `sslmode=verify-full` option.
 
 ## Next steps
 
-By reading this document, you have enabled the `verify-full` SSL option and have a better understanding of what SSL options are available to encrypt your data in motion. If you have not done so already, you are recommended to follow the guidance on [connecting a third-party client to [!DNL Query Service]](./overview.md).
+By reading this document, you have a better understanding of the available SSL options for connecting a third-party client to [!DNL Query Service], and also how to enable the `verify-full` SSL option to encrypt your data in motion.
+
+If you have not done so already, follow the guidance on [connecting a third-party client to [!DNL Query Service]](./overview.md).
