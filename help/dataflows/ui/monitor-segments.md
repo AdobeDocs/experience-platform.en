@@ -31,14 +31,14 @@ The following metrics are available for this dashboard view:
 
 | Metric | Description |
 | ------ | ----------- |
-| Segment name | The name of the segment |
-| Last evaluation timestamp | |
-| Last evaluation status | |
-| Last evaluation profiles | |
-| Last activation timestamp | |
-| Last activation status | | 
-| Last activation identities | |
-| Last activation destination | |
+| **Segment name** | The name of the segment. |
+| **Last evaluation timestamp** | The date and time that the segment's last evaluation job ran. Possible values include |
+| **Last evaluation status** | The status of the segment's last evaluation job. |
+| **Last evaluation profiles** | The number of profiles that were evaluated in the segment's last evaluation job. |
+| **Last activation timestamp** | The date and time that the segment's last activation job ran. |
+| **Last activation status** | The status of the segment's last activation job. Possible values include | 
+| **Last activation identities** | The number of identities that were activated in the segment's last activation job. |
+| **Last activation destination** | The name of the destination that the segment's last activation job activated to. |
 
 You can filter to a specific segment and view its segment jobs by selecting the filter icon.
 
@@ -52,14 +52,14 @@ The following metrics are available for this dashboard view:
 
 | Metric | Description |
 | ------ | ----------- |
-| Job start | |
-| Type | |
-| Job complete | |
-| Processing time | |
-| Job status | |
-| Profile count | |
-| Identity count | |
-| Destination name | |
+| **Job start** | The date and time when the segment job started. |
+| **Type** | Indicates the type of the segment job. The two supported job types are **activation** and **evaluation** jobs. |
+| **Job complete** | The date and time when the segment job completed. |
+| **Processing time** | The amount of time it took for the segment job to complete. |
+| **Job status** | The status of the segment job. Supported values include **[!UICONTROL Success]**, **[!UICONTROL In Progress]**, and **[!UICONTROL Failed]**. |
+| **Profile count** | The number of profiles that the segment job is evaluating. Each user should have a unique profile. |
+| **Identity count** | The number of identities that the segment job is activating. Each profile can have multiple identities. For example, a profile could have an email, phone number, and a loyalty number as identities. |
+| **Destination name** | The name of the destination that the segment job is being activated for. |
 
 You can further filter to a specific segment job and see its details by selecting the filter icon. There are two different kinds of segment jobs that can be filtered on: activation jobs and evaluation jobs:
 
@@ -73,17 +73,17 @@ The following metrics are available for this dashboard view:
 
 | Metric | Description |
 | ------ | ----------- |
-| Profiles received | |
-| Identities activated | |
-| Identities excluded | |
-| Size of data | |
-| Total files | |
-| Status | |
-| Dataflow run start | |
-| Dataflow run end | |
-| Dataflow run ID | |
-| IMS org ID | |
-| Destination name | |
+| **Profiles received** | |
+| **Identities activated** | |
+| **Identities excluded** | |
+| **Size of data** | |
+| **Total files** | |
+| **Status** | |
+| **Dataflow run start** | |
+| **Dataflow run end** | |
+| **Dataflow run ID** | |
+| **IMS org ID** | |
+| **Destination name** | |
 
 Underneath the metrics, a toggle to display between the dataflow run errors and the segments is displayed.
 
@@ -97,11 +97,11 @@ For the segments section, the following metrics are available:
 
 | Metric | Description | 
 | ------ | ----------- |
-| Name | |
-| Identities activated | |
-| Identities excluded | |
-| Last dataflow run status | |
-| Last dataflow run date | |
+| **Name** | |
+| **Identities activated** | |
+| **Identities excluded** | |
+| **Last dataflow run status** | |
+| **Last dataflow run date** | |
 
 ### Evaluation job details {#evaluation-job-details}
 
@@ -113,16 +113,16 @@ The following metrics are available for this dashboard view:
 
 | Metric | Description |
 | ------ | ----------- |
-| Total profiles | |
-| Status | |
-| Job start | |
-| Job end | |
-| Job type | |
-| Evaluation type | |
-| Job ID | |
-| IMS org ID | |
-| Segment name| |
-| Segment ID | |
+| **Total profiles** | |
+| **Status** | |
+| **Job start** | |
+| **Job end** | |
+| **Job type** | |
+| **Evaluation type** | |
+| **Job ID** | |
+| **IMS org ID** | |
+| **Segment name** | |
+| **Segment ID** | |
 
 Under the segments section a list of segments that belong to the activation job are shown. You can filter the list of segments by name by using the search bar. 
 
@@ -130,5 +130,5 @@ For the segments section, the following metrics are available:
 
 | Metric | Description | 
 | ------ | ----------- |
-| Name | |
-| Profile count | |
+| **Name** | |
+| **Profile count** | |
