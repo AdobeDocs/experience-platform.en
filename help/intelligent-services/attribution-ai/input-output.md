@@ -18,9 +18,9 @@ Attribution AI works by analyzing the following datasets to calculate algorithmi
 - Experience Event (EE) datasets in general from Adobe Experience Platform schema
 - Consumer Experience Event (CEE) datasets
 
-You can now add multiple datasets from different sources based on the identity map (field) if each of the datasets shares the same identity type (namespace) such as an ECID. After you select an identity and a namespace, ID Column completeness metrics appear which indicate the volume of data being stitched. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
+You can now add multiple datasets from different sources based on the **identity map** (field) if each of the datasets shares the same identity type (namespace) such as an ECID. After you select an identity and a namespace, ID Column completeness metrics appear which indicate the volume of data being stitched. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
 
-The channel information is not always mapped by default. In some cases, if the mediaChannel (field) is blank, you would not be able to  "continue" until you map a field to mediaChannel. If the channel is detected in the dataset, it is mapped to mediaChannel by default.
+The channel information is not always mapped by default. In some cases, if the mediaChannel (field) is blank, you would not be able to  "continue" until you map a field to mediaChannel as it is a required column. If the channel is detected in the dataset, it is mapped to mediaChannel by default. The other columns such as **media type** and **media action** are still optional.
 
 After you map the channel field, continue to the 'Define events' step where you can select the conversion events, touchpoint events, and choose specific fields from individual datasets.
 
@@ -47,6 +47,8 @@ You can configure the touch points using any fields recommended below in the sch
 | Commerce | Conversion |
 
 Typically, attribution is run on conversion columns such as order, purchases, and checkouts under "commerce". The columns for "channel" and "marketing" are used to define touchpoints for Attribution AI (for example, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). For optimal results and insights, it is highly recommended that you include as many conversion and touchpoint columns as possible. Additionally, you are not limited to just the above columns. You can include any other recommended or custom columns as a conversion or touchpoint definition.
+
+Experience event (EE) Datasets do not need to explicitly have Channel and Marketing mixins as long as the channel or campaign information relevant to configure a touchpoint is present in one of mixin or pass through fields.
 
 >[!TIP]
 >
