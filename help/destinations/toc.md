@@ -46,6 +46,7 @@ feature: Destinations
         * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
         * [Bing Ads Universal Event Tracking (UET) extension](./catalog/advertising/bing-ads.md)
         * [Branch extension](./catalog/advertising/branch.md)
+        * [(Beta) Criteo connection](./catalog/advertising/criteo.md)
         * [DoubleClick Floodlight (Beta) extension](./catalog/advertising/doubleclick-floodlight.md)
         * [Facebook Pixel extension](./catalog/advertising/facebook-pixel.md)
         * [Flashtalking OneTag extension](./catalog/advertising/flashtalking.md)
@@ -105,6 +106,7 @@ feature: Destinations
         * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
         * [Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
+        * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
         * [Tag extension overview](./catalog/launch-extensions/overview.md)  
     * Mobile engagement destinations {#mobile-engagement}
@@ -179,6 +181,8 @@ feature: Destinations
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
+    * Reference {#reference}
+      * [Supported transformation functions](./destination-sdk/supported-functions.md)
     * Document your destination {#document-destination}
       * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
