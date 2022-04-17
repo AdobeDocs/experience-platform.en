@@ -189,17 +189,25 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
 
-### [!UICONTROL Audiences mapped status] {#audience-size}
+### [!UICONTROL Audiences mapped status] {#audiences-mapped-status}
 
-The [!UICONTROL Audience size] widget displays the total number of both mapped and unmapped audiences as a doughnut chart. The numbers calculated are dependant on the chosen merge policy. 
+The [!UICONTROL Audiences mapped status] widget displays the total number of both mapped and unmapped audiences and uses a doughnut chart to illustrate the proportional difference between their totals. The numbers calculated are dependent on the chosen merge policy. 
 
-![The Audiences mapped status widget.](XXXXXXX.png)
+Individual counts for either mapped or unmapped audiences are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+
+![The Audiences mapped status widget.](../images/profiles/audiences-mapped-status.png)
 
 ### [!UICONTROL Audiences size] {#audiences-size}
 
 The [!UICONTROL Audiences size] widget provides a two column table that lists of up to 20 segments and the total number of audiences contained in each segment. The list is ordered from high to low according to total number of audiences. The total audience size number is dependant on the merge policy applied.
 
-![The Audiences size widget.]()
+![The Audiences size widget.](../images/profiles/audiences-size.png)
+
+To see comprehensive information on a segment, select a segment name from the list provided to navigate to the [!UICONTROL Segments] [!UICONTROL Detail] page. Also, by selecting [!UICONTROL **View all segments**] from the end of the widget, you can navigate to the [!UICONTROL Segments] [!UICONTROL Browse] tab to find any existing segment. 
+
+![The Audiences size widget with a segment name and view all segments text highlighted.](../images/profiles/audiences-size-view-all-segments.png)
+
+See the documentation for more information on the [[!UICONTROL Segments] [!UICONTROL  Browse] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
 ### [!UICONTROL Single identity profiles change trend] {#single-identity-profiles-change-trend}
 
