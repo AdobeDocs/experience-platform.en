@@ -263,7 +263,7 @@ This widget shows the proportion of profiles that are of high, medium, or low co
 
 ### (Beta) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
 
-This widget creates a stacked column chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
+This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
 
 The x-axis represents time, the y-axis represents the number of profiles, and the colors represent the three levels of profile completeness. 
 
