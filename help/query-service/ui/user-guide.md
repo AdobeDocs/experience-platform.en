@@ -80,9 +80,9 @@ This panel also shows useful metadata such as the last time the query was modifi
 
 ### Scheduled queries {#scheduled-queries}
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> You can only add a schedule to a query that has already been created, saved, and run. Additionally, you will **not** be able to add a schedule to a parameterized query.
+>The following is a list of limitations for scheduled queries when using the Query Editor. They do not apply to the [!DNL Query Service] API:<br/>You can only add a schedule to a query that has already been created, saved, and run.<br/>You **cannot** add a schedule to a parameterized query.<br/>Scheduled queries **cannot** contain an anonymous block.
 
 To add a schedule to a query, select **[!UICONTROL Add schedule]**. 
 
