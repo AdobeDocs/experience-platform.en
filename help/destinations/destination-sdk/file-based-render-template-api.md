@@ -1,5 +1,5 @@
 ---
-description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render/destination/` API endpoint, to to render exported data for your destination, based on your destination configuration.
+description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render/destination/` API endpoint, to render exported data for your destination, based on your destination configuration.
 title: Render template API operations
 ---
 # Render file-based destination template with the testing API {#render-template-api-operations}
@@ -52,7 +52,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 | Parameter | Description |
 | -------- | ----------- |
 | `destinationId` | The destination instance ID of the destination that you are testing.| 
-| `templates`| The templated fields defined in your [destination server configuration](server-and-file-configuration.md). The keys in these key-value pairs are not using any reserved names. You should use key names that offer the most accurate meaning for the customer configuration.|
+| `templates`| The templated fields defined in your [destination server configuration](server-and-file-configuration.md). Provide key names that offer the most accurate meaning for the customer configuration.|
 
 ### Response
 

@@ -12,9 +12,13 @@ title: Generate sample profiles with the testing API
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
+>[!IMPORTANT]
+>
+>Use this API endpoint to generate sample profiles to use when making calls to [test if your destination is configured correctly](file-based-destination-testing-api.md), by using *destination instance ID* as a query parameter.
+
 ## Generate sample profiles based on the source schema to use when testing your destination {#generate-sample-profiles-source-schema}
 
-You can generate sample profiles based on the source schema by making a GET request to the `authoring/sample-profiles/` endpoint and providing the ID of a destination instance that you created based on the destination configuration that you want to test. 
+You can generate sample profiles based on the source schema by making a GET request to the `authoring/sample-profiles/` endpoint with the destination instance ID of the destination that you want to test. 
 
 To get the ID of a destination instance, you must first create a connection in the Experience Platform UI to your destination before attempting to test your destination. Read the [activate destination tutorial](/help/destinations/ui/activation-overview.md) and see the tip below for how to get the destinations instance ID to use for this API.
 

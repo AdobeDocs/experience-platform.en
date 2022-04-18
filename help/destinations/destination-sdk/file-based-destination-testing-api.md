@@ -10,7 +10,7 @@ title: Destination testing API operations
 >
 >**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your destination is configured correctly and to verify the integrity of data flows to your configured destination. For a description of the functionality supported by this endpoint, read [Test your destination configuration](./test-destination.md).
+This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination. For a description of the functionality supported by this endpoint, read [Test your destination configuration](./test-destination.md).
 
 You make requests to the testing endpoint with or without adding profiles to the call. If you don't send any profiles on the request, Adobe will generate those internally for you and add them to the request.
 
@@ -20,8 +20,8 @@ You can use the [sample profile generation API](file-based-sample-profile-genera
 
 >[!IMPORTANT]
 >
->In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](../ui/connect-destination.md) and [activate profiles and segments to a destination](../ui/activate-segment-streaming-destinations.md) for more information. After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint from the URL when [browsing a connection with your destination](../ui/destination-details-page.md).
->![UI image how to get destination instance ID](./assets/get-destination-instance-id.png)
+>In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](../ui/connect-destination.md) and [activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) for more information. After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint from the URL when [browsing a connection with your destination](../ui/destination-details-page.md).
+>![UI image that highlights how to get the destination instance ID from the browser URL.](./assets/get-destination-instance-id.png)
 
 ## Getting started with destination testing API operations {#get-started}
 
@@ -82,13 +82,15 @@ A successful response returns HTTP status 200 along with the API response from y
 
 | Property | Description |
 | -------- | ----------- |
-| `activations` | The list of segment activated to the destination, and their corresponding flow run ID.|
-| `inputProfiles` | Includes the profiles that were exported on the call to your destination. The profiles match your source schema.|
-|`results`| Includes the flow run IDs that you can use in a call to the [results API](file-based-destination-results-api.md), to test the activation results.|
+| `activations` | The list of segments activated to the destination, and their corresponding flow run IDs.|
+| `inputProfiles` | Returns the profiles that were exported on the call to your destination. The profiles match your source schema.|
+| `results`| Returns the flow run IDs that you can use in a call to the [results API](file-based-destination-results-api.md), to test the integration.|
 
 {style="table-layout:auto"}
 
 ## Test your destination configuration with profiles added to the call {#test-with-added-profiles}
+
+In addition to testing the destination configuration without profiles added to the call, you can also add profiles to the call, after [generating them using the sample profile API](file-based-sample-profile-generation-api.md).
 
 You can test your destination configuration by making a POST request to the `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` endpoint and providing the destination instance ID of the destination that you are testing.
 
@@ -153,7 +155,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 |Property|Description|
 |---|---|
-|`profiles`| Array that can include one or multiple profiles.|
+|`profiles`| Array that can include one or multiple profiles. Use the [sample profile API](file-based-sample-profile-generation-api.md) to generate profiles to use in this API call.|
 
 ### Response
 
@@ -209,7 +211,8 @@ A successful response returns HTTP status 200 along with the API response from y
 
 |Property| Description|
 |---|---|
-|`activations`| Includes the segment ID and flow run ID for each activated segment. The number of activation entries (and associated generated files) is equal to the number of segments mapped on the destination instance. <br><br> Example: If you mapped two segments to the destination instance, the `activations` array will contain two entries. Each activated segment will correspond to one exported file.|
+|`activations`| Returns the segment ID and flow run ID for each activated segment. The number of activation entries (and associated generated files) is equal to the number of segments mapped on the destination instance. <br><br> Example: If you mapped two segments to the destination instance, the `activations` array will contain two entries. Each activated segment will correspond to one exported file.|
+|`results`| Returns the destination instance ID and the flow run IDs that you can use to call the [results API](file-based-destination-results-api.md).|
 
 ## API error handling {#api-error-handling}
 
@@ -217,4 +220,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps
 
-After reading this document, you now know how to test your destination. You can now use the Adobe [self-service documentation process](../destination-sdk/docs-framework/documentation-instructions.md) to create a documentation page for your destination.
+After reading this document, you now know how to test your file-based destination configuration. You can now [submit your destination configuration](../destination-sdk/submit-destination.md) to Adobe for review.
