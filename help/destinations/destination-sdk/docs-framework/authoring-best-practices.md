@@ -13,11 +13,11 @@ This page describes rules that you should follow when [authoring your destinatio
 * When filling in the [template](./self-service-template.md) for your destination documentation, refer to the Adobe contributor guide for information about [linking](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en), [tables](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#tables), the [supported markdown syntax](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en), [writing guidance](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en), and more.
 * Do not include observations and estimations in the product documentation.
 * In Experience Platform documentation, Adobe writers use **bold formatting** to refer to user interface controls, like this:
-  * Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. View an example of how user interface controls are documented in a [destinations tutorial](/https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+  * Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. View an example of how user interface controls are documented in a [destinations tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
 
 ## Linking {#linking}
 
-Please follow the provided documentation template and don't edit the existing links in the template. When including new links, read [using links in documentation](/https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) in the contributor guide.
+Please follow the provided documentation template and don't edit the existing links in the template. When including new links, read [using links in documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) in the contributor guide.
 
 ## Branding guidelines {#branding}
 
@@ -33,7 +33,7 @@ Please follow the provided documentation template and don't edit the existing li
 * Please don’t use numbered screenshots as filenames. Image filenames should be descriptive.
   * **Don't use**: `1.png`, `2.png`, `3.png`
   * **Use**: `yourdestiation-authentication-details.png`, `yourdestination-destination-details.png`
-* Please use alt-text for any images you add to the documentation and use proper grammar in the alt-text.
+* Please use alt text for any images that you add to the documentation and use proper grammar in the alt text.
   * **Don't use**: Destination connection details
   * **Use**: Image of the Platform UI, showing destination connection details filled in.
 
