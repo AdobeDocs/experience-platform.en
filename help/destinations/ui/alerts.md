@@ -31,34 +31,23 @@ This document requires a working understanding of the following components of Ad
 >
 >You must enable instant notifications of emails for your Platform account in order to receive email-based alert notifications for your dataflows.
 
-You can enable alerts for your dataflows during the [!UICONTROL Dataflow detail] step of the destination workflow in the destinations workspace.
+You can enable alerts for your dataflows during the [!UICONTROL Configure new destination] step of the [destination connection](connect-destination.md) workflow.
 
 ![dataflow-detail](../assets/ui/alerts/dataflow-detail.png)
 
-The available alerts for sources dataflows are:
+The available alerts for destination dataflows are:
 
 | Alerts | Description |
 | --- | --- |
-| Sources Dataflow Run Start | This alert sends you a message when your source dataflow has started. |
-| Sources Dataflow Run Success | This alert sends you a message when data from your source is successfully ingested to Platform. |
-| Sources Dataflow Run Failure | This alert sends you a message if an error occurs in your dataflow. |
-| Sources Dataflow Lack of Ingestion | This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Platform. |
+| Destination Flow Run Delay | This alert sends you a message when activation has been delayed. |
+| Destination Flow Run Failure | This alert sends you a message when activation has failed. |
+| Destination Flow Run Success | This alert sends you a message when the activation was successful. |
+| Destination Flow Run Start | This alert sends you a message when activation has started. |
+| Activation Skip Rate Exceeded||
 
 Select the alerts you would like to subscribe to and then select **[!UICONTROL Next]** to review and finish your dataflow.
 
 ![select-alerts](../assets/ui/alerts/select-alerts.png)
-
-See the following guides for detailed steps on creating a sources dataflow in the UI:
-
-* [Advertising](./dataflow/advertising.md)
-* [Cloud storage](./dataflow/batch/cloud-storage.md)
-* [CRM](./dataflow/crm.md)
-* [Database](./dataflow/databases.md)
-* [E-commerce](./dataflow/ecommerce.md)
-* [Local files](./create/local-system/local-file-upload.md)
-* [Marketing automation](./dataflow/marketing-automation.md)
-* [Payments](./dataflow/payments.md)
-* [Protocols](./dataflow/protocols.md)
 
 ## Receive alerts
 
@@ -90,7 +79,7 @@ The lower half of the page displays any [!UICONTROL Dataflow run errors] that oc
 
 ![dataflow-run-errors](../assets/ui/alerts/dataflow-run-error.png)
 
-For more information on handling dataflow errors, see the guide on [monitoring sources dataflows in the UI](../../../dataflows/ui/monitor-sources.md).
+For more information on handling dataflow errors, see the guide on [monitoring destinations dataflows in the UI](../../../dataflows/ui/monitor-destinations.md).
 
 ### By email
 
@@ -108,10 +97,10 @@ You can subscribe to more alerts or unsubscribe from established alerts for an e
 
 ![options](../assets/ui/alerts/options.png)
 
-A pop-up window appears, providing you with a list of sources alerts. Select any alerts you want to subscribe to or deselect alerts that you want to unsubscribe from. When finished, select **[!UICONTROL Save]**.
+A pop-up window appears, providing you with a list of destination alerts. Select any alerts you want to subscribe to or deselect alerts that you want to unsubscribe from. When finished, select **[!UICONTROL Save]**.
 
 ![save](../assets/ui/alerts/save.png)
 
 ## Next steps
 
-This document provided a step-by-step guide on how to subscribe to in-context alerts for your sources dataflows. For more information, see the [alerts UI guide](../../../observability/alerts/ui.md).
+This document provided a step-by-step guide on how to subscribe to in-context alerts for your destination dataflows. For more information, see the [alerts UI guide](../../../observability/alerts/ui.md).
