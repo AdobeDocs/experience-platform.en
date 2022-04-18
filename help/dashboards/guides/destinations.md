@@ -75,7 +75,7 @@ Selecting the name of a destination from the list shown on the widget will take 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlycreateddestinations"
 >title="Recently created destinations"
->abstract="This widget displays a list of your organization's most recently configured destinations."
+>abstract="This widget displays a list of the most recently configured destinations within your organization."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-created-destinations" text="Learn more from documentation"
 
 The **[!UICONTROL Recently created destinations]** widget enables you to see a list of your organization's most recently configured destinations. 

@@ -65,6 +65,8 @@ For more information on merge policies, including how to create, edit, and decla
 
 The dashboard will automatically select a merge policy to display, but you can change the merge policy that is selected using the dropdown menu. To choose a different merge policy, select the drop-down next to the merge policy name and then select the merge policy that you wish to view.
 
+The dashboard will automatically select a merge policy to use. The applied merge policy can be changed using the dropdown menu next to the merge policy name.
+
 >[!NOTE]
 >
 >The dropdown menu shows only merge policies related to the XDM Individual Profile Class. However, if your organization has created multiple merge policies, it may mean that you will need to scroll in order to view the complete list of available merge policies.
@@ -135,7 +137,7 @@ The **[!UICONTROL Profiles added]** widget displays the total number of merged p
 
 >[!NOTE]
 >
->The [!UICONTROL Profiles added] widget reflects the number of profiles added after the Profile Store is set up and profiles are ingested. In other words, if your organization set up the Profile Store and ingested 4,000,000 on Day 1, within 24 hours the dashboard would be available. However, the [!UICONTROL Profiles added] widget would be set to 0. This is done to avoid a spike associated with the initial ingestion of profiles into the system. Over the next 30 days, your organization ingests an additional 1,000,000 profiles into the Profile Store. After the next snapshot is taken, the [!UICONTROL Profiles added] widget would show a total of 1,000,000 profiles added, while the [!UICONTROL Profile count] widget would display 5,000,000 total profiles.
+>The [!UICONTROL Profiles added] widget reflects the number of profiles added after the Profile Store is set up and profiles are ingested. For example, if your organization set up the Profile Store and ingested 4,000,000 on Day 1, within 24 hours the dashboard would be available. However, the [!UICONTROL Profiles added] widget would be set to 0. This is done to avoid a spike associated with the initial ingestion of profiles into the system. Over the next 30 days, your organization ingests an additional 1,000,000 profiles into the Profile Store. After the next snapshot is taken, the [!UICONTROL Profiles added] widget would show a total of 1,000,000 profiles added, while the [!UICONTROL Profile count] widget would display 5,000,000 total profiles.
 
 ![](../images/profiles/profiles-added.png)
 
@@ -287,16 +289,16 @@ The [!UICONTROL Attribute quality assessment] widget shows the completeness and 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbycompleteness"
 >title="Profiles by completeness"
->abstract="The donut chart displays the percentage of profile attributes that are filled with non-null values among all observed attributes. It illustrates the proportion of profiles that are of high, medium, or low completeness. High completeness profiles have more than 70% of attributes filled. Medium completeness profiles have less than 70% and more than 30% of attributes filled. Low completeness: Profiles have less than 30% of attributes filled."
+>abstract="The donut chart displays the percentage of profile attributes that are filled with non-null values among all observed attributes. It illustrates the proportion of profiles that are of high, medium, or low completeness. High completeness profiles have more than 70% of their attributes filled. Medium completeness profiles have between 30% and 70% of their attributes filled. Low completeness profiles have less than 30% of their attributes filled."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness" text="Learn more from documentation"
 
 The [!UICONTROL Profiles by completeness] widget creates a donut chart of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
 
 This widget shows the proportion of profiles that are of high, medium, or low completeness. By default, there are three levels of completeness configured: 
 
-* High completeness: Profiles have more than 70% of attributes filled. 
-* Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
-* Low completeness: Profiles have less than 30% of attributes filled. 
+* High completeness: Profiles have more than 70% of their attributes filled. 
+* Medium completeness: Profiles have between 30% and 70% of their attributes filled. 
+* Low completeness: Profiles have less than 30% of their attributes filled. 
 
 ![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
 
@@ -305,7 +307,7 @@ This widget shows the proportion of profiles that are of high, medium, or low co
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescompletenesstrend"
 >title="Profiles completeness trend"
->abstract="This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes."
+>abstract="This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes that are filled with non-null values among all observed attributes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-completeness-trend" text="Learn more from documentation"
 
 This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
