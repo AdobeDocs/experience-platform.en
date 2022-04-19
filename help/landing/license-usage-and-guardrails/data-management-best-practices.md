@@ -158,6 +158,8 @@ Conversely, the following will still create correct results:
 >
 >For convenience, you can keep the same TTL for all datasets, so that you don't have to worry about the TTL impact across datasets in segmentation logic.
 
+For more information on applying TTL to Profile data, see the documentation on [Profile Service TTL](../../profile/apply-ttl.md).
+
 ## Summary of best practices for license usage compliancy {#best-practices}
 
 The following is a list of some recommended best practices that you can follow to ensure better adherence to your license usage entitlement"
