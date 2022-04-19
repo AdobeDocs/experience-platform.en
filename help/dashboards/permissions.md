@@ -20,7 +20,7 @@ This document provides a summary of how to provide access to specific dashboard 
 There are two main permissions that are required to access dashboards within Experience Platform. These permissions are:
 
 * **View License Usage Dashboard**: This permission allows users read-only access to the license usage dashboard within the Experience Platform UI.
-* **Manage Standard Dashboards**: This permission allows users to add custom attributes that are not yet in the data warehouse.
+* **Manage Standard Dashboards**: This permission provides both read and write permissions. This allows users to edit schemas and add custom attributes that are not yet in the data warehouse.
 
 The following steps will show you how to add these permissions using Admin Console.
 
