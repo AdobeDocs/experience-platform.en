@@ -11,7 +11,7 @@ For increased security, Adobe Experience Platform [!DNL Query Service] provides 
 
 This document assumes that you have already downloaded a third-party desktop client application for use with your Platform data. Specific instructions on how to incorporate SSL security when connecting with a third-party client are found in their respective connection guide documentation. For a list of all [!DNL Query Service] supported clients, see the [client connections overview](./overview.md).
 
-## Available SSL options
+## Available SSL options {#available-ssl-options}
 
 Platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange. 
 
@@ -26,12 +26,12 @@ The different `sslmode` parameter values provide different levels of protection.
 | `allow`  | Partial  | No  | Security is not a priority, speed and a low processing overhead are more important. This mode only opts for encryption if the server insists on it.  |
 | `prefer`  | Partial  | No  | Encryption is not required but the communication will be encrypted if the server supports it.  |
 | `require`  | Yes  | No  | Encryption is required on all communications. The network is trusted to connect to the correct server. Server SSL certificate validation is not required. |
-| `verify-ca`  | Yes  | Depends on CA-policy  | Encryption is required on all communications. Server validation is required before data is shared. This requires you to setup a root certificate in your PostgreSQL home directory. [Details are provided below](#instructions) |
-| `verify-full`  | Yes  | Yes  | Encryption is required on all communications. Server validation is required before data is shared. This requires you to setup a root certificate in your PostgreSQL home directory. [Details are provided below](#instructions).  |
+| `verify-ca`  | Yes  | Depends on CA-policy  | Encryption is required on all communications. Server validation is required before data is shared. This requires you to set up a root certificate in your PostgreSQL home directory. [Details are provided below](#instructions) |
+| `verify-full`  | Yes  | Yes  | Encryption is required on all communications. Server validation is required before data is shared. This requires you to set up a root certificate in your PostgreSQL home directory. [Details are provided below](#instructions).  |
 
 >[!NOTE]
 >
->The difference between `verify-ca` and `verify-full` depends on the policy of the root certificate authority (CA). If you have created and operate your own local CA to issue private certificates for your applications, using `verify-ca` often provides enough protection. If using a public CA, `verify-ca` allows connections to a server that somebody else may have registered with the CA. `verify-full` should always be used with a public root CA.
+>The difference between `verify-ca` and `verify-full` depends on the policy of the root certificate authority (CA). If you have created your own local CA to issue private certificates for your applications, using `verify-ca` often provides enough protection. If using a public CA, `verify-ca` allows connections to a server that somebody else may have registered with the CA. `verify-full` should always be used with a public root CA.
 
 When establishing a third-party connection to a Platform database, you are recommended to use `sslmode=require` at a minimum to ensure a secure connection for your data in motion. The `verify-full` SSL mode is recommended for use in most security-sensitive environments.
 
@@ -59,8 +59,8 @@ If you need stricter security control than `sslmode=require`, you can follow the
 ![The list of available DigiCert root certificates with Download PEM highlighted.](../images/clients/ssl-modes/digicert.png)
 1. Rename the security certificate file to `root.crt`.
 1. Copy the file to the [!DNL PostgreSQL] folder. The necessary file path is different depending on your operating system. If the folder does not already exist, create the folder. 
-    - If you are using macOS, the path is: `/Users/<username>/.postgresql`
-    - If you are using Windows, the path is: `%appdata%\postgresql`
+    - If you are using macOS, the path is `/Users/<username>/.postgresql`
+    - If you are using Windows, the path is `%appdata%\postgresql`
 
 >[!TIP]
 >
