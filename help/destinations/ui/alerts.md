@@ -33,25 +33,23 @@ This document requires a working understanding of the following components of Ad
 
 You can enable alerts for your dataflows during the [!UICONTROL Configure new destination] step of the [destination connection](connect-destination.md) workflow.
 
-![dataflow-detail](../assets/ui/alerts/dataflow-detail.png)
+![UI image showing the destination alerts section](../assets/ui/alerts/destination-alerts.png)
+
+Select the alerts you would like to subscribe to and then select **[!UICONTROL Next]** to review and finish your dataflow.
 
 The available alerts for destination dataflows are:
 
 | Alerts | Description |
 | --- | --- |
-| Destination Flow Run Delay | This alert sends you a message when activation has been delayed. |
-| Destination Flow Run Failure | This alert sends you a message when activation has failed. |
-| Destination Flow Run Success | This alert sends you a message when the activation was successful. |
-| Destination Flow Run Start | This alert sends you a message when activation has started. |
+| Destination Flow Run Delay | This alert sends you a message when a destination flow run takes longer than 150 minutes to activate a segment. |
+| Destination Flow Run Failure | This alert sends you a message when an error occurs while activating a segment to a destination. |
+| Destination Flow Run Success | This alert sends you a message when a segment is successfully activated to a destination. |
+| Destination Flow Run Start | This alert sends you a message when a destination flow run starts activating a segment. |
 | Activation Skip Rate Exceeded||
-
-Select the alerts you would like to subscribe to and then select **[!UICONTROL Next]** to review and finish your dataflow.
-
-![select-alerts](../assets/ui/alerts/select-alerts.png)
 
 ## Receive alerts
 
-Once your dataflow runs, you can receive alerts through the UI or by email.
+Once your destination dataflow runs, you can receive alerts through the UI or by email.
 
 ### In the UI
 
@@ -93,13 +91,17 @@ Similar to the UI alert, the [!UICONTROL Dataflow run overview] page appears, pr
 
 ## Subscribe and unsubscribe to alerts
 
-You can subscribe to more alerts or unsubscribe from established alerts for an existing dataflow in the [!UICONTROL Dataflows] page. Locate the dataflow you create from the list and then select the ellipses (`...`) to see a dropdown menu of options. Next, select **[!UICONTROL Subscribe alerts]** to modify the alert settings of your dataflow.
+You can subscribe to more alerts or unsubscribe from established alerts for an existing destination dataflow in the destinations [!UICONTROL Browse] page.
 
-![options](../assets/ui/alerts/options.png)
+![UI image showing the Destinations Browse page](../assets/ui/alerts/destination-list.png)
+
+Locate the destination connection that you want to receive alerts for and select the ellipses (`...`) to see a dropdown menu of options. Next, select **[!UICONTROL Subscribe to alerts]** to modify the alert settings of your destination dataflow.
+
+![UI image showing the destination options](../assets/ui/alerts/destination-alerts-subscribe.png)
 
 A pop-up window appears, providing you with a list of destination alerts. Select any alerts you want to subscribe to or deselect alerts that you want to unsubscribe from. When finished, select **[!UICONTROL Save]**.
 
-![save](../assets/ui/alerts/save.png)
+![UI image showing the destination alerts subscriptions page](../assets/ui/alerts/destination-alerts-list.png)
 
 ## Next steps
 
