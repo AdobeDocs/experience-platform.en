@@ -101,9 +101,11 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 1. Select **[!UICONTROL Create]** to save the schedule.
 
-#### Considerations of using the **[!UICONTROL After segment evaluation]** option {#after-segment-evaluation}
+#### Considerations of using the **[!UICONTROL After segment evaluation]** or [!UICONTROL Scheduled] options {#after-segment-evaluation}
 
-Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily batch segmentation jobs complete. This ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.
+Use the **[!UICONTROL After segment evaluation]** option to have the activation job run immediately after the daily batch segmentation jobs complete. This ensures that when the activation job runs, the most up-to-date profiles are exported to your destination. Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}, but Adobe reserves the right to modify the schedule.
+
+Use the **[!UICONTROL Scheduled]** option to have the activation job run at a fixed time. This ensures that Experience Platform profile data will be exported at the same time each day, but the profiles you export may not be the most up-to-date, depending on whether the batch segmentation job has run before the activation job kicks off.
 
 ![Image showing the after segment evaluation option selected in the activation flow for batch destinations](/help/destinations/assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
 
