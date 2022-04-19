@@ -7,7 +7,7 @@ exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
 ---
 # Access permissions for dashboards
 
-In order to grant users the ability to view, edit, and update dashboards, you must first enable permissions. In Adobe Experience Platform, access control is provided through the Adobe Admin Console. This functionality leverages product profiles in [!DNL Admin Console], which link users with permissions and sandboxes.
+In order to grant users the ability to view, edit, and update dashboards, you must first enable permissions. In Adobe Experience Platform, access control is provided through the [Adobe Admin Console](https://adminconsole.adobe.com/). This functionality leverages product profiles in [!DNL Admin Console], which link users with permissions and sandboxes.
 
 This document provides a summary of how to provide access to specific dashboard permissions within Admin Console. For detailed information on gaining and assigning access permissions, please begin by reading the [access control overview](../access-control/home.md).
 
@@ -17,10 +17,11 @@ This document provides a summary of how to provide access to specific dashboard 
 
 ## Available permissions {#available-permissions}
 
-There are two main permissions that are required to access dashboards within Experience Platform. These permissions are:
+There are three main permissions that are required to access dashboards within Experience Platform. These permissions are:
 
 * **View License Usage Dashboard**: This permission allows users read-only access to the license usage dashboard within the Experience Platform UI.
 * **Manage Standard Dashboards**: This permission provides both read and write permissions. This allows users to edit schemas and add custom attributes that are not yet in the data warehouse.
+* **View Standard Dashboards**: This provides read-only permissions for the standard dashboards in Platform’s left navigation. 
 
 The following steps will show you how to add these permissions using Admin Console.
 
