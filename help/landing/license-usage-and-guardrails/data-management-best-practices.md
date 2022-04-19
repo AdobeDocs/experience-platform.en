@@ -45,6 +45,15 @@ The [!DNL Profile Richness] metric varies depending on the licensing that you pu
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased.
 
+## Best practices for license usage compliancy {#best-practices}
+
+The following is a list of some recommended best practices that you can follow to ensure better adherence to your license usage entitlement"
+
+* Use the [license usage dashboard](../../dashboards/guides/license-usage.md) to track and monitor customer usage trends. This allows you to get ahead of any potential overages that may incur.
+* Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
+* Ensure that you have only [enabled datasets for profile](#ingestion-filters) that are required for your segmentation and personalization use cases. 
+* Configure an [[!DNL ExperienceEvent] Dataset TTL](#dataset-ttl) for high frequency data like web data. You can use this TTL during sizing calculations. TTL varies from customer to customer.
+
 ### Using the license usage dashboard within Experience Platform UI
 
 The Adobe Experience Platform UI provides a dashboard through which you can view a snapshot of your organization’s license-related data for Platform. The data in the dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. The snapshot is neither an approximation nor a sample of data, and the dashboard is not updating in real-time.
@@ -121,7 +130,7 @@ There are a number of reports available to help you understand the composition o
 * **Identity Overlap Report API**: Exposes the identity namespaces that contribute the most to your Addressable Audience. See the tutorial on [generating the identity overlap report](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) for more information.
 * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 
-#### [!DNL ExperienceEvent] Dataset TTL
+#### [!DNL ExperienceEvent] Dataset TTL {#dataset-ttl}
 
 You can apply TTL to Profile-enabled datasets to remove behavioral data from the Profile Store that is no longer valuable for your use cases. Once TTL is applied to a Profile-enabled dataset, Platform automatically removes data that is no longer needed through a two-part process:
 
@@ -159,15 +168,6 @@ Conversely, the following will still create correct results:
 >For convenience, you can keep the same TTL for all datasets, so that you don't have to worry about the TTL impact across datasets in segmentation logic.
 
 For more information on applying TTL to Profile data, see the documentation on [Profile Service TTL](../../profile/apply-ttl.md).
-
-## Summary of best practices for license usage compliancy {#best-practices}
-
-The following is a list of some recommended best practices that you can follow to ensure better adherence to your license usage entitlement"
-
-* Use the [license usage dashboard](../../dashboards/guides/license-usage.md) to track and monitor customer usage trends. This allows you to get ahead of any potential overages that may incur.
-* Configure ingestion filters by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
-* Ensure that you have only enabled datasets for profile that are required for your segmentation and personalization use cases. 
-* Configure an [!DNL ExperienceEvent] Dataset TTL for high frequency data like web data. You can use this TTL during sizing calculations. TTL varies from customer to customer.
 
 ## Feature summary and availability {#feature-summary}
 
