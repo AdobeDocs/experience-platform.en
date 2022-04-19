@@ -9,7 +9,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your [!DNL Real-time Customer Profile] data, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Profiles] dashboard in the UI and provides information regarding the metrics displayed in the dashboard.  
 
-For an overview of all of the Profile features within the Experience Platform user interface, please visit the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).
+For an overview of all of the Profile features within the Experience Platform user interface, please refer to the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).
 
 ## Profile dashboard data
 
@@ -33,7 +33,7 @@ To navigate to the [!UICONTROL Profiles] dashboard within the Platform UI, selec
 
 ### Modifying the [!UICONTROL Profiles] dashboard
 
-You can modify the appearance of the [!UICONTROL Profiles] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the **[!UICONTROL Widget library]** to explore available widgets and create custom widgets for your organization. 
+You can modify the appearance of the [!UICONTROL Profiles] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard, as well as to access the **[!UICONTROL Widget library]** to explore available widgets, and create custom widgets for your organization. 
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
 
@@ -43,7 +43,7 @@ Please refer to the [modifying dashboards](../customize/modify.md) and [widget l
 >
 >The profile efficacy insight functionality is currently in beta and are not available to all users. The documentation and the functionality are subject to change.
 
-The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data thorough the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
+The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data through the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
 
 ![The profile efficacy dashboard.](../images/profiles/attributes-quality-assessment.png)
 
@@ -53,21 +53,21 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## Browse profiles {#browse-profiles}
 
-The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your IMS Organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and segments 
+The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your IMS Organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and segments.
 
-To learn more about the profile viewing capabilities provided in the Platform UI please see the documentation on [browsing profiles in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+To learn more about the profile viewing capabilities provided in the Platform UI, please see the documentation on [browsing profiles in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Merge policies {#merge-policies}
 
 The metrics displayed in the [!UICONTROL Profiles] dashboard are based on merge policies being applied to your Real-time Customer Profile data. When data is brought together from multiple sources to create the customer profile, it is possible for the data to contain conflicting values (for example, one dataset may list a customer as "single" while another dataset may list the customer as "married"). It is the job of the merge policy to determine which data to prioritize and display as part of the profile.
 
-For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md).
+For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, refer to the [merge policies overview](../../profile/merge-policies/overview.md).
 
 The dashboard will automatically select a merge policy to display, but you can change the merge policy that is selected using the drop down menu. To choose a different merge policy, select the drop down next to the merge policy name and then select the merge policy that you wish to view.
 
 >[!NOTE]
 >
->The dropdown menu shows only merge policies related to the XDM Individual Profile Class, however if your organization has created multiple merge policies, it may mean that you will need to scroll in order to view the complete list of available merge policies.
+>The dropdown menu shows only merge policies related to the XDM Individual Profile Class, however, if your organization has created multiple merge policies, you may need to scroll in order to view the complete list of available merge policies
 
 ![](../images/profiles/select-merge-policy.png)
 
@@ -87,7 +87,7 @@ The "last updated" date and time on a widget shows when the last snapshot of the
 
 ## Standard widgets
 
-Adobe provides multiple standard widgets that you can use to visualize different metrics related to your Profile data. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
+Adobe provides multiple standard widgets that you can use to visualize different metrics related to your Profile data. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, refer to the [widget library overview](../customize/widget-library.md).
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
@@ -111,13 +111,13 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 >
 >The [!UICONTROL Profile count] widget may show a different number than the profile count shown on the [!UICONTROL Browse] tab in the [!UICONTROL Profiles] section of the UI for multiple reasons. The most common reason is because the [!UICONTROL Browse] tab references the total number of merged profiles based on your organization's default merge policy, while the [!UICONTROL Profile count] widget references the total number of merged profiles based on the merge policy that you have selected to view in the dashboard. 
 >
->Another common reason is due to the differences between the time when the dashboard snapshot is taken and the time when the sample job is run for the [!UICONTROL Browse] tab. You can see when the [!UICONTROL Profile count] widget was last updated by looking at the timestamp on the widget, and to learn more about how the sample job is triggered on the [!UICONTROL Browse] tab, see the [profile count section in the Real-time Customer Profile UI guide](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>Another common reason is due to the differences between the time when the dashboard snapshot is taken and the time when the sample job is run for the [!UICONTROL Browse] tab. You can see when the [!UICONTROL Profile count] widget was last updated by looking at the timestamp on the widget. To learn more about how the sample job is triggered on the [!UICONTROL Browse] tab, see the [profile count section in the Real-time Customer Profile UI guide](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profiles added] {#profiles-added}
 
-The **[!UICONTROL Profiles added]** widget displays the total number of merged profiles that have been added to the Profile Store as of the last snapshot that was taken. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. You can use the dropdown selector to view the profiles added over the last 30 days, 90 days, or 12 months.
+The **[!UICONTROL Profiles added]** widget displays the total number of merged profiles that have been added to the Profile Store since the last snapshot was taken. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. You can use the dropdown selector to view the profiles added over the last 30 days, 90 days, or 12 months.
 
 >[!NOTE]
 >
@@ -155,7 +155,7 @@ The **[!UICONTROL Identity overlap]** widget displays a Venn diagram, or set dia
 
 After using the dropdown menus on the widget to select the identities that you wish to compare, circles appear displaying the relative size of each identity, with the number of profiles containing both namespaces being represented by the size of the overlap between the circles. If a customer interacts with your brand on more than one channel, multiple identities will be associated with that individual customer, therefore it is likely that your organization will have multiple profiles containing fragments from more than one identity.
 
-For more information on profile fragments, begin by reading the section on [profile fragments vs merged profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) in the Real-time Customer Profile overview.
+For more information on profile fragments, refer to the section on [profile fragments vs merged profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) in the Real-time Customer Profile overview.
 
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
@@ -191,7 +191,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 >
 >The profile efficacy widgets are currently in Beta and are not available to all users. The documentation and the functionality are subject to change.
 
-Adobe provides multiple widgets to assess the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
+Adobe provides multiple widgets to assess the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by merge policy. To change the merge policy filter, select [!UICONTROL Profiles using the merge policy] dropdown and choose the appropriate policy from the available list.
 
 To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
