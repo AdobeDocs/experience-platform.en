@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;OneTrust
 solution: Experience Platform
 title: (Beta) Create a dataflow for a OneTrust Integration source using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to OneTrust Integration using the Flow Service API.
+exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
 ---
 # (Beta) Create a dataflow for a [!DNL OneTrust Integration] source using the [!DNL Flow Service] API
 
@@ -6788,7 +6789,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
@@ -7780,4 +7781,3 @@ curl -X DELETE \
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
 You can confirm the deletion by attempting a lookup (GET) request to the connection.
-

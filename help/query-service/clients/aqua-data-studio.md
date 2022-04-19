@@ -46,6 +46,10 @@ To find your credentials, log in to the [!DNL Platform] UI and select **[!UICONT
 
 Next, select the **[!DNL Driver]** tab. Under **[!DNL Parameters]**, set the value as `?sslmode=require`
 
+>[!IMPORTANT]
+>
+>See the [[!DNL Query Service] SSL documentation](./ssl-modes.md) to learn about SSL support for third-party connections to Adobe Experience Platform Query Service, and how to connect using `verify-full` SSL mode.
+
 ![The Aqua Data Studio Driver tab with the Parameters field highlighted.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
 After inputting your connection details, select **[!DNL Test Connection]** to ensure your credentials work properly. If your connection test is successful, select **[!DNL Save]** to register your server. A confirmation dialog appears confirming connection and the connection appears on the dashboard. You can now connect to the server and view its schema objects.
