@@ -33,7 +33,11 @@ Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Custome
 
 The [!UICONTROL Add data] screen lists all available data sources for Customer Attributes. Only one dataset can be selected per Customer Attributes source connection. 
 
-Schema evolution is not supported by the customer attributes source. If the schema input of a customer attributes data source is changed, then it would become incompatible with Platform. As a work around, you can delete an existing customer attributes dataflow and create a new one with the updated schema and data source.
+>[!NOTE]
+>
+>Field groups, schemas, and datasets are created out-of-box as a part of flow provisioning. They will remain as-is and you will have to manually delete them, if needed.
+
+Schema evolution is not supported by the customer attributes source. If the schema input of a customer attributes data source is changed, then it would become incompatible with Platform. As a workaround, you can delete an existing customer attributes dataflow, along with its associated dataset, schema, and field group, and then create a new one with the updated schema and data source.
 
 >[!IMPORTANT]
 >
