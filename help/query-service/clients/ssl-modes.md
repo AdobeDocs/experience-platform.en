@@ -66,7 +66,7 @@ If you need stricter security control than `sslmode=require`, you can follow the
 >
 >To find your `%appdata%` file location on a Windows operating system, press ⊞ **Win + R** and input `%appdata%` into the search field.
 
-After the [!DNL DigiCert Global Root CA] CRT file is available in your [!DNL PostgreSQL] folder, you can connect to [!DNL Query Service] using the `sslmode=verify-full` option.
+After the [!DNL DigiCert Global Root CA] CRT file is available in your [!DNL PostgreSQL] folder, you can connect to [!DNL Query Service] using the `sslmode=verify-full` or `sslmode=verify-ca` option.
 
 ## Next steps
 
