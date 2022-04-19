@@ -29,7 +29,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the mapping screen of the [destination activation workflow](../../ui/activate-segment-streaming-destinations.md#mapping).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -56,7 +56,7 @@ The HTTP API destination supports several authentication types to your HTTP endp
 
 * HTTP endpoint with no authentication;
 * Bearer token authentication;
-* [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentication with the body form, with client ID, client secret and grant type in the body of the HTTP request, as shown in the example below.
+* [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentication with the body form, with [!DNL client ID], [!DNL client secret] and [!DNL grant type] in the body of the HTTP request, as shown in the example below.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -66,7 +66,16 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-* [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) with basic authorization, with an authorization header which contains URL-encoded client ID and client secret.
+* [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) with basic authorization, with an authorization header which contains URL-encoded [!DNL client ID] and [!DNL client secret].
+
+```shell
+curl --location --request POST 'https://some-api.com/token' \
+--header 'Authorization: Basic base64(clientId:clientSecret)' \
+--header 'Content-type: application/x-www-form-urlencoded; charset=UTF-8' \
+--data-urlencode 'grant_type=client_credentials'
+```
+
+* [OAuth 2.0 password grant](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
 ## Connect to the destination {#connect-destination}
 
@@ -107,7 +116,7 @@ If you select the **[!UICONTROL OAuth 2 Password]** authentication type to conne
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="Client credentials type"
->abstract="Select **Body Form Encoded** when ... and **Basic Authorization** when ..."
+>abstract="Select **Body Form Encoded** to include the client ID and client secret in the body of the request or **Basic Authorization** to include client ID and client secret in an authorization header. View examples in the documentation."
 
 If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
@@ -117,8 +126,8 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: The [!DNL client secret] that your system assigns to Adobe Experience Platform.
 * **[!UICONTROL Client Credentials Type]**: Select the type of OAuth2 Client Credentials grant supported by your endpoint:
-  * **[!UICONTROL Body Form Encoded]**: Add description here
-  * **[!UICONTROL Basic Authorization]**: Add description here
+  * **[!UICONTROL Body Form Encoded]**: In this case, the [!DNL client ID] and [!DNL client secret] are included *in the body of the request* sent to your destination. For an example, see the [Supported authentication types](#supported-authentication-types) section.
+  * **[!UICONTROL Basic Authorization]**: In this case, the [!DNL client ID] and [!DNL client secret] are included *in an `Authorization` header* after being base64 encoded and sent to your destination. For an example, see the [Supported authentication types](#supported-authentication-types) section.
 
 ### Destination details {#destination-details}
 
@@ -302,7 +311,7 @@ Below are further examples of exported data, depending on the UI settings you se
 
 ## Limits and retry policy {#limits-retry-policy}
 
-In 95% of cases, Experience Platform offers a throughput guarantee of less than 10 minutes for successfully sent messages with a rate of mess than 10.000 requests per second.
+In 95% of cases, Experience Platform offers a throughput guarantee of less than 10 minutes for successfully sent messages with a rate of less than 10.000 requests per second.
 
 Note that there is currently no way for customers to control the output rate of requests going out of Experience Platform.
 
