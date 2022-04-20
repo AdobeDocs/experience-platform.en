@@ -142,6 +142,8 @@ The following tables list all supported mapping functions, including sample expr
 
 {style="table-layout:auto"}
 
+For information on object copy, see the section [below](#object-copy).
+
 ### Hierarchies - Arrays {#arrays}
 
 >[!NOTE]
@@ -245,6 +247,10 @@ The following tables list all supported mapping functions, including sample expr
 
 ### Object Copy {#object-copy}
 
+>[!TIP]
+>
+>Object copy is automatically applied when an object in the source is mapped to an object in the XDM. There is no additional action needed from the users.
+
 You can use the object copy feature to automatically copy attributes of an object without making changes to the data prep mapping. For example, if your source data has a structure of:
 
 ```json
@@ -272,7 +278,7 @@ address -> addr
 address.line1 -> addr.addrLine1
 ```
 
-Because the `address` object is mapped to `addr`, then the `city` and `state` attributes are automatically mapped as well. If you were to create a `line2` attribute in the XDM structure and your input data also contains a `line2` in the `address` object, then it will also be automatically ingested without any need to manually alter the mapping.
+Because the `address` object is mapped to `addr`, then the `city` and `state` attributes are automatically ingested as well at runtime. If you were to create a `line2` attribute in the XDM structure and your input data also contains a `line2` in the `address` object, then it will also be automatically ingested without any need to manually alter the mapping.
 
 The following prerequisites must be met, to ensure that the automatic mapping works:
 
