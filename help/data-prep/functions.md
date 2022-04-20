@@ -242,3 +242,42 @@ The following tables list all supported mapping functions, including sample expr
 | ua_device_class | Extracts the device class from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_device_class​(USER_AGENT) | ua_device_class​("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Phone |
 
 {style="table-layout:auto"}
+
+### Object Copy {#object-copy}
+
+You can use the object copy feature to automatically copy attributes of an object without making changes to the data prep mapping. For example, if your source data has a structure of:
+
+```json
+address{
+line1: 4191 Ridgebrook Way,
+city: San Jose,
+state: California
+}
+```
+
+and an XDM structure of:
+
+```json
+addr{
+addrLine1: 4191 Ridgebrook Way,
+city: San Jose,
+state: California
+}
+```
+
+Then the mapping becomes:
+
+```json
+address -> addr
+address.line1 -> addr.addrLine1
+```
+
+Because the `address` object is mapped to `addr`, then the `city` and `state` attributes are automatically mapped as well. If you were to create a `line2` attribute in the XDM structure and your input data also contains a `line2` in the `address` object, then it will also be automatically ingested without any need to manually alter the mapping.
+
+The following prerequisites must be met, to ensure that the automatic mapping works:
+
+* Parent-level objects should be mapped;
+* New attributes must have been created in the XDM schema;
+* New attributes should have matching names in the source schema and the XDM schema.
+
+If any of the prerequisites are not met, then you must manually map using data prep.
