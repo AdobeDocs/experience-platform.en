@@ -32,9 +32,11 @@ Profile export destinations receive raw data, often with email address as the pr
 >
 >Enterprise destinations, or streaming profile export destinations, are available to [Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers only.
 
-Streaming profile export destinations receive segment and profile data as Experience Platform data streams.
+Use enterprise destination data connectors to deliver Real-time Customer Data Platform profiles in near real-time to internal systems or to other third-party systems for data synchronization, analysis, and further profile enrichment use cases.
 
-These destinations include:
+These destinations receive segment and profile data as Experience Platform data streams.
+
+Enterprise destinations include:
 
 * [HTTP API destination](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
