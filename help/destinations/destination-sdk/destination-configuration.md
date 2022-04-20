@@ -92,8 +92,8 @@ This is an example configuration of a fictional streaming destination, Moviestar
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -270,6 +270,10 @@ This option allows you to:
   * Segment ID;
   * Segment status;
   * Identity or groups of identities.
+
+>[!NOTE]
+>
+>When using the configurable aggregation option for your destination, be mindful of the minimum and maximum values that you can use for the two parameters `maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600) and `maxNumEventsInBatch` (minimum 1.000, maximum 10.000).
 
 For detailed explanations of the aggregation parameters, refer to the [Destinations API endpoint operations](./destination-configuration-api.md) reference page, where each parameter is described.
 
