@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;Query service;query service;connect;connect to query service;SSL;ssl;sslmode;
 title: Query Service SSL Options
 description: Learn about SSL support for third-party connections to Adobe Experience Platform Query Service, and how to connect using verify-full SSL mode.
+exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
 ---
 # [!DNL Query Service] SSL options
 
