@@ -45,15 +45,6 @@ The [!DNL Profile Richness] metric varies depending on the licensing that you pu
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased.
 
-## Best practices for license usage compliancy {#best-practices}
-
-The following is a list of some recommended best practices that you can follow to ensure better adherence to your license usage entitlement"
-
-* Use the [license usage dashboard](../../dashboards/guides/license-usage.md) to track and monitor customer usage trends. This allows you to get ahead of any potential overages that may incur.
-* Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
-* Ensure that you have only [enabled datasets for profile](#ingestion-filters) that are required for your segmentation and personalization use cases. 
-* Configure an [[!DNL ExperienceEvent] Dataset TTL](#dataset-ttl) for high frequency data like web data. You can use this TTL during sizing calculations. TTL varies from customer to customer.
-
 ### Using the license usage dashboard within Experience Platform UI
 
 The Adobe Experience Platform UI provides a dashboard through which you can view a snapshot of your organization’s license-related data for Platform. The data in the dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. The snapshot is neither an approximation nor a sample of data, and the dashboard is not updating in real-time.
@@ -91,7 +82,7 @@ You can apply both data ingestion filters and expiration rules (also known as Ti
 There are a number of tools that you can leverage to stay within your license usage entitlements:
 
 * [Ingestion filters](#ingestion-filters)
-* [Profile Service TTL](#profile-service-ttl)
+* [Profile Service TTL](#profile-service)
 
 ### Ingestion filters {#ingestion-filters}
 
@@ -107,7 +98,7 @@ Ingestion filters allow you to bring in only the data that is needed for your us
 
 {style="table-layout:auto"}
 
-### Profile Service TTL {#profile-service-ttl}
+### Profile Service {#profile-service}
 
 The Profile Service TTL (time-to-live) capability allows you to apply TTL on data in the profile store. Doing so allows the system to automatically remove data that has diminished value over time.
 
@@ -168,6 +159,16 @@ Conversely, the following will still create correct results:
 >For convenience, you can keep the same TTL for all datasets, so that you don't have to worry about the TTL impact across datasets in segmentation logic.
 
 For more information on applying TTL to Profile data, see the documentation on [Profile Service TTL](../../profile/apply-ttl.md).
+
+## Summary of best practices for license usage compliancy {#best-practices}
+
+The following is a list of some recommended best practices that you can follow to ensure better adherence to your license usage entitlement"
+
+* Use the [license usage dashboard](../../dashboards/guides/license-usage.md) to track and monitor customer usage trends. This allows you to get ahead of any potential overages that may incur.
+* Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
+* Ensure that you have only [enabled datasets for profile](#ingestion-filters) that are required for your segmentation and personalization use cases. 
+* Configure an [[!DNL ExperienceEvent] Dataset TTL](#dataset-ttl) for high frequency data like web data.
+* Periodically check the [Profile Composition Reports](#profile-store-composition-reports) to understand your Profile Store composition. This allows you to understand the data sources contributing most to your license usage consumption.
 
 ## Feature summary and availability {#feature-summary}
 
