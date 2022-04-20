@@ -10,6 +10,10 @@ exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 
 The tables below contain the mappings between the fields in the nine [!DNL Marketo] datasets and their corresponding Experience Data Model (XDM) fields.
 
+>[!TIP]
+>
+>All [!DNL Marketo] datasets except `Activities` now support `isDeleted`. If you have existing dataflows, you can implement `isDeleted` by stopping your existing dataflows and recreating them with the new mapping. This allows you to maintain accuracy and have the `isDeleted` flag to all of your historical data.
+
 ## Activities {#activities}
 
 | Source dataset | XDM target field | Notes |
