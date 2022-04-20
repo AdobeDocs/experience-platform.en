@@ -70,15 +70,18 @@ See the overview on [data usage labels](./labels/overview.md) for more informati
 
 In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
-An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that specific types of data, such as Personally Identifiable Information (PII), cannot be exported and an "I" label (Identity data) has been applied to the dataset, you will receive a response from the [!DNL Policy Service] telling you that a data usage policy has been violated.
+An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that Personally Identifiable Information (PII) cannot be exported, and an "I" label (identity data) has been applied to the dataset, [!DNL Policy Service] prevents any action that would export this dataset to a third-party destination. Should one of these action attempts occur, Policy Service sends a message telling you that a data usage policy has been violated.
 
-Once data usage labels have been applied, data stewards can create policies using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
+There are two types of policies available:
+
+* **[!UICONTROL Data governance policy]**: Restrict data activation based on the marketing action being performed and the data usage labels carried by the data in question.
+* **[!UICONTROL Consent policy] (Beta)**: Filter the profiles that can be activated to [destinations](../destinations/home.md) based on your customers' consent or preferences.
+
+Once data usage labels have been applied, data stewards can create policies using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface. For more information on data usage policies and marketing actions, see the [policies overview](./policies/overview.md).
 
 >[!IMPORTANT]
 >
 >All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy.
-
-For more information on data usage policies and marketing actions, see the [policies overview](./policies/overview.md).
 
 ## Next steps
 

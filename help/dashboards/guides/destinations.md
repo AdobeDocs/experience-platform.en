@@ -45,10 +45,11 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Recently created destinations]](#recently-created-destinations)
 * [[!UICONTROL Recently activated segments]](#recently-activated-segments)
 * [[!UICONTROL Recently activated segments by destination]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Audience size trend]](#audience-size-trends)
+* [[!UICONTROL Audience size trend]](#audience-size-trend)
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
+* [[!UICONTROL Destinations count]](#destinations-count)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
@@ -106,6 +107,10 @@ The second dropdown menu lists every available segment that can be sent to the d
 
 ![The audience size trend widget.](../images/destinations/audience-size-trend.png)
 
+The **[!UICONTROL Audience size trend]** widget provides a [!UICONTROL Captions] button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog. A machine learning model automatically generates captions to describe the key trends and important events by analyzing the chart and segment data.
+
+![The automatic captions dialog for the Audience size trend widget.](../images/destinations/audience-size-trend-captions.png)
+
 ### [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
 
 The **[!UICONTROL Unmapped segments by identity]** widget lists the top five **unmapped** segments ranked by descending identity count for a given destination and identity. It highlights segments that are the most beneficial to map to the chosen destination account based on the chosen ID.
@@ -145,6 +150,14 @@ If your segment mapped profile count is outside one standard deviation from the 
 If a segment within the [!UICONTROL Mapped audience health] widget is deviating by a wide margin, you should refer to the audience size trend chart and locate the anomalous segment. The trend can provide further insight into your segment's health.   
 
 ![The Mapped audience health widget.](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL Destinations count] {#destinations-count}
+
+The [!UICONTROL Destinations count] widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. 
+
+Below the total count, select **[!UICONTROL Destinations]** to navigate to the destinations browse tab. This page lists all the destinations that you have established a connection with to date.
+
+![The Destinations count widget.](../images/destinations/destinations-count.png)
 
 ## Next steps
 

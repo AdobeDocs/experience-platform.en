@@ -56,6 +56,13 @@ Cloud storage sources can bring your own data into Platform without the need to 
 - [[!DNL Oracle Object Storage] connector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
+### Consent and Preferences {#consent}
+
+Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. See the following related documents for more information:
+
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+
+
 ### Customer Relationship Management (CRM) {#crm}
 
 CRM systems provide data that can help build customer relationships, which in turn, create loyalty and drive customer retention. Experience Platform provides support for ingesting CRM data from [!DNL Microsoft Dynamics 365] and [!DNL Salesforce]. See the following related documents for more information:
@@ -113,6 +120,7 @@ Experience Platform provides support for ingesting data from a third-party marke
 
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
+- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Payments {#payments}

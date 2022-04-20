@@ -96,6 +96,10 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Profiles count trend]](#profiles-count-trend)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
+* [[!UICONTROL Single Identity Profiles]](#single-identity-profiles)
+* [[!UICONTROL Unsegmented Profiles]](#unsegmented-profiles)
+* [[!UICONTROL Unsegmented Profiles] Trend](#unsegmented-profiles-trend)
+* [[!UICONTROL Unsegmented Profiles by Identity]](#unsegmented-profiles-by-identity)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -129,7 +133,7 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 
 The **[!UICONTROL Profile count trend]** widget displays a 'captions' button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
-![Profile overview tab displaying the Profiles count trend widget with the captions button highlighted.](../images/profiles/profile-count-trend-captions.png)
+![The Profile overview tab displaying the Profiles count trend widget with the captions button highlighted.](../images/profiles/profile-count-trend-captions.png)
 
 A machine learning model automatically generates captions for describing the key trends and important events by analyzing the chart and the data.
 
@@ -156,6 +160,30 @@ For more information on profile fragments, begin by reading the section on [prof
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+### [!UICONTROL Single Identity Profiles] {#single-identity-profiles}
+
+The [!UICONTROL Single Identity Profiles] widget provides a count of your organization's profiles that only have one type of ID type that creates their identity. This ID type can either be an email or ECID. The profile count is generated from the data contained in the most recent snapshot.
+
+![Single Identity Profiles widget.](../images/profiles/single-identity-profiles.png)
+
+### [!UICONTROL Unsegmented Profiles] {#unsegmented-profiles}
+
+The [!UICONTROL Unsegmented Profiles] widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. It also indicates the opportunity to expunge profiles that do not provide adequate ROI.
+
+![The Unsegmented Profiles widget.](../images/profiles/unsegmented-profiles.png)
+
+### [!UICONTROL Unsegmented Profiles Trend] {#unsegmented-profiles-trend}
+
+The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the y-axis and time on the x-axis.
+
+![The Unsegmented Profiles Trend widget.](../images/profiles/unsegmented-profiles-trend.png)
+
+### [!UICONTROL Unsegmented Profiles by Identity] (#unsegmented-profiles-by-identity)
+
+The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
+
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
 
 ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
@@ -198,7 +226,7 @@ This widget shows the proportion of profiles that are of high, medium, or low co
 
 ### (Beta) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
 
-This widget creates a stacked column chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
+This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
 
 The x-axis represents time, the y-axis represents the number of profiles, and the colors represent the three levels of profile completeness. 
 
