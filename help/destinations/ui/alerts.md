@@ -41,11 +41,11 @@ The available alerts for destination dataflows are:
 
 | Alerts | Description |
 | --- | --- |
-| Destination Flow Run Delay | This alert sends you a message when a destination flow run takes longer than 150 minutes to activate a segment. |
-| Destination Flow Run Failure | This alert sends you a message when an error occurs while activating a segment to a destination. |
-| Destination Flow Run Success | This alert sends you a message when a segment is successfully activated to a destination. |
-| Destination Flow Run Start | This alert sends you a message when a destination flow run starts activating a segment. |
-| Activation Skip Rate Exceeded||
+| Destination Flow Run Delay | This alert notifies you when a destination flow run takes longer than 150 minutes to activate a segment. |
+| Destination Flow Run Failure | This alert notifies you when an error occurs while activating a segment to a destination. |
+| Destination Flow Run Success | This alert notifies you when a segment is successfully activated to a destination. |
+| Destination Flow Run Start | This alert notifies you when a destination flow run starts activating a segment. |
+| Activation Skip Rate Exceeded| This alert notifies you when the activation skip rate has been exceeded. Identities are skipped during activation when they have missing attributes or consent violation.| 
 
 ## Receive alerts
 
@@ -55,19 +55,19 @@ Once your destination dataflow runs, you can receive alerts through the UI or by
 
 Alerts are represented in the UI by a notification icon in the top header of the Platform UI. Select the notification icon to see specific alert messages regarding your dataflows.
 
-![notification](../assets/ui/alerts/notification.png)
+![UI image showing the notification icon in Experience Platform](../assets/ui/alerts/notification.png)
 
 The notifications panel appears, displaying a list of status updates on the dataflow that you created.
 
-![alert-window](../assets/ui/alerts/alert-window.png)
+![UI image showing the notification panel](../assets/ui/alerts/alert-window.png)
 
 You can hover on an alert message to mark them as read or you can select the clock icon to set future reminders on the status of your dataflow.
 
-![remind-me](../assets/ui/alerts/remind-me.png)
+![UI image showing the notification reminder options](../assets/ui/alerts/remind-me.png)
 
 Select the alert message to see specific information on your dataflow.
 
-![select-alert-message](../assets/ui/alerts/select-alert-message.png)
+![UI image showing how to select a notification](../assets/ui/alerts/select-alert-message.png)
 
 The [!UICONTROL Dataflow run overview] page appears. The upper half of the screen displays an overview on your dataflow, including information on its attributes, corresponding dataflow run ID, and high-level error summary.
 
@@ -83,7 +83,7 @@ For more information on handling dataflow errors, see the guide on [monitoring d
 
 Alerts for your dataflows are also delivered to you by email. Select the dataflow name in the email body to see more information on your dataflow.
 
-![email](../assets/ui/alerts/email.png)
+![Screenshot of an alert email](../assets/ui/alerts/email.png)
 
 Similar to the UI alert, the [!UICONTROL Dataflow run overview] page appears, providing you with an interface to investigate any errors associated with your dataflow.
 
