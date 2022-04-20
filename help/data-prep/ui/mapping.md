@@ -183,7 +183,7 @@ Alternatively, you can select the mapping rule you want to import from the list 
 
 ![select-mapping](../images/ui/mapping/select-mapping.png)
 
-The mapping page updates with the mapping rules that you imported.
+The mapping page updates with the mapping rules that you imported from another dataflow.
 
 ![mapping-imported](../images/ui/mapping/mapping-imported.png)
 
