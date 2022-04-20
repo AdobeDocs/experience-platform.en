@@ -8,13 +8,15 @@ keywords: Identity;mobile;id;sharing;domain;cross-domain;sdk;platform;
 
 ## Overview
 
-The Adobe Experience Platform Web SDK supports visitor ID sharing capabilities that enable customers to more accurately deliver personalized experiences across devices and across domains.
+The Adobe Experience Platform Web SDK supports visitor ID sharing capabilities that enable customers to more accurately deliver personalized experiences between mobile apps and mobile web content, and across domains.
 
 ## Use cases {#use-cases}
 
-### Deliver consistent personalization across devices
+### Deliver consistent personalization between mobile apps and mobile websites
 
 A clothing company wants to personalize their customers' experience based on their interests, and keep the personalization accurate across customer devices. By using the mobile-to-web ID sharing feature, they can ensure that the most accurate offers are presented to customers, whether they are shopping from their smartphones, laptops, or tablets.
+
+A clothing company wants to personalize their customers' experience based on their interests, and keep the personalization accurate in a mobile application that also loads WebViews. By using the mobile-to-web ID sharing feature, they can ensure that the most accurate offers are presented to customers, using the same visitor identifier in the app and mobile web content by passing the [!DNL ECID] to the mobile web URL.
 
 ### Deliver consistent personalization across domains
 
@@ -23,6 +25,8 @@ A retailer with multiple online stores wants to personalize the shopper experien
 ## Prerequisites {#prerequisites}
 
 To use mobile-to-web and cross-domain ID sharing, you must update to [!DNL Web SDK] version 2.10.0 or later.
+
+For Edge Network mobile implementations, this feature is supported in the [Identity for Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) extension starting with version 1.1.0 (iOS and Android).
 
 ## Mobile-to-web ID sharing {#mobile-to-web}
 
