@@ -57,7 +57,7 @@ The "last updated" date and time on a widget shows when the last snapshot of the
 
 ## Standard widgets
 
-Adobe provides multiple standard widgets that you can use to visualize different metrics related to your segments. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
+Adobe provides multiple standard widgets that you can use to visualize different metrics related to your segments. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, refer to the [widget library overview](../customize/widget-library.md).
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
@@ -70,7 +70,7 @@ To learn more about each of the available standard widgets, select the name of a
 
 The **[!UICONTROL Audience size]** widget displays the total number of merged profiles within the selected segment at the time the snapshot was taken. This number is the result of applying the segment merge policy to your Profile data in order to merge profile fragments together to form a single profile for each individual in the segment. 
 
-For more information on fragments and merged profiles, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
+For more information on fragments and merged profiles, refer to the [Real-time Customer Profile overview](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
 
