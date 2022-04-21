@@ -98,12 +98,12 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Single Identity Profiles]](#single-identity-profiles)
 * [[!UICONTROL Unsegmented Profiles]](#unsegmented-profiles)
-* [[!UICONTROL Unsegmented Profiles] Trend](#unsegmented-profiles-trend)
+* [[!UICONTROL Unsegmented Profiles Trend]](#unsegmented-profiles-trend)
 * [[!UICONTROL Unsegmented Profiles by Identity]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences mapped status]](#audiences-mapped-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
-<!-- * [[!UICONTROL Single identity profiles trend]](#single-identity-profiles-trend) -->
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
+<!-- * [[!UICONTROL Single identity profiles trend]](#single-identity-profiles-trend) -->
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -125,7 +125,7 @@ The **[!UICONTROL Profiles added]** widget displays the total number of merged p
 
 >[!NOTE]
 >
->The [!UICONTROL Profiles added] widget reflects the number of profiles added after the Profile Store is set-up and profiles are ingested. In other words, if your organization set up the Profile Store and ingested 4,000,000 on Day 1, within 24 hours the dashboard would be available, however the [!UICONTROL Profiles added] widget would be set to 0. This is done to avoid a spike associated with the initial ingestion of profiles into the system. Over the next 30 days, your organization ingests an additional 1,000,000 profiles into the Profile Store. After the next snapshot is taken, the [!UICONTROL Profiles added] widget would show a total of 1,000,000 profiles added, while the [!UICONTROL Profile count] widget would display 5,000,000 total profiles.
+>The [!UICONTROL Profiles added] widget reflects the number of profiles added **after** the initial profile ingestion and Profile Store set-up. In other words, if your organization set up the Profile Store and ingested 4,000,000 on Day 1, within 24 hours the dashboard would be available, however the [!UICONTROL Profiles added] widget would be set to 0. This is done to avoid a spike associated with the initial ingestion of profiles into the system. Over the next 30 days, your organization ingests an additional 1,000,000 profiles into the Profile Store. After the next snapshot is taken, the [!UICONTROL Profiles added] widget would show a total of 1,000,000 profiles added, while the [!UICONTROL Profile count] widget would display 5,000,000 total profiles.
 
 ![](../images/profiles/profiles-added.png)
 

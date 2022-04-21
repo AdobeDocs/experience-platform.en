@@ -165,7 +165,7 @@ Below the total count, select **[!UICONTROL Destinations]** to navigate to the d
 
 ### [!UICONTROL Destination status] {#destination-status}
 
-The [!UICONTROL Destination status] widget displays the total number of enabled as a single metric and uses a doughnut chart to illustrate the proportional difference between enabled and disabled destinations.
+The [!UICONTROL Destination status] widget displays the total number of enabled destinations as a single metric and uses a doughnut chart to illustrate the proportional difference between enabled and disabled destinations.
 
 Individual counts for either enabled or disabled destinations are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 

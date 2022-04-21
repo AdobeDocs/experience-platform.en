@@ -130,15 +130,19 @@ The [!UICONTROL Audience size trend] widget provides a line graph illustration f
 
 ### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
 
+<!-- This widget is undergoing a name change -->
+
 This widget provides a line graph illustration of the difference in total number of profiles that qualified for a given segment between the most recent daily snapshots. The segment chosen for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected in the y-axis and time on the x-axis.
 
 ![The Audience size change trend widget.](../images/segments/audience-size-change-trend.png)
 
 ### [!UICONTROL Audience identity trend] {#audience-identity-trend}
 
+<!-- This widget is undergoing a name change -->
+
 This widgets illustrates the audience size trend for a particular segment based on the identity type chosen from the widget dropdown menu. The segment used for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
 
-![The Audience size trend widget.](../images/segments/audience-size-trend.png)
+<!-- ![The Audience size trend widget.](../images/segments/audience-size-trend.png) -->
 
 ## Next steps
 
