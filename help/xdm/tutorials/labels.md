@@ -44,7 +44,7 @@ To edit the labels for the entire schema, select the pencil icon (![](../images/
 >
 >A disclaimer message appears when you first attempt to edit the labels for a schema or field, explaining how label usage affects downstream operations depending on your organization's policies. Select **[!UICONTROL Proceed]** to continue editing.
 >
->![Selected fields displayed](../images/tutorials/labels/disclaimer.png)
+>![Label usage disclaimer](../images/tutorials/labels/disclaimer.png)
 
 ## Edit the labels for the schema or field
 
