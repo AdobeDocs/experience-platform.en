@@ -68,7 +68,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audience activation order]](#audience-activation-order)
 * [[!UICONTROL Audience size trend new]](#audience-size-trend-new)
 * [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
-* [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
+* [[!UICONTROL Audience identity trend]](#audience-identity-trend)
 
 ### [!UICONTROL Audience size] {#audience-size}
 
@@ -86,9 +86,11 @@ To learn more about segment evaluation and how profiles qualify and exit from se
 
 ![The segments overview displays the Audience size trend widget.](../images/segments/audience-size-trend-captions.png)
 
-The **[!UICONTROL Audience size trend]** widget provides a [!UICONTROL Captions] button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog. A machine learning model automatically generates captions to describe the key trends and important events by analyzing the chart and segment data.
+Within the **[!UICONTROL Audience size trend]** widget select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
 ![The automatic captions dialog for the Audience size trend widget.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+
+A machine learning model automatically generates captions to describe the key trends and important events by analyzing the chart and segment data.
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
@@ -106,35 +108,37 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 The **[!UICONTROL Profiles by identity]** widget displays the breakdown of identities across all of the merged profiles in your selected segment. The total number of profiles by identity may be higher than the total number of profiles in the segment because one profile could have multiple identities associated with it. In other words, adding together the values shown for each identity may total more than the total audience size in the segment because if a customer interacts with your brand on more than one channel, multiple identities may be associated with that individual customer.
 
-To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
+Select [!UICONTROL **Captions**] to open the automatic captions dialog.
 
-![](../images/segments/profiles-by-identity.png)
+![The profiles by identity captions dialog.](../images/segments/profiles-by-identity.png)
+
+A machine learning model automatically generates data insights by analyzing the overall distribution and key dimensions of the data.
+
+To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
 ### [!UICONTROL Audience activation order] {#audience-activation-order}
 
-The [!UICONTROL Audience activation order] widget provides a three column table that lists up to 10 audiences, the name of the audience, and the activation date of the audience. The list is ordered from high to low according to recency.
+The [!UICONTROL Audience activation order] widget provides a three column table that lists up to 10 audiences, the name of the destination, and the activation date of the audience. The list is ordered from high to low according to recency.
 
-![The Audience activation order widget.]()
+![The Audience activation order widget.](../images/segments/audience-activation-order.png)
 
 ### [!UICONTROL Audience size trend new] {#audience-size-trend-new}
 
 The [!UICONTROL Audience size trend] widget provides a line graph illustration for the total number of profiles that meet the criteria of **any** segment definition over a given period of time. The audience size trend can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected in the y-axis and time on the x-axis.
 
-![The Audience size trend widget.]()
+![The Audience size trend widget.](../images/segments/audience-size-trend.png)
 
 ### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
 
 This widget provides a line graph illustration of the difference in total number of profiles that qualified for a given segment between the most recent daily snapshots. The segment chosen for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected in the y-axis and time on the x-axis.
 
-![The Audience size change trend widget.]()
+![The Audience size change trend widget.](../images/segments/audience-size-change-trend.png)
 
-### [!UICONTROL Audience size trend by identity] {#audience-size-trend-by-identity}
+### [!UICONTROL Audience identity trend] {#audience-identity-trend}
 
-This widgets illustrates the audience size trend for a particular segment based on a specific identity chosen from the widget dropdown menu. The segment used for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
+This widgets illustrates the audience size trend for a particular segment based on the identity type chosen from the widget dropdown menu. The segment used for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
 
-<!-- I don't understand the functionality of this one specifically -->
-
-![The Audience size trend by identity widget.]()
+![The Audience size trend widget.](../images/segments/audience-size-trend.png)
 
 ## Next steps
 

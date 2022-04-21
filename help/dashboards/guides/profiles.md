@@ -102,7 +102,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Unsegmented Profiles by Identity]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences mapped status]](#audiences-mapped-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
-* [[!UICONTROL Single identity profiles trend]](#single-identity-profiles-trend)
+<!-- * [[!UICONTROL Single identity profiles trend]](#single-identity-profiles-trend) -->
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
 
 ### [!UICONTROL Profile count] {#profile-count}
@@ -149,9 +149,15 @@ The **[!UICONTROL Profiles by identity]** widget displays the breakdown of ident
 
 See the [section on merge policies earlier in this document](#merge-policies) to learn more.
 
-To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
+![The Profiles overview dashboard with the Profiles by identity widget highlighted.](../images/profiles/profiles-by-identity.png)
 
-![](../images/profiles/profiles-by-identity.png)
+Select [!UICONTROL **Captions**] to open the automatic captions dialog.
+
+![The profiles by identity captions dialog.](../images/profiles/profiles-by-identity-captions.png)
+
+A machine learning model automatically generates data insights by analyzing the overall distribution and key dimensions of the data.
+
+To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
@@ -209,11 +215,11 @@ To see comprehensive information on a segment, select a segment name from the li
 
 See the documentation for more information on the [[!UICONTROL Segments] [!UICONTROL  Browse] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
-### [!UICONTROL Single identity profiles trend] {#single-identity-profiles-trend}
+<!-- ### [!UICONTROL Single identity profiles trend] {#single-identity-profiles-trend}
 
 The [!UICONTROL Single identity profiles trend] widget depicts the difference in total number of profiles with only a single identity over a period of time. The widget uses a line graph to illustrate the trend in total numbers of single identity profiles. The depicted time period can be adjusted using the dropdown menu to cover the past 30 days, 90 days, or 12 months.
 
-![The Single identity profiles change trend widget.](../images/profiles/single-identity-profiles-trend.png)
+![The Single identity profiles change trend widget.](../images/profiles/single-identity-profiles-trend.png) -->
 
 ### [!UICONTROL Single identity profiles by identity] {#single-identity-profiles-by-identity}
 
