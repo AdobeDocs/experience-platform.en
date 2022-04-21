@@ -7,6 +7,10 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 ---
 # Create a new destination connection
 
+>[!IMPORTANT]
+> 
+>To connect to a destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/https://experienceleague.adobe.com/docs/experience-platform/access-control/ui/overview.html?lang=en) or contact your product administrator to obtain the required permissions.
+
 ## Overview {#overview}
 
 Before you can send audience data to a destination, you must set up a connection to your destination platform. This article shows you how to set up a new destination using the Adobe Experience Platform user interface.
