@@ -18,7 +18,7 @@ With Experience Platform, you can centralize data you collect from disparate sou
 
 Sources in Experience Platform are grouped into the following categories:
 
-### Adobe applications
+### Adobe applications {#adobe-applications}
 
 Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, and Adobe Audience Manager. See the following related documents for more information:
 
@@ -32,13 +32,13 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 - [[!DNL Marketo Engage] connector overview](connectors/adobe-applications/marketo/marketo.md)
 - [Create a [!DNL Marketo Engage] source connection in the UI](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Advertising
+### Advertising {#advertising}
 
 Experience Platform provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
 
-### Cloud Storage
+### Cloud Storage {#cloud-storage}
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
 
@@ -56,7 +56,14 @@ Cloud storage sources can bring your own data into Platform without the need to 
 - [[!DNL Oracle Object Storage] connector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
-### Customer Relationship Management (CRM)
+### Consent and Preferences {#consent}
+
+Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. See the following related documents for more information:
+
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+
+
+### Customer Relationship Management (CRM) {#crm}
 
 CRM systems provide data that can help build customer relationships, which in turn, create loyalty and drive customer retention. Experience Platform provides support for ingesting CRM data from [!DNL Microsoft Dynamics 365] and [!DNL Salesforce]. See the following related documents for more information:
 
@@ -65,14 +72,14 @@ CRM systems provide data that can help build customer relationships, which in tu
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### Customer Success
+### Customer Success {#customer-success}
 
 Experience Platform provides support for ingesting data from a third-party customer success application. See the following related documents for more information:
 
 - [[!DNL Salesforce Service Cloud] connector](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] connector](connectors/customer-success/servicenow.md)
 
-### Database
+### Database {#database}
 
 Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
 
@@ -95,39 +102,40 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
 - [[!DNL Snowflake] connector](connectors/databases/snowflake.md)
 
-### eCommerce
+### eCommerce {#ecommerce}
 
 Experience Platform provides support for ingesting data from a third-party eCommerce system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
-### Local system
+### Local system {#local-system}
 
 Experience Platform provides support for ingesting data from your local system. See the following related documents for more information on specific source connectors:
 
 - [Local file upload](connectors/local-system/local-file-upload.md)
 
-### Marketing Automation
+### Marketing Automation {#marketing-automation}
 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
+- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
-### Payments
+### Payments {#payments}
 
 Experience Platform provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
 
-### Streaming
+### Streaming {#streaming}
 
 Experience Platform provides support for ingesting data from streaming sources. See the following related documents for more information on specific source connectors:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
-### Protocols
+### Protocols {#protocols}
 
 Experience Platform provides support for ingesting data from a third-party protocols system. See the following related documents for more information on specific source connectors:
 

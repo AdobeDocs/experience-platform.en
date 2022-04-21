@@ -1,5 +1,5 @@
 ---
-solution: Experience Platform, Intelligent Services
+solution: Experience Platform
 audience: user
 user-guide-title: Intelligent Services Help
 breadcrumb-title: Intelligent Services Guide
@@ -18,6 +18,7 @@ user-guide-description: Utilize intelligent AI services to generate scores, disc
   - [Discover insights](attribution-ai/discover-insights.md)
   - [Download scores](attribution-ai/download-scores.md)
   - [Analyze scores using Query Service](attribution-ai/aai-query-service.md)
+  - [Error troubleshooting](attribution-ai/troubleshooting.md)
 - Content and Commerce AI (beta) {#content-commerce-ai}
   - [Overview](content-commerce-ai/overview.md)
   - [Getting started](content-commerce-ai/getting-started.md)
