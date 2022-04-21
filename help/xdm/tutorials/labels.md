@@ -40,6 +40,12 @@ To edit the labels for the entire schema, select the pencil icon (![](../images/
 
 ![Select the schema name from the [!UICONTROL Labels] tab](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
+>[!NOTE]
+>
+>A disclaimer message appears when you first attempt to edit the labels for a schema or field, explaining how label usage affects downstream operations depending on your organization's policies. Select **[!UICONTROL Proceed]** to continue editing.
+>
+>![Selected fields displayed](../images/tutorials/labels/disclaimer.png)
+
 ## Edit the labels for the schema or field
 
 A dialog appears that allows you to edit the labels for the selected field. If you selected an individual object-type field, the right rail lists the sub-fields that the applied labels will propagate to.
