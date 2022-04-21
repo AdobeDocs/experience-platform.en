@@ -85,21 +85,23 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
     * **[!UICONTROL Once]**: schedule a one time on-demand full file export.
-    * **[!UICONTROL Daily]**: schedule full file exports once a day, every day, at the time you specify.
+    * **[!UICONTROL Daily]**: schedule full file exports once a day, every day. at the time you specify.
 
-1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+2. Use the **[!UICONTROL Time]** selector to choose whether the export should happen immediately after segment evaluation or on a scheduled basis
+
+3. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
     
       >[!IMPORTANT]
       >
       >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
-1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+4. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
       >[!IMPORTANT]
       >
       > When selecting an export interval, the last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10th.
 
-1. Select **[!UICONTROL Create]** to save the schedule.
+5. Select **[!UICONTROL Create]** to save the schedule.
 
 #### Considerations of using the **[!UICONTROL After segment evaluation]** or [!UICONTROL Scheduled] options {#after-segment-evaluation}
 
