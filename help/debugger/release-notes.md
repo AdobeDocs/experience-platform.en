@@ -7,6 +7,11 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Release notes
 
+## Version 1.4.0 - April 21, 2022
+
+* Prevented the debugger from attaching to the login window
+* Fixed an issue where AT.js logs did not appear in the client logs view
+
 ## Version 1.3.0 - January 28, 2022
 
 * Added About link to show current release version and notes.
