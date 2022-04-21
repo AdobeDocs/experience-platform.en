@@ -6,7 +6,7 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
 # Release notes
 
-## Version 2.10.0 - April 21, 2022
+## Version 2.10.0 - April 22, 2022
 
 * Use a persistent iframe for all ID syncs and segment destinations.
 * Fixed an issue where merged metrics propositions were duplicated in the `sendEvent` result.

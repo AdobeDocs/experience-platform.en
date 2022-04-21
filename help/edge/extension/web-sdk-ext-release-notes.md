@@ -7,7 +7,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## Version 2.11.0 - April 21, 2022
+## Version 2.11.0 - April 22, 2022
 
 * Improved Tags UI performance.
 * Add sandbox selectors to datastreams extension configuration.
