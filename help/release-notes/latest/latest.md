@@ -1,22 +1,56 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
-exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: January 26, 2022**
+**Release date: March 30, 2022**
+
+New features in Adobe Experience Platform:
+
+- [Audit logs](#audit-logs)
+- [Related accounts in Real-Time CDP B2B Edition](#related-accounts)
 
 Updates to existing features in Adobe Experience Platform:
 
 - [Alerts](#alerts)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Dashboards]](#dashboards)
-- [[!DNL Destinations]](#destinations)
-- [Query Service](#query-service)
-- [Sandboxes](#sandboxes)
-- [Segmentation Service](#segmentation)
+- [Data collection](#data-collection)
+- [[!DNL Query Service]](#query-service)
 - [Sources](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
+
+## Audit Logs {#audit-logs}
+
+Experience Platform allows you to audit user activity for various services and capabilities. The audit logs provide information about who did what and when.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Audit logs for Dataset, Schema, Class, Field group, Data type, Sandbox, Destination, Segment, Merge policy, Computed attribute, Product profile and Account (Adobe) | These are the resources which are recorded by audit logs. If the feature is enabled, the audit logs will be automatically collected as activity occurs. You do not need to manually enable log collection. |
+| Export audit logs | The audit logs can be downloaded as a `CSV` or `JSON` file. The generated files are saved directly to your machine.  |
+
+{style="table-layout:auto"}
+
+For more information on audit logs in Platform, refer to the [audit logs overview](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## Related accounts in Real-Time CDP B2B Edition {#related-accounts}
+
+>[!NOTE]
+>
+>The Related accounts feature is available for customers of the Real-Time CDP B2B Edition only.
+
+B2B enterprises often have their customer information stored in multiple systems, each including only partial or even conflicting data for the same real-world business entity. This creates a massive challenge of arriving at an accurate view of their customers, therefore reducing the efficiency and effectiveness of their B2B marketing and sales efforts. With the release of related accounts, [!DNL Real-time CDP B2B] now shows you a list of accounts that are similar to the account you are browsing. You can include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments. 
+
+Read more about the feature in the following documentation pages:
+
+- [Related accounts in Real-Time CDP B2B Edition overview](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Related accounts tab in the Account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-accounts)
+
+To learn more about Real-time CDP B2B Edition, see the [overview](../../rtcdp/overview.md).
 
 ## Alerts {#alerts}
 
@@ -26,56 +60,71 @@ Experience Platform allows you to subscribe to event-based alerts for various Pl
 
 | Feature | Description |
 | --- | --- |
-| New alert rules | Several new alert rules are now available for workflows related to data ingestion, identities, profiles, segmentation, and activation. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
-| In-context alerts for sources dataflows | You can now subscribe to receive alert messages regarding the status of your dataflows during the ingestion workflow. For more information, see the guide on [subscribing to sources alerts in the UI](../../sources/tutorials/ui/alerts.md). |
+| New alert rules | Two new alert rules are now available for sources related to data ingestion. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
+
+{style="table-layout:auto"}
 
 For more information on alerts in Platform, refer to the [alerts overview](../../observability/alerts/overview.md).
 
-## [!DNL Dashboards] {#dashboards}
+## Dashboards {#dashboards}
 
-Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization’s data, as captured during daily snapshots.
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important information about your organization’s data, as captured during daily snapshots.
 
-| Feature | Description |
-| --- | --- |
-| Intelligent Captions | A machine learning algorithm automatically provides insights on your profile and audience data, and illustrates patterns and trends over a 30-90 day, or 12-month period. The captions include information on <ul><li>Overall shape and statistics</li><li>Trends and abrupt changes</li><li>Seasonal patterns</li><li>Unexpected anomalies</li></ul> More information can be found on the [profiles dashboards](../../dashboards/guides/profiles.md#profiles-count-trend) and [segments dashboards](../../dashboards/guides/segments.md#audience-size-trend) documentation. |
-| Dashboards Inventory | Access the pre-configured reports of profile, segments, and destinations dashboards including any installed integrations such as PowerBI, in a centralized location. For more information, see the [[!DNL Dashboards] inventory documentation](../../dashboards/inventory.md). |
-| PowerBI Report Templates | Build, customize or extend metrics from the profile, segments, and destination reporting data models using new PowerBI charts. The automated installation workflow allows you to share your marketing insights across your organization from within the PowerBI environment. For more information, see the [PowerBI report template documentation](../../dashboards/integrations/power-bi.md). |
+### Profile Dashboards
 
-For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. 
 
 **Updated features**
 
 | Feature | Description |
 | --- | --- |
-| Consolidated mapping experience | The new mapping interface in the Platform UI provides you with a consistent mapping experience to take advantage of intelligent mapping recommendations, manually configure mapping rules, and debug any errors that occur to your mapping sets. For more information, see the [[!DNL Data Prep] UI guide](../../data-prep/ui/mapping.md). |
+| Unsegmented Profiles widget | The widget provides the total number of all profiles not attached to any segment. The number generated is accurate as of the last snapshot and represents the opportunity for profile activation across your organization. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
+| Unsegmented Profiles Trend widget | This widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend can be visualized over 30 days, 90 days, and 12 month periods. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
+| Unsegmented Profiles by Identity widget | This widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
+| Single identity profiles widget | This widget provides a count of your organization's profiles that only have one type of ID type that creates their identity, either an email or ECID. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
 
-For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+{style="table-layout:auto"}
 
-## [!DNL Destinations] {#destinations}
+For more information on Profiles dashboards, refer to the [Profiles dashboards overview](../../dashboards/guides/profiles.md).
 
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+### Destinations Dashboards
 
-**New or updated features**
+The Destinations dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. 
+
+**Updated features**
 
 | Feature | Description |
-| ----------- | ----------- |
-| Same-page and next-page personalization | The [same-page and next-page personalization feature](../../destinations/ui/configure-personalization-destinations.md) provides a shared, targetable view of users for applications on the Experience Edge, for consistency between marketing and customer channels. This personalization is possible through the [Adobe Target connection](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization connection](../../destinations/catalog/personalization/custom-personalization.md). To configure your same-page or next-page personalization campaigns, see the [dedicated tutorial](../../destinations/ui/configure-personalization-destinations.md). |
-| Batch destination monitoring and segment-level metrics | The destination monitoring functionality is now expanded from streaming destinations to also include batch destinations and segment-level metrics for your activation dataflows. For more information, read [monitoring destinations dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [monitoring segment jobs dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard), and [segment-level view](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
-| Schedule editing in the UI for existing batch activation dataflows | This release introduces the option to edit the schedule of your existing activation dataflows to batch destinations. For more information, read [activate profile data to batch profile destinations](/help/destinations/ui/activate-batch-profile-destinations.md).  |
-| Marketo destination enhancements | Experience Platform customers who use Marketo Engage can maximize their Marketo database with the new ability to push net-new person records into Marketo Engage from Experience Platform via the [Marketo destination connector](/help/destinations/catalog/adobe/marketo-engage.md). <br> When sending audience segments from Experience Platform to Marketo Engage, people within the segment that don’t already exist in your Marketo Engage database can be automatically added to it. For more information, read [Push an Adobe Experience Platform Segment to a Marketo Static List](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (step 9 in the tutorial indicates how to push net-new person records into Marketo). |
+| --- | --- |
+|  Destinations count widget | The widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. See the [destinations standard widget documentation](../../dashboards/guides/destinations.md#standard-widgets) for more information. |
 
-**New destinations**
+{style="table-layout:auto"}
 
-| Destination | Description |
-| ----------- | ----------- |
-| [Adobe Target connection](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target is an application that provides real-time, AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more. Adobe Target is a personalization connection in Adobe Experience Platform. |
-| [Custom personalization connection](../../destinations/catalog/personalization/custom-personalization.md) | This personalization connection provides a way to retrieve segment information from Adobe Experience Platform to external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites. |
+For more information on Destinations dashboards in Platform, refer to the [Destinations dashboards overview](../../dashboards/guides/destinations.md).
 
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+## Data collection {#data-collection}
+
+Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Global datastream settings | You can now configure several new global settings when configuring a datastream: geo location, first-party ID cookie, and third-party ID sync. See the section on [configuring a datastream](../../edge/fundamentals/datastreams.md#configure) in the Datastreams UI guide for more information. |
+|[Edge Network Server API](../../server-api/overview.md)|The Server API allows customers to interact with the Experience Platform Edge Network using a new, authenticated endpoint, to power a variety of data collection, personalization, advertising and marketing use cases.|
+
+For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## Query Service {#query-service}
 
@@ -85,43 +134,26 @@ For more general information on destinations, refer to the [destinations overvie
 
 | Feature | Description |
 | --- | --- |
-| Anonymous Block | The anonymous block SQL construct allows you to break down large scale data preparation jobs in Query Service into smaller tasks, then reuse and execute them in sequence for incremental data loading. For more information, see the [sample queries for anonymous block documentation](../../query-service/best-practices/anonymous-block.md). |
-| Dataset Organization | Provides a coherent, logical data structure to organize your data assets for use with Query Service as the amount of data assets within the sandbox grows. For more information, see the [organize data assets documentation](../../query-service/best-practices/organize-data-assets.md). |
+| `table_exists` | The new feature command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. See the [SQL syntax documentation](../../query-service/sql/syntax.md) for more information. |
 
-For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
+{style="table-layout:auto"}
 
-## Sandboxes {#sandboxes}
-
-Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
-
-**Updated features**
-
-| Feature | Description |
-| --- | --- |
-| Sandboxes UI enhancements | The sandbox indicator is now integrated within the header for all Platform UI applications. The sandbox indicator displays the sandbox name, region, and type and also allows you to access a dropdown menu to switch between sandboxes. For more information, see the [sandbox UI guide](../../sandboxes/ui/user-guide.md). |
-
-For more information on sandboxes, please see the [sandboxes overview](../../sandboxes/home.md).
-
-## Segmentation Service {#segmentation}
-
-[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| Segment Match | Segment Match is a data collaboration service that allows for two or more Platform users to exchange data, based on common identifiers, in a secure, governed, and privacy-friendly manner. Segment Match uses Platform privacy standards and personal identifiers such as hashed emails, hashed phone numbers, and device identifiers like IDFAs and GAIDs. For more information, see the [Segment Match overview](../../segmentation/ui/segment-match/overview.md). |
-
-For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
+For more information on available features, refer to the [Query Service overview](../../query-service/home.md).
 
 ## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughout.
+
+**Updated features**
 
 | Feature | Description |
 | --- | --- |
-| Beta sources moving to GA | The following sources have been promoted from beta to GA: <ul><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li><li>[[!DNL Veeva CRM]](../../sources/connectors/crm/veeva.md)</li></ul> |
-| [!DNL Event Hubs] source enhancements | The [!DNL Event Hubs] source now supports non-root SAS key type of authentication to connect and create source connection. For more information, see the [[!DNL Event Hubs] overview](../../sources/connectors/cloud-storage/eventhub.md). |
-| [!DNL SFTP] source enhancements | The [!DNL SFTP] source now allows you to a establish a set number of a maximum concurrent connections that a dataflow can use to connect to the SFTP server. For more information, see the [[!DNL SFTP] overview](../../sources/connectors/cloud-storage/sftp.md). |
+| New sources now available for B2B usage | You can now use all the available sources on Platform for B2B use cases. See the [sources catalog](../../sources/home.md) for a complete list of available sources. |
+| General availability of new [!DNL Oracle Eloqua] source | You can now use the [!DNL Oracle Eloqua] source to seamlessly ingest data from your [!DNL Oracle Eloqua] instance (account, campaign, contacts) to Platform. See the documentation on [creating an [!DNL Oracle Eloqua] source connection](../../sources/connectors/marketing-automation/oracle-eloqua.md) for more information. |
+| API enhancements for [!DNL Data Landing Zone] | The [!DNL Data Landing Zone] source now supports auto-detection of file properties when using the [!DNL Flow Service] API. See the documentation on [creating a [!DNL Data Landing Zone] source connection](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) for more information. |
+
+{style="table-layout:auto"}
+
+To learn more about sources, see the [sources overview](../../sources/home.md).

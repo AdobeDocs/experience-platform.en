@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
-exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
+exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
 ---
 # Adobe Experience Platform release notes 
 
@@ -10,8 +10,8 @@ exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
 Updates to existing features in Adobe Experience Platform:
 
 - [Alerts](#alerts)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Dashboards]](#dashboards)
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [Query Service](#query-service)
 - [Sandboxes](#sandboxes)

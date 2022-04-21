@@ -1,5 +1,5 @@
 ---
-solution: Experience Platform, Data Collection
+solution: Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK Help
 breadcrumb-title: Web SDK Guide
@@ -23,12 +23,13 @@ feature: Web SDK
   * [Supported use cases](fundamentals/supported-use-cases.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
+  * [First-party device IDs](identity/first-party-device-ids.md)
 * Data collection {#data-collection}
   * [Automatically collected information](data-collection/automatic-information.md)
   * [Track links](data-collection/track-links.md)
   * [Collect commerce and products data](data-collection/collect-commerce-data.md)
   * Adobe Analytics {#adobe-analytics}
-    * [Overview](data-collection/adobe-analytics/analytics-overview.md)
+    * [Using Adobe Analytics with Platform Web SDK](data-collection/adobe-analytics/analytics-overview.md)
     * [Mapping Analytics variables](data-collection/adobe-analytics/manually-mapping-variables.md)
     * [Automatically mapped variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
     * [Sending data to Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
@@ -40,6 +41,11 @@ feature: Web SDK
     * [Single-page application implementation](personalization/adobe-target/spa-implementation.md)
     * [Accessing response tokens](personalization/adobe-target/accessing-response-tokens.md)
     * [Using mbox 3rd party ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
+    * [Comparing the at.js library to the Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
+    * Analytics for Target (A4T) logging {#a4t}
+      * [Overview](personalization/adobe-target/analytics-logging/overview.md)
+      * [Client-side logging](personalization/adobe-target/analytics-logging/client-side.md)
+      * [Server-side logging](personalization/adobe-target/analytics-logging/server-side.md)
   * Offer Decisioning {#offer-decisioning}
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consent {#consent}

@@ -16,9 +16,20 @@ Adobe Target is a personalization connection in Adobe Experience Platform.
 
 This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md). You must be using this SDK to use this destination.
 
-## Export type {#export-type}
+>[!IMPORTANT]
+>
+>Before creating an [!DNL Adobe Target] connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
 
-**Profile request** - you are requesting all the segments that are mapped in the Adobe Target destination for a single profile.
+## Export type and frequency {#export-type-frequency}
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!DNL Profile request]** | You are requesting all the segments that are mapped in the Adobe Target destination for a single profile.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Use cases {#use-cases}
 
@@ -28,15 +39,11 @@ A home rental and sales company wants to personalize their home page with a bann
 
 ## Connect to the destination {#connect}
 
->[!IMPORTANT]
->
->Before creating an [!DNL Adobe Target] connection, we recommend that you read our guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
-
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="About datastream IDs"
->abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream."
+>abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream"
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -48,7 +55,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **Name**: Fill in the preferred name for this destination.
 *  **Description**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
-*  **Datastream ID**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details.
+*  **Datastream ID**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details.
 
 ## Activate segments to this destination {#activate}
 

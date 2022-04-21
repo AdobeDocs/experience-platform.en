@@ -42,6 +42,8 @@ feature: Sources
     - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
+  - Consent & Preferences {#consent}
+    - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
@@ -75,6 +77,8 @@ feature: Sources
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
+    - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
+    - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
@@ -101,6 +105,8 @@ feature: Sources
       - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
       - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
+    - Consent & Preferences {#consent}
+      - [OneTrust Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
@@ -134,6 +140,7 @@ feature: Sources
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
       - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
+      - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -174,6 +181,7 @@ feature: Sources
       - [Adobe Analytics (report-suite data)](tutorials/ui/create/adobe-applications/analytics.md)
       - [Adobe Analytics (classifications data)](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+      - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
     - Advertising {#create}
@@ -193,6 +201,8 @@ feature: Sources
       - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+    - Consent & Preferences {#consent}
+      - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -226,6 +236,9 @@ feature: Sources
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+      - [Mailchimp Campaigns](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
+      - [Mailchimp Members](tutorials/ui/create/marketing-automation/mailchimp-members.md)
+      - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
@@ -237,6 +250,7 @@ feature: Sources
     - [Advertising connection dataflow](tutorials/ui/dataflow/advertising.md)
     - [Batch cloud storage connection dataflow](tutorials/ui/dataflow/batch/cloud-storage.md)
     - [Streaming cloud storage connection dataflow](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+    - [Consent & Preferences connection dataflow](tutorials/ui/dataflow/consent-and-preferences.md)
     - [CRM connection dataflow](tutorials/ui/dataflow/crm.md)
     - [Customer success connection dataflow](tutorials/ui/dataflow/customer-success.md)
     - [Database connection dataflow](tutorials/ui/dataflow/databases.md)
@@ -267,7 +281,8 @@ feature: Sources
   - [Document your source in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
   - [Use the GitHub web interface to create a sources documentation page](sources-sdk/documentation/github.md)
   - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
-  - [Documentation self-service template](sources-sdk/documentation/template.md)
+  - [Documentation self-service API template](sources-sdk/documentation/template.md)
+  - [Documentation self-service UI template](sources-sdk/documentation/ui-template.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)

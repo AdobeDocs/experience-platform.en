@@ -1,6 +1,6 @@
 ---
 keywords: OCR;text presence;optical character recognition
-solution: Experience Platform, Intelligent Services
+solution: Experience Platform
 title: Text Presence and Optical Character Recognition
 topic-legacy: Developer guide
 description: In the Content and Commerce AI API, the Text Presence / Optical Character Recognition (OCR) service can indicate if text is present in a given image. If text is present, OCR can return the text.

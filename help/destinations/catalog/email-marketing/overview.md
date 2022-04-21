@@ -21,6 +21,7 @@ Adobe Experience Platform supports the following email marketing destinations:
 * [Oracle Eloqua](oracle-eloqua.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+* [SendGrid](sendgrid.md)
 
 ## Connect to a new email marketing destination {#connect-destination}
 
@@ -69,4 +70,4 @@ For instructions on how to activate segments to email marketing destinations, re
 ## Additional resources
 
 * [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md)
-* [Create email marketing destinations and activate data using the Flow Service API](../../api/email-marketing.md)
+* [Create email marketing destinations and activate data using the Flow Service API](../../api/connect-activate-batch-destinations.md)

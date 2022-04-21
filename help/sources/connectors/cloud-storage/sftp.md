@@ -52,7 +52,7 @@ A list of optional features appears. If **OpenSSH Client** is already pre-instal
 If not installed, select **Install** and then open **[!DNL Powershell]** and run the following command to generate your private key:
 
 ```shell
-PS C:\Users\lucy> ssh-keygen -t rsa
+PS C:\Users\lucy> ssh-keygen -t rsa -m pem
 Generating public/private rsa key pair.
 Enter file in which to save the key (C:\Users\lucy/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
@@ -88,7 +88,7 @@ The above command saves the [!DNL Base64]-encoded private key in the file path y
 If you are using a [!DNL Mac], open **Terminal** and run the following command to generate the private key (in this case, the private key will be saved in `/Documents/id_rsa`):
 
 ```shell
-ssh-keygen -t rsa -f ~/Documents/id_rsa
+ssh-keygen -t rsa -m pem -f ~/Documents/id_rsa
 Generating public/private rsa key pair.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:

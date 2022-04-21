@@ -7,11 +7,7 @@ type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Zoho CRM using the Flow Service API.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
 ---
-# (Beta) Create a [!DNL Zoho CRM] base connection using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL Zoho CRM] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# Create a [!DNL Zoho CRM] base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
