@@ -45,7 +45,7 @@ The available alerts for destination dataflows are:
 | Destination Flow Run Failure | This alert notifies you when an error occurs while activating a segment to a destination. |
 | Destination Flow Run Success | This alert notifies you when a segment is successfully activated to a destination. |
 | Destination Flow Run Start | This alert notifies you when a destination flow run starts activating a segment. |
-| Activation Skip Rate Exceeded| This alert notifies you when the activation skip rate has been exceeded. Identities are skipped during activation when they have missing attributes or consent violation.| 
+| Activation Skip Rate Exceeded| This alert notifies you when the activation skip rate has exceeded 1% of total activations. Identities are skipped during activation when they have missing attributes or consent violation.| 
 
 ## Receive alerts
 
