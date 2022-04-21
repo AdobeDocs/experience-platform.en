@@ -15,7 +15,7 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 >
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >
->Read the [access control overview](/https://experienceleague.adobe.com/docs/experience-platform/access-control/ui/overview.html?lang=en) or contact your product administrator to obtain the required permissions.
+>Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 This tutorial demonstrates how to use the Flow Service API to create a batch [cloud storage](../catalog/cloud-storage/overview.md) or [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your newly created destination, and export data to your newly created destination via CSV files.
 
