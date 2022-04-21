@@ -22,11 +22,11 @@ The following sections provide additional information that you will need to know
 
 In order for [!DNL Flow Service] to connect with [!DNL Square], you must provide values for the following connection properties:
 
-| Credential | Description | Example |
-| --- | --- | --- |
-| `host` | The URL of the [!DNL Square] instance. | `mystore.mysquare.com` |
-| `clientId` | The client ID associated with your [!DNL Square] application. |
-| `clientSecret` | The client secret associated with your [!DNL Square] application. |
+| Credential | Description |
+| --- | --- |
+| `host` | The URL of the [!DNL Square] instance. |
+| `clientId` | The client ID associated with your [!DNL Square] account. |
+| `clientSecret` | The client secret associated with your [!DNL Square] account. |
 | `accessToken` | The access token is used to authenticate your [!DNL Square] account with OAuth 2.0 authentication. The access token can be obtained from [!DNL Square]. |
 | `refreshToken` | The refresh token is used to generate new access tokens once your current access token expires. The refresh token can be obtained from [!DNL Square]. |
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Square] is: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` |
@@ -70,8 +70,8 @@ curl -X POST \
             "host": "{HOST}",
             "clientId": "{CLIENT_ID}",
             "clientSecret": "{CLIENT_SECRET}"
-            "accessToken": ""
-            "refreshToken": ""
+            "accessToken": "{ACCESS_TOKEN}"
+            "refreshToken": "{REFRESH_TOKEN}"
             }
         },
         "connectionSpec": {
@@ -84,8 +84,10 @@ curl -X POST \
 | Property | Description |
 | --------- | ----------- |
 | `auth.params.host` | The URL of the [!DNL Square] instance. |
-| `auth.params.clientId` | The client ID associated with your [!DNL Square] instance. |
-| `auth.params.clientSecret` | The client secret associated with your [!DNL Square] instance. |
+| `auth.params.clientId` | The client ID associated with your [!DNL Square] account. |
+| `auth.params.clientSecret` | The client secret associated with your [!DNL Square] account. |
+| `auth.params.accessToken` | The access token is used to authenticate your [!DNL Square] account with OAuth 2.0 authentication. The access token can be obtained from [!DNL Square]. |
+| `auth.params.refreshToken` |  The refresh token is used to generate new access tokens once your current access token expires. The refresh token can be obtained from [!DNL Square]. |
 | `connectionSpec.id` | The [!DNL Square] connection specification ID: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`. |
 
 **Response**
