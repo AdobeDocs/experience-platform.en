@@ -55,7 +55,7 @@ To use an existing account, select the [!DNL Square] account you want to create 
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and the appropriate values for your [!DNL Square] credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![connect](../../../../images/tutorials/create/square/connect.png)
+![new](../../../../images/tutorials/create/square/new.png)
 
 ## Next steps
 
