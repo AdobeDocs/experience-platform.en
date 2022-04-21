@@ -13,7 +13,7 @@ For an overview of destinations, as well as a catalog of all available destinati
 
 ## [!UICONTROL Destinations] dashboard data {#destinations-dashboard-data}
 
-The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. The data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the destinations dashboard is not updating in real-time.
+The destinations dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. The data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the destinations dashboard is not updating in real-time.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ To navigate to the destinations dashboard within the Platform UI, select **[!UIC
 
 >[!NOTE]
 >
->If your organization is new to Experience Platform and does not yet have active destinations, the [!UICONTROL Destinations] dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [!UICONTROL Catalog] tab. To learn more about the [!UICONTROL Catalog] tab, refer to the [[!UICONTROL Destinations] workspace guide](../../destinations/ui/destinations-workspace.md).
+>If your organization is new to Experience Platform and does not yet have active destinations, the destinations dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [!UICONTROL Catalog] tab. To learn more about the [!UICONTROL Catalog] tab, refer to the [[!UICONTROL Destinations] workspace guide](../../destinations/ui/destinations-workspace.md).
 
 ![](../images/destinations/dashboard-overview.png)
 
@@ -37,7 +37,7 @@ Please refer to the [modifying dashboards](../customize/modify.md) and [widget l
 
 ## Standard widgets
 
-Adobe provides multiple standard widgets that you can use to visualize different metrics related to your destinations and assess the completeness of the segments available for your data analysis. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
+Adobe provides multiple standard widgets that you can use to visualize different metrics related to your destinations and assess the completeness of the segments available for your data analysis. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please refer to the [widget library overview](../customize/widget-library.md).
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
@@ -83,7 +83,7 @@ The updated date shown displays the last time the segment was activated to the d
 
 Selecting the name of a segment from the list shown on the widget will take you to the segment details. You can also select **[!UICONTROL View All]** to navigate to the segment browse tab and then select the name of a segment to view its details.
 
-For more information on working with segments in Experience Platform, please begin by reading the [Segmentation Service overview](../../segmentation/home.md).
+For more information on working with segments in Experience Platform, please refer to the [Segmentation Service overview](../../segmentation/home.md).
 
 ![](../images/destinations/recently-activated-segments.png)
 
