@@ -9,7 +9,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.11.0 - April 21, 2022
 
-* Improved Tags UI performance
+* Improved Tags UI performance.
 * Add sandbox selectors to datastreams extension configuration.
 
 Contains version 2.10.0 of the Adobe Experience Platform Web SDK Library.
