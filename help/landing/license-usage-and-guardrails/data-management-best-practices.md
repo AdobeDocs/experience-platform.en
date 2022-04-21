@@ -30,7 +30,7 @@ The **Profile Store** is where customer profiles are created and primarily serve
 >
 >Your access to the [!DNL Data Lake] can depend on the product SKU that you purchased. For more information on product SKUs, please speak with your Adobe representative.
 
-## License usage entitlements {#license-usage-entitlements}
+## License usage {#license-usage}
 
 When you license Experience Platform, you are provided with license usage entitlements that vary depending on SKU:
 
@@ -45,13 +45,17 @@ The [!DNL Profile Richness] metric varies depending on the licensing that you pu
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased.
 
-### Using the license usage dashboard within Experience Platform UI
+## License usage dashboard
 
 The Adobe Experience Platform UI provides a dashboard through which you can view a snapshot of your organization’s license-related data for Platform. The data in the dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. The snapshot is neither an approximation nor a sample of data, and the dashboard is not updating in real-time.
 
 For more information, see the guide on [using the license usage dashboard on Platform UI](../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
-## Understanding your data
+## Data management best practices
+
+The following sections outline best practices to follow to better manage your data.
+
+### Understanding your data
 
 Not all data is the same in Adobe Experience Platform. Some data may be dense, but low in value, while others may be sparse, but high in value. Some data may lose value as soon as its generated, while others may be valuable for months, if not years.
 
@@ -63,7 +67,7 @@ There are three dimensions to consider in understanding the value of your data:
 | Timespan | Represents the length of time that ingested data continues to stay valuable. | Offline purchases - moderate in volume and fidelity, but may be valuable for long periods of time. |
 | Fidelity | Represents how rich the data is with information. | Customer accounts - low in volume, but high in fidelity. Can be valuable beyond the lifetime of a customer. |
 
-## Data Management tools {#data-management-tools}
+### Data Management tools {#data-management-tools}
 
 There are two central scenarios to consider when ensuring that your data usage remains within your license entitlement limits:
 
@@ -162,7 +166,7 @@ For more information on applying TTL to Profile data, see the documentation on [
 
 ## Summary of best practices for license usage compliancy {#best-practices}
 
-The following is a list of some recommended best practices that you can follow to ensure better adherence to your license usage entitlement"
+The following is a list of some recommended best practices that you can follow to ensure better adherence to your license usage entitlement
 
 * Use the [license usage dashboard](../../dashboards/guides/license-usage.md) to track and monitor customer usage trends. This allows you to get ahead of any potential overages that may incur.
 * Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
