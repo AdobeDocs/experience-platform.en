@@ -12,7 +12,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 >[!TIP]
 >
->All [!DNL Marketo] datasets except `Activities` now support `isDeleted`. If you have existing dataflows, you can implement `isDeleted` by stopping your existing dataflows and recreating them with the new mapping. This allows you to maintain accuracy and have the `isDeleted` flag to all of your historical data.
+>All [!DNL Marketo] datasets except `Activities` now support `isDeleted`. Your existing dataflows will automatically include `isDeleted`, but will only ingested the flag for newly ingested data. If you want to apply the flag to all of your historical data, then you must stop your existing dataflows and recreate them with the new mapping. Please note that if you remove `isDeleted`, then you will no longer have access to the functionality. It is critical that the mapping is kept after it is auto-populated.
 
 ## Activities {#activities}
 
