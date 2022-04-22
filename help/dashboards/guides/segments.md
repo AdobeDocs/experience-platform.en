@@ -15,7 +15,7 @@ For an overview of all of the Adobe Experience Platform Segmentation Service fea
 
 The segment dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile store in Experience Platform. The snapshot does not include any event (time series) data. 
 
-The attribute data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the segment dashboard is not updating in real time.
+The attribute data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the segment dashboard is not updating in real-time.
 
 >[!NOTE]
 >
@@ -39,9 +39,9 @@ Please refer to the [modifying dashboards](../customize/modify.md) and [widget l
 
 ## Select a segment
 
-The dashboard automatically selects a segment to display, however you can change the segment by using the drop down menu or segment selector. 
+The dashboard automatically selects a segment to display, however you can change the segment by using the drop-down menu or segment selector. 
 
-To choose a different segment, select the drop down next to the segment name or use the segment selector to open the segment selection dialog.
+To choose a different segment, select the drop-down next to the segment name or use the segment selector to open the segment selection dialog.
 
 ![](../images/segments/change-segment.png)
 
@@ -51,7 +51,7 @@ To choose a different segment, select the drop down next to the segment name or 
 
 The segments dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. 
 
-The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot is provided in UTC; it is not in the timezone of the individual user or IMS Organization.
+The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or IMS Organization.
 
 ![](../images/segments/widget-timestamp.png)
 
@@ -78,7 +78,7 @@ For more information on fragments and merged profiles, please begin by reading t
 
 ![](../images/segments/audience-size.png)
 
-<!-- Audience size trend was commented out because it was replaced with two new widgets: 'Audience size trend' and 'Audience size change trend'. I have not deleted it because i am unsure whether it will have auto captions functionality -->
+<!-- Audience size trend was commented out because it was replaced with two new widgets: 'Audience size trend' and 'Audience size change trend'. I have not deleted it because I am unsure whether it will have auto-captions functionality -->
 
 <!-- ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
@@ -120,25 +120,25 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ### [!UICONTROL Audience activation order] {#audience-activation-order}
 
-The [!UICONTROL Audience activation order] widget provides a three column table that lists up to 10 audiences, the name of the destination, and the activation date of the audience. The list is ordered from high to low according to recency.
+The [!UICONTROL Audience activation order] widget provides a three-column table that lists up to 10 audiences, the name of the destination, and the activation date of the audience. The list is ordered from high to low according to recency.
 
 ![The Audience activation order widget.](../images/segments/audience-activation-order.png)
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
-The [!UICONTROL Audience size trend] widget provides a line graph illustration for the total number of profiles that meet the criteria of **any** segment definition over a given period of time. The audience size trend can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected in the y-axis and time on the x-axis.
+The [!UICONTROL Audience size trend] widget provides a line graph illustration for the total number of profiles that meet the criteria of **any** segment definition over a given period of time. The audience size trend can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected on the y-axis and time on the x-axis.
 
 ![The Audience size trend widget.](../images/segments/audience-size-trend.png)
 
 ### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
 
-This widget provides a line graph illustration of the difference in total number of profiles that qualified for a given segment between the most recent daily snapshots. The segment chosen for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected in the y-axis and time on the x-axis.
+This widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. The segment chosen for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected on the y-axis and time on the x-axis.
 
 ![The Audience size change trend widget.](../images/segments/audience-size-change-trend.png)
 
 ### [!UICONTROL Audience size trend by identity] {#audience-size-trend-by-identity}
 
-This widgets illustrates the audience size trend for a particular segment based on the identity type chosen from the widget dropdown menu. The segment used for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
+This widget illustrates the audience size trend for a particular segment based on the identity type chosen from the widget dropdown menu. The segment used for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
 
 ![The Audience size trend by identity widget.](../images/segments/audience-size-trend-by-identity.png)
 
