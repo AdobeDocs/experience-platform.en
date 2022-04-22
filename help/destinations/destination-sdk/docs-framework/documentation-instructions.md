@@ -16,6 +16,7 @@ This documentation section includes:
 * A template for you to fill out for your destination;
 * [General instructions on using Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
 * [Specific instructions for the Adobe Markdown flavor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions) (the Adobe Markdown flavor is very similar to regular Markdown).
+* A [best practices page](./authoring-best-practices.md) to help you author a documentation page for your destination page, which meets the Experience Platform documentation quality standards.
 
 ## Prerequisites {#prerequisites}
 
