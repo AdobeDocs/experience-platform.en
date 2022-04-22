@@ -52,7 +52,9 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
     * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
   * Audit logs {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
-* [License usage dashboard](license-usage-dashboard.md)
+* License usage and guardrails
+  * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)    
+  * [License usage dashboard](license-usage-dashboard.md)
 * [Troubleshooting guide](troubleshooting.md)
 * [Gen2 data lake migration](adls2-gen2-migration.md)
 * [Glossary](glossary.md)
