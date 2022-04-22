@@ -166,7 +166,7 @@ For more information on applying TTL to Profile data, see the documentation on [
 
 ## Summary of best practices for license usage compliancy {#best-practices}
 
-The following is a list of some recommended best practices that you can follow to ensure better adherence to your license usage entitlement
+The following is a list of some recommended best practices that you can follow to ensure better adherence to your license usage entitlement:
 
 * Use the [license usage dashboard](../../dashboards/guides/license-usage.md) to track and monitor customer usage trends. This allows you to get ahead of any potential overages that may incur.
 * Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
