@@ -19,6 +19,7 @@ Field level access control involves the following components:
 | Terminology | Definition |
 | --- | --- |
 | Attributes | Attributes are the identifiers that indicate the correlation between a user and the Platform resources that they have access to. |
+| Labels | Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Platform, or as soon as data becomes available for use in Platform. |
 | Permissions | Permissions include the ability to view and/or use Platform features, such as creating sandboxes, defining schemas, and managing datasets. |
 | Permission sets | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | Policies | Policies are statements that bring attributes together to establish permissible and impermissible actions. Policies can either be local or global, and can override other policies. |
