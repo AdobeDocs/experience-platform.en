@@ -29,11 +29,11 @@ Experience Platform Debugger shows the following information for each solution:
   </tr> 
   <tr> 
    <td colname="col1"> <p>Version </p> </td> 
-   <td colname="col2"> <p>The <a href="https://experiencecloud.adobe.com/resources/help/en_US/sc/implement/appmeasure_mjs.html" format="html" scope="external"> AppMeasurement</a> version defined for the page </p> </td> 
+   <td colname="col2"> <p>The <a href="https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html" format="html" scope="external"> AppMeasurement</a> version defined for the page </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Visitor Version </p> </td> 
-   <td colname="col2"> <p>The version of the <a href="https://experiencecloud.adobe.com/resources/help/en_US/sc/implement/visid_analytics.html" format="html" scope="external"> visitor ID</a> library. </p> </td> 
+   <td colname="col2"> <p>The version of the <a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html" format="html" scope="external"> visitor ID</a> library. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Page Name </p> </td> 
@@ -133,7 +133,7 @@ Experience Platform Debugger shows the following information for each solution:
   </tr> 
   <tr> 
    <td colname="col1"> <p>Version </p> </td> 
-   <td colname="col2"> <p>The version of the<a href="https://experiencecloud.adobe.com/resources/help/en_US/sc/implement/visid_analytics.html" format="html" scope="external"> visitor ID</a> library </p> </td> 
+   <td colname="col2"> <p>The version of the<a href="https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html" format="html" scope="external"> visitor ID</a> library </p> </td> 
   </tr> 
  </tbody> 
 </table>
