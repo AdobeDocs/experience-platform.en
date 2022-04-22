@@ -9,6 +9,7 @@ description: The latest release notes for Adobe Experience Platform.
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [Sources](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -22,3 +23,16 @@ Updates to existing features in Adobe Experience Platform:
 | Support for importing existing mapping rules | You can now import mapping rules from an existing dataflow to accelerate your dataflow configurations and limit errors. See the tutorial on [importing existing mapping rules](../../data-prep/ui/mapping.md) for more information. |
 
 For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## Sources {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+
+To learn more about sources, see the [sources overview](../../sources/home.md).
