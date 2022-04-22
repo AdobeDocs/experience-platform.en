@@ -22,8 +22,9 @@ exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 | `campaignID` | String  | A unique identifier for the campaign entity. |
 | `campaignName` | String  | The name of the campaign. |
 | `campaignType` | String  | The campaign type or target audience. |
-| `isDeleted` | Boolean  | Indicates whether this campaign entity has been deleted in Marketo Engage.<br><br>When using the [Marketo source connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), any records that are deleted in Marketo are automatically reflected in Real-time Customer Profile. However, records relating to these profiles may still persist in the Data Lake. By setting `isDeleted` to `true`, you can use the field to filter out which records have been deleted from your sources when querying the Data Lake. |
 
 {style="table-layout:auto"}
 
-See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.
+To learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI, see the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) 
+
+For additional fields that are compatible with this class, see the field group reference for [[!UICONTROL XDM Business Campaign Details]](../../field-groups/b2b-campaign/details.md).
