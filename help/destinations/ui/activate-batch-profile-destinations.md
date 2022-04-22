@@ -95,19 +95,19 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
     ![Image highlighting the After segment evaluation and Scheduled options in the activation flow for batch destinations](/help/destinations/assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
 
-2. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+1. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
     
       >[!IMPORTANT]
       >
       >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
-3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
       >[!IMPORTANT]
       >
       > When selecting an export interval, the last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10th.
 
-4. Select **[!UICONTROL Create]** to save the schedule.
+1. Select **[!UICONTROL Create]** to save the schedule.
 
 ### Export incremental files {#export-incremental-files}
 
