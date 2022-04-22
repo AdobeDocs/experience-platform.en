@@ -254,9 +254,17 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 | ------ | ------ |
 | `IF EXISTS` | If this is specified, no exception is thrown if the table does **not** exist. |
 
+## CREATE DATABASE
+
+The `CREATE DATABASE` command creates an ADLS database.
+
+```sql
+CREATE DATABASE [IF NOT EXISTS] db_name
+```
+
 ## DROP DATABASE
 
-The `DROP DATABASE` command drops an existing database.
+The `DROP DATABASE` command deletes the database from an instance.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -406,6 +414,50 @@ WHEN other THEN SELECT 'ERROR';
 
 END $$; 
 ```
+
+## Inline {#inline}
+
+The `inline` function separates the elements of an array of structs and generates the values into a table. It can only be placed in the `SELECT` list or a `LATERAL VIEW`.
+
+The `inline` function **cannot** be placed in a select list where there are other generator functions.
+
+By default, the columns produced are named “col1”, “col2”, and so on. If the expression is `NULL` then no rows are produced.
+
+>[!TIP]
+>
+>Column names can be renamed using the `RENAME` command.
+
+**Example**
+
+```sql
+> SELECT inline(array(struct(1, 'a'), struct(2, 'b'))), 'Spark SQL';
+```
+
+The example returns the following:
+
+```text
+1  a Spark SQL
+2  b Spark SQL
+```
+
+This second example further demonstrates the concept and application of the `inline` function. The data model for the example is illustrated in the image below.
+
+![A schema diagram for the productListItems](../images/sql/productListItems.png)
+
+**Example**
+
+```sql
+select inline(productListItems) from source_dataset limit 10;
+```
+
+The values taken from the `source_dataset` are used to populate the target table.
+
+|         SKU         |  _experience                      | quantity | priceTotal   |
+|---------------------+-----------------------------------+----------+--------------|
+| product-id-1        | ("("("(A,pass,B,NULL)")")")       |     5    |  10.5        |
+| product-id-5        | ("("("(A, pass, B,NULL)")")")     |          |              |
+| product-id-2        | ("("("(AF, C, D,NULL)")")")       |      6   |  40          |
+| product-id-4        | ("("("(BM, pass, NA,NULL)")")")   |     3    |  12          |
 
 ## [!DNL Spark] SQL commands 
 
@@ -660,6 +712,7 @@ COPY query
 
 The `ALTER TABLE` command lets you add or drop primary or foreign key constraints as well as add columns to the table.
 
+
 #### ADD or DROP CONSTRAINT
 
 The following SQL queries show examples of adding or dropping constraints to a table. 
@@ -698,6 +751,34 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
+#### ADD SCHEMA
+
+The following SQL query shows an example of adding a table to a database / schema.
+
+```sql
+ALTER TABLE table_name ADD SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> ADLS tables and views cannot be added to DWH databases / schemas.
+
+
+#### REMOVE SCHEMA
+
+The following SQL query shows an example of removing a table from a database / schema.
+
+```sql
+ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> DWH tables and views cannot be removed from physically linked DWH databases / schemas.
+
+
+**Parameters**
+
 | Parameters | Description|
 | ------ | ------ |
 | `table_name` | The name of the table which you are editing. |
@@ -732,4 +813,43 @@ SHOW FOREIGN KEYS
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
+
+
+### SHOW DATAGROUPS
+
+The `SHOW DATAGROUPS` command returns a table of all associated databases. For each database the table includes schema, group type, child type, child name and child ID.
+
+```sql
+SHOW DATAGROUPS
+```
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                       |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   adls_db     | adls_scheema      | ADLS      | Data Lake Table      | adls_table1                                        | 6149ff6e45cfa318a76ba6d3
+   adls_db     | adls_scheema      | ADLS      | Data Warehouse Table | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view1                                         | c2e7ddac-d41c-40c5-a7dd-acd41c80c5e9
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view4                                         | b280c564-df7e-405f-80c5-64df7ea05fc3
+```
+
+
+### SHOW DATAGROUPS FOR table
+
+The `SHOW DATAGROUPS FOR` 'table_name' command returns a table of all associated databases that contain the parameter as its child. For each database the table includes schema, group type, child type, child name and child ID.
+
+```sql
+SHOW DATAGROUPS FOR 'table_name'
+```
+
+**Parameters**
+
+- `table_name`: The name of the table that you want to find associated databases for.
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   dwh_db_demo | schema2           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema1           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   qsaccel     | profile_aggs      | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
 ```

@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
+exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 ---
 # Adobe Experience Platform release notes 
 
@@ -15,6 +16,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [Alerts](#alerts)
 - [[!DNL Dashboards]](#dashboards)
+- [Data collection](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [Sources](#sources)
 <!-- - [Experience Data Model (XDM)](#xdm) -->
@@ -46,7 +48,7 @@ Read more about the feature in the following documentation pages:
 
 - [Related accounts in Real-Time CDP B2B Edition overview](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [Related accounts tab in the Account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-account)
+- [How to use related accounts in segment definitions](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 To learn more about Real-time CDP B2B Edition, see the [overview](../../rtcdp/overview.md).
 
@@ -98,6 +100,19 @@ The Destinations dashboard displays a snapshot of the destinations that your org
 {style="table-layout:auto"}
 
 For more information on Destinations dashboards in Platform, refer to the [Destinations dashboards overview](../../dashboards/guides/destinations.md).
+
+## Data collection {#data-collection}
+
+Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Global datastream settings | You can now configure several new global settings when configuring a datastream: geo location, first-party ID cookie, and third-party ID sync. See the section on [configuring a datastream](../../edge/fundamentals/datastreams.md#configure) in the Datastreams UI guide for more information. |
+|[Edge Network Server API](../../server-api/overview.md)|The Server API allows customers to interact with the Experience Platform Edge Network using a new, authenticated endpoint, to power a variety of data collection, personalization, advertising and marketing use cases.|
+
+For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 

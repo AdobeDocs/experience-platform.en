@@ -1,16 +1,16 @@
 ---
-title: Extend a Soft Enum Field
-description: Learn how to extend a soft enum field in the Schema Registry API.
+title: Add Suggested Values to a Field
+description: Learn how to add suggested values to a string field in the Schema Registry API.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 ---
-# Extend a soft enum field
+# Add suggested values to a field
 
-In Experience Data Model (XDM), an enum field represents a string field that is constrained to a pre-defined subset of values. Enum fields can provide validation to ensure that ingested data conforms to a set of accepted values (referred to as a "hard enum"), or they can simply represent a set of suggested values without enforcing constraints (referred to as a "soft enum").
+In Experience Data Model (XDM), an enum field represents a string field that is constrained to a pre-defined subset of values. Enum fields can provide validation to ensure that ingested data conforms to a set of accepted values. However, you can also also define a set of suggested values for a string field without enforcing them as constraints.
 
-In the Schema Registry API, the constrained values for a hard enum are represented by an `enum` array, while a `meta:enum` object provides friendly display names for those values:
+In the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/), the constrained values for an enum field are represented by an `enum` array, while a `meta:enum` object provides friendly display names for those values:
 
 ```json
-"sampleHardEnumField": {
+"exampleStringField": {
   "type": "string",
   "enum": [
     "value1",
@@ -26,12 +26,12 @@ In the Schema Registry API, the constrained values for a hard enum are represent
 }
 ```
 
-For hard enum fields, the Schema Registry does not allow `meta:enum` to be extended beyond the values provided under `enum`, since attempting to ingest string values outside of those constraints would not pass validation.
+For enum fields, the Schema Registry does not allow `meta:enum` to be extended beyond the values provided under `enum`, since attempting to ingest string values outside of those constraints would not pass validation.
 
-By contrast, a soft enum field does not contain an `enum` array and only uses the `meta:enum` object to denote suggested values:
+Alternatively, you can define a string field that does not contain an `enum` array and only uses the `meta:enum` object to denote suggested values:
 
 ```json
-"sampleSoftEnumField": {
+"exampleStringField": {
   "type": "string",
   "meta:enum": {
     "value1": "Value 1",
@@ -42,7 +42,7 @@ By contrast, a soft enum field does not contain an `enum` array and only uses th
 }
 ```
 
-Since soft enums do not have the same validation constraints as hard enums, their `meta:enum` properties can be extended to include new values. This tutorial covers how to extend standard and custom soft enum fields in the Schema Registry API.
+Since the string does not have an `enum` array to define constraints, its `meta:enum` property can be extended to include new values. This tutorial covers how to add suggested values to standard and custom string fields in the Schema Registry API.
 
 ## Prerequisites
 
@@ -51,15 +51,15 @@ This guide assumes you are familiar with the elements of schema composition in X
 * [Basics of schema composition](../schema/composition.md)
 * [Schema Registry API guide](../api/overview.md)
 
-## Extend a standard soft enum field
+## Add suggested values to a standard field
 
 To extend the `meta:enum` of a standard string field, you can create a [friendly name descriptor](../api/descriptors.md#friendly-name) for the field in question in a particular schema.
 
 >[!NOTE]
 >
->Standard soft enums can only be extended at the schema level. In other words, extending the `meta:enum` of a standard field in one schema does not affect other schemas that employ the same standard field.
+>Suggested values for string fields can only be added at the schema level. In other words, extending the `meta:enum` of a standard field in one schema does not affect other schemas that employ the same standard field.
 
-The following request adds soft enum values to the standard `eventType` field (provided by the [XDM ExperienceEvent class](../classes/experienceevent.md)) for the schema identified under `sourceSchema`:
+The following request adds suggested values to the standard `eventType` field (provided by the [XDM ExperienceEvent class](../classes/experienceevent.md)) for the schema identified under `sourceSchema`:
 
 ```curl
 curl -X POST \
@@ -128,7 +128,7 @@ After applying the descriptor, the Schema Registry responds with the following w
 >}
 >```
 
-## Extend a custom soft enum field
+## Add suggested values to a custom field
 
 To extend the `meta:enum` of a custom field, you can update the field's parent class, field group, or data type through a PATCH request.
 
@@ -190,4 +190,4 @@ After applying the change, the Schema Registry responds with the following when 
 
 ## Next steps
 
-This guide covered how to extend soft enums in the Schema Registry API. See the guide on [defining custom fields in the API](./custom-fields-api.md) for more information on how to create different field types.
+This guide covered how to add suggested values to string fields in the Schema Registry API. See the guide on [defining custom fields in the API](./custom-fields-api.md) for more information on how to create different field types.

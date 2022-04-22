@@ -21,6 +21,7 @@ Adobe Experience Platform supports the following email marketing destinations:
 * [Oracle Eloqua](oracle-eloqua.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+* [SendGrid](sendgrid.md)
 
 ## Connect to a new email marketing destination {#connect-destination}
 

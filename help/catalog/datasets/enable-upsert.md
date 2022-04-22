@@ -9,6 +9,10 @@ exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
 
 This tutorial covers the process of enabling a dataset with "upsert" capabilities in order to make updates to Real-time Customer Profile data. This includes steps for creating a new dataset and configuring an existing dataset. 
 
+>[!NOTE]
+>
+>The upsert workflow only works for batch ingestion. Streaming ingestion is **not** supported.
+
 ## Getting started
 
 This tutorial requires a working understanding of several Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for these related [!DNL Platform] services:
@@ -16,7 +20,7 @@ This tutorial requires a working understanding of several Adobe Experience Platf
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Catalog Service]](../../catalog/home.md): A RESTful API that allows you to create datasets and configure them for [!DNL Real-time Customer Profile] and [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
-- [Batch ingestion](../../ingestion/batch-ingestion/overview.md)
+- [Batch ingestion](../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the Platform APIs.
 
@@ -96,11 +100,11 @@ A successful response shows an array containing the ID of the newly created data
 
 ## Configure an existing dataset {#configure-an-existing-dataset}
 
-The following steps cover how to configure an existing Profile-enabled dataset for update ("upsert") functionality. 
+The following steps cover how to configure an existing Profile-enabled dataset for update (upsert) functionality. 
 
 >[!NOTE]
 >
->In order to configure an existing Profile-enabled dataset for "upsert", you must first disable the dataset for Profile and then re-enable it alongside the `isUpsert` tag. If the existing dataset is not enabled for Profile, you can proceed directly to the steps for [enabling the dataset for Profile and upsert](#enable-the-dataset). If you are unsure, the following steps show you how to check if the dataset is enabled already.
+>In order to configure an existing Profile-enabled dataset for upsert, you must first disable the dataset for Profile and then re-enable it alongside the `isUpsert` tag. If the existing dataset is not enabled for Profile, you can proceed directly to the steps for [enabling the dataset for Profile and upsert](#enable-the-dataset). If you are unsure, the following steps show you how to check if the dataset is enabled already.
 
 ### Check if the dataset is enabled for Profile
 
@@ -209,11 +213,12 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] },
+        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
       ]'
 ```
 
 **Response**
+
 A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` tag has now been disabled.
 
 ```json
@@ -262,6 +267,6 @@ A successful PATCH request returns HTTP Status 200 (OK) and an array containing 
 ]
 ```
 
-## Next Steps
+## Next steps
 
-Your Profile and upsert-enabled dataset can now be used by batch and streaming ingestion workflows to make updates to profile data. To learn more about ingesting data into Adobe Experience Platform, please begin by reading the [data ingestion overview](../../ingestion/home.md).
+Your Profile and upsert-enabled dataset can now be used by batch ingestion workflows to make updates to profile data. To learn more about ingesting data into Adobe Experience Platform, please begin by reading the [data ingestion overview](../../ingestion/home.md).
