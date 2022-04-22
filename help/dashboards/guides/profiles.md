@@ -15,7 +15,7 @@ For an overview of all of the Profile features within the Experience Platform us
 
 The [!UICONTROL Profiles] dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. The snapshot does not include any event (time series) data. 
 
-The attribute data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the Profile dashboard is not updating in real time.
+The attribute data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the Profile dashboard is not updating in real-time.
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ Please refer to the [modifying dashboards](../customize/modify.md) and [widget l
 >
 >The profile efficacy insight functionality is currently in beta and are not available to all users. The documentation and the functionality are subject to change.
 
-The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data thorough the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
+The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data through the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
 
 ![The profile efficacy dashboard.](../images/profiles/attributes-quality-assessment.png)
 
@@ -59,15 +59,15 @@ To learn more about the profile viewing capabilities provided in the Platform UI
 
 ## Merge policies {#merge-policies}
 
-The metrics displayed in the [!UICONTROL Profiles] dashboard are based on merge policies being applied to your Real-time Customer Profile data. When data is brought together from multiple sources to create the customer profile, it is possible for the data to contain conflicting values (for example, one dataset may list a customer as "single" while another dataset may list the customer as "married"). It is the job of the merge policy to determine which data to prioritize and display as part of the profile.
+The metrics displayed in the [!UICONTROL Profiles] dashboard is based on merge policies being applied to your Real-time Customer Profile data. When data is brought together from multiple sources to create the customer profile, the data can contain conflicting values. For example, one dataset may list a customer as "single" while another dataset may list the customer as "married". It is the job of the merge policy to determine which data to prioritize and display as part of the profile.
 
 For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md).
 
-The dashboard will automatically select a merge policy to display, but you can change the merge policy that is selected using the drop down menu. To choose a different merge policy, select the drop down next to the merge policy name and then select the merge policy that you wish to view.
+The dashboard will automatically select a merge policy to display, but you can change the merge policy that is selected using the drop-down menu. To choose a different merge policy, select the drop-down next to the merge policy name and then select the merge policy that you wish to view.
 
 >[!NOTE]
 >
->The dropdown menu shows only merge policies related to the XDM Individual Profile Class, however if your organization has created multiple merge policies, it may mean that you will need to scroll in order to view the complete list of available merge policies.
+>The dropdown menu shows only merge policies related to the XDM Individual Profile Class. However, if your organization has created multiple merge policies, it may mean that you will need to scroll in order to view the complete list of available merge policies.
 
 ![](../images/profiles/select-merge-policy.png)
 
@@ -114,7 +114,7 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 
 >[!NOTE]
 >
->The [!UICONTROL Profile count] widget may show a different number than the profile count shown on the [!UICONTROL Browse] tab in the [!UICONTROL Profiles] section of the UI for multiple reasons. The most common reason is because the [!UICONTROL Browse] tab references the total number of merged profiles based on your organization's default merge policy, while the [!UICONTROL Profile count] widget references the total number of merged profiles based on the merge policy that you have selected to view in the dashboard. 
+>The [!UICONTROL Profile count] widget may show a different number than the profile count shown on the [!UICONTROL Browse] tab in the [!UICONTROL Profiles] section of the UI for multiple reasons. The most common reason for this is because the [!UICONTROL Browse] tab references the total number of merged profiles based on your organization's default merge policy, while the [!UICONTROL Profile count] widget references the total number of merged profiles based on the merge policy that you have selected to view in the dashboard. 
 >
 >Another common reason is due to the differences between the time when the dashboard snapshot is taken and the time when the sample job is run for the [!UICONTROL Browse] tab. You can see when the [!UICONTROL Profile count] widget was last updated by looking at the timestamp on the widget, and to learn more about how the sample job is triggered on the [!UICONTROL Browse] tab, see the [profile count section in the Real-time Customer Profile UI guide](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
@@ -186,7 +186,7 @@ The [!UICONTROL Unsegmented Profiles] widget provides the total number of all pr
 
 ### [!UICONTROL Unsegmented Profiles Trend] {#unsegmented-profiles-trend}
 
-The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected in the y-axis and time on the x-axis.
+The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustration for the number of profiles that are not attached to any segment over a given period of time. The trend of profiles not attached to any segment can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The profile count is reflected on the y-axis and time on the x-axis.
 
 ![The Unsegmented Profiles Trend widget.](../images/profiles/unsegmented-profiles-trend.png)
 
@@ -206,7 +206,7 @@ Individual counts for either mapped or unmapped audiences are displayed in a dia
 
 ### [!UICONTROL Audiences size] {#audiences-size}
 
-The [!UICONTROL Audiences size] widget provides a two column table that lists of up to 20 segments and the total number of audiences contained in each segment. The list is ordered from high to low according to total number of audiences. The total audience size number is dependant on the merge policy applied.
+The [!UICONTROL Audiences size] widget provides a two-column table that lists up to 20 segments and the total number of audiences contained in each segment. The list is ordered from high to low according to the total number of audiences. The total audience size number is dependent on the merge policy applied.
 
 ![The Audiences size widget.](../images/profiles/audiences-size.png)
 
@@ -218,13 +218,13 @@ See the documentation for more information on the [[!UICONTROL Segments] [!UICON
 
 ### [!UICONTROL Profile count trend] {#profile-count-trend}
 
-The [!UICONTROL Profile count trend] widget uses a line graph to illustrate the trend in total number of profiles contained in the system over time. This total number includes any profiles imported into the system since the last daily snapshot. The data can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
+The [!UICONTROL Profile count trend] widget uses a line graph to illustrate the trend in the total number of profiles contained in the system over time. This total number includes any profiles imported into the system since the last daily snapshot. The data can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
 
 ![The Profile count trend widget.](../images/profiles/profile-count-trend.png)
 
 <!-- ### [!UICONTROL Single identity profiles trend] {#single-identity-profiles-trend}
 
-The [!UICONTROL Single identity profiles trend] widget depicts the difference in total number of profiles with only a single identity over a period of time. The widget uses a line graph to illustrate the trend in total numbers of single identity profiles. The depicted time period can be adjusted using the dropdown menu to cover the past 30 days, 90 days, or 12 months.
+The [!UICONTROL Single identity profiles trend] widget depicts the difference in the total number of profiles with only a single identity over a period of time. The widget uses a line graph to illustrate the trend in total numbers of single identity profiles. The depicted time period can be adjusted using the dropdown menu to cover the past 30 days, 90 days, or 12 months.
 
 ![The Single identity profiles change trend widget.](../images/profiles/single-identity-profiles-trend.png) -->
 
@@ -242,7 +242,7 @@ Hover over individual bars to see a dialog detailing the total count of profiles
 >
 >The profile efficacy widgets are currently in Beta and are not available to all users. The documentation and the functionality are subject to change.
 
-Adobe provides multiple widgets to assess the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
+Adobe provides multiple widgets to assess the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by the merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
 
 To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
@@ -277,7 +277,7 @@ This widget shows the proportion of profiles that are of high, medium, or low co
 
 ### (Beta) [!UICONTROL Profile completeness trend] {#profile-completeness-trend}
 
-This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes are filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
+This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
 
 The x-axis represents time, the y-axis represents the number of profiles, and the colors represent the three levels of profile completeness. 
 
