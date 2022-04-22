@@ -7,7 +7,7 @@ description: This document outlines best practices to follow and tools you can u
 
 Adobe Experience Platform is an open system that transforms your data into robust customer profiles that update in real time and uses AI-driven insights to help you to deliver the right experiences across every channel. You can ingress data of varying types, volumes, and histories to Experience Platform using sources and then cater that data to use cases ranging from segmentation and personalization to analytics and machine learning.
 
-Platform offers licenses that establish the amount of data you can bring in and the number of profiles that you can subsequently create. Given the capacity to bring in any source, volume, or history of data, it is possible to exceed your licensing entitlements as your data volumes grow.
+Platform offers licenses that establish the number of profiles that you can create and the amount of data that you can bring in. Given the capacity to bring in any source, volume, or history of data, it is possible to exceed your licensing entitlements as your data volumes grow.
 
 This document outlines best practices to follow and tools you can use to better manage your license entitlements with Adobe Experience Platform.
 
