@@ -93,15 +93,16 @@ To learn more about each of the available standard widgets, select the name of a
 
 * [[!UICONTROL Profile count]](#profile-count)
 * [[!UICONTROL Profiles added]](#profiles-added)
-* [[!UICONTROL Profiles count trend]](#profiles-count-trend)
+* [[!UICONTROL Profiles added trend]](#profiles-added-trend)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Single Identity Profiles]](#single-identity-profiles)
 * [[!UICONTROL Unsegmented Profiles]](#unsegmented-profiles)
 * [[!UICONTROL Unsegmented Profiles Trend]](#unsegmented-profiles-trend)
 * [[!UICONTROL Unsegmented Profiles by Identity]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL Audiences mapped status]](#audiences-mapped-status)
+* [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
+* [[!UICONTROL Profile count trend]](#profile-count-trend)
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
 <!-- * [[!UICONTROL Single identity profiles trend]](#single-identity-profiles-trend) -->
 
@@ -129,19 +130,19 @@ The **[!UICONTROL Profiles added]** widget displays the total number of merged p
 
 ![](../images/profiles/profiles-added.png)
 
-### [!UICONTROL Profiles count trend] {#profiles-count-trend}
+### [!UICONTROL Profiles added trend] {#profiles-added-trend}
 
-The **[!UICONTROL Profiles count trend]** widget displays the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
+The **[!UICONTROL Profiles added trend]** widget displays the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
 
 See the [section on merge policies earlier in this document](#merge-policies) to learn more.
 
-The **[!UICONTROL Profile count trend]** widget displays a 'captions' button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog.
+The **[!UICONTROL Profiles added trend]** widget displays a 'captions' button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
-![The Profile overview tab displaying the Profiles count trend widget with the captions button highlighted.](../images/profiles/profile-count-trend-captions.png)
+![The Profile overview tab displaying the Profiles added trend widget with the captions button highlighted.](../images/profiles/profiles-added-trend-captions.png)
 
 A machine learning model automatically generates captions for describing the key trends and important events by analyzing the chart and the data.
 
-![The automatic captions dialog for the Profiles count trend widget.](../images/profiles/profiles-count-trends-automatic-captions-dialog.png)
+![The automatic captions dialog for the Profiles added trend widget.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
 
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
@@ -195,13 +196,13 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
 
-### [!UICONTROL Audiences mapped status] {#audiences-mapped-status}
+### [!UICONTROL Audiences mapped to destination status] {#audiences-mapped-to-destination-status}
 
-The [!UICONTROL Audiences mapped status] widget displays the total number of both mapped and unmapped audiences in a single metric and uses a doughnut chart to illustrate the proportional difference between their totals. The numbers calculated are dependent on the chosen merge policy. 
+The [!UICONTROL Audiences mapped to destination status] widget displays the total number of both mapped and unmapped audiences in a single metric and uses a doughnut chart to illustrate the proportional difference between their totals. The numbers calculated are dependent on the chosen merge policy. 
 
 Individual counts for either mapped or unmapped audiences are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
-![The Audiences mapped status widget.](../images/profiles/audiences-mapped-status.png)
+![The Audiences mapped to destination status widget.](../images/profiles/audiences-mapped-to-destination-status.png)
 
 ### [!UICONTROL Audiences size] {#audiences-size}
 
@@ -214,6 +215,12 @@ To see comprehensive information on a segment, select a segment name from the li
 ![The Audiences size widget with a segment name and view all segments text highlighted.](../images/profiles/audiences-size-view-all-segments.png)
 
 See the documentation for more information on the [[!UICONTROL Segments] [!UICONTROL  Browse] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+
+### [!UICONTROL Profile count trend] {#profile-count-trend}
+
+The [!UICONTROL Profile count trend] widget uses a line graph to illustrate the trend in total number of profiles contained in the system over time. This total number includes any profiles imported into the system since the last daily snapshot. The data can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
+
+![The Profile count trend widget.](../images/profiles/profile-count-trend.png)
 
 <!-- ### [!UICONTROL Single identity profiles trend] {#single-identity-profiles-trend}
 
