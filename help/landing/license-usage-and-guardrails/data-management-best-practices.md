@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;data management;license entitl
 title: Data Management License Entitlement Best Practices
 description: This document outlines best practices to follow and tools you can use to better manage your license entitlements with Adobe Experience Platform.
 ---
-# Data Management license entitlement best practices 
+# Data management license entitlement best practices 
 
 Adobe Experience Platform is an open system that transforms your data into robust customer profiles that update in real time and uses AI-driven insights to help you to deliver the right experiences across every channel. You can ingress data of varying types, volumes, and histories to Experience Platform using sources and then cater that data to use cases ranging from segmentation and personalization to analytics and machine learning.
 
