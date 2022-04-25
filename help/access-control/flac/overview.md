@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics;access control;field level access control;FLAC
-title: Field Level Access Control Overview
-description: This document provides information on Field Level Access Control in Adobe Experience Platform
+keywords: Experience Platform;home;popular topics;access control;attribute-based access control;
+title: Attribute-Based Access Control Overview
+description: This document provides information on Attribute-Based Access Control in Adobe Experience Platform
 hide: true
 hidefromtoc: true
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 ---
-# Field level access control overview
+# Attribute-based access control overview
 
-Field level access control in Adobe Experience Platform provides a fine level of control at the data field level. This functionality allows administrators to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, field level access control allows administrators to manage access to specific segments.
+Attribute-based access control in Adobe Experience Platform provides a fine level of control at the data field level. This functionality allows administrators to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
 
-Through field level access control, administrators of your organization can control users' access to both sensitive personal data (SPD)and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define specific user roles that have access only to specific fields, as well as only to specific data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD)and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define specific user roles that have access only to specific fields, as well as only to specific data that correspond to those fields.
 
-## Understanding field level access control
+## Understanding attribute-based access control
 
-Field level access control involves the following components:
+Attribute-based access control involves the following components:
 
 | Terminology | Definition |
 | --- | --- |
@@ -30,15 +30,15 @@ Field level access control involves the following components:
 
 ## Permissions UI
 
-The Permissions UI in Adobe Experience Cloud provides a central location for managing field level access control configurations for subjects and resources in your organization. Through the Permissions UI, you can create and manage roles, as well as assign the desired resource permissions for these roles. The Permissions UI also allows you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the Permissions UI guide.
+The Permissions UI in Adobe Experience Cloud provides a central location for managing attribute-based access control configurations for subjects and resources in your organization. Through the Permissions UI, you can create and manage roles, as well as assign the desired resource permissions for these roles. The Permissions UI also allows you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the Permissions UI guide.
 
-## Field level access control API
+## Attribute-based access control API
 
-The Field Level Access Control API allows you to programmatically manage roles, products, permission categories, and permission sets within Platform using APIs.
+The attribute-based access control API allows you to programmatically manage roles, products, permission categories, and permission sets within Platform using APIs.
 
-## Field level access control in Platform
+## Attribute-based access control in Platform
 
-The following sections provide information on how field level access control is integrated to other components of Platform:
+The following sections provide information on how attribute-based access control is integrated to other components of Platform:
 
 ### Access control
 
@@ -50,7 +50,7 @@ For more information on access control, see the [access control overview](../hom
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-As an administrator, you can use field level access control functionalities to:
+As an administrator, you can use attribute-based access control functionalities to:
 
 * Configure user access to view specific segments in the activation process, based on role, permissions, and labels;
   * In the activation process, users may be required to select segments they want to activate to a destination. As an administrator, you can provision users in your organization to only see segments that are labelled with labels that users have access to, and segments that do not contain any labels.
@@ -63,7 +63,7 @@ For more information on [!DNL Destinations], refer to the [[!DNL Destinations] o
 
 Adobe Experience Platform [!DNL Identity Service] helps you gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
-As part of field level access control, the `view-identity-graph` permission allows you to determine which users in your organization can access the identity graph through the user interface or APIs. For more information, see the guide on [using the identity graph viewer](../../identity-service/ui/identity-graph-viewer.md).
+As part of attribute-based access control, the `view-identity-graph` permission allows you to determine which users in your organization can access the identity graph through the user interface or APIs. For more information, see the guide on [using the identity graph viewer](../../identity-service/ui/identity-graph-viewer.md).
 
 For more information on [!DNL Identity Service], refer to the [[!DNL Identity Service] overview](../../identity-service/home.md).
 
@@ -71,7 +71,7 @@ For more information on [!DNL Identity Service], refer to the [[!DNL Identity Se
 
 Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
-As an administrator, you can use field level access control functionalities to:
+As an administrator, you can use attribute-based access control functionalities to:
 
 * Configure user access to specific profile attributes based on role, permissions, and labels;
   * As an administrator, you can provision users in your organization to only see profile attributes that are labelled with labels that users have access to, and profile attributes that do not contain any label;
@@ -84,7 +84,7 @@ For more information on Profile, refer to the [Profile overview](../../profile/h
 
 [!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
 
-As an administrator, you can use field level access control functionalities to:
+As an administrator, you can use attribute-based access control functionalities to:
 
 * Configure user access to view and manage specific segments, based on role, permissions, and labels;
   * As an administrator, you can provision users in your organization to only see segments that are labelled with labels that users have access to, and segments that do not contain any labels, when using the Segmentation UI.
@@ -95,7 +95,7 @@ For more information on [!DNL Segmentation Service], refer to the [[!DNL Segment
 
 Experience Data Model (XDM) is an open-source specification that is designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
-With field level access control, you can:
+With attribute-based access control, you can:
 
 * Apply attributes to field groups and or classes. This allows multiple schemas with the same field groups or classes, to have fields tagged with the same attributes, depending on the the configurations at the field group or class level;
 * Configure user access to specific XDM schema fields depending on the permission sets applied to roles assigned to users.
