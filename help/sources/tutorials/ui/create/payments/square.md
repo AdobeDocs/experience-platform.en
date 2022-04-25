@@ -44,7 +44,6 @@ Under the [!UICONTROL Payments] category, select **[!UICONTROL Square]**, and th
 
 The **[!UICONTROL Connect to Square]** page appears. On this page, you can either use new credentials or existing credentials.
 
-
 ### Existing account
 
 To use an existing account, select the [!DNL Square] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
