@@ -42,7 +42,9 @@ feature: Queries
   - [Prepared statements](sql/prepared-statements.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
+  - [SSL modes](./clients/ssl-modes.md)
   - [Aqua Data Studio](clients/aqua-data-studio.md)
+  - [Db Visualizer](./clients/dbvisulaizer.md)
   - [Looker](clients/looker.md)
   - [Postico](clients/postico.md)
   - [Power BI](clients/power-bi.md)

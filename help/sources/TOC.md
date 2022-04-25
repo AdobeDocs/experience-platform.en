@@ -42,6 +42,8 @@ feature: Sources
     - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
+  - Consent & Preferences {#consent}
+    - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
@@ -80,6 +82,7 @@ feature: Sources
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
+    - [Square connector](connectors/payments/square.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)
@@ -103,6 +106,8 @@ feature: Sources
       - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
       - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
+    - Consent & Preferences {#consent}
+      - [OneTrust Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
@@ -140,6 +145,7 @@ feature: Sources
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
+      - [Square](tutorials/api/create/payments/square.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
       - [Generic REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -197,6 +203,8 @@ feature: Sources
       - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+    - Consent & Preferences {#consent}
+      - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -236,6 +244,7 @@ feature: Sources
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
+      - [Square](tutorials/ui/create/payments/square.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
     - Streaming {#streaming}
@@ -244,6 +253,7 @@ feature: Sources
     - [Advertising connection dataflow](tutorials/ui/dataflow/advertising.md)
     - [Batch cloud storage connection dataflow](tutorials/ui/dataflow/batch/cloud-storage.md)
     - [Streaming cloud storage connection dataflow](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+    - [Consent & Preferences connection dataflow](tutorials/ui/dataflow/consent-and-preferences.md)
     - [CRM connection dataflow](tutorials/ui/dataflow/crm.md)
     - [Customer success connection dataflow](tutorials/ui/dataflow/customer-success.md)
     - [Database connection dataflow](tutorials/ui/dataflow/databases.md)
