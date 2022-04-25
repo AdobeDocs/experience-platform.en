@@ -5,7 +5,7 @@ description: Learn how to create a Square source connection using the Adobe Expe
 ---
 # Create a [!DNL Square] source connection in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Square] source connector using the Platform user interface.
+This tutorial provides steps for creating a [!DNL Square] source connector using the Platform user interface.
 
 ## Getting started
 
@@ -30,9 +30,9 @@ In order to access your [!DNL Square] account Platform, you must provide the fol
 
 For more information on these credentials and how to obtain them, see the [[!DNL Square] documentation on OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
 
-## Connect your [!DNL Square] account
-
 Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Square] account to Platform.
+
+## Connect your [!DNL Square] account
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
