@@ -22,7 +22,7 @@ From any dashboard (for example, the [!UICONTROL Profiles] dashboard), you can s
 
 ## Reorder widgets
 
-After choosing to modify the dashboard, you can reorder the widgets by selecting the widget title and dragging and dropping the widgets into the desired order. In this example, the **[!UICONTROL Profiles count trend]** widget is moved to the top row and the [!UICONTROL Profile Count] widget now appears in the second row.
+After choosing to modify the dashboard, you can reorder the widgets by selecting the widget title and dragging and dropping the widgets into the desired order. In this example, the **[!UICONTROL Profiles count trend]** widget is moved to the top row and the **[!UICONTROL Profile count]** widget now appears in the second row.
 
 ![](../images/customization/move-widget.png)
 
@@ -38,7 +38,7 @@ You can also resize a widget by selecting the angle symbol in the bottom-right c
 
 ## Save dashboard updates
 
-After you have finished moving and resizing widgets, select **[!UICONTROL Save]** to save your changes and return to the main dashboard view. If you do not wish to keep your changes, select **[!UICONTROL Cancel]** to reset the dashboard and return to the main dashboard view.
+After you have finished moving and resizing widgets, select **[!UICONTROL Save & exit]** to save your changes and return to the main dashboard view. If you do not wish to keep your changes, select **[!UICONTROL Cancel]** to reset the dashboard and return to the main dashboard view.
 
 ![](../images/customization/save-changes.png)
 
