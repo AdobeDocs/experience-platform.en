@@ -9,7 +9,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.11.1 - April 22, 2022
 
-* Fixed configure command error from previous release.
+* Fixed configure command error from version 2.11.0.
 
 Contains version 2.10.0 of the Adobe Experience Platform Web SDK Library.
 
