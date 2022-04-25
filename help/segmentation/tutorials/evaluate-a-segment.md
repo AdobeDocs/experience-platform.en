@@ -40,7 +40,7 @@ All POST, PUT, and PATCH requests require an additional header:
 
 - Content-Type: application/json
 
-## Evaluate a segment {#valuate-a-segment}
+## Evaluate a segment {#evaluate-a-segment}
 
 Once you have developed, tested, and saved your segment definition, you can then evaluate the segment through either scheduled evaluation or on-demand evaluation.
 

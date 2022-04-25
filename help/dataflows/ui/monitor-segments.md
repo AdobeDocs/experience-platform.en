@@ -9,7 +9,7 @@ type: Tutorial
 
 Segmentation Service allows you to create segments and audiences from your Real-time Customer Profile data in Adobe Experience Platform. Platform provides dataflows to transparently track this flow of data from sources to destinations.
 
-The monitoring dashboard provides you with a visual representation of the data's activity within a segment, including the status of your data's segmentation. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's segmentation using the Experience Platform user interface, allowing you to track the status of segment activation (export) and segment evaluation jobs.
+The monitoring dashboard provides you with a visual representation of the data's activity within a segment, including the status of your data's segmentation. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's segmentation using the Experience Platform user interface, allowing you to track the status of segment activation, evaluation, and export jobs.
 
 ## Getting started {#getting-started}
 
@@ -18,6 +18,9 @@ This guide requires a working understanding of the following components of Adobe
 - [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
   - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
 - [Segmentation](../../segmentation/home.md): Segmentation allows you to create segments and audiences from your Real-time Customer Profile data. 
+  - [Activation jobs](../../destinations/ui/activation-overview.md): An activation job is used to activate your segment to a specified destination.
+  - [Evaluation jobs](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): An evaluation job is an asynchronous process that runs creates an audience segment based on the specified segment.
+  - [Export jobs](../../segmentation/api/export-jobs.md): An export job is an asynchronous processes that are used to persist audience segment members to datasets.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Monitoring segments dashboard {#monitoring-segments-dashboard}
@@ -27,15 +30,13 @@ This guide requires a working understanding of the following components of Adobe
 >title="Segments"
 >abstract="The segments view contains information on all your IMS Organization's segments, with further information about their activation and evaluation jobs."
 
-To access the **[!UICONTROL Segments]** dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the **[!UICONTROL Monitoring]** page, select **[!UICONTROL Segments]** card. 
+To access the **[!UICONTROL Segments]** dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Segments]** card. 
 
-![The Segments card. Information about the last evaluation job and the last export job is shown.](../assets/ui/monitor-segments/segment-card.png)
+![The Segments card. Information about the last evaluation job and the last export job is shown.](../assets/ui/monitor-segments/segment-card-monitoring.png)
 
 On the main **[!UICONTROL Segments]** dashboard, the **[!UICONTROL Segments]** card shows the status and date of the last evaluation job and the last export job. 
 
-<!-- An evaluation job is an asynchronous process that runs creates an audience segment based on the specified segment. An export job is an asynchronous processes that are used to persist audience segment members to datasets. To learn more about evaluation jobs, please read the tutorial on [evaluating a segment](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). To learn more about export jobs, please read the guide on the [export job endpoint](../../segmentation/api/export-jobs.md). -->
-
-The dashboard itself contains metrics for both segments and segment jobs. By default, the dashboard will show the segment metrics for the last 24 hours.
+The dashboard itself contains metrics for both segments and segment jobs. By default, the dashboard will show the segment metrics for the last 24 hours. To learn more about the segment jobs view, please read the [monitoring segment jobs](#monitoring-segment-jobs-dashboard) section.
 
 >[!IMPORTANT]
 >
@@ -129,7 +130,7 @@ For the segments section, the following metrics are available:
 
 ### Evaluation job details {#evaluation-job-details}
 
-The evaluation job dataflow run details page shows information on the run's metrics and segments that are related to the segment job. An evaluation job is an asynchronous process that runs creates an audience segment based on the specified segment. To learn more about evaluation jobs, please read the tutorial on [evaluating a segment](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment).
+The evaluation job dataflow run details page shows information on the run's metrics and segments that are related to the segment job. An evaluation job is an asynchronous process that creates an audience segment based on the specified segment. To learn more about evaluation jobs, please read the tutorial on [evaluating a segment](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment).
 
 ![The evaluation job dashboard. Information about the segment evaluation job is displayed.](../assets/ui/monitor-segments/evaluation-job-details.png)
 
@@ -150,6 +151,10 @@ The following metrics are available for this dashboard view:
 
 Under the segments section, you can see a list of segments that are being evaluated as part of the evaluation job. You can filter the list of segments by name by using the search bar. 
 
+>[!IMPORTANT]
+>
+>Metrics for up to 800 segments are available at this time.
+
 For the segments section, the following metrics are available:
 
 | Metric | Description | 
@@ -168,7 +173,7 @@ To access the **[!UICONTROL Segment Jobs]** dashboard, select **[!UICONTROL Moni
 
 >[!NOTE]
 >
->Only **segment evaluation jobs** are supported for per-segment monitoring.
+>Only **segment evaluation jobs** are supported for per-segment monitoring. Segment export jobs only support organization-level monitoring.
 
 ![Segment jobs monitoring dashboard](../assets/ui/monitor-segments/segment-jobs-dashboard.png)
 
