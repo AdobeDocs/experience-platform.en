@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics;api;field level access control;Field Level Access Control;flac;FLAC
+keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Control;attribute-based access control
 solution: Experience Platform
 title: Products API Endpoint
-description: The /products endpoint in the Field Level Access Control API allows you to  programmatically manage products in Adobe Experience Platform.
+description: The /products endpoint in the Attribute-Based Access Control API allows you to  programmatically manage products in Adobe Experience Platform.
 ---
 # Products endpoint
 
-The `/products` endpoint in the Field Level Access Control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your IMS Organization.
+The `/products` endpoint in the Attribute-Based Access Control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your IMS Organization.
 
 ## Getting started
 
-The API endpoint used in this guide is part of the Field Level Access Control API. Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the Attribute-Based Access Control API. Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of entitled products {#list}
 

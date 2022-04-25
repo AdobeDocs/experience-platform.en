@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;api;field level access control;Field Level Access Control;flac;FLAC
+keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Control;attribute-based access control
 solution: Experience Platform
 title: Roles API Endpoint
-description: The /roles endpoint in the Field Level Access Control API allows you to  programmatically manage roles in Adobe Experience Platform.
+description: The /roles endpoint in the Attribute-Based Access Control API allows you to  programmatically manage roles in Adobe Experience Platform.
 ---
 # Roles endpoint
 
 Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need. 
 
-The `/roles` endpoint in the Field Level Access Control API allows you to  programmatically manage roles in your IMS Organization.
+The `/roles` endpoint in the Attribute-Based Access Control API allows you to  programmatically manage roles in your IMS Organization.
 
 ## Getting started
 
-The API endpoint used in this guide is part of the Field Level Access Control API. Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the Attribute-Based Access Control API. Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of roles {#list}
 
@@ -96,7 +96,7 @@ A successful response returns a list of roles in your organization, including in
 | `roleType` |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
-| `subjectAttributes` |  |
+| `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Look up a role {#lookup}
@@ -163,7 +163,7 @@ A successful response returns details for the queried role ID, including informa
 | `roleType` |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
-| `subjectAttributes` |  |
+| `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Look up subjects by role ID
@@ -202,17 +202,17 @@ A successful response returns the subjects associated with the queried role ID, 
       {
           "roleId": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
           "subjectType": "user",
-          "subjectId": "D4CB31EF61C1C9DB0A494206@AdobeID"
+          "subjectId": "03Z07HFQCCUF3TUHAX274206@AdobeID"
       },
       {
           "roleId": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
           "subjectType": "user",
-          "subjectId": "439157105459D7350A4C86DE@AdobeID"
+          "subjectId": "PIRJ7WE5T3QT9Z4TCLVH86DE@AdobeID"
       },
       {
           "roleId": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
           "subjectType": "user",
-          "subjectId": "121A32D35ADF96900A49403D@AdobeID"
+          "subjectId": "WHPWE00MC26SHZ7AKBFG403D@AdobeID"
       },
   ]
   "_page": {
@@ -238,9 +238,9 @@ A successful response returns the subjects associated with the queried role ID, 
 
 | Property | Description |
 | --- | --- |
-| `roleId` |
-| `subjectType` |
-| `subjectId` |
+| `roleId` | The role ID associated with the queried subject. |
+| `subjectType` | The type of the queried subject. |
+| `subjectId` | The ID that corresponds with the queried subject. |
 
 ## Create a role {#create}
 
@@ -391,7 +391,7 @@ A successful response returns the updated role, including new values for the pro
 | `roleType` |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
-| `subjectAttributes` |  |
+| `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Update a role by role ID {#put}
@@ -465,7 +465,7 @@ A successful returns your updated role, including new values for its name, descr
 | `roleType` |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
-| `subjectAttributes` |  |
+| `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Update subject by role ID
