@@ -21,7 +21,7 @@ Dataflows are a representation of jobs that move data across Platform. These dat
 
 | Feature | Description |
 | ------- | ----------- |
-| Segments dashboard | You can now use the monitoring dashboard to monitor dataflows for segments. To learn more, please read the tutorial on [monitoring segments in the UI](../../dataflows/ui/monitor-segments.md) |
+| Segments dashboard | You can now use the monitoring dashboard to monitor dataflows for segments. To learn more, please read the guide on [monitoring segments in the UI](../../dataflows/ui/monitor-segments.md) |
 
 For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md). To learn more about segmentation, refer to the [segmentation overview](../../segmentation/home.md).
 
