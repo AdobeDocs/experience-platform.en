@@ -108,7 +108,7 @@ The details page also displays a list of identities that failed and identities t
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Dataflow run details"
 >abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=en#dataflow-runs-for-streaming-destinations" text="Dataflow runs for streaming destinations"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Dataflow runs for streaming destinations"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -158,29 +158,6 @@ The details page for a dataflow, in addition to the details shown on the dataflo
 The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code and description. By default, the list displays the failed identities. To show excluded identities, select the **[!UICONTROL Identities excluded]** toggle.
 
 ![Dataflow records for batch destinations](../assets/ui/monitor-destinations/dataflow-records-batch.png)
-
-## Monitoring Segment Jobs dashboard {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Segment Jobs"
->abstract="The segment jobs view contains information on the evaluation and export jobs for all your segments."
-
-To access the [!UICONTROL Segment Jobs] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Segment Jobs]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the segment evaluation and export jobs.
-
-![Segment jobs monitoring dashboard](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-Use the [!UICONTROL Segment Jobs] dashboard to understand if profile evaluation and export happens on time and without any exceptions, so the downstream services for destination activation can have the latest evaluated profile data.
-
-The following metrics are available for segment jobs:
-
-| Metric | Description |
----------|----------|
-| **[!UICONTROL Segment job]** | Indicates the name of the segment job. |
-| **[!UICONTROL Type]** | Indicates the type of segment job - export or evaluation. Note that in both cases, the segment job evaluates or exports *all* segments belonging to an organization. |
-| **[!UICONTROL Job start]** | The date and time when the segment job started. |
-| **[!UICONTROL Job end]** | The date and time when the segment job completed. |
-| **[!UICONTROL Status]** | The status of the completed job - success or failed. |
 
 ## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
 
