@@ -8,26 +8,12 @@ description: The April 2022 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Dataflows](#dataflows)
 - [[!DNL Dashboards]](#dashboards)
+- [Dataflows](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Sources](#sources)
-
-## Dataflows {#dataflows}
-
-In Platform, data is ingested from many different sources, analyzed within the system, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
-
-Dataflows are a representation of jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-time Customer Profile before ultimately being activated to destinations.
-
-**New features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Segments dashboard | You can now use the monitoring dashboard to monitor dataflows for segments. To learn more, please read the guide on [monitoring segments in the UI](../../dataflows/ui/monitor-segments.md) |
-
-For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md). To learn more about segmentation, refer to the [segmentation overview](../../segmentation/home.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -35,7 +21,7 @@ Platform provides multiple dashboards through which you can view important infor
 
 Dashboards provide pre-configured reporting options for your organization’s data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.
 
-The following widgets are available through the widget library on their respective dashboards. See the documentation for more information on [how to add widgets through the widget library](../../dashboards/customize/widget-library.md).
+The following widgets are available through the Widget library on their respective dashboards. See the documentation for more information on [how to add widgets through the Widget library](../../dashboards/customize/widget-library.md).
 
 | Feature                                                   |  Dashboard    | Description |
 | --------------------------------------------------------- | ------------- | ----------- |
@@ -53,6 +39,20 @@ The following widgets are available through the widget library on their respecti
 | [!UICONTROL Audience size trend by identity]              |  Segments    | This widget illustrates the audience size trend for a particular segment based on a selected identity type. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |
 
 See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
+
+## Dataflows {#dataflows}
+
+In Platform, data is ingested from many different sources, analyzed within the system, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
+
+Dataflows are a representation of jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-time Customer Profile before ultimately being activated to destinations.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Segments dashboard | You can now use the monitoring dashboard to monitor dataflows for segments. To learn more, please read the guide on [monitoring segments in the UI](../../dataflows/ui/monitor-segments.md) |
+
+For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md). To learn more about segmentation, refer to the [segmentation overview](../../segmentation/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
