@@ -8,7 +8,22 @@ description: The April 2022 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Dataflows](#dataflows)
 - [Experience Data Model (XDM)](#xdm)
+
+## Dataflows {#dataflows}
+
+In Platform, data is ingested from many different sources, analyzed within the system, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
+
+Dataflows are a representation of jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-time Customer Profile before ultimately being activated to destinations.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Segments dashboard | You can now use the monitoring dashboard to monitor dataflows for segments. To learn more, please read the guide on [monitoring segments in the UI](../../dataflows/ui/monitor-segments.md) |
+
+For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md). To learn more about segmentation, refer to the [segmentation overview](../../segmentation/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -64,3 +79,4 @@ XDM is an open-source specification that provides common structures and definiti
 {style="table-layout:auto"}
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+
