@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;access control;field level access control;FLAC
-title: Field Level Access Control Manage Users
-description: This document provides information on Field Level Access Control in Adobe Experience Platform
+keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
+title: Attribute-based Access Control Manage Users
+description: This document provides information on attribute-based access control in Adobe Experience Platform
 hide: true
 hidefromtoc: true
 ---
@@ -24,4 +24,4 @@ Select the **[!UICONTROL Roles]** tab to view the roles the user is assigned to.
 
 ## Next steps
 
-You have now learnt how to view user details and the roles they are currently added to. To learn more about field level access control, see the [field level access control overview](../overview.md).
+You have now learnt how to view user details and the roles they are currently added to. To learn more about attribute-based access control, see the [attribute-based access control overview](../overview.md).

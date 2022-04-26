@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;access control;field level access control;FLAC
-title: Field Level Access Control Manage Role Permissions
-description: This document provides information on Field Level Access Control in Adobe Experience Platform
+keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
+title: Attribute-based Access Control Manage Role Permissions
+description: This document provides information on attribute-based access control in Adobe Experience Platform
 hide: true
 hidefromtoc: true
 ---
