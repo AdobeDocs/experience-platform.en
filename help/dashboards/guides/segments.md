@@ -35,13 +35,13 @@ To navigate to the [!UICONTROL Segments] dashboard within the Platform UI, selec
 
 You can modify the appearance of the [!UICONTROL Segments] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the **[!UICONTROL Widget library]** to explore available widgets and create custom widgets for your organization. 
 
-Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
+Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
 
 ## Select a segment
 
-The dashboard automatically selects a segment to display, however you can change the segment by using the drop-down menu or segment selector. 
+The dashboard automatically selects a segment to display, however you can change the segment by using the dropdown menu or segment selector. 
 
-To choose a different segment, select the drop-down next to the segment name or use the segment selector to open the segment selection dialog.
+To choose a different segment, select the dropdown next to the segment name or use the segment selector to open the segment selection dialog.
 
 ![](../images/segments/change-segment.png)
 
@@ -57,11 +57,10 @@ The "last updated" date and time on a widget shows when the last snapshot of the
 
 ## Standard widgets
 
-Adobe provides multiple standard widgets that you can use to visualize different metrics related to your segments. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
+Adobe provides multiple standard widgets that you can use to visualize different metrics related to your segments. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
-<!-- * [[!UICONTROL Audience size trend]](#audience-size-trend) -this will be replaced by 2 widget one giving an absolute count, one the change trend =(audience size trend) Will become (Audience size change trend) the chart is getting broken down into the two widgets and i can reference the two new widgets -->
 * [[!UICONTROL Audience size]](#audience-size)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
@@ -78,25 +77,9 @@ For more information on fragments and merged profiles, please begin by reading t
 
 ![](../images/segments/audience-size.png)
 
-<!-- Audience size trend was commented out because it was replaced with two new widgets: 'Audience size trend' and 'Audience size change trend'. I have not deleted it because I am unsure whether it will have auto-captions functionality -->
-
-<!-- ### [!UICONTROL Audience size trend] {#audience-size-trend}
-
-The **[!UICONTROL Audience size trend]** widget provides information regarding the total number of profiles in the segment as captured during the daily snapshot, for the last 30 days, 90 days, or 12 months. This widget displays how the segment size may have shifted over time as new profiles qualify for or exit from the segment.
-
-To learn more about segment evaluation and how profiles qualify and exit from segments, please refer to the [Segmentation Service documentation](../../segmentation/home.md).
-
-![The segments overview displays the Audience size trend widget.](../images/segments/audience-size-trend-captions.png)
-
-Within the **[!UICONTROL Audience size trend]** widget select **[!UICONTROL Captions]** to open the automatic captions dialog.
-
-![The automatic captions dialog for the Audience size trend widget.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
-
-A machine learning model automatically generates captions to describe the key trends and important events by analyzing the chart and segment data. -->
-
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
-The **[!UICONTROL Identity overlap]** widget displays a Venn diagram, or set diagram, showing the overlap of profiles in your segment containing multiple identities. 
+The **[!UICONTROL Identity overlap]** widget displays a Venn diagram, or set diagram, showing the overlap of profiles in your segment containing multiple identities.
 
 After using the dropdown menus on the widget to select the identities that you wish to compare, circles appear displaying the relative size of each identity, with the number of profiles containing both namespaces being represented by the size of the overlap between the circles.
 
@@ -110,7 +93,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 The **[!UICONTROL Profiles by identity]** widget displays the breakdown of identities across all of the merged profiles in your selected segment. The total number of profiles by identity may be higher than the total number of profiles in the segment because one profile could have multiple identities associated with it. In other words, adding together the values shown for each identity may total more than the total audience size in the segment because if a customer interacts with your brand on more than one channel, multiple identities may be associated with that individual customer.
 
-Select [!UICONTROL **Captions**] to open the automatic captions dialog.
+Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
 ![The profiles by identity captions dialog.](../images/segments/profiles-by-identity.png)
 
@@ -120,7 +103,7 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 ### [!UICONTROL Audience activation order] {#audience-activation-order}
 
-The [!UICONTROL Audience activation order] widget provides a three-column table that lists up to 10 audiences, the name of the destination, and the activation date of the audience. The list is ordered from high to low according to recency.
+The [!UICONTROL Audience activation order] widget provides a three-column table that lists the [!UICONTROL destination name], the [!UICONTROL platform], and the activation [!UICONTROL date] of the audience. The list is ordered from high to low according to recency and can accommodate up to 10 rows.
 
 ![The Audience activation order widget.](../images/segments/audience-activation-order.png)
 

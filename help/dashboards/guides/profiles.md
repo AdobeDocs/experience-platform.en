@@ -35,7 +35,7 @@ To navigate to the [!UICONTROL Profiles] dashboard within the Platform UI, selec
 
 You can modify the appearance of the [!UICONTROL Profiles] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the **[!UICONTROL Widget library]** to explore available widgets and create custom widgets for your organization. 
 
-Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
+Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
 
 ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -63,7 +63,7 @@ The metrics displayed in the [!UICONTROL Profiles] dashboard is based on merge p
 
 For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md).
 
-The dashboard will automatically select a merge policy to display, but you can change the merge policy that is selected using the drop-down menu. To choose a different merge policy, select the drop-down next to the merge policy name and then select the merge policy that you wish to view.
+The dashboard will automatically select a merge policy to display, but you can change the merge policy that is selected using the dropdown menu. To choose a different merge policy, select the dropdown next to the merge policy name and then select the merge policy that you wish to view.
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ The dashboard will automatically select a merge policy to display, but you can c
 
 ## Union schemas
 
-The [!UICONTROL Union Schema] dashboard displays the union schema for a specific XDM class. By selecting the [!UICONTROL **Class**] dropdown, you can view the union schemas for different XDM classes.
+The [!UICONTROL Union Schema] dashboard displays the union schema for a specific XDM class. By selecting the **[!UICONTROL Class]** dropdown, you can view the union schemas for different XDM classes.
 
 Union schemas are composed of multiple schemas that share the same class and have been enabled for Profile. They enable you to see in a single view, an amalgamation of every field contained within each schema that shares the same class.
 
@@ -87,7 +87,7 @@ The "last updated" date and time on a widget shows when the last snapshot of the
 
 ## Standard widgets
 
-Adobe provides multiple standard widgets that you can use to visualize different metrics related to your Profile data. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
+Adobe provides multiple standard widgets that you can use to visualize different metrics related to your Profile data. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
@@ -104,7 +104,6 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audiences size]](#audiences-size)
 * [[!UICONTROL Profile count trend]](#profile-count-trend)
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
-<!-- * [[!UICONTROL Single identity profiles trend]](#single-identity-profiles-trend) -->
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -152,7 +151,7 @@ See the [section on merge policies earlier in this document](#merge-policies) to
 
 ![The Profiles overview dashboard with the Profiles by identity widget highlighted.](../images/profiles/profiles-by-identity.png)
 
-Select [!UICONTROL **Captions**] to open the automatic captions dialog.
+Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
 ![The profiles by identity captions dialog.](../images/profiles/profiles-by-identity-captions.png)
 
@@ -210,7 +209,7 @@ The [!UICONTROL Audiences size] widget provides a two-column table that lists up
 
 ![The Audiences size widget.](../images/profiles/audiences-size.png)
 
-To see comprehensive information on a segment, select a segment name from the list provided to navigate to the [!UICONTROL Segments] [!UICONTROL Detail] page. Also, by selecting [!UICONTROL **View all segments**] from the end of the widget, you can navigate to the [!UICONTROL Segments] [!UICONTROL Browse] tab to find any existing segment. 
+To see comprehensive information on a segment, select a segment name from the list provided to navigate to the [!UICONTROL Segments] [!UICONTROL Detail] page. Also, by selecting **[!UICONTROL View all segments]** from the end of the widget, you can navigate to the [!UICONTROL Segments] [!UICONTROL Browse] tab to find any existing segment. 
 
 ![The Audiences size widget with a segment name and view all segments text highlighted.](../images/profiles/audiences-size-view-all-segments.png)
 
@@ -221,12 +220,6 @@ See the documentation for more information on the [[!UICONTROL Segments] [!UICON
 The [!UICONTROL Profile count trend] widget uses a line graph to illustrate the trend in the total number of profiles contained in the system over time. This total number includes any profiles imported into the system since the last daily snapshot. The data can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
 
 ![The Profile count trend widget.](../images/profiles/profile-count-trend.png)
-
-<!-- ### [!UICONTROL Single identity profiles trend] {#single-identity-profiles-trend}
-
-The [!UICONTROL Single identity profiles trend] widget depicts the difference in the total number of profiles with only a single identity over a period of time. The widget uses a line graph to illustrate the trend in total numbers of single identity profiles. The depicted time period can be adjusted using the dropdown menu to cover the past 30 days, 90 days, or 12 months.
-
-![The Single identity profiles change trend widget.](../images/profiles/single-identity-profiles-trend.png) -->
 
 ### [!UICONTROL Single identity profiles by identity] {#single-identity-profiles-by-identity}
 
