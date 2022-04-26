@@ -54,7 +54,7 @@ Once you select a schema, the [!DNL Schema Editor] appears with the schema's str
 >
 >This section covers how to add existing field groups to a schema. If you want to create a new custom field group, see the guide on [creating and editing field groups](./field-groups.md#create) instead.
 
-Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of field groups. To start, select **[!UICONTROL Add]** next to to **[!UICONTROL Field groups]** in the left rail.
+Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of field groups. To start, select **[!UICONTROL Add]** next to **[!UICONTROL Field groups]** in the left rail.
 
 ![](../../images/ui/resources/schemas/add-field-group-button.png)
 
@@ -62,7 +62,7 @@ A dialog appears, showing a list of field groups that you can select for the sch
 
 ![](../../images/ui/resources/schemas/field-group-popularity.png)
 
-If you know the general activity or business area of the fields you want to add, select one or more of the industry vertical categories in the left rail to filter the displayed list of field groups.
+If you know the general activity or business area of the fields you want to add, select one or more of the industry-vertical categories in the left rail to filter the displayed list of field groups.
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
@@ -248,7 +248,7 @@ Once you have assigned a class and added field groups to a schema, you can edit 
 
 >[!NOTE]
 >
->Keep in mind that the display names of fields that belong to standard classes or field groups can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not effect other schemas that employ the same associated class or field group.
+>Keep in mind that the display names of fields that belong to standard classes or field groups can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not affect other schemas that employ the same associated class or field group.
 >
 >Once you make changes the display names for a schema's fields, those changes are immediately reflected in any existing datasets based on that schema.
 
