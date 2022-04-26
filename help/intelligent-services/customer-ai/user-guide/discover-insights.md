@@ -163,7 +163,7 @@ The segment builder is used to define a segment. When selecting **[!UICONTROL Cr
 
  ![All your Segments](../images/insights/Segments-dashboard.png)
 
-## Performance summary metrics {#performance-metrics}
+## Historical performance {#historical-performance}
 
 The **[!UICONTROL Performance summary]** tab shows the actual churn or conversion rates, separated into each of the propensity buckets scored by Customer AI.
 
@@ -186,6 +186,39 @@ The bottom half of the **[!UICONTROL Performance summary]** tab displays the res
 Depending on if you are predicting churn or conversion, the [!UICONTROL Distribution of Scores] graph displays the distribution of profiles churned/converted and not churned/not converted in each increment.
 
 ![individual scoring](../images/insights/scoring_tab.png)
+
+## Model evaluation {#model-evaluation}
+
+As you enable more clients in Customer AI, marketers will vet the accuracy of the models with data scientists (internal or external) before using the results to create and target audiences. So far, most have data science teams but simply looking at actual conversion/churn rates after an outcome passes is no longer sufficient. Three metrics that enable you to trust the models have now been added - **AUC**, **lift** and **gains charts**, etc.
+
+### Lift chart
+
+![lift chart](../images/user-guide/lift_chart.png)
+
+The lift chart measures the improvement of using a predictive model instead of random targeting. After sorting the customers by propensity score from high to low, the population is split into deciles - 10 equally sized groups. `Lift = Rate of outcome` in bin divided by Overall rate of positive outcome across the entire eligible population. 
+
+Indicators of good model quality include:
+
+* High lift values in the first few deciles mean that the model is good at identifying the users with the highest propensity to take the action of interest.
+* Descending lift values mean that people with higher scores are more likely to take the action of interest than people with lower scores.
+
+### Gains chart
+
+![gains chart](../images/user-guide/gains_chart.png)
+
+The cumulative gains chart measures the percentage of positive outcomes captured by targeting scores above a certain threshold. After sorting the customers by propensity score from high to low, the population is split into deciles - 10 equally sized groups. A perfect model would capture all of the positive outcomes in the highest score deciles. A baseline random targeting method captures positive outcomes proportionally to the size of the group - targeting 30% of the users would capture 30% of the outcomes.
+
+Indicators of good model quality include:
+
+* The cumulative gains approach 100% quickly.
+* The cumulative gains curve for the model is closer to the upper left corner of the chart.
+* The cumulative gains chart can be used to determine the score cutoffs for segmentation and targeting. For example, if the model captures 70% of the positive outcomes in the first 2 score deciles, targeting users with PercentileScore > 80 is expected to capture approximately 70% of the positive outcomes.
+
+### AUC
+
+Metrics based on model quality: 
+
+The AUC reflects the strength of the relationship between the ranking by score and the occurrence of the predicted goal. An **AUC** of 0.5 means the model is no better than a random guess. An **AUC** of 1 means the model can perfectly predict who will take the relevant action.
 
 ## Next steps
 
