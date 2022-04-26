@@ -163,27 +163,31 @@ You can manually add fields, functions, and operators using the expression edito
 
 ![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
 
-### Import mapping rules {#import}
+### Import mapping {#import}
 
-You can reuse the mapping rules of an existing dataflow to reduce the manual configuration time of your data ingestion and limit mistakes. Select **[!UICONTROL Import mapping]** to reuse an existing mapping rule.
+You can reuse the mapping of an existing dataflow to reduce the manual configuration time of your data ingestion and limit mistakes. Select **[!UICONTROL Import mapping]** to reuse an existing mapping.
 
 ![import-mapping](../images/ui/mapping/import-mapping.png)
 
 The [!UICONTROL Import mapping] window appears, providing you with a list of dataflows to choose from. 
 
-Select the preview icon to preview the mapping rules of the dataflow you selected.
+Select the preview icon to preview the mapping of the dataflow you selected.
 
 ![list-mapping](../images/ui/mapping/list-mapping.png)
 
-The preview window allows you to inspect existing mapping rules before importing to your dataflow. Once you verify the mapping rules, you can select **[!UICONTROL Back]** to return to the list of dataflows and inspect another set of mapping rules, or you can select **[!UICONTROL Select]** to proceed.
+The preview window allows you to inspect existing mapping before importing to your dataflow. Once you verify the mapping, you can select **[!UICONTROL Back]** to return to the list of dataflows and inspect another set of mapping, or you can select **[!UICONTROL Select]** to proceed.
 
 ![preview-mapping](../images/ui/mapping/preview-mapping.png)
 
-Alternatively, you can select the mapping rule you want to import from the list of dataflows window. Select the dataflow that contains the mapping rule you want to import and then select **[!UICONTROL Select]** to proceed.
+Alternatively, you can select the mapping you want to import from the list of dataflows window. Select the dataflow that contains the mapping you want to import and then select **[!UICONTROL Select]** to proceed.
 
 ![select-mapping](../images/ui/mapping/select-mapping.png)
 
-The mapping page updates with the mapping rules that you imported from another dataflow.
+The interface updates with the mapping you imported.
+
+>[!NOTE]
+>
+>Any existing mapping sets that you establish or ML mapping recommendations are replaced by the mapping that you imported from an existing dataflow.
 
 ![mapping-imported](../images/ui/mapping/mapping-imported.png)
 
