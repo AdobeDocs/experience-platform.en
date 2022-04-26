@@ -199,8 +199,8 @@ The lift chart measures the improvement of using a predictive model instead of r
 
 Indicators of good model quality include:
 
-* High lift values in the first few deciles mean that the model is good at identifying the users with the highest propensity to take the action of interest.
-* Descending lift values mean that people with higher scores are more likely to take the action of interest than people with lower scores.
+- High lift values in the first few deciles mean that the model is good at identifying the users with the highest propensity to take the action of interest.
+- Descending lift values mean that people with higher scores are more likely to take the action of interest than people with lower scores.
 
 ### Gains chart
 
@@ -210,9 +210,9 @@ The cumulative gains chart measures the percentage of positive outcomes captured
 
 Indicators of good model quality include:
 
-* The cumulative gains approach 100% quickly.
-* The cumulative gains curve for the model is closer to the upper left corner of the chart.
-* The cumulative gains chart can be used to determine the score cutoffs for segmentation and targeting. For example, if the model captures 70% of the positive outcomes in the first 2 score deciles, targeting users with PercentileScore > 80 is expected to capture approximately 70% of the positive outcomes.
+- The cumulative gains approach 100% quickly.
+- The cumulative gains curve for the model is closer to the upper left corner of the chart.
+- The cumulative gains chart can be used to determine the score cutoffs for segmentation and targeting. For example, if the model captures 70% of the positive outcomes in the first 2 score deciles, targeting users with PercentileScore > 80 is expected to capture approximately 70% of the positive outcomes.
 
 ### AUC
 
