@@ -4,6 +4,7 @@ description: Segmentation allows you to create segments and audiences from your 
 title: Monitor Dataflows for Segments in the UI
 topic-legacy: overview
 type: Tutorial
+exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 ---
 # Monitor dataflows for segments in the UI
 
