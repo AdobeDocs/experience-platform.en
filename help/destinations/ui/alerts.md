@@ -77,7 +77,7 @@ The lower half of the page displays any [!UICONTROL Dataflow run errors] that oc
 
 ![dataflow-run-errors](../assets/ui/alerts/dataflow-run-error.png)
 
-For more information on handling dataflow errors, see the guide on [monitoring destinations dataflows in the UI](../../../dataflows/ui/monitor-destinations.md).
+For more information on handling dataflow errors, see the guide on [monitoring destinations dataflows in the UI](../../dataflows/ui/monitor-destinations.md).
 
 ### By email
 
@@ -105,4 +105,4 @@ A pop-up window appears, providing you with a list of destination alerts. Select
 
 ## Next steps
 
-This document provided a step-by-step guide on how to subscribe to in-context alerts for your destination dataflows. For more information, see the [alerts UI guide](../../../observability/alerts/ui.md).
+This document provided a step-by-step guide on how to subscribe to in-context alerts for your destination dataflows. For more information, see the [alerts UI guide](../../observability/alerts/ui.md).
