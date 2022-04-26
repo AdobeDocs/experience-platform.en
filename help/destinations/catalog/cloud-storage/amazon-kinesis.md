@@ -84,10 +84,6 @@ For more information on controlling access for [!DNL Kinesis] data streams, read
 
 ## Connect to the destination {#connect}
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
-
-### Connection parameters {#parameters}
-
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). When connecting to this destination, you must provide the following information:
 
 ### Authentication information {#authentication-information}
@@ -97,7 +93,7 @@ Input the fields below and select **[!UICONTROL Connect to destination]**:
 ![Image of the UI screen showing completed fields for the Amazon Kinesis authentication details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **Region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
+* **[!UICONTROL Region]**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
 ### Destination details {#destination-details}
 
@@ -105,9 +101,11 @@ After establishing the authentication connection to the Amazon Kinesis destinati
 
 ![Image of the UI screen showing completed fields for the Amazon Kinesis destination details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
-* **Name**: Provide a name for your connection to [!DNL Amazon Kinesis]
-* **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].
-* **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Platform will export data to this stream.
+* **[!UICONTROL Name]**: Provide a name for your connection to [!DNL Amazon Kinesis]
+* **[!UICONTROL Description]**: Provide a description for your connection to [!DNL Amazon Kinesis].
+* **[!UICONTROL stream]**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Platform will export data to this stream.
+* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the segments you are exporting. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 
 <!--
 
@@ -150,6 +148,10 @@ For example, consider this dataflow to an [!DNL Amazon Kinesis] destination wher
 A profile export to the destination can be determined by a profile qualifying for or exiting one of the *three mapped segments*. However, in the data export, in the `segmentMembership` object (see [Exported Data](#exported-data) section below), other unmapped segments might appear, if that particular profile is a member of them. If a profile qualifies for the Customer with DeLorean Cars segment but is also a member of the Watched "Back to the Future" movie and Science fiction fans segments, then these other two segments will also be present in the `segmentMembership` object of the data export, even though these are not mapped in the dataflow.
 
 From a profile attributes point of view, any changes to the four attributes mapped above will determine a destination export and any of the four mapped attributes present on the profile will be present in the data export.
+
+## Historical data backfill {#historical-data-backfill}
+
+When you add a new segment to an existing destination, or when you create a new destination and map segments to it, Experience Platform exports historical data to the destination. Profiles which qualified for the segment *before* the segment was added to the destination are exported to the destination as part of the first data export to the destination.  
 
 ## Exported data {#exported-data}
 
@@ -208,6 +210,53 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL Amazon Kinesis
 }
 
 ```
+
+Below are further examples of exported data, depending on the UI settings you select in the connect destination flow for the **[!UICONTROL Include Segment Names]** and **[!UICONTROL Include Segment Timestamps]** options:
+
++++ The data export sample below includes segment names in the `segmentMembership` section
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ The data export sample below includes segment timestamps in the `segmentMembership` section
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## Limits and retry policy {#limits-retry-policy}
+
+In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10.000 requests per second for each dataflow to an HTTP destination.
+
+In case of failed requests to your HTTP API destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.
 
 >[!MORELIKETHIS]
 >

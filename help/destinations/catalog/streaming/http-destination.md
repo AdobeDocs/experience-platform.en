@@ -2,7 +2,7 @@
 keywords: streaming; HTTP destination
 title: HTTP API connection
 keywords: streaming;
-description: The HTTP API destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
+description: Use the HTTP API destination in Adobe Experience Platform to send profile data to third-party HTTP endpoint to run your own analytics or perform any other operations you may need on profile data exported out of Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 ---
 # HTTP API connection
@@ -281,8 +281,6 @@ Below are further examples of exported data, depending on the UI settings you se
 
 ## Limits and retry policy {#limits-retry-policy}
 
-In 95% of cases, Experience Platform offers a throughput guarantee of less than 10 minutes for successfully sent messages with a rate of less than 10.000 requests per second.
-
-Note that there is currently no way for customers to control the output rate of requests going out of Experience Platform.
+In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10.000 requests per second for each dataflow to an HTTP destination.
 
 In case of failed requests to your HTTP API destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.
