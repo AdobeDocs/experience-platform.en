@@ -9,7 +9,7 @@ description: The April 2022 release notes for Adobe Experience Platform.
 Updates to existing features in Adobe Experience Platform:
 
 - [Dataflows](#dataflows)
-- [!DNL Data Prep](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Sources](#sources)
