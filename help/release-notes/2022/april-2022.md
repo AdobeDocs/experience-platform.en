@@ -9,6 +9,7 @@ description: The April 2022 release notes for Adobe Experience Platform.
 Updates to existing features in Adobe Experience Platform:
 
 - [Dataflows](#dataflows)
+- [[!DNL Dashboards]](#dashboards)
 - [[!DNL Data Prep]](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
@@ -27,6 +28,31 @@ Dataflows are a representation of jobs that move data across Platform. These dat
 | Segments dashboard | You can now use the monitoring dashboard to monitor dataflows for segments. To learn more, please read the guide on [monitoring segments in the UI](../../dataflows/ui/monitor-segments.md) |
 
 For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md). To learn more about segmentation, refer to the [segmentation overview](../../segmentation/home.md).
+
+## [!DNL Dashboards] {#dashboards}
+
+Platform provides multiple dashboards through which you can view important information about your organization’s data, as captured during daily snapshots.
+
+Dashboards provide pre-configured reporting options for your organization’s data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.
+
+The following widgets are available through the widget library on their respective dashboards. See the documentation for more information on [how to add widgets through the widget library](../../dashboards/customize/widget-library.md).
+
+| Feature                                                   |  Dashboard    | Description |
+| --------------------------------------------------------- | ------------- | ----------- |
+| [!UICONTROL Profiles added trend]                         |   Profiles    | This widget uses a line graph to illustrate the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months.           |
+| [!UICONTROL Audiences mapped to destination status]       |     Profiles        |  This widget displays the total number of both mapped and unmapped audiences in a single metric and uses a doughnut chart to illustrate the proportional difference between their totals. |
+| [!UICONTROL Audiences size]                               |     Profiles        | This widget provides a two-column table that lists up to 20 segments and the total number of audiences contained in each segment. The list is dependent on the merge policy applied and ordered from high to low according to the total number of audiences. |
+| [!UICONTROL Profile count trend]                          |     Profiles        |  This widget uses a line graph to illustrate the trend in the total number of profiles contained in the system over time. The data can be visualized over 30 days, 90 days, and 12 month periods. |
+| [!UICONTROL Single identity profiles by identity]         |     Profiles        |   This widget uses a bar chart to illustrate the total number of profiles that are identified with only a single unique identifier. The widget supports up to five of the most commonly occurring identities. |
+| [!UICONTROL Destination status]                           |   Destinations      |   This widget displays the total number of enabled destinations as a single metric and uses a doughnut chart to illustrate the proportional difference between enabled and disabled destinations. |
+| [!UICONTROL Active destinations by destination platform]  |   Destinations      |  This widget uses a two-column table to show a list of active destination platforms and the total number of active destinations for each destination platform. |
+| [!UICONTROL Activated audiences across all destinations]  |   Destinations      |  This widget provides the total number of audiences activated across all destinations in a single metric. |
+| [!UICONTROL Audience activation order]                    |  Segments    | This widget provides a three-column table that lists the destination name, the platform, and the activation date of the audience. |           
+| [!UICONTROL Audience size trend]                          |  Segments    | This widget provides a line graph illustration for the total number of profiles that meet the criteria of any segment definition over 30 days, 90 days, and 12 month periods. |
+| [!UICONTROL Audience size change trend]                   |  Segments    | This widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |           
+| [!UICONTROL Audience size trend by identity]              |  Segments    | This widget illustrates the audience size trend for a particular segment based on a selected identity type. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |
+
+See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
 
 ## [!DNL Data Prep] {#data-prep}
 
