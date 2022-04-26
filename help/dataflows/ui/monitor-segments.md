@@ -153,7 +153,7 @@ Under the segments section, you can see a list of segments that are being evalua
 
 >[!IMPORTANT]
 >
->Metrics for up to 800 segments are available at this time.
+>This dashboard view currently supports up to 800 segment metrics.
 
 For the segments section, the following metrics are available:
 
