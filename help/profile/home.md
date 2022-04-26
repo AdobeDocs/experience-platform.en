@@ -28,7 +28,7 @@ The Real-Time Customer Profile is composed of only a single entity with various 
 ![image](https://user-images.githubusercontent.com/6667779/165386001-383e7792-f3e8-484c-8a1b-faf8c3912bcb.png)
 
 >[!IMPORTANT]
->Note that entities that exist outside of the primary entity of the Real-Time Customer Profile are only used for segmentation purposes
+>Note that entities that exist outside of the primary entity of the Real-Time Customer Profile are only used for batch segmentation purposes
 
 ### Profile data store
 
