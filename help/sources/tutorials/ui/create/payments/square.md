@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;Square;square
 title: Create a Square Source Connection in the UI
 description: Learn how to create a Square source connection using the Adobe Experience Platform UI.
+exl-id: 7cdfeb36-c989-4875-bb94-e6594ddf30da
 ---
 # Create a [!DNL Square] source connection in the UI
 
