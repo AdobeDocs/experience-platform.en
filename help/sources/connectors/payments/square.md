@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;square
 solution: Experience Platform
 title: Square Source Connector Overview
 description: Learn how to connect Square to Adobe Experience Platform using APIs or the user interface.
+exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
 ---
 # [!DNL Square] connector
 
