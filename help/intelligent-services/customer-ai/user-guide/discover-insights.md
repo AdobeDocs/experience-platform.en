@@ -193,7 +193,7 @@ As you enable more clients in Customer AI, marketers will vet the accuracy of th
 
 ### Lift chart
 
-![lift chart](../images/user-guide/lift_chart.png)
+![lift chart](../images/user-guide/lift-chart.png)
 
 The lift chart measures the improvement of using a predictive model instead of random targeting. After sorting the customers by propensity score from high to low, the population is split into deciles - 10 equally sized groups. `Lift = Rate of outcome` in bin divided by Overall rate of positive outcome across the entire eligible population. 
 
@@ -204,7 +204,7 @@ Indicators of good model quality include:
 
 ### Gains chart
 
-![gains chart](../images/user-guide/gains_chart.png)
+![gains chart](../images/user-guide/gains-chart.png)
 
 The cumulative gains chart measures the percentage of positive outcomes captured by targeting scores above a certain threshold. After sorting the customers by propensity score from high to low, the population is split into deciles - 10 equally sized groups. A perfect model would capture all of the positive outcomes in the highest score deciles. A baseline random targeting method captures positive outcomes proportionally to the size of the group - targeting 30% of the users would capture 30% of the outcomes.
 
