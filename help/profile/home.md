@@ -19,6 +19,17 @@ The relationship between Real-time Customer Profile and other services within Ex
 
 [!DNL Real-time Customer Profile] merges data from various enterprise systems and then provides access to that data in the form of customer profiles with related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels. The following sections highlight some of the core concepts that you must understand in order to effectively build and maintain profiles within Platform.
 
+### Profile Entity Composition
+
+The Real-Time Customer Profile is composed of only a single entity with various supporting entities around. This signle entity is commonly referred to as the primary entity within the Real-Time Customer Profile. The primary entity is composed of traits, behaviors and segment memberships of an profile. Other entities have been built to simplify the data modeling process around denormalization while also allowing the segmentation engine to utilze data outside of the primary entity of the profile.  These other entities are as follows:  
+- **_Dimensional Entity_** - more commonly referred to as the lookup / classification entity
+- **_B2B Entity_** - supports the complexity of person, account and opportunity relationships
+
+![image](https://user-images.githubusercontent.com/6667779/165386001-383e7792-f3e8-484c-8a1b-faf8c3912bcb.png)
+
+>[!IMPORTANT]
+>Note that entities that exist outside of the primary entity of the Real-Time Customer Profile are only used for segmentation purposes
+
 ### Profile data store
 
 Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] data store. The [!DNL Profile] store is separate from catalog data in the data lake and [!DNL Identity Service] data in the identity graph.
