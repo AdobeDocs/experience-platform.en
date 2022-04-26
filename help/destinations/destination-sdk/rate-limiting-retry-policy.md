@@ -12,13 +12,13 @@ When configuring a destination using Destination SDK, you can select between two
 
 ## Best effort aggregation {#best-effort-aggregation}
 
-For any HTTP calls made to your destination that fail, Experience Platform attempts to make the call again one more time immediately after the first call. If the still fails on the second attempt, Experience Platform drops the call and does not reattempt it a third time.
+For any HTTP calls made to your destination that fail, Experience Platform attempts to make the call again one more time immediately after the first call. If the call still fails on the second attempt, Experience Platform drops the call and does not reattempt it a third time.
 
 ## Configurable aggregation {#configurable-aggregation}
 
 In the case of destination platforms set up with configurable aggregation, Experience Platform distinguishes between the error type returned by your platform:
 
-* Errors where Experience Platform retries to send the data to your platform
+* Errors where Experience Platform retries to send the data to your platform:
   * HTTP response codes 420 and 429
   * HTTP response codes greater than 500
 * Errors where Experience Platform *does not* retry to send the data to your platform: all the other ones returned by your platform
