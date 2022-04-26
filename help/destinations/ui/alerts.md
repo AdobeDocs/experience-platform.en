@@ -15,7 +15,7 @@ This document provides steps on how to subscribe receive alerts messages for you
 
 This document requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Destinations](../home.md): Pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases..
+* [Destinations](../home.md): Pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 * [Observability](../../observability/home.md): [!DNL Observability Insights] allows you to monitor Platform activities through the use of statistical metrics and event notifications.
   * [Alerts](../../observability/alerts/overview.md): When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Platform can deliver alert messages to any users in your organization who have subscribed to them.
 
@@ -33,7 +33,7 @@ This document requires a working understanding of the following components of Ad
 
 You can enable alerts for your dataflows during the [!UICONTROL Configure new destination] step of the [destination connection](connect-destination.md) workflow.
 
-![UI image showing the destination alerts section](../assets/ui/alerts/destination-alerts.png)
+![UI image showing the destination alerts section.](../assets/ui/alerts/destination-alerts.png)
 
 Select the alerts you would like to subscribe to and then select **[!UICONTROL Next]** to review and finish your dataflow.
 
