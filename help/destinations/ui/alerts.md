@@ -50,8 +50,6 @@ The alerts available to destination dataflows are described in the table below.
 | Destination Flow Run Start | This alert notifies you when a destination flow run starts activating a segment. |
 | Activation Skipped Rate Exceeded| This alert notifies you when the activation skip rate has exceeded 1% of total activations. Identities are skipped during activation when they have missing attributes or consent violation.|
 
-
-
 ## Receive alerts
 
 Once your destination dataflow runs, you can receive alerts through the UI or by email.
