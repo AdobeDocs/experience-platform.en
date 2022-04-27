@@ -78,7 +78,8 @@ For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overv
 
 | Feature | Description |
 | ----------- | ----------- |
-| [In-context alerts for destination dataflows](../../destinations/ui/alerts.md) | You can now subscribe to alerts when creating a destination dataflow, to receive alert messages regarding the status, success, or failure of your dataflow run. You can choose to receive alerts in the Experience Platform UI or via email. |
+| Advanced Enterprise Destination Connectors | Three enterprise destination connectors are now generally available: [Amazon Kinesis](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](../../destinations/catalog/streaming/http-destination.md). <br> The general availability of enterprise destination connectors includes all the capabilities offered previously in the Beta phase, and more: <ul><li>New authentication capabilities, including [Shared Access Signature in Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) and more [authentication types](../../destinations/catalog/streaming/http-destination.md#authentication-information) (bearer tokens, OAuth 2) in the HTTP API destination;</li><li>[Backfilling historical profile data](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (sending historical profiles qualified for the segment when first activated);</li><li>Dataflow runs metrics are now supported for these destinations;</li><li>[Additional segment metadata](../../destinations/catalog/streaming/http-destination.md#destination-details) included in the data payload, including segment names and segment timestamps;</li><li>Support for [static IP addresses](/help/destinations/catalog/streaming/ip-address-allow-list.md) for customers who need to allowlist Experience Platform.</li></ul> |
+| In-context alerts for destination dataflows | You can now [subscribe to alerts]((../../destinations/ui/alerts.md)) when creating a destination dataflow, to receive alert messages regarding the status, success, or failure of your dataflow run. You can choose to receive alerts in the Experience Platform UI or via email. |
 
 **New destinations**
 
@@ -86,6 +87,8 @@ For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overv
 | ----------- | ----------- |
 | [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Connect and activate data to the Criteo advertising platform. |
 | [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | Connect and activate data to the Sendgrid platform for transactional and marketing emails. |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
