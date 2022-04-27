@@ -511,7 +511,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 +++
 
-### [!DNL Data Landing Zone] (DLZ) destination server example configuration {#sftp-server-sample}
+### [!DNL Data Landing Zone] (DLZ) destination server example configuration {#dlz-server-sample}
 
 +++View a sample for a [!DNL Data Landing Zone (DLZ)] destination server configuration
 
