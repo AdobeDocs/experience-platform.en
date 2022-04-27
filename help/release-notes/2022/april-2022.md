@@ -95,6 +95,13 @@ For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overv
 | ----------- | ----------- |
 | [In-context alerts for destination dataflows](../../destinations/ui/alerts.md) | You can now subscribe to alerts when creating a destination dataflow, to receive alert messages regarding the status, success, or failure of your dataflow run. You can choose to receive alerts in the Experience Platform UI or via email. |
 
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Connect and activate data to the Criteo advertising platform. |
+| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | Connect and activate data to the Sendgrid platform for transactional and marketing emails. |
+
 ## Experience Data Model (XDM) {#xdm}
 
 XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
