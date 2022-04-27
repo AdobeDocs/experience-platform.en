@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics; alerts;destinations
 description: You can subscribe to alerts when creating a dataflow, to receive alert messages regarding the status, success, or failure of your flow run.
 title: Subscribe to in-context destination alerts
+exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 ---
 # Subscribe to in-context destination alerts
 
