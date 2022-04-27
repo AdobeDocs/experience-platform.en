@@ -6995,7 +6995,7 @@ curl -X POST \
               "name": "Mapping",
               "params": {
                   "mappingId": "a87f130e82f04d5188da01f087805c4b",
-                  "mappingVersion": "0"
+                  "mappingVersion": 0
               }
           }
       ],
