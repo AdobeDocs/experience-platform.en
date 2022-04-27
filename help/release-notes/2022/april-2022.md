@@ -157,7 +157,7 @@ Attribution AI and Customer AI allow customers to configure advanced AI/ML model
 
 For more information on [!DNL Intelligent Services], please see the [[!DNL Intelligent Services] overview](../../intelligent-services/home.md).
 
-### Real-time Customer Data Platform B2B Edition {#B2B}
+## Real-time Customer Data Platform B2B Edition {#B2B}
 
 Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
