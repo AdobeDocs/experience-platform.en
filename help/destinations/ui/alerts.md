@@ -37,7 +37,10 @@ You can enable alerts for your dataflows during the [!UICONTROL Configure new de
 
 Select the alerts you would like to subscribe to and then select **[!UICONTROL Next]** to review and finish your dataflow.
 
-The available alerts for destination dataflows are:
+The alerts available to destination dataflows are described in the table below.
+
+* For streaming destinations, only the [!DNL Activation Skipped Rate Exceeded] alert is available.
+* For file-based destinations, all alerts are available.
 
 | Alerts | Description |
 | --- | --- |
@@ -45,7 +48,9 @@ The available alerts for destination dataflows are:
 | Destination Flow Run Failure | This alert notifies you when an error occurs while activating a segment to a destination. |
 | Destination Flow Run Success | This alert notifies you when a segment is successfully activated to a destination. |
 | Destination Flow Run Start | This alert notifies you when a destination flow run starts activating a segment. |
-| Activation Skip Rate Exceeded| This alert notifies you when the activation skip rate has exceeded 1% of total activations. Identities are skipped during activation when they have missing attributes or consent violation.| 
+| Activation Skipped Rate Exceeded| This alert notifies you when the activation skip rate has exceeded 1% of total activations. Identities are skipped during activation when they have missing attributes or consent violation.|
+
+
 
 ## Receive alerts
 
@@ -69,13 +74,13 @@ Select the alert message to see specific information on your dataflow.
 
 ![UI image showing how to select a notification](../assets/ui/alerts/select-alert-message.png)
 
-The [!UICONTROL Dataflow run overview] page appears. The upper half of the screen displays an overview on your dataflow, including information on its attributes, corresponding dataflow run ID, and high-level error summary.
+The [!UICONTROL Dataflow run details] page appears. The upper half of the screen displays an overview on your dataflow, including information on its attributes, corresponding dataflow run ID, and high-level error summary.
 
-![dataflow-overview](../assets/ui/alerts/dataflow-overview.png)
+![UI image showing the dataflow run details page.](../assets/ui/alerts/dataflow-overview.png)
 
 The lower half of the page displays any [!UICONTROL Dataflow run errors] that ocurred during the dataflow run stage. From here, you can preview error diagnostics or use the [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) to download error diagnostics or the file manifest that corresponds to your dataflow.
 
-![dataflow-run-errors](../assets/ui/alerts/dataflow-run-error.png)
+![UI image showing the dataflow run details page, with a highlight on the errors section.](../assets/ui/alerts/dataflow-run-error.png)
 
 For more information on handling dataflow errors, see the guide on [monitoring destinations dataflows in the UI](../../dataflows/ui/monitor-destinations.md).
 
