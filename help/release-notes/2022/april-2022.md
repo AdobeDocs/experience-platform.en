@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes April 2022
 description: The April 2022 release notes for Adobe Experience Platform.
+exl-id: 39233787-3089-4469-8363-b006ae41ae21
 ---
 # Adobe Experience Platform release notes 
 
