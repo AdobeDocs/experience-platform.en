@@ -85,8 +85,8 @@ For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overv
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Connect and activate data to the Criteo advertising platform. |
-| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | Connect and activate data to the Sendgrid platform for transactional and marketing emails. |
+| [!DNL Criteo] | Connect and activate data to the [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) advertising platform. |
+| [!DNL Sendgrid]| Connect and activate data to the [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) platform for transactional and marketing emails. |
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
