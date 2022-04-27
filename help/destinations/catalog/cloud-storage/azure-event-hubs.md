@@ -136,7 +136,7 @@ From a profile attributes point of view, any changes to the four attributes mapp
 
 ## Historical data backfill {#historical-data-backfill}
 
-When you add a new segment to an existing destination, or when you create a new destination and map segments to it, Experience Platform exports historical segment qualification data to the destination within approximately one hour. Profiles which qualified for the segment *before* the segment was added to the destination are exported to the destination as part of the first data export to the destination. 
+When you add a new segment to an existing destination, or when you create a new destination and map segments to it, Experience Platform exports historical segment qualification data to the destination. Profiles which qualified for the segment *before* the segment was added to the destination are exported to the destination within approximately one hour.
 
 ## Exported data {#exported-data}
 
