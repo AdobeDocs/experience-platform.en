@@ -1,11 +1,11 @@
 ---
-title: Release Notes
+title: Adobe Experience Platform Debugger Release Notes
 description: The latest release notes for Adobe Experience Platform Debugger.
 keywords: debugger;experience Platform Debugger extension;chrome;extension;release notes
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
-# Release notes
+# Adobe Experience Platform Debugger release notes
 
 ## Version 1.3.0 - January 28, 2022
 
