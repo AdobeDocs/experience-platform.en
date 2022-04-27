@@ -189,7 +189,7 @@ Depending on if you are predicting churn or conversion, the [!UICONTROL Distribu
 
 ## Model evaluation {#model-evaluation}
 
-As you enable more clients in Customer AI, marketers will vet the accuracy of the models with data scientists (internal or external) before using the results to create and target audiences. So far, most have data science teams but simply looking at actual conversion/churn rates after an outcome passes is no longer sufficient. Three metrics that enable you to trust the models have now been added - **AUC**, **lift** and **gains charts**, etc.
+In addition to tracking the predicted and actual outcomes over time on the Historical Performance tab, marketers have even more transparency over model quality with the Model Evaluation tab. A user can use the **Lift** and **Gains** charts to determine how much better using the predictive model is over random targeting and how many positive outcomes are be captured at each score cutoff. This is useful for segmentation and for aligning return on investment with marketing actions.
 
 ### Lift chart
 
