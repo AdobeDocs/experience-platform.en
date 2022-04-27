@@ -87,9 +87,9 @@ For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the 
 
 If you have been utilizing these destinations in the Beta phase, please note the following:
 
-* If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
-* If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
-* The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
+- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
+- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
+- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
 
 **New destinations**
 
