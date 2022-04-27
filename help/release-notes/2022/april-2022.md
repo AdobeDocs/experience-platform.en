@@ -9,28 +9,14 @@ exl-id: 39233787-3089-4469-8363-b006ae41ae21
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Dataflows](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
+- [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Sources](#sources)
-
-## [!DNL Intelligent Services] {#intelligent-services}
-
-Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
-
-Attribution AI and Customer AI allow customers to configure advanced AI/ML models for marketing attribution and customer propensity. The Multi Dataset feature helps customers to bring in multiple datasets at the time of model configuration without the need to stitch and prepare data in advance.
-
-**Updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Support for Multi Dataset | The Multi Dataset feature now supports all Experience Event datasets as well as the selection of Identity Map as an identity. Customers can select the Identity Map and any associated IDs as long as there is a common identity namespace across datasets. Attribution AI supports the following schemas: Adobe Analytics, Experience Event, Consumer Experience Event. Customer AI supports all of these schemas plus the Adobe Audience Manager schema. For more information on Multi Dataset support in Attribution AI & Customer AI, refer to the [Attribution AI user guide](../../intelligent-services/attribution-ai/user-guide.md) and [Customer AI user guide](../../intelligent-services/customer-ai/user-guide/configure.md). |
-| New model evaluation metrics in Customer AI | New Gains charts in Customer AI allow marketers to determine the group size to target based on their budget and ROI goals. New Lift charts measure the quality of the model, providing better visibility into the lift they would get over random targeting. For more information, see the [discover insights with Customer AI](../../intelligent-services/customer-ai/user-guide/discover-insights.md) document. |
-
-For more information on [!DNL Intelligent Services], please see the [[!DNL Intelligent Services] overview](../../intelligent-services/home.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -83,6 +69,23 @@ For more general information on dataflows, refer to the [dataflows overview](../
 | Support for importing existing mapping rules | You can now import mapping rules from an existing dataflow to accelerate your dataflow configurations and limit errors. See the tutorial on [importing existing mapping rules](../../data-prep/ui/mapping.md) for more information. |
 
 For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+| [In-context alerts for destination dataflows](../../destinations/ui/alerts.md) | You can now subscribe to alerts when creating a destination dataflow, to receive alert messages regarding the status, success, or failure of your dataflow run. You can choose to receive alerts in the Experience Platform UI or via email. |
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Connect and activate data to the Criteo advertising platform. |
+| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | Connect and activate data to the Sendgrid platform for transactional and marketing emails. |
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -138,6 +141,21 @@ XDM is an open-source specification that provides common structures and definiti
 {style="table-layout:auto"}
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+
+## [!DNL Intelligent Services] {#intelligent-services}
+
+Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
+
+Attribution AI and Customer AI allow customers to configure advanced AI/ML models for marketing attribution and customer propensity. The Multi Dataset feature helps customers to bring in multiple datasets at the time of model configuration without the need to stitch and prepare data in advance.
+
+**Updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Support for Multi Dataset | The Multi Dataset feature now supports all Experience Event datasets as well as the selection of Identity Map as an identity. Customers can select the Identity Map and any associated IDs as long as there is a common identity namespace across datasets. Attribution AI supports the following schemas: Adobe Analytics, Experience Event, Consumer Experience Event. Customer AI supports all of these schemas plus the Adobe Audience Manager schema. For more information on Multi Dataset support in Attribution AI & Customer AI, refer to the [Attribution AI user guide](../../intelligent-services/attribution-ai/user-guide.md) and [Customer AI user guide](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| New model evaluation metrics in Customer AI | New Gains charts in Customer AI allow marketers to determine the group size to target based on their budget and ROI goals. New Lift charts measure the quality of the model, providing better visibility into the lift they would get over random targeting. For more information, see the [discover insights with Customer AI](../../intelligent-services/customer-ai/user-guide/discover-insights.md) document. |
+
+For more information on [!DNL Intelligent Services], please see the [[!DNL Intelligent Services] overview](../../intelligent-services/home.md).
 
 ## Real-time Customer Data Platform B2B Edition {#B2B}
 
