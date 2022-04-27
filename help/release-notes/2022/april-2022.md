@@ -13,6 +13,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Dataflows](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
+- [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Sources](#sources)
@@ -83,6 +84,16 @@ For more general information on dataflows, refer to the [dataflows overview](../
 | Support for importing existing mapping rules | You can now import mapping rules from an existing dataflow to accelerate your dataflow configurations and limit errors. See the tutorial on [importing existing mapping rules](../../data-prep/ui/mapping.md) for more information. |
 
 For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+| [In-context alerts for destination dataflows](../../destinations/ui/alerts.md) | You can now subscribe to alerts when creating a destination dataflow, to receive alert messages regarding the status, success, or failure of your dataflow run. You can choose to receive alerts in the Experience Platform UI or via email. |
 
 ## Experience Data Model (XDM) {#xdm}
 
