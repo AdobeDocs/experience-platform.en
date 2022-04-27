@@ -139,7 +139,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
-### Real-time Customer Data Platform B2B Edition {#B2B}
+## Real-time Customer Data Platform B2B Edition {#B2B}
 
 Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
