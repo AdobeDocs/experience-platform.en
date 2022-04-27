@@ -45,6 +45,10 @@ Before you can send audience data to a destination, you must set up a connection
 
    ![Connect to destination](../assets/ui/connect-destinations/connect-destination.png)
 
+1. (Optional) Select the destination dataflow alerts that you want to subscribe to. You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts.
+
+   ![UI image showing the in-context destination alerts subscription options](../assets/ui/connect-destinations/subscribe-to-alerts.png)
+
 1. Select **[!UICONTROL Next]**.
 
    ![Connect to destination](../assets/ui/connect-destinations/next.png)
