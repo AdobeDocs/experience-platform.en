@@ -81,6 +81,16 @@ For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overv
 | Advanced Enterprise Destination Connectors | Three enterprise destination connectors are now generally available: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md), and [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> The general availability of enterprise destination connectors includes all the capabilities offered previously in the Beta phase, and more: <ul><li>New authentication capabilities, including [Shared Access Signature in Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) and more [authentication types](../../destinations/catalog/streaming/http-destination.md#authentication-information) (bearer tokens, OAuth 2) in the HTTP API destination;</li><li>[Backfilling historical profile data](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (sending historical profiles qualified for the segment when first activated);</li><li>Dataflow runs metrics are now supported for these destinations;</li><li>[Additional segment metadata](../../destinations/catalog/streaming/http-destination.md#destination-details) included in the data payload, including segment names and segment timestamps;</li><li>Support for [static IP addresses](/help/destinations/catalog/streaming/ip-address-allow-list.md) for customers who need to allowlist Experience Platform.</li></ul> |
 | In-context alerts for destination dataflows | You can now [subscribe to alerts](../../destinations/ui/alerts.md) when creating a destination dataflow, to receive alert messages regarding the status, success, or failure of your dataflow run. You can choose to receive alerts in the Experience Platform UI or via email. |
 
+### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
+
+For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
+
+If you have been utilizing these destinations in the Beta phase, please note the following:
+
+* If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
+* If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
+* The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
+
 **New destinations**
 
 | Destination | Description |
