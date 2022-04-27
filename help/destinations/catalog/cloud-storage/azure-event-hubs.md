@@ -124,6 +124,10 @@ A profile export to the destination can be determined by a profile qualifying fo
 
 From a profile attributes point of view, any changes to the four attributes mapped above will determine a destination export and any of the four mapped attributes present on the profile will be present in the data export.
 
+## Historical data backfill {#historical-data-backfill}
+
+When you add a new segment to an existing destination, or when you create a new destination and map segments to it, Experience Platform exports historical segment qualification data to the destination within approximately one hour. Profiles which qualified for the segment *before* the segment was added to the destination are exported to the destination as part of the first data export to the destination. 
+
 ## Exported data {#exported-data}
 
 Your exported [!DNL Experience Platform] data lands in your [!DNL Azure Event Hubs] destination in JSON format. For example, the export below contains a profile that has qualified for a certain segment, is a member of another two segments, and exited another segment. The export also includes the profile attribute first name, last name, date of birth, and personal email address. The identities for this profile are ECID and email.
