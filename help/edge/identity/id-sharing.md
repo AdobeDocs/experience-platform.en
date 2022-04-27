@@ -14,13 +14,15 @@ The Adobe Experience Platform Web SDK supports visitor ID sharing capabilities t
 
 ### Deliver consistent personalization between mobile apps and mobile websites
 
-A clothing company wants to personalize their customers' experience based on their interests, and keep the personalization accurate across customer devices. By using the mobile-to-web ID sharing feature, they can ensure that the most accurate offers are presented to customers, whether they are shopping from their smartphones, laptops, or tablets.
-
 A clothing company wants to personalize their customers' experience based on their interests, and keep the personalization accurate in a mobile application that also loads WebViews. By using the mobile-to-web ID sharing feature, they can ensure that the most accurate offers are presented to customers, using the same visitor identifier in the app and mobile web content by passing the [!DNL ECID] to the mobile web URL.
 
 ### Deliver consistent personalization across domains
 
 A retailer with multiple online stores wants to personalize the shopper experience across their domains, based on customer interests. Using the Web SDK cross-domain ID sharing feature, the retailer can deliver accurate offers based on customer interests, across all of their domains.
+
+### Enhance visitor activity reporting
+
+A technology retailer wants to improve their visitor activity reporting with information on when their visitors move from the mobile application to their mobile website, or to their other domains. Using the Web SDK cross-domain ID sharing feature, the marketing team can accurately track visitors across their web properties and generate activity reports.
 
 ## Prerequisites {#prerequisites}
 
@@ -35,7 +37,7 @@ The mobile-to-web ID sharing feature is supported by Web SDK version 2.10.0 or l
 The query string parameter includes:
 
 * The Experience Cloud `orgID` that must match the `orgID` configured in the [!DNL Web SDK].
-* A timestamp parameter that cannot be older than 5 minutes.
+* A timestamp parameter that cannot be older than five minutes.
 * The `ECID`.
 
 Mobile-to-web ID sharing uses the `adobe_mc` parameter. When the `adobe_mc` parameter is present and valid, the `ECID` from the query string is automatically added to the identity map in the first request made to the Edge Network. All subsequent Edge Network interactions will use that `ECID`.
