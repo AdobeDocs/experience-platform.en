@@ -45,7 +45,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Recently created destinations]](#recently-created-destinations)
 * [[!UICONTROL Recently activated segments]](#recently-activated-segments)
 * [[!UICONTROL Recently activated segments by destination]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Audience size trend]](#audience-size-trends)
+* [[!UICONTROL Audience size trend]](#audience-size-trend)
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
@@ -106,6 +106,10 @@ A time period for the audience trend over the past 30 days, 90 days, or 12 month
 The second dropdown menu lists every available segment that can be sent to the destination account chosen at the top of the dashboard. 
 
 ![The audience size trend widget.](../images/destinations/audience-size-trend.png)
+
+The **[!UICONTROL Audience size trend]** widget provides a [!UICONTROL Captions] button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog. A machine learning model automatically generates captions to describe the key trends and important events by analyzing the chart and segment data.
+
+![The automatic captions dialog for the Audience size trend widget.](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
 
