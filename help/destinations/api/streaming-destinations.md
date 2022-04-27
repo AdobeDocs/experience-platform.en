@@ -9,10 +9,6 @@ exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 ---
 # Connect to streaming destinations and activate data using the Flow Service API
 
->[!NOTE]
->
->The [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations in Platform are currently in beta. The documentation and the functionality are subject to change.
-
 >[!IMPORTANT]
 > 
 >To connect to a destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). 
