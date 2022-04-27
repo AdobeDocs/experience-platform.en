@@ -33,6 +33,7 @@ feature: Destinations
     * [Edit activation dataflows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
     * [Monitor dataflows](./ui/monitor-dataflows.md)
+    * [Subscribe to in-context destination alerts](ui/alerts.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
     * Adobe destinations{#adobe}
