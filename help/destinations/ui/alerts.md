@@ -50,11 +50,11 @@ The alerts available to destination dataflows are described in the table below.
 | Destination Flow Run Start | This alert notifies you when a destination flow run starts activating a segment. |
 | Activation Skipped Rate Exceeded| This alert notifies you when the activation skip rate has exceeded 1% of total activations. Identities are skipped during activation when they have missing attributes or consent violation.|
 
-## Receive alerts
+## Receiving alerts {#receiving-alerts}
 
 Once your destination dataflow runs, you can receive alerts through the UI or by email.
 
-### In the UI
+### Receiving alerts in the UI {#receiving-alerts-in-ui}
 
 Alerts are represented in the UI by a notification icon in the top header of the Platform UI. Select the notification icon to see specific alert messages regarding your dataflows.
 
@@ -82,7 +82,7 @@ The lower half of the page displays any [!UICONTROL Dataflow run errors] that oc
 
 For more information on handling dataflow errors, see the guide on [monitoring destinations dataflows in the UI](../../dataflows/ui/monitor-destinations.md).
 
-### By email
+### Receiving alerts by email {#receiving-alerts-by-email}
 
 Alerts for your dataflows are also delivered to you by email. Select the dataflow name in the email body to see more information on your dataflow.
 
@@ -92,7 +92,7 @@ Similar to the UI alert, the [!UICONTROL Dataflow run overview] page appears, pr
 
 ![dataflow-overview](../assets/ui/alerts/dataflow-overview.png)
 
-## Subscribe and unsubscribe to alerts
+## Subscribe and unsubscribe to alerts {#subscribe-and-unsubscribe}
 
 You can subscribe to more alerts or unsubscribe from established alerts for an existing destination dataflow in the destinations [!UICONTROL Browse] page.
 
@@ -106,6 +106,6 @@ A pop-up window appears, providing you with a list of destination alerts. Select
 
 ![UI image showing the destination alerts subscriptions page](../assets/ui/alerts/destination-alerts-list.png)
 
-## Next steps
+## Next steps {#next-steps}
 
 This document provided a step-by-step guide on how to subscribe to in-context alerts for your destination dataflows. For more information, see the [alerts UI guide](../../observability/alerts/ui.md).
