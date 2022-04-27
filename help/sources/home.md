@@ -127,7 +127,8 @@ Experience Platform provides support for ingesting data from a third-party marke
 
 Experience Platform provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL PayPal] connector](connectors/payments/paypal.md)
+- [[!DNL PayPal]](connectors/payments/paypal.md)
+- [[!DNL Square]](connectors/payments/square.md)
 
 ### Streaming {#streaming}
 
