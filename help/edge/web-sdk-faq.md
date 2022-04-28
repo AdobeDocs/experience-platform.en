@@ -74,9 +74,11 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 Alloy is the code name for Adobe Experience Platform Web SDK. It is used within the SDK's source code and filename, though Adobe Experience Platform Web SDK is the official name.
 
-## Do customers need to buy Adobe Experience Platform to use the Web SDK?
+## Do customers need to buy Adobe Experience Platform to use the [!DNL Web SDK]?
 
-No. Any Adobe Digital Experience customer can use it. Totally free. Any customer wanting to use the Web SDK will be given access to create schemas and datasets in the Adobe Experience Platform UI.
+No. Any Adobe Digital Experience customer can use the Adobe Experience Platform Web SDK free of charge. To use the  Web SDK, you must have your organization provisioned for this feature. If you would like to get access, please fill out the following [form](https://adobe.ly/websdkaccess) and Adobe will provision you with access to the [Datastreams UI](fundamentals/datastreams.md) and the Adobe Experience Platform UI (if needed).
+
+Customers who wish to use the [!DNL Web SDK] will be given access to create schemas, datasets, and identity namespaces in the Adobe Experience Platform UI.
 
 ## Who should use the Web SDK?
 
