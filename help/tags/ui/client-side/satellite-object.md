@@ -43,7 +43,14 @@ var product = _satellite.getVar('product');
 
 In the example provided, if a data element exists with a matching name, the data element's value will be returned. If no matching data element exists, it will then check to see if a custom variable with a matching name has previously been set using `_satellite.setVar()`. If a matching custom variable is found, its value will be returned.
 
-Note that in many form fields in the Data Collection user interface, you can use the `%%` syntax to reference variables, reducing the need to call `_satellite.getVar()`. For example, using %product% will access the value of the product data element or custom variable.
+Note that in many form fields in the Data Collection user interface, you can use the `%%` syntax to reference variables, reducing the need to call `_satellite.getVar()`. For example, using `%product%` will access the value of the product data element or custom variable.
+
+You can also pass the `event` object from the calling Rule into `_satellite.getVar()` like so:
+
+```javascript
+// event refers to the calling Rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
 ## `setVar`
 
