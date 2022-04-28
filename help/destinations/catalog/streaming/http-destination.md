@@ -87,6 +87,11 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authentication information {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Client credentials type"
+>abstract="Select **Body Form Encoded** to include the client ID and client secret in the body of the request or **Basic Authorization** to include client ID and client secret in an authorization header. View examples in the documentation."
+
 #### Bearer token authentication {#bearer-token-authentication}
 
 If you select the **[!UICONTROL Bearer token]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
@@ -116,11 +121,6 @@ If you select the **[!UICONTROL OAuth 2 Password]** authentication type to conne
 * **[!UICONTROL Password]**: The password to access your HTTP endpoint.
 
 #### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_clientcredentialstype"
->title="Client credentials type"
->abstract="Select **Body Form Encoded** to include the client ID and client secret in the body of the request or **Basic Authorization** to include client ID and client secret in an authorization header. View examples in the documentation."
 
 If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
