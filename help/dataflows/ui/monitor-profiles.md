@@ -32,7 +32,9 @@ This guide requires a working understanding of the following components of Adobe
 >title="Dataflow run details"
 >abstract="The Dataflow run details page displays more information on your Profile dataflow run, including its IMS Org ID and dataflow run ID."
 
-To access the Profiles dashboard, select Monitoring in the left navigation. Once on the Monitoring page, select the Profiles card.
+To access the **[!UICONTROL Profiles]** dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Profiles]** card.
+
+IMAGE
 
 The [!UICONTROL Profile processing] page contains information on records ingested to [!DNL Profile], including number of profile fragments created, profile fragments updated, and the total number of profile fragments.
 
