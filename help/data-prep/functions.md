@@ -37,7 +37,7 @@ The following tables list all supported mapping functions, including sample expr
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Concatenates the given strings. | <ul><li>STRING: The strings that will be concatenated.</li></ul> | concat(STRING_1, STRING_2) | concat("Hi, ", "there", "!") | `"Hi, there!"` |
-| explode | Splits the string based on a regex and returns an array of parts. Can optionally include regex to split the string. By default, the splitting resolves to ",". The following delimiters **need** to be escaped with `\`: `+, ?, ^, |, ., [, (, {, ), *, $, \` If you include multiple characters as the delimiter, the delimiter will be treated as a multi-character delimiter. | <ul><li>STRING: **Required** The string that needs to be split.</li><li>REGEX: *Optional* The regular expression that can be used to split the string.</li></ul> | explode(STRING, REGEX) | explode("Hi, there!", " ") | `["Hi,", "there"]` |
+| explode | Splits the string based on a regex and returns an array of parts. Can optionally include regex to split the string. By default, the splitting resolves to ",". The following delimiters **need** to be escaped with `\`: `+, ?, ^, \|, ., [, (, {, ), *, $, \` If you include multiple characters as the delimiter, the delimiter will be treated as a multi-character delimiter. | <ul><li>STRING: **Required** The string that needs to be split.</li><li>REGEX: *Optional* The regular expression that can be used to split the string.</li></ul> | explode(STRING, REGEX) | explode("Hi, there!", " ") | `["Hi,", "there"]` |
 | instr | Returns the location/index of a substring.| <ul><li>INPUT: **Required** The string that is being searched.</li><li>SUBSTRING: **Required** The substring that is being searched for within the string.</li><li>START_POSITION: *Optional* The location of where to start looking in the string.</li><li>OCCURRENCE: *Optional* The nth occurrence to look for from the start position. By default, it is 1. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr("adobe.com", "com") | 6 |
 | replacestr | Replaces the search string if present in original string. | <ul><li>INPUT: **Required** The input string.</li><li>TO_FIND: **Required** The string to look up within the input.</li><li>TO_REPLACE: **Required** The string that will replace the value within "TO_FIND".</li></ul> | replacestr(INPUT, TO_FIND, TO_REPLACE) | replacestr("This is a string re test", "re", "replace") | "This is a string replace test" |
 | substr | Returns a substring of a given length. | <ul><li>INPUT: **Required** The input string.</li><li>START_INDEX: **Required** The index of the input string where the substring starts.</li><li>LENGTH: **Required** The length of the substring.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr("This is a substring test", 7, 8) | " a subst" |
@@ -142,6 +142,8 @@ The following tables list all supported mapping functions, including sample expr
 
 {style="table-layout:auto"}
 
+For information on the object copy feature, see the section [below](#object-copy).
+
 ### Hierarchies - Arrays {#arrays}
 
 >[!NOTE]
@@ -242,3 +244,46 @@ The following tables list all supported mapping functions, including sample expr
 | ua_device_class | Extracts the device class from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_device_class​(USER_AGENT) | ua_device_class​("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Phone |
 
 {style="table-layout:auto"}
+
+### Object copy {#object-copy}
+
+>[!TIP]
+>
+>The object copy feature is automatically applied when an object in the source is mapped to an object in the XDM. No additional action needed from users.
+
+You can use the object copy feature to automatically copy attributes of an object without making changes to the mapping. For example, if your source data has a structure of:
+
+```json
+address{
+        line1: 4191 Ridgebrook Way,
+        city: San Jose,
+        state: California
+        }
+```
+
+and an XDM structure of:
+
+```json
+addr{
+    addrLine1: 4191 Ridgebrook Way,
+    city: San Jose,
+    state: California
+    }
+```
+
+Then the mapping becomes:
+
+```json
+address -> addr
+address.line1 -> addr.addrLine1
+```
+
+In the example above, the `city` and `state` attributes are also ingested automatically at runtime because the `address` object is mapped to `addr`. If you were to create a `line2` attribute in the XDM structure and your input data also contains a `line2` in the `address` object, then it will also be automatically ingested without any need to manually alter the mapping.
+
+To ensure that the automatic mapping works, the following prerequisites must be met:
+
+* Parent-level objects should be mapped;
+* New attributes must have been created in the XDM schema;
+* New attributes should have matching names in the source schema and the XDM schema.
+
+If any of the prerequisites are not met, then you must manually map the source schema to the XDM schema using data prep.

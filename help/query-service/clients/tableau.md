@@ -22,6 +22,10 @@ You can now enter values to connect with Adobe Experience Platform. For more inf
 
 Ensure that you have checked the **[!UICONTROL SSL Required]** box before trying to connect.
 
+>[!IMPORTANT]
+>
+>See the [[!DNL Query Service] SSL documentation](./ssl-modes.md) to learn about SSL support for third-party connections to Adobe Experience Platform Query Service, and how to connect using `verify-full` SSL mode.
+
 After filling in all your credentials, select **[!DNL Sign In]** to continue.
     
 ![](../images/clients/tableau/sign-in.png)

@@ -40,7 +40,7 @@ All POST, PUT, and PATCH requests require an additional header:
 
 - Content-Type: application/json
 
-## Evaluate a segment
+## Evaluate a segment {#evaluate-a-segment}
 
 Once you have developed, tested, and saved your segment definition, you can then evaluate the segment through either scheduled evaluation or on-demand evaluation.
 
@@ -147,7 +147,7 @@ The following steps are required to export your audience:
 - [Monitor export progress](#monitor-export-progress) - Check the current progress of the export process. 
 - [Read audience data](#next-steps) - Retrieve the resulting XDM Individual Profiles representing the members of your audience.
 
-### Create a target dataset
+### Create a target dataset {#create-dataset}
 
 When exporting an audience, a target dataset must first be created. It is important that the dataset be configured correctly to ensure the export is successful. 
 

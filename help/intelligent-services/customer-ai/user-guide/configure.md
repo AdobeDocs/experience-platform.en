@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Configure a Customer AI Instance
 topic-legacy: Instance creation
@@ -58,7 +58,7 @@ Provide the required values and then select **[!UICONTROL Next]** to continue.
 
 ## Select data {#select-data}
 
-By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience Event, and Consumer Experience Event data to calculate propensity scores. When selecting a dataset, only ones that are compatible with Customer AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
+By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience Events in general, and Consumer Experience Event data to calculate propensity scores. When selecting a dataset, only ones that are compatible with Customer AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
 
 ![Select and search for dataset](../images/user-guide/configure-dataset-page.png)
 
@@ -84,7 +84,9 @@ There is a dataset completeness percentage value in the dataset preview. This va
 
 ### Select an identity {#identity}
 
-In order for multiple datasets to join on one another, you must select a identity type (also known as an "identity namespace") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
+You can now join multiple datasets to one another based on the identity map (field). You must select an identity type (also known as an "identity namespace") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
+
+[select same namespace](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -92,7 +94,8 @@ In order for multiple datasets to join on one another, you must select a identit
 
 To select an identity, select the underlined value located in the identity column. The select an identity popover appears.
 
-![select same namespace](../images/user-guide/identity-type.png)
+<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
+[select same namespace](../images/user-guide/cai-identity-namespace.png)
 
 In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and be more useful in individual predictions. This means that `EMAIL (personalEmail.address)` would be selected as the identity.
 
@@ -110,7 +113,8 @@ The **[!UICONTROL Define goal]** step appears and it provides an interactive env
 
 To create a goal, select **[!UICONTROL Enter Field Name]** and followed by a field from the dropdown list. Select the second input, a clause for the event's condition, then optionally provide the target value to complete the event. Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
 
-![](../images/user-guide/define-a-goal.png)
+<!-- ![](../images/user-guide/define-a-goal.png) -->
+![](../images/user-guide/cai-define-a-goal.png)
 
 ### Will occur and will not occur
 
@@ -118,7 +122,8 @@ While defining your goal, you have the option to select **[!UICONTROL Will occur
 
 For example, if you would like to set up an app to predict whether a customer will make a purchase, you can select **[!UICONTROL Will occur]** followed by **[!UICONTROL All of]** and then enter **commerce.purchases.id** (or a similar field) and **[!UICONTROL exists]** as the operator.
 
-![will occur](../images/user-guide/occur.png)
+<!-- ![will occur](../images/user-guide/occur.png) -->
+![will occur](../images/user-guide/cai-will-occur.png)
 
 However, there may be cases when you are interested in predicting whether some event will not happen in a certain timeframe. To configure a goal with this option, select **[!UICONTROL Will not occur]** from the top-level dropdown.
 
