@@ -9,6 +9,10 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 ---
 # Activate audience data to streaming segment export destinations
 
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 ## Overview {#overview}
 
 This article explains the workflow required to activate audience data in Adobe Experience Platform segment streaming destinations.
