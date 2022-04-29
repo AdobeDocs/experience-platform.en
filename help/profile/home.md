@@ -13,22 +13,24 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 The relationship between Real-time Customer Profile and other services within Experience Platform is highlighted in the following diagram:
 
-![](images/profile-overview/profile-in-platform.png) 
+![The relationship between Real-time Customer Profile and other services in Adobe Experience Platform. This diagram shows that Profile is one of the core components of Adobe Experience Platform.](images/profile-overview/profile-in-platform.png) 
 
 ## Understanding profiles
 
 [!DNL Real-time Customer Profile] merges data from various enterprise systems and then provides access to that data in the form of customer profiles with related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels. The following sections highlight some of the core concepts that you must understand in order to effectively build and maintain profiles within Platform.
 
-### Profile Entity Composition
+### Profile entity composition
 
-The Real-Time Customer Profile is composed of only a single entity with various supporting entities around. This signle entity is commonly referred to as the primary entity within the Real-Time Customer Profile. The primary entity is composed of traits, behaviors and segment memberships of an profile. Other entities have been built to simplify the data modeling process around denormalization while also allowing the segmentation engine to utilze data outside of the primary entity of the profile.  These other entities are as follows:  
-- **_Dimensional Entity_** - more commonly referred to as the lookup / classification entity
-- **_B2B Entity_** - supports the complexity of person, account and opportunity relationships
+A Real-time Customer Profile is composed of a main entity, called the **primary entity**, and various supporting entities. The primary entity is composed of traits, behaviors, and segment memberships of a profile. Other entities allow the segmentation engine to utilize data outside of the primary entity of the profile, and include the following:
 
-![image](https://user-images.githubusercontent.com/6667779/165386001-383e7792-f3e8-484c-8a1b-faf8c3912bcb.png)
+- **Dimensional entity**: The entity that is related to events and profiles which require a lookup. This is also known as the classification entity.
+- **B2B entity**: The entity that supports the complexity of person, account, and opportunity relationships.
+
+![A diagram explaining the composition of the profile entity.](./images/profile-overview/profile-entity-composition.png) 
 
 >[!IMPORTANT]
->Note that entities that exist outside of the primary entity of the Real-Time Customer Profile are only used for batch segmentation purposes
+>
+>Entities that exist outside of the primary entity of a Real-time Customer Profile are only used for batch segmentation.
 
 ### Profile data store
 
@@ -120,9 +122,9 @@ Data Governance is a series of strategies and technologies used to manage custom
 
 As it relates to accessing data, data governance plays a key role within [!DNL Experience Platform] at various levels: 
 
-*   Data usage labeling 
-*   Data access policies 
-*   Access control on data for marketing actions
+-   Data usage labeling 
+-   Data access policies 
+-   Access control on data for marketing actions
 
 Data Governance is managed at several points. These include deciding what data is ingested into [!DNL Platform] and what data is accessible after ingestion for a given marketing action. For more information, begin by reading the [data governance overview](../data-governance/home.md).
 
