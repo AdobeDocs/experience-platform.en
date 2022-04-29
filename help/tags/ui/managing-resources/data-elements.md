@@ -131,7 +131,7 @@ You can then use this in custom scripts by using the `_satellite` object syntax:
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-When using the `%%` syntax, you only need to specify the data element name. You don't need to specify `event`.
+When using percent (`%`) syntax, you only need to specify the data element name. You don't need to specify `event`.
 
 ```text
 %data element name%
