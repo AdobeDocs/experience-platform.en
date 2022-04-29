@@ -41,7 +41,7 @@ arc.ruleStash: Object<string, *>`
 ```
 
 ```javascript
-logger.log(context.arc.ruleStash);
+utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` is an object that collects every result from action modules.
