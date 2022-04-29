@@ -127,7 +127,7 @@ return eventType; // if this data element is called from a "DOM Ready" event, th
 You can then use this in custom scripts by using the `_satellite` object syntax:
 
 ```javascript
-// event refers to the calling Rule's event
+// event refers to the calling rule's event
 var rule = _satellite.getVar('return event rule', event);
 ```
 
