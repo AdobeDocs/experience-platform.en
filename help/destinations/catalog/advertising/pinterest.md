@@ -48,15 +48,17 @@ Refer to the table below for information about the destination export type and f
 
 To help you better understand how and when you should use the [!DNL Pinterest Customer List] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-
 ### Use Case #1
 
 Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
 
 ## Connect to destination {#connect}
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
 ### Connection parameters {#parameters}
 
@@ -67,6 +69,10 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Advertiser ID]**: Your Pinterest advertiser ID.
 
 ## Activate segments to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 

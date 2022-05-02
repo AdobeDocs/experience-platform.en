@@ -10,7 +10,7 @@ exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 
 >[!IMPORTANT]
 >
->This documentation page was created by Criteo. This is currently a beta product. For any inquiries or update requests, please contact Criteo directly [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>This documentation page was created by Criteo. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact Criteo directly [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo powers trusted and impactful advertising to bring richer experiences to every consumer across the open internet. With the world's largest commerce data set and best-in-class AI, Criteo ensures each touchpoint across the shopping journey is personalized to reach customers with the right ad, at the right time.
 
@@ -18,7 +18,11 @@ Criteo powers trusted and impactful advertising to bring richer experiences to e
 
 * You need to have an administrator user account on [Criteo Management Center](https://marketing.criteo.com).
 * You'll need your Criteo Advertiser ID (ask your Criteo contact if you don't have this ID).
-* Criteo only accepts SHA-256 and plain text emails (to be transformed into SHA-256 before sending). Please do not send any PII (Personal Identifiable Information, such as individual's names or phone numbers).
+
+## Limitations {#limitations}
+
+* Criteo does not currently support removing users from audiences.
+* Criteo only accepts [!DNL SHA-256]-hashed and plain-text emails (to be transformed into [!DNL SHA-256] before sending). Please do not send any PII (Personal Identifiable Information, such as individual's names or phone numbers).
 
 ![Prerequisites](../../assets/catalog/advertising/criteo/prerequisites.png)
 
@@ -53,6 +57,10 @@ When visitors leave your website, remind them what they're missing with retarget
 
 ## Connect to Criteo {#connect}
 
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
 ### Authenticate to Criteo
@@ -86,6 +94,10 @@ After authenticating to the destination, please fill in the following connection
 | Advertiser ID | Criteo Advertiser ID of your organization. Please contact your Criteo account manager to obtain this information. | Yes |
 
 ## Activate segments to this destination {#activate-segments}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
