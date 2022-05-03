@@ -8,7 +8,7 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 
 ## Version 2.10.1 - May 3, 2022
 
-* Fixed an issue where multiple persistent iframes were created for id syncs and segment destinations.
+* Fixed an issue where multiple persistent iframes were created for ID syncs and segment destinations.
 
 ## Version 2.10.0 - April 22, 2022
 
