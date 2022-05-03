@@ -23,7 +23,7 @@ The audit log categories provided by [!DNL Query Service] are as follows.
 
 The log results can be further filtered based on the time period they were executed, the action/function taken, and the status, or user that enacted the query.
 
-## Perform a [!DNL Query Service] audit log 
+## Perform a [!DNL Query Service] audit log {#perform-an-audit-log}
 
 To perform an audit for [!DNL Query Service] activity, select **[!UICONTROL Audits]** form the Platform UI left navigation rail, followed by the funnel icon (![A filter icon.](./images/audit-log/filter.png)) to display a list of filter controls to help narrow results.
 
@@ -60,7 +60,7 @@ Select any row of audit log results to open a details panel to the right of the 
 >
 >The details panel can be used to find the [!UICONTROL Asset ID]. The Asset ID is the query ID.
 
-## Available filters for [!DNL Query Service] audit log categories
+## Available filters for [!DNL Query Service] audit log categories {#available-filters}
 
 The following table details the filters available for [!DNL Query Service] audit log categories.
 
