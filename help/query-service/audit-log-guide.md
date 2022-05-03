@@ -21,17 +21,13 @@ The audit log categories provided by [!DNL Query Service] are as follows.
 | [!UICONTROL Scheduled query] | This category allows you to return the query details of any scheduled queries. |
 | [!UICONTROL Query template] | As queries are stored as templates, the [!UICONTROL Query template] category provides a record of any query run through [!DNL Query Service] UI or API. |
 
-The log results can be further filtered based on the time period they were executed, the action/function taken, and the status, or user that enacted the query.
-
 ## Perform a [!DNL Query Service] audit log {#perform-an-audit-log}
 
 To perform an audit for [!DNL Query Service] activity, select **[!UICONTROL Audits]** form the Platform UI left navigation rail, followed by the funnel icon (![A filter icon.](./images/audit-log/filter.png)) to display a list of filter controls to help narrow results.
 
-![The Platform UI audit log dashboard with Audits in the left navigation and filter controls highlighted.]()
+![The Platform UI audit log dashboard with Audits in the left navigation and filter controls highlighted.](./images/audit-log/filter-controls.png)
 
-From the [!UICONTROL Audits] dashboard [!UICONTROL Activity log] tab, you can filter all the recorded Platform actions by any of the [!DNL Query Service] categories. 
-
-See the audit log documentation for [full instructions on how to filter the logs based on category, action, user, and status](../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
+From the [!UICONTROL Audits] dashboard [!UICONTROL Activity log] tab, you can filter all the recorded Platform actions by any of the [!DNL Query Service] categories. The log results can be further filtered based on the time period they were executed, the action/function taken, and the status, or user that enacted the query. See the audit log documentation for [full instructions on how to filter the logs based on category, action, user, and status](../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
 The returned audit log data contains the following information on all queries that meet your chosen filter criteria.
 
@@ -47,6 +43,8 @@ The returned audit log data contains the following information on all queries th
 >
 >More query details are provided by downloading the log results in either CSV or JSON file formats, than are displayed by default in the audit log dashboard.
 
+![The Audits dashboard with the filtered activity log highlighted.](./images/audit-log/filtered-activity.png)
+
 <!-- In the Scheduled Query category of audit logs, what are the 'enable' and 'disable' actions in SQL?  -->
 <!-- What populates the Asset name column in the audit log results? -->
 <!-- What do the Status filters mean (Allow, Deny, Success, and Failure)? -->
@@ -54,7 +52,7 @@ The returned audit log data contains the following information on all queries th
 
 Select any row of audit log results to open a details panel to the right of the screen.
 
-![Audits dashboard Activity log tab with the details panel highlighted.]()
+![Audits dashboard Activity log tab with the details panel highlighted.](./images/audit-log/details-panel.png)
 
 >[!NOTE]
 >
@@ -75,3 +73,5 @@ The following table details the filters available for [!DNL Query Service] audit
 ## Next steps
 
 By reading this document you have a better understanding of the [!DNL Query Service] audit log capability and how it can be used to filter your [!DNL Query Service] user actions.
+
+If you are using the [!DNL Query Service] audit log capability for troubleshooting purposes, you are recommended to read the [troubleshooting guide](./troubleshooting-guide.md).  
