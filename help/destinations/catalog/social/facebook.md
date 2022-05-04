@@ -114,6 +114,10 @@ Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], ma
 
 ## Connect to the destination {#connect}
 
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
 The video below also demonstrates the steps to configure a [!DNL Facebook] destination and activate segments. 
@@ -154,6 +158,10 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
 >title="Origin of audience"
 >abstract="Advertisers collected data directly from their customers and partners."
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
