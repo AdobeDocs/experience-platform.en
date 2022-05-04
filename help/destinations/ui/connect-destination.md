@@ -7,6 +7,10 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 ---
 # Create a new destination connection
 
+>[!IMPORTANT]
+> 
+>To connect to a destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 ## Overview {#overview}
 
 Before you can send audience data to a destination, you must set up a connection to your destination platform. This article shows you how to set up a new destination using the Adobe Experience Platform user interface.
@@ -40,6 +44,10 @@ Before you can send audience data to a destination, you must set up a connection
    >The image below is used for illustration purposes only. The destination connection details vary between destinations. For detailed information about the connection details for your destination, see the **Connection parameters** section in each [destination catalog](../catalog/overview.md) page (for example, [Google Customer Match](..//catalog/advertising/google-customer-match.md#parameters)).
 
    ![Connect to destination](../assets/ui/connect-destinations/connect-destination.png)
+
+1. (Optional) Select the destination dataflow alerts that you want to subscribe to. You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts.
+
+   ![UI image showing the in-context destination alerts subscription options](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
 1. Select **[!UICONTROL Next]**.
 

@@ -9,6 +9,10 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 ---
 # Activate audience data to batch profile export destinations
 
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 ## Overview {#overview}
 
 This article explains the workflow required to activate audience data in Adobe Experience Platform batch profile-based destinations, such as cloud storage and email marketing destinations.
@@ -71,12 +75,12 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Activate after segment evaluation"
->abstract="Activation runs immediately after the daily segmentation job completes. This ensures that the most up-to-date profiles are exported. Need to move this popover to the new activation chaining section for correct linking."
+>abstract="Activation runs immediately after the daily segmentation job completes. This ensures that the most up-to-date profiles are exported."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
 >title="Scheduled activation"
->abstract="Activation runs at a fixed time of the day. Need to move this popover to the new activation chaining section for correct linking."
+>abstract="Activation runs at a fixed time of the day."
 
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
 
