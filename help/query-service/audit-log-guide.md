@@ -6,11 +6,11 @@ description: Query Service audit logs maintain records for various user actions 
 
 The Adobe Experience Platform [!DNL Query Service] audit log integration provides records of query related user actions. Audit logs are an essential tool for troubleshooting and adhering to corporate data stewardship policies and regulatory requirements. The capability allows you to return an action log for many event types and filter and export the records. The logs can be accessed either through the Platform UI or the [Audit Query API](https://www.adobe.io/experience-platform-apis/references/audit-query/) and downloaded in either CSV or JSON file formats.
 
-See the documentation to [learn more about the audit logs user interface](../landing/governance-privacy-security/audit-logs/overview.md) or [making calls to Platform APIs](../landing/api-guide.md). 
+To learn more about the audit logs user interface, refer to the [audit logs overview document](../landing/governance-privacy-security/audit-logs/overview.md). To learn more about making calls to Platform APIs, refer to the [audit logs API guide](../landing/api-guide.md). 
 
 ## Prerequisites
 
-You must have the [!UICONTROL Data Governance] [!UICONTROL View User Activity Log] permission enabled to view the audit log dashboard within the Platform UI. The permission is enabled through Adobe [Admin Console](https://adminconsole.adobe.com/). Please contact your organization's administrator if you do not have administrator privileges to enable this permission. See the access control documentation for [full instructions on adding permissions through Admin Console](../access-control/home.md). 
+You must have the [!UICONTROL Data Governance] [!UICONTROL View User Activity Log] permission enabled to view the audit log dashboard within the Platform UI. The permission is enabled through the Adobe [Admin Console](https://adminconsole.adobe.com/). Please contact your organization's administrator if you do not have administrator privileges to enable this permission. See the access control documentation for [full instructions on adding permissions through Admin Console](../access-control/home.md). 
 
 ## [!DNL Query Service] audit log categories {#audit-log-categories}
 
@@ -23,7 +23,7 @@ The audit log categories provided by [!DNL Query Service] are as follows.
 
 ## Perform a [!DNL Query Service] audit log {#perform-an-audit-log}
 
-To perform an audit for [!DNL Query Service] activity, select **[!UICONTROL Audits]** form the Platform UI left navigation rail, followed by the funnel icon (![A filter icon.](./images/audit-log/filter.png)) to display a list of filter controls to help narrow results.
+To perform an audit for [!DNL Query Service] activities, select **[!UICONTROL Audits]** form the Platform UI left navigation rail, followed by the funnel icon (![A filter icon.](./images/audit-log/filter.png)) to display a list of filter controls to help narrow results.
 
 ![The Platform UI audit log dashboard with Audits in the left navigation and filter controls highlighted.](./images/audit-log/filter-controls.png)
 
