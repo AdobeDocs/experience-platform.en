@@ -50,7 +50,7 @@ GROUP BY customerId,sku
 order by price desc)D;
 ```
 
-<!-- VIDEO -->
+>[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
 ## Benefits of [!DNL Query Service]
 
