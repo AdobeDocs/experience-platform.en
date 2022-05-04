@@ -9,9 +9,13 @@ exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 ---
 # Connect to streaming destinations and activate data using the Flow Service API
 
->[!NOTE]
+>[!IMPORTANT]
+> 
+>To connect to a destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). 
 >
->The [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations in Platform are currently in beta. The documentation and the functionality are subject to change.
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+>
+>Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) or [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), create a dataflow to your new created destination, and activate data to your new created destination.
 

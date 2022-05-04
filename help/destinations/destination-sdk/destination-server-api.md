@@ -76,11 +76,13 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## Create configuration for a file-based destination server {#create-file-based}
 
-### Example: create configuration for an SFTP destination server
-
 >[!IMPORTANT]
 >
 >File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+
+### SFTP destination server example configuration {#sftp-server-sample}
+
++++View a sample for an [!DNL SFTP] destination server configuration
 
 You can create a new SFTP destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
@@ -186,11 +188,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 +++
 
-+++Example: create configuration for an Amazon S3 destination server
+### [!DNL Amazon S3] destination server example configuration {#s3-server-sample}
 
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
++++View a sample for an [!DNL Amazon S3] destination server configuration
 
 You can create a new Amazon S3 destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
@@ -297,16 +297,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 +++
 
-+++Example: create configuration for an Azure Blob destination server
+### [!DNL Azure Blob] destination server example configuration {#blob-server-sample}
 
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
++++View a sample for an [!DNL Azure Blob] destination server configuration
 
 You can create a new Azure Blob destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
-
 
 ```http
 POST /authoring/destination-servers
@@ -409,16 +406,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 +++
 
-+++Example: create configuration for an Azure Data Lake Storage (ADLS) destination server
+### [!DNL Azure Data Lake Storage] destination server example configuration {#adls-server-sample}
 
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
++++View a sample for an [!DNL Azure Data Lake Storage (ADLS)] destination server configuration
 
 You can create a new ADLS destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
-
 
 ```http
 POST /authoring/destination-servers
@@ -517,18 +511,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 A successful response returns HTTP status 200 with details of your newly created destination server configuration.
 +++
 
-+++Example: create configuration for a Data Landing Zone (DLZ) destination server
+### [!DNL Data Landing Zone] (DLZ) destination server example configuration {#dlz-server-sample}
 
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
++++View a sample for a [!DNL Data Landing Zone (DLZ)] destination server configuration
 
-[!DNL Data Landing Zone] ([!DNL DLZ]) is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you to access a secure, cloud-based file storage facility to bring files into Platform. See
+[!DNL Data Landing Zone] ([!DNL DLZ]) is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you to access a secure, cloud-based file storage facility to bring files into Platform.
 
 You can create a new DLZ destination server configuration by making a POST request to the `/authoring/destination-servers` endpoint.
 
 **API format**
-
 
 ```http
 POST /authoring/destination-servers
@@ -634,7 +625,6 @@ You can retrieve a list of all destination server configurations for your IMS Or
 
 **API format**
 
-
 ```http
 GET /authoring/destination-servers
 ```
@@ -736,7 +726,6 @@ You can update an existing destination server configuration by making a PUT requ
 
 **API format**
 
-
 ```http
 PUT /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -785,7 +774,6 @@ You can retrieve detailed information about a specific destination server config
 
 **API format**
 
-
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -828,7 +816,6 @@ A successful response returns HTTP status 200 with detailed information about th
    }
 }
 ```
-
 
 ## Delete a specific destination server configuration {#delete}
 
