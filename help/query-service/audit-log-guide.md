@@ -19,13 +19,13 @@ The audit log categories provided by [!DNL Query Service] are as follows.
 | Category | Description |
 |---|---|
 | [!UICONTROL Scheduled query] | This category allows you to audit the schedules that have been created within [!DNL Query Service]. |
-| [!UICONTROL Query template] | This category allows you audit the various actions taken on an query template. |
+| [!UICONTROL Query template] | This category allows you audit the various actions taken on a query template. |
 
 ## Perform a [!DNL Query Service] audit log {#perform-an-audit-log}
 
-To perform an audit for [!DNL Query Service] activities, select **[!UICONTROL Audits]** form the Platform UI left navigation rail, followed by the funnel icon (![A filter icon.](./images/audit-log/filter.png)) to display a list of filter controls to help narrow results.
+To perform an audit for [!DNL Query Service] activities, select **[!UICONTROL Audits]** from the Platform UI left navigation rail, followed by the funnel icon (![A filter icon.](./images/audit-log/filter.png)) to display a list of filter controls to help narrow results.
 
-![The Platform UI audit log dashboard with Audits in the left navigation and filter controls highlighted.](./images/audit-log/filter-controls.png)
+![The Platform UI audit log dashboard with "Audits" in the left navigation and filter controls highlighted.](./images/audit-log/filter-controls.png)
 
 From the [!UICONTROL Audits] dashboard [!UICONTROL Activity log] tab, you can filter all the recorded Platform actions by any of the [!DNL Query Service] categories. The log results can be further filtered based on the time period they were executed, the action/function taken, or user that enacted the query. See the audit log documentation for [full instructions on how to filter the logs based on category, action, user, and status](../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
