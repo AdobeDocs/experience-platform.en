@@ -33,7 +33,7 @@ The returned audit log data contains the following information on all queries th
 
 | Column name  | Description |
 |---|---|
-| [!UICONTROL Timestamp] | The exact date and time of the query in a `month/day/year hour:minute AM/PM` format.  |
+| [!UICONTROL Timestamp] | The exact date and time of the action performed in a `month/day/year hour:minute AM/PM` format.  |
 | [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. When using the [!UICONTROL Scheduled query] category this is the **schedule name**. When using the [!UICONTROL Query template] category, this is the **template name**.  |
 | [!UICONTROL Category] | This field matches the category selected by you in the filter dropdown.  |
 | [!UICONTROL Action] |  This can be either create, delete, update, or execute. The available actions depend on the category chosen as a filter. |
@@ -60,7 +60,7 @@ Available filters vary depending on the category selected in the dropdown. The f
 | Filter  | Description |
 |---|---|
 | Category | See the [[!DNL Query Service] audit log categories](#audit-log-categories) section for a complete list of available categories. |
-| Action | When referring to query logs, update is both `UPDATE` and `INSERT`, delete is `DROP TABLE`, create is `CTAS`, and execute is running a query. The execute action is not available as a filter for the [!UICONTROL Query template] category. |
+| Action | When referring to [!DNL Query Service] audit categories, update is a **modification to the existing form**, delete is the **removal of the schedule or template**, create is **creating a new schedule or template**, and execute is running a query.|
 | User | Enter the complete user ID (for example, johndoe@acme.com) to filter by user. |
 | Date  | Select a start date and/or an end date to define a date range to filter results by. |
 
