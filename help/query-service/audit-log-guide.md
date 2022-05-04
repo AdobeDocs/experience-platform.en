@@ -29,8 +29,6 @@ To perform an audit for [!DNL Query Service] activities, select **[!UICONTROL Au
 
 From the [!UICONTROL Audits] dashboard [!UICONTROL Activity log] tab, you can filter all the recorded Platform actions by any of the [!DNL Query Service] categories. The log results can be further filtered based on the time period they were executed, the action/function taken, or user that enacted the query. See the audit log documentation for [full instructions on how to filter the logs based on category, action, user, and status](../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
-<!-- The log results can be further filtered based on the time period they were executed, the action/function taken, and the status, or user that enacted the query. 'and the status a was omitted '-->
-
 The returned audit log data contains the following information on all queries that meet your chosen filter criteria.
 
 | Column name  | Description |
@@ -57,7 +55,7 @@ Select any row of audit log results to open a details panel to the right of the 
 
 ## Available filters for [!DNL Query Service] audit log categories {#available-filters}
 
-The following table details the filters available for [!DNL Query Service] audit log categories.
+Available filters vary depending on the category selected in the dropdown. The following table details the filters available for [[!DNL Query Service] audit log categories](#audit-log-categories).
 
 | Filter  | Description |
 |---|---|
@@ -65,7 +63,6 @@ The following table details the filters available for [!DNL Query Service] audit
 | Action | When referring to query logs, update is both `UPDATE` and `INSERT`, delete is `DROP TABLE`, create is `CTAS`, and execute is running a query. The execute action is not available as a filter for the [!UICONTROL Query template] category. |
 | User | Enter the complete user ID (for example, johndoe@acme.com) to filter by user. |
 | Date  | Select a start date and/or an end date to define a date range to filter results by. |
-<!-- | Status | Available options are Allow, Deny, Success, and Failure. These are not necessary to filter query logs. | -->
 
 ## Next steps
 
