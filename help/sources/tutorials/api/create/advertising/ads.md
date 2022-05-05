@@ -112,4 +112,7 @@ A successful response returns details of the newly created base connection, incl
 
 ## Next steps
 
-By following this tutorial, you have created an [!DNL AdWords] base connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can now use this base connection ID to [explore your data tables](../../explore/tabular.md) and then [create a dataflow and bring your advertising data to Platform](../../collect/advertising.md).
+By following this tutorial, you have created a [!DNL Google AdWords] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring advertising data to Platform using the [!DNL Flow Service] API](../../collect/advertising.md)

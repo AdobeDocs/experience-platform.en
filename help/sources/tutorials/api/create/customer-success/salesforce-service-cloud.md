@@ -101,4 +101,7 @@ A successful response returns the newly created connection, including its unique
 
 ## Next steps
 
-By following this tutorial, you have created an [!DNL Salesforce Service Cloud] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can now use this base connection ID to [explore your data tables](../../explore/tabular.md) and then [create a dataflow and bring your customer success data to Platform](../../collect/customer-success.md).
+By following this tutorial, you have created a [!DNL Salesforce Service Cloud] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring customer success data to Platform using the [!DNL Flow Service] API](../../collect/customer-success.md)

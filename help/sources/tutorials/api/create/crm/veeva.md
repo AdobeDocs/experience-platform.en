@@ -107,4 +107,9 @@ A successful response returns details of the newly created base connection, incl
 
 ## Next steps
 
-By following this tutorial, you have created an [!DNL Veeva CRM] base connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can now use this base connection ID to [explore your data tables](../../explore/tabular.md) and then [create a dataflow and bring your CRM data to Platform](../../collect/crm.md)..
+## Next steps
+
+By following this tutorial, you have created a [!DNL Veeva CRM] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring CRM data to Platform using the [!DNL Flow Service] API](../../collect/crm.md)
