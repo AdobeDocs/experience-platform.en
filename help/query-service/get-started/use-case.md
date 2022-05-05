@@ -49,7 +49,7 @@ GROUP BY customerId,sku
 order by price desc)D;
 ```
 
-## Query Service browse abandonment example using adobe analytics {#video-example}
+## [!DNL Query Service] browse abandonment example using adobe analytics {#video-example}
 
 The video presentation seen below provides a holistic, real-world use case for your Experience Platform data focussed on [!DNL Query Service] and Adobe analytics integrations.  
 
