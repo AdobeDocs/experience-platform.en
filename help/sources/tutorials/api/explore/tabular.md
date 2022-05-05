@@ -20,7 +20,7 @@ This guide requires a working understanding of the following components of Adobe
 
 ### Using Platform APIs
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
 
 ## Explore your data tables
 
