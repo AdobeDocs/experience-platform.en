@@ -117,4 +117,4 @@ A successful response returns details of the newly created base connection, incl
 
 ## Next steps
 
-By following this tutorial, you have created an [!DNL Zoho CRM] base connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore CRM systems using the Flow Service API](../../explore/crm.md).
+By following this tutorial, you have created an [!DNL Zoho CRM] base connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can now use this base connection ID to [explore your data tables](../../explore/tabular.md) and then [create a dataflow and bring your CRM data to Platform](../../collect/crm.md).

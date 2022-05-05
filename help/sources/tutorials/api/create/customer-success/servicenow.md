@@ -101,4 +101,4 @@ A successful response returns the newly created connection, including its unique
 
 ## Next steps
 
-By following this tutorial, you have created a [!DNL ServiceNow] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID in the next tutorial as you learn how to [explore customer success systems using the Flow Service API](../../explore/customer-success.md).
+By following this tutorial, you have created a [!DNL ServiceNow] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can now use this base connection ID to [explore your data tables](../../explore/tabular.md) and then [create a dataflow and bring your customer success data to Platform](../../collect/customer-success.md).
