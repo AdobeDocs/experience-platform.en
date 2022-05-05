@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;
+keywords: Experience Platform;home;popular topics;sources;API;explore;flow service
 title: Explore a Tabular Source using the Flow Service API
 description: This tutorial uses the Flow Service API to explore the contents and structure of a table-based source.
 ---
