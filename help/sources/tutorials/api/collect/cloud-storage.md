@@ -13,7 +13,7 @@ This tutorial covers the steps for retrieving data from a cloud storage source a
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with any of the following cloud storage sources on Platform:<ul><li>[[!DNL Amazon S3]](../create/cloud-storage/s3.md)</li><li>[[!DNL Apache HDFS]](../create/cloud-storage/hdfs.md)</li><li>[[!DNL Azure Blob]](../create/cloud-storage/blob.md)</li><li>[[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)</li><li>[[!DNL FTP]](../create/cloud-storage/ftp.md)</li><li>[[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)</li><li>[[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)</li><li>[[!DNL SFTP]](../create/cloud-storage/sftp.md)</li></ul>
+>In order to create a dataflow, you must already have a valid base connection ID with a cloud storage source. If you do not have this ID, then see the [sources overview](../../../home.md#cloud-storage) for a list of cloud storage sources that you can create a base connection with.
 
 ## Getting started
 
@@ -522,7 +522,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

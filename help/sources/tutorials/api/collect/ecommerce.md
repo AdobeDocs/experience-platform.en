@@ -13,7 +13,7 @@ This tutorial covers the steps for retrieving data from an e-commerce source and
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid [!DNL Shopify] base connection ID. If you do not have this ID, then see the steps on how to [create a [!DNL Shopify] base connection](../create/ecommerce/shopify.md) before attempting to do this tutorial.
+>In order to create a dataflow, you must already have a valid base connection ID with an E-commerce source. If you do not have this ID, then see the [sources overview](../../../home.md#ecommerce) for a list of E-commerce sources that you can create a base connection with.
 
 ## Getting started
 
@@ -540,7 +540,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "22922102bffd4369b6209c102a604062",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

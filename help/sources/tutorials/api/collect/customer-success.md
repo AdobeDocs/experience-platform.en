@@ -13,7 +13,7 @@ This tutorial covers the steps for retrieving data from a customer success sourc
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with any of the following customer success sources on Platform:<ul><li>[[!DNL Salesforce Service Cloud]](../create/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL ServiceNow]](../create/customer-success/servicenow.md)</li></ul>
+>In order to create a dataflow, you must already have a valid base connection ID with a customer success source. If you do not have this ID, then see the [sources overview](../../../home.md#customer-success) for a list of customer success sources that you can create a base connection with.
 
 ## Getting started
 
@@ -580,7 +580,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "7c3547d3cfc14f568a51c32b4c0ed739",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

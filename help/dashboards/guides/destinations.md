@@ -33,11 +33,11 @@ To navigate to the destinations dashboard within the Platform UI, select **[!UIC
 
 You can modify the appearance of the destinations dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the **[!UICONTROL Widget library]** to explore available widgets and create custom widgets for your organization. 
 
-Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
+Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
 
 ## Standard widgets
 
-Adobe provides multiple standard widgets that you can use to visualize different metrics related to your destinations and assess the completeness of the segments available for your data analysis. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
+Adobe provides multiple standard widgets that you can use to visualize different metrics related to your destinations and assess the completeness of the segments available for your data analysis. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
@@ -45,11 +45,14 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Recently created destinations]](#recently-created-destinations)
 * [[!UICONTROL Recently activated segments]](#recently-activated-segments)
 * [[!UICONTROL Recently activated segments by destination]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Audience size trend]](#audience-size-trends)
+* [[!UICONTROL Audience size trend]](#audience-size-trend)
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
 * [[!UICONTROL Destinations count]](#destinations-count)
+* [[!UICONTROL Destination status]](#destination-status)
+* [[!UICONTROL Active destinations by destination platform]](#active-destinations-by-destination-platform)
+* [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
@@ -107,6 +110,10 @@ The second dropdown menu lists every available segment that can be sent to the d
 
 ![The audience size trend widget.](../images/destinations/audience-size-trend.png)
 
+The **[!UICONTROL Audience size trend]** widget provides a [!UICONTROL Captions] button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog. A machine learning model automatically generates captions to describe the key trends and important events by analyzing the chart and segment data.
+
+![The automatic captions dialog for the Audience size trend widget.](../images/destinations/audience-size-trend-captions.png)
+
 ### [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
 
 The **[!UICONTROL Unmapped segments by identity]** widget lists the top five **unmapped** segments ranked by descending identity count for a given destination and identity. It highlights segments that are the most beneficial to map to the chosen destination account based on the chosen ID.
@@ -119,7 +126,7 @@ The identities column counts the number of source IDs within the segment that co
 
 ### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
 
-This widget provides a top five list of **mapped** segments. The list is ordered from high to low according to the number of source IDs contained within the segments. The destination ID to be counted is selected from the dropdown menu below the widget title. The destination IDs available from the drop-down in the widget will change according to the destination account filter chosen at the top of the overview dashboard.
+This widget provides a top five list of **mapped** segments. The list is ordered from high to low according to the number of source IDs contained within the segments. The destination ID to be counted is selected from the dropdown menu below the widget title. The destination IDs available from the dropdown in the widget will change according to the destination account filter chosen at the top of the overview dashboard.
 
 ![The Mapped segments by identity widget.](../images/destinations/mapped-segments-by-identity.png)
 
@@ -147,13 +154,35 @@ If a segment within the [!UICONTROL Mapped audience health] widget is deviating 
 
 ![The Mapped audience health widget.](../images/destinations/mapped-audience-health.png)
 
-### [!UICONTROL Destinations count] (#destinations-count)
+### [!UICONTROL Destinations count] {#destinations-count}
 
 The [!UICONTROL Destinations count] widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. 
 
 Below the total count, select **[!UICONTROL Destinations]** to navigate to the destinations browse tab. This page lists all the destinations that you have established a connection with to date.
 
 ![The Destinations count widget.](../images/destinations/destinations-count.png)
+
+### [!UICONTROL Destination status] {#destination-status}
+
+The [!UICONTROL Destination status] widget displays the total number of enabled destinations as a single metric and uses a donut chart to illustrate the proportional difference between enabled and disabled destinations.
+
+Individual counts for either enabled or disabled destinations are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+
+![The Destination status widget.](../images/destinations/destination-status.png)
+
+### [!UICONTROL Active destinations by destination platform] {#active-destinations-by-destination-platform}
+
+The widget provides a two column table to show a list of active destination platforms and the total number of active destinations for each destination platform. The list of destination platforms is ordered from high to low.
+
+![The Active destinations by destination platform widget.](../images/destinations/active-destinations-by-destination-platform.png)
+
+### [!UICONTROL Activated audiences across all destinations] {#activated-audiences-across-all-destinations}
+
+The [!UICONTROL Activated audiences across all destinations] widget provides the total number of audiences activated across all destinations in a single metric. This number is accurate to the most recent snapshot. 
+
+![The Activated audiences across all destinations widget.](../images/destinations/activated-audiences-across-all-destinations.png)
+
+Select **[!UICONTROL Audiences]** to navigate to the destinations [!UICONTROL Browse] tab. This page provides a list of all enabled destinations and a variety of relevant metrics. See the documentation for [more information on the [!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
 
 ## Next steps
 
