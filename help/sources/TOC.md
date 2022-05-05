@@ -161,6 +161,7 @@ feature: Sources
     - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
     - [Explore payment data](tutorials/api/explore/payments.md)
     - [Explore protocol data](tutorials/api/explore/protocols.md)
+    - [Explore data tables](tutorials/api/explore/tabular.md)
   - Collect data {#collect}
     - [Collect advertising data](tutorials/api/collect/advertising.md)
     - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)

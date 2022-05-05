@@ -84,7 +84,7 @@ A successful request creates the B2B namespaces and schemas according to beta sp
 The documentation below provides information on how to connect [!DNL Salesforce] to Platform using APIs or the user interface:
 
 - [Create a Salesforce base connection using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
-- [Explore the data structure and contents of a CRM source using the Flow Service API](../../tutorials/api/explore/crm.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Salesforce] to Platform using the UI

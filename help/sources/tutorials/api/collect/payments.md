@@ -13,7 +13,7 @@ This tutorial covers the steps for retrieving data from a payments source and br
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with any of the following payments sources on Platform:<ul><li>[[!DNL PayPal]](../create/payments/paypal.md)</li><li>[[!DNL Square]](../create/payments/square.md)</li></ul>
+>In order to create a dataflow, you must already have a valid base connection ID with a payments source. If you do not have this ID, then see the [sources overview](../../../home.md#payments) for a list of payments sources that you can create a base connection with.
 
 ## Getting started
 

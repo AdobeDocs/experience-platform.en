@@ -21,7 +21,7 @@ The documentation below provides information on how to connect [!DNL Microsoft D
 ## Connect [!DNL Microsoft Dynamics] to [!DNL Platform] using APIs
 
 - [Create a Microsoft Dynamics base connection using the Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
-- [Explore the data structure and contents of a CRM source using the Flow Service API](../../tutorials/api/explore/crm.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Microsoft Dynamics] to [!DNL Platform] using the UI
