@@ -43,15 +43,15 @@ There are five permissions not included in the [!DNL Dashboard] category that ar
 
 The following access-control matrix provides a breakdown of which permissions are required and what function they provide regarding access to the different dashboard features. Permissions are listed across the top horizontal row and the Platform UI workspace is listed along the left column.  
 
-|   | [!UICONTROL View Standard Dashboard] OR [!UICONTROL Manage Standard Dashboard] | [!UICONTROL View Profiles],<br/>[!UICONTROL View Segments],<br/> [!UICONTROL View Destinations] | [!UICONTROL Manage Queries] & [!UICONTROL Manage Sandboxes] | [!UICONTROL View License Usage Dashboard]  | [!UICONTROL Manage Standard Dashboards] |
-|---|---|---|---|---|---|
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] in the left navigation. | N/A | READ <br/>(for each respective dashboard) | N/A | N/A | N/A |
-| [!DNL Dashboards] in the left navigation. | READ | **At least one REQUIRED**. | N/A | N/A | N/A |
-| [!DNL Dashboards] [!DNL Inventory] <br/>(the browse tab) | READ | N/A | N/A | N/A | N/A |
-| [!DNL Dashboards] [!DNL Integrations] tab <br/>(used to install Power BI) | READ | **At least one REQUIRED** |N/A | N/A | N/A |
-| Power BI Install button & workflow | N/A | N/A | **REQUIRED** | N/A | N/A |
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] [!DNL Overview] tab | READ | **REQUIRED** (for each respective dashboard) | N/A | N/A | READ & WRITE<br/>This allows you to create custom widgets and edit the schema through the [!UICONTROL Widget library]. |
-| [!DNL License Usage Dashboard] |  N/A | N/A | N/A | READ | N/A |
+|   | [!UICONTROL View Standard Dashboard] OR [!UICONTROL Manage Standard Dashboard] | [!UICONTROL View Profiles],<br/>[!UICONTROL View Segments],<br/> [!UICONTROL View Destinations] | [!UICONTROL Manage Queries] & [!UICONTROL Manage Sandboxes] | [!UICONTROL View License Usage Dashboard]  |
+|---|---|---|---|---|
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] in the left navigation. | N/A | A "View" or "Manage" permission is REQUIRED for each respective dashboard. | N/A | N/A |
+| [!DNL Dashboards] in the left navigation. | ENABLED | **At least one REQUIRED**. | N/A | N/A |
+| [!DNL Dashboards] [!DNL Inventory] <br/>(the browse tab) | ENABLED | N/A | N/A | N/A |
+| [!DNL Dashboards] [!DNL Integrations] tab <br/>(used to install Power BI) | ENABLED | **At least one REQUIRED** |N/A | N/A |
+| Power BI Install button & workflow | ENABLED | N/A | **REQUIRED** | N/A |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dashbaords.<br/>The ability to edit widget schemas and add new attributes for widget customization | **Manage-standard-dashboard REQUIRED**  | REQUIRED (for each respective dashboard) | N/A | N/A |
+| [!DNL License Usage Dashboard] |  N/A | N/A | N/A | ENABLED |
 
 {style="table-layout:auto"}
 
