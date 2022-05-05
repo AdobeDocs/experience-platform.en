@@ -8,11 +8,11 @@ description: An end-to-end example to demonstrate the versatility and benefits o
 
 This document and accompanying video presentation provide a high-level end-to-end workflow demonstrating how Adobe Experience Platform [!DNL Query Service] benefits your organization's strategic business insights. Using a browse abandonment use case as an example, this guide illustrates the following key concepts:
 
-* Why data processing is key to maximizing the potential of Adobe Experience Platform.
+* The key importance of data processing to maximizing the potential of Adobe Experience Platform
 * How building the query depends on your existing data architecture.
-* How to ensure data quality to meet your needs, and how to mitigate any shortfalls.
-* How to schedule a query to run at a set frequency for use downstream in [!UICONTROL segmentation] and [!UICONTROL destinations] for personalization.
-* How [!DNL Query Service] makes it easier for marketers to include computed attributes in their own segments.
+* How to ensure data quality that meets your needs, and how to mitigate any shortfalls.
+* How to schedule a query to run at a set frequency for use downstream in segmentation and destinations for personalization.
+* How [!DNL Query Service] makes it easier for marketers to include derived attributes in their own segments.
 
 ## Objectives {#objectives}
 
@@ -24,7 +24,7 @@ This workflow demonstration relies on several Adobe Experience Platform services
 * [Segmentation](../../segmentation/home.md)
 * [Destinations](../../destinations/home.md)
 
-The browse abandonment example centers on using Adobe [!DNL Analytics] data to create a particular actionable audience. The audience is refined to include only the product's SKU, its price, and an analysis of a specific four-day time period where the users added items to their basket but did not complete a purchase.
+The browse abandonment example centers on using Adobe [!DNL Analytics] data to create a particular actionable audience. The audience is refined to include every customer who browsed the website in the last four days but did not make a purchase. Each profile in the audience is then targeted with the highest-price SKU that resulted from the customer's behavior pattern.
 
 The query itself is very prescriptive and only includes data that meets the use case criteria for the segment definition. This improves performance by minimizing the amount of [!DNL Analytics] data being processed. It also orders the data by price from highest to lowest and chooses the highest-priced SKU that the user was browsing.
 
@@ -59,11 +59,11 @@ The video presentation seen below provides a holistic, real-world use case for y
 
 The features provided by [!DNL Query Service] serves many purposes. You can use it to accommodate complex logic for segmentation, for calculating various personalized attributes for use downstream, or to greatly simplify how you build out your segments. 
 
-[!DNL Query Service] enables you to include constraints in your queries to simplify your segment building process. This improves data quality by ensuring the right data qualifies for your segments and creates more accurate audiences. Maintaining the quality of your query results in an accurate audience and helps with data reliability. You can also save your audience by creating schemas and custom tables based on computed attributes calculated by your query. A custom table can be enabled for Profile and you can use these data points for segmentation and personalization. This feature assists marketers who want to create a clear-cut audience of people.
+[!DNL Query Service] enables you to include constraints in your queries to simplify your segment building process. This improves data quality by ensuring the right data qualifies for your segments and creates more accurate audiences. Maintaining the quality of your query results in an accurate audience and helps with data reliability. You can also save your audience by creating schemas and custom tables based on attributes derived from your query. A custom table can be enabled for Profile and you can use these data points for segmentation and personalization. This feature assists marketers who want to create a clear-cut audience of people.
 
 Also, by including logic in your query that satisfies any recurring or static conditions, [!DNL Query Service] extracts the burden of elaborate segmentation.
 
-Adobe Experience Platform provides a data repository and the necessary tools to activate your data in an efficient and reliable way. By keeping data inside Platform, it allows you to compute attributes while running other processes and removes the need to export data to third-party tools for manipulation and processing. Such processing overheads can greatly impact a project timeline when dealing with hundreds of attributes or campaigns. This gives marketers a single location to access their data and build out campaigns as well as a very dynamic means of segmenting and personalizing their messages.
+Adobe Experience Platform provides a data repository and the necessary tools to activate your data in an efficient and reliable way. By keeping data inside Platform, it allows you to derive attributes while running other processes and removes the need to export data to third-party tools for manipulation and processing. Such processing overheads can greatly impact a project timeline when dealing with hundreds of attributes or campaigns. This gives marketers a single location to access their data and build out campaigns as well as a very dynamic means of segmenting and personalizing their messages.
 
 ## Next steps
 
