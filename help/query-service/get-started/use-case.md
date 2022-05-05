@@ -51,19 +51,19 @@ order by price desc)D;
 
 ## Query Service browse abandonment example using adobe analytics {#video-example}
 
-The video presentation seen below provides a wholistic, real-world use case for your Experience Platform data focussed on [!DNL Query Service] and Adobe analytics integrations.  
+The video presentation seen below provides a holistic, real-world use case for your Experience Platform data focussed on [!DNL Query Service] and Adobe analytics integrations.  
 
 >[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
 ## Benefits of [!DNL Query Service] {#benefits}
 
-The features provided by [!DNL Query Service] serve many purposes. You can use it to accommodate complex logic for segmentation, for calculating various personalized attributes for use downstream, or to greatly simplify how you build out your segments. 
+The features provided by [!DNL Query Service] serves many purposes. You can use it to accommodate complex logic for segmentation, for calculating various personalized attributes for use downstream, or to greatly simplify how you build out your segments. 
 
 [!DNL Query Service] enables you to include constraints in your queries to simplify your segment building process. This improves data quality by ensuring the right data qualifies for your segments and creates more accurate audiences. Maintaining the quality of your query results in an accurate audience and helps with data reliability. You can also save your audience by creating schemas and custom tables based on computed attributes calculated by your query. A custom table can be enabled for Profile and you can use these data points for segmentation and personalization. This feature assists marketers who want to create a clear-cut audience of people.
 
 Also, by including logic in your query that satisfies any recurring or static conditions, [!DNL Query Service] extracts the burden of elaborate segmentation.
 
-Adobe Experience Platform provides a data repository and the necessary tools to activate your data in an efficient and reliable way. By keeping data inside Platform, it allows you to compute attributes while running other processes and removes the need to export data to a third-party tools for manipulation and processing. Such processing overheads can greatly impact a project timeline when dealing with hundreds of attributes or campaigns. This gives marketers a single location to access their data and build out campaigns as well as a very dynamic means of segmenting and personalizing their messages.
+Adobe Experience Platform provides a data repository and the necessary tools to activate your data in an efficient and reliable way. By keeping data inside Platform, it allows you to compute attributes while running other processes and removes the need to export data to third-party tools for manipulation and processing. Such processing overheads can greatly impact a project timeline when dealing with hundreds of attributes or campaigns. This gives marketers a single location to access their data and build out campaigns as well as a very dynamic means of segmenting and personalizing their messages.
 
 ## Next steps
 
@@ -71,4 +71,4 @@ By reading this document, you should now understand how [!DNL Query Service] imp
 
 Other documents that will benefit your understanding of [!DNL Query Service] features and uses include [guidance for query execution](../best-practices/writing-queries.md) and [guidance for data asset organization](../best-practices/organize-data-assets.md).
 
-For more applicable SQL examples using Adobe Analytics with [!DNL Query Service], see the [Adobe Analytics sample queries documentation](../sample-queries/adobe-analytics.md). 
+For more applicable SQL examples that use Adobe Analytics with [!DNL Query Service], see the [Adobe Analytics sample queries documentation](../sample-queries/adobe-analytics.md). 
