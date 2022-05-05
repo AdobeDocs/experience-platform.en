@@ -13,7 +13,7 @@ This tutorial covers the steps for retrieving data from a protocols source and b
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with any of the following protocols sources on Platform:<ul><li>[Generic OData](../create/protocols/odata.md)</li><li>[Generic REST](../create/protocols/generic-rest.md)</li></ul>
+>In order to create a dataflow, you must already have a valid base connection ID with a protocols source. If you do not have this ID, then see the [sources overview](../../../home.md#protocols) for a list of protocols sources that you can create a base connection with.
 
 ## Getting started
 
