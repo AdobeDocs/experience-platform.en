@@ -9,10 +9,10 @@ description: An end-to-end example to demonstrate the versatility and benefits o
 This document and accompanying video presentation provide a high-level end-to-end workflow demonstrating how Adobe Experience Platform [!DNL Query Service] benefits your organization's strategic business insights. Using a browse abandonment use case as an example, this guide illustrates the following key concepts:
 
 * The key importance of data processing to maximizing the potential of Adobe Experience Platform
-* How building the query depends on your existing data architecture.
-* How to ensure data quality that meets your needs, and how to mitigate any shortfalls.
-* How to schedule a query to run at a set frequency for use downstream in segmentation and destinations for personalization.
-* How [!DNL Query Service] makes it easier for marketers to include derived attributes in their own segments.
+* Ways to build the query based on your existing data architecture.
+* Ensure data quality that meets your needs, and methods to mitigate any shortfalls.
+* The process to schedule a query to run at a set frequency for use downstream in segmentation and destinations for personalization.
+* The ease for marketers to include derived attributes in their segments through the power of [!DNL Query Service].
 
 ## Objectives {#objectives}
 
