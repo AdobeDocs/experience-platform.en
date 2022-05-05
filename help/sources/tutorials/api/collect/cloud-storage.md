@@ -69,9 +69,9 @@ curl -X POST \
         "data": {
             "format": "delimited",
             "properties": {
-                "columnDelimiter": ";",
-                "encoding": "ISO-8859-1"
-                "compressionType":
+                "columnDelimiter": "{COLUMN_DELIMITER}",
+                "encoding": "{ENCODING}"
+                "compressionType": "{COMPRESSION_TYPE}"
             }
         },
         "params": {
