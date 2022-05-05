@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor profiles;monitor dataflows;dataflows;profile;real time customer profile;
-description: Segmentation allows you to create segments and audiences from your Real-time Customer Profile data. This tutorial provides instructions on how you can monitor dataflows during segmentation using the Experience Platform user interface.
+description: Real-time Customer Profile lets you see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. This tutorial provides instructions on how you can monitor dataflows with Profiles using the Experience Platform user interface.
 title: Monitor Dataflows for Profiles in the UI
 topic-legacy: overview
 type: Tutorial
@@ -40,7 +40,7 @@ To access the **[!UICONTROL Profiles]** dashboard, select **[!UICONTROL Monitori
 
 On the main **[!UICONTROL Profiles]** dashboard, the **[!UICONTROL Profiles]** card shows information about the total number of records received, the number of profile fragments created and updated, as well as the success rate of created and updated profile fragments. 
 
-The dashboard itself contains metrics about the Profile processing itself. By default, the dashboard will show Profile processing details for your organization's sources for the last 24 hours. 
+The dashboard itself contains metrics about Profile processing. By default, the dashboard will show Profile processing details for your organization's sources for the last 24 hours. 
 
 ![The Profiles dashboard. Information about the number of the Profile records received per source is displayed.](../assets/ui/monitor-profiles/sources.png)
 

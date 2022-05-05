@@ -1,4 +1,12 @@
-# Monitor dataflows for identities in the UI {#identity-metrics}
+# Monitor dataflows for identities in the UI
+
+INTRO
+
+## Getting started {#getting-started}
+
+BLURB
+
+## Monitoring identities dashboard {#identity-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
@@ -11,7 +19,23 @@
 >title="Dataflow run details"
 >abstract="The Dataflow run details page displays more information on your Identity dataflow run, including its IMS Org ID and dataflow run ID."
 
+To access the **[!UICONTROL Identities]** dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Identities]** card.
+
+IMAGE
+
+On the main **[!UICONTROL Identities]** dashboard, the **[!UICONTROL Identities]** card shows information about the INFO
+
+The dashboard itself contains metrics about Identity processing. By default, the dashboard will show Identity processing details for your organization's sources for the last 24 hours. 
+
+IMAGE
+
 The [!UICONTROL Identity processing] page contains information on records ingested to [!DNL Identity Service], including number of identities added, graphs created, and graphs updated.
+
+The following metrics are available for this dashboard view:
+
+TABLE
+
+You can select the filter icon (ICON) beside the source name to see INFO.
 
 Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow run start time to see more information on your [!DNL Identity] dataflow run.
 
