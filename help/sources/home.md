@@ -42,26 +42,33 @@ Experience Platform provides support for ingesting data from a third-party adver
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
 
-- [[!DNL Azure Data Lake Storage Gen2] connector](connectors/cloud-storage/adls-gen2.md)
-- [[!DNL Azure Blob] connector](connectors/cloud-storage/blob.md)
-- [[!DNL Amazon Kinesis] connector](connectors/cloud-storage/kinesis.md)
-- [[!DNL Amazon S3] connector](connectors/cloud-storage/s3.md)
-- [[!DNL Apache HDFS] connector](connectors/cloud-storage/hdfs.md)
-- [[!DNL Azure Event Hubs] connector](connectors/cloud-storage/eventhub.md)
-- [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
+- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
+- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md)
+- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md)
+- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md)
+- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md)
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md)
+- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
-- [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
-- [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
-- [[!DNL Google PubSub] connector](connectors/cloud-storage/google-pubsub.md)
-- [[!DNL Oracle Object Storage] connector](connectors/cloud-storage/oracle-object-storage.md)
-- [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
+- [[!DNL FTP]](connectors/cloud-storage/ftp.md)
+- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md)
+- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md)
+- [[!DNL SFTP]](connectors/cloud-storage/sftp.md)
 
-### Customer Relationship Management (CRM) {#crm}
+### Consent and Preferences {#consent}
+
+Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. See the following related documents for more information:
+
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+
+
+### Customer Relationship Management (CRM) {#customer-relationship-management}
 
 CRM systems provide data that can help build customer relationships, which in turn, create loyalty and drive customer retention. Experience Platform provides support for ingesting CRM data from [!DNL Microsoft Dynamics 365] and [!DNL Salesforce]. See the following related documents for more information:
 
-- [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
-- [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
+- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
+- [[!DNL Salesforce]](connectors/crm/salesforce.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
@@ -69,31 +76,31 @@ CRM systems provide data that can help build customer relationships, which in tu
 
 Experience Platform provides support for ingesting data from a third-party customer success application. See the following related documents for more information:
 
-- [[!DNL Salesforce Service Cloud] connector](connectors/customer-success/salesforce-service-cloud.md)
-- [[!DNL ServiceNow] connector](connectors/customer-success/servicenow.md)
+- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
+- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md)
 
 ### Database {#database}
 
 Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Amazon Redshift] connector](connectors/databases/redshift.md)
-- [[!DNL Apache Hive on Azure HDInsights] connector](connectors/databases/hive.md)
-- [[!DNL Apache Spark on Azure HDInsights] connector](connectors/databases/spark.md)
-- [[!DNL Azure Data Explorer] connector](connectors/databases/data-explorer.md)
-- [[!DNL Azure Synapse Analytics] connector](connectors/databases/synapse-analytics.md)
-- [[!DNL Azure Table Storage] connector](connectors/databases/ats.md)
-- [[!DNL Couchbase] connector](connectors/databases/couchbase.md)
-- [[!DNL Google BigQuery] connector](connectors/databases/bigquery.md)
-- [[!DNL GreenPlum] connector](connectors/databases/greenplum.md)
-- [[!DNL HP Vertica] connector](connectors/databases/hp-vertica.md)
-- [[!DNL IBM DB2] connector](connectors/databases/ibm-db2.md)
-- [[!DNL MariaDB] connector](connectors/databases/mariadb.md)
-- [[!DNL Microsoft SQL Server] connector](connectors/databases/sql-server.md)
-- [[!DNL MySQL] connector](connectors/databases/mysql.md)
-- [[!DNL Oracle] connector](connectors/databases/oracle.md)
-- [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
-- [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
-- [[!DNL Snowflake] connector](connectors/databases/snowflake.md)
+- [[!DNL Amazon Redshift]](connectors/databases/redshift.md)
+- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md)
+- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md)
+- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md)
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)
+- [[!DNL Azure Table Storage]](connectors/databases/ats.md)
+- [[!DNL Couchbase]](connectors/databases/couchbase.md)
+- [[!DNL Google BigQuery]](connectors/databases/bigquery.md)
+- [[!DNL GreenPlum]](connectors/databases/greenplum.md)
+- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md)
+- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB]](connectors/databases/mariadb.md)
+- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md)
+- [[!DNL MySQL]](connectors/databases/mysql.md)
+- [[!DNL Oracle]](connectors/databases/oracle.md)
+- [[!DNL Phoenix]](connectors/databases/phoenix.md)
+- [[!DNL PostgreSQL]](connectors/databases/postgres.md)
+- [[!DNL Snowflake]](connectors/databases/snowflake.md)
 
 ### eCommerce {#ecommerce}
 
@@ -113,13 +120,15 @@ Experience Platform provides support for ingesting data from a third-party marke
 
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
+- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Payments {#payments}
 
 Experience Platform provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL PayPal] connector](connectors/payments/paypal.md)
+- [[!DNL PayPal]](connectors/payments/paypal.md)
+- [[!DNL Square]](connectors/payments/square.md)
 
 ### Streaming {#streaming}
 

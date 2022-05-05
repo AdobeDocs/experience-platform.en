@@ -13,7 +13,7 @@ This tutorial covers the steps for retrieving data from a payments source and br
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid [!DNL PayPal] base connection ID. If you do not have this ID, then see the steps on how to [create a [!DNL PayPal] base connection](../create/payments/paypal.md) before attempting to do this tutorial.
+>In order to create a dataflow, you must already have a valid base connection ID with a payments source. If you do not have this ID, then see the [sources overview](../../../home.md#payments) for a list of payments sources that you can create a base connection with.
 
 ## Getting started
 
@@ -592,7 +592,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "b54a8dc38e8d4e31a2dc096e413ae8e5",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

@@ -12,7 +12,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 >[!IMPORTANT]
 >
-> While Adobe supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
+> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -28,6 +28,10 @@ Refer to the table below for information about the destination export type and f
 ![SFTP profile-based export type](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## Connect to the destination {#connect}
+
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -49,33 +53,47 @@ When [connecting](../../ui/connect-destination.md) to this destination, you must
 
 If you select the **[!UICONTROL Basic authentication]** type to connect to your SFTP location:
 
-![SFTP destination basic authentication](/help/destinations/assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP destination basic authentication](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Host]**: The address of your SFTP storage location;
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
 * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
+  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, wwith the middle part shortened for brevity.
+
+    ![PGP key](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 If you select the **[!UICONTROL SFTP with SSH key]** authentication type to connect to your SFTP location:
 
-![SFTP destination SSH key authentication](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP destination SSH key authentication](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL Domain]**: Fill in the IP address or the domain name of your SFTP account
 * **[!UICONTROL Port]**: The port used by your SFTP storage location;
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
 * **[!UICONTROL SSH Key]**: The SSH key to log into your SFTP storage location.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
+  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, wwith the middle part shortened for brevity.
 
+    ![PGP key](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+    
 #### Destination details {#destination-details}
 
 After establishing the authentication connection to the SFTP location, provide the following information for the destination:
 
-![Available Destination details for SFTP destination](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![Available Destination details for SFTP destination](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL Name]**: enter a name that will help you identify this destination in the Experience Platform user interface;
 * **[!UICONTROL Description]**: enter a description for this destination;
 * **[!UICONTROL Folder path]**: enter the path to the folder in your SFTP location where the files will be exported.
+
+## Activate segments to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
 ## Exported data {#exported-data}
 

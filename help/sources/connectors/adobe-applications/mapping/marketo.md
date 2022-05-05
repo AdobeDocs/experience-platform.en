@@ -10,6 +10,10 @@ exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 
 The tables below contain the mappings between the fields in the nine [!DNL Marketo] datasets and their corresponding Experience Data Model (XDM) fields.
 
+>[!TIP]
+>
+>All [!DNL Marketo] datasets except `Activities` now support `isDeleted`. Your existing dataflows will automatically include `isDeleted`, but will only ingest the flag for newly ingested data. If you want to apply the flag to all of your historical data, then you must stop your existing dataflows and recreate them with the new mapping. Please note that if you remove `isDeleted`, then you will no longer have access to the functionality. It is critical that the mapping is kept after it is auto-populated.
+
 ## Activities {#activities}
 
 | Source dataset | XDM target field | Notes |
@@ -112,6 +116,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style="table-layout:auto"}
 
@@ -142,6 +147,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style="table-layout:auto"}
 
@@ -171,6 +177,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style="table-layout:auto"}
 
@@ -186,6 +193,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style="table-layout:auto"}
 
@@ -200,6 +208,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Relation |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relation |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style="table-layout:auto"}
 
@@ -229,6 +238,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `name` | `accountName` |
 | `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `sourceType` | `accountSourceType` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style="table-layout:auto"}
 
@@ -262,6 +272,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style="table-layout:auto"}
 
@@ -280,6 +291,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style="table-layout:auto"}
 
@@ -332,6 +344,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
 | `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | This is a calculated field. |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style="table-layout:auto"}
 
