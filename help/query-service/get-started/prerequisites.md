@@ -16,7 +16,7 @@ After you have ingested your data into Adobe Experience Platform, you can begin 
 
 This document covered the prerequisites needed to use [!DNL Query Service] features in Experience Platform. To learn more about how [!DNL Query Service] benefits data processing in Platform, see the [example use case presentation](./use-case.md).
 
-The following resources are also recommended to improve your understanding of [!DNL Query Service]:
+The following resources are useful to improve your understanding of [!DNL Query Service]:
 
 - [[!DNL Query Service] UI overview](../ui/overview.md)
 - [[!DNL Query Service] credentials](../ui/credentials.md)
