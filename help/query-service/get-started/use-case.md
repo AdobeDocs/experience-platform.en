@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;query service;Query service;query
-solution: Experience Platform
 title: Example Use Case for Adobe Experience Platform Query Service
 topic-legacy: tutorial
 description: An end-to-end example to demonstrate the versatility and benefits of Adobe Experience Platform Query Service.
