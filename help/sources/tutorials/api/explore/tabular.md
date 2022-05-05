@@ -26,8 +26,6 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 You can retrieve information on the structure of your data tables by making a GET request to the [!DNL Flow Service] API while providing the base connection ID of your source.
 
-Using the connection ID for your database, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into [!DNL Platform].
-
 **API format**
 
 ```http
