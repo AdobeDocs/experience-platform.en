@@ -1,17 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;upsert;streaming upsert
 title: Streaming Upserts in Data Prep
-description: This document provides information on how to use streaming upserts in Data Prep.
+description: This document provides information on how to stream partial row updates to Profile Service using Data Prep
 ---
-# Streaming Upserts in [!DNL Data Prep]
+# Send partial row updates to [!DNL Profile Service] using [!DNL Data Prep]
 
-Through streaming upserts, [!DNL Data Prep] allows you to retain the format of your data while translating data to Profile Service PATCH requests in flight, during ingestion. Based on the inputs you provide, [!DNL Data Prep] allows you to send a single API payload and translate them to both Profile Service PATCH and Identity Service CREATE requests. 
+Streaming Upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Profile Service] data while also creating and stitching identities with a single API request.
+
+Through Streaming Upserts, you can retain the format of your data while translating that data to [!DNL Profile Service] PATCH requests in flight during ingestion. Based on the inputs you provide, [!DNL Data Prep] allows you to send a single API payload and translate them to both [!DNL Profile Service] PATCH and Identity Service CREATE requests. 
 
 This document provides information on how to stream upserts in [!DNL Data Prep].
-
-<!--
-The goal of Streaming Upserts support in Data Prep is to extend this functionality by allowing customers to retain their data formats as-is and translate that data format to Profile Patch requests in flight during ingestion and eventually to CDC when CDC is available. Data Prep will support receiving a single payload API from customers and translate them to Profile Patch requests and Identity Create requests based on the inputs given. This effort does not change any other existing behavior of Profile Patch requests or other ingestion processes. All other considerations and limitations will remain as is and will be addressed as part of the CDC integration or other initiatives.
--->
 
 ## Getting started
 
@@ -20,6 +18,7 @@ This overview requires a working understanding of the following components of Ad
 * [[!DNL Data Prep]](./home.md): Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
 * [[Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
+* [Sources](../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 
 ## How to use Streaming Upserts in [!DNL Data Prep]
 
@@ -29,16 +28,18 @@ This overview requires a working understanding of the following components of Ad
 
 ### Streaming Upserts high-level workflow
 
-* You must create and enable a dataset for [!DNL Profile] consumption;
-* If identity stitching is required, then you must create an additional dataset **with the same schema** as the dataset that you created and enabled for [!DNL Profile];
-* A dataflow must be created to map your incoming request to the [!DNL Profile] dataset;
+Streaming Upserts in [!DNL Data Prep] works as follows:
+
+* You must first create and enable a dataset for [!DNL Profile] consumption. See the guide on [enabling a dataset for [!DNL Profile]](../catalog/datasets/enable-for-profile.md) for more information;
+* If [!DNL Identity Stitching] is required, then you must also create an additional dataset **with the same schema** as your [!DNL Profile] dataset;
+* Once your dataset(s) are prepared, you must create a dataflow to map your incoming request to the [!DNL Profile] dataset;
 * Next, you must update the incoming request to include the necessary headers. These headers define:
-  * The data operation that is needed to be performed with [!DNL Profile]: Create and Merge;
-  * The optional identity operation to be performed with [!DNL Identity Service]: Create.
+  * The data operation that is needed to be performed with [!DNL Profile]: `create` and `merge`;
+  * The optional identity operation to be performed with [!DNL Identity Service]: `create`.
 
 ### Configuring the identity dataset
 
-If identity stitching is required, then you must create and pass an additional dataset in the incoming payload. The identity dataset must meet the following criteria:
+If [!DNL Identity Stitching] is required, then you must create and pass an additional dataset in the incoming payload. When creating an identity dataset, you must ensure that the following requirements are met:
 
 * The identity dataset must have its associated schema as the [!DNL Profile] dataset. A mismatch of schemas may lead to inconsistent system behavior;
 * However, you must ensure that the identity dataset is different from the [!DNL Profile] dataset. If the datasets are the same, then data will be treated as "overwrite" and not as upsert;
@@ -46,15 +47,16 @@ If identity stitching is required, then you must create and pass an additional d
 
 #### Required fields in the schemas associated with the identity dataset
 
-If your schema contains required fields, validation of the dataset must be suppressed in order to enable [!DNL Identity Service] to receive just the identities. You can suppress validation by applying the `disabled` value to the `acp_validationContext` parameter, as shown below:
+If your schema contains required fields, validation of the dataset must be suppressed in order to enable [!DNL Identity Service] to only receive the identities. You can suppress validation by applying the `disabled` value to the `acp_validationContext` parameter. See the example below:
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
---header 'x-gw-ims-org-id: C6420AAF5CD2749D0A495C60@AdobeOrg' \
---header 'Authorization: Bearer <token>' \
---header 'x-api-key: acp_core_validation' \
---header 'Content-Type: application/json' \
---data-raw '{
+curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
     "tags":{
         "acp_validationContext": ["disabled"]
         }
@@ -67,13 +69,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/catal
 
 ## Understanding the incoming payload structure 
 
-### With identity stitching
+### With [!DNL Identity Stitching]
 
 ```shell
 {
   "header": {
     "flowId": "923e2ac3-3869-46ec-9e6f-7012c4e23f69",
-    "imsOrgId": "C6420AAF5CD2749D0A495C60@AdobeOrg",
+    "imsOrgId": "{ORG_ID}",
     "datasetId": "621fc19ab33d941949af16c8",
     "operations": {
         "data": "create" (default)/"merge"/"delete",
@@ -93,7 +95,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/catal
 | `operations` | This parameter outlines the actions that [!DNL Data Prep] will take based on the incoming request. |
 | `operations.data` | Defines the actions need to be performed in the [!DNL Profile Service]. |
 | `operations.identity` | Defines the operations permitted by the [!DNL Identity Service] on the data.  |
-| `operations.identityDatasetId` | (Optional) The ID of the identity dataset that is required only if identity stitching is needed. |
+| `operations.identityDatasetId` | (Optional) The ID of the identity dataset that is required only if [!DNL Identity Stitching] is needed. |
 
 #### Supported operations
 
@@ -111,16 +113,16 @@ The following operations are supported by [!DNL Identity Service]:
 | --- | --- |
 | `create` | The only permitted operation for this parameter. If `create` is passed as value for `operations.identity`, then [!DNL Data Prep] generates an XDM Entity Create request for [!DNL Identity Service]. If the identity already exists, then the identity is ignored. **Note:** If `operations.identity` is set to `create`, then the `identityDatasetId` must also be specified. The XDM Entity Create message generated internally by [!DNL Data Prep] component will be generated for this dataset id. |
 
-### Without identity stitching
+### Without [!DNL Identity Stitching]
 
-If identity stitching is not required, then you can omit the `identity` and `identityDatasetId` parameters in the operations. Doing so sends data only to [!DNL Profile Service] and skips the [!DNL Identity Service]. See the payload below for an example:
+If [!DNL Identity Stitching] is not required, then you can omit the `identity` and `identityDatasetId` parameters in the operations. Doing so sends data only to [!DNL Profile Service] and skips the [!DNL Identity Service]. See the payload below for an example:
 
 ```shell
 
 {
   "header": {
     "flowId": "923e2ac3-3869-46ec-9e6f-7012c4e23f69",
-    "imsOrgId": "C6420AAF5CD2749D0A495C60@AdobeOrg",
+    "imsOrgId": "{ORG_ID}",
     "datasetId": "621fc19ab33d941949af16c8",
     "operations": {
         "data": "create"/"merge"/"delete",
@@ -128,5 +130,108 @@ If identity stitching is not required, then you can omit the `identity` and `ide
   }
 ... //the raw data attributes goes in here as "body"
 }
+```
+
+## Dynamically pass primary identities
+
+For XDM updates, the schema must be enabled for [!DNL Profile] and contain a primary identity. You can specify the primary identity of an XDM schema in two ways:
+
+* Designate a static field as the primary identity in the XDM schema;
+* Designate one of the identity fields as the primary identity through the identity map field group in the XDM schema
+
+### Designate a static field as the primary identity field in the XDM schema
+
+In the example below, `state`, `homePhone.number` and other attributes are upserted with their respective given values into the [!DNL Profile] with the primary identity of `sampleEmail@gmail.com`. An XDM Entity update message is then generated by the streaming [!DNL Data Prep] component and the [!DNL Profile Service] consumes that XDM Update message to upsert the profile record.
+
+>[!NOTE]
+>
+>In this example, identities will not get stitched as there no operations defined for identity.
+
+```shell
+curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: d5262d48-0f47-4949-be6d-795f06933527' \
+  -d '{
+    "header": {
+        "flowId" : "d5262d48-0f47-4949-be6d-795f06933527",
+        "imsOrgId": "{ORG_ID}",
+        "datasetId": "62259f817f62d71947929a7b",
+        "operations": {
+         "data": "create"
+     }
+    },
+    {
+        "body": {
+        "homeAddress": {
+            "country": "US",
+            "state": "GA",
+            "region": "va7"
+        },
+        "homePhone": {
+            "number": "123.456.799"
+        },
+        "identityMap": {
+            "Email": [{
+                "id": "sampleEmail@gmail.com",
+                "primary": true
+            }]
+        },
+      "personalEmail": {
+            "address": "sampleEmail@gmail.com",
+            "primary": true
+       },
+      "personID": "346576345",
+      "_id": "346576345",
+      "timestamp": "2021-05-05T17:51:45.1880+02",
+      "workEmail": "sampleWorkEmail@gmail.com"
+  }
+}'
+```
+
+### Designate one of the identity fields as the primary identity through the identity map field group in the XDM schema
+
+In this example, the header contains the `operations` attribute with the `identity` and `identityDatasetId` properties. This allows data to be merged with [!DNL Profile Service] and also for identities to be passed to [!DNL Identity Service].
+
+```shell
+curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: d5262d48-0f47-4949-be6d-795f06933527' \
+  -d '{
+    "header": {
+        "flowId" : "d5262d48-0f47-4949-be6d-795f06933527",
+        "imsOrgId": "{ORG_ID}",
+        "datasetId": "62259f817f62d71947929a7b",
+        "operations": {          
+            "data": "merge",
+            "identity": "create",
+            "identityDatasetId": "6254a93b851ecd194b64af9e"
+      }
+    },
+    {        
+       "body": {
+        "homeAddress": {
+            "country": "US",
+            "state": "GA",
+            "region": "va7"
+        },
+        "homePhone": {
+            "number": "123.456.799"
+        },
+        "identityMap": {
+            "Email": [{
+                "id": "sampleEmail@gmail.com",
+                "primary": true
+            }]
+        },
+      "personalEmail": {
+            "address": "sampleEmail@gmail.com",
+            "primary": true
+       },
+      "personID": "346576345",
+      "_id": "346576345",
+      "timestamp": "2021-05-05T17:51:45.1880+02",
+      "workEmail": "sampleWorkEmail@gmail.com"
+  }
+ }'
 ```
 
