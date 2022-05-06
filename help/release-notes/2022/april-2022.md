@@ -14,7 +14,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Sources](#sources)
 
@@ -155,17 +155,31 @@ XDM is an open-source specification that provides common structures and definiti
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
-## [!DNL Intelligent Services] {#intelligent-services}
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
+Intelligent services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
 
-Attribution AI and Customer AI allow customers to configure advanced AI/ML models for marketing attribution and customer propensity. The Multi Dataset feature helps customers to bring in multiple datasets at the time of model configuration without the need to stitch and prepare data in advance.
+### Attribution AI
+
+Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 
 **Updated features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for Multi Dataset | The Multi Dataset feature now supports all Experience Event datasets as well as the selection of Identity Map as an identity. Customers can select the Identity Map and any associated IDs as long as there is a common identity namespace across datasets. Attribution AI supports the following schemas: Adobe Analytics, Experience Event, Consumer Experience Event. Customer AI supports all of these schemas plus the Adobe Audience Manager schema. For more information on Multi Dataset support in Attribution AI & Customer AI, refer to the [Attribution AI user guide](../../intelligent-services/attribution-ai/user-guide.md) and [Customer AI user guide](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Support for Multi Dataset | The Multi Dataset feature now supports all Experience Event datasets as well as the selection of Identity Map as an identity. Customers can select the Identity Map and any associated IDs as long as there is a common identity namespace across datasets. Attribution AI supports the following schemas: Adobe Analytics, Experience Event, Consumer Experience Event. For more information on Multi Dataset support in Attribution AI, refer to the [Attribution AI user guide](../../intelligent-services/attribution-ai/user-guide.md). |
+
+For more information on [!DNL Intelligent Services], please see the [[!DNL Intelligent Services] overview](../../intelligent-services/home.md).
+
+### Customer AI
+
+Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
+
+**Updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Support for Multi Dataset | The Multi Dataset feature now supports all Experience Event datasets as well as the selection of Identity Map as an identity. Customers can select the Identity Map and any associated IDs as long as there is a common identity namespace across datasets. Customer AI supports the following schemas: Adobe Analytics, Experience Event, Consumer Experience Event, and the Adobe Audience Manager schema. For more information on Multi Dataset support in Customer AI, refer to the [Customer AI user guide](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | New model evaluation metrics in Customer AI | New Gains charts in Customer AI allow marketers to determine the group size to target based on their budget and ROI goals. New Lift charts measure the quality of the model, providing better visibility into the lift they would get over random targeting. For more information, see the [discover insights with Customer AI](../../intelligent-services/customer-ai/user-guide/discover-insights.md) document. |
 
 For more information on [!DNL Intelligent Services], please see the [[!DNL Intelligent Services] overview](../../intelligent-services/home.md).
