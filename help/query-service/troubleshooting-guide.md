@@ -467,7 +467,7 @@ WHERE T2.ID IS NULL
 
 This section provides information on exporting data and limits.
 
-### Is there a way to extract data from Query Service after query processing and save the results in a CSV file?
+### Is there a way to extract data from Query Service after query processing and save the results in a CSV file? {#export-csv}
 
 +++Answer
 Yes. Data can be extracted from Query Service and there is also the option to store the results in CSV format via a SQL command. 

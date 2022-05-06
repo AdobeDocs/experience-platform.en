@@ -42,9 +42,11 @@ The expression filters the MCIDs of all visitors that meet the threshold but doe
 
 ## Improve bot detection with machine learning
 
-The initial SQL statement must be refined to allow for a variety of different intervals and ensure that the established thresholds are suitable to determine bot traffic with high accuracies.
+The initial SQL statement can be refined to become a feature extraction query for machine learning. The improved query should produce more features for a variety of intervals for training machine learning models with high accuracies.  
 
 The example statement is expanded from one minute with up to 60 clicks, to include five minute and 30 minutes periods with click counts of 300, and 1800 respectively.
+
+The example statement collects the maximum number of clicks for each MCID over the various durations. The initial statement has been expanded to include one minute (60 seconds), 5 minutes (300 seconds), and one hour (i.e. 1800 seconds) periods.
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -88,9 +90,9 @@ The result of this expression might look similar to the table provided below.
 
 | `id` | `count_1_min`  | `count_5_min` | `count_30_min` |
 |---|---|---|---|
-| 4833075303848917832 | 1 | 1  | 1  |
-| 1469109497068938520  | 1  | 1  |  1 |
-| 5045682519445554093 | 1  | 1 | 1  |
+| 4833075303848917832 | 1 | 1  | 1 |
+| 1469109497068938520 | 1  | 1 | 1 |
+| 5045682519445554093 | 1  | 1 | 1 |
 | 7148203816406620066 | 3  | 3 | 3 |
 | 1013065429311352386 |  1 | 1 | 1 |
 | 3077475871984695013 |  7 | 7 | 7 |
@@ -103,9 +105,9 @@ The result of this expression might look similar to the table provided below.
 
 ## Identify new spike thresholds using machine learning
 
-The results of using a variety of different intervals, enable you to conduct machine learning model training. Export the dataset in CSV format into [!DNL Jupyter Notebook] to train a machine learning model using current machine learning libraries.
+Next, export the resulting query dataset into CSV format and then import it into [!DNL Jupyter Notebook]. From that environment, you can train a machine learning model using current machine learning libraries. See the troubleshooting guide for more details on [how to export data from [!DNL Query Service] in CSV format](.md#export-csv)
 
-The ad hoc spike thresholds initially established are not data-driven and therefore lack accuracy. Machine Learning models can be used to train parameters as thresholds and offer the opportunity to increase the query efficiency by reducing the number of `GROUP BY` keywords.
+The ad hoc spike thresholds initially established are not data-driven and therefore lack accuracy. Machine Learning models can be used to train parameters as thresholds. As a result, you can increase the query efficiency by reducing the number of `GROUP BY` keywords by removing unneeded features.
 
 This example uses the Scikit-Learn machine learning library which is installed by default with [!DNL Jupyter Notebook]. The "pandas" python library is also imported for use here. The following commands are input into [!DNL Jupyter Notebook].
 
@@ -121,7 +123,7 @@ df
 
 Next, you must train a decision tree classifier on the dataset and observe the logic resulting from the model.
 
-The "puplot" library is used to train the decision tree classifier in the example below.
+The "Matplotlib" library is used to visualize the decision tree classifier in the example below.
 
 ```shell
 from sklearn.tree import DecisionTreeClassifier
@@ -142,23 +144,17 @@ plt.show()
 
 The values returned from [!DNL Jupyter Notebook] for this example are as follows.
 
+```text
+Model Accuracy: 0.99935
+```
+
 ![Statistical output from [!DNL Jupyter Notebook] machine learning model.](./images/jupiter-notebook-output.png)
 
-The results fom the model shown in the example above are over 99% accurate.
+The results for the model shown in the example above are over 99% accurate.
 
 As the decision tree classifier can be trained using data from [!DNL Query Service] on a regular cadence using scheduled queries, you can ensure data integrity by filtering bot activity with a high degree of accuracy. By using the parameters derived from the machine learning model, the original queries can be updated with the highly accurate parameters created by the model.
 
 The example model determined with a high degree of accuracy that any visitors with more than 130 interactions in five minutes are bots. This information can now be used to refine your bot filtering SQL queries.
-
-## Suggested queries for bot filtering without machine learning
-
-The following suggestions can be used to identify and filter bot activity without the use of a machine learning model.
-
-* Spikes in traffic where the bounce rate is a hundred percent.
-* Spikes in traffic where the time spent on the site is less than one second. 
-* When 100% (or very close to 100%) of total user sessions come from new visitors to the website.  
-* When there is exactly one page per session. 
-* When browser dimensions are “not set”. 
 
 ## Next steps
 
