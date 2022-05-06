@@ -9,7 +9,9 @@ feature: Queries
 # Adobe Experience Platform Query Service {#query}
 
 - [Query Service overview](home.md)
-- [Quickstart guide](quickstart.md)
+- Get started {#get-started}
+  - [Prerequisites](get-started/prerequisites.md)
+  - [Use case](get-started/use-case.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
@@ -51,6 +53,7 @@ feature: Queries
   - [PSQL](clients/psql.md)
   - [RStudio](clients/rstudio.md)
   - [Tableau](clients/tableau.md)
+- [Audit log guide](audit-log-guide.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
