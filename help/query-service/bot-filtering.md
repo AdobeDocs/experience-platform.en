@@ -156,6 +156,12 @@ The following suggestions can be used to identify and filter bot activity withou
 
 * Spikes in traffic where the bounce rate is a hundred percent.
 * Spikes in traffic where the time spent on the site is less than one second. 
-* When 100% (or very close to 100%) of total user sessions come from new visitors to the website.ß  
+* When 100% (or very close to 100%) of total user sessions come from new visitors to the website.  
 * When there is exactly one page per session. 
 * When browser dimensions are “not set”. 
+
+## Next steps
+
+By reading this document you have a better understanding of how to use Query Service and machine learning to determine and filter bot activity. 
+
+Other documents that demonstrate the benefits of [!DNL Query Service] to your organization’s strategic business insights are the abandoned browse use case example.
