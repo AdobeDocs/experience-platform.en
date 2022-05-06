@@ -2,7 +2,7 @@
 title: Bot Filtering in Query Service with Machine Learning
 description: This document provides an overview of how to use Query Service and machine learning to determine bot activity and filter their actions from genuine online website visitor traffic.
 ---
-# Bot Filtering in [!DNL Query Service] with Machine Learning
+# Bot Filtering in [!DNL Query Service] with machine learning
 
 Bot activity can impact analytics metrics and damage data integrity. Adobe Experience Platform [!DNL Query Service] can be used to maintain your data quality through the process of bot filtering. 
 
@@ -12,11 +12,11 @@ Bot activity can be identified in a number of ways. The approach taken in this d
 
 This document provides an overview and detailed examples of the SQL bot filtering queries and the machine learning models necessary for you to set up the process in your environment.    
 
-## Prerequisites
+## Getting started
 
 As part of this process requires you to train a machine learning model, this document assumes a working knowledge of one or more machine learning environments. 
 
-This example uses [!DNL Jupiter Notebook] as a development environment. Although there are many options available, [!DNL Jupiter Notebook] is recommended because it is an open-source web application that has low computational requirements. It can be [downloaded from the official site](https://jupyter.org/). 
+This example uses [!DNL Jupyter Notebook] as a development environment. Although there are many options available, [!DNL Jupyter Notebook] is recommended because it is an open-source web application that has low computational requirements. It can be [downloaded from the official site](https://jupyter.org/). 
 
 ## Use [!DNL Query Service] to define a threshold for bot activity
 
@@ -47,7 +47,7 @@ The initial SQL statement must be refined to allow for a variety of different in
 The example statement is expanded from one minute with up to 60 clicks, to include five minute and 30 minutes periods with click counts of 300, and 1800 respectively.
 
 ```sql
-SELECT table1.mcid AS id, 
+SELECT table_count_1_min.mcid AS id, 
        count_1_min, 
        count_5_mins, 
        count_30_mins 
@@ -59,7 +59,7 @@ FROM   ( ( (SELECT mcid,
        <YOUR_TABLE_NAME> 
                   GROUP  BY Unix_timestamp(timestamp) / 60, 
                             enduserids._experience.mcid.id) 
-          GROUP  BY mcid) AS table1 
+          GROUP BY mcid) AS table_count_1_min 
            LEFT JOIN (SELECT mcid, 
                              Max(count_5_mins) AS count_5_mins 
                       FROM   (SELECT enduserids._experience.mcid.id AS mcid, 
@@ -69,8 +69,8 @@ FROM   ( ( (SELECT mcid,
            <YOUR_TABLE_NAME> 
                               GROUP  BY Unix_timestamp(timestamp) / 300, 
                                         enduserids._experience.mcid.id) 
-                      GROUP  BY mcid) AS table2 
-                  ON table1.mcid = table2.mcid ) 
+                      GROUP  BY mcid) AS table_count_5_mins 
+                  ON table_count_1_min.mcid = table_count_5_mins.mcid ) 
          LEFT JOIN (SELECT mcid, 
                            Max(count_30_mins) AS count_30_mins 
                     FROM   (SELECT enduserids._experience.mcid.id AS mcid, 
@@ -80,11 +80,9 @@ FROM   ( ( (SELECT mcid,
          <YOUR_TABLE_NAME> 
                             GROUP  BY Unix_timestamp(timestamp) / 1800, 
                                       enduserids._experience.mcid.id) 
-                    GROUP  BY mcid) AS table3 
-                ON table1.mcid = table3.mcid ) 
+                    GROUP  BY mcid) AS table_count_30_mins 
+                ON table_count_1_min.mcid = table_count_30_mins.mcid ) 
 ```
-
-<!-- Q) Can we rename table1, table2, and table3 to be more descriptive? -->
 
 The result of this expression might look similar to the table provided below.
 
@@ -105,13 +103,11 @@ The result of this expression might look similar to the table provided below.
 
 ## Identify new spike thresholds using machine learning
 
-The results of using a variety of different intervals, enable you to conduct machine learning model training. Export the dataset in CSV format into [!DNL Jupiter Notebook] to train a machine learning model using current machine learning libraries.
-
-<!-- Do we need to include the command line example? -->
+The results of using a variety of different intervals, enable you to conduct machine learning model training. Export the dataset in CSV format into [!DNL Jupyter Notebook] to train a machine learning model using current machine learning libraries.
 
 The ad hoc spike thresholds initially established are not data-driven and therefore lack accuracy. Machine Learning models can be used to train parameters as thresholds and offer the opportunity to increase the query efficiency by reducing the number of `GROUP BY` keywords.
 
-This example uses the Scikit-Learn machine learning library which is installed by default with [!DNL Jupiter Notebook]. The "pandas" python library is also imported for use here. The following commands are input into [!DNL Jupiter Notebook].
+This example uses the Scikit-Learn machine learning library which is installed by default with [!DNL Jupyter Notebook]. The "pandas" python library is also imported for use here. The following commands are input into [!DNL Jupyter Notebook].
 
 ```shell
 import pandas as ps
@@ -122,9 +118,6 @@ df['is_bot'] = 0
 df.loc[df['count_1_min'] > 50,'is_bot'] = 1
 df
 ```
-
-<!-- df.loc[df['count_5-mins'] > 130,:] (line was removed from example)-->
-<!-- do i need to show the same table with more data?  -->
 
 Next, you must train a decision tree classifier on the dataset and observe the logic resulting from the model.
 
@@ -147,18 +140,15 @@ tree.plot_tree(clf,feature_names=X.columns)
 plt.show()
 ```
 
-<!-- Is tree.plot_tree(clf,feature_names=X.columns)
-plt.show() input at a different time? -->
+The values returned from [!DNL Jupyter Notebook] for this example are as follows.
 
-The values returned from [!DNL Jupiter Notebook] for this example are as follows.
-
-![Statistical output from Jup[iter Notebook machine learning model.]](./images/jupiter-notebook-output.png)
+![Statistical output from [!DNL Jupyter Notebook] machine learning model.](./images/jupiter-notebook-output.png)
 
 The results fom the model shown in the example above are over 99% accurate.
 
 As the decision tree classifier can be trained using data from [!DNL Query Service] on a regular cadence using scheduled queries, you can ensure data integrity by filtering bot activity with a high degree of accuracy. By using the parameters derived from the machine learning model, the original queries can be updated with the highly accurate parameters created by the model.
 
-The example model determines that bot activity can be defined as visitors with more than 1in five minutes. This information can now be used to refine your bot filtering SQL queries.
+The example model determined with a high degree of accuracy that any visitors with more than 130 interactions in five minutes are bots. This information can now be used to refine your bot filtering SQL queries.
 
 ## Suggested queries for bot filtering without machine learning
 
