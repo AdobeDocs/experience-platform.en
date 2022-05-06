@@ -9,7 +9,7 @@ In order to use the [Reactor API](https://www.adobe.io/experience-platform-apis/
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 This guide covers how to use the Adobe Developer Console to gather the values for each of these headers so you can start making calls to the Reactor API.
 
@@ -21,11 +21,11 @@ Before you can generate authentication values for the Reactor API, you must have
 
 Using Adobe Developer Console, you must generate the following three access credentials:
 
-* `{IMS_ORG}`
+* `{ORG_ID}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Your IMS Organization's ID (`{IMS_ORG}`) and API key (`{API_KEY}`) can be reused in future API calls after they have been initially generated. However, your access token (`{ACCESS_TOKEN}`) is temporary and must be regenerated every 24 hours.
+Your IMS Organization's ID (`{ORG_ID}`) and API key (`{API_KEY}`) can be reused in future API calls after they have been initially generated. However, your access token (`{ACCESS_TOKEN}`) is temporary and must be regenerated every 24 hours.
 
 The steps for generating these values are covered in detail below.
 
@@ -64,13 +64,13 @@ Select the desired product profiles from the list, then select **Save configured
 Once the API has been added to the project, the project page reappears on the Experience Platform Reactor API page. From here, scroll down to the **Service Account (JWT)** section, which provides the following access credentials that are required in all calls to the Reactor API:
 
 * **CLIENT ID**: The Client ID is the required `{API_KEY}` which must be provided in the `x-api-key` header.
-* **ORGANIZATION ID**: The Organization ID is the `{IMS_ORG}` value that must be used in the `x-gw-ims-org-id` header.
+* **ORGANIZATION ID**: The Organization ID is the `{ORG_ID}` value that must be used in the `x-gw-ims-org-id` header.
 
 ![](../images/api/getting-started/access-creds.png)
 
 ### Authentication for each session
 
-Now that you have your `{API_KEY}` and `{IMS_ORG}` values, the final step is generating a `{ACCESS_TOKEN}` value.
+Now that you have your `{API_KEY}` and `{ORG_ID}` values, the final step is generating a `{ACCESS_TOKEN}` value.
 
 >[!NOTE]
 >
@@ -147,7 +147,7 @@ A successful response returns a new access token, as well as the number of secon
 
 ## Next steps
 
-By following the steps in this tutorial, you should have a valid values for `{IMS_ORG}`, `{API_KEY}`, and `{ACCESS_TOKEN}`. You can now test these values by using them in a simple cURL request to the Reactor API.
+By following the steps in this tutorial, you should have a valid values for `{ORG_ID}`, `{API_KEY}`, and `{ACCESS_TOKEN}`. You can now test these values by using them in a simple cURL request to the Reactor API.
 
 Start by attempting to make an API call to [list all companies](./endpoints/companies.md#list). 
 
