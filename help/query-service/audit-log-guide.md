@@ -1,6 +1,7 @@
 ---
 title: Query Service Audit Log Integration
 description: Query Service audit logs maintain records for various user actions to form an audit trail for troubleshooting issues or adhering to corporate data stewardship policies and regulatory requirements. This tutorial provides an overview of the audit log features specific to Query Service.
+exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
 ---
 # [!DNL Query Service] audit log integration
 
@@ -68,4 +69,4 @@ Available filters vary depending on the category selected in the dropdown. The f
 
 By reading this document you have a better understanding of the [!DNL Query Service] audit log capability and how it can be used to filter your [!DNL Query Service] user actions.
 
-If you are using the [!DNL Query Service] audit log capability for troubleshooting purposes, you are recommended to read the [troubleshooting guide](./troubleshooting-guide.md).  
+If you are using the [!DNL Query Service] audit log capability for troubleshooting purposes, you are recommended to read the [troubleshooting guide](./troubleshooting-guide.md).
