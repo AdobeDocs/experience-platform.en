@@ -32,7 +32,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a source connection {#source}
 
-You can create a source connection by making a POST request to the `sourceConnections` endpoint of [!DNL Flow Service] API while providing your base connection ID, the path to the source file that you want to ingest, and your source's corresponding connection spec ID.
+You can create a source connection by making a POST request to the `sourceConnections` endpoint of [!DNL Flow Service] API while providing your base connection ID, the path to the source file that you want to ingest, and your source's corresponding connection specification ID.
 
 When creating a source connection, you must also define an enum value for the data format attribute.
 
@@ -90,11 +90,11 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of your cloud storage source. |
 | `data.format` | The format of the data you want to bring to Platform. Supported values are: `delimited`, `JSON`, and `parquet`. |
 | `data.properties` | (Optional) A set of properties that you can apply to your data while creating a source connection. |
-| `data.properties.columnDelimiter` | (Optional) A single character column delimiter that you can specify when collecting flat files. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value. **Note**: The `columnDelimiter` property can only be used when ingesting delimited files. |
+| `data.properties.columnDelimiter` | (Optional) A single character column delimiter that you can specify when collecting flat files. Any single character value is a permissible column delimiter. If not provided, a comma (`,`) is used as the default value. **Note**: The `columnDelimiter` property can only be used when ingesting delimited files. |
 | `data.properties.encoding` | (Optional) A property that defines the encoding type to be used when ingesting your data to Platform. The supported encoding types are: `UTF-8` and `ISO-8859-1`. **Note**: The `encoding` parameter is only available when ingesting delimited CSV files. Other file types will be ingested with the default encoding, `UTF-8`. |
-| `data.properties.compressionType` | (Optional) A property that defines the compressed file type for ingestion. The supported compressed file types are:  `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, and `tar`. **Note**: The `compressionType` property can only be used when ingesting delimited or JSON files. |
+| `data.properties.compressionType` | (Optional) A property that defines the compressed file type for ingestion. The supported compressed file types are: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, and `tar`. **Note**: The `compressionType` property can only be used when ingesting delimited or JSON files. |
 | `params.path` | The path of the source file you are accessing. |
-| `connectionSpec.id` | The connection spec ID associated with your specific cloud storage source. See the [appendix](#appendix) for a list of connection spec IDs. |
+| `connectionSpec.id` | The connection specification ID associated with your specific cloud storage source. See the [appendix](#appendix) for a list of connection spec IDs. |
 
 **Response**
 
