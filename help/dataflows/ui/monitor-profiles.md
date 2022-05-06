@@ -52,7 +52,7 @@ The following metrics are available for this dashboard view:
 | -------| ----------- |
 | **[!UICONTROL Source name]** | The name of the source. |
 | **[!UICONTROL Records received]** |  The number of records received from [!DNL Data Lake]. |
-| **[!UICONTROL Records failed ]**| The number of records that were ingested, but not into [!DNL Profile] due to errors. |
+| **[!UICONTROL Records failed]**| The number of records that were ingested, but not into [!DNL Profile] due to errors. |
 | **[!UICONTROL Profile fragments created]** | The number of net new [!DNL Profile] fragments added. |
 | **[!UICONTROL Profile fragments updated]** | The number of existing [!DNL Profile] fragments updated. |
 | **[!UICONTROL Total Profile fragments]** | The total number of records written into [!DNL Profile], including all existing [!DNL Profile] fragments updated and new [!DNL Profile] fragments created. |
