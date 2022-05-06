@@ -7,9 +7,9 @@ exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
 ---
 # Access permissions for dashboards
 
-In order to grant users the ability to view, edit, and update dashboards, you must first enable permissions. In Adobe Experience Platform, access control is provided through the [Adobe Admin Console](https://adminconsole.adobe.com/). Users are linked with permissions and sandboxes through product profiles in [!DNL Admin Console].
+In order to grant users the ability to view, edit, and update dashboards, you must first enable permissions. In Adobe Experience Platform, access control is provided through the [Adobe Admin Console](https://adminconsole.adobe.com/). Users are linked with permissions and sandboxes through product profiles in the [!DNL Admin Console].
 
-This document provides a summary of the available permissions for dashboards, including the features they give access to and the user functions they enable. It also details how to add specific dashboard permissions within Admin Console. For detailed information on gaining and assigning access permissions, please begin by reading the [access control overview](../access-control/home.md).
+This document provides a summary of the available permissions for dashboards, including the features they give access to and the user functions they enable. For detailed information on gaining and assigning access permissions, please begin by reading the [access control overview](../access-control/home.md).
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ In order to configure access control for [!DNL Experience Platform], you must ha
 
 ## Available dashboard permissions {#available-permissions}
 
-The [!DNL Dashboards] service provides three permissions that, when combined, provide full access to the [!UICONTROL Profiles], [!UICONTROL Segments] and [!UICONTROL Destinations] dashboards within Adobe Experience Platform. These permissions are:
+The [!DNL Dashboards] service provides three permissions that, when combined, provide full access to the [!UICONTROL Profiles], [!UICONTROL Segments], [!UICONTROL Destinations], and [!UICONTROL Licence Usage] dashboards within Adobe Experience Platform. These permissions are:
 
 | Permission  | Description  |
 |---|---|
@@ -25,7 +25,7 @@ The [!DNL Dashboards] service provides three permissions that, when combined, pr
 | **View Standard Dashboards**  | This provides **read-only** functionality for the [!UICONTROL Profiles], [!UICONTROL Destinations], and [!UICONTROL Segments] dashboards and allows access to them through Platform’s left navigation. It also adds [!UICONTROL Dashboards] to the left navigation and access to the [!UICONTROL Dashboards] inventory and integrations tab. |
 | **View License Usage Dashboard** | This permission allows users **read-only** access to [the license usage dashboard](./guides/license-usage.md) within the Experience Platform UI. |
 
-There are five permissions not included in the [!DNL Dashboard] category that are potentially required depending on your needs. The following table outlines their category locations in Admin Console:
+There are five permissions not included in the [!DNL Dashboard] category that are potentially required depending on your needs. The following table outlines their category locations in the Admin Console:
 
 >[!IMPORTANT]
 >
@@ -45,12 +45,12 @@ The following access-control matrix provides a breakdown of which permissions ar
 
 |   | [!UICONTROL View Standard Dashboard] OR [!UICONTROL Manage Standard Dashboard] | [!UICONTROL View Profiles],<br/>[!UICONTROL View Segments],<br/> [!UICONTROL View Destinations] | [!UICONTROL Manage Queries] & [!UICONTROL Manage Sandboxes] | [!UICONTROL View License Usage Dashboard]  |
 |---|---|---|---|---|
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] in the left navigation. | N/A | A "View" or "Manage" permission is REQUIRED for each respective dashboard. | N/A | N/A |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] in the left navigation. | N/A | **A "View" or "Manage" permission is REQUIRED** for each respective dashboard. | N/A | N/A |
 | [!DNL Dashboards] in the left navigation. | ENABLED | **At least one REQUIRED**. | N/A | N/A |
 | [!DNL Dashboards] [!DNL Inventory] <br/>(the browse tab) | ENABLED | N/A | N/A | N/A |
 | [!DNL Dashboards] [!DNL Integrations] tab <br/>(used to install Power BI) | ENABLED | **At least one REQUIRED** |N/A | N/A |
 | Power BI Install button & workflow | ENABLED | N/A | **REQUIRED** | N/A |
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dashbaords.<br/>The ability to edit widget schemas and add new attributes for widget customization | **Manage-standard-dashboard REQUIRED**  | REQUIRED (for each respective dashboard) | N/A | N/A |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] dashbaords.<br/>The ability to edit widget schemas and add new attributes for widget customization | **Manage-standard-dashboard REQUIRED**  | **REQUIRED (for each respective dashboard)** | N/A | N/A |
 | [!DNL License Usage Dashboard] |  N/A | N/A | N/A | ENABLED |
 
 {style="table-layout:auto"}
@@ -58,28 +58,6 @@ The following access-control matrix provides a breakdown of which permissions ar
 ## Add permissions to your product profile
 
 Use the information provided above to add the appropriate permissions to your product profile. See the documentation for full instructions on [how to add permissions through the access control UI](../access-control/ui/permissions.md). 
-
-<!-- The following steps illustrate how to add these permissions using Admin Console and grant users access to dashboards in Experience Platform. 
-
-Begin by logging into [Adobe Admin Console](https://adminconsole.adobe.com) and selecting **Products** from the top navigation.
-
-![The Adobe Admin Console UI with Products highlighted in the top navigation bar.](images/admin-console/admin-console-overview.png)
-
-Select **Adobe Experience Platform** from the Experience Cloud dropdown in the left navigation or from the cards listed under *Products and services*. From the Adobe Experience Platform product page, select the product profile that you want to add the dashboard permissions to, or select **New Profile** to create a new product profile.
-
-![The Admin Console Product page displaying the Product Profiles tab.](images/admin-console/products.png)
-
-The selected product profile opens, showing the users associated with that product profile. To manage the permissions for the product profile, select **Permissions**.
-
-![The Admin Console Product page displaying the Permissions tab.](images/admin-console/product-users.png) -->
-
-<!-- ## Add/edit permissions
-
-The **Permissions** tab displays all of the available permissions for the product profile. Locate the **Dashboards** row. To edit the dashboard permissions, select **Edit** on the dashboard row.
-
-![The Adobe Admin Console displaying the permissions tab and highlighting the Dashboards row.](images/admin-console/product-permissions.png)
-
-The **Edit Permissions** dialog opens. See the documentation for complete instructions on [how to add and edit permissions using Admin console](../access-control/ui/permissions.md).  -->
 
 For descriptions of the permissions, please refer to the [available permissions](#available-permissions) section earlier in this document.
 
