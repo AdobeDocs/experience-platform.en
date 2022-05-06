@@ -10,7 +10,7 @@ Once your organization is provisioned for Adobe Experience Platform, your admini
 
 This [data ingestion tutorial video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) provides an overview on creating a dataset, mapping a dataset to a schema, adding data to the dataset, and confirming its ingestion. The [ingestion overview documentation](../../ingestion/home.md) supplements this and provides more in depth information and links to other learning resources.
 
-After you have ingested your data into Adobe Experience Platform, you can begin working with [!DNL Query Service] using either the [[!DNL Query Editor] in the Platform UI](ui/user-guide.md) or the [[!DNL Query Service] API](../api/getting-started.md). Full documentation on how to use each of these tools can be found within their respective sections. 
+After you have ingested your data into Adobe Experience Platform, you can begin working with [!DNL Query Service] using either the [[!DNL Query Editor] in the Platform UI](../ui/user-guide.md) or the [[!DNL Query Service] API](../api/getting-started.md). Full documentation on how to use each of these tools can be found within their respective sections. 
 
 ## Next Steps
 
