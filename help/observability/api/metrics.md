@@ -35,7 +35,7 @@ curl -X POST \
   https://platform.adobe.io/data/infrastructure/observability/insights/metrics \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "start": "2020-07-14T00:00:00.000Z",
@@ -300,7 +300,7 @@ Responses from the `/metrics` endpoint may return error messages under certain c
         "tenantInfo": {
             "sandboxName": "prod",
             "sandboxId": "49f58060-5d47-34rd-aawf-a5384333ff12",
-            "imsOrgId": "{IMS_ORG}"
+            "imsOrgId": "{ORG_ID}"
         },
         "additionalContext": null
     },
