@@ -11,7 +11,9 @@ feature: Queries
 - [Query Service overview](home.md)
 - Get started {#get-started}
   - [Prerequisites](get-started/prerequisites.md)
-  - [Use case](get-started/use-case.md)
+- Use cases {#use-cases}
+  - [Abandoned Cart](use-cases/abandoned-cart.md)
+  - [Bot Filtering](use-cases/bot-filtering.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
