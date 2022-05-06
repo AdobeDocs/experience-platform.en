@@ -14,18 +14,22 @@ This document covers the process for enabling the customer-managed keys (CMK) fe
 
 ## Process summary
 
-After your organization purchases CMK, the process for setting up the feature can be summarized as follows:
+CMK is included in the Healthcare Shield and the Privacy and Security Shield offerings from Adobe. After your organization purchases one of these offerings, the process for setting up CMK can be summarized as follows:
 
-1. [Create an Azure Key Vault](#create-key-vault), then [generate or import an encryption key](#generate-or-import-key) that will ultimately be shared with Adobe.
+1. [Create an Azure Key Vault](#create-key-vault), then [generate or import an encryption key](#generate-or-import-key) (based on your organization's policies) that will ultimately be shared with Adobe.
 1. Use API calls to [register the CMK app](#register-app) with your Azure tenant.
 1. [Assign the service principal for the CMK app](#assign-to-role) to an appropriate role for the key vault. 
 1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe).
 
-Once the setup process is complete, you can grant or revoke access to ingested Platform data by enabling and disabling the encryption key in Azure.
+Once the setup process is complete, your organization's data across all sandboxes will be encrypted using your Azure key setup.
 
 ## Create an Azure Key Vault {#create-key-vault}
 
-CMK only supports keys from a Microsoft Azure Key Vault. If you do not have a key vault set up already, you can [create a free account](https://azure.microsoft.com/en-us/free/) and follow the steps below to set one up.
+CMK only supports keys from a Microsoft Azure Key Vault. To get started, you must work with Azure to create a new enterprise account, or use an existing enterprise account  and follow the steps below to create the Key Vault.
+
+>[!NOTE]
+>
+>The documentation below only covers the basic steps to create the key vault. Outside of this guidance, you should configure the key vault as per your organization's policies.
 
 Log in to the Azure portal and use the search bar to locate **[!DNL Key vaults]** under the list of services.
 
@@ -35,9 +39,15 @@ The **[!DNL Key vaults]** page appears after selecting the service. From here, s
 
 ![Create key vault](./assets/customer-managed-keys/create-key-vault.png)
 
-Using the provided form, fill in the basic details for the key vault, including a name and an assigned resource group. While most options can be left as their default values, make sure that you enable the purge protection option. From here, continue going through the key vault creation workflow and configure the different options how you wish.
+Using the provided form, fill in the basic details for the key vault, including a name and an assigned resource group.
 
-![Basic config for the key vault](./assets/customer-managed-keys/basic-config.png)
+>[!WARNING]
+>
+>While most options can be left as their default values, **make sure that you enable the purge protection option**. If you do not turn this feature on, you could risk losing access to your data if the key vault is deleted.
+>
+>![Enable purge protection](./assets/customer-managed-keys/basic-config.png)
+
+From here, continue going through the key vault creation workflow and configure the different options according to your organization's policies.
 
 Once you arrive at the **[!DNL Review + create]** step, you can review the details of the key vault while it goes through validation. Once validation passes, select **[!DNL Create]** to complete the process.
 
@@ -159,7 +169,7 @@ On the next screen, choose **[!DNL Select members]** to open a dialog in the rig
 
 ## Send your key URI to Adobe {#send-to-adobe}
 
-After installing the CMK app on Azure, you can start sending your encryption key identifiers to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
+After installing the CMK app on Azure, you can send your encryption key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
 
 ![Select key](./assets/customer-managed-keys/select-key.png)
 
