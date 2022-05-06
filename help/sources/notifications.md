@@ -61,7 +61,7 @@ A successful response returns a set of `metrics` that define characteristics of 
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "7127a4f0-def8-11e9-83ce-e79494b1c2a5",
     "sandboxName": "prod",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "id": "933cf9f4-cf01-4d75-bcf9-f4cf010d750a",
     "flowId": "1c6f1047-dcaf-48fe-af10-47dcaf08feaf",
     "providerRefId": "test1234",
@@ -166,7 +166,7 @@ A successful response returns a set of `metrics` that define characteristics of 
     "processStartTime": 1597213531213,
     "header": {
       "_adobeio": {
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "providerMetadata": "platform_notifications",
         "eventCode": "sources_flow_run_success"
       }
@@ -199,7 +199,7 @@ The following response is an example of a failed flow run, with an error occurri
         "msgType": "eventNotification",
         "version": "1.0",
         "timestamp": 1597434157622,
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "schema": {
           "name": "run-notification",
           "version": "1.0"
@@ -218,7 +218,7 @@ The following response is an example of a failed flow run, with an error occurri
           "updatedClient": "{UPDATED_CLIENT}",
           "sandboxId": "e49ebb00-d0fa-11e9-b164-ed6a398c8b35",
           "sandboxName": "prod",
-          "imsOrgId": "{IMS_ORG}",
+          "imsOrgId": "{ORG_ID}",
           "id": "d9024c32-2174-4271-824c-322174627101",
           "flowId": "cf4fce79-8822-456d-8fce-798822556dc6",
           "etag": "\"0c003dbf-0000-0200-0000-5f36e92d0000\"",
