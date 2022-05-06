@@ -14,7 +14,7 @@ After you have ingested your data into Adobe Experience Platform, you can begin 
 
 ## Next Steps
 
-This document covered the prerequisites needed to use [!DNL Query Service] features in Experience Platform. To learn more about how [!DNL Query Service] benefits data processing in Platform, see the [example use case presentation](./use-cases/abandoned-cart.md).
+This document covered the prerequisites needed to use [!DNL Query Service] features in Experience Platform. To learn more about how [!DNL Query Service] benefits data processing in Platform, see the [example use case presentation](../use-cases/abandoned-cart.md).
 
 The following resources are useful to improve your understanding of [!DNL Query Service]:
 

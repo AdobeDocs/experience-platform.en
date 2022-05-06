@@ -105,7 +105,7 @@ The result of this expression might look similar to the table provided below.
 
 ## Identify new spike thresholds using machine learning
 
-Next, export the resulting query dataset into CSV format and then import it into [!DNL Jupyter Notebook]. From that environment, you can train a machine learning model using current machine learning libraries. See the troubleshooting guide for more details on [how to export data from [!DNL Query Service] in CSV format](.md#export-csv)
+Next, export the resulting query dataset into CSV format and then import it into [!DNL Jupyter Notebook]. From that environment, you can train a machine learning model using current machine learning libraries. See the troubleshooting guide for more details on [how to export data from [!DNL Query Service] in CSV format](../troubleshooting-guide.md#export-csv)
 
 The ad hoc spike thresholds initially established are not data-driven and therefore lack accuracy. Machine Learning models can be used to train parameters as thresholds. As a result, you can increase the query efficiency by reducing the number of `GROUP BY` keywords by removing unneeded features.
 
@@ -148,7 +148,7 @@ The values returned from [!DNL Jupyter Notebook] for this example are as follows
 Model Accuracy: 0.99935
 ```
 
-![Statistical output from [!DNL Jupyter Notebook] machine learning model.](./images/jupiter-notebook-output.png)
+![Statistical output from [!DNL Jupyter Notebook] machine learning model.](../images/use-cases/jupiter-notebook-output.png)
 
 The results for the model shown in the example above are over 99% accurate.
 
