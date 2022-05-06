@@ -4,28 +4,28 @@ description: This document provides an overview of how to use Query Service and 
 ---
 # Bot Filtering in [!DNL Query Service] with Machine Learning
 
-Bot activity can impact analytics metrics and damage data integrity. Adobe Experience Platform Query Service can be used to maintain your data quality through the process of bot filtering. 
+Bot activity can impact analytics metrics and damage data integrity. Adobe Experience Platform [!DNL Query Service] can be used to maintain your data quality through the process of bot filtering. 
 
-Bot filtering allows you to maintain your data quality by broadly removing data contamination that results from non-human interaction with your website. This process is achieved through the combination of machine learning and SQL queries.
+Bot filtering allows you to maintain your data quality by broadly removing data contamination that results from non-human interaction with your website. This process is achieved through the combination of SQL queries and machine learning.
 
-Bot activity can be identified in a number of ways. The approach taken in this document focuses on the number of actions taken by a user in a given period of time. Initially an SQL query sets a ratio of actions over time to qualify the presence of bot activity. The ratio that qualifies these actions as bot activity is then refined dynamically using a machine learning model to improve the accuracy of these thresholds.
+Bot activity can be identified in a number of ways. The approach taken in this document focuses on activity spikes, in this case, the number of actions taken by a user in a given period of time. Initially, an SQL query arbitrarily sets a threshold for the number of actions taken over a period of time to qualify as bot activity. This threshold is then refined dynamically using a machine learning model to improve the accuracy of these ratios.
 
-This document provides an overview and detailed examples of the SQL bot filtering queries and the machine learning models required for you to set up the process in your environment.    
+This document provides an overview and detailed examples of the SQL bot filtering queries and the machine learning models necessary for you to set up the process in your environment.    
 
-## Prerequsites
+## Prerequisites
 
 As part of this process requires you to train a machine learning model, this document assumes a working knowledge of one or more machine learning environments. 
 
-This example uses [!DNL Jupiter Notebook] as a development environment. Although there are many options available, [!DNL Jupiter Notebook] is recommended because it is an open source web application that has low computational requirements. It can be [downloaded from the official site](https://jupyter.org/). 
+This example uses [!DNL Jupiter Notebook] as a development environment. Although there are many options available, [!DNL Jupiter Notebook] is recommended because it is an open-source web application that has low computational requirements. It can be [downloaded from the official site](https://jupyter.org/). 
 
 ## Use [!DNL Query Service] to define a threshold for bot activity
 
-The two main attributes used to extract data for bot detection are:
+The two attributes used to extract data for bot detection are:
 
-* Marketing Cloud ID (MCID): This provides a universal, persistent ID that identifies your visitors across all the solutions in the online platform.
-* Timestamp: This provides the time and date in UTC format when an an activity occurred on the website.  
+* Marketing Cloud ID (MCID): This provides a universal, persistent ID that identifies your visitors across all Adobe solutions.
+* Timestamp: This provides the time and date in UTC format when an activity occurred on the website.  
 
-The following SQL statement provides a simple example to identify bot activity. The statement assumes that if a visitor performs 50 clicks within one minute, then the user is a bot.
+The following SQL statement provides an initial example to identify bot activity. The statement assumes that if a visitor performs 50 clicks within one minute, then the user is a bot.
 
 ```sql
 SELECT * 
@@ -44,7 +44,7 @@ The expression filters the MCIDs of all visitors that meet the threshold but doe
 
 The initial SQL statement must be refined to allow for a variety of different intervals and ensure that the established thresholds are suitable to determine bot traffic with high accuracies.
 
-The example statement is expanded to include one minute, five minutes, and 30 minutes periods with click counts of 60, 300 and 1800 respectively.
+The example statement is expanded from one minute with up to 60 clicks, to include five minute and 30 minutes periods with click counts of 300, and 1800 respectively.
 
 ```sql
 SELECT table1.mcid AS id, 
@@ -93,19 +93,79 @@ The result of this expression might look similar to the table provided below.
 | 4833075303848917832 | 1 | 1  | 1  |
 | 1469109497068938520  | 1  | 1  |  1 |
 | 5045682519445554093 | 1  | 1 | 1  |
-| 7148203816406620066 |   |   |   |
-| 1013065429311352386 |   |   |   |
-| 3077475871984695013 |   |   |   |
-| 4151486040344674930 |   |   |   |
-| 6563366098591762751 |   |   |   |
-| 2403566105776993627 |   |   |   |
-| 5710530640819698543 |   |   |   |
-| 3675089655839425960 |   |   |   |
-| 9091930660723241307 |   |   |   |
+| 7148203816406620066 | 3  | 3 | 3 |
+| 1013065429311352386 |  1 | 1 | 1 |
+| 3077475871984695013 |  7 | 7 | 7 |
+| 4151486040344674930 |  2 | 2 | 2 |
+| 6563366098591762751 |  6 | 6 | 6 |
+| 2403566105776993627 |  4 | 4 | 4 |
+| 5710530640819698543 | 1  | 1 | 1 |
+| 3675089655839425960 | 1  | 1 | 1 |
+| 9091930660723241307 | 1  | 1 | 1 |
 
-The results of using a variety of different intervals, a machine learning model can  
+## Identify new spike thresholds using machine learning
 
-## Identify bot activity within your data
+The results of using a variety of different intervals, enable you to conduct machine learning model training. Export the dataset in CSV format into [!DNL Jupiter Notebook] to train a machine learning model using current machine learning libraries.
 
-Marketing Cloud ID (MCID) 
+<!-- Do we need to include the command line example? -->
 
+The ad hoc spike thresholds initially established are not data-driven and therefore lack accuracy. Machine Learning models can be used to train parameters as thresholds and offer the opportunity to increase the query efficiency by reducing the number of `GROUP BY` keywords.
+
+This example uses the Scikit-Learn machine learning library which is installed by default with [!DNL Jupiter Notebook]. The "pandas" python library is also imported for use here. The following commands are input into [!DNL Jupiter Notebook].
+
+```shell
+import pandas as ps
+
+df = pd_read.csv('data/bot.csv')
+df = df[df['count_1-min'] > 1]
+df['is_bot'] = 0
+df.loc[df['count_1_min'] > 50,'is_bot'] = 1
+df
+```
+
+<!-- df.loc[df['count_5-mins'] > 130,:] (line was removed from example)-->
+<!-- do i need to show the same table with more data?  -->
+
+Next, you must train a decision tree classifier on the dataset and observe the logic resulting from the model.
+
+The "puplot" library is used to train the decision tree classifier in the example below.
+
+```shell
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import tree
+from matplotlib import pyplot as plt
+
+X = df.iloc[:,:[1,3]]
+y = df.iloc[:,-1]
+
+clf = DecisionTreeClassifier(max_leaf_nodes=2, random_state=0)
+clf.fit(X,y)
+
+print("Model Accuracy: {:.5f}".format(clf.scre(X,y)))
+
+tree.plot_tree(clf,feature_names=X.columns)
+plt.show()
+```
+
+<!-- Is tree.plot_tree(clf,feature_names=X.columns)
+plt.show() input at a different time? -->
+
+The values returned from [!DNL Jupiter Notebook] for this example are as follows.
+
+![Statistical output from Jup[iter Notebook machine learning model.]](./images/jupiter-notebook-output.png)
+
+The results fom the model shown in the example above are over 99% accurate.
+
+As the decision tree classifier can be trained using data from [!DNL Query Service] on a regular cadence using scheduled queries, you can ensure data integrity by filtering bot activity with a high degree of accuracy. By using the parameters derived from the machine learning model, the original queries can be updated with the highly accurate parameters created by the model.
+
+The example model determines that bot activity can be defined as visitors with more than 1in five minutes. This information can now be used to refine your bot filtering SQL queries.
+
+## Suggested queries for bot filtering without machine learning
+
+The following suggestions can be used to identify and filter bot activity without the use of a machine learning model.
+
+* Spikes in traffic where the bounce rate is a hundred percent.
+* Spikes in traffic where the time spent on the site is less than one second. 
+* When 100% (or very close to 100%) of total user sessions come from new visitors to the website.ß  
+* When there is exactly one page per session. 
+* When browser dimensions are “not set”. 
