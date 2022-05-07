@@ -3,6 +3,7 @@ keywords: Experience Platform;query service;Query service;query
 title: Getting Started with Adobe Experience Platform Query Service
 topic-legacy: tutorial
 description: A breakdown of the necessary steps to fully utilize Adobe Experience Platform Query Service
+exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
 ---
 # Getting started with Adobe Experience Platform [!DNL Query Service] {#getting-started}
 
