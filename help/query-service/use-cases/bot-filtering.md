@@ -1,6 +1,7 @@
 ---
 title: Bot Filtering in Query Service with Machine Learning
 description: This document provides an overview of how to use Query Service and machine learning to determine bot activity and filter their actions from genuine online website visitor traffic.
+exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 ---
 # Bot Filtering in [!DNL Query Service] with machine learning
 
