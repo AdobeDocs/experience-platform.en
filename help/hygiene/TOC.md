@@ -10,4 +10,6 @@ feature: Privacy
 
 * [Data hygiene overview](./home.md)
 * [Data hygiene UI guide](./ui.md)
-* [Data hygiene API guide](./api.md)
+* Data Hygiene API {#api}
+  * [Overview](./api/overview.md)
+  * [Work order](./api/workorder.md)
