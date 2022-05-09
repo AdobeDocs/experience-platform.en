@@ -3,6 +3,7 @@ keywords: Experience Platform;query service;Query service;query
 title: Getting Started with Adobe Experience Platform Query Service
 topic-legacy: tutorial
 description: A breakdown of the necessary steps to fully utilize Adobe Experience Platform Query Service
+exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
 ---
 # Getting started with Adobe Experience Platform [!DNL Query Service] {#getting-started}
 
@@ -14,7 +15,7 @@ After you have ingested your data into Adobe Experience Platform, you can begin 
 
 ## Next Steps
 
-This document covered the prerequisites needed to use [!DNL Query Service] features in Experience Platform. To learn more about how [!DNL Query Service] benefits data processing in Platform, see the [example use case presentation](./use-case.md).
+This document covered the prerequisites needed to use [!DNL Query Service] features in Experience Platform. To learn more about how [!DNL Query Service] benefits data processing in Platform, see the [example use case presentation](../use-cases/abandoned-cart.md).
 
 The following resources are useful to improve your understanding of [!DNL Query Service]:
 

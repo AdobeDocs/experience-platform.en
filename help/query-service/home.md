@@ -36,7 +36,7 @@ Adobe Experience Platform [!DNL Segmentation Service] allows users to divide the
 
 ### Adobe Analytics browse abandonment
 
-This [browse abandonment example centers on using Adobe [!DNL Analytics]](./get-started/use-case.md) data to create a particular actionable audience. [!DNL Query Service] accommodates complex logic for segmentation to calculate various personalized attributes for use downstream, or to greatly simplify how you build out your segments. 
+This [browse abandonment example centers on using Adobe [!DNL Analytics]](./use-cases/abandoned-cart.md) data to create a particular actionable audience. [!DNL Query Service] accommodates complex logic for segmentation to calculate various personalized attributes for use downstream, or to greatly simplify how you build out your segments. 
 
 ### Looker BI dashboards
 
