@@ -30,7 +30,7 @@ The following table outlines which actions on which resources are recorded by au
 | [Product profile](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Account (Adobe)](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Query template](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Scheduled query](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li></ul> |
+| [Scheduled query](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 
 ## Access to audit logs
 
