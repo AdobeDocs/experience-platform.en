@@ -34,7 +34,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -81,7 +81,7 @@ A successful response includes a `children` array that lists the details of each
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550691551888,
             "createdClient": "{CLIENT_ID}",
             "createdUser": "{USER_ID}",
@@ -113,7 +113,7 @@ A successful response includes a `children` array that lists the details of each
                     }
                 ]
             },
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "created": 1550703519823,
             "createdClient": "{CLIENT_ID}",
             "createdUser": "{USER_ID}",
@@ -162,7 +162,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -197,7 +197,7 @@ A successful response returns the details of the policy.
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550703519823,
     "createdClient": "{CLIENT_ID}",
     "createdUser": "{USER_ID}",
@@ -282,7 +282,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "Export Data to Third Party",
@@ -346,7 +346,7 @@ A successful response returns the details of the newly created policy, including
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550691551888,
     "createdClient": "{CLIENT_ID}",
     "createdUser": "{USER_ID}",
@@ -396,7 +396,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "Export Data to Third Party",
@@ -446,7 +446,7 @@ A successful response returns the details of the updated policy.
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550691551888,
     "createdClient": "{CLIENT_ID}",
     "createdUser": "{USER_ID}",
@@ -500,7 +500,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d ' [
           {
@@ -548,7 +548,7 @@ A successful response returns the details of the updated policy.
             }
         ]
     },
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "created": 1550703519823,
     "createdClient": "{CLIENT_ID}",
     "createdUser": "{USER_ID}",
@@ -589,7 +589,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb56eb60ca13dbf8b9a8 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -616,7 +616,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -636,7 +636,7 @@ A successful response returns the list of enabled core policies under a `policyI
     "corepolicy_0007",
     "corepolicy_0008"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "created": 1529696681413,
   "createdClient": "{CLIENT_ID}",
   "createdUser": "{USER_ID}",
@@ -674,7 +674,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "policyIds": [
@@ -702,7 +702,7 @@ A successful response returns the updated list of enabled core policies under a 
     "corepolicy_0007",
     "corepolicy_0008"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "created": 1529696681413,
   "createdClient": "{CLIENT_ID}",
   "createdUser": "{USER_ID}",

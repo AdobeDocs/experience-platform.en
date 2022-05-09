@@ -46,7 +46,7 @@ The following request will retrieve the last two segment definitions posted with
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -64,7 +64,7 @@ A successful response returns HTTP status 200 with a list of segment definitions
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -104,7 +104,7 @@ A successful response returns HTTP status 200 with a list of segment definitions
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "name": "test segment",
             "description": "",
             "expression": {
@@ -161,7 +161,7 @@ POST /segment/definitions
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -209,7 +209,7 @@ A successful response returns HTTP status 200 with details of your newly created
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -267,7 +267,7 @@ GET /segment/definitions/{SEGMENT_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -284,7 +284,7 @@ A successful response returns HTTP status 200 with detailed information about th
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -346,7 +346,7 @@ POST /segment/definitions/bulk-get
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
@@ -375,7 +375,7 @@ A successful response returns HTTP status 207 with the requested segment definit
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -414,7 +414,7 @@ A successful response returns HTTP status 207 with the requested segment definit
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -486,7 +486,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -517,7 +517,7 @@ The following request will update the work address country from the USA to Canad
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -554,7 +554,7 @@ A successful response returns HTTP status 200 with details of your newly updated
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -606,7 +606,7 @@ The following request will change the segment definition's format from `pql/text
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{

@@ -170,7 +170,8 @@ To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring
 
 >[!NOTE]
 >
->Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>- Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>- For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, identities excluded are currently not displayed.
 
 Use the [!UICONTROL Destinations] dashboard to get an overall idea of the health of your activation flows. Start by getting insights on an aggregated level for all batch and streaming destinations and then drill down into detailed views for dataflows, dataflow runs, and activated segments for an in-depth look at your activation data. The screens in the [!UICONTROL Monitoring] dashboard provide actionable insights through metrics and error descriptions to help you troubleshoot any problems that might arise in your activation scenarios.
 
