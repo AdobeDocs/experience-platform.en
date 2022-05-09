@@ -31,6 +31,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "action": "delete_identity",
         "datasetId": "c48b51623ec641a2949d339bad69cb15",
@@ -61,7 +62,7 @@ curl -X POST \
 | --- | --- |
 | `action` | The action to be performed. The value must be set to `delete_identity` when deleting identities. |
 | `datasetId` | If you are deleting from a single dataset, this value must be the ID of the dataset in question. If you are deleting from all datasets, set the value to `ALL`.<br><br>If you are specifying a single dataset, the dataset's associated Experience Data Model (XDM) schema must have a primary identity defined. |
-| `identities` | An array containing the identities of at least one user whose information you would like to delete. Each identity is comprised of an [identity namespace](../identity-service/namespaces.md) and a value:<ul><li>`namespace`: Contains a single string property, `code`, which represents the identity namespace. </li><li>`id`: The identity value.</ul>If `datasetId` specifies a single dataset, each entity under `identities` must use the same identity namespace as the schema's primary identity.<br><br>If `datasetId` is set to `ALL`, the `identities` array is not constrained to any single namespace since each dataset might be different. However, your requests are still constrained the namespaces available to your organization, as reported by [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | An array containing the identities of at least one user whose information you would like to delete. Each identity is comprised of an [identity namespace](../../identity-service/namespaces.md) and a value:<ul><li>`namespace`: Contains a single string property, `code`, which represents the identity namespace. </li><li>`id`: The identity value.</ul>If `datasetId` specifies a single dataset, each entity under `identities` must use the same identity namespace as the schema's primary identity.<br><br>If `datasetId` is set to `ALL`, the `identities` array is not constrained to any single namespace since each dataset might be different. However, your requests are still constrained the namespaces available to your organization, as reported by [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style="table-layout:auto"}
 
@@ -97,6 +98,8 @@ A successful response returns the details of the identity deletion.
 | `status` | The current status of the deletion order. |
 | `createdBy` | The user that created the deletion order. |
 
+{style="table-layout:auto"}
+
 ## List the statuses of all identity deletions {#list}
 
 You can list the statuses of all identity deletions by making a GET request.
@@ -111,6 +114,8 @@ GET /workorder?{QUERY_PARAMS}
 | --- | --- |
 | `{QUERY_PARAMS}` | A list of optional query parameters for the listing call, with multiple parameters separated by `&` characters. Accepted query params are as follows:<ul><li>`data` - A boolean value that, when set to `true`, includes all additional request and response data received for the deletion order. Defaults to `false`.</li><li>`start` - A timestamp for the beginning of the timeframe to search for deletion orders.</li><li>`end` - A timestamp for the end of the timeframe to search for deletion orders.</li><li>`page` - The specific response page to return.</li><li>`limit` - The number of records to be displayed per page.</li></ul>|
 
+{style="table-layout:auto"}
+
 **Request**
 
 ```shell
@@ -118,7 +123,8 @@ curl -X GET \
   https://platform.adobe.io/data/core/hygiene/workorder \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**
@@ -175,6 +181,8 @@ A successful response returns the details of all delete operations, including th
 | `count` | The total number of deletion orders found on each page of the response. |
 | `_links` | Contains pagination information to help you explore the rest of the response:<ul><li>`next`: Contains a URL for the next page in the response.</li><li>`page`: Contains a URL template to access another page in the response or adjust the number of items returned on each page.</li></ul> |
 
+{style="table-layout:auto"}
+
 ## Retrieve the status of an identity deletion (#lookup)
 
 After sending a request to [delete an identity](#delete-identities), you can check on its status using a GET request.
@@ -189,6 +197,8 @@ GET /workorder/{WORK_ORDER_ID}
 | --- | --- |
 | `{WORK_ORDER_ID}` | The `workorderId` of the identity deletion you are looking up. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 ```shell
@@ -196,7 +206,8 @@ curl -X GET \
   https://platform.adobe.io/data/core/hygiene/workorder/ID6c28e2d2d2b54079aadf7be94568f6d3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**
