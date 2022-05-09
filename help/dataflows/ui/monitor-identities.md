@@ -35,7 +35,7 @@ The following metrics are available for this dashboard view:
 
 | Identity metrics | Description |
 | ---------------- | ----------- |
-| **[!UICONTROL Records received]** | The number of records received from [!DNL Data Lake]. |
+| **[!UICONTROL Records received]** | The number of records received from data lake. |
 | **[!UICONTROL Records failed]** | The number of records that were not ingested into Platform due to errors in the data. |
 | **[!UICONTROL Records skipped]** | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
 | **[!UICONTROL Records ingested]** | The number of records ingested into [!DNL Identity Service]. |
@@ -59,11 +59,11 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Dataflow]** | The name of the dataflow. |
 | **[!UICONTROL Dataset]** | The name of the dataset that the dataflow is inserting to. |
 | **[!UICONTROL Source name]** | The name of the source that the dataflow belongs to. |
-| **[!UICONTROL Records received]** | The number of records received from [!DNL Data Lake]. |
+| **[!UICONTROL Records received]** | The number of records received from data lake. |
 | **[!UICONTROL Records failed]** | The number of records that were not ingested into Platform due to errors in the data. |
 | **[!UICONTROL Records skipped]** | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
 | **[!UICONTROL Records ingested]** | The number of records ingested into [!DNL Identity Service]. |
-| **[!UICONTROL Total records]** | The total number of records ??? |
+| **[!UICONTROL Total records]** | The total count of all records, including records failed, records skipped, identities added, and duplicated records. |
 | **[!UICONTROL Identities added]** | The number of net new identifiers added to [!DNL Identity Service]. |
 | **[!UICONTROL Graphs created]** | The number of net new identity graphs created in [!DNL Identity Service]. |
 | **[!UICONTROL Graphs updated]** | The number of existing identity graphs updated with new edges. |
@@ -81,7 +81,7 @@ The following metrics are available for this dashboard view:
 
 | Metric | Description |
 | -------| ----------- |
-| **[!UICONTROL Records received]** | The number of records received from [!DNL Data Lake]. |
+| **[!UICONTROL Records received]** | The number of records received from data lake. |
 | **[!UICONTROL Records failed]** | The number of records that were not ingested into Platform due to errors in the data. |
 | **[!UICONTROL Records skipped]** | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
 | **[!UICONTROL Records ingested]** | The number of records ingested into [!DNL Identity Service]. |

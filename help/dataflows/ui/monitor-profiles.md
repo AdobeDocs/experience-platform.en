@@ -51,7 +51,7 @@ The following metrics are available for this dashboard view:
 | Metric | Description |
 | -------| ----------- |
 | **[!UICONTROL Source name]** | The name of the source. |
-| **[!UICONTROL Records received]** |  The number of records received from [!DNL Data Lake]. |
+| **[!UICONTROL Records received]** |  The number of records received from data lake. |
 | **[!UICONTROL Records failed]**| The number of records that were ingested, but not into [!DNL Profile] due to errors. |
 | **[!UICONTROL Profile fragments created]** | The number of net new [!DNL Profile] fragments added. |
 | **[!UICONTROL Profile fragments updated]** | The number of existing [!DNL Profile] fragments updated. |
@@ -73,7 +73,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Dataflow]** | The name of the dataflow. |
 | **[!UICONTROL Dataset]** | The name of the dataset that the dataflow is inserting to. |
 | **[!UICONTROL Source name]** | The name of the source that the dataflow belongs to. |
-| **[!UICONTROL Records received**] |  The number of records received from [!DNL Data Lake]. |
+| **[!UICONTROL Records received**] |  The number of records received from data lake. |
 | **[!UICONTROL Records failed]** | The number of records that were ingested, but not into [!DNL Profile] due to errors. |
 | **[!UICONTROL Profile fragments created]** | The number of net new [!DNL Profile] fragments added. |
 | **[!UICONTROL Profile fragments updated]** | The number of existing [!DNL Profile] fragments updated |
@@ -93,7 +93,7 @@ The following metrics are available for this dashboard view:
 
 | Metric | Description |
 | -------| ----------- |
-| **[!UICONTROL Records received]** | The number of records received from [!DNL Data Lake]. |
+| **[!UICONTROL Records received]** | The number of records received from data lake. |
 | **[!UICONTROL Records failed]** | The number of records that were ingested, but not into [!DNL Profile] due to errors. |
 | **[!UICONTROL Profile fragments created]** | The number of net new [!DNL Profile] fragments added. |
 | **[!UICONTROL Profile fragments updated]** | The number of existing [!DNL Profile] fragments updated. |
