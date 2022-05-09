@@ -15,7 +15,7 @@ This section provides an introduction to the core concepts you need to know befo
 
 ### Gather values for required headers
 
-In order to make calls to the Data Hygiene API, you must first gather your authentication credentials. These are the same credentials that are used to access the Privacy Service API. Follow the [getting started guide](./api/getting-started.md) for the Privacy Service API to generate values for each of the required headers for the Data Hygiene API, as shown below:
+In order to make calls to the Data Hygiene API, you must first gather your authentication credentials. Follow the [API authentication guide](../landing/api-authentication.md) to generate values for each of the required headers for the Data Hygiene API, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
