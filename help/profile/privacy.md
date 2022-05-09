@@ -63,13 +63,13 @@ curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
         "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
+        "value": "{ORG_ID}"
       }
     ],
     "users": [

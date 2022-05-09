@@ -82,6 +82,7 @@ feature: Sources
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
+    - [Square connector](connectors/payments/square.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)
@@ -144,6 +145,7 @@ feature: Sources
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
+      - [Square](tutorials/api/create/payments/square.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
       - [Generic REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -159,6 +161,7 @@ feature: Sources
     - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
     - [Explore payment data](tutorials/api/explore/payments.md)
     - [Explore protocol data](tutorials/api/explore/protocols.md)
+    - [Explore data tables](tutorials/api/explore/tabular.md)
   - Collect data {#collect}
     - [Collect advertising data](tutorials/api/collect/advertising.md)
     - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
@@ -242,6 +245,7 @@ feature: Sources
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
+      - [Square](tutorials/ui/create/payments/square.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
     - Streaming {#streaming}

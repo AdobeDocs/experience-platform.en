@@ -449,7 +449,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -630,7 +630,7 @@ A successful response returns the newly created connection specification, includ
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "MailChimp Members source",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",

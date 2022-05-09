@@ -9,7 +9,11 @@ feature: Queries
 # Adobe Experience Platform Query Service {#query}
 
 - [Query Service overview](home.md)
-- [Quickstart guide](quickstart.md)
+- Get started {#get-started}
+  - [Prerequisites](get-started/prerequisites.md)
+- Use cases {#use-cases}
+  - [Abandoned Cart](use-cases/abandoned-cart.md)
+  - [Bot Filtering](use-cases/bot-filtering.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
@@ -42,6 +46,7 @@ feature: Queries
   - [Prepared statements](sql/prepared-statements.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
+  - [SSL modes](./clients/ssl-modes.md)
   - [Aqua Data Studio](clients/aqua-data-studio.md)
   - [Db Visualizer](./clients/dbvisulaizer.md)
   - [Looker](clients/looker.md)
@@ -50,6 +55,7 @@ feature: Queries
   - [PSQL](clients/psql.md)
   - [RStudio](clients/rstudio.md)
   - [Tableau](clients/tableau.md)
+- [Audit log guide](audit-log-guide.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
