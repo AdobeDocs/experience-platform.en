@@ -9,7 +9,11 @@ feature: Queries
 # Adobe Experience Platform Query Service {#query}
 
 - [Query Service overview](home.md)
-- [Quickstart guide](quickstart.md)
+- Get started {#get-started}
+  - [Prerequisites](get-started/prerequisites.md)
+- Use cases {#use-cases}
+  - [Abandoned Cart](use-cases/abandoned-cart.md)
+  - [Bot Filtering](use-cases/bot-filtering.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
