@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;tr
 solution: Experience Platform
 title: Query Service Troubleshooting Guide
 topic-legacy: troubleshooting
-description: This document contains information on common error codes you encounter and the possible causes.
+description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
 # [!DNL Query Service] troubleshooting guide
