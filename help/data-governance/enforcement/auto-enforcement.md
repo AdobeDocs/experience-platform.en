@@ -113,11 +113,11 @@ Once you reach at the **[!UICONTROL Review]** step when [activating a destinatio
 
 ![View applied policies button in the activate destination workflow](../images/enforcement/view-applied-policies.png)
 
-A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segments.
+A policy check dialog appears, showing you a preview of how your consent policies affect the consented audience of the activated segments.
 
 ![Consent policy check dialog in the Platform UI](../images/enforcement/consent-policy-check.png)
 
-The dialog shows the addressable audience for one segment at a time. To view the policy evaluation for a different segment, use the dropdown menu above the diagram to select one from the list.
+The dialog shows the consented audience for one segment at a time. To view the policy evaluation for a different segment, use the dropdown menu above the diagram to select one from the list.
 
 ![Segment switcher in the policy check dialog](../images/enforcement/segment-switcher.png)
 
@@ -131,7 +131,7 @@ The diagram displays the overlap between three groups of profiles:
 1. Profiles that qualify for the selected consent policy
 1. Profiles that qualify for the other applicable consent policies for the segment (referred to as "[!UICONTROL Other policies]" in the diagram)
 
-The profiles that qualify for all three of the above groups represent the addressable audience for the selected segment, summarized in the right rail.
+The profiles that qualify for all three of the above groups represent the consented audience for the selected segment, summarized in the right rail.
 
 ![Summary section in the policy check dialog](../images/enforcement/summary.png)
 
@@ -139,9 +139,9 @@ Hover over one of the audiences in the diagram to show the number of profiles it
 
 ![Highlighting a diagram section in the policy check dialog](../images/enforcement/highlight-segment.png)
 
-The addressable audience is represented by the central overlap of the diagram, and can be highlighted like the other sections.
+The consented audience is represented by the central overlap of the diagram, and can be highlighted like the other sections.
 
-![Highlighting the addressable audience in the diagram](../images/enforcement/addressable-audience.png)
+![Highlighting the consented audience in the diagram](../images/enforcement/consented-audience.png)
 
 #### Flow run enforcement
 
