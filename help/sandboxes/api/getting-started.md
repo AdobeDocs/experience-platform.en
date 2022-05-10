@@ -26,7 +26,7 @@ This guide requires you to have completed the [authentication tutorial](https://
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 In addition to the authentication headers, all requests require a header that specifies the name of the sandbox the operation will take place in:
 

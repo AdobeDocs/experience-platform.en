@@ -22,7 +22,8 @@ The following alert rules are specific to [Data Ingestion](../../ingestion/home.
 | Source Flow Run Delays, Failures and Errors | Sources Flow Run Failure | This alert triggers when an error occurs while ingesting data from a source connection. |
 | Source Flow Run Delays, Failures and Errors | Ingestion Delay | This alert triggers when a batch ingestion flow run takes longer than 150 minutes to process. |
 | Source Flow Run Delays, Failures and Errors | Lack of Ingestion | This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Platform. |
-| Source Flow Run Delays, Failures and Errors | Ingestion Failure | This alert triggers when the ratio of failed records to all records exceed a threshold of 0.5% |
+| Source Flow Run Delays, Failures and Errors | Ingestion Failure | This alert triggers when the ratio of failed records to all records exceed a threshold of 0.5%. |
+| Source Flow Run Delays, Failures and Errors | Skippage rate exceeds threshold | This alert triggers when the ratio of skipped ids to total ids exceeds a threshold. |
 
 {style="table-layout:auto"}
 

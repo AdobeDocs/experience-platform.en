@@ -130,7 +130,6 @@ The following tables list all supported mapping functions, including sample expr
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| size_of | Returns the size of the input. | <ul><li>INPUT: **Required** The object that you're trying to find the size of.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | need sample | need sample |
 | to_object | Creates an object based on the flat key/value pairs given. | <ul><li>INPUT: **Required** A flat list of key/value pairs.</li></ul> | to_object(INPUT) | to_object​("firstName", "John", "lastName", "Doe") | `{"firstName": "John", "lastName": "Doe"}` |
@@ -158,6 +157,7 @@ For information on the object copy feature, see the section [below](#object-copy
 | add_to_array | Adds elements to the end of the array. | <ul><li>ARRAY: **Required** The array that you are adding elements to.</li><li>VALUES: The elements that you want to append to the array.</li></ul> | add_to_array​(ARRAY, VALUES) | add_to_array​(['a', 'b'], 'c', 'd') | ['a', 'b', 'c', 'd'] |
 | join_arrays | Combines the arrays with each other. | <ul><li>ARRAY: **Required** The array that you are adding elements to.</li><li>VALUES: The array(s) you want to append to the parent array.</li></ul> | join_arrays​(ARRAY, VALUES) | join_arrays​(['a', 'b'], ['c'], ['d', 'e']) | ['a', 'b', 'c', 'd', 'e'] |
 | to_array | Takes a list of inputs and converts it to an array. | <ul><li>INCLUDE_NULLS: **Required** A boolean value to indicate whether or not to include nulls in the response array.</li><li>VALUES: **Required** The elements that are to be converted to an array.</li></ul> | to_array​(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
+| size_of | Returns the size of the input. | <ul><li>INPUT: **Required** The object that you're trying to find the size of.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 
 {style="table-layout:auto"}
 

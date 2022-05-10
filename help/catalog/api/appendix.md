@@ -35,7 +35,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -49,7 +49,7 @@ A successful response returns a list of related objects. In this example, a list
         "id": "7d501090-0280-11ea-a6bb-f18323b7005c-1",
         "batchId": "7d501090-0280-11ea-a6bb-f18323b7005c",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -61,7 +61,7 @@ A successful response returns a list of related objects. In this example, a list
         "id": "148ac690-0280-11ea-8d23-8571a35dce49-1",
         "batchId": "148ac690-0280-11ea-8d23-8571a35dce49",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -73,7 +73,7 @@ A successful response returns a list of related objects. In this example, a list
         "id": "64dd5e19-8ea4-4ddd-acd1-f43cccd8eddb-1",
         "batchId": "64dd5e19-8ea4-4ddd-acd1-f43cccd8eddb",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -111,7 +111,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/catalog \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
