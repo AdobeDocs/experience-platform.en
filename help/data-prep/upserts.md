@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;upsert;streaming upsert
-title: Streaming Upserts in Data Prep
+title: Send partial row updates to Profile Service using Data Prep
 description: This document provides information on how to stream partial row updates to Profile Service using Data Prep
 ---
 # Send partial row updates to [!DNL Profile Service] using [!DNL Data Prep]
 
-Streaming Upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Profile Service] data while also creating and stitching identities with a single API request.
+Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Profile Service] data while also creating and stitching identities with a single API request.
 
-Through Streaming Upserts, you can retain the format of your data while translating that data to [!DNL Profile Service] PATCH requests in flight during ingestion. Based on the inputs you provide, [!DNL Data Prep] allows you to send a single API payload and translate them to both [!DNL Profile Service] PATCH and Identity Service CREATE requests. 
+By streaming upserts, you can retain the format of your data while translating that data to [!DNL Profile Service] PATCH requests in flight during ingestion. Based on the inputs you provide, [!DNL Data Prep] allows you to send a single API payload and translate them to both [!DNL Profile Service] PATCH and [!DNL Identity Service] CREATE requests. 
 
 This document provides information on how to stream upserts in [!DNL Data Prep].
 
@@ -24,17 +24,17 @@ This overview requires a working understanding of the following components of Ad
 
 >[!NOTE]
 >
->The following sources support the use of Streaming Upserts:<ul><li>[[!DNL Amazon Kinesis]](../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../sources/connectors/streaming/http.md)</li></ul>
+>The following sources support the use of streaming upserts:<ul><li>[[!DNL Amazon Kinesis]](../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../sources/connectors/streaming/http.md)</li></ul>
 
 ### Streaming Upserts high-level workflow
 
-Streaming Upserts in [!DNL Data Prep] works as follows:
+Streaming upserts in [!DNL Data Prep] works as follows:
 
 * You must first create and enable a dataset for [!DNL Profile] consumption. See the guide on [enabling a dataset for [!DNL Profile]](../catalog/datasets/enable-for-profile.md) for more information;
 * If [!DNL Identity Stitching] is required, then you must also create an additional dataset **with the same schema** as your [!DNL Profile] dataset;
 * Once your dataset(s) are prepared, you must create a dataflow to map your incoming request to the [!DNL Profile] dataset;
 * Next, you must update the incoming request to include the necessary headers. These headers define:
-  * The data operation that is needed to be performed with [!DNL Profile]: `create` and `merge`;
+  * The data operation that is needed to be performed with [!DNL Profile]: `create`, `merge`, and `delete`;
   * The optional identity operation to be performed with [!DNL Identity Service]: `create`.
 
 ### Configuring the identity dataset
@@ -42,7 +42,7 @@ Streaming Upserts in [!DNL Data Prep] works as follows:
 If [!DNL Identity Stitching] is required, then you must create and pass an additional dataset in the incoming payload. When creating an identity dataset, you must ensure that the following requirements are met:
 
 * The identity dataset must have its associated schema as the [!DNL Profile] dataset. A mismatch of schemas may lead to inconsistent system behavior;
-* However, you must ensure that the identity dataset is different from the [!DNL Profile] dataset. If the datasets are the same, then data will be treated as "overwrite" and not as upsert;
+* However, you must ensure that the identity dataset is different from the [!DNL Profile] dataset. If the datasets are the same, then data will be treated as overwrite and not as upsert;
 * While the initial dataset must be enabled for [!DNL Profile], the identity dataset **should not** be enabled for [!DNL Profile]. Otherwise, data will also be treated as overwrite, instead of upsert.
 
 #### Required fields in the schemas associated with the identity dataset
@@ -68,6 +68,8 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 >You do not need to do any additional configuration if the schema associated with the identity dataset does not have any required fields.
 
 ## Understanding the incoming payload structure 
+
+The following displays an example of an incoming payload structure with [!DNL Identity Stitching].
 
 ### With [!DNL Identity Stitching]
 
@@ -235,3 +237,6 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
  }'
 ```
 
+## Next steps
+
+By reading this document, you should now understand how to stream upserts in [!DNL Data Prep] to send partial row updates to your [!DNL Profile Service] data, while also creating and stitching identities with a single API request. For more information on other Data Prep features, please read the [Data Prep overview](./home.md). To learn how to use mapping sets within the Data Prep API, please read the [Data Prep developer guide](./api/overview.md).
