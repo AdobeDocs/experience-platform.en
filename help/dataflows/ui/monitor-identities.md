@@ -17,7 +17,7 @@ BLURB
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
 >title="Dataflow run details"
->abstract="The Dataflow run details page displays more information on your Identity dataflow run, including its IMS Org ID and dataflow run ID."
+>abstract="The Dataflow run details page displays more information on your Identity dataflow run, including its organization ID and dataflow run ID."
 
 To access the **[!UICONTROL Identities]** dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Identities]** card.
 
@@ -73,7 +73,7 @@ Select the filter icon ![filter](../assets/ui/monitor-identities/filter.png) bes
 
 ![The filter icon is highlighted. Selecting this icon allows you to view details about the selected dataflow.](../assets/ui/monitor-identities/dataflows-filter.png)
 
-The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Identity] dataflow run, including its IMS Org ID and dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Identity Service], should any errors occur in the ingestion process.
+The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Identity] dataflow run, including its organization ID and dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Identity Service], should any errors occur in the ingestion process.
 
 ![A dashboard showing detailed information about the selected dataflow is displayed.](../assets/ui/monitor-identities/dataflow-run-details.png)
 
