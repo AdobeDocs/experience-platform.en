@@ -107,7 +107,7 @@ GET /ttl/{TTL_ID}
 **Request**
 
 ```shell
-curl -X PUT \
+curl -X GET \
   https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -274,6 +274,135 @@ A successful response returns the details of the updated TTL.
 {style="table-layout:auto"}
 
 ## Cancel a TTL {#delete}
+
+You can cancel a TTL by making a DELETE request.
+
+**API format**
+
+```http
+DELETE /ttl/{TTL_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{TTL_ID}` | The ID of the TTL that you want to cancel. |
+
+{style="table-layout:auto"}
+
+**Request**
+
+The following request updates the TTL for dataset `5b020a27e7040801dedbf46e` so it expires at the end of 2023 (Greenwich Mean Time).
+
+```shell
+curl -X DELETE \
+  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+{style="table-layout:auto"}
+
+**Response**
+
+A successful response returns the details of the TTL, with its `status` attribute now set to `cancelled`.
+
+```json
+{
+    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "datasetId": "62759f2ede9e601b63a2ee14",
+    "imsOrg": "{ORG_ID}",
+    "status": "cancelled",
+    "expiry": "2023-12-31T23:59:59Z",
+    "updatedAt": "2022-05-09T23:47:30.071186Z",
+    "updatedBy": "{USER_ID}"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `ttlId` | The ID of the dataset TTL. |
+| `datasetId` | The ID of the dataset that this TTL applies to. |
+| `imsOrg` | Your organization's ID. |
+| `status` | The current status of the TTL. |
+| `expiry` | The scheduled date and time when the dataset will be deleted. |
+| `updatedAt` | A timestamp of when the TTL was last updated. |
+| `updatedBy` | The user who last updated the TTL. |
+
+{style="table-layout:auto"}
+
+## Retrieve the history of a TTL
+
+You can look up the history of a specific TTL by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the TTL, any updates that have been applied, and its cancellation or execution (if applicable).
+
+**API format**
+
+```http
+GET /ttl/{TTL_ID}?include=history
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{TTL_ID}` | The ID of the TTL whose history you want to look up. |
+
+{style="table-layout:auto"}
+
+**Request**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e?include=history \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns the details of the TTL, with a `history` array providing the details its `status`, `expiry`, `updatedAt`, and `updatedBy` attributes for each of its recorded updates.
+
+```json
+{
+  "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+  "datasetId": "62759f2ede9e601b63a2ee14",
+  "imsOrg": "{ORG_ID}",
+  "status": "cancelled",
+  "expiry": "2022-05-09T23:47:30.071186Z",
+  "updatedAt": "2022-05-09T23:47:30.071186Z",
+  "updatedBy": "{USER_ID}",
+  "history": [
+    {
+      "status": "created",
+      "expiry": "2032-12-31T23:59:59Z",
+      "updatedAt": "2022-05-09T22:38:40.393115Z",
+      "updatedBy": "{USER_ID}"
+    },
+    {
+      "status": "updated",
+      "expiry": "2032-12-31T23:59:59Z",
+      "updatedAt": "2022-05-09T22:41:46.731002Z",
+      "updatedBy": "{USER_ID}"
+    },
+    {
+      "status": "cancelled",
+      "expiry": "2022-05-09T23:47:30.071186Z",
+      "updatedAt": "2022-05-09T23:47:30.071186Z",
+      "updatedBy": "{USER_ID}"
+    }
+  ]
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `ttlId` | The ID of the dataset TTL. |
+| `datasetId` | The ID of the dataset that this TTL applies to. |
+| `imsOrg` | Your organization's ID. |
+| `history` | Lists the history of updates for the TTL as an array of objects, with each object containing the `status`, `expiry`, `updatedAt`, and `updatedBy` attributes for the TTL at the time of the update. |
+
+{style="table-layout:auto"}
 
 ## Appendix
 

@@ -13,3 +13,4 @@ feature: Privacy
 * Data Hygiene API {#api}
   * [Overview](./api/overview.md)
   * [Work order](./api/workorder.md)
+  * [Dataset time-to-live (TTL)](./api/ttl.md)
