@@ -9,6 +9,10 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 ---
 # Activate audience data to batch profile export destinations
 
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 ## Overview {#overview}
 
 This article explains the workflow required to activate audience data in Adobe Experience Platform batch profile-based destinations, such as cloud storage and email marketing destinations.
@@ -66,7 +70,17 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 >id="platform_destinations_activate_exportoptions"
 >title="File export options"
 >abstract="Select **Export full files** to export a complete snapshot of all the profiles that qualify for the segment. Select **Export incremental files** to export only the profiles which qualified for the segment since the last export. <br> The first incremental file export includes all profiles that qualify for the segment, acting as a backfill. Future incremental files include only the profiles which qualified for the segment since the first incremental file export."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Export incremental files"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="Export incremental files"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_aftersegmentevaluation"
+>title="Activate after segment evaluation"
+>abstract="Activation runs immediately after the daily segmentation job completes. This ensures that the most up-to-date profiles are exported."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_scheduled"
+>title="Scheduled activation"
+>abstract="Activation runs at a fixed time of the day."
 
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
 

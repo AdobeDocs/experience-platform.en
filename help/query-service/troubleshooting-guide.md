@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;tr
 solution: Experience Platform
 title: Query Service Troubleshooting Guide
 topic-legacy: troubleshooting
-description: This document contains information on common error codes you encounter and the possible causes.
+description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
 # [!DNL Query Service] troubleshooting guide
@@ -273,6 +273,8 @@ Query Service provides several built-in SQL helper functions to extend SQL funct
 First, check the logs to find out the details of the error. The FAQ section on [finding errors within logs](#error-logs) provides more information on how to do this.
 
 You should also check the documentation for guidance on how to perform [scheduled queries in the UI](./ui/user-guide.md#scheduled-queries) and through [the API](./api/scheduled-queries.md). 
+
+The following is a list of considerations for scheduled queries when using the [!DNL Query Editor]. They do not apply to the [!DNL Query Service] API:<br/>You can only add a schedule to a query that has already been created, saved, and run.<br/>You **cannot** add a schedule to a parameterized query.<br/>Scheduled queries **cannot** contain an anonymous block.<br/>You can only schedule **one** query template using the UI. If you want to add additional schedules to a query template, you will need to use the API. If a schedule has already been added using the API, you will not be able to add additional schedules using the UI.
 +++
 
 ### What does the "Session Limit Reached" error mean?
@@ -465,7 +467,7 @@ WHERE T2.ID IS NULL
 
 This section provides information on exporting data and limits.
 
-### Is there a way to extract data from Query Service after query processing and save the results in a CSV file?
+### Is there a way to extract data from Query Service after query processing and save the results in a CSV file? {#export-csv}
 
 +++Answer
 Yes. Data can be extracted from Query Service and there is also the option to store the results in CSV format via a SQL command. 

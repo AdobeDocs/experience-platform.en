@@ -17,6 +17,7 @@ Use the publish destinations API endpoint to submit a publishing request when:
 
 * As a Destination SDK partner, you want to make your productized destination available across all Experience Platform organizations for all Experience Platform customers to use;
 * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes.
+* You make *any updates* to your configurations. Configuration updates are reflected in the destination only after you submit a new publishing request, which is approved by the Experience Platform team.
 
 ## Getting started with destination publishing API operations {#get-started}
 
@@ -40,7 +41,7 @@ The following request submits a destination for publishing, across the organizat
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -78,7 +79,7 @@ The following request retrieves the list of destinations submitted for publishin
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -134,7 +135,7 @@ GET /authoring/destinations/publish/{DESTINATION_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish/1230e5e4-4ab8-4655-ae1e-a6296b30f2ec \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
