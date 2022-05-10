@@ -302,8 +302,6 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-{style="table-layout:auto"}
-
 **Response**
 
 A successful response returns the details of the TTL, with its `status` attribute now set to `cancelled`.
