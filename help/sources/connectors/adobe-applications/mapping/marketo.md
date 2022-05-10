@@ -364,6 +364,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `address` | `workAddress.street1` |
 | `phone` | `workPhone.number` |
 | `company` | `b2b.companyName` |
+| `website` | `b2b.companyWebsite` |
 | `leadScore` | `personComponents.personScore` |
 | `leadSource` | `personComponents.personSource` |
 | `leadStatus` | `personComponents.personStatus` |
