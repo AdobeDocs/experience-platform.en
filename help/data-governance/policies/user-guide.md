@@ -128,7 +128,7 @@ The consent policy is now created, and its status is set to [!UICONTROL Disabled
 
 #### Verify policy enforcement
 
-After you have created and enabled a consent policy, you can preview how it affects your addressable audiences when activating segments to destinations. See the section on [consent policy evaluation](../enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+After you have created and enabled a consent policy, you can preview how it affects your consented audiences when activating segments to destinations. See the section on [consent policy evaluation](../enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
 
 ## Enable or disable a policy {#enable}
 
