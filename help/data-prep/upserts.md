@@ -5,7 +5,7 @@ description: This document provides information on how to send partial row updat
 ---
 # Send partial row updates to [!DNL Profile Service] using [!DNL Data Prep]
 
-Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Profile Service] data while also creating and stitching identities together with a single API request.
+Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Profile Service] data while also creating and establishing new identity links with a single API request.
 
 By streaming upserts, you can retain the format of your data while translating that data to [!DNL Profile Service] PATCH requests during ingestion. Based on the inputs you provide, [!DNL Data Prep] allows you to send a single API payload and translate the data to both [!DNL Profile Service] PATCH and [!DNL Identity Service] CREATE requests. 
 
@@ -31,7 +31,7 @@ This overview requires a working understanding of the following components of Ad
 Streaming upserts in [!DNL Data Prep] works as follows:
 
 * You must first create and enable a dataset for [!DNL Profile] consumption. See the guide on [enabling a dataset for [!DNL Profile]](../catalog/datasets/enable-for-profile.md) for more information;
-* If [!DNL Identity Stitching] is required, then you must also create an additional dataset **with the same schema** as your [!DNL Profile] dataset;
+* If new identities must be linked, then you must also create an additional dataset **with the same schema** as your [!DNL Profile] dataset;
 * Once your dataset(s) are prepared, you must create a dataflow to map your incoming request to the [!DNL Profile] dataset;
 * Next, you must update the incoming request to include the necessary headers. These headers define:
   * The data operation that is needed to be performed with [!DNL Profile]: `create`, `merge`, and `delete`;
@@ -39,7 +39,7 @@ Streaming upserts in [!DNL Data Prep] works as follows:
 
 ### Configure the identity dataset
 
-If [!DNL Identity Stitching] is required, then you must create and pass an additional dataset in the incoming payload. When creating an identity dataset, you must ensure that the following requirements are met:
+If new identities must be linked, then you must create and pass an additional dataset in the incoming payload. When creating an identity dataset, you must ensure that the following requirements are met:
 
 * The identity dataset must have its associated schema as the [!DNL Profile] dataset. A mismatch of schemas may lead to inconsistent system behavior;
 * However, you must ensure that the identity dataset is different from the [!DNL Profile] dataset. If the datasets are the same, then data will be overwritten instead of updated;
@@ -69,9 +69,9 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 
 ## Incoming payload structure 
 
-The following displays an example of an incoming payload structure with [!DNL Identity Stitching].
+The following displays an example of an incoming payload structure that establishes new identity links.
 
-### With [!DNL Identity Stitching]
+### With identity
 
 ```shell
 {
@@ -97,7 +97,7 @@ The following displays an example of an incoming payload structure with [!DNL Id
 | `operations` | This parameter outlines the actions that [!DNL Data Prep] will take based on the incoming request. |
 | `operations.data` | Defines the actions that must be performed in [!DNL Profile Service]. |
 | `operations.identity` | Defines the operations permitted by the [!DNL Identity Service] on the data.  |
-| `operations.identityDatasetId` | (Optional) The ID of the identity dataset that is required only if [!DNL Identity Stitching] is needed. |
+| `operations.identityDatasetId` | (Optional) The ID of the identity dataset that is required only if new identities must be linked. |
 
 #### Supported operations
 
@@ -115,9 +115,9 @@ The following operations are supported by [!DNL Identity Service]:
 | --- | --- |
 | `create` | The only permitted operation for this parameter. If `create` is passed as a value for `operations.identity`, then [!DNL Data Prep] generates an XDM entity create request for [!DNL Identity Service]. If the identity already exists, then the identity is ignored. **Note:** If `operations.identity` is set to `create`, then the `identityDatasetId` must also be specified. The XDM entity create message generated internally by [!DNL Data Prep] component will be generated for this dataset id. |
 
-### Without [!DNL Identity Stitching]
+### Without identity
 
-If [!DNL Identity Stitching] is not required, then you can omit the `identity` and `identityDatasetId` parameters in the operations. Doing so sends data only to [!DNL Profile Service] and skips the [!DNL Identity Service]. See the payload below for an example:
+If new identities do not need to be linked, then you can omit the `identity` and `identityDatasetId` parameters in the operations. Doing so sends data only to [!DNL Profile Service] and skips the [!DNL Identity Service]. See the payload below for an example:
 
 ```shell
 
@@ -239,4 +239,4 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ## Next steps
 
-By reading this document, you should now understand how to stream upserts in [!DNL Data Prep] to send partial row updates to your [!DNL Profile Service] data, while also creating and stitching identities with a single API request. For more information on other [!DNL Data Prep] features, please read the [[!DNL Data Prep] overview](./home.md). To learn how to use mapping sets within the [!DNL Data Prep] API, please read the [[!DNL Data Prep] developer guide](./api/overview.md).
+By reading this document, you should now understand how to stream upserts in [!DNL Data Prep] to send partial row updates to your [!DNL Profile Service] data, while also creating and linking identities with a single API request. For more information on other [!DNL Data Prep] features, please read the [[!DNL Data Prep] overview](./home.md). To learn how to use mapping sets within the [!DNL Data Prep] API, please read the [[!DNL Data Prep] developer guide](./api/overview.md).
