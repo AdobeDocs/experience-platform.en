@@ -26,11 +26,11 @@ The documentation below provides information on how to connect [!DNL Google AdWo
 
 ### Using APIs
 
-- [Create a Google AdWords base connection using the Flow Service API](../../tutorials/api/create/advertising/ads.md)
-- [Explore the data structure and contents of an advertising source using the Flow Service API](../../tutorials/api/explore/advertising.md)
-- [Create a dataflow for an advertising source using Flow Service API](../../tutorials/api/collect/advertising.md)
+* [Create a Google AdWords base connection using the Flow Service API](../../tutorials/api/create/advertising/ads.md)
+* [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
+* [Create a dataflow for an advertising source using Flow Service API](../../tutorials/api/collect/advertising.md)
 
 ### Using the UI
 
-- [Create a Google AdWords source connection in the UI](../../tutorials/ui/create/advertising/ads.md)
-- [Create a dataflow for an advertising source connection in the UI](../../tutorials/ui/dataflow/advertising.md)
+* [Create a Google AdWords source connection in the UI](../../tutorials/ui/create/advertising/ads.md)
+* [Create a dataflow for an advertising source connection in the UI](../../tutorials/ui/dataflow/advertising.md)

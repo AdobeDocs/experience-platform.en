@@ -15,7 +15,7 @@ For an overview of all of the Adobe Experience Platform Segmentation Service fea
 
 The segment dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile store in Experience Platform. The snapshot does not include any event (time series) data. 
 
-The attribute data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the segment dashboard is not updating in real time.
+The attribute data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the segment dashboard is not updating in real-time.
 
 >[!NOTE]
 >
@@ -35,13 +35,13 @@ To navigate to the [!UICONTROL Segments] dashboard within the Platform UI, selec
 
 You can modify the appearance of the [!UICONTROL Segments] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the **[!UICONTROL Widget library]** to explore available widgets and create custom widgets for your organization. 
 
-Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
+Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
 
 ## Select a segment
 
-The dashboard automatically selects a segment to display, however you can change the segment by using the drop down menu or segment selector. 
+The dashboard automatically selects a segment to display, however you can change the segment by using the dropdown menu or segment selector. 
 
-To choose a different segment, select the drop down next to the segment name or use the segment selector to open the segment selection dialog.
+To choose a different segment, select the dropdown next to the segment name or use the segment selector to open the segment selection dialog.
 
 ![](../images/segments/change-segment.png)
 
@@ -51,20 +51,23 @@ To choose a different segment, select the drop down next to the segment name or 
 
 The segments dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. 
 
-The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot is provided in UTC; it is not in the timezone of the individual user or IMS Organization.
+The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or IMS Organization.
 
 ![](../images/segments/widget-timestamp.png)
 
 ## Standard widgets
 
-Adobe provides multiple standard widgets that you can use to visualize different metrics related to your segments. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
+Adobe provides multiple standard widgets that you can use to visualize different metrics related to your segments. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
 * [[!UICONTROL Audience size]](#audience-size)
-* [[!UICONTROL Audience size trend]](#audience-size-trend)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+* [[!UICONTROL Audience activation order]](#audience-activation-order)
+* [[!UICONTROL Audience size trend]](#audience-size-trend)
+* [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
+* [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
 
 ### [!UICONTROL Audience size] {#audience-size}
 
@@ -79,24 +82,6 @@ The **[!UICONTROL Audience size]** widget displays the total number of merged pr
 For more information on fragments and merged profiles, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
-
-### [!UICONTROL Audience size trend] {#audience-size-trend}
-
->[!CONTEXTUALHELP]
->id="platform_dashboards_segments_audiencesizetrend"
->title="Audience size trend"
->abstract="This widget provides information regarding the total number of profiles in the segment as captured during the daily snapshot, for the last 30 days, 90 days, or 12 months."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Learn more from documentation"
-
-The **[!UICONTROL Audience size trend]** widget provides information regarding the total number of profiles in the segment as captured during the daily snapshot, for the last 30 days, 90 days, or 12 months. This widget displays how the segment size may have shifted over time as new profiles qualify for or exit from the segment.
-
-To learn more about segment evaluation and how profiles qualify and exit from segments, please refer to the [Segmentation Service documentation](../../segmentation/home.md).
-
-![The segments overview displays the Audience size trend widget.](../images/segments/audience-size-trend-captions.png)
-
-The **[!UICONTROL Audience size trend]** widget provides a [!UICONTROL Captions] button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog. A machine learning model automatically generates captions to describe the key trends and important events by analyzing the chart and segment data.
-
-![The automatic captions dialog for the Audience size trend widget.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
@@ -126,9 +111,51 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 
 The **[!UICONTROL Profiles by identity]** widget displays the breakdown of identities across every merged profile in your selected segment. The total number of profiles by identity may be higher than the total number of profiles in the segment because one profile could have multiple identities associated with it. In other words, adding together the values shown for each identity may total more than the total audience size in the segment because if a customer interacts with your brand on more than one channel, multiple identities may be associated with that individual customer.
 
+Select **[!UICONTROL Captions]** to open the automatic captions dialog.
+
+![The profiles by identity captions dialog.](../images/segments/profiles-by-identity.png)
+
+A machine learning model automatically generates data insights by analyzing the overall distribution and key dimensions of the data.
+
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
-![](../images/segments/profiles-by-identity.png)
+### [!UICONTROL Audience activation order] {#audience-activation-order}
+
+The [!UICONTROL Audience activation order] widget provides a three-column table that lists the [!UICONTROL destination name], the [!UICONTROL platform], and the activation [!UICONTROL date] of the audience. The list is ordered from high to low according to recency and can accommodate up to 10 rows.
+
+![The Audience activation order widget.](../images/segments/audience-activation-order.png)
+
+### [!UICONTROL Audience size trend] {#audience-size-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesizetrend"
+>title="Audience size trend"
+>abstract="This widget provides information regarding the total number of profiles that meet the criteria of **any** segment definition, as captured during the daily snapshot, for the last 30 days, 90 days, or 12 months."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Learn more from documentation"
+
+The **[!UICONTROL Audience size trend]** widget provides a line graph illustration for the total number of profiles that meet the criteria of **any** segment definition over a given period of time. The audience size trend can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected on the y-axis and time on the x-axis.
+
+This widget also includes the automatic [!UICONTROL Captions] feature where a machine learning model analyzes the chart and segment data and automatically generates captions to describe the key trends and important events. Select **[!UICONTROL Captions]** to open the automatic captions dialog. 
+
+![The segments overview displays the Audience size trend widget.](../images/segments/audience-size-trend-captions.png)
+
+The automatic captions dialog opens providing insights on your data. 
+
+![The automatic captions dialog for the Audience size trend widget.](../images/segments/audience-size-trend-automatic-captions-dialog.png) 
+
+To learn more about segment evaluation and how profiles qualify and exit from segments, please refer to the [Segmentation Service documentation](../../segmentation/home.md).
+
+### [!UICONTROL Audience size change trend] {#audience-size-change-trend}
+
+This widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. The segment chosen for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected on the y-axis and time on the x-axis.
+
+![The Audience size change trend widget.](../images/segments/audience-size-change-trend.png)
+
+### [!UICONTROL Audience size trend by identity] {#audience-size-trend-by-identity}
+
+This widget illustrates the audience size trend for a particular segment based on the identity type chosen from the widget dropdown menu. The segment used for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
+
+![The Audience size trend by identity widget.](../images/segments/audience-size-trend-by-identity.png)
 
 ## Next steps
 
