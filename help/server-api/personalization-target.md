@@ -93,7 +93,7 @@ https://ns.adobe.com/personalization/dom-action
 
 ### Decision scopes {#decision-scopes}
 
-Target activity names should be included in the `decisionScopes` array to return the appropriate content.
+Adobe Target [!DNL mbox] names should be included in the `decisionScopes` array to return the appropriate content.
 
 #### Example {#decision-scopes-example}
 
@@ -285,12 +285,12 @@ The table below explains the key elements of that portion of the response.
 
 |Property | Description   | Example  |
 |---|---|---|
-| `scope`  |  The Target activity name that resulted in the proposed offers.  | `"scope": "serverapimbox"`   |
+| `scope`  |  The Target mbox name that resulted in the proposed offers.  | `"scope": "serverapimbox"`   |
 | `items[].schema` | The schema of the content associated with the proposed offer. This will be related to the activity type you selected when creating the personalization activity. | `"schema": "https://ns.adobe.com/personalization/json-content-item",` | 
 | `items[].meta.activity.id`| The unique ID of the offer activity. Typically a 6-digit number. | `"activity.id": "140281"` |
 | `items[].meta.activity.name` | The name of the user-specified offer activity. This is provided during the activity creation step. | `"activity.name": "Server API Form"`|
 | `items[].meta.experience.id` | The unique ID of the personalization experience. | `"experience.id": "0"` | 
 | `items[].meta.experience.name` | The unique name of the personalization experience. | `"experience.name": "Experience A"` | 
-| `items[].data.id` | The ID of the proposed offer. Same as the activity ID. | `"id": "282484"`  |
+| `items[].data.id` | The ID of the proposed offer. | `"id": "282484"`  |
 | `items[].data.format` | The format of the content associated with the proposed offer. | `"format: "application/json`| 
 | `items[].data.content` | Content associated with the proposed offer. This will be used for personalization of content of the calling application. | `"content": "<CONTENT CONFIGURED IN TARGET>"` |
