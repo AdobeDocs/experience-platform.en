@@ -47,7 +47,7 @@ Data Prep can robustly handle different formats of data ingested into Platform. 
 
 ## Send partial row updates using [!DNL Data Prep]
 
-Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Profile Service] data while also creating and stitching identities with a single API request. To learn more about how to stream upserts in [!DNL Data Prep], see the document on [sending partial row updates](./upserts.md).
+Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Profile Service] data while also creating and establishing new identity links with a single API request. To learn more about how to stream upserts in [!DNL Data Prep], see the document on [sending partial row updates](./upserts.md).
 
 ## Next steps
 
