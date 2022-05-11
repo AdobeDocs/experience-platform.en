@@ -9,7 +9,11 @@ feature: Privacy
 # Data Hygiene {#hygiene}
 
 * [Data hygiene overview](./home.md)
-* [Data hygiene UI guide](./ui.md)
+* Data Hygiene UI {#ui}
+  * [Overview](./ui/overview.md)
+  * [Browse existing work orders](./ui/browse.md)
+  * [Delete customer data](./ui/delete-customer.md)
+  * [Schedule a time to live (TTL) for a dataset](./ui/dataset-ttl.md)
 * Data Hygiene API {#api}
   * [Overview](./api/overview.md)
   * [Work order](./api/workorder.md)

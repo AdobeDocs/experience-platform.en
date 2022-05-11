@@ -39,4 +39,4 @@ A dataset TTL is a time-delayed "delete a dataset" action. By creating a TTL, yo
 
 ## Next steps
 
-This guide covered how to manage data hygiene requests using API calls. For information on how to perform these actions in the Platform UI, see the [data hygiene UI guide](../ui.md).
+This guide covered how to manage data hygiene requests using API calls. For information on how to perform these actions in the Platform UI, see the [data hygiene UI guide](../ui/overview.md).
