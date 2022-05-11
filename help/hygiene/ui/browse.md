@@ -15,7 +15,7 @@ This guide covers how to view and manage existing work orders in the Adobe Exper
 
 ## List and filter existing work orders
 
-When you first access the **[!UICONTROL Data cleansing]** workspace in the UI, a list of existing work orders is shown along with their basic details.
+When you first access the **[!UICONTROL Data Cleansing]** workspace in the UI, a list of existing work orders is shown along with their basic details.
 
 The list only shows work orders for one category at a time Select **[!UICONTROL Consumer]** to view a list of customer deletion tasks, and **[!UICONTROL Dataset]** to view a list of time-to-live (TTL) schedules for datasets.
 

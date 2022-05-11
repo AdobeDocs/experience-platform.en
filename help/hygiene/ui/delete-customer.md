@@ -4,7 +4,7 @@ description: Learn how to delete customer records in the Adobe Experience Platfo
 ---
 # Delete customer records
 
-The **[!UICONTROL Data cleansing]** workspace in the Adobe Experience Platform UI allows you to delete customer records that are participating in Identity Service and Real-time Customer Profile.
+The **[!UICONTROL Data Cleansing]** workspace in the Adobe Experience Platform UI allows you to delete customer records that are participating in Identity Service and Real-time Customer Profile.
 
 ## Prerequisites
 
@@ -12,9 +12,9 @@ Deleting customer records requires a working understanding of how identity field
 
 Refer to the following documentation for more information on identities in Platform:
 
-* [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
-  * [Identity namespaces](../../../identity-service/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
-* [Real-time Customer Profile](../../../profile/home.md): Leverages customer identity graphs to provide unified consumer profiles based on aggregated data from multiple sources, updated in near-real-time.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
+  * [Identity namespaces](../../identity-service/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
+* [Real-time Customer Profile](../../profile/home.md): Leverages customer identity graphs to provide unified consumer profiles based on aggregated data from multiple sources, updated in near-real-time.
 * [XDM System](../../xdm/home.md): Provides standard definitions and structures for Platform data through the use of schemas. All Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
   * [Identity fields](../../xdm/ui/fields/identity.md): Learn how an identity field is defined in an XDM schema.
 
@@ -103,7 +103,7 @@ Once you have finished adding identities to the request, select **[!UICONTROL Su
 
 You are asked to confirm the list of identities whose data you want to delete. Select **[!UICONTROL Submit]** to confirm your selection.
 
-After the request is submitted, a work order is created and appears on the [!UICONTROL Consumer] tab of the [!UICONTROL Data cleansing] workspace. From here, you can monitor the work order's status as it processes the request. Most work orders will take several days to complete.
+After the request is submitted, a work order is created and appears on the [!UICONTROL Consumer] tab of the [!UICONTROL Data Cleansing] workspace. From here, you can monitor the work order's status as it processes the request. Most customer deletion work orders will take several days to complete.
 
 ## Next steps
 
