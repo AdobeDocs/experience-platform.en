@@ -31,13 +31,13 @@ Each event should include the corresponding `XDM` content that needs to be colle
 ### API format {#api-format}
 
 ```http
-POST /ee/v2/collect
+POST /v2/collect
 ```
 
 ### Request {#request}
 
 ```shell
-curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
+curl -X POST "https://server.adobedc.net/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}" 

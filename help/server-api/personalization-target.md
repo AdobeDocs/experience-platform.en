@@ -120,7 +120,7 @@ In the example below, all four offer types are requested along with a Target act
 **API format**
 
 ```http
-POST /ee/v2/interact
+POST /v2/interact
 ```
 
 ### Request {#request}

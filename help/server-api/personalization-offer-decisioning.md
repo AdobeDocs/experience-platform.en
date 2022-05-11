@@ -70,7 +70,7 @@ Copy the Base64-encoded decision scope. You will use it in the `query` object of
 **API format**
 
 ```http
-POST /ee/v2/interact
+POST /v2/interact
 ```
 
 ### Request {#request}

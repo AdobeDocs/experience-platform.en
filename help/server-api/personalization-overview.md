@@ -132,7 +132,7 @@ The personalized content retrieved from personalization solutions is presented i
 **API format**
 
 ```http
-POST /ee/v2/interact
+POST /v2/interact
 ```
 
 ### Request {#request}

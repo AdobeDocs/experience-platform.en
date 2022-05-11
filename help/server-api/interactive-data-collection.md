@@ -18,7 +18,7 @@ The server response includes one or more `Handle` objects, as shown below.
 ### API format {#format}
 
 ```http
-POST /ee/v2/interact
+POST /v2/interact
 ```
 
 ### Request {#request}
