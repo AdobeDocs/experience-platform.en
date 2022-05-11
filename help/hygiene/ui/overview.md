@@ -14,4 +14,4 @@ From here, you can browse existing work orders and create new data hygiene reque
 
 * [Browse existing work orders](./browse.md)
 * [Delete customer data](./delete-customer.md)
-* [Manage time to live (TTL) for datasets](./dataset-ttl.md)
+* [Manage time to live (TTL) for datasets](./ttl.md)

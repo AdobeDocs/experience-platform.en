@@ -13,8 +13,8 @@ feature: Privacy
   * [Overview](./ui/overview.md)
   * [Browse existing work orders](./ui/browse.md)
   * [Delete customer data](./ui/delete-customer.md)
-  * [Schedule a time to live (TTL) for a dataset](./ui/dataset-ttl.md)
+  * [Manage time to live (TTL) for datasets](./ui/ttl.md)
 * Data Hygiene API {#api}
   * [Overview](./api/overview.md)
   * [Work order](./api/workorder.md)
-  * [Dataset time-to-live (TTL)](./api/ttl.md)
+  * [Dataset time to live (TTL)](./api/ttl.md)

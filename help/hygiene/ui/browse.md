@@ -57,4 +57,4 @@ The details page for a dataset TTL provides information on its basic attributes,
 This guide covered how to view and manage existing data hygiene work orders in the Platform UI. For information on creating your own work orders, refer to the following documentation:
 
 * [Delete a customer](./delete-customer.md)
-* [Schedule a dataset TTL](./dataset-ttl.md)
+* [Schedule a dataset TTL](./ttl.md)

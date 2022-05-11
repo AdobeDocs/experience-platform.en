@@ -36,8 +36,6 @@ To edit or cancel a TTL, select **[!UICONTROL Dataset]** on the main page of the
 
 On the details page of the TTL, the right rail shows controls to edit or cancel the scheduled deletion.
 
-
-
 ## Next steps
 
 This document covered how to schedule dataset TTLs in the Experience Platform UI. For information on how to perform other data hygiene tasks in the UI, refer to the [data hygiene UI overview](./overview.md).

@@ -33,7 +33,7 @@ This document provides an example API call to demonstrate how to format your req
 
 A work order is a representation of a data hygiene task that deletes customer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API.
 
-## Dataset time-to-live (TTL) schedules
+## Time to live (TTL) for datasets
 
 A dataset TTL is a time-delayed "delete a dataset" action. By creating a TTL, you are specifying a future time at which that dataset should be deleted. See the [dataset TTL endpoint guide](./ttl.md) for details on scheduling dataset TTLs in the API.
 
