@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;upsert;streaming upsert
-title: Send partial row updates to Profile Service using Data Prep
-description: This document provides information on how to stream partial row updates to Profile Service using Data Prep
+title: Send Partial Row Updates To Profile Service Using Data Prep
+description: This document provides information on how to send partial row updates to Profile Service using Data Prep.
 ---
 # Send partial row updates to [!DNL Profile Service] using [!DNL Data Prep]
 
-Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Profile Service] data while also creating and stitching identities with a single API request.
+Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Profile Service] data while also creating and stitching identities together with a single API request.
 
-By streaming upserts, you can retain the format of your data while translating that data to [!DNL Profile Service] PATCH requests in flight during ingestion. Based on the inputs you provide, [!DNL Data Prep] allows you to send a single API payload and translate them to both [!DNL Profile Service] PATCH and [!DNL Identity Service] CREATE requests. 
+By streaming upserts, you can retain the format of your data while translating that data to [!DNL Profile Service] PATCH requests during ingestion. Based on the inputs you provide, [!DNL Data Prep] allows you to send a single API payload and translate the data to both [!DNL Profile Service] PATCH and [!DNL Identity Service] CREATE requests. 
 
 This document provides information on how to stream upserts in [!DNL Data Prep].
 
@@ -15,18 +15,18 @@ This document provides information on how to stream upserts in [!DNL Data Prep].
 
 This overview requires a working understanding of the following components of Adobe Experience Platform:
 
-* [[!DNL Data Prep]](./home.md): Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+* [[!DNL Data Prep]](./home.md): [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-* [[Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
+* [Real-time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 * [Sources](../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 
-## How to use Streaming Upserts in [!DNL Data Prep]
+## Use streaming upserts in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 
 >[!NOTE]
 >
 >The following sources support the use of streaming upserts:<ul><li>[[!DNL Amazon Kinesis]](../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../sources/connectors/streaming/http.md)</li></ul>
 
-### Streaming Upserts high-level workflow
+### Streaming upserts high-level workflow
 
 Streaming upserts in [!DNL Data Prep] works as follows:
 
@@ -37,15 +37,15 @@ Streaming upserts in [!DNL Data Prep] works as follows:
   * The data operation that is needed to be performed with [!DNL Profile]: `create`, `merge`, and `delete`;
   * The optional identity operation to be performed with [!DNL Identity Service]: `create`.
 
-### Configuring the identity dataset
+### Configure the identity dataset
 
 If [!DNL Identity Stitching] is required, then you must create and pass an additional dataset in the incoming payload. When creating an identity dataset, you must ensure that the following requirements are met:
 
 * The identity dataset must have its associated schema as the [!DNL Profile] dataset. A mismatch of schemas may lead to inconsistent system behavior;
-* However, you must ensure that the identity dataset is different from the [!DNL Profile] dataset. If the datasets are the same, then data will be treated as overwrite and not as upsert;
-* While the initial dataset must be enabled for [!DNL Profile], the identity dataset **should not** be enabled for [!DNL Profile]. Otherwise, data will also be treated as overwrite, instead of upsert.
+* However, you must ensure that the identity dataset is different from the [!DNL Profile] dataset. If the datasets are the same, then data will be overwritten instead of updated;
+* While the initial dataset must be enabled for [!DNL Profile], the identity dataset **should not** be enabled for [!DNL Profile]. Otherwise, data will also be overwritten instead of updated.
 
-#### Required fields in the schemas associated with the identity dataset
+#### Required fields in the schemas associated with the identity dataset {#identity-dataset-required-fileds}
 
 If your schema contains required fields, validation of the dataset must be suppressed in order to enable [!DNL Identity Service] to only receive the identities. You can suppress validation by applying the `disabled` value to the `acp_validationContext` parameter. See the example below:
 
@@ -67,7 +67,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 >
 >You do not need to do any additional configuration if the schema associated with the identity dataset does not have any required fields.
 
-## Understanding the incoming payload structure 
+## Incoming payload structure 
 
 The following displays an example of an incoming payload structure with [!DNL Identity Stitching].
 
@@ -85,17 +85,17 @@ The following displays an example of an incoming payload structure with [!DNL Id
         "identityDatasetId": "621fc19ab33d941949af16d9"
     }
   }
-... //the raw data attributes goes in here as "body"
+... //The raw data attributes are included here as the key/value pairs of the "body" property.
 }
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `flowId` | The `flowId` that corresponds with your dataflow. This dataflow should correspond to the source connection created with [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], or [!DNL HTTP API]. This dataflow should also have a [!DNL Profile]-enabled dataset as the target dataset and the [!DNL Profile] dataset should match the `datasetId` parameter. |
+| `flowId` | A unique ID to identify a dataflow. This dataflow ID should correspond to the source connection created with [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], or [!DNL HTTP API]. This dataflow should also have a [!DNL Profile]-enabled dataset as the target dataset. **Note**: The ID of the [!DNL Profile]-enabled target dataset is also used as your `datasetId` parameter. |
 | `imsOrgId` | The ID that corresponds with your organization. |
-| `datasetId` | The ID [!DNL Profile]-enabled target dataset of your dataflow. |
+| `datasetId` | The ID of the [!DNL Profile]-enabled target dataset of your dataflow. **Note**: This is the same ID as the [!DNL Profile]-enabled target dataset ID found in your dataflow.  |
 | `operations` | This parameter outlines the actions that [!DNL Data Prep] will take based on the incoming request. |
-| `operations.data` | Defines the actions need to be performed in the [!DNL Profile Service]. |
+| `operations.data` | Defines the actions that must be performed in [!DNL Profile Service]. |
 | `operations.identity` | Defines the operations permitted by the [!DNL Identity Service] on the data.  |
 | `operations.identityDatasetId` | (Optional) The ID of the identity dataset that is required only if [!DNL Identity Stitching] is needed. |
 
@@ -105,15 +105,15 @@ The following operations are supported by [!DNL Profile Service]:
 
 | Operations | Description |
 | --- | --- | 
-| `create` | The default operation. This generates an XDM Entity Create operation for [!DNL Profile Service]. |
-| `merge` | This generates an  XDM Entity Update for [!DNL Profile Service]. |
-| `delete` | This generates an XDM Entity Delete for [!DNL Profile Service] and permanently removes the data from the [!DNL Profile Store]. |
+| `create` | The default operation. This generates an XDM entity create method for [!DNL Profile Service]. |
+| `merge` | This generates an XDM entity update method for [!DNL Profile Service]. |
+| `delete` | This generates an XDM entity delete method for [!DNL Profile Service] and permanently removes the data from the [!DNL Profile Store]. |
 
 The following operations are supported by [!DNL Identity Service]:
 
 | Operations | Descriptions |
 | --- | --- |
-| `create` | The only permitted operation for this parameter. If `create` is passed as value for `operations.identity`, then [!DNL Data Prep] generates an XDM Entity Create request for [!DNL Identity Service]. If the identity already exists, then the identity is ignored. **Note:** If `operations.identity` is set to `create`, then the `identityDatasetId` must also be specified. The XDM Entity Create message generated internally by [!DNL Data Prep] component will be generated for this dataset id. |
+| `create` | The only permitted operation for this parameter. If `create` is passed as a value for `operations.identity`, then [!DNL Data Prep] generates an XDM entity create request for [!DNL Identity Service]. If the identity already exists, then the identity is ignored. **Note:** If `operations.identity` is set to `create`, then the `identityDatasetId` must also be specified. The XDM entity create message generated internally by [!DNL Data Prep] component will be generated for this dataset id. |
 
 ### Without [!DNL Identity Stitching]
 
@@ -130,7 +130,7 @@ If [!DNL Identity Stitching] is not required, then you can omit the `identity` a
         "data": "create"/"merge"/"delete",
     }
   }
-... //the raw data attributes goes in here as "body"
+... //The raw data attributes are included here as the key/value pairs of the "body" property.
 }
 ```
 
@@ -147,7 +147,7 @@ In the example below, `state`, `homePhone.number` and other attributes are upser
 
 >[!NOTE]
 >
->In this example, identities will not get stitched as there no operations defined for identity.
+>In this example, identities will not get stitched together as there are no operations defined for identity.
 
 ```shell
 curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
@@ -239,4 +239,4 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ## Next steps
 
-By reading this document, you should now understand how to stream upserts in [!DNL Data Prep] to send partial row updates to your [!DNL Profile Service] data, while also creating and stitching identities with a single API request. For more information on other Data Prep features, please read the [Data Prep overview](./home.md). To learn how to use mapping sets within the Data Prep API, please read the [Data Prep developer guide](./api/overview.md).
+By reading this document, you should now understand how to stream upserts in [!DNL Data Prep] to send partial row updates to your [!DNL Profile Service] data, while also creating and stitching identities with a single API request. For more information on other [!DNL Data Prep] features, please read the [[!DNL Data Prep] overview](./home.md). To learn how to use mapping sets within the [!DNL Data Prep] API, please read the [[!DNL Data Prep] developer guide](./api/overview.md).
