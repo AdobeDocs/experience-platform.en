@@ -10,6 +10,8 @@ This guide covers how to manage data hygiene tasks in the Platform UI. For infor
 
 To access the workspace, select **[!UICONTROL Data Cleansing]** in the left navigation.
 
+![Image showing the [!UICONTROL Data Cleansing] workspace in the Platform UI](../images/ui/overview/home.png)
+
 From here, you can browse existing work orders and create new data hygiene requests. Refer to the following sections of this guide to learn more:
 
 * [Browse existing work orders](./browse.md)

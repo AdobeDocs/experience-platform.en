@@ -4,7 +4,7 @@ description: Learn how to delete customer records in the Adobe Experience Platfo
 ---
 # Delete customer records
 
-The **[!UICONTROL Data Cleansing]** workspace in the Adobe Experience Platform UI allows you to delete customer records that are participating in Identity Service and Real-time Customer Profile.
+The [[!UICONTROL Data Cleansing] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete customer records that are participating in Identity Service and Real-time Customer Profile.
 
 ## Prerequisites
 
@@ -15,22 +15,30 @@ Refer to the following documentation for more information on identities in Platf
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
   * [Identity namespaces](../../identity-service/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
 * [Real-time Customer Profile](../../profile/home.md): Leverages customer identity graphs to provide unified consumer profiles based on aggregated data from multiple sources, updated in near-real-time.
-* [XDM System](../../xdm/home.md): Provides standard definitions and structures for Platform data through the use of schemas. All Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
+* [Experience Data Model (XDM)](../../xdm/home.md): Provides standard definitions and structures for Platform data through the use of schemas. All Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
   * [Identity fields](../../xdm/ui/fields/identity.md): Learn how an identity field is defined in an XDM schema.
 
 ## Create a new request
 
 To start the process, select **[!UICONTROL Create request]** from the main page in the workspace.
 
+![Image showing the [!UICONTROL Create request] button being selected](../images/ui/delete-customer/create-request-button.png)
+
 The request creation dialog appears. By default, the **[!UICONTROL Consumer]** option is selected under the **[!UICONTROL Action]** section. Leave this option selected.
+
+![Image showing the consumer option selected in the creation dialog](../images/ui/delete-customer/consumer-action.png)
 
 ## Select datasets
 
-On the creation dialog for a data hygiene request, select **[!UICONTROL Consumer]** under the **[!UICONTROL Action]** section. 
+Under the **[!UICONTROL Consumer Details]** section, the next step is to determine whether you want to delete customer data from a single dataset or all datasets.
 
-Under the **[!UICONTROL Consumer Details]** section, the next step is to determine whether you want to delete customer data from a single dataset or all datasets. If you choose **[!UICONTROL Select dataset]**, an additional control appears that allows you to select the desired dataset from the list.
+If you choose **[!UICONTROL Select dataset]**, select the database icon (![Image of the database  icon](../images/ui/delete-customer/database-icon.png)) and a dialog appears that allows you to select the desired dataset from the list.
+
+![Image showing the dataset selection dialog](../images/ui/delete-customer/select-dataset.png)
 
 If you want to delete customer data from all datasets, select **[!UICONTROL All datasets]**.
+
+![Image showing the [!UICONTROL All datasets] option selected](../images/ui/delete-customer/all-datasets.png)
 
 >[!NOTE]
 >
@@ -55,6 +63,8 @@ Like all identity fields in Platform, a primary identity is composed of two thin
 >[!TIP]
 >
 >If you don't know the primary identity for a particular dataset, you can find it in the Platform UI. In the **[!UICONTROL Datasets]** workspace, select the dataset in question from the list. On the details page for the dataset, hover over the name of the dataset's schema in the right rail. The primary identity is displayed along with the schema name and description.
+>
+>![Image showing the primary identity of a dataset highlighted in the UI](../images/ui/delete-customer/dataset-primary-identity.png)
 
 If you are deleting customer records from a single dataset, all the identities you provide must have the same type, since a dataset can only have one primary identity. If you are deleting from all datasets, you can include multiple identity types since different datasets may have different primary identities.
 
@@ -66,6 +76,8 @@ There are two options to provide customer identities when deleting customer reco
 ### Upload a JSON file {#upload-json}
 
 To upload a JSON file, you can drag and drop the file into the provide area, or select **[!UICONTROL Choose files]** to browse and select from your local directory.
+
+![Image showing the methods for uploading JSON in the UI](../images/ui/delete-customer/upload-json.png)
 
 The JSON file must be formatted as an array of objects, each object representing a customer identity.
 
@@ -93,15 +105,25 @@ Once the file is uploaded, you can continue to [submit the request](#submit).
 
 To enter identities manually, select **[!UICONTROL Add identity]**.
 
+![Image showing the [!UICONTROL Add identity] button being selected](../images/ui/delete-customer/add-identity.png)
+
 Controls appear that allow you to enter customer identities one at a time. Under **[!UICONTROL Primary Identity]**, use the dropdown menu to select the identity type. Under **[!UICONTROL Identity Value]**, provide the primary identity value for the customer.
 
-To add more identities, select the plus (**+**) icon next to one of the rows, or select **[!UICONTROL Add identity]**.
+![Image showing a manually added identity field](../images/ui/delete-customer/identity-added.png)
+
+To add more identities, select the plus icon (![Image of the plus icon](../images/ui/delete-customer/plus-icon.png)) next to one of the rows, or select **[!UICONTROL Add identity]**.
+
+![Image showing how to add more identities to the request](../images/ui/delete-customer/more-identities.png)
 
 ## Submit the request (#submit)
 
 Once you have finished adding identities to the request, select **[!UICONTROL Submit]**.
 
+![Image showing the [!UICONTROL Submit] button being selected](../images/ui/delete-customer/submit.png)
+
 You are asked to confirm the list of identities whose data you want to delete. Select **[!UICONTROL Submit]** to confirm your selection.
+
+![Image showing the confirmation dialog](../images/ui/delete-customer/confirm-request.png)
 
 After the request is submitted, a work order is created and appears on the [!UICONTROL Consumer] tab of the [!UICONTROL Data Cleansing] workspace. From here, you can monitor the work order's status as it processes the request. Most customer deletion work orders will take several days to complete.
 
