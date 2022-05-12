@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;upsert;streaming upsert
 title: Send Partial Row Updates To Profile Service Using Data Prep
 description: This document provides information on how to send partial row updates to Profile Service using Data Prep.
+exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
 ---
 # Send partial row updates to [!DNL Profile Service] using [!DNL Data Prep]
 
