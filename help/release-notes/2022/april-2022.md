@@ -47,7 +47,7 @@ The following widgets are available through the Widget library on their respecti
 
 | Feature | Dashboard | Description |
 | ------- | --------- | ----------- |
-| Leftover profile segment membership cleanup | Profiles and License Usage | Profile Service now removes leftover segment members on a daily basis to give a more accurate representation of your profiles in your system. This clean up occurs after all the profile fragments for a given profile are deleted. This may show a drop in the "Addressable Audience" metric in the license usage dashboard and may show a drop in the "Profile Count" metric in the Profile dashboard, since these metrics included segment fragments prior to this release. |
+| Orphaned profile segment membership cleanup | Profiles and License Usage | Profile Service now removes leftover segment members on a daily basis to give a more accurate representation of your profiles in your system. This clean up occurs after all the profile fragments for a given profile are deleted. This may show a drop in the "Addressable Audience" metric in the license usage dashboard and may show a drop in the "Profile Count" metric in the Profile dashboard, since these metrics included leftover segment fragments prior to this release. |
 
 See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
 
