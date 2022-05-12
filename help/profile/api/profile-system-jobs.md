@@ -45,7 +45,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -62,7 +62,7 @@ The response includes a "children" array with an object for each delete request 
   "children": [
     {
       "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "batchId": "8d075b5a178e48389126b9289dcfd0ac",
       "jobType": "DELETE",
       "status": "COMPLETED",
@@ -72,7 +72,7 @@ The response includes a "children" array with an object for each delete request 
     },
     {
       "id": "3f225e7e-ac8c-4904-b1d5-0ce79e03c2ec",
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "dataSetId": "5c802d3cd83fc114b741c4b5",
       "jobType": "DELETE",
       "status": "PROCESSING",
@@ -114,7 +114,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "dataSetId": "5c802d3cd83fc114b741c4b5"
@@ -132,7 +132,7 @@ A successful response returns the details of the newly created delete request, i
 ```json
 {
     "id": "3f225e7e-ac8c-4904-b1d5-0ce79e03c2ec",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "dataSetId": "5c802d3cd83fc114b741c4b5",
     "jobType": "DELETE",
     "status": "NEW",
@@ -170,7 +170,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
        "batchId": "8d075b5a178e48389126b9289dcfd0ac"
@@ -188,7 +188,7 @@ A successful response returns the details of the newly created delete request, i
 ```json
 {
     "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "batchId": "8d075b5a178e48389126b9289dcfd0ac",
     "jobType": "DELETE",
     "status": "NEW",
@@ -239,7 +239,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -250,7 +250,7 @@ The response provides the details of the delete request, including its updated s
 ```json
 {
     "id": "9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "batchId": "8d075b5a178e48389126b9289dcfd0ac",
     "jobType": "DELETE",
     "status": "COMPLETED",
@@ -289,7 +289,7 @@ curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 

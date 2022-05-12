@@ -21,7 +21,7 @@ The documentation below provides information on how to connect [!DNL Microsoft] 
 ## Connect [!DNL Microsoft] SQL Server to [!DNL Platform] using APIs
 
 - [Create a Microsoft SQL Server base connection using the Flow Service API](../../tutorials/api/create/databases/sql-server.md)
-- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Microsoft] SQL Server to [!DNL Platform] using the UI
