@@ -78,12 +78,6 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 >title="Scheduled activation"
 >abstract="Activation runs at a fixed time of the day."
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activationchaining_activatenow"
->title="Activate on-demand"
->abstract="Immediately triggers a full file export for the selected segment, based on the last segment evaluation. This activation does not alter the existing segment export schedule. For optimal results, you should only use this option for segments that have been activated for more than 24 hours."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en#activate-on-demand" text="Activating segments on-demand"
-
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
 
 ![Export full files](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
