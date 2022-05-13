@@ -10,7 +10,7 @@ type: Tutorial
 
 Real-time Customer Profile lets you see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction. 
 
-The monitoring dashboard provides you with a visual representation of the data's activity within a Profile, including the status of your data's Profiles. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's profiles using the Experience Platform user interface, allowing you to track the status of Profile processing.
+The monitoring dashboard provides you with a visual representation of the data's activity within Profile, including the status of your data's Profiles. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's profiles using the Experience Platform user interface, allowing you to track the status of Profile processing.
 
 ## Getting started {#getting-started}
 
@@ -26,7 +26,7 @@ This guide requires a working understanding of the following components of Adobe
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Profile processing"
->abstract="The Profile processing view contains information on records ingested to Profile service, including the number of profile fragments created, profile fragments updated and the total number of profile fragments."
+>abstract="The Profile processing view contains information on records ingested to Profile service, including the number of profile fragments created, profile fragments updated, and the total number of profile fragments."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]

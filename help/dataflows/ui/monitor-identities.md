@@ -1,17 +1,30 @@
+---
+keywords: Experience Platform;home;popular topics;monitor identities;monitor dataflows;dataflows;identities;
+description: Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time. This tutorial provides instructions on how you can monitor dataflows with identities using the Experience Platform user interface.
+title: Monitor Dataflows for Identities in the UI
+topic-legacy: overview
+type: Tutorial
+---
+
 # Monitor dataflows for identities in the UI
 
-INTRO
+Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+
+The monitoring dashboard provides you with a visual representation of the data's activity within identities, including the status of your data's identities. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's identities using the Experience Platform user interface, allowing you to track the status of identity processing.
 
 ## Getting started {#getting-started}
 
-BLURB
+- [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
+  - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
+- [Identity Service](../../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Monitoring identities dashboard {#identity-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Identity processing"
->abstract="The Identity processing view contains information on records ingested to Identity service, including the number of identities added, graphs created and graphs updated. Review the metric definition guide to learn more about metrics and graphs."
+>abstract="The Identity processing view contains information on records ingested to Identity service, including the number of identities added, graphs created, and graphs updated. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
