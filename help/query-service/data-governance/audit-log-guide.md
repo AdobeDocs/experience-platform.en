@@ -5,7 +5,7 @@ exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
 ---
 # [!DNL Query Service] audit log integration
 
-The Adobe Experience Platform [!DNL Query Service] audit log integration provides records of query related user actions. Audit logs are an essential tool for troubleshooting and adhering to corporate data stewardship policies and regulatory requirements. The capability allows you to return an action log for many event types and filter and export the records. The logs can be accessed either through the Platform UI or the [Audit Query API](https://www.adobe.io/experience-platform-apis/references/audit-query/) and downloaded in either CSV or JSON file formats.
+The Adobe Experience Platform [!DNL Query Service] audit log integration provides records of query-related user actions. Audit logs are an essential tool for troubleshooting and adhering to corporate data stewardship policies and regulatory requirements. The capability allows you to return an action log for many event types and filter and export the records. The logs can be accessed either through the Platform UI or the [Audit Query API](https://www.adobe.io/experience-platform-apis/references/audit-query/) and downloaded in either CSV or JSON file formats.
 
 To learn more about the audit logs user interface, refer to the [audit logs overview document](../../landing/governance-privacy-security/audit-logs/overview.md). To learn more about making calls to Platform APIs, refer to the [audit logs API guide](../../landing/api-guide.md). 
 
@@ -20,8 +20,8 @@ The audit log categories provided by [!DNL Query Service] are as follows.
 | Category | Description |
 |---|---|
 | [!UICONTROL Scheduled query] | This category allows you to audit the schedules that have been created, updated, or deleted within [!DNL Query Service]. |
-| [!UICONTROL Query template] | This category allows you audit the various actions (create, update, and delete) taken on a query template. |
-| [!UICONTROL Query] | This category allows you audit query executions. |
+| [!UICONTROL Query template] | This category allows you to audit the various actions (create, update, and delete) taken on a query template. |
+| [!UICONTROL Query] | This category allows you to audit query executions. |
 
 ## Perform a [!DNL Query Service] audit log {#perform-an-audit-log}
 
@@ -64,7 +64,7 @@ Available filters vary depending on the category selected in the dropdown. The f
 | Category | See the [[!DNL Query Service] audit log categories](#audit-log-categories) section for a complete list of available categories. |
 | Action | When referring to [!DNL Query Service] audit categories, update is a **modification to the existing form**, delete is the **removal of the schedule or template**, create is **creating a new schedule or template**, and execute is running a query.|
 | User | Enter the complete user ID (for example, johndoe@acme.com) to filter by user. |
-| Status | This filter is not applicable to [!DNL Query Service] audit logs. The [!UICONTROL Allow], [!UICONTROL Success], and [!UICONTROL Failure] options will not filter the results whereas the [!UICONTROL Deny] option will filter out **all** logs. |
+| Status | This filter does not apply to the [!DNL Query Service] audit logs. The [!UICONTROL Allow], [!UICONTROL Success], and [!UICONTROL Failure] options will not filter the results whereas the [!UICONTROL Deny] option will filter out **all** logs. |
 | Date  | Select a start date and/or an end date to define a date range to filter results by. |
 
 ## Next steps
