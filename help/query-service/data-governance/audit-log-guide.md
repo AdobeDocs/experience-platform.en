@@ -21,7 +21,7 @@ The audit log categories provided by [!DNL Query Service] are as follows.
 |---|---|
 | [!UICONTROL Scheduled query] | This category allows you to audit the schedules that have been created, updated, or deleted within [!DNL Query Service]. |
 | [!UICONTROL Query template] | This category allows you to audit the various actions (create, update, and delete) taken on a query template. |
-| [!UICONTROL Query] | This category allows you to audit query executions. |
+<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
 
 ## Perform a [!DNL Query Service] audit log {#perform-an-audit-log}
 
