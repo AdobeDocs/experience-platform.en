@@ -43,11 +43,13 @@ The following widgets are available through the Widget library on their respecti
 | [!UICONTROL Audience size change trend] | Segments | This widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |           
 | [!UICONTROL Audience size trend by identity] | Segments | This widget illustrates the audience size trend for a particular segment based on a selected identity type. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |
 
-**New features**
+**New features** {#new-features}
 
 | Feature | Dashboard | Description |
 | ------- | --------- | ----------- |
 | Orphaned profile segment membership cleanup | Profiles and License Usage | Profile Service now removes leftover segment members on a daily basis to give a more accurate representation of your profiles in your system. This clean up occurs after all the profile fragments for a given profile are deleted. This may show a drop in the "Addressable audience" metric in the license usage dashboard and may show a drop in the "Profile count" metric in the Profile dashboard, since these metrics included leftover segment fragments prior to this release. |
+
+{style="table-layout:auto"}
 
 See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
 
