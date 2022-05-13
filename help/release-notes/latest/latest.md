@@ -9,12 +9,12 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Dataflows](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Sources](#sources)
 
@@ -26,20 +26,30 @@ Dashboards provide pre-configured reporting options for your organization’s da
 
 The following widgets are available through the Widget library on their respective dashboards. See the documentation for more information on [how to add widgets through the Widget library](../../dashboards/customize/widget-library.md).
 
-| Feature                                                   |  Dashboard    | Description |
-| --------------------------------------------------------- | ------------- | ----------- |
-| [!UICONTROL Profiles added trend]                         |   Profiles    | This widget uses a line graph to illustrate the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months.           |
-| [!UICONTROL Audiences mapped to destination status]       |     Profiles        |  This widget displays the total number of both mapped and unmapped audiences in a single metric and uses a doughnut chart to illustrate the proportional difference between their totals. |
-| [!UICONTROL Audiences size]                               |     Profiles        | This widget provides a two-column table that lists up to 20 segments and the total number of audiences contained in each segment. The list is dependent on the merge policy applied and ordered from high to low according to the total number of audiences. |
-| [!UICONTROL Profile count trend]                          |     Profiles        |  This widget uses a line graph to illustrate the trend in the total number of profiles contained in the system over time. The data can be visualized over 30 days, 90 days, and 12 month periods. |
-| [!UICONTROL Single identity profiles by identity]         |     Profiles        |   This widget uses a bar chart to illustrate the total number of profiles that are identified with only a single unique identifier. The widget supports up to five of the most commonly occurring identities. |
-| [!UICONTROL Destination status]                           |   Destinations      |   This widget displays the total number of enabled destinations as a single metric and uses a doughnut chart to illustrate the proportional difference between enabled and disabled destinations. |
-| [!UICONTROL Active destinations by destination platform]  |   Destinations      |  This widget uses a two-column table to show a list of active destination platforms and the total number of active destinations for each destination platform. |
-| [!UICONTROL Activated audiences across all destinations]  |   Destinations      |  This widget provides the total number of audiences activated across all destinations in a single metric. |
-| [!UICONTROL Audience activation order]                    |  Segments    | This widget provides a three-column table that lists the destination name, the platform, and the activation date of the audience. |           
-| [!UICONTROL Audience size trend]                          |  Segments    | This widget provides a line graph illustration for the total number of profiles that meet the criteria of any segment definition over 30 days, 90 days, and 12 month periods. |
-| [!UICONTROL Audience size change trend]                   |  Segments    | This widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |           
-| [!UICONTROL Audience size trend by identity]              |  Segments    | This widget illustrates the audience size trend for a particular segment based on a selected identity type. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |
+**New widgets**
+
+| Widget | Dashboard | Description |
+| ------ | --------- | ----------- |
+| [!UICONTROL Profiles added trend] | Profiles | This widget uses a line graph to illustrate the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. |
+| [!UICONTROL Audiences mapped to destination status] | Profiles | This widget displays the total number of both mapped and unmapped audiences in a single metric and uses a doughnut chart to illustrate the proportional difference between their totals.|
+| [!UICONTROL Audiences size] | Profiles | This widget provides a two-column table that lists up to 20 segments and the total number of audiences contained in each segment. The list is dependent on the merge policy applied and ordered from high to low according to the total number of audiences. |
+| [!UICONTROL Profile count trend] | Profiles |  This widget uses a line graph to illustrate the trend in the total number of profiles contained in the system over time. The data can be visualized over 30 days, 90 days, and 12 month periods. |
+| [!UICONTROL Single identity profiles by identity] | Profiles | This widget uses a bar chart to illustrate the total number of profiles that are identified with only a single unique identifier. The widget supports up to five of the most commonly occurring identities. |
+| [!UICONTROL Destination status] | Destinations | This widget displays the total number of enabled destinations as a single metric and uses a doughnut chart to illustrate the proportional difference between enabled and disabled destinations. |
+| [!UICONTROL Active destinations by destination platform] | Destinations | This widget uses a two-column table to show a list of active destination platforms and the total number of active destinations for each destination platform. |
+| [!UICONTROL Activated audiences across all destinations] | Destinations | This widget provides the total number of audiences activated across all destinations in a single metric. |
+| [!UICONTROL Audience activation order] | Segments | This widget provides a three-column table that lists the destination name, the platform, and the activation date of the audience. |
+| [!UICONTROL Audience size trend] | Segments | This widget provides a line graph illustration for the total number of profiles that meet the criteria of any segment definition over 30 days, 90 days, and 12 month periods. |
+| [!UICONTROL Audience size change trend] | Segments | This widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |           
+| [!UICONTROL Audience size trend by identity] | Segments | This widget illustrates the audience size trend for a particular segment based on a selected identity type. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. |
+
+**New features**
+
+| Feature | Dashboard | Description |
+| ------- | --------- | ----------- |
+| Orphaned profile segment membership cleanup | Profiles and License Usage | Profile Service now removes leftover segment members on a daily basis to give a more accurate representation of your profiles in your system. This clean up occurs after all the profile fragments for a given profile are deleted. This may show a drop in the "Addressable audience" metric in the license usage dashboard and may show a drop in the "Profile count" metric in the Profile dashboard, since these metrics included leftover segment fragments prior to this release. |
+
+{style="table-layout:auto"}
 
 See the documentation for more information on [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), and [[!DNL Segments]](../../dashboards/guides/segments.md) dashboards.
 
@@ -155,17 +165,31 @@ XDM is an open-source specification that provides common structures and definiti
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
-## [!DNL Intelligent Services] {#intelligent-services}
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
+AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
 
-Attribution AI and Customer AI allow customers to configure advanced AI/ML models for marketing attribution and customer propensity. The Multi Dataset feature helps customers to bring in multiple datasets at the time of model configuration without the need to stitch and prepare data in advance.
+### Attribution AI
+
+Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 
 **Updated features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for Multi Dataset | The Multi Dataset feature now supports all Experience Event datasets as well as the selection of Identity Map as an identity. Customers can select the Identity Map and any associated IDs as long as there is a common identity namespace across datasets. Attribution AI supports the following schemas: Adobe Analytics, Experience Event, Consumer Experience Event. Customer AI supports all of these schemas plus the Adobe Audience Manager schema. For more information on Multi Dataset support in Attribution AI & Customer AI, refer to the [Attribution AI user guide](../../intelligent-services/attribution-ai/user-guide.md) and [Customer AI user guide](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Support for Multi Dataset | The Multi Dataset feature now supports all Experience Event datasets as well as the selection of Identity Map as an identity. Customers can select the Identity Map and any associated IDs as long as there is a common identity namespace across datasets. Attribution AI supports the following schemas: Adobe Analytics, Experience Event, Consumer Experience Event. For more information on Multi Dataset support in Attribution AI, refer to the [Attribution AI user guide](../../intelligent-services/attribution-ai/user-guide.md). |
+
+For more information on [!DNL Intelligent Services], please see the [[!DNL Intelligent Services] overview](../../intelligent-services/home.md).
+
+### Customer AI
+
+Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
+
+**Updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Support for Multi Dataset | The Multi Dataset feature now supports all Experience Event datasets as well as the selection of Identity Map as an identity. Customers can select the Identity Map and any associated IDs as long as there is a common identity namespace across datasets. Customer AI supports the following schemas: Adobe Analytics, Experience Event, Consumer Experience Event, and the Adobe Audience Manager schema. For more information on Multi Dataset support in Customer AI, refer to the [Customer AI user guide](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | New model evaluation metrics in Customer AI | New Gains charts in Customer AI allow marketers to determine the group size to target based on their budget and ROI goals. New Lift charts measure the quality of the model, providing better visibility into the lift they would get over random targeting. For more information, see the [discover insights with Customer AI](../../intelligent-services/customer-ai/user-guide/discover-insights.md) document. |
 
 For more information on [!DNL Intelligent Services], please see the [[!DNL Intelligent Services] overview](../../intelligent-services/home.md).
