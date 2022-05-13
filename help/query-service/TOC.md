@@ -38,7 +38,7 @@ feature: Queries
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
   - [Sample Adobe Target queries](sample-queries/adobe-target.md)
 - Data Governance {#data-governance}
-  - [Audit log guide](audit-log-guide.md)
+  - [Audit log guide](data-governance/audit-log-guide.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
