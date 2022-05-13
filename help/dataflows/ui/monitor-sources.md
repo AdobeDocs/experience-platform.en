@@ -128,5 +128,5 @@ You can use the breadcrumb system at the top header to navigate your way back to
 
 By following this tutorial, you have successfully monitored the ingestion dataflow from the source-level using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
 
-* [Real-time Customer Profile overview](../../profile/home.md)
-* [Data Science Workspace overview](../../data-science-workspace/home.md)
+* [Monitoring identities in dataflows](./monitor-identities.md)
+* [Monitoring profiles in dataflows](./monitor-profiles.md)
