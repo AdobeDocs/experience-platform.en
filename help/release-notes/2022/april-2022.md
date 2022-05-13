@@ -9,12 +9,12 @@ exl-id: 39233787-3089-4469-8363-b006ae41ae21
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Dataflows](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Sources](#sources)
 
@@ -167,7 +167,7 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Intelligent services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
+AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
 
 ### Attribution AI
 
