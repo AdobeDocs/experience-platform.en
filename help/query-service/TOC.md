@@ -12,8 +12,8 @@ feature: Queries
 - Get started {#get-started}
   - [Prerequisites](get-started/prerequisites.md)
 - Use cases {#use-cases}
-  - [Abandoned Browse](use-cases/abandoned-browse.md)
-  - [Bot Filtering](use-cases/bot-filtering.md)
+  - [Abandoned browse](use-cases/abandoned-browse.md)
+  - [Bot filtering](use-cases/bot-filtering.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
