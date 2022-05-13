@@ -9,7 +9,11 @@ feature: Queries
 # Adobe Experience Platform Query Service {#query}
 
 - [Query Service overview](home.md)
-- [Quickstart guide](quickstart.md)
+- Get started {#get-started}
+  - [Prerequisites](get-started/prerequisites.md)
+- Use cases {#use-cases}
+  - [Abandoned Cart](use-cases/abandoned-cart.md)
+  - [Bot Filtering](use-cases/bot-filtering.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
@@ -33,6 +37,8 @@ feature: Queries
   - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
   - [Sample Adobe Target queries](sample-queries/adobe-target.md)
+- Data Governance {#data-governance}
+  - [Audit log guide](data-governance/audit-log-guide.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
