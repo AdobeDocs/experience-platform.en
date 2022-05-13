@@ -170,7 +170,7 @@ The example below passes the [!DNL FPID] as an `identityMap` parameter.
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
 -H "Authorization: Bearer {TOKEN}"
--H "x-gw-ims-org-id: {IMS_ORG_ID}"
+-H "x-gw-ims-org-id: {ORG_ID}"
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{

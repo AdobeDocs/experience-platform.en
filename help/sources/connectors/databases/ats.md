@@ -21,7 +21,7 @@ The documentation below provides information on how to connect [!DNL Azure Table
 ## Connect [!DNL Azure Table Storage] to Platform using APIs
 
 - [Create an Azure Table Storage base connection using the Flow Service API](../../tutorials/api/create/databases/ats.md)
-- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Azure Table Storage] to Platform using the UI

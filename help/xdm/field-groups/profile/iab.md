@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;field group;field group;iab;tcf;consent;
 solution: Experience Platform
-title: IAB TCF 2.0 Consent Schema Field Group
+title: IAB TCF 2.0 Consent Field Group for Profile Schemas
 topic-legacy: overview
 description: This document provides an overview of the IAB TCF 2.0 Consent schema field group for the XDM Individual Profile class.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
 ---
-# [!UICONTROL IAB TCF 2.0 Consent] schema field group
+# [!UICONTROL IAB TCF 2.0 Consent] field group for profile schemas
 
 >[!NOTE]
 >
