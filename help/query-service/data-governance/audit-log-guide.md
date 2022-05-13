@@ -11,7 +11,7 @@ To learn more about the audit logs user interface, refer to the [audit logs over
 
 ## Prerequisites
 
-You must have the [!UICONTROL Data Governance] [!UICONTROL View User Activity Log] permission enabled to view the audit log dashboard within the Platform UI. The permission is enabled through the Adobe [Admin Console](https://adminconsole.adobe.com/). Please contact your organization's administrator if you do not have administrator privileges to enable this permission. See the access control documentation for [full instructions on adding permissions through Admin Console](../../access-control/home.md). 
+You must have the [!DNL Data Governance] [!UICONTROL View User Activity Log] permission enabled to view the audit log dashboard within the Platform UI. The permission is enabled through the Adobe [Admin Console](https://adminconsole.adobe.com/). Please contact your organization's administrator if you do not have administrator privileges to enable this permission. See the access control documentation for [full instructions on adding permissions through Admin Console](../../access-control/home.md). 
 
 ## [!DNL Query Service] audit log categories {#audit-log-categories}
 
@@ -25,7 +25,7 @@ The audit log categories provided by [!DNL Query Service] are as follows.
 
 ## Perform a [!DNL Query Service] audit log {#perform-an-audit-log}
 
-To perform an audit for [!DNL Query Service] activities, select **[!UICONTROL Audits]** from the Platform UI left navigation rail, followed by the funnel icon (![A filter icon.](../images/audit-log/filter.png)) to display a list of filter controls to help narrow results.
+To perform an audit for [!DNL Query Service] activities, select **[!UICONTROL Audits]** from the left navigation, followed by the funnel icon (![A filter icon.](../images/audit-log/filter.png)) to display a list of filter controls to help narrow results.
 
 ![The Platform UI audit log dashboard with "Audits" in the left navigation and filter controls highlighted.](../images/audit-log/filter-controls.png)
 
