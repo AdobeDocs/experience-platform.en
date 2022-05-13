@@ -12,7 +12,7 @@ feature: Queries
 - Get started {#get-started}
   - [Prerequisites](get-started/prerequisites.md)
 - Use cases {#use-cases}
-  - [Abandoned Cart](use-cases/abandoned-cart.md)
+  - [Abandoned Browse](use-cases/abandoned-browse.md)
   - [Bot Filtering](use-cases/bot-filtering.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
