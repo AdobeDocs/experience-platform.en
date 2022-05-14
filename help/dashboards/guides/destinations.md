@@ -54,6 +54,10 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Destination status]](#destination-status)
 * [[!UICONTROL Active destinations by destination platform]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL Activated audiences by destination]](#activated-audiences-by-destination)
+* [[!UICONTROL Mapped audiences]](#mapped-audiences)
+
+<!-- Screenshot calls the widget Activated audiences NOT Activated audiences by destination -->
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
@@ -244,6 +248,22 @@ The [!UICONTROL Activated audiences across all destinations] widget provides the
 ![The Activated audiences across all destinations widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
 Select **[!UICONTROL Audiences]** to navigate to the destinations [!UICONTROL Browse] tab. This page provides a list of all enabled destinations and a variety of relevant metrics. See the documentation for [more information on the [!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
+
+### [!UICONTROL Activated audiences by destination] {#activated-audiences-by-destination}
+
+<!-- Screenshot calls the widget Activated audiences NOT Activated audiences by destination -->
+
+words
+
+![The Activated audiences by destination widget.](../images/destinations/activated-audiences.png)
+
+### [!UICONTROL Mapped audiences] {#mapped-audiences}
+
+<!-- INCORRECT PLACEHOLDER IMAGE -->
+
+words
+
+![The Mapped audiences widget.](../images/destinations/mapped-audiences.png)
 
 ## Next steps
 

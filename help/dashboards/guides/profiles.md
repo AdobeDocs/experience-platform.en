@@ -104,6 +104,10 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audiences size]](#audiences-size)
 * [[!UICONTROL Profile count trend]](#profile-count-trend)
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
+* [[!UICONTROL Audience overlap by merge policy]](#audiences-overlap-by-merge-policy)
+* [[!UICONTROL Single identity profiles change trend]](#single-identity-profiles-change-trend)
+* [[!UICONTROL Profiles count change trend by identity]](#profiles-count-change-trend-by-identity)
+<!-- The screenshot says: single identity profiles trend NOT Single identity profiles change trend -->
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -284,6 +288,27 @@ This widget uses a bar chart to illustrate the total number of profiles that are
 Hover over individual bars to see a dialog detailing the total count of profiles for an identity.
 
 ![The Single identity profiles by identity widget.](../images/profiles/single-identity-profiles-by-identity.png)
+
+### [!UICONTROL Audience overlap by merge policy] {#audience-overlap}
+
+words
+
+![The Platform UI Profiles dashboard with the merge policy dropdown and the widget segment dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
+
+### [!UICONTROL Single identity profiles change trend] {#single-identity-profiles-change-trend}
+
+<!-- The screenshot says: single identity profiles trend NOT Single identity profiles change trend -->
+
+words
+
+![The Single identity profiles change trend widget.](../images/profiles/single-identity-profiles-change-trend.png)
+
+### [!UICONTROL Profiles count change trend by identity] {#profiles-count-change-trend-by-identity}
+
+words
+
+![The Profiles count change trend by identity widget.](../images/profiles/profiles-count-change-trend-by-identity.png)
+
 
 ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
