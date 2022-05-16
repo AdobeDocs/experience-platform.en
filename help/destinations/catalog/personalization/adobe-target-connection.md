@@ -42,8 +42,8 @@ A home rental and sales company wants to personalize their home page with a bann
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="About datastream IDs"
->abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream"
+>abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the Target destination configuration enabled. You must configure a datastream before you can configure your destination. Selecting None disables all use cases that depend on edge segmentation."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html" text="Learn more about selecting datastreams."
 
 >[!IMPORTANT]
 > 
@@ -59,7 +59,14 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **Name**: Fill in the preferred name for this destination.
 *  **Description**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
-*  **Datastream ID**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details.
+*  **Datastream ID**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the Target destination enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details.
+
+When selecting the **[!UICONTROL None]** option for datastream ID, some personalization use cases are not supported. See the table below for details.
+    
+|No datastream selected|Datastream selected|
+|---|---|
+|<ul><li>[Edge segmentation](../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are not supported</li><li>You can share segments to the Adobe Target connection only for the production sandbox.</li><li>To configure next-session personalization without usinig a datastream, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul>|<ul><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) is supported</li><li>Segment sharing is supported for other sandboxes.</li></ul>|
+
 
 ## Activate segments to this destination {#activate}
 
