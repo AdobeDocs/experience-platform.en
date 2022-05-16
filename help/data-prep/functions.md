@@ -94,7 +94,7 @@ The following tables list all supported mapping functions, including sample expr
 | get_url_host | Returns the host of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the host needs to be extracted.</li></ul> | get_url_host​(URL) | get_url_host​("https://platform​.adobe.com/home") | platform.adobe.com |
 | get_url_port | Returns the port of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the port needs to be extracted.</li></ul> | get_url_port(URL) | get_url_port​("sftp://example.com//home/​joe/employee.csv") | 22 |
 | get_url_path | Returns the path of the given URL. By default, the full path is returned. | <ul><li>URL: **Required** The URL from which the path needs to be extracted.</li><li>FULL_PATH: *Optional* A boolean value that determines if the full path is returned. If set to false, only the end of the path is returned.</li></ul> | get_url_path​(URL, FULL_PATH) | get_url_path​("sftp://example.com//​home/joe/employee.csv") | "//home/joe/​employee.csv" |
-| get_url_query_str | Returns the query string of a given URL. | <ul><li>URL: **Required** The URL that you are trying to get the query string from.</li><li>ANCHOR: **Required** Determines what will be done with the anchor in the query string. Can be one of three values: "retain", "remove", or "append".<br><br>If the value is "retain", the anchor will be attached to the returned value.<br>If the value is "remove", the anchor will be removed from the returned value.<br>If the value is "append", the anchor will be returned as a separate value.</li></ul> | get_url_query_str​(URL, ANCHOR) | get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "retain")<br>get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "remove")<br>get_url_query_str​("foo://example.com​:8042/over/there​?name=ferret#nose", "append") | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | Returns the query string of a given URL as a map of query string name and query string value. | <ul><li>URL: **Required** The URL that you are trying to get the query string from.</li><li>ANCHOR: **Required** Determines what will be done with the anchor in the query string. Can be one of three values: "retain", "remove", or "append".<br><br>If the value is "retain", the anchor will be attached to the returned value.<br>If the value is "remove", the anchor will be removed from the returned value.<br>If the value is "append", the anchor will be returned as a separate value.</li></ul> | get_url_query_str​(URL, ANCHOR) | get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "retain")<br>get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "remove")<br>get_url_query_str​("foo://example.com​:8042/over/there​?name=ferret#nose", "append") | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 {style="table-layout:auto"}
 
@@ -130,7 +130,6 @@ The following tables list all supported mapping functions, including sample expr
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| size_of | Returns the size of the input. | <ul><li>INPUT: **Required** The object that you're trying to find the size of.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | need sample | need sample |
 | to_object | Creates an object based on the flat key/value pairs given. | <ul><li>INPUT: **Required** A flat list of key/value pairs.</li></ul> | to_object(INPUT) | to_object​("firstName", "John", "lastName", "Doe") | `{"firstName": "John", "lastName": "Doe"}` |
@@ -141,6 +140,8 @@ The following tables list all supported mapping functions, including sample expr
 | get_values | Parses the key/value pairs and returns the value of the string, based on the given key. | <ul><li>STRING: **Required** The string that you want to parse.</li><li>KEY: **Required** The key for which the value has to be extracted.</li><li>VALUE_DELIMITER: **Required** The delimiter that separates the field and the value. If either a `null` or an empty string are provided, this value is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field and value pairs. If either a `null` or an empty string are provided, this value is `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\"firstName - John , lastName - Cena , phone - 555 420 8692\", \"firstName\", \"-\", \",\") | John |
 
 {style="table-layout:auto"}
+
+For information on the object copy feature, see the section [below](#object-copy).
 
 ### Hierarchies - Arrays {#arrays}
 
@@ -156,6 +157,7 @@ The following tables list all supported mapping functions, including sample expr
 | add_to_array | Adds elements to the end of the array. | <ul><li>ARRAY: **Required** The array that you are adding elements to.</li><li>VALUES: The elements that you want to append to the array.</li></ul> | add_to_array​(ARRAY, VALUES) | add_to_array​(['a', 'b'], 'c', 'd') | ['a', 'b', 'c', 'd'] |
 | join_arrays | Combines the arrays with each other. | <ul><li>ARRAY: **Required** The array that you are adding elements to.</li><li>VALUES: The array(s) you want to append to the parent array.</li></ul> | join_arrays​(ARRAY, VALUES) | join_arrays​(['a', 'b'], ['c'], ['d', 'e']) | ['a', 'b', 'c', 'd', 'e'] |
 | to_array | Takes a list of inputs and converts it to an array. | <ul><li>INCLUDE_NULLS: **Required** A boolean value to indicate whether or not to include nulls in the response array.</li><li>VALUES: **Required** The elements that are to be converted to an array.</li></ul> | to_array​(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
+| size_of | Returns the size of the input. | <ul><li>INPUT: **Required** The object that you're trying to find the size of.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 
 {style="table-layout:auto"}
 
@@ -242,3 +244,46 @@ The following tables list all supported mapping functions, including sample expr
 | ua_device_class | Extracts the device class from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_device_class​(USER_AGENT) | ua_device_class​("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Phone |
 
 {style="table-layout:auto"}
+
+### Object copy {#object-copy}
+
+>[!TIP]
+>
+>The object copy feature is automatically applied when an object in the source is mapped to an object in the XDM. No additional action needed from users.
+
+You can use the object copy feature to automatically copy attributes of an object without making changes to the mapping. For example, if your source data has a structure of:
+
+```json
+address{
+        line1: 4191 Ridgebrook Way,
+        city: San Jose,
+        state: California
+        }
+```
+
+and an XDM structure of:
+
+```json
+addr{
+    addrLine1: 4191 Ridgebrook Way,
+    city: San Jose,
+    state: California
+    }
+```
+
+Then the mapping becomes:
+
+```json
+address -> addr
+address.line1 -> addr.addrLine1
+```
+
+In the example above, the `city` and `state` attributes are also ingested automatically at runtime because the `address` object is mapped to `addr`. If you were to create a `line2` attribute in the XDM structure and your input data also contains a `line2` in the `address` object, then it will also be automatically ingested without any need to manually alter the mapping.
+
+To ensure that the automatic mapping works, the following prerequisites must be met:
+
+* Parent-level objects should be mapped;
+* New attributes must have been created in the XDM schema;
+* New attributes should have matching names in the source schema and the XDM schema.
+
+If any of the prerequisites are not met, then you must manually map the source schema to the XDM schema using data prep.

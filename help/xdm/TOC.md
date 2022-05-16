@@ -71,6 +71,10 @@ feature: Schemas
     * [Upgrade Details](./field-groups/event/upgrade-details.md)
     * [Upsell Details](./field-groups/event/upsell-details.md)
     * [Web Details](./field-groups/event/web-details.md)
+  * XDM Business Campaign {#b2b-campaign}
+    * [XDM Business Campaign Details](./field-groups/b2b-campaign/details.md)
+  * XDM Business Campaign Members {#b2b-campaign-members}
+    * [XDM Business Campaign Members Details](./field-groups/b2b-campaign-members/details.md)
   * Product {#product}
     * [Product Catalog](./field-groups/product/product-catalog.md)
     * [Product Category](./field-groups/product/product-category.md)

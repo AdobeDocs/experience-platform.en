@@ -12,17 +12,13 @@ This document covers the steps for configuring a datastream in the Data Collecti
 
 >[!NOTE]
 >
->Your organization must be provisioned for this feature in order to access it in the UI. Please fill out the following [form](https://adobe.ly/websdkaccess) to request the necessary access.
+>Your organization must be provisioned for this feature in order to access it in the UI. Please fill out the following [form](https://adobe.ly/websdkaccess) to request the necessary access. To manage datastreams, your user account must be added to a product profile for tags in [!DNL Adobe Experience Platform].
 
 ## Access the [!UICONTROL Datastreams] workspace
 
 You can create and manage datastreams in the Data Collection UI by selecting **[!UICONTROL Datastreams]** in the left navigation.
 
 ![Datastreams tab in the Data Collection UI](../images/datastreams/datastreams-tab.png)
-
->[!NOTE]
->
->While you can access the [!UICONTROL Datastreams] tab regardless of whether you use Platform's tag management capabilities, you must have developer permissions to manage datastreams themselves. See the [user permissions](../../tags/ui/administration/user-permissions.md) article in the tags documentation for more details.
 
 The [!UICONTROL Datastreams] tab displays a list of existing datastreams, including their friendly name, ID, and last modified date. Select the name of of a datastream to [view its details and configure services](#view-details).
 

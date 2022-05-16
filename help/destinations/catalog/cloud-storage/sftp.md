@@ -12,7 +12,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 >[!IMPORTANT]
 >
-> While Adobe supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
+> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -28,6 +28,10 @@ Refer to the table below for information about the destination export type and f
 ![SFTP profile-based export type](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## Connect to the destination {#connect}
+
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -82,6 +86,14 @@ After establishing the authentication connection to the SFTP location, provide t
 * **[!UICONTROL Name]**: enter a name that will help you identify this destination in the Experience Platform user interface;
 * **[!UICONTROL Description]**: enter a description for this destination;
 * **[!UICONTROL Folder path]**: enter the path to the folder in your SFTP location where the files will be exported.
+
+## Activate segments to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
 ## Exported data {#exported-data}
 
