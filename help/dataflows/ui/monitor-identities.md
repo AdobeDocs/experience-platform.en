@@ -4,8 +4,8 @@ description: Adobe Experience Platform Identity Service provides you with a comp
 title: Monitor Dataflows for Identities in the UI
 topic-legacy: overview
 type: Tutorial
+exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 ---
-
 # Monitor dataflows for identities in the UI
 
 Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
