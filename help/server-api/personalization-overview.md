@@ -51,10 +51,10 @@ Retrieving personalized content requires an explicit request query object for a 
 }
 ```
 
-| Attribute | Type | Description |
-| --- | --- | --- |
-| `schemas` | `String[]` | *Optional*. List of schemas used in the decision, to select the type of offers returned. |
-| `scopes` | `String[]` | *Optional*. List of decision scopes. Maximum 30 per request. |
+| Attribute | Type |Required / Optional| Description |
+| --- | --- | --- | ---|
+| `schemas` | `String[]` | Required for Target personalization. Optional for Offer Decisioning. | List of schemas used in the decision, to select the type of offers returned.|
+| `scopes` | `String[]` | Optional| List of decision scopes. Maximum 30 per request. |
 
 ## The handle object {#handle}
 
@@ -113,7 +113,7 @@ The personalized content retrieved from personalization solutions is presented i
 | --- | --- | --- |
 | `payload.id` | String | The decision ID. |
 | `payload.scope` | String | The decision scope that resulted in the proposed offers. |
-| `payload.scopeDetails.decisionProvider`|String| This will either be `TGT` if using Adobe Target or `ODE` if using [!DNL Offer Decisioning].|
+| `payload.scopeDetails.decisionProvider`|String| Set to `TGT` when using Adobe Target.|
 | `payload.scopeDetails.activity.id` | String | The unique ID of the offer activity. |
 | `payload.scopeDetails.experience.id` | String | The unique ID of the offer placement. |
 | `items[].id` | String | The unique ID of the offer placement. |

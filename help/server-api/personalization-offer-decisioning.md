@@ -16,7 +16,7 @@ The Edge Network Server API can deliver personalized experiences managed in [Off
 
 Before you can use the Server API in conjunction with Offer Decisioning, you must enable Adobe Experience Platform personalization on your datastream configuration, and enable the **[!UICONTROL Offer Decisioning]** option.
 
-See the [guide on adding services to a datastream](../edge/fundamentals/datastreams.md#adobe-experience-platform-settings), for detailed information on how to enable Adobe Target.
+See the [guide on adding services to a datastream](../edge/fundamentals/datastreams.md#adobe-experience-platform-settings), for detailed information on how to enable Offer Decisioning.
 
 ![UI image showing the datastream service configuration screen, with Offer Decisioning selected](assets/aep-od-datastream.png)
 
@@ -70,7 +70,7 @@ Copy the Base64-encoded decision scope. You will use it in the `query` object of
 **API format**
 
 ```http
-POST /v2/interact
+POST /ee/v2/interact
 ```
 
 ### Request {#request}
@@ -82,7 +82,7 @@ A full request that includes a complete XDM object, data object and an Offer Dec
 >The `xdm` and `data` objects are optional and are only required for Offer Decisioning if you have created segments with conditions that use fields in either of those objects.
 
 ```shell
-curl -X POST 'https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}' \
+curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org: {ORG_ID}' \
 --header 'Authorization: Bearer {TOKEN}' \

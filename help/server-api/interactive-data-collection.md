@@ -18,13 +18,13 @@ The server response includes one or more `Handle` objects, as shown below.
 ### API format {#format}
 
 ```http
-POST /v2/interact
+POST /ee/v2/interact
 ```
 
 ### Request {#request}
 
 ```shell
-curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}" 
+curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}" 

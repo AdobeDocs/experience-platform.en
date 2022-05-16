@@ -36,7 +36,7 @@ You can choose between the following [!DNL Analytics Logging] options:
 
 ## Custom parameters {#custom-parameters}
 
-All fields in the [!DNL XDM] portion of each request are serialized into dot notation and then sent to Target as custom or [!DNL mbox] parameters.
+Most fields in the [!DNL XDM] portion of each request are serialized into dot notation and then sent to Target as custom or [!DNL mbox] parameters.
 
 
 ### Example {#custom-parameters-example}
@@ -44,22 +44,20 @@ All fields in the [!DNL XDM] portion of each request are serialized into dot not
 Given the following XDM sample: 
 
 ```json
-"xdm": {
-    "eventType": "web.webpagedetails.pageViews",
-    "device": {
-        "screenHeight": 1440,
-        "screenWidth": 3440,
-        "screenOrientation": "landscape"
-    }
+"xdm":{
+   "marketing":{
+      "campaignGroup":"winter22",
+      "campaignName":"homeOwnerPromo22",
+      "trackingCode":"hop22"
+   }
 }
 ```
 
 When creating audiences in Target, the following values will be available as custom parameters:
 
-* `xdm.eventType`
-* `xdm.device.screenHeight`
-* `xdm.device.screenWidth`
-* `xdm.device.screenOrientation`
+* `xdm.marketing.campaignGroup`
+* `xdm.marketing.campaignName`
+* `xdm.marketing.trackingCode`
 
 ## Target profile updates {#profile-update}
 
@@ -120,15 +118,15 @@ In the example below, all four offer types are requested along with a Target act
 **API format**
 
 ```http
-POST /v2/interact
+POST /ee/v2/interact
 ```
 
 ### Request {#request}
 
-A full request that includes a complete XDM object (each parameter will be converted to [!DNL mbox] or a custom parameter), profile paramters, along with the appropriate Target query is outlined below.
+A full request that includes a complete XDM object, profile paramters, along with the appropriate Target query is outlined below.
 
 ```shell
-curl -X POST 'https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}' \
+curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org: {ORG_ID}' \
 --header 'Authorization: Bearer {TOKEN}' \
