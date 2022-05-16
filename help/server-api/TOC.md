@@ -17,8 +17,6 @@ feature: Data Collection
   * [Batch event data collection](non-interactive-data-collection.md)
 * Interacting with other Adobe solutions {#interacting-other-adobe-solutions}
   * [Interacting with Adobe Analytics](interacting-adobe-analytics.md)
-  * [Interacting with Adobe Experience Platform](interacting-experience-platform.md)
-* [Interacting with third-party solutions](interacting-third-party-solutions.md)
 * Personalization {#personalization}
   * [Retrieve personalization content from Adobe solutions](personalization-overview.md)
   * [Personalization via Offer Decisioning](personalization-offer-decisioning.md)
