@@ -291,9 +291,9 @@ Hover over individual bars to see a dialog detailing the total count of profiles
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
-This widget uses a venn diagram to display the overlap of two selected segments. The merge policy is chosen from the overview dropdown at the top of the page and the segments for analysis are selected from two dropdown menus within the widget. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection.
+This widget uses a Venn diagram to display the overlap of two selected segments. The merge policy is chosen from the overview dropdown at the top of the page and the segments for analysis are selected from two dropdown menus within the widget. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection.
 
-As the widget displays the visual crossover of segment definitions, it allows you to optimize segmentation strategy by studying similarities between your segment definitions.
+As the widget displays the visual crossover of segment definitions, you can optimize your segmentation strategy by studying similarities between your segment definitions.
 
 ![The Platform UI Profiles dashboard with the merge policy dropdown and the widget segment dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
 

@@ -261,7 +261,7 @@ Select **[!UICONTROL Audiences]** to navigate to the details page of the destina
 
 ![The destinations dashboard details page with Activation data tab highlighted.](../images/destinations/activation-data-tab.png)
 
-This widget helps you to understand at a glance, the value of your destinations based on the number of audiences activated. It also provides easy access to more detailed information for further analysis.
+This widget helps you to understand the value of your destinations based on the number of audiences activated at a glance. It also provides easy access to more detailed information for further analysis.
 
 ### [!UICONTROL Mapped audiences] {#mapped-audiences}
 

@@ -160,7 +160,7 @@ This widget illustrates the audience size trend for a particular segment based o
 
 ### [!UICONTROL Audience overlap] {#audience-overlap}
 
-This widget visually represents the number of profiles from two segments that meet the criteria for both segment definitions. The segments used for comparison are selected from the widget dropdown menus. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection of the Venn diagram.
+This widget represents the number of profiles from two segments that meet the criteria for both segment definitions. The segments used for comparison are selected from the widget dropdown menus. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection of the Venn diagram.
 
 This widget enables you to optimize your segmentation strategy by visualizing the similarities in the results of your segment definitions.
 
