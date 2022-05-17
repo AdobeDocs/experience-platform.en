@@ -44,7 +44,7 @@ A home rental and sales company wants to personalize their home page with a bann
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="About datastream IDs"
->abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the Target destination configuration enabled. To use edge segmentation, you must select a datastream. Selecting None disables all use cases that depend on edge segmentation."
+>abstract="This option determines in which data collection datastream the segments will be included. The drop-down menu shows only datastreams that have the Target destination configuration enabled. To use edge segmentation, you must select a datastream. Selecting None disables all use cases that depend on edge segmentation."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Learn more about selecting datastreams."
 
 >[!IMPORTANT]
