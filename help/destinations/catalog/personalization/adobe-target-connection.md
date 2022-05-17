@@ -14,7 +14,9 @@ Adobe Target is a personalization connection in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
-This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md). You must be using this SDK to use this destination.
+When configuring the Adobe Target connection to [use a datastream ID](#parameters), the [Adobe Experience Platform Web SDK](../../../edge/home.md) is required.
+
+When configuring the Adobe Target connection without [using a datastream ID](#parameters), the [Adobe Experience Platform Web SDK](../../../edge/home.md) is not required.
 
 >[!IMPORTANT]
 >
@@ -65,7 +67,7 @@ When selecting the **[!UICONTROL None]** option for datastream ID, some personal
     
 |No datastream selected|Datastream selected|
 |---|---|
-|<ul><li>[Edge segmentation](../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are not supported.</li><li>You can share segments to the Adobe Target connection only for the production sandbox.</li><li>To configure next-session personalization without usinig a datastream, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul>|<ul><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are supported.</li><li>Segment sharing is supported for other sandboxes.</li></ul>|
+|<ul><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are not supported.</li><li>You can share segments to the Adobe Target connection only for the production sandbox.</li><li>To configure next-session personalization without usinig a datastream, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul>|<ul><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are supported.</li><li>Segment sharing is supported for other sandboxes.</li></ul>|
 
 
 ## Activate segments to this destination {#activate}
