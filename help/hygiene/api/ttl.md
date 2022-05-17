@@ -14,7 +14,7 @@ A dataset TTL is only a timed-delayed delete operation. The dataset is not prote
 
 At any time before the dataset-delete is actually initiated, you can cancel the TTL or modify its trigger time. After cancelling a TTL, you can reopen it by setting a new expiry.
 
-Once the dataset deletion is initiated, its TTL will be marked as `executing`, and it may not be further altered. The dataset itself may be recoverable for up to seven days, but only through a manual process initiated through a customer service request.
+Once the dataset deletion is initiated, its TTL will be marked as `executing`, and it may not be further altered. The dataset itself may be recoverable for up to seven days, but only through a manual process initiated through an Adobe service request.
 
 ## Getting started
 

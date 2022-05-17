@@ -1,10 +1,10 @@
 ---
 title: Work order API Endpoint
-description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for customer identities.
+description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for consumer identities.
 ---
 # Work order endpoint
 
-The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for customer identities in Adobe Experience Platform.
+The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for consumer identities in Adobe Experience Platform.
 
 ## Getting started
 
@@ -12,7 +12,7 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 
 ## Delete identities {#delete-identities}
 
-You can delete one or more customer identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
+You can delete one or more consumer identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
 
 **API format**
 
@@ -22,7 +22,7 @@ POST /workorder
 
 **Request**
 
-Depending on the value of the `datasetId` provided in the request payload, the API call will delete customer identities from all datasets or a single dataset that you specify. The following request deletes three customer identities from a specific dataset.
+Depending on the value of the `datasetId` provided in the request payload, the API call will delete consumer identities from all datasets or a single dataset that you specify. The following request deletes three consumer identities from a specific dataset.
 
 ```shell
 curl -X POST \

@@ -4,7 +4,7 @@ description: Learn how to schedule a time to live (TTL) for a dataset in the Ado
 ---
 # Manage dataset TTLs
 
-The [[!UICONTROL Data Cleansing] workspace](./overview.md) in the Adobe Experience Platform UI allows you to schedule a time to live (TTL) for a dataset.
+The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to schedule a time to live (TTL) for a dataset.
 
 This document covers how to schedule and manage dataset TTLs in the Platform UI.
 
@@ -40,7 +40,7 @@ Once you have selected a dataset and a TTL date, select **[!UICONTROL Submit]**.
 
 You are asked to confirm the date that the dataset will be deleted by. Select **[!UICONTROL Submit]** to continue.
 
-After the request is submitted, a work order is created and appears on the [!UICONTROL Consumer] tab of the [!UICONTROL Data Cleansing] workspace. From here, you can monitor the work order's status as it processes the request.
+After the request is submitted, a work order is created and appears on the [!UICONTROL Consumer] tab of the [!UICONTROL Data Hygiene] workspace. From here, you can monitor the work order's status as it processes the request.
 
 ## Edit or cancel a TTL
 

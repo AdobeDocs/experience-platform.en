@@ -31,7 +31,7 @@ This document provides an example API call to demonstrate how to format your req
 
 ## Work orders
 
-A work order is a representation of a data hygiene task that deletes customer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API.
+A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API.
 
 ## Time to live (TTL) for datasets
 
