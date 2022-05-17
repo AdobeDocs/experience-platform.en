@@ -644,6 +644,24 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
       "profileRequired":true,
       "segmentRequired":true,
       "identityRequired":true
+      "requiredMappings": [
+      {
+          "source": "segment - 0, 1",
+          "sourceType": "text/x.schema-path",
+          "destination": "delete"
+      },
+      {
+          "source": "{{metadata.segment.alias}}",
+          "sourceType": "text/x.schema-path",
+          "destination": "ppid"
+      },
+      {
+          "source": "{{segmentMembership.status}}",
+          "sourceType": "text/x.schema-path",
+          "destination": ""
+      }
+    ]
+}
 ```
 
 |Parameter | Type | Description|
@@ -652,6 +670,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
+|`requiredMappings`|Object||
 
 {style="table-layout:auto"}
 
@@ -735,7 +754,17 @@ This section refers to the file export settings in the configuration above that 
          "EVERY_HOUR"
       ],
       "defaultFrequency":"DAILY",
-      "defaultStartTime":"00:00"
+      "defaultStartTime":"00:00",
+      "filenameConfig": {
+            "allowedFilenameAppendOptions": [
+                "SEGMENT_NAME",
+                "DATETIME",
+                "TIMESTAMP",
+                "DESTINATION_NAME",
+                "SANDBOX_NAME"
+            ],
+            "defaultFilename": "{{DESTINATION_NAME}}_{{SEGMENT_ID}}"
+      }
    }
 ```
 
@@ -748,6 +777,8 @@ This section refers to the file export settings in the configuration above that 
 |`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
 |`defaultFrequency`|Enum|Defines the default file export frequency.Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br> Default value is `DAILY`.|
 |`defaultStartTime`|String|Defines the default start time for the file export. Uses 24-hour file format. Default value is "00:00".|
+|`filenameConfig.allowedFilenameAppendOptions`|String|Defines the fields that users can append to the exported file names.|
+|`filenameConfig.defaultFilename`|String|Defines the default file name format for the exported files.|
 
 ## Historical profile qualifications {#profile-backfill}
 
