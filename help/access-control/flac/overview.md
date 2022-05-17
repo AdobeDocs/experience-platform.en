@@ -8,11 +8,15 @@ exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 ---
 # Attribute-based access control overview
 
-Attribute-based access control in Adobe Experience Platform allows administrators to control access to specific objects and/or capabilities based on attributes. This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release. This capability will be available to all Real-Time Customer Data Platform customers once it is fully released.
 
-Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD)and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define specific user roles that have access only to specific fields, as well as only to specific data that correspond to those fields.
+Attribute-based access control allows administrators to control access to specific objects and/or capabilities based on attributes. This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
 
-## Understanding attribute-based access control
+Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define specific user roles that have access only to specific fields, as well as only to specific data that correspond to those fields.
+
+## Attribute-based access control terminology
 
 Attribute-based access control involves the following components:
 
@@ -36,7 +40,7 @@ The Permissions UI in Adobe Experience Cloud provides a central location for man
 
 The attribute-based access control API allows you to programmatically manage roles, products, permission categories, and permission sets within Platform using APIs.
 
-## Attribute-based access control in Platform
+## Attribute-based access control in Adobe Experience Platform
 
 The following sections provide information on how attribute-based access control is integrated to other components of Platform:
 
