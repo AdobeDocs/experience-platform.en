@@ -4,8 +4,8 @@ description: Real-time Customer Profile lets you see a holistic view of each ind
 title: Monitor Dataflows for Profiles in the UI
 topic-legacy: overview
 type: Tutorial
+exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 ---
-
 # Monitor dataflows for Profiles in the UI 
 
 Real-time Customer Profile lets you see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction. 
