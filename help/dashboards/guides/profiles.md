@@ -104,7 +104,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audiences size]](#audiences-size)
 * [[!UICONTROL Profile count trend]](#profile-count-trend)
 * [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
-* [[!UICONTROL Audience overlap by merge policy]](#audiences-overlap-by-merge-policy)
+* [[!UICONTROL Audience overlap by merge policy]](#audience-overlap-by-merge-policy)
 * [[!UICONTROL Single identity profiles change trend]](#single-identity-profiles-change-trend)
 * [[!UICONTROL Profiles count change trend by identity]](#profiles-count-change-trend-by-identity)
 <!-- The screenshot says: single identity profiles trend NOT Single identity profiles change trend -->
@@ -289,23 +289,30 @@ Hover over individual bars to see a dialog detailing the total count of profiles
 
 ![The Single identity profiles by identity widget.](../images/profiles/single-identity-profiles-by-identity.png)
 
-### [!UICONTROL Audience overlap by merge policy] {#audience-overlap}
+### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
-words
+This widget uses a venn diagram to display the overlap of two selected segments. The merge policy is chosen from the overview dropdown at the top of the page and the segments for analysis are selected from two dropdown menus within the widget. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection.
+
+As the widget displays the visual crossover of segment definitions, it allows you to optimize segmentation strategy by studying similarities between your segment definitions.
 
 ![The Platform UI Profiles dashboard with the merge policy dropdown and the widget segment dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 ### [!UICONTROL Single identity profiles change trend] {#single-identity-profiles-change-trend}
 
 <!-- The screenshot says: single identity profiles trend NOT Single identity profiles change trend -->
+This widget uses a line graph to illustrate the change in number of profiles with a single identity. The trend can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
 
-words
+Understanding the growth pattern of single identity profiles allows you to be more efficient when managing your destination activation needs.
 
 ![The Single identity profiles change trend widget.](../images/profiles/single-identity-profiles-change-trend.png)
 
 ### [!UICONTROL Profiles count change trend by identity] {#profiles-count-change-trend-by-identity}
 
-words
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+This widget filters the profile count based on a selected source identity and merge policy, then illustrates the change in number for a variety of periods using a line graph. The merge policy is selected from the overview dropdown at the top of the page, the source identity and time period are selected from the widget dropdown menus. The trend can be visualized over 30 days, 90 days, and 12 month periods.
+
+This widget helps you to manage your destination activation needs by demonstrating the growth pattern of profiles filtered by a required identity.
 
 ![The Profiles count change trend by identity widget.](../images/profiles/profiles-count-change-trend-by-identity.png)
 
