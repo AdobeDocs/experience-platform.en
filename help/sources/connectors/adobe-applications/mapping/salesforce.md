@@ -28,7 +28,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `Fax` | `faxPhone.number`|
 | `FirstName`| `person.name.firstName`|
 | `HomePhone` | `homePhone.number`|
-| `Id` | `b2b.personKey.sourceID`|
+| `Id` | `b2b.personKey.sourceID`|  
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
 | `Id` | `personComponents.sourcePersonKey.sourceID` |
@@ -175,7 +175,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `Amount` | `opportunityAmount.amount` |
 | `CampaignId` | `campaignKey.sourceID`|
 | `iif(CampaignId != null && CampaignId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(CampaignId,"@${CRM_ORG_ID}.Salesforce")), null)` | `campaignKey` |
-| `CloseDate` | `actualCloseDate` / `expectedCloseDate` |
+| `CloseDate` | `expectedCloseDate` |
 | `CreatedDate`| `extSourceSystemAudit.createdDate` |
 | `Description` | `opportunityDescription`|
 | `ExpectedRevenue` | `expectedRevenue.amount` |

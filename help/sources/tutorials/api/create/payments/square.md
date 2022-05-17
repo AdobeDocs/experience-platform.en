@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;Square;square
 title: Create a Square Base Connection Using the Flow Service API
 description: Learn how to connect Square to Adobe Experience Platform using the Flow Service API.
+exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
 ---
 # Create a [!DNL Square] base connection using the [!DNL Flow Service] API
 
@@ -58,7 +59,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
