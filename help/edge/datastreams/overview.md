@@ -32,8 +32,6 @@ To create a datastream, start by selecting **[!UICONTROL New Datastream]**.
 
 ![Select New Datastream](../images/datastreams/overview/new-datastream-button.png)
 
-### [!UICONTROL Configure] {#configure}
-
 The datastream creation workflow appears, starting at the configuration step. From here, you must provide a name and optional description for the datastream.
 
 If you are configuring this datastream for use in Experience Platform and are using the Platform Web SDK, you must also select an [event-based Experience Data Model (XDM) schema](../../xdm/classes/experienceevent.md) to represent the data you plan on ingesting.
