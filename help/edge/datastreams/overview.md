@@ -18,19 +18,19 @@ This document covers the steps for configuring a datastream in the Data Collecti
 
 You can create and manage datastreams in the Data Collection UI by selecting **[!UICONTROL Datastreams]** in the left navigation.
 
-![Datastreams tab in the Data Collection UI](../images/datastreams/datastreams-tab.png)
+![Datastreams tab in the Data Collection UI](../images/datastreams/overview/datastreams-tab.png)
 
 The [!UICONTROL Datastreams] tab displays a list of existing datastreams, including their friendly name, ID, and last modified date. Select the name of of a datastream to [view its details and configure services](#view-details).
 
 Select the "more" icon (**...**) for a particular datastream to reveal more options. Select **[!UICONTROL Edit]** to update the [basic configuration](#configure) for the datastream, or select **[!UICONTROL Delete]** to remove the datastream.
 
-![Options to edit or delete and existing datastream](../images/datastreams/edit-datastream.png)
+![Options to edit or delete and existing datastream](../images/datastreams/overview/edit-datastream.png)
 
 ## Create a new datastream {#create}
 
 To create a datastream, start by selecting **[!UICONTROL New Datastream]**.
 
-![Select New Datastream](../images/datastreams/new-datastream-button.png)
+![Select New Datastream](../images/datastreams/overview/new-datastream-button.png)
 
 ### [!UICONTROL Configure] {#configure}
 
@@ -38,11 +38,11 @@ The datastream creation workflow appears, starting at the configuration step. Fr
 
 If you are configuring this datastream for use in Experience Platform and are using the Platform Web SDK, you must also select an [event-based Experience Data Model (XDM) schema](../../xdm/classes/experienceevent.md) to represent the data you plan on ingesting.
 
-![Basic configuration for a datastream](../images/datastreams/configure.png)
+![Basic configuration for a datastream](../images/datastreams/overview/configure.png)
 
 Select **[!UICONTROL Advanced Options]** to reveal additional controls to configure the datastream.
 
-![Advanced configuration options](../images/datastreams/advanced-options.png)
+![Advanced configuration options](../images/datastreams/overview/advanced-options.png)
 
 | Setting | Description |
 | --- | --- |
@@ -56,7 +56,7 @@ From here, if you are configuring your datastream for Experience Platform, follo
 
 After configuring a new datastream or selecting an existing one to view, the details page for that datastream appears. Here you can find further information about the datastream, including its ID.
 
-![Details page for a created datastream](../images/datastreams/view-details.png)
+![Details page for a created datastream](../images/datastreams/overview/view-details.png)
 
 From the datastream details screen, you can [add services](#add-services) to enable capabilities from the Adobe Experience Cloud products you have access to.
 
@@ -64,15 +64,15 @@ From the datastream details screen, you can [add services](#add-services) to ena
 
 On the details page of a datastream, select **[!UICONTROL Add Service]** to start adding available services for that datastream.
 
-![Select Add Service to continue](../images/datastreams/add-service.png)
+![Select Add Service to continue](../images/datastreams/overview/add-service.png)
 
 On the next screen, use the dropdown menu to select a service to configure for this datastream. Only the services that you have access to will appear in this list.
 
-![Select a service from the list](../images/datastreams/service-selection.png)
+![Select a service from the list](../images/datastreams/overview/service-selection.png)
 
 Select the desired service, fill in the configuration options that appear, and then select **[!UICONTROL Save]** to add the service to the datastream. All added services appear in the details view for the datastream.
 
-![Services added to a datastream](../images/datastreams/services-added.png)
+![Services added to a datastream](../images/datastreams/overview/services-added.png)
 
 The subsections below describe the configuration options for each service.
 
@@ -84,7 +84,7 @@ The subsections below describe the configuration options for each service.
 
 This service controls whether and how data is sent to Adobe Analytics. Additional details can be found in the guide on [sending data to Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Adobe Analytics settings Block](../images/datastreams/analytics-config.png)
+![Adobe Analytics settings Block](../images/datastreams/overview/analytics-config.png)
 
 | Setting | Description |
 | --- | --- |
@@ -94,7 +94,7 @@ This service controls whether and how data is sent to Adobe Analytics. Additiona
 
 This service controls whether and how data is sent to Adobe Audience Manager. All that is needed to send data to Audience Manager is to enable this section. The other settings are optional but encouraged.
 
-![Adobe Audience Manage settings block](../images/datastreams/audience-manager-config.png)
+![Adobe Audience Manage settings block](../images/datastreams/overview/audience-manager-config.png)
 
 | Setting | Description |
 | --- | --- |
@@ -107,13 +107,13 @@ This service controls whether and how data is sent to Adobe Audience Manager. Al
 >
 >When enabling a datastream for Platform, take note of the Platform sandbox that you are currently using, as displayed in the top ribbon of the Data Collection UI.
 >
->![Selected sandbox](../images/datastreams/platform-sandbox.png)
+>![Selected sandbox](../images/datastreams/overview/platform-sandbox.png)
 >
 >Sandboxes are virtual partitions in Adobe Experience Platform that allow you to isolate your data and implementations from others in your organization. Once a datastream is created, its sandbox cannot be changed. For more details about the role of sandboxes in Experience Platform, see the [sandboxes documentation](../../sandboxes/home.md). 
 
 This service controls whether and how data is sent to Adobe Experience Platform.
 
-![Adobe Experience Platform settings block](../images/datastreams/platform-config.png)
+![Adobe Experience Platform settings block](../images/datastreams/overview/platform-config.png)
 
 | Setting | Description |
 | --- | --- |
@@ -127,7 +127,7 @@ This service controls whether and how data is sent to Adobe Experience Platform.
 
 This service controls whether and how data is sent to Adobe Target.
 
-![Adobe Target settings block](../images/datastreams/target-config.png)
+![Adobe Target settings block](../images/datastreams/overview/target-config.png)
 
 | Setting | Description |
 | --- | --- |
@@ -139,7 +139,7 @@ This service controls whether and how data is sent to Adobe Target.
 
 This service controls whether and how data is sent to [event forwarding](../../tags/ui/event-forwarding/overview.md).
 
-![Event Forwarding section of the configuration UI](../images/datastreams/event-forwarding-config.png)
+![Event Forwarding section of the configuration UI](../images/datastreams/overview/event-forwarding-config.png)
 
 | Setting | Description |
 | --- | --- |
