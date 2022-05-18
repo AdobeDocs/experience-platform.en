@@ -20,9 +20,21 @@ When finished, select **[!UICONTROL Confirm]**.
 
 ![flac-create-new-role](../../images/flac-ui/flac-create-new-role.png)
 
-Next, select the resource permissions that you would like to include in the role using the dropdown menu. When finished, select **[!UICONTROL Save and exit]**.
+Next, select the resource permissions that you would like to include in the role using the dropdown menu. 
 
 ![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
+
+To add additional resources, select **[!UICONTROL Adobe Experience Platform]** from the left navigation panel, which displays a list of resources. Alternatively, enter the resource name into the search bar in the left navigation panel.
+
+![flac-add-additional-resources](../../images/flac-ui/flac-add-additional-resources.png)
+
+Click and drag the relevant resource and drop into the main panel. 
+
+![flac-additional-resources-added](../../images/flac-ui/flac-additional-resources-added.png)
+
+Select the resource permissions that you would like to include in the role using the dropdown menu. Repeat this for all resources you would like to include for the role. When finished, select **[!UICONTROL Save and exit]**.
+
+![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
 
 The new role is successfully created, and you are redirected to the **[!UICONTROL Roles]** page, where you will see the newly created role appear in the list. 
 
@@ -56,7 +68,7 @@ The new role will appear in the list on the **[!UICONTROL Roles]** page.
 
 ## Delete a role
 
-Select the ellipsis (…) next to a role's name, and a dropdown displays controls to edit, delete, or duplicate the role. Select delete for the dropdown.
+Select the ellipsis (…) next to a role's name, and a dropdown displays controls to edit, delete, or duplicate the role. Select delete from the dropdown.
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 
