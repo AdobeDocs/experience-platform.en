@@ -1,10 +1,10 @@
 ---
 title: Use the ALTER TABLE Command to Set an Identity or a Primary Identity
-description: The functionality of the ALTER TABLE command has been expanded in Adobe Experience Platform Query Service to allow users to set an identity or a primary identity to existing tables. The document explains how to use the ALTER TABLE command to set an identity or a primary identity.
+description: The functionality of the ALTER TABLE command has been expanded in Adobe Experience Platform Query Service to allow users to set an identity or a primary identity to existing tables. The document explains how to use the ALTER TABLE command to set a primary identity or secondary identity.
 ---
 # Use the ALTER TABLE Command to Set an Identity or a Primary Identity
 
-Adobe Experience Platform Query Service have added new constraints for the `ALTER TABLE` command that allows you to mark dataset columns as either primary or secondary identities. This feature can be used to ensure that flagged fields are consistent with data privacy requirements. With this command you can add new columns to existing tables, while simultaneously adding and deleting constraints for both primary and secondary IDs table columns directly through SQL.
+Adobe Experience Platform Query Service has added new constraints for the `ALTER TABLE` command that allows you to mark dataset columns as either primary or secondary identities. This feature can be used to ensure that flagged fields are consistent with data privacy requirements. With this command, you can add new columns to existing tables, while simultaneously adding and deleting constraints for both primary and secondary IDs table columns directly through SQL.
 
 ## Getting started 
 
@@ -38,7 +38,7 @@ The following example removes the requirement that the `c1` column be labeled a 
 ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ```
 
-The same syntax is used to when removing an identity constraint as seen below:
+As seen below, the same syntax is used to when removing an identity constraint.
 
 ```sql
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
@@ -58,14 +58,14 @@ The list below explains important considerations for updating identities in exis
 
 1. To specify a column as an identity, you **must** also define the namespace to be preserved as metadata for the column.
 1. XDM does not support specifying a column name in the namespace attribute.
-1. If your schema uses the `identityMap` XDM field, the root or top level **must** be labelled as an identity or primary identity.
+1. If your schema uses the `identityMap` XDM field, the root or top-level **must** be labeled as an identity or primary identity.
 
 
 ## Supported data types
 
 The following table lists the accepted data types for PSQL, XDM, and the data warehouse.
 
-<!-- Are these data types the corresponding equivilants in their respective areas?  -->
+<!-- Are these data types the corresponding equivalents in their respective areas?  -->
 
 <!-- How can I elaborate on the above sentence? Why are these data types relevant to the reader?-->
 
