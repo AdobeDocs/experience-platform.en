@@ -6,7 +6,6 @@ topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to Zendesk using the Flow Service API.
 hide: true
 hidefromtoc: true
-exl-id: 
 ---
 # Create a Zendesk connection using the Flow Service API
 
@@ -14,16 +13,13 @@ exl-id:
 
 [Zendesk](https://www.zendesk.com) is a popular customer service solution and sales tool.
 
-This [!DNL Adobe Experience Platform] [!DNL sources connector](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [!DNL Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) that returns users information into Experience Platform from Zendesk for further processing.
+This Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) that returns users information into Experience Platform from Zendesk for further processing.
 
 Zendesk uses bearer tokens as an authentication mechanism to communicate with the Zendesk API.
 
 ## Prerequisites
 
-The following items are required before you start configuring the extension:
-
-* You need to have a Zendesk Support account. 
-    * Go to the Zendesk [register](https://www.zendesk.com/register/) page to register and create a Zendesk account, if you do not have one already.
+Before you start configuring the extension you need to have a Zendesk Support account. If you do not have one already go to the Zendesk [register](https://www.zendesk.com/register/) page to register and create your Zendesk account.
 
 ### Gather required credentials
 
@@ -31,16 +27,13 @@ In order to connect Zendesk to Platform, you must provide values for the followi
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| subdomain | Unique domain specific to your account created during the registration process. | *xxxxx.zendesk.com*|
-| API token | Zendesk API token.<br></br>Navigate to the Zendesk website and access **[!UICONTROL Settings]** > **[!UICONTROL Apps and Integrations]** > **[!UICONTROL Zendesk API]** page. Then Navigate to the **[!UICONTROL API Tokens]** section. |*0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf*|
+| subdomain | Unique domain specific to your account created during the registration process. <br/><br/> Refer to the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) if you require any guidance. | *xxxxx.zendesk.com*|
+| API token | Zendesk API token.<br></br>Navigate to the Zendesk website and access **[!UICONTROL Settings]** > **[!UICONTROL Apps and Integrations]** > **[!UICONTROL Zendesk API]** page.  Next to the **[!UICONTROL API Tokens]** section. <br/><br/> Refer to the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).|*0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf*|
 
-![Zendesk domain](../../../../images/tutorials/create/zendesk/zendesk-domain.png?lang=en)
-![Zendesk API page displaying the API tokens section](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png?lang=en)
-![Zendesk API page displaying the API token key of interest](../../../../images/tutorials/create/zendesk/zendesk-api-key.png?lang=en)
+![Zendesk API token](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png?lang=en)
 
-For more information on these credentials, see the Zendesk authentication documentation. 
-* [Where can I find my Zendesk subdomain](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-)
-* [Generating a new API token](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token)
+Finally, create a Platform [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html) required for the Zendesk Search API. Refer also to the [limits](#limits) section further below on this page.
+![Create Schema](../../../../images/tutorials/create/zendesk/schema.png?lang=en)
 
 ## Connect Zendesk to Platform using the [!DNL Flow Service] API
 
