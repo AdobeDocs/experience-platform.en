@@ -46,6 +46,7 @@ feature: Queries
   - [Spark SQL functions](sql/spark-sql-functions.md)
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
+  - [Alter table](sql/alter-table.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
   - [SSL modes](./clients/ssl-modes.md)
