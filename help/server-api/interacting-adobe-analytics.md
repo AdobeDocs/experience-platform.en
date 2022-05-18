@@ -27,7 +27,7 @@ POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Request {#request}
 
-The sample below includes several automatically mapped values from the `_experience.analytics` field group. It also includes JSON-based data layers. While these data layers cannot be mapped automatically, it is possible to use [Data Prep for Data Collection](../edge/datastreams/overview.md#data-prep) to map these values to a schema that contains field groups referenced above.
+The sample below includes several automatically mapped values from the `_experience.analytics` field group. It also includes JSON-based data layers. While these data layers cannot be mapped automatically, it is possible to use [Data Prep for Data Collection](../edge/datastreams/data-prep.md) to map these values to a schema that contains field groups referenced above.
 
 All values that users map to those fields will automatically map to the appropriate Analytics values, as if they were included in the API request.
 

@@ -1,12 +1,12 @@
 ---
-title: Configure a Datastream
+title: Datastreams Overview
 description: Connect your client-side Experience Platform SDK integration with Adobe products and third-party destinations.
 keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;Data Prep for Data Collection;Data Prep;Mapper;XDM Mapper;Mapper on Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
-# Configure a datastream
+# Datastreams overview
 
-A datastream represents the server-side configuration when implementing the Adobe Experience Platform Web and Mobile SDKs. While the [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client (such as the `edgeDomain`), datastreams handle all other configurations for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the datastream. This allows you to update the server-side configuration without having to make code changes on your website. 
+A datastream represents the server-side configuration when implementing the Adobe Experience Platform Web and Mobile SDKs. While the [configure command](../fundamentals/configuring-the-sdk.md) in the SDK controls things that must be handled on the client (such as the `edgeDomain`), datastreams handle all other configurations for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the datastream. This allows you to update the server-side configuration without having to make code changes on your website. 
 
 This document covers the steps for configuring a datastream in the Data Collection UI. 
 
@@ -50,138 +50,7 @@ Select **[!UICONTROL Advanced Options]** to reveal additional controls to config
 | [!UICONTROL First Party ID Cookie] | When enabled, this setting tells the Edge Network to refer to a specified cookie when looking up a [first-party device ID](../identity/first-party-device-ids.md), rather than looking up this value in the Identity Map.<br><br>When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored. |
 | [!UICONTROL Third Party ID Sync] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. When enabled, this setting lets you specify which container of ID syncs is run for this datastream. |
 
-The rest of this section focuses on the steps to map data to a selected Platform event schema. If you are using the Mobile SDK or are otherwise not configuring your datastream for Platform, select **[!UICONTROL Save]** before proceeding to the next section on [adding services to the datastream](#add-services).
-
-### Data Prep for Data Collection {#data-prep}
-
->[!IMPORTANT]
->
->Data Prep for Data Collection is currently not supported for Mobile SDK implementations.
-
-Data Prep is an Experience Platform service that allows you to map, transform, and validate data to and from Experience Data Model (XDM). When configuring a Platform-enabled datastream, you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
-
->[!NOTE]
->
->For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
->
->* [Data Prep overview](../../data-prep/home.md)
->* [Data Prep mapping functions](../../data-prep/functions.md)
->* [Handling data formats with Data Prep](../../data-prep/data-handling.md)
-
-The subsections below cover the basic steps for mapping your data within the Data Collection UI. For a quick demonstration of these steps, refer to the following video:
-
->[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
-
-#### [!UICONTROL Select data]
-
-Select **[!UICONTROL Save and Add Mapping]** after completing the [basic configuration step](#configure), and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data you plan on sending to Platform.
-
-You should construct this JSON object so that you can map it the properties in your data layer that you want to capture. Select the section below to view an example of a properly formatted JSON object.
-
-+++Sample JSON file
-
-```json
-{
-  "data": {
-    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
-    "eventType": "view:load",
-    "timestamp": "2021-09-30T14:50:09.604Z",
-    "web": {
-      "webPageDetails": {
-        "siteSection": "Product section",
-        "server": "example.com",
-        "name": "product home",
-        "URL": "https://www.example.com"
-      },
-      "webReferrer": {
-        "URL": "https://www.adobe.com/index2.html",
-        "type": "external"
-      }
-    },
-    "commerce": {
-      "purchase": 1,
-      "order": {
-        "orderID": "1234"
-      }
-    },
-    "product": [
-      {
-        "productInfo": {
-          "productID": "123"
-        }
-      },
-      {
-        "productInfo": {
-          "productID": "1234"
-        }
-      }
-    ],
-    "reservation": {
-      "id": "anc45123xlm",
-      "name": "Embassy Suits",
-      "SKU": "12345-L",
-      "skuVariant": "12345-LG-R",
-      "priceTotal": "112.99",
-      "currencyCode": "USD",
-      "adults": 2,
-      "children": 3,
-      "productAddMethod": "PDP",
-      "_namespace": {
-        "test": 1,
-        "priceTotal": "112.99",
-        "category": "Overnight Stay"
-      },
-      "freeCancellation": false,
-      "cancellationFee": 20,
-      "refundable": true
-    }
-  }
-}
-```
-
-+++
-
->[!IMPORTANT]
->
->The JSON object must have a single root node `data` in order to pass validation.
-
-You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead. If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
-
-![JSON sample of expected incoming data](../images/datastreams/select-data.png)
-
-#### [!UICONTROL Mapping]
-
-The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Platform. 
-
-If you have existing datastreams configured, you can import their mapping configurations for re-use in new datastreams. Select **[!UICONTROL Import Mapping]** to 0
-
-To get started, select **[!UICONTROL Add new mapping]** to create a new mapping row.
-
-![Adding a new mapping](../images/datastreams/add-new-mapping.png)
-
-Select the source icon (![Source icon](../images/datastreams/source-icon.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
-
-![Selecting the field to be mapped in the source schema](../images/datastreams/source-mapping.png)
-
-Next, select the schema icon (![Schema icon](../images/datastreams/schema-icon.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
-
-![Selecting the field to be mapped in the target schema](../images/datastreams/target-mapping.png)
-
-The mapping page reappears with the completed field mapping shown. The **[!UICONTROL Mapping progress]** section updates to reflect the total number of fields that have been successfully mapped.
-
-![Field successfully mapped with progress reflected](../images/datastreams/field-mapped.png)
-
->[!TIP]
->
->If you want to map an array of objects (in the source field) to an array of different objects (in the target field), add `[*]` after the array name in the source and destination field paths, as shown below.
->
->![Array object mapping](../images/datastreams/array-object-mapping.png)
-
-Continue following the above steps to map the rest of the fields to the target schema. While you do not have to map all available source fields, any fields in the target schema that are set as required must be mapped in order to complete this step. The **[!UICONTROL Required fields]** counter indicates how many required fields are not yet mapped in the current configuration.
-
-Once the required fields count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
-
-![Mapping complete](../images/datastreams/mapping-complete.png)
+From here, if you are configuring your datastream for Experience Platform, follow the tutorial on [Data Prep for Data Collection](./data-prep.md) to map your data to a Platform event schema before returning to this guide. Otherwise, select **[!UICONTROL Save]** and continue to the next section.
 
 ## View datastream details {#view-details}
 
