@@ -9,7 +9,7 @@ exl-id: c49e40b7-9653-40f1-9db5-8941b20de8a3
 
 ## Overview {#overview}
 
-To enable Experience Platform data collection, you must first [configure your datastream](../edge/fundamentals/datastreams.md) to forward events into Experience Platform datasets.
+To enable Experience Platform data collection, you must first [configure your datastream](../edge/datastreams/overview.md) to forward events into Experience Platform datasets.
 
 Once configured, the datastream configuration should include settings for `com_adobe_experience_platform`, as shown in the example below:
 

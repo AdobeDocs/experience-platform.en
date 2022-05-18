@@ -12,7 +12,6 @@ feature: Web SDK
 * [Platform Web SDK overview](home.md)
 * Fundamentals {#fundamentals}
   * [Prerequisites](fundamentals/prerequisite.md)
-  * [Configuring a datastream](fundamentals/datastreams.md)
   * [Install the SDK](fundamentals/installing-the-sdk.md)
   * [Configure the SDK](fundamentals/configuring-the-sdk.md)
   * [Execute commands](fundamentals/executing-commands.md)
@@ -21,6 +20,8 @@ feature: Web SDK
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
   * [Supported use cases](fundamentals/supported-use-cases.md)
+* Datastreams {#datastreams}
+  * [Overview](./datastreams/overview.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
   * [First-party device IDs](identity/first-party-device-ids.md)
