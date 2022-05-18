@@ -3,7 +3,7 @@ title: Bot Filtering in Query Service with Machine Learning
 description: This document provides an overview of how to use Query Service and machine learning to determine bot activity and filter their actions from genuine online website visitor traffic.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 ---
-# Bot Filtering in [!DNL Query Service] with machine learning
+# Bot filtering in [!DNL Query Service] with machine learning
 
 Bot activity can impact analytics metrics and damage data integrity. Adobe Experience Platform [!DNL Query Service] can be used to maintain your data quality through the process of bot filtering. 
 
@@ -159,6 +159,6 @@ The example model determined with a high degree of accuracy that any visitors wi
 
 ## Next steps
 
-By reading this document you have a better understanding of how to use Query Service and machine learning to determine and filter bot activity. 
+By reading this document you have a better understanding of how to use [!DNL Query Service] and machine learning to determine and filter bot activity. 
 
-Other documents that demonstrate the benefits of [!DNL Query Service] to your organization’s strategic business insights are the abandoned browse use case example.
+Other documents that demonstrate the benefits of [!DNL Query Service] to your organization’s strategic business insights are the [abandoned browse use case](./abandoned-browse.md) example.
