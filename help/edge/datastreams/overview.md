@@ -56,7 +56,7 @@ After configuring a new datastream or selecting an existing one to view, the det
 
 ![Details page for a created datastream](../images/datastreams/overview/view-details.png)
 
-From the datastream details screen, you can [add services](#add-services) to enable capabilities from the Adobe Experience Cloud products you have access to.
+From the datastream details screen, you can [add services](#add-services) to enable capabilities from the Adobe Experience Cloud products you have access to. You can also edit the datastream's [basic configuration](#create), update its [mapping rules](./data-prep.md), [copy the datastream](#copy), or delete it entirely.
 
 ## Add services to a datastream {#add-services}
 
@@ -148,6 +148,22 @@ This service controls whether and how data is sent to [event forwarding](../../t
 >
 >You can select **[!UICONTROL Manually enter IDs]** to type in the property and environment names instead of using the dropdown menus.
 
+## Copy a datastream
+
+You can create a copy of any existing datastream and alter its details as needed. From the main page in the [!UICONTROL Datastreams] workspace, select the ellipsis (**....**) for the datastream in question, then select **[!UICONTROL Copy]**.
+
+![Image showing the [!UICONTROL Copy] option being selected from the datastream list view](../images/datastreams/overview/copy-datastream-list.png)
+
+Alternatively, you can select **[!UICONTROL Copy Datastream]** from the details view of a given datastream.
+
+![Image showing the [!UICONTROL Copy] option being selected from the datastream details view](../images/datastreams/overview/copy-datastream-details.png)
+
+A confirmation dialog appears, prompting you to provide a unique name for the new datastream to be created, along with details about the configuration options that will be copied over. When ready, select **[!UICONTROL Copy]**.
+
+![Image of the confirmation dialog for copying a datastream](../images/datastreams/overview/copy-datastream-confirm.png)
+
+The main page of the [!UICONTROL Datastreams] workspace reappears with the new datastream listed.
+
 ## Next steps
 
-This guide covered how to configure a datastream in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../collection/e2e.md#install).
+This guide covered how to manage datastreams in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../collection/e2e.md#install).
