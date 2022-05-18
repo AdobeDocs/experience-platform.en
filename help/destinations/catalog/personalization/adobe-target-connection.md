@@ -14,9 +14,9 @@ Adobe Target is a personalization connection in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
-When configuring the Adobe Target connection to [use a datastream ID](#parameters), the [Adobe Experience Platform Web SDK](../../../edge/home.md) is required.
+When configuring the Adobe Target connection to [use a datastream ID](#parameters), you must have the [Adobe Experience Platform Web SDK](../../../edge/home.md) implemented.
 
-Configuring the Adobe Target connection without [using a datastream ID](#parameters) does not require the [Adobe Experience Platform Web SDK](../../../edge/home.md).
+Configuring the Adobe Target connection without using a datastream ID does not require you to implement the Web SDK.
 
 >[!IMPORTANT]
 >
