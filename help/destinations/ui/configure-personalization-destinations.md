@@ -9,6 +9,12 @@ exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
 ---
 # Configure personalization destinations for same-page and next-page personalization
 
+## Overview {#overview}
+
+>[!NOTE]
+>
+>When [configuring the Adobe Target connection](../catalog/personalization/adobe-target-connection.md) without using a datastream ID, the use cases described in this article are not supported.
+
 Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) to enable customers to create and target audience segments at high scale, in real time.
 
 This capability helps you configure same-page and next-page personalization use cases.
