@@ -8,7 +8,7 @@ hidefromtoc: true
 
 # Manage Sandboxes
 
-If you would like to view sandbox details and roles they are assigned to, select the **[!UICONTROL Sandboxes]** tab. 
+To view details and roles that a sandbox is assigned to/with, select the **[!UICONTROL Sandboxes]** tab. 
 
 ![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
 

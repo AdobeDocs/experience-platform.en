@@ -8,6 +8,8 @@ hidefromtoc: true
 
 # Manage policies
 
+Policies are statements that bring attributes together to establish permissible and impermissible actions. Policies can either be local or global, and can override other policies.
+
 ## Create a new policy
 
 To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
@@ -18,13 +20,13 @@ The **[!UICONTROL Create a new policy]** dialog appears, prompting you to enter 
 
 ![flac-create-new-policy](../../images/flac-ui/flac-create-new-policy.png)
 
-Using the drop down arrow select if you would like to **Permit access to** (![flac-permit-access-to](../../images/flac-ui/flac-permit-access-to.png)) a resource or **Deny access to** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) a resource.
+Using the dropdown arrow select if you would like to **Permit access to** (![flac-permit-access-to](../../images/flac-ui/flac-permit-access-to.png)) a resource or **Deny access to** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) a resource.
 
 Next, select the resource that you would like to include in the policy using the dropdown menu and search access type, read or write.
 
 ![flac-flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
 
-Next, using the drop down arrow select the condition you would like to apply to this policy, **The following being true** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) or **The following being false** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
+Next, using the dropdown arrow select the condition you would like to apply to this policy, **The following being true** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) or **The following being false** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
 
 Select the plus icon to **Add matches expression** or **Add expression group** for the resource. 
 
@@ -46,7 +48,7 @@ Finally, select the **Sandbox** that you would like the policy conditions to app
 
 ![flac-policy-sandboxes-dropdown](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
 
-Click **Add resource** to add more resources. Once finished, select **[!UICONTROL Save and exit]**.
+Select **Add resource** to add more resources. Once finished, select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
@@ -60,11 +62,11 @@ To edit an existing policy, select the policy from the **[!UICONTROL Policies]**
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Next, select the ellipsis (…) next to the policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select edit from the dropdown.
+Next, select the ellipsis (`…`) next to the policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select edit from the dropdown.
 
 ![flac-policy-edit](../../images/flac-ui/flac-policy-edit.png)
 
-You will be taken to the policy permissions screen. Make the updates then select **[!UICONTROL Save and exit]**.
+The policy permissions screen appears. Make the updates then select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
@@ -76,7 +78,7 @@ To duplicate an existing policy, select the policy from the **[!UICONTROL Polici
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Next, select the ellipsis (…) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select duplicate from the dropdown.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select duplicate from the dropdown.
 
 ![flac-policy-duplicate](../../images/flac-ui/flac-policy-duplicate.png)
 
@@ -94,7 +96,7 @@ To delete an existing policy, select the policy from the **[!UICONTROL Policies]
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Next, select the ellipsis (…) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select delete from the dropdown.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select delete from the dropdown.
 
 ![flac-policy-delete](../../images/flac-ui/flac-policy-delete.png)
 
@@ -112,7 +114,7 @@ To activate an existing policy, select the policy from the **[!UICONTROL Policie
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-Next, select the ellipsis (…) next to a policies name, and a dropdown displays controls to edit, activate, delete, or duplicate the role. Select activate from the dropdown.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, activate, delete, or duplicate the role. Select activate from the dropdown.
 
 ![flac-policy-activate](../../images/flac-ui/flac-policy-delete.png)
 

@@ -8,6 +8,8 @@ hidefromtoc: true
 
 # Manage roles
 
+Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need.
+
 ## Create a new role
 
 To create a new role, select the **[!UICONTROL Roles]** tab in the sidebar and select **[!UICONTROL Create Role]**.
@@ -68,7 +70,7 @@ The new role will appear in the list on the **[!UICONTROL Roles]** page.
 
 ## Delete a role
 
-Select the ellipsis (…) next to a role's name, and a dropdown displays controls to edit, delete, or duplicate the role. Select delete from the dropdown.
+Select the ellipsis (`…`) next to a role's name, and a dropdown displays controls to edit, delete, or duplicate the role. Select delete from the dropdown.
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 
