@@ -10,9 +10,11 @@ exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release. This capability will be available to all Real-Time Customer Data Platform customers once it is fully released.
+>Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
 
-Attribute-based access control allows administrators to control access to specific objects and/or capabilities based on attributes. This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
+Attribute-based access control allows administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be an existing value such as the geolocation or department of a person. Attributes can also be metadata that is added to an object such as a label added to a schema field or segment.
+
+This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
 
 Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define specific user roles that have access only to specific fields, as well as only to specific data that correspond to those fields.
 
@@ -22,7 +24,7 @@ Attribute-based access control involves the following components:
 
 | Terminology | Definition |
 | --- | --- |
-| Attributes | Attributes are the identifiers that indicate the correlation between a user and the Platform resources that they have access to. Attributes can be an existing value such as the geolocation or department of a person. Attributes can also be metadata that is added to an object such as a label added to a schema field or segment |
+| Attributes | Attributes are the identifiers that indicate the correlation between a user and the Platform resources that they have access to. Attributes can be an existing value such as the geolocation or department of a person. Attributes can also be metadata that is added to an object such as a label added to a schema field or segment. |
 | Labels | Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Platform, or as soon as data becomes available for use in Platform. |
 | Permissions | Permissions include the ability to view and/or use Platform features, such as creating sandboxes, defining schemas, and managing datasets. |
 | Permission sets | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
@@ -32,9 +34,9 @@ Attribute-based access control involves the following components:
 | Subject | A subject is the user requesting access to a resource to perform an action. |
 | User groups | User groups are multiple users that have been grouped together and have the access to execute the same functions. |
 
-## Permissions UI
+## Permissions
 
-The Permissions UI in Adobe Experience Cloud provides a central location for managing attribute-based access control configurations for subjects and resources in your organization. Through the Permissions UI, you can create and manage roles, as well as assign the desired resource permissions for these roles. The Permissions UI also allows you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the Permissions UI guide.
+Permissions is the area of Experience Cloud where administrators can define user roles and access polices to manage access permissions for features, capabilities, and objects within a product application. Through the Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allows you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the Permissions guide.
 
 ## Attribute-based access control API
 
