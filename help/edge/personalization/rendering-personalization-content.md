@@ -290,3 +290,101 @@ alloy("sendEvent", {
 ### Manage flicker
 
 The SDK provides facilities to [manage flicker](../personalization/manage-flicker.md) during the personalization process.
+
+## applyPropositions {#applypropositions}
+
+
+
+### Use case 1: Re-render page-wide propositions
+
+```js
+// Fetch page-wide propositions (__view__ scope)
+alloy("sendEvent", {
+  "renderDecisions": false,
+  "xdm": {...}
+}).then(pageLoadResult) => {
+    // Do things on the page before rendering the propositions
+    return pageLoadResult;
+}).then({ propositions }) => {
+    // Render page-wide propositions
+    return alloy("applyPropositions", {
+        propositions
+    });
+}).then({ propositions }) => {
+    // Send the display notifications via sendEvent command
+    alloy("sendEvent", {
+      xdm: {
+        eventType: "decisioning.propositionDisplay",
+        _experience: {
+          decisioning: {
+            propositions
+          }
+        }
+      }
+    });
+});
+```
+
+
+### Use case 2: Re-render single-page application view
+
+```js
+[Existing functionality] To render an SPA view and send display notifications (could be initial view render or re-render where customer wants repeated display notifications):
+const cartPropositions = alloy("sendEvent", {
+  "renderDecisions": true,
+  "xdm": {
+    "web": {
+      "webPageDetails": {
+        "viewName":"cart"
+      }
+    }
+  }
+}).then(propositions => {
+    // Collect response tokens, etc.
+    return propositions;
+});
+ 
+[New functionality] To re-render the previously fetched "cart" view propositions without display notifications:
+alloy("applyPropositions", {
+    propositions: cartPropositions
+});
+```
+
+### Use case 3: Render propositions that do not have a selector
+
+This can apply to Target form-based offers or offers in ODE.  Selector, action, and scope must be provided in the `applyPropositions` call.  Valid `actionTypes` include: `setHtml`, `replaceHtml`, and `appendHtml`.  If no `actionType` is provided, then `appendHtml` is used as the default.  If no selector is provided, then `#HEAD` is used as the default selector.
+
+```js
+// Retrieve propositions for scope1 and scope2
+alloy("sendEvent", {
+    decisionScopes:  ["scope1', 'scope2'],
+    renderDecisions: false
+}).then(({ propositions }) => {
+    // Render propositions on the page by providing additional metadata
+    alloy("applyPropositions", {
+        propositions,
+        metadata: {
+            scope1: {
+                selector: "#first-form-based-offer",
+                actionType: "setHtml"
+            },
+            scope2: {
+                selector: "#second-form-based-offer",
+                actionType: "replaceHtml"
+            }
+        }
+    })
+}).then({ renderedPropositions }) => {
+    // Send the display notifications via sendEvent command
+    alloy("sendEvent", {
+      xdm: {
+        eventType: "decisioning.propositionDisplay",
+        _experience: {
+          decisioning: {
+            propositions: renderedPropositions
+          }
+        }
+      }
+    });
+});
+```
