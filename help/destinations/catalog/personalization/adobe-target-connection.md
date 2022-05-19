@@ -20,7 +20,7 @@ Configuring the Adobe Target connection without using a datastream ID does not r
 
 >[!IMPORTANT]
 >
->Before creating an [!DNL Adobe Target] connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
+>Before creating an [!DNL Adobe Target] connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components. Same-page and next-page personalization requires you to use a datastream ID when configuring the Adobe Target connection.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -61,9 +61,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **Name**: Fill in the preferred name for this destination.
 *  **Description**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
-*  **Datastream ID**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the Target destination enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details.
-
-When selecting the **[!UICONTROL None]** option for datastream ID, some personalization use cases are not supported. See the table below for details.
+*  **Datastream ID**: This determines in which Data Collection datastream the segments will be included. The drop-down menu shows only datastreams that have the Target destination enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details. When selecting the **[!UICONTROL None]** option for datastream ID, some personalization use cases are not supported. See the table below for details.
     
 |No datastream selected|Datastream selected|
 |---|---|
