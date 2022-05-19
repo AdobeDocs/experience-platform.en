@@ -4,7 +4,7 @@ description: The functionality of the ALTER TABLE command has been expanded in A
 ---
 # Use the ALTER TABLE Command to Set an Identity or a Primary Identity
 
-Adobe Experience Platform Query Service has added new constraints for the `ALTER TABLE` command that allows you to mark dataset columns as either primary or secondary identities. This feature can be used to ensure that flagged fields are consistent with data privacy requirements. With this command, you can add new columns to existing tables, while simultaneously adding and deleting constraints for both primary and secondary IDs table columns directly through SQL.
+Adobe Experience Platform Query Service has added new constraints for the `ALTER TABLE` command that allows you to mark dataset columns as either primary or secondary identities. This feature can be used to ensure that flagged fields are consistent with data privacy requirements. With this command you can mark columns as an identity or primary identity, and add or delete constraints for both primary and secondary identity table columns directly through SQL.
 
 ## Getting started 
 
@@ -63,7 +63,7 @@ The list below explains important considerations for updating identities in exis
 
 ## Supported data types
 
-The following table lists the accepted data types for PSQL, XDM, and the data warehouse.
+The following table lists the accepted data types for PSQL, XDM, and the accelerated store.
 
 <!-- Are these data types the corresponding equivalents in their respective areas?  -->
 
