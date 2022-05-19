@@ -120,6 +120,8 @@ To capture properties from an XDM object data element, the same rules apply to t
 }
 ```
 
++++
+
 You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead. If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
 
 ![JSON sample of expected incoming data](../images/datastreams/data-prep/select-data.png)
