@@ -319,7 +319,7 @@ This section in the destinations configuration generates the [Configure new dest
 
 Depending on which [authentication option](authentication-configuration.md##supported-authentication-types) you indicate in the `authType` field, the Experience Platform page is generated for the users as follows:
 
-### Amazon S3 authentication
+### Amazon S3 authentication {#s3}
 
 When you configure the Amazon S3 authentication type, users are required to input the S3 credentials.
 
@@ -646,19 +646,14 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
       "identityRequired":true
       "requiredMappings": [
       {
-          "source": "segment - 0, 1",
-          "sourceType": "text/x.schema-path",
-          "destination": "delete"
+        "sourceType": "text/plain",
+        "source": "metadata.segment.alias",
+        "destination": "list_id"
       },
       {
-          "source": "{{metadata.segment.alias}}",
-          "sourceType": "text/x.schema-path",
-          "destination": "ppid"
-      },
-      {
-          "source": "{{segmentMembership.status}}",
-          "sourceType": "text/x.schema-path",
-          "destination": ""
+        "sourceType": "text/x.aep-xl",
+        "source": "iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")",
+        "destination": "delete"
       }
     ]
 }

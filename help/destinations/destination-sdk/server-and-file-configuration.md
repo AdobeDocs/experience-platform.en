@@ -194,6 +194,25 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedGoogleCloudStorageDestination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedGoogleCloudStorageDestination.path.value`|String|The path to the destination folder that will host the exported files.|
 
+## File-based destinations file name configuration {#file-name-configuration}
+
+You can use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../ui/activate-batch-profile-destinations.md#file-names) screen.
+
+As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names unique as well.
+
+|Macro|UI label|Description|Example|
+|---|---|---|---|
+|`DESTINATION`|[!UICONTROL Destination]|Destination name in the UI.|Amazon S3|
+|`DESTINATION_INSTANCE_NAME`|[!UICONTROL Destination Name]|User-defined name of the destination instance.|My 2022 Advertising Destination|
+|`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
+|`SEGMENT_NAME`|[!UICONTROL Segment Name]|User-defined segment name|VIP subscriber|
+|`SEGMENT_ID`|[!UICONTROL Segment ID]|Unique, Platform-generated segment ID|ce5c5482-2813-4a80-99bc-57113f6acde2|
+|`DATETIME`|[!UICONTROL Date and time]|Date and time when the file was generated, in the following format: YYYYMMDD_HHMMSS.|20220509_210543|
+|`TIMESTAMP`|[!UICONTROL Date and time]|10-digit timestamp of the time when the file was generated, in Unix format.|1652131584|
+|`CUSTOM_TEXT`|[!UICONTROL Custom text]|User-defined custom text to be included in the file name.|My_Custom_Text|
+|`SANDBOX_NAME`|[!UICONTROL Sandbox Name]|Name of the sandbox used by the customer.|prod|
+|`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in Adobe Experience Platform.|My Organization Name|
+
 ## File-based destinations file configuration {#file-configuration}
 
 This section describes the file formatting settings for the exported `CSV` files. You can modify several properties of the exported files to match the requirements of the file reception system on your side, in order to optimally read and interpret the files received from Experience Platform.
