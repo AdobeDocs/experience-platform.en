@@ -126,11 +126,12 @@ You can select the option to upload the object as a file, or paste the raw objec
 
 ## [!UICONTROL Mapping]
 
-The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Platform. 
+The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Platform. From here, you can configure the mapping in two ways:
 
-If you have existing datastreams configured, you can import their mapping configurations for re-use in new datastreams. Select **[!UICONTROL Import Mapping]** to 0
+* [Create new mapping rules](#create-mapping) for this datastream through a manual process.
+* [Import mapping rules](#import-mapping) from an existing datastream.
 
-### Create a new mapping
+### Create a new mapping {#create-mapping}
 
 To get started, select **[!UICONTROL Add new mapping]** to create a new mapping row.
 
@@ -154,7 +155,7 @@ The mapping page reappears with the completed field mapping shown. The **[!UICON
 >
 >![Array object mapping](../images/datastreams/data-prep/array-object-mapping.png)
 
-### Import existing mapping rules
+### Import existing mapping rules {#import-mapping}
 
 If you have previously created a datastream, you can re-use its configured mapping rules for a new datastream. 
 
