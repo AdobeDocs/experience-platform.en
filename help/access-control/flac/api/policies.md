@@ -278,9 +278,9 @@ A successful request returns the newly created policy, including its unique poli
     "id": "c3863937-5d40-448d-a7be-416e538f955e",
     "recordType": "policy",
     "imsOrgId": "{IMS_ORG}",
-    "createdBy": "acp_accessControlService",
+    "createdBy": "{CREATED_BY}",
     "createdAt": 1652988384458,
-    "modifiedBy": "acp_accessControlService",
+    "modifiedBy": "{MODIFIED_BY}",
     "modifiedAt": 1652988384458,
     "name": "acme-integration-policy",
     "description": "Policy for ACME",
@@ -330,7 +330,7 @@ PUT /policies/{POLICY_ID}
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/access-control/administration/policies/13138ef6-c007-495d-837f-0a248867e219 \
+  https://platform.adobe.io/data/foundation/access-control/administration/policies/8cf487d7-3642-4243-a8ea-213d72f694b9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -360,9 +360,9 @@ A successful response returns the updated policy.
     "id": "8cf487d7-3642-4243-a8ea-213d72f694b9",
     "recordType": "policy",
     "imsOrgId": "{IMS_ORG}",
-    "createdBy": "acp_accessControlService",
+    "createdBy": "{CREATED_BY}",
     "createdAt": 1652988866647,
-    "modifiedBy": "acp_accessControlService",
+    "modifiedBy": "{MODIFIED_BY}",
     "modifiedAt": 1652989297287,
     "name": "test-2",
     "description": null,
@@ -398,6 +398,8 @@ PATCH /policies/{POLICY_ID}
 
 **Request**
 
+The following request replaces the value of `/description` in policy ID `c3863937-5d40-448d-a7be-416e538f955e`.
+
 ```shell
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/access-control/administration/policies/c3863937-5d40-448d-a7be-416e538f955e \
@@ -423,7 +425,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns the queried policy ID with updated properties.
+A successful response returns the queried policy ID with updated description.
 
 ```json
 {
