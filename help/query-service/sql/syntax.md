@@ -453,7 +453,7 @@ select inline(productListItems) from source_dataset limit 10;
 The values taken from the `source_dataset` are used to populate the target table.
 
 |         SKU         |  _experience                      | quantity | priceTotal   |
-|---------------------+-----------------------------------+----------+--------------|
+|---------------------|-----------------------------------|----------|--------------|
 | product-id-1        | ("("("(A,pass,B,NULL)")")")       |     5    |  10.5        |
 | product-id-5        | ("("("(A, pass, B,NULL)")")")     |          |              |
 | product-id-2        | ("("("(AF, C, D,NULL)")")")       |      6   |  40          |

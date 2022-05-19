@@ -29,7 +29,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -63,7 +63,7 @@ GET /batches/{BATCH_ID}/meta?path=input_files
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-2233-11ea-acf0-f3edfcded2d2/meta?path=input_files \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -121,7 +121,7 @@ GET /batches/{BATCH_ID}/meta?path=input_files/{FILE}
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-2233-11ea-acf0-f3edfcded2d2/meta?path=input_files/fileMetaData1.json \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -160,7 +160,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2233-11ea-acf0-f3edfcded2d2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -187,7 +187,7 @@ A successful response returns with detailed information about the batch's status
         "inputFormat": {
             "format": "parquet"
         },
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "started": 1576741718543,
         "metrics": {
             "inputByteSize": 568,
@@ -234,7 +234,7 @@ If the batch has one or more errors and has error diagnostics enabled, the respo
         "inputFormat": {
             "format": "parquet"
         },
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "started": 1576741718543,
         "metrics": {
             "inputByteSize": 568,
@@ -331,7 +331,7 @@ GET /export/batches/{BATCH_ID}/meta?path=row_errors
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
