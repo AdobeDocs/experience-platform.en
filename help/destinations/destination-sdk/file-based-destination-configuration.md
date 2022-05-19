@@ -273,7 +273,7 @@ You can configure the functionality described in this document by using the `/au
    },
    "batchConfig":{
       "allowMandatoryFieldSelection":true,
-      "allowJoinKeyFieldSelection":true,
+      "allowDedupeKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
       "allowedExportMode":[
          "DAILY_FULL_EXPORT",
@@ -289,7 +289,17 @@ You can configure the functionality described in this document by using the `/au
          "EVERY_HOUR"
       ],
       "defaultFrequency":"DAILY",
-      "defaultStartTime":"00:00"
+      "defaultStartTime":"00:00",
+      "filenameConfig": {
+            "allowedFilenameAppendOptions": [
+                "SEGMENT_NAME",
+                "DATETIME",
+                "TIMESTAMP",
+                "DESTINATION_NAME",
+                "SANDBOX_NAME"
+            ],
+            "defaultFilename": "{{DESTINATION_NAME}}_{{SEGMENT_ID}}"
+      }
    },
    "backfillHistoricalProfileData":true
 }
@@ -767,12 +777,12 @@ This section refers to the file export settings in the configuration above that 
 |---------|----------|------|
 |`allowMandatoryFieldSelection`|Boolean|Set to `true` to allow customers to specify which profile attributes are mandatory. Default value is `false`. See [Mandatory attributes](../ui/activate-batch-profile-destinations.md#mandatory-attributes) for more information. |
 |`allowDedupeKeyFieldSelection`|Boolean|Set to `true` to allow customers to specify deduplication keys. Default value is `false`.  See [Deduplication keys](../ui/activate-batch-profile-destinations.md#deduplication-keys) for more information. |
-|`defaultExportMode`|Enum|Defines the default file export mode. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br> Default value is `DAILY_FULL_EXPORT`. See the [batch activation documentation](../ui/activate-batch-profile-destinations.md#scheduling) for details about file exports scheduling. |
+|`defaultExportMode`|Enum|Defines the default file export mode. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> Default value is `DAILY_FULL_EXPORT`. See the [batch activation documentation](../ui/activate-batch-profile-destinations.md#scheduling) for details about file exports scheduling. |
 |`allowedExportModes`|List|Defines the file export modes available to customers. Supported values:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul>|
 |`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
-|`defaultFrequency`|Enum|Defines the default file export frequency.Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br> Default value is `DAILY`.|
+|`defaultFrequency`|Enum|Defines the default file export frequency.Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Default value is `DAILY`.|
 |`defaultStartTime`|String|Defines the default start time for the file export. Uses 24-hour file format. Default value is "00:00".|
-|`filenameConfig.allowedFilenameAppendOptions`|String|Defines the list of macros that users can include in the exported file name. Supported values: <ul><li>`DESTINATION`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`SEGMENT_NAME`</li><li>`SEGMENT_ID`</li><li>`DATETIME`</li><li>`TIMESTAMP`</li><li>`CUSTOM_TEXT`</li><li>`SANDBOX_NAME`</li><li>`ORGANIZATION_NAME`</li></ul> See the documentation on [file name configuration](server-and-file-configuration.md#file-name-configuration) for details on the supported macros.|
+|`filenameConfig.allowedFilenameAppendOptions`|String|Defines the list of macros that users can include in the exported file name. Supported values: <ul><li>`DESTINATION`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`SEGMENT_NAME`</li><li>`SEGMENT_ID`</li><li>`DATETIME`</li><li>`TIMESTAMP`</li><li>`CUSTOM_TEXT`</li><li>`SANDBOX_NAME`</li><li>`ORGANIZATION_NAME`</li></ul> See [file name configuration](server-and-file-configuration.md#file-name-configuration) for details on the supported macros.|
 |`filenameConfig.defaultFilename`|String|Defines the default file name format for the exported files.|
 
 ## Historical profile qualifications {#profile-backfill}
