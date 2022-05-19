@@ -8,9 +8,11 @@ description: The Attribute-based access control API allows you to programmatical
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release. This capability will be available to all Real-Time Customer Data Platform customers once it is fully released.
+>Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
 
-The Attribute-based access control API is used to access roles, products, permission categories, and permission sets within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible.
+Attribute-based access control allows administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be an existing value such as the geolocation or department of a person. Attributes can also be metadata that is added to an object such as a label added to a schema field or segment.
+
+The attribute-based access control API is used to access roles, products, permission categories, and permission sets within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible.
 
 These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
@@ -20,8 +22,8 @@ Roles define the access that an administrator, a specialist, or an end-user has 
 
 ## Products
 
-The `/products` endpoint in the Attribute-based access control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your IMS Organization. See the [products endpoint guide](./products.md) for more information on working with products and their corresponding permission categories and permission sets in the API.
+The `/products` endpoint in the attribute-based access control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your organization. See the [products endpoint guide](./products.md) for more information on working with products and their corresponding permission categories and permission sets in the API.
 
 ## Next steps
 
-To begin making calls using the Attribute-based access control API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
+To begin making calls using the attribute-based access control API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.

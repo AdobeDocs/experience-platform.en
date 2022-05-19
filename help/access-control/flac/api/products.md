@@ -6,11 +6,11 @@ description: The /products endpoint in the Attribute-Based Access Control API al
 ---
 # Products endpoint
 
-The `/products` endpoint in the Attribute-Based Access Control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your IMS Organization.
+The `/products` endpoint in the attribute-based access control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your organization.
 
 ## Getting started
 
-The API endpoint used in this guide is part of the Attribute-Based Access Control API. Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the attribute-based access control API. Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of entitled products {#list}
 
@@ -24,7 +24,7 @@ GET /products/
 
 **Request**
 
-The following request retrieves a list of entitled products belonging to your IMS Organization.
+The following request retrieves a list of entitled products belonging to your organization.
 
 ```shell
 curl -X GET \
@@ -36,7 +36,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns a list of entitled products belonging to your IMS Organization.
+A successful response returns a list of entitled products belonging to your organization.
 
 ```json
 {

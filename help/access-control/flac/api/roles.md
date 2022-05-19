@@ -8,15 +8,15 @@ description: The /roles endpoint in the Attribute-Based Access Control API allow
 
 Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need. 
 
-The `/roles` endpoint in the Attribute-Based Access Control API allows you to  programmatically manage roles in your IMS Organization.
+The `/roles` endpoint in the attribute-based access control API allows you to  programmatically manage roles in your organization.
 
 ## Getting started
 
-The API endpoint used in this guide is part of the Attribute-Based Access Control API. Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the attribute-based access control API. Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of roles {#list}
 
-You can list all existing roles belonging to your IMS Organization by making a GET request to the `/roles` endpoint.
+You can list all existing roles belonging to your organization by making a GET request to the `/roles` endpoint.
 
 **API format**
 
@@ -26,7 +26,7 @@ GET /roles/
 
 **Request**
 
-The following request retrieves a list of roles belonging to your IMS Organization.
+The following request retrieves a list of roles belonging to your organization.
 
 ```shell
 curl -X GET \
@@ -95,7 +95,7 @@ A successful response returns a list of roles in your organization, including in
 | `description` | The description property provides additional information on your role. |
 | `roleType` |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
-| `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
+| `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
 | `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
@@ -162,7 +162,7 @@ A successful response returns details for the queried role ID, including informa
 | `description` | The description property provides additional information on your role. |
 | `roleType` |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
-| `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
+| `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
 | `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
@@ -308,9 +308,9 @@ A successful response returns your newly created role, with its corresponding ro
 | `id` | The ID that corresponds with the role. This ID is auto-generated. |
 | `name` | The name of your role. |
 | `description` | The description property provides additional information on your role. |
-| `roleType` |
+| `roleType` | The designated type of the role. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
-| `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
+| `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
 | `subjectAttributes` |  |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
@@ -388,9 +388,9 @@ A successful response returns the updated role, including new values for the pro
 | `id` | The ID that corresponds with the role. This ID is auto-generated. |
 | `name` | The name of your role. |
 | `description` | The description property provides additional information on your role. |
-| `roleType` |
+| `roleType` | The designated type of the role. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
-| `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
+| `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
 | `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
@@ -415,17 +415,17 @@ curl -X PUT \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
   -d'{
-    "name": "string",
-    "description": "string",
+    "name": "Administrator role for ACME",
+    "description": "New administrator role for ACME",
     "roleType": "user-defined"
   }'
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `name` |
-| `description` |
-| `roleType` |
+| `name` | The updated name of a role. |
+| `description` | The updated description of a role. |
+| `roleType` | The designated type of the role. |
 
 **Response**
 
@@ -462,9 +462,9 @@ A successful returns your updated role, including new values for its name, descr
 | `id` | The ID that corresponds with the role. This ID is auto-generated. |
 | `name` | The name of your role. |
 | `description` | The description property provides additional information on your role. |
-| `roleType` |
+| `roleType` | The designated type of the role. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
-| `sandboxes` | This property displays the sandboxes within your IMS Organization that is provisioned for a particular role. |
+| `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
 | `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
@@ -496,8 +496,8 @@ curl -X PATCH \
     "operations": [
       {
         "op": "add",
-        "path": "string",
-        "value": "string"
+        "path": "/subjects",
+        "value": "New subjects"
       }
     ]
   }'
@@ -540,8 +540,8 @@ A successful response returns the updated subjects associated with the queried r
 
 | Property | Description |
 | --- | --- |
-| `subjectId` |
-| `subjectType` |
+| `subjectId` | The ID of a subject. |
+| `subjectType` | The type of a subject. |
 
 ## Delete a role {#delete}
 
