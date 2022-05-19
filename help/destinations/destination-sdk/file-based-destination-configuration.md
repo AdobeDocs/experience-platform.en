@@ -772,7 +772,7 @@ This section refers to the file export settings in the configuration above that 
 |`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
 |`defaultFrequency`|Enum|Defines the default file export frequency.Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br> Default value is `DAILY`.|
 |`defaultStartTime`|String|Defines the default start time for the file export. Uses 24-hour file format. Default value is "00:00".|
-|`filenameConfig.allowedFilenameAppendOptions`|String|Defines the fields that users can append to the exported file names.|
+|`filenameConfig.allowedFilenameAppendOptions`|String|Defines the list of macros that users can include in the exported file name. Supported values: <ul><li>`DESTINATION`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`SEGMENT_NAME`</li><li>`SEGMENT_ID`</li><li>`DATETIME`</li><li>`TIMESTAMP`</li><li>`CUSTOM_TEXT`</li><li>`SANDBOX_NAME`</li><li>`ORGANIZATION_NAME`</li></ul> See the documentation on [file name configuration](server-and-file-configuration.md#file-name-configuration) for details on the supported macros.|
 |`filenameConfig.defaultFilename`|String|Defines the default file name format for the exported files.|
 
 ## Historical profile qualifications {#profile-backfill}
