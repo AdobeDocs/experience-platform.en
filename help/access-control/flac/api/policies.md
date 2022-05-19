@@ -120,7 +120,7 @@ A successful response returns a list of existing policies.
 | Property | Description |
 | --- | --- |
 | `id` | The ID that corresponds with a policy. This identifier is auto-generated and can be used to lookup, update, and delete a policy. |
-| `recordType` |
+| `recordType` | The type of the queried record. Possible values include... |
 | `imsOrgId` | The organization where the queried policy is accessible. |
 | `createdBy` | The ID of the user who created the policy. |
 | `createdAt` | The time when the policy was created. The `createdAt` property is displayed in unix epoch timestamp.  |
@@ -132,7 +132,7 @@ A successful response returns a list of existing policies.
 | `subjectCondition` | |
 | `rules` | |
 | `rules.effect` | |
-| `rules.resource` | |
+| `rules.resource` | The asset or object that a subject can or can't access. |
 | `rules.condition` | |
 | `rules.action` | |
 
