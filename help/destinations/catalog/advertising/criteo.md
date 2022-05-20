@@ -18,11 +18,13 @@ Criteo powers trusted and impactful advertising to bring richer experiences to e
 
 * You need to have an administrator user account on [Criteo Management Center](https://marketing.criteo.com).
 * You'll need your Criteo Advertiser ID (ask your Criteo contact if you don't have this ID).
+* You'll need to provide GUM caller ID, in case you want to use GUM ID as identifier.
 
 ## Limitations {#limitations}
 
 * Criteo does not currently support removing users from audiences.
 * Criteo only accepts [!DNL SHA-256]-hashed and plain-text emails (to be transformed into [!DNL SHA-256] before sending). Please do not send any PII (Personal Identifiable Information, such as individual's names or phone numbers).
+* Criteo needs at least one identifier to be provided by the client. It prioritizes GUM ID as identifier over hashed email as it contributes to better matching rate.
 
 ![Prerequisites](../../assets/catalog/advertising/criteo/prerequisites.png)
 
