@@ -53,7 +53,7 @@ Added labels appear under **[!UICONTROL Labels]** tab.
 
 ![flac-added-labels](../../images/flac-ui/flac-added-labels.png)
 
-To remove a label, select the **X** icon next to the labels's name, to remove the label from the role.
+To remove a label from a role, select the **X** icon next to the labels's name.
 
 ![flac-delete-labels](../../images/flac-ui/flac-delete-labels.png)
 
@@ -85,9 +85,57 @@ Added users appear under **[!UICONTROL Users]** tab.
 
 ![flac-added-users](../../images/flac-ui/flac-added-users.png)
 
-To remove a user, select the **X** icon next to the users name, to remove the user from the role.
+To remove a user from a role, select the **X** icon next to the users name.
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
+
+## Managing users for API credentials
+
+Select the **[!UICONTROL API credentials]** tab to open the roles API credentials page, then select **[!UICONTROL Add API credentials]** to assign API credentials to the role.
+
+![flac-api-credentials](../../images/flac-ui/flac-api-credentials.png)
+
+Select the API credentials from the list you would like to add to the role, then select **[!UICONTROL Save]**
+
+![flac-add-api-credentials](../../images/flac-ui/flac-add-api-credentials.png)
+
+Added API credentials appears under **[!UICONTROL API credentials]** tab.
+
+![flac-added-api-credentials](../../images/flac-ui/flac-added-api-credentials.png)
+
+To remove a API credentials from a role, select the **X** icon next to the API credential name. 
+
+![flac-remove-api-credentials](../../images/flac-ui/flac-remove-api-credentials.png)
+
+The **[!UICONTROL Remove API credentials]** dialogue appears, prompting you to confirm deletion. 
+
+![flac-confirm-api-credentials-delete](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
+
+You will be returned to the **[!UICONTROL API credentials]** tab.
+
+## Managing users for user groups
+
+Select the **[!UICONTROL User groups]** tab to open the roles user groups page, then select **[!UICONTROL Add Groups]** to assign user groups to the role.
+
+![flac-user-groups](../../images/flac-ui/flac-user-groups.png)
+
+Select the user groups from the list you would like to add to the role. Alternatively, use the search bar to search for the user group by entering the name of the group, then select **[!UICONTROL Save]**
+
+![flac-add-user-groups](../../images/flac-ui/flac-add-user-groups.png)
+
+Added user group appears under **[!UICONTROL User groups]** tab.
+
+![flac-added-user-groups](../../images/flac-ui/flac-added-user-groups.png)
+
+To remove a user group from a role, select the **X** icon next to the user group name. 
+
+![flac-remove-user-groups](../../images/flac-ui/flac-remove-user-groups.png)
+
+The **[!UICONTROL Remove user group]** dialogue appears, prompting you to confirm deletion. 
+
+![flac-confirm-user-groups -delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+
+You will be returned to the **[!UICONTROL User groups]** tab.
 
 ## Next steps
 
