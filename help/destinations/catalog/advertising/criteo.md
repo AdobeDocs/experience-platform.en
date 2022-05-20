@@ -33,7 +33,7 @@ Criteo supports the activation of identities described in the table below. Learn
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
 | `email_sha256` | Email addresses hashed with the SHA-256 algorithm | Both plain text and SHA-256-hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the [!UICONTROL Apply transformation] option, to have Platform automatically hash the data on activation. |
-| `gum_id` | Criteo GUM cookie identifier | GUM ID's allow clients to maintain a correspondence between their user identification system and Criteo's user identification (UID) if they are unable to send emails or mobile ad identifiers.If the identifier type is 'gum', an additional parameter, the gumCallerId, must also be included.Please reach out to your Criteo account team for the appropriate gumCallerId or to get more information on this GUM sync, if needed.|
+| `gum_id` | Criteo GUM cookie identifier | GUM ID's allow clients to maintain a correspondence between their user identification system and Criteo's user identification (UID).If the identifier type is 'gum', an additional parameter, the gumCallerId, must also be included.Please reach out to your Criteo account team for the appropriate gumCallerId or to get more information on this GUM sync, if needed.|
 
 ## Export type and frequency {#export-type-frequency}
 
