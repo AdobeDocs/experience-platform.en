@@ -42,7 +42,6 @@ A successful response returns a list of existing policies.
 {
   {
       "id": "7019068e-a3a0-48ce-b56b-008109470592",
-      "recordType": "policy",
       "imsOrgId": "{IMS_ORG}",
       "createdBy": "{CREATED_BY}",
       "createdAt": 1652892767559,
@@ -84,7 +83,6 @@ A successful response returns a list of existing policies.
   },
   {
       "id": "13138ef6-c007-495d-837f-0a248867e219",
-      "recordType": "policy",
       "imsOrgId": "{IMS_ORG}",
       "createdBy": "{CREATED_BY}",
       "createdAt": 1652859368555,
@@ -120,7 +118,6 @@ A successful response returns a list of existing policies.
 | Property | Description |
 | --- | --- |
 | `id` | The ID that corresponds with a policy. This identifier is auto-generated and can be used to lookup, update, and delete a policy. |
-| `recordType` | The type of the queried record. Possible values include... |
 | `imsOrgId` | The organization where the queried policy is accessible. |
 | `createdBy` | The ID of the user who created the policy. |
 | `createdAt` | The time when the policy was created. The `createdAt` property is displayed in unix epoch timestamp.  |
@@ -129,12 +126,12 @@ A successful response returns a list of existing policies.
 | `name` | The name of the policy. |
 | `description` | (Optional) A property that can be added to provide further information on a particular policy. |
 | `status` | The current status of a policy. This property defines whether a policy is currently `active` or `inactive`. |
-| `subjectCondition` | |
-| `rules` | |
-| `rules.effect` | |
-| `rules.resource` | The asset or object that a subject can or can't access. |
-| `rules.condition` | |
-| `rules.action` | |
+| `subjectCondition` | The conditions applied to a subject. A subject is a user with certain attributes requesting access to a resource to perform an action. In this case, `subjectCondition` are query-like conditions applied to the subject attributes. |
+| `rules` | The set of rules that define a policy. Rules define which attribute combinations are authorized in order for the subject to successfully perform an action to the queried asset or object. |
+| `rules.effect` | The effect that results after considering values for `action`, `condition` and `resource`. Possible values include: `permit`, `deny`, or `indeterminate`. |
+| `rules.resource` | The asset or object that a subject can or can't access.  Resources can be files, applications, servers, or even APIs. |
+| `rules.condition` | The conditions applied to a resource. For example, if a resource is a schema, then a schema can have certain labels applied to it that contribute to whether an action against that schema is permissible or impermissible. |
+| `rules.action` | The action that a subject is permitted to do against a queried resource. Possible values include: `read`, `create`, `edit`, and `delete`. |
 
 ## Look up policy details by ID {#lookup}
 
@@ -169,7 +166,6 @@ A successful request returns information on the queried policy ID.
 ```json
 {
     "id": "13138ef6-c007-495d-837f-0a248867e219",
-    "recordType": "policy",
     "imsOrgId": "{IMS_ORG}",
     "createdBy": "{CREATED_BY}",
     "createdAt": 1652859368555,
@@ -204,7 +200,6 @@ A successful request returns information on the queried policy ID.
 | Property | Description |
 | --- | --- |
 | `id` | The ID that corresponds with a policy. This identifier is auto-generated and can be used to lookup, update, and delete a policy. |
-| `recordType` |
 | `imsOrgId` | The organization where the queried policy is accessible. |
 | `createdBy` | The ID of the user who created the policy. |
 | `createdAt` | The time when the policy was created. The `createdAt` property is displayed in unix epoch timestamp.  |
@@ -276,7 +271,6 @@ A successful request returns the newly created policy, including its unique poli
 ```json
 {
     "id": "c3863937-5d40-448d-a7be-416e538f955e",
-    "recordType": "policy",
     "imsOrgId": "{IMS_ORG}",
     "createdBy": "{CREATED_BY}",
     "createdAt": 1652988384458,
@@ -358,7 +352,6 @@ A successful response returns the updated policy.
 ```json
 {
     "id": "8cf487d7-3642-4243-a8ea-213d72f694b9",
-    "recordType": "policy",
     "imsOrgId": "{IMS_ORG}",
     "createdBy": "{CREATED_BY}",
     "createdAt": 1652988866647,
@@ -430,7 +423,6 @@ A successful response returns the queried policy ID with updated description.
 ```json
 {
     "id": "c3863937-5d40-448d-a7be-416e538f955e",
-    "recordType": "policy",
     "imsOrgId": "{IMS_ORG}",
     "createdBy": "acp_accessControlService",
     "createdAt": 1652988384458,
