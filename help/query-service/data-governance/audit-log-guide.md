@@ -21,7 +21,7 @@ The audit log categories provided by [!DNL Query Service] are as follows.
 |---|---|
 | [!UICONTROL Scheduled query] | This category allows you to audit the schedules that have been created, updated, or deleted within [!DNL Query Service]. |
 | [!UICONTROL Query template] | This category allows you to audit the various actions (create, update, and delete) taken on a query template. |
-<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
+| [!UICONTROL Query] | This category allows you to audit query executions. |
 
 ## Perform a [!DNL Query Service] audit log {#perform-an-audit-log}
 
@@ -36,7 +36,7 @@ The returned audit log data contains the following information on all queries th
 | Column name  | Description |
 |---|---|
 | [!UICONTROL Timestamp] | The exact date and time of the action performed in a `month/day/year hour:minute AM/PM` format.  |
-| [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. When using the [!UICONTROL Scheduled query] category this is the **schedule name**. When using the [!UICONTROL Query template] category, this is the **template name**.  |
+| [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. When using the [!UICONTROL Scheduled query] category this is the **schedule name**. When using the [!UICONTROL Query template] category, this is the **template name**. When using the [!UICONTROL Query] category, this is the **XXXXXX**  |
 | [!UICONTROL Category] | This field matches the category selected by you in the filter dropdown.  |
 | [!UICONTROL Action] |  This can be either create, delete, update, or execute. The available actions depend on the category chosen as a filter. |
 | [!UICONTROL User] | This field provides the user ID that executed the query. | 
@@ -53,7 +53,7 @@ Select any row of audit log results to open a details panel to the right of the 
 
 >[!NOTE]
 >
->The details panel can be used to find the [!UICONTROL Asset ID]. The value of the [!UICONTROL Asset ID] changes depending on the category used in the audit. When using the [!UICONTROL Query template] category, the [!UICONTROL Asset ID] is the **template ID**. When using the [!UICONTROL Scheduled query] category, the [!UICONTROL Asset ID] is the  **schedule ID**.
+>The details panel can be used to find the [!UICONTROL Asset ID]. The value of the [!UICONTROL Asset ID] changes depending on the category used in the audit. When using the [!UICONTROL Query template] category, the [!UICONTROL Asset ID] is the **template ID**. When using the [!UICONTROL Scheduled query] category, the [!UICONTROL Asset ID] is the  **schedule ID**. When using the [!UICONTROL Query] category, the [!UICONTROL Asset ID] is the  **XXXXXX**.
 
 ## Available filters for [!DNL Query Service] audit log categories {#available-filters}
 
@@ -62,7 +62,7 @@ Available filters vary depending on the category selected in the dropdown. The f
 | Filter  | Description |
 |---|---|
 | Category | See the [[!DNL Query Service] audit log categories](#audit-log-categories) section for a complete list of available categories. |
-| Action | When referring to [!DNL Query Service] audit categories, update is a **modification to the existing form**, delete is the **removal of the schedule or template**, create is **creating a new schedule or template**, and execute is running a query.|
+| Action | When referring to [!DNL Query Service] audit categories, update is a **modification to the existing form**, delete is the **removal of the schedule or template**, create is **creating a new schedule or template**, and execute is **running a query**.|
 | User | Enter the complete user ID (for example, johndoe@acme.com) to filter by user. |
 | Status | This filter does not apply to the [!DNL Query Service] audit logs. The [!UICONTROL Allow], [!UICONTROL Success], and [!UICONTROL Failure] options will not filter the results whereas the [!UICONTROL Deny] option will filter out **all** logs. |
 | Date  | Select a start date and/or an end date to define a date range to filter results by. |
