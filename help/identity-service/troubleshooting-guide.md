@@ -84,7 +84,7 @@ Identities are referenced in API calls either by their composite identity or XID
 
 ## How does Identity Service handle personally identifiable information (PII)?
 
-Identity Service has standard namespaces to support the ingestion of hashed identity values for phone numbers and emails. However, you are responsible for the hashing of values.
+Identity Service has standard namespaces to support the ingestion of hashed identity values for phone numbers and emails. However, you are responsible for the hashing of values. To learn more about hashing data that is ingested into Platform, see the [[!DNL Data Prep] mapping functions guide](../data-prep/functions.md#hashing).
 
 ## Are there any considerations when hashing PII-based identities?
 
