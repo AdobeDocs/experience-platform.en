@@ -54,10 +54,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Destination status]](#destination-status)
 * [[!UICONTROL Active destinations by destination platform]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations)
-* [[!UICONTROL Activated audiences by destination]](#activated-audiences-by-destination)
-* [[!UICONTROL Mapped audiences]](#mapped-audiences)
-
-<!-- Screenshot calls the widget Activated audiences NOT Activated audiences by destination -->
+* [[!UICONTROL Activated audiences]](#activated-audiences)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
 
@@ -249,31 +246,17 @@ The [!UICONTROL Activated audiences across all destinations] widget provides the
 
 Select **[!UICONTROL Audiences]** to navigate to the destinations [!UICONTROL Browse] tab. This page provides a list of all enabled destinations and a variety of relevant metrics. See the documentation for [more information on the [!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
 
-### [!UICONTROL Activated audiences by destination] {#activated-audiences-by-destination}
-
-<!-- Screenshot calls the widget Activated audiences NOT Activated audiences by destination -->
+### [!UICONTROL Activated audiences] {#activated-audiences}
 
 This widget provides a single metric for the total number of audiences activated to a destination.   
 
-![The Activated audiences by destination widget.](../images/destinations/activated-audiences.png)
+![The Activated audiences widget.](../images/destinations/activated-audiences.png)
 
 Select **[!UICONTROL Audiences]** to navigate to the details page of the destinations dashboard. The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular segment, select its name from the list. 
 
 ![The destinations dashboard details page with Activation data tab highlighted.](../images/destinations/activation-data-tab.png)
 
 This widget helps you to understand the value of your destinations based on the number of audiences activated at a glance. It also provides easy access to more detailed information for further analysis.
-
-### [!UICONTROL Mapped audiences] {#mapped-audiences}
-
-<!-- INCORRECT PLACEHOLDER IMAGE -->
-
-This widget provides a single metric for the total number of mapped audiences for the selected destination.
-
-Select **[!UICONTROL Segments]** to navigate to the segments dashboard [!UICONTROL Browse] tab. The [!UICONTROL Browse] tab displays a list of all the segment definitions associated with your Organization ID.
-
-![The Mapped audiences widget.](../images/destinations/mapped-audiences.png)
-
-This widget helps you to understand the potential number of audiences that can be activated through the selected destination.
 
 ## Next steps
 
