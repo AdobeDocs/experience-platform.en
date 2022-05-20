@@ -81,49 +81,52 @@ To validate that you have correctly set up the source; and Zendesk profiles are 
 1. Finally, select the **[!UICONTROL Preview dataset]** button to display the data that was ingested.
 ![Zendesk dataset](../../../../images/tutorials/create/zendesk/preview-dataset.png?lang=en)
 
+1. You can verify this data against the data on the Zendesk > Customers page.
+![Zendesk customers](../../../../images/tutorials/create/zendesk/zendesk-customers.png?lang=en)
+
 ### Zendesk schema
 
 * The table below lists the supported mappings that must be set up for Zendesk. 
 * Click [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) for the link to the API.
 
-   | Source | Schema Target | Type |
-   |---|---|---|
-   |results.active|_extconndev.active|Boolean|
-   |results.alias|_extconndev.alias||
-   |results.created_at|_extconndev.created_at|String|
-   |results.custom_role_id|_extconndev.custom_role_id||
-   |results.default_group_id|_extconndev.default_group_id||
-   |results.details|_extconndev.details||
-   |results.email|_extconndev.email|String|
-   |results.external_id|_extconndev.external_id||
-   |results.iana_time_zone|_extconndev.iana_time_zone|String|
-   |results.id|_extconndev.id|Integer|
-   |results.last_login_at|_extconndev.last_login_at||
-   |results.locale|_extconndev.locale|String|
-   |results.locale_id|_extconndev.locale_id|Integer|
-   |results.moderator|_extconndev.moderator|Boolean|
-   |results.name|_extconndev.name|String|
-   |results.notes|_extconndev.notes||
-   |results.only_private_comments|_extconndev.only_private_comments|Boolean|
-   |results.organization_id|_extconndev.organization_id||
-   |results.phone|_extconndev.phone||
-   |results.photo|_extconndev.photo||
-   |results.report_csv|_extconndev.report_csv|Boolean|
-   |results.restricted_agent|_extconndev.restricted_agent|Boolean|
-   |results.result_type|_extconndev.result_type|String|
-   |results.role|_extconndev.role|String|
-   |results.role_type|_extconndev.role_type||
-   |results.shared|_extconndev.shared|Boolean|
-   |results.shared_agent|_extconndev.shared_agent|Boolean|
-   |results.shared_phone_number|_extconndev.shared_phone_number||
-   |results.signature|_extconndev.signature||
-   |results.suspended|_extconndev.suspended|Boolean|
-   |results.ticket_restriction|_extconndev.ticket_restriction|String|
-   |results.time_zone|_extconndev.time_zone|String|
-   |results.two_factor_auth_enabled|_extconndev.two_factor_auth_enabled|Boolean|
-   |results.updated_at|_extconndev.updated_at|String|
-   |results.url|_extconndev.url|String|
-   |results.verified|_extconndev.verified|Boolean|
+   | Source | Type |
+   |---|---|
+   |results.active|Boolean|
+   |results.alias|String|
+   |results.created_at|String|
+   |results.custom_role_id|Integer|
+   |results.default_group_id|Integer|
+   |results.details|String|
+   |results.email|String|
+   |results.external_id|Integer|
+   |results.iana_time_zone|String|
+   |results.id|Integer|
+   |results.last_login_at|String|
+   |results.locale|String|
+   |results.locale_id|Integer|
+   |results.moderator|Boolean|
+   |results.name|String|
+   |results.notes|String|
+   |results.only_private_comments|Boolean|
+   |results.organization_id|Integer|
+   |results.phone|String|
+   |results.photo|String|
+   |results.report_csv|Boolean|
+   |results.restricted_agent|Boolean|
+   |results.result_type|String|
+   |results.role|String|
+   |results.role_type|Integer|
+   |results.shared|Boolean|
+   |results.shared_agent|Boolean|
+   |results.shared_phone_number|Boolean|
+   |results.signature|String|
+   |results.suspended|Boolean|
+   |results.ticket_restriction|String|
+   |results.time_zone|String|
+   |results.two_factor_auth_enabled|Boolean|
+   |results.updated_at|String|
+   |results.url|String|
+   |results.verified|Boolean|
 
 ### Limits {#limits}
 
