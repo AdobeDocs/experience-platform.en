@@ -5,7 +5,7 @@ description: Adobe Advertising Cloud DSP is an integrated destination for the [!
 
 # Adobe Advertising Cloud DSP Destination
 
-Advertising Cloud DSP is an integrated destination for the [!DNL Adobe Real-time Customer Data Profile (CDP)], allowing you to share authenticated first-party segments with approved advertisers and users for campaign activation. To learn more about the Real-Time CDP integration with DSP, see [About Activating Authenticated Segments from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+The Advertising Cloud DSP destination allows you to share authenticated first-party segments with approved advertisers and users for campaign activation with DSP.<!-- To learn more about the Real-Time CDP integration with DSP, see [About Activating Authenticated Segments from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html). -->
 
 >[!IMPORTANT]
 >
@@ -27,8 +27,8 @@ A media agency with a DSP account is running a retargeting campaign on behalf of
 
 * DSP account-level and campaign-level settings to enable segment sharing with [!DNL LiveRamp RampID], which will translate customer data to [!DNL RampIDs] to create targetable segments. Your DSP account team will perform this configuration.
 * The Experience Cloud organization ID for the Experience Platform account. You can find your ID on your Real-Time CDP user profile page.
-* A [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) to receive segments for campaign activation. Your DSP account team will create the source using your Experience Cloud organization ID.
-* The source key for the DSP account or advertiser, which is generated when a [[!DNL Real-Time CDP] source is created in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Your DSP account team will share this key with you. You'll use it within Experience Platform to create a destination connection to the Advertising Cloud DSP destination, as [explained below](#authenticate).
+* A [!DNL Real-Time CDP] source in DSP<!-- [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) --> to receive segments for campaign activation. Your DSP account team will create the source using your Experience Cloud organization ID.
+* The source key for the DSP account or advertiser, which is generated when a [!DNL Real-Time CDP] source is created in DSP<!-- [[!DNL Real-Time CDP] source is created in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) -->. Your DSP account team will share this key with you. You'll use it within Experience Platform to create a destination connection to the Advertising Cloud DSP destination, as [explained below](#authenticate).
 * Customer data consisting of emails or hashed emails.
 
 ## Supported identities {#supported-identities}
@@ -64,9 +64,9 @@ To connect to the destination, follow the instructions to [create a destination 
 
 To connect to the destination, provide the following parameter in the [!UICONTROL Connection type] section, and then select **[!UICONTROL Connect to destination]**.: 
 
-* **[!UICONTROL Account or Advertiser Key]**: This [!UICONTROL Source Key] is generated in the DSP user interface when a [[!DNL Real-Time CDP] source is created](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Your DSP account team will share this key with you after they create the source.
+* **[!UICONTROL Account or Advertiser Key]**: This [!UICONTROL Source Key] is generated when a [!DNL Real-Time CDP] source is created in the DSP user interface<!-- [[!DNL Real-Time CDP] source is created in the DSP user interface](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) -->. Your DSP account team will share this key with you after they create the source.
 
-![Connection type field](/help/destinations/assets/catalog/advertising/connection-type.png)
+![Connection type field](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-dsp-destination/connection-type.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -75,7 +75,7 @@ To configure details for the destination, fill in the required fields in the [!U
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 
-![Destination detail fields](/help/destinations/assets/catalog/advertising/destination-details.png)
+![Destination detail fields](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-dsp-destination/destination-details.png)
 
 ## Activate segments to this destination {#activate}
 
