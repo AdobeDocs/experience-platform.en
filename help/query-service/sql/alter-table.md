@@ -8,7 +8,10 @@ Adobe Experience Platform Query Service has added new constraints for the `ALTER
 
 ## Getting started 
 
-Before continuing with this document, please see the SQL syntax guide for [full instructions on the use of the `ALTER TABLE` command](../sql/syntax.md). You should also have a good understanding of data privacy requirements before improving your datasets to comply with data privacy regulations. If you have not done so already, please read the [Data Governance overview](../../data-governance/home.md) for more information.
+Labelling dataset columns as primary or secondary identiy requires an understanding of the `ALTER TABLE` SQL command and a good understanding of data privacy requirements. Before continuing with this document, please review the following documentation:
+
+* [The SQL syntax guide for the `ALTER TABLE` command](../sql/syntax.md). 
+* [The Data Governance overview](../../data-governance/home.md) for more information.
 
 ## Add constraints {#add-constraints}
 
@@ -61,25 +64,3 @@ The following list explains important considerations for updating identities in 
 1. To specify a column as an identity, you **must** also define the namespace to be preserved as metadata for the column.
 1. XDM does not support specifying a column name in the namespace attribute.
 1. If your schema uses the `identityMap` XDM field, the root or top-level **must** be labeled as an identity or primary identity.
-
-
-## Supported data types
-
-The following table lists the accepted data types for PSQL, XDM, and the accelerated store.
-
-<!-- Are these data types the corresponding equivalents in their respective areas?  -->
-
-<!-- How can I elaborate on the above sentence? Why are these data types relevant to the reader?-->
-
-|--|PSQL client|XDM|DWH|
-|---|---|---|---|
-|1|bigint|int8|bigint|
-|2|smallint|int2|smallint|
-|3|integer|int4|integer|
-|4|tinyint|int1|tinyint|
-|5|varchar(len)|string|varchar(len)|
-|6|double|float8|double precision|
-|7|double precision|float8|double precision|
-|8|date|date|date|
-|9|datetime|datetime|datetime|
-|10|char(len)|string|char(len)|
