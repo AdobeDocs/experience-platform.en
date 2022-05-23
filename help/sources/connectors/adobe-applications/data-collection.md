@@ -17,4 +17,16 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Adobe Data Collection]**, and then select **[!UICONTROL Set up]**.
 
-![data-collection](./images/)
+![data-collection](./images/data-collection/catalog.png)
+
+The Data Collection UI appears on the **[!UICONTROL Datastreams]** tab. 
+
+A datastream is a configuration that tells the Edge Network where you want your data to be sent. Specifically, a datastream specifies which Experience Cloud products you want to send the data to, and how you want the data to be handled and stored in each product.
+
+![datastreams](./images/data-collection/datastreams.png)
+
+For comprehensive steps on how to use the Data Collection UI, see the [data collection end-to-end overview](../../../collection/e2e.md).
+
+## Next steps
+
+By reading this document, you have learned how to access the Data Collection UI using the sources workspace. For more information on Data Collection, see the [Data Collection overview](../../../collection/e2e.md).
