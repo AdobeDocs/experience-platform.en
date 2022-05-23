@@ -4,7 +4,11 @@ solution: Experience Platform
 title: Zendesk Source Connector Overview
 description: Learn how to connect Zendesk to Adobe Experience Platform using APIs or the user interface.
 ---
-# [!DNL Zendesk]
+# (Beta) [!DNL Zendesk]
+
+>[!NOTE]
+>
+>The [!DNL Zendesk] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -36,11 +40,9 @@ The documentation below provides information on how to connect [!DNL Zendesk] to
 
 ## Connect [!DNL Zendesk] to Platform using APIs
 
-* [Create a Zendesk base connection using the Flow Service API](../../tutorials/api/create/customer-success/zendesk.md)
-* [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
-* [Create a dataflow for a payments source using the Flow Service API](../../tutorials/api/collect/customer-success.md)
+* [Create a source connection and a dataflow for [!DNL Zendesk] using the Flow Service API](../../tutorials/api/create/customer-success/zendesk.md)
 
 ## Connect [!DNL Zendesk] to Platform using the UI
 
-* [Create a Zendesk source connection in the UI](../../tutorials/ui/create/customer-success/Zendesk.md)
+* [Create a [!DNL Zendesk ]source connection in the UI](../../tutorials/ui/create/customer-success/Zendesk.md)
 * [Create a dataflow for a customer success source connection in the UI](../../tutorials/ui/dataflow/customer-success.md)

@@ -3,7 +3,11 @@ keywords: Experience Platform;Zendesk;sources;connectors;source connectors;sourc
 title: Create a Zendesk Source Connection in the UI
 description: Learn how to create a Zendesk source connection using the Adobe Experience Platform UI.
 ---
-# Create a [!DNL Zendesk] source connection in the UI
+# (Beta) Create a [!DNL Zendesk] source connection in the UI
+
+>[!NOTE]
+>
+>The [!DNL Zendesk] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 This tutorial provides steps for creating a [!DNL Zendesk] source connection using the Adobe Experience Platform user interface.
 
@@ -26,7 +30,6 @@ In order to access your [!DNL Zendesk] account on Platform, you must provide val
 | API token | Zendesk API token. |*0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf*|
 
 For more information on authenticating your [!DNL Zendesk] source, see the [[!DNL Zendesk] source overview](../../../../connectors/customer-success/zendesk.md).
-
 
 ![Zendesk API token](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png?lang=en)
 
