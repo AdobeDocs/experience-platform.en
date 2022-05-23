@@ -1,47 +1,49 @@
 ---
-keywords: Experience Platform;Zendesk;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Create a Zendesk source connection in the UI
+keywords: Experience Platform;Zendesk;sources;connectors;source connectors;sources sdk;sdk;SDK;zendesk;Zendesk
+title: Create a Zendesk Source Connection in the UI
 description: Learn how to create a Zendesk source connection using the Adobe Experience Platform UI.
-hide: true
-hidefromtoc: true
 ---
-# Create a Zendesk source connection in the UI
+# Create a [!DNL Zendesk] source connection in the UI
 
-This tutorial provides steps for creating a Zendesk source connector using the Platform user interface.
+This tutorial provides steps for creating a [!DNL Zendesk] source connection using the Adobe Experience Platform user interface.
 
-## Overview
+## Getting started
 
-[Zendesk](https://www.zendesk.com) is a popular customer service solution and sales tool.
+This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-This Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) that returns users information into Experience Platform from Zendesk for further processing.
-
-Zendesk uses bearer tokens as an authentication mechanism to communicate with the Zendesk API.
-
-## Prerequisites
-
-Before you start configuring the extension you need to have a Zendesk Support account. If you do not have one already go to the Zendesk [register](https://www.zendesk.com/register/) page to register and create your Zendesk account.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+  * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 ### Gather required credentials
 
-In order to connect Zendesk to Platform, you must provide values for the following connection properties:
+In order to access your [!DNL Zendesk] account on Platform, you must provide values for the following credentials:
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| subdomain | Unique domain specific to your account created during the registration process. <br/><br/> Refer to the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) if you require any guidance. | *xxxxx.zendesk.com*|
+| Subdomain | Unique domain specific to your account created during the registration process. <br/><br/> Refer to the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) if you require any guidance. | *xxxxx.zendesk.com*|
 | API token | Zendesk API token.<br></br>Navigate to the Zendesk website and access **[!UICONTROL Settings]** > **[!UICONTROL Apps and Integrations]** > **[!UICONTROL Zendesk API]** page, Next to the **[!UICONTROL API Tokens]** section. <br/><br/> Refer to the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).|*0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf*|
+
+For more information on these credentials and how to obtain them, see the [[!DNL Zendesk] documentation](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-).
 
 ![Zendesk API token](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png?lang=en)
 
-Finally, create a Platform [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html) required for the Zendesk Search API. Refer also to the [limits](#limits) section further below on this page.
+### Create a Platform schema for [!DNL Zendesk]
+
+Before creating a [!DNL Zendesk] source connection, you must also ensure that you first create a Platform schema to use for your source. See the tutorial on [creating a Platform schema](../../../../../xdm/schema/composition.md) for comprehensive steps on how to create a schema.
+
+For additional guidance on your [!DNL Zendesk] schema required for the [!DNL Zendesk Search API], refer to the [limits](#limits) section below.
+
 ![Create Schema](../../../../images/tutorials/create/zendesk/schema.png?lang=en)
 
-## Connect your Zendesk account
+## Connect your [!DNL Zendesk] account
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Customer Success* category, select *Zendesk*, and then select **[!UICONTROL Add data]**.
+Under the *Customer Success* category, select **[!UICONTROL Zendesk]**, and then select **[!UICONTROL Add data]**.
 
 ![catalog](../../../../images/tutorials/create/zendesk/catalog.png)
 
@@ -61,30 +63,39 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your *Zendesk* account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+By following this tutorial, you have authenticated and created a source connection between your [!DNL Zendesk] account and Platform. You can now continue on to the next tutorial and [create a dataflow to bring customer success data into Platform](../../dataflow/customer success.md).
 
 ## Additional resources
 
+The sections below provides additional resources that you can refer to when using the [!DNL Zendesk] source.
+
 ### Validation {#validation}
 
-To validate that you have correctly set up the source; and Zendesk profiles are being ingested, follow the steps below:
+The following outlines steps to validate that you have successfully connected your [!DNL Zendesk] source and that [!DNL Zendesk] profiles are being ingested to Platform.
 
-1. In the Platform UI, select **[!UICONTROL Datasets]** from the left navigation bar to access the [!UICONTROL Datasets] workspace. The [!UICONTROL Dataset Activity] screen displays the details of executions.
+In the Platform UI, select **[!UICONTROL Datasets]** from the left navigation to access the [!UICONTROL Datasets] workspace. The [!UICONTROL Dataset Activity] screen displays the details of executions.
+
 ![Activity page](../../../../images/tutorials/create/zendesk/dataset-activity.png?lang=en)
 
-1. Next, select the dataflow run ID of the dataflow that you want to view, to see specific details about that dataflow run.
+Next, select the dataflow run ID of the dataflow that you want to view to see specific details about that dataflow run.
+
 ![Dataflow page](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png?lang=en)
 
-1. Next, select the **[!UICONTROL Data governance]** tab, to view the schema details.
+To see details around your schema, select **[!UICONTROL Data governance]**.
+
 ![Zendesk schema](../../../../images/tutorials/create/zendesk/dataset-governance.png?lang=en)
 
-1. Finally, select the **[!UICONTROL Preview dataset]** button to display the data that was ingested.
+Finally, select **[!UICONTROL Preview dataset]** to display the data that was ingested.
+
 ![Zendesk dataset](../../../../images/tutorials/create/zendesk/preview-dataset.png?lang=en)
 
 ### Zendesk schema
 
-* The table below lists the supported mappings that must be set up for Zendesk. 
-* Click [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) for the link to the API.
+The table below lists the supported mappings that must be set up for Zendesk. 
+
+>[!TIP]
+>
+>See [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) for more information on the API.
 
 | Source | Schema Target | Type |
 |---|---|---|
@@ -128,7 +139,7 @@ To validate that you have correctly set up the source; and Zendesk profiles are 
 ### Limits {#limits}
 
 * The [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) returns a maximum of 1000 records per page. 
-    * The value for the ``filter[type]`` parameter is set to ``user`` and hence the Zendesk connection only returns users.
-    * The number of results per page is managed by the ``page[size]`` parameter. The value is set to ``100``. This is done to reduce the impact of speed reduction constraints set by Zendesk.
-    * See [Limits](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) and [Pagination](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1). 
-    * You can also refer to [Paginating through lists using cursor pagination](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).
+  * The value for the ``filter[type]`` parameter is set to ``user`` and hence the Zendesk connection only returns users.
+  * The number of results per page is managed by the ``page[size]`` parameter. The value is set to ``100``. This is done to reduce the impact of speed reduction constraints set by Zendesk.
+  * See [Limits](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) and [Pagination](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1). 
+  * You can also refer to [Paginating through lists using cursor pagination](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).
