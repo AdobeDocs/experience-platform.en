@@ -173,6 +173,10 @@ In the dialog that appears, select the datastream whose mapping rules you want t
 
 ![Image showing an existing datastream being selected](../images/datastreams/data-prep/select-mapping-rules.png)
 
+>[!NOTE]
+>
+>Datastreams can only be imported within the same [sandbox](../../sandboxes/home.md). In other words, you cannot import a datastream from one sandbox to another.
+
 The next screen shows a preview of the saved mapping rules for the selected datastream. Make sure that the displayed mappings are what you expect, and then select **[!UICONTROL Import]** to confirm and add the mappings to the new datastream.
 
 ![Image showing the mapping rules to be imported](../images/datastreams/data-prep/import-mapping-rules.png)

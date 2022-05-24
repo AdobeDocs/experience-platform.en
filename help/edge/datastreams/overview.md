@@ -148,9 +148,15 @@ This service controls whether and how data is sent to [event forwarding](../../t
 >
 >You can select **[!UICONTROL Manually enter IDs]** to type in the property and environment names instead of using the dropdown menus.
 
-## Copy a datastream
+## Copy a datastream {#copy}
 
-You can create a copy of any existing datastream and alter its details as needed. From the main page in the [!UICONTROL Datastreams] workspace, select the ellipsis (**....**) for the datastream in question, then select **[!UICONTROL Copy]**.
+You can create a copy of an existing datastream and alter its details as needed.
+
+>[!NOTE]
+>
+>Datastreams can only be copied within the same [sandbox](../../sandboxes/home.md). In other words, you cannot copy a datastream from one sandbox to another.
+
+From the main page in the [!UICONTROL Datastreams] workspace, select the ellipsis (**....**) for the datastream in question, then select **[!UICONTROL Copy]**.
 
 ![Image showing the [!UICONTROL Copy] option being selected from the datastream list view](../images/datastreams/overview/copy-datastream-list.png)
 
