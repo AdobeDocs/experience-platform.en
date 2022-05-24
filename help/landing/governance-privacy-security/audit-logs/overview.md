@@ -52,7 +52,7 @@ You can view audit logs for different Experience Platform features within the **
 
 ![Audit logs dashboard](../../images/audit-logs/audits.png)
 
-Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only go back for a maximum period of 365 days. If you require data of more than 365 days, you should export logs to meet your internal policy requirements.
+Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only go back for a maximum period of 365 days. If you require data of more than 365 days, you should export logs at a regular cadence to meet your internal policy requirements.
 
 Select an event from the list to view its details in the right rail.
 
