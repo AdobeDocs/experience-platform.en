@@ -44,7 +44,7 @@ Permissions is the area of Experience Cloud where administrators can define user
 
 ## Attribute-based access control API
 
-The attribute-based access control API allows you to programmatically manage roles, policies, and products within Platform using APIs.
+The attribute-based access control API allows you to programmatically manage roles, policies, and products within Platform using APIs. For more information see the guide on [using the API to manage attribute-based access control configurations](api/overview.md).
 
 ## Attribute-based access control in Adobe Experience Platform
 
