@@ -36,7 +36,7 @@ The returned audit log data contains the following information on all queries th
 | Column name  | Description |
 |---|---|
 | [!UICONTROL Timestamp] | The exact date and time of the action performed in a `month/day/year hour:minute AM/PM` format.  |
-| [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. When using the [!UICONTROL Scheduled query] category this is the **schedule name**. When using the [!UICONTROL Query template] category, this is the **template name**. When using the [!UICONTROL Query] category, this is the **XXXXXX**  |
+| [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. When using the [!UICONTROL Scheduled query] category this is the **schedule name**. When using the [!UICONTROL Query template] category, this is the **template name**. When using the [!UICONTROL Query] category, this is the **session ID**  |
 | [!UICONTROL Category] | This field matches the category selected by you in the filter dropdown.  |
 | [!UICONTROL Action] |  This can be either create, delete, update, or execute. The available actions depend on the category chosen as a filter. |
 | [!UICONTROL User] | This field provides the user ID that executed the query. | 
@@ -51,9 +51,13 @@ Select any row of audit log results to open a details panel to the right of the 
 
 ![Audits dashboard Activity log tab with the details panel highlighted.](../images/audit-log/details-panel.png)
 
->[!NOTE]
->
->The details panel can be used to find the [!UICONTROL Asset ID]. The value of the [!UICONTROL Asset ID] changes depending on the category used in the audit. When using the [!UICONTROL Query template] category, the [!UICONTROL Asset ID] is the **template ID**. When using the [!UICONTROL Scheduled query] category, the [!UICONTROL Asset ID] is the  **schedule ID**. When using the [!UICONTROL Query] category, the [!UICONTROL Asset ID] is the  **XXXXXX**.
+The details panel can be used to find the [!UICONTROL Asset ID] and the [!UICONTROL Event status]. The value of the [!UICONTROL Asset ID] changes depending on the category used in the audit.
+
+* When using the [!UICONTROL Query template] category, the [!UICONTROL Asset ID] is the **template ID**.
+* When using the [!UICONTROL Scheduled query] category, the [!UICONTROL Asset ID] is the  **schedule ID**.
+* When using the [!UICONTROL Query] category, the [!UICONTROL Asset ID] is the  **session ID**.
+
+When using the [!UICONTROL Query] category, the [!UICONTROL Event status] field provides a list of all query IDs executed by the user within that session.
 
 ## Available filters for [!DNL Query Service] audit log categories {#available-filters}
 
