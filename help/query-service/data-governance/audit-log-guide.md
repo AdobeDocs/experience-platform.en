@@ -29,7 +29,7 @@ To perform an audit for [!DNL Query Service] activities, select **[!UICONTROL Au
 
 ![The Platform UI audit log dashboard with "Audits" in the left navigation and filter controls highlighted.](../images/audit-log/filter-controls.png)
 
-From the [!UICONTROL Audits] dashboard [!UICONTROL Activity log] tab, you can filter all the recorded Platform actions by any of the [!DNL Query Service] categories. The log results can be further filtered based on the time period they were executed, the action/function taken, or user that enacted the query. See the audit log documentation for [full instructions on how to filter the logs based on category, action, user, and status](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
+From the [!UICONTROL Audits] dashboard [!UICONTROL Activity log] tab, you can filter all the recorded Platform actions by any of the [!DNL Query Service] categories. The log results can be further filtered based on the time period they were executed, the action/function taken, or the user that enacted the query. See the audit log documentation for [full instructions on how to filter the logs based on category, action, user, and status](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
 The returned audit log data contains the following information on all queries that meet your chosen filter criteria.
 
