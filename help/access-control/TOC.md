@@ -12,11 +12,11 @@ feature: Access Control
 * Attribute-based access control {#abac}
   * [Overview](abac/overview.md)
   * Attribute-based access control API {#abac-api}
-    * [Overview](flac/api/overview.md)
-    * [Getting started](flac/api/getting-started.md)
-    * [Roles](flac/api/roles.md)
-    * [Policies](flac/api/policies.md)
-    * [Products](flac/api/products.md)
+    * [Overview](abac/api/overview.md)
+    * [Getting started](abac/api/getting-started.md)
+    * [Roles](abac/api/roles.md)
+    * [Policies](abac/api/policies.md)
+    * [Products](abac/api/products.md)
 * Access control UI {#ui}
   * [Overview](ui/overview.md)
   * [Select a product profile](ui/browse.md)
