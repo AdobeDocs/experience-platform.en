@@ -18,40 +18,31 @@ Salesforce CRM uses [OAuth 2 with Password Grant](https://experienceleague.adobe
 
 To help you better understand how and when you should use the Salesforce CRM destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1
+### Use case
 
-Add customer contacts within an account to track their engagement journey.
-
-### Use case #2
-
-Send a list email broadcast to customer contacts within an account.
+Marketing teams can add new customer contacts into CRM through Adobe Experience Platform, build segments from their own offline data, and send these segments to Salesforce CRM. Once contacts are added they can be used in various ways. For example sending emails for marketing campaigns or to display ads in their social media feeds.
 
 ## Prerequisites {#prerequisites}
+
+Before activating data to the Salesforce CRM destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
 The following items are required before you start configuring the destination.
 
 1. You need to have a Salesforce account.
     * Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a Salesforce account, if you do not have one already.
-1. After logging in to the Salesforce portal, you will need to create a connected app within Salesforce.
-    * This allows [!DNL Experience Platform] to communicate with Salesforce CRM. 
-    * Navigate to the **[!DNL PLATFORM TOOLS]** > **[!DNL Apps]** > **[!DNL App Manager]** page. 
-    * Then select **[New Connected App]** button *(on the top right)*. 
-    * Fill the required details and finally select the **[!UICONTROL Save]** button.
-    * Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) if you need additional guidance.
-1. After selecting **[!UICONTROL Save]**, the **[!UICONTROL Consumer Key]** and **[!UICONTROL Consumer Secret]** will be generated.
-
-![Your Salesforce domain](../../assets/catalog/crm/salesforce/salesforce-domain.png)
-
-![New Connected App](../../assets/catalog/crm/salesforce/create-connected-account.png)
-
-![Consumer Key and Secret](../../assets/catalog/crm/salesforce/connected-app-keys.png)
-
->[!IMPORTANT]
->
-> * Ensure you select **[!UICONTROL Enable OAuth Settings]**.
-> * Select these scopes: chatter_api, lightning, visualforce, content, openid, full, api, web, refresh_token, offline_access.
-
-Before activating data to the Salesforce CRM destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+1. Note down your [Salesforce domain](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5).
+1. Create a [connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5), enable its [OAuth Settings](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) and once created successfully note down its *Consumer Key* and *Consumer Secret*. Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) if you need additional guidance.
+1. Select the following [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) for the connected app in the Salesforce user interface:
+    - chatter_api
+    - lightning
+    - visualforce
+    - content
+    - openid
+    - full
+    - api
+    - web
+    - refresh_token
+    - offline_access
 
 ## Supported identities {#supported-identities}
 
@@ -59,7 +50,7 @@ Salesforce CRM supports the activation of identities described in the table belo
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|email |Email address|Note both plain text and SHA256 hashed email addresses are supported by [!DNL Adobe Experience Platform]. If the Experience platform source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.<br/><br/> Note that **Salesforce CRM** does not support hashed email addresses, hence only plain text data without transformation is sent to the destination.|
+|email |Email address|Note that *Salesforce CRM* does not support hashed email addresses, hence only plain text data without transformation is sent to the destination.|
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -80,21 +71,17 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-* Within the [!DNL Experience Platform], navigate to **Destinations**. 
-* Select the **Catalog** tab and search for *Salesforce CRM*, or select *CRM* within **Categories**. 
-* Then select **[!UICONTROL Set up]**. After you have established a connection to the destination, the UI label changes to **[!UICONTROL Activate Segments]**.
 ![Catalog](../../assets/catalog/crm/salesforce/catalog.png)
 
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-1. Next, you are shown a wizard which assists you in configuring the Salesforce CRM destination. Create the new destination by selecting **[!UICONTROL Configure new destination]** and fill in the details below and select **[!UICONTROL Connect to destination]**.
 ![Account Info](../../assets/catalog/crm/salesforce/account-info.png)
 
 *  **[!UICONTROL Password]**: Your Salesforce account password.
-*  **[!UICONTROL Client ID]**: Consumer Key generated during the [prerequisites](#prerequisites) step.
-*  **[!UICONTROL Client Secret]**: Consumer Secret generated during the [prerequisites](#prerequisites) step.
+*  **[!UICONTROL Client ID]**: Your Salesforce connected app Consumer Key.
+*  **[!UICONTROL Client Secret]**: Your Salesforce connected app Consumer Secret.
 *  **[!UICONTROL Username]**: Your Salesforce account username.
 
 1. If the details provided are valid, the UI displays a **Connected** status with a green check mark, you can then proceed to the next step.
@@ -106,7 +93,7 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Custom Domain]**: Your Salesforce domain as shown within [prerequisites](#prerequisites).
+*  **[!UICONTROL Custom Domain]**: Your Salesforce domain.
 
 ## Activate segments to this destination {#activate}
 
