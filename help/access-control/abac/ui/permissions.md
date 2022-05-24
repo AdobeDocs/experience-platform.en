@@ -8,6 +8,10 @@ hidefromtoc: true
 
 # Manage permissions for a role
 
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+
 Immediately after [creating a new role](#create-a-new-role), you are returned to the **[!UICONTROL Roles]** tab. If you are editing permissions for an existing role, select the role from the **[!UICONTROL Roles]** tab. Alternatively, use the filter option to filter the results to find a role.
 
 ## Filter roles

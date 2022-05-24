@@ -6,7 +6,11 @@ hide: true
 hidefromtoc: true
 ---
 
-# Attribute-based access control permissions UI guide
+# Permissions guide
+
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
 
 In order to access attribute-based access control permissions for [!DNL Experience Cloud], you must be an administrator for your organization that has a subscription to [!DNL Experience Cloud]. While Adobe supports flexible administrator hierarchies for your organizations, you must be a product administrator for Adobe Experience Platform to configure permissions. See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
 
@@ -17,6 +21,10 @@ Once you have admin privileges, go to [Adobe Experience Cloud](https://experienc
 ![flac-select-product](../../images/flac-ui/flac-select-product.png)
 
 The attribute-based access control workspace for Adobe Experience Cloud appears, opening on the **[!UICONTROL Roles]** page. This page allows you to view all roles and manage various settings as outlined in this document.
+
+>[!IMPORTANT]
+>
+>Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Product Profiles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
 
 ![flac-select-roles](../../images/flac-ui/flac-select-roles.png)
 

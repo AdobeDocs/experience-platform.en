@@ -8,6 +8,10 @@ hidefromtoc: true
 
 # Manage policies
 
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+
 Policies are statements that bring attributes together to establish permissible and impermissible actions. Policies can either be local or global, and can override other policies.
 
 ## Create a new policy
