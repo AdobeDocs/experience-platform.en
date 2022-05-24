@@ -36,11 +36,15 @@ Attribute-based access control involves the following components:
 
 ## Permissions
 
+>[!IMPORTANT]
+>
+>Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of the Adobe Admin Console, to manage attribute-based access control configurations for users, labels, roles, and other resources in your organization.
+
 Permissions is the area of Experience Cloud where administrators can define user roles and access polices to manage access permissions for features, capabilities, and objects within a product application. Through the Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allows you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the Permissions guide.
 
 ## Attribute-based access control API
 
-The attribute-based access control API allows you to programmatically manage roles, products, permission categories, and permission sets within Platform using APIs.
+The attribute-based access control API allows you to programmatically manage roles, policies, and products within Platform using APIs.
 
 ## Attribute-based access control in Adobe Experience Platform
 
@@ -48,7 +52,7 @@ The following sections provide information on how attribute-based access control
 
 ### Access control
 
-Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
+Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration. Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of the Adobe Admin Console, to manage attribute-based access control configurations for users, labels, roles, and other resources in your organization.
 
 For more information on access control, see the [access control overview](../home.md).
 
