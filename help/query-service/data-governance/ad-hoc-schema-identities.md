@@ -4,7 +4,7 @@ description: Adobe Experience Platform Query Service allows you to set an identi
 ---
 # Set primary identities in an ad hoc dataset
 
-Adobe Experience Platform Query Service allows you to mark dataset columns as either primary or secondary identities using constraints for the SQL `ALTER TABLE` command. Use this feature to ensure that flagged fields are consistent with data privacy requirements. This command allows you to add or delete constraints for both primary and secondary identity table columns directly through SQL.
+Adobe Experience Platform Query Service allows you to mark dataset columns as either primary or secondary identities using constraints for the SQL `ALTER TABLE` command. You can use this feature to ensure that flagged fields are consistent with data privacy requirements. This command allows you to add or delete constraints for both primary and secondary identity table columns directly through SQL.
 
 ## Getting started 
 
@@ -69,6 +69,6 @@ An example of a returned table is displayed below.
 
 The following list explains important considerations for updating identities in existing datasets when using XDM.
 
-1. To specify a column as an identity, you **must** also define the namespace to be preserved as metadata for the column.
-1. XDM does not support specifying a column name in the namespace attribute.
-1. If your schema uses the `identityMap` XDM field, the root or top-level `identityMap` object **must** be labeled as an identity or primary identity.
+* To specify a column as an identity, you **must** also define the namespace to be preserved as metadata for the column.
+* XDM does not support specifying a column name in the namespace attribute.
+* If your schema uses the `identityMap` XDM field, the root or top-level `identityMap` object **must** be labeled as an identity or primary identity.
