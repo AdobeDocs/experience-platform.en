@@ -4,6 +4,10 @@ description: Learn how to schedule a time to live (TTL) for a dataset in the Ado
 ---
 # Manage dataset TTLs
 
+>[!IMPORTANT]
+>
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+
 The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to schedule a time to live (TTL) for a dataset.
 
 This document covers how to schedule and manage dataset TTLs in the Platform UI.

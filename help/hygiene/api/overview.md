@@ -5,6 +5,10 @@ exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 ---
 # Data Hygiene API guide
 
+>[!IMPORTANT]
+>
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+
 The Data Hygiene API allows you to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform, as well as schedule time-to-live (TTL) protocols for datasets. This guide covers the prerequisite steps to using the API and provides links to more endpoint-specific documentation.
 
 ## Getting started

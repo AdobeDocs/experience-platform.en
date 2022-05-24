@@ -4,6 +4,10 @@ description: The /ttl endpoint in the Data Hygiene API allows you to programmati
 ---
 # Dataset time-to-live (TTL) endpoint
 
+>[!IMPORTANT]
+>
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+
 The `/ttl` endpoint in the Data Hygiene API allows you to schedule time-to-live (TTL) protocols for datasets in Adobe Experience Platform.
 
 A dataset TTL is only a timed-delayed delete operation. The dataset is not protected in the interim, so it may be be deleted by other means before its expiry is reached.

@@ -4,6 +4,10 @@ description: The /workorder endpoint in the Data Hygiene API allows you to progr
 ---
 # Work order endpoint
 
+>[!IMPORTANT]
+>
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+
 The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for consumer identities in Adobe Experience Platform.
 
 ## Getting started

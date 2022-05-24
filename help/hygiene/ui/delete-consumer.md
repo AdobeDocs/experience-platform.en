@@ -4,6 +4,10 @@ description: Learn how to delete consumer records in the Adobe Experience Platfo
 ---
 # Delete consumer records
 
+>[!IMPORTANT]
+>
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+
 The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-time Customer Profile.
 
 ## Prerequisites

@@ -9,6 +9,10 @@ description: Learn how to view and manage existing data hygiene work orders in t
 >title="Work order IDs"
 >abstract="When a data hygiene request is sent to the system, a work order is created to execute the requested task. In other words, a work order represents a specific data hygiene process, which includes its current status and other related details. Each work order is automatically assigned its own unique ID upon creation. To learn more, see the data hygiene UI guide."
 
+>[!IMPORTANT]
+>
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+
 When a data hygiene request is sent to the system, a work order is created to execute the requested task. A work order represents a specific data hygiene process (such as deleting consumer data), which includes its current status and other related details.
 
 This guide covers how to view and manage existing work orders in the Adobe Experience Platform UI.

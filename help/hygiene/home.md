@@ -4,6 +4,10 @@ description: Adobe Experience Platform Data Hygiene allows you to manage the lif
 ---
 # Data hygiene on Adobe Experience Platform
 
+>[!IMPORTANT]
+>
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+
 Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
 
 Platform's data hygiene capabilities allow you manage your stored consumer data through programmatic deletions of consumer records and datasets. 
