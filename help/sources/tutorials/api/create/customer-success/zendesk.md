@@ -28,8 +28,8 @@ In order to access your [!DNL Zendesk] account on Platform, you must provide val
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| `host` | The unique domain specific to your account created during the registration process.| *xxxxx.zendesk.com*|
-| `accessToken` | Zendesk API token. |*0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf*|
+| `host` | The unique domain specific to your account created during the registration process.| `https://yoursubdomain.zendesk.com`|
+| `accessToken` | Zendesk API token. |`0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 For more information on authenticating your [!DNL Zendesk] source, see the [[!DNL Zendesk] source overview](../../../../connectors/customer-success/zendesk.md).
 
@@ -65,13 +65,13 @@ curl -X POST \
         "name": "Zendesk base connection",
         "description": "Zendesk base connection to authenticate to Platform",
         "connectionSpec": {
-            "id": "2526ee57-0af4-46ea-a477-720a53108145",
+            "id": "0a27232b-2c6e-4396-b8c6-c9fc24e37ba4",
             "version": "1.0"
         },
         "auth": {
-            "specName": "OAuth generic-rest-connector",
+            "specName": "OAuth2 Refresh Code",
             "params": {
-                "host":{ZENDESK_SUBDOMAIN}
+                "host": "{HOST}",
                 "accessToken": "{ACCESS_TOKEN}"
             }
         }
@@ -85,6 +85,8 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
 | `auth.params.` | Contains the credentials required to authenticate your source. |
+| `auth.params.host` | The unique domain specific to your account created during the registration process. The format for the subdomain is `https://yoursubdomain.zendesk.com`.|
+| `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
 **Response**
 
@@ -142,7 +144,7 @@ A successful response returns the structure of the queried file. In the example 
     "schema": {
         "type": "object",
         "properties": {
-            "results": {
+            "result": {
                 "type": "object",
                 "properties": {
                     "organization_id": {
@@ -279,14 +281,7 @@ A successful response returns the structure of the queried file. In the example 
     },
     "data": [
         {
-            "meta": {
-                "has_more": true,
-                "after_cursor": "eyJmaWVsZCI6ImNyZWF0ZWRfYXQiLCJkZXNjIjp0cnVlLCJ0aWVCcmVha0ZpZWxkIjoiaWQiLCJ0aWVCcmVha0Rlc2MiOmZhbHNlLCJzb3J0VmFsdWVzIjpbMTY1MjE3MjA4NTAwMCw2MDMwODg3MTM5NzI5XSwiZXhwb3J0ZWRUaHVzRmFyIjoxMDAsInNlc3Npb25TdGFydCI6MTY1MjQzNDE4MzkwOCwiY3JlYXRlZEF0IjoxNjUyNDM0MTgzOTI2LCJzYWx0ZWRSZXF1ZXN0SGFzaCI6LTczMzQxODQ0NSwic2FsdGVkQ3Vyc29ySGFzaCI6MjgxNzM0NzU2fQ=="
-            },
-            "links": {
-                "next": "https://d3v-dxinfosys.zendesk.com/api/v2/search/export.json?filter%5Btype%5D=user&page%5Bafter%5D=eyJmaWVsZCI6ImNyZWF0ZWRfYXQiLCJkZXNjIjp0cnVlLCJ0aWVCcmVha0ZpZWxkIjoiaWQiLCJ0aWVCcmVha0Rlc2MiOmZhbHNlLCJzb3J0VmFsdWVzIjpbMTY1MjE3MjA4NTAwMCw2MDMwODg3MTM5NzI5XSwiZXhwb3J0ZWRUaHVzRmFyIjoxMDAsInNlc3Npb25TdGFydCI6MTY1MjQzNDE4MzkwOCwiY3JlYXRlZEF0IjoxNjUyNDM0MTgzOTI2LCJzYWx0ZWRSZXF1ZXN0SGFzaCI6LTczMzQxODQ0NSwic2FsdGVkQ3Vyc29ySGFzaCI6MjgxNzM0NzU2fQ%3D%3D&query=type%3Auser"
-            },
-            "results": {
+            "result": {
                 "id": 6106699702801,
                 "url": "https://d3v-dxinfosys.zendesk.com/api/v2/users/6106699702801.json",
                 "name": "test",
@@ -343,7 +338,7 @@ curl -X POST \
         "description": "Zendesk Source Connection",
         "baseConnectionId": "70383d02-2777-4be7-a309-9dd6eea1b46d",
         "connectionSpec": {
-            "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
+            "id": "0a27232b-2c6e-4396-b8c6-c9fc24e37ba4",
             "version": "1.0"
         },
         "data": {
@@ -470,184 +465,182 @@ curl -X POST \
         "version": 0,
         "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
         "xdmVersion": "1.0",
-        "id": null,
         "mappings": [
-    "mappings": [
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.id",
-            "destination": "_extconndev.id",
-            "name": "id",
-            "description": "Zendesk"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.external_id",
-            "destination": "_extconndev.external_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.role_type",
-            "destination": "_extconndev.role_type"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.custom_role_id",
-            "destination": "_extconndev.custom_role_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.default_group_id",
-            "destination": "_extconndev.default_group_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.phone",
-            "destination": "_extconndev.phone"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.shared_phone_number",
-            "destination": "_extconndev.shared_phone_number"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.verified",
-            "destination": "_extconndev.verified"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.alias",
-            "destination": "_extconndev.alias"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.last_login_at",
-            "destination": "_extconndev.last_login_at"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.signature",
-            "destination": "_extconndev.signature"
-        },        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.details",
-            "destination": "_extconndev.details"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.notes",
-            "destination": "_extconndev.notes"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.active",
-            "destination": "_extconndev.active"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.created_at",
-            "destination": "_extconndev.created_at"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.email",
-            "destination": "_extconndev.email"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.iana_time_zone",
-            "destination": "_extconndev.iana_time_zone"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.organization_id",
-            "destination": "_extconndev.organization_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.locale",
-            "destination": "_extconndev.locale"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.locale_id",
-            "destination": "_extconndev.locale_id"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.moderator",
-            "destination": "_extconndev.moderator"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.name",
-            "destination": "_extconndev.name"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.only_private_comments",
-            "destination": "_extconndev.only_private_comments"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.report_csv",
-            "destination": "_extconndev.report_csv"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.restricted_agent",
-            "destination": "_extconndev.restricted_agent"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.result_type",
-            "destination": "_extconndev.result_type"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.role",
-            "destination": "_extconndev.role"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.shared",
-            "destination": "_extconndev.shared"
-        },        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.shared_agent",
-            "destination": "_extconndev.shared_agent"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.time_zone",
-            "destination": "_extconndev.time_zone"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.two_factor_auth_enabled",
-            "destination": "_extconndev.two_factor_auth_enabled"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.suspended",
-            "destination": "_extconndev.suspended"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.updated_at",
-            "destination": "_extconndev.updated_at"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.url",
-            "destination": "_extconndev.url"
-        },
-        {
-            "sourceType": "ATTRIBUTE",
-            "source": "results.verified",
-            "destination": "_extconndev.verified"
-        }
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.id",
+                "destination": "_extconndev.id",
+                "name": "id",
+                "description": "Zendesk"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.external_id",
+                "destination": "_extconndev.external_id"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.role_type",
+                "destination": "_extconndev.role_type"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.custom_role_id",
+                "destination": "_extconndev.custom_role_id"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.default_group_id",
+                "destination": "_extconndev.default_group_id"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.phone",
+                "destination": "_extconndev.phone"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.shared_phone_number",
+                "destination": "_extconndev.shared_phone_number"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.verified",
+                "destination": "_extconndev.verified"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.alias",
+                "destination": "_extconndev.alias"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.last_login_at",
+                "destination": "_extconndev.last_login_at"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.signature",
+                "destination": "_extconndev.signature"
+            },        {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.details",
+                "destination": "_extconndev.details"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.notes",
+                "destination": "_extconndev.notes"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.active",
+                "destination": "_extconndev.active"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.created_at",
+                "destination": "_extconndev.created_at"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.email",
+                "destination": "_extconndev.email"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.iana_time_zone",
+                "destination": "_extconndev.iana_time_zone"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.organization_id",
+                "destination": "_extconndev.organization_id"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.locale",
+                "destination": "_extconndev.locale"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.locale_id",
+                "destination": "_extconndev.locale_id"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.moderator",
+                "destination": "_extconndev.moderator"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.name",
+                "destination": "_extconndev.name"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.only_private_comments",
+                "destination": "_extconndev.only_private_comments"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.report_csv",
+                "destination": "_extconndev.report_csv"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.restricted_agent",
+                "destination": "_extconndev.restricted_agent"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.result_type",
+                "destination": "_extconndev.result_type"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.role",
+                "destination": "_extconndev.role"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.shared",
+                "destination": "_extconndev.shared"
+            },        {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.shared_agent",
+                "destination": "_extconndev.shared_agent"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.time_zone",
+                "destination": "_extconndev.time_zone"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.two_factor_auth_enabled",
+                "destination": "_extconndev.two_factor_auth_enabled"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.suspended",
+                "destination": "_extconndev.suspended"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.updated_at",
+                "destination": "_extconndev.updated_at"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.url",
+                "destination": "_extconndev.url"
+            },
+            {
+                "sourceType": "ATTRIBUTE",
+                "source": "result.verified",
+                "destination": "_extconndev.verified"
+            }
         ]
     }'
 ```
