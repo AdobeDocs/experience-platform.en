@@ -48,13 +48,19 @@ A successful response returns a list of entitled products belonging to your orga
 {
   "products": [
     {
-      "id": "acp",
+      "id": "{ID}",
       "name": "Adobe Experience Platform",
-      "serviceCode": "acp"
+      "serviceCode": "{SERVICE_CODE}"
     }
   ]
 }
 ```
+
+| Property | Description |
+| --- | --- |
+| `id` | The corresponding ID of the queried product. |
+| `name` | The name of the queried product. |
+| `serviceCode` | The corresponding service code of the queried product. |
 
 ## Look up permission categories by product ID 
 
@@ -125,6 +131,11 @@ A successful response returns the permission categories associated with the prod
   ]
 }
 ```
+
+| Property | Description |
+| --- | --- |
+| `category` | The permission categories that are available within the queried product ID. |
+| `name` | The name of the permission category. |
 
 ## Look up permission sets by product ID
 
@@ -216,3 +227,13 @@ A successful response returns the permission sets associated with the product ID
   ]
 }
 ```
+
+| Property | Description |
+| --- | --- |
+| `permission-sets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
+| `id` | The corresponding ID of the queried permission set. |
+| `name` | The corresponding name of the queried permission set. |
+| `category` | The available permission category. |
+| `permissions` | Permissions include the ability to view and/or use Platform features, such as creating sandboxes, defining schemas, and managing datasets. |
+| `permissions.resource` | The asset or object that a subject can or cannot access. Resources can be files, applications, servers, or even APIs. |
+| `permissions.actions` | The action that a subject is permitted to do against a queried resource. Possible values include: `view`, `read`, `create`, `edit`, and `delete` |
