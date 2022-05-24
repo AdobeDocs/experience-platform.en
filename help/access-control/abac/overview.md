@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;
 title: Attribute-Based Access Control Overview
-description: This document provides information on Attribute-Based Access Control in Adobe Experience Platform
+description: This document provides information on attribute-based access control in Adobe Experience Platform
 hide: true
 hidefromtoc: true
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
