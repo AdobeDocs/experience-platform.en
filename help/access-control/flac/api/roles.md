@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Con
 solution: Experience Platform
 title: Roles API Endpoint
 description: The /roles endpoint in the Attribute-Based Access Control API allows you to  programmatically manage roles in Adobe Experience Platform.
+hide: true
+hidefromtoc: true
 ---
 # Roles endpoint
 

@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Con
 solution: Experience Platform
 title: Policies API Endpoint
 description: The /policies endpoint in the Attribute-Based Access Control API allows you to  programmatically manage policies in Adobe Experience Platform.
+hide: true
+hidefromtoc: true
 ---
 # Policies endpoint
 
@@ -127,7 +129,7 @@ A successful response returns a list of existing policies.
 | `description` | (Optional) A property that can be added to provide further information on a particular policy. |
 | `status` | The current status of a policy. This property defines whether a policy is currently `active` or `inactive`. |
 | `subjectCondition` | The conditions applied to a subject. A subject is a user with certain attributes requesting access to a resource to perform an action. In this case, `subjectCondition` are query-like conditions applied to the subject attributes. |
-| `rules` | The set of rules that define a policy. Rules define which attribute combinations are authorized in order for the subject to successfully perform an action to the queried asset or object. |
+| `rules` | The set of rules that define a policy. Rules define which attribute combinations are authorized in order for the subject to successfully perform an action to the resource. |
 | `rules.effect` | The effect that results after considering values for `action`, `condition` and `resource`. Possible values include: `permit`, `deny`, or `indeterminate`. |
 | `rules.resource` | The asset or object that a subject can or can't access.  Resources can be files, applications, servers, or even APIs. |
 | `rules.condition` | The conditions applied to a resource. For example, if a resource is a schema, then a schema can have certain labels applied to it that contribute to whether an action against that schema is permissible or impermissible. |
@@ -208,12 +210,12 @@ A successful request returns information on the queried policy ID.
 | `name` | The name of the policy. |
 | `description` | (Optional) A property that can be added to provide further information on a particular policy. |
 | `status` | The current status of a policy. This property defines whether a policy is currently `active` or `inactive`. |
-| `subjectCondition` | |
-| `rules` | |
-| `rules.effect` | |
-| `rules.resource` | |
-| `rules.condition` | |
-| `rules.action` | |
+| `subjectCondition` | The conditions applied to a subject. A subject is a user with certain attributes requesting access to a resource to perform an action. In this case, `subjectCondition` are query-like conditions applied to the subject attributes. |
+| `rules` | The set of rules that define a policy. Rules define which attribute combinations are authorized in order for the subject to successfully perform an action to the resource. |
+| `rules.effect` | The effect that results after considering values for `action`, `condition` and `resource`. Possible values include: `permit`, `deny`, or `indeterminate`. |
+| `rules.resource` | The asset or object that a subject can or can't access.  Resources can be files, applications, servers, or even APIs. |
+| `rules.condition` | The conditions applied to a resource. For example, if a resource is a schema, then a schema can have certain labels applied to it that contribute to whether an action against that schema is permissible or impermissible. |
+| `rules.action` | The action that a subject is permitted to do against a queried resource. Possible values include: `read`, `create`, `edit`, and `delete`. |
 
 
 ## Create a policy {#create}
@@ -258,11 +260,11 @@ curl -X POST \
 | `name` | The name of the policy. |
 | `description` | (Optional) A property that can be added to provide further information on a particular policy. |
 | `imsOrgId` | The organization that contains the policy. |
-| `rules` |
-| `rules.effect`|
-| `rules.resources` |
-| `rules.condition` |
-| `rules.actions` |
+| `rules` | The set of rules that define a policy. Rules define which attribute combinations are authorized in order for the subject to successfully perform an action to the resource. |
+| `rules.effect` | The effect that results after considering values for `action`, `condition` and `resource`. Possible values include: `permit`, `deny`, or `indeterminate`. |
+| `rules.resource` | The asset or object that a subject can or can't access.  Resources can be files, applications, servers, or even APIs. |
+| `rules.condition` | The conditions applied to a resource. For example, if a resource is a schema, then a schema can have certain labels applied to it that contribute to whether an action against that schema is permissible or impermissible. |
+| `rules.action` | The action that a subject is permitted to do against a queried resource. Possible values include: `read`, `create`, `edit`, and `delete`. |
 
 **Response**
 
@@ -298,12 +300,11 @@ A successful request returns the newly created policy, including its unique poli
 | --- | --- |
 | `id` | The ID that corresponds with a policy. This identifier is auto-generated and can be used to lookup, update, and delete a policy. |
 | `name` | The name of a policy. |
-| `rules` |
-| `rules.effect` |
-| `rules.resource` |
-| `rules.condition` |
-| `rules.action` |
-| `subjectCondition` |
+| `rules` | The set of rules that define a policy. Rules define which attribute combinations are authorized in order for the subject to successfully perform an action to the resource. |
+| `rules.effect` | The effect that results after considering values for `action`, `condition` and `resource`. Possible values include: `permit`, `deny`, or `indeterminate`. |
+| `rules.resource` | The asset or object that a subject can or can't access.  Resources can be files, applications, servers, or even APIs. |
+| `rules.condition` | The conditions applied to a resource. For example, if a resource is a schema, then a schema can have certain labels applied to it that contribute to whether an action against that schema is permissible or impermissible. |
+| `rules.action` | The action that a subject is permitted to do against a queried resource. Possible values include: `read`, `create`, `edit`, and `delete`. |
 
 
 ## Update a policy by policy ID {#put}

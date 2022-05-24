@@ -2,6 +2,8 @@
 keywords: Experience Platform;home;popular topics;Attribute-Based Access Control;attribute-based access control
 title: Getting Started with the Attribute-Based Access Control
 description: The Attribute-Based Access Control allows you to programmatically manage roles and policies within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
+hide: true
+hidefromtoc: true
 ---
 # Getting started with the attribute-based access control
 
