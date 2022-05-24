@@ -1,14 +1,14 @@
 ---
-title: Use the ALTER TABLE Command to Set an Identity or a Primary Identity
-description: The functionality of the ALTER TABLE command has been expanded in Adobe Experience Platform Query Service to allow users to set an identity or a primary identity to existing tables. The document explains how to use the ALTER TABLE command to set a primary identity or secondary identity.
+title: Set Primary Identities in an Ad Hoc Dataset
+description: Adobe Experience Platform Query Service allows you to set an identity or a primary identity for ad hoc schema dataset fields directly through the SQL ALTER TABLE command. The document explains how to use the ALTER TABLE command to set a primary identity or secondary identity.
 ---
-# Use the ALTER TABLE command to set an identity or a primary identity
+# Set primary identities in an ad hoc dataset
 
-Adobe Experience Platform Query Service has added new constraints for the `ALTER TABLE` command that allows you to mark dataset columns as either primary or secondary identities. This feature can be used to ensure that flagged fields are consistent with data privacy requirements. With this command you can mark columns as an identity or primary identity, and add or delete constraints for both primary and secondary identity table columns directly through SQL.
+Adobe Experience Platform Query Service allows you to mark dataset columns as either primary or secondary identities using constraints for the SQL `ALTER TABLE` command. Use this feature to ensure that flagged fields are consistent with data privacy requirements. This command allows you to add or delete constraints for both primary and secondary identity table columns directly through SQL.
 
 ## Getting started 
 
-Labelling dataset columns as primary or secondary identiy requires an understanding of the `ALTER TABLE` SQL command and a good understanding of data privacy requirements. Before continuing with this document, please review the following documentation:
+Labelling dataset columns as primary or secondary identity requires an understanding of the `ALTER TABLE` SQL command and a good understanding of data privacy requirements. Before continuing with this document, please review the following documentation:
 
 * [The SQL syntax guide for the `ALTER TABLE` command](../sql/syntax.md). 
 * [The Data Governance overview](../../data-governance/home.md) for more information.
@@ -57,10 +57,18 @@ Use the metadata command `show identities` from the command line interface to di
 > show identities;
 ```
 
+An example of a returned table is displayed below.
+
+```console
+ tableName | columnName | datatype | namespace | ifPrimary
+-----------+------------+----------+-----------+----------
+(0 rows)
+```
+
 ## XDM limitations {#limitations}
 
 The following list explains important considerations for updating identities in existing datasets when using XDM.
 
 1. To specify a column as an identity, you **must** also define the namespace to be preserved as metadata for the column.
 1. XDM does not support specifying a column name in the namespace attribute.
-1. If your schema uses the `identityMap` XDM field, the root or top-level **must** be labeled as an identity or primary identity.
+1. If your schema uses the `identityMap` XDM field, the root or top-level `identityMap` object **must** be labeled as an identity or primary identity.

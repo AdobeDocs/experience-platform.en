@@ -39,6 +39,7 @@ feature: Queries
   - [Sample Adobe Target queries](sample-queries/adobe-target.md)
 - Data Governance {#data-governance}
   - [Audit log guide](data-governance/audit-log-guide.md)
+  - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
@@ -46,7 +47,6 @@ feature: Queries
   - [Spark SQL functions](sql/spark-sql-functions.md)
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
-  - [Alter table](sql/alter-table.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
   - [SSL modes](./clients/ssl-modes.md)
