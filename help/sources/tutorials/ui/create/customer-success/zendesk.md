@@ -75,9 +75,6 @@ To validate that you have correctly set up the source; and Zendesk profiles are 
 1. Next, select the dataflow run ID of the dataflow that you want to view, to see specific details about that dataflow run.
 ![Dataflow page](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png?lang=en)
 
-1. Next, select the **[!UICONTROL Data governance]** tab, to view the schema details.
-![Zendesk schema](../../../../images/tutorials/create/zendesk/dataset-governance.png?lang=en)
-
 1. Finally, select the **[!UICONTROL Preview dataset]** button to display the data that was ingested.
 ![Zendesk dataset](../../../../images/tutorials/create/zendesk/preview-dataset.png?lang=en)
 
