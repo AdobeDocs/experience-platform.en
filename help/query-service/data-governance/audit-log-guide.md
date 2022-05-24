@@ -19,9 +19,9 @@ The audit log categories provided by [!DNL Query Service] are as follows.
 
 | Category | Description |
 |---|---|
-| [!UICONTROL Scheduled query] | This category allows you to audit the schedules that have been created, updated, or deleted within [!DNL Query Service]. |
-| [!UICONTROL Query template] | This category allows you to audit the various actions (create, update, and delete) taken on a query template. |
 | [!UICONTROL Query] | This category allows you to audit query executions. |
+| [!UICONTROL Query template] | This category allows you to audit the various actions (create, update, and delete) taken on a query template. |
+| [!UICONTROL Scheduled query] | This category allows you to audit the schedules that have been created, updated, or deleted within [!DNL Query Service]. |
 
 ## Perform a [!DNL Query Service] audit log {#perform-an-audit-log}
 
@@ -47,17 +47,25 @@ The returned audit log data contains the following information on all queries th
 >
 >More query details are provided by downloading the log results in either CSV or JSON file formats, than are displayed by default in the audit log dashboard.
 
+## Details panel
+
 Select any row of audit log results to open a details panel to the right of the screen.
 
 ![Audits dashboard Activity log tab with the details panel highlighted.](../images/audit-log/details-panel.png)
 
-The details panel can be used to find the [!UICONTROL Asset ID] and the [!UICONTROL Event status]. The value of the [!UICONTROL Asset ID] changes depending on the category used in the audit.
+The details panel can be used to find the [!UICONTROL Asset ID] and the [!UICONTROL Event status]. 
 
-* When using the [!UICONTROL Query template] category, the [!UICONTROL Asset ID] is the **template ID**.
-* When using the [!UICONTROL Scheduled query] category, the [!UICONTROL Asset ID] is the  **schedule ID**.
+The value of the [!UICONTROL Asset ID] changes depending on the category used in the audit.
+
 * When using the [!UICONTROL Query] category, the [!UICONTROL Asset ID] is the  **session ID**.
+* When using the [!UICONTROL Query template] category, the [!UICONTROL Asset ID] is the **template ID** and prefixed with `[!UICONTROL templateID:]`.
+* When using the [!UICONTROL Scheduled query] category, the [!UICONTROL Asset ID] is the  **schedule ID** and prefixed with `[!UICONTROL scheduleID:]`.
 
-When using the [!UICONTROL Query] category, the [!UICONTROL Event status] field provides a list of all query IDs executed by the user within that session.
+The value of the [!UICONTROL Event status] changes depending on the category used in the audit.
+
+* When using the [!UICONTROL Query] category, the [!UICONTROL Event status] field provides a list of all **query IDs** executed by the user within that session.
+* When using the [!UICONTROL Query template] category, the [!UICONTROL Event status] field provides the **template name** as a prefix for the event status.
+* When using the [!UICONTROL Query schedule] category, the [!UICONTROL Event status] field provides the **schedule name** as a prefix for the event status.
 
 ## Available filters for [!DNL Query Service] audit log categories {#available-filters}
 
