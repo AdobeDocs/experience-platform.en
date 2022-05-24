@@ -140,6 +140,8 @@ The table below lists the supported mappings that must be set up for Zendesk.
 |results.url|_extconndev.url|String|
 |results.verified|_extconndev.verified|Boolean|
 
+{style="table-layout:auto"}
+
 ### Limits {#limits}
 
 * The [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) returns a maximum of 1000 records per page. 
