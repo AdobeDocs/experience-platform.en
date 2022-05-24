@@ -31,7 +31,7 @@ When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]*
 
 ![Datastream configuration](../assets/ui/configure-personalization-destinations/datastream-config.png)
 
-For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/fundamentals/datastreams.md).
+For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../edge/datastreams/overview.md).
 
 ## Step 2: Configure your personalization destination {#configure-destination}
 
