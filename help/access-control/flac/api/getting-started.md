@@ -7,6 +7,10 @@ hidefromtoc: true
 ---
 # Getting started with the attribute-based access control
 
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+
 This developer guide provides steps to help you use the attribute-based access control to manage roles, products, permission categories, and permission sets in Adobe Experience Platform, and includes sample API calls for performing various operations.
 
 ## Reading sample API calls

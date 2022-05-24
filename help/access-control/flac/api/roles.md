@@ -8,6 +8,10 @@ hidefromtoc: true
 ---
 # Roles endpoint
 
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+
 Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need. 
 
 The `/roles` endpoint in the attribute-based access control API allows you to  programmatically manage roles in your organization.
@@ -95,10 +99,10 @@ A successful response returns a list of roles in your organization, including in
 | `id` | The ID that corresponds with the role. This ID is auto-generated. |
 | `name` | The name of your role. |
 | `description` | The description property provides additional information on your role. |
-| `roleType` |
+| `roleType` | The designated type of the role. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
-| `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
+| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Platform resources that they have access to. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Look up a role {#lookup}
@@ -162,10 +166,10 @@ A successful response returns details for the queried role ID, including informa
 | `id` | The ID that corresponds with the role. This ID is auto-generated. |
 | `name` | The name of your role. |
 | `description` | The description property provides additional information on your role. |
-| `roleType` |
+| `roleType` | The designated type of the role. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
-| `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
+| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Platform resources that they have access to. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Look up subjects by role ID
@@ -273,7 +277,7 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your role. Ensure that the name of your role is descriptive as you can use this to look up information on your role. |
 | `description` | (Optional) A descriptive value that you can include to provide more information on your role. |
-| `roleType` |
+| `roleType` | The designated type of the role. |
 
 **Response**
 
@@ -313,7 +317,7 @@ A successful response returns your newly created role, with its corresponding ro
 | `roleType` | The designated type of the role. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
-| `subjectAttributes` |  |
+| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Platform resources that they have access to. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Update a role {#patch}
@@ -393,7 +397,7 @@ A successful response returns the updated role, including new values for the pro
 | `roleType` | The designated type of the role. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
-| `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
+| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Platform resources that they have access to. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Update a role by role ID {#put}
@@ -467,7 +471,7 @@ A successful returns your updated role, including new values for its name, descr
 | `roleType` | The designated type of the role. |
 | `permissionSets` | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | `sandboxes` | This property displays the sandboxes within your organization that is provisioned for a particular role. |
-| `subjectAttributes` | Displays information regarding subjects attributes applied to the queried role. |
+| `subjectAttributes` | The attributes that indicate the correlation between a subject and the Platform resources that they have access to. |
 | `subjectAttributes.labels` | Displays the data usage labels applied to the queried role. |
 
 ## Update subject by role ID
