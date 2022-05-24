@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 ---
 
-# Attribute-based Access Control Permissions UI Guide
+# Attribute-based access control permissions UI guide
 
 In order to access attribute-based access control permissions for [!DNL Experience Cloud], you must be an administrator for your organization that has a subscription to [!DNL Experience Cloud]. While Adobe supports flexible administrator hierarchies for your organizations, you must be a product administrator for Adobe Experience Platform to configure permissions. See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
 

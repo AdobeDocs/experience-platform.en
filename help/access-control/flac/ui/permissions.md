@@ -115,6 +115,8 @@ You will be returned to the **[!UICONTROL API credentials]** tab.
 
 ## Managing user groups for roles
 
+User groups are multiple users that have been grouped together and have the access to execute the same functions.
+
 Select the **[!UICONTROL User groups]** tab to open the roles user groups page, then select **[!UICONTROL Add Groups]** to assign user groups to the role.
 
 ![flac-user-groups](../../images/flac-ui/flac-user-groups.png)
