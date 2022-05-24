@@ -9,6 +9,7 @@ feature: Access Control
 # Access control {#access-control}
 
 * [Access control overview](home.md)
+* Attribute-based access control {#abac}
 * Access control UI {#ui}
   * [Overview](ui/overview.md)
   * [Select a product profile](ui/browse.md)
