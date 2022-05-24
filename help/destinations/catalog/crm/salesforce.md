@@ -50,7 +50,14 @@ Salesforce CRM supports the activation of identities described in the table belo
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|email |Email address|Note that *Salesforce CRM* does not support hashed email addresses, hence only plain text data without transformation is sent to the destination.|
+| state | State ||
+| country | Country ||
+| number | Mobile Phone ||
+| firstName | First Name ||
+| postalCode | Mailing Postal Code ||
+| city | Mailing City ||
+| lastName | Last Name ||
+| email |Salesforce Email ID|Note that *Salesforce CRM* does not support hashed email addresses, hence only plain text data without transformation is sent to the destination.|
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -102,19 +109,6 @@ To configure details for the destination, fill in the required fields and select
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
-
-The list of attribute mappings that can be set up for the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) is given below.
-
-| Source Field | Target Field |
-|---|---|
-| xdm: workAddress.state | Identity: MailingState |
-| xdm: workAddress.country | Identity: MailingCountry |
-| xdm: mobilePhone.number | Identity: MobilePhone |
-| xdm: person.name.firstName | Identity: FirstName |
-| xdm: workAddress.postalCode | Identity: MailingPostalCode |
-| xdm: workAddress.city | Identity: MailingCity |
-| xdm: person.name.lastName | Identity: LastName |
-| IdentityMap: Email | Identity: salesforceEmailID |
 
 ## Exported data / Validate data export {#exported-data}
 
