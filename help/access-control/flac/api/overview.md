@@ -22,6 +22,10 @@ These endpoints are outlined below. Please visit the individual endpoint guides 
 
 Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need. See the [roles endpoint guide](./roles.md) for more information on working with roles in the API.
 
+## Policies
+
+Policies are statements that bring attributes together to establish permissible and impermissible actions. Policies can either be local or global, and can override other policies. The `/policies` endpoint allows you to programmatically manage policies in your organization. See the [policies endpoint guide](./policies.md) for more information on working with policies in the API.
+
 ## Products
 
 The `/products` endpoint in the attribute-based access control API allows you to programmatically manage products as well as permission categories and permission sets associated with products in your organization. See the [products endpoint guide](./products.md) for more information on working with products and their corresponding permission categories and permission sets in the API.
