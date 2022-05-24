@@ -10,7 +10,7 @@ feature: Access Control
 
 * [Access control overview](home.md)
 * Attribute-based access control {#abac}
-  * [Overview](flac/overview.md)
+  * [Overview](abac/overview.md)
   * Attribute-based access control API {#abac-api}
     * [Overview](flac/api/overview.md)
     * [Getting started](flac/api/getting-started.md)
