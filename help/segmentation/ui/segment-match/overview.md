@@ -108,7 +108,13 @@ To connect a partner using their [!UICONTROL connect ID], enter their unique ID 
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### Create feed
+### Create feed {#create-feed}
+
+>[!CONTEXTUALHELP]
+>id="platform_segment_match_marketing"
+>title="Restricted marketing use cases"
+>abstract="Restricted marketing use cases help provide guidance to your partners to ensure shared segments are properly used per your data governance restrictions."
+>text="Learn more in documentation"
 
 A **feed** is a grouping of data (segments), the rules for how that data can be exposed or used, and the configurations that determine how your data is matched against your partners' data. A feed can be managed independently and exchanged with other Platform users through [!DNL Segment Match].
 

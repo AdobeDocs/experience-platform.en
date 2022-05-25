@@ -73,11 +73,11 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 
 ![](../images/policies/created-policy.png)
 
-### Create a consent policy (Beta) {#consent-policy}
+### Create a consent policy {#consent-policy}
 
 >[!IMPORTANT]
 >
->Consent policies are currently in beta and your organization may not have access to them yet.
+>Consent policies are currently only available for organizations that have purchased Adobe Shield for Healthcare.
 
 If you chose to create a consent policy, a new screen appears that allows you to configure the new policy.
 
