@@ -78,7 +78,7 @@ The subsections below describe the configuration options for each service.
 >
 >Each service configuration contains an **[!UICONTROL Enabled]** toggle that is automatically activated when the service is selected. To disable the selected service for this datastream, select the **[!UICONTROL Enabled]** toggle again.
 
-### Adobe Analytics settings
+### Adobe Analytics settings {#analytics}
 
 This service controls whether and how data is sent to Adobe Analytics. Additional details can be found in the guide on [sending data to Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
@@ -88,7 +88,7 @@ This service controls whether and how data is sent to Adobe Analytics. Additiona
 | --- | --- |
 | [!UICONTROL Report Suite ID] | **(Required)** The ID of the Analytics report suite that you want to send data to. This ID can be found in the Adobe Analytics UI under [!UICONTROL Admin] > [!UICONTROL ReportSuites]. If multiple report suites are specified, then data is copied to each report suite. | 
 
-### Adobe Audience Manager settings
+### Adobe Audience Manager settings {#audience-manager}
 
 This service controls whether and how data is sent to Adobe Audience Manager. All that is needed to send data to Audience Manager is to enable this section. The other settings are optional but encouraged.
 
@@ -99,7 +99,7 @@ This service controls whether and how data is sent to Adobe Audience Manager. Al
 | [!UICONTROL Cookie Destinations Enabled] | Allows the SDK to share segment information via [cookie destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from [!DNL Audience Manager]. |
 | [!UICONTROL URL Destinations Enabled] | Allows the SDK to share segment information via [URL destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) from [!DNL Audience Manager]. |
 
-### Adobe Experience Platform settings
+### Adobe Experience Platform settings {#aep}
 
 >[!IMPORTANT]
 >
