@@ -31,7 +31,6 @@ This section outlines prerequisite steps to complete in order to authenticate yo
 
 See the [[!DNL Zendesk documentation on subdomains]](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) for information on how to retrieve your subdomain. For information on generating your API token, see the [[!DNL Zendesk] guide on generating a new API token](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
 
-
 <!-- ## IP address allow list
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information. -->
