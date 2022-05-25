@@ -38,7 +38,7 @@ The following table outlines which actions on which resources are recorded by au
 | [Schema](../../../xdm/schema/composition.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for Profile</li></ul> |
 | [Segment](../../../segmentation/home.md) | <ul><li>Create</li><li>Delete</li><li>Segment Activate</li><li>Segment Remove</li></ul> |
 | [Source data flow](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset activate</li><li>Dataset remove</li><li>Profile ativate</li><li>Profile remove</li></ul> |
-| [Work order](../../../privacy-service/ui/../data-hygiene-api.md) | <ul><li>Create</li></ul> |
+| [Work order](../../../hygiene/home.md) | <ul><li>Create</li></ul> |
 
 ## Access to audit logs
 
