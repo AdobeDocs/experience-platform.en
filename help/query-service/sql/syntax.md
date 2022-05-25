@@ -708,7 +708,7 @@ COPY query
 >
 >The complete output path will be `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### ALTER TABLE
+### ALTER TABLE {#alter-table}
 
 The `ALTER TABLE` command lets you add or drop primary or foreign key constraints as well as add columns to the table.
 
@@ -740,6 +740,26 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 >[!NOTE]
 >
 >The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory for primary key constraints.
+
+#### Add or drop primary and secondary identities
+
+The `ALTER TABLE` command allows you to add or delete constraints for both primary and secondary identity table columns directly through SQL.
+
+The following examples adds a primary identity and a secondary identity by adding constraints.
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+Identities can also be removed by dropping constraints, as seen in the example below.
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+See the document on setting identities in an ad hoc datasets for more detailed information.
 
 #### ADD COLUMN
 
