@@ -57,13 +57,19 @@ The **[!UICONTROL Connect Zendesk account]** page appears. On this page, you can
 
 To use an existing account, select the *Zendesk* account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![existing](../../../../images/tutorials/create/zendesk/authentication-existing-account.png)
+![existing](../../../../images/tutorials/create/zendesk/existing.png)
 
 ### New account
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![new](../../../../images/tutorials/create/zendesk/authentication-new-account.png)
+![new](../../../../images/tutorials/create/zendesk/new.png)
+
+### Select data
+
+Once your source is authenticated, the page updates into an interactive schema tree that allows you to explore and inspect the hierarchy of your data. Select **[!UICONTROL Next]** to proceed.
+
+![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 
 ## Next steps
 
@@ -75,7 +81,7 @@ The sections below provides additional resources that you can refer to when usin
 
 ### Validation {#validation}
 
-The following outlines steps to validate that you have successfully connected your [!DNL Zendesk] source and that [!DNL Zendesk] profiles are being ingested to Platform.
+The following outlines steps you can take to validate that you have successfully connected your [!DNL Zendesk] source and that [!DNL Zendesk] profiles are being ingested to Platform.
 
 In the Platform UI, select **[!UICONTROL Datasets]** from the left navigation to access the [!UICONTROL Datasets] workspace. The [!UICONTROL Dataset Activity] screen displays the details of executions.
 
