@@ -10,7 +10,7 @@ hidefromtoc: true
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+>Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
 
 In order to access attribute-based access control permissions for [!DNL Experience Cloud], you must be an administrator for your organization that has a subscription to [!DNL Experience Cloud]. While Adobe supports flexible administrator hierarchies for your organizations, you must be a product administrator for Adobe Experience Platform to configure permissions. See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
 

@@ -10,7 +10,7 @@ hidefromtoc: true
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+>Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
 
 Attribute-based access control allows administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be an existing value such as the geolocation or department of a person. Attributes can also be metadata that is added to an object such as a label added to a schema field or segment.
 
