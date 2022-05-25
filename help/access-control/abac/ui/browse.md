@@ -32,4 +32,4 @@ This user guide focuses on how to use the [!DNL Experience Cloud] to assign acce
 
 ## Next steps
 
-Once you have navigated the access control workspace, proceed to the next step to [create a new role](create-role.md).
+Once you have navigated the permissions workspace, proceed to the next step to [create a new role](role.md).
