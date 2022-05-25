@@ -17,20 +17,28 @@ The following table outlines which actions on which resources are recorded by au
 
 | Resource | Actions |
 | --- | --- |
-| [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-time Customer Profile](../../../profile/home.md)</li><li>Disable for Profile</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for Profile</li></ul> |
+| [Access control policy (attribute based access control)](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Account (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Audit logs](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Export</li></ul> |
 | [Class](../../../xdm/schema/composition.md#class) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Field group](../../../xdm/schema/composition.md#field-group) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Data type](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Create</li><li>Update</li><li>Reset</li><li>Delete</li></ul> |
-| [Destination](../../../destinations/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset Activate</li><li>Dataset Remove</li><li>Profile Activate</li><li>Profile Remove</li></ul> |
-| [Segment](../../../segmentation/home.md) | <ul><li>Create</li><li>Delete</li><li>Segment Activate</li><li>Segment Remove</li></ul> |
-| [Merge policy](../../../profile/merge-policies/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Computed attribute](../../../profile/computed-attributes/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-time Customer Profile](../../../profile/home.md)</li><li>Disable for Profile</li><li>Add data</li><li>Delete batch</li></ul> |
+| [Data types](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Destination](../../../destinations/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset Activate</li><li>Dataset Remove</li><li>Profile Activate</li><li>Profile Remove</li></ul> |
+| [Field group](../../../xdm/schema/composition.md#field-group) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Identity graph](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>View</li></ul> |
+| [Identity namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Create</li><li>Update</li></ul> |
+| [Merge policy](../../../profile/merge-policies/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Product profile](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Account (Adobe)](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Query template](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Scheduled query](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Query](../../../query-service/ui/overview.md) | <ul><li>Execute</li></ul> |
+| [Query template](../../../query-service/ui/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Role (attribute based access control)](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Add user</li><li>Remove user</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Create</li><li>Update</li><li>Reset</li><li>Delete</li></ul> |
+| [Scheduled query](../../../query-service/ui/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for Profile</li></ul> |
+| [Segment](../../../segmentation/home.md) | <ul><li>Create</li><li>Delete</li><li>Segment Activate</li><li>Segment Remove</li></ul> |
+| [Source data flow](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset activate</li><li>Dataset remove</li><li>Profile ativate</li><li>Profile remove</li></ul> |
+| [Work order](../../../hygiene/home.md) | <ul><li>Create</li></ul> |
 
 ## Access to audit logs
 
@@ -44,7 +52,7 @@ You can view audit logs for different Experience Platform features within the **
 
 ![Audit logs dashboard](../../images/audit-logs/audits.png)
 
-Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only back for a maximum period of 365 days.
+Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only go back for a maximum period of 365 days. If you require data of more than 365 days, you should export logs at a regular cadence to meet your internal policy requirements.
 
 Select an event from the list to view its details in the right rail.
 

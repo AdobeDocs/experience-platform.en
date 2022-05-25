@@ -6,7 +6,7 @@ user-guide-description: Manage consumer data requests to comply with legal priva
 feature: Privacy
 ---
 
-# Data Hygiene {#hygiene}
+# Data hygiene {#hygiene}
 
 * [Data hygiene overview](./home.md)
 * Data Hygiene UI {#ui}
