@@ -19,7 +19,7 @@ The `ALTER TABLE` command allows you to label a dataset column as a person's ide
 
 **Examples**
 
-The following example adds a constraint to the existing `t1` table. The values of the `id` column are now marked as primary IDs with the namespace of `IDFA`.
+The following example adds a constraint to the existing `t1` table. The values of the `id` column are now marked as primary identities under the `IDFA` namespace. An identity namespace is a keyword that declares the type of identity data that the field represents.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
