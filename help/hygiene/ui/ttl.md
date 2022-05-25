@@ -1,6 +1,7 @@
 ---
 title: Manage Dataset TTLs
 description: Learn how to schedule a time to live (TTL) for a dataset in the Adobe Experience Platform UI.
+exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 ---
 # Manage dataset TTLs
 

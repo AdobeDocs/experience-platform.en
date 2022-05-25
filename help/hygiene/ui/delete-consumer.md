@@ -1,6 +1,7 @@
 ---
 title: Delete Consumer Records
 description: Learn how to delete consumer records in the Adobe Experience Platform UI.
+exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 ---
 # Delete consumer records
 
