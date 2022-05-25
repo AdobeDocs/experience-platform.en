@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Zendesk;zendesk
 solution: Experience Platform
 title: Zendesk Source Connector Overview
 description: Learn how to connect Zendesk to Adobe Experience Platform using APIs or the user interface.
+exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
 ---
 # (Beta) [!DNL Zendesk]
 

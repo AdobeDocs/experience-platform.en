@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Create a dataflow for Zendesk using the Flow Service API
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to Zendesk using the Flow Service API.
+exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
 ---
 # (Beta) Create a dataflow for [!DNL Zendesk] using the [!DNL Flow Service] API
 

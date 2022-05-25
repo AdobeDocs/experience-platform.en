@@ -4,8 +4,8 @@ title: Attribute-based Access Control Sandboxes
 description: This document provides information on attribute-based access control in Adobe Experience Platform
 hide: true
 hidefromtoc: true
+exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 ---
-
 # Manage Sandboxes
 
 >[!IMPORTANT]

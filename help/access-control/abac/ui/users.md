@@ -4,8 +4,8 @@ title: Attribute-based Access Control Manage Users
 description: This document provides information on attribute-based access control in Adobe Experience Platform
 hide: true
 hidefromtoc: true
+exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 ---
-
 # Manage users
 
 >[!IMPORTANT]

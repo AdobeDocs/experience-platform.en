@@ -4,8 +4,8 @@ title: Attribute-based Access Control Create a Policy
 description: This document provides information on attribute-based access control in Adobe Experience Platform
 hide: true
 hidefromtoc: true
+exl-id: 66820711-2db0-4621-908d-01187771de14
 ---
-
 # Manage policies
 
 >[!IMPORTANT]

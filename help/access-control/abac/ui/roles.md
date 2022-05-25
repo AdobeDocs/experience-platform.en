@@ -4,8 +4,8 @@ title: Attribute-based Access Control Create a Role
 description: This document provides information on attribute-based access control in Adobe Experience Platform
 hide: true
 hidefromtoc: true
+exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 ---
-
 # Manage roles
 
 >[!IMPORTANT]
