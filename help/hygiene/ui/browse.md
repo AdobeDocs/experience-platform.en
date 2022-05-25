@@ -1,6 +1,9 @@
 ---
 title: Browse Data Hygiene Work Orders
 description: Learn how to view and manage existing data hygiene work orders in the Adobe Experience Platform user interface.
+exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
+hide: true
+hidefromtoc: true
 ---
 # Browse data hygiene work orders
 
@@ -23,7 +26,7 @@ When you first access the **[!UICONTROL Data Hygiene]** workspace in the UI, a l
 
 ![Image showing the [!UICONTROL Data Hygiene] workspace in the Platform UI](../images/ui/browse/work-order-list.png)
 
-The list only shows work orders for one category at a time Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of time-to-live (TTL) schedules for datasets.
+The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer deletion tasks, and **[!UICONTROL Dataset]** to view a list of time-to-live (TTL) schedules for datasets.
 
 ![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png)
 
