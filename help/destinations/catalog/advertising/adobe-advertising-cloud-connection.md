@@ -68,7 +68,7 @@ To connect to the destination, provide the following parameter in the [!UICONTRO
 
 * **[!UICONTROL Account or Advertiser Key]**: This [!UICONTROL Source Key] is generated when a [!DNL Real-Time CDP] source is created in the DSP user interface<!-- [[!DNL Real-Time CDP] source is created in the DSP user interface](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) -->. Your DSP account team will share this key with you after they create the source.
 
-![Connection type field](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-dsp-destination/connection-type.png)
+![Connection type field](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/connection-type.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -77,7 +77,7 @@ To configure details for the destination, fill in the required fields in the [!U
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 
-![Destination detail fields](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-dsp-destination/destination-details.png)
+![Destination detail fields](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
 
 ## Activate segments to this destination {#activate}
 
