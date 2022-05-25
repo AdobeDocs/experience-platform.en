@@ -56,8 +56,6 @@ Experience Platform provides a suite of data hygiene capabilities that allow you
 | Consumer deletion | [Delete consumer records](../../hygiene/ui/delete-consumer.md) from the data lake and Profile store based on primary identity data. |
 | Time to live (TTL) for datasets | [Schedule TTLs](../../hygiene/ui/ttl.md) for Platform datasets.  |
 
-{style="table-layout:auto"}
-
 For more information on audit logs in Platform, refer to the [data hygiene overview](../../hygiene/home.md). -->
 
 ## Audit Logs {#audit-logs}
