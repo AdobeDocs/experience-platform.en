@@ -10,7 +10,7 @@ hidefromtoc: true
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+>Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
 
 If you would like to view user details and roles they are assigned to, select the **[!UICONTROL Users]** tab. 
 
