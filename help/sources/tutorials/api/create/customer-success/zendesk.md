@@ -323,7 +323,7 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for Zendesk:
+The following request creates a source connection for [!DNL Zendesk]:
 
 ```shell
 curl -X POST \
@@ -352,9 +352,9 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
-| `baseConnectionId` | The base connection ID of Zendesk. This ID was generated in an earlier step. |
+| `baseConnectionId` | The base connection ID of [!DNL Zendesk]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
-| `data.format` | The format of the Zendesk data that you want to ingest. Currently, the only supported data format is `json`. |
+| `data.format` | The format of the [!DNL Zendesk] data that you want to ingest. Currently, the only supported data format is `json`. |
 
 **Response**
 
@@ -426,7 +426,7 @@ curl -X POST \
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to data lake. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | The format of the Zendesk data that you want to bring to Platform. |
+| `data.format` | The format of the [!DNL Zendesk] data that you want to bring to Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 
