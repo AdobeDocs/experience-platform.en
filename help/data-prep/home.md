@@ -53,9 +53,9 @@ Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to 
 
 Attribute-based access control in Adobe Experience Platform allows administrators to control access to specific objects and/or capabilities based on attributes. 
 
-Attribute-based access control ensures that you can map only the attributes that you have access to. Attributes that you do not have access to can not be used in pass-through mappings and calculated fields. As such, if you do not have access to a required field, then you cannot save successfully save a mapping. Furthermore, you cannot map objects or object arrays if you do not have access to any one of the child attributes. However, you can map other elements within the object or object array individually.
+Attribute-based access control ensures that you can map only the attributes that you have access to. Attributes that you do not have access to can not be used in pass-through mappings and calculated fields. As such, if you do not have access to a required field, then you cannot successfully save a mapping. Furthermore, you cannot map objects or object arrays if you do not have access to any one of the child attributes. However, you can map other elements within the object or object array individually.
 
-For more information, see the documentation on attribute-based access control.
+See the [attribute-based access control overview](../access-control/abac/overview.md) for more information.
 
 ## Next steps
 
