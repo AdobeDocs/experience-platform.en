@@ -6,15 +6,16 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
 feature: Sources
 ---
 
-# Source connectors {#sources}
+# Sources {#sources}
 
-- [Source connectors overview](home.md)
+- [Sources overview](home.md)
 - Available source connectors {#connectors}
   - Adobe applications {#adobe-applications}
-    - [Analytics Classifications source connector](connectors/adobe-applications/classifications.md)
-    - [Analytics source connector](connectors/adobe-applications/analytics.md)
-    - [Audience Manager source connector](connectors/adobe-applications/audience-manager.md)
-    - [Customer attributes source connector](connectors/adobe-applications/customer-attributes.md)
+    - [Analytics Classifications source](connectors/adobe-applications/classifications.md)
+    - [Analytics source](connectors/adobe-applications/analytics.md)
+    - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
+    - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
+    - [Data Collection source](connectors/adobe-applications/data-collection.md)
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)

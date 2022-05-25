@@ -1,7 +1,9 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/privacy/data-hygiene-api.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/query/get-started/use-case.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-cart.html
+https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html,https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/query/audit-log-guide.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/audit-log-guide.html
 https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-cart.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-browse.html
-https://experienceleague.adobe.com/docs/experience-platform/query/get-started/use-case.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-browse.html
 https://experienceleague.adobe.com/docs/experience-platform/query/quickstart.html,https://experienceleague.adobe.com/docs/experience-platform/query/get-started/prerequisites.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/extend-soft-enum.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/suggested-values.html
 https://experienceleague.adobe.com/docs/experience-platform/privacy/api/jobs.html,https://experienceleague.adobe.com/docs/experience-platform/privacy/api/privacy-jobs.html

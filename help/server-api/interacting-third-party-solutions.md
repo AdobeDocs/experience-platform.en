@@ -13,6 +13,6 @@ Use the event forwarding capabilities of the Edge Network Server API to send col
 
 ## Configure datastream event forwarding {#event-forwarding}
 
-To enable third-party solutions to receive data from Server API, you need to [configure your datastream](../edge/fundamentals/datastreams.md#event-forwarding-settings) for event forwarding.
+To enable third-party solutions to receive data from Server API, you need to [configure your datastream](../edge/datastreams/overview.md#event-forwarding-settings) for event forwarding.
 
 ![Adobe Analytics Datastream Configuration](assets/event-forwarding-datastream.png)
