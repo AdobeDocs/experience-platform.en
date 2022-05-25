@@ -1,6 +1,7 @@
 ---
 title: Dataset Time-to-Live (TTL) API Endpoint
 description: The /ttl endpoint in the Data Hygiene API allows you to programmatically schedule dataset TTLs in Adobe Experience Platform.
+exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 ---
 # Dataset time-to-live (TTL) endpoint
 
