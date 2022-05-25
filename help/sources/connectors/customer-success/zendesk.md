@@ -16,6 +16,10 @@ Experience Platform provides support for ingesting data from a third-party custo
 
 This Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) that returns users information into Experience Platform from Zendesk for further processing.
 
+## IP address allow list
+
+A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+
 ## Authenticate your [!DNL Zendesk] account
 
 [!DNL Zendesk] uses bearer tokens as an authentication mechanism to communicate with the [!DNL Zendesk] API.
@@ -30,10 +34,6 @@ This section outlines prerequisite steps to complete in order to authenticate yo
 ![Zendesk API token](../../images/tutorials/create/zendesk/zendesk-api-tokens.png?lang=en)
 
 See the [[!DNL Zendesk documentation on subdomains]](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) for information on how to retrieve your subdomain. For information on generating your API token, see the [[!DNL Zendesk] guide on generating a new API token](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
-
-<!-- ## IP address allow list
-
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information. -->
 
 The documentation below provides information on how to connect [!DNL Zendesk] to Platform using APIs or the user interface:
 
