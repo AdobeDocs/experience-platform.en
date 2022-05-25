@@ -27,7 +27,7 @@ In order to connect Zendesk to Platform, you must provide values for the followi
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| subdomain | Unique domain specific to your account created during the registration process. <br/><br/> Refer to the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) if you require any guidance. | *xxxxx.zendesk.com*|
+| subdomain | Unique domain specific to your Zendesk account created during the registration process. <br/><br/> Refer to the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) if you require any guidance. | *https://`xxxxxxxxxxx`.zendesk.com*|
 | API token | Zendesk API token.<br></br>Navigate to the Zendesk website and access **[!UICONTROL Settings]** > **[!UICONTROL Apps and Integrations]** > **[!UICONTROL Zendesk API]** page, Next to the **[!UICONTROL API Tokens]** section. <br/><br/> Refer to the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).|*0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf*|
 
 ![Zendesk API token](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png?lang=en)
