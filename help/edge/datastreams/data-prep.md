@@ -1,6 +1,7 @@
 ---
 title: Data Prep for Data Collection
 description: Learn how to map your data to an Experience Data Model (XDM) event schema when configuring a datastream for the Adobe Experience Platform Web and Mobile SDKs.
+exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 ---
 # Data Prep for Data Collection
 
