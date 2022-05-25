@@ -10,7 +10,7 @@ hidefromtoc: true
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+>Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
 
 To view details and roles that a sandbox is assigned to/with, select the **[!UICONTROL Sandboxes]** tab. 
 
