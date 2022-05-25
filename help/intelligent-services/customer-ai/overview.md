@@ -40,7 +40,7 @@ The following video is designed to support your understanding of Customer AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
-## How does it work?
+## How it works
 
 Customer AI works by analyzing existing Consumer Experience Event data to predict churn or conversion propensity scores. Adobe realizes that the definition of churn and conversion is not uniform across all the use cases and for this reason, you have the ability to define custom target goals as a set of conditions. You can configure the predicted goal as long as the event of interest is present within the input Consumer Experience Event data.
 
