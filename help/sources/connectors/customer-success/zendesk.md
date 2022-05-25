@@ -31,7 +31,7 @@ This section outlines prerequisite steps to complete in order to authenticate yo
 * Next, select **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * Finally, retrieve your API token from the **[!DNL API token]** section.
 
-![Zendesk API token](../../images/tutorials/create/zendesk/zendesk-api-tokens.png?lang=en)
+![Zendesk API token](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
 See the [[!DNL Zendesk documentation on subdomains]](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) for information on how to retrieve your subdomain. For information on generating your API token, see the [[!DNL Zendesk] guide on generating a new API token](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
 
@@ -43,5 +43,5 @@ The documentation below provides information on how to connect [!DNL Zendesk] to
 
 ## Connect [!DNL Zendesk] to Platform using the UI
 
-* [Create a [!DNL Zendesk ]source connection in the UI](../../tutorials/ui/create/customer-success/Zendesk.md)
+* [Create a [!DNL Zendesk ]source connection in the UI](../../tutorials/ui/create/customer-success/zendesk.md)
 * [Create a dataflow for a customer success source connection in the UI](../../tutorials/ui/dataflow/customer-success.md)

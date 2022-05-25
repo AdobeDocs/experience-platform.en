@@ -31,7 +31,7 @@ In order to access your [!DNL Zendesk] account on Platform, you must provide val
 
 For more information on authenticating your [!DNL Zendesk] source, see the [[!DNL Zendesk] source overview](../../../../connectors/customer-success/zendesk.md).
 
-![Zendesk API token](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png?lang=en)
+![Zendesk API token](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
 ### Create a Platform schema for [!DNL Zendesk]
 
@@ -73,7 +73,7 @@ Once your source is authenticated, the page updates into an interactive schema t
 
 ## Next steps
 
-By following this tutorial, you have authenticated and created a source connection between your [!DNL Zendesk] account and Platform. You can now continue on to the next tutorial and [create a dataflow to bring customer success data into Platform](../../dataflow/customer success.md).
+By following this tutorial, you have authenticated and created a source connection between your [!DNL Zendesk] account and Platform. You can now continue on to the next tutorial and [create a dataflow to bring customer success data into Platform](../../dataflow/customer-success.md).
 
 ## Additional resources
 
@@ -85,19 +85,19 @@ The following outlines steps you can take to validate that you have successfully
 
 In the Platform UI, select **[!UICONTROL Datasets]** from the left navigation to access the [!UICONTROL Datasets] workspace. The [!UICONTROL Dataset Activity] screen displays the details of executions.
 
-![Activity page](../../../../images/tutorials/create/zendesk/dataset-activity.png?lang=en)
+![Activity page](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
 Next, select the dataflow run ID of the dataflow that you want to view to see specific details about that dataflow run.
 
-![Dataflow page](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png?lang=en)
+![Dataflow page](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
 To see details around your schema, select **[!UICONTROL Data governance]**.
 
-![Zendesk schema](../../../../images/tutorials/create/zendesk/dataset-governance.png?lang=en)
+![Zendesk schema](../../../../images/tutorials/create/zendesk/dataset-governance.png)
 
 Finally, select **[!UICONTROL Preview dataset]** to display the data that was ingested.
 
-![Zendesk dataset](../../../../images/tutorials/create/zendesk/preview-dataset.png?lang=en)
+![Zendesk dataset](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
 ### Zendesk schema
 
