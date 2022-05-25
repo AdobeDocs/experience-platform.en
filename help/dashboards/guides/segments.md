@@ -68,6 +68,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audience size trend]](#audience-size-trend)
 * [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
 * [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
+* [[!UICONTROL Audience overlap]](#audience-overlap)
 
 ### [!UICONTROL Audience size] {#audience-size}
 
@@ -156,6 +157,14 @@ This widget provides a line graph illustration of the difference in the total nu
 This widget illustrates the audience size trend for a particular segment based on the identity type chosen from the widget dropdown menu. The segment used for analysis is selected from the overview dropdown. The period of trend analysis can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget.
 
 ![The Audience size trend by identity widget.](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL Audience overlap] {#audience-overlap}
+
+This widget represents the number of profiles from two segments that meet the criteria for both segment definitions. The segments used for comparison are selected from the widget dropdown menus. The total number of profiles contained within the the relevant segment definition can be seen by hovering over a circle or the intersection of the Venn diagram.
+
+This widget enables you to optimize your segmentation strategy by visualizing the similarities in the results of your segment definitions.
+
+![The Audience overlap widget.](../images/segments/audience-overlap.png)
 
 ## Next steps
 
