@@ -18,8 +18,10 @@ Labels allow you to categorize datasets and fields according to usage policies t
 
 To create a new label, select the **[!UICONTROL Labels]** tab in the sidebar and select **[!UICONTROL Create Label]**.
 
-![flac-new-label](../../images/flac-ui/flac-new-label.png)
+![flac-new-label](../../images/flac-ui/create-label.png)
 
-The **[!UICONTROL Create a new label]** dialog appears, prompting you to enter a name, optional friendly name and an optional description. 
+The **[!UICONTROL Create a new label]** dialog appears, prompting you to enter a name, an optional friendly name and an optional description.
+
+![new-label-info](../../images/flac-ui/new-label-info.png)
 
 When finished, select **[!UICONTROL Confirm]**.
