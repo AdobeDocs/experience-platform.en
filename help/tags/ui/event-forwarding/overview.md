@@ -71,7 +71,7 @@ The **[!UICONTROL Path]** value for the data element must follow the pattern `ar
 
 ### Rules {#rules}
 
-Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../edge/fundamentals/datastreams.md) and forwards those events to destinations if certain conditions are satisfied.
+Creating rules in event forwarding properties works in a similar way to tags, with the key difference being that you cannot select events as rule components. Instead, an event forwarding rule processes all events it receives from the [datastream](../../../edge/datastreams/overview.md) and forwards those events to destinations if certain conditions are satisfied.
 
 ![Event forwarding rules in the Data Collection UI](../../images/ui/event-forwarding/overview/rules.png)
 

@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: April 27, 2022**
+**Release date: May 25, 2022**
 
 Updates to existing features in Adobe Experience Platform:
 
@@ -13,7 +13,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Dataflows](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
-- [Destinations](#destinations)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Sources](#sources)
@@ -88,27 +88,9 @@ For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overv
 
 | Feature | Description |
 | ----------- | ----------- |
-| Advanced Enterprise Destination Connectors | Three enterprise destination connectors are now generally available: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md), and [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> The general availability of enterprise destination connectors includes all the capabilities offered previously in the Beta phase, and more: <ul><li>New authentication capabilities, including [Shared Access Signature in Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) and more [authentication types](../../destinations/catalog/streaming/http-destination.md#authentication-information) (bearer tokens, OAuth 2) in the HTTP API destination;</li><li>[Backfilling historical profile data](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (sending historical profiles qualified for the segment when first activated);</li><li>Dataflow runs metrics are now supported for these destinations;</li><li>[Additional segment metadata](../../destinations/catalog/streaming/http-destination.md#destination-details) included in the data payload, including segment names and segment timestamps;</li><li>Support for [static IP addresses](/help/destinations/catalog/streaming/ip-address-allow-list.md) for customers who need to allowlist Experience Platform.</li></ul> |
-| In-context alerts for destination dataflows | You can now [subscribe to alerts](../../destinations/ui/alerts.md) when creating a destination dataflow, to receive alert messages regarding the status, success, or failure of your dataflow run. You can choose to receive alerts in the Experience Platform UI or via email. |
+| Export latest profile qualifications [after daily segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | You can now schedule a full file export, once or daily, with the latest profile qualifications, after the daily segment evaluation is complete. |
+| Optional datastream ID for [Adobe Target destinations](../../destinations/catalog/personalization/adobe-target-connection.md) | To enable Adobe Target personalization for users who cannot implement the Experience Platform Web SDK, the datastream ID selection is now optional when configuring Adobe Target destinations. When not using a datastream, segments exported from Experience Platform to Target will only support next-session personalization, while edge segmentation is disabled, along with all [use cases](../../destinations/ui/configure-personalization-destinations.md) that depend on edge segmentation. |
 
-### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
-
-For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
-
-If you have been utilizing these destinations in the Beta phase, please note the following:
-
-- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
-- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
-- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
-
-**New destinations**
-
-| Destination | Description |
-| ----------- | ----------- |
-| [!DNL Criteo] | Connect and activate data to the [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) advertising platform. |
-| [!DNL Sendgrid]| Connect and activate data to the [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) platform for transactional and marketing emails. |
-
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
