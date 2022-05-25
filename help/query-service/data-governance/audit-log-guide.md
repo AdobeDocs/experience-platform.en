@@ -76,7 +76,7 @@ Available filters vary depending on the category selected in the dropdown. The f
 | Category | See the [[!DNL Query Service] audit log categories](#audit-log-categories) section for a complete list of available categories. |
 | Action | When referring to [!DNL Query Service] audit categories, update is a **modification to the existing form**, delete is the **removal of the schedule or template**, create is **creating a new schedule or template**, and execute is **running a query**.|
 | User | Enter the complete user ID (for example, johndoe@acme.com) to filter by user. |
-| Status | This filter does not apply to the [!DNL Query Service] audit logs. The [!UICONTROL Allow], [!UICONTROL Success], and [!UICONTROL Failure] options will not filter the results whereas the [!UICONTROL Deny] option will filter out **all** logs. |
+| Status | The [!UICONTROL Allow], [!UICONTROL Success], and [!UICONTROL Failure] options filter the logs based on the "Status" or "Event Status" whereas the [!UICONTROL Deny] option will filter out **all** logs.|
 | Date  | Select a start date and/or an end date to define a date range to filter results by. |
 
 ## Next steps
