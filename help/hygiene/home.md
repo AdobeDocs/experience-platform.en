@@ -2,6 +2,8 @@
 title: Data hygiene overview
 description: Adobe Experience Platform Data Hygiene allows you to manage the lifecycle of your data by updating or purging outdated or inaccurate records.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
+hide: true
+hidefromtoc: true
 ---
 # Data hygiene on Adobe Experience Platform
 
