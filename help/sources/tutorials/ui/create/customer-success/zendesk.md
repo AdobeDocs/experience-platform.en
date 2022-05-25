@@ -39,7 +39,7 @@ Before creating a [!DNL Zendesk] source connection, you must also ensure that yo
 
 For additional guidance on your [!DNL Zendesk] schema required for the [!DNL Zendesk Search API], refer to the [limits](#limits) section below.
 
-![Create Schema](../../../../images/tutorials/create/zendesk/schema.png?lang=en)
+![Create Schema](../../../../images/tutorials/create/zendesk/schema.png)
 
 ## Connect your [!DNL Zendesk] account
 
