@@ -49,6 +49,8 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `salutation` | `person.name.courtesyTitle` |
 | `telephone1` | `workPhone.number` |
 
+{style="table-layout:auto"}
+
 ## Leads {#leads}
 
 | Source field | Target XDM field | Notes |
@@ -86,6 +88,8 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `salutation` | `person.name.courtesyTitle` |
 
+{style="table-layout:auto"}
+
 ## Accounts {#accounts}
 
 | Source field | Target XDM field | Notes |
@@ -120,6 +124,8 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `tickersymbol` | `accountOrganization.tickerSymbol` |
 | `websiteurl` | `accountOrganization.website` |
 
+{style="table-layout:auto"}
+
 ## Opportunities {#opportunities}
 
 | Source field | Target XDM field | Notes |
@@ -142,6 +148,8 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `salesstage` | `opportunityStage` |
 | `stepname` | `nextStep` |
 
+{style="table-layout:auto"}
+
 ## Opportunity contact roles {#opportunity-contact-roles}
 
 | Source field | Target XDM field | Notes |
@@ -157,6 +165,8 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `connectionrole1.name` | `personRole` |
 | `record1objecttypecode` | *A custom field group must be defined as a target schema.* See the appendix section for steps on [how to map a picklist type source field to a target XDM schema](#picklist-type-fields) for more information. | For a list of possible and values and labels for the `record1objecttypecode` source field, see this [[!DNL Microsoft Dynamics] connection entity reference document](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
 | `record2objecttypecode` | *A custom field group must be defined as a target schema.* See the appendix section for steps on [how to map a picklist type source field to a target XDM schema](#picklist-type-fields) for more information. | For a list of possible and values and labels for the `record2objecttypecode` source field, see this [[!DNL Microsoft Dynamics] connection entity reference document](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options).  |
+
+{style="table-layout:auto"}
 
 ## Campaigns {#campaigns}
 
@@ -182,6 +192,8 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `utcconversiontimezonecode` | `timeZone` |
 | `utcconversiontimezonecode` | `timezoneName` |
 
+{style="table-layout:auto"}
+
 ## Marketing list {#marketing-list}
 
 | Source field | Target XDM field | Notes |
@@ -195,6 +207,8 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 
+{style="table-layout:auto"}
+
 ## Marketing list members {#marketing-list-members}
 
 | Source field | Target XDM field | Notes |
@@ -206,6 +220,8 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
+
+{style="table-layout:auto"}
 
 ## Appendix
 
