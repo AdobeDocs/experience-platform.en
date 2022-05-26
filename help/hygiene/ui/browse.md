@@ -10,7 +10,8 @@ hidefromtoc: true
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="Work order IDs"
->abstract="When a data hygiene request is sent to the system, a work order is created to execute the requested task. In other words, a work order represents a specific data hygiene process, which includes its current status and other related details. Each work order is automatically assigned its own unique ID upon creation. To learn more, see the data hygiene UI guide."
+>abstract="When a data hygiene request is sent to the system, a work order is created to execute the requested task. In other words, a work order represents a specific data hygiene process, which includes its current status and other related details. Each work order is automatically assigned its own unique ID upon creation."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/browse.html" text="See the data hygiene UI guide to learn more."
 
 >[!IMPORTANT]
 >
