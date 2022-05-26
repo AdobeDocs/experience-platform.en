@@ -58,7 +58,7 @@ For more information is the [document on logical operators in [!DNL Data Prep]](
 | `address1_stateorprovince` | `workAddress.state` |
 | `assistantname` | `extendedWorkDetails.assistantDetails.name.fullName` |
 | `assistantphone` | `extendedWorkDetails.assistantDetails.phone.number` |
-| `birthdate` | `	person.birthDate` |
+| `birthdate` | `person.birthDate` |
 | `"Dynamics"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `contactid` | `b2b.personKey.sourceID` |
