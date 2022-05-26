@@ -231,6 +231,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Beta release of [!DNL Zendesk] source | Use the [!DNL Zendesk] source to ingest user, agent, and organization data from your [!DNL Zendesk] instance for [!DNL Profile] enrichment. See the [[!DNL Zendesk] source overview](../../sources/connectors/customer-success/zendesk.md) for more information. |
+| General availability of B2B [!DNL Microsoft Dynamics] source | You can now use the [!DNL Microsoft Dynamics] source to ingest B2B objects like accounts, opportunities, campaigns, marketing list and marketing list members. See the [[!DNL Microsoft Dynamics] source overview](../../sources/connectors/crm/ms-dynamics.md) for more information. |
 | Support for Adobe Data Collection | Use the sources catalog to access your Data Collection Experience Edge data, including Data Prep for Data Collection and improved support for data warnings from Data Prep. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
 | Support for ingesting files with `ISO-8859-1` encoding | Use the `encoding` parameter to ingest `ISO-8859-1` encoded files with a cloud storage source to Platform using the [!DNL Flow Service] API. See the guide on [creating a cloud storage source connection](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
 
