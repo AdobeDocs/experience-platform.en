@@ -284,7 +284,7 @@ A successful response returns the structure of the queried file. In the example 
         {
             "results": {
                 "id": 6106699702801,
-                "url": "https://d3v-dxinfosys.zendesk.com/api/v2/users/6106699702801.json",
+                "url": "https://yoursubdomain.zendesk.com/api/v2/users/6106699702801.json",
                 "name": "test",
                 "email": "test@org.com",
                 "created_at": "2022-05-13T08:04:22Z",
