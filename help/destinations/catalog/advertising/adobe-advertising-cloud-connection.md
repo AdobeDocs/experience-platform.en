@@ -68,7 +68,7 @@ To connect to the destination, provide the following parameter in the [!UICONTRO
 
 * **[!UICONTROL Account or Advertiser Key]**: This [!UICONTROL Source Key] is generated when a [!DNL Real-Time CDP] source is created in the DSP user interface<!-- [[!DNL Real-Time CDP] source is created in the DSP user interface](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) -->. Your DSP account team will share this key with you after they create the source.
 
-![Connection type field](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/connection-type.png)
+![Connection type field](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -95,7 +95,7 @@ To verify that data segment was shared with Advertising Cloud, check the followi
 
 * In DSP, the segment is available when you create or edit an audience from [!UICONTROL Audiences] > [!UICONTROL All Audiences] or from within the [!UICONTROL Audience Targeting] section of placement settings. The segment should be visible in the [!UICONTROL Adobe Segments] tab under the [!UICONTROL Real-Time CDP] folder.
 
-<!-- ADD SCREEN SHOT OF SEGMENTS IN DSP ![segment in DSP]() -->
+![Real-Time CDP segments in DSP audience settings](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## Data usage and governance {#data-usage-governance}
 
