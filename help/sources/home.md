@@ -22,22 +22,22 @@ Sources in Experience Platform are grouped into the following categories:
 
 Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, and Adobe Audience Manager. See the following related documents for more information:
 
-- [Adobe Audience Manager connector overview](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager source overview](connectors/adobe-applications/audience-manager.md)
 - [Create an Adobe Audience Manager source connection in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics Classifications Data source connection overview](connectors/adobe-applications/classifications.md)
 - [Create an Adobe Analytics Classifications Data source connection in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics Report Suite Data source connection overview](connectors/adobe-applications/analytics.md)
 - [Create an Adobe Analytics source connection in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe Data Collection](connectors/adobe-applications/data-collection.md)
+- [Adobe Data Collection source overview](connectors/adobe-applications/data-collection.md)
 - [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] connector overview](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage] source overview](connectors/adobe-applications/marketo/marketo.md)
 - [Create a [!DNL Marketo Engage] source connection in the UI](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Advertising {#advertising}
 
 Experience Platform provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
+- [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
 ### Cloud Storage {#cloud-storage}
 
