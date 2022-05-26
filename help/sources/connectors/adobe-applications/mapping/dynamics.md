@@ -7,39 +7,6 @@ description: The tables below contain the mappings between Microsoft Dynamics so
 
 The tables below contain the mappings between [!DNL Microsoft Dynamics] source fields and their corresponding Experience Data Model (XDM) fields.
 
-## [!DNL Microsoft Dynamics] picklist fields
-
-You can use [calculated fields](../../../../data-prep/ui/mapping.md#calculated-fields) to map a picklist type source field from [!DNL Microsoft Dynamics] to a target XDM field.
-
-For example, the `genderCode` field includes two options:
-
-| Value | Label |
-| --- | --- |
-| 1 | Male |
-| 2 | Female |
-
-You can use the following options to map the `genderCode` source field to `person.gender` target field:
-
-### Use a logical operator
-
-| Source field | Target XDM field |
-| --- | --- |
-| `decode(genderCode, "1", "Male", "2", "Female", "default")` | `person.gender` |
-
-In this scenario, the value corresponds to the key, if the key is found in options, or `default`, if `default` is present and the key is not found. The value corresponds to `null` if options is `null` or there is no `default` and the key is not found.
-
-### Use a calculated field
-
-| Source field | Target XDM field |
-| --- | --- |
-| `iif(gendercode.equals("1"),"Male",iif(gendercode.equals("2"),"Female",null))` | `person.gender` |
-
->[!TIP]
->
->A nested iteration of the above operation would be similar to: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
-
-For more information is the [document on logical operators in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
-
 ## Contacts {#contacts}
 
 | Source field | Target XDM field | Notes |
@@ -188,6 +155,8 @@ For more information is the [document on logical operators in [!DNL Data Prep]](
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
+| `record1objecttypecode` | *A custom field group must be defined as a target schema.* See the appendix section for steps on [how to map a picklist type source field to a target XDM schema](#picklist-type-fields) for more information. | For a list of possible and values and labels for the `record1objecttypecode` source field, see this [[!DNL Microsoft Dynamics] connection entity reference document](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *A custom field group must be defined as a target schema.* See the appendix section for steps on [how to map a picklist type source field to a target XDM schema](#picklist-type-fields) for more information. | For a list of possible and values and labels for the `record2objecttypecode` source field, see this [[!DNL Microsoft Dynamics] connection entity reference document](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options).  |
 
 ## Campaigns {#campaigns}
 
@@ -237,3 +206,40 @@ For more information is the [document on logical operators in [!DNL Data Prep]](
 | `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
+
+## Appendix
+
+The sections below provide additional information that you can use when configuring B2B mappings for your [!DNL Microsoft] Dynamics source.
+
+### Picklist type fields {#picklist-type-fields}
+
+You can use [calculated fields](../../../../data-prep/ui/mapping.md#calculated-fields) to map a picklist type source field from [!DNL Microsoft Dynamics] to a target XDM field.
+
+For example, the `genderCode` field includes two options:
+
+| Value | Label |
+| --- | --- |
+| 1 | Male |
+| 2 | Female |
+
+You can use the following options to map the `genderCode` source field to `person.gender` target field:
+
+#### Use a logical operator
+
+| Source field | Target XDM field |
+| --- | --- |
+| `decode(genderCode, "1", "Male", "2", "Female", "default")` | `person.gender` |
+
+In this scenario, the value corresponds to the key, if the key is found in options, or `default`, if `default` is present and the key is not found. The value corresponds to `null` if options is `null` or there is no `default` and the key is not found.
+
+#### Use a calculated field
+
+| Source field | Target XDM field |
+| --- | --- |
+| `iif(gendercode.equals("1"),"Male",iif(gendercode.equals("2"),"Female",null))` | `person.gender` |
+
+>[!TIP]
+>
+>A nested iteration of the above operation would be similar to: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
+
+For more information is the [document on logical operators in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
