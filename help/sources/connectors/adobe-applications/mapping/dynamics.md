@@ -7,9 +7,42 @@ description: The tables below contain the mappings between Microsoft Dynamics so
 
 The tables below contain the mappings between [!DNL Microsoft Dynamics] source fields and their corresponding Experience Data Model (XDM) fields.
 
+## [!DNL Microsoft Dynamics] picklist fields
+
+You can use [calculated fields](../../../../data-prep/ui/mapping.md#calculated-fields) to map a picklist type source field from [!DNL Microsoft Dynamics] to a target XDM field.
+
+For example, the `genderCode` field includes two options:
+
+| Value | Label |
+| --- | --- |
+| 1 | Male |
+| 2 | Female |
+
+You can use the following options to map the `genderCode` source field to `person.gender` target field:
+
+### Use a logical operator
+
+| Source field | Target XDM field |
+| --- | --- |
+| `decode(genderCode, "1", "Male", "2", "Female", "default")` | `person.gender` |
+
+In this scenario, the value corresponds to the key, if the key is found in options, or `default`, if `default` is present and the key is not found. The value corresponds to `null` if options is `null` or there is no `default` and the key is not found.
+
+### Use a calculated field
+
+| Source field | Target XDM field |
+| --- | --- |
+| `iif(gendercode.equals("1"),"Male",iif(gendercode.equals("2"),"Female",null))` | `person.gender` |
+
+>[!TIP]
+>
+>A nested iteration of the above operation would be similar to: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
+
+For more information is the [document on logical operators in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+
 ## Contacts {#contacts}
 
-| Source field | Target XDM field path | Notes |
+| Source field | Target XDM field | Notes |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -51,7 +84,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 
 ## Leads {#leads}
 
-| Source field | Target XDM field path | Notes |
+| Source field | Target XDM field | Notes |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -88,7 +121,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 
 ## Accounts {#accounts}
 
-| Source field | Target XDM field path | Notes |
+| Source field | Target XDM field | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
@@ -122,7 +155,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 
 ## Opportunities {#opportunities}
 
-| Source field | Target XDM field path | Notes |
+| Source field | Target XDM field | Notes |
 | --- | --- | --- |
 | `name` | `opportunityName` |
 | `"Dynamics"` | `opportunityKey.sourceType` |
@@ -144,7 +177,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 
 ## Opportunity contact roles {#opportunity-contact-roles}
 
-| Source field | Target XDM field path | Notes |
+| Source field | Target XDM field | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
@@ -158,7 +191,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 
 ## Campaigns {#campaigns}
 
-| Source field | Target XDM field path | Notes |
+| Source field | Target XDM field | Notes |
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
@@ -182,7 +215,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 
 ## Marketing list {#marketing-list}
 
-| Source field | Target XDM field path | Notes |
+| Source field | Target XDM field | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
@@ -195,7 +228,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 
 ## Marketing list members {#marketing-list-members}
 
-| Source field | Target XDM field path | Notes |
+| Source field | Target XDM field | Notes |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
