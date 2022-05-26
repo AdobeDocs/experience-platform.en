@@ -2,13 +2,16 @@
 title: Browse Data Hygiene Work Orders
 description: Learn how to view and manage existing data hygiene work orders in the Adobe Experience Platform user interface.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
+hide: true
+hidefromtoc: true
 ---
 # Browse data hygiene work orders
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="Work order IDs"
->abstract="When a data hygiene request is sent to the system, a work order is created to execute the requested task. In other words, a work order represents a specific data hygiene process, which includes its current status and other related details. Each work order is automatically assigned its own unique ID upon creation. To learn more, see the data hygiene UI guide."
+>abstract="When a data hygiene request is sent to the system, a work order is created to execute the requested task. In other words, a work order represents a specific data hygiene process, which includes its current status and other related details. Each work order is automatically assigned its own unique ID upon creation."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/browse.html" text="See the data hygiene UI guide to learn more."
 
 >[!IMPORTANT]
 >

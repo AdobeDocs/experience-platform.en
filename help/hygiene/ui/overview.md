@@ -2,6 +2,8 @@
 title: Data Hygiene UI Guide
 description: Learn how to manage data hygiene tasks in the Adobe Experience Platform user interface.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
+hide: true
+hidefromtoc: true
 ---
 # Data hygiene UI guide
 
