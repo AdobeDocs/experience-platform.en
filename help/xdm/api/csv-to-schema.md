@@ -48,6 +48,8 @@ Refer to the following [CSV template](../assets/sample-csv-template.csv) to dete
 
 ## Create an export payload from a CSV file
 
+Once you have set up your CSV template, you can send the file to the `/rpc/csv2schema` endpoint and convert it to an export payload.
+
 **API format**
 
 ```http
@@ -55,6 +57,8 @@ POST /rpc/csv2schema
 ```
 
 **Request**
+
+The request payload must use form data as its format. The required form fields are shown below.
 
 ```shell
 curl -X POST \
@@ -77,6 +81,8 @@ curl -X POST \
 | `schema-description` | A description for the schema. |
 
 **Response**
+
+A successful response returns an export payload that was generated from the CSV file. The payload takes a form of an array, and each array item is an object that represents a dependent XDM component for the schema. Select the section below to view a full example of an export payload generated from a CSV file.
 
 +++ Example response payload
 
