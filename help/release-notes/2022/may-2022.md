@@ -129,6 +129,7 @@ Experience Platform provides a suite of technologies that allow you to collect c
 | Import datastream mapping rules | When setting up Data Prep for Data Collection, you can [import the mapping rules of an existing datastream](../../edge/datastreams/data-prep.md#import-mapping) instead of configuring every field mapping manually. |
 | Datasteam mapping support for Mobile SDK | You can now configure Data Prep for Data Collection on datastreams intended for use with the Experience Platform Mobile SDK. |
 | Datasteam mapping support for XDM objects | Map XDM objects in addition to data-layer objects when [configuring Data Prep for Data Collection](../../edge/datastreams/data-prep.md#select-data). |
+| Integration with dataflows | Use the sources catalog in Platform to access your data on Platform Edge Network, including Data Prep for Data Collection and improved support for Data Prep warnings. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
 
@@ -231,7 +232,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Beta release of [!DNL Zendesk] source | Use the [!DNL Zendesk] source to ingest user, agent, and organization data from your [!DNL Zendesk] instance for [!DNL Profile] enrichment. See the [[!DNL Zendesk] source overview](../../sources/connectors/customer-success/zendesk.md) for more information. |
-| Support for Adobe Data Collection | Use the sources catalog to access your Data Collection Experience Edge data, including Data Prep for Data Collection and improved support for data warnings from Data Prep. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
+| Support for Adobe Data Collection | Use the sources catalog in Platform to access your data on Platform Edge Network, including Data Prep for Data Collection and improved support for Data Prep warnings. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
 | Support for ingesting files with `ISO-8859-1` encoding | Use the `encoding` parameter to ingest `ISO-8859-1` encoded files with a cloud storage source to Platform using the [!DNL Flow Service] API. See the guide on [creating a cloud storage source connection](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
 
 {style="table-layout:auto"}
