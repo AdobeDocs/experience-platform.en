@@ -7,9 +7,9 @@ description: This document explains how to flatten XDM schemas for all tables an
 
 Adobe Experience Platform Query Service supports the `FLATTEN` setting when connecting to a database through third-party BI tools. This feature flattens nested data structures in third-party BI tools to improve their usability and reduce the required workload to retrieve, analyze, transform and report data.
 
-Many BI tools like Tableau and Power BI do not natively support nested data structures. The `FLATTEN` setting removes the need to create SQL views on top of your data to provide a flat version, or to use Query Service `CTAS` or `INSERT INTO` jobs to duplicate your datasets into flat versions when using ad hoc schemas.
+Many BI tools like [!DNL Tableau] and [!DNL Power BI] do not natively support nested data structures. The `FLATTEN` setting removes the need to create SQL views on top of your data to provide a flat version, or to use Query Service `CTAS` or `INSERT INTO` jobs to duplicate your datasets into flat versions when using ad hoc schemas.
 
-The `FLATTEN` setting pulls each leaf field structure into the root of the table and names the field after the original. This allows you to use dot notation to match a field to its XDM path while preserving the field's context.
+The `FLATTEN` setting pulls each leaf field structure into the root of the table and names the field after the original namespace. This allows you to use dot notation to match a field to its XDM path while preserving the field's context.
 
 ## Prerequisites
 
@@ -23,23 +23,31 @@ Using the `FLATTEN` setting requires a working understanding of the following co
 
 * [Nested data structures](./nested-data-structures.md): The complexity of enterprise data structures can make transforming or processing this data complicated. This document provides examples of how to create, process, or transform datasets with complex data types including nested data structures.
 
-## Connect to a database using the FLATTEN setting
+## Connect to a database using the FLATTEN setting {#connect-with-flatten}
 
-Append the `FLATTEN` setting to the database name when connecting. The database name will contain:
+Append the `FLATTEN` setting to the database name when connecting. For information on how to connect a specific BI tool, please see its respective documentation in the [connect clients to Query Service overview](../clients/overview.md). The connection string should contain:
 
-* The sandbox name
-* A colon followed by "all" or a specific dataset ID, view ID, or database
-* A question mark (?) followed by the `FLATTEN` setting
+* The sandbox name.
+* A colon followed by "all" or a specific dataset ID, view ID, or database name.
+* A question mark (?) followed by the `FLATTEN` keyword.
+
+The input should take the following format.
 
 ```terminal
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
+A example connection string might look as below.
+
+```terminal
+prod:all?FLATTEN
+```
+
 ## Example {#example}
 
-This document uses the Commerce field group that utilizes the "commerce" structure and the "productListItems" array as an example. a representation of the schema structure can be seen in the image below.
+This document uses the standard "Commerce Details" field group that utilizes the "commerce" object structure and the "productListItems" array as an example. See the XDM documentation for [more information on the "Commerce Details" field group](../../xdm/field-groups/event/commerce-details.md). A representation of the schema structure can be seen in the image below.
 
-![A schema diagram of the commerce and productListItems structures.]()
+![A schema diagram of the Commerce Details field group including the commerce and productListItems structures.](../../../.png)
 
 If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as commerce and productListItems in the example schema). These values may appear in an unusable way as demonstrated below. 
 
@@ -57,7 +65,7 @@ commerce.purchases.value
 
 The `FLATTEN` setting has certain limitations when dealing with other data structures. Full details are provided in the [limitations section](#limitations).
 
-### Use quotation marks for fields in queries
+### Use quotation marks for fields in queries {#quotation-marks}
 
 The flattened root fields now use dot notation to match their XDM paths. When used in a query the fields need to be enclosed in quotation marks (" ").
 
