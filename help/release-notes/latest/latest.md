@@ -14,6 +14,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Alerts](#alerts)
 - [Audit Logs](#audit-logs)
 - [Dashboards](#dashbaords)
 - [Data collection](#data-collection)
@@ -23,6 +24,19 @@ Updates to existing features in Adobe Experience Platform:
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Sources](#sources)
+
+## Alerts {#alerts}
+
+Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
+**Updated features**
+
+| Feature | Alert rule | Description |
+| --- | --- | --- |
+| New alert rule | Skippage rate exceeds threshold | You can now use the alert to receive notifications when your sources dataflow exceeds the identities thresholds. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
+
+{style="table-layout:auto"}
+
 
 <!-- ## Attribute-based access control {#abac}
 
