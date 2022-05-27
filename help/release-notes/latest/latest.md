@@ -31,11 +31,12 @@ Experience Platform allows you to subscribe to event-based alerts for various Pl
 
 **Updated features**
 
-| Feature | Description |
-| --- | --- |
-| New alert rule | A new alert rule is now available for sources related to identities exceeding thresholds. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
+| Feature | Alert rule | Description |
+| --- | --- | --- |
+| New alert rule | Skippage rate exceeds threshold | You can now use the alert to receive notifications when your sources dataflow exceeds the identities thresholds. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
 
 {style="table-layout:auto"}
+
 
 <!-- ## Attribute-based access control {#abac}
 
