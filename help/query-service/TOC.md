@@ -14,6 +14,7 @@ feature: Queries
 - Use cases {#use-cases}
   - [Abandoned browse](use-cases/abandoned-browse.md)
   - [Bot filtering](use-cases/bot-filtering.md)
+  - [Web and mobile analytics insights](use-cases/analytics-insights.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
