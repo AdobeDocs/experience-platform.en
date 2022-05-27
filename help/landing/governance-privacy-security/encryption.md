@@ -17,9 +17,9 @@ The following process flow diagram illustrates how data is ingested, processed, 
 
 In general, data is brought into Platform in three ways:
 
-* [Data collection](../collection/home.md) capabilities allow websites and mobile applications to send data to the Platform Edge Network for staging and preparation for ingestion.
-* [Source connectors](../sources/home.md) stream data directly to Platform from Adobe Experience Cloud applications and other enterprise data sources.
-* Non-Adobe ETL (extract, transform, load) tools send data to the [batch ingestion API](../ingestion/batch-ingestion/overview.md) for consumption.
+* [Data collection](../../collection/home.md) capabilities allow websites and mobile applications to send data to the Platform Edge Network for staging and preparation for ingestion.
+* [Source connectors](../../sources/home.md) stream data directly to Platform from Adobe Experience Cloud applications and other enterprise data sources.
+* Non-Adobe ETL (extract, transform, load) tools send data to the [batch ingestion API](../../ingestion/batch-ingestion/overview.md) for consumption.
 
 After data has been brought into the system and enriched by Platform services, it can be sent to authenticated [destinations](../../destinations/home.md) which include Adobe applications, partner applications, and native Platform applications such as Adobe Customer Journey Analytics and Adobe Journey Optimizer.
 
