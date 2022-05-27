@@ -234,8 +234,8 @@ For example, the `genderCode` field includes two options:
 
 | Value | Label |
 | --- | --- |
-| 1 | male |
-| 2 | female |
+| 1 | `male` |
+| 2 | `female` |
 
 You can use the following options to map the `genderCode` source field to `person.gender` target field:
 
