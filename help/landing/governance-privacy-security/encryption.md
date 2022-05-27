@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;popular topics;catalog;data protection;encryption data lake
 title: Data Encryption in Adobe Experience Platform
 topic-legacy: data protection
-description: All data persisted in the Data Lake is encrypted, stored, and managed in an isolated Microsoft Azure Data Lake Storage account that is unique to your organization. The following process flow diagram illustrates how data is ingested, processed, encrypted, and persisted by Experience Platform.
+description: Learn how Experience Platform encrypts data in transit and at rest.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 ---
 # Data encryption in Adobe Experience Platform
 
-Adobe Experience Platform is a powerful and extensible system that centralizes and standardizes customer experience data across your enterprise. As such, the security of your digital experience data is of the upmost importance. To meet the latest security needs demanded by the industry, Experience Platform provides deep security procedures and approaches to keep your data protected. This document describes these security measures at a high level.
+Adobe Experience Platform is a powerful and extensible system that centralizes and standardizes customer experience data across enterprise solutions. All data utilized by Platform is encrypted in transit and at rest to keep your data secure. This document describes Platform's encryption processes at a high level.
 
-The following process flow diagram illustrates how data is ingested, processed, encrypted, and persisted by [!DNL Experience Platform]:
+The following process flow diagram illustrates how data is ingested, encrypted, and persisted by [!DNL Experience Platform]:
 
 ![](../images/governance-privacy-security/encryption/flow.png)
 
@@ -27,11 +27,11 @@ Regardless of the method(s) used to move data in and out of Experience Platform,
 
 ## Data at rest
 
-Data that is ingested and used by Platform is stored in the data lake, a highly granular data store containing all data managed by the system, regardless of origin or file format. All data persisted in the data lake is encrypted, stored, and managed in an isolated [!DNL Microsoft Azure Data Lake] Storage instance that is unique to your organization.
+Data that is ingested and used by Platform is stored in the data lake, a highly granular data store containing all data managed by the system, regardless of origin or file format. All data persisted in the data lake is encrypted, stored, and managed in an isolated [[!DNL Microsoft Azure Data Lake] Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) instance that is unique to your organization.
 
 For details on how data at rest is encrypted in Azure Data Lake Storage and Cosmos DB, see the [data encryption overview](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption) in the official Azure documentation.
 
-## Encryption keys
+### Encryption keys
 
 Your data lake instance in Platform stores encryption keys in a secure [Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview). These keys are maintained by Adobe on your behalf. In a future release, you will be able to provide your own encryption keys for even greater control over the security of your data.
 
