@@ -47,7 +47,7 @@ prod:all?FLATTEN
 
 This document uses the standard "Commerce Details" field group that utilizes the "commerce" object structure and the "productListItems" array as an example. See the XDM documentation for [more information on the "Commerce Details" field group](../../xdm/field-groups/event/commerce-details.md). A representation of the schema structure can be seen in the image below.
 
-![A schema diagram of the Commerce Details field group including the commerce and productListItems structures.](../../../.png)
+![A schema diagram of the Commerce Details field group including the commerce and productListItems structures.](../images/best-practices/final-subscription-schema.png)
 
 If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as commerce and productListItems in the example schema). These values may appear in an unusable way as demonstrated below. 
 
