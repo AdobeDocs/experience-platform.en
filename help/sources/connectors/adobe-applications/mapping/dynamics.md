@@ -72,7 +72,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `createdon` | `extSourceSystemAudit.createdDate` |
 | `emailaddress1` | `workEmail.address` | Secondary identifier |
 | `emailaddress2` | `personalEmail.address` |
-| `emailddress1` | `personComponents.workEmail.address` |
+| `emailaddress1` | `personComponents.workEmail.address` |
 | `fax` | `faxPhone.number` |
 | `firstname` | `person.name.firstName` |
 | `fullname` | `person.name.fullName` |
@@ -177,7 +177,6 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `concat(campaignid,"@${CRM_ORG_ID}.Dynamics")` | `campaignKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `"Dynamics"` | `campaignKey.sourceType` |
 | `iif(campaignid != null && campaignid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", campaignid, "sourceKey", concat(campaignid,"@${CRM_ORG_ID}.Dynamics")), null)` | `extSourceSystemAudit.externalKey` | The `extSourceSystemAudit.externalKey` is the secondary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
-| `createdby` | `extSourceSystemAudit.createdBy` |
 | `createdon` | `extSourceSystemAudit.createdDate` |
 | `modifiedby` | `extSourceSystemAudit.lastUpdatedBy` |
 | `modifiedon` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -235,8 +234,8 @@ For example, the `genderCode` field includes two options:
 
 | Value | Label |
 | --- | --- |
-| 1 | Male |
-| 2 | Female |
+| 1 | male |
+| 2 | female |
 
 You can use the following options to map the `genderCode` source field to `person.gender` target field:
 
@@ -244,7 +243,7 @@ You can use the following options to map the `genderCode` source field to `perso
 
 | Source field | Target XDM field |
 | --- | --- |
-| `decode(genderCode, "1", "Male", "2", "Female", "default")` | `person.gender` |
+| `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
 In this scenario, the value corresponds to the key, if the key is found in options, or `default`, if `default` is present and the key is not found. The value corresponds to `null` if options is `null` or there is no `default` and the key is not found.
 
@@ -252,7 +251,7 @@ In this scenario, the value corresponds to the key, if the key is found in optio
 
 | Source field | Target XDM field |
 | --- | --- |
-| `iif(gendercode.equals("1"),"Male",iif(gendercode.equals("2"),"Female",null))` | `person.gender` |
+| `iif(gendercode.equals("1"),"male",iif(gendercode.equals("2"),"female",null))` | `person.gender` |
 
 >[!TIP]
 >
