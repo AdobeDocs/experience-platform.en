@@ -186,7 +186,7 @@ POST /activation/authoring/destinations
       },
       {
         "sourceType": "text/x.aep-xl",
-        "source": "iif(segmentMembership.ups.seg_id.status==\"exited\", \"1\", \"0\")",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
         "destination": "delete"
       }
     ] 
