@@ -3,41 +3,43 @@ keywords: Experience Platform;query service;Query service;nested data structures
 title: Flatten Nested Data Structures For Use With BI Tools
 description: This document explains how to flatten XDM schemas for all tables and views during a session when using third-party BI tools with Query Service.
 ---
-# Flatten Nested Data Structures for use with third-party BI tools
+# Flatten nested data structures for use with third-party BI tools
 
-Adobe Experience Platform Query Service supports the `FLATTEN` setting when connecting to a database through third-party BI tools. This feature flattens nested data structures in third-party BI tools to improve their usability and reduce the required workload to retrieve, analyze, transform and report data.
+Adobe Experience Platform Query Service supports the `FLATTEN` setting when connecting to a database through third-party BI tools. This feature flattens nested data structures in third-party BI tools to improve their usability and reduce the required workload to retrieve, analyze, transform, and report data.
 
 Many BI tools like [!DNL Tableau] and [!DNL Power BI] do not natively support nested data structures. The `FLATTEN` setting removes the need to create SQL views on top of your data to provide a flat version, or to use Query Service `CTAS` or `INSERT INTO` jobs to duplicate your datasets into flat versions when using ad hoc schemas.
 
-The `FLATTEN` setting pulls each leaf field structure into the root of the table and names the field after the original namespace. This allows you to use dot notation to match a field to its XDM path while preserving the field's context.
+The `FLATTEN` setting pulls the structure of each leaf field into the root of the table and names the field after the original namespace. This allows you to use dot notation to match a field to its Experience Data Model (XDM) path while preserving the field's context.
 
 ## Prerequisites
 
 Using the `FLATTEN` setting requires a working understanding of the following components of Adobe Experience Platform:
 
-* [XDM system overview](../../xdm/home.md): A high-level overview of XDM and its implementation in Experience Platform.
+* [XDM System](../../xdm/home.md): A high-level overview of XDM and its implementation in Experience Platform.
   
-  * [Create an ad hoc schema](../../xdm/tutorials/ad-hoc.md): Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset are referred to as an “ad-hoc” schema. Ad-hoc schemas are used in various data ingestion workflows for Experience Platform and creating certain kinds of source connections.
+  * [Create an ad hoc schema](../../xdm/tutorials/ad-hoc.md): An XDM schema with fields that are namespaced for usage only by a single dataset are referred to as an “ad hoc” schema. Ad hoc schemas are used in various data ingestion workflows for Experience Platform and creating certain kinds of source connections.
 
 * [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-* [Nested data structures](./nested-data-structures.md): The complexity of enterprise data structures can make transforming or processing this data complicated. This document provides examples of how to create, process, or transform datasets with complex data types including nested data structures.
+* [Nested data structures](./nested-data-structures.md): This document provides examples of how to create, process, or transform datasets with complex data types including nested data structures.
 
 ## Connect to a database using the FLATTEN setting {#connect-with-flatten}
 
-Append the `FLATTEN` setting to the database name when connecting. For information on how to connect a specific BI tool, please see its respective documentation in the [connect clients to Query Service overview](../clients/overview.md). The connection string should contain:
+The `FLATTEN` setting flattens nested data structures into separate columns where the attribute name becomes the column name that holds the row values. This improves the usability of ad hoc schemas and reduces the necessary workload when working with data in BI tools that do not support nested data structures. 
+
+Append the `FLATTEN` setting to the database name when connecting to Query Service with your chosen third-party client. For information on how to connect a specific BI tool, please see its respective documentation in the [connect clients to Query Service overview](../clients/overview.md). The connection string should contain:
 
 * The sandbox name.
-* A colon followed by "all" or a specific dataset ID, view ID, or database name.
+* A colon followed by `all` or a specific dataset ID, view ID, or database name.
 * A question mark (?) followed by the `FLATTEN` keyword.
 
-The input should take the following format.
+The input should take the following format:
 
 ```terminal
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
-A example connection string might look as below.
+A example connection string might look as below:
 
 ```terminal
 prod:all?FLATTEN
@@ -45,17 +47,18 @@ prod:all?FLATTEN
 
 ## Example {#example}
 
-This document uses the standard "Commerce Details" field group that utilizes the "commerce" object structure and the "productListItems" array as an example. See the XDM documentation for [more information on the "Commerce Details" field group](../../xdm/field-groups/event/commerce-details.md). A representation of the schema structure can be seen in the image below.
+The example schema used in this guide employs the standard field group [!UICONTROL Commerce Details], which utilizes the `commerce` object structure and the `productListItems` array. See the XDM documentation for [more information on the [!UICONTROL Commerce Details] field group](../../xdm/field-groups/event/commerce-details.md). A representation of the schema structure can be seen in the image below.
 
-![A schema diagram of the Commerce Details field group including the commerce and productListItems structures.](../images/best-practices/final-subscription-schema.png)
+![A schema diagram of the Commerce Details field group including the `commerce` and `productListItems` structures.](../images/best-practices/final-subscription-schema.png)
 
-If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as commerce and productListItems in the example schema). These values may appear in an unusable way as demonstrated below. 
+If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as `commerce` and `productListItems` in the example schema). These values may appear in an unusable way as demonstrated below. 
 
+<!-- how does this is demonstrate poor usability? What values are trying to be referenced here, and how exactly is the output not good? Break this down more. -->
 ```terminal
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
-By using the `FLATTEN` setting you can access separate fields within your schema or whole sections of the nested data structure by using dot notation and their original pathname. An example of this format using the Commerce field group is given below. 
+By using the `FLATTEN` setting, you can access separate fields within your schema or whole sections of the nested data structure by using dot notation and their original pathname. An example of this format using the `commerce` field group is given below. 
 
 ```terminal
 commerce.order.priceTotal
@@ -69,7 +72,7 @@ The `FLATTEN` setting has certain limitations when dealing with other data struc
 
 The flattened root fields now use dot notation to match their XDM paths. When used in a query the fields need to be enclosed in quotation marks (" ").
 
-The SQL example below displays the original state of the nested query.
+The SQL example below displays the original state of the nested query:
 
 ```sql
 SELECT YEAR(timestamp) AS year,
@@ -79,7 +82,7 @@ WHERE commerce.purchases.value > 0
 GROUP BY 1;
 ```
 
-When using the flattened data fields, the query is written using dot notation and enclosed in quotation marks as seen below.
+When using the flattened data fields, the query is written using dot notation and enclosed in quotation marks as seen below:
 
 ```sql
 SELECT YEAR(timestamp) AS year,
@@ -91,13 +94,14 @@ GROUP BY 1;
 
 ## Limitations {#limitations}
 
-The `FLATTEN` setting does not currently latten the following data structures.
+The `FLATTEN` setting does not currently flatten the following data structures:
 
+<!-- Can we provide code examples of the described workarounds for these two types? -->
 | Data structure  | Limitation |
 |---|---|
-| Arrays | Use an explicit array index or the EXPLODE function to access arrays. |
+| Arrays | Use an explicit array index or the `EXPLODE` function to access arrays. |
 | Maps | Use the string key to access a value under a map to access maps. |
 
 ## Next steps
 
-By reading this document you better understand how to flatten nested data structures for use with third-party BI tools. If you have not already connected your client, see [the client connection overview](../clients/overview.md) for a list of supported third-party clients. 
+This document covered how to flatten nested data structures for use with third-party BI tools. If you have not already connected your client, see [the client connection overview](../clients/overview.md) for a list of supported third-party clients. 

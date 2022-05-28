@@ -30,7 +30,7 @@ Ensure that you have checked the **[!UICONTROL SSL Required]** box before trying
     
 >[!IMPORTANT]
 >
->Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See [the `FLATTEN` feature documentation](../best-practices/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database. 
+>Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See the documentation on the[`FLATTEN` feature](../best-practices/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database. 
 
 After filling in all your credentials, select **[!DNL Sign In]** to continue.
 
