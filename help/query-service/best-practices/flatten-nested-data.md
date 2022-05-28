@@ -25,9 +25,9 @@ Using the `FLATTEN` setting requires a working understanding of the following co
 
 ## Connect to a database using the FLATTEN setting {#connect-with-flatten}
 
-The `FLATTEN` setting flattens nested data structures into separate columns where the attribute name becomes the column name that holds the row values. This improves the usability of ad hoc schemas and reduces the necessary workload when working with data in BI tools that do not support nested data structures. 
+The `FLATTEN` setting flattens nested data structures into separate columns where the attribute name becomes the column name that holds the row values. when working with data in BI tools that do not support nested data structures, this setting improves the usability of ad hoc schemas and reduces the necessary workload. 
 
-Append the `FLATTEN` setting to the database name when connecting to Query Service with your chosen third-party client. For information on how to connect a specific BI tool, please see its respective documentation in the [connect clients to Query Service overview](../clients/overview.md). The connection string should contain:
+When connecting to Query Service with your chosen third-party client, append the `FLATTEN` setting to the database name. For information on how to connect a specific BI tool, please see its respective documentation in the [connect clients to Query Service overview](../clients/overview.md). The connection string should contain:
 
 * The sandbox name.
 * A colon followed by `all` or a specific dataset ID, view ID, or database name.
