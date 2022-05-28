@@ -54,6 +54,7 @@ The example schema used in this guide employs the standard field group [!UICONTR
 If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as `commerce` and `productListItems` in the example schema). These values may appear in an unusable way as demonstrated below. 
 
 <!-- how does this is demonstrate poor usability? What values are trying to be referenced here, and how exactly is the output not good? Break this down more. -->
+
 ```terminal
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
