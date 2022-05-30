@@ -131,7 +131,8 @@ POST /activation/authoring/destinations
       "type": "string",
       "isRequired": true,
       "readOnly": false,
-      "hidden": false
+      "hidden": false,
+      "pattern": "^[0-9]+$"
     },
     {
       "name": "accountType",
@@ -157,7 +158,7 @@ POST /activation/authoring/destinations
   },
   "destinationDelivery": [
     {
-      "destinationServerId": "",
+      "destinationServerId": "<~server-id~>",
       "authenticationRule": "CUSTOMER_AUTHENTICATION"
     }
   ],
@@ -168,34 +169,16 @@ POST /activation/authoring/destinations
     "audienceTemplateId": "{YOUR_AUDIENCE_TEMPLATE_ID}",
     "authenticationId": "{YOUR_GOOGLE_CREDENTIAL_ID}"
   },
-  "identityNamespaces": {
-    "ppid": {
-      "required": true,
-      "acceptsAttributes": true,
-      "acceptsCustomNamespaces": true,
-      "acceptedGlobalNamespaces": {}
-    }
-  },
   "schemaConfig": {
     "useCustomerSchemaForAttributeMapping": false,
     "identityRequired": true,
     "profileRequired": false,
     "segmentRequired": true,    
-    "profileFields": [
+    "profileFields": [],
+    "requiredMappings": [
       {
-        "name": "list_id",
-        "title": "list_id",
-        "type": "string",
-        "isRequired": true
+        "destination": "ppid"
       },
-      {
-        "name": "delete",
-        "title": "delete",
-        "type": "string",
-        "isRequired": true
-      }
-    ],
-   "requiredMappings": [
       {
         "sourceType": "text/plain",
         "source": "metadata.segment.alias",
@@ -203,10 +186,10 @@ POST /activation/authoring/destinations
       },
       {
         "sourceType": "text/x.aep-xl",
-        "source": "iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
         "destination": "delete"
       }
-    ]
+    ] 
   },
   "batchConfig": {
     "defaultExportMode": "FIRST_FULL_THEN_INCREMENTAL",
