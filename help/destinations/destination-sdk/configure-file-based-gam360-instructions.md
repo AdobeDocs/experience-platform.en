@@ -165,8 +165,8 @@ POST /activation/authoring/destinations
     "mapUserInput": false,
     "mapExperiencePlatformSegmentId": true,
     "mapExperiencePlatformSegmentName": true,
-    "audienceTemplateId": "YOUR_AUDIENCE_TEMPLATE_ID",
-    "authenticationId": "YOUR_GOOGLE_CREDENTIAL_ID"
+    "audienceTemplateId": "{YOUR_AUDIENCE_TEMPLATE_ID}",
+    "authenticationId": "{YOUR_GOOGLE_CREDENTIAL_ID}"
   },
   "identityNamespaces": {
     "ppid": {
