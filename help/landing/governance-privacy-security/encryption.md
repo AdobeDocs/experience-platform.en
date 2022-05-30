@@ -1,8 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;data protection;encryption data lake
 title: Data Encryption in Adobe Experience Platform
 topic-legacy: data protection
-description: Learn how Experience Platform encrypts data in transit and at rest.
+description: Learn how data is encrypted in transit and at rest in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 ---
 # Data encryption in Adobe Experience Platform
@@ -13,7 +12,9 @@ The following process flow diagram illustrates how data is ingested, encrypted, 
 
 ![](../images/governance-privacy-security/encryption/flow.png)
 
-## Data in transit
+## Data in transit {#in-transit}
+
+All data in transit between Platform and any external component is conducted over secure, encrypted connections using HTTPS [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
 
 In general, data is brought into Platform in three ways:
 
@@ -21,15 +22,13 @@ In general, data is brought into Platform in three ways:
 * [Source connectors](../../sources/home.md) stream data directly to Platform from Adobe Experience Cloud applications and other enterprise data sources.
 * Non-Adobe ETL (extract, transform, load) tools send data to the [batch ingestion API](../../ingestion/batch-ingestion/overview.md) for consumption.
 
-After data has been brought into the system and enriched by Platform services, it can be sent to authenticated [destinations](../../destinations/home.md) which include Adobe applications, partner applications, and native Platform applications such as Adobe Customer Journey Analytics and Adobe Journey Optimizer.
+After data has been brought into the system and [encrypted at rest](#at-rest), it can then be enriched by Platform services and activated to authenticated [destinations](../../destinations/home.md) including Adobe applications and partner applications. This data can also be used by native Platform applications such as Adobe Customer Journey Analytics and Adobe Journey Optimizer.
 
-Regardless of the method(s) used to move data in and out of Experience Platform, all data in transit between Platform and any external component is conducted over secure, encrypted connections using HTTPS [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
-
-## Data at rest
+## Data at rest {#at-rest}
 
 Data that is ingested and used by Platform is stored in the data lake, a highly granular data store containing all data managed by the system, regardless of origin or file format. All data persisted in the data lake is encrypted, stored, and managed in an isolated [[!DNL Microsoft Azure Data Lake] Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) instance that is unique to your organization.
 
-For details on how data at rest is encrypted in Azure Data Lake Storage and Cosmos DB, see the [data encryption overview](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption) in the official Azure documentation.
+For details on how data at rest is encrypted in Azure Data Lake Storage and Cosmos DB, see the [official Azure documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
 ### Encryption keys
 
