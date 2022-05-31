@@ -2,8 +2,6 @@
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Manage Role Permissions
 description: This document provides information on attribute-based access control in Adobe Experience Platform
-hide: true
-hidefromtoc: true
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 ---
 # Manage permissions for a role

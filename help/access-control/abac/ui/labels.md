@@ -2,8 +2,6 @@
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Manage Labels
 description: This document provides information on attribute-based access control in Adobe Experience Platform
-hide: true
-hidefromtoc: true
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 ---
 # Manage labels
