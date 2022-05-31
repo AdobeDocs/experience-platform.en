@@ -100,3 +100,7 @@ The following table shows which pattern letters are defined for format strings. 
 | V | Time zone ID | Text | America/Los_Angeles |
 | O | Time zone offset | Text | GMT+8 |
 | Q/q | Quarter of the year | Number/Text | 3; 03; Q3; 3rd quarter |
+
+## Maps {#maps}
+
+Maps are currently not supported in [!DNL Data Prep].
