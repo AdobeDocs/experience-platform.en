@@ -39,6 +39,7 @@ feature: Queries
   - [Sample Adobe Target queries](sample-queries/adobe-target.md)
 - Data Governance {#data-governance}
   - [Audit log guide](data-governance/audit-log-guide.md)
+  - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
