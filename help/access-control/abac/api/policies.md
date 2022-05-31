@@ -3,8 +3,6 @@ keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Con
 solution: Experience Platform
 title: Policies API Endpoint
 description: The /policies endpoint in the Attribute-Based Access Control API allows you to  programmatically manage policies in Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
 ---
 # Policies endpoint
