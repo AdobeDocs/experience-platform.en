@@ -18,13 +18,13 @@ Criteo powers trusted and impactful advertising to bring richer experiences to e
 
 * You need to have an administrator user account on [Criteo Management Center](https://marketing.criteo.com).
 * You'll need your Criteo Advertiser ID (ask your Criteo contact if you don't have this ID).
-* You'll need to provide GUM caller ID, in case you want to use GUM ID as identifier.
+* You'll need to provide [!DNL GUM caller ID], in case you want to use [!DNL GUM ID] as identifier.
 
 ## Limitations {#limitations}
 
 * Criteo does not currently support removing users from audiences.
-* Criteo only accepts [!DNL SHA-256]-hashed and plain-text emails (to be transformed into [!DNL SHA-256] before sending). Please do not send any PII (Personal Identifiable Information, such as individual's names or phone numbers).
-* Criteo needs at least one identifier to be provided by the client. It prioritizes GUM ID as identifier over hashed email as it contributes to better matching rate.
+* Criteo only accepts [!DNL SHA-256]-hashed and plain-text emails (to be transformed into [!DNL SHA-256] before sending). Please do not send any PII (Personal Identifiable Information, such as individuals' names or phone numbers).
+* Criteo needs at least one identifier to be provided by the client. It prioritizes [!DNL GUM ID] as identifier over hashed email as it contributes to better matching rate.
 
 ![Prerequisites](../../assets/catalog/advertising/criteo/prerequisites.png)
 
@@ -35,7 +35,7 @@ Criteo supports the activation of identities described in the table below. Learn
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
 | `email_sha256` | Email addresses hashed with the SHA-256 algorithm | Both plain text and SHA-256-hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the [!UICONTROL Apply transformation] option, to have Platform automatically hash the data on activation. |
-| `gum_id` | Criteo GUM cookie identifier | GUM IDs allow clients to maintain a correspondence between their user identification system and Criteo's user identification (UID). If the identifier type is `GUM`, an additional parameter, the `GUM Caller ID`, must also be included. Please reach out to your Criteo account team for the appropriate `GUM Caller ID` or to get more information on this `GUM` sync, if needed.|
+| `gum_id` | Criteo [!DNL GUM] cookie identifier | [!DNL GUM IDs] allow clients to maintain a correspondence between their user identification system and Criteo's user identification ([!DNL UID]). If the identifier type is `GUM`, an additional parameter, the [!DNL GUM Caller ID], must also be included. Please reach out to your Criteo account team for the appropriate [!DNL GUM Caller ID] or to get more information on this `GUM` sync, if needed.|
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -95,7 +95,7 @@ After authenticating to the destination, please fill in the following connection
 | Description | A description to help you identify this destination in the future. | No |
 | API Version | Criteo API Version. Please select Preview. | Yes |
 | Advertiser ID | Criteo Advertiser ID of your organization. Please contact your Criteo account manager to obtain this information. | Yes |
-| Criteo GUM caller ID | GUM Caller ID of your organization. Please reach out to your Criteo account team for the appropriate `GUM Caller ID` or to get more information on this GUM sync, if needed. | Yes, whenever GUM ID is provided as an identifier |
+| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] of your organization. Please reach out to your Criteo account team for the appropriate [!DNL GUM Caller ID] or to get more information on this [!DNL GUM] sync, if needed. | Yes, whenever [!DNL GUM ID] is provided as an identifier |
 
 ## Activate segments to this destination {#activate-segments}
 
