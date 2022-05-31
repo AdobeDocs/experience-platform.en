@@ -2,8 +2,6 @@
 title: Data Hygiene API Guide
 description: Learn how to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-hide: true
-hidefromtoc: true
 ---
 # Data Hygiene API guide
 
@@ -35,9 +33,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 This document provides an example API call to demonstrate how to format your requests. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/api-guide.md#sample-api) in the getting started guide for Experience Platform APIs.
 
-## Work orders
+<!-- ## Work orders
 
-A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API.
+A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
 ## Time to live (TTL) for datasets
 
