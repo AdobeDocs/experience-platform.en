@@ -22,7 +22,7 @@ To enable Adobe Analytics to receive data from Server API, you need to [configur
 ### API format {#format}
 
 ```http
-POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
+POST https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}
 ```
 
 ### Request {#request}
@@ -32,7 +32,7 @@ The sample below includes several automatically mapped values from the `_experie
 All values that users map to those fields will automatically map to the appropriate Analytics values, as if they were included in the API request.
 
 ```shell
-curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}" \
+curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" \
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}" 
