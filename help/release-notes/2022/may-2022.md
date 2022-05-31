@@ -233,7 +233,9 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 
 {style="table-layout:auto"}
 
-For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md). For more information on Query Service capabilities, see the [Query Service overview](../../query-service/home.md)
+For more information on Query Service capabilities, see the [Query Service overview](../../query-service/home.md)
+
+<!--For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md).-->
 
 ## Sources {#sources}
 
