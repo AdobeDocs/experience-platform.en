@@ -1,8 +1,8 @@
 ---
 title: Adobe Advertising Cloud DSP connection
-description: Adobe Advertising Cloud DSP is an integrated destination for the [!DNL Adobe Real-time Customer Data Profile], allowing you to share authenticated first-party segments with approved advertisers and users for campaign activation.  
+description: Adobe Advertising Cloud DSP is an integrated destination for the [!DNL Adobe Real-time Customer Data Profile], allowing you to share authenticated first-party segments with approved advertisers and users for campaign activation.
+exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 ---
-
 # Adobe Advertising Cloud DSP connection
 
 ## Overview {#overview}
