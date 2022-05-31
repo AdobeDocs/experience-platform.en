@@ -16,6 +16,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 ## Activities {#activities}
 
+The Marketo Connector is adding support for additional standard activities, which may cause errors to our customers because if they create a new Activity dataflow without updating their schema, the mapping templates will fail since the new target fields are not present on their schema. The user can choose to dismiss any errors, resulting in, in which the new/updated fields will not ingest into AEP or re-run the Postman script to update the schema before creating a new dataflow.
+
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
