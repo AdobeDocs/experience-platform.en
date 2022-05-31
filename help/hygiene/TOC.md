@@ -16,3 +16,4 @@ feature: Privacy
 * Data Hygiene API {#api}
   * [Overview](./api/overview.md)
   * [Dataset time to live (TTL)](./api/ttl.md)
+  * [Consumer delete jobs](./api/jobs.md)
