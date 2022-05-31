@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Manage Users
-description: This document provides information on attribute-based access control in Adobe Experience Platform
+description: This document provides information on managing users and user groups through the Permissions interface in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 ---
 # Manage users

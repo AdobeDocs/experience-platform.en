@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Create a Role
-description: This document provides information on attribute-based access control in Adobe Experience Platform
+description: This document provides information on managing roles through the Permissions interface in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 ---
 # Manage roles
