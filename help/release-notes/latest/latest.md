@@ -14,6 +14,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Alerts](#alerts)
 - [Audit Logs](#audit-logs)
 - [Dashboards](#dashbaords)
 - [Data collection](#data-collection)
@@ -23,6 +24,19 @@ Updates to existing features in Adobe Experience Platform:
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Sources](#sources)
+
+## Alerts {#alerts}
+
+Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
+**Updated features**
+
+| Feature | Alert rule | Description |
+| --- | --- | --- |
+| New alert rule | Skippage rate exceeds threshold | You can now use the alert to receive notifications when your sources dataflow exceeds the identities thresholds. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
+
+{style="table-layout:auto"}
+
 
 <!-- ## Attribute-based access control {#abac}
 
@@ -65,7 +79,7 @@ Experience Platform allows you to audit user activity for various services and c
 **Updated features**
 
 | Feature | Name | Description |
-| --- | --- | -- |
+| --- | --- | --- |
 | Resources added | <ul><li> Access control policy </li><li> Role </li><li> Audit logs </li><li> Work order </li><li> Identity namespace </li><li> Identity graph </li><li> Query </li><li> Dataset </li><li> Source data flow </li></ul> | Audit log resources are recorded automatically as the activity occurs. If the feature is enabled you do not need to manually enable log collection. |
 
 {style="table-layout:auto"}
@@ -129,6 +143,7 @@ Experience Platform provides a suite of technologies that allow you to collect c
 | Import datastream mapping rules | When setting up Data Prep for Data Collection, you can [import the mapping rules of an existing datastream](../../edge/datastreams/data-prep.md#import-mapping) instead of configuring every field mapping manually. |
 | Datasteam mapping support for Mobile SDK | You can now configure Data Prep for Data Collection on datastreams intended for use with the Experience Platform Mobile SDK. |
 | Datasteam mapping support for XDM objects | Map XDM objects in addition to data-layer objects when [configuring Data Prep for Data Collection](../../edge/datastreams/data-prep.md#select-data). |
+| Integration with dataflows | Use the sources catalog in Platform to access your data on Platform Edge Network, including Data Prep for Data Collection and improved support for Data Prep warnings. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
 
@@ -231,7 +246,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Beta release of [!DNL Zendesk] source | Use the [!DNL Zendesk] source to ingest user, agent, and organization data from your [!DNL Zendesk] instance for [!DNL Profile] enrichment. See the [[!DNL Zendesk] source overview](../../sources/connectors/customer-success/zendesk.md) for more information. |
-| Support for Adobe Data Collection | Use the sources catalog to access your Data Collection Experience Edge data, including Data Prep for Data Collection and improved support for data warnings from Data Prep. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
+| Support for Adobe Data Collection | Use the sources catalog in Platform to access your data on Platform Edge Network, including Data Prep for Data Collection and improved support for Data Prep warnings. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
 | Support for ingesting files with `ISO-8859-1` encoding | Use the `encoding` parameter to ingest `ISO-8859-1` encoded files with a cloud storage source to Platform using the [!DNL Flow Service] API. See the guide on [creating a cloud storage source connection](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
 
 {style="table-layout:auto"}

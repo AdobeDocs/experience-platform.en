@@ -759,7 +759,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-See the document on setting identities in an ad hoc datasets for more detailed information.
+See the document on [setting identities in an ad hoc datasets](../data-governance/ad-hoc-schema-identities.md) for more detailed information.
 
 #### ADD COLUMN
 
