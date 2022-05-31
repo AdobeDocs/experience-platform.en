@@ -35,7 +35,7 @@ Criteo supports the activation of identities described in the table below. Learn
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
 | `email_sha256` | Email addresses hashed with the SHA-256 algorithm | Both plain text and SHA-256-hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the [!UICONTROL Apply transformation] option, to have Platform automatically hash the data on activation. |
-| `gum_id` | Criteo GUM cookie identifier | GUM ID's allow clients to maintain a correspondence between their user identification system and Criteo's user identification (UID).If the identifier type is 'gum', an additional parameter, the gumCallerId, must also be included.Please reach out to your Criteo account team for the appropriate gumCallerId or to get more information on this GUM sync, if needed.|
+| `gum_id` | Criteo GUM cookie identifier | GUM IDs allow clients to maintain a correspondence between their user identification system and Criteo's user identification (UID). If the identifier type is `GUM`, an additional parameter, the `GUM Caller ID`, must also be included. Please reach out to your Criteo account team for the appropriate `GUM Caller ID` or to get more information on this `GUM` sync, if needed.|
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -95,7 +95,7 @@ After authenticating to the destination, please fill in the following connection
 | Description | A description to help you identify this destination in the future. | No |
 | API Version | Criteo API Version. Please select Preview. | Yes |
 | Advertiser ID | Criteo Advertiser ID of your organization. Please contact your Criteo account manager to obtain this information. | Yes |
-| Criteo gum caller ID | Gum Caller Id of your organization. Please reach out to your Criteo account team for the appropriate gumCallerId or to get more information on this GUM sync, if needed. | No |
+| Criteo GUM caller ID | GUM Caller ID of your organization. Please reach out to your Criteo account team for the appropriate `GUM Caller ID` or to get more information on this GUM sync, if needed. | Yes, whenever GUM ID is provided as an identifier |
 
 ## Activate segments to this destination {#activate-segments}
 
