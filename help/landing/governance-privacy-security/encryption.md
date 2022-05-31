@@ -22,17 +22,16 @@ In general, data is brought into Platform in three ways:
 * [Source connectors](../../sources/home.md) stream data directly to Platform from Adobe Experience Cloud applications and other enterprise data sources.
 * Non-Adobe ETL (extract, transform, load) tools send data to the [batch ingestion API](../../ingestion/batch-ingestion/overview.md) for consumption.
 
-After data has been brought into the system and [encrypted at rest](#at-rest), it can then be enriched by Platform services and activated to authenticated [destinations](../../destinations/home.md) including Adobe applications and partner applications. This data can also be used by native Platform applications such as Adobe Customer Journey Analytics and Adobe Journey Optimizer.
+After data has been brought into the system and [encrypted at rest](#at-rest), it can then be enriched by Platform services and brought out of the system in the following ways:
+
+* [Destinations](../../destinations/home.md) allow you to activate data to Adobe applications and partner applications.
+* Native Platform applications such as [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html) and [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) can also make use of the data.
 
 ## Data at rest {#at-rest}
 
 Data that is ingested and used by Platform is stored in the data lake, a highly granular data store containing all data managed by the system, regardless of origin or file format. All data persisted in the data lake is encrypted, stored, and managed in an isolated [[!DNL Microsoft Azure Data Lake] Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) instance that is unique to your organization.
 
 For details on how data at rest is encrypted in Azure Data Lake Storage and Cosmos DB, see the [official Azure documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
-
-### Encryption keys
-
-Your data lake instance in Platform stores encryption keys in a secure [Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview). These keys are maintained by Adobe on your behalf. In a future release, you will be able to provide your own encryption keys for even greater control over the security of your data.
 
 ## Next steps
 
