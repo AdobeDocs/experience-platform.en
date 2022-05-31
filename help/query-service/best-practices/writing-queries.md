@@ -4,7 +4,7 @@ solution: Experience Platform
 title: General Guidance for Query Execution in Query Service
 topic-legacy: queries
 type: Tutorial
-description: This document details important details to know when writing queries in Adobe Experience Platform Query Service.
+description: This document outlines important details to know when writing queries in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 ---
 # General guidance for query execution in [!DNL Query Service]
