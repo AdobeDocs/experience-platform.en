@@ -61,6 +61,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `ReportsToId` | `extendedWorkDetails.reportsToID`|
 | `Salutation` | `person.name.courtesyTitle`|
 | `Title`| `extendedWorkDetails.jobTitle`|
+| `"Contact"` | `b2b.personType` |
 
 {style="table-layout:auto"}
 
@@ -69,8 +70,6 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `City`| `workAddress.city`|
-| `ConvertedContactId` | `b2b.convertedContactID`|
-| `ConvertedContactId` | `personComponents.sourceConvertedContactID`|
 | `ConvertedDate` | `b2b.convertedDate` |
 | `Country`| `workAddress.country`|
 | `Email`  | `workEmail.address`| Secondary identity. |
@@ -107,6 +106,16 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `Suffix` | `person.name.suffix` |
 | `Company` | `b2b.companyName` |
 | `Website` | `b2b.companyWebsite` |
+| `ConvertedContactId` | `b2b.convertedContactKey.sourceID` |
+| `"Salesforce"` | `b2b.convertedContactKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.convertedContactKey.sourceInstanceID` |
+| `concat(ConvertedContactId,\"@${CRM_ORG_ID}.Salesforce\")` | `b2b.convertedContactKey.sourceKey` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `"Lead"` | `b2b.personType` |
+| `ConvertedContactId` | `personComponents.sourceConvertedContactKey.sourceID` |
+| `"Salesforce"` | `personComponents.sourceConvertedContactKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personComponents.sourceConvertedContactKey.sourceInstanceID` |
+| `concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourceConvertedContactKey.sourceKey` |
 
 {style="table-layout:auto"}
 
@@ -146,7 +155,6 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `ParentId` | `accountParentKey.sourceID`|
 | `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountParentKey` |
 | `Phone` | `accountPhone.number`|
-| `Rating` | `accountOrganization.rating`|
 | `ShippingCity`| `accountShippingAddress.city`|
 | `ShippingCountry`| `accountShippingAddress.country`|
 | `ShippingLatitude` | `accountShippingAddress._schema.latitude` |
@@ -160,6 +168,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `TickerSymbol`| `accountOrganization.tickerSymbol`|
 | `Tradestyle`| `accountTradeStyle`| data.com feature |
 | `Type` | `accountType`|
+| `Website` | `accountOrganization.website` |
 
 {style="table-layout:auto"}
 
@@ -197,6 +206,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `StageName` | `opportunityStage`|
 | `TotalOpportunityQuantity` | `opportunityQuantity` |
 | `Type` | `opportunityType`|
+| `CurrencyIsoCode` | `opportunityAmount.currencyCode` |
 
 {style="table-layout:auto"}
 
@@ -249,6 +259,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
 | `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
+| `CurrencyIsoCode` | `actualCost.currencyCode` |
 
 ## Campaign member {#campaign-member}
 
@@ -271,6 +282,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `FirstRespondedDate` | `firstRespondedDate` |
+| `Type` | `b2b.personType` |
 
 ## Next steps
 
