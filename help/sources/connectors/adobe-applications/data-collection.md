@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;sources;source;data collection
 title: Adobe Data Collection
 description: This document provides an overview of the Adobe Data Collection source.
+exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
 ---
 # Adobe Data Collection
 

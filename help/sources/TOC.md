@@ -21,6 +21,7 @@ feature: Sources
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target field mappings](connectors/adobe-applications/mapping/target.md)
       - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
+      - [Microsoft Dynamics field mappings](connectors/adobe-applications/mapping/dynamics.md)
       - [Salesforce field mappings](connectors/adobe-applications/mapping/salesforce.md)
     - Marketo {#marketo}
       - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
@@ -53,6 +54,7 @@ feature: Sources
   - Customer success {#customer-success}
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
+    - [Zendesk connector](connectors/customer-success/zendesk.md)
   - Databases {#databases}
     - [Amazon Redshift connector](connectors/databases/redshift.md)
     - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
@@ -117,6 +119,7 @@ feature: Sources
     - Customer success {#customer-success}
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
+      - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
     - Databases {#databases}
       - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/api/create/databases/hive.md)
@@ -215,6 +218,7 @@ feature: Sources
     - Customer Success {#customer-success}
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
+      - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
     - Databases {#databases}
       - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
