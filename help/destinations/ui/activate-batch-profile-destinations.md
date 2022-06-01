@@ -25,15 +25,15 @@ To activate data to destinations, you must have successfully [connected to a des
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Destination Catalog tab](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+    ![Image highlighting how to get to the destinations catalog tab](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. Select **[!UICONTROL Activate segments]** on the card corresponding to the destination where you want to activate your segments, as shown in the image below.
 
-    ![Activate segments button](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+    ![Image highlighting the Activate segments button](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
 
 1. Select the destination connection that you want to use to activate your segments, then select **[!UICONTROL Next]**.
 
-    ![Select destination](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+    ![Image highlighting how to select one or multiple destinations to activate segments to](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Move to the next section to [select your segments](#select-segments).
 
@@ -41,7 +41,7 @@ To activate data to destinations, you must have successfully [connected to a des
 
 Use the check boxes to the left of the segment names to select the segments that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-![Select segments](../assets/ui/activate-batch-profile-destinations/select-segments.png)
+![Image highlighting how to select one or multiple segments to activate](../assets/ui/activate-batch-profile-destinations/select-segments.png)
 
 
 ## Schedule segment export {#scheduling}
@@ -62,7 +62,7 @@ Use the check boxes to the left of the segment names to select the segments that
 
 Select the **[!UICONTROL Create schedule]** button corresponding to the segment that you want to send to your destination.
 
-![Create schedule button](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![Image highlighting the Create schedule button](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Export full files {#export-full-files}
 
@@ -84,7 +84,7 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
 
-![Export full files](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![Image of the UI with the Export full files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
@@ -126,7 +126,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 >
 >The first exported incremental file includes all profiles that qualify for a segment, functioning as a backfill.
 
-![Export incremental files](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![Image of the UI with the Export incremental files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
@@ -158,11 +158,15 @@ The default file names consist of destination name, segment ID, and a date and t
 
 Select the pencil icon to open a modal window and edit the file names. File names are limited to 255 characters.
 
-![configure file name](../assets/ui/activate-batch-profile-destinations/configure-name.png)
+>[!NOTE]
+>
+>The image below shows how file names can be edited for Amazon S3 destinations but the process is identical for all batch destinations (for example SFTP or Azure Blob Storage).
+
+![Image highlighting the pencil icon, which is used to configure file names.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
 In the file name editor, you can select different components to add to the file name. 
 
-![edit file name options](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
+![Image displaying all the available file name options.](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
 The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
 
@@ -185,17 +189,17 @@ For profile-based destinations, you must select the profile attributes that you 
 
 1. In the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]**.
     
-    ![Add new mapping](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+    ![Image highlighting the Add new field button.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
 1. Select the arrow to the right of the **[!UICONTROL Schema field]** entry.
 
-    ![Select source field](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
+    ![Image highlighting how to select a source field.](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
 1. In the **[!UICONTROL Select field]** page, select the XDM attributes that you want to send to the destination, then choose **[!UICONTROL Select]**.
 
-    ![Select source field page](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+    ![Image showing the various fields available as source fields.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
-1. To add more mappings, repeat steps 1 to3.
+1. To add more mappings, repeat steps one to three.
 
 >[!NOTE] 
 >
@@ -205,7 +209,7 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
 
-![recommended attributes](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png) 
+![Image showing prefilled recommended attributes in the mapping step of the segment activation workflow.](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png) 
 
 ### Mandatory attributes {#mandatory-attributes}
 
@@ -378,11 +382,11 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 >
 >In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
-![data policy violation](../assets/common/data-policy-violation.png)
+![Image showing a data policy violation example.](../assets/common/data-policy-violation.png)
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
-![Review](../assets/ui/activate-batch-profile-destinations/review.png)
+![Image showing the review screen of the segment activation workflow.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ## Verify segment activation {#verify}
 
