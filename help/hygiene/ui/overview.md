@@ -2,8 +2,6 @@
 title: Data Hygiene UI Guide
 description: Learn how to manage data hygiene tasks in the Adobe Experience Platform user interface.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-hide: true
-hidefromtoc: true
 ---
 # Data hygiene UI guide
 
@@ -19,8 +17,7 @@ To access the workspace, select **[!UICONTROL Data Hygiene]** in the left naviga
 
 ![Image showing the [!UICONTROL Data Hygiene] workspace in the Platform UI](../images/ui/overview/home.png)
 
-From here, you can browse existing work orders and create new data hygiene requests. Refer to the following sections of this guide to learn more:
+From here, you can browse existing work orders and configure new data hygiene operations. Refer to the following sections of this guide to learn more:
 
 * [Browse existing work orders](./browse.md)
-* [Delete consumer data](./delete-consumer.md)
 * [Manage time to live (TTL) for datasets](./ttl.md)
