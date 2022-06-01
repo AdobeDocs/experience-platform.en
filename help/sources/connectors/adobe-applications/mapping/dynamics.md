@@ -43,6 +43,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `emailaddress1` | `personComponents.workEmail.address` |
 | `firstname` | `person.name.firstName` |
 | `fullname` | `person.name.fullName` |
+| `lastname` | `person.name.lastName` |
 | `jobtitle` | `extendedWorkDetails.jobTitle` |
 | `middlename` | `person.name.middleName` |
 | `mobilephone` | `mobilePhone.number` |
@@ -124,6 +125,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `telephone1` | `accountPhone.number` |
 | `tickersymbol` | `accountOrganization.tickerSymbol` |
 | `websiteurl` | `accountOrganization.website` |
+| `concat(accountid,"@${CRM_ORG_ID}.Dynamics")` | `accountKey.sourceKey` |
 
 {style="table-layout:auto"}
 
