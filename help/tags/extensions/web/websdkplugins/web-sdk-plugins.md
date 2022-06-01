@@ -49,6 +49,7 @@ The Web SDK Plugins extension provides the following data elements:
 [//]: # (- [ ] Add links to plugin pages within the data elements below)
 
 ### getAndPersistValue
+
 >[!IMPORTANT]
 >
 >This data element both sets cookies and allows for storing user-generated values in cookies. Please refer to the plug-in specific documentation for more information.
@@ -64,6 +65,7 @@ The `getAndPersistValue` data element provides the following arguments:
 If the variable in the `vtp` argument is set, then the data element sets the cookie then returns the cookie value. If the variable in the `vtp` argument is not set, then the data element only returns the cookie value.
 
 ### getGeoCoordinates
+
 >[!IMPORTANT]
 >
 >This plug-in requires location access on the client but will not throw an exception if it doesn't get it.
@@ -77,6 +79,7 @@ The `getGeoCoordinates` data element does not use any arguments. It returns one 
 * `"latitude=[LATITUDE] | longtitude=[LONGITUDE]"`: Where [LATITUDE]/[LONGITUDE] are the latitude and longitude, respectively
 
 ### getNewRepeat
+
 >[!IMPORTANT]
 >
 >This data element sets cookies. Please refer to the plug-in specific documentation for more information.
@@ -103,6 +106,7 @@ The `getPageName` data element uses the following arguments:
 The data element returns a string containing a friendly-formatted version of the URL. This string is typically assigned to the `pageName` variable, but can be used in other variables as well.
 
 ### getPreviousValue
+
 >[!IMPORTANT]
 >
 >This data element both sets cookies and allows for storing user-generated values in cookies. Please refer to the plug-in specific documentation for more information.
@@ -157,6 +161,7 @@ Calling this data element returns a string that contains the following delimited
 * The current time (AM/PM)
 
 ### getTimeSinceLastVisit
+
 >[!IMPORTANT]
 >
 >This data element sets cookies. Please refer to the plug-in specific documentation for more information.
@@ -171,6 +176,7 @@ The `getTimeSinceLastVisit` data element does not use any arguments. It returns 
 * If a visitor has not visited before or the time elapsed is greater than two years, the value is set to `"New Visitor"`.
 
 ### getValOnce
+
 >[!IMPORTANT]
 >
 >This data element both sets cookies and allows for storing user-generated values in cookies. Please refer to the plug-in specific documentation for more information.
@@ -187,6 +193,7 @@ The `getValOnce` data element uses the following arguments:
 If the `vtc` argument and cookie value match, this method returns an empty string. If the `vtc` argument and cookie value do not match, the method returns the `vtc` argument as a string.
 
 ### getVisitDuration
+
 >[!IMPORTANT]
 >
 >This data element sets cookies. Please refer to the plug-in specific documentation for more information.
@@ -201,6 +208,7 @@ The `getVisitDuration` data element does not use any arguments. It returns one o
 * `"[x] minutes"` (where `[x]` is the number of minutes passed since the visitor landed on the site)
 
 ### getVisitNum
+
 >[!IMPORTANT]
 >
 >This data element sets cookies. Please refer to the plug-in specific documentation for more information.
