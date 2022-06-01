@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;Salesforce;salesforce;field mapping;Field mapping;mapping;marketo;B2B;b2b
 title: Microsoft Dynamics Mapping Fields
 description: The tables below contain the mappings between Microsoft Dynamics source fields and their corresponding XDM fields.
+exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 ---
 # [!DNL Microsoft Dynamics] field mappings
 
@@ -42,6 +43,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `emailaddress1` | `personComponents.workEmail.address` |
 | `firstname` | `person.name.firstName` |
 | `fullname` | `person.name.fullName` |
+| `lastname` | `person.name.lastName` |
 | `jobtitle` | `extendedWorkDetails.jobTitle` |
 | `middlename` | `person.name.middleName` |
 | `mobilephone` | `mobilePhone.number` |
@@ -123,6 +125,7 @@ The tables below contain the mappings between [!DNL Microsoft Dynamics] source f
 | `telephone1` | `accountPhone.number` |
 | `tickersymbol` | `accountOrganization.tickerSymbol` |
 | `websiteurl` | `accountOrganization.website` |
+| `concat(accountid,"@${CRM_ORG_ID}.Dynamics")` | `accountKey.sourceKey` |
 
 {style="table-layout:auto"}
 
