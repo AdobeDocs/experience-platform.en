@@ -92,6 +92,15 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authentication information {#authentication-information}
 
+Input the fields below and select **[!UICONTROL Connect to destination]**:
+
+![Image of the UI screen showing completed fields for the Amazon Kinesis authentication details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+
+* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL Region]**: Indicate which [!DNL Amazon Web Services] region to stream data to.
+
+### Destination details {#destination-details}
+
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="Include Segment Names"
@@ -101,15 +110,6 @@ To connect to this destination, follow the steps described in the [destination c
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="Include Segment Timestamps"
 >abstract="Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. View the documentation for a data export example with this option selected."
-
-Input the fields below and select **[!UICONTROL Connect to destination]**:
-
-![Image of the UI screen showing completed fields for the Amazon Kinesis authentication details](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
-
-* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Region]**: Indicate which [!DNL Amazon Web Services] region to stream data to.
-
-### Destination details {#destination-details}
 
 After establishing the authentication connection to the Amazon Kinesis destination, provide the following information for the destination:
 
