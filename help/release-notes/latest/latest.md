@@ -7,10 +7,10 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 **Release date: May 25, 2022**
 
- <!-- New features in Adobe Experience Platform: -->
+New features in Adobe Experience Platform:
 
-<!-- - [Attribute-based access control](#abac) -->
-<!-- - [Data hygiene](#hygiene) -->
+- [Attribute-based access control](#abac)
+- [Data hygiene](#hygiene)
 
 Updates to existing features in Adobe Experience Platform:
 
@@ -18,12 +18,47 @@ Updates to existing features in Adobe Experience Platform:
 - [Audit Logs](#audit-logs)
 - [Dashboards](#dashbaords)
 - [Data collection](#data-collection)
-<!-- - [Data Governance](#data-governance) -->
+- [Data Governance](#data-governance)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Sources](#sources)
+
+## Attribute-based access control {#abac}
+
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+
+Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
+
+Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+
+| Feature | Description |
+| --- | --- |
+| Attribute-based access control | Attribute-based access control allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies covering XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments. For more information, see the [attribute-based access control overview](../../access-control/abac/overview.md). |
+| Permissions | Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the [Permissions UI guide](../../access-control/abac/ui/browse.md). |
+
+For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md).
+
+## Data hygiene {#hygiene}
+
+Experience Platform provides a suite of data hygiene capabilities that allow you manage your stored data through programmatic deletions of consumer records and datasets. Using either the [!UICONTROL Data Hygiene] workspace in the UI or through calls to the Data Hygiene API, you can manage your data stores to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
+
+>[!IMPORTANT]
+>
+>Data hygiene capabilities are currently only available for organizations that have purchased the Adobe Shield for Healthcare add-on offering.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Time to live (TTL) for datasets | [Schedule TTLs](../../hygiene/ui/ttl.md) for Platform datasets.  |
+
+{style="table-layout:auto"}
+
+For more information on audit logs in Platform, refer to the [data hygiene overview](../../hygiene/home.md).
 
 ## Alerts {#alerts}
 
@@ -37,40 +72,7 @@ Experience Platform allows you to subscribe to event-based alerts for various Pl
 
 {style="table-layout:auto"}
 
-
-<!-- ## Attribute-based access control {#abac}
-
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
-Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
-
-Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
-
-| Feature | Description |
-| --- | --- |
-| Attribute-based access control | Attribute-based access control allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies covering XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments. |
-| Permissions | Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the [Permissions UI guide](../../access-control/abac/ui/browse.md). |
-
-For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). -->
-
-<!-- ## Data hygiene {#hygiene}
-
-Experience Platform provides a suite of data hygiene capabilities that allow you manage your stored data through programmatic deletions of consumer records and datasets. Using either the [!UICONTROL Data Hygiene] workspace in the UI or through calls to the Data Hygiene API, you can manage your data stores to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
-
->[!IMPORTANT]
->
->Data hygiene capabilities are currently only available for organizations that have purchased the Adobe Shield for Healthcare add-on offering.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| Consumer deletion | [Delete consumer records](../../hygiene/ui/delete-consumer.md) from the data lake and Profile store based on primary identity data. |
-| Time to live (TTL) for datasets | [Schedule TTLs](../../hygiene/ui/ttl.md) for Platform datasets.  |
-
-For more information on audit logs in Platform, refer to the [data hygiene overview](../../hygiene/home.md). -->
+For more information on alerts, see the [[!DNL Observability Insights] overview](../../observability/home.md).
 
 ## Audit Logs {#audit-logs}
 
@@ -147,7 +149,7 @@ Experience Platform provides a suite of technologies that allow you to collect c
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
 
-<!-- ## Data Governance {#governance}
+## Data Governance {#governance}
 
 Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
@@ -159,7 +161,7 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 {style="table-layout:auto"}
 
-See the [Data Governance overview](../../data-governance/home.md) for more information on the service. -->
+See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -169,12 +171,11 @@ See the [Data Governance overview](../../data-governance/home.md) for more infor
 
 | Feature | Description | 
 | ------- | ----------- |
+| Attribute-based access control in [!DNL Data Prep] | You will now only be able to map attributes that you have access to. Attributes that you do not have access to can not be used in pass-through mappings and calculated fields. For more information, see [attribute-based access control in [!DNL Data Prep]](../../data-prep/home.md). **Note**: Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released. |
 | Localized data errors | [!DNL Data Prep] now localizes all transformation errors to the attribute level (previously at the row level). Dataflows will now ingest partial rows filled with columns that do not have any transformation errors, instead of ignoring the full rows. |
 | Stream upserts to [!DNL Profile Service] | Stream upserts with [!DNL Data Prep] to send partial row updates to Profile Service using the [[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md), or [[!DNL HTTP API]](../../sources/connectors/streaming/http.md) source. See the guide on [streaming upserts](../../data-prep/upserts.md) for more information. |
 
 {style="table-layout:auto"}
-
-<!-- | Attribute-based access control in [!DNL Data Prep] | You will now only be able to map attributes that you have access to. Attributes that you do not have access to can not be used in pass-through mappings and calculated fields. For more information, see [attribute-based access control in [!DNL Data Prep]](../../data-prep/home.md). **Note**: Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released. | -->
 
 For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
@@ -233,9 +234,9 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 
 {style="table-layout:auto"}
 
-<!-- For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md). -->
-
 For more information on Query Service capabilities, see the [Query Service overview](../../query-service/home.md)
+
+<!--For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md).-->
 
 ## Sources {#sources}
 
@@ -245,13 +246,11 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
+| Attribute-based access control in sources | You can now manage and control access to individual source fields and attributes during ingestion. **Note**: Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.  |
 | Beta release of [!DNL Zendesk] source | Use the [!DNL Zendesk] source to ingest user, agent, and organization data from your [!DNL Zendesk] instance for [!DNL Profile] enrichment. See the [[!DNL Zendesk] source overview](../../sources/connectors/customer-success/zendesk.md) for more information. |
-| General availability of B2B [!DNL Microsoft Dynamics] source | You can now use the [!DNL Microsoft Dynamics] source to ingest B2B objects like accounts, opportunities, campaigns, marketing list and marketing list members. See the [[!DNL Microsoft Dynamics] source overview](../../sources/connectors/crm/ms-dynamics.md) for more information. |
-| Support for Adobe Data Collection | Use the sources catalog to access your Data Collection Experience Edge data, including Data Prep for Data Collection and improved support for data warnings from Data Prep. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
+| Support for Adobe Data Collection | Use the sources catalog in Platform to access your data on Platform Edge Network, including Data Prep for Data Collection and improved support for Data Prep warnings. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
 | Support for ingesting files with `ISO-8859-1` encoding | Use the `encoding` parameter to ingest `ISO-8859-1` encoded files with a cloud storage source to Platform using the [!DNL Flow Service] API. See the guide on [creating a cloud storage source connection](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
 
 {style="table-layout:auto"}
-
-<!-- | Attribute-based access control in sources | You can now manage and control access to individual source fields and attributes during ingestion. **Note**: Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.  | -->
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
