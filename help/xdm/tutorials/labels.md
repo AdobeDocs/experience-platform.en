@@ -2,11 +2,11 @@
 title: Manage Data Usage Labels for a Schema
 description: Learn how to add data usage labels to Experience Data Model (XDM) schema fields in the Adobe Experience Platform UI.
 ---
-# Manage data usage labels for a schema (Beta)
+# Manage data usage labels for a schema
 
 >[!IMPORTANT]
 >
->This feature is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+>Schema-based labeling is part of [attribute-based access control](../../access-control/abac/overview.md), which is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
 
 All data that is brought into Adobe Experience Platform is constrained by Experience Data Model (XDM) schemas. This data may be subject to usage restrictions defined by your organization or by legal regulations. To account for this, the Platform allows you to restrict the usage of certain datasets and fields through the use of [data usage labels](../../data-governance/labels/overview.md).
 
