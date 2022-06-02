@@ -198,6 +198,28 @@ The server and file configuration specs for file-based destinations can be confi
 
 You can use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../ui/activate-batch-profile-destinations.md#file-names) screen.
 
+```json
+"filenameConfig":{
+   "allowedFilenameAppendOptions":[
+      "DESTINATION",
+      "SEGMENT_ID",
+      "SEGMENT_NAME",
+      "DATETIME",
+      "TIMESTAMP",
+      "CUSTOM_TEXT",
+      "DESTINATION_INSTANCE_NAME",
+      "DESTINATION_INSTANCE_ID",
+      "SANDBOX_NAME",
+      "ORGANIZATION_NAME"
+   ],
+   "defaultFilenameAppendOptions":[
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilename":""
+}
+```
+
 As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well.
 
 |Macro|UI label|Description|Example|
@@ -226,7 +248,7 @@ The example shown in the image above uses the following file name macro configur
       "SEGMENT_ID",
       "DATETIME"
    ],
-   "defaultFilename":"DESTINATION_NAME"
+   "defaultFilename":"DESTINATION"
 }
 ```
 
