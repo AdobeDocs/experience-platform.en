@@ -627,7 +627,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         }
     },
     "params": {
-        "mode": "Cloud Storage",
+        "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
         "format": "CSV"
