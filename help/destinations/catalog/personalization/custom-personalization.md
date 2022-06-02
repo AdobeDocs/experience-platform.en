@@ -20,7 +20,7 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 ## Export type and frequency {#export-type-frequency}
 
-**Profile request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../edge/fundamentals/datastreams.md).
+**Profile request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../edge/datastreams/overview.md).
 
 ## Use cases {#use-cases}
 
@@ -54,6 +54,10 @@ The following day, the user returns to the same customer website. The segments t
 >abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream"
 
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
 ### Connection parameters {#parameters}
@@ -63,9 +67,13 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
 *  **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
-*  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details.
+*  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/datastreams/overview.md) for more details.
 
 ## Activate segments to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and segments to profile request destinations](../../ui/activate-profile-request-destinations.md) for instructions on activating audience segments to this destination.
 

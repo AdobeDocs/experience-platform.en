@@ -132,9 +132,9 @@ POST /ee/v2/interact
 ### Request {#request}
 
 ```shell
-curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
+curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}"
 -H "Authorization: Bearer {TOKEN}"
--H "x-gw-ims-org-id: {IMS_ORG_ID}"
+-H "x-gw-ims-org-id: {ORG_ID}"
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{
@@ -247,15 +247,15 @@ Notifications with the right `id` for the corresponding scopes are required to b
 ### API format
 
 ```http
-POST /v2/collect
+POST /ee/v2/collect
 ```
 
 ### Request
 
 ```shell
-url -X POST "https://server.adobedc.net/v2/collect?dataStreamId={DATASTREAM_ID}" 
+url -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
--H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{

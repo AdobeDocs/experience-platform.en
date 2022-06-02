@@ -24,9 +24,9 @@ POST /ee/v2/interact
 ### Request {#request}
 
 ```shell
-curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}" 
+curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
--H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}" 
 -H "Content-Type: application/json" 
 -d '{

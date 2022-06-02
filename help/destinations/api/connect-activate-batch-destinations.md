@@ -9,6 +9,14 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 ---
 # Connect to batch destinations and activate data using the Flow Service API
 
+>[!IMPORTANT]
+> 
+>To connect to a destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). 
+>
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+>
+>Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 This tutorial demonstrates how to use the Flow Service API to create a batch [cloud storage](../catalog/cloud-storage/overview.md) or [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your newly created destination, and export data to your newly created destination via CSV files.
 
 This tutorial uses the [!DNL Adobe Campaign] destination in all examples, but the steps are identical for all batch cloud storage and email marketing destinations.
@@ -50,7 +58,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Resources in [!DNL Experience Platform] can be isolated to specific virtual sandboxes. In requests to [!DNL Platform] APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 
@@ -85,7 +93,7 @@ GET /connectionSpecs
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
@@ -142,7 +150,7 @@ POST /connections
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -187,7 +195,7 @@ POST /sourceConnections
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -251,7 +259,7 @@ The request below establishes a base connection to [!DNL Adobe Campaign] destina
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -305,7 +313,7 @@ The request below establishes a base connection to [!DNL Amazon S3] destinations
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -335,7 +343,7 @@ The request below establishes a base connection to [!DNL Azure Blob] destination
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -364,7 +372,7 @@ The request below establishes a base connection to [!DNL Oracle Eloqua] destinat
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -405,7 +413,7 @@ The request below establishes a base connection to [!DNL Oracle Responsys] desti
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -446,7 +454,7 @@ The request below establishes a base connection to [!DNL Salesforce Marketing Cl
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -487,7 +495,7 @@ The request below establishes a base connection to SFTP destinations.
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -554,7 +562,7 @@ The request below establishes a target connection to [!DNL Adobe Campaign] desti
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Adobe Campaign",
@@ -601,7 +609,7 @@ The request below establishes a target connection to [!DNL Amazon S3] destinatio
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Amazon S3",
@@ -637,7 +645,7 @@ The request below establishes a target connection to [!DNL Azure Blob] destinati
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Azure Blob",
@@ -673,7 +681,7 @@ The request below establishes a target connection to [!DNL Oracle Eloqua] destin
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Oracle Eloqua",
@@ -714,7 +722,7 @@ The request below establishes a target connection to [!DNL Oracle Responsys] des
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Oracle Responsys",
@@ -755,7 +763,7 @@ The request below establishes a target connection to [!DNL Salesforce Marketing 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for Salesforce Marketing Cloud",
@@ -796,7 +804,7 @@ The request below establishes a target connection to SFTP destinations, to deter
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "TargetConnection for SFTP",
@@ -868,7 +876,7 @@ curl -X POST \
 'https://platform.adobe.io/data/foundation/flowservice/flows' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'x-api-key: {API_KEY}' \
--H 'x-gw-ims-org-id: {IMS_ORG}' \
+-H 'x-gw-ims-org-id: {ORG_ID}' \
 -H 'x-sandbox-name: {SANDBOX_NAME}' \
 -H 'Content-Type: application/json' \
 -d  '{
@@ -952,7 +960,7 @@ PATCH /flows
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'If-Match: "{ETAG}"' \
@@ -989,6 +997,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "exportMode": "DAILY_FULL_EXPORT",
                 "schedule": {
                     "frequency": "ONCE",
+                    "triggerType": "SCHEDULED",
                     "startDate": "2021-12-20",
                     "startTime": "17:00"
                 },   
@@ -1024,10 +1033,15 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `exportMode` | Mandatory. Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. |
 | `startDate` | Select the date when the segment should start exporting profiles to your destination. |
 | `frequency` | Mandatory. <br> <ul><li>For the `"DAILY_FULL_EXPORT"` export mode, you can select `ONCE` or `DAILY`.</li><li>For the `"FIRST_FULL_THEN_INCREMENTAL"` export mode, you can select `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul>   |
-| `endDate` | Not applicable when selecting `"exportMode":"DAILY_FULL_EXPORT"` and `"frequency":"ONCE"`. <br> Sets the date when segment members stop being exported to the destination. |
-| `startTime` | Mandatory. Select the time when files containing members of the segment should be generated and exported to your destination. |
+| `triggerType` | For *batch destinations* only. This field is required only when selecting the `"DAILY_FULL_EXPORT"` mode in the `frequency` selector. <br> Mandatory. <br> <ul><li>Select `"AFTER_SEGMENT_EVAL"` to have the activation job run immediately after the daily Platform batch segmentation job completes. This ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.</li><li>Select `"SCHEDULED"` to have the activation job run at a fixed time. This ensures that Experience Platform profile data is exported at the same time each day, but the profiles you export may not be the most up-to-date, depending on whether the batch segmentation job has completed before the activation job starts. When selecting this option, you must also add a `startTime` to indicate at which time in UTC the daily exports should occur.</li></ul> |
+| `endDate` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Not applicable when selecting `"exportMode":"DAILY_FULL_EXPORT"` and `"frequency":"ONCE"`. <br> Sets the date when segment members stop being exported to the destination. |
+| `startTime` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Mandatory. Select the time when files containing members of the segment should be generated and exported to your destination. |
 
 {style="table-layout:auto"}
+
+>[!TIP]
+>
+> See [Update components of a segment in a dataflow](/help/destinations/api/update-destination-dataflows.md#update-segment) to learn how to update various components (file name template, export time, and so on) of exported segments.
 
 **Response**
 
@@ -1053,7 +1067,7 @@ GET /flows
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'Content-Type: application/json' \
 --header 'x-sandbox-name: prod' \
 --header 'If-Match: "{ETAG}"' 
