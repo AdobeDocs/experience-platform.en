@@ -45,13 +45,11 @@ To learn more, visit the [segment dashboard guide](../../dashboards/guides/segme
 >id="platform_segments_browse_churncolumnname"
 >title="Churn"
 >abstract="The churn represents the percentage of profiles that are changing within a segment definition compared to the last time the segment job ran."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#browse" text="Learn more from documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Evaluation method"
 >abstract="Evaluation methods for segments include batch, streaming, and edge."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#browse" text="Learn more from documentation"
 
 Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your IMS Organization. 
 
