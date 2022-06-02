@@ -76,3 +76,39 @@ document.addEventListener("click", event => {
 });
 ```
 
+## Using the Tags extension {#tags-extension}
+
+Similar to using the [!DNL Web SDK], there is no additional configuration required in the [!DNL Tags] extension to use identities passed through the URL.
+
+To share identities from the current page to other domains, there is a  new action available in the [!DNL Web SDK] [!DNL Tags] extension. This action is designed to be used with a **[!UICONTROL Core - Click]** event type and a value comparison condition.
+
+Follow the steps described [here](../../tags/ui/managing-resources/rules.md) to create a rule with the following configuration:
+
+* [!UICONTROL Event Configuration]:
+  * **[!UICONTROL Extension: Core]**
+  * **[!UICONTROL Event Type: Click]**
+  * Select **[!UICONTROL When the user clicks on > specific elements]**
+  * Type in the **[!UICONTROL Selector]**: `a[href]`. This event will trigger any time an anchor tag is clicked on the page with a `href` property.
+
+    ![UI image showing the event configuration with the settings described above](assets/id-sharing-event-configuration.png)
+
+* [!UICONTROL Condition Configuration]
+  * **[!UICONTROL Logic Type]**: [!UICONTROL Regular]
+  * **[!UICONTROL Extension]**: [!UICONTROL Core]
+  * **[!UICONTROL Condition Type]**: [!UICONTROL Value Comparison]
+  * **[!UICONTROL Left Operand]**: [!UICONTROL `%this.hostname%`]. This is a special data element that works with [!UICONTROL Core - Click] events and resolves to the hostname of the link that was clicked. 
+  * **[!UICONTROL Operator]**: [!UICONTROL Matches Regex]
+  * **[!UICONTROL Right Operand]**: Type a regular expression that matches the domains that you would like to share identities with. For example, to match links with hostnames ending with `adobe.com` or `behance.com`, use this regular expression: `behance.com$|adobe.com$`. The linked page needs to have the [!DNL Web SDK] or [!DNL Visitor ID] installed to accept the identity.
+
+    ![UI image showing the condition configuration with the settings described above](assets/id-sharing-condition-configuration.png)
+
+* [!UICONTROL Action Configuration]
+  * **[!UICONTROL Extension]**: [!UICONTROL Adobe Experience Platform Web SDK]
+  * **[!UICONTROL Action Type]**: [!UICONTROL Append identity to URL]
+  * **[!UICONTROL Instance]**: Select your instance. In most cases, you will have only one instance configured. If you have multiple instances, select the one with the identity you would like to share.
+
+    ![UI image showing the action configuration with the settings described above](assets/id-sharing-action-configuration.png)
+
+The **[!UICONTROL Redirect with identity]** action will stop the browser from navigating through to the link. Then, it will call the `appendIdentityToUrl` method on the [!DNL Web SDK] instance.
+
+Finally, it redirects the user to the [!DNL URL] with the `adobe_mc` query string parameter appended.
