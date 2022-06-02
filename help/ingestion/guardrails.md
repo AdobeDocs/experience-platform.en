@@ -5,7 +5,7 @@ description: This document provides guidance on guardrails for data ingestion in
 ---
 # Guardrails for Data Ingestion
 
-Guardrails are recommended thresholds that provide guidance for data and system usage, optimizing performance, and avoiding errors or unexpected results in Adobe Experience Platform. Guardrails can refer to your usage or consumption of data and processing in relation to your licensing entitlements.
+Guardrails are thresholds that provide guidance for data and system usage, performance optimization, and avoidance of errors or unexpected results in Adobe Experience Platform. Guardrails can refer to your usage or consumption of data and processing in relation to your licensing entitlements.
 
 This document provides guidance on guardrails for data ingestion in Adobe Experience Platform
 
