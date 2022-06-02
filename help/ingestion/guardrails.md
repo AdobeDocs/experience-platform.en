@@ -1,6 +1,35 @@
 ---
 keywords: Experience Platform;troubleshooting;guardrails;guidelines;
 title: Guardrails for Data Ingestion
-description: 
+description: This document provides guidance on guardrails for data ingestion in Adobe Experience Platform
 ---
 # Guardrails for Data Ingestion
+
+Guardrails are recommended thresholds that provide guidance for data and system usage, optimizing performance, and avoiding errors or unexpected results in Adobe Experience Platform. Guardrails can refer to your usage or consumption of data and processing in relation to your licensing entitlements.
+
+This document provides guidance on guardrails for data ingestion in Adobe Experience Platform
+
+## Guardrails for batch ingestion
+
+The following table outlines guardrails to consider when using the [batch ingestion API](./batch-ingestion/overview.md) or sources:
+
+| Type of ingestion | Guidelines | Notes |
+| --- | --- | --- |
+| Data lake ingestion using the batch ingestion API  | <ul><li>You can ingest up to 7 GB of data per hour to data lake using the batch ingestion API.</li><li>The maximum number of files per batch is 1500.</li><li>The maximum batch size is 100 GB.</li><li>The maximum number of properties or fields per row is 10000.</li><li>The maximum number of batches per minute, per user is 138.</li></ul> |
+| Data lake ingestion using batch sources | <ul><li>You can ingest up to 200 GB of data per hour to data lake using batch ingestion sources such as [!DNL Azure Blob], [!DNL Amazon S3], and [!DNL SFTP].</li><li>A batch size should be between 256 MB and 100 GB MB.</li><li>The maximum number of files per batch is 1500.</li></ul> | See the [sources overview](../sources/home.md) for a catalog of sources you can use for data ingestion. |
+
+## Guardrails for streaming ingestion
+
+The following table outlines guardrails to consider when using the [streaming ingestion API](./streaming-ingestion/overview.md) or streaming sources:
+
+| Type of ingestion | Guidelines | Notes |
+| --- | --- | --- |
+| Streaming ingestion | <ul><li>The maximum record size is 1 MB, with the recommended size being 10 KB</li><li>You can process 20000 requests per second to Profile in under one minute. This can be scaled up to 100000 requests per second across tenants</li><li>You can process up to 20000 requests per second to data lake in under 15 minutes. This can be scaled up to 100000 requests per second across tenants.</li></ul>| Use the batch ingestion API if you require a higher data throughput. |
+| Streaming sources | <ul><li>The maximum record size is 1 MB, with the recommended size being 10 KB.</li><li>Streaming sources support 1200 to 1500 requests per second per tasks and four tasks are created by default. This means that you can make between 4000 to 5000 requests per second upon the creation of a new source connection.</li><li>You can process between 4000 and 5000 requests per second to data lake.</li></ul> | Streaming sources such as [!DNL Kafka], [!DNL Azure Event Hubs], and [!DNL Amazon Kinesis] do not use the [!DNL Data Collection Core Service] (DCCS) route and can have different throughput limits. See the [sources overview](../sources/home.md) for a catalog of sources you can use for data ingestion. |
+
+## Next steps
+
+See the following documentation for more information on data and processing guardrails in Experience Platform:
+
+* [Guardrails for Real-time Customer Profile data](../profile/guardrails.md)
+* [Guardrails for Identity Service data](../identity-service/guardrails.md)
