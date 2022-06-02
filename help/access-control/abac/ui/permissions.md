@@ -1,9 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Manage Role Permissions
-description: This document provides information on attribute-based access control in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: This document provides information on configuring permissions for a role through the Permissions interface in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 ---
 # Manage permissions for a role
@@ -11,6 +9,10 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 >[!IMPORTANT]
 >
 >Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+
+Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
+
+Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role.
 
 Immediately after [creating a new role](#create-a-new-role), you are returned to the **[!UICONTROL Roles]** tab. If you are editing permissions for an existing role, select the role from the **[!UICONTROL Roles]** tab. Alternatively, use the filter option to filter the results to find a role.
 
