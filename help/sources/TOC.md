@@ -6,20 +6,22 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
 feature: Sources
 ---
 
-# Source connectors {#sources}
+# Sources {#sources}
 
-- [Source connectors overview](home.md)
+- [Sources overview](home.md)
 - Available source connectors {#connectors}
   - Adobe applications {#adobe-applications}
-    - [Analytics Classifications source connector](connectors/adobe-applications/classifications.md)
-    - [Analytics source connector](connectors/adobe-applications/analytics.md)
-    - [Audience Manager source connector](connectors/adobe-applications/audience-manager.md)
-    - [Customer attributes source connector](connectors/adobe-applications/customer-attributes.md)
+    - [Analytics Classifications source](connectors/adobe-applications/classifications.md)
+    - [Analytics source](connectors/adobe-applications/analytics.md)
+    - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
+    - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
+    - [Data Collection source](connectors/adobe-applications/data-collection.md)
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target field mappings](connectors/adobe-applications/mapping/target.md)
       - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
+      - [Microsoft Dynamics field mappings](connectors/adobe-applications/mapping/dynamics.md)
       - [Salesforce field mappings](connectors/adobe-applications/mapping/salesforce.md)
     - Marketo {#marketo}
       - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
@@ -52,6 +54,7 @@ feature: Sources
   - Customer success {#customer-success}
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
+    - [Zendesk connector](connectors/customer-success/zendesk.md)
   - Databases {#databases}
     - [Amazon Redshift connector](connectors/databases/redshift.md)
     - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
@@ -82,6 +85,7 @@ feature: Sources
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
+    - [Square connector](connectors/payments/square.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)
@@ -115,6 +119,7 @@ feature: Sources
     - Customer success {#customer-success}
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
+      - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
     - Databases {#databases}
       - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/api/create/databases/hive.md)
@@ -144,6 +149,7 @@ feature: Sources
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
+      - [Square](tutorials/api/create/payments/square.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
       - [Generic REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -159,6 +165,7 @@ feature: Sources
     - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
     - [Explore payment data](tutorials/api/explore/payments.md)
     - [Explore protocol data](tutorials/api/explore/protocols.md)
+    - [Explore data tables](tutorials/api/explore/tabular.md)
   - Collect data {#collect}
     - [Collect advertising data](tutorials/api/collect/advertising.md)
     - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
@@ -211,6 +218,7 @@ feature: Sources
     - Customer Success {#customer-success}
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
+      - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
     - Databases {#databases}
       - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
@@ -242,6 +250,7 @@ feature: Sources
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
+      - [Square](tutorials/ui/create/payments/square.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
     - Streaming {#streaming}

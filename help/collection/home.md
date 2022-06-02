@@ -20,7 +20,7 @@ The data-collection technologies provided by Experience Platform focus on the di
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tags](../tags/home.md)
-* [Datastreams](../edge/fundamentals/datastreams.md)
+* [Datastreams](../edge/datastreams/overview.md)
 * [Event forwarding](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
@@ -40,7 +40,7 @@ Compressing these libraries speeds up data collection and consolidates operation
 
 ## Platform Edge Network and datastreams {#edge}
 
-Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using tags, you can set up [datastreams](../edge/fundamentals/datastreams.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
+Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using tags, you can set up [datastreams](../edge/datastreams/overview.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
 
 ![Datastreams and Adobe solutions](./images/home/adobe-solutions.png)
 

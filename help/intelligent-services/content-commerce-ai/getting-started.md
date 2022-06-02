@@ -22,7 +22,7 @@ However, when you get to the **Add API** step, the API is located under Experien
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ## Create a Postman environment (optional)
 

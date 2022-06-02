@@ -87,6 +87,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 > * Select the three dots in the [!UICONTROL Name] column and use the ![Activate segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]** button to send segments to that destination.
 > * Select the three dots in the [!UICONTROL Name] column and use the ![Delete button](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** button to [remove](delete-destinations.md) an existing connection to a destination.
 > * Select the three dots in the [!UICONTROL Name] column and use the ![View in monitoring button](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]** button to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Select the three dots in the [!UICONTROL Name] column and use the ![Subscribe to alerts ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Subscribe to alerts]** button to subscribe to destination dataflow alerts. You can subscribe to alerts to receive messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts..
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
 

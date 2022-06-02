@@ -33,6 +33,7 @@ feature: Destinations
     * [Edit activation dataflows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
     * [Monitor dataflows](./ui/monitor-dataflows.md)
+    * [Subscribe to in-context destination alerts](ui/alerts.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
     * Adobe destinations{#adobe}
@@ -41,6 +42,7 @@ feature: Destinations
         * [Experience Platform segment sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising}
         * [Advertising destinations overview](./catalog/advertising/overview.md)
+        * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
         * [Awin Advertiser Conversion Tag extension](./catalog/advertising/awin-conversiontag.md)
         * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
@@ -86,10 +88,10 @@ feature: Destinations
         * [Yext Conversion Tracking extension](./catalog/analytics/yext.md)
     * Cloud storage destinations {#cloud-storage}
         * [Cloud Storage destinations overview](./catalog/cloud-storage/overview.md)
-        * [(Beta) Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
+        * [Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 connection](./catalog/cloud-storage/amazon-s3.md)
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
-        * [(Beta) Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
+        * [Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Data Management Platform destinations {#data-management}
@@ -133,7 +135,7 @@ feature: Destinations
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
     * Streaming destinations {#streaming}
-        * [ (Beta) HTTP API connection](./catalog/streaming/http-destination.md)
+        * [HTTP API connection](./catalog/streaming/http-destination.md)
         * [IP address allowlist for streaming destinations](./catalog/streaming/ip-address-allow-list.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
@@ -182,11 +184,13 @@ feature: Destinations
       * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
     * Reference {#reference}
+      * [Rate limiting and retry policy for streaming destinations](./destination-sdk/rate-limiting-retry-policy.md)
       * [Supported transformation functions](./destination-sdk/supported-functions.md)
     * Document your destination {#document-destination}
       * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [Use a text editor in your local environment to create a destination documentation page](./destination-sdk/docs-framework/work-in-local-environment.md)
       * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
+      * [Authoring best practices](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Frequently asked questions](./destinations-faq.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

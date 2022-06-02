@@ -68,31 +68,29 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 **Modern and ready for the future:** The Web SDK and its connection to the Experience Edge Network has enabled Adobe to significantly modernize how Adobe deals with data collection, personalization, consent and the future of 3rd party cookies. (It enables a first party domain, managed by Adobe.)
 
-**Time-to-value:** Adobe has worked hard (and will continue) to make it as easy as possible to deploy the Web SDK via tags and map client-side data to XDM.  After that work is done, all other Adobe solutions and Adobe Experience Platform services can be turned on or off server-side. For example, if you are using this for Adobe Analytics and you want to turn on Target or Experience Platform, you can simply flip a toggle on the Datastream configuration and light up those use cases. 
+**Time-to-value:** Adobe has worked hard (and will continue) to make it as easy as possible to deploy the Web SDK via tags and map client-side data to XDM. After that work is done, all other Adobe solutions and Adobe Experience Platform services can be turned on or off server-side. For example, if you are using this for Adobe Analytics and you want to turn on Target or Experience Platform, you can simply flip a toggle on the Datastream configuration and light up those use cases. 
 
 ## What is Alloy?
 
 Alloy is the code name for Adobe Experience Platform Web SDK. It is used within the SDK's source code and filename, though Adobe Experience Platform Web SDK is the official name.
 
-## Do customers need to buy Adobe Experience Platform to use the Web SDK?
+## Do customers need to buy Adobe Experience Platform to use the [!DNL Web SDK]?
 
-No. Any Adobe Digital Experience customer can use it. Totally free. Any customer wanting to use the Web SDK will be given access to create schemas and datasets in the Adobe Experience Platform UI.
+No. Any Adobe Digital Experience customer can use the Adobe Experience Platform Web SDK free of charge. To use the Web SDK, you must have your organization provisioned for this feature. If you would like to get access, please fill out the following [form](https://adobe.ly/websdkaccess) and Adobe will provision you with access to the [Datastreams UI](datastreams/overview.md) and the Adobe Experience Platform UI (if needed).
+
+Customers who wish to use the [!DNL Web SDK] will be given access to create schemas, datasets, and identity namespaces in the Adobe Experience Platform UI.
 
 ## Who should use the Web SDK?
 
 Adobe Experience Platform Web SDK has been developed for the following people:
 
 * Adobe Experience Platform users
+  * If you need to send data directly from a device to Adobe Experience Platform, this is the officially recommended way. 
+  * Adobe is aware that using the Adobe Analytics connector is faster if the customer already has Adobe Analytics, but it is not the long-term strategy for data collection. 
 
-    If you need to send data directly from a device to Adobe Experience Platform, this is the officially recommended way. 
-
-    Adobe is aware that using the Adobe Analytics connector is faster if the customer already has Adobe Analytics, but it is not the long-term strategy for data collection. 
-    
 * Adobe Experience Cloud solution customers
-
-    New Adobe Analytics, Adobe Audience Manager, and Adobe Target customers should start with the new Web SDK and not use legacy libraries.
-
-    Existing customers who want to get the most optimized implementation possible should use the new Web SDK. 
+  * New Adobe Analytics, Adobe Audience Manager, and Adobe Target customers should start with the new Web SDK and not use legacy libraries.
+  * Existing customers who want to get the most optimized implementation possible should use the new Web SDK. 
 
 
 ## How do I get access to start using Adobe Experience Platform Web SDK?
@@ -109,7 +107,7 @@ It depends. Adobe Experience Platform Web SDK can be deployed in two different s
 
 * **Just another tag:** If the site is already tagged for solutions and you can't retag, but you want to send data to Adobe Experience Platform Edge Network for Experience Platform use cases or the upcoming event forwarding features (see below), you can add the `alloy.js` tag to the site, where it works as "just another tag."
 
-* **The one and only tag:** If you want to use the Web SDK for an Experience Cloud solution, you must use it for _all_ of the solutions on that page. For example, if your site is already tagged for Adobe Analytics and you want to use it for Target, you need to use it for both, as well as for any others in the future.  
+* **The one and only tag:** If you want to use the Web SDK for an Experience Cloud solution, you must use it for _all_ of the solutions on that page. For example, if your site is already tagged for Adobe Analytics and you want to use it for Target, you need to use it for both, as well as for any others in the future.
 
 In other words, if you decide to use Adobe Experience Platform Web SDK for non-solution use cases, you can tag the site with `alloy.js` and move on as if it's a new solution. If you want to use it for Adobe Analytics, Target, or Audience Manager, or for application use cases, you might have to remove any of the legacy code on your page. 
 
@@ -139,7 +137,7 @@ However:
 
 ## What is event forwarding?
 
-If you use our SDKs and send XDM to the Experience Edge, these new features event forwarding allows you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as “data collection as a service.”  This will be available for a cost, as well as being bundled as part of Adobe Experience Platform. 
+If you use our SDKs and send XDM to the Experience Edge, these new features event forwarding allows you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as “data collection as a service”. This will be available for a cost, as well as being bundled as part of Adobe Experience Platform. 
 
 ## What is a CNAME or First Party Domain and why does it matter?
 

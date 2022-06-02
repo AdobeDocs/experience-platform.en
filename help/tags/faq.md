@@ -100,6 +100,4 @@ See the guide on [managing permissions](./ui/administration/manage-permissions.m
 
 ## What if I have other questions?
 
-If you have other questions, please ask in the Adobe Community on the main tags page located at [https://adobe.com/go/launchme](https://adobe.com/go/launchme).
-
-Tags are just one example of where our platform is headed: more open, more integrated and as always dedicated to customer success.
+If you have other questions, you can ask on the [Adobe Experience Platform Data Collection community page](https://adobe.com/go/launchme) on Experience League, or join the [official Slack group for tag developers](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
