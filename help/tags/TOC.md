@@ -110,7 +110,7 @@ solution: Data Collection
       * [Overview](./extensions/web/core/overview.md)
       * [Event forwarding](./extensions/web/core/event-forwarding.md)
       * [Release notes](./extensions/web/core/release-notes.md)
-    * [!DNL Mailchimp] Edge
+    * [!DNL Mailchimp] Edge {#mailchimp-edge}
       * [Overview](./extensions/web/mailchimp/overview.md)
     * [!DNL Marketo Munchkin] {#marketo}
       * [Overview](./extensions/web/marketo/overview.md)
