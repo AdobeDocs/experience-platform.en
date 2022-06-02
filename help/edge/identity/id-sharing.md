@@ -8,7 +8,7 @@ keywords: Identity;mobile;id;sharing;domain;cross-domain;sdk;platform;
 
 ## Overview
 
-The Adobe Experience Platform Web SDK supports visitor ID sharing capabilities that enable customers to more accurately deliver personalized experiences between mobile apps and mobile web content, and across domains.
+The Adobe Experience Platform Web SDK supports visitor ID sharing capabilities that enable customers to enable customers to deliver personalized experiences more accurately, between between mobile apps and mobile web content, and across domains.
 
 ## Use cases {#use-cases}
 
@@ -32,13 +32,16 @@ For Edge Network mobile implementations, this feature is supported in the [Ident
 
 ## Mobile-to-web ID sharing {#mobile-to-web}
 
-The mobile-to-web ID sharing feature is supported by Web SDK version 2.10.0 or later. No configuration is required to accept `ECID` values in the query string.
+Use the `getUrlVariables` API from the [Identity for Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) extension to retrieve the identifiers as query parameters and attach them to your URL when opening [!DNL webViews].
+
+No additional configuration is required for the Web SDK to accept `ECID` values in the query string. 
 
 The query string parameter includes:
 
-* The Experience Cloud `orgID` that must match the `orgID` configured in the [!DNL Web SDK].
-* A timestamp parameter that cannot be older than five minutes.
-* The `ECID`.
+* `MCID`: The Experience Cloud ID (`ECID`)
+* `MCORGID`: The Experience Cloud `orgID` that must match the `orgID` configured in the [!DNL Web SDK].
+* `TS`: A timestamp parameter that cannot be older than five minutes.
+
 
 Mobile-to-web ID sharing uses the `adobe_mc` parameter. When the `adobe_mc` parameter is present and valid, the `ECID` from the query string is automatically added to the identity map in the first request made to the Edge Network. All subsequent Edge Network interactions will use that `ECID`.
 
