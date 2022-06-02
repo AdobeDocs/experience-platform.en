@@ -42,6 +42,12 @@ To learn more, visit the [segment dashboard guide](../../dashboards/guides/segme
 ## Browse {#browse}
 
 >[!CONTEXTUALHELP]
+>id="platform_segments_browse_ChurnColumnName"
+>title="Churn"
+>abstract="The churn represents the percentage of profiles that are changing within a segment definition compared to the last time the segment job ran."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#browse" text="Learn more from documentation"
+
+>[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationMethodColumnName"
 >title="Evaluation method"
 >abstract="Evaluation methods for segments include batch, streaming, and edge."
