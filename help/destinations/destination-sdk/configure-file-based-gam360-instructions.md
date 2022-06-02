@@ -203,8 +203,7 @@ POST /activation/authoring/destinations
       "EVERY_6_HOURS",
       "EVERY_8_HOURS",
       "EVERY_12_HOURS",
-      "ONCE",
-      "EVERY_HOUR"
+      "ONCE"
     ],
     "defaultFrequency": "EVERY_3_HOURS",
     "defaultStartTime": "00:00",
@@ -222,10 +221,10 @@ POST /activation/authoring/destinations
         "ORGANIZATION_NAME"
       ],
       "defaultFilenameAppendOptions": [
-        "DESTINATION_INSTANCE_ID",
-        "SEGMENT_ID"
+        "SEGMENT_ID",
+        "DATETIME"
       ],
-      "defaultFilename": "%ORGANIZATION_NAME%_%SEGMENT_ID%_%SANDBOX_NAME%"
+      "defaultFilename": ""
     }
   },
   "maxProfileAttributes": 1,

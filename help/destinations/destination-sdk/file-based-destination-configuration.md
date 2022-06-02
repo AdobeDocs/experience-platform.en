@@ -762,13 +762,22 @@ This section refers to the file export settings in the configuration above that 
       "defaultStartTime":"00:00",
       "filenameConfig": {
             "allowedFilenameAppendOptions": [
+                "DESTINATION_NAME",
+                "SEGMENT_ID",
                 "SEGMENT_NAME",
                 "DATETIME",
                 "TIMESTAMP",
-                "DESTINATION_NAME",
-                "SANDBOX_NAME"
+                "CUSTOM_TEXT",
+                "DESTINATION_INSTANCE_NAME",
+                "DESTINATION_INSTANCE_ID",
+                "SANDBOX_NAME",
+                "ORGANIZATION_NAME"
             ],
-            "defaultFilename": "{{DESTINATION_NAME}}_{{SEGMENT_ID}}"
+             "defaultFilenameAppendOptions": [
+                "SEGMENT_ID",
+                "DATETIME"
+               ],
+      "defaultFilename": ""
       }
    }
 ```
@@ -782,8 +791,9 @@ This section refers to the file export settings in the configuration above that 
 |`allowedScheduleFrequency`|List|Defines the file export frequency available to customers. Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul>|
 |`defaultFrequency`|Enum|Defines the default file export frequency.Supported values:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Default value is `DAILY`.|
 |`defaultStartTime`|String|Defines the default start time for the file export. Uses 24-hour file format. Default value is "00:00".|
-|`filenameConfig.allowedFilenameAppendOptions`|String|Defines the list of macros that users can include in the exported file name. Supported values: <ul><li>`DESTINATION`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`SEGMENT_NAME`</li><li>`SEGMENT_ID`</li><li>`DATETIME`</li><li>`TIMESTAMP`</li><li>`CUSTOM_TEXT`</li><li>`SANDBOX_NAME`</li><li>`ORGANIZATION_NAME`</li></ul> See [file name configuration](server-and-file-configuration.md#file-name-configuration) for details on the supported macros.|
-|`filenameConfig.defaultFilename`|String|Defines the default file name format for the exported files.|
+|`filenameConfig.allowedFilenameAppendOptions`|String|List of available file name macros for users to choose from. When setting `defaultFilename`, make sure to avoid duplicating macros. Supported values: <ul><li>`DESTINATION`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`SEGMENT_NAME`</li><li>`SEGMENT_ID`</li><li>`DATETIME`</li><li>`TIMESTAMP`</li><li>`CUSTOM_TEXT`</li><li>`SANDBOX_NAME`</li><li>`ORGANIZATION_NAME`</li></ul> See [file name configuration](server-and-file-configuration.md#file-name-configuration) for details on the supported macros.|
+|`filenameConfig.defaultFilenameAppendOptions`|String|Pre-selected default file name macros that users can uncheck.|
+|`filenameConfig.defaultFilename`|String|Defines the default file name macros for the exported files. These cannot be overwritten by users. Any macro defined by `allowedFilenameAppendOptions` will be appended after the `defaultFilename` macros.|
 
 ## Historical profile qualifications {#profile-backfill}
 

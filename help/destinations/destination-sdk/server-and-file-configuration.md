@@ -198,7 +198,7 @@ The server and file configuration specs for file-based destinations can be confi
 
 You can use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../ui/activate-batch-profile-destinations.md#file-names) screen.
 
-As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names unique as well.
+As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well.
 
 |Macro|UI label|Description|Example|
 |---|---|---|---|
@@ -212,6 +212,23 @@ As a best practice, you should always include the `SEGMENT_ID` macro in your exp
 |`CUSTOM_TEXT`|[!UICONTROL Custom text]|User-defined custom text to be included in the file name.|My_Custom_Text|
 |`SANDBOX_NAME`|[!UICONTROL Sandbox Name]|Name of the sandbox used by the customer.|prod|
 |`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in Adobe Experience Platform.|My Organization Name|
+
+![UI image showing the file name configuration screen with preselected macros](assets/file-name-configuration.png)
+
+The example shown in the image above uses the following file name macro configuration:
+
+```json
+"filenameConfig":{
+   "allowedFilenameAppendOptions":[
+      "CUSTOM_TEXT"
+   ],
+   "defaultFilenameAppendOptions":[
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilename":"DESTINATION_NAME"
+}
+```
 
 ## File-based destinations file configuration {#file-configuration}
 
