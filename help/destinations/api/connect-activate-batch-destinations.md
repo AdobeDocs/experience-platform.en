@@ -663,7 +663,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         }
     },
     "params": {
-        "mode": "Cloud Storage",
+        "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
         "format": "CSV"
@@ -822,7 +822,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         }
     },
     "params": {
-        "mode": "Cloud Storage",
+        "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
     }
 }'
