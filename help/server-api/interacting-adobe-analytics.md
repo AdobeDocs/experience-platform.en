@@ -22,7 +22,7 @@ To enable Adobe Analytics to receive data from Server API, you need to [configur
 ### API format {#format}
 
 ```http
-POST https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}
+POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 ```
 
 ### Request {#request}
