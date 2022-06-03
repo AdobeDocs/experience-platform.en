@@ -2,8 +2,8 @@
 title: Personalization via Adobe Target
 description: Learn how to use the Server API to deliver and render personalized experiences created in Adobe Target
 keywords: personalization; server api; Adobe Experience Platform Edge Network; retrieve personalization;target;adobe target
+exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
 ---
-
 # Personalization via Adobe Target
 
 ## Overview {#overview}

@@ -2,8 +2,8 @@
 title: Personalization via Offer Decisioning
 description: Learn how to use the Server API to deliver and render personalized experiences via Offer Decisioning
 keywords: personalization; server api; Adobe Experience Platform Edge Network; retrieve personalization;target;offer decisioning;
+exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
 ---
-
 # Personalization via Offer Decisioning
 
 ## Overview {#overview}
@@ -254,4 +254,3 @@ The table below explains the key elements of that portion of the response.
 |`content`| Content associated with the proposed offer in the format of a string. | `"content": "<p style="color:red;">20% Off on shipping</p>"`|
 |`deliveryUrl`| Image content associated with the proposed offer in the format of a URL. | `"deliveryURL": "https://image.jpeg"`|
 |`characteristics`| JSON object containing the characteristics associated with the proposed offer. | `"characteristics": { "foo": "bar", "foo1": "bar1" }`|
-
