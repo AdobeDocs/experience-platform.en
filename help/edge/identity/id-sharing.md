@@ -8,7 +8,7 @@ keywords: Identity;mobile;id;sharing;domain;cross-domain;sdk;platform;
 
 ## Overview
 
-The Adobe Experience Platform Web SDK supports visitor ID sharing capabilities that enable customers to enable customers to deliver personalized experiences more accurately, between between mobile apps and mobile web content, and across domains.
+The Adobe Experience Platform Web SDK supports visitor ID sharing capabilities that enable customers to deliver personalized experiences more accurately, between between mobile apps and mobile web content, and across domains.
 
 ## Use cases {#use-cases}
 
