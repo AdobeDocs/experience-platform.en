@@ -1,6 +1,7 @@
 ---
 title: Manage Data Usage Labels for a Schema
 description: Learn how to add data usage labels to Experience Data Model (XDM) schema fields in the Adobe Experience Platform UI.
+exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 ---
 # Manage data usage labels for a schema
 
