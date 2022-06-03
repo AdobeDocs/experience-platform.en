@@ -1,13 +1,11 @@
 ---
-title: Retrieve personalization content from other Adobe solutions
+title: Personalization overview
 description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: personalization; server api; Adobe Experience Platform Edge Network; retrieve personalization
 ---
 
-# Retrieve personalization content from Adobe solutions
-
-## Overview {#overview}
+# Personalization overview
 
 With the [!DNL Server API], you can retrieve personalized content from Adobe personalization solutions, including [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) and [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
@@ -132,7 +130,7 @@ The personalized content retrieved from personalization solutions is presented i
 **API format**
 
 ```http
-POST /v2/interact
+POST /ee/v2/interact
 ```
 
 ### Request {#request}

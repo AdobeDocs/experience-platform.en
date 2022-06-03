@@ -18,7 +18,7 @@ feature: Data Collection
 * Interacting with other Adobe solutions {#interacting-other-adobe-solutions}
   * [Interacting with Adobe Analytics](interacting-adobe-analytics.md)
 * Personalization {#personalization}
-  * [Retrieve personalization content from Adobe solutions](personalization-overview.md)
+  * [Personalization overview](personalization-overview.md)
   * [Personalization via Offer Decisioning](personalization-offer-decisioning.md)
   * [Personalization via Adobe Target](personalization-target.md)
 * [Error handling](error-handling.md)
