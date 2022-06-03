@@ -113,6 +113,9 @@ solution: Data Collection
     * [!DNL BrightCove] video tracking {#brightcove}
       * [Overview](./extensions/web/brightcove/overview.md)
       * [Release notes](./extensions/web/brightcove/release-notes.md)
+    * Google Data Layer {#google-data-layer}
+      * [Overview](./extensions/web/google-data-layer/overview.md)
+      * [Release notes](./extensions/web/google-data-layer/release-notes.md)
     * [!DNL YouTube] video tracking extension {#youtube}
       * [Overview](./extensions/web/youtube/overview.md)
       * [Release notes](./extensions/web/youtube/release-notes.md)
