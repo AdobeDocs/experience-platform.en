@@ -18,7 +18,7 @@ The Edge Network Server API can deliver and render personalized experiences crea
 
 Before you can use the Server API in conjunction with Adobe Target, you must enable Adobe Target personalization on your datastream configuration.
 
-See the [guide on adding services to a datastream](../edge/fundamentals/datastreams.md#adobe-target-settings), for detailed information on how to enable Adobe Target.
+See the [guide on adding services to a datastream](../edge/datastreams/overview.md#adobe-target-settings), for detailed information on how to enable Adobe Target.
 
 When configuring your datastream, you can (optionally) provide values for [!DNL Property Token], [!DNL Target Environment ID], and [!DNL Target Third Party ID Namespace].
 
