@@ -49,12 +49,20 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
+* [[!UICONTROL Mapped audience health]](#mapped-audience-health)
 * [[!UICONTROL Destinations count]](#destinations-count)
 * [[!UICONTROL Destination status]](#destination-status)
 * [[!UICONTROL Active destinations by destination platform]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Activated audiences across all destinations]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL Activated audiences]](#activated-audiences)
 
 ### [!UICONTROL Most used destinations] {#most-used-destinations}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mostuseddestinations"
+>title="Most used destinations"
+>abstract="This widget displays your organization's most active destinations by the number of segments mapped. These numbers are accurate at the time of the last snapshot. This ranking provides insight into which destinations are currently most used while highlighting those that may be underutilized."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#most-used-destinations" text="Learn more from documentation"
 
 The **[!UICONTROL Most used destinations]** widget displays your organization's top destinations by the number of segments mapped, as of the last snapshot. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. 
 
@@ -68,6 +76,12 @@ Selecting the name of a destination from the list shown on the widget will take 
 
 ### [!UICONTROL Recently created destinations] {#recently-created-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlycreateddestinations"
+>title="Recently created destinations"
+>abstract="This widget displays a list of the most recently configured destinations within your organization."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-created-destinations" text="Learn more from documentation"
+
 The **[!UICONTROL Recently created destinations]** widget enables you to see a list of your organization's most recently configured destinations. 
 
 The created date shown is accurate to the last daily snapshot. In other words, if you create a new destination, it will not appear in the list until after the next snapshot is taken.
@@ -80,7 +94,13 @@ To learn more about how to configure specific types of destinations, visit the [
 
 ### [!UICONTROL Recently activated segments] {#recently-activated-segments}
 
-The **[!UICONTROL Recently activated segments]** widget provides a list of the segments most recently mapped to a destination. This list provides a snapshot of what segments and destinations are actively in use in the system and can help in troubleshooting any erroneous mappings. 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegments"
+>title="Recently activated segments"
+>abstract="This widget provides a list of the segments most recently mapped to a destination. This list provides a snapshot of the segments and destinations that are actively in use in the system and can help in troubleshooting any erroneous mappings."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments" text="Learn more from documentation"
+
+The **[!UICONTROL Recently activated segments]** widget provides a list of the segments most recently mapped to a destination. This list provides a snapshot of the segments and destinations that are actively in use in the system and can help in troubleshooting any erroneous mappings. 
 
 The updated date shown displays the last time the segment was activated to the destination and is accurate to the last daily snapshot. In other words, if you activate a segment to the destination, the updated date will not change until after the next snapshot is taken.
 
@@ -92,6 +112,12 @@ For more information on working with segments in Experience Platform, please beg
 
 ### [!UICONTROL Recently activated segments by destination] {#recently-activated-segments-by-destination}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
+>title="Recently activated segments by destination"
+>abstract="This widget displays the top five most recently activated segments in descending order according to the destination chosen in the overview dropdown."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments-by-destination" text="Learn more from documentation"
+
 The **[!UICONTROL Recently activated segments by destination]** widget displays the top five most recently activated segments in descending order according to the destination chosen in the overview dropdown. It is similar to the [!UICONTROL Recently activated segments] widget, but the data displayed **only** applies to the selected destination.
 
 This widget contains two metrics: the segment name and the date that the segment was last activated to the destination. The data displayed is correct as of the last daily snapshot. 
@@ -101,6 +127,12 @@ You can view a segment's details by selecting the name of a segment from the lis
 ![Recently activated segments by destination widget.](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_audiencesizetrend"
+>title="Audience size trend"
+>abstract="This widget illustrates the number of profiles contained in the segment, that is being sent to the destination account daily. The first dropdown menu adjusts the time period for the audience trend. The second widget dropdown menu selects the segment for analysis. The destination is chosen from the overview dropdown."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#audience-size-trend" text="Learn more from documentation"
 
 The **[!UICONTROL Audience size trend]** widget depicts the relationship of the profile count over a period of time for a segment that has been mapped to that destination account. The widget uses a line graph to illustrate the number of profiles contained in the segment, that are being sent to the destination account daily.
 
@@ -116,6 +148,12 @@ The **[!UICONTROL Audience size trend]** widget provides a [!UICONTROL Captions]
 
 ### [!UICONTROL Unmapped segments by identity] {#unmapped-segments-by-identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
+>title="Unmapped segments by identity"
+>abstract="This widget lists the top five **unmapped** segments ranked by descending identity count for a given destination and identity. The filter IDs listed in the widget dropdown change depending on the destination account selected at the top of the overview page."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#unmapped-segments-by-identity" text="Learn more from documentation"
+
 The **[!UICONTROL Unmapped segments by identity]** widget lists the top five **unmapped** segments ranked by descending identity count for a given destination and identity. It highlights segments that are the most beneficial to map to the chosen destination account based on the chosen ID.
 
 The destination ID dropdown filters your available segments. The filter IDs listed in the dropdown change depending on the destination account selected at the top of the overview page.
@@ -126,13 +164,25 @@ The identities column counts the number of source IDs within the segment that co
 
 ### [!UICONTROL Mapped segments by identity] {#mapped-segments-by-identity}
 
-This widget provides a top five list of **mapped** segments. The list is ordered from high to low according to the number of source IDs contained within the segments. The destination ID to be counted is selected from the dropdown menu below the widget title. The destination IDs available from the dropdown in the widget will change according to the destination account filter chosen at the top of the overview dashboard.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedsegmentsbyidentity"
+>title="Mapped segments by identity"
+>abstract="This widget provides a top five list of **mapped** segments. The list is ordered from high to low according to the number of source IDs contained within the segments. The destination ID to be counted is selected from the dropdown menu below the widget title. The destination IDs available from the widget drop-down are dependant on the destination chosen at the top of the overview dashboard."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-segments-by-identity" text="Learn more from documentation"
+
+This widget provides a top five list of **mapped** segments. The list is ordered from high to low according to the number of source IDs contained within the segments. The destination ID to be counted is selected from the dropdown menu below the widget title. The destination IDs available from the drop-down in the widget will change according to the destination account filter chosen at the top of the overview dashboard.
 
 ![The Mapped segments by identity widget.](../images/destinations/mapped-segments-by-identity.png)
 
 The **[!UICONTROL Mapped segments by identity]** widget highlights at a glance, the likelihood of successfully targeting profile opportunities for a campaign within the chosen destination. An efficient targeted campaign does not depend on the number of profiles sent to the destination but rather the number of source IDs that are likely to be matched with the destination IDs to provide useful and actionable data.  
 
-### Common audiences
+### Common audiences {#common-audiences}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_commonaudiences"
+>title="Common audiences"
+>abstract="This widget provides a list of the top five segments activated across the destination account chosen at the top of the page, and the destination selected in the widget dropdown. The list of segments is ordered according to how recently they were activated. The most recently activated segment is displayed at the top."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#common-audiences" text="Learn more from documentation"
 
 The **[!UICONTROL Common audiences]** widget provides a list of the top five segments activated across the destination account chosen at the top of the page, and the destination selected in the widget dropdown. The list of segments is ordered according to how recently they were activated. The most recently activated segment is displayed at the top. 
 
@@ -140,7 +190,13 @@ The [!UICONTROL AUDIENCE SIZE] column provides the total profile count of each l
 
 ![The Common audiences widget.](../images/destinations/common-audiences.png)
 
-### Mapped audience health
+### Mapped audience health {#mapped-audience-health}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedaudiencehealth"
+>title="Mapped audience health"
+>abstract="This widget provides a list of up to 20 mapped segments whose total profile counts deviate by a factor of at least one standard deviation from the 30 days mean audience size mapped to that destination. It provides a calculated metric for the dispersion of audience sizes from the mean over the last 30 days. The audience sizes are sorted from high to low."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-audience-health" text="Learn more from documentation"
 
 The widget provides a list of up to 20 mapped segments whose total profile counts, as of the last daily snapshot, deviate by a factor of at least one standard deviation from the 30 days mean audience size mapped to that destination.
 
@@ -155,6 +211,12 @@ If a segment within the [!UICONTROL Mapped audience health] widget is deviating 
 ![The Mapped audience health widget.](../images/destinations/mapped-audience-health.png)
 
 ### [!UICONTROL Destinations count] {#destinations-count}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_destinationscount"
+>title="Destinations count"
+>abstract="This widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#destinations-count" text="Learn more from documentation"
 
 The [!UICONTROL Destinations count] widget provides the total number of available endpoints where an audience can be activated and delivered within the system. This number includes both active and inactive destinations. 
 
@@ -183,6 +245,18 @@ The [!UICONTROL Activated audiences across all destinations] widget provides the
 ![The Activated audiences across all destinations widget.](../images/destinations/activated-audiences-across-all-destinations.png)
 
 Select **[!UICONTROL Audiences]** to navigate to the destinations [!UICONTROL Browse] tab. This page provides a list of all enabled destinations and a variety of relevant metrics. See the documentation for [more information on the [!UICONTROL Browse] tab](../../destinations/ui/destinations-workspace.md#browse).
+
+### [!UICONTROL Activated audiences] {#activated-audiences}
+
+This widget provides a single metric for the total number of audiences activated to a destination.   
+
+![The Activated audiences widget.](../images/destinations/activated-audiences.png)
+
+Select **[!UICONTROL Audiences]** to navigate to the details page of the destinations dashboard. The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular segment, select its name from the list. 
+
+![The destinations dashboard details page with Activation data tab highlighted.](../images/destinations/activation-data-tab.png)
+
+This widget helps you to understand the value of your destinations based on the number of audiences activated at a glance. It also provides easy access to more detailed information for further analysis.
 
 ## Next steps
 
