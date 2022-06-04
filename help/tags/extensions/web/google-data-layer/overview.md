@@ -1,6 +1,7 @@
 ---
 title: Google Data Layer Extension
 description: Learn about the Google Client Data Layer tag extension in Adobe Experience Platform.
+exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
 ---
 # Google Data Layer extension (Beta)
 
