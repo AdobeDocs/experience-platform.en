@@ -7,21 +7,21 @@ description: Learn how to connect Adobe Experience Platform to Mixpanel using th
 hide: true
 hidefromtoc: true
 ---
-# Create a *Mixpanel* source connection in the UI
+# Create a source connection and dataflow for *Mixpanel* using the Flow Service API
 
-This tutorial provides steps for creating a *Mixpanel* source connector using the Platform user interface.
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring Mixpanel data to Platform using the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Overview
 
 [Mixpanel](https://www.mixpanel.com) is a product analytics tool that enables capturing data on how users interact with a digital product. Mixpanel allows you to analyze this product data with simple, interactive reports that let you query and visualize the data with just a few clicks.
 
-This Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [Event Export API > Download](https://developer.mixpanel.com/reference/raw-event-export) to download your event data as it is received and stored within Mixpanel, along with all event properties (including distinct_id) and the exact timestamp the event was fired into Experience Platform.
+This Adobe Experience Platform [source](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [Mixpanel Event Export API > Download](https://developer.mixpanel.com/reference/raw-event-export) to download your event data as it is received and stored within Mixpanel, along with all event properties (including `distinct_id`) and the exact timestamp the event was fired into Experience Platform.
 
 Mixpanel uses bearer tokens as an authentication mechanism to communicate with the Mixpanel Event Export API.
 
 ## Prerequisites
 
-Before you start configuring the extension you need to have a Mixpanel account. If you do not have one already, go to the Mixpanel [register](https://mixpanel.com/register/) page to register and create your Mixpanel account.
+The first step in creating a Mixpanel source connection is to ensure that you have a Mixpanel account. If you do not have one already, see the [Mixpanel register](https://mixpanel.com/register/) page to register and create your account.
 
 ### Gather required credentials
 
@@ -30,22 +30,22 @@ In order to connect *Mixpanel* to Platform, you must provide values for the foll
 | Credential | Description | Example |
 | --- | --- | --- |
 | Host | Mixpanel Raw Data Export API endpoint. <br/><br/>Refer to the [Mixpanel API reference](https://developer.mixpanel.com/reference/overview) page, then scroll to the *Raw Data Export API* section if you require any guidance. | *https://data.mixpanel.com*|
-| Username | Service account Username. <br/><br/>Refer to the [Service Accounts](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) page if you require any guidance. | *`xxxxxxxxxxx`.6d4ee7.mp-service-account* |
-| Password | Service account Password. | *8iQbnjuk5.................* |
-| projectId | MixPanel Project Id. <br/><br/>Refer to the pages below if you require any guidance. <br/>[Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) <br/>[Create and Manage Projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) | *2384945* |
+| Username | Service account Username. <br/><br/>Refer to the [Service Accounts](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) page if you require any guidance. | *Test8.6d4ee7.mp-service-account* |
+| Password | Service account Password. | *dLlidiKHpCZtJhQDyN2RECKudMeTItX1* |
+| projectId | Mixpanel Project Id. <br/><br/>Refer to the pages below if you require any guidance. <br/>[Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) <br/>[Create and Manage Projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) | *2384945* |
 | timezone | Select the timezone to correspond to your project within the Mixpanel account. <br/><br/>Refer to the [Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) page if you require any guidance.| *Pacific Standard Time* |
 
-The Mixpanel Project Id can be obtained by navigating to the screen below within your account.
+You can retrieve your Mixpanel Project ID and configure your Timezone by navigating to the Project Details page of your account in the Mixpanel UI.
 
 ![Mixpanel Project Details](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-project-settings.png?lang=en)
 
-The Mixpanel Service Account credentials can be obtained by navigating to the screen below within your account.
+To retrieve your Mixpanel service account credentials, navigate to the Service Accounts in the Mixpanel UI.
 
 ![Mixpanel Service Account](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png?lang=en)
 
 >[!TIP]
 >
->* It is suggested to use a service account that doesn't expire.
+>* It is suggested to use a service account that doesn't [expire](https://developer.mixpanel.com/reference/service-accounts#service-account-expiration).
 
 Finally, create a Platform [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html) required for the Mixpanel Event Export API. Refer also to the [limits](#limits) section further below on this page.
 ![Create Schema](../../../../images/tutorials/create/mixpanel-export-events/schema.png?lang=en)
@@ -137,7 +137,7 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `list_id` string in base64. In the example below, `"list_id": "10c097ca71"` encoded in base64 equates to `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}": "10c097ca71"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. | 
 
 
 **Request**

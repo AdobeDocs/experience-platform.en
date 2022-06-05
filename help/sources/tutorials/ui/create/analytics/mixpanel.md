@@ -13,13 +13,13 @@ This tutorial provides steps for creating a *Mixpanel* source connector using th
 
 [Mixpanel](https://www.mixpanel.com) is a product analytics tool that enables capturing data on how users interact with a digital product. Mixpanel allows you to analyze this product data with simple, interactive reports that let you query and visualize the data with just a few clicks.
 
-This Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [Event Export API > Download](https://developer.mixpanel.com/reference/raw-event-export) to download your event data as it is received and stored within Mixpanel, along with all event properties (including distinct_id) and the exact timestamp the event was fired into Experience Platform.
+This Adobe Experience Platform [source](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [Mixpanel Event Export API > Download](https://developer.mixpanel.com/reference/raw-event-export) to download your event data as it is received and stored within Mixpanel, along with all event properties (including distinct_id) and the exact timestamp the event was fired into Experience Platform.
 
 Mixpanel uses bearer tokens as an authentication mechanism to communicate with the Mixpanel Event Export API.
 
 ## Prerequisites
 
-Before you start configuring the extension you need to have a Mixpanel account. If you do not have one already, go to the Mixpanel [register](https://mixpanel.com/register/) page to register and create your Mixpanel account.
+The first step in creating a Mixpanel source connection is to ensure that you have a Mixpanel account. If you do not have one already, see the [Mixpanel register](https://mixpanel.com/register/) page to register and create your account.
 
 ### Gather required credentials
 
@@ -28,22 +28,22 @@ In order to connect *Mixpanel* to Platform, you must provide values for the foll
 | Credential | Description | Example |
 | --- | --- | --- |
 | Host | Mixpanel Raw Data Export API endpoint. <br/><br/>Refer to the [Mixpanel API reference](https://developer.mixpanel.com/reference/overview) page, then scroll to the *Raw Data Export API* section if you require any guidance. | *https://data.mixpanel.com*|
-| Username | Service account Username. <br/><br/>Refer to the [Service Accounts](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) page if you require any guidance. | *`xxxxxxxxxxx`.6d4ee7.mp-service-account* |
-| Password | Service account Password. | *8iQbnjuk5.................* |
-| projectId | MixPanel Project Id. <br/><br/>Refer to the pages below if you require any guidance. <br/>[Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) <br/>[Create and Manage Projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) | *2384945* |
+| Username | Service account Username. <br/><br/>Refer to the [Service Accounts](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) page if you require any guidance. | *Test8.6d4ee7.mp-service-account* |
+| Password | Service account Password. | *dLlidiKHpCZtJhQDyN2RECKudMeTItX1* |
+| projectId | Mixpanel Project Id. <br/><br/>Refer to the pages below if you require any guidance. <br/>[Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) <br/>[Create and Manage Projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) | *2384945* |
 | timezone | Select the timezone to correspond to your project within the Mixpanel account. <br/><br/>Refer to the [Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) page if you require any guidance.| *Pacific Standard Time* |
 
-The Mixpanel Project Id can be obtained by navigating to the screen below within your account.
+You can retrieve your Mixpanel Project ID and configure your Timezone by navigating to the Project Details page of your account in the Mixpanel UI.
 
 ![Mixpanel Project Details](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-project-settings.png?lang=en)
 
-The Mixpanel Service Account credentials can be obtained by navigating to the screen below within your account.
+To retrieve your Mixpanel service account credentials, navigate to the Service Accounts in the Mixpanel UI.
 
 ![Mixpanel Service Account](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png?lang=en)
 
 >[!TIP]
 >
->* It is suggested to use a service account that doesn't expire.
+>* It is suggested to use a service account that doesn't [expire](https://developer.mixpanel.com/reference/service-accounts#service-account-expiration).
 
 Finally, create a Platform [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html) required for the Mixpanel Event Export API. Refer also to the [limits](#limits) section further below on this page.
 ![Create Schema](../../../../images/tutorials/create/mixpanel-export-events/schema.png?lang=en)
@@ -54,7 +54,7 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Customer Success* category, select *Mixpanel*, and then select **[!UICONTROL Add data]**.
+Under the *Analytics* category, select *Mixpanel*, and then select **[!UICONTROL Add data]**.
 
 ![catalog](../../../../images/tutorials/create/mixpanel-export-events/catalog.png?lang=en)
 
@@ -105,17 +105,17 @@ To validate that you have correctly set up the source; and Mixpanel events are b
 
    | Source | Type |
    |---|---|
-   |data.distinct_id|string|
-   |data.event_name|string|
-   |data.import|boolean|
-   |data.insert_id|string|
-   |data.item_id|string|
-   |data.item_name|string|
-   |data.item_price|string|
-   |data.mp_api_endpoint|string|
-   |data.mp_api_timestamp_ms|integer|
-   |data.mp_processing_time_ms|integer|
-   |data.time|integer|
+   |`distinct_id`|string|
+   |`event_name`|string|
+   |`import`|boolean|
+   |`insert_id`|string|
+   |`item_id`|string|
+   |`item_name`|string|
+   |`item_price`|string|
+   |`mp_api_endpoint`|string|
+   |`mp_api_timestamp_ms`|integer|
+   |`mp_processing_time_ms`|integer|
+   |`time`|integer|
 
 ### Limits {#limits}
 * A maximum of 100 concurrent queries, and 60 queries per hour as indicated on [Export API Rate Limits](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints).
