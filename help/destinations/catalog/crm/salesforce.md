@@ -10,39 +10,47 @@ description: The Salesforce CRM destination allows you to export your account da
 
 [Salesforce CRM](https://www.salesforce.com/) is a popular Customer Relationship Management (CRM) platform.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts), which allows you to add Accounts and create Contacts after activating them within a new Salesforce segment for your business needs.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts), which allows you to add accounts and create contacts after activating them within a new Salesforce segment for your business needs.
 
-Salesforce CRM uses [OAuth 2 with Password Grant](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-sdk/functionality/authentication/oauth2-authentication.html?lang=en) as an authentication mechanism to communicate with the Salesforce REST API.
+Salesforce CRM uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions are further [below](#authenticate).
 
 ## Use cases {#use-cases}
 
 To help you better understand how and when you should use the Salesforce CRM destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case
+### Send emails to contacts for marketing campaigns
 
-Marketing teams can add new customer contacts into CRM through Adobe Experience Platform, build segments from their own offline data, and send these segments to Salesforce CRM. Once contacts are added they can be used in various ways. For example sending emails for marketing campaigns or to display ads in their social media feeds.
+The sales department of a home rental platform wants to broadcast a marketing email to a targeted customer audience. The platform's marketing team can add new customer contacts into CRM through Adobe Experience Platform, build segments from their own offline data, and send these segments to Salesforce CRM, which can then be used to send the marketing campaign email.
+
+### Display ads in the social media feeds of existing customers
+
+An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to Salesforce CRM, to display ads in their customers’ social media feeds.
 
 ## Prerequisites {#prerequisites}
 
 Before activating data to the Salesforce CRM destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-The following items are required before you start configuring the destination.
+In order to access your Salesforce account on Platform.
 
 1. You need to have a Salesforce account.
     * Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a Salesforce account, if you do not have one already.
-1. Note down your [Salesforce domain](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5).
-1. Create a [connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5), enable its [OAuth Settings](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) and once created successfully note down its *Consumer Key* and *Consumer Secret*. Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) if you need additional guidance.
-1. Select the following [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) for the connected app in the Salesforce user interface:
-    - chatter_api
-    - lightning
-    - visualforce
-    - content
-    - openid
-    - full
-    - api
-    - web
-    - refresh_token
-    - offline_access
+1. Next, You need to configure a [connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) within your Salesforce account, if you do not have one already. 
+    * Within the connected app ensure [OAuth Settings](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) is enabled.
+    * Also ensure the [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mentioned below are selected.
+        * chatter_api
+        * lightning
+        * visualforce
+        * content
+        * openid
+        * full
+        * api
+        * web
+        * refresh_token
+        * offline_access
+1. Note down the items below before you Authenticate to the Salesforce CRM destination.
+    * Note down your [Salesforce domain](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5).
+    * Copy the *Consumer Key* and *Consumer Secret* from the connected app.
+        * Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) if you need additional guidance.    
 
 ## Supported identities {#supported-identities}
 
@@ -50,14 +58,7 @@ Salesforce CRM supports the activation of identities described in the table belo
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-| state | State ||
-| country | Country ||
-| number | Mobile Phone ||
-| firstName | First Name ||
-| postalCode | Mailing Postal Code ||
-| city | Mailing City ||
-| lastName | Last Name ||
-| email |Salesforce Email ID|Note that *Salesforce CRM* does not support hashed email addresses, hence only plain text data without transformation is sent to the destination.|
+| email |Salesforce Email ID|Mandatory, Note that *Salesforce CRM* does not support hashed email addresses, hence only plain text data without transformation is sent to the destination.|
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -91,7 +92,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 *  **[!UICONTROL Client Secret]**: Your Salesforce connected app Consumer Secret.
 *  **[!UICONTROL Username]**: Your Salesforce account username.
 
-1. If the details provided are valid, the UI displays a **Connected** status with a green check mark, you can then proceed to the next step.
+If the details provided are valid, the UI displays a **Connected** status with a green check mark, you can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
@@ -110,7 +111,19 @@ To configure details for the destination, fill in the required fields and select
 
 Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-## Exported data / Validate data export {#exported-data}
+The list of attribute mappings that can be set up for the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) is given below.
+| Source Field | Target Field | Mandatory |
+|---|---|--|
+| IdentityMap: `Email` | Identity: `salesforceEmailID` | Yes |
+| xdm: `person.name.lastName` | Attribute: `LastName` | Yes |
+| xdm: `workAddress.state` | Attribute: `MailingState` ||
+| xdm: `workAddress.country` | Attribute: `MailingCountry` ||
+| xdm: `mobilePhone.number` | Attribute: `MobilePhone` ||
+| xdm: `person.name.firstName` | Attribute: `FirstName` ||
+| xdm: `workAddress.postalCode` | Attribute: `MailingPostalCode` ||
+| xdm: `workAddress.city` | Attribute: `MailingCity` ||
+
+## Validate data export {#exported-data}
 
 To validate that you have correctly set up the destination, follow the steps below:
 
