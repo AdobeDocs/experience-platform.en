@@ -243,7 +243,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 The following outlines a list of known limitations to consider when streaming upserts with [!DNL Data Prep]:
 
 * The streaming upserts method should only be used when sending partial row updates to [!DNL Profile Service]. Partial row updates are **not** consumed by data lake.
-* The streaming upserts method does not support updating, replacing, and removing identities. Identities can only be added using the `identity: create` operation.
+* The streaming upserts method does not support updating, replacing, and removing identities. New identities are created if they do not exist. Hence the `identity` operation must always be set to create. If an identity already exists, the operation is a no-op.
 * The streaming upserts method currently only supports primitive single-value attributes (such as integers, dates, timestamps, and strings) and objects. The streaming upserts method does not support replacing, appending, or overwriting array attributes and specific array indices.
 
 ## Next steps

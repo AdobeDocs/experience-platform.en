@@ -1,49 +1,48 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Documentation self-service template
+title: Create a dataflow for Zendesk using the Flow Service API
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to Zendesk using the Flow Service API.
-hide: true
-hidefromtoc: true
+exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
 ---
-# Create a Zendesk connection using the Flow Service API
+# (Beta) Create a dataflow for [!DNL Zendesk] using the [!DNL Flow Service] API
 
-## Overview
+>[!NOTE]
+>
+>The [!DNL Zendesk] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
-[Zendesk](https://www.zendesk.com) is a popular customer service solution and sales tool.
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Zendesk] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-This Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [Zendesk Search API > Export Search Results](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) that returns users information into Experience Platform from Zendesk for further processing.
+## Getting started
 
-Zendesk uses bearer tokens as an authentication mechanism to communicate with the Zendesk API.
+This guide requires a working understanding of the following components of Experience Platform:
 
-## Prerequisites
+* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-Before you start configuring the extension you need to have a Zendesk Support account. If you do not have one already go to the Zendesk [register](https://www.zendesk.com/register/) page to register and create your Zendesk account.
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Zendesk] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order to connect Zendesk to Platform, you must provide values for the following connection properties:
+In order to access your [!DNL Zendesk] account on Platform, you must provide values for the following credentials:
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| subdomain | Unique domain specific to your Zendesk account created during the registration process. <br/><br/> Refer to the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) if you require any guidance. | *https://`xxxxxxxxxxx`.zendesk.com*|
-| API token | Zendesk API token.<br></br>Navigate to the Zendesk website and access **[!UICONTROL Settings]** > **[!UICONTROL Apps and Integrations]** > **[!UICONTROL Zendesk API]** page.  Next to the **[!UICONTROL API Tokens]** section. <br/><br/> Refer to the [Zendesk documentation](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).|*0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf*|
+| `host` | The unique domain specific to your account created during the registration process.| `https://yoursubdomain.zendesk.com`|
+| `accessToken` | Zendesk API token. |`0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
-![Zendesk API token](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png?lang=en)
+For more information on authenticating your [!DNL Zendesk] source, see the [[!DNL Zendesk] source overview](../../../../connectors/customer-success/zendesk.md).
 
-Finally, create a Platform [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html) required for the Zendesk Search API. Refer also to the [limits](#limits) section further below on this page.
-![Create Schema](../../../../images/tutorials/create/zendesk/schema.png?lang=en)
+## Connect [!DNL Zendesk] to Platform using the [!DNL Flow Service] API
 
-## Connect Zendesk to Platform using the [!DNL Flow Service] API
-
-The following tutorial walks you through the steps to create a Zendesk source connection and create a dataflow to bring Zendesk data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL Zendesk] source connection and create a dataflow to bring [!DNL Zendesk] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Create a base connection {#base-connection}
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your Zendesk authentication credentials as part of the request body.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Zendesk] authentication credentials as part of the request body.
 
 **API format**
 
@@ -53,7 +52,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for Zendesk:
+The following request creates a base connection for [!DNL Zendesk]:
 
 ```shell
 curl -X POST \
@@ -73,7 +72,7 @@ curl -X POST \
         "auth": {
             "specName": "OAuth2 Refresh Code",
             "params": {
-                "host":"{ZENDESK_SUBDOMAIN}"
+                "host": "{HOST}",
                 "accessToken": "{ACCESS_TOKEN}"
             }
         }
@@ -86,8 +85,9 @@ curl -X POST \
 | `description` | An optional value that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
-| `auth.params.host` | Unique domain specific to your Zendesk account. |
-| `auth.params.accessToken` | Zendesk API token. |
+| `auth.params.` | Contains the credentials required to authenticate your source. |
+| `auth.params.host` | The unique domain specific to your account created during the registration process. The format for the subdomain is `https://yoursubdomain.zendesk.com`.|
+| `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
 **Response**
 
@@ -95,7 +95,7 @@ A successful response returns the newly created base connection, including its u
 
 ```json
 {
-     "id": "0a27232b-2c6e-4396-b8c6-c9fc24e37ba4",
+     "id": "70383d02-2777-4be7-a309-9dd6eea1b46d",
      "etag": "\"d64c8298-add4-4667-9a49-28195b2e2a84\""
 }
 ```
@@ -145,7 +145,7 @@ A successful response returns the structure of the queried file. In the example 
     "schema": {
         "type": "object",
         "properties": {
-            "results": {
+            "result": {
                 "type": "object",
                 "properties": {
                     "organization_id": {
@@ -282,9 +282,9 @@ A successful response returns the structure of the queried file. In the example 
     },
     "data": [
         {
-            "results": {
+            "result": {
                 "id": 6106699702801,
-                "url": "https://yoursubdomain.zendesk.com/api/v2/users/6106699702801.json",
+                "url": "https://{YOURSUBDOMAIN}.zendesk.com/api/v2/users/6106699702801.json",
                 "name": "test",
                 "email": "test@org.com",
                 "created_at": "2022-05-13T08:04:22Z",
@@ -324,7 +324,7 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for Zendesk:
+The following request creates a source connection for [!DNL Zendesk]:
 
 ```shell
 curl -X POST \
@@ -353,9 +353,9 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
-| `baseConnectionId` | The base connection ID of Zendesk. This ID was generated in an earlier step. |
+| `baseConnectionId` | The base connection ID of [!DNL Zendesk]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
-| `data.format` | The format of the Zendesk data that you want to ingest. Currently, the only supported data format is `json`. |
+| `data.format` | The format of the [!DNL Zendesk] data that you want to ingest. Currently, the only supported data format is `json`. |
 
 **Response**
 
@@ -368,25 +368,25 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-### Create a target XDM schema {#target-schema}
+## Create a target XDM schema {#target-schema}
 
 In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
 ### Create a target dataset {#target-dataset}
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
-For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../../catalog/api/create-dataset.md).
 
 ### Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to the [!DNL Data Lake]. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -410,7 +410,7 @@ curl -X POST \
         "name": "Zendesk Target Connection",
         "description": "Zendesk Target Connection",
         "connectionSpec": {
-            "id": "0a27232b-2c6e-4396-b8c6-c9fc24e37ba4",
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         },
         "data": {
@@ -426,8 +426,8 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
-| `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | The format of the Zendesk data that you want to bring to Platform. |
+| `connectionSpec.id` | The connection specification ID that corresponds to data lake. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | The format of the [!DNL Zendesk] data that you want to bring to Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 
@@ -469,177 +469,177 @@ curl -X POST \
         "mappings": [
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.id",
+                "source": "result.id",
                 "destination": "_extconndev.id",
                 "name": "id",
                 "description": "Zendesk"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.external_id",
+                "source": "result.external_id",
                 "destination": "_extconndev.external_id"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.role_type",
+                "source": "result.role_type",
                 "destination": "_extconndev.role_type"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.custom_role_id",
+                "source": "result.custom_role_id",
                 "destination": "_extconndev.custom_role_id"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.default_group_id",
+                "source": "result.default_group_id",
                 "destination": "_extconndev.default_group_id"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.phone",
+                "source": "result.phone",
                 "destination": "_extconndev.phone"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.shared_phone_number",
+                "source": "result.shared_phone_number",
                 "destination": "_extconndev.shared_phone_number"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.verified",
+                "source": "result.verified",
                 "destination": "_extconndev.verified"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.alias",
+                "source": "result.alias",
                 "destination": "_extconndev.alias"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.last_login_at",
+                "source": "result.last_login_at",
                 "destination": "_extconndev.last_login_at"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.signature",
+                "source": "result.signature",
                 "destination": "_extconndev.signature"
             },        {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.details",
+                "source": "result.details",
                 "destination": "_extconndev.details"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.notes",
+                "source": "result.notes",
                 "destination": "_extconndev.notes"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.active",
+                "source": "result.active",
                 "destination": "_extconndev.active"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.created_at",
+                "source": "result.created_at",
                 "destination": "_extconndev.created_at"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.email",
+                "source": "result.email",
                 "destination": "_extconndev.email"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.iana_time_zone",
+                "source": "result.iana_time_zone",
                 "destination": "_extconndev.iana_time_zone"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.organization_id",
+                "source": "result.organization_id",
                 "destination": "_extconndev.organization_id"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.locale",
+                "source": "result.locale",
                 "destination": "_extconndev.locale"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.locale_id",
+                "source": "result.locale_id",
                 "destination": "_extconndev.locale_id"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.moderator",
+                "source": "result.moderator",
                 "destination": "_extconndev.moderator"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.name",
+                "source": "result.name",
                 "destination": "_extconndev.name"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.only_private_comments",
+                "source": "result.only_private_comments",
                 "destination": "_extconndev.only_private_comments"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.report_csv",
+                "source": "result.report_csv",
                 "destination": "_extconndev.report_csv"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.restricted_agent",
+                "source": "result.restricted_agent",
                 "destination": "_extconndev.restricted_agent"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.result_type",
+                "source": "result.result_type",
                 "destination": "_extconndev.result_type"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.role",
+                "source": "result.role",
                 "destination": "_extconndev.role"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.shared",
+                "source": "result.shared",
                 "destination": "_extconndev.shared"
             },        {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.shared_agent",
+                "source": "result.shared_agent",
                 "destination": "_extconndev.shared_agent"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.time_zone",
+                "source": "result.time_zone",
                 "destination": "_extconndev.time_zone"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.two_factor_auth_enabled",
+                "source": "result.two_factor_auth_enabled",
                 "destination": "_extconndev.two_factor_auth_enabled"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.suspended",
+                "source": "result.suspended",
                 "destination": "_extconndev.suspended"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.updated_at",
+                "source": "result.updated_at",
                 "destination": "_extconndev.updated_at"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.url",
+                "source": "result.url",
                 "destination": "_extconndev.url"
             },
             {
                 "sourceType": "ATTRIBUTE",
-                "source": "results.verified",
+                "source": "result.verified",
                 "destination": "_extconndev.verified"
             }
         ]
