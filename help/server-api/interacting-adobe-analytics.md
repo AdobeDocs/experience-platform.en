@@ -13,7 +13,7 @@ Adobe Analytics data collection works by translating XDM data into a format that
 
 You can also [manually map XDM values](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) to legacy Analytics variables.
 
-To enable Adobe Analytics to receive data from Server API, you need to [configure your datastream](../edge/fundamentals/datastreams.md#adobe-analytics-settings) to forward events to Adobe Analytics, by entering the report suite ID in the datastream configuration page.
+To enable Adobe Analytics to receive data from Server API, you need to [configure your datastream](../edge/datastreams/overview.md#adobe-analytics-settings) to forward events to Adobe Analytics, by entering the report suite ID in the datastream configuration page.
 
 ![Adobe Analytics Datastream Configuration](assets/analytics-datastream.png)
 
@@ -22,17 +22,17 @@ To enable Adobe Analytics to receive data from Server API, you need to [configur
 ### API format {#format}
 
 ```http
-POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
+POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 ```
 
 ### Request {#request}
 
-The sample below includes several automatically mapped values from the `_experience.analytics` field group. It also includes JSON-based data layers. While these data layers cannot be mapped automatically, it is possible to use [Data Prep for Data Collection](../edge/fundamentals/datastreams.md#data-prep) to map these values to a schema that contains field groups referenced above.
+The sample below includes several automatically mapped values from the `_experience.analytics` field group. It also includes JSON-based data layers. While these data layers cannot be mapped automatically, it is possible to use [Data Prep for Data Collection](../edge/datastreams/data-prep.md) to map these values to a schema that contains field groups referenced above.
 
 All values that users map to those fields will automatically map to the appropriate Analytics values, as if they were included in the API request.
 
 ```shell
-curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}" \
+curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" \
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}" 
