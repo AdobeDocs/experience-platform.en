@@ -48,7 +48,7 @@ In order to access your Salesforce account on Platform.
         * refresh_token
         * offline_access
 1. Note down the items below before you Authenticate to the Salesforce CRM destination.
-    * Note down your [Salesforce domain](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5).
+    * Note down your [Salesforce domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5). For example if your domain is *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, you need the highlighted value.
     * Copy the *Consumer Key* and *Consumer Secret* from the connected app.
         * Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) if you need additional guidance.    
 
