@@ -1,6 +1,6 @@
 ---
 title: Analytics Insights For Web and Mobile Interactions 
-description: This document provides an overview of how to use adobe analytics data to turn insights into actionable points
+description: This document explains how to use Query Service to create actionable insights from ingested Adobe Analytics data.
 ---
 # Analytics insights for web and mobile interactions
 
