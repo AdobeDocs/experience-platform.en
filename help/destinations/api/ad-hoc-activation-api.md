@@ -85,9 +85,10 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 Before you can activate segments through the ad-hoc activation API, you must first have an activation flow configured in the Platform UI, for the chosen destination.
 
-This includes going into the activation workflow, selecting your segments, configuring a schedule, and activating them.
+This includes going into the activation workflow, selecting your segments, configuring a schedule, and activating them. You can use the UI or API to create an activation flow:
 
-See the following tutorial for detailed instructions on how to configure an activation flow for your batch destinations: [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md).
+* [Use the Platform UI to create an activation flow to batch profile export destinations](../ui/activate-batch-profile-destinations.md)
+* [Use the Flow Service API to connect to batch profile export destinations and activate data](../api/connect-activate-batch-destinations.md)
 
 ## Step 4: Obtain the latest segment export job ID {#segment-export-id}
 
@@ -151,7 +152,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Property | Description |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate segments. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate segments. You can get these IDs from the Platform UI, by navigating to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab, and clicking on the desired destination row to bring up the destination ID in the right rail. For more information, read the [destinations workspace documentation](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the segments that you want to activate to the selected destination. |
 | <ul><li>`exportId1`</li></ul> | The ID returned in the response of the [segment export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest segment export job ID](#segment-export-id) for instructions on how to find this ID. |
 
