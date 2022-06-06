@@ -291,45 +291,15 @@ alloy("sendEvent", {
 
 The SDK provides facilities to [manage flicker](../personalization/manage-flicker.md) during the personalization process.
 
-## applyPropositions {#applypropositions}
+## Render propositions in single-page applications without incrementing metrics {#applypropositions}
 
+The `applyProposition` function allows you to load propositions from [!DNL Target] and [!DNL Offer Decisioning] into single-page applications, without incrementing the analytics metrics. This eliminates reporting errors and icreases analytics accuracy.
 
+### Use case 1: Re-render single-page application view
 
-### Use case 1: Re-render page-wide propositions
-
-```js
-// Fetch page-wide propositions (__view__ scope)
-alloy("sendEvent", {
-  "renderDecisions": false,
-  "xdm": {...}
-}).then(pageLoadResult) => {
-    // Do things on the page before rendering the propositions
-    return pageLoadResult;
-}).then({ propositions }) => {
-    // Render page-wide propositions
-    return alloy("applyPropositions", {
-        propositions
-    });
-}).then({ propositions }) => {
-    // Send the display notifications via sendEvent command
-    alloy("sendEvent", {
-      xdm: {
-        eventType: "decisioning.propositionDisplay",
-        _experience: {
-          decisioning: {
-            propositions
-          }
-        }
-      }
-    });
-});
-```
-
-
-### Use case 2: Re-render single-page application view
+The use case described in the sample below re-renders the previously fetched cart view propositions without sending display notifications.
 
 ```js
-[Existing functionality] To render an SPA view and send display notifications (could be initial view render or re-render where customer wants repeated display notifications):
 const cartPropositions = alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
@@ -343,16 +313,22 @@ const cartPropositions = alloy("sendEvent", {
     // Collect response tokens, etc.
     return propositions;
 });
- 
-[New functionality] To re-render the previously fetched "cart" view propositions without display notifications:
 alloy("applyPropositions", {
     propositions: cartPropositions
 });
 ```
 
-### Use case 3: Render propositions that do not have a selector
+### Use case 2: Render propositions that do not have a selector
 
-This can apply to Target form-based offers or offers in ODE.  Selector, action, and scope must be provided in the `applyPropositions` call.  Valid `actionTypes` include: `setHtml`, `replaceHtml`, and `appendHtml`.  If no `actionType` is provided, then `appendHtml` is used as the default.  If no selector is provided, then `#HEAD` is used as the default selector.
+This use case applies to Target form-based offers or offers from the [!DNL Offer Decisioning Engine].
+
+You must proviide the selector, action, and scope in the `applyPropositions` call.
+
+Valid `actionTypes` are:
+
+* `setHtml`
+* `replaceHtml`
+* `appendHtml`
 
 ```js
 // Retrieve propositions for scope1 and scope2
