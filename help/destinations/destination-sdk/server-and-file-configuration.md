@@ -194,7 +194,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedGoogleCloudStorageDestination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedGoogleCloudStorageDestination.path.value`|String|The path to the destination folder that will host the exported files.|
 
-## File-based destinations file name configuration {#file-name-configuration}
+## File name configuration {#file-name-configuration}
 
 You can use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../ui/activate-batch-profile-destinations.md#file-names) screen.
 
@@ -252,7 +252,7 @@ The example shown in the image above uses the following file name macro configur
 }
 ```
 
-## File-based destinations file configuration {#file-configuration}
+## File formatting configuration {#file-configuration}
 
 This section describes the file formatting settings for the exported `CSV` files. You can modify several properties of the exported files to match the requirements of the file reception system on your side, in order to optimally read and interpret the files received from Experience Platform.
 

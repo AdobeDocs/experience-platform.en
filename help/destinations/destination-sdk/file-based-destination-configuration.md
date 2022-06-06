@@ -656,16 +656,21 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
       "identityRequired":true
       "requiredMappings": [
       {
+        "destination": "ppid",
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      },
+      {
         "sourceType": "text/plain",
         "source": "metadata.segment.alias",
         "destination": "list_id"
       },
       {
         "sourceType": "text/x.aep-xl",
-        "source": "iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
         "destination": "delete"
       }
-    ]
+    ] 
 }
 ```
 
@@ -675,7 +680,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
-|`requiredMappings`|Object||
+|`requiredMappings`|Array|Applies only to [Google Ad Manager 360 destinations](configure-file-based-gam360-instructions.md). This mapping configuration is required by Google Ad Manager 360 and should not be modified.|
 
 {style="table-layout:auto"}
 

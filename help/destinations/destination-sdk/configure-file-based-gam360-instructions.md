@@ -26,7 +26,14 @@ Start by creating a server and file configuration using the `/destinations-serve
 POST /activation/authoring/destination-servers
 ```
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
    "name":"Google Ad Manager 360 Server",
    "destinationServerType":"FILE_BASED_GOOGLE_CLOUD",
@@ -56,7 +63,7 @@ POST /activation/authoring/destination-servers
 
 ## Step 2: Create an audience template {#create-audience-template}
 
-Use the `/authoring/audience-templates` API endpoint to create an audience template for [!DNL Google Ad Manager 360].
+Use the `/authoring/audience-templates` API endpoint to create an audience template for [!DNL Google Ad Manager 360] (read [API reference](audience-metadata-api.md)). The audience template configuration below is specific to [!DNL Google Ad Manager 360].
 
 **API format**
 
@@ -64,7 +71,14 @@ Use the `/authoring/audience-templates` API endpoint to create an audience templ
 POST /authoring/audience-templates
 ```
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
    "audience":{
       "context":"Google Ads",
@@ -97,7 +111,14 @@ To connect the server and file configuration in step 1 to this destination confi
 POST /activation/authoring/destinations
 ``` 
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
   "name": "Google Ad Manager 360",
   "description": "Google Ad Manager 360 Destination",
@@ -158,7 +179,7 @@ POST /activation/authoring/destinations
   },
   "destinationDelivery": [
     {
-      "destinationServerId": "<~server-id~>",
+      "destinationServerId": "{YOUR_DESTINATION_SERVER_ID}",
       "authenticationRule": "CUSTOMER_AUTHENTICATION"
     }
   ],
