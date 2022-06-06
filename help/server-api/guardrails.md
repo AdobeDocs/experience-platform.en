@@ -1,17 +1,18 @@
 ---
-title: Service level agreements and targets
-description: Learn how to configure authentication for the Edge Network Server API
-seo-description: Learn how to configure authentication for the Edge Network Server API
+title: Performance guardrails
+description: Learn how to use the Server API within optimal performance guardrails
 keywords: data collection;collection;edge network;api;sla;slt;service levels
 hide: yes
 hidefromtoc: yes
 ---
 
-# Guardrails
+# Performance guardrails
 
 ## Overview {#overview}
 
-Adobe will use commercially resonable efforts to make the [!DNL Server API] available within a monthly uptime percentage of at least 99.9% for each region, during any monthly billing cycle.
+Performance guardrails define usage limits related to your Server API use cases. Exceeding the performance guardrails outlined in this article results in performance degradation.
+
+Adobe is not responsible for performance degradation caused by exceeded usage limits. Customers who consistently exceed the performance guardrails can request additional processing capacity to avoid performance degradation.
 
 ## Definitions
 
@@ -21,21 +22,6 @@ Adobe will use commercially resonable efforts to make the [!DNL Server API] avai
 * A **request** sent to the Server API is defined as one or more request units.
 * A **request unit** corresponds to a 8 KB fragment of a request and one upstream configured for a datastream.
 * An **error** is any request that fails due to an Adobe Experience Platform Edge Network [internal service error](error-handling.md).
-
-## Internal targets
-
-Adobe engineering teams deploy close to real-time telemetry, monitoring, and scale out procedures to ensure the following targets:
-
-* Less than 1% of HTTP requests return `5xx` errors in the last five minutes
-* Less than 1% of upstream connnections return an error in the last five minutes
-* Any tenant capacity is doubled in less than 10 minutes from the moment when a limit is reached.
-
-## Service level agreement exclusions
-
-The service level commitment described above does not apply to any unavailability or performance issues caused by the following events:
-
-* Factors outside of our reasonable control, including Internet access or related problems beyond Adobe’s infrastructure.
-* Any misuse of the [!DNL Server API], as defined by the limits outlined below.
 
 ## Service limits
 
@@ -74,4 +60,3 @@ The table below shows the default limit values. If you need higher request unit 
 >[!NOTE]
 >
 >Depending on the payload itself, binary formats are generally 20-40% more compact, allowing you to push more data than you would in plain-text JSON. Please get in contact with your Customer Care representative if you need a higher capacity for your datastreams.
-
