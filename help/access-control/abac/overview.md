@@ -2,8 +2,6 @@
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;
 title: Attribute-Based Access Control Overview
 description: This document provides information on attribute-based access control in Adobe Experience Platform
-hide: true
-hidefromtoc: true
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 ---
 # Attribute-based access control overview
@@ -109,7 +107,7 @@ Experience Data Model (XDM) is an open-source specification that is designed to 
 
 With attribute-based access control, you can:
 
-* Apply attributes to field groups and or classes. This allows multiple schemas with the same field groups or classes, to have fields tagged with the same attributes, depending on the the configurations at the field group or class level;
+* [Apply data usage labels to field groups and classes](../../xdm/tutorials/labels.md). This allows multiple schemas with the same field groups or classes, to have fields tagged with the same attributes, depending on the the configurations at the field group or class level;
 * Configure user access to specific XDM schema fields depending on the permission sets applied to roles assigned to users.
 
 For more information on XDM, refer to the [XDM overview](../../xdm/home.md).
