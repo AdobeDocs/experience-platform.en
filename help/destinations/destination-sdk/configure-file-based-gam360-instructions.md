@@ -177,7 +177,9 @@ POST /activation/authoring/destinations
     "profileFields": [],
     "requiredMappings": [
       {
-        "destination": "ppid"
+        "destination": "ppid",
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
       },
       {
         "sourceType": "text/plain",
@@ -209,7 +211,7 @@ POST /activation/authoring/destinations
     "defaultStartTime": "00:00",
     "filenameConfig": {
       "allowedFilenameAppendOptions": [
-        "DESTINATION_NAME",
+        "DESTINATION",
         "SEGMENT_ID",
         "SEGMENT_NAME",
         "DATETIME",
