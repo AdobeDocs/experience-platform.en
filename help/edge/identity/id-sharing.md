@@ -8,7 +8,7 @@ keywords: Identity;mobile;id;sharing;domain;cross-domain;sdk;platform;
 
 ## Overview
 
-The Adobe Experience Platform Web SDK supports visitor ID sharing capabilities that enable customers to deliver personalized experiences more accurately, between between mobile apps and mobile web content, and across domains.
+The Adobe Experience Platform Web SDK supports visitor ID sharing capabilities that enable customers to deliver personalized experiences more accurately, between mobile apps and mobile web content, and across domains.
 
 ## Use cases {#use-cases}
 
@@ -26,13 +26,13 @@ A technology retailer wants to improve their visitor activity reporting with inf
 
 ## Prerequisites {#prerequisites}
 
-To use mobile-to-web and cross-domain ID sharing, you must update to [!DNL Web SDK] version 2.10.0 or later.
+To use mobile-to-web and cross-domain ID sharing, you must update to [!DNL Web SDK] version 2.11.0 or later.
 
 For Edge Network mobile implementations, this feature is supported in the [Identity for Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) extension starting with version 1.1.0 (iOS and Android).
 
 ## Mobile-to-web ID sharing {#mobile-to-web}
 
-Use the `getUrlVariables` API from the [Identity for Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) extension to retrieve the identifiers as query parameters and attach them to your URL when opening [!DNL webViews].
+Use the `getUrlVariables` API from the [Identity for Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network/api-reference#geturlvariables) extension to retrieve the identifiers as query parameters and attach them to your URL when opening [!DNL webViews].
 
 No additional configuration is required for the Web SDK to accept `ECID` values in the query string. 
 
@@ -45,9 +45,11 @@ The query string parameter includes:
 
 Mobile-to-web ID sharing uses the `adobe_mc` parameter. When the `adobe_mc` parameter is present and valid, the `ECID` from the query string is automatically added to the identity map in the first request made to the Edge Network. All subsequent Edge Network interactions will use that `ECID`.
 
+For more information on how to pass visitor IDs from a mobile app to a WebView, see the documentation on [handling WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+
 ## Cross-domain ID sharing {#cross-domain-sharing}
 
-For cross-domain ID sharing, Web SDK version 2.10.0 adds support for the `appendIdentityToUrl` command. When used, this command generates the `adobe_mc` query string parameter.
+For cross-domain ID sharing, Web SDK version 2.11.0 adds support for the `appendIdentityToUrl` command. When used, this command generates the `adobe_mc` query string parameter.
 
 The command accepts an object with one property, `url`, and returns an object with the property `url`.
 
@@ -79,6 +81,8 @@ document.addEventListener("click", event => {
 ## Using the Tags extension {#tags-extension}
 
 Similar to using the [!DNL Web SDK], there is no additional configuration required in the [!DNL Tags] extension to use identities passed through the URL.
+
+To use mobile-to-web and cross-domain ID sharing through the Tags extension, you must use version 2.12.0 or later of the Tags extension.
 
 To share identities from the current page to other domains, there is a  new action available in the [!DNL Web SDK] [!DNL Tags] extension. This action is designed to be used with a **[!UICONTROL Core - Click]** event type and a value comparison condition.
 
