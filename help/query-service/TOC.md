@@ -14,6 +14,7 @@ feature: Queries
 - Use cases {#use-cases}
   - [Abandoned browse](use-cases/abandoned-browse.md)
   - [Bot filtering](use-cases/bot-filtering.md)
+  - [Activity Analysis With Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
