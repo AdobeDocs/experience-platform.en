@@ -11,6 +11,7 @@ feature: Data Collection
 
 
 * [Overview](overview.md)
+* [Performance guardrails](guardrails.md)
 * [Authentication](authentication.md)
 * Data collection {#data-collection}
   * [Single-event data collection](interactive-data-collection.md)

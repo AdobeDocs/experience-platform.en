@@ -2,15 +2,13 @@
 title: Performance guardrails
 description: Learn how to use the Server API within optimal performance guardrails
 keywords: data collection;collection;edge network;api;sla;slt;service levels
-hide: yes
-hidefromtoc: yes
 ---
 
 # Performance guardrails
 
 ## Overview {#overview}
 
-Performance guardrails define usage limits related to your Server API use cases. Exceeding the performance guardrails outlined in this article results in performance degradation.
+Performance guardrails define usage limits related to your Server API use cases. Exceeding the performance guardrails outlined in this article could result in performance degradation.
 
 Adobe is not responsible for performance degradation caused by exceeded usage limits. Customers who consistently exceed the performance guardrails can request additional processing capacity to avoid performance degradation.
 
@@ -19,8 +17,8 @@ Adobe is not responsible for performance degradation caused by exceeded usage li
 * **Availability** is calculated for each five-minute interval as the percentage of requests processed by the Experience Adobe Experience Platform Edge Network that do not fail with errors and relate solely to the provisioned Adobe Experience Platform Edge Network APIs. If a tenant did not make any requests in a given five-minute interval, that interval is considered to be 100% available.
 * **Monthly uptime percentage** for a given region is calculated as the average of the availability for all five-minute intervals in a month.
 * An **upstream** is a service behind the Adobe Edge Network, enabled for a specific datastream, such as Adobe Server Side Forwarding, Adobe Edge Segmentation, or Adobe Target.
-* A **request** sent to the Server API is defined as one or more request units.
 * A **request unit** corresponds to a 8 KB fragment of a request and one upstream configured for a datastream.
+* A **request** is a single message sent by a customer-owned application to the [!DNL Server API]. A request can contain one or more request units.
 * An **error** is any request that fails due to an Adobe Experience Platform Edge Network [internal service error](error-handling.md).
 
 ## Service limits
