@@ -36,13 +36,14 @@ The guardrails below generally apply to activation through all destination types
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Max # of audiences to a single destination | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
-|Max # of destinations | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
-|Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile data* to destinations. Exporting event data is not supported at this time.|
-|Max # of destinations | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Maximum number of segments to a single destination | N/A | - | There is currently no limit to how many segments you can activate in an activation flow to a single destination platform.|
+|Maximum number of destinations | N/A | - | There is currently no limit to how many destinations per organization ID or per sandbox you can connect and activate data to.|
+|Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile data* to destinations. XDM attributes that describe event data is not supported at this time.|
 |Insert other guardrails | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
 
 {style="table-layout:auto"}
+
+<!--
 
 ### Streaming activation {#streaming-activation}
 
@@ -68,9 +69,11 @@ The guardrails below apply to activation through batch file-based destinations.
 
 {style="table-layout:auto"}
 
+-->
+
 ### Ad-hoc activation {#ad-hoc-activation}
 
-The guardrails below apply to the ad-hoc activation method.
+The guardrails below apply to the [ad-hoc activation](/help/destinations/api/ad-hoc-activation-api.md) method.
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
@@ -79,9 +82,9 @@ The guardrails below apply to the ad-hoc activation method.
 
 {style="table-layout:auto"}
 
-### Edge destinations activation {#edge-destinations-activation}
+### Edge personalization destinations activation {#edge-destinations-activation}
 
-The guardrails below apply to activation through edge destinations.
+The guardrails below apply to activation through edge personalization destinations.
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
