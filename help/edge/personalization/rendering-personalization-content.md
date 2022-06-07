@@ -293,11 +293,15 @@ The SDK provides facilities to [manage flicker](../personalization/manage-flicke
 
 ## Render propositions in single-page applications without incrementing metrics {#applypropositions}
 
-The `applyProposition` function allows you to load propositions from [!DNL Target] and [!DNL Offer Decisioning] into single-page applications, without incrementing the analytics metrics. This eliminates reporting errors and icreases analytics accuracy.
+The `applyPropositions` function allows you to render or execute an array of propositions from [!DNL Target] and [!DNL Offer Decisioning] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and icreases analytics accuracy.
 
-### Use case 1: Re-render single-page application view
+### Use case 1: Re-render single-page application view propositions
 
-The use case described in the sample below re-renders the previously fetched cart view propositions without sending display notifications.
+The use case described in the sample below re-renders the previously fetched and rendered cart view propositions without sending display notifications.
+
+In the example below, the `sendEvent` command is triggered upon a view change, and saves the resulting object in a constant.
+
+Next, when the view or a component gets updated, the `applyPropositions` command is called, with the propositions from the previous `sendEvent` command, to re-render the view propositions.
 
 ```js
 const cartPropositions = alloy("sendEvent", {
@@ -313,6 +317,7 @@ const cartPropositions = alloy("sendEvent", {
     // Collect response tokens, etc.
     return propositions;
 });
+    // Call applyPropositions to re-render the view propositions from the previous `sendEvent` command. 
 alloy("applyPropositions", {
     propositions: cartPropositions
 });
@@ -320,11 +325,11 @@ alloy("applyPropositions", {
 
 ### Use case 2: Render propositions that do not have a selector
 
-This use case applies to Target form-based offers or offers from the [!DNL Offer Decisioning Engine].
+This use case applies to offers based on the [!DNL Target Form-based Experience Composer], or offers from the [!DNL Offer Decisioning Engine].
 
-You must proviide the selector, action, and scope in the `applyPropositions` call.
+You must provide the selector, action, and scope in the `applyPropositions` call.
 
-Valid `actionTypes` are:
+Supported `actionTypes` are:
 
 * `setHtml`
 * `replaceHtml`
@@ -333,8 +338,7 @@ Valid `actionTypes` are:
 ```js
 // Retrieve propositions for scope1 and scope2
 alloy("sendEvent", {
-    decisionScopes:  ["scope1', 'scope2'],
-    renderDecisions: false
+    decisionScopes:  ["scope1', 'scope2']
 }).then(({ propositions }) => {
     // Render propositions on the page by providing additional metadata
     alloy("applyPropositions", {
@@ -350,7 +354,8 @@ alloy("sendEvent", {
             }
         }
     })
-}).then({ renderedPropositions }) => {
+}).then(result => {
+    const renderedPropositions = result.propositions;
     // Send the display notifications via sendEvent command
     alloy("sendEvent", {
       xdm: {
@@ -364,3 +369,5 @@ alloy("sendEvent", {
     });
 });
 ```
+
+If you provide no metadata for a decision scope, the associated propositions will not be rendered.
