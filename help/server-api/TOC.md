@@ -20,7 +20,7 @@ feature: Data Collection
   * [Interacting with Adobe Analytics](interacting-adobe-analytics.md)
 * Personalization {#personalization}
   * [Personalization overview](personalization-overview.md)
-  * [Personalization via Offer Decisioning](personalization-offer-decisioning.md)
   * [Personalization via Adobe Target](personalization-target.md)
+  * [Personalization via Offer Decisioning](personalization-offer-decisioning.md)
 * [Error handling](error-handling.md)
 * [Troubleshooting](troubleshooting.md)
