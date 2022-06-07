@@ -14,7 +14,7 @@ This page describes how to use the information in [Configuration options in Dest
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps illustrated below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs. 
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
@@ -25,6 +25,8 @@ Start by creating a server and file configuration using the `/destinations-serve
 ```http
 POST /activation/authoring/destination-servers
 ```
+
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -61,6 +63,21 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }
 ```
 
+|Parameter|Type|Description|
+|---|---|---|
+|`name`|String|The name of your destination server.|
+|`destinationServerType`|String|Set this value according to your destination platform. <br><br> When configuring a Google Ad Manager 360 destination, set this to `FILE_BASED_GOOGLE_CLOUD`.|
+|`fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy`|String| *Required.*  Use `PEBBLE_V1`.|
+|`fileBasedGoogleCloudStorageDestination.bucket.value`|String|The name of the [!DNL Google Cloud Storage] bucket to be used by this destination. The `{{customerData.bucket}}` macro will use the bucket name defined by the user in the UI.|
+|`fileBasedGoogleCloudStorageDestination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
+|`fileBasedGoogleCloudStorageDestination.path.value`|String|The path to the destination folder that will host the exported files. The `{{customerData.path}}` macro will use the path defined by the user in the UI.|
+|`fileConfigurations.compression.templatingStrategy`|String|When configuring a [!DNL Google Ad Manager 360] destination, set this to `NONE`.|
+|`fileConfigurations.compression.value`|Optional|Compression codec to use when saving data to file. <br><br> When configuring a [!DNL Google Ad Manager 360] destination, set this to `NONE`.|
+|`fileConfigurations.fileType.templatingStrategy`|String|When configuring a [!DNL Google Ad Manager 360] destination, set this to `NONE`.|
+|`fileType.value`|Optional|Specifies the output file format. <br><br> When configuring a [!DNL Google Ad Manager 360] destination, set this to `CSV`.|
+|`maxFileRowCount`|Integer|Defines the maximum number of rows to be included in the exported files. When configuring a [!DNL Google Ad Manager 360] destination, set this to 5000000. |
+
+
 ## Step 2: Create an audience template {#create-audience-template}
 
 Use the `/authoring/audience-templates` API endpoint to create an audience template for [!DNL Google Ad Manager 360] (read [API reference](audience-metadata-api.md)). The audience template configuration below is specific to [!DNL Google Ad Manager 360].
@@ -70,6 +87,11 @@ Use the `/authoring/audience-templates` API endpoint to create an audience templ
 ```http
 POST /authoring/audience-templates
 ```
+
+**Request**
+>[!IMPORTANT]
+>
+>When configuring a [!DNL Google Ad Manager 360] destination, perform the audience template API call exactly as shown below. None of the parameters shown below need to be changed.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -110,6 +132,8 @@ To connect the server and file configuration in step 1 to this destination confi
 ```http
 POST /activation/authoring/destinations
 ``` 
+
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -256,10 +280,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }
 ```
 
-## Step 4: Publish your destination {#publish-destination}
-
-After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
-
-## Step 5: Document your destination {#document-destination}
-
-If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
+|Parameter | Type | Description|
+|---------|----------|------|
+|All parameters||See the [file-based destination configuration](file-based-destination-configuration.md) documentation for detailed explanation on each destination parameter specific to file-based destinations.|
+|`requiredMappings`|Array|*Required*. Applies only to [Google Ad Manager 360 destinations](configure-file-based-gam360-instructions.md). This mapping configuration is required by [!DNL Google Ad Manager 360] and should not be modified.|

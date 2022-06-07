@@ -45,6 +45,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedS3Destination.bucket.value`|String|The name of the [!DNL Amazon S3] bucket to be used by this destination.|
 |`fileBasedS3Destination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedS3Destination.path.value`|String|The path to the destination folder that will host the exported files.|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 ## File-based SFTP destination server spec {#sftp-example}
 
@@ -80,6 +81,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedSftpDestination.hostName.value`|String|The host name of the destination storage.|
 |`port`|Integer|The SFTP file server port.|
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 ## File-based [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destination server spec {#adls-example}
 
@@ -105,6 +107,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`destinationServerType`|String|Set this value according to your destination platform. For [!DNL Azure Data Lake Storage] destinations, set this to `FILE_BASED_ADLS_GEN2`.|
 |`fileBasedAdlsGen2Destination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedAdlsGen2Destination.path.value`|String|The path to the destination folder that will host the exported files.|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 ## File-based [!DNL Azure Blob Storage] destination server spec {#blob-example}
 
@@ -136,6 +139,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedAzureBlobDestination.path.value`|String|The path to the destination folder that will host the exported files.|
 |`fileBasedAzureBlobDestination.container.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedAzureBlobDestination.container.value`|String|The name of the [!DNL Azure Blob Storage] container to be used by this destination.|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 ## File-based [!DNL Data Landing Zone] ([!DNL DLZ]) destination server spec {#dlz-example}
 
@@ -162,6 +166,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`destinationServerType`|String|Set this value according to your destination platform. For [!DNL Data Landing Zone] destinations, set this to `FILE_BASED_DLZ`.|
 |`fileBasedDlzDestination.path.templatingStrategy`|String| *Required.*  Use `PEBBLE_V1`.|
 |`fileBasedDlzDestination.path.value`|String|The path to the destination folder that will host the exported files.|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 ## File-based [!DNL Google Cloud Storage] destination server spec {#gcs-example}
 
@@ -193,6 +198,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedGoogleCloudStorageDestination.bucket.value`|String|The name of the [!DNL Google Cloud Storage] bucket to be used by this destination.|
 |`fileBasedGoogleCloudStorageDestination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedGoogleCloudStorageDestination.path.value`|String|The path to the destination folder that will host the exported files.|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 ## File name configuration {#file-name-configuration}
 
@@ -201,7 +207,6 @@ You can use file name configuration macros to define what the exported file name
 ```json
 "filenameConfig":{
    "allowedFilenameAppendOptions":[
-      "DESTINATION",
       "SEGMENT_ID",
       "SEGMENT_NAME",
       "DATETIME",
@@ -216,9 +221,18 @@ You can use file name configuration macros to define what the exported file name
       "SEGMENT_ID",
       "DATETIME"
    ],
-   "defaultFilename":""
+   "defaultFilename": "%DESTINATION%"
 }
 ```
+
+
+|Parameter | Type | Description|
+|---------|----------|------|
+|`filenameConfig.allowedFilenameAppendOptions`|String|List of available file name macros for users to choose from. When setting `defaultFilename`, make sure to avoid duplicating macros. Supported values: <ul><li>`DESTINATION`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`SEGMENT_NAME`</li><li>`SEGMENT_ID`</li><li>`DATETIME`</li><li>`TIMESTAMP`</li><li>`CUSTOM_TEXT`</li><li>`SANDBOX_NAME`</li><li>`ORGANIZATION_NAME`</li></ul> See [file name configuration](server-and-file-configuration.md#file-name-configuration) for details on the supported macros.|
+|`filenameConfig.defaultFilenameAppendOptions`|String|Pre-selected default file name macros that users can uncheck.|
+|`filenameConfig.defaultFilename`|String|*Optional*. Defines the default file name macros for the exported files. These cannot be overwritten by users. Any macro defined by `allowedFilenameAppendOptions` will be appended after the `defaultFilename` macros.|
+
+// get the correct UI macro order from Vincent
 
 As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well.
 
@@ -242,13 +256,15 @@ The example shown in the image above uses the following file name macro configur
 ```json
 "filenameConfig":{
    "allowedFilenameAppendOptions":[
-      "CUSTOM_TEXT"
+      "CUSTOM_TEXT",
+      "SEGMENT_ID",
+      "DATETIME"
    ],
    "defaultFilenameAppendOptions":[
       "SEGMENT_ID",
       "DATETIME"
    ],
-   "defaultFilename":"DESTINATION"
+   "defaultFilename": "%DESTINATION%"
 }
 ```
 
