@@ -6,6 +6,15 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
 # Release notes
 
+## Version 2.11.0 - June 9, 2022
+
+* Added support for ECIDs passed via the adobe_mc query string parameter.
+* Added "appendIdentityToUrl" command to enable cross-domain identity sharing.
+* Updated cookie settings to use sameSite="none" and secure flag when on HTTPS pages.
+* Added "applyPropositions" command to enable re-rendering of personalized content.
+* Fixed an issue where personalized content was not applied correctly when using the "eq" pseudo selector.
+* Fixed an issue where localTimezoneOffset could fail Adobe Experience Platform validation.
+
 ## Version 2.10.1 - May 3, 2022
 
 * Fixed an issue where multiple persistent iframes were created for ID syncs and segment destinations.

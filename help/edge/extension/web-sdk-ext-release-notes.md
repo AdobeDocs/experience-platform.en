@@ -7,6 +7,18 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.12.0 - June 9, 2022
+
+* Updated the identity map data element to populate the namespace options based on the extension settings sandboxes.
+* Added "Redirect with identity" action to allow cross-domain identity sharing.
+* Added documentation links to the send event action.
+* Added copy to clipboard datastream ID, and delete datastream buttons.
+* Changed no datastreams alert box to informative instead of error styling.
+* Updated error for unprovisioned organizations.
+* Upgraded react-spectrum UI library.
+
+Contains version 2.11.0 of the Adobe Experience Platform Web SDK Library.
+
 ## Version 2.11.2 - May 3, 2022
 
 Contains version 2.10.1 of the Adobe Experience Platform Web SDK Library.
