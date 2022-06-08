@@ -138,4 +138,10 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 This document covered how to delete consumer records in the Experience Platform UI. For information on how to perform other data hygiene tasks in the UI, refer to the [data hygiene UI overview](./overview.md).
 
+<!--
+
+Paragraph below should be commented out until workorder.md will be added to the TOC.
+
 To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
+
+-->
