@@ -293,7 +293,11 @@ The SDK provides facilities to [manage flicker](../personalization/manage-flicke
 
 ## Render propositions in single-page applications without incrementing metrics {#applypropositions}
 
-The `applyPropositions` function allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy.
+The `applyPropositions` command allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy.
+
+>[!IMPORTANT]
+>
+>If propositions for the `__view__` scope were rendered on page load, their `renderAttempted` flag will be set to `true`. The `applyPropositions` command will not re-render the `__view__` scope propositions that have the `renderAttempted: true` flag.
 
 ### Use case 1: Re-render single-page application view propositions
 
