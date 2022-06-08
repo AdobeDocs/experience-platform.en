@@ -35,7 +35,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes?&limit=4&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -152,7 +152,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 **Response**
@@ -186,6 +186,10 @@ A successful response returns the details of the sandbox, including its `name`, 
 
 ## Create a sandbox {#create}
 
+>[!NOTE]
+>
+>When a new sandbox is created, you must first add that new sandbox to your product profile in [Adobe Admin Console](https://adminconsole.adobe.com/) before you can start using the new sandbox. See the documentation on [managing permissions for a product profile](../../access-control/ui/permissions.md) for information on how to provision a sandbox to a product profile.
+
 You can create a new development or production sandbox by making a POST request to the `/sandboxes` endpoint.
 
 ### Create a development sandbox
@@ -207,7 +211,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "acme-dev",
@@ -259,7 +263,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H `Accept: application/json` \
   -H 'Content-Type: application/json' \
   -d '{
@@ -320,7 +324,7 @@ curl -X PATCH \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json'
   -d '{
     "title": "Acme Business Group prod"
@@ -365,7 +369,7 @@ curl -X PUT \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json'
   -d '{
     "action": "reset"
@@ -444,7 +448,7 @@ curl -X PUT \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json'
   -d '{
     "action": "reset"
@@ -499,7 +503,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Response**

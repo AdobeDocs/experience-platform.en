@@ -1,6 +1,7 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
+feature: Customer AI
 title: Getting Started in Customer AI
 topic-legacy: Getting started
 description: This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads.
@@ -27,7 +28,7 @@ Downloading Customer AI scores is done through a combination of API calls. In or
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 

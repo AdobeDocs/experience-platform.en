@@ -275,7 +275,7 @@ In this example, instead of creating a global client ID and client secret as sho
                     "description": "Client ID",
                     "type": "string",
                     "isRequired": true,
-                    "fieldType": "CUSTOMER"
+                    "source": "CUSTOMER"
                 },
                 {
                     "name": "clientSecret",
@@ -284,7 +284,7 @@ In this example, instead of creating a global client ID and client secret as sho
                     "type": "string",
                     "isRequired": true,
                     "format": "password",
-                    "fieldType": "CUSTOMER"
+                    "source": "CUSTOMER"
                 },
                 {
                     "name": "moviestarId",
@@ -292,7 +292,7 @@ In this example, instead of creating a global client ID and client secret as sho
                     "description": "Moviestar ID",
                     "type": "string",
                     "isRequired": true,
-                    "fieldType": "CUSTOMER"
+                    "source": "CUSTOMER"
                 }
             ],
             "accessTokenRequest": {

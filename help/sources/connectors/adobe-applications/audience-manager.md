@@ -49,16 +49,20 @@ Datasets are a storage and management construct for a collection of data, typica
 
 Audience Manager datasets are disabled for Profile by default and users have the ability to enable or disable datasets based on their use cases. It is not recommended to disable datasets that will be used for segment membership in Profile.
 
-| Dataset Name | Description |
-| ------------ | ----------- |
-| AAM Real-time | This dataset contains data collected by direct hits on Audience Manager DCS endpoints and identity maps for Audience Manager Profiles. Keep this dataset enabled for Profile ingestion. |
-| AAM Real-time Profile Updates | This dataset enables Real-time targeting of Audience Manager traits and segments. It includes information for Edge regional routing, trait, and segment membership. Keep this dataset enabled for Profile ingestion. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile. |
-| AAM Devices Data | Device data with ECIDs and corresponding segment realizations aggregated in Audience Manager. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile.  |
-| AAM Device Profile Data | Used for Audience Manager connector diagnostics. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile.  |
-| AAM Authenticated Profiles | This dataset contains Audience Manager authenticated profiles. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile. |
-| AAM Authenticated Profiles Meta Data | Used for Audience Manager Connector diagnostics. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile. |
-| AAM Devices Data Backfill | Dataset from bringing in past devices data. This contains ECIDs and corresponding segment realizations aggregated in Audience Manager. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle to directly ingest the data to Profile. |
-| AAM Authenticated Profiles Backfill | Dataset from bringing in past authenticated data. This contains Audience Manager authenticated profiles. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle to directly ingest the data to Profile. |
+>[!NOTE]
+>
+>AAM Real-time is the only dataset that goes to the [!DNL Data Lake]. All of the other Audience Manager datasets go to [!DNL Profile], if they are enabled for [!DNL Profile]. If they are not enabled for [!DNL Profile], then they don't receive any data and they will show as empty.
+
+| Dataset Name | Description | Class |
+| --- | --- | --- |
+| AAM Real-time | This dataset contains data collected by direct hits on Audience Manager DCS endpoints and identity maps for Audience Manager Profiles. Keep this dataset enabled for Profile ingestion. | Experience event |
+| AAM Real-time Profile Updates | This dataset enables real-time targeting of Audience Manager traits and segments. It includes information for Edge regional routing, trait, and segment membership. Keep this dataset enabled for Profile ingestion. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile. | Record |
+| AAM Devices Data | Device data with ECIDs and corresponding segment realizations aggregated in Audience Manager. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile.  | Record |
+| AAM Device Profile Data | Used for Audience Manager connector diagnostics. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile.  | Record |
+| AAM Authenticated Profiles | This dataset contains Audience Manager authenticated profiles. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile. | Record |
+| AAM Authenticated Profiles Meta Data | Used for Audience Manager Connector diagnostics. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile. | Record |
+| AAM Devices Data Backfill | Dataset from bringing in past devices data. This contains ECIDs and corresponding segment realizations aggregated in Audience Manager. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle to directly ingest the data to Profile. | Record |
+| AAM Authenticated Profiles Backfill | Dataset from bringing in past authenticated data. This contains Audience Manager authenticated profiles. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle to directly ingest the data to Profile. | Record |
 
 ### Connections
 

@@ -1,6 +1,6 @@
 ---
 solution: Experience Platform
-title: Introduction to Experience Platform Dashboards
+title: Dashboards Overview
 type: Documentation
 description: Explore multiple dashboards in Adobe Experience Platform to view important information about your organization's data, as captured during daily snapshots.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
@@ -16,13 +16,19 @@ Dashboards provide out-of-the-box reporting on your organization's data and are 
 
 ## Getting started with dashboards
 
-To access dashboards, navigate to the appropriate section within the Platform user interface (UI). Once in the section, select the **[!UICONTROL Overview]** tab, if it is not automatically selected, to view the dashboard.
+To view and manage dashboards, navigate to **[!UICONTROL Dashboards]** in the Experience Platform user interface (UI) and select the **[!UICONTROL Browse]** tab to access the dashboard inventory.
+
+You can also access dashboards by navigating to the appropriate section within the UI for the dashboard you would like to view. To view the dashboard for profiles, for example, navigate to the **[!UICONTROL Profiles]** workspace and select the **[!UICONTROL Overview]** tab.
 
 The data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the dashboards are not updating in real time.
 
 >[!NOTE]
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
+
+## Dashboard inventory
+
+For detailed steps on how to use the **[!UICONTROL Dashboards]** workspace to view all available dashboards, please refer to the [dashboard inventory guide](./inventory.md).
 
 ## Available dashboards
 

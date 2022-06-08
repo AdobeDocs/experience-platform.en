@@ -9,6 +9,10 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 ---
 # Activate audience data to streaming segment export destinations
 
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 ## Overview {#overview}
 
 This article explains the workflow required to activate audience data in Adobe Experience Platform segment streaming destinations.
@@ -75,13 +79,19 @@ Some segment streaming destinations require you to select source attributes or i
 >id="platform_destinations_activate_applytransformation"
 >title="Apply transformation"
 >abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="Learn more in documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="Learn more in documentation"
 
 When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
 
 ![Identity mapping](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Schedule segment export {#scheduling}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_enddate"
+>title="End date"
+>abstract="Adding an end date for segment schedule is not available."
+>additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="Learn more in documentation"
 
 By default, the [!UICONTROL Segment schedule] page shows only the newly selected segments that you chose in the current activation flow.
 

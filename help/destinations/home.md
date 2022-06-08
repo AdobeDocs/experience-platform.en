@@ -19,7 +19,7 @@ One of the core functionalities of Platform is ingesting your first-party data a
 ## Destinations steps {#steps}
 
 * Choose from a [self-service catalog](./catalog/overview.md) of all the destinations available in Platform.
-* Use destinations to and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
+* Use destinations to send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Controls {#controls}
@@ -42,14 +42,14 @@ The destinations functionality in Platform works with Adobe Experience Platform 
 
 For more information about access controls, see the [Access control user guide](../access-control/ui/overview.md).
 
-## [!DNL Data Governance] restrictions on activating data to destinations {#data-governance}
+## Data Governance restrictions on activating data to destinations {#data-governance}
 
 Data governance is enforced for Platform destinations through:
 
 * *Marketing actions* that you can select in the create destinations workflow;
 * *Data usage policies* that restrict data containing certain usage labels from being activated to destinations with certain marketing actions.
   
-See the [!DNL Data Governance] in Platform documentation for more information about [marketing actions](../data-governance/policies/overview.md) and [resolving data policy violations](../data-governance/enforcement/auto-enforcement.md).
+See the Data Governance in Platform documentation for more information about [marketing actions](../data-governance/policies/overview.md) and [resolving data policy violations](../data-governance/enforcement/auto-enforcement.md).
 
 For more information about selecting marketing actions in the create destination workflow, see the following pages for the different destination types in Platform:
 

@@ -20,8 +20,8 @@ The documentation below provides information on how to connect MySQL to [!DNL Pl
 
 ## Connect MySQL to [!DNL Platform] using APIs
 
-- [Create a MySQL basee connection using the Flow Service API](../../tutorials/api/create/databases/mysql.md)
-- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Create a MySQL base connection using the Flow Service API](../../tutorials/api/create/databases/mysql.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect MySQL to [!DNL Platform] using the UI

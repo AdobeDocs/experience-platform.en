@@ -12,13 +12,15 @@ PSQL is a command-line interface that comes installed when you install [!DNL Pos
 
 >[!NOTE]
 >
-> This guide assumes you already have access to [!DNL PSQL] and are familiar with how to use it. More information about [!DNL PSQL] can be found in the [official [!DNL PSQL] documentation](https://www.postgresql.org/docs/current/app-psql.html.
+> This guide assumes you already have access to [!DNL PSQL] and are familiar with how to use it. More information about [!DNL PSQL] can be found in the [official [!DNL PSQL] documentation](https://www.postgresql.org/docs/current/app-psql.html).
 
 After installing PSQL on your computer, you are ready to connect PSQL with Query Service. Return to the [!DNL Platform] UI, then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
-![Image](../images/clients/psql/connect-bi.png)
+Under the **[!UICONTROL PSQL Command]** section, select the **[!UICONTROL Copy to clipboard]** icon (![Copy Icon](../images/clients/psql/copy-icon.png)) to copy the command string.
 
-Select the icon to copy the section labeled **[!UICONTROL PSQL Command]**, then paste the command string into a terminal or command-line window before pressing enter.
+![The Queries dashboard Credentials tab with the copy icon highlighted.](../images/clients/psql/connect-bi.png)
+
+Paste the command string into a terminal or command-line window and press **Enter** on your keyboard.
 
 >[!IMPORTANT]
 >

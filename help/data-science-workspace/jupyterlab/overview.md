@@ -23,7 +23,7 @@ The following list outlines some of the features that are unique to JupyterLab o
 | **Kernels** | Kernels provide notebook and other [!DNL JupyterLab] front-ends the ability to execute and introspect code in different programming languages. [!DNL Experience Platform] provides additional kernels to support development in [!DNL Python], R, PySpark, and [!DNL Spark]. See the [kernels](#kernels) section for more details. |
 | **Data access** | Access existing datasets directly from within [!DNL JupyterLab] with full support for read and write capabilities. |
 | **[!DNL Platform] service integration** | Built-in integrations allows you to utilize other [!DNL Platform] services directly from within [!DNL JupyterLab]. A complete list of supported integrations is provided in the section on [Integration with other Platform services](#service-integration). |
-| **Authentication** | In addition to <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab's built-in security model</a>, every interaction between your application and Experience Platform, including Platform service-to-service communication is encrypted and authenticated through the <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **Authentication** | In addition to <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab's built-in security model</a>, every interaction between your application and Experience Platform, including Platform service-to-service communication is encrypted and authenticated through the <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Development libraries** | In [!DNL Experience Platform], [!DNL JupyterLab] provides pre-installed libraries for [!DNL Python], R, and PySpark. See the [appendix](#supported-libraries) for a complete list of supported libraries. |
 | **Library controller** | When the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. See the [kernels](#kernels) section for more details. |
 
@@ -165,7 +165,7 @@ The customized *Launcher* provides you with useful notebook templates for their 
 | --- | --- |
 | Blank | An empty notebook file. |
 | Starter | A pre-filled notebook demonstrating data exploration using sample data. |
-| Retail Sales | A pre-filled notebook featuring the [retail sales recipe](https://adobe.ly/2wOgO3L) using sample data. |
+| Retail Sales | A pre-filled notebook featuring the [retail sales recipe](../pre-built-recipes/retail-sales.md) using sample data. |
 | Recipe Builder | A notebook template for creating a recipe in [!DNL JupyterLab]. It is pre-filled with code and commentary that demonstrates and describes the recipe creation process. Refer to the [notebook to recipe tutorial](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) for a detailed walkthrough. |
 | [!DNL Query Service] | A pre-filled notebook demonstrating the usage of [!DNL Query Service] directly in [!DNL JupyterLab] with provided sample workflows that analyzes data at scale. |
 | XDM Events | A pre-filled notebook demonstrating data exploration on postvalue Experience Event data, focusing on features common across the data structure. |

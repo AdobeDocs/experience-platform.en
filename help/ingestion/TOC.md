@@ -14,8 +14,9 @@ feature: Data Ingestion
   - [Kafka connector](streaming-ingestion/kafka.md)
   - [Troubleshooting](streaming-ingestion/troubleshooting.md)
 - Batch ingestion{#batch}
-  - [Overview](batch-ingestion/overview.md)
-  - [Batch ingestion API](batch-ingestion/api-overview.md)
+  - [Getting started with batch ingestion APIs](batch-ingestion/getting-started.md)
+  - [API Overview](batch-ingestion/overview.md)
+  - [API Developer Guide](batch-ingestion/api-overview.md)
   - [Partial batch ingestion](batch-ingestion/partial.md)
   - [Troubleshooting](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}

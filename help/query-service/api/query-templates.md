@@ -45,7 +45,7 @@ The following request retrieves the latest query template created for your IMS o
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -76,7 +76,7 @@ A successful response returns HTTP status 200 with a list of query templates for
                 "update": {
                     "href": "https://platform.adobe.io/data/foundation/query/query-templates/f7cb5155-29da-4b95-8131-8c5deadfbe7f",
                     "method": "PUT",
-                    "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+                    "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
                 }
             }
         }
@@ -118,7 +118,7 @@ POST /query-templates
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -156,7 +156,7 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -185,7 +185,7 @@ GET /query-templates/{TEMPLATE_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -214,7 +214,7 @@ A successful response returns HTTP status 200 with details of your specified que
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -247,7 +247,7 @@ PUT /query-templates/{TEMPLATE_ID}
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -286,7 +286,7 @@ A successful response returns HTTP status 202 (Accepted) with the updated inform
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query_templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -315,7 +315,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

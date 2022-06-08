@@ -5,10 +5,6 @@ exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 ---
 # [!UICONTROL XDM Business Person Details] schema field group
 
->[!NOTE]
->
->This field group is only available for organizations that have access to the B2B edition of Real-time Customer Data Platform.
-
 [!UICONTROL XDM Business Person Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) that captures information about an individual person in the context of a business-to-business (B2B) enterprise.
 
 ![](../../images/field-groups/business-person-details.png)
@@ -51,6 +47,7 @@ exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 | `workEmail` | [Email address](../../data-types/email-address.md) | The person's work email address. |
 | `workPhone` | [Phone number](../../data-types/phone-number.md) | The person's work phone number. |
 | `identityMap` | Map | A map field that contains a set of namespaced identities for the person. This field is automatically updated by the system as identity data is ingested. In order to properly utilize this field for [Real-time Customer Profile](../../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../../schema/composition.md#identityMap) for more information on their use case. |
+| `isDeleted` | Boolean  | Indicates whether this person has been deleted in Marketo Engage.<br><br>When using the [Marketo source connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), any records that are deleted in Marketo are automatically reflected in Real-time Customer Profile. However, records relating to these profiles may still persist in the Data Lake. By setting `isDeleted` to `true`, you can use the field to filter out which records have been deleted from your sources when querying the Data Lake. |
 | `organizations` | Array of strings | A list of organization names where the person works. |
 
 {style="table-layout:auto"}

@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes March 11, 2020
+title: Adobe Experience Platform Release Notes March 2020
+description: The March 2020 release notes for Adobe Experience Platform.
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
@@ -13,17 +13,17 @@ exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
 
 Updates to existing features in Adobe Experience Platform:
 
-* [[!DNL Data Governance]](#governance)
+* [Data Governance](#governance)
 * [[!DNL Data Ingestion]](#ingestion)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Identity Service]](#identity)
 * [[!DNL Sources]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## Data Governance {#governance}
 
 [!DNL Experience Platform] allows companies to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. [!DNL Experience Platform] includes an end-to-end data governance infrastructure to ensure the proper use of data within [!DNL Platform] and when being shared between systems.
 
-Adobe Experience Platform [!DNL Data Governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
 **New features**
 
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Data Governance] is a series of strategies and t
 
 | Feature | Description |
 | ------- | ----------- |
-| Automated enforcement of data usage policies for [!DNL Real-time Customer Data Platform]| Data usage policies are now enforced in the workflow of activating data to destinations. [!DNL Data Governance] is also embedded and enforced when making changes that affect existing activations (such as changes to dataset labels, merge policies, segment definitions, and others). |
+| Automated enforcement of data usage policies for [!DNL Real-time Customer Data Platform]| Data usage policies are now enforced in the workflow of activating data to destinations. Data Governance is also embedded and enforced when making changes that affect existing activations (such as changes to dataset labels, merge policies, segment definitions, and others). |
 | Data lineage for enforcement | When a data usage policy is violated in Real-time CDP, the UI displays a notification that contains data lineage information to help the user understand why the policies were violated and what they can do to resolve the violation. |
 
 
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Data Governance] is a series of strategies and t
 
 * None
 
-For more information about [!DNL Data Governance], see the [Data Governance overview](../../data-governance/home.md).
+For more information about Data Governance, see the [Data Governance overview](../../data-governance/home.md).
 
 ## Data Ingestion {#ingestion}
 

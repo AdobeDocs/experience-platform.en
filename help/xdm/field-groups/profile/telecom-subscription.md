@@ -37,7 +37,7 @@ For more details on the field group, refer to the public XDM repository:
 
 ## `internetSubscription` {#internetSubscription}
 
-`internetSubscription` is provided an array of objects. The structure of each object is described below.
+`internetSubscription` is provided as an array of objects. The structure of each object is described below.
 
 ![internetSubscription](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
@@ -54,7 +54,7 @@ For more details on the field group, refer to the public XDM repository:
 
 ## `landlineSubscription` {#landlineSubscription}
 
-`landlineSubscription` is provided an array of objects. The structure of each object is described below.
+`landlineSubscription` is provided as an array of objects. The structure of each object is described below.
 
 ![landlineSubscription](../../images/field-groups/telecom-subscription/landlineSubscription.png)
 
@@ -65,7 +65,7 @@ For more details on the field group, refer to the public XDM repository:
 | `callBlocking` | Boolean | Indicates whether the landline subscription features include call blocking. |
 | `callForwarding` | Boolean | Indicates whether the landline subscription features include call forwarding. |
 | `callWaiting` | Boolean | Indicates whether the landline subscription features include call waiting. |
-| `callerID` | Boolean | Indicates whether the landline subscription features include caller id. |
+| `callerID` | Boolean | Indicates whether the landline subscription features include caller ID. |
 | `internationalCalling` | Boolean | Indicates whether the landline subscription features include international calling. |
 | `minutes` | Integer | The number of monthly minutes available within the subscription. |
 | `threeWayCalling` | Boolean | Indicates whether the landline subscription features include three-way calling. |
@@ -77,7 +77,7 @@ For more details on the field group, refer to the public XDM repository:
 
 ## `mediaSubscription` {#mediaSubscription}
 
-`mediaSubscription` is provided an array of objects. The structure of each object is described below.
+`mediaSubscription` is provided as an array of objects. The structure of each object is described below.
 
 ![mediaSubscription](../../images/field-groups/telecom-subscription/mediaSubscription.png)
 
@@ -91,7 +91,7 @@ For more details on the field group, refer to the public XDM repository:
 
 ## `mobileSubscription` {#mobileSubscription}
 
-`mobileSubscription` is provided an array of objects. The structure of each object is described below.
+`mobileSubscription` is provided as an array of objects. The structure of each object is described below.
 
 ![mobileSubscription](../../images/field-groups/telecom-subscription/mobileSubscription.png)
 

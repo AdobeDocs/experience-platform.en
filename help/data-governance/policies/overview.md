@@ -10,6 +10,11 @@ exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 
 In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
+There are two types of policies available:
+
+* **[!UICONTROL Data governance policy]**: Restrict data activation based on the marketing action being performed and the data usage labels carried by the data in question.
+* **[!UICONTROL Consent policy] (Beta)**: Filter the profiles that can be activated to [destinations](../../destinations/home.md) based on your customers' consent or preferences
+
 This document provides a high-level overview of data usage policies, and provides links to further documentation for working with policies in the UI or API.
 
 ## Marketing actions {#marketing-actions}
@@ -17,7 +22,7 @@ This document provides a high-level overview of data usage policies, and provide
 Marketing actions, (also called marketing use cases) in the context of the data governance framework, are actions that an [!DNL Experience Platform] data consumer can take, for which your organization wants to restrict data usage. As such, a data usage policy is defined by the following:
 
 1. A specific marketing action
-2. The data usage label(s) that action is restricted from being performed against
+2. The conditions under which that action is restricted from being performed
 
 An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that specific types of data (such as Personally Identifiable Information (PII)) cannot be exported, and you attempt to export a dataset that contains an "I" label (Identity data), you will receive a response from the [!DNL Policy Service] telling you that a data usage policy has been violated.
 
@@ -29,9 +34,9 @@ When data usage happens in your organization's service, relevant marketing actio
 
 >[!NOTE]
 >
->If you are using [!DNL Real-time Customer Data Platform], you can set up marketing use cases on destinations to automate policy enforcement. See the document on [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md) for more information.
+>You can set up marketing use cases on destinations to automate policy enforcement. See the [destinations documentation](../../destinations/home.md) for more information on the configuration options for your particular destination.
 
-See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the [!DNL Policy Service] API or the [!DNL Experience Platform ]user interface. More information on working with marketing actions and policies is provided in the next section.
+See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface. More information on working with marketing actions and policies is provided in the next section.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -55,7 +60,7 @@ For information on how to work with marketing actions and policies in the [!DNL 
 
 ## Next steps
 
-This document provided an introduction to data usage policies within the [!DNL Data Governance] framework. You can now continue to read the process documentation linked to throughout this guide to learn more about how to work with policies in the API and UI.
+This document provided an introduction to data usage policies within the Data Governance framework. You can now continue to read the process documentation linked to throughout this guide to learn more about how to work with policies in the API and UI.
 
 ## Appendix
 

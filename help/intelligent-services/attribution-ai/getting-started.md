@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;attribution ai;popular topics
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Getting Started in Attribution AI
 topic-legacy: Getting started
 description: The following guides require an understanding of the various Adobe Experience Platform services involved with using Attribution AI. Before beginning the tutorials, please review the following documents.
@@ -32,7 +32,7 @@ Downloading Attribution AI scores is done through a combination of API calls. In
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 

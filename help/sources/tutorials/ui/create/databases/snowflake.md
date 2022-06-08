@@ -8,10 +8,6 @@ exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 ---
 # Create a [!DNL Snowflake] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL Snowflake] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 This tutorial provides steps for creating a [!DNL Snowflake] source connector using the Adobe Experience Platform user interface.
 
 ## Getting started
@@ -27,14 +23,14 @@ In order to access your Snowflake account on [!DNL Platform], you must provide t
 
 | Credential | Description |
 | ---------- | ----------- |
-| Account | The [!DNL Snowflake] account you want to connect to Platform. |
+| Account | The full account name associated with your [!DNL Snowflake] account. A fully qualified [!DNL Snowflake] account name includes your account name, region, and cloud platform. For example, `cj12345.east-us-2.azure`. For more information on account names, refer to this [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
 | Warehouse | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
-| Database | The [!DNL Snowflake] contains the data you want to bring the Platform. |
+| Database | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
 | Username | The username for the [!DNL Snowflake] account. |
 | Password | The password for the [!DNL Snowflake] user account. |
-| Connection string | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| Connection string | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
-For more information about these values, refer to [this Snowflake document](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
+For more information about these values, refer to [this Snowflake document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 ## Connect your  Snowflake account
 

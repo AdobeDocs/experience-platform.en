@@ -32,15 +32,15 @@ In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must prov
 
 | Credential | Description |
 | --- | --- |
-| `account` | The [!DNL Snowflake] account you want to connect to Platform. |
+| `account` | The full account name associated with your [!DNL Snowflake] account. A fully qualified [!DNL Snowflake] account name includes your account name, region, and cloud platform. For example, `cj12345.east-us-2.azure`. For more information on account names, refer to this [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html).  |
 | `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
-| `database` | The [!DNL Snowflake] contains the data you want to bring the Platform. |
+| `database` | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
 | `username` | The username for the [!DNL Snowflake] account. |
 | `password` | The password for the [!DNL Snowflake] user account. |
-| `connectionString` | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| `connectionString` | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
-For more information about getting started, refer to this [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
+For more information about getting started, refer to this [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 ## Create a base connection
 
@@ -63,7 +63,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -98,4 +98,7 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
-By following this tutorial, you have created a [!DNL Snowflake] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID in the next tutorial as you learn how to [explore databases using the Flow Service API](../../explore/database-nosql.md).
+By following this tutorial, you have created a [!DNL Snowflake] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring database data to Platform using the [!DNL Flow Service] API](../../collect/database-nosql.md)

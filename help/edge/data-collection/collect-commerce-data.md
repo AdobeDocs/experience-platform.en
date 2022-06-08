@@ -108,7 +108,7 @@ The product list indicates which products are related to the corresponding actio
 |**Field**|**Recommendation**|**Description**|
 |---|---|---|
 |[currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode)|Optional|The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency for for the product. This is only useful when you can have products with different currency codes and when it applies. For example, when there is a purchase or add to cart.|
-|[priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal)|Highly Recommended|Should only be set when applicable. For example, it might not be possible to set on `productView` because different variations of the product can have different prices but on a `productListAdds`.|
+|[priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal)|Highly Recommended|Should only be set when applicable. For example, it might not be possible to set on `productView` event because different variations of the product can have different prices but on a `productListAdds` event.|
 |[product](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct)|Highly Recommended|The XDM ID for the product.|
 |[productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod)|Highly Recommended|The method that was used to add a product item to the list by the visitor. Set with `productListAdds` measures, and should only be used when a product is added to the list. Examples include `add to cart button`, `quick add`, and `upsell`.|
 |[productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname)|Highly Recommended|This is set to the display name or human-readable name of the product.|
@@ -117,7 +117,7 @@ The product list indicates which products are related to the corresponding actio
 
 ## Examples
 
-`productView` event
+`productViews` event
 
 ```javascript
 alloy("sendEvent",{
@@ -141,7 +141,7 @@ alloy("sendEvent",{
 });
 ```
 
-`productView` event
+`productListAdds` event
 
 ```javascript
 alloy("sendEvent",{
@@ -171,7 +171,7 @@ alloy("sendEvent",{
 });
 ```
 
-`checkout` event
+`checkouts` event
 
 ```javascript
 alloy("sendEvent",{
@@ -199,7 +199,7 @@ alloy("sendEvent",{
 });
 ```
 
-`purchase` event
+`order` event
 
 ```javascript
 alloy("sendEvent",{

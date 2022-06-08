@@ -1,6 +1,7 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
+feature: Customer AI
 title: Input and Output in Customer AI
 topic-legacy: Getting started
 description: Learn more about the required events, inputs, and outputs utilized by Customer AI.
@@ -14,9 +15,12 @@ The following document outlines the different required events, inputs, and outpu
 
 Customer AI works by analyzing one of the following datasets to predict churn or conversion propensity scores:
 
-- Consumer Experience Event (CEE) dataset
 - Adobe Analytics data using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Adobe Audience Manager data using the [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- Experience Event (EE) dataset
+- Consumer Experience Event (CEE) dataset
+
+You can add multiple datasets from different sources if each of the datasets shares the same identity type (namespace) such as an ECID. For more information on adding multiple datasets, visit the [Customer AI user guide](./user-guide/configure.md#select-data)
 
 >[!IMPORTANT]
 >
@@ -42,7 +46,7 @@ The following table outlines some common terminology used in this document:
 >
 > Customer AI automatically determines which events are useful for predictions and raises a warning if the available data is not sufficient to generate quality predictions.
 
-Customer AI supports CEE, Adobe Analytics, and Adobe Audience Manager datasets. The CEE schema requires you to add field groups during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below during the connection process. 
+Customer AI supports Adobe Analytics, Adobe Audience Manager, Experience Event (EE), and Consumer Experience event (CEE) datasets. The CEE schema requires you to add field groups during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below during the connection process. You can add multiple datasets from different sources if each of the datasets shares the same identity type (namespace) such as an ECID.
 
 For more information on mapping Adobe Analytics data or Audience Manager data, visit the [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md) or [Audience Manager field mappings](../../sources/connectors/adobe-applications/mapping/audience-manager.md) guide.
 
@@ -82,11 +86,11 @@ To view a field group in the Platform UI, select the **[!UICONTROL Schemas]** ta
 
 Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide data for as many fields as possible such as, `startDate`, `endDate`, and any other relevant details.
 
-### Adding custom field groups
+### Adding custom events and profile attributes
 
-If you have additional information you wish to include in addition to the [standard event fields](#standard-events) used by Customer AI. A custom events option is provided during your [instance configuration](./user-guide/configure.md#custom-events). 
+If you have information you wish to include in addition to the [standard event fields](#standard-events) used by Customer AI, a custom event and custom profile attribute option is provided during your [instance configuration](./user-guide/configure.md#custom-events). 
 
-If the dataset you selected includes custom events such as a hotel or restaurant reservation defined in your schema, you can add them to your instance. These additional custom events are used by Customer AI to improve the quality of your model and provide more accurate results.
+If the dataset you selected includes custom events or profile attributes such as a "hotel reservation" or "employee of X company" defined in your schema, you can add them to your instance. These additional custom events and profile attributes are used by Customer AI to improve the quality of your model and provide more accurate results.
 
 ### Historical data {#data-requirements}
 
@@ -104,7 +108,7 @@ Minimum length of data required = eligible population + outcome window
 >
 > 30 is the minimum number of days required for eligible population. If this is not provided the default is 120 days.
 
-Examples : 
+Examples: 
 
 - You want to predict whether a customer is likely to purchase a watch in the next 30 days. You also want to score users who have some web activity in the last 60 days. In this case the minimum length of data required = 60 days + 30 days. The eligible population is 60 days and the outcome window is 30 days totaling 90 days.
 
@@ -254,6 +258,10 @@ When you are configuring a new customer AI instance, `audienceName` and `audienc
 ## Customer AI output data
 
 Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score (output) based on what you have provisioned. If you have a Real-time Customer Profile-enabled dataset, you can consume insights from Real-time Customer Profile in the [Segment Builder](../../segmentation/ui/segment-builder.md). If you don't have a Profile-enabled dataset, you can [download the Customer AI output](./user-guide/download-scores.md) dataset available on the data lake.
+
+You can find the output dataset under **Datasets** in Platform. All Customer AI output datasets start with the name **Customer AI Scores - Name_of_app**. Similarly, all Customer AI output schemas start with the name **Customer AI Schema - Name_of_app**.
+
+![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png)
 
 >[!NOTE]
 >

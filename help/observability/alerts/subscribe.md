@@ -50,11 +50,10 @@ The next screen displays a list of event types to subscribe to. Select the event
 
 >[!NOTE]
 >
->If you are unsure which events to subscribe to for the service you are working with, consult the service-specific notification documentation:
+>If you are unsure which events to subscribe to for the service you are working with, consult the following documentation:
 >
->* [[!DNL Privacy Service] notifications](../../privacy-service/privacy-events.md)
->* [[!DNL Data Ingestion] notifications](../../ingestion/quality/subscribe-events.md)
->* [[!DNL Flow Service (sources)] notifications](../../sources/notifications.md)
+>* [Platform notifications](./rules.md)
+>* [Privacy Service notifications](../../privacy-service/privacy-events.md)
 
 ![](../images/notifications/choose-event-subscriptions.png)
 

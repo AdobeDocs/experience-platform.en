@@ -1,15 +1,13 @@
 ---
-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
-seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
-seo-title: How to use Destination SDK to configure your destination
-title: How to use Destination SDK to configure your destination
+description: This page lists and describes the steps to configure a streaming destination using Destination SDK.
+title: Use Destination SDK to configure a streaming destination
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 ---
-# How to use Destination SDK to configure your destination
+# Use Destination SDK to configure a streaming destination
 
 ## Overview {#overview}
 
-This page describes how to use the reference information in [Configuration options in Destinations SDK](./configuration-options.md) to configure your destination. The steps are laid out in sequential order below.
+This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [streaming destination](/help/destinations/destination-types.md#streaming-destinations). The steps are laid out in sequential order below.
 
 ## Prerequisites {#prerequisites}
 
@@ -21,7 +19,7 @@ Before advancing to the steps illustrated below, please read the [Destination SD
 
 ## Step 1: Create a server and template configuration {#create-server-template-configuration}
 
-Start by creating a server and template configuration using the `/destinations-server` endpoint (read [API reference](./destination-server-api.md)). For more information about the server and template configuration, refer to [Server and template specs](./configuration-options.md#server-and-template) in the reference section.
+Start by creating a server and template configuration using the `/destinations-server` endpoint (read [API reference](destination-server-api.md)). For more information about the server and template configuration, refer to [Server and template specs](server-and-template-configuration.md) in the reference section.
 
 Shown below is an example configuration. Note that the message transformation template in the `requestBody.value` parameter is addressed in step 3, [Create transformation template](./configure-destination-instructions.md#create-transformation-template).
 
@@ -52,7 +50,13 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
 
-Shown below is an example configuration for a destination template, created by using the `/destinations` API endpoint. For more information about this template, refer to [Destination configuration](./destination-configuration.md). 
+Shown below is an example configuration for a destination template, created by using the `/destinations` API endpoint. For more information about this configuration, refer to [Destination configuration](./destination-configuration.md).
+
+To connect the server and template configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
+
+>[!IMPORTANT]
+>
+>To create a correctly configured destination, you *must* add at least one target identity in `identityNamespaces`, as shown below. If no target identity is configured, users will not be able to proceed past the [Mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activation workflow.
 
 ```json
 
@@ -106,6 +110,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
+   "segmentMappingConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   },   
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -118,8 +128,8 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "groups":null
          },
          "splitUserById":true,
-         "maxBatchAgeInSecs":360,
-         "maxNumEventsInBatch":100
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000
       }
    },
    "destinationDelivery":[
@@ -127,8 +137,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
          "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
       }
-   ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed"
+   ]
 }
 
 ```
@@ -137,26 +146,29 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 Based on the payloads that your destination supports, you must create a template that transforms the format of the exported data from Adobe XDM format into a format supported by your destination. See template examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](./message-format.md#using-templating) and use the [template authoring tool](./create-template.md) provided by Adobe.
 
+Once you have crafted a message transformation template that works for you, add it to the server and template configuration you created in step 1.
+
 ## Step 4: Create audience metadata configuration {#create-audience-metadata-configuration}
 
-For some destinations, Destination SDK requires that you configure an audience metadata template to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](./audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
+For some destinations, Destination SDK requires that you configure an audience metadata configuration to programmatically create, update, or delete audiences in your destination. Refer to [Audience metadata management](./audience-metadata-management.md) for information on when you need to set up this configuration and how to do it.
 
-## Step 5: Create credentials configuration / Set up authentication {#set-up-authentication}
+If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
 
-Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint. 
+## Step 5: Set up authentication {#set-up-authentication}
 
-* **Most common case**: If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` and your destination supports the OAuth 2 authentication method, read [OAuth 2 authentication](./oauth2-authentication.md).
-* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to [Credentials configuration](./credentials-configuration.md) in the reference documentation.
+Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
+
+* **Most common case**: If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration and your destination supports the OAuth 2 authentication method, read [OAuth 2 authentication](./oauth2-authentication.md).
+* If you selected `"authenticationRule": "PLATFORM_AUTHENTICATION"`, refer to the [Authentication configuration](./authentication-configuration.md#when-to-use).
 
 ## Step 6: Test your destination {#test-destination}
 
-After setting up your destination using the templates in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./test-destination.md) to test the integration between Adobe Experience Platform and your destination.
 
 As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
 
 * [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
-
 
 ## Step 7: Publish your destination {#publish-destination}
 
@@ -164,4 +176,4 @@ After configuring and testing your destination, use the [destination publishing 
 
 ## Step 8: Document your destination {#document-destination}
 
-If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience League destinations catalog](/help/destinations/catalog/overview.md).
+If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).

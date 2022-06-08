@@ -86,8 +86,8 @@ alloy("sendEvent", {
       target: {
         "profile.gender": "female",
         "profile.age": 30,
-        "entity.id" : "123",
-        "entity.genre" : "Drama"
+        "entity.id": "123",
+        "entity.genre": "Drama"
       }
     }
   }
@@ -190,13 +190,36 @@ alloy("sendEvent", {
       }
     }
   }
-}).then(function(results) {
+}).then(function(result) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
     // Tracking the event failed.
   });
 ```
+
+
+### The `result` object
+
+The `sendEvent` command returns a promise that is resolved with a `result` object. The `result` object contains the following properties:
+
+**propositions**: The Personalization offers that the visitor has qualified for. [Learn more about propositions.](../personalization/rendering-personalization-content.md#manually-rendering-content)
+
+**decisions**: This property is deprecated. Please use `propositions` instead.
+
+**destinations**: Segments from Adobe Experience Platform that can be shared with external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites. [Learn more about destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html?lang=en)
+
+>[!WARNING]
+>
+>`destinations` is currently in Beta. The documentation and functionality are subject to change.
+
+**inferences**: Real-time machine learning insights. [Learn more about real-time Machine Learning.](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/real-time-machine-learning/home.html?lang=en)
+
+>[!WARNING]
+>
+>`inferences` is currently in Beta. The documentation and functionality are subject to change.
+
+
 
 ## Modifying events globally {#modifying-events-globally}
 

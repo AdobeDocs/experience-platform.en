@@ -6,6 +6,35 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
 # Release notes
 
+## Version 2.10.1 - May 3, 2022
+
+* Fixed an issue where multiple persistent iframes were created for ID syncs and segment destinations.
+
+## Version 2.10.0 - April 22, 2022
+
+* Use a persistent iframe for all ID syncs and segment destinations.
+* Fixed an issue where merged metrics propositions were duplicated in the `sendEvent` result.
+
+## Version 2.9.0 - March 10, 2022
+
+* Added support for tracking [!DNL control (default)] Adobe Target experiences.
+* Optimized the view-change events for single page applications. The display notification is now included with the view-change event when personalized experiences are rendered.
+* Removed console warning when no `eventType` is present.
+* Fixed an issue where the `propositions` property was only returned from a `sendEvent` command when experiences were requested or retrieved from the cache. The `propositions` property will now always be defined as an array.
+* Fixed an issue where hidden containers were not shown when there was an error returned from the Adobe Experience Edge.
+* Fixed an issue where the interact events were not being counted in Adobe Target. This was fixed by adding the view name to the XDM at web.webPageDetails.viewName.
+* Fix broken documentation links in console messages.
+
+## Version 2.8.0 - January 19, 2022
+
+* Support shadow DOM selectors for personalization.
+* Renamed personalization event types. (`display` and `click` become `decisioning.propositionDisplay` and `decisioning.propositionInteract`)
+* Fixed an issue where HTML offers with inline script tags added the script tags twice to the page even though the script was only run once.
+
+## Version 2.7.0 - October 26, 2021
+
+* Expose additional information from Experience Edge in the return value from `sendEvent`, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](fundamentals/tracking-events.md)
+
 ## Version 2.6.4 - September 7, 2021
 
 * Fixed an issue where set HTML Adobe Target actions applied to the `head` element were replacing the entire `head` content. Now set HTML actions applied to the `head` element are changed to append HTML.

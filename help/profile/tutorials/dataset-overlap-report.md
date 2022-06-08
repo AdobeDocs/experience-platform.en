@@ -21,7 +21,7 @@ The required headers for all of the API calls in this tutorial are:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`: The `Authorization` header requires an access token prepended by the word `Bearer`. A new access token value must be generated every 24 hours.
 * `x-api-key: {API_KEY}`: The `API Key` is also known as a `Client ID` and is a value that only needs to be generated once.
-* `x-gw-ims-org-id: {IMS_ORG}`: The `IMS Org` is also known as an `Organization ID` and only needs to be generated once.
+* `x-gw-ims-org-id: {ORG_ID}`: The `IMS Org` is also known as an `Organization ID` and only needs to be generated once.
 
 After completing the authentication tutorial and gathering the values for the required headers, you are ready to begin making calls to the Real-time Customer API.
 
@@ -38,7 +38,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-04-19 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
 |Parameter|Description|
@@ -118,6 +118,7 @@ To interpret the results of the report, consider the following example:
 ```
 
 This report provides the following information:
+
 * There are 123 profiles comprised of data coming from the following datasets: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * There are 454,412 profiles comprised of data coming from these two datasets: `5d92921872831c163452edc8` and `5eb2cdc6fa3f9a18a7592a98`.
 * There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.

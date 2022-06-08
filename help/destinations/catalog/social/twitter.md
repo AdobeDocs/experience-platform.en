@@ -16,7 +16,6 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 1. Your [!DNL Twitter Ads] account must be eligible for advertising. New [!DNL Twitter Ads] accounts are not eligible for advertising in the first 2 weeks after they are created.
 2. Your Twitter user account that you authorized access for in [!DNL Twitter Audience Manager] must have the *[!DNL Partner Audience Manager]* permission enabled.
 
-
 ## Supported identities {#supported-identities}
 
 [!DNL Twitter Custom Audiences] supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
@@ -28,9 +27,16 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 
 {style="table-layout:auto"}
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
-**Segment Export** - you are exporting all members of a segment (audience) with the identifiers used in the Twitter Custom Audiences destination.
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers used in the Twitter Custom Audiences destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Use Cases {#use-cases}
 
@@ -41,6 +47,10 @@ To help you better understand how and when you should use the [!DNL Twitter Cust
 Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform as [!DNL List Custom Audiences] in Twitter.
 
 ## Connect to destination {#connect}
+
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -53,6 +63,10 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Account ID]**: Your [!DNL Twitter Ads] account ID. This can be found in your [!DNL Twitter Ads] settings.
 
 ## Activate segments to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 

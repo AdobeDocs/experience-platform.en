@@ -130,9 +130,33 @@ The default fields shown can also be changed at an organizational-level to displ
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-You can view additional information related to the individual profile by selecting another of the available tabs. These tabs include attributes, events, and the segment membership tab that shows the segments for which the profile is currently qualified.
+You can view additional information related to the individual customer profile by selecting another of the available tabs. These tabs include attributes, events, and the segment membership tab that shows the segments for which the profile is currently qualified.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
+
+### Attributes tab
+
+The **[!UICONTROL Attributes]** tab provides a list view summarizing all of the attributes related to a single profile, after the specified merge policy has been applied.
+
+These attributes can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for any users wishing to better understand how the profile attributes are ingested into Platform.
+
+![](../images/user-guide/profiles-attributes.png)
+
+### Events tab
+
+The **[!UICONTROL Events]** tab contains data related to ExperienceEvents associated with the customer. This could include email opens, cart activities, page views, and more. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
+
+Events can also be viewed as a JSON object by selecting to **[!UICONTROL View JSON]**. This is helpful for understanding how events are captured in Platform.
+
+![](../images/user-guide/profiles-events.png)
+
+### Segment membership tab
+
+The **[!UICONTROL Segment membership]** tab displays a list with the name and description of segments to which the individual customer profile currently belongs. This list is updated automatically as the profile qualifies or expires from segments. The total count of segments for which the profile is currently qualified is shown on the right-hand side of the tab.
+
+For more information about segmentation in Experience Platform, please refer to the [Adobes Experience Platform Segmentation Service documentation](../../segmentation/home.md).
+
+![](../images/user-guide/profiles-segment-membership.png)
 
 ## Merge policies
 

@@ -1,6 +1,7 @@
 ---
 title: Getting Started With Event Forwarding
 description: Follow this step-by-step tutorial to get started using event forwarding in Adobe Experience Platform.
+feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 ---
 # Getting started with event forwarding
@@ -93,7 +94,7 @@ Next, configure Edge Network to send data to event forwarding, and to other Adob
 
 After configuring, make note of the Environment IDs for the new property.
 
-## Configure the tag Web SDK extension to send data to the datastream created previously
+## Configure the Platform Web SDK extension to send data to the datastream created previously
 
 Create your property in the Data Collection UI, then use the Adobe Experience Platform Web SDK extension to configure it.
 

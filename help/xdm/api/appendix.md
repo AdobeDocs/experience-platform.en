@@ -71,50 +71,52 @@ The following is a side-by-side comparison showing birthday-related fields (with
   <tr>
   <td>
   <pre class=" language-json">
-        {
-          "xdm:birthDate": {
-              "title": "Birth Date",
-              "type": "string",
-              "format": "date",
-          },
-          "xdm:birthDayAndMonth": {
-              "title": "Birth Date",
-              "type": "string",
-              "pattern": "[0-1][0-9]-[0-9][0-9]",
-          },
-          "xdm:birthYear": {
-              "title": "Birth year",
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 32767
-        }
+{
+  "xdm:birthDate": {
+    "title": "Birth Date",
+    "type": "string",
+    "format": "date"
+  },
+  "xdm:birthDayAndMonth": {
+    "title": "Birth Date",
+    "type": "string",
+    "pattern": "[0-1][0-9]-[0-9][0-9]"
+  },
+  "xdm:birthYear": {
+    "title": "Birth year",
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 32767
+  }
+}
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-        {
-          "birthDate": {
-              "title": "Birth Date",
-              "type": "string",
-              "format": "date",
-              "meta:xdmField": "xdm:birthDate",
-              "meta:xdmType": "date"
-          },
-          "birthDayAndMonth": {
-              "title": "Birth Date",
-              "type": "string",
-              "pattern": "[0-1][0-9]-[0-9][0-9]",
-              "meta:xdmField": "xdm:birthDayAndMonth",
-              "meta:xdmType": "string"
-          },
-          "birthYear": {
-              "title": "Birth year",
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 32767,
-              "meta:xdmField": "xdm:birthYear",
-              "meta:xdmType": "short"
-        }
+{
+  "birthDate": {
+    "title": "Birth Date",
+    "type": "string",
+    "format": "date",
+    "meta:xdmField": "xdm:birthDate",
+    "meta:xdmType": "date"
+  },
+  "birthDayAndMonth": {
+    "title": "Birth Date",
+    "type": "string",
+    "pattern": "[0-1][0-9]-[0-9][0-9]",
+    "meta:xdmField": "xdm:birthDayAndMonth",
+    "meta:xdmType": "string"
+  },
+  "birthYear": {
+    "title": "Birth year",
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 32767,
+    "meta:xdmField": "xdm:birthYear",
+    "meta:xdmType": "short"
+  }
+}
       </pre>
   </td>
   </tr>

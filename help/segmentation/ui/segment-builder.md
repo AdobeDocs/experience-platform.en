@@ -12,9 +12,14 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## Segment definition building blocks
+## Segment definition building blocks {#building-blocks}
 
-The basic building blocks of segment definitions are attributes and events. In addition, the attributes and events contained in existing audiences can also be used as components for new definitions. 
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_fields"
+>title="Fields"
+>abstract="The three field types that make up a segment are attributes, events, and audiences. Attributes let you use Profile attributes that belong to the XDM Individual Profile class, events let you create an audience based on actions or events that take place using XDM ExperienceEvent data elements, and audiences let you use imported audiences from external sources."
+
+The basic building blocks of segment definitions are attributes and events. In addition, the attributes and events contained in existing audiences can be used as components for new definitions. 
 
 You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: "[!UICONTROL Attributes]", "[!UICONTROL Events]", and "[!UICONTROL Audiences]".
 
@@ -46,6 +51,44 @@ By default, only populated schema fields from your data store are shown. This in
 
 ![](../images/ui/segment-builder/show-populated.png)
 
+#### Adobe Analytics report suite datasets
+
+You can use data from either a single or multiple Adobe Analytics report suites as events within segmentation. 
+
+When using data from a single Analytics report suite, Platform will automatically add descriptors and friendly names to eVars, making it easier to find those fields within [!DNL Segment Builder].
+
+![An image showing how generic variables (eVars) are mapped with a user friendly name.](../images/ui/segment-builder/single-report-suite.png)
+
+When using data from multiple Analytics report suites, Platform **cannot** automatically add descriptors or friendly names to eVars. As a result, before using the data from Analytics report suites, you must map to XDM fields. More information about mapping Analytics variables to XDM can be found in the [Adobe Analytics source connection guide](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+
+For example, consider a situation where you had two report suites with the following variables:
+
+| Field | Report Suite Schema A | Report Suite Schema B |
+| ----- | --------------------- | --------------------- |
+| eVar1 | Referring Domain | Logged in Y/N |
+| eVar2 | Page Name | Member Loyalty ID | 
+| eVar3 | URL | Page Name |
+| eVar4 | Search Terms | Product Name |
+| event1 | Clicks | Page Views |
+| event2 | Page Views | Cart Additions |
+| event3 | Cart Additions | Checkouts |
+| event4 | Purchases | Purchases |
+
+In this case, you could map the two report suites with the following schema:
+
+![An image showing how two report suites can be mapped into one union schema.](../images/ui/segment-builder/union-schema.png)
+
+>[!NOTE]
+>
+>While the generic eVar values still get populated, you should **not** use them in your segment definitions (if possible), since the values could mean different things than what they were originally in their reports.
+
+Once the report suites have been mapped, you can use these newly mapped fields within your Profile-related workflows and segmentation.
+
+| Scenario | Union Schema experience | Segmentation generic variable | Segmentation mapped variable |
+| -------- | ----------------------- | ----------------------------- | ---------------------------- |
+| Single report suite | Friendly name descriptor is included with generic variables. <br><br>**Example:** Page Name (eVar2) | <ul><li>Friendly name descriptor included with generic variables</li><li>Queries use data from the specific dataset, since it is the only one</li></ul> | Queries can use Adobe Analytics data and potentially other sources. |
+| Multiple report suites | No friendly name descriptors are included with generic variables. <br><br>**Example:** eVar2 | <ul><li>Any field with multiple descriptors appear as generic. This means that no friendly names appear in the UI.</li><li>Queries can use data from any datasets that contain the eVar, which may result in mixed or incorrect results.</li></ul> | Queries use correctly combined results from multiple datasets. |
+ 
 ### Audiences
 
 The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within [!DNL Experience Platform].
@@ -69,6 +112,14 @@ To add a new rule to your segment definition, drag a tile from the **[!UICONTROL
 >[!IMPORTANT]
 >
 >The latest changes to Adobe Experience Platform have updated the usage of the `OR` and `AND` logical operators between events. These updates will not affect existing segments. However, all subsequent updates to existing segments and new segment creations will be affected by these changes. Please read the [time constants update](./segment-refactoring.md) for more information.
+
+When selecting a value for the attribute, you will see a list of enum values that the attribute can be.
+
+![](../images/ui/segment-builder/enum-list.png)
+
+If selecting a value from this list of enums, the value will be outlined with a solid border. However, for fields that use `meta:enum` (soft) enums, you can also select a value which is **not** from the list of enums. If you create your own value, it will be outlined with a dotted border, along with a warning that this value is not in the enum list.
+
+![](../images/ui/segment-builder/enum-warning.png)
 
 ### Adding audiences
 
@@ -158,7 +209,19 @@ To select a merge policy for your segment definition, select the gear icon on th
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Segment properties 
+## Segment properties {#segment-properties}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_segmentproperties"
+>title="Segment properties"
+>abstract="The segment properties section displays an estimate of the size of the resulting segment, displaying the number of qualified profiles in comparison to the total number of profiles. This allows you to adjust your segment definition as necessary before building the audience itself."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_refreshestimate"
+>title="Refresh estimates"
+>abstract="You can refresh the estimates of your segment to immediately see a preview of how many profiles would qualify for the proposed segment. Audience estimates are generated by using a sample size of that day's sample data."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Learn more from documentation"
+
 
 When building a segment definition, the **[!UICONTROL Segment Properties]** section on the right-hand side of the workspace displays an estimate of the size of the resulting segment, allowing you to adjust your segment definition as needed before building the audience itself.
 

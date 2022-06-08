@@ -1,6 +1,7 @@
 ---
 title: Core Event Forwarding Extension Overview
 description: Learn about the Core event forwarding extension in Adobe Experience Platform.
+feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
 ---
 # Core event forwarding extension overview
@@ -36,16 +37,16 @@ getDataElementValue('productName')
 In your custom code, you might also use the `ruleStash` object.
 
 ```javascript
-arc.ruleStash: Object<string, *>`
-```
-
-```javascript
-logger.log(context.arc.ruleStash);
+utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` is an object that collects every result from action modules.
 
 Each extension has its own namespace. For example, if your extension has the name `send-beacon`, all results from the `send-beacon` actions are stored on the `ruleStash['send-beacon']` namespace.
+
+```javascript
+utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
+```
 
 The namespace is unique for each extension and has the value `undefined` at the beginning.
 

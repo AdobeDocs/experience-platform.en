@@ -31,7 +31,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -64,7 +64,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/stats \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -74,7 +74,7 @@ A successful response returns information regarding your organization's use of t
 
 ```JSON
 {
-  "imsOrg":"{IMS_ORG}",
+  "imsOrg":"{ORG_ID}",
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
@@ -229,9 +229,7 @@ Currently, Platform only supports a single major version (`1`) for each schema. 
 
 ## XDM field constraints and best practices
 
-The fields of a schema are listed within its `properties` object. Each field is itself an object, containing attributes to describe and constrain the data that the field can contain. 
-
-More information about defining field types in the API can be found in the [field constraints guide](../schema/field-constraints.md) for this guide, including code samples and optional constraints for the most commonly used data types.
+The fields of a schema are listed within its `properties` object. Each field is itself an object, containing attributes to describe and constrain the data that the field can contain. Refer to the guide on [defining custom fields in the API](../tutorials/custom-fields-api.md) for code samples and optional constraints for the most commonly used data types.
 
 The following sample field illustrates a properly formatted XDM field, with further details on naming constraints and best practices provided below. These practices can also be applied when defining other resources that contain similar attributes.
 
@@ -257,8 +255,6 @@ The following sample field illustrates a properly formatted XDM field, with furt
     * Where a specific formatting of data is required, `examples` can be added as an array.
     * The field type may also be defined using any data type in the registry. See the section on [creating a data type](./data-types.md#create) in the data types endpoint guide for more information. 
 * The `description` explains the field and pertinent information regarding field data. It should be written in full sentences with clear language so that anyone accessing the schema can understand the intention of the field.
-
-See the document on [field constraints](../schema/field-constraints.md) for more information on how to define different field types in the API.
 
 ## Next steps
 

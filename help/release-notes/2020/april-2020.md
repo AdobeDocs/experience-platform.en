@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes April 8, 2020
+title: Adobe Experience Platform Release Notes April 2020
+description: The April 2020 release notes for Adobe Experience Platform.
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
@@ -16,7 +16,7 @@ New features in Adobe Experience Platform:
 
 Updates to existing features:
 * [[!DNL Experience Data Model (XDM)]](#xdm)
-* [[!DNL Data Governance]](#governance)
+* [Data Governance](#governance)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Privacy Service]](#privacy)
 * [[!DNL Sources]](#sources)
@@ -60,13 +60,13 @@ XDM is a publicly documented specification designed to improve the power of digi
 
 * Known
 
-## [!DNL Data Governance] {#governance}
+## Data Governance {#governance}
 
-Adobe Experience Platform [!DNL Data Governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
 Getting started with data governance requires a thorough understanding of the regulations, contractual obligations, and corporate policies that apply to your customer data. From there, data can be classified by applying the appropriate data usage labels, and its use can be controlled through the definition of data usage policies.
 
-The [!DNL Data Governance] framework simplifies and streamlines the process of categorizing data and creating data usage policies through the [!DNL Experience Platform] user interface and [!DNL Policy Service] API. 
+The Data Governance framework simplifies and streamlines the process of categorizing data and creating data usage policies through the [!DNL Experience Platform] user interface and [!DNL Policy Service] API. 
 
 **New features**
 

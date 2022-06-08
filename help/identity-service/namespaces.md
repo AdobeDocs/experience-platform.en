@@ -41,7 +41,7 @@ The following identity types are available within [!DNL Platform]:
 | Non-people identifier | Non-people IDs are used for storing identifiers that require namespaces but are not connected to a person cluster. For example, a product SKU, data related to products, organizations, or stores. |
 | Phone number | Phone numbers are often associated with a single person and therefore can be used to identify that person across different channels. Identities of this type include PII. This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
-### Standard namespaces
+### Standard namespaces {#standard}
 
 Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the Platform UI.
 
@@ -73,7 +73,7 @@ To view identity namespaces in the UI, select **[!UICONTROL Identities]** in the
 
 ![browse](./images/browse.png)
 
-A list of identity namespaces appears in the main interface of the page, displaying information on their names, identity symbols, last updated date, and whether they are a standard or a custom namespace. The right rail contains information on [!UICONTROL Unique identities] and [!UICONTROL Identity graph strength]. [!UICONTROL Unique identities] refer to the number of identities that exist in the particular sandbox that you are using, while the [!UICONTROL Identity graph strength] strength displays information on the number of cookie and non-cookie IDs within your sandbox.
+A list of identity namespaces appears in the main interface of the page, displaying information on their names, identity symbols, last updated date, and whether they are a standard or a custom namespace. The right rail contains information on [!UICONTROL Identity graph strength].
 
 ![identities](./images/identities.png)
 

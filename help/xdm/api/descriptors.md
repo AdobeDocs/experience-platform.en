@@ -18,7 +18,7 @@ The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to prog
 
 ## Getting started
 
-The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of descriptors {#list}
 
@@ -37,7 +37,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
@@ -104,7 +104,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors/f3a1dfa38a4871cf4442a33074c1f9406a593407 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -122,7 +122,7 @@ A successful response returns the details of the descriptor, including its `@typ
   "xdm:property": "xdm:code",
   "xdm:isPrimary": false,
   "createdUser": "{CREATED_USER}",
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "createdClient": "{CREATED_CLIENT}",
   "updatedUser": "{UPDATED_USER}",
   "created": 1548899346989,
@@ -156,7 +156,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
       {
@@ -220,7 +220,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "@type": "xdm:descriptorIdentity",
@@ -268,7 +268,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors/ca921946fb5281cbdb8ba5e07087486ce531a1f2  \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -315,7 +315,7 @@ An identity descriptor signals that the "[!UICONTROL sourceProperty]" of the "[!
 
 {style="table-layout:auto"}
 
-#### Friendly name descriptor
+#### Friendly name descriptor {#friendly-name}
 
 Friendly name descriptors allow a user to modify the `title`, `description`, and `meta:enum` values of the core library schema fields. Especially useful when working with "eVars" and other "generic" fields that you wish to label as containing information specific to your organization. The UI can use these to show a more friendly name or to only show fields that have a friendly name.
 

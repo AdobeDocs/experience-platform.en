@@ -41,9 +41,9 @@ The input format should be specified at batch creation time within the payload. 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{
           "datasetId": "{DATASET_ID}",
            "inputFormat": {
@@ -59,8 +59,8 @@ In order for data to appear in the dataset, the batch must be marked as complete
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -71,9 +71,9 @@ To ingest multi-line JSON, the `isMultiLineJson` flag needs to be set at the tim
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{
           "datasetId": "{DATASET_ID}",
            "inputFormat": {
@@ -141,9 +141,9 @@ Once a batch has been signaled for batch promotion, the batch ingestion progress
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 With this request, you will get a response similar to this:
@@ -155,7 +155,7 @@ With this request, you will get a response similar to this:
 ```json
 {
     "{BATCH_ID}":{
-        "imsOrg":"{IMS_ORG}",
+        "imsOrg":"{ORG_ID}",
         "created":1494349962314,
         "createdClient":"{API_KEY}",
         "createdUser":"{USER_ID}",

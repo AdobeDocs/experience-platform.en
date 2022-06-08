@@ -8,7 +8,7 @@ exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 ---
 # Segment jobs endpoint
 
-A segment job is an asynchronous process that creates a new audience segment. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
+A segment job is an asynchronous process that creates an audience segment on demand. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
 
 This guide provides information to help you better understand segment jobs and includes sample API calls for performing basic actions using the API.
 
@@ -44,7 +44,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -189,7 +189,7 @@ POST /segment/jobs
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -211,7 +211,7 @@ A successful response returns HTTP status 200 with details of your newly created
 ```json
 {
     "id": "d3b4a50d-dfea-43eb-9fca-557ea53771fd",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -286,7 +286,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -298,7 +298,7 @@ A successful response returns HTTP status 200 with detailed information about th
 ```json
 {
     "id": "d3b4a50d-dfea-43eb-9fca-557ea53771fd",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -380,7 +380,7 @@ POST /segment/jobs/bulk-get
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
@@ -408,7 +408,7 @@ A successful response returns HTTP status 207 with the requested segment jobs.
     "results": {
         "cc3419d3-0389-47f1-b174-fead6b3c830d": {
             "id": "cc3419d3-0389-47f1-b174-fead6b3c830d",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "status": "SUCCEEDED",
             "segments": [
                 {
@@ -434,7 +434,7 @@ A successful response returns HTTP status 207 with the requested segment jobs.
         },
         "c527dc3f-07fe-4b96-be4e-23f38e734ff8": {
             "id": "c527dc3f-07fe-4b96-be4e-23f38e734ff8",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "status": "SUCCEEDED",
             "segments": [
                 {
@@ -493,7 +493,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

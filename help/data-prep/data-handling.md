@@ -35,7 +35,7 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Parameter | Description |
 | --------- | ----------- |
 | `{DATE}` | Required. The string that represents the date. |
-| `{FORMAT}` | Optional. The string representing the format of the date. More information on string formatting can be found in the [date/time format string section](#format). |
+| `{FORMAT}` | Optional. The string representing the format of the source date. More information on string formatting can be found in the [date/time format string section](#format). |
 | `{DEFAULT_DATE}` | Optional. The default date to be returned if the provided date is null. |
 
 For example, the expression `date(orderDate, "yyyy-MM-dd")` will convert an `orderDate` value of "December 31st, 2020" into a datetime value of "2020-12-31".
@@ -100,3 +100,7 @@ The following table shows which pattern letters are defined for format strings. 
 | V | Time zone ID | Text | America/Los_Angeles |
 | O | Time zone offset | Text | GMT+8 |
 | Q/q | Quarter of the year | Number/Text | 3; 03; Q3; 3rd quarter |
+
+## Maps {#maps}
+
+Maps are currently not supported in [!DNL Data Prep].

@@ -19,7 +19,7 @@ This tutorial requires a working understanding of the various [!DNL Adobe Experi
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
@@ -33,7 +33,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 

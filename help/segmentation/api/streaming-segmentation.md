@@ -18,7 +18,9 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will be evaluated along with the nightly scheduled segmented job.
+>Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+>
+>Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
 
 ## Getting started
 
@@ -40,7 +42,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -56,7 +58,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 Additional headers may be required to complete specific requests. The correct headers are shown in each of the examples within this document. Please pay special attention to the sample requests in order to ensure that all required headers are included.
 
-### Streaming segmentation enabled query types {#streaming-segmentation-query-types}
+### Streaming segmentation enabled query types {#query-types}
 
 >[!NOTE]
 >
@@ -66,26 +68,30 @@ In order for a segment to be evaluated using streaming segmentation, the query m
 
 | Query type | Details |
 | ---------- | ------- |
-| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
-| Incoming hit within a relative time window | Any segment definition that refers to a single incoming event. |
-| Incoming hit with a time window | Any segment definition that refers to a single incoming event with a time window. |
+| Single event | Any segment definition that refers to a single incoming event with no time restriction. |
+| Single event within a relative time window | Any segment definition that refers to a single incoming event. |
+| Single event with a time window | Any segment definition that refers to a single incoming event with a time window. |
 | Profile only | Any segment definition that refers to only a profile attribute. |
-| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
-| Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. |
+| Single event with a profile attribute | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. **Note:** The query is immediately evaluated when the event comes. In the case of a profile event, however, it must wait 24 hours to be incorporated. |
+| Single event with a profile attribute within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes.  |
 | Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. |
-| Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
+| Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
 A segment definition will **not** be enabled for streaming segmentation in the following scenarios:
 
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
 
-Additionally, some guidelines apply when doing streaming segmentation:
+Please note the following guidelines apply when doing streaming segmentation:
 
 | Query type | Guideline |
 | ---------- | -------- |
 | Single event query | There are no limits to the lookback window. |
 | Query with event history | <ul><li>The lookback window is limited to **one day**.</li><li>A strict time-ordering condition **must** exist between the events.</li><li>Queries with at least one negated event are supported. However, the entire event **cannot** be a negation.</li></ul>|
+
+If a segment definition is modified so it no longer meets the criteria for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
+
+Additionally, segment unqualification, similarly to segment qualification, happens in real-time. As a result, if an audience no longer qualifies for a segment, it will be immediately unqualified. For example, if the segment definition asks for "All users who bought red shoes in the last three hours", after three hours, all the profiles that initially qualified for the segment definition will be unqualified.
 
 ## Retrieve all segments enabled for streaming segmentation
 
@@ -107,7 +113,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -124,7 +130,7 @@ A successful response returns an array of segments in your IMS Organization that
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -158,7 +164,7 @@ A successful response returns an array of segments in your IMS Organization that
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -202,7 +208,7 @@ A successful response returns an array of segments in your IMS Organization that
 
 ## Create a streaming-enabled segment
 
-A segment will automatically be streaming-enabled if it matches one of the [streaming segmentation types listed above](#streaming-segmentation-query-types).
+A segment will automatically be streaming-enabled if it matches one of the [streaming segmentation types listed above](#query-types).
 
 **API format**
 
@@ -218,7 +224,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'  \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "schema": {
@@ -250,7 +256,7 @@ A successful response returns the details of the newly created streaming-enabled
         "name": "_xdm.context.profile"
     },
     "ttlInDays": 30,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",
@@ -309,7 +315,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "{SCHEDULE_NAME}",
@@ -328,7 +334,7 @@ curl -X POST \
 | `type` | **(Required)** The job type in string format. The supported types are `batch_segmentation` and `export`. |
 | `properties` | **(Required)** An object containing additional properties related to the schedule. |
 | `properties.segments` | **(Required when `type` equals `batch_segmentation`)** Using `["*"]` ensures all segments are included. |
-| `schedule` | **(Required)** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. The example shown (`0 0 1 * * ?`) means the job is triggered every day at 1:00:00 UTC. For more information, please review the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
+| `schedule` | **(Required)** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. The example shown (`0 0 1 * * ?`) means the job is triggered every day at 1:00:00 UTC. For more information, please review the appendix on the [cron expression format](./schedules.md#appendix) within the documentation on schedules within segmentation. |
 | `state` | *(Optional)* String containing the schedule state. Available values: `active` and `inactive`. Default value is `inactive`. An IMS Organization can only create one schedule. Steps for updating the schedule are available later in this tutorial. |
 
 **Response**
@@ -338,7 +344,7 @@ A successful response returns the details of the newly created schedule.
 ```json
 {
     "id": "cd585edf-962d-420d-94ad-3be03e619ac2",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "e7e17720-c5bb-11e9-aafb-87c71c35cac8",
         "sandboxName": "prod",
@@ -371,7 +377,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **Request**
 
-The following request uses [JSON Patch formatting](http://jsonpatch.com/) in order to update the `state` of the schedule to `active`.
+The following request uses [JSON Patch formatting](https://datatracker.ietf.org/doc/html/rfc6902) in order to update the `state` of the schedule to `active`.
 
 ```shell
 curl -X POST \
@@ -379,7 +385,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         {
@@ -401,3 +407,31 @@ The same operation can be used to disable a schedule by replacing the "value" in
 Now that you have enabled both new and existing segments for streaming segmentation, and enabled scheduled segmentation to develop a baseline and perform recurring evaluations, you can begin to create streaming-enabled segments for your organization. 
 
 To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).
+
+## Appendix
+
+The following section lists frequently asked questions regarding streaming segmentation:
+
+### Does streaming segmentation "unqualification" also happen in real time?
+
+For most instances, streaming segmentation unqualification happens in real-time. However, streaming segments that use segments of segments do **not** unqualify in real-time, instead unqualifying after 24 hours.
+
+### What data does streaming segmentation work on?
+
+Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+
+### How are segments defined as batch or streaming segmentation?
+
+A segment is defined as either batch or streaming segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment can be found in the [streaming segmentation query types section](#query-types).
+
+### Can a user define a segment as batch or streaming segmentation?
+
+At this time, the user cannot define whether a segment is evaluated using batch or streaming ingestion, as the system will automatically determine which method the segment will be evaluated with. 
+
+### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
+
+The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. This value is shown for both batch and streaming segments.
+
+The number under the "Last X days" **only** includes audiences that are qualified in streaming segmentation, and **only** increases if you have streamed data into the system and it counts toward that streaming definition. This value is **only** shown for streaming segments. As a result, this value **may** display as 0 for batch segments.
+
+As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment.

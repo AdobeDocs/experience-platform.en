@@ -30,7 +30,7 @@ In order to authenticate your [!DNL Event Hubs] source connector, you must provi
 | Credential | Description |
 | ---------- | ----------- |
 | `sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
-| `sasKey` | The generated shared access signature. |
+| `sasKey` | The primary key of the [!DNL Event Hubs] namespace. The `sasPolicy` that the `sasKey` corresponds to must have `manage` rights configured in order for the [!DNL Event Hubs] list to be populated. |
 | `namespace` | The namespace of the [!DNL Event Hubs] you are accessing. |
 
 For more information about these values, refer to [this [!DNL Event Hubs] document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).

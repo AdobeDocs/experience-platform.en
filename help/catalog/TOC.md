@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Catalog and Datasets Guide
 user-guide-description: Explore data lineage, metadata, file descriptions, directories, and datasets within the Data Lake.
-feature: Data Management
+feature: Catalog
 ---
 
 # Catalog and Datasets {#catalog}
@@ -25,7 +25,8 @@ feature: Data Management
   * [Datasets overview](datasets/overview.md)
   * [Datasets user guide](datasets/user-guide.md)
   * [Create and populate a dataset using APIs](datasets/create.md)
+  * [Enable a dataset for Profile and Identity](datasets/enable-for-profile.md)
+  * [Enable a dataset for Profile updates (upsert)](datasets/enable-upsert.md)
 * [Privacy request processing in the Data Lake](privacy.md)
-* [Data protection in Experience Platform](data-protection.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

@@ -8,7 +8,7 @@ exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 ---
 # [!DNL Policy Service] API guide
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
+Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
 The [!DNL Policy Service] API provides several endpoints that allow you to programmatically manage data usage labels and policies, as well as evaluate marketing actions for policy violations. These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
@@ -20,7 +20,7 @@ Data usage labels allow you to categorize datasets and fields according to usage
 
 ## Marketing actions
 
-Marketing actions (also called marketing use cases), in the context of the [!DNL Data Governance] framework, are actions that an [!DNL Experience Platform] data consumer can take, for which your organization wants to restrict data usage. For detailed information on working with marketing actions, see the [marketing actions endpoint guide](./marketing-actions.md).
+Marketing actions (also called marketing use cases), in the context of the Data Governance framework, are actions that an [!DNL Experience Platform] data consumer can take, for which your organization wants to restrict data usage. For detailed information on working with marketing actions, see the [marketing actions endpoint guide](./marketing-actions.md).
 
 ## Policies
 

@@ -28,7 +28,7 @@ The pages below provide more detail about the functionality and configuration op
 |--- |--- |
 |[Destination configuration](./destination-configuration.md) | [Destinations API endpoint operations](./destination-configuration-api.md) |
 |[Server and template specs](./server-and-template-configuration.md) |[Destination servers API endpoint operations](./destination-server-api.md) |
-|[Authentication configuration](./credentials-configuration.md) | [Credentials endpoint API operations](./credentials-configuration-api.md) |
+|[Authentication configuration](./authentication-configuration.md) | [Credentials endpoint API operations](./credentials-configuration-api.md) |
 |[Audience metadata management](./audience-metadata-management.md) | [Audience metadata endpoint API operations](./audience-metadata-api.md) | 
 |[OAuth 2 configuration](./oauth2-authentication.md) | Configure using the `customerAuthenticationConfigurations` parameter in the [/destinations API endpoint](./destination-configuration-api.md). |
 |[Message format](./message-format.md) | - |

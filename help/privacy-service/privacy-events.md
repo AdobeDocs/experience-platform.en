@@ -26,7 +26,7 @@ This document provides steps for setting up an event registration for [!DNL Priv
 Please review the following Privacy Service documentation before starting this tutorial:
 
 * [Privacy Service overview](./home.md)
-* [Privacy Service API developer guide](./api/getting-started.md)
+* [Privacy Service API guide](./api/overview.md)
 
 ## Register a webhook to [!DNL Privacy Service Events]
 
@@ -51,7 +51,7 @@ The following JSON is an example of a [!DNL Privacy Service Event] notification 
   "source":"https://ns.adobe.com/platform/gdpr",
   "time":"Wed Oct 23 18:52:32 GMT 2019",
   "data":{
-    "imsOrg":"{IMS_ORG}",
+    "imsOrg":"{ORG_ID}",
     "value":{
       "jobId":"6f0f2b62-88a7-4515-ba05-432d9a7021c5",
       "message":"analytics.access.complete"

@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
 solution: Experience Platform
-title: Create a Streaming Connection Using the API
+title: Create an HTTP API Streaming Connection Using the API
 topic-legacy: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 ---
 
-# Creating a streaming connection using the API
+# Creating an [!DNL HTTP API] streaming connection using the API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -35,7 +35,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -71,7 +71,7 @@ In order to create a streaming connection, the provider ID and connection specif
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -133,7 +133,7 @@ In order to create a streaming connection, the provider ID and connection specif
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -199,7 +199,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -243,7 +243,7 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
-## Create a source connection
+## Create a source connection {#source}
 
 After creating your base connection, you will need to create a source connection. When creating a source connection, you'll need the `id` value from your created base connection.
 
@@ -261,7 +261,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name": "Sample source connection",
@@ -285,7 +285,21 @@ A successful response returns HTTP status 201 with detailed of the newly created
 }
 ```
 
-## Create a target connection
+## Create a target XDM schema {#target-schema}
+
+In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+
+For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
+
+### Create a target dataset {#target-dataset}
+
+A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
+
+For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../../catalog/api/create-dataset.md).
+
+## Create a target connection {#target}
 
 A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -305,7 +319,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name": "Sample target connection",
@@ -334,6 +348,68 @@ A successful response returns HTTP status 201 with details of the newly created 
 }
 ```
 
+## Create a mapping {#mapping}
+
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to.
+
+To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
+
+**API format**
+
+```http
+POST /mappingSets
+```
+
+**Request**
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/mappingSets' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "version": 0,
+        "xdmSchema": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+        "xdmVersion": "1.0",
+        "mappings": [
+            {
+                "destinationXdmPath": "person.name.firstName",
+                "sourceAttribute": "firstName",
+                "identity": false,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.lastName",
+                "sourceAttribute": "lastName",
+                "identity": false,
+                "version": 0
+            }
+        ]
+    }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `xdmSchema` | The `$id` of the target XDM schema. |
+
+**Response**
+
+A successful response returns details of the newly created mapping including its unique identifier (`id`). This ID is required in a later step to create a dataflow.
+
+```json
+{
+    "id": "380b032b445a46008e77585e046efe5e",
+    "version": 0,
+    "createdDate": 1604960750613,
+    "modifiedDate": 1604960750613,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
+}
+```
+
 ## Create a dataflow
 
 With your source and target connections created, you can now create a dataflow. The dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request to the `/flows` endpoint. 
@@ -352,23 +428,39 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample flow",
-    "description": "Sample flow description",
-    "flowSpec": {
-        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
-        "version": "1.0"
-    },
-    "sourceConnectionIds": [
-        "{SOURCE_CONNECTION_ID}"
-    ],
-    "targetConnectionIds": [
-        "{TARGET_CONNECTION_ID}"
-    ]
-}'
+        "name": "HTTP API streaming dataflow",
+        "description": "HTTP API streaming dataflow",
+        "flowSpec": {
+            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+            "version": "1.0"
+        },
+        "sourceConnectionIds": [
+            "63070871-ec3f-4cb5-af47-cf7abb25e8bb"
+        ],
+        "targetConnectionIds": [
+            "98a2a72e-a80f-49ae-aaa3-4783cc9404c2"
+        ],
+        "transformations": [
+            {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "380b032b445a46008e77585e046efe5e",
+                "mappingVersion": 0
+            }
+            }
+        ]
+    }'
 ```
+
+| Property | Description |
+| --- | --- |
+| `flowSpec.id` | The flow specification ID for [!DNL HTTP API]. This ID is: `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
+| `targetConnectionIds` | The [target connection ID](#target) retrieved in an earlier step. |
+| `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
 
 **Response**
 

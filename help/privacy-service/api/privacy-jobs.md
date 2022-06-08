@@ -8,7 +8,7 @@ exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 ---
 # Privacy jobs endpoint
 
-This document covers how to work with privacy jobs using API calls. Specifically, it covers the use of the `/job` endpoint in the [!DNL Privacy Service] API. Before reading this guide, refer to the [getting started section](./getting-started.md#getting-started) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+This document covers how to work with privacy jobs using API calls. Specifically, it covers the use of the `/job` endpoint in the [!DNL Privacy Service] API. Before reading this guide, refer to the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Response**
@@ -94,12 +94,12 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
     "companyContexts": [
       {
         "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
+        "value": "{ORG_ID}"
       }
     ],
     "users": [
@@ -240,7 +240,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs/6fc09b53-c24f-4a6c-9ca2-c6076b0842b6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Response**

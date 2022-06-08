@@ -8,26 +8,31 @@ exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 ---
 # Manage details and additional services for a product profile
 
-You can configure a profile's details and access to additional services from within the **[!UICONTROL Profile Settings]** menu. To access the menu, click **[!UICONTROL Settings]** from the **[!UICONTROL Product Profile]** page.
+You can configure a profile's details and access to additional services from within the **[!UICONTROL Profile Settings]** menu. To access the menu, select **[!UICONTROL Settings]** from the **[!UICONTROL Product Profile]** page.
 
-![profile-settings](../images/profile-settings.png)
+![settings](../images/settings.png)
 
-The **[!UICONTROL Profile Settings]** menu appears, starting on the **[!UICONTROL Details]** tab. This tab allows you to input and edit your profile name and description. You can also modify your display name as well as the email notification settings for your account.
+The **[!UICONTROL Edit product profile]** menu appears, starting on the **[!UICONTROL Edit profile details]** tab. This tab allows you to input and edit your profile name and description. You can also modify your display name as well as the email notification settings for your account.
 
-![edit-details-settings](../images/edit-details-settings.png)
+![edit-product-profile](../images/edit-product-profile.png)
 
-Click **[!UICONTROL Services]** to access the **[!UICONTROL Services]** page.
+Select **[!UICONTROL Next]** to access the **[!UICONTROL Enable services]** page.
 
-![services-page](../images/services-page.png)
-
-The **[!UICONTROL Services]** menu allows you to modify a profile's access to additional [!DNL Platform] services that were initially configured when the profile was created. Depending on your [!DNL Platform] subscription, these services can include:
+The **[!UICONTROL Enable services]** menu allows you to modify a profile's access to additional [!DNL Platform] services that were initially configured when the profile was created. Depending on your [!DNL Platform] subscription, these services can include:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
 - [!DNL Real-Time Customer Data Platform] UI (For Real-time CDP only)
+- B2B UI
 
-Click the toggle on the right side of a particular service to enable or disable it. You can also click the **[!UICONTROL All on]** checkbox to enable or disable all listed services.
+Click the toggle on the right side of a particular service to enable or disable it. You can also select the **[!UICONTROL All on]** checkbox to enable or disable all listed services.
 
-When finished, click **[!UICONTROL Save]**.
+When finished, select **[!UICONTROL Save]**.
 
-![edit-additional-services](../images/edit-additional-services.png)
+![enable-services](../images/enable-services.png)
+
+Customers entitled to the B2B or B2P Edition have access to B2B UI. B2B UI can be provisioned for users through the [!UICONTROL Enable services menu]. Select the toggle beside [!UICONTROL B2B UI] to enable the service for a particular product profile, and then select **[!UICONTROL Save]**.
+
+The B2B UI toggle enables users to view B2B workflows around managing Accounts and Opportunities, as well as create B2B related segments. For more information, see the documentation on [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
+
+![enable-b2b](../images/enable-b2b.png)

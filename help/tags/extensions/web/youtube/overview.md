@@ -97,7 +97,7 @@ The following video extension objects are to be included.
 To concatenate video information values, create a new data element called ”Video Meta Data,” and program it to pull in all the video data elements (listed above) and assemble them together. For example:
 
 ```javascript
-var r = ””;
+var r = [];
 
 r.push('YouTube'); //Player Name
 r.push(_satellite.getVar('Video ID'));
