@@ -51,7 +51,7 @@ If you want to delete consumer data from all datasets, select **[!UICONTROL All 
 >
 >Selecting the **[!UICONTROL All datasets]** option can cause the delete operation to take longer and may not result in accurate record deletion.
 
-## Provide consumer identities {#identities}
+## Provide consumer identities {#provide-consumer-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
