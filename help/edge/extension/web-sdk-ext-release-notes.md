@@ -9,13 +9,11 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.12.0 - June 9, 2022
 
-* Updated the identity map data element to populate the namespace options based on the extension settings sandboxes.
-* Added "Redirect with identity" action to allow cross-domain identity sharing.
-* Added documentation links to the send event action.
-* Added copy to clipboard datastream ID, and delete datastream buttons.
-* Changed no datastreams alert box to informative instead of error styling.
-* Updated error for unprovisioned organizations.
-* Upgraded react-spectrum UI library.
+* Updated the `identityMap` data element to populate the namespace options based on the sandboxes defined by the extension settings.
+* Added **[!UICONTROL Redirect with identity]** action to allow cross-domain identity sharing.
+* Added documentation links to the `sendEvent` action.
+* Upgraded React Spectrum UI library.
+* Multiple user interface enhancements.
 
 Contains version 2.11.0 of the Adobe Experience Platform Web SDK Library.
 
