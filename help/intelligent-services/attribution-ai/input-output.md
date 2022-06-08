@@ -137,6 +137,38 @@ The following table outlines the schema fields in the raw scores example output:
 | scores (Object) | True | Touchpoint contribution to this conversion as score. For more information on the scores produced within this object, see the [aggregated attribution scores](#aggregated-attribution-scores) section. |
 | touchPoint (Object) | True | Touchpoint Metadata. For more information on the scores produced within this object, see the [aggregated scores](#aggregated-scores) section. |
 
+New Attribution AI output fields: Starting from 5/25/2022, to power richer insights for marketing analysts, we are adding more fields into the Attribution AI output schema. Details below:
+
+There are three fields added to the conversion object:
+
+| Column Name (DataType) | Nullable | Description |
+| --- | --- | --- |
+| path (String) | False | A string representing the conversion path with deduplication consisting of touchpoint names (max 20). It will be an empty string if it is a conversion-only path (no touchpoint prior to conversion). <br> **Example:** Banner->Email->Banner->Social->Banner->Social. |
+| totalDaysToConversion (Integer) | True | An integer indicating the total days on the conversion path. It will be null if it is a conversion-only path. It will be 0 if all touchpoints and conversion happen on the same day. <br> **Example:** 7. |
+| totalTouchpointCount (Integer) | False | An integer indicating the total number of touchpoints on the conversion path. It will be 0 if it is a conversion-only path (no touchpoint prior to conversion).<br> **Example:** 8. |
+
+There are four fields are added to touchpointDetails object:
+
+| Column Name (DataType) | Nullable | Description |
+| --- | --- | --- |
+| touchpointCountToConversion (Integer)	| True | An integer indicating the number of touchpoints between the current touchpoint (included) and conversion. For conversion-only path, this will be null. <br> **Example:** 3 |
+| lag (Integer)	| True | An integer indicating the number of days between the current touchpoint and conversion. It would be 0 if the touchpoint and conversion happen on the same day. For conversion-only path, this will be null. <br> **Example:** 7. |
+| position (String) | True | A string indicating the position of the current touchpoint. it has values S, P, C standing for Starter, Player, `Closer` respectively. If there is only one touchpoint, it will be `Closer`. <br> If there are two touchpoints, earlier touchpoint would be `Starter` and the other one would be `Closer`. <br> For conversion-only path, this will be null. |
+| isFirstInThePosition (Integer) | True | An integer indicating if it is the first occurrence of the touchpoint type in the position (S, P, C). 1 means true and 0 means false. <br> For conversion-only path, this will be null. |
+
+NOTE: These above new fields are automatically added to output data sets for apps that are created after the release date. For existing apps, it will take up to 2 weeks for the new fields to be populated in the existing output data sets;, however there will be null value for any new fields for any historical conversions because Attribution AI do not automatically run historical rescoring. In case you would like to rescore historical data, you can clone an existing app and create a new app where you can define historical training window and scoring cadence. In both cases, in any future scoring cadence, Attribution AI will run scoring against incremental conversions and the values of these fields for new conversions will be non-null.
+
+With these new OPTIONALoutput fields, you can create new metrics for further analysis in Customer Journey Analytics or other BI tool of your choice, for example: 
+
+| Metrics | Description |
+| --- | --- |
+| Acquisition Rate |For each channel, among the conversion paths it touched, the percentage of the channel being Starter. |
+| Player Rate | For each channel, among the conversion paths it touched, the percentage of the channel being Player. |
+| Closer Rate |	For each channel, among the conversion paths it touched, the percentage of the channel being Closer. |
+| AAI AVG Days Away From Order | For each channel, the average days away from order. |
+| AAI AVG Total Days in Sales Process | For each channel, the average total days of the conversion paths it touched. |
+| AVG Touches Away From Order | For each channel, the average touches away from order. |
+
 ### Viewing raw score paths (UI) {#raw-score-path}
 
 You can view the path to your raw scores in the UI. Start by selecting **[!UICONTROL Schemas]** in the Platform UI then search for and select your attribution AI scores schema from within the **[!UICONTROL Browse]** tab.
