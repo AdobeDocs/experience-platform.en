@@ -226,4 +226,5 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Related information {#related-information}
 
-* [Activate audience segments to batch destinations on-demand using the Experience Platform UI](/help/destinations/ui/activate-batch-on-demand.md)
+* [Activate audience segments to batch destinations on-demand using the Experience Platform UI](/help/destinations/ui/ad-hoc-activation-ui.md)
+* [Connect to batch destinations and activate data using the Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
