@@ -223,3 +223,7 @@ A successful response returns HTTP status 200.
 ## API error handling {#api-error-handling}
 
 Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+
+## Related information {#related-information}
+
+* [Activate audience segments to batch destinations on-demand using the Experience Platform UI](/help/destinations/ui/activate-batch-on-demand.md)
