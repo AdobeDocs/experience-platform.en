@@ -56,12 +56,12 @@ If you want to delete consumer data from all datasets, select **[!UICONTROL All 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Primary identity"
->abstract="A primary identity is an attribute that ties a record to a consumer's profile in Experience Platform. The primary identity field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the type (or namespace) for the consumer's primary identity, such as "email" for email addresses and "ecid" for Experience Cloud IDs. To learn more, see the data hygiene UI guide."
+>abstract="A primary identity is an attribute that ties a record to a consumer's profile in Experience Platform. The primary identity field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the type (or namespace) for the consumer's primary identity, such as `email` for email addresses and `ecid` for Experience Cloud IDs. To learn more, see the data hygiene UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Identity value"
->abstract="In this column, you must provide the value for the consumer's primary identity, which must correspond with the identity type provided in the left column. If the primary identity type is "email", the value should be the consumer's email address. To learn more, see the data hygiene UI guide."
+>abstract="In this column, you must provide the value for the consumer's primary identity, which must correspond with the identity type provided in the left column. If the primary identity type is `email`, the value should be the consumer's email address. To learn more, see the data hygiene UI guide."
 
 When deleting consumer data, you must provide identity information so the system can determine which records must be deleted. For any dataset in Platform, records are deleted based on the **primary identity** field that is defined by the dataset's schema.
 
