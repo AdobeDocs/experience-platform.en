@@ -293,7 +293,7 @@ The SDK provides facilities to [manage flicker](../personalization/manage-flicke
 
 ## Render propositions in single-page applications without incrementing metrics {#applypropositions}
 
-The `applyPropositions` function allows you to render or execute an array of propositions from [!DNL Target] and [!DNL Offer Decisioning] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and icreases analytics accuracy.
+The `applyPropositions` function allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy.
 
 ### Use case 1: Re-render single-page application view propositions
 
@@ -325,7 +325,7 @@ alloy("applyPropositions", {
 
 ### Use case 2: Render propositions that do not have a selector
 
-This use case applies to offers based on the [!DNL Target Form-based Experience Composer], or offers from the [!DNL Offer Decisioning Engine].
+This use case applies to offers based on the [!DNL Target Form-based Experience Composer].
 
 You must provide the selector, action, and scope in the `applyPropositions` call.
 
