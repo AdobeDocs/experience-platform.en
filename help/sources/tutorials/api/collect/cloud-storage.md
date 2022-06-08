@@ -93,7 +93,8 @@ curl -X POST \
 | `data.properties.columnDelimiter` | (Optional) A single character column delimiter that you can specify when collecting flat files. Any single character value is a permissible column delimiter. If not provided, a comma (`,`) is used as the default value. **Note**: The `columnDelimiter` property can only be used when ingesting delimited files. |
 | `data.properties.encoding` | (Optional) A property that defines the encoding type to be used when ingesting your data to Platform. The supported encoding types are: `UTF-8` and `ISO-8859-1`. **Note**: The `encoding` parameter is only available when ingesting delimited CSV files. Other file types will be ingested with the default encoding, `UTF-8`. |
 | `data.properties.compressionType` | (Optional) A property that defines the compressed file type for ingestion. The supported compressed file types are: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, and `tar`. **Note**: The `compressionType` property can only be used when ingesting delimited or JSON files. |
-| `params.path` | The path of the source file you are accessing. |
+| `params.path` | The path of the source file you are accessing. This parameter points to an individual file or an entire folder. |
+| `params.type` | The file type of the source data file you are ingesting. Use type `file` to ingest an individual file and use type `folder` to ingest an entire folder. |
 | `connectionSpec.id` | The connection specification ID associated with your specific cloud storage source. See the [appendix](#appendix) for a list of connection spec IDs. |
 
 **Response**
