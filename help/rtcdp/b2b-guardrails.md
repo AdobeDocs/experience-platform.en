@@ -101,7 +101,7 @@ The guardrails outlined in this section refer to the number and nature of segmen
 | --- | --- | --- | --- |
 | Segments per B2B sandbox | 400 | Soft | An organization can have more than 400 segments in total, as long as there are less than 400 segments in each individual B2B sandbox. Attempting to create additional segments may affect system performance.|
 
-## Next Steps
+## Next steps
 
 The limits outlined in this document represent the changes enabled by Real-time Customer Data Platform B2B Edition. For a complete list of default limits for Real-time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-time Customer Profile data documentation](../profile/guardrails.md).
 

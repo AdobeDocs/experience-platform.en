@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
-solution: Experience Platform, Intelligent Services
+solution: Experience Platform
 title: Getting Started with Content and Commerce AI
 topic-legacy: Getting started 
 description: Content and Commerce AI utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the authentication tutorial.
@@ -22,7 +22,7 @@ However, when you get to the **Add API** step, the API is located under Experien
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ## Create a Postman environment (optional)
 

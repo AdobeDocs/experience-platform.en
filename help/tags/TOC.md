@@ -4,6 +4,7 @@ user-guide-title: Tags Help
 breadcrumb-title: Tags
 user-guide-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
 feature: Tags
+solution: Data Collection
 ---
 
 # Tags {#tags}
@@ -38,6 +39,7 @@ feature: Tags
   * [Libraries](./ui/publishing/libraries.md)
   * [Self-hosting libraries](./ui/publishing/hosts/self-hosting-libraries.md)
   * [Republish a library](./ui/publishing/republish.md)
+  * [Premium CDN support (Beta)](./ui/publishing/premium-cdn.md)
 * Client-side information {#client-side}
   * [Overview](./ui/client-side/overview.md)
   * [Asynchronous deployment](./ui/client-side/asynchronous-deployment.md)
@@ -111,6 +113,9 @@ feature: Tags
     * [!DNL BrightCove] video tracking {#brightcove}
       * [Overview](./extensions/web/brightcove/overview.md)
       * [Release notes](./extensions/web/brightcove/release-notes.md)
+    * Google Data Layer {#google-data-layer}
+      * [Overview](./extensions/web/google-data-layer/overview.md)
+      * [Release notes](./extensions/web/google-data-layer/release-notes.md)
     * [!DNL YouTube] video tracking extension {#youtube}
       * [Overview](./extensions/web/youtube/overview.md)
       * [Release notes](./extensions/web/youtube/release-notes.md)

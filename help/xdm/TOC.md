@@ -71,6 +71,10 @@ feature: Schemas
     * [Upgrade Details](./field-groups/event/upgrade-details.md)
     * [Upsell Details](./field-groups/event/upsell-details.md)
     * [Web Details](./field-groups/event/web-details.md)
+  * XDM Business Campaign {#b2b-campaign}
+    * [XDM Business Campaign Details](./field-groups/b2b-campaign/details.md)
+  * XDM Business Campaign Members {#b2b-campaign-members}
+    * [XDM Business Campaign Members Details](./field-groups/b2b-campaign-members/details.md)
   * Product {#product}
     * [Product Catalog](./field-groups/product/product-catalog.md)
     * [Product Category](./field-groups/product/product-category.md)
@@ -164,8 +168,9 @@ feature: Schemas
   * [Define a schema relationship in the UI](tutorials/relationship-ui.md)
   * [Define a schema relationship in the API](tutorials/relationship-api.md)
   * [Define a schema relationship in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
+  * [Manage data usage labels for a schema](tutorials/labels.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
-  * [Extend a soft enum field (API)](tutorials/extend-soft-enum.md)
+  * [Add suggested values to a field (API)](tutorials/suggested-values.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

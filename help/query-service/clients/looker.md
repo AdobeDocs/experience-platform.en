@@ -30,11 +30,14 @@ From here, you can fill out the details for the connection settings.
 - **[!DNL Dialect]:** The dialect used for the SQL database. [!DNL Query Service] uses **[!DNL PostgreSQL]**.
 - **[!DNL Host and Port]:** The host endpoint and its port for [!DNL Query Service]. 
 - **[!DNL Database]:** The database that will be used. 
-- **[!DNL Username and Password]:** The login credentials that will be used. The username will be in the form of `ORG_ID@AdobeOrg`. 
+- **[!DNL Username and Password]:** The login credentials that will be used. The username will be in the form of `ORG_ID@AdobeOrg`.
+- **SSL**: Enable SSL to ensure a secure connection across the network. 
 
->[!NOTE]
+>[!IMPORTANT]
 >
->For more information on finding your host and port, database name, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+>See the [[!DNL Query Service] SSL documentation](./ssl-modes.md) to learn about SSL support for third-party connections to Adobe Experience Platform Query Service, and how to connect using `verify-full` SSL mode.
+
+For more information on finding your host and port, database name, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
 After inputting your connection details, select **[!DNL Test These Settings]** to ensure your credentials work properly. If they do, a message indicating that you can connect will appear below. If your connection is indeed successful, select **[!DNL Add Connection]** to create your connection.
 

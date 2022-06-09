@@ -87,6 +87,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 > * Select the three dots in the [!UICONTROL Name] column and use the ![Activate segments button](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activate segments]** button to send segments to that destination.
 > * Select the three dots in the [!UICONTROL Name] column and use the ![Delete button](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete]** button to [remove](delete-destinations.md) an existing connection to a destination.
 > * Select the three dots in the [!UICONTROL Name] column and use the ![View in monitoring button](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL View in monitoring]** button to view activation information for this destination in the [monitoring dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Select the three dots in the [!UICONTROL Name] column and use the ![Subscribe to alerts ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Subscribe to alerts]** button to subscribe to destination dataflow alerts. You can subscribe to alerts to receive messages regarding the status, success, or failure of your flow run. See [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts..
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
 
@@ -99,8 +100,8 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 |[!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3, FTP, or [!DNL Azure Blob].</li><li>For real-time advertising destinations: Server-to-server.</li><li>For streaming destinations: Can be [!DNL Azure Event Hubs] or [!DNL Amazon Kinesis].</li></ul>|
 |[!UICONTROL Username] | The account credentials you selected for the destination flow.|
 |[!UICONTROL Activation Data] | Indicates the number of segments that are being activated to this destination. Select this control to find out more about the activated segments. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated segments.|
-|[!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created.|
-| [!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is being activated to this destination.|
+|[!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created. Select the up/down arrow symbol to sort the activation flows by newest first or oldest first.|
+| [!UICONTROL Status] | `Enabled` or `Disabled`. Indicates whether data is being activated to this destination.|
 
 Click on a destination row to bring up more information about the destination in the right rail.
 

@@ -11,7 +11,7 @@ exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 
 [!UICONTROL XDM Business Campaign] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a business campaign.
 
-![](../../images/classes/b2b/business-campaign.png)
+![The structure of the XDM Business Campaign class as it appears in the UI](../../images/classes/b2b/business-campaign.png)
 
 | Property | Data type |  Description |
 | --- | --- | --- |
@@ -25,4 +25,6 @@ exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 
 {style="table-layout:auto"}
 
-See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.
+To learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI, see the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) 
+
+For additional fields that are compatible with this class, see the field group reference for [[!UICONTROL XDM Business Campaign Details]](../../field-groups/b2b-campaign/details.md).
