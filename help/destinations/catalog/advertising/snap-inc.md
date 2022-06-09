@@ -1,6 +1,6 @@
 ---
-title: Snap Inc
-description: Use your audience segments in the Snapchat Ads Platform.
+title: Snap Inc connection
+description: Learn how to connect to the Snapchat Ads Platform and export your audience segments from Experience Platform.
 ---
 
 # Snap Inc
@@ -15,7 +15,7 @@ description: Use your audience segments in the Snapchat Ads Platform.
 
 ## Use cases {#use-cases}
 
-This destination allows marketers to import user segments that they built using the Adobe platform into Snapchat Ads and use them to target their ads. 
+This destination allows marketers to import user segments created in Experience Platform into Snapchat Ads and use them to target their ads. 
 
 ## Prerequisites {#prerequisites}
 
@@ -25,18 +25,21 @@ To use this destination, you must have a Snapchat Ads account. Please refer to t
 
 ## Limitations {#limitations}
 
-* Snap Inc does not support multiple identities for a given Audience Segment. Please map only one identity when activating a segment.
+* Snap Inc does not support multiple identities for a given audience segment. Please map only one identity when activating a segment.
 * Snap Inc does not support renaming segments. To rename a segment, you must deactivate, rename it, and then activate it.
-* It is not possible to define a retention period for an audience segment's members. All members have lifetime retention and will be in the segment until they are removed..
+* It is not possible to define a retention period for an audience segment's members. All members have lifetime retention and will be in the segment until they are removed.
 
 
 ## Supported identities {#supported-identities}
 
 The *Snap Inc* destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-All identifiers sent to the *Snap Inc* destination must be hashed in SHA-256 format. To hash plain text identifiers before sending them to the destination, check the [!UICONTROL Apply transformation] option when mapping target identifiers for the destination. 
+All identifiers sent to the *Snap Inc* destination must be hashed in SHA-256 format. To hash plain text identifiers before sending them to the destination, check the **[!UICONTROL Apply transformation]** option when mapping target identifiers for the destination. 
 
-**Unhashed identifiers will not be accepted by the Snap Inc destination and sending them could cause errors.**
+>[!WARNING]
+> 
+> Unhashed identifiers will not be accepted by the Snap Inc destination and sending them could cause errors.
+
 
 >[!IMPORTANT]
 > 
@@ -70,19 +73,19 @@ Refer to the table below for information about the destination export type and f
 
 To authenticate to the destination, follow these steps:
 
-1. Find the *Snap Inc* destination from the Adobe Experience Platform's Destination Catalog and click on **Set Up**.
+1. Find the *Snap Inc* destination from Adobe Experience Platform's Destination Catalog and select **Set Up**.
 
-2. Click on **[!UICONTROL Connect to destination]**. You will be redirected to the following screen:
+2. Select **[!UICONTROL Connect to destination]**. You will be redirected to the following screen:
 
 ![Auth Screen 1](assets/auth1.png)
 
-3. Enter your Snapchat credentials and click on **Log In**.
+3. Enter your Snapchat credentials and select **Log In**.
 
-4. You will be shown the Snapchat data that the Adobe Experience Platform will be be able to access. Click **Continue** to proceed with the connection process. 
+4. You will be shown the Snapchat data that Adobe Experience Platform will be be able to access. Select **Continue** to proceed with the connection process. 
 
 ![Auth Screen 2](assets/auth2.png)
 
-After clicking continue, wait until you are redirected back to the Adobe Experience Platform. 
+After selecting continue, wait until you are redirected back to Adobe Experience Platform. 
 
 ### Fill in destination details {#destination-details}
 
@@ -111,16 +114,12 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 After activating segments to the *Snap Inc* destination, you will be able to see the segments in the Snap Ads Manager's [**Audiences** section](https://businesshelp.snapchat.com/s/article/audience-sharing). To navigate to this section, follow these steps:
 
 1. Log into the [Snap Ads Manager](https://ads.snapchat.com/)
-2. Select **Audiences** from the pulldown menu in the upper left corner of the screen. You will see the segments that you activated in the Adobe Experience Platform in the Audience Library:
+2. Select **Audiences** from the pulldown menu in the upper left corner of the screen. You will see the segments that you activated in Adobe Experience Platform in the Audience Library:
 
 ![Audiences](assets/audiences.png)
 
-Please note that when an Adobe segment is first activated to Snap Inc, you will initially see it as an empty audience. This is because it takes  time for the Adobe Experience Platform to build the segment and export the member data to Snap Inc. For more information about this, please refer to [Adobe's Segment Service documentation](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html).
+Please note that when an Adobe segment is first activated to Snap Inc, you will initially see it as an empty audience. This is because Adobe Experience Platform does not export member data to Snap Inc until it evaluates the segment. For more information about how segments are evaluated in Experience Platform, please refer to the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
-
-## Additional resources {#additional-resources}
-
-*You can provide further links to your product documentation or any other resources you consider important for the customer to be successful.*
