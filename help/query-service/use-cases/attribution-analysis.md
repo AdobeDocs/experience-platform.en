@@ -15,7 +15,7 @@ The SQL examples throughout this document are queries commonly used with Adobe A
 * [The Attributino IQ overview](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
 * [The Adobe Analytics Attribution panel guide](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
-The [Adobe Marketing and Commerce Term Glossary](https://business.adobe.com/glossary/index.html) may also be of use.
+An explanation of the parameters within the `OVER()` function can be found in the [window functions section](../sql/adobe-defined-functions.md#window-functions). The [Adobe Marketing and Commerce Term Glossary](https://business.adobe.com/glossary/index.html) may also be of use.
 
 ## Objectives
 
@@ -39,11 +39,13 @@ The query below returns the first touch attribution value and details of the cha
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
+The following table provides descriptions of the parameters required:
+
 | Parameter | Description |
 |---|---|
-| {TIMESTAMP} | The timestamp field found in the dataset. |
-| {CHANNEL_NAME} | The label for the returned object. |
-| {CHANNEL_VALUE} | The column or field that is the target channel for the query. |
+| {`TIMESTAMP`} | The timestamp field found in the dataset. |
+| {`CHANNEL_NAME`} | The label for the returned object. |
+| {`CHANNEL_VALUE`} | The column or field that is the target channel for the query. |
 
 **Example query**
 
@@ -81,7 +83,7 @@ In the results below, the initial tracking code `em:946426` taken from the [!DNL
 
 **first_touch column components**
 
-The results are given in the `first_touch` column. The `first_touch` column is made up of the following components:
+The results for the query are given in the `first_touch` column. The `first_touch` column is made up of the following components:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -106,11 +108,13 @@ The query returns the last touch attribution value and details of the channel in
 ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
+The following table provides descriptions of the parameters required:
+
 | Parameter | Description |
 |---|---|
-| {TIMESTAMP} | The timestamp field found in the dataset. |
-| {CHANNEL_NAME} | The label of the returned object. |
-| {CHANNEL_VALUE} | The column or field that is the target channel for the query. |
+| {`TIMESTAMP`} | The timestamp field found in the dataset. |
+| {`CHANNEL_NAME`} | The label of the returned object. |
+| {`CHANNEL_VALUE`} | The column or field that is the target channel for the query. |
 
 **Example query**
 
@@ -147,7 +151,7 @@ In the results displayed below, the tracking code in the returned object is the 
 
 **last_touch column components**
 
-The results are given in the `last_touch` column. The `last_touch` column is made up of the following components:
+The results for the query are given in the `last_touch` column. The `last_touch` column is made up of the following components:
 
 ```console
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -160,11 +164,15 @@ The results are given in the `last_touch` column. The `last_touch` column is mad
 |{`TIMESTAMP`} | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
 |{`FRACTION`} | The attribution of the first touch, expressed as a decimal fraction. |
 
-## First-touch attribution with expiration condition {#first-touch-attribution-with-expiration-condition}
+### First-touch attribution with expiration condition {#first-touch-attribution-with-expiration-condition}
 
-The query returns the first-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. The query returns a struct object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
+<!-- This query is used to see which interaction within a selected time period, led to a customer action. In the example shown below, the first touch returned for each customer action is the earliest interaction within the previous seven days (expTimeout = 86400 * 7).
 
-This query below is useful if you want to see what interaction, within a selected time interval, led to a customer action. In the example shown below, the first touch returned for each customer action is the earliest interaction within the previous seven days (expTimeout = 86400 * 7).
+The query returns the first-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. It also returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel. -->
+
+This query is used to see which interaction led to a series of customer actions within a portion of the Experience Event dataset determined by a condition of your choosing.
+
+The query returns the first-touch attribution value and details for a single channel in the target Experience Event dataset, expiring after or before a condition. It also returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
 
 **Query syntax**
 
@@ -186,6 +194,8 @@ The following table provides descriptions of the parameters required:
 
 **Example query**
 
+In the example shown below, a purchase is recorded (`commerce.purchases.value IS NOT NULL`) on each of the four days shown in the results (July 15, 21, 23, and 29) and the initial tracking code on each day is attributed 100% (1.0) responsibility for the customer actions.
+
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
     ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, 'Paid First', marketing.trackingCode, commerce.purchases.value IS NOT NULL, false)
@@ -200,24 +210,24 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 **Results**
 
 ```console
-                id                 |       timestamp       | trackingCode |                   first_touch                    
------------------------------------+-----------------------+--------------+--------------------------------------------------
- 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
- 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
- 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
- 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:08:30.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
- 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:45:10.0 | em:483339    | (Paid First,em:483339,2019-07-21 18:45:10.0,1.0)
- 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:50:22.0 | em:483339    | (Paid First,em:483339,2019-07-21 18:45:10.0,1.0)
- 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:56:56.0 |              | (Paid First,em:483339,2019-07-21 18:45:10.0,1.0)
- 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-23 12:25:12.0 | sms:70558    | (Paid First,em:70558,2019-07-23 12:25:12.0,1.0)
- 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-23 12:38:51.0 |              | (Paid First,em:70558,2019-07-23 12:25:12.0,1.0)
- 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-29 21:33:30.0 | em:884210    | (Paid First,em:884210,2019-07-29 21:33:30.0,1.0)
+ id | timestamp | trackingCode | first_touch                    
+----+-----------+--------------+------------
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:05.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:08:30.0 |              | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:45:10.0 | em:483339    | (Paid First,em:483339,2019-07-21 18:45:10.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:50:22.0 | em:483339    | (Paid First,em:483339,2019-07-21 18:45:10.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:56:56.0 |              | (Paid First,em:483339,2019-07-21 18:45:10.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-23 12:25:12.0 | sms:70558    | (Paid First,em:70558,2019-07-23 12:25:12.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-23 12:38:51.0 |              | (Paid First,em:70558,2019-07-23 12:25:12.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-29 21:33:30.0 | em:884210    | (Paid First,em:884210,2019-07-29 21:33:30.0,1.0)
 (10 rows)
 ```
 
 **first_touch column components**
 
-The results are given in the `first_touch` column. The `first_touch` column is made up of the following components:
+The results for the query are given in the `first_touch` column. The `first_touch` column is made up of the following components:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -232,7 +242,7 @@ The following table provides descriptions of the required parameters:
 | `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
 | `{FRACTION}` | The attribution of the first touch, expressed as a decimal fraction. |
 
-## First-touch attribution with expiration timeout {#first-touch-attribution-with-expiration-timeout}
+### First-touch attribution with expiration timeout {#first-touch-attribution-with-expiration-timeout}
 
 This query is used to find the interaction, within a selected time period, that led to a customer action.
 
@@ -256,6 +266,8 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
 
 **Example query**
 
+In the example shown below, the first touch returned for each customer action is the earliest interaction within the previous seven days (expTimeout = 86400 * 7).
+
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
     ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, 'Paid First', marketing.trackingCode, commerce.purchases.value IS NOT NULL, false)
@@ -268,8 +280,6 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 **Results**
-
-In the results displayed below, the first touch returned for each customer action is the earliest interaction within the previous seven days (expTimeout = 86400 * 7).
 
 ```console
  id | timestamp | trackingCode | first_touch
@@ -289,7 +299,7 @@ In the results displayed below, the first touch returned for each customer actio
 
 **first_touch column components**
 
-The results are given in the `first_touch` column. The `first_touch` column is made up of the following components:
+The results for the query are given in the `first_touch` column. The `first_touch` column is made up of the following components:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -301,3 +311,145 @@ The results are given in the `first_touch` column. The `first_touch` column is m
 |{`VALUE`} | The value from {`CHANNEL_VALUE`} that is the first touch in the Experience Event. |
 |{`TIMESTAMP`} | The timestamp of the Experience Event where the first touch occurred. |
 |{`FRACTION`} | The attribution of the first touch, expressed as a decimal fraction. |
+
+### Last-touch attribution with expiration condition {#last-touch-attribution-with-expiration-condition}
+
+This query is used to find the last interaction in a series of customer actions within a portion of the [!DNL Experience Event] dataset determined by a condition of your choosing.
+
+The query below returns the last-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset, expiring after or before a condition. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. 
+
+**Query syntax**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+The following table provides descriptions of the parameters required:
+
+| Parameter | Description | 
+| --------- | ----------- |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{CHANNEL_NAME}` | The label for the returned object. |
+| `{CHANNEL_VALUE}` | The column or field that is the target channel for the query. |
+| `{EXP_CONDITION}` | The condition that determines the expiry point of the channel. |
+| `{EXP_BEFORE}` | A boolean that indicates if the channel expires before or after the specified condition, `{EXP_CONDITION}`, is met. This is primarily enabled for a session's expiry conditions, to ensure that the first touch is not selected from a previous session. By default, this value is set to `false`. |
+
+**Example query**
+
+In the example shown below, a purchase is recorded (`commerce.purchases.value IS NOT NULL`) on each of the four days shown in the results (July 15, 21, 23, and 29) and the last tracking code on each day is attributed 100% (`1.0`) responsibility for the customer actions.
+
+```sql
+SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
+    ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, 'trackingCode', marketing.trackingCode, commerce.purchases.value IS NOT NULL, false)
+      OVER(PARTITION BY endUserIds._experience.mcid.id
+           ORDER BY timestamp
+           ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+      AS last_touch
+FROM experience_events
+ORDER BY endUserIds._experience.mcid.id, timestamp ASC
+```
+
+**Example results**
+
+```console
+ id | timestamp | trackingCode | last_touch                   
+----+-----------+--------------+------------
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:08:30.0 | em:550984    | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:45:10.0 | em:483339    | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:50:22.0 | em:483339    | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:56:56.0 |              | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-23 12:25:12.0 | sms:70558    | (Paid Last,em:380097,2019-07-23 12:38:51.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-23 12:38:51.0 | em:380097    | (Paid Last,em:380097,2019-07-23 12:38:51.0,1.0)
+7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-29 21:33:30.0 | em:884210    | (Paid Last,em:884210,2019-07-29 21:33:30.0,1.0)
+(10 rows)
+```
+
+**last_touch column components**
+
+The results for the query are given in the `last_touch` column. The `last_touch` column is made up of the following components:
+
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
+
+The following table provides descriptions of the parameters required:
+
+| Parameters | Description | 
+| ---------- | ----------- |
+| `{NAME}` | The `{CHANNEL_NAME}`, which was entered as a label in the ADF. |
+| `{VALUE}` | The value from `{CHANNEL_VALUE}` that is the last touch in the [!DNL Experience Event], prior to the `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the last touch occurred. |
+| `{FRACTION}` | The attribution of the last touch, expressed as a decimal fraction.  |
+
+
+### Last touch attribution with expiration timeout
+
+This query is used to find the last interaction within a selected time interval. The query returns the last-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. 
+
+**Query syntax**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| Parameter | Description | 
+| --------- | ----------- |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{CHANNEL_NAME}` | The label for the returned object |
+| `{CHANNEL_VALUE}` | The column or field that is the target channel for the query |
+| `{EXP_TIMEOUT}` | The window of time after the channel event, in seconds, that the query searches for a last touch event. |
+
+**Example query**
+
+In the example shown below, the last touch returned for each customer action is the final interaction within the following seven days (`expTimeout = 86400 * 7`).
+
+```sql
+SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
+    ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, 'trackingCode', marketing.trackingCode, 86400 * 7)
+      OVER(PARTITION BY endUserIds._experience.mcid.id
+           ORDER BY timestamp
+           ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+      AS last_touch
+FROM experience_events
+ORDER BY endUserIds._experience.mcid.id, timestamp ASC
+```
+
+**Results**
+
+```console
+                id                 |       timestamp       | trackingcode |                   last_touch                   
+-----------------------------------+-----------------------+--------------+-------------------------------------------------
+ 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
+ 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
+ 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:05:35.0 |              | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
+ 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:08:30.0 |              | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
+ 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:45:10.0 | em:483339    | (Paid Last,sms:70558,2019-07-23 12:38:51.0,1.0)
+ 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:50:22.0 | em:483339    | (Paid Last,sms:70558,2019-07-23 12:38:51.0,1.0)
+ 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-21 18:56:56.0 |              | (Paid Last,sms:70558,2019-07-23 12:38:51.0,1.0)
+ 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-23 12:25:12.0 | sms:70558    | (Paid Last,em:884210,2019-07-29 21:33:30.0,1.0)
+ 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-23 12:38:51.0 |              | (Paid Last,em:884210,2019-07-29 21:33:30.0,1.0)
+ 7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-29 21:33:30.0 | em:884210    | (Paid Last,em:884210,2019-07-29 21:33:30.0,1.0)
+(10 rows)
+```
+
+**last_touch column components**
+
+The results for the query are given in the `last_touch` column. The `last_touch` column is made up of the following components:
+
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
+
+| Parameters | Description | 
+| ---------- | ----------- |
+| `{NAME}` | The `{CHANNEL_NAME}`, entered as a label in the ADF. |
+| `{VALUE}` | The value from `{CHANNEL_VALUE}` that is the last touch within the specified `{EXP_TIMEOUT}` interval |
+| `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the last touch occurred |
+| `{FRACTION}` | The attribution of the last touch, expressed as a decimal fraction. |
