@@ -1,15 +1,19 @@
 ---
-title: The Trade Desk - CRM connection
+title: (Beta) The Trade Desk - CRM connection
 description: Activate profiles to your Trade Desk account for audience targeting and suppression based on CRM data.
 ---
 
-# The [!DNL Trade Desk] - CRM connection
+# (Beta) The [!DNL Trade Desk] - CRM connection
+
+>[!IMPORTANT]
+>
+> [!DNL The Trade Desk - CRM] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
+
+## Overview {#overview}
 
 >[!IMPORTANT]
 >
 >This documentation page was created by the *[!DNL Trade Desk]* team. For any inquiries or update requests, please contact your [!DNL Trade Desk] representative.
-
-## Overview {#overview}
 
 This document is designed to help you activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data.
 
