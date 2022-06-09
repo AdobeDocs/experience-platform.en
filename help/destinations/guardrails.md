@@ -106,7 +106,7 @@ Details on throttling thresholds or limitations for given destinations. This sec
 | --- | --- |
 | Enterprise destinations (HTTP API, Amazon Kinesis, Azure EventHubs)| In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10.000 requests per second for each dataflow to an enterprise destination. <br> In case of failed requests to your enterprise destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.|
 
-## Guardrails for other Experience Platform services {guardrails-other-services}
+## Guardrails for other Experience Platform services {#guardrails-other-services}
 
 View guardrails information for other Experience Platform services:
 
