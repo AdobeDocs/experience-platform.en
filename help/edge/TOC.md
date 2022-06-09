@@ -26,6 +26,7 @@ feature: Web SDK
 * Identity {#identity}
   * [Overview](identity/overview.md)
   * [First-party device IDs](identity/first-party-device-ids.md)
+  * [Mobile-to-web and cross-domain ID sharing](identity/id-sharing.md)
 * Data collection {#data-collection}
   * [Automatically collected information](data-collection/automatic-information.md)
   * [Track links](data-collection/track-links.md)
