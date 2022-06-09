@@ -2,8 +2,8 @@
 title: Mobile-to-web and cross-domain ID sharing
 description: Learn how to persist visitor IDs from mobile to web properties and across domains
 keywords: Identity;mobile;id;sharing;domain;cross-domain;sdk;platform;
+exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
 ---
-
 # Mobile-to-web and cross-domain ID sharing
 
 ## Overview
