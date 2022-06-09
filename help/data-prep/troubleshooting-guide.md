@@ -12,7 +12,7 @@ This document provides answers to frequently asked questions about Adobe Experie
 
 The following is a list of answers to frequently asked questions about [!DNL Data Prep].
 
-### How can I resolve transformation errors?
+### How are transformation errors resolved?
 
 [!DNL Data Prep] localizes all transformation errors to the column in which they occurred. As a result, that column is nullified and the rest of the row will continue to be processed. These transformation issues are logged as **Warnings**. It is recommended that you review the warnings periodically and adjust the transformation logic to account for the transformation issues. This will increase the quality of the data ingested into Experience Platform. 
 
