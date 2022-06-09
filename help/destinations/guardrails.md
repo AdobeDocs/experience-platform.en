@@ -28,7 +28,7 @@ There are two types of default limits within this document:
 
 ## Activation limits {#activation-limits}
 
-The following guardrails provide recommended limits when activating Real-time Customer Profile data. To learn more about ....., see the section on ... in the Appendix.
+The following guardrails provide recommended limits when activating Real-time Customer Profile data to destinations.
 
 ### General activation guardrails {#general-activation-guardrails}
 
@@ -38,12 +38,10 @@ The guardrails below generally apply to activation through all destination types
 | --- | --- | --- | --- |
 |Maximum number of segments to a single destination | N/A | - | There is currently no limit to how many segments you can activate in an activation flow to a single destination platform.|
 |Maximum number of destinations | N/A | - | There is currently no limit to how many destinations per organization ID or per sandbox you can connect and activate data to.|
-|Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile data* to destinations. XDM attributes that describe event data is not supported at this time.|
+|Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile record attributes* to destinations. XDM attributes that describe event data are not supported for export at this time.|
 |Insert other guardrails | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
 
 {style="table-layout:auto"}
-
-<!--
 
 ### Streaming activation {#streaming-activation}
 
@@ -63,13 +61,11 @@ The guardrails below apply to activation through batch file-based destinations.
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Max # of records activated per minute | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
-|Max size per file to activate | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
-|Max size per record to activate | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Activation frequency | One daily full export or more frequent incremental exports every 3, 6, 8, 12 hour increments | Hard| Read the [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentation sections for more information about the frequency increments for batch exports.|
+|Maximum size per file to activate | 5GB | Hard | The maximum size of exported files is 5 GB. |
+|Maximum number of rows (records) per file to activate | 5 million | Hard| Adobe Experience Platform automatically splits the export files at 5 million records (rows) per file. Each row represents one profile. Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.|
 
 {style="table-layout:auto"}
-
--->
 
 ### Ad-hoc activation {#ad-hoc-activation}
 
@@ -77,7 +73,7 @@ The guardrails below apply to the [ad-hoc activation](/help/destinations/api/ad-
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Segments activated per ad-hoc activation job | 20 | Hard| Currently, each ad-hoc activation job can activate up to 20 segments. Attempting to activate more than 20 segments per job will cause the job to fail. This behavior is subject to change in future releases.|
+| Segments activated per ad-hoc activation job | 80 | Hard| Currently, each ad-hoc activation job can activate up to 80 segments. Attempting to activate more than 80 segments per job will cause the job to fail. This behavior is subject to change in future releases.|
 | Concurrent ad-hoc activation jobs | 1 | Hard| Do not run more than one concurrent ad-hoc activation job per segment.|
 
 {style="table-layout:auto"}
@@ -102,21 +98,17 @@ The guardrails below apply to activation through edge personalization destinatio
 | --- | --- | --- | --- |
 | maxNumEventsInBatch | Minimum x and maximum y | Hard| Description of this limit.|
 
-### Destination Throttling {#destination-throttling}
+### Destination throttling and retry policy {#destination-throttling-and-retry-policy}
 
-Details on throttling thresholds or limitations for given destinations.
+Details on throttling thresholds or limitations for given destinations. This section also provides information regarding the retry policy for destinations.
 
-## Appendix {#appendix}
-
-This section provides additional details for the limits in this document.
-
-### Retry policy {#retry-policy}
-
-Add information regarding the retry policy for destinations.
+| Type of destination | Description |
+| --- | --- |
+| Enterprise destinations (HTTP API, Amazon Kinesis, Azure EventHubs)| In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10.000 requests per second for each dataflow to an enterprise destination. <br> In case of failed requests to your enterprise destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.|
 
 ## Guardrails for other Experience Platform services {guardrails-other-services}
 
-View guardrails information for other Experience Platform services
+View guardrails information for other Experience Platform services:
 
 * Guardrails for [[!DNL Identity Service] data](/help/identity-service/guardrails.md)
 * Guardrails for [[!DNL Real-time Customer Profile] data](/help/profile/guardrails.md)
