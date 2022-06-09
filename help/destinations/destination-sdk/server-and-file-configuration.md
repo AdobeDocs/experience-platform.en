@@ -202,52 +202,50 @@ The server and file configuration specs for file-based destinations can be confi
 
 ## File name configuration {#file-name-configuration}
 
-You can use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../ui/activate-batch-profile-destinations.md#file-names) screen.
+Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../ui/activate-batch-profile-destinations.md#file-names) screen.
 
 ```json
 "filenameConfig":{
    "allowedFilenameAppendOptions":[
+      "DESTINATION"
       "SEGMENT_ID",
       "SEGMENT_NAME",
-      "DATETIME",
-      "TIMESTAMP",
-      "CUSTOM_TEXT",
-      "DESTINATION_INSTANCE_NAME",
       "DESTINATION_INSTANCE_ID",
+      "DESTINATION_INSTANCE_NAME",
+      "ORGANIZATION_NAME",
       "SANDBOX_NAME",
-      "ORGANIZATION_NAME"
+      "DATETIME",
+      "CUSTOM_TEXT"
    ],
    "defaultFilenameAppendOptions":[
       "SEGMENT_ID",
       "DATETIME"
    ],
-   "defaultFilename": "%DESTINATION%"
+   "defaultFilename": ""
 }
 ```
 
-
 |Parameter | Type | Description|
 |---------|----------|------|
-|`filenameConfig.allowedFilenameAppendOptions`|String|List of available file name macros for users to choose from. When setting `defaultFilename`, make sure to avoid duplicating macros. Supported values: <ul><li>`DESTINATION`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`SEGMENT_NAME`</li><li>`SEGMENT_ID`</li><li>`DATETIME`</li><li>`TIMESTAMP`</li><li>`CUSTOM_TEXT`</li><li>`SANDBOX_NAME`</li><li>`ORGANIZATION_NAME`</li></ul> See [file name configuration](server-and-file-configuration.md#file-name-configuration) for details on the supported macros.|
-|`filenameConfig.defaultFilenameAppendOptions`|String|Pre-selected default file name macros that users can uncheck.|
-|`filenameConfig.defaultFilename`|String|*Optional*. Defines the default file name macros for the exported files. These cannot be overwritten by users. Any macro defined by `allowedFilenameAppendOptions` will be appended after the `defaultFilename` macros.|
-
-// get the correct UI macro order from Vincent
+|`filenameConfig.allowedFilenameAppendOptions`|String|*Required*. List of available file name macros for users to choose from. When setting `defaultFilename`, make sure to avoid duplicating macros. Supported values: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Regardless of the order in which you define the macros, the Experience Platform UI will always display them in the order presented here. <br> If `defaultFilename` is empty, the `allowedFilenameAppendOptions` list must contain at least one macro.|
+|`filenameConfig.defaultFilenameAppendOptions`|String|*Required*. Pre-selected default file name macros that users can uncheck. The macros in this list are a subset of the ones defined in `allowedFilenameAppendOptions`. |
+|`filenameConfig.defaultFilename`|String|*Optional*. Defines the default file name macros for the exported files. These cannot be overwritten by users. Any macro defined by `allowedFilenameAppendOptions` will be appended after the `defaultFilename` macros. <br>If `defaultFilename` is empty, you must define at least one macro in `allowedFilenameAppendOptions`. <br><br> Example: `"defaultFilename":"%DESTINATION%_%SEGMENT_ID%"`|
 
 As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well.
 
 |Macro|UI label|Description|Example|
 |---|---|---|---|
 |`DESTINATION`|[!UICONTROL Destination]|Destination name in the UI.|Amazon S3|
-|`DESTINATION_INSTANCE_NAME`|[!UICONTROL Destination Name]|User-defined name of the destination instance.|My 2022 Advertising Destination|
-|`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
-|`SEGMENT_NAME`|[!UICONTROL Segment Name]|User-defined segment name|VIP subscriber|
 |`SEGMENT_ID`|[!UICONTROL Segment ID]|Unique, Platform-generated segment ID|ce5c5482-2813-4a80-99bc-57113f6acde2|
-|`DATETIME`|[!UICONTROL Date and time]|Date and time when the file was generated, in the following format: YYYYMMDD_HHMMSS.|20220509_210543|
-|`TIMESTAMP`|[!UICONTROL Date and time]|10-digit timestamp of the time when the file was generated, in Unix format.|1652131584|
-|`CUSTOM_TEXT`|[!UICONTROL Custom text]|User-defined custom text to be included in the file name.|My_Custom_Text|
-|`SANDBOX_NAME`|[!UICONTROL Sandbox Name]|Name of the sandbox used by the customer.|prod|
+|`SEGMENT_NAME`|[!UICONTROL Segment Name]|User-defined segment name|VIP subscriber|
+|`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
+|`DESTINATION_INSTANCE_NAME`|[!UICONTROL Destination Name]|User-defined name of the destination instance.|My 2022 Advertising Destination|
 |`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in Adobe Experience Platform.|My Organization Name|
+|`SANDBOX_NAME`|[!UICONTROL Sandbox Name]|Name of the sandbox used by the customer.|prod|
+|`DATETIME`|[!UICONTROL Date and time]|Date and time when the file was generated, in the following format: YYYYMMDD_HHMMSS.|20220509_210543|
+|`CUSTOM_TEXT`|[!UICONTROL Custom text]|User-defined custom text to be included in the file name. Cannot be used in `defaultFilename`.|My_Custom_Text|
+|`TIMESTAMP`|[!UICONTROL Date and time]|10-digit timestamp of the time when the file was generated, in Unix format.|1652131584|
+
 
 ![UI image showing the file name configuration screen with preselected macros](assets/file-name-configuration.png)
 
@@ -339,7 +337,8 @@ This section describes the file formatting settings for the exported `CSV` files
                 "templatingStrategy": "NONE",
                 "value": "\n"
             }
-        }
+        },
+        "maxFileRowCount":5000000
     }
 ```
 
@@ -360,3 +359,4 @@ This section describes the file formatting settings for the exported `CSV` files
 |`csvOptions.charToEscapeQuoteEscaping.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping the escape for the quote character.|`\` when the escape and quote characters are different. `\0` when the escape and quote character are the same.|
 |`csvOptions.emptyValue.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets the string representation of an empty value.|`""`|
 |`csvOptions.lineSep.value`|Optional|*Only for `"fileType.value": "csv"`*. Defines the line separator that should be used for writing. Maximum length is 1 character.|`\n`|
+|`maxFileRowCount`|Optional|||

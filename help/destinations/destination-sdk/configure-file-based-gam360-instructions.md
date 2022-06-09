@@ -280,6 +280,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }
 ```
 
+>[!IMPORTANT]
+>
+>When configuring a file-based destination, the `allowedFilenameAppendOptions` and `defaultFilenameAppendOptions` objects cannot be empty. Creating a destination with empty `allowedFilenameAppendOptions` or `defaultFilenameAppendOptions` objects will prevent customers from finishing the activation flow in the Experience Platform UI.
+
 |Parameter | Type | Description|
 |---------|----------|------|
 |All parameters||See the [file-based destination configuration](file-based-destination-configuration.md) documentation for detailed explanation on each destination parameter specific to file-based destinations.|
