@@ -155,7 +155,9 @@ Yes, currently the Web SDK uses anywhere between 1-4 cookies depending on your i
 
 **kndctr_orgid_consentcheck:** This session-based cookie signals the server to look up the consent preferences server side.
 
-When using the Web SDK cookies will be set by the Adobe Experience Platform Edge Network, any cookies that are set will be set with the secure and sameSite="none" attributes. Please note that if you currently have secure and non-secure portions on your site this could cause a problem with user identification. If a user were to navigate from a secure portion of the site to a non-secure portion the Edge Network would generate a new ECID with the request.  
+When using the Web SDK, the Edge Network sets one or more of the cookies above. The Edge Network sets all the cookies with the `secure` and `sameSite="none"` attributes.
+
+If you currently have both secure and non-secure sections on your website, this could interfere with user identification. When a user navigates from a secure section of the site to a non-secure section, the Edge Network generates a new `ECID` with the request.  
 
 ## Which browsers does the Adobe Experience Platform Web SDK support?
 
