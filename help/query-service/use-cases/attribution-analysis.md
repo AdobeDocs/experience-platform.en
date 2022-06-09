@@ -31,7 +31,7 @@ The query examples contained in this document support various use cases for firs
 
 The table below provides a breakdown of the parameters and their descriptions used in first touch and last touch attribution queries:
 
-| Parameter | Descriptin` |
+| Parameter | Description |
 |---|---|
 | `{TIMESTAMP}` | The timestamp field found in the dataset. |
 | `{CHANNEL_NAME}` | The label for the returned object. |
