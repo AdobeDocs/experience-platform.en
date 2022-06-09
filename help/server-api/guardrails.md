@@ -2,8 +2,8 @@
 title: Performance guardrails
 description: Learn how to use the Server API within optimal performance guardrails
 keywords: data collection;collection;edge network;api;sla;slt;service levels
+exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
 ---
-
 # Performance guardrails
 
 ## Overview {#overview}
