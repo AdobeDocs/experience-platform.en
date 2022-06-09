@@ -293,7 +293,7 @@ The SDK provides facilities to [manage flicker](../personalization/manage-flicke
 
 ## Render propositions in single-page applications without incrementing metrics {#applypropositions}
 
-The `applyPropositions` command allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy.
+The `applyPropositions` command allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the [!DNL Analytics] and [!DNL Target] metrics. This increases reporting accuracy.
 
 >[!IMPORTANT]
 >
@@ -317,7 +317,8 @@ const cartPropositions = alloy("sendEvent", {
       }
     }
   }
-}).then(propositions => {
+}).then(propositions => { => }).then(({propositions}) => {
+
     // Collect response tokens, etc.
     return propositions;
 });
@@ -329,7 +330,7 @@ alloy("applyPropositions", {
 
 ### Use case 2: Render propositions that do not have a selector
 
-This use case applies to offers based on the [!DNL Target Form-based Experience Composer].
+This use case applies to activity offers authored using the [!DNL Target Form-based Experience Composer].
 
 You must provide the selector, action, and scope in the `applyPropositions` call.
 
@@ -342,7 +343,7 @@ Supported `actionTypes` are:
 ```js
 // Retrieve propositions for scope1 and scope2
 alloy("sendEvent", {
-    decisionScopes:  ["scope1', 'scope2']
+    decisionScopes: ["scope1", "scope2"]
 }).then(({ propositions }) => {
     // Render propositions on the page by providing additional metadata
     alloy("applyPropositions", {
