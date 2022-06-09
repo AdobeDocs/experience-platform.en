@@ -31,12 +31,12 @@ The query examples contained in this document support various use cases for firs
 
 The table below provides a breakdown of the parameters and their descriptions used in first touch and last touch attribution queries:
 
-| Parameter | Description |
+| Parameter | Descriptin` |
 |---|---|
-| {`TIMESTAMP`} | The timestamp field found in the dataset. |
-| {`CHANNEL_NAME`} | The label for the returned object. |
-| {`CHANNEL_VALUE`} | The column or field that is the target channel for the query. |
-| {`EXP_TIMEOUT`} | The window of time prior to the channel event, in seconds, that the query searches for a first touch event. |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{CHANNEL_NAME}` | The label for the returned object. |
+| `{CHANNEL_VALUE}` | The column or field that is the target channel for the query. |
+| `{EXP_TIMEOUT}` | The window of time prior to the channel event, in seconds, that the query searches for a first touch event. |
 | `{EXP_CONDITION}` | The condition that determines the expiry point of the channel. |
 | `{EXP_BEFORE}` | A boolean that indicates if the channel expires before or after the specified condition, `{EXP_CONDITION}`, is met. This is primarily enabled for a session's expiry conditions, to ensure that the first touch is not selected from a previous session. By default, this value is set to `false`. |
 
