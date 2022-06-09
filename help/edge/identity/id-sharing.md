@@ -108,7 +108,7 @@ Follow the steps described [here](../../tags/ui/managing-resources/rules.md) to 
 
 * [!UICONTROL Action Configuration]
   * **[!UICONTROL Extension]**: [!UICONTROL Adobe Experience Platform Web SDK]
-  * **[!UICONTROL Action Type]**: [!UICONTROL Append identity to URL]
+  * **[!UICONTROL Action Type]**: [!UICONTROL Redirect with identity]
   * **[!UICONTROL Instance]**: Select your instance. In most cases, you will have only one instance configured. If you have multiple instances, select the one with the identity you would like to share.
 
     ![UI image showing the action configuration with the settings described above](assets/id-sharing-action-configuration.png)
