@@ -13,6 +13,8 @@ feature: Queries
   - [Prerequisites](get-started/prerequisites.md)
 - Use cases {#use-cases}
   - [Abandoned browse](use-cases/abandoned-browse.md)
+  - [Activity Analysis With Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
+  - [Attribution analysis](use-cases/attribution-analysis.md)
   - [Bot filtering](use-cases/bot-filtering.md)
   - [Web and mobile analytics insights](use-cases/analytics-insights.md)
 - Query Service API {#api}
