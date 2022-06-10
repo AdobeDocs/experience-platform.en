@@ -308,21 +308,23 @@ In the example below, the `sendEvent` command is triggered upon a view change, a
 Next, when the view or a component gets updated, the `applyPropositions` command is called, with the propositions from the previous `sendEvent` command, to re-render the view propositions.
 
 ```js
-const cartPropositions = alloy("sendEvent", {
-  "renderDecisions": true,
-  "xdm": {
-    "web": {
-      "webPageDetails": {
-        "viewName":"cart"
-      }
+var cartPropositions = alloy("sendEvent", {
+    renderDecisions: true,
+    xdm: {
+        web: {
+            webPageDetails: {
+                viewName: "cart"
+            }
+        }
     }
-  }
-}).then(propositions => { => }).then(({propositions}) => {
+}).then(function(result) {
+    var propositions = result.propositions;
 
     // Collect response tokens, etc.
     return propositions;
 });
-    // Call applyPropositions to re-render the view propositions from the previous `sendEvent` command. 
+
+// Call applyPropositions to re-render the view propositions from the previous sendEvent command.
 alloy("applyPropositions", {
     propositions: cartPropositions
 });
@@ -341,36 +343,39 @@ Supported `actionTypes` are:
 * `appendHtml`
 
 ```js
-// Retrieve propositions for scope1 and scope2
+// Retrieve propositions for salutation and discount scopes
 alloy("sendEvent", {
-    decisionScopes: ["scope1", "scope2"]
-}).then(({ propositions }) => {
+    decisionScopes: ["salutation", "discount"]
+}).then(function(result) {
+    var retrievedPropositions = result.propositions;
     // Render propositions on the page by providing additional metadata
-    alloy("applyPropositions", {
-        propositions,
+
+    return alloy("applyPropositions", {
+        propositions: retrievedPropositions,
         metadata: {
-            scope1: {
+            salutation: {
                 selector: "#first-form-based-offer",
                 actionType: "setHtml"
             },
-            scope2: {
+            discount: {
                 selector: "#second-form-based-offer",
                 actionType: "replaceHtml"
             }
         }
-    })
-}).then(result => {
-    const renderedPropositions = result.propositions;
-    // Send the display notifications via sendEvent command
-    alloy("sendEvent", {
-      xdm: {
-        eventType: "decisioning.propositionDisplay",
-        _experience: {
-          decisioning: {
-            propositions: renderedPropositions
-          }
-        }
-      }
+    }).then(function(applyPropositionsResult) {
+        var renderedPropositions = applyPropositionsResult.propositions;
+
+        // Send the display notifications via sendEvent command
+        alloy("sendEvent", {
+            xdm: {
+                eventType: "decisioning.propositionDisplay",
+                _experience: {
+                    decisioning: {
+                        propositions: renderedPropositions
+                    }
+                }
+            }
+        });
     });
 });
 ```
