@@ -17,6 +17,8 @@ The SQL examples throughout this document are queries commonly used with Adobe A
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](../sql/adobe-defined-functions.md#window-functions). The [Adobe Marketing and Commerce Term Glossary](https://business.adobe.com/glossary/index.html) may also be of use.
 
+For each of the following use cases, a parameterized SQL query example is provided as a template for you to customize. Provide parameters wherever you see `{ }` in the SQL examples that you are interested in evaluating.
+
 ## Objectives
 
 An attribution use case uses Adobe Analytics data to help associate customer actions to a successful outcome. This association is a critical part of understanding the factors that influence customer experiences. Attribution analysis data can be used to understand the significance of a customer’s touch point during the customer journey.

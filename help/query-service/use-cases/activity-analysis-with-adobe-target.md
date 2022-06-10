@@ -10,7 +10,7 @@ This document provides a variety of sample SQL queries that demonstrate common u
 
 ## Getting started
 
-For each of the following use cases, a parameterized SQL query example is provided as a template for you to customize. Provide parameters wherever you see `{ }` in the SQL examples for the dataset, eVar, event, or time frame you are interested in evaluating.
+For each of the following use cases, a parameterized SQL query example is provided as a template for you to customize. Provide parameters wherever you see `{ }` in the SQL examples that you are interested in evaluating.
 
 ## High-level partial XDM field mapping
 
