@@ -51,17 +51,17 @@ If you want to delete consumer data from all datasets, select **[!UICONTROL All 
 >
 >Selecting the **[!UICONTROL All datasets]** option can cause the delete operation to take longer and may not result in accurate record deletion.
 
-## Provide consumer identities {#identities}
+## Provide consumer identities {#provide-consumer-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Primary identity"
->abstract="A primary identity is an attribute that ties a record to a consumer's profile in Experience Platform. The primary identity field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the type (or namespace) for the consumer's primary identity, such as "email" for email addresses and "ecid" for Experience Cloud IDs. To learn more, see the data hygiene UI guide."
+>abstract="A primary identity is an attribute that ties a record to a consumer's profile in Experience Platform. The primary identity field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the type (or namespace) for the consumer's primary identity, such as `email` for email addresses and `ecid` for Experience Cloud IDs. To learn more, see the data hygiene UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Identity value"
->abstract="In this column, you must provide the value for the consumer's primary identity, which must correspond with the identity type provided in the left column. If the primary identity type is "email", the value should be the consumer's email address. To learn more, see the data hygiene UI guide."
+>abstract="In this column, you must provide the value for the consumer's primary identity, which must correspond with the identity type provided in the left column. If the primary identity type is `email`, the value should be the consumer's email address. To learn more, see the data hygiene UI guide."
 
 When deleting consumer data, you must provide identity information so the system can determine which records must be deleted. For any dataset in Platform, records are deleted based on the **primary identity** field that is defined by the dataset's schema.
 
@@ -138,4 +138,10 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 This document covered how to delete consumer records in the Experience Platform UI. For information on how to perform other data hygiene tasks in the UI, refer to the [data hygiene UI overview](./overview.md).
 
+<!--
+
+Paragraph below should be commented out until workorder.md will be added to the TOC.
+
 To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
+
+-->
