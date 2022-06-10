@@ -12,7 +12,7 @@ description: The Salesforce CRM destination allows you to export your account da
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts), which allows you to add accounts and create contacts after activating them within a new Salesforce segment for your business needs.
 
-Salesforce CRM uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions are further [below](#authenticate).
+Salesforce CRM uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce CRM instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
@@ -30,13 +30,13 @@ An athletic apparel brand wants to reach existing customers through their social
 
 Before activating data to the Salesforce CRM destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-In order to access your Salesforce account on Platform.
+Note the following prerequisites in Salesforce, in order to export data from Platform to your Salesforce account:
 
 1. You need to have a Salesforce account.
     * Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a Salesforce account, if you do not have one already.
 1. Next, You need to configure a [connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) within your Salesforce account, if you do not have one already. 
-    * Within the connected app ensure [OAuth Settings](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) is enabled.
-    * Also ensure the [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mentioned below are selected.
+    * Within the connected app ensure that [OAuth Settings](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) is enabled.
+    * Also ensure that [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mentioned below are selected.
         * chatter_api
         * lightning
         * visualforce
@@ -47,7 +47,7 @@ In order to access your Salesforce account on Platform.
         * web
         * refresh_token
         * offline_access
-1. Note down the items below before you Authenticate to the Salesforce CRM destination.
+1. Note down the items below before you authenticate to the Salesforce CRM destination.
     * Note down your [Salesforce domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5). For example if your domain is *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, you need the highlighted value.
     * Copy the *Consumer Key* and *Consumer Secret* from the connected app.
         * Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) if you need additional guidance.    
