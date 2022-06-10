@@ -207,8 +207,6 @@ Use file name configuration macros to define what the exported file names should
 ```json
 "filenameConfig":{
    "allowedFilenameAppendOptions":[
-      "DESTINATION"
-      "SEGMENT_ID",
       "SEGMENT_NAME",
       "DESTINATION_INSTANCE_ID",
       "DESTINATION_INSTANCE_NAME",
@@ -221,15 +219,15 @@ Use file name configuration macros to define what the exported file names should
       "SEGMENT_ID",
       "DATETIME"
    ],
-   "defaultFilename": ""
+   "defaultFilename": "%DESTINATION%_%SEGMENT_ID%"
 }
 ```
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`filenameConfig.allowedFilenameAppendOptions`|String|*Required*. List of available file name macros for users to choose from. When setting `defaultFilename`, make sure to avoid duplicating macros. Supported values: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Regardless of the order in which you define the macros, the Experience Platform UI will always display them in the order presented here. <br> If `defaultFilename` is empty, the `allowedFilenameAppendOptions` list must contain at least one macro.|
-|`filenameConfig.defaultFilenameAppendOptions`|String|*Required*. Pre-selected default file name macros that users can uncheck. The macros in this list are a subset of the ones defined in `allowedFilenameAppendOptions`. |
-|`filenameConfig.defaultFilename`|String|*Optional*. Defines the default file name macros for the exported files. These cannot be overwritten by users. Any macro defined by `allowedFilenameAppendOptions` will be appended after the `defaultFilename` macros. <br>If `defaultFilename` is empty, you must define at least one macro in `allowedFilenameAppendOptions`. <br><br> Example: `"defaultFilename":"%DESTINATION%_%SEGMENT_ID%"`|
+|`filenameConfig.allowedFilenameAppendOptions`|String|*Required*. List of available file name macros for users to choose from. When setting `defaultFilename`, make sure to avoid duplicating macros. <br><br>Supported values: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Regardless of the order in which you define the macros, the Experience Platform UI will always display them in the order presented here. <br><br> If `defaultFilename` is empty, the `allowedFilenameAppendOptions` list must contain at least one macro.|
+|`filenameConfig.defaultFilenameAppendOptions`|String|*Required*. Pre-selected default file name macros that users can uncheck.<br><br> The macros in this list are a subset of the ones defined in `allowedFilenameAppendOptions`. |
+|`filenameConfig.defaultFilename`|String|*Optional*. Defines the default file name macros for the exported files. These cannot be overwritten by users. <br><br>Any macro defined by `allowedFilenameAppendOptions` will be appended after the `defaultFilename` macros. <br><br>If `defaultFilename` is empty, you must define at least one macro in `allowedFilenameAppendOptions`.|
 
 As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well.
 
@@ -242,7 +240,7 @@ As a best practice, you should always include the `SEGMENT_ID` macro in your exp
 |`DESTINATION_INSTANCE_NAME`|[!UICONTROL Destination Name]|User-defined name of the destination instance.|My 2022 Advertising Destination|
 |`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in Adobe Experience Platform.|My Organization Name|
 |`SANDBOX_NAME`|[!UICONTROL Sandbox Name]|Name of the sandbox used by the customer.|prod|
-|`DATETIME`|[!UICONTROL Date and time]|Date and time when the file was generated, in the following format: YYYYMMDD_HHMMSS.|20220509_210543|
+|`DATETIME` / `TIMESTAMP`|[!UICONTROL Date and time]|`DATETIME` and `TIMESTAMP` both define when the file was generated, but in different formats. <br><br><ul><li>`DATETIME` uses the following format: YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` uses the 10-digit Unix format. </li></ul> `DATETIME` and `TIMESTAMP` are mutually exclusive, and cannot be used simultaneously. |<ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul>|
 |`CUSTOM_TEXT`|[!UICONTROL Custom text]|User-defined custom text to be included in the file name. Cannot be used in `defaultFilename`.|My_Custom_Text|
 |`TIMESTAMP`|[!UICONTROL Date and time]|10-digit timestamp of the time when the file was generated, in Unix format.|1652131584|
 
