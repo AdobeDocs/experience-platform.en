@@ -59,7 +59,7 @@ If you select the **[!UICONTROL Basic authentication]** type to connect to your 
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
 * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
-  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, wwith the middle part shortened for brevity.
+  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, with the middle part shortened for brevity.
 
     ![PGP key](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
@@ -73,9 +73,9 @@ If you select the **[!UICONTROL SFTP with SSH key]** authentication type to conn
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
 * **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be formatted as a Base64-encoded string and must not be password-protected.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
-  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, wwith the middle part shortened for brevity.
+  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, with the middle part shortened for brevity.
 
-    ![PGP key](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![PGP key](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
     
 #### Destination details {#destination-details}
 
