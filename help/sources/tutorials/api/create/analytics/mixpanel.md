@@ -82,15 +82,15 @@ curl -X POST \
         "name": "{Mixpanel} base connection",
         "description": "{Mixpanel} base connection to authenticate to Platform",
         "connectionSpec": {
-            "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
+            "id": "fd2c8ff3-1de0-4f6b-8fa8-4264784870eb",
             "version": "1.0"
         },
         "auth": {
             "specName": "OAuth2 Refresh Code",
             "params": {
-            "host": "https://data.mixpanel.com",
-            "username": "{MIXPANEL_SERVICEACCOUNT_USERNAME}",
-            "password": "{MIXPANEL_SERVICEACCOUNT_PASSWORD}"
+                "host": "https://data.mixpanel.com",
+                "username": "{MIXPANEL_SERVICEACCOUNT_USERNAME}",
+                "password": "{MIXPANEL_SERVICEACCOUNT_PASSWORD}"
             }
         }
     }'
@@ -134,10 +134,10 @@ When performing GET requests to explore your source's file structure and content
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
 | `objectType=rest` | The type of object that you wish to explore. Currently, this value is always set to `rest`. |
-| `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
+| `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}": "10c097ca71"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. | 
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. <br/>In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. | 
 
 
 **Request**
@@ -381,7 +381,7 @@ curl -X POST \
         "description": "{Mixpanel} Source Connection",
         "baseConnectionId": "70383d02-2777-4be7-a309-9dd6eea1b46d",
         "connectionSpec": {
-            "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
+            "id": "fd2c8ff3-1de0-4f6b-8fa8-4264784870eb",
             "version": "1.0"
         },
         "data": {
@@ -389,7 +389,7 @@ curl -X POST \
         },
         "params": {
             "projectId": "{MIXPANEL_PROJECT_ID}",
-            "timezone": "{MIXPANEL_PROJECT_ID}"
+            "timezone": "{MIXPANEL_PROJECT_TIMEZONE}"
         }
     }'
 ```
@@ -401,6 +401,8 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of *Mixpanel*. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | The format of the *Mixpanel* data that you want to ingest. Currently, the only supported data format is `json`. |
+| `params.projectId` | Mixpanel Project Id. <br/><br/>Refer to the pages below if you require any guidance. <br/>[Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) <br/>[Create and Manage Projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) |
+| `params.timezone` | Select the timezone to correspond to your project within the Mixpanel account. <br/><br/>Refer to the [Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) page if you require any guidance. |
 
 **Response**
 
@@ -455,7 +457,7 @@ curl -X POST \
         "name": "{Mixpanel} Target Connection",
         "description": "{Mixpanel} Target Connection",
         "connectionSpec": {
-            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+            "id": "fd2c8ff3-1de0-4f6b-8fa8-4264784870eb",
             "version": "1.0"
         },
         "data": {
@@ -471,7 +473,7 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
-| `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb`. |
 | `data.format` | The format of the *Mixpanel* data that you want to bring to Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 

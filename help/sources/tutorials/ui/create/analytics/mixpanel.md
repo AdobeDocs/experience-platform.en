@@ -64,13 +64,13 @@ The **[!UICONTROL Connect Mixpanel account]** page appears. On this page, you ca
 
 To use an existing account, select the *Mixpanel* account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![existing](../../../../images/tutorials/create/mixpanel-export-events/authentication-existing-account.png?lang=en)
+![existing](../../../../images/tutorials/create/mixpanel-export-events/existing.png?lang=en)
 
 ### New account
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![new](../../../../images/tutorials/create/mixpanel-export-events/authentication-new-account.png?lang=en)
+![new](../../../../images/tutorials/create/mixpanel-export-events/new.png?lang=en)
 
 Next, add the projectId and select the timezone.
 
