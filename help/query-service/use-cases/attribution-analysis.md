@@ -21,7 +21,7 @@ An explanation of the parameters within the `OVER()` function can be found in th
 
 An attribution use case uses Adobe Analytics data to help associate customer actions to a successful outcome. This association is a critical part of understanding the factors that influence customer experiences. Attribution analysis data can be used to understand the significance of a customer’s touch point during the customer journey.
 
-The query examples contained in this document support various use cases for first-touch and last-touch attribution with different expiration settings. This guide illustrates the following key concepts:
+The query examples contained in this document support various use cases for first touch and last touch attribution with different expiration settings. This guide illustrates the following key concepts:
 
 * First touch and last touch attribution.
 * First touch and last touch attribution with expiration timeout.
@@ -50,7 +50,7 @@ The results for the attribution queries are given in either the `first_touch` or
 
 | Parameters | Description | 
 | ---------- | ----------- |
-| `{NAME}` | The `{CHANNEL_NAME}`, entered as a label in the ADF. |
+| `{NAME}` | The `{CHANNEL_NAME}`, entered as a label in the Azure Data Factory (ADF). |
 | `{VALUE}` | The value from `{CHANNEL_VALUE}` that is the last touch within the specified `{EXP_TIMEOUT}` interval |
 | `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the last touch occurred |
 | `{FRACTION}` | The attribution of the last touch, expressed as a decimal fraction. | 
@@ -85,7 +85,7 @@ LIMIT 10
 
 **Results**
 
-In the results below, the initial tracking code `em:946426` is taken from the [!DNL Experience Event] dataset is attributed with 100% (`1.0`) of the responsibility for the customer actions because it was the first interaction.
+In the results below, the initial tracking code `em:946426` is taken from the [!DNL Experience Event] dataset. This tracking code is attributed with 100% (`1.0`) of the responsibility for the customer actions because it was the first interaction.
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
@@ -156,7 +156,7 @@ For a breakdown of the results displayed in the `last_touch` column, see the [co
 
 This query is used to see which interaction led to a series of customer actions within a portion of the [!DNL Experience Event] dataset determined by a condition of your choosing.
 
-The query returns the first-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset, expiring after or before a condition. It also returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
+The query returns the first touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset, expiring after or before a condition. It also returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
 
 **Query syntax**
 
@@ -203,11 +203,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 For a breakdown of the results displayed in the `first_touch` column, see the [column components section](#query-result-column-components).
 
-### First-touch attribution with expiration timeout {#first-touch-attribution-with-expiration-timeout}
+### First touch attribution with expiration timeout {#first-touch-attribution-with-expiration-timeout}
 
 This query is used to find the interaction, within a selected time period, that led to the successful customer action.
 
-The query below returns the first-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
+The query below returns the first touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
 
 **Query syntax**
 
@@ -254,11 +254,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 For a breakdown of the results displayed in the `first_touch` column, see the [column components section](#query-result-column-components).
 
-### Last-touch attribution with expiration condition {#last-touch-attribution-with-expiration-condition}
+### Last touch attribution with expiration condition {#last-touch-attribution-with-expiration-condition}
 
 This query is used to find the last interaction in a series of customer actions within a portion of the [!DNL Experience Event] dataset determined by a condition of your choosing.
 
-The query below returns the last-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset, expiring after or before a condition. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. 
+The query below returns the last touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset, expiring after or before a condition. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. 
 
 **Query syntax**
 
@@ -307,7 +307,7 @@ For a breakdown of the results displayed in the `last_touch` column, see the [co
 
 ### Last touch attribution with expiration timeout {#last-touch-attribution-with-expiration-timeout}
 
-This query is used to find the last interaction within a selected time interval. The query returns the last-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. 
+This query is used to find the last interaction within a selected time interval. The query returns the last touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. 
 
 **Query syntax**
 
