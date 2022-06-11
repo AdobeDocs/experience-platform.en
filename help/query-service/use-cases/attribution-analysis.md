@@ -1,6 +1,7 @@
 ---
 title: Attribution Analysis
 description: This document explains how you can use Query Service to create a marketing effectiveness measurement technique based on the marketing attribution model of first and last touch.
+exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
 ---
 # Attribution analysis
 
