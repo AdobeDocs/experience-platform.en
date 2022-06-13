@@ -30,10 +30,10 @@ A retailer is looking to better understand customer preferences for order fulfil
 ## Prerequisites {#prerequisites}
 
 The following information is required to establish the Medallia connection:
-* **API Gateway URL**
 * **OAuth Token Endpoint URL**
 * **Client ID**
 * **Client Secret**
+* **API Gateway URL**
 * **Import API Name**
 
 Work with your Medallia delivery team to obtain these details.
@@ -71,10 +71,9 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* **OAuth Token Endpoint URL**: Typically takes the form of https://instance.medallia.tld/oauth/tenant/token
-* **Client ID**: Obtain from your Medallia delivery team
-* **API Gateway URL**: Typically takes the form of https://instance-tenant.apis.medallia.com
-* **Client Secret**: Obtain from your Medallia delivery team
+* **OAuth Token Endpoint URL**: Typically takes the form of https://instance.medallia.tld/oauth/tenant/token.
+* **Client ID**: Obtain from your Medallia delivery team.
+* **Client Secret**: Obtain from your Medallia delivery team.
 
 <img src="/help/destinations/assets/catalog/voice/medallia-destination-oauth.png" width="60%">
 
@@ -84,9 +83,10 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Import API Name]**: Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different segments to different Import APIs to trigger different survey programs.
+*  **API Gateway URL**: Obtain from your Medallia delivery team. Typically takes the form of https://instance-tenant.apis.medallia.com.
+*  **Import API Name**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different segments to different Import APIs to trigger different survey programs.
 
-<img src="/help/destinations/assets/catalog/voice/medallia-destination-details.png" width="60%">
+<img src="/help/destinations/assets/catalog/voice/medallia-destination-details.png" width="40%">
 
 
 ## Activate segments to this destination {#activate}
@@ -110,7 +110,7 @@ It is strongly recommended that you also map additional target custom attributes
     *  Map the customer's last name to **Target field** > **Select custom attributes** > **Attribute name** > **lastname**
 * Add mappings for any other target custom attributes as desired
 
-![Image of sample mapping](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
+![Sample-Mapping](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
 > 
