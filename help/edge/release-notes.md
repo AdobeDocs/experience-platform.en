@@ -16,7 +16,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 * You can now deliver personalized experiences more accurately, by sharing visitor IDs between mobile apps and mobile web content, and across domains. See the [dedicated documentation](identity/id-sharing.md) to learn more.
 * You can now render or execute an array of propositions from [!DNL Adobe Target] into single-page applications, without incrementing the analytics metrics. This reduces reporting errors and increases analytics accuracy. See the [dedicated documentation](personalization/rendering-personalization-content.md#applypropositions) to learn more.
-* Added additional information to the `getLibraryInfo` command including available commands, and the final configuration for the instance.
+* Added additional information to the `getLibraryInfo` command including available commands and the final configuration for the instance.
 
 **Fixes and improvements**
 
