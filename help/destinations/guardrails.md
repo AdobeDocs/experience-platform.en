@@ -52,7 +52,6 @@ The guardrails below apply to activation through streaming destinations.
 | --- | --- | --- | --- |
 |Number of activations (HTTP messages with profile exports) per second | N/A | - | There is currently no limit to the number of messages per second sent from Experience Platform to partner destinations' API endpoints. <br> Any limits or latencies are dictated by the endpoint where Experience Platform is sending data. |
 
-
 {style="table-layout:auto"}
 
 ### Batch (file-based) activation {#batch-file-based-activation}
