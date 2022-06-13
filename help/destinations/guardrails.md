@@ -4,7 +4,7 @@ title: Default guardrails for activation data
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 
+description: Learn about the default use and rate limits with regard to activation behavior.
 ---
 # Guardrails for activation data
 
@@ -38,8 +38,9 @@ The guardrails below generally apply to activation through all destination types
 | --- | --- | --- | --- |
 |Maximum number of segments to a single destination | N/A | - | There is currently no limit to how many segments you can activate in an activation flow to a single destination platform.|
 |Maximum number of destinations | N/A | - | There is currently no limit to how many destinations per organization ID or per sandbox you can connect and activate data to.|
+|Maximum number of attributes mapped to a destination | N/A | - | For destinations that support attributes export (enterprise destinations, batch file-based destinations, edge personalization destinations), there is currently no limit to how many attributes can be mapped to a single destination.|
 |Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile record attributes* to destinations. XDM attributes that describe event data are not supported for export at this time.|
-|Insert other guardrails | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Type of data activated to destinations - array attributes support | Not available | Hard| At this time, it is **not** possible to export *array attributes* to destinations.|
 
 {style="table-layout:auto"}
 
@@ -49,9 +50,8 @@ The guardrails below apply to activation through streaming destinations.
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Number of activations per second | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
-|Max size per record to activate | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
-|Insert other guardrails | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Number of activations (HTTP messages with profile exports) per second | N/A | - | There is currently no limit to the number of messages per second sent from Experience Platform to partner destinations' API endpoints. <br> Any limits or latencies are dictated by the endpoint where Experience Platform is sending data. |
+
 
 {style="table-layout:auto"}
 
@@ -80,13 +80,12 @@ The guardrails below apply to the [ad-hoc activation](/help/destinations/api/ad-
 
 ### Edge personalization destinations activation {#edge-destinations-activation}
 
-The guardrails below apply to activation through edge personalization destinations.
+The guardrails below apply to activation through [edge personalization destinations](/help/destinations/destination-types.md#streaming-profile-export).
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Max # of records activated per minute | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
-|Max size per file to activate | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
-|Max size per record to activate | insert number (e.g. 20) | Soft or Hard| Description of the guardrail|
+|Maximum number of destinations | N/A | - | There is currently no limit to how many custom personalization destinations per organization ID or per sandbox you can connect and activate data to.|
+|Maximum number of attributes mapped to a personalization destination | N/A | - | There is currently no limit to how many attributes can be mapped to a single destination.|
 
 {style="table-layout:auto"}
 
@@ -96,7 +95,7 @@ The guardrails below apply to activation through edge personalization destinatio
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| maxNumEventsInBatch | Minimum x and maximum y | Hard| Description of this limit.|
+| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600)</li><li>`maxNumEventsInBatch` (minimum 1.000, maximum 10.000)</li></ul> | Hard| When using the [configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
 
 ### Destination throttling and retry policy {#destination-throttling-and-retry-policy}
 
