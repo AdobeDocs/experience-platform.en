@@ -90,7 +90,7 @@ Refer to the table below for information about the destination export type and f
 Before you can send, or activate, audience data to a destination, you must set up a connection to your own destination platform. While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) this destination, you must provide the following information:
 
 *  **[!UICONTROL Account Type]**: Please choose the **[!UICONTROL Existing Account]** option. 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination mapping in the future. 
+*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Advertiser ID]**: your Trade Desk Advertiser ID, which can either be shared by your TTD Account Manager or be found under Advertiser Preferences in the TTD UI. 
 
@@ -107,9 +107,7 @@ In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the 
 >
 >All segments activated to [!DNL The Trade Desk] CRM Destination are automatically set to a daily frequency and full file export.
 
-In the **[!UICONTROL Mapping]** page, you must select attributes or identity namespaces you want to set as the source to target destination.  
-
-Identities are set to an identity namespace in your schema, and the namespace will determine what is chosen in mapping.  
+In the **[!UICONTROL Mapping]** page, you must select attributes or identity namespaces from the source column and map to the target column.
 
 Below is an example of correct identity mapping when activating segments to the Trade Desk CRM destination: 
 
