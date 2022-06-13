@@ -14,12 +14,12 @@ Adobe is not responsible for performance degradation caused by exceeded usage li
 
 ## Definitions
 
-* **Availability** is calculated for each five-minute interval as the percentage of requests processed by the Experience Adobe Experience Platform Edge Network that do not fail with errors and relate solely to the provisioned Adobe Experience Platform Edge Network APIs. If a tenant did not make any requests in a given five-minute interval, that interval is considered to be 100% available.
+* **Availability** is calculated for each five-minute interval as the percentage of requests processed by the Experience Platform Edge Network that do not fail with errors and relate solely to the provisioned Edge Network APIs. If a tenant did not make any requests in a given five-minute interval, that interval is considered to be 100% available.
 * **Monthly uptime percentage** for a given region is calculated as the average of the availability for all five-minute intervals in a month.
-* An **upstream** is a service behind the Adobe Edge Network, enabled for a specific datastream, such as Adobe Server Side Forwarding, Adobe Edge Segmentation, or Adobe Target.
+* An **upstream** is a service behind the Edge Network, enabled for a specific datastream, such as Adobe Server Side Forwarding, Adobe Edge Segmentation, or Adobe Target.
 * A **request unit** corresponds to a 8 KB fragment of a request and one upstream configured for a datastream.
 * A **request** is a single message sent by a customer-owned application to the [!DNL Server API]. A request can contain one or more request units.
-* An **error** is any request that fails due to an Adobe Experience Platform Edge Network [internal service error](error-handling.md).
+* An **error** is any request that fails due to an Edge Network [internal service error](error-handling.md).
 
 ## Service limits
 

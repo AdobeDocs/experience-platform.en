@@ -82,6 +82,11 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 >title="Scheduled activation"
 >abstract="Activation runs at a fixed time of the day."
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_activatenow"
+>title="Activate on-demand"
+>abstract="Select this control to deliver a full file export on top of any previously scheduled exports. The file export is triggered immediately."
+
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
 
 ![Image of the UI with the Export full files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
