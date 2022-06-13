@@ -88,7 +88,7 @@ This includes going into the activation workflow, selecting your segments, confi
 * [Use the Platform UI to create an activation flow to batch profile export destinations](../ui/activate-batch-profile-destinations.md)
 * [Use the Flow Service API to connect to batch profile export destinations and activate data](../api/connect-activate-batch-destinations.md)
 
-## Step 4: Obtain the latest segment export job ID (Deprecated) {#segment-export-id}
+## Step 4: Obtain the latest segment export job ID (Not required in v2) {#segment-export-id}
 
 >[!IMPORTANT]
 >
@@ -160,8 +160,9 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate segments. You can get these IDs from the Platform UI, by navigating to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab, and clicking on the desired destination row to bring up the destination ID in the right rail. For more information, read the [destinations workspace documentation](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the segments that you want to activate to the selected destination. |
 
+{style="table-layout:auto"}
 
-### Request (deprecated) {#request-deprecated}
+### Request with export IDs (to be deprecated) {#request-deprecated}
 
 >[!IMPORTANT]
 >
@@ -198,6 +199,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the segments that you want to activate to the selected destination. |
 | <ul><li>`exportId1`</li></ul> | The ID returned in the response of the [segment export](../../segmentation/api/export-jobs.md#retrieve-list) job. See [Step 4: Obtain the latest segment export job ID](#segment-export-id) for instructions on how to find this ID. |
 
+{style="table-layout:auto"}
+
 ### Response {#response}
 
 A successful response returns HTTP status 200.
@@ -220,9 +223,27 @@ A successful response returns HTTP status 200.
 | `order` | The ID of the destination to which the segment was activated. |
 | `statusURL` | The status URL of the activation flow. You can track the flow progress using the [Flow Service API](../../sources/tutorials/api/monitor.md). |
 
+{style="table-layout:auto"}
+
 ## API error handling {#api-error-handling}
 
 Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
+
+### API error codes and messages specific to the ad-hoc activation API {#specific-error-messages}
+
+When using the ad-hoc activation API, you can come across error messages that are specific to this API endpoint. Review them below to learn how to address them when they do come up.
+
++++Run already going on for segment fb1bb839-69e5-40e8-ba9b-c96b84bf1519 for order 07e4dca1-dafb-4c2f-ab05-e4f65c4a4f62 with run id 6becd765-a2ca-4a8f-8041-37fad0f4391a
+
+This error message indicates that an ad-hoc activation flow is currently ongoing for a segment. Wait for the job to finish before triggering the activation job again.
+
++++
+
++++"Segments `<segment name>` are not part of this dataflow or out of schedule range!"
+
+This error message indicates that the segments you selected to activate are not mapped to the dataflow or that the activation schedule set up for the segments has either expired or not yet started.
+
++++
 
 ## Related information {#related-information}
 
