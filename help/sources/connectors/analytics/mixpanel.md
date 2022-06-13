@@ -54,7 +54,5 @@ The documentation below provides information on how to connect [!DNL Mixpanel] t
 ## Connect [!DNL Mixpanel] to Platform using the UI
 
 * [Create a [!DNL Mixpanel ]source connection in the UI](../../tutorials/ui/create/analytics/mixpanel.md)
-
-<!--
 * [Create a dataflow for a customer success source connection in the UI](../../tutorials/ui/dataflow/analytics.md)
--->
+
