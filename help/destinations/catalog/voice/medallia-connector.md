@@ -9,6 +9,10 @@ description: Activate profiles for targeted Medallia surveys and feedback collec
 
 Activate profiles for targeted Medallia surveys and feedback collection to better understand customer needs and expectations.
 
+>[!IMPORTANT]
+>
+>This documentation page was created by the Medallia team. For any inquiries or update requests, please contact them directly at adobe-integrations@medallia.com.
+
 
 ## Use cases {#use-cases}
 
