@@ -168,6 +168,7 @@ feature: Schemas
   * [Define a schema relationship in the UI](tutorials/relationship-ui.md)
   * [Define a schema relationship in the API](tutorials/relationship-api.md)
   * [Define a schema relationship in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
+  * [Manage data usage labels for a schema](tutorials/labels.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
   * [Add suggested values to a field (API)](tutorials/suggested-values.md)
 * [Troubleshooting guide](troubleshooting-guide.md)

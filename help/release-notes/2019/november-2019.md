@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes November 18, 2019
+title: Adobe Experience Platform Release Notes November 2019
+description: The November 2019 release notes for Adobe Experience Platform.
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527

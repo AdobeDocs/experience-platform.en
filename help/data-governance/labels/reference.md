@@ -49,6 +49,8 @@ One type of data you may consider to be sensitive may be different types of geog
 | --- | --- |
 | **S1** | Data specifying latitude and longitude that can be used to determine the precise location of a device. |
 | **S2** | Data that can be used to determine a broadly defined geofence area. |
+| **PSPD** | Permitted Sensitive Personal Data (PSPD) refers to data that you are contractually permitted by Adobe to upload that is deemed “sensitive”, “special category of data”, or a similar term used by applicable laws. This specifically excludes Protected Health Information (PHI) and other regulated health data. |
+| **RHD** | Data that refers to Protected Health Information (PHI) or information about a patient that you are contractually permitted by Adobe to upload. |
 
 ## Appendix
 
