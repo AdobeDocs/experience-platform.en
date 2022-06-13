@@ -1,64 +1,50 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-solution: Experience Platform
-title: Documentation self-service template
-topic-legacy: tutorial
+title: (Beta) Create a Source Connection and Dataflow for Mixpanel using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Mixpanel using the Flow Service API.
-hide: true
-hidefromtoc: true
 ---
-# Create a source connection and dataflow for *Mixpanel* using the Flow Service API
+# (Beta) Create a source connection and dataflow for [!DNL Mixpanel] using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a source connection and a dataflow to bring Mixpanel data to Platform using the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+>[!NOTE]
+>
+>The [!DNL Mixpanel] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
-## Overview
+[[!DNL Mixpanel]](https://www.mixpanel.com) is a product analytics tool that enables you to capture data on how users interact with a digital product. Mixpanel allows you to analyze this product data with simple, interactive reports that let you query and visualize the data with just a few clicks.
 
-[Mixpanel](https://www.mixpanel.com) is a product analytics tool that enables capturing data on how users interact with a digital product. Mixpanel allows you to analyze this product data with simple, interactive reports that let you query and visualize the data with just a few clicks.
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL Mixpanel] data to Adobe Experience Platform using the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
-This Adobe Experience Platform [source](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [Mixpanel Event Export API > Download](https://developer.mixpanel.com/reference/raw-event-export) to download your event data as it is received and stored within Mixpanel, along with all event properties (including `distinct_id`) and the exact timestamp the event was fired into Experience Platform.
+## Getting started
 
-Mixpanel uses bearer tokens as an authentication mechanism to communicate with the Mixpanel Event Export API.
+This guide requires a working understanding of the following components of Experience Platform:
 
-## Prerequisites
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The first step in creating a Mixpanel source connection is to ensure that you have a Mixpanel account. If you do not have one already, see the [Mixpanel register](https://mixpanel.com/register/) page to register and create your account.
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Mixpanel] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order to connect *Mixpanel* to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL Mixpanel] to Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Host | Mixpanel Raw Data Export API endpoint. <br/><br/>Refer to the [Mixpanel API reference](https://developer.mixpanel.com/reference/overview) page, then scroll to the *Raw Data Export API* section if you require any guidance. | *https://data.mixpanel.com*|
-| Username | Service account Username. <br/><br/>Refer to the [Service Accounts](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) page if you require any guidance. | *Test8.6d4ee7.mp-service-account* |
-| Password | Service account Password. | *dLlidiKHpCZtJhQDyN2RECKudMeTItX1* |
-| projectId | Mixpanel Project Id. <br/><br/>Refer to the pages below if you require any guidance. <br/>[Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) <br/>[Create and Manage Projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) | *2384945* |
-| timezone | Select the timezone to correspond to your project within the Mixpanel account. <br/><br/>Refer to the [Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) page if you require any guidance.| *Pacific Standard Time* |
+| `host` | The [!DNL Mixpanel] raw data export API endpoint. See the [!DNL Raw Data Export API] section in the [Mixpanel API reference documentation](https://developer.mixpanel.com/reference/overview) for more information. | `https://data.mixpanel.com` |
+| `username` | The service account username that corresponds with your [!DNL Mixpanel] account. See the [[!DNL Mixpanel] service accounts documentatio ](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) for more information. | `Test8.6d4ee7.mp-service-account` |
+| `password` | The service account password that corresponds with your [!DNL Mixpanel] account. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
+| `projectId` | Your [!DNL Mixpanel] project ID. This ID is required to create a source connection. See the [[!DNL Mixpanel] project settings documentation](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) and the [[!DNL Mixpanel] guide on creating and managing projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) for more information. | `2384945` |
+| `timezone` | The timezone that corresponds with your [!DNL Mixpanel] project. Timezone is required to create a source connection. See the [Mixpanel project settings documentation](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) for more information.| `Pacific Standard Time` |
 
-You can retrieve your Mixpanel Project ID and configure your Timezone by navigating to the Project Details page of your account in the Mixpanel UI.
+For more information on authenticating your [!DNL Mixpanel] source, see the [[!DNL Mixpanel] source overview](../../../../connectors/analytics/mixpanel.md).
 
-![Mixpanel Project Details](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-project-settings.png?lang=en)
+## Connect [!DNL Mixpanel] to Platform using the [!DNL Flow Service] API
 
-To retrieve your Mixpanel service account credentials, navigate to the Service Accounts in the Mixpanel UI.
-
-![Mixpanel Service Account](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png?lang=en)
-
->[!TIP]
->
->* It is suggested to use a service account that doesn't [expire](https://developer.mixpanel.com/reference/service-accounts#service-account-expiration).
-
-Finally, create a Platform [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html) required for the Mixpanel Event Export API. Refer also to the [limits](#limits) section further below on this page.
-![Create Schema](../../../../images/tutorials/create/mixpanel-export-events/schema.png?lang=en)
-
-## Connect *Mixpanel* to Platform using the [!DNL Flow Service] API
-
-The following tutorial walks you through the steps to create a *Mixpanel* source connection and create a dataflow to bring *Mixpanel* data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL Mixpanel] source connection and create a dataflow to bring [!DNL Mixpanel] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Create a base connection {#base-connection}
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your *Mixpanel* authentication credentials as part of the request body.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Mixpanel] authentication credentials as part of the request body.
 
 **API format**
 
@@ -68,32 +54,32 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for *Mixpanel*:
+The following request creates a base connection for [!DNL Mixpanel]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "{Mixpanel} base connection",
-        "description": "{Mixpanel} base connection to authenticate to Platform",
-        "connectionSpec": {
-            "id": "fd2c8ff3-1de0-4f6b-8fa8-4264784870eb",
-            "version": "1.0"
-        },
-        "auth": {
-            "specName": "OAuth2 Refresh Code",
-            "params": {
-                "host": "https://data.mixpanel.com",
-                "username": "{MIXPANEL_SERVICEACCOUNT_USERNAME}",
-                "password": "{MIXPANEL_SERVICEACCOUNT_PASSWORD}"
-            }
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Mixpanel base connection",
+      "description": "Mixpanel base connection to authenticate to Platform",
+      "connectionSpec": {
+          "id": "fd2c8ff3-1de0-4f6b-8fa8-4264784870eb",
+          "version": "1.0"
+      },
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "host": "https://data.mixpanel.com",
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}"
+          }
+      }
+  }'
 ```
 
 | Property | Description |
@@ -102,8 +88,10 @@ curl -X POST \
 | `description` | An optional value that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
-| `auth.params.projectId` | Your Mixpanel Project Id. |
-| `auth.params.timezone` | Timezone that is defined within your Mixpanel project corresponding to the `projectId`. |
+| `auth.params.` | Contains the credentials required to authenticate your source. |
+| `auth.params.host` | The unique domain specific to your account created during the registration process. |
+| `auth.params.username` | The username that corresponds with your [!DNL Mixpanel] account. |
+| `auth.params.password` | The password that corresponds with your [!DNL Mixpanel] account. |
 
 **Response**
 
@@ -119,7 +107,7 @@ A successful response returns the newly created base connection, including its u
 ### Explore your source {#explore}
 
 Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests.
-Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
+Use the following calls to find the path of the file you wish to bring into Experience Platform:
 
 **API format**
 
@@ -137,7 +125,7 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. <br/>In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. | 
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `{"projectId":"2671127","timezone":"Pacific Standard Time"}` string in base64. **Note**: In the example below, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encoded in base64 equates to `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. | 
 
 
 **Request**
@@ -366,43 +354,43 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for *Mixpanel*:
+The following request creates a source connection for [!DNL Mixpanel]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "{Mixpanel} Source Connection",
-        "description": "{Mixpanel} Source Connection",
-        "baseConnectionId": "70383d02-2777-4be7-a309-9dd6eea1b46d",
-        "connectionSpec": {
-            "id": "fd2c8ff3-1de0-4f6b-8fa8-4264784870eb",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "json"
-        },
-        "params": {
-            "projectId": "{MIXPANEL_PROJECT_ID}",
-            "timezone": "{MIXPANEL_PROJECT_TIMEZONE}"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Mixpanel source connection",
+      "description": "Mixpanel source connection",
+      "baseConnectionId": "70383d02-2777-4be7-a309-9dd6eea1b46d",
+      "connectionSpec": {
+          "id": "fd2c8ff3-1de0-4f6b-8fa8-4264784870eb",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "json"
+      },
+      "params": {
+          "projectId": "{PROJECT_ID}",
+          "timezone": "{TIMEZONE}"
+      }
+  }'
 ```
 
 | Property | Description |
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
-| `baseConnectionId` | The base connection ID of *Mixpanel*. This ID was generated in an earlier step. |
+| `baseConnectionId` | The base connection ID of [!DNL Mixpanel]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
-| `data.format` | The format of the *Mixpanel* data that you want to ingest. Currently, the only supported data format is `json`. |
-| `params.projectId` | Mixpanel Project Id. <br/><br/>Refer to the pages below if you require any guidance. <br/>[Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) <br/>[Create and Manage Projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) |
-| `params.timezone` | Select the timezone to correspond to your project within the Mixpanel account. <br/><br/>Refer to the [Project Settings](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) page if you require any guidance. |
+| `data.format` | The format of the [!DNL Mixpanel] data that you want to ingest. Currently, the only supported data format is `json`. |
+| `params.projectId` | Your [!DNL Mixpanel] project ID. |
+| `params.timezone` | The timezone of your [!DNL Mixpanel] project. |
 
 **Response**
 
@@ -415,25 +403,25 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-### Create a target XDM schema {#target-schema}
+## Create a target XDM schema {#target-schema}
 
 In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](../../../../../xdm/api/schemas.md).
 
 ### Create a target dataset {#target-dataset}
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
-For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](../../../../../catalog/api/create-dataset.md).
 
 ### Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data is to be stored. To create a target connection, you must provide the fixed connection specification ID that corresponds to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to the [!DNL Data Lake]. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -443,7 +431,7 @@ POST /targetConnections
 
 **Request**
 
-The following request creates a target connection for *Mixpanel*:
+The following request creates a target connection for [!DNL Mixpanel]:
 
 ```shell
 curl -X POST \
@@ -473,8 +461,8 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
-| `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb`. |
-| `data.format` | The format of the *Mixpanel* data that you want to bring to Platform. |
+| `connectionSpec.id` | The connection specification ID that corresponds to data lake. This fixed ID is: `fd2c8ff3-1de0-4f6b-8fa8-4264784870eb`. |
+| `data.format` | The format of the [!DNL Mixpanel] data that you want to bring to Platform. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 
@@ -503,77 +491,77 @@ POST /conversion/mappingSets
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-        "xdmVersion": "1.0",
-        "id": null,
-        "mappings": [
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.distinct_id",
-                "destination": "_extconndev.distinct_id",
-                "name": "distinct_id",
-                "description": "Mixpanel"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.event_name",
-                "destination": "_extconndev.event_name"
-           },
-           {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.import",
-                "destination": "_extconndev.import"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.insert_id",
-                "destination": "_extconndev.insert_id"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.item_id",
-                "destination": "_extconndev.item_id"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.item_name",
-                "destination": "_extconndev.item_name"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.item_price",
-                "destination": "_extconndev.item_price"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.mp_api_endpoint",
-                "destination": "_extconndev.mp_api_endpoint"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.mp_api_timestamp_ms",
-                "destination": "_extconndev.mp_api_timestamp_ms"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.mp_processing_time_ms",
-                "destination": "_extconndev.mp_processing_time_ms"
-            },
-            {
-                "sourceType": "ATTRIBUTE",
-                "source": "data.time",
-                "destination": "_extconndev.time"
-            }
-        ]
-    }'
+  'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "version": 0,
+      "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
+      "xdmVersion": "1.0",
+      "id": null,
+      "mappings": [
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.distinct_id",
+              "destination": "_extconndev.distinct_id",
+              "name": "distinct_id",
+              "description": "Mixpanel"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.event_name",
+              "destination": "_extconndev.event_name"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.import",
+              "destination": "_extconndev.import"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.insert_id",
+              "destination": "_extconndev.insert_id"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.item_id",
+              "destination": "_extconndev.item_id"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.item_name",
+              "destination": "_extconndev.item_name"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.item_price",
+              "destination": "_extconndev.item_price"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.mp_api_endpoint",
+              "destination": "_extconndev.mp_api_endpoint"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.mp_api_timestamp_ms",
+              "destination": "_extconndev.mp_api_timestamp_ms"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.mp_processing_time_ms",
+              "destination": "_extconndev.mp_processing_time_ms"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "data.time",
+              "destination": "_extconndev.time"
+          }
+      ]
+  }'
 ```
 
 | Property | Description |
@@ -600,7 +588,7 @@ A successful response returns details of the newly created mapping including its
 
 ### Create a flow {#flow}
 
-The last step towards bringing data from *Mixpanel* to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing data from [!DNL Mixpanel] to Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)
@@ -621,39 +609,39 @@ POST /flows
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/flows' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "{Mixpanel} dataflow",
-        "description": "{Mixpanel} dataflow",
-        "flowSpec": {
-            "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-            "version": "1.0"
-        },
-        "sourceConnectionIds": [
-            "246d052c-da4a-494a-937f-a0d17b1c6cf5"
-        ],
-        "targetConnectionIds": [
-            "7c96c827-3ffd-460c-a573-e9558f72f263"
-        ],
-        "transformations": [
-            {
-                "name": "Mapping",
-                "params": {
-                    "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
-                    "mappingVersion": "0"
-                }
-            }
-        ],
-        "scheduleParams": {
-            "startTime": "1625040887",
-            "frequency": "minute",
-            "interval": 15
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "{Mixpanel} dataflow",
+      "description": "{Mixpanel} dataflow",
+      "flowSpec": {
+          "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
+          "version": "1.0"
+      },
+      "sourceConnectionIds": [
+          "246d052c-da4a-494a-937f-a0d17b1c6cf5"
+      ],
+      "targetConnectionIds": [
+          "7c96c827-3ffd-460c-a573-e9558f72f263"
+      ],
+      "transformations": [
+          {
+              "name": "Mapping",
+              "params": {
+                  "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
+                  "mappingVersion": "0"
+              }
+          }
+      ],
+      "scheduleParams": {
+          "startTime": "1625040887",
+          "frequency": "minute",
+          "interval": 15
+      }
+  }'
 ```
 
 | Property | Description |
