@@ -10,7 +10,7 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have an authenticated account with the [!DNL Mixpanel] source. See the tutorial on [creating a [!DNL Mixpanel] source connection in the UI](../../ui/create/analytics/analytics.md) for more information.
+>In order to create a dataflow, you must already have an authenticated account with the [!DNL Mixpanel] source. See the tutorial on [creating a [!DNL Mixpanel] source connection in the UI](../../ui/create/analytics/mixpanel.md) for more information.
 
 ## Getting started
 
