@@ -38,23 +38,19 @@ To activate data on-demand to batch destinations, you must have successfully [co
 
     ![Image highlighting a filtered dataflow.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Select the segment for which you want to export a file on-demand.
-
-    ![Image showing all segments in a dataflow.](../assets/ui/activate-on-demand/select-segment-to-activate.png)
-
-4. Select the **[!UICONTROL Activate on-demand]** control to trigger a one-time export which will deliver a file to your batch destination.
+3. Select the segment for which you want to export a file on-demand and select the **[!UICONTROL Activate on-demand]** control to trigger a one-time export which will deliver a file to your batch destination.
 
     ![Image highlighting the Activate ad-hoc button.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
 
-5. Select **[!UICONTROL Yes]** to confirm and trigger the file export.
+4. Select **[!UICONTROL Yes]** to confirm and trigger the file export.
 
     ![Image showing the activate on-demand confirmation dialog.](../assets/ui/activate-on-demand/confirm-activation.png)
 
-6. A confirmation message appears, letting you know that the file export has started.
+5. A confirmation message appears, letting you know that the file export has started.
 
     ![Image showing confirmation of successful ad-hoc activation.](../assets/ui/activate-on-demand/ad-hoc-success.png)
 
-7. You can also switch to the **[!UICONTROL Dataflow runs]** tab to confirm that the file export has kicked off.
+6. You can also switch to the **[!UICONTROL Dataflow runs]** tab to confirm that the file export has kicked off.
 
 ## Considerations {#considerations}
 
@@ -80,6 +76,7 @@ This error message indicates that an ad-hoc activation flow is currently ongoing
 This error message indicates that the segments you selected to activate are not mapped to the dataflow or that the activation schedule set up for the segments has either expired or not yet started.
 
 +++
+
 ## Related information {#related-information}
 
 * [Activate audience segments to batch destinations on-demand using the Experience Platform UI](/help/destinations/ui/ad-hoc-activation-ui.md)
