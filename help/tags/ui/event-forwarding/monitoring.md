@@ -43,7 +43,7 @@ The **[!UICONTROL Compute Time]** report shows the compute time of all rules on 
 
 The following factors affect compute time:
 
-1. The number of rules.
-2. The complexity of the rules, usually driven by the amount of custom JavaScript being executed.
+1. The number of rules
+2. The complexity of the rules, usually driven by the amount of custom JavaScript being executed
 
 For example, if an action in event forwarding hits an endpoint and that endpoint take two seconds to respond, this two-second latency will not count against compute time because event forwarding is just waiting and not actively computing anything. This two-second response time cannot be longer than 30 seconds, otherwise data will be dropped.
