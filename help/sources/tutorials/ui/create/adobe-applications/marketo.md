@@ -17,6 +17,10 @@ This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter r
 
 ## Getting started
 
+>[!TIP]
+>
+>Before creating your source connection dataflow, see the guide on [setting up your B2B namespaces and schema auto-generation utility](./marketo-namespaces.md) to auto-populate your B2B namespaces and schemas.
+
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
