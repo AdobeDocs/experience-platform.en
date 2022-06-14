@@ -2,6 +2,8 @@
 title: Activate audience segments on-demand to batch destinations using the Experience Platform UI
 type: Tutorial
 description: Learn how to activate audience segments on-demand to batch destinations using the Experience Platform UI.
+hide: true
+hidefromtoc: true
 ---
 # Activate audience segments on-demand to batch destinations using the Experience Platform UI
 
