@@ -41,6 +41,16 @@ To learn more, visit the [segment dashboard guide](../../dashboards/guides/segme
 
 ## Browse {#browse}
 
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_churncolumnname"
+>title="Churn"
+>abstract="The churn represents the percentage of profiles that are changing within a segment definition compared to the last time the segment job ran."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_evaluationmethodcolumnname"
+>title="Evaluation method"
+>abstract="Evaluation methods for segments include batch, streaming, and edge."
+
 Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your IMS Organization. 
 
 ![](../images/ui/overview/segment-browse-all.png)
@@ -59,7 +69,7 @@ The breakdown shows a bar graph outlining the percentage of profiles that belong
 
 The churn represents the percentage of profiles that are changing within a segment definition compared to the last time the segment job ran, while the profile count represents the total number of profiles that qualify for the segment.
 
-The evaluation method can either be streaming or batch. Streaming segments are constantly evaluated as data enters the system. Batch segments are evaluated according to a set schedule. 
+The evaluation method can either be streaming, batch, or edge. Streaming segments are constantly evaluated as data enters the system. Batch segments are evaluated according to a set schedule. Edge segments are evaluated in real-time, which allow for same page and next page personalization use cases.
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
