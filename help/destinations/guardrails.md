@@ -38,7 +38,7 @@ The guardrails below generally apply to activation through all destination types
 | --- | --- | --- | --- |
 |Maximum number of segments to a single destination | N/A | - | There is currently no limit to how many segments you can activate in an activation flow to a single destination platform.|
 |Maximum number of destinations | N/A | - | There is currently no limit to how many destinations per organization ID or per sandbox you can connect and activate data to.|
-|Maximum number of attributes mapped to a destination | N/A | - | For destinations that support attributes export (enterprise destinations, batch file-based destinations, edge personalization destinations), there is currently no limit to how many attributes can be mapped to a single destination.|
+|Maximum number of attributes mapped to a destination | N/A | - | For destinations that support attributes export (enterprise destinations, batch file-based destinations), there is currently no limit to how many attributes can be mapped to a single destination. [Edge personalization destinations](#edge-destinations-activation) are the exception, where a maximum number of attributes is enforced.|
 |Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile record attributes* to destinations. XDM attributes that describe event data are not supported for export at this time.|
 |Type of data activated to destinations - array attributes support | Not available | Hard| At this time, it is **not** possible to export *array attributes* to destinations.|
 
@@ -83,8 +83,8 @@ The guardrails below apply to activation through [edge personalization destinati
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Maximum number of destinations | N/A | - | There is currently no limit to how many custom personalization destinations per organization ID or per sandbox you can connect and activate data to.|
-|Maximum number of attributes mapped to a personalization destination | N/A | - | There is currently no limit to how many attributes can be mapped to a single destination.|
+|Maximum number of destinations | N/A | - | There is currently no limit to how many personalization destinations per organization ID or per sandbox you can connect and activate data to.|
+|Maximum number of attributes mapped to a personalization destination | 20 | Hard | A maximum of 20 attributes can be mapped in a dataflow to a personalization destination.|
 
 {style="table-layout:auto"}
 
