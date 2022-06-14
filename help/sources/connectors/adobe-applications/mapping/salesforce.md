@@ -94,7 +94,6 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `LeadSource` | `personComponents.personSource`|
 | `Latitude` | `workAddress._schema.latitude` |
 | `Longitude` | `workAddress._schema.longitude` |
-| `MiddleName` | `person.name.middleName` |
 | `Name` | `person.name.fullName` |
 | `PostalCode` | `workAddress.postalCode` |
 | `Salutation` | `person.name.courtesyTitle` |
