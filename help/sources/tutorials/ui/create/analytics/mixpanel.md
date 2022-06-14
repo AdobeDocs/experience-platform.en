@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: (Beta )Create a Mixpanel Source Connection in the UI
-description: Learn how to create a Mixpanel source connection 
 description: Learn how to create a Mixpanel source connection using the Adobe Experience Platform UI.
 ---
 # (Beta) Create a [!DNL Mixpanel] source connection in the UI
@@ -78,7 +77,7 @@ After a few moments, the right interface updates to a preview panel, allowing yo
 
 By following this tutorial, you have established a connection to your [!DNL Mixpanel] account. You can now continue on to the next tutorial and [configure a dataflow to bring analytics data into Platform](../../dataflow/analytics.md).
 
-## Additional resources
+## Additional resources {#additional-resources}
 
 The sections below provides additional resources that you can refer to when using the [!DNL Mixpanel] source.
 
@@ -127,4 +126,4 @@ The table below lists the supported mappings that must be set up for [!DNL Mixpa
 
 ### Limits {#limits}
 
-* A maximum of 100 concurrent queries, and 60 queries per hour as indicated on [Export API Rate Limits](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints).
+* You have a maximum of 100 concurrent queries and 60 queries per hour as indicated on [Export API Rate Limits](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints).

@@ -11,9 +11,9 @@ description: Learn how to connect Mixpanel to Adobe Experience Platform using AP
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[[!DNL Mixpanel]](https://www.mixpanel.com) is a product analytics tool that enables you to capture data on how users interact with a digital product. Mixpanel allows you to analyze this product data with simple, interactive reports that let you query and visualize the data with just a few clicks.
-
 Experience Platform provides support for ingesting data from a third-party analytics application. Support for analytics providers include [!DNL Mixpanel].
+
+[[!DNL Mixpanel]](https://www.mixpanel.com) is a product analytics tool that enables you to capture data on how users interact with a digital product. Mixpanel allows you to analyze this product data with simple, interactive reports that let you query and visualize the data with just a few clicks.
 
 Sources leverages the [Mixpanel Event Export API > Download](https://developer.mixpanel.com/reference/raw-event-export) to download your event data as it is received and stored within [!DNL Mixpanel], along with all event properties (including `distinct_id`) and the exact timestamp the event was sent into Experience Platform. 
 
@@ -41,7 +41,7 @@ Next, navigate to the [!DNL Service Accounts] tab in the [!DNL Project Settings]
 
 ![Mixpanel Service Account](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-Finally, create a Platform [schema](../../../xdm/schema/composition.md) required for the [!DNL Mixpanel Event Export API]. Refer also to the [limits](#limits) section further below on this page.
+Finally, create a Platform [schema](../../../xdm/schema/composition.md) required for the [!DNL Mixpanel Event Export API]. See the [additional resources](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources) for more information on the schema as well as limitations to consider.
 
 ![Create Schema](../../images/tutorials/create/mixpanel-export-events/schema.png)
 
@@ -53,6 +53,6 @@ The documentation below provides information on how to connect [!DNL Mixpanel] t
 
 ## Connect [!DNL Mixpanel] to Platform using the UI
 
-* [Create a [!DNL Mixpanel ]source connection in the UI](../../tutorials/ui/create/analytics/mixpanel.md)
+* [Create a [!DNL Mixpanel] source connection in the UI](../../tutorials/ui/create/analytics/mixpanel.md)
 * [Create a dataflow for a customer success source connection in the UI](../../tutorials/ui/dataflow/analytics.md)
 
