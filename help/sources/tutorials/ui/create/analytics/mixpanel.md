@@ -21,6 +21,20 @@ This tutorial requires a working understanding of the following components of Ex
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
+### Gather required credentials
+
+In order to connect [!DNL Mixpanel] to Platform, you must provide values for the following connection properties:
+
+| Credential | Description | Example |
+| --- | --- | --- |
+| Host | The [!DNL Mixpanel] raw data export API endpoint. See the [!DNL Raw Data Export API] section in the [Mixpanel API reference documentation](https://developer.mixpanel.com/reference/overview) for more information. | `https://data.mixpanel.com` |
+| Username | The service account username that corresponds with your [!DNL Mixpanel] account. See the [[!DNL Mixpanel] service accounts documentation](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) for more information. | `Test8.6d4ee7.mp-service-account` |
+| Password | The service account password that corresponds with your [!DNL Mixpanel] account. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
+| Project ID | Your [!DNL Mixpanel] project ID. This ID is required to create a source connection. See the [[!DNL Mixpanel] project settings documentation](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) and the [[!DNL Mixpanel] guide on creating and managing projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) for more information. | `2384945` |
+| Timezone | The timezone that corresponds with your [!DNL Mixpanel] project. Timezone is required to create a source connection. See the [Mixpanel project settings documentation](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) for more information.| `Pacific Standard Time` |
+
+For more information on authenticating your [!DNL Mixpanel] source, see the [[!DNL Mixpanel] source overview](../../../../connectors/analytics/mixpanel.md).
+
 ## Connect your [!DNL Mixpanel] account
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
@@ -45,15 +59,26 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ![new](../../../../images/tutorials/create/mixpanel-export-events/new.png)
 
-Next, add the projectId and select the timezone.
+## Select your project ID and timezone {#project-id-and-timezone}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_mixpanel_timezone"
+>title="Set your timezone"
+>abstract="You must set a timezone for your project prior to ingestion. Mixpanel will adjust its timezone to coordinate with your project timezone before recording the event to a Mixpanel data store. If you change your project timezone, the conversion is only applied to new events."
+
+Once your source is authenticated, provide your project ID and timezone and then select **[!UICONTROL Select]**. 
+
+Events are recorded by [!DNL Mixpanel] in Coordinated Universal Time (UTC). After you designate a timezone for your project, [!DNL Mixpanel] converts its timezone to coordinate with your project timezone, prior to recording the event to a [!DNL Mixpanel] data store. If you change your project timezone, [!DNL Mixpanel] will only apply the conversion to new events and old events will remain in your project's old timezone. [!DNL Mixpanel] also accommodates Daylight Savings Time and will adjust your ingestion timestamp appropriately.
+
+After a few moments, the right interface updates to a preview panel, allowing you to inspect your schema before creating a dataflow. When finished, select **[!UICONTROL Next]**.
 
 ![configuration](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Mixpanel] account. You can now continue on to the next tutorial and [configure a dataflow to bring analytics data into Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/analytics.html).
+By following this tutorial, you have established a connection to your [!DNL Mixpanel] account. You can now continue on to the next tutorial and [configure a dataflow to bring analytics data into Platform](../../dataflow/analytics.md).
 
-## Additional resource
+## Additional resources
 
 The sections below provides additional resources that you can refer to when using the [!DNL Mixpanel] source.
 
