@@ -11,6 +11,13 @@ description: Learn how to activate audience segments on-demand to batch destinat
 
 ## Activate on-demand overview {#overview}
 
+<!--
+
+Include popover with ID platform_destinations_activationchaining_activatenow
+Popover text: Select this control to deliver a full file export in addition to any previously scheduled exports. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs.
+
+-->
+
 This article explains how to use the Experience Platform UI to activate audience segments on-demand to batch destinations such as cloud storage and email marketing destinations.
 
 The **[!UICONTROL Activate On-demand]** control allows you to export a full file without interrupting the current schedule of a previously scheduled segment. This export happens in addition to previously scheduled exports and does not change the export frequency of the segment. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs.
@@ -22,9 +29,6 @@ You can also use the Flow Service API for this purpose. Read how to [activate au
 To activate data on-demand to batch destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
 ## How to activate segments on-demand {#select-activate-on-demand-control}
-
-Include popover with ID platform_destinations_activationchaining_activatenow
-Popover text: Select this control to deliver a full file export in addition to any previously scheduled exports. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs.
 
 1. Go to **[!UICONTROL Connections > Destinations]**, select the **[!UICONTROL Browse]** tab and the filter symbol to filter the displayed connections to your desired batch destination.
     
