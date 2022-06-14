@@ -42,6 +42,7 @@ feature: Destinations
         * [Experience Platform segment sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising}
         * [Advertising destinations overview](./catalog/advertising/overview.md)
+        * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
         * [Awin Advertiser Conversion Tag extension](./catalog/advertising/awin-conversiontag.md)
         * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
