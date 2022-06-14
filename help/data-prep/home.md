@@ -49,6 +49,14 @@ Data Prep can robustly handle different formats of data ingested into Platform. 
 
 Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Profile Service] data while also creating and establishing new identity links with a single API request. To learn more about how to stream upserts in [!DNL Data Prep], see the document on [sending partial row updates](./upserts.md).
 
+## Attribute-based access control in [!DNL Data Prep]
+
+Attribute-based access control in Adobe Experience Platform allows administrators to control access to specific objects and/or capabilities based on attributes. 
+
+Attribute-based access control ensures that you can map only the attributes that you have access to. Attributes that you do not have access to can not be used in pass-through mappings and calculated fields. As such, if you do not have access to a required field, then you cannot successfully save a mapping. Furthermore, you cannot map objects or object arrays if you do not have access to any one of the child attributes. However, you can map other elements within the object or object array individually.
+
+See the [attribute-based access control overview](../access-control/abac/overview.md) for more information.
+
 ## Next steps
 
 This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about how Data Prep handles different data types, please read the [data format handling guide](./data-handling.md#dates). To learn how to use the Data Prep API, please read the [Data Prep developer guide](api/overview.md).
