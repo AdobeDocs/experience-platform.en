@@ -149,8 +149,8 @@ Four fields are added to **touchpointDetails** object:
 
 | Column Name (DataType) | Nullable | Description |
 | --- | --- | --- |
-| touchpointCountToConversion (Integer)	| True | An integer indicating the number of touchpoints between the current touchpoint (included) and conversion. For conversion-only path, this will be null. <br> **Example:** 3 |
-| lag (Integer)	| True | An integer indicating the number of days between the current touchpoint and conversion. It would be 0 if the touchpoint and conversion happen on the same day. For conversion-only path, this will be null. <br> **Example:** 7. |
+| touchpointCountToConversion (Integer) | True | An integer indicating the number of touchpoints between the current touchpoint (included) and conversion. For conversion-only path, this will be null. <br> **Example:** 3 |
+| lag (Integer) | True | An integer indicating the number of days between the current touchpoint and conversion. It would be 0 if the touchpoint and conversion happen on the same day. For conversion-only path, this will be null. <br> **Example:** 7. |
 | position (String) | True | A string indicating the position of the current touchpoint. it has values S, P, C standing for Starter, Player, `Closer` respectively. If there is only one touchpoint, it will be `Closer`. <br> If there are two touchpoints, earlier touchpoint would be `Starter` and the other one would be `Closer`. <br> For conversion-only path, this will be null. |
 | isFirstInThePosition (Integer) | True | An integer indicating if it is the first occurrence of the touchpoint type in the position (S, P, C). 1 means true and 0 means false. <br> For conversion-only path, this will be null. |
 
@@ -164,7 +164,7 @@ With the following new **OPTIONAL** output fields, you can create new metrics fo
 | --- | --- |
 | Acquisition Rate |For each channel, among the conversion paths it touched, the percentage of the channel being Starter. |
 | Player Rate | For each channel, among the conversion paths it touched, the percentage of the channel being Player. |
-| Closer Rate |	For each channel, among the conversion paths it touched, the percentage of the channel being Closer. |
+| Closer Rate | For each channel, among the conversion paths it touched, the percentage of the channel being Closer. |
 | AAI AVG Days Away From Order | For each channel, the average days away from order. |
 | AAI AVG Total Days in Sales Process | For each channel, the average total days of the conversion paths it touched. |
 | AVG Touches Away From Order | For each channel, the average touches away from order. |
