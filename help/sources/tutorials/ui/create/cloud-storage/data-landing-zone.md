@@ -1,15 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Data Landing Zone;data landing zone
-solution: Experience Platform
 title: Connect Data Landing Zone to Platform using the UI
-topic-legacy: overview
-type: Tutorial
 description: Learn how to create a Data Landing Zone source connector using the Platform user interface.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
 ---
 # Connect [!DNL Data Landing Zone] to Platform using the UI
 
-[!DNL Data Landing Zone] is a cloud-based data storage facility for temporary file storage provisioned with Adobe Experience Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
+[!DNL Data Landing Zone] is a secure, cloud-based file storage facility to bring files into Adobe Experience Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
 
 This tutorial provides steps for creating a [!DNL Data Landing Zone] source connection using the Platform user interface.
 
