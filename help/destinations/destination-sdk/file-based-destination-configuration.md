@@ -780,6 +780,47 @@ This section refers to the file export settings in the configuration above that 
 |`filenameConfig.defaultFilenameAppendOptions`|String|*Required*. Pre-selected default file name macros that users can uncheck.<br><br> The macros in this list are a subset of the ones defined in `allowedFilenameAppendOptions`. |
 |`filenameConfig.defaultFilename`|String|*Optional*. Defines the default file name macros for the exported files. These cannot be overwritten by users. <br><br>Any macro defined by `allowedFilenameAppendOptions` will be appended after the `defaultFilename` macros. <br><br>If `defaultFilename` is empty, you must define at least one macro in `allowedFilenameAppendOptions`.|
 
+
+### File name configuration {#file-name-configuration}
+
+Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../ui/activate-batch-profile-destinations.md#file-names) screen.
+
+As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well.
+
+|Macro|UI label|Description|Example|
+|---|---|---|---|
+|`DESTINATION`|[!UICONTROL Destination]|Destination name in the UI.|Amazon S3|
+|`SEGMENT_ID`|[!UICONTROL Segment ID]|Unique, Platform-generated segment ID|ce5c5482-2813-4a80-99bc-57113f6acde2|
+|`SEGMENT_NAME`|[!UICONTROL Segment Name]|User-defined segment name|VIP subscriber|
+|`DESTINATION_INSTANCE_ID`|[!UICONTROL Destination ID]|Unique, Platform-generated ID of the destination instance|7b891e5f-025a-4f0d-9e73-1919e71da3b0|
+|`DESTINATION_INSTANCE_NAME`|[!UICONTROL Destination Name]|User-defined name of the destination instance.|My 2022 Advertising Destination|
+|`ORGANIZATION_NAME`|[!UICONTROL Organization Name]|Name of the customer organization in Adobe Experience Platform.|My Organization Name|
+|`SANDBOX_NAME`|[!UICONTROL Sandbox Name]|Name of the sandbox used by the customer.|prod|
+|`DATETIME` / `TIMESTAMP`|[!UICONTROL Date and time]|`DATETIME` and `TIMESTAMP` both define when the file was generated, but in different formats. <br><br><ul><li>`DATETIME` uses the following format: YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` uses the 10-digit Unix format. </li></ul> `DATETIME` and `TIMESTAMP` are mutually exclusive, and cannot be used simultaneously. |<ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul>|
+|`CUSTOM_TEXT`|[!UICONTROL Custom text]|User-defined custom text to be included in the file name. Cannot be used in `defaultFilename`.|My_Custom_Text|
+|`TIMESTAMP`|[!UICONTROL Date and time]|10-digit timestamp of the time when the file was generated, in Unix format.|1652131584|
+
+
+![UI image showing the file name configuration screen with preselected macros](assets/file-name-configuration.png)
+
+The example shown in the image above uses the following file name macro configuration:
+
+```json
+"filenameConfig":{
+   "allowedFilenameAppendOptions":[
+      "CUSTOM_TEXT",
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilenameAppendOptions":[
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilename": "%DESTINATION%"
+}
+```
+
+
 ## Historical profile qualifications {#profile-backfill}
 
 You can use the `backfillHistoricalProfileData` parameter in the destinations configuration to determine if historical profile qualifications should be exported to your destination.
