@@ -3,7 +3,11 @@ title: Monitor Activities in Event Forwarding
 description: Learn how to monitor usage, errors, and compute time in your event forwarding properties.
 feature: Event Forwarding
 ---
-# Monitor activities in event forwarding
+# Monitor activities in event forwarding (Beta)
+
+>[!IMPORTANT]
+>
+>This feature is currently in beta and your organization may not have access to it yet. The functionality and documentation are subject to change.
 
 The **[!UICONTROL Monitoring]** tab in the Data Collection UI allows you to monitor usage patterns, errors, and compute time of your event forwarding properties. This guide provides a high-level overview of how to view and understand the reports shown in the tab.
 
@@ -27,7 +31,9 @@ The **[!UICONTROL Usage]** report shows incoming and outgoing calls for a given 
 
 ## [!UICONTROL Error Events]
 
-The **[!UICONTROL Error Events]** report shows errors in aggregate, and broken out by HTTP Response code when you hover your cursor over the line chart. The errors are shown for a given time period, which can be adjusted from the provided dropdown menu. 
+The **[!UICONTROL Error Events]** report shows errors in aggregate, and broken out by HTTP response code when you hover your cursor over the line chart. The displayed errors are from outgoing calls and the response codes are from the endpoint that event forwarding is interacting with.
+
+The errors are shown for a given time period, which can be adjusted from the provided dropdown menu. 
 
 ![Image showing the time period dropdown menu for the Error Events report](../../images/ui/event-forwarding/monitoring/error-time.png)
 
@@ -46,4 +52,4 @@ The following factors affect compute time:
 1. The number of rules
 2. The complexity of the rules, usually driven by the amount of custom JavaScript being executed
 
-For example, if an action in event forwarding hits an endpoint and that endpoint take two seconds to respond, this two-second latency will not count against compute time because event forwarding is just waiting and not actively computing anything. This two-second response time cannot be longer than 30 seconds, otherwise data will be dropped.
+For example, if an action in event forwarding hits an endpoint and that endpoint takes two seconds to respond, this two-second latency will not count against compute time because event forwarding is just waiting and not actively computing anything. The response time cannot be longer than 30 seconds, otherwise data will be dropped.
