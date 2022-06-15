@@ -1,11 +1,15 @@
 ---
-title: Activate audience segments on-demand to batch destinations using the Experience Platform UI
+title: (Beta) Activate audience segments on-demand to batch destinations using the Experience Platform UI
 type: Tutorial
 description: Learn how to activate audience segments on-demand to batch destinations using the Experience Platform UI.
 hide: true
 hidefromtoc: true
 ---
-# Activate audience segments on-demand to batch destinations using the Experience Platform UI
+# (Beta) Activate audience segments on-demand to batch destinations using the Experience Platform UI
+
+>[!IMPORTANT]
+>
+>The activate on-demand option in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 >[!IMPORTANT]
 > 
