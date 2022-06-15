@@ -62,13 +62,13 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
->title="Set your timezone"
->abstract="You must set a timezone for your project prior to ingestion. Mixpanel will adjust its timezone to coordinate with your project timezone before recording the event to a Mixpanel data store. Then, Platform uses the designated project timezone to ingest relevant data from Mixpanel. If you change your project timezone, the conversion is only applied to new events."
+>title="Set a timezone for Mixpanel ingestion"
+>abstract="The timezone must be the same as your Mixpanel profile timezone setting because Platform uses the designated project timezone to ingest relevant data from Mixpanel. Mixpanel will adjust its timezone to coordinate with your project timezone before recording the event to a Mixpanel data store."
 >text="Learn more in documentation"
 
 Once your source is authenticated, provide your project ID and timezone and then select **[!UICONTROL Select]**. 
 
-Events are recorded by [!DNL Mixpanel] in Coordinated Universal Time (UTC). After you designate a timezone for your project, [!DNL Mixpanel] converts its timezone to coordinate with your project timezone, prior to recording the event to a [!DNL Mixpanel] data store. If you change your project timezone, [!DNL Mixpanel] will only apply the conversion to new events and old events will remain in your project's old timezone. [!DNL Mixpanel] also accommodates Daylight Savings Time and will adjust your ingestion timestamp appropriately.
+The timezone that you designate prior to ingesting your [!DNL Mixpanel] data to Platform must be the same as your [!DNL Mixpanel] profile timezone setting. Any changes to your data's timezone will only be applied to new events and old events will remain in the timezone that you previously designated. [!DNL Mixpanel] accommodates Daylight Savings Time and will adjust your ingestion timestamp appropriately. For more information on how timezones affect your data, see the [!DNL Mixpanel] guide on [managing timezones for projects](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
 
 After a few moments, the right interface updates to a preview panel, allowing you to inspect your schema before creating a dataflow. When finished, select **[!UICONTROL Next]**.
 
