@@ -3,7 +3,7 @@ title: Snap Inc connection
 description: Learn how to connect to the Snapchat Ads Platform and export your audience segments from Experience Platform.
 ---
 
-# Snap Inc
+# (Beta) Snap Inc
 
 ## Overview {#overview}
 
@@ -11,7 +11,7 @@ description: Learn how to connect to the Snapchat Ads Platform and export your a
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *Snap Inc* team. For any inquiries or update requests, please contact them directly at *dev-support@snap.com*
+>This documentation page was created by the *Snap Inc* team. This is currently a beta product and functionality is subject to change. For any inquiries or update requests, please contact them directly at *dev-support@snap.com*
 
 ## Use cases {#use-cases}
 
