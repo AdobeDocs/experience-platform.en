@@ -22,6 +22,7 @@ feature: Destinations
     * [Create a new destination connection](./ui/connect-destination.md)
     * Activate audience data to destinations{#activate}
         * [Activation overview](./ui/activation-overview.md)
+        * [(Beta) Activate audience data on-demand to batch destinations](./ui/ad-hoc-activation-ui.md)
         * [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)

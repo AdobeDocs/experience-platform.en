@@ -231,19 +231,12 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ### API error codes and messages specific to the ad-hoc activation API {#specific-error-messages}
 
-When using the ad-hoc activation API, you can come across error messages that are specific to this API endpoint. Review them below to learn how to address them when they do come up.
+When using the ad-hoc activation API, you can come across error messages that are specific to this API endpoint. Review the table to understand how to address them when they do appear.
 
-+++Run already going on for segment fb1bb839-69e5-40e8-ba9b-c96b84bf1519 for order 07e4dca1-dafb-4c2f-ab05-e4f65c4a4f62 with run id 6becd765-a2ca-4a8f-8041-37fad0f4391a
-
-This error message indicates that an ad-hoc activation flow is currently ongoing for a segment. Wait for the job to finish before triggering the activation job again.
-
-+++
-
-+++"Segments `<segment name>` are not part of this dataflow or out of schedule range!"
-
-This error message indicates that the segments you selected to activate are not mapped to the dataflow or that the activation schedule set up for the segments has either expired or not yet started.
-
-+++
+|Error message | Resolution |
+|---------|----------|
+| Run already going on for segment `segment ID` for order `dataflow ID` with run id `flow run ID` | This error message indicates that an ad-hoc activation flow is currently ongoing for a segment. Wait for the job to finish before triggering the activation job again.|
+| Segments `<segment name>` are not part of this dataflow or out of schedule range! | This error message indicates that the segments you selected to activate are not mapped to the dataflow or that the activation schedule set up for the segments has either expired or not yet started. |
 
 ## Related information {#related-information}
 
