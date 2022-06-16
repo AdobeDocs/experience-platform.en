@@ -13,11 +13,11 @@ Derived attributes, such as those created with decile data, are necessary for a 
 
 ## Getting started
 
-This overview requires a working understanding of Platform API calls and the following components of Adobe Experience Platform:
+This overview requires a working understanding of [Platform API calls](../../landing/api-guide.md) and the following components of Adobe Experience Platform:
 
 * [Real-time Customer Profile overview](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Basics of schema composition](../../xdm/schema/composition.md): An introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas.
-* [Enable a schema for Real-time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/add-profile-data.html)
+* [How to enable a schema for Real-time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/add-profile-data.html): This tutorial outlines the steps necessary to add data to Real-time Customer Profile.
 
 ## SQL support for derived attributes
 
@@ -45,9 +45,9 @@ A decile is a method of splitting up a set of ranked data into 10 equal parts. W
 
 A decile rank arranges the data in order from lowest to highest and is done on a scale of one to 10 where each successive number corresponds to an increase of 10 percentage points.
 
-Decile buckets represent the number of ranked groups and are used to assign a ranking to a dimension (category) in the dataset. The bucket can be a number or an expression that evaluates to a positive integer value (greater than 0) for each partition. The buckets must not have a null value.
+Decile buckets represent the number of ranked groups and are used to assign a ranking to a dimension (category) in the dataset. The bucket can be a number or an expression that evaluates to a positive integer value (greater than zero) for each partition. The buckets must not have a null value.
 
-Quartiles are used to divide the distribution by four and percentiles by 100.
+Quartiles are used to divide the distribution by four, and percentiles by 100.
 
 ### Create the schema for decile buckets {#create-schema}
 
@@ -73,7 +73,7 @@ See the documentation for instructions on [how to define a custom data type](../
 
 The creation of the field group is a one-time step per sandbox. It can also be reused for all decile-related schemas.
 
-[Create filed groups through the UI](../../xdm/ui/resources/field-groups.md#create)
+See the documentation for instructions on how to [create filed groups through the UI](../../xdm/ui/resources/field-groups.md#create)
 
 ## Use Query Service to create deciles
 
@@ -208,7 +208,7 @@ It is important to note the identity, dimension, and metric columns for the quer
 
 #### Ranking
 
-Deciles allow you to perform categorical bucketing. To create the ranking number, the `NTILE` function is used with a parameter of `10` within a WINDOW grouped by the `loyaltyStatus` field. This results in a ranking from one to ten. Set the `ORDER BY` clause of the WINDOW to `DESC` to ensure that a ranking value of `1` is given to the **greatest** metric within the dimension.
+Deciles allow you to perform categorical bucketing. To create the ranking number, the `NTILE` function is used with a parameter of `10` within a WINDOW grouped by the `loyaltyStatus` field. This results in a ranking from one to 10. Set the `ORDER BY` clause of the WINDOW to `DESC` to ensure that a ranking value of `1` is given to the **greatest** metric within the dimension.
 
 ```sql
 rankings_1 AS (
