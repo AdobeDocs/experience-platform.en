@@ -141,15 +141,13 @@ This error message displays when the value of the provided API key header (`x-ap
 
 ```json
 {
-"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-627178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-627179940000\\\\\\\"]"
+"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-123178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-456179940000\\\\\\\"]"
 }
 ```
 
 An API caller may receive an etag error if a change was made on any source or destination entity like flow, connection, source connector, or target connection by another caller. Due to the version mismatch, the change that they are trying to make would not be applied to the latest version of the entity.
 
 To resolve this, you need to fetch the entity again, make sure that your changes are compatible with new version of the entity, then place the new etag header, and finally make the API call.
-
-
 
 ### Missing header {#missing-header}
 
