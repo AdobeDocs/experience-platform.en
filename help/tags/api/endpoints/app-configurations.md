@@ -183,6 +183,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -251,12 +252,12 @@ A successful response return the details of the newly created app configuration.
 
 ## Update an app configuration
 
-You can update an app configuration by including its ID in the path of a PUT request.
+You can update an app configuration by including its ID in the path of a PATCH request.
 
 **API format**
 
 ```http
-PUT /app_configurations/{APP_CONFIGURATION_ID}
+PATCH /app_configurations/{APP_CONFIGURATION_ID}
 ```
 
 | Parameter | Description |
@@ -270,12 +271,13 @@ PUT /app_configurations/{APP_CONFIGURATION_ID}
 The following request updates the `app_id` for an existing app configuration.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -355,7 +357,9 @@ curl -X DELETE \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H "Content-Type: application/vnd.api+json" \
+  -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **Response**
