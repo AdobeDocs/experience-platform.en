@@ -7,7 +7,7 @@ description: This document provides guidance on guardrails for data ingestion in
 
 Guardrails are thresholds that provide guidance for data and system usage, performance optimization, and avoidance of errors or unexpected results in Adobe Experience Platform. Guardrails can refer to your usage or consumption of data and processing in relation to your licensing entitlements.
 
-This document provides guidance on guardrails for data ingestion in Adobe Experience Platform
+This document provides guidance on guardrails for data ingestion in Adobe Experience Platform.
 
 ## Guardrails for batch ingestion
 
@@ -17,7 +17,7 @@ The following table outlines guardrails to consider when using the [batch ingest
 | --- | --- | --- |
 | Data lake ingestion using the batch ingestion API  | <ul><li>You can ingest up to 7 GB of data per hour to data lake using the batch ingestion API.</li><li>The maximum number of files per batch is 1500.</li><li>The maximum batch size is 100 GB.</li><li>The maximum number of properties or fields per row is 10000.</li><li>The maximum number of batches per minute, per user is 138.</li></ul> |
 | Data lake ingestion using batch sources | <ul><li>You can ingest up to 200 GB of data per hour to data lake using batch ingestion sources such as [!DNL Azure Blob], [!DNL Amazon S3], and [!DNL SFTP].</li><li>A batch size should be between 256 MB and 100 GB MB.</li><li>The maximum number of files per batch is 1500.</li></ul> | See the [sources overview](../sources/home.md) for a catalog of sources you can use for data ingestion. |
-| Batch ingestion to Profile | <ul><li>120 GB per hour.</li><li>The maximum size of a record class is 100 KB (soft).</li><li>The maximum size of an ExperienceEvent class is 10 KB (soft).</li><li>The maximum size of a single record is 1 MB.</li></ul> |
+| Batch ingestion to Profile | <ul><li>You can ingest up to 120 GB of data per hour.</li><li>The maximum size of a record class is 100 KB (soft).</li><li>The maximum size of an ExperienceEvent class is 10 KB (soft).</li><li>The maximum size of a single record is 1 MB.</li></ul> |
 
 ## Guardrails for streaming ingestion
 
