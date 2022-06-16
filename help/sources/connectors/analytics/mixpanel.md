@@ -17,9 +17,7 @@ Experience Platform provides support for ingesting data from a third-party analy
 
 [[!DNL Mixpanel]](https://www.mixpanel.com) is a product analytics tool that enables you to capture data on how users interact with a digital product. Mixpanel allows you to analyze this product data with simple, interactive reports that let you query and visualize the data with just a few clicks.
 
-Sources leverages the [Mixpanel Event Export API > Download](https://developer.mixpanel.com/reference/raw-event-export) to download your event data as it is received and stored within [!DNL Mixpanel], along with all event properties (including `distinct_id`) and the exact timestamp the event was sent into Experience Platform. 
-
-Mixpanel uses bearer tokens as an authentication mechanism to communicate with the Mixpanel Event Export API.
+Sources leverages the [Mixpanel Event Export API > Download](https://developer.mixpanel.com/reference/raw-event-export) to download your event data as it is received and stored within [!DNL Mixpanel], along with all event properties (including `distinct_id`) and the exact timestamp the event was sent into Experience Platform. Mixpanel uses bearer tokens as an authentication mechanism to communicate with the Mixpanel Event Export API.
 
 ## IP address allow list
 
@@ -43,7 +41,7 @@ Next, navigate to the [!DNL Service Accounts] tab in the [!DNL Project Settings]
 
 ![Mixpanel Service Account](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-Finally, create a Platform [schema](../../../xdm/schema/composition.md) required for the [!DNL Mixpanel Event Export API]. See the [additional resources](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources) for more information on the schema as well as limitations to consider.
+Finally, create a Platform [schema](../../../xdm/schema/composition.md) required for the [!DNL Mixpanel Event Export API]. For more information on the mappings required for your schema, see the guide on [creating a [!DNL Mixpanel] source connection in the UI](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources).
 
 ![Create Schema](../../images/tutorials/create/mixpanel-export-events/schema.png)
 
