@@ -2,6 +2,8 @@
 keywords: Experience Platform;home;popular topics;
 title: (Beta) Mixpanel Source Connector Overview
 description: Learn how to connect Mixpanel to Adobe Experience Platform using APIs or the user interface.
+hide: true
+hidefromtoc: true
 ---
 # (Beta) [!DNL Mixpanel]
 
