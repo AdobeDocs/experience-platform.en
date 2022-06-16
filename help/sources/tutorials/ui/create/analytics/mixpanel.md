@@ -2,6 +2,8 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: (Beta )Create a Mixpanel Source Connection in the UI
 description: Learn how to create a Mixpanel source connection using the Adobe Experience Platform UI.
+hide: true
+hidefromtoc: true
 ---
 # (Beta) Create a [!DNL Mixpanel] source connection in the UI
 
@@ -64,7 +66,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 >id="platform_sources_mixpanel_timezone"
 >title="Set a timezone for Mixpanel ingestion"
 >abstract="The timezone must be the same as your Mixpanel profile timezone setting because Platform uses the designated project timezone to ingest relevant data from Mixpanel. Mixpanel will adjust its timezone to coordinate with your project timezone before recording the event to a Mixpanel data store."
->text="Learn more in documentation"
+>additional-url="www.adobe.com/go/sources-mixpanel-ui" >text="Learn more in documentation"
 
 Once your source is authenticated, provide your project ID and timezone and then select **[!UICONTROL Select]**. 
 

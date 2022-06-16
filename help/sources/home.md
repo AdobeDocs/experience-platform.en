@@ -39,11 +39,11 @@ Experience Platform provides support for ingesting data from a third-party adver
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
-### Analytics {#analytics}
+<!-- ### Analytics {#analytics}
 
 Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) -->
 
 ### Cloud Storage {#cloud-storage}
 
@@ -68,7 +68,6 @@ Cloud storage sources can bring your own data into Platform without the need to 
 Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. See the following related documents for more information:
 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
-
 
 ### Customer Relationship Management (CRM) {#customer-relationship-management}
 
