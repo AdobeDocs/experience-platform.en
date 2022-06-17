@@ -27,7 +27,7 @@ This guide requires a working understanding of the following components of Adobe
 
 Once your query has been executed and results have been generated, an ad hoc schema is automatically generated and added to the schema inventory. 
 
-To add a data label, navigate to [!UICONNTROL Schemas] dashboard browse tab by selecting [!UICONNTROL Schemas] in the left rail of the Platform UI. The schema inventory is displayed.
+To add a data label, navigate to [!UICONTROL Schemas] dashboard browse tab by selecting [!UICONTROL Schemas] in the left rail of the Platform UI. The schema inventory is displayed.
 
 >[!NOTE]
 >
@@ -45,15 +45,15 @@ Select the name of the recently created ad hoc schema from the available list. A
 
 ## Edit labels
 
-To edit data labels for your ad hoc schema, select the [!UICONNTROL Labels] tab. The labels workspace allows you to apply and edit labels to your ad hoc schema fields and control access permissions through the UI. All fields within the ad hoc schema are represented here.
+To edit data labels for your ad hoc schema, select the [!UICONTROL Labels] tab. The labels workspace allows you to apply and edit labels to your ad hoc schema fields and control access permissions through the UI. All fields within the ad hoc schema are represented here.
 
 ## Edit labels for the schema or field
 
-To edit the labels for the entire schema, select the pencil icon () to the side of the schema’s name under the [!UICONNTROL Labels] tab.
+To edit the labels for the entire schema, select the pencil icon () to the side of the schema’s name under the [!UICONTROL Labels] tab.
 
 ![PLACEHOLDER IMAGE - The labels view in the schemas workspace with the pencil icon highlighted.](../images/data-governance/edit-entire-schema-labels.png)
 
-To apply a label to an existing field, select one or more fields from the list followed by [!UICONNTROL Edit governance labels] in the right sidebar.
+To apply a label to an existing field, select one or more fields from the list followed by [!UICONTROL Edit governance labels] in the right sidebar.
 
 ![The labels view in the schemas workspace with the 'Edit governance labels' option highlighted in the rights hand sidebar.](../images/data-governance/edit-governance-labels.png) 
 
