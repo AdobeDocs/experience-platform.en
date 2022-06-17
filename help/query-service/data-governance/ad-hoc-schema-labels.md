@@ -10,7 +10,7 @@ Executing a CTAS query through Query Service automatically generates an ad hoc s
 
 Labels can be applied at any time, providing flexibility in how you choose to govern data. Although, it is best practice to label data as soon as it is ingested into Platform, or as soon as the data becomes available for use in Platform.
 
-Schema based labelling is an important component of Attribute Based Access Control (ABAC) to better manage the access given to users or groups of users. Adobe Experience Platform enables you to restrict access to any field of an ad hoc schema by creating and applying labels through the UI.
+Schema-based labeling is an important component of attribute-based access control (ABAC) to better manage the access given to users or groups of users. Adobe Experience Platform enables you to restrict access to any field of an ad hoc schema by creating and applying labels through the UI.
 
 This document provides a tutorial to manage access to sensitive data by applying labels to data fields of ad hoc schemas generated through Query Service.
 
@@ -25,7 +25,7 @@ This guide requires a working understanding of the following components of Adobe
 
 ## Create an ad hoc schema
 
-Once your query has executed and results have been generated, an ad hoc schema is automatically generated and added to the schema inventory. 
+Once your query has been executed and results have been generated, an ad hoc schema is automatically generated and added to the schema inventory. 
 
 To add a data label, navigate to [!UICONNTROL Schemas] dashboard browse tab by selecting [!UICONNTROL Schemas] in the left rail of the Platform UI. The schema inventory is displayed.
 
@@ -45,7 +45,7 @@ Select the name of the recently created ad hoc schema from the available list. A
 
 ## Edit labels
 
-To edit data labels for your ad hoc schema, select the [!UICONNTROL Labels] tab. This labels workspace allows you to apply and edit labels to your ad hoc schema fields and control access permissions through the UI. All fields within the ad hoc schema are represented here.
+To edit data labels for your ad hoc schema, select the [!UICONNTROL Labels] tab. The labels workspace allows you to apply and edit labels to your ad hoc schema fields and control access permissions through the UI. All fields within the ad hoc schema are represented here.
 
 ## Edit labels for the schema or field
 
@@ -69,9 +69,9 @@ See the documentation for guidance on how to [edit the labels for the selected f
 >
 >Creating a new label or editing an existing label requires admin permissions for your organization. If you do not have admin privileges please contact your system administrator to arrange access.
 
-Labels can also can be created using the admin console if you have the appropriate permissions. See the [attribute-based access control manage labels documentation](../../access-control/abac/ui/labels.md) for instructions on creating labels through admin console.
+Labels can also be created using the admin console if you have the appropriate permissions. See the [attribute-based access control manage labels documentation](../../access-control/abac/ui/labels.md) for instructions on creating labels through admin console.
 
-Once the label has been applied, the field will no longer be visible to any user who does not have the required permissions. Any subsequent queries that reference the restricted field will result in an error and will not acknowledge the existence of the restricted field. Equally, if the results of an executed query would include the restricted field, this data is omitted from the returned results for a user or group who do not have the required permissions.
+Once the label has been applied, the field will no longer be visible to any user who does not have the required permissions. Any subsequent queries that reference the restricted field will result in an error and will not acknowledge the existence of the restricted field. Equally, if the results of an executed query would include the restricted field, this data is omitted from the returned results for a user or group who does not have the required permissions.
 
 ## Next steps
 
