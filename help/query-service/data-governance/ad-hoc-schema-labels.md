@@ -1,5 +1,5 @@
 ---
-title: Restrict Access To Fields Of An Ad Hoc Schema
+title: Restrict Access To Ad Hoc Schema Data Fields
 description: An guide to restrict access to data fields in ad hoc schemas generated through Adobe Experience Platform Query Service.
 ---
 # Restrict access to ad hoc schema data fields 

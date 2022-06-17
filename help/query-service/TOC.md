@@ -42,6 +42,7 @@ feature: Queries
 - Data Governance {#data-governance}
   - [Audit log guide](data-governance/audit-log-guide.md)
   - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
+  - [Ad hoc schema labels](./data-governance/ad-hoc-schema-labels.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
