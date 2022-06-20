@@ -27,7 +27,7 @@ In the [!DNL Experience Platform] UI, select **[!UICONTROL Policies]** to open t
 
 ![](../images/policies/browse-policies.png)
 
-If you have access to consent policies (currently in beta), select the **[!UICONTROL Consent policies]** toggle to view them in the [!UICONTROL Browse] tab.
+If you have access to consent policies, select the **[!UICONTROL Consent policies]** toggle to view them in the [!UICONTROL Browse] tab.
 
 ![](../images/policies/consent-policy-toggle.png)
 

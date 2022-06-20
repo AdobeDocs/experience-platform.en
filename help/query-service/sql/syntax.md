@@ -718,28 +718,35 @@ The `ALTER TABLE` command lets you add or drop primary or foreign key constraint
 The following SQL queries show examples of adding or dropping constraints to a table. 
 
 ```sql
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY column_name NAMESPACE namespace
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
+
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 ```
 
 | Parameters | Description|
 | ------ | ------ |
 | `table_name` | The name of the table which you are editing. |
-| `constraint_name` | The name of the constraint that you want to add or delete. |
 | `column_name` | The name of the column that you are adding a constraint to. |
 | `referenced_table_name` | The name of the table that is referenced by the foreign key. |
 | `primary_column_name` | The name of the column that is referenced by the foreign key. |
 
+
 >[!NOTE]
 >
->The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory for primary key constraints.
+>The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory for primary key, primary identity, and identity constraints.
 
 #### Add or drop primary and secondary identities
 
@@ -759,7 +766,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-See the document on setting identities in an ad hoc datasets for more detailed information.
+See the document on [setting identities in an ad hoc datasets](../data-governance/ad-hoc-schema-identities.md) for more detailed information.
 
 #### ADD COLUMN
 
