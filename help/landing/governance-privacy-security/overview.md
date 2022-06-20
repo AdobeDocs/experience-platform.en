@@ -60,6 +60,10 @@ For information on how process customer consent data in accordance with the IAB 
 
 The integrity and security of your data is indispensable for your business, and this risk requires industry-leading security capabilities. In order to meet this challenge, Platform provides several tools to help safeguard your data operations.
 
+### Data encryption
+
+All Platform data is encrypted in transit and at rest. See the document on [data encryption in Platform](./encryption.md) for more information.
+
 ### Access control {#access-control}
 
 Experience Platform uses the Adobe Admin Console to provide role-based access control to various Platform capabilities. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.

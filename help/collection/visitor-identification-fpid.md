@@ -105,7 +105,7 @@ To identify users via `FPID`, ensure that the `FPID` cookie has been sent prior 
 ## Request with `FPID` passed as cookie header
 
 ```shell
-curl -X POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream ID}' \
+curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}' \
 -H 'cookie: FPID=e98f38e6-6183-442d-8cd2-0e384f4c8aa8' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -170,7 +170,7 @@ The example below passes the [!DNL FPID] as an `identityMap` parameter.
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
 -H "Authorization: Bearer {TOKEN}"
--H "x-gw-ims-org-id: {IMS_ORG_ID}"
+-H "x-gw-ims-org-id: {ORG_ID}"
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{
