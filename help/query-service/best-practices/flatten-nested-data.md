@@ -17,7 +17,7 @@ Using the `FLATTEN` setting requires a working understanding of the following co
 
 * [XDM System](../../xdm/home.md): A high-level overview of XDM and its implementation in Experience Platform.
   
-  * [Create an ad hoc schema](../../xdm/tutorials/ad-hoc.md): An XDM schema with fields that are namespaced for usage only by a single dataset are referred to as an “ad hoc” schema. Ad hoc schemas are used in various data ingestion workflows for Experience Platform and creating certain kinds of source connections.
+  * [Create an ad hoc schema](../../xdm/tutorials/ad-hoc.md): An XDM schema with fields that are namespaced for usage only by a single dataset, is referred to as an ad hoc schema. Ad hoc schemas are used in various data ingestion workflows for Experience Platform and creating certain kinds of source connections.
 
 * [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
@@ -25,7 +25,7 @@ Using the `FLATTEN` setting requires a working understanding of the following co
 
 ## Connect to a database using the FLATTEN setting {#connect-with-flatten}
 
-The `FLATTEN` setting flattens nested data structures into separate columns where the attribute name becomes the column name that holds the row values. when working with data in BI tools that do not support nested data structures, this setting improves the usability of ad hoc schemas and reduces the necessary workload. 
+The `FLATTEN` setting flattens nested data structures into separate columns where the attribute name becomes the column name that holds the row values. When working with data in BI tools that do not support nested data structures, this setting improves the usability of ad hoc schemas and reduces the necessary workload. 
 
 When connecting to Query Service with your chosen third-party client, append the `FLATTEN` setting to the database name. For information on how to connect a specific BI tool, please see its respective documentation in the [connect clients to Query Service overview](../clients/overview.md). The connection string should contain:
 
@@ -39,7 +39,7 @@ The input should take the following format:
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
-A example connection string might look as below:
+An example connection string might look as below:
 
 ```terminal
 prod:all?FLATTEN
@@ -51,9 +51,9 @@ The example schema used in this guide employs the standard field group [!UICONTR
 
 ![A schema diagram of the Commerce Details field group including the `commerce` and `productListItems` structures.](../images/best-practices/final-subscription-schema.png)
 
-If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as `commerce` and `productListItems` in the example schema). These values may appear in an unusable way as demonstrated below. 
+If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as `commerce` and `productListItems` in the example schema). These values may appear as parts of a single encoded `commerce` string field and are not realistically unusable. 
 
-<!-- how does this is demonstrate poor usability? What values are trying to be referenced here, and how exactly is the output not good? Break this down more. -->
+The following values represent `commerce.order.priceTotal` (3018.0), `commerce.order.purchaseID` (c9b5aff9-25de-450b-98f4-4484a2170180), and `commerce.purchases.value`(1.0) in poorly formatted nested fields. 
 
 ```terminal
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
@@ -97,11 +97,14 @@ GROUP BY 1;
 
 The `FLATTEN` setting does not currently flatten the following data structures:
 
-<!-- Can we provide code examples of the described workarounds for these two types? -->
 | Data structure  | Limitation |
 |---|---|
 | Arrays | Use an explicit array index or the `EXPLODE` function to access arrays. |
 | Maps | Use the string key to access a value under a map to access maps. |
+
+To resolve both Map and Array limitations you need to use the BI tools raw SQL editing like the Advanced Options -> SQL Statement in Power BI.
+
+BI tools such as raw SQL editing are necessary to resolve both map and array limitations. See the guide on how to [use Power BI advanced options to enter a custom SQL query](https://experienceleague.adobe.com/docs/experience-platform/query/clients/power-bi.html#import-tables-using-custom-sql) in the SQL statement section.
 
 ## Next steps
 
