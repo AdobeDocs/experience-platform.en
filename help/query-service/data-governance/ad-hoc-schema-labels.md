@@ -1,12 +1,12 @@
 ---
-title: Restrict Access To Ad Hoc Schema Data Fields
+title: ABAC Support for Ad Hoc Schemas
 description: An guide to restrict access to data fields in ad hoc schemas generated through Adobe Experience Platform Query Service.
 ---
-# Restrict access to ad hoc schema data fields 
+# ABAC support for ad hoc schemas
 
 Any data that is brought into Adobe Experience Platform is encapsulated by Experience Data Model (XDM) schemas and may be subject to usage restrictions defined by your organization or by legal regulations. 
 
-Executing a CTAS query through Query Service automatically generates an ad hoc schema. Since ad hoc schemas do not use standard classes and field groups, they do not inherit labels through propagation. As a result, it is often necessary to restrict the usage of certain fields, or datasets, of ad hoc schemas through the application of data usage labels.
+By executing a CTAS query through Query Service, an ad hoc schema is automatically generated. It is often necessary to restrict the usage of certain fields, or datasets, of ad hoc schemas to control access to both sensitive personal data and personally identifiable information. Adobe Experience Platform facilitates this access control by allowing you to label schema fields through the Platform UI using the attribute-based access control capability.
 
 Labels can be applied at any time, providing flexibility in how you choose to govern data. Although, it is best practice to label data as soon as it is ingested into Platform, or as soon as the data becomes available for use in Platform.
 
@@ -21,7 +21,7 @@ This guide requires a working understanding of the following components of Adobe
 * [Experience Data Model (XDM) System](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html): The standardized framework by which Experience Platform organizes customer experience data.
   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html): Learn how to create and manage schemas and other resources in the Platform UI.
 * [[!DNL Data Governance]](../../data-governance/home.md): Learn how [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
-* [Attribute-based access control](../../access-control/abac/overview.md): A capability of Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes.
+* [Attribute-based access control](../../access-control/abac/overview.md): A capability of Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Labels can be added to a schema field or segment through the UI or attribute-based access control API for the purpose of controlling user access to sensitive information.
 
 ## Create an ad hoc schema
 
@@ -35,7 +35,7 @@ To add a data label, navigate to [!UICONTROL Schemas] dashboard browse tab by se
 
 ## Discover ad hoc schemas in schema inventory
 
-To enable the display of ad hoc schemas in the Platform UI, select the filter icon () to the left of the search field. A left rail appears with filter options. Enable "Show adhoc schemas" by selecting the toggle.
+To enable the display of ad hoc schemas in the Platform UI, select the filter icon (../images/data-governance/filter.png) to the left of the search field. A left rail appears with filter options. Enable "Show adhoc schemas" by selecting the toggle.
 
 ![The Schema dashboard filter options left rail with 'Show adhoc schema' toggle enabled.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -43,13 +43,13 @@ Select the name of the recently created ad hoc schema from the available list. A
 
 ![The example ad hoc schema structure diagram.](../images/data-governance/adhoc-schema-structure-diagram.png)
 
-## Edit labels
+## Edit governance labels
 
-To edit data labels for your ad hoc schema, select the [!UICONTROL Labels] tab. The labels workspace allows you to apply and edit labels to your ad hoc schema fields and control access permissions through the UI. All fields within the ad hoc schema are represented here.
+To edit data labels for your ad hoc schema, select the [!UICONTROL Labels] tab. The labels workspace allows you to apply, create, and edit labels to your ad hoc schema fields and control access permissions through the UI. All fields within the ad hoc schema are represented here.
 
 ## Edit labels for the schema or field
 
-To edit the labels for the entire schema, select the pencil icon () to the side of the schema’s name under the [!UICONTROL Labels] tab.
+To edit the labels for the entire schema, select the pencil icon (![](../images/data-governance/edit-icon.png)) to the side of the schema’s name under the [!UICONTROL Labels] tab.
 
 ![PLACEHOLDER IMAGE - The labels view in the schemas workspace with the pencil icon highlighted.](../images/data-governance/edit-entire-schema-labels.png)
 
@@ -59,11 +59,11 @@ To apply a label to an existing field, select one or more fields from the list f
 
 ## Edit labels popover
 
-The [!UICONTROL Edit labels] popover appears.
+The [!UICONTROL Edit labels] popover appears. From this view you can create or edit existing governance labels through the UI.
 
-![The Edit labels popover.](../images/data-governance/edit-labels‚Äìpopover.png)
+![The Edit labels popover.](../images/data-governance/edit-labels-popover.png)
 
-See the documentation for guidance on how to [edit the labels for the selected field](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
+See the documentation for guidance on how to [create or edit labels for the selected schema or field](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
