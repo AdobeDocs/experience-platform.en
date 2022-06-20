@@ -11,7 +11,9 @@ exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
 
 >[!IMPORTANT]
 >
->After completing the Beta phase, the [!DNL ad-hoc activation API] is now generally available (GA) to all Experience Platform customers. Note that in the GA version, the API has been upgraded to version 2. See [Run the ad-hoc activation job](#activation-job) further below in this tutorial for more information.
+>After completing the Beta phase, the [!DNL ad-hoc activation API] is now generally available (GA) to all Experience Platform customers. In the GA version, the API has been upgraded to version 2. Step 4 ([Obtain the latest segment export job ID](#segment-export-id)) is not required anymore, since the API does not require the export ID anymore.
+>
+>See [Run the ad-hoc activation job](#activation-job) further below in this tutorial for more information.
 
 ## Overview {#overview}
 
