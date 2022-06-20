@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;analytics;mixpanel
 solution: Experience Platform
 title: Create a Dataflow Using an Analytics Source in the UI
 description: This tutorial provides steps on how to create a dataflow for an analytics source using Platform UI.
+exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
 ---
 # Create a dataflow using an analytics source in the UI
 
