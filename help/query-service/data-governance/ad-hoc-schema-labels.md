@@ -1,8 +1,8 @@
 ---
-title: ABAC Support for Ad Hoc Schemas
+title: Attribute-based Access Control Support for Ad Hoc Schemas
 description: An guide to restrict access to data fields in ad hoc schemas generated through Adobe Experience Platform Query Service.
 ---
-# ABAC support for ad hoc schemas
+# Attribute-based access control support for ad hoc schemas
 
 Any data that is brought into Adobe Experience Platform is encapsulated by Experience Data Model (XDM) schemas and may be subject to usage restrictions defined by your organization or by legal regulations. 
 
@@ -10,7 +10,7 @@ By executing a CTAS query through Query Service, an ad hoc schema is automatical
 
 Labels can be applied at any time, providing flexibility in how you choose to govern data. Although, it is best practice to label data as soon as it is ingested into Platform, or as soon as the data becomes available for use in Platform.
 
-Schema-based labeling is an important component of attribute-based access control (ABAC) to better manage the access given to users or groups of users. Adobe Experience Platform enables you to restrict access to any field of an ad hoc schema by creating and applying labels through the UI.
+Schema-based labeling is an important component of attribute-based access control to better manage the access given to users or groups of users. Adobe Experience Platform enables you to restrict access to any field of an ad hoc schema by creating and applying labels through the UI.
 
 This document provides a tutorial to manage access to sensitive data by applying labels to data fields of ad hoc schemas generated through Query Service.
 
@@ -21,7 +21,7 @@ This guide requires a working understanding of the following components of Adobe
 * [Experience Data Model (XDM) System](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html): The standardized framework by which Experience Platform organizes customer experience data.
   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html): Learn how to create and manage schemas and other resources in the Platform UI.
 * [[!DNL Data Governance]](../../data-governance/home.md): Learn how [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
-* [Attribute-based access control](../../access-control/abac/overview.md): A capability of Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Labels can be added to a schema field or segment through the UI or attribute-based access control API for the purpose of controlling user access to sensitive information.
+* [Attribute-based access control](../../access-control/abac/overview.md): A capability of Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Labels can be added to a schema field or segment through the UI for the purpose of controlling user access to sensitive information.
 
 ## Create an ad hoc schema
 
@@ -35,7 +35,7 @@ To add a data label, navigate to [!UICONTROL Schemas] dashboard browse tab by se
 
 ## Discover ad hoc schemas in schema inventory
 
-To enable the display of ad hoc schemas in the Platform UI, select the filter icon (../images/data-governance/filter.png) to the left of the search field. A left rail appears with filter options. Enable "Show adhoc schemas" by selecting the toggle.
+To enable the display of ad hoc schemas in the Platform UI, select the filter icon (../images/data-governance/filter.png) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
 
 ![The Schema dashboard filter options left rail with 'Show adhoc schema' toggle enabled.](../images/data-governance/adhoc-schema-toggle.png)
 
