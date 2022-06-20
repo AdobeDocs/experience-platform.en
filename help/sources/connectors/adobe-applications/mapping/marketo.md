@@ -16,6 +16,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 ## Activities {#activities}
 
+The [!DNL Marketo] source now supports additional standard activities. To use standard activities, you must update your schema using the [schema auto-generation utility](../marketo/marketo-namespaces.md) because if you create new `activities` dataflow without updating your schema, the mapping templates will fail as the new target fields will not be present in your schema. If you choose not to update your schema, you can still create a new dataflow and dismiss any errors. However, any new or updated fields will not be ingested into Platform.
+
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |

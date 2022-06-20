@@ -23,7 +23,7 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 
 ## Supported identities {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+[!DNL Google Display & Video 360] supports the activation of identities described in the table below.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
