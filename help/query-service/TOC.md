@@ -13,7 +13,10 @@ feature: Queries
   - [Prerequisites](get-started/prerequisites.md)
 - Use cases {#use-cases}
   - [Abandoned browse](use-cases/abandoned-browse.md)
+  - [Activity Analysis With Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
+  - [Attribution analysis](use-cases/attribution-analysis.md)
   - [Bot filtering](use-cases/bot-filtering.md)
+  - [Web and mobile analytics insights](use-cases/analytics-insights.md)
 - Query Service API {#api}
   - [Getting started](api/getting-started.md)
   - [Queries](api/queries.md)
@@ -36,7 +39,6 @@ feature: Queries
 - Sample Queries {#sample-queries}
   - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
-  - [Sample Adobe Target queries](sample-queries/adobe-target.md)
 - Data Governance {#data-governance}
   - [Audit log guide](data-governance/audit-log-guide.md)
   - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
