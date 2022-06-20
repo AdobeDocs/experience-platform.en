@@ -2,6 +2,7 @@
 title: Monitor Activities in Event Forwarding
 description: Learn how to monitor usage, errors, and compute time in your event forwarding properties.
 feature: Event Forwarding
+exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
 ---
 # Monitor activities in event forwarding (Beta)
 
