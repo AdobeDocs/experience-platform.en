@@ -17,6 +17,12 @@ The **[!UICONTROL Monitoring]** tab in the Data Collection UI allows you to moni
 
 This guide assumes that you have purchased event forwarding and that you have a working understanding of how event forwarding works. See the [event forwarding overview](./overview.md) for more information.
 
+## Video overview
+
+Watch the following video for a high-level overview of the monitoring feature:
+
+>[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
+
 ## Selecting properties and environments
 
 You can view metrics within an individual environment and property, or across all properties and environments owned by your organization. 
