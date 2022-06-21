@@ -21,7 +21,7 @@ This guide requires a working understanding of the following components of Adobe
 * [Experience Data Model (XDM) System](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html): The standardized framework by which Experience Platform organizes customer experience data.
   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html): Learn how to create and manage schemas and other resources in the Platform UI.
 * [[!DNL Data Governance]](../../data-governance/home.md): Learn how [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
-* [Attribute-based access control](../../access-control/abac/overview.md): A capability of Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Labels can be added to a schema field or segment through the UI for the purpose of controlling user access to sensitive information.
+* [Attribute-based access control](../../access-control/abac/overview.md): Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions. Labels can be added to a schema field or segment through the UI for the purpose of controlling user access to sensitive information.
 
 ## Create an ad hoc schema
 
