@@ -10,6 +10,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [Query Service](#query-service)
 - [Sources](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -27,6 +28,21 @@ Data Science Workspace uses machine learning and artificial intelligence to unle
 
 For more general information on Data Science Workspace, see the [overview documentation](../../data-science-workspace/home.md).
 
+## Query Service {#query-service}
+
+Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Ad hoc schema labeling | Manage access to sensitive data by applying labels to data fields of ad hoc schemas that are automatically generated through Query Service CTAS queres. You can restrict the usage of certain fields, or datasets, of ad hoc schemas to control access to both sensitive personal data and personally identifiable information. By using the attribute-based access control capability you can you label ad hoc schema fields through the Platform UI. |
+| `FLATTEN` setting | When connecting to a database through third-party BI tools, the `FLATTEN` setting flattens nested data structures into separate columns where the attribute name becomes the column name that holds the row values. This improves the usability of ad hoc schemas and reduces the required workload to retrieve, analyze, transform and report data in BI tools that do not support nested data structures. |
+
+{style="table-layout:auto"}
+
+For more information on available features, refer to the [Query Service overview](../../query-service/home.md).
+
 ## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
@@ -40,4 +56,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
-
