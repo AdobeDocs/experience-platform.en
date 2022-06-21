@@ -2,6 +2,7 @@
 title: Monitor Activities in Event Forwarding
 description: Learn how to monitor usage, errors, and compute time in your event forwarding properties.
 feature: Event Forwarding
+exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
 ---
 # Monitor activities in event forwarding (Beta)
 
@@ -16,6 +17,12 @@ The **[!UICONTROL Monitoring]** tab in the Data Collection UI allows you to moni
 ## Prerequisites
 
 This guide assumes that you have purchased event forwarding and that you have a working understanding of how event forwarding works. See the [event forwarding overview](./overview.md) for more information.
+
+## Video overview
+
+Watch the following video for a high-level overview of the monitoring feature:
+
+>[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
 
 ## Selecting properties and environments
 
