@@ -71,8 +71,6 @@ See the documentation for guidance on how to [create or edit labels for the sele
 
 Labels can also be created using the permissions workspace. See the [guide on creating labels in the permissions workspace](../../access-control/abac/ui/labels.md) for instructions.
 
-<!-- Once the label has been applied, the field will no longer be visible to any user who does not have the required permissions. Any subsequent queries that reference the restricted field will result in an error and will not acknowledge the existence of the restricted field. Equally, if the results of an executed query would include the restricted field, this data is omitted from the returned results for a user or group who does not have the required permissions. -->
-
 Once the appropriate level of attribute-based access control has been applied, the following system behavior applies to any query executed via Query Service when a user tries to access non-accessible data: 
 
 1. If a user is declined access to one of the fields within a schema, the user will not be able to read or write on the restricted field. This applies to the following common scenarios:
@@ -81,6 +79,8 @@ Once the appropriate level of attribute-based access control has been applied, t
     * When a user tries to execute a query with multiple columns that include a restricted column, the system will return output for all non-restricted columns only.
 
 1. If a user requests access to a calculated field, the user is required to have access to all the fields used in the composition or the system will deny access to the calculated field. 
+
+If an identity or primary identity is set on ad hoc schema, the system automatically honors any associated data hygiene requests and cleans the data in those datasets tied to the identity column.
 
 ## Next steps
 
