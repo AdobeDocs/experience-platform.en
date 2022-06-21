@@ -129,7 +129,7 @@ When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Ser
 
 >[!IMPORTANT]
 >
->While a successful delete request removes the collected attribute data for a customer (or set of customers), the request does not remove the associations established in the identity graph.
+>If a delete request is made for Profile (`ProfileService`) but not Identity Service (`identity`), the resulting job removes the collected attribute data for a customer (or set of customers) but does not remove the associations established in the identity graph.
 >
 >For example, a delete request that uses a customer's `email_id` and `customer_id` removes all attribute data stored under those IDs. However, any data which is thereafter ingested under the same `customer_id` will still be associated with the appropriate `email_id`, as the association still exists.
 >
