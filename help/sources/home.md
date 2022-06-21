@@ -39,11 +39,11 @@ Experience Platform provides support for ingesting data from a third-party adver
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
-<!-- ### Analytics {#analytics}
+### Analytics {#analytics}
 
 Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) -->
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 
 ### Cloud Storage {#cloud-storage}
 
