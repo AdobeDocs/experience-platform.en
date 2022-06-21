@@ -11,7 +11,7 @@ exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
 
 >[!IMPORTANT]
 >
->You must have access to [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-time Customer Profile](../../../../profile/home.md).
+>You must have access to [Real-time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-time Customer Profile](../proile/../../profile/home.md).
 
 Real-time Customer Data Platform B2B Edition allows you to bring your B2B data through various sources including the [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) source connector, Salesforce, Amazon S3, and ADLS among others. This range of sources provides you with the ability to structure, label, and enhance incoming data using services.
 
