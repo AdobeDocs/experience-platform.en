@@ -1,9 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;ABAC
 title: Attribute-based Access Control Browse
-description: This document provides information on attribute-based access control in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: This document provides information on using the Permissions interface in Adobe Experience Cloud
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
 ---
 # Permissions guide
@@ -11,6 +9,17 @@ exl-id: 39634bde-8858-44a6-b39a-776846654fc1
 >[!IMPORTANT]
 >
 >Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+
+Permissions is the area of Adobe Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. 
+
+With permissions, you can configure:
+
+* [Labels](./labels.md)
+* [Permissions](./permissions.md)
+* [Policies](./permissions.md)
+* [Roles](./roles.md)
+* [Sandboxes](./sandboxes.md)
+* [Users](./users.md)
 
 In order to access attribute-based access control permissions for [!DNL Experience Cloud], you must be an administrator for your organization that has a subscription to [!DNL Experience Cloud]. While Adobe supports flexible administrator hierarchies for your organizations, you must be a product administrator for Adobe Experience Platform to configure permissions. See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
 

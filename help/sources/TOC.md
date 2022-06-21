@@ -21,6 +21,7 @@ feature: Sources
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target field mappings](connectors/adobe-applications/mapping/target.md)
       - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
+      - [Microsoft Dynamics field mappings](connectors/adobe-applications/mapping/dynamics.md)
       - [Salesforce field mappings](connectors/adobe-applications/mapping/salesforce.md)
     - Marketo {#marketo}
       - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
@@ -28,6 +29,8 @@ feature: Sources
       - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
     - [Google AdWords connector](connectors/advertising/ads.md)
+  - Analytics {#analytics}
+    - [Mixpanel connector](connectors/analytics/mixpanel.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Amazon S3 connector](connectors/cloud-storage/s3.md)
@@ -94,6 +97,8 @@ feature: Sources
   - Create a base connection {#create}
     - Advertising {#advertising}
       - [Google AdWords](tutorials/api/create/advertising/ads.md)
+    - Analytics {#analytics}
+      - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -190,8 +195,10 @@ feature: Sources
       - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-    - Advertising {#create}
+    - Advertising {#advertising}
       - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+    - Analytics {#analytics}
+      - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -256,6 +263,7 @@ feature: Sources
       - [HTTP API](tutorials/ui/create/streaming/http.md)
   - Configure a dataflow {#dataflow}
     - [Advertising connection dataflow](tutorials/ui/dataflow/advertising.md)
+    - [Analytics connection dataflow](tutorials/ui/dataflow/analytics.md)
     - [Batch cloud storage connection dataflow](tutorials/ui/dataflow/batch/cloud-storage.md)
     - [Streaming cloud storage connection dataflow](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
     - [Consent & Preferences connection dataflow](tutorials/ui/dataflow/consent-and-preferences.md)

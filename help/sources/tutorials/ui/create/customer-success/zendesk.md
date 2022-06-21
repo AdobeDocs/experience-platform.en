@@ -92,10 +92,6 @@ Next, select the dataflow run ID of the dataflow that you want to view to see sp
 
 ![Dataflow page](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
-To see details around your schema, select **[!UICONTROL Data governance]**.
-
-![Zendesk schema](../../../../images/tutorials/create/zendesk/dataset-governance.png)
-
 Finally, select **[!UICONTROL Preview dataset]** to display the data that was ingested.
 
 ![Zendesk dataset](../../../../images/tutorials/create/zendesk/preview-dataset.png)

@@ -12,9 +12,9 @@ feature: Privacy
 * Data Hygiene UI {#ui}
   * [Overview](./ui/overview.md)
   * [Browse existing work orders](./ui/browse.md)
-  * [Delete consumer data](./ui/delete-consumer.md)
   * [Manage time to live (TTL) for datasets](./ui/ttl.md)
+  * [Delete consumer records](./ui/delete-consumer.md)
 * Data Hygiene API {#api}
   * [Overview](./api/overview.md)
-  * [Work order](./api/workorder.md)
   * [Dataset time to live (TTL)](./api/ttl.md)
+  * [Consumer delete jobs](./api/jobs.md)
