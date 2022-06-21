@@ -136,19 +136,6 @@ This error message displays when an API key header (`x-api-key`) is missing from
 
 This error message displays when the value of the provided API key header (`x-api-key`) is invalid. Ensure that you have entered the key correctly before trying again. If you do not know your API key, you can find it in the [Adobe I/O Console](https://console.adobe.io): in the **Integrations** tab, navigate to the **Overview** section for a specific integration to find the API key under **Client Credentials**.
 
-
-### Refresh etag error {#refresh-etag-error}
-
-```json
-{
-"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-123178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-456179940000\\\\\\\"]"
-}
-```
-
-An API caller may receive an etag error if a change was made on any source or destination entity like flow, connection, source connector, or target connection by another caller. Due to the version mismatch, the change that they are trying to make would not be applied to the latest version of the entity.
-
-To resolve this, you need to fetch the entity again, make sure that your changes are compatible with new version of the entity, then place the new etag header, and finally make the API call.
-
 ### Missing header {#missing-header}
 
 ```json
@@ -170,6 +157,18 @@ This error message displays when an IMS org header (`x-gw-ims-org-id`) is missin
 ```
 
 This error message displays when the user or Adobe I/O integration (identified by the [access token](#how-do-i-get-an-access-token) in the `Authorization` header) is not entitled to make calls to [!DNL Experience Platform] APIs for the IMS Org provided in the `x-gw-ims-org-id` header. Ensure that you have provided the correct ID for your IMS organization in the header before trying again. If you do not know your organization ID, you can find it in the [Adobe I/O Console](https://console.adobe.io): in the **Integrations** tab, navigate to the **Overview** section for a specific integration to find the ID under **Client Credentials**.
+
+### Refresh etag error {#refresh-etag-error}
+
+```json
+{
+"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-123178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-456179940000\\\\\\\"]"
+}
+```
+
+You may receive an etag error if a change was made on any source or destination entity like flow, connection, source connector, or target connection by another API caller. Due to the version mismatch, the change that you are trying to make would not be applied to the latest version of the entity.
+
+To resolve this, you need to fetch the entity again, make sure that your changes are compatible with new version of the entity, then place the new etag in the `If-Match` header, and finally make the API call.
 
 ### Valid content-type not specified {#valid-content-type-not-specified}
 

@@ -591,7 +591,7 @@ The returned response should include in the `transformations` parameter the segm
 }
 ```
 
-## Using Postman collections to connect to streaming destinations  {#collections}
+## Using [!DNL Postman] collections to connect to streaming destinations  {#collections}
 
 To connect to the streaming destinations described in this tutorial in a more streamlined way, you can use [[!DNL Postman]](https://www.postman.com/). 
 
@@ -606,17 +606,21 @@ Click [here](../assets/api/streaming-destination/DestinationPostmanCollection.zi
 
 Each collection includes the necessary requests and environment variables, for [!DNL AWS Kinesis], and [!DNL Azure Event Hub], respectively.
 
-### How to use the Postman collections
+### How to use the [!DNL Postman] collections {#how-to-use-postman-collections}
 
 To successfully connect to the destinations using the attached [!DNL Postman] collections, follow these steps:
 
 * Download and install [!DNL Postman];
 * [Download](../assets/api/streaming-destination/DestinationPostmanCollection.zip) and unzip the attached collections;
-* Import the collections from their corresponding folders into Postman;
+* Import the collections from their corresponding folders into [!DNL Postman];
 * Fill in the environment variables according to the instructions in this article;
-* Run the [!DNL API] requests from Postman, based on the instructions in this article.
+* Run the [!DNL API] requests from [!DNL Postman], based on the instructions in this article.
 
-## Next steps
+## API error handling {#api-error-handling}
+
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+
+## Next steps {#next-steps}
 
 By following this tutorial, you have successfully connected Platform to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
 
