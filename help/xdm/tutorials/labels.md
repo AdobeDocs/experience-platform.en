@@ -15,6 +15,8 @@ A label applied to a schema field indicates the usage policies that apply to the
 
 While labels can be applied to applied to individual datasets (and fields within those datasets), you can also apply labels at the schema level. When labels are applied directly to a schema, those labels are propagated to all existing and future datasets that are based on that schema.
 
+In addition, any field label that you add in one schema propagates to all other schemas that employ the same field from a shared class or field group. This helps to ensure that usage rules for similar fields are consistent across your entire data model.
+
 This tutorial covers the steps for adding labels to a schema using the Schema Editor in the Platform UI.
 
 ## Getting started
@@ -27,7 +29,7 @@ This guide requires a working understanding of the following components of Adobe
 
 ## Select a schema or field to add labels to
 
-Labels can only be applied to schemas, and cannot be added to the components that make up those schemas (classes, field groups, and data types). To start adding labels, you must first [select an existing schema to edit](../ui/resources/schemas.md#edit) or [create a new schema](../ui/resources/schemas.md#create) to view its structure in the Schema Editor.
+To start adding labels, you must first [select an existing schema to edit](../ui/resources/schemas.md#edit) or [create a new schema](../ui/resources/schemas.md#create) to view its structure in the Schema Editor.
 
 To edit the labels for an individual field, you can select the field in the canvas and then select **[!UICONTROL Manage access]** in the right rail.
 
