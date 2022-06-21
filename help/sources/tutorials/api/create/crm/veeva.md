@@ -34,7 +34,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Veeva CRM], you must prov
 | `securityToken` | The security token for your [!DNL Veeva CRM] instance. |
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Veeva CRM] is: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
 
-For more information about these values, refer to this [[!DNL Veeva CRM] document](https://developer.veevacrm.com/api/#order-management-rest-api).
+For more information about these values, refer to this [[!DNL Veeva CRM] document](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ### Using Platform APIs
 
@@ -61,7 +61,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json'
     -d '{
@@ -107,4 +107,9 @@ A successful response returns details of the newly created base connection, incl
 
 ## Next steps
 
-By following this tutorial, you have created an [!DNL Veeva CRM] base connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore CRM systems using the Flow Service API](../../explore/crm.md).
+## Next steps
+
+By following this tutorial, you have created a [!DNL Veeva CRM] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring CRM data to Platform using the [!DNL Flow Service] API](../../collect/crm.md)

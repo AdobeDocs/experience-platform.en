@@ -1,9 +1,9 @@
 ---
-title: Sample Incremental Load Queries
+title: Incremental Load in Query Service
 description: The incremental load feature uses both anonymous block and snapshot features to provide a near real-time solution for moving data from the data lake to your data warehouse whilst ignoring matching data.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
 ---
-# Sample incremental data load queries
+# Incremental load in Query Service
 
 The incremental load design pattern is a solution for managing data. The pattern only processes information in the dataset that has been created or modified since the last load execution. 
 

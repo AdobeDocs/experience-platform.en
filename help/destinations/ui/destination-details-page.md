@@ -71,6 +71,11 @@ You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start a
 
 The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch and streaming destinations. Refer to [Monitor dataflows](monitor-dataflows.md) for details and metric definitions.
 
+>[!NOTE]
+>
+>* Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>* For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, identities excluded are currently not displayed.
+
 ![Dataflow runs view](../assets/ui/details-page/dataflow-runs.png)
 
 ## [!UICONTROL Activation data] {#activation-data}

@@ -1,16 +1,16 @@
 ---
 keywords: Azure event hub destination;azure event hub;azure eventhub
-title: (Beta) [!DNL Azure Event Hubs] connection
+title: Azure Event Hubs connection
 description: Create a real-time outbound connection to your [!DNL Azure Event Hubs] storage to stream data from Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 ---
-# (Beta) [!DNL Azure Event Hubs] connection
+# [!DNL Azure Event Hubs] connection
 
 ## Overview {#overview}
 
 >[!IMPORTANT]
 >
->The [!DNL Azure Event Hubs] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
+> This destination is available only to [Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
 [!DNL Azure Event Hubs] is a big data streaming platform and event ingestion service. It can receive and process millions of events per second. Data sent to an event hub can be transformed and stored by using any real-time analytics provider or batching/storage adapters.
 
@@ -28,26 +28,79 @@ By using streaming destinations such as [!DNL Azure Event Hubs], you can easily 
 
 For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the [!DNL Azure Event Hubs] destination, you would receive this event in [!DNL Azure Event Hubs]. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [audience activation workflow](../../ui/activate-streaming-profile-destinations.md#select-attributes).
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
+
+## IP address allowlist {#ip-address-allowlist}
+
+To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the [!DNL Azure Event Hubs] destination. Refer to [IP address allow list for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
 ## Connect to the destination {#connect}
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-### Connection parameters {#parameters}
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). When connecting to this destination, you must provide the following information:
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+### Authentication information {#authentication-information}
+
+#### Standard authentication {#standard-authentication}
+
+![Image of the UI screen showing completed fields for the Azure Event Hubs standard authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
+
+If you select the **[!UICONTROL Standard authentication]** type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
 * **[!UICONTROL SAS Key Name]**: The name of the authorization rule, which is also known as the SAS key name.
 * **[!UICONTROL SAS Key]**: The primary key of the Event Hubs namespace. The `sasPolicy` that the `sasKey` corresponds to must have **manage** rights configured in order for the Event Hubs list to be populated. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+
+#### Shared Access Signature (SAS) authentication {#sas-authentication}
+
+![Image of the UI screen showing completed fields for the Azure Event Hubs standard authentication details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
+
+If you select the **[!UICONTROL Standard authentication]** type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
+
+* **[!UICONTROL SAS Key Name]**: The name of the authorization rule, which is also known as the SAS key name.
+* **[!UICONTROL SAS Key]**: The primary key of the Event Hubs namespace. The `sasPolicy` that the `sasKey` corresponds to must have **manage** rights configured in order for the Event Hubs list to be populated. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+
+### Destination details {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmentnames"
+>title="Include Segment Names"
+>abstract="Toggle if you want the data export to include the names of the segments you are exporting. View the documentation for a data export example with this option selected."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
+>title="Include Segment Timestamps"
+>abstract="Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. View the documentation for a data export example with this option selected."
+
+After establishing the authentication connection to the Azure Event Hubs destination, provide the following information for the destination:
+
+![Image of the UI screen showing completed fields for the Azure Event Hubs destination details](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
+
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Customers interested in kitesurfing".
 * **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
+* **[!UICONTROL Include Segment Names]**: Toggle if you want the data export to include the names of the segments you are exporting. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
+* **[!UICONTROL Include Segment Timestamps]**: Toggle if you want the data export to include the UNIX timestamp when the segments were created and updated, as well as the UNIX timestamp when the segments were mapped to the destination for activation. For an example of a data export with this option selected, refer to the [Exported data](#exported-data) section further below.
 
 ## Activate segments to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming profile export destinations](../../ui/activate-streaming-profile-destinations.md) for instructions on activating audience segments to this destination.
 
@@ -80,6 +133,10 @@ For example, consider this dataflow to an [!DNL Azure Event Hubs] destination wh
 A profile export to the destination can be determined by a profile qualifying for or exiting one of the *three mapped segments*. However, in the data export, in the `segmentMembership` object (see [Exported Data](#exported-data) section below), other unmapped segments might appear, if that particular profile is a member of them. If a profile qualifies for the Customer with DeLorean Cars segment but is also a member of the Watched "Back to the Future" movie and Science fiction fans segments, then these other two segments will also be present in the `segmentMembership` object of the data export, even though these are not mapped in the dataflow.
 
 From a profile attributes point of view, any changes to the four attributes mapped above will determine a destination export and any of the four mapped attributes present on the profile will be present in the data export.
+
+## Historical data backfill {#historical-data-backfill}
+
+When you add a new segment to an existing destination, or when you create a new destination and map segments to it, Experience Platform exports historical segment qualification data to the destination. Profiles which qualified for the segment *before* the segment was added to the destination are exported to the destination within approximately one hour.
 
 ## Exported data {#exported-data}
 
@@ -139,6 +196,52 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL Azure Event Hu
 
 ```
 
+Below are further examples of exported data, depending on the UI settings you select in the connect destination flow for the **[!UICONTROL Include Segment Names]** and **[!UICONTROL Include Segment Timestamps]** options:
+
++++ The data export sample below includes segment names in the `segmentMembership` section
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ The data export sample below includes segment timestamps in the `segmentMembership` section
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## Limits and retry policy {#limits-retry-policy}
+
+In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10.000 requests per second for each dataflow to an HTTP destination.
+
+In case of failed requests to your HTTP API destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.
 
 >[!MORELIKETHIS]
 >

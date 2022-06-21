@@ -18,7 +18,9 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will be evaluated along with the nightly scheduled segmented job.
+>Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+>
+>Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
 
 ## Getting started
 
@@ -40,7 +42,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -111,7 +113,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -128,7 +130,7 @@ A successful response returns an array of segments in your IMS Organization that
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -162,7 +164,7 @@ A successful response returns an array of segments in your IMS Organization that
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG_ID}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -222,7 +224,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'  \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "schema": {
@@ -254,7 +256,7 @@ A successful response returns the details of the newly created streaming-enabled
         "name": "_xdm.context.profile"
     },
     "ttlInDays": 30,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",
@@ -313,7 +315,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "{SCHEDULE_NAME}",
@@ -342,7 +344,7 @@ A successful response returns the details of the newly created schedule.
 ```json
 {
     "id": "cd585edf-962d-420d-94ad-3be03e619ac2",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "e7e17720-c5bb-11e9-aafb-87c71c35cac8",
         "sandboxName": "prod",
@@ -383,7 +385,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         {

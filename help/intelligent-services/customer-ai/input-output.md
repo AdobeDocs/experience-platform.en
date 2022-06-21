@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Input and Output in Customer AI
 topic-legacy: Getting started
@@ -258,6 +258,10 @@ When you are configuring a new customer AI instance, `audienceName` and `audienc
 ## Customer AI output data
 
 Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score (output) based on what you have provisioned. If you have a Real-time Customer Profile-enabled dataset, you can consume insights from Real-time Customer Profile in the [Segment Builder](../../segmentation/ui/segment-builder.md). If you don't have a Profile-enabled dataset, you can [download the Customer AI output](./user-guide/download-scores.md) dataset available on the data lake.
+
+You can find the output dataset under **Datasets** in Platform. All Customer AI output datasets start with the name **Customer AI Scores - Name_of_app**. Similarly, all Customer AI output schemas start with the name **Customer AI Schema - Name_of_app**.
+
+![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png)
 
 >[!NOTE]
 >

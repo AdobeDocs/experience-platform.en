@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: The latest release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes February 2022
+description: The February 2022 release notes for Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 ---
 # Adobe Experience Platform release notes 
@@ -14,9 +14,10 @@ exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Dashboards]](#dashboards)
-- [Data collection](#data-collection)
+- [[!DNL Data collection]](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Identity Service]](#identity)
-- [Sources](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -38,11 +39,21 @@ Platform provides a suite of technologies that allow you to collect client-side 
 
 | Feature | Description |
 | --- | --- |
-| Improved UI workflow for datastream configuration | The workflow for creating a new datastream in the Data Collection UI has been updated. When adding services to a datastream, only the services you have access to will be included in the list of options. See the guide on [configuring a datastream](../../edge/fundamentals/datastreams.md) for more information. |
-| Data Prep for Data Collection | If you are using the Adobe Experience Platform Web SDK, you can now leverage Data Prep capabilities to map your data to Experience Data Model (XDM) on the server side. See the section on [Data Prep for Data Collection](../../edge/fundamentals/datastreams.md#data-prep) in the datastreams guide for more information. |
+| Improved UI workflow for datastream configuration | The workflow for creating a new datastream in the Data Collection UI has been updated. When adding services to a datastream, only the services you have access to will be included in the list of options. See the guide on [configuring a datastream](../../edge/datastreams/overview.md) for more information. |
+| Data Prep for Data Collection | If you are using the Adobe Experience Platform Web SDK, you can now leverage Data Prep capabilities to map your data to Experience Data Model (XDM) on the server side. See the section on [Data Prep for Data Collection](../../edge/datastreams/data-prep.md) in the datastreams guide for more information. |
 | First-party device IDs | You can now send your own device IDs to the Adobe Experience Platform Edge Network when collecting customer data using the Platform Web SDK, providing a workaround for recent browser restrictions on third-party cookie lifespans. See the guide on [first-party device IDs](../../edge/identity/first-party-device-ids.md) for more information. |
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+| (Beta) Destination SDK support for file-based destinations | [Destination SDK support for file-based destinations](../../destinations/destination-sdk/file-based-destination-configuration.md) is currently in private beta and is only available to a select number of partners and customers. The functionality and associated documentation are subject to change before general availability release.<br><br>Contact your Adobe account representative to learn how to access the feature. Adobe-internal account representatives should reach out to the Experience Platform destinations product and engineering teams to discuss supported use cases. <br><br> In the beta phase of Destination SDK support for file-based destinations, beta partners and customers can use the [Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to build private destinations to benefit from the following functionality: <ul><li>Create a file-based (batch) destination via Amazon S3, SFTP servers, Azure Blob, Azure Data Lake Storage, Data Landing Zone storage.</li><li>Configure and set default file export scheduling and frequency options.</li><li>Configure and set options to format your exported CSV files (delimiters, escape characters, and other options).</li><li>Ability to set and edit custom file headers.</li><li>Ability to receive event notifications about the export of files and segments.</li><li>Ability to export additional file types such as CSV, TSV, JSON, Parquet.</li></ul>  <br>To get started with the new functionality, read [(Beta) Use Destination SDK to configure a file-based destination](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> The functionality to create private or productized *streaming* destinations by using Destination SDK is already available to all Experience Platform customers and partners. Read the guide on how to [use Destination SDK to configure a streaming destination](/help/destinations/destination-sdk/configure-destination-instructions.md) for details. |
 
 ## [!DNL Identity Service] {#identity}
 
