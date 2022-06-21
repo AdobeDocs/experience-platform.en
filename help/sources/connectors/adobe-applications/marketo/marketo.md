@@ -8,6 +8,10 @@ exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
 ---
 # [!DNL Marketo Engage] connector
 
+>[!IMPORTANT]
+>
+>You must have access to [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-time Customer Profile](../../../../profile/home.md).
+
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) (hereinafter referred to as "[!DNL Marketo]") is a complete solution for **lead management** and **B2B marketers** looking to transform customer experiences by engaging across every stage of complex buying journeys.
