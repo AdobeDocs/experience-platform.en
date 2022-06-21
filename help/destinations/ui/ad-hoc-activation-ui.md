@@ -17,11 +17,6 @@ hidefromtoc: true
 
 ## Activate on-demand overview {#overview}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activationchaining_activatenow"
->title="Activate on-demand"
->abstract="Select this control to deliver a full file export in addition to any previously scheduled exports. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs."
-
 This article explains how to use the Experience Platform UI to activate audience segments on-demand to batch destinations such as cloud storage and email marketing destinations.
 
 The **[!UICONTROL Activate On-demand]** control allows you to export a full file without interrupting the current schedule of a previously scheduled segment. This export happens in addition to previously scheduled exports and does not change the export frequency of the segment. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs.
