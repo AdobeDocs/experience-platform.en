@@ -2,18 +2,22 @@
 keywords: google ad manager 360;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager; DFP
 title: (Beta) Google Ad Manager 360 for PPID connection
 description: Google Ad Manager 360 is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
+hide: yes
+hidefromtoc: yes
 ---
-# (Beta) [!DNL Google Ad Manager 360] for PPID connection
+# (Beta) [!DNL Google Ad Manager 360] connection
 
 ## Overview {#overview}
 
-The [!DNL Google Ad Manager 360 for PPID] destination enables batch upload for publisher provided identifiers ([!DNL PPID]) into Google Ad Manager 360, via Google Cloud Storage.
+The [!DNL Google Ad Manager 360] connection enables batch upload for publisher provided identifiers ([!DNL PPID]) into Google Ad Manager 360, via Google Cloud Storage.
+
+For more details on how publisher provided identifiers work in Google Ad Manager 360, see the [official documentation](https://support.google.com/admanager/answer/2880055?hl=en).
 
 >[!IMPORTANT]
 >
 >This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Ad Manager 360] for PPID connection, contact your Adobe representative and provide your [!DNL IMS Organization ID].
 
-The [!DNL Google Ad Manager 360 for PPID] exports [!DNL CSV] files to your [!DNL Google Cloud Storage] bucket. Once you've exported the CSV files, you must manually import them into your [!DNL Google Ad Manager 360] account.
+The [!DNL Google Ad Manager 360] exports [!DNL CSV] files to your [!DNL Google Cloud Storage] bucket. Once you've exported the [!DNL CSV] files, you must import them into your [!DNL Google Ad Manager 360] account.
 
 ## Destination specifics {#specifics}
 
@@ -45,7 +49,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
-If you are looking to create your first destination with [!DNL Google Ad Manager 3600] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+If you are looking to create your first destination with [!DNL Google Ad Manager 360] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
 
 ### Allow-listing {#allow-listing}
 
@@ -53,7 +57,7 @@ If you are looking to create your first destination with [!DNL Google Ad Manager
 >
 >The allow list is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
 
-Before creating the [!DNL Google Ad Manager] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
+Before creating the [!DNL Google Ad Manager 360] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
 
 * **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
 * **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
@@ -88,8 +92,22 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+
+During the identity mapping step, you can see the following pre-populated, mappings:
+
+* `ECID` -> `ppid`
+* `metadata.segment.alias` -> `list_id`
+* `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete`
+
+These mappings are required by Google Ad Manager 360 and are automatically created by Adobe Experience Platform for all Google Ad Manager 360 connections.
+
+The only user-editable mapping is the `ECID` -> `ppid` one. You can select any of your attributes or identity namespaces from Platform to map them to `ppid`.
+
+![UI image showing the mapping step for Google Ad Manager 360.](../../assets/catalog/advertising/google-ad-manager-360/ad-manager-360-mapping.png)
+
+For more details on how publisher provided identifiers work in Google Ad Manager 360, see the [official documentation](https://support.google.com/admanager/answer/2880055?hl=en).
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to the [!DNL Google Ad Manager] destination, check your [!DNL Google Ad Manager] account. If activation was successful, audiences are populated in your account.
+To verify if data has been exported successfully to the [!DNL Google Ad Manager 360] destination, check your [!DNL Google Ad Manager 360] account. If activation was successful, audiences are populated in your account.
