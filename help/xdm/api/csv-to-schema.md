@@ -1,8 +1,8 @@
 ---
-title: CSV to Schema Conversion API Endpoint
-description: The /csv2schema endpoint in the Schema Registry API allows you to use CSV templates to automatically create Experience Data Model (XDM) schemas.
+title: CSV Template to Schema Conversion API Endpoint
+description: The /rpc/csv2schema endpoint in the Schema Registry API allows you to use CSV templates to automatically create Experience Data Model (XDM) schemas.
 ---
-# CSV to schema conversion API endpoint
+# CSV template to schema conversion API endpoint
 
 The `/rpc/csv2schema` endpoint in the [!DNL Schema Registry] API allows you to automatically create an Experience Data Model (XDM) schema using a CSV file as a template. Using this endpoint, you can create templates to bulk-import schema fields and cut down on manual API or UI work.
 
