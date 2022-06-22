@@ -42,6 +42,7 @@ feature: Queries
   - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
 - Data Governance {#data-governance}
+  - [Overview](data-governance/overview.md)
   - [Audit log guide](data-governance/audit-log-guide.md)
   - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
   - [Attribute-based access control support for ad hoc schemas](./data-governance/ad-hoc-schema-labels.md)
