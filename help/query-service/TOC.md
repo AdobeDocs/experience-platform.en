@@ -37,6 +37,7 @@ feature: Queries
   - [Anonymous block](best-practices/anonymous-block.md)
   - [Incremental loading](best-practices/incremental-load.md)
   - [Data deduplication](best-practices/deduplication.md)
+- [Derived attributes](derived-attributes.md)
 - Sample Queries {#sample-queries}
   - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
