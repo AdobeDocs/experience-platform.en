@@ -1,8 +1,6 @@
 ---
 title: (Beta) [!DNL Google Ad Manager 360] connection
 description: Google Ad Manager 360 is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
-hide: yes
-hidefromtoc: yes
 ---
 # (Beta) [!DNL Google Ad Manager 360] connection
 
