@@ -22,7 +22,7 @@ This tutorial walks you through the required steps to create a model using the J
 
 Before you proceed with this tutorial, you must create the required schemas and datasets. Visit the tutorial for [creating the Luma propensity model schemas and datasets](../models-recipes/create-luma-data.md) to download the required assets and set up the pre-requisites.
 
-## Getting started with the [!DNL JupyterLab] notebook environment
+## Get started with the [!DNL JupyterLab] notebook environment
 
 Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. To start, navigate to [Adobe Experience Platform](https://platform.adobe.com) and select the **[!UICONTROL Notebooks]** tab on the left. To create a new notebook, select the Recipe Builder template from the [!DNL JupyterLab Launcher].
 
