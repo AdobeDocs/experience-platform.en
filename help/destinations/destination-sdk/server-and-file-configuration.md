@@ -32,7 +32,7 @@ The server and file configuration specs for file-based destinations can be confi
         }
     },
     "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -66,7 +66,7 @@ The server and file configuration specs for file-based destinations can be confi
       "encryptionMode" : "PGP"
    },
     "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -96,7 +96,7 @@ The server and file configuration specs for file-based destinations can be confi
       }
    },
   "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -126,7 +126,7 @@ The server and file configuration specs for file-based destinations can be confi
       }
    },
   "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -155,7 +155,7 @@ The server and file configuration specs for file-based destinations can be confi
       "useCase": "Your use case"
    },
    "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -185,7 +185,7 @@ The server and file configuration specs for file-based destinations can be confi
       }
    },
    "fileConfigurations":{
-      // see File-based destinations file configuration
+      // See the file formatting configuration section further below on this page
    }
 }
 ```
@@ -199,8 +199,6 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedGoogleCloudStorageDestination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedGoogleCloudStorageDestination.path.value`|String|The path to the destination folder that will host the exported files.|
 |`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
-
-
 
 ## File formatting configuration {#file-configuration}
 
