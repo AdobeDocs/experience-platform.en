@@ -1,6 +1,8 @@
 ---
 title: Derived Attributes
 description: Derived attributes allow you to compute attributes on a regular cadence and optionally publish these derived attributes into Real-time Customer Profile as profile attributes. This document provides an overview of how to use Query Service to create derived attributes for use with your Profile data.
+hide: true
+hidefromtoc: true
 ---
 # Derived attributes
 
