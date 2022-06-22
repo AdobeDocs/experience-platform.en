@@ -238,7 +238,7 @@ When using the ad-hoc activation API, you can come across error messages that ar
 |Error message | Resolution |
 |---------|----------|
 | Run already going on for segment `segment ID` for order `dataflow ID` with run id `flow run ID` | This error message indicates that an ad-hoc activation flow is currently ongoing for a segment. Wait for the job to finish before triggering the activation job again.|
-| Segments `<segment name>` are not part of this dataflow or out of schedule range! | This error message indicates that the segments you selected to activate are not mapped to the dataflow or that the activation schedule set up for the segments has either expired or not yet started. |
+| Segments `<segment name>` are not part of this dataflow or out of schedule range! | This error message indicates that the segments you selected to activate are not mapped to the dataflow or that the activation schedule set up for the segments has either expired or not yet started. Check if the segment is indeed mapped to the dataflow and verify that the segment activation schedule overlaps with the present date.|
 
 ## Related information {#related-information}
 
