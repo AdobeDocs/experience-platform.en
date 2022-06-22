@@ -213,7 +213,7 @@ The `sendEvent` command returns a promise that is resolved with a `result` objec
 >
 >`destinations` is currently in Beta. The documentation and functionality are subject to change.
 
-**inferences**: Real-time machine learning insights. [Learn more about real-time Machine Learning.](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/real-time-machine-learning/home.html?lang=en)
+**inferences**: Insights from Real-time Machine Learning (currently in alpha). [Learn more about Real-time Machine Learning.](../../data-science-workspace/real-time-machine-learning/home.md)
 
 >[!WARNING]
 >
