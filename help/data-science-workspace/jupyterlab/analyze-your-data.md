@@ -33,7 +33,7 @@ By default, Tensorflow recipe work in a GPU cluster and Python runs within a CPU
 
 ### Create a new notebook
 
-In the [!DNL Adobe Experience Platform] UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. You should see a page similar to this.
+In the [!DNL Adobe Experience Platform] UI, select [!UICONTROL Data Science] in the top menu to take you to the Data Science Workspace. From this page, select [!DNL JupyterLab] to open the [!DNL JupyterLab] launcher. You should see a page similar to this.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
