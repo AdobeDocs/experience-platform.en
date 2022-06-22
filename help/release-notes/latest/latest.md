@@ -10,6 +10,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations]](#destinations)
 - [Query Service](#query-service)
 - [Sources](#sources)
 
@@ -27,6 +28,19 @@ Data Science Workspace uses machine learning and artificial intelligence to unle
 {style="table-layout:auto"}
 
 For more general information on Data Science Workspace, see the [overview documentation](../../data-science-workspace/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+| [(Beta) Google Ad Manager 360 connection](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) |  |
+| |  |
+
+{style="table-layout:auto"}
 
 ## Query Service {#query-service}
 
