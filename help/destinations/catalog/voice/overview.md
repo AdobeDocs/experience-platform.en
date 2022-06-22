@@ -16,7 +16,7 @@ Currently, Adobe Experience Platform supports the Voice of the Customer destinat
 
 ### Connections {#connections}
 
-* [Medallia connection](./catalog/voice/medallia-connector.md)
+* [Medallia connection](/help/destinations/catalog/voice/medallia-connector.md)
 
 ### Extensions {#extensions}
 
