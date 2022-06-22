@@ -1,7 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: The latest release notes for Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Adobe Experience Platform Release Notes June 2022
+description: The June 2022 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
@@ -41,6 +40,16 @@ For more general information on Data Science Workspace, see the [overview docume
 | (Beta) Destination SDK support for [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) file-based destinations and [configurable file names](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | You can now use the Destination SDK to create Google Cloud Storage destinations and define custom file names for exported files, via file name macros. <br><br> File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.|
 
 {style="table-layout:auto"}
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Activate profiles for targeted Medallia surveys and feedback collection to better understand customer needs and expectations. |
+
+{style="table-layout:auto"}
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Query Service {#query-service}
 
