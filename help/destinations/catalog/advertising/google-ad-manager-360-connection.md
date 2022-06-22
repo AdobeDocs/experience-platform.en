@@ -20,9 +20,9 @@ The [!DNL Google Ad Manager 360] destination exports [!DNL CSV] files to your [!
 
 ## Destination specifics {#specifics}
 
-Note the following details that are specific to [!DNL Google Ad Manager 360 for PPID] destinations.
+Note the following details that are specific to [!DNL Google Ad Manager 360] destinations.
 
-* Activated audiences are created programmatically and populated in the Google platform and populated in the CSV file.
+* Activated audiences are created programmatically in the Google platform and populated in the CSV file.
 
 ## Supported identities {#supported-identities}
 
