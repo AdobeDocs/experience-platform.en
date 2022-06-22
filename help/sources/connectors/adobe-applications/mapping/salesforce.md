@@ -290,6 +290,29 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `FirstRespondedDate` | `firstRespondedDate` |
 | `Type` | `b2b.personType` |
 
+## Account contact relation {#account-contact-relation}
+
+| Source field | Target XDM field path | Notes |
+| --- | --- | --- |
+| `AccountId` | `accountKey.sourceID` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` |
+| `ContactId` | `personKey.sourceID` |
+| `iif(ContactId != null && ContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personKey` |
+| `CreatedById` | `extSourceSystemAudit.createdBy` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `EndDate` | `relationEndDate` |
+| `IsDeleted` | `isDeleted` |
+| `Id` | `accountPersonKey.sourceID` |
+| `"Salesforce"` | `accountPersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `accountPersonKey.sourceInstanceID` |
+| `concat(Id, "@${CRM_ORG_ID}.Salesforce")` | `accountPersonKey.sourceKey` | Primary identity. |
+| `IsActive` | `IsActive` |
+| `IsDirect` | `IsDirect` |
+| `LastModifiedById` | `extSourceSystemAudit.lastUpdatedBy` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `explode(Roles,";")` | `personRoles[]` |
+| `StartDate` | `relationStartDate` |
+
 ## Next steps
 
 By reading this document, you have gained insight on the mapping relationship between [!DNL Salesforce] source fields and their corresponding XDM fields. See the documentation on [creating a [!DNL Salesforce] source connection](../../../connectors/crm/salesforce.md) for more information.
