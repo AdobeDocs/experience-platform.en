@@ -29,6 +29,7 @@ See the following for detailed information on the field mapping rules between [!
 - [Opportunity contact roles](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [Campaigns](../adobe-applications/mapping/salesforce.md#campaign)
 - [Campaign members](../adobe-applications/mapping/salesforce.md#campaign-member)
+- [Account contact relation](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
 ## Set up the [!DNL Salesforce] namespace and schema auto-generation utility
 
