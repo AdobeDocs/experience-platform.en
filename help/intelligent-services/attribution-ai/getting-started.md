@@ -48,4 +48,8 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Next steps {#next-steps}
 
+We have now implemented role-based access control with `ATTRIBUTION_AI_VIEW` and `ATTRIBUTION_AI_MANAGE` and depending on your privileges, you can access different functionalities of Customer AI. `ATTRIBUTION_AI_MANAGE` lets you **create**,**update**, **delete**, **enable**, or **disable** an app while `ATTRIBUTION_AI_VIEW` only lets you read or view it. 
+
+To learn more about assigning permissions, refer to the [attribute based access control documentation](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=en#permissions) and to the [Audit Logs documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=en).
+
 Once you are ready and have all your credentials and schemas in place, start by following the [Attribution AI user interface guide](./user-guide.md). This guide walks you through creating an instance and submitting it for training and scoring.

@@ -38,6 +38,12 @@ Attribution AI can be used to assist with the following example use cases:
 ### Additional features
 
 Attribution AI also offers integration with other Adobe solutions such as [!DNL Adobe Analytics]. This enables you to use these solutions to utilize the customizable algorithmic model to evaluate media performance and provide analytical insights.
+
+>[!IMPORTANT]
+>
+> - When you request to update data, Attribution AI uses only the updated data for further training and scoring. Likewise, when you request to delete data, AAI refrains from using the deleted data.
+> - Attribution AI is GDPR compliant and your data is deleted when requested.
+> - All data is encrypted in transit and at rest.
   
 ## Next steps
 

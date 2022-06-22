@@ -44,4 +44,9 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Next steps
 
+We have now implemented role-based access control with `CUSTOMER_AI_VIEW` and `CUSTOMER_AI_MANAGE` and depending on your privileges, you can access different functionalities of Customer AI. `CUSTOMER_AI_MANAGE` lets you **create**,**update**, **delete**, **enable**, or **disable** an app while `CUSTOMER_AI_VIEW` only lets you read or view it. 
+
+To learn more about assigning permissions, refer to the [attribute based access control documentation](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=en#permissions) and to the [Audit Logs documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=en).
+
+
 Once you have completed the steps outlined in the document above, visit the [Input and Output](./input-output.md) documentation. This document give a brief overview of what types of data are used and produced in Customer AI.
