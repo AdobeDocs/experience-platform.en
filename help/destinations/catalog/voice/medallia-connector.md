@@ -13,7 +13,6 @@ Activate profiles for targeted Medallia surveys and feedback collection to bette
 >
 >This documentation page was created by the Medallia team. For any inquiries or update requests, please contact them directly at adobe-integrations@medallia.com.
 
-
 ## Use cases {#use-cases}
 
 To help you better understand how and when you should use the Medallia destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
@@ -26,7 +25,6 @@ A B2B brand wants to evaluate and streamline its onboarding program. They'd like
 
 A retailer is looking to better understand customer preferences for order fulfillment. They want to send a short 1-question SMS survey to customers who have made online and in-store purchases over the past month.
 
-
 ## Prerequisites {#prerequisites}
 
 The following information is required to establish the Medallia connection:
@@ -38,7 +36,6 @@ The following information is required to establish the Medallia connection:
 
 Work with your Medallia delivery team to obtain these details.
 
-
 ## Supported identities {#supported-identities}
 
 Medallia supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
@@ -48,6 +45,7 @@ Medallia supports the activation of identities described in the table below. Lea
 |email|Email address|Select the email target identity when you want to send email-invitation surveys. When a profile is associated with multiple email addresses, Medallia will trigger the invitation to the first email only.|
 |phone|Phone numbers hashed in E.164 format |Select the phone target identity when you want to send SMS-based surveys. The phone number must be in E.164 format, which includes a plus sign (+), an international country calling code, a local area code, and a phone number. For example: (+)(country code)(area code)(phone number). When a profile is associated with multiple phone numbers, Medallia will trigger the invitation to the first phone number only.|
 
+{style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -58,6 +56,7 @@ Refer to the table below for information about the destination export type and f
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all newly qualified members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
+{style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
@@ -71,11 +70,11 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* **OAuth Token Endpoint URL**: Typically takes the form of https://instance.medallia.tld/oauth/tenant/token.
-* **Client ID**: Obtain from your Medallia delivery team.
-* **Client Secret**: Obtain from your Medallia delivery team.
+* **[!UICONTROL OAuth Token Endpoint URL]**: Typically takes the form of https://instance.medallia.tld/oauth/tenant/token.
+* **[!UICONTROL Client ID]**: Obtain from your Medallia delivery team.
+* **[!UICONTROL Client Secret]**: Obtain from your Medallia delivery team.
 
-<img src="/help/destinations/assets/catalog/voice/medallia-destination-oauth.png" width="60%">
+![Image showing the authentication screen for this destination.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -83,11 +82,10 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **API Gateway URL**: Obtain from your Medallia delivery team. Typically takes the form of https://instance-tenant.apis.medallia.com.
-*  **Import API Name**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different segments to different Import APIs to trigger different survey programs.
+*  **[!UICONTROL API Gateway URL]**: Obtain from your Medallia delivery team. Typically takes the form of https://instance-tenant.apis.medallia.com.
+*  **[!UICONTROL Import API Name]**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different segments to different Import APIs to trigger different survey programs.
 
-<img src="/help/destinations/assets/catalog/voice/medallia-destination-details.png" width="40%">
-
+![Image showing the destination details screen for this destination.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
 ## Activate segments to this destination {#activate}
 
@@ -97,7 +95,6 @@ To configure details for the destination, fill in the required fields and select
 
 Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-
 ### Map attributes and identities {#map}
 
 The following target identity namespace(s) must be mapped depending on the use case:
@@ -105,17 +102,17 @@ The following target identity namespace(s) must be mapped depending on the use c
 * For SMS-based surveys, **phone** must be mapped as a target field using **Target field** > **Select identity namespace** > **phone**. Phone numbers must be in E.164 format, which includes a plus sign (+), an international country calling code, a local area code, and a phone number
 
 It is strongly recommended that you also map additional target custom attributes to create personalized surveys and append additional information about the customer to the survey record:
+
 * Personalized surveys typically address the customer by name
     *  Map the customer's first name to **Target field** > **Select custom attributes** > **Attribute name** > **firstname**
     *  Map the customer's last name to **Target field** > **Select custom attributes** > **Attribute name** > **lastname**
 * Add mappings for any other target custom attributes as desired
 
-![Sample-Mapping](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
+![Image showing a sample mapping for identities and attributes.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
 > 
 > Share with your Medallia delivery team the exact **Attribute names** for every target custom attribute you map using **Target field** > **Select custom attributes** > **Attribute name**. You may wish to take a screenshot of the mapping page to share directly.
-
 
 ## Exported data {#exported-data}
 
@@ -123,7 +120,7 @@ Once you have activated your segment(s) to the destination, inform your Medallia
 
 A sample JSON of the exported data is provided below, which uses the example mapping from the screenshot above in the **Map attributes and identities** section:
 
-``` 
+```json
 [
     {
         "profile_raw_encoded": "eyJhdHRyaWJ1dGVzIjp7ImZpcnN",
@@ -137,7 +134,6 @@ A sample JSON of the exported data is provided below, which uses the example map
     }
 ]
 ```
-
 
 ## Data usage and governance {#data-usage-governance}
 
