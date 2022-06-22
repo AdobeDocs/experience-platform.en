@@ -10,21 +10,19 @@ description: The Salesforce CRM destination allows you to export your account da
 
 [Salesforce CRM](https://www.salesforce.com/) is a popular Customer Relationship Management (CRM) platform.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts), which allows you to add accounts and create contacts after activating them within a new Salesforce segment for your business needs.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts), which allows you to update identities within a segment into Salesforce CRM.
 
-Salesforce CRM uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce CRM instance are further below, in the [Authenticate to destination](#authenticate) section.
+## Destination specifics {#specifics}
+
+Note the following details that are specific to the [!DNL Salesforce CRM] destination:
+
+* [!DNL Adobe Experience Platform] segments are exported to [!DNL Salesforce CRM] using a custom `AdobeExperiencePlatformSegments` field. Instructions are further below, in the [Prerequisites](#prerequisites) section.
+
+* Salesforce CRM uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce CRM instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Salesforce CRM destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
-
-### Send emails to contacts for marketing campaigns
-
-The sales department of a home rental platform wants to broadcast a marketing email to a targeted customer audience. The platform's marketing team can add new customer contacts into CRM through Adobe Experience Platform, build segments from their own offline data, and send these segments to Salesforce CRM, which can then be used to send the marketing campaign email.
-
-### Display ads in the social media feeds of existing customers
-
-An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to Salesforce CRM, to display ads in their customers’ social media feeds.
+As a marketer, I can deliver personalized experiences to my users, based on attributes from their Adobe Experience Platform profiles, build segments from my offline data, and send these segments to Salesforce CRM, to display in my users’ feeds, as soon as segments and profiles are updated in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -47,18 +45,24 @@ Note the following prerequisites in Salesforce, in order to export data from Pla
         * web
         * refresh_token
         * offline_access
+1. Create the custom field which will allow Experience Platform to update your profiles within Salesforce CRM. Refer to the Salesforce documentation to [Create Custom Fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance.
+
+    | Field | Data Type |
+    |---|---|
+    | `AdobeExperiencePlatformSegments` | `Text Area Long` |
+
 1. Note down the items below before you authenticate to the Salesforce CRM destination.
     * Note down your [Salesforce domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5). For example if your domain is *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, you need the highlighted value.
     * Copy the *Consumer Key* and *Consumer Secret* from the connected app.
-        * Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) if you need additional guidance.    
+        * Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) if you need additional guidance.
 
 ## Supported identities {#supported-identities}
 
-Salesforce CRM supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+Salesforce CRM supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-| email |Salesforce Email ID|Mandatory, Note that *Salesforce CRM* does not support hashed email addresses, hence only plain text data without transformation is sent to the destination.|
+| SalesforceId |Custom Salesforce CRM identifier that supports mapping of any identity.|Mandatory, You can send any [identity](../../../identity-service/namespaces.md) to the [!DNL Salesforce CRM] destination, as long as you map it to the `SalesforceId`. |
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -66,7 +70,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), according to your field mapping.[!DNL Adobe Experience Platform] segments are exported to [!DNL Salesforce CRM] under the `AdobeExperiencePlatformSegments` attribute.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -111,17 +115,16 @@ To configure details for the destination, fill in the required fields and select
 
 Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-The list of attribute mappings that can be set up for the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) is given below.
-| Source Field | Target Field | Mandatory |
-|---|---|--|
-| IdentityMap: `Email` | Identity: `salesforceEmailID` | Yes |
-| xdm: `person.name.lastName` | Attribute: `LastName` | Yes |
-| xdm: `workAddress.state` | Attribute: `MailingState` ||
-| xdm: `workAddress.country` | Attribute: `MailingCountry` ||
-| xdm: `mobilePhone.number` | Attribute: `MobilePhone` ||
-| xdm: `person.name.firstName` | Attribute: `FirstName` ||
-| xdm: `workAddress.postalCode` | Attribute: `MailingPostalCode` ||
-| xdm: `workAddress.city` | Attribute: `MailingCity` ||
+## Mapping Example {#mapping-example}
+
+In the select target window, When selecting the target field choose the **Select custom attributes** category and add the mappings' desired.
+
+For instance, your XDM profile schema and your [!DNL Salesforce CRM] instance could have the attribute mapping as below:
+
+||XDM Profile Schema|[!DNL Salesforce CRM] Instance| Mandatory|
+|---|---|---|---|
+|Attributes|<ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>personalEmail.address</code></li></ul>|<ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>Email</code></li></ul>|
+|Identities|<ul><li><code>crmID</code></li></ul>|<ul><li><code>SalesforceId</code></li></ul>|Yes|
 
 ## Validate data export {#exported-data}
 
@@ -141,6 +144,9 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 1. Login to the Salesforce website then navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page and check if the profiles from the segment have been added.
 ![Salesforce Contacts](../../assets/catalog/crm/salesforce/contacts.png)
+
+1. Click a contact and check if the attribute is updated. You will notice the segment id's which were used to update against the `AdobeExperiencePlatformSegments` custom field.
+![Salesforce Contacts](../../assets/catalog/crm/salesforce/contact-info.png)
 
 ## Data usage and governance {#data-usage-governance}
 
