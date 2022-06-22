@@ -24,7 +24,7 @@ This user guide requires a working understanding of the following components of 
 ## View datasets {#view-datasets}
 
 >[!CONTEXTUALHELP]
->id="platform_datasets_negative_numbers”
+>id="platform_datasets_negative_numbers"
 >title="Negative numbers in dataset activity"
 >abstract="Negative numbers in ingested records means that a user has deleted certain batches in a selected time range."
 >text="Learn more in documentation"
