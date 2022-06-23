@@ -17,7 +17,7 @@ In Adobe Experience Platform, we distinguish between two destination types - con
 
 ## Connections {#connections}
 
-**[!UICONTROL Profile Export]** and **[!UICONTROL Streaming Segment Export]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Segment Export]**, and **[!DNL Edge Personalization]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
 ## Profile export destinations {#profile-export}
 
@@ -49,6 +49,12 @@ File-based destinations receive `.csv` files containing profiles and/or attribut
 ## Streaming segment export destinations {#streaming-destinations}
 
 Segment export destinations receive Experience Platform segment data. These destinations use segment IDs or user IDs. Advertising and social destinations like [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), or [Facebook](catalog/social/facebook.md) are examples of such destinations.
+
+## Edge personalization destinations {#edge-personalization-destinations}
+
+Edge personalization destinations in Experience Platform include [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization destination](/help/destinations/catalog/personalization/custom-personalization.md). By using these destinations, you can enable same-page and next-page personalization use cases for your customers.
+
+Read more about how to [configure personalization destinations for same-page and next-page personalization](/help/destinations/ui/configure-personalization-destinations.md).
 
 ## Profile export and segment export destinations - video overview {#video}
 
