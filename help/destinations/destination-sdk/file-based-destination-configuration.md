@@ -302,7 +302,6 @@ You can configure the functionality described in this document by using the `/au
             "CUSTOM_TEXT"
          ],
          "defaultFilenameAppendOptions":[
-            "SEGMENT_ID",
             "DATETIME"
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
@@ -753,23 +752,21 @@ This section refers to the file export settings in the configuration above that 
    "defaultFrequency":"DAILY",
    "defaultStartTime":"00:00",
    "filenameConfig":{
-      "allowedFilenameAppendOptions":[
-         "SEGMENT_NAME",
-         "DESTINATION_INSTANCE_ID",
-         "DESTINATION_INSTANCE_NAME",
-         "ORGANIZATION_NAME",
-         "SANDBOX_NAME",
-         "DATETIME",
-         "CUSTOM_TEXT"
-      ],
-      "defaultFilenameAppendOptions":[
-         "SEGMENT_ID",
-         "DATETIME"
-      ],
-      "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      },
    }
-}
-
 ```
 
 |Parameter | Type | Description|
