@@ -79,5 +79,5 @@ When using the **[!UICONTROL Export file now]** control, you might encounter any
 
 ## Related information {#related-information}
 
-* [Activate audience segments to batch destinations on-demand using the Experience Platform UI](/help/destinations/ui/ad-hoc-activation-ui.md)
+* [Activate audience segments to batch destinations on-demand using the Experience Platform APIs](/help/destinations/api/ad-hoc-activation-api.md)
 * [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md)
