@@ -73,7 +73,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your segments using [!UICONTROL Mapping ID], to their corresponding segment ID or friendly name in the Bing destination.
+In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your segments using the [!UICONTROL Mapping ID] field, to their corresponding segment ID or friendly name in the Bing destination.
 
 When mapping segments, we recommend you use the [!DNL Platform] segment name or a shorter form of it, for ease of use. However, the segment ID or name in your destination does not need to match the one in your [!DNL Platform] account. Any value you insert in the mapping field will be reflected by the destination.
 
