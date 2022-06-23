@@ -1,11 +1,28 @@
 ---
-title: Release Notes
+title: Adobe Experience Platform Debugger Release Notes
 description: The latest release notes for Adobe Experience Platform Debugger.
 keywords: debugger;experience Platform Debugger extension;chrome;extension;release notes
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
-# Release notes
+# Adobe Experience Platform Debugger release notes
+
+## Version 1.3.3 - June 20, 2022
+
+* Fixed issue that prevented opening popups from network event tables.
+* Fixed issue that prevented the loading of on-page Alloy information.
+
+## Version 1.3.2 - June 9, 2022
+
+* Added a default avatar when the user is logged in.
+* Added syntax highlighting to JSON objects in logs. 
+
+## Version 1.3.1 - May 24, 2022
+
+* Updated dependencies.
+* Fixed Analytics issue where post-process hits could not be enabled.
+* Fixed issue where debugger would attach to Adobe login window.
+* Fixed AT.js issue where log messages would not show up in Debugger.
 
 ## Version 1.3.0 - January 28, 2022
 

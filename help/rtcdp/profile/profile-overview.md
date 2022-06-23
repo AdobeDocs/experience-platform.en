@@ -16,7 +16,7 @@ Real-time CDP is built on top of Experience Platform and utilizes many of the co
 
 ## Profile enhancements for Real-time CDP, B2B Edition
 
-In addition to the profile capabilities supported by Real-time CDP, you can use Real-time CDP, B2B Edition to browse important information associated with an individual, such as an account and opportunities. To lear more about profile enhancements for Real-time CDP, B2B Edition, begin by reading the [profile browse guide](profile-browse.md).
+In addition to the profile capabilities supported by Real-time CDP, you can use Real-time CDP, B2B Edition to browse important information associated with an individual, such as an account and opportunities. To learn more about profile enhancements for Real-time CDP, B2B Edition, begin by reading the [profile browse guide](profile-browse.md).
 
 ## Identities and identity namespaces
 
