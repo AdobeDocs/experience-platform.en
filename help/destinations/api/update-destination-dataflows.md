@@ -858,8 +858,8 @@ A successful response returns your flow ID and an updated etag. You can verify t
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have learned how to update various components of a destination dataflow, like adding or removing segments or profile attributes using [!DNL Flow Service] API. For more information on destinations, see the [destinations overview](../home.md).
