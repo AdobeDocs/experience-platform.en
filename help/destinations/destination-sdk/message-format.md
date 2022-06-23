@@ -55,8 +55,7 @@ To demonstrate the profile transformation process, the example below uses three 
 
 Let's say your platform can receive a message format like:
 
-```curl
-
+```shell
 POST https://YOUR_REST_API_URL/users/
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
@@ -470,7 +469,6 @@ Profile 2:
     ]
 }
 ```
-
 
 ### Create a template that sends segments and identities {#segments-and-identities}
 
