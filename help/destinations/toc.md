@@ -27,6 +27,7 @@ feature: Destinations
         * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
         * [Activate audience data to profile request destinations](./ui/activate-profile-request-destinations.md)
         * [Configure personalization destinations for same-page and next-page personalization](./ui/configure-personalization-destinations.md)
+        * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
@@ -55,6 +56,7 @@ feature: Destinations
         * [Google Ads connection](./catalog/advertising/google-ads-destination.md)
         * [Google Ads extension](./catalog/advertising/google-ads-extension.md)
         * [Google Ad Manager connection](./catalog/advertising/google-ad-manager.md)
+        * [Google Ad Manager 360 connection](./catalog/advertising/google-ad-manager-360-connection.md)
         * [Google Customer Match connection](./catalog/advertising/google-customer-match.md)
         * [Google Display & Video 360 connection](./catalog/advertising/google-dv360.md)
         * [Google gtag extension](./catalog/advertising/gtag-advertising.md)
@@ -147,6 +149,7 @@ feature: Destinations
         * [Voice of the Customer destinations overview](./catalog/voice/overview.md)
         * [Confirmit Digital Feedback extension](./catalog/voice/confirmit-digital-feedback.md)
         * [Invoca Tags extension](./catalog/voice/invoca.md)
+        * [Medallia connection](./catalog/voice/medallia-connector.md)
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
 * Destination SDK {#destination-sdk}

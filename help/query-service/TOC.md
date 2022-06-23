@@ -41,10 +41,6 @@ feature: Queries
 - Sample Queries {#sample-queries}
   - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
-- Data Governance {#data-governance}
-  - [Audit log guide](data-governance/audit-log-guide.md)
-  - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
-  - [Attribute-based access control support for ad hoc schemas](./data-governance/ad-hoc-schema-labels.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
@@ -63,6 +59,10 @@ feature: Queries
   - [PSQL](clients/psql.md)
   - [RStudio](clients/rstudio.md)
   - [Tableau](clients/tableau.md)
+- Data Governance {#data-governance}
+  - [Audit log guide](data-governance/audit-log-guide.md)
+  - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
+  - [Attribute-based access control support for ad hoc schemas](./data-governance/ad-hoc-schema-labels.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
