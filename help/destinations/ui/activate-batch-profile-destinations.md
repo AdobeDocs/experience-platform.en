@@ -84,7 +84,7 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
->title="Activate on-demand"
+>title="Export file now"
 >abstract="Select this control to deliver a full file export in addition to any previously scheduled exports. The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs."
 
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
