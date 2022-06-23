@@ -3,14 +3,16 @@ keywords: Experience Platform;home;popular topics;query service;query templates;
 solution: Experience Platform
 title: Query Templates API Endpoint
 topic-legacy: query templates
-description: The following documentation walks through the various API calls you can make using query templates for the Query Service API.
+description: This guide details the various API calls you can make regarding query templates using the Query Service API.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 ---
 # Query templates endpoint
 
 ## Sample API calls
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+The following sections describe the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+
+See the [UI query templates documentation](../ui/query-templates.md) for information on creating templates through the Experience Platform UI.
 
 ### Retrieve a list of query templates
 

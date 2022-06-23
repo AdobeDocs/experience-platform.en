@@ -130,6 +130,10 @@ You can delete a schedule by selecting **[!UICONTROL Delete a schedule]**.
 
 [!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, select **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the **[!UICONTROL Query Details]** panel.
 
+>[!NOTE]
+>
+>Queries named and saved in using the Query Editor are available as templates within the Query dashboard [!UICONTROL Browse] tab. See the [templates documentation](./query-templates) for more information.
+
 ### How to find previous queries {#previous-queries}
 
 All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the **[!UICONTROL Log]** tab to find query executions. Saved queries are listed in the **[!UICONTROL Browse]** tab. 
