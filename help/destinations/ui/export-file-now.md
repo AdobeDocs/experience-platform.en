@@ -1,7 +1,7 @@
 ---
-title: (Beta) Activate audience segments on-demand to batch destinations using the Experience Platform UI
+title: (Beta) Export files on-demand to batch destinations using the Experience Platform UI
 type: Tutorial
-description: Learn how to activate audience segments on-demand to batch destinations using the Experience Platform UI.
+description: Learn how to export files on-demand to batch destinations using the Experience Platform UI.
 hide: true
 hidefromtoc: true
 ---
