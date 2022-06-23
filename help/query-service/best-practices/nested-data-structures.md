@@ -1,4 +1,5 @@
 ---
+keywords: Experience Platform;query service;Query service;nested data structures;nested data;
 title: Working with nested data structures in Query Service
 description: This document provides a working example for processing and transforming nested data fields using CTAS and INSERT INTO statements.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974

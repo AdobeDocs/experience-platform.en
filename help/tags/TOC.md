@@ -51,6 +51,7 @@ solution: Data Collection
   * [Overview](./ui/event-forwarding/overview.md)
   * [Getting started](./ui/event-forwarding/getting-started.md)
   * [Configuring secrets](./ui/event-forwarding/secrets.md)
+  * [Monitoring (Beta)](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
