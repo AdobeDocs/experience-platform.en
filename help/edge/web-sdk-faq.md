@@ -151,7 +151,7 @@ Yes, currently the Web SDK uses anywhere between 1-4 cookies depending on your i
 
 **kndctr_orgid_consent:** This cookie stores the user's consent preference for the website.
 
-**kndctr_orgid_cluster:** This cookie stores the Experience Edge region that is serving this user's requests. The region is used in the url path so that Experience Edge can route the request to the correct region. This cookie has a relatively short lifetime (30 minutes) so that if a user connects with a different IP address, the request can be routed to the closest region.
+**kndctr_orgid_cluster:** This cookie stores the Experience Edge region that is serving the current user's requests. The region is used in the URL path so that Experience Edge can route the request to the correct region. This cookie has a 30 minutes lifetime, so that if a user connects with a different IP address, the request can be routed to the closest region.
 
 When using the Web SDK, the Edge Network sets one or more of the cookies above. The Edge Network sets all the cookies with the `secure` and `sameSite="none"` attributes.
 
