@@ -18,7 +18,7 @@ You can create query templates through two methods, either by making a POST requ
 
 ### Use the Query Editor to author and save a query as a template
 
-See the documentation for instructions on how to use the Query Editor to [write](./user-guide.md#query-authoring) and [save queries](./user-guide.md.md#saving-queries). Once you have named and saved your query, it is available to be reused as a query template from the [!UICONTROL Browse] tab.
+See the documentation for instructions on how to use the Query Editor to [write](./user-guide.md#query-authoring) and [save queries](./user-guide.md#saving-queries). Once you have named and saved your query, it is available to be reused as a query template from the [!UICONTROL Browse] tab.
 
 From the Queries workspace of the Platform UI, select **[!UICONTROL Browse]** to display the list of available saved queries.
 

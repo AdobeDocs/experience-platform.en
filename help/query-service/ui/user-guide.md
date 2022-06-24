@@ -132,7 +132,7 @@ You can delete a schedule by selecting **[!UICONTROL Delete a schedule]**.
 
 >[!NOTE]
 >
->Queries named and saved in using the Query Editor are available as templates within the Query dashboard [!UICONTROL Browse] tab. See the [templates documentation](./query-templates) for more information.
+>Queries named and saved in using the Query Editor are available as templates within the Query dashboard [!UICONTROL Browse] tab. See the [templates documentation](./query-templates.md) for more information.
 
 ### How to find previous queries {#previous-queries}
 
