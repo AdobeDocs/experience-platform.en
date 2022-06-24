@@ -14,13 +14,13 @@ You must have the [!UICONTROL Manage queries] permission enabled to access the Q
 
 ## Create a query template
 
-You can create query templates through two methods, making a POST request to the Query Service API `query-templates` endpoint, or by writing, naming, and saving a query through the Query Editor.
+You can create query templates through two methods, either by making a POST request to the Query Service API `query-templates` endpoint, or by writing, naming, and saving a query through the Query Editor.
 
 ### Use the Query Editor to author and save a query as a template
 
 See the documentation for instructions on how to use the Query Editor to [write](./user-guide.md#query-authoring) and [save queries](./user-guide.md.md#saving-queries). Once you have named and saved your query, it is available to be reused as a query template from the [!UICONTROL Browse] tab.
 
-From the Queries workspace of the Platform UI, select Browse to display the list of available saved queries.
+From the Queries workspace of the Platform UI, select **[!UICONTROL Browse]** to display the list of available saved queries.
 
 ![The queries workspace with the Browse tab highlighted.](../images/ui/query-templates/query-templates.png)
 
@@ -38,6 +38,6 @@ See the documentation for instructions on [how to make a query template](../api/
 
 ## Next steps
 
-By reading this document you better understand how to create query templates in Query Service. See the [UI overview](./overview.md), or the [Query Service API guide](../api/getting-started.md) to learn more about Query Service capabilities. 
+By reading this document, you now have a better understanding of how to create query templates in Query Service. See the [UI overview](./overview.md), or the [Query Service API guide](../api/getting-started.md) to learn more about Query Service capabilities. 
 
 See the [scheduled queries endpoint guide](../api/scheduled-queries.md) to learn how to schedule queries using the API, or the [Query Editor guide](./user-guide.md#scheduled-queries) for the UI.
