@@ -1,6 +1,7 @@
 ---
-title: Analytics Insights For Web and Mobile Interactions 
+title: Analytics Insights For Web and Mobile Interactions
 description: This document explains how to use Query Service to create actionable insights from ingested Adobe Analytics data.
+exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 ---
 # Analytics insights for web and mobile interactions
 
