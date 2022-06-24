@@ -36,10 +36,10 @@ In order for [!DNL Flow Service] to connect with [!DNL Salesforce Marketing Clou
 
 | Credential | Description |
 | ---------- | ----------- |
-| `host` | The host server of your application. This is often your subdomain. |
+| `host` | The host server of your application. This is often your subdomain. **Note:** When entering your `host` value, you only need to specify the subdomain and not the entire URL. For example, if your host URL is `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, then you only need to enter `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` as your host value. |
 | `clientId` | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
 | `clientSecret` | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Marketing Cloud] is: `cea1c2a08-b722-11eb-8529-0242ac130003`.  |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Marketing Cloud] is: `ea1c2a08-b722-11eb-8529-0242ac130003`.  |
 
 For more information about getting started, refer to this [[!DNL Salesforce Marketing Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 
@@ -64,7 +64,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -79,7 +79,7 @@ curl -X POST \
             }
         },
         "connectionSpec": {
-            "id": "cea1c2a08-b722-11eb-8529-0242ac130003",
+            "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
             "version": "1.0"
         }
     }'
@@ -89,7 +89,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.clientId` | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
 | `auth.params.clientSecret` | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
-| `connectionSpec.id` | The [!DNL Salesforce Marketing Cloud] connection specification ID: `cea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `connectionSpec.id` | The [!DNL Salesforce Marketing Cloud] connection specification ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **Response**
 
@@ -102,4 +102,9 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
-By following this tutorial, you have created a [!DNL Salesforce Marketing Cloud] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID in the next tutorial as you learn how to [explore marketing automation systems using the Flow Service API](../../explore/marketing-automation.md).
+## Next steps
+
+By following this tutorial, you have created a [!DNL Salesforce Marketing Cloud] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring marketing automation data to Platform using the [!DNL Flow Service] API](../../collect/marketing-automation.md)

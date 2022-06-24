@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Generic REST API Source Connector Overview
 topic-legacy: overview
 description: Learn how to connect Generic REST API to Adobe Experience Platform using APIs or the user interface.
+exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
 ---
 # (Beta) [!DNL Generic REST API]
 
@@ -26,12 +27,5 @@ The documentation below provides information on how to connect a [!DNL Generic R
 ## Connect [!DNL Generic REST API] to [!DNL Platform] using APIs
 
 - [Create a generic REST API base connection using the Flow Service API](../../tutorials/api/create/protocols/generic-rest.md)
-- [Explore the data structure and contents of a protocols source using the Flow Service API](../../tutorials/api/explore/protocols.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a protocols source using the Flow Service API](../../tutorials/api/collect/protocols.md)
-
-## Connect [!DNL Generic REST API] to [!DNL Platform] using the UI
-
-- [Create a Generic REST API source connection in the UI](../../tutorials/ui/create/protocols/generic-rest.md)
-- [Create a dataflow for a protocols source connection in the UI](../../tutorials/ui/dataflow/protocols.md)
-
-

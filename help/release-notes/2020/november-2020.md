@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes November 11, 2020
+title: Adobe Experience Platform Release Notes November 2020
+description: The November 2020 release notes for Adobe Experience Platform.
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
@@ -96,7 +96,7 @@ Data Science Workspace uses machine learning and artificial intelligence to crea
 | ------- | ----------- |
 | [!DNL JupyterLab] Recipe Builder template | Notebook to recipe requirements usage and versions updated. [!DNL Python] ML Runtime base image has been updated to use [!DNL Python] 3.6.7 and a [!DNL Conda] environment exclusively. |
 
-For more information, please read the document on [creating a recipe using Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
+For more information, please read the document on [creating a recipe using Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-model.md).
 
 ## [!DNL Destinations] Service {#destinations}
 

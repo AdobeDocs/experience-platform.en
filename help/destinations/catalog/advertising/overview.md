@@ -22,9 +22,11 @@ To understand the difference between connections and extensions, see [Connection
 
 ### Connections
 
+* [(Beta) Criteo connection](criteo.md)
 * [Google Display & Video 360 connection](google-dv360.md)
 * [Google Ads connection](google-ads-destination.md)
 * [Google Ad Manager connection](google-ad-manager.md)
+* [(Beta) Google Ad Manager 360 connection](google-ad-manager-360-connection.md)
 * [Google Customer Match connection](google-customer-match.md)
 * [Microsoft Bing connection](bing.md)
 * [Pinterest Customer List connection](pinterest.md)

@@ -21,7 +21,6 @@ You can create a new audience template by making a POST request to the `/authori
 
 **API format**
 
-
 ```http
 POST /authoring/audience-templates
 ```
@@ -34,7 +33,7 @@ The following request creates a new audience metadata template, configured by th
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -140,6 +139,31 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
                "value":"string"
             }
          ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
       }
    },
    "validations":[
@@ -178,7 +202,6 @@ You can update an existing audience template by making a PUT request to the `/au
 
 **API format**
 
-
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
 ```
@@ -195,7 +218,7 @@ The following request updates an existing audience metadata template, configured
 
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-templates/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -289,7 +312,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ```
 
-
 ## Retrieve a list of audience templates {#retrieve-list}
 
 You can retrieve a list of all audience templates for your IMS Organization by making a GET request to the `/authoring/audience-templates` endpoint.
@@ -308,7 +330,7 @@ The following request will retrieve the list of audience templates that you have
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -429,7 +451,6 @@ You can retrieve detailed information about a specific audience template by maki
 
 **API format**
 
-
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
@@ -443,7 +464,7 @@ GET /authoring/audience-templates/{INSTANCE_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -582,7 +603,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience-templates/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
@@ -593,7 +614,7 @@ A successful response returns HTTP status 200 along with an empty HTTP response.
 
 ## API error handling
 
-Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+Destination SDK API endpoints follow the general Experience Platform API error message principles. Refer to [API status codes](../../landing/troubleshooting.md#api-status-codes) and [request header errors](../../landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide.
 
 ## Next steps
 

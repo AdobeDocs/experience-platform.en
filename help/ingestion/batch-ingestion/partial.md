@@ -31,7 +31,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -54,14 +54,14 @@ To create a new batch, follow the steps in the [batch ingestion developer guide]
 ```json
 {
     "enableErrorDiagnostics": true,
-    "partialIngestionPercentage": 5
+    "partialIngestionPercent": 5
 }
 ```
 
 | Property | Description |
 | -------- | ----------- |
 | `enableErrorDiagnostics` | A flag that allows [!DNL Platform] to generate detailed error messages about your batch. |
-| `partialIngestionPercentage` | The percentage of acceptable errors before the entire batch will fail. So, in this example, a maximum of 5% of the batch can be errors, before it will fail. |
+| `partialIngestionPercent` | The percentage of acceptable errors before the entire batch will fail. So, in this example, a maximum of 5% of the batch can be errors, before it will fail. |
 
 
 ## Enable a batch for partial batch ingestion in the UI {#enable-ui}

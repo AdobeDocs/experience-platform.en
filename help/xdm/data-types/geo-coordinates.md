@@ -15,7 +15,7 @@ exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
 | Property | Data type | Description |
 | --- | --- | --- |
 | `_schema.description` | String | A description of what the coordinates identify. |
-| `_schema.elevation` | Double | The specific elevation of the defined coordinate. The value must conform to the [WGS84](http://gisgeography.com/wgs84-world-geodetic-system/) datum and is measured in meters. |
+| `_schema.elevation` | Double | The specific elevation of the defined coordinate. The value must conform to the [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) datum and is measured in meters. |
 | `_schema.latitude` | Double | The signed vertical coordinate of the geographic point. |
 | `_schema.longitude` | Double | The signed horizontal coordinate of the geographic point. |
 |  `_id` | String | A unique, system-generated ID for the coordinates. |

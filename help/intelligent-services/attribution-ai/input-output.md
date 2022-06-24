@@ -12,10 +12,17 @@ The following document outlines the different input and outputs utilized in [!DN
 
 ## [!DNL Attribution AI] input data
 
-Attribution AI works by analyzing one of the following datasets to calculate algorithmic scores:
+Attribution AI works by analyzing the following datasets to calculate algorithmic scores:
 
-- Consumer Experience Event (CEE) dataset
 - Adobe Analytics datasets using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Experience Event (EE) datasets in general from Adobe Experience Platform schema
+- Consumer Experience Event (CEE) datasets
+
+You can now add multiple datasets from different sources based on the **identity map** (field) if each of the datasets shares the same identity type (namespace) such as an ECID. After you select an identity and a namespace, ID Column completeness metrics appear which indicate the volume of data being stitched. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
+
+The channel information is not always mapped by default. In some cases, if the mediaChannel (field) is blank, you would not be able to  "continue" until you map a field to mediaChannel as it is a required column. If the channel is detected in the dataset, it is mapped to mediaChannel by default. The other columns such as **media type** and **media action** are still optional.
+
+After you map the channel field, continue to the 'Define events' step where you can select the conversion events, touchpoint events, and choose specific fields from individual datasets.
 
 >[!IMPORTANT]
 >
@@ -25,11 +32,9 @@ For more details on setting up the [!DNL Consumer Experience Event] (CEE) schema
 
 Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are mandatory for Attribution AI. 
 
->[!NOTE]
->
-> The following 9 columns are mandatory, additional columns are optional but recommended/necessary if you want to use the same data for other Adobe solutions such as [!DNL Customer AI] and [!DNL Journey AI].
+You can configure the touch points using any fields recommended below in the schema or selected dataset.
 
-| Mandatory columns | Needed for |
+| Recommended columns | Needed for |
 | --- | --- |
 | Primary Identity Field | Touchpoint / Conversion |
 | Timestamp | Touchpoint / Conversion |
@@ -43,17 +48,11 @@ Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are man
 
 Typically, attribution is run on conversion columns such as order, purchases, and checkouts under "commerce". The columns for "channel" and "marketing" are used to define touchpoints for Attribution AI (for example, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). For optimal results and insights, it is highly recommended that you include as many conversion and touchpoint columns as possible. Additionally, you are not limited to just the above columns. You can include any other recommended or custom columns as a conversion or touchpoint definition.
 
+Experience event (EE) Datasets do not need to explicitly have Channel and Marketing mixins as long as the channel or campaign information relevant to configure a touchpoint is present in one of mixin or pass through fields.
+
 >[!TIP]
 >
 >If you are using Adobe Analytics data in your CEE schema, the touchpoint information for Analytics is typically stored in `channel.typeAtSource` (for example, `channel.typeAtSource = 'email'`).
-
-The columns below are not required but it is recommended that you include them in your CEE schema if you have the information available.
-
-**Additional recommended columns:**
-- web.webReferer
-- web.webInteraction
-- web.webPageDetails
-- xdm:productListItems
 
 ## Historical data {#data-requirements}
 
@@ -77,7 +76,7 @@ Minimum length of data required = training window + lookback window
 >
 > The minimum length of data required for an application with default configurations is: 2 quarters (180 days) + 56 days = 236 days.
 
-Example : 
+Example: 
 
 - You want to attribute conversion events that have happened within the last 90 days (3 months) and track all the touchpoints that have happened within 4 weeks prior the conversion event. The input data duration should span over the past 90 days + 28 days (4 weeks). The training window is 90 days and the lookback window is 28 days totaling 118 days.
 
@@ -128,7 +127,7 @@ The following table outlines the schema fields in the raw scores example output:
 | skuId (String) | True | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. <br> **Example:** MJ-03-XS-Black |
 | timestamp (DateTime) | True | Timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
 | passThrough (Object) | True | Additional Score dataset Columns specified by user while configuring the model. |
-| commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city : San Jose |
+| commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city: San Jose |
 | customerProfile (Object) | False | Identity details of the user used to build the model. |
 | identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
 | id (String) | True | Identity ID of the user such as cookie ID or AAID or MCID etc. <br> **Example:** 17348762725408656344688320891369597404 |
@@ -147,7 +146,6 @@ You can view the path to your raw scores in the UI. Start by selecting **[!UICON
 Next, select a field within the **[!UICONTROL Structure]** window of the UI, the **[!UICONTROL Field properties]** tab opens. Within **[!UICONTROL Field properties]** is the path field that maps to your raw scores.
 
 ![Pick a Schema](./images/input-output/field_properties.png)
-
 
 ### Aggregated attribution scores {#aggregated-attribution-scores}
 

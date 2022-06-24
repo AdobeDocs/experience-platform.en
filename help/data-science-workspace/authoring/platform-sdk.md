@@ -31,7 +31,7 @@ If you are not using Jupyter Notebook or you need to change the IMS Org, please 
 ```python
 from platform_sdk.client_context import ClientContext
 client_context = ClientContext(api_key={API_KEY},
-              org_id={IMS_ORG},
+              org_id={ORG_ID},
               user_token={USER_TOKEN},
               service_token={SERVICE_TOKEN})
 ```
@@ -56,7 +56,7 @@ library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
 client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
-              org_id={IMS_ORG},
+              org_id={ORG_ID},
               user_token={USER_TOKEN},
               service_token={SERVICE_TOKEN})
 ```
@@ -215,4 +215,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Next steps
 
-Once you have configured the `platform_sdk` data loader, the data undergoes preparation and is then split to the `train` and `val` datasets. To learn about data preparation and feature engineering please visit the section on [data preparation and feature engineering](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) in the tutorial for creating a recipe using [!DNL JupyterLab] notebooks.
+Once you have configured the `platform_sdk` data loader, the data undergoes preparation and is then split to the `train` and `val` datasets. To learn about data preparation and feature engineering please visit the section on [data preparation and feature engineering](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in the tutorial for creating a recipe using [!DNL JupyterLab] notebooks.

@@ -9,10 +9,6 @@ exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
 ---
 # Create a [!DNL Google PubSub] Source Connection Using the Flow Service API
 
->[!NOTE]
->
->The [!DNL Google PubSub] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 This tutorial walks you through the steps to connect [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
@@ -63,7 +59,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -120,7 +116,7 @@ curl -X POST \
     -H 'authorization: Bearer {ACCESS_TOKEN}' \
     -H 'content-type: application/json' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_Org}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -d '{
         "name": "Google PubSub source connection",
@@ -146,7 +142,7 @@ curl -X POST \
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can provide to include more information on your source connection. |
 | `baseConnectionId` | The base connection ID of your [!DNL PubSub] source that was generated in the previous step. |
-| `connectionSpec.id` | The fixed connection specification ID for [!DNL PubSub]. This ID is : `70116022-a743-464a-bbfe-e226a7f8210c` |
+| `connectionSpec.id` | The fixed connection specification ID for [!DNL PubSub]. This ID is: `70116022-a743-464a-bbfe-e226a7f8210c` |
 | `data.format` | The format of the [!DNL PubSub] data that you want to ingest. Currently, the only supported data format is `json`. |
 | `params.topicId` | The topic ID defines the specific named resource which messages are sent by publishers |
 | `params.subscriptionId` | The subscription ID defines the specific named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application. |

@@ -68,7 +68,7 @@ The `init` method will be called by tags as soon as the view has been loaded int
 | `propertySettings` | An object containing settings for the property. See the [turbine object guide](../turbine.md#property-settings) for details on what is contained in this object. |
 | `tokens` | An object containing API tokens. For accessing Adobe APIs from inside the view you will need to usually use an IMS token under `tokens.imsAccess`. This token will be made available only for extensions developed by Adobe. If you are an Adobe employee representing an extension authored by Adobe, please [email the data collection engineering team](mailto:reactor@adobe.com) and provide the name of the extension so we can add it to the allowed list. |
 | `company` | An object containing a single property, `orgId`, which itself represents your Adobe Experience Cloud ID (a 24-character alphanumeric string). |
-| `schema` | An object in [JSON Schema](http://json-schema.org/) format. This object will come from the [extension manifest](../manifest.md) and may be helpful in validating your form. |
+| `schema` | An object in [JSON Schema](https://json-schema.org/) format. This object will come from the [extension manifest](../manifest.md) and may be helpful in validating your form. |
 
 Your view should use this information to render and manage its form. It is likely you will only need to deal with `info.settings`, but the other information is provided in case it is necessary.
 
@@ -163,6 +163,10 @@ At runtime, before passing the settings object to your library module, the setti
 To indicate where it may be helpful for users to use data elements and to make it easy for users to enter a data element, we highly recommend adding an icon button next to such fields as shown here:
 
 ![data element field](../images/data-element-field.png)
+
+>[!NOTE]
+>
+>To download the appropriate icon, navigate to the [icons page on Adobe Spectrum](https://spectrum.adobe.com/page/icons/) and search for "[!DNL Data]".
 
 When the button next to the text field is selected by a user, call `window.extensionBridge.openDataElementSelector` as [outlined above](#open-data-element). This will display a list of the user's data elements that the user can choose from rather than forcing them to remember the name and type percent signs. Once the user has selected a data element, you will receive the name of the selected data element wrapped in percent signs (unless you've set the `tokenize` option to `false`). We encourage you to then populate the text field with the result.
 

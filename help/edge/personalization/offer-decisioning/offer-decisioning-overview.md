@@ -47,7 +47,7 @@ It is important to understand the following terminology when working with Offer 
 
   ![](assets/decision-scope-copy.png)
 
-* **Datastreams:** For more information, please read the [datastreams](../../fundamentals/datastreams.md) documentation.
+* **Datastreams:** For more information, please read the [datastreams](../../datastreams/overview.md) documentation.
 
 * **Identity**: For more information, please read this documentation outlining how [Platform Web SDK uses Identity Service](../../identity/overview.md).
 
@@ -55,7 +55,7 @@ It is important to understand the following terminology when working with Offer 
 
 To enable Offer Decisioning, perform the following steps:
 
-1. Enabled Adobe Experience Platform in your [datastream](../../fundamentals/datastreams.md) and check the "Offer Decisioning" box
+1. Enabled Adobe Experience Platform in your [datastream](../../datastreams/overview.md) and check the "Offer Decisioning" box
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -133,7 +133,7 @@ To enable Offer Decisioning, perform the following steps:
 
 | Property | Required | Description | Limits | Example |
 |---|---|---|---|---|
-| `identityMap`| Yes | Refer to this [Identity Service documentation](../../identity/overview.md).| One identity per request.| `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`|
+| `identityMap`| Yes | Refer to this [Identity Service documentation](../../identity/overview.md).| One identity per request.| `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Note: Users don't need to include the `ECID` parameter in the API call. This parameter is automatically added to the call if needed. |
 | `decisionScopes` | Yes | An array of Base64 encoded strings of JSON containing the activity and placement IDs. | Maximum 30 `decisionScopes` per request. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **Response**
@@ -230,7 +230,7 @@ To enable Offer Decisioning, perform the following steps:
 
 | Property | Required | Description | Limits | Example |
 |---|---|---|---|---|
-| `identityMap`| Yes | Refer to this [Identity Service documentation](../../identity/overview.md).| One identity per request.| `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`|
+| `identityMap`| Yes | Refer to this [Identity Service documentation](../../identity/overview.md).| One identity per request.| `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Note: Users don't need to include the `ECID` parameter in the API call. This parameter is automatically added to the call if needed. |
 | `decisionScopes` | Yes | An array of Base64 encoded strings of JSON containing the activity and placement IDs. | Maximum 30 `decisionScopes` per request. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="`|
 
 **Response**

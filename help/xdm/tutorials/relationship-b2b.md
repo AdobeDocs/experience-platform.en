@@ -3,11 +3,7 @@ title: Define a Relationship Between Two Schemas in Real-time Customer Data Plat
 description: Learn how to define a many-to-one relationship between two schemas in Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 ---
-# Define a relationship between two schemas in Real-time Customer Data Platform B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
+# Define a relationship between two schemas in Real-time Customer Data Platform B2B Edition
 
 >[!NOTE]
 >

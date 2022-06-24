@@ -37,7 +37,7 @@ The following tables list all supported mapping functions, including sample expr
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Concatenates the given strings. | <ul><li>STRING: The strings that will be concatenated.</li></ul> | concat(STRING_1, STRING_2) | concat("Hi, ", "there", "!") | `"Hi, there!"` |
-| explode | Splits the string based on a regex and returns an array of parts. Can optionally include regex to split the string. By default, the splitting resolves to ",". The following delimiters **need** to be escaped with `\`: `+, ?, ^, |, ., [, (, {, ), *, $, \` If you include multiple characters as the delimiter, the delimiter will be treated as a multi-character delimiter. | <ul><li>STRING: **Required** The string that needs to be split.</li><li>REGEX: *Optional* The regular expression that can be used to split the string.</li></ul> | explode(STRING, REGEX) | explode("Hi, there!", " ") | `["Hi,", "there"]` |
+| explode | Splits the string based on a regex and returns an array of parts. Can optionally include regex to split the string. By default, the splitting resolves to ",". The following delimiters **need** to be escaped with `\`: `+, ?, ^, \|, ., [, (, {, ), *, $, \` If you include multiple characters as the delimiter, the delimiter will be treated as a multi-character delimiter. | <ul><li>STRING: **Required** The string that needs to be split.</li><li>REGEX: *Optional* The regular expression that can be used to split the string.</li></ul> | explode(STRING, REGEX) | explode("Hi, there!", " ") | `["Hi,", "there"]` |
 | instr | Returns the location/index of a substring.| <ul><li>INPUT: **Required** The string that is being searched.</li><li>SUBSTRING: **Required** The substring that is being searched for within the string.</li><li>START_POSITION: *Optional* The location of where to start looking in the string.</li><li>OCCURRENCE: *Optional* The nth occurrence to look for from the start position. By default, it is 1. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr("adobe.com", "com") | 6 |
 | replacestr | Replaces the search string if present in original string. | <ul><li>INPUT: **Required** The input string.</li><li>TO_FIND: **Required** The string to look up within the input.</li><li>TO_REPLACE: **Required** The string that will replace the value within "TO_FIND".</li></ul> | replacestr(INPUT, TO_FIND, TO_REPLACE) | replacestr("This is a string re test", "re", "replace") | "This is a string replace test" |
 | substr | Returns a substring of a given length. | <ul><li>INPUT: **Required** The input string.</li><li>START_INDEX: **Required** The index of the input string where the substring starts.</li><li>LENGTH: **Required** The length of the substring.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr("This is a substring test", 7, 8) | " a subst" |
@@ -94,7 +94,7 @@ The following tables list all supported mapping functions, including sample expr
 | get_url_host | Returns the host of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the host needs to be extracted.</li></ul> | get_url_host​(URL) | get_url_host​("https://platform​.adobe.com/home") | platform.adobe.com |
 | get_url_port | Returns the port of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the port needs to be extracted.</li></ul> | get_url_port(URL) | get_url_port​("sftp://example.com//home/​joe/employee.csv") | 22 |
 | get_url_path | Returns the path of the given URL. By default, the full path is returned. | <ul><li>URL: **Required** The URL from which the path needs to be extracted.</li><li>FULL_PATH: *Optional* A boolean value that determines if the full path is returned. If set to false, only the end of the path is returned.</li></ul> | get_url_path​(URL, FULL_PATH) | get_url_path​("sftp://example.com//​home/joe/employee.csv") | "//home/joe/​employee.csv" |
-| get_url_query_str | Returns the query string of a given URL. | <ul><li>URL: **Required** The URL that you are trying to get the query string from.</li><li>ANCHOR: **Required** Determines what will be done with the anchor in the query string. Can be one of three values: "retain", "remove", or "append".<br><br>If the value is "retain", the anchor will be attached to the returned value.<br>If the value is "remove", the anchor will be removed from the returned value.<br>If the value is "append", the anchor will be returned as a separate value.</li></ul> | get_url_query_str​(URL, ANCHOR) | get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "retain")<br>get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "remove")<br>get_url_query_str​("foo://example.com​:8042/over/there​?name=ferret#nose", "append") | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | Returns the query string of a given URL as a map of query string name and query string value. | <ul><li>URL: **Required** The URL that you are trying to get the query string from.</li><li>ANCHOR: **Required** Determines what will be done with the anchor in the query string. Can be one of three values: "retain", "remove", or "append".<br><br>If the value is "retain", the anchor will be attached to the returned value.<br>If the value is "remove", the anchor will be removed from the returned value.<br>If the value is "append", the anchor will be returned as a separate value.</li></ul> | get_url_query_str​(URL, ANCHOR) | get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "retain")<br>get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "remove")<br>get_url_query_str​("foo://example.com​:8042/over/there​?name=ferret#nose", "append") | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 {style="table-layout:auto"}
 
@@ -108,10 +108,10 @@ The following tables list all supported mapping functions, including sample expr
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Retrieves the current time. | | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | Retrieves the current Unix time. | | timestamp() | timestamp() | 1571850624571 |
-| date_to_string | Formats the input date according to a specified format. | <ul><li>DATE: **Required** The input date, as a ZonedDateTime object, that you want to format.</li><li>FORMAT: **Required** The format that you want the date to be changed to.</li></ul> | date_to_string(DATE, FORMAT)  | date_to_string(2019-10-23T11:24:00+00:00, "yyyy-MM-dd HH:mm:ss") | "2019-10-23 11:24:35" |
-| long_to_date | Converts a timestamp to a date string according to a specified format. | <ul><li>TIMESTAMP: **Required** The timestamp you want to format. This is written in milliseconds.</li><li>FORMAT: **Required** The format that you want the timestamp to become.</li></ul> | long_to_date(TIMESTAMP, FORMAT) | long_to_date(1571829875000, "yyyy-MM-dd'T'HH:mm:ss.SSSX") | "2019-10-23T11:24:35.000Z" |
-| date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li><li>DEFAULT_DATE: **Required** The default date returned, if the date provided is null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm", now()) | "2019-10-23T11:24:00Z" |
-| date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li></ul> | date(DATE, FORMAT) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm") | "2019-10-23T11:24:00Z" |
+| format | Formats the input date according to a specified format. | <ul><li>DATE: **Required** The input date, as a ZonedDateTime object, that you want to format.</li><li>FORMAT: **Required** The format that you want the date to be changed to.</li></ul> | format(DATE, FORMAT)  | format(2019-10-23T11:24:00+00:00, "yyyy-MM-dd HH:mm:ss") | `2019-10-23 11:24:35` |
+| dformat | Converts a timestamp to a date string according to a specified format. | <ul><li>TIMESTAMP: **Required** The timestamp you want to format. This is written in milliseconds.</li><li>FORMAT: **Required** The format that you want the timestamp to become.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, "yyyy-MM-dd'T'HH:mm:ss.SSSX") | `2019-10-23T11:24:35.000Z` |
+| date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li><li>DEFAULT_DATE: **Required** The default date returned, if the date provided is null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm", now()) | `2019-10-23T11:24:00Z` |
+| date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li></ul> | date(DATE, FORMAT) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm") | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li></ul> | date(DATE) | date("2019-10-23 11:24") | "2019-10-23T11:24:00Z" |
 | date_part | Retrieves the parts of the date. The following component values are supported: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"quarter"<br>"qq"<br>"q"<br><br>"month"<br>"mm"<br>"m"<br><br>"dayofyear"<br>"dy"<br>"y"<br><br>"day"<br>"dd"<br>"d"<br><br>"week"<br>"ww"<br>"w"<br><br>"weekday"<br>"dw"<br>"w"<br><br>"hour"<br>"hh"<br>"hh24"<br>"hh12"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s"<br><br>"millisecond"<br>"ms" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>DATE: **Required** The date, in a standard format.</li></ul> | date_part​(COMPONENT, DATE) | date_part("MM", date("2019-10-17 11:55:12")) | 10 |
 | set_date_part | Replaces a component in a given date. The following components are accepted: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"month"<br>"mm"<br>"m"<br><br>"day"<br>"dd"<br>"d"<br><br>"hour"<br>"hh"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>VALUE: **Required** The value to set for the component for a given date.</li><li>DATE: **Required** The date, in a standard format.</li></ul> | set_date_part​(COMPONENT, VALUE, DATE) | set_date_part("m", 4, date("2016-11-09T11:44:44.797") | "2016-04-09T11:44:44Z" |
@@ -130,17 +130,18 @@ The following tables list all supported mapping functions, including sample expr
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| size_of | Returns the size of the input. | <ul><li>INPUT: **Required** The object that you're trying to find the size of.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | need sample | need sample |
 | to_object | Creates an object based on the flat key/value pairs given. | <ul><li>INPUT: **Required** A flat list of key/value pairs.</li></ul> | to_object(INPUT) | to_object​("firstName", "John", "lastName", "Doe") | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | Creates an object from the input string. | <ul><li>STRING: **Required** The string that is being parsed to create an object.</li><li>VALUE_DELIMITER: *Optional* The delimiter that separates a field from the value. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field value pairs. The default delimiter is `,`.</li></ul> | str_to_object​(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object("firstName - John | lastName - | phone - 123 456 7890", "-", "|") | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| str_to_object | Creates an object from the input string. | <ul><li>STRING: **Required** The string that is being parsed to create an object.</li><li>VALUE_DELIMITER: *Optional* The delimiter that separates a field from the value. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field value pairs. The default delimiter is `,`.</li></ul> | str_to_object​(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object("firstName=John,lastName=Doe,phone=123 456 7890", "=", ",") | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | contains_key | Checks if the object exists within the source data. **Note:** This function replaces the deprecated `is_set()` function. | <ul><li>INPUT: **Required** The path to be checked if it exists within the source data.</li></ul> | contains_key(INPUT) | contains_key("evars.evar.field1") | true |
 | nullify | Sets the value of the attribute to `null`. This should be used when you do not want to copy the field to the target schema. | | nullify() | nullify() | `null`  |
 | get_keys | Parses the key/value pairs and returns all the keys. | <ul><li>OBJECT: **Required** The object where the keys will be extracted from.</li></ul> | get_keys(OBJECT) | get_keys({"book1": "Pride and Prejudice", "book2": "1984"}) | `["book1", "book2"]` |
 | get_values | Parses the key/value pairs and returns the value of the string, based on the given key. | <ul><li>STRING: **Required** The string that you want to parse.</li><li>KEY: **Required** The key for which the value has to be extracted.</li><li>VALUE_DELIMITER: **Required** The delimiter that separates the field and the value. If either a `null` or an empty string are provided, this value is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field and value pairs. If either a `null` or an empty string are provided, this value is `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\"firstName - John , lastName - Cena , phone - 555 420 8692\", \"firstName\", \"-\", \",\") | John |
 
 {style="table-layout:auto"}
+
+For information on the object copy feature, see the section [below](#object-copy).
 
 ### Hierarchies - Arrays {#arrays}
 
@@ -156,8 +157,14 @@ The following tables list all supported mapping functions, including sample expr
 | add_to_array | Adds elements to the end of the array. | <ul><li>ARRAY: **Required** The array that you are adding elements to.</li><li>VALUES: The elements that you want to append to the array.</li></ul> | add_to_array​(ARRAY, VALUES) | add_to_array​(['a', 'b'], 'c', 'd') | ['a', 'b', 'c', 'd'] |
 | join_arrays | Combines the arrays with each other. | <ul><li>ARRAY: **Required** The array that you are adding elements to.</li><li>VALUES: The array(s) you want to append to the parent array.</li></ul> | join_arrays​(ARRAY, VALUES) | join_arrays​(['a', 'b'], ['c'], ['d', 'e']) | ['a', 'b', 'c', 'd', 'e'] |
 | to_array | Takes a list of inputs and converts it to an array. | <ul><li>INCLUDE_NULLS: **Required** A boolean value to indicate whether or not to include nulls in the response array.</li><li>VALUES: **Required** The elements that are to be converted to an array.</li></ul> | to_array​(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
+| size_of | Returns the size of the input. | <ul><li>INPUT: **Required** The object that you're trying to find the size of.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 
 {style="table-layout:auto"}
+
+<!--
+| upsert_array_append | This function is used to append all elements in the entire input array to the end of the array in Profile. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to append the array in the Profile.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
+| upsert_array_replace | This function is used to replace elements in an array. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to replace the array in the Profile.</li><li>INDEX: **Optional** The position from where the replacement needs to happen.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+-->
 
 ### Logical operators {#logical-operators}
 
@@ -208,7 +215,7 @@ The following tables list all supported mapping functions, including sample expr
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | Deserialize JSON content from the given string. | <ul><li>STRING: **Required** The JSON string to be deserialized.</li></ul> | json_to_object​(STRING) | json_to_object​({"info":{"firstName":"John","lastName" : "Doe"}}) | An object representing the JSON. |
+| json_to_object | Deserialize JSON content from the given string. | <ul><li>STRING: **Required** The JSON string to be deserialized.</li></ul> | json_to_object​(STRING) | json_to_object​({"info":{"firstName":"John","lastName": "Doe"}}) | An object representing the JSON. |
 
 {style="table-layout:auto"}
 
@@ -242,3 +249,46 @@ The following tables list all supported mapping functions, including sample expr
 | ua_device_class | Extracts the device class from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_device_class​(USER_AGENT) | ua_device_class​("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Phone |
 
 {style="table-layout:auto"}
+
+### Object copy {#object-copy}
+
+>[!TIP]
+>
+>The object copy feature is automatically applied when an object in the source is mapped to an object in the XDM. No additional action needed from users.
+
+You can use the object copy feature to automatically copy attributes of an object without making changes to the mapping. For example, if your source data has a structure of:
+
+```json
+address{
+        line1: 4191 Ridgebrook Way,
+        city: San Jose,
+        state: California
+        }
+```
+
+and an XDM structure of:
+
+```json
+addr{
+    addrLine1: 4191 Ridgebrook Way,
+    city: San Jose,
+    state: California
+    }
+```
+
+Then the mapping becomes:
+
+```json
+address -> addr
+address.line1 -> addr.addrLine1
+```
+
+In the example above, the `city` and `state` attributes are also ingested automatically at runtime because the `address` object is mapped to `addr`. If you were to create a `line2` attribute in the XDM structure and your input data also contains a `line2` in the `address` object, then it will also be automatically ingested without any need to manually alter the mapping.
+
+To ensure that the automatic mapping works, the following prerequisites must be met:
+
+* Parent-level objects should be mapped;
+* New attributes must have been created in the XDM schema;
+* New attributes should have matching names in the source schema and the XDM schema.
+
+If any of the prerequisites are not met, then you must manually map the source schema to the XDM schema using data prep.

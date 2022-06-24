@@ -5,12 +5,9 @@ title: Create a Zoho CRM Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Zoho CRM using the Flow Service API.
+exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
 ---
-# (Beta) Create a [!DNL Zoho CRM] base connection using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL Zoho CRM] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# Create a [!DNL Zoho CRM] base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
@@ -70,7 +67,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json'
     -d '{
@@ -120,4 +117,7 @@ A successful response returns details of the newly created base connection, incl
 
 ## Next steps
 
-By following this tutorial, you have created an [!DNL Zoho CRM] base connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore CRM systems using the Flow Service API](../../explore/crm.md).
+By following this tutorial, you have created a [!DNL Zoho] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
+
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Create a dataflow to bring CRM data to Platform using the [!DNL Flow Service] API](../../collect/crm.md)

@@ -4,12 +4,9 @@ solution: Experience Platform
 title: Zoho CRM Source Connector Overview
 topic-legacy: overview
 description: Learn how to connect Zoho CRM to Adobe Experience Platform using APIs or the user interface.
+exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
 ---
-# (Beta) [!DNL Zoho CRM]
-
->[!NOTE]
->
->The [!DNL Zoho CRM] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL Zoho CRM]
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -48,7 +45,7 @@ For detailed steps on acquiring your credentials, see the [[!DNL Zoho CRM] authe
 The documentation below provides information on how to connect [!DNL Zoho CRM] to Platform using APIs or the user interface:
 
 - [Create a [!DNL Zoho CRM] base connection using the Flow Service API](../../tutorials/api/create/crm/zoho.md)
-- [Explore the data structure and contents of a CRM source using the Flow Service API](../../tutorials/api/explore/crm.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Zoho CRM] to [!DNL Platform] using the UI

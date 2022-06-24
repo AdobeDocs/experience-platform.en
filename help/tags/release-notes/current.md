@@ -1,13 +1,19 @@
 ---
-title: Release Notes
+title: Release Notes for Tags
 description: The latest release notes for tags in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
-# Release notes
+# Release notes for tags in Adobe Experience Platform
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
+
+## November 15, 2021
+
+**Accept ES6 code in Tags** – Extensions and custom code containing ES6 code can now be used in Tags. In the extension catalog you will see an ES6+ label inside the card of each extension that contains ES6 code. IE10 and IE11 do not support ES6 code. Before using ES6 code in your Tags libraries, do your due dilligence.
+
+**Using Terser as JavaScript compressor** – Uglifier was replaced with Terser. Starting from this release, all Tags libraries are minified by Terser.
 
 ## October 21, 2021
 

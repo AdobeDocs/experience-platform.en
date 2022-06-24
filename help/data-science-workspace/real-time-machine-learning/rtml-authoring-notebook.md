@@ -117,7 +117,7 @@ The **[!UICONTROL Real-time ML]** templates **Data Transformations** cell needs 
 >The following example has been condensed for readability purposes using `[ ... ]`. Please view and expand the *Real-time ML* templates data transformations section for the complete code cell.
 
 ```python
-df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
+df1.rename(columns = {config_properties['ten_id']+'.identification.ecid': 'ecid',
                      [ ... ]}, inplace=True)
 df1 = df1[['ecid', 'km', 'cartype', 'age', 'gender', 'carbrand', 'leasing', 'city', 
        'country', 'nationality', 'primaryuser', 'purchase', 'pricequote', 'timestamp']]
@@ -152,7 +152,7 @@ df1['gender'].fillna('notgiven', inplace=True)
 
 [ ... ]
 
-df1['city'] = df1.groupby('country')['city'].transform(lambda x : x.fillna(x.mode()))
+df1['city'] = df1.groupby('country')['city'].transform(lambda x: x.fillna(x.mode()))
 df1.dropna(subset = ['pricequote'], inplace=True)
 print("df1 shape 3", df1.shape)
 print(df1)
@@ -254,7 +254,7 @@ model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
-print("Model ID : ", model_id)
+print("Model ID: ", model_id)
 ```
 
 ![ONNX model](../images/rtml/onnx-model-rail.png)

@@ -84,7 +84,8 @@ To use an existing dataset, select **[!UICONTROL Existing dataset]**. On the for
 
 ### Map standard fields
 
-Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For more information on mapper functions and calculated fields, refer to either the [Data Prep functions guide](../../../../../data-prep/functions.md) or the [calculated fields guide](../../../../../data-prep/calculated-fields.md).
+
+Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 To add a new source field, select **[!UICONTROL Add new mapping]**.
 

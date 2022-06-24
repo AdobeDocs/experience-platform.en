@@ -1,23 +1,17 @@
 ---
-title: Overview of Segmentation Use Cases for Real-time CDP B2B Edition (Beta)
+title: Segmentation Use Cases for Real-time CDP B2B Edition
 description: An overview of the various available Real-time CDP B2B Edition use cases.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 ---
-# Overview of Segmentation use cases for Real-time Customer Data Platform B2B Edition (Beta)
+# Segmentation use cases for Real-time Customer Data Platform B2B Edition
 
-<!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
-
->[!IMPORTANT]
->
->Real-time CDP B2B Edition is currently in beta. The documentation and the functionality are subject to change.
-
-This document provides examples regarding the segmentation available for Real-time CDP B2B Edition and how the different types of attributes can be combined for common B2B use cases.
+This document provides examples of segment definitions in Real-time CDP B2B Edition and how different types of attributes can be combined for common B2B use cases. To understand how destinations fit into your B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
 >The attributes required for these segmentation use cases are only available to Real-time Customer Data Platform B2B Edition customers. If you are not using Real-time Customer Data Platform B2B Edition, see the [segmentation overview](./segmentation-overview.md) instead.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 Before you can use the segmentation attributes for B2B classes, you must complete the following steps:
 
@@ -28,7 +22,7 @@ Before you can use the segmentation attributes for B2B classes, you must complet
 
 Once these requirements have been met you are able to combine these attributes for common B2B use cases.
 
-## Getting started
+## Getting started {#getting-started}
 
 Once the union schemas for the B2B classes have relationships established and have been used to ingest data, their attributes are made available in the left rail of the Segment Builder. 
 
@@ -54,52 +48,58 @@ Please refer to the [schemas in Real-time Customer Data Platform B2B Edition doc
 
 The use cases below provide information on which classes are used to establish relationships between the different schemas to achieve these results. These examples can be used to help you create your own segments.
 
-## Examples of different use cases
+## Examples of different segmentation use cases {#use-cases}
 
 The following use cases are available for segmentation with the B2B Edition. Each example provides a description of what the segment does and a description of the classes used to create them. The images provided highlight the file path in the [!UICONTROL Attributes] side rail which reflects the structure of the schema. The [!UICONTROL Segment properties] section on the right of the display contains a written breakdown of the segment's attributes. 
 
-### Example 1
+### Example 1: Find "decision-makers" for B2B opportunities {#find-decision-maker}
 
 Find all the people who are the "Decision Maker" of any opportunity. This segment requires a link between the [!UICONTROL XDM Individual Profile] class and the [!UICONTROL XDM Business Opportunity Person Relation] class. 
 
 ![UI displaying example 1 settings](../assets/segmentation/example-1.png)
 
-### Example 2
+### Example 2: Find B2B profiles assigned to opportunities over a certain dollar amount {#find-opportunities-amount}
 
 Find all the people who are directly assigned to any opportunities of which the opportunity amount is more than the given amount ($1 million). This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Opportunity Person Relation] class, and [!UICONTROL XDM Business Opportunity] class.
 
 ![UI displaying example 2 settings](../assets/segmentation/example-2.png)
 
-### Example 3
+### Example 3: Find B2B profiles assigned to opportunities by location {#find-opportunities-location} 
 
 Find all the people who are directly assigned to any opportunities where the account is located in a given location (Canada). This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Opportunity Person Relation] class, [!UICONTROL XDM Business Opportunity] class, and [!UICONTROL XDM Business Account] class.
 
 ![UI displaying example 3 settings](../assets/segmentation/example-3.png)
 
-### Example 4
+### Example 4: Find "decision-makers" for opportunities by industry and browsing behavior {#find-industry-browsing-behavior}
 
 Find all the people who are a "Decision Maker" of any opportunity where the account is in the "Finance" industry, and visited the pricing page in the last three days. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Opportunity Person Relation] class, [!UICONTROL XDM Business Opportunity] class, and [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM ExperienceEvent] class.
 
 ![UI displaying example 4 settings](../assets/segmentation/example-4.png)
 
-### Example 5
+### Example 5: Find B2B profiles for opportunities by department name and opportunity amount {#find-department-opportunity-amount}
 
 Find all the people who work in a Human Resources (HR) department and are related to any account that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM Business Opportunity] class.
 
 ![UI displaying example 5 settings](../assets/segmentation/example-5.png)
 
-### Example 6
+### Example 6: Find B2B profiles by job title and annual account revenue {#find-by-job-title-and-revenue}
 
 Find all the people whose job title is Vice President and are related to any account with annual revenue of the given amount ($100 million) or more, and have visited the pricing page at least 3 times in the last month. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM ExperienceEvent] class.
 
 ![UI displaying example 6 settings](../assets/segmentation/example-6.png)
 
-### Example 7
+### Example 7: Find "decision-makers" by opportunity status and browsing behavior {#find-by-opportunity-status-and-browsing-behavior}
 
 Find all the people who are a "Decision Maker" of any closed-lost opportunity, and visited the pricing page in the last week. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Opportunity Person Relation] class, [!UICONTROL XDM Business Opportunity] class, and [!UICONTROL XDM ExperienceEvent] class.
 
 ![UI displaying example 7 settings](../assets/segmentation/example-7.png)
 
-## Next steps
+### Example 8: Use related accounts to expand segmentation reach {#related-accounts}
+
+Find all the people who work in a Human Resources (HR) department and are related to any account *or any one of the account's related accounts* that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the [!UICONTROL XDM Individual Profile] class, [!UICONTROL XDM Business Account] class, and [!UICONTROL XDM Business Opportunity] class.
+
+![UI displaying segmentation for related accounts](../assets/segmentation/segmentation-related-accounts.png)
+
+## Next steps {#next-steps}
 
 After reading this overview, you now have an understanding of the segmentation possibilities that are available using Real-time CDP, B2B Edition. For more information about the Segmentation Service, please read the [Segmentation documentation](../../segmentation/home.md).

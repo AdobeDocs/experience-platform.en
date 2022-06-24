@@ -1,14 +1,10 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Example Use Case for Real-time Customer Data Platform B2B Edition (Beta)
+title: Example Use Case for Real-time Customer Data Platform B2B Edition
 description: This sample scenario provides an example for the configuration of your implementation of Real-time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 ---
-# Example Use Case for Real-time Customer Data Platform B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Real-time CDP Business to Business Edition is currently in beta. The documentation and the functionality are subject to change.
+# Example Use Case for Real-time Customer Data Platform B2B Edition
 
 Real-time Customer Data Platform B2B Edition expands the existing Real-time CDP and Adobe Experience Platform offerings to support B2B data and workflows. This document provides an example use case that demonstrates the additional benefits provided by the B2B Edition. They include:
 
@@ -23,8 +19,6 @@ Bodea, a technology company, has a new product and wants to simultaneously targe
 However, Bodea has two different lines of business. Bodea's first line of business "Line 1" creates software for the automotive industry. Its second line of business "Line 2" sells 3D printers that create automobile parts. As a result of Bodea's two lines of business, the revenue data generated from Bodea's customer accounts is not unified in a single view. 
 
 Each line of business has its own sales system: "CRM 1" and "CRM 2". Both of these CRM sales systems are connected to their own marketing automation platform "Marketo 1" and "Marketo 2". Data from CRM 1 gets synced only into Marketo 1 and Data from CRM2 gets synced only into Marketo 2. Ultimately, their data is maintained in different corporate information silos.
-
-<!-- ![lines of business diagram](./assets/lines-of-business.png) -->
 
 ## Current data situation
 
@@ -91,7 +85,7 @@ By reading this document you have now been introduced to the types of objectives
 
 The following documentation is recommended to improve your understanding of B2B specific features: 
 
-<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Real-time Customer Data Platform B2B Edition end-to-end tutorial](./b2b-tutorial.md)
 - [Sources in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
 - [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
 - [B2B Segmentation examples](./segmentation/b2b.md)

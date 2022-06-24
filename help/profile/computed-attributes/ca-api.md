@@ -52,16 +52,16 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}'\
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name" : "birthdayCurrentMonth",
-        "path" : "_{TENANT_ID}",
-        "description" : "Computed attribute to capture if the customer birthday is in the current month.",
-        "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
-            "value":  "person.birthDate.getMonth() = currentMonth()"
+        "name": "birthdayCurrentMonth",
+        "path": "_{TENANT_ID}",
+        "description": "Computed attribute to capture if the customer birthday is in the current month.",
+        "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
+            "value": "person.birthDate.getMonth() = currentMonth()"
         },
         "schema": 
           {
@@ -87,7 +87,7 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
 ```json
 {
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "prod",
@@ -165,16 +165,16 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}'\
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name" : "averageSpend",
-        "path" : "_{TENANT_ID}.purchaseSummary",
-        "description" : "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-        "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
-            "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
+        "name": "averageSpend",
+        "path": "_{TENANT_ID}.purchaseSummary",
+        "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
+        "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
+            "value": "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
         },
         "schema": 
           {
@@ -200,7 +200,7 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
 ```json
 {
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",
@@ -214,9 +214,9 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
         "purchaseSummary"
     ],
     "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
-    "expression" : {
-            "type" : "PQL", 
-            "format" : "pql/text", 
+    "expression": {
+            "type": "PQL", 
+            "format": "pql/text", 
             "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
     },
     "schema": {
@@ -294,7 +294,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/computedAttributes/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -313,7 +313,7 @@ The response also includes a `children` array composed of one or more objects, e
     "children": [
         {
             "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -355,7 +355,7 @@ The response also includes a `children` array composed of one or more objects, e
         },
         {
             "id": "ae0c6552-cf49-4725-8979-116366e8e8d3",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -369,8 +369,8 @@ The response also includes a `children` array composed of one or more objects, e
             ],
             "description": "Calculate total product downloads.",
             "expression": {
-                "type" : "PQL", 
-                "format" : "pql/text", 
+                "type": "PQL", 
+                "format": "pql/text", 
                 "value":  "let Y = xEvent[_coresvc.event.subType = \"DOWNLOAD\"].groupBy(_coresvc.attributes[name = \"product\"].value).map({
                   \"downloaded\": this.head()._coresvc.attributes[name = \"product\"].head().value,
                   \"downloadsSum\": this.count(),
@@ -436,7 +436,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/computedAttributes/2afcf410-450e-4a39-984d-2de99ab58877 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -445,7 +445,7 @@ curl -X GET \
 ```json
 {
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
         "sandboxName": "prod",
@@ -502,7 +502,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **Request**
 
-This request uses [JSON Patch formatting](http://jsonpatch.com/) to update the "value" of the "expression" field.
+This request uses [JSON Patch formatting](https://datatracker.ietf.org/doc/html/rfc6902) to update the "value" of the "expression" field.
 
 ```shell
 curl -X PATCH \
@@ -510,7 +510,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'\
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \  
   -d '[
         {
@@ -518,8 +518,8 @@ curl -X PATCH \
           "path": "/expression",
           "value": 
           {
-            "type" : "PQL", 
-            "format" : "pql/text", 
+            "type": "PQL", 
+            "format": "pql/text", 
             "value":  "{NEW_EXPRESSION_VALUE}"
           }
         }
@@ -559,7 +559,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/core/ups/config/computedAttributes/ae0c6552-cf49-4725-8979-116366e8e8d3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
   -H 'x-sandbox-name: {SANDBOX_NAME}' \ 
 ```
 
@@ -587,7 +587,7 @@ POST /segment/definitions
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -634,7 +634,7 @@ A successful response returns HTTP status 200 with details of your newly created
     },
     "ttlInDays": 60,
     "id": "119835c3-5fab-4c18-ae01-4ccab328fc5c",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",

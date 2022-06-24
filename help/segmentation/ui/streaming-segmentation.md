@@ -16,11 +16,11 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will be evaluated along with the nightly scheduled segment job.
+>Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
 >
 >Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
 
-## Streaming segmentation query types
+## Streaming segmentation query types {#query-types}
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ A segment definition will **not** be enabled for streaming segmentation in the f
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
 
-Additionally, some guidelines apply when doing streaming segmentation:
+Please note the following guidelines apply when doing streaming segmentation:
 
 | Query type | Guideline |
 | ---------- | -------- |
@@ -52,6 +52,8 @@ Additionally, some guidelines apply when doing streaming segmentation:
 | Query with event history | <ul><li>The lookback window is limited to **one day**.</li><li>A strict time-ordering condition **must** exist between the events.</li><li>Queries with at least one negated event are supported. However, the entire event **cannot** be a negation.</li></ul>|
 
 If a segment definition is modified so it no longer meets the criteria for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
+
+Additionally, segment unqualification, similarly to segment qualification, happens in real-time. As a result, if an audience no longer qualifies for a segment, it will be immediately unqualified. For example, if the segment definition asks for "All users who bought red shoes in the last three hours", after three hours, all the profiles that initially qualified for the segment definition will be unqualified.
 
 ## Streaming segmentation segment details
 
@@ -62,6 +64,12 @@ After creating a streaming-enabled segment, you can view details of that segment
 Specifically, the **[!UICONTROL Total qualified]** metric is displayed, which shows the total number of qualified audiences, based on all segment evaluations ( including both batch and streaming evaluations).
 
 Underneath is a line graph that shows the number of new audiences that were updated in the last 24 hours. The dropdown can be adjusted to show the last 24 hours, last week, or last 30 days. The **[!UICONTROL New audience updated]** metric is based on the change in audience size during the selected time range, as evaluated by streaming segmentation. This metric does not include the total qualified audience from the daily segment batch evaluation.
+
+>[!NOTE]
+>
+>A segment is considered qualified if it goes from having no status to realized or if it goes from exited to realized. A segment is considered unqualified if it goes from realized to exited or from existing to exited.
+>
+>More information about these statuses can be found in the status table within the [segmentation overview](./overview.md#browse).
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
@@ -76,3 +84,31 @@ For more information about segment definitions, please read the previous section
 This user guide explains how streaming-enabled segment definitions work on Adobe Experience Platform and how to monitor streaming-enabled segments. 
 
 To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md).
+
+## Appendix
+
+The following section lists frequently asked questions regarding streaming segmentation:
+
+### Does streaming segmentation "unqualification" also happen in real time?
+
+For most instances, streaming segmentation unqualification happens in real-time. However, streaming segments that use segments of segments do **not** unqualify in real-time, instead unqualifying after 24 hours.
+
+### What data does streaming segmentation work on?
+
+Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+
+### How are segments defined as batch or streaming segmentation?
+
+A segment is defined as either batch or streaming segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment can be found in the [streaming segmentation query types section](#query-types).
+
+### Can a user define a segment as batch or streaming segmentation?
+
+At this time, the user cannot define whether a segment is evaluated using batch or streaming ingestion, as the system will automatically determine which method the segment will be evaluated with. 
+
+### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
+
+The number of total qualified segments is drawn from the daily segmentation job, which includes audiences that qualify for both batch and streaming segments. This value is shown for both batch and streaming segments.
+
+The number under the "Last X days" **only** includes audiences that are qualified in streaming segmentation, and **only** increases if you have streamed data into the system and it counts toward that streaming definition. This value is **only** shown for streaming segments. As a result, this value **may** display as 0 for batch segments.
+
+As a result, if you see that the number under "Last X days" is zero, and the line graph is also reporting zero, you have **not** streamed any profiles into the system that would qualify for that segment.

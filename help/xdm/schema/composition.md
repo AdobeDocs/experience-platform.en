@@ -45,6 +45,12 @@ Both record and time series schemas contain a map of identities (`xdm:identityMa
 
 ### [!UICONTROL Identity] {#identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identities"
+>title="Identities in schemas"
+>abstract="Identities are key fields within a schema that can be used to identify a subject, such as an email address or a marketing ID. These fields are used to construct the identity graph for each individual and build customer profiles."
+>text="See the documentation for more information on identities in schemas."
+
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
 To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
@@ -119,7 +125,19 @@ The following table breaks down which changes are supported when editing schemas
 
 | Supported changes | Breaking changes (Not supported) |
 | --- | --- |
-| <ul><li>Adding new fields to the resource</li><li>Making a mandatory field optional</li><li>Changing the resource's display name and description</li><li>Enabling the schema to participate in Profile</li></ul> | <ul><li>Removing previously defined fields</li><li>Introducing new mandatory fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving existing fields to a different location in the tree</li><li>Deleting the schema</li><li>Disabling the schema from participating in Profile</li></ul> |
+| <ul><li>Adding new fields to the resource</li><li>Making a mandatory field optional</li><li>Introducing new mandatory fields*</li><li>Changing the resource's display name and description</li><li>Enabling the schema to participate in Profile</li></ul> | <ul><li>Removing previously defined fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving existing fields to a different location in the tree</li><li>Deleting the schema</li><li>Disabling the schema from participating in Profile</li></ul> |
+
+\**Refer to the [subsection below](#post-ingestion-required-fields) for important considerations regarding setting new mandatory fields.*
+
+#### Setting fields as mandatory after ingestion {#post-ingestion-required-fields}
+
+If a field has been used to ingest data and was not originally set as required, that field may have a null value for some records. If you set this field as required post-ingestion, all future records must contain a value for this field even though historical records may be null.
+
+When setting a previously optional field as mandatory, keep the following in mind:
+
+1. If you query historical data and write the results into a new dataset, some rows will fail because they contain null values for the required field.
+1. If the field participates in [Real-time Customer Profile](../../profile/home.md) and you export data before setting it as required, it may be null for some profiles.
+1. You can use the Schema Registry API to view a timestamped changelog for all XDM resources in Platform, including new mandatory fields. See the guide on the [audit log endpoint](../api/audit-log.md) for more information.
 
 ### Schemas and data ingestion
 
@@ -212,7 +230,7 @@ The valid ranges of these scalar types can be further constrained to certain pat
 
 >[!NOTE]
 >
->The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can only be defined at the system level, meaning you may encounter a map in an industry or vendor-defined schema, but it is not available for use in fields you define. The [Schema Registry API developer guide](../api/getting-started.md) contains more information on defining field types.
+>The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can be found in standard XDM classes and field groups, but you can also define custom maps using the Schema Registry API. See the tutorial on [defining custom fields](../tutorials/custom-fields-api.md#maps) for more information.
 
 ## Composition example
 

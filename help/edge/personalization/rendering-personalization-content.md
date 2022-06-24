@@ -6,7 +6,11 @@ exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
 ---
 # Render personalized content
 
-Adobe Experience Platform Web SDK supports retrieving personalized content from personalization solutions at Adobe, including [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) and [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html). Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) can be retrieved and rendered automatically by the SDK. Content created within Adobe Target's [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) or Offer Decisioning cannot be rendered automatically by the SDK. Instead, you must request this content using the SDK and then manually render the content yourself.
+Adobe Experience Platform Web SDK supports retrieving personalized content from Adobe personalization solutions, including [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) and [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html).
+
+Additionally, the Web SDK powers same-page and next-page personalization capabilies through Adobe Experience Platform personalization destinations, such as [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [custom personalization connection](../../destinations/catalog/personalization/custom-personalization.md). To learn how to configure Experience Platform for same-page and next-page personalization, see the [dedicated guide](../../destinations/ui/configure-personalization-destinations.md).
+
+Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) can be retrieved and rendered automatically by the SDK. Content created within Adobe Target's [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) or Offer Decisioning cannot be rendered automatically by the SDK. Instead, you must request this content using the SDK and then manually render the content yourself.
 
 ## Automatically rendering content
 
@@ -260,7 +264,7 @@ alloy("sendEvent", {
       // Send a "display" event 
     alloy("sendEvent", {
       xdm: {
-        eventType: "display",
+        eventType: "decisioning.propositionDisplay",
         _experience: {
           decisioning: {
             propositions: [
@@ -286,3 +290,94 @@ alloy("sendEvent", {
 ### Manage flicker
 
 The SDK provides facilities to [manage flicker](../personalization/manage-flicker.md) during the personalization process.
+
+## Render propositions in single-page applications without incrementing metrics {#applypropositions}
+
+The `applyPropositions` command allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the [!DNL Analytics] and [!DNL Target] metrics. This increases reporting accuracy.
+
+>[!IMPORTANT]
+>
+>If propositions for the `__view__` scope were rendered on page load, their `renderAttempted` flag will be set to `true`. The `applyPropositions` command will not re-render the `__view__` scope propositions that have the `renderAttempted: true` flag.
+
+### Use case 1: Re-render single-page application view propositions
+
+The use case described in the sample below re-renders the previously fetched and rendered cart view propositions without sending display notifications.
+
+In the example below, the `sendEvent` command is triggered upon a view change, and saves the resulting object in a constant.
+
+Next, when the view or a component gets updated, the `applyPropositions` command is called, with the propositions from the previous `sendEvent` command, to re-render the view propositions.
+
+```js
+var cartPropositions = alloy("sendEvent", {
+    renderDecisions: true,
+    xdm: {
+        web: {
+            webPageDetails: {
+                viewName: "cart"
+            }
+        }
+    }
+}).then(function(result) {
+    var propositions = result.propositions;
+
+    // Collect response tokens, etc.
+    return propositions;
+});
+
+// Call applyPropositions to re-render the view propositions from the previous sendEvent command.
+alloy("applyPropositions", {
+    propositions: cartPropositions
+});
+```
+
+### Use case 2: Render propositions that do not have a selector
+
+This use case applies to activity offers authored using the [!DNL Target Form-based Experience Composer].
+
+You must provide the selector, action, and scope in the `applyPropositions` call.
+
+Supported `actionTypes` are:
+
+* `setHtml`
+* `replaceHtml`
+* `appendHtml`
+
+```js
+// Retrieve propositions for salutation and discount scopes
+alloy("sendEvent", {
+    decisionScopes: ["salutation", "discount"]
+}).then(function(result) {
+    var retrievedPropositions = result.propositions;
+    // Render propositions on the page by providing additional metadata
+
+    return alloy("applyPropositions", {
+        propositions: retrievedPropositions,
+        metadata: {
+            salutation: {
+                selector: "#first-form-based-offer",
+                actionType: "setHtml"
+            },
+            discount: {
+                selector: "#second-form-based-offer",
+                actionType: "replaceHtml"
+            }
+        }
+    }).then(function(applyPropositionsResult) {
+        var renderedPropositions = applyPropositionsResult.propositions;
+
+        // Send the display notifications via sendEvent command
+        alloy("sendEvent", {
+            xdm: {
+                eventType: "decisioning.propositionDisplay",
+                _experience: {
+                    decisioning: {
+                        propositions: renderedPropositions
+                    }
+                }
+            }
+        });
+    });
+});
+```
+
+If you provide no metadata for a decision scope, the associated propositions will not be rendered.

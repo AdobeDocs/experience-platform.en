@@ -99,7 +99,7 @@ With your dataset and schema established, the **[!UICONTROL Map standard fields]
 >
 >Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
-Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For more information on mapper functions and calculated fields, refer to either the [Data Prep functions guide](../../../../../data-prep/functions.md) or the [calculated fields guide](../../../../../data-prep/calculated-fields.md).
+Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 Once your source data is mapped, select **[!UICONTROL Next]**.
 

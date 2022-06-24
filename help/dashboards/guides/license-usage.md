@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;user interface;UI;customization;license usage dashboard;dashboard;license usage;entitlement;consumption
-title: License Usage Dashboard
+title: License Usage Dashboard Guide
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's license usage.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
@@ -65,20 +65,12 @@ Each widget displays a line graphs comparing actual numbers for your organizatio
 
 ## Available metrics
 
-The license usage dashboard reports on four key metrics, with more metrics to be added in subsequent releases. The available metrics are listed below.
-
->[!NOTE]
->
->Three of the available metrics are currently in beta.
+The license usage dashboard reports on four key metrics, with more metrics to be added in subsequent releases. The available metrics are:
 
 * [!UICONTROL Addressable Audience]
-* [!UICONTROL Average profile richness] (Beta)
-* [!UICONTROL Data scanned per segmentation ratio] (Beta)
-* [!UICONTROL Total consumed storage] (Beta)
-
->[!WARNING]
->
->Known limitation of the [!UICONTROL Total consumed storage] metric: When deleting batch data, that batch is placed into a soft delete state for a period of 7 days to support data recovery use cases. After 7 days, the batch is moved to a hard delete state. Reporting on total consumed storage will not reflect any change to the trend chart until the batch is in the hard delete state. This issue will be resolved in a future release.
+* [!UICONTROL Average profile richness]
+* [!UICONTROL Data scanned per segmentation ratio]
+* [!UICONTROL Total consumed storage]
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, please reference the appropriate Product Description documentation:
 
@@ -89,6 +81,7 @@ The availability of these metrics and the specific definition of each of these m
 |<ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL TO 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL TO 50M</li></ul>|[Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html)|
 |<ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL UP TO 50M</li></ul>|[Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)|
 |<ul><li>AEP:OD INTELLIGENCE</li></ul>|[Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html)|
+|<ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP RTCDP:OD PROFILE ORCHESTRATION</li></ul>|[Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html)|
 
 >[!WARNING]
 >

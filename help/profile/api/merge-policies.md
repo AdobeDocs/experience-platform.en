@@ -44,7 +44,7 @@ The complete merge policy object represents a set of preferences controlling asp
     {
         "id": "{MERGE_POLICY_ID}",
         "name": "{NAME}",
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "schema": {
             "name": "{SCHEMA_CLASS_NAME}"
         },
@@ -80,7 +80,7 @@ The complete merge policy object represents a set of preferences controlling asp
     {
         "id": "10648288-cda5-11e8-a8d5-f2801f1b9fd1",
         "name": "profile-default",
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -137,7 +137,7 @@ A profile fragment is the profile information for just one identity out of the l
 Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 
 * **`timestampOrdered`**: (default) Give priority to the profile which was updated last. Using this merge type, the `data` attribute is not required.
-* **`dataSetPrecedence`** : Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
+* **`dataSetPrecedence`**: Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
   * **`order`**: When "dataSetPrecedence" is used, an `order` array must be supplied with a list of datasets. Any datasets not included in the list will not be merged. In other words, datasets must be explicitly listed to be merged into a profile. The `order` array lists the IDs of the datasets in order of priority.
 
 #### Example `attributeMerge` object using `dataSetPrecedence` type
@@ -145,7 +145,7 @@ Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 ```json
     "attributeMerge": {
         "type": "dataSetPrecedence",
-        "order" : [
+        "order": [
             "dataSetId_2", 
             "dataSetId_3", 
             "dataSetId_1", 
@@ -211,7 +211,7 @@ curl -X GET \
   'https://platform.adobe.io/data/core/ups/config/mergePolicies/10648288-cda5-11e8-a8d5-f2801f1b9fd1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}
 ```
 
@@ -222,7 +222,7 @@ A successful response returns the details of the merge policy.
 ```json
 {
     "id": "10648288-cda5-11e8-a8d5-f2801f1b9fd1",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "schema": {
         "name": "_xdm.context.profile"
     },
@@ -260,7 +260,7 @@ curl -X POST \
   'https://platform.adobe.io/data/core/ups/config/mergePolicies/bulk-get' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -285,7 +285,7 @@ A successful response returns HTTP Status 207 (Multi-Status) and the details of 
         "0bf16e61-90e9-4204-b8fa-ad250360957b": {
             "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
             "name": "Profile Default Merge Policy",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -309,7 +309,7 @@ A successful response returns HTTP Status 207 (Multi-Status) and the details of 
         "42d4a596-b1c6-46c0-994e-ca5ef1f85130": {
             "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
             "name": "Dataset Precedence Merge Policy",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -374,7 +374,7 @@ curl -X GET \
   'https://platform.adobe.io/data/core/ups/config/mergePolicies?schema.name=_xdm.context.profile' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}
 ```
 
@@ -392,7 +392,7 @@ A successful response returns a paginated list of merge policies that meet the c
         {
             "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
             "name": "Profile Default Merge Policy",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -416,7 +416,7 @@ A successful response returns a paginated list of merge policies that meet the c
         {
             "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
             "name": "Dataset Precedence Merge Policy",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -472,17 +472,17 @@ curl -X POST \
   https://platform.adobe.io/data/core/ups/config/mergePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Loyalty members ordered by ID",
-    "identityGraph" : {
+    "identityGraph": {
         "type": "none"
     },
-    "attributeMerge" : {
+    "attributeMerge": {
         "type":"dataSetPrecedence",
-        "order" : [
+        "order": [
             "5b76f86b85d0e00000be5c8b",
             "5b76f8d787a6af01e2ceda18"
         ]
@@ -514,7 +514,7 @@ A successful response returns the details of the newly created merge policy.
 {
     "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
     "name": "Loyalty members ordered by ID",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
         "sandboxName": "prod",
@@ -570,7 +570,7 @@ curl -X PATCH \
   https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -582,7 +582,7 @@ curl -X PATCH \
 
 |Property|Description|
 |---|---|
-|`op`|Specifies the operation to take. Examples of other PATCH operations can be found in the [JSON Patch documentation](http://jsonpatch.com)|
+|`op`|Specifies the operation to take. Examples of other PATCH operations can be found in the [JSON Patch documentation](https://datatracker.ietf.org/doc/html/rfc6902)|
 |`path`|The path of the field to update. Accepted values are: "/name", "/identityGraph.type", "/attributeMerge.type", "/schema.name", "/version", "/default", "/isActiveOnEdge"|
 |`value`|The value to set the specified field to.|
 
@@ -597,7 +597,7 @@ A successful response returns the details of the newly updated merge policy.
 {
     "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
     "name": "Loyalty members ordered by ID",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
         "sandboxName": "prod",
@@ -647,12 +647,12 @@ curl -X PUT \
   https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
         "name": "Loyalty members ordered by ID",
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -692,7 +692,7 @@ A successful response returns the details of the updated merge policy.
 {
     "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
     "name": "Loyalty members ordered by ID",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
         "sandboxName": "prod",
@@ -746,7 +746,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
