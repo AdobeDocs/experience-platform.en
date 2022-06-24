@@ -265,6 +265,7 @@ Use the `maxUsersPerRequest` parameter to specify the maximum number of profiles
 This option works best if you'd rather take large batches, with thousands of profiles on the same call. This option also allows you to aggregate the exported profiles based on complex aggregation rules.
 
 This option allows you to:
+
 * Set the maximum time and maximum number of profiles to aggregate before an API call is made to your destination.
 * Aggregate the exported profiles mapped to the destination based on:
   * Segment ID;

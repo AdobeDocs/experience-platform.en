@@ -1,6 +1,7 @@
 ---
 title: Export API Endpoint
 description: The /export endpoint in the Schema Registry API allows you to share XDM resources between sandboxes.
+exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
 ---
 # Export endpoint
 
