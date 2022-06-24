@@ -1,6 +1,7 @@
 ---
 title: Activity Analysis With Adobe Target
 description: This document explains how to use Query Service to create actionable insights from datasets created with your Adobe Target data.
+exl-id: a5181ee2-1e1c-405d-8dfe-5a32c28ac9f1
 ---
 # Activity analysis with Adobe Target
 

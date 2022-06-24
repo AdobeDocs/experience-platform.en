@@ -67,7 +67,7 @@ The following table outlines the accepted values for specifying an Adobe product
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Customer Attributes (CRS) | `CRS` |
-| Identity Service | `Identity` |
+| Identity Service | `identity` |
 | Marketo Engage | `marketo` |
 
 {style="table-layout:auto"}
