@@ -18,35 +18,33 @@ The following five categories are instrumental in adhering to data compliance re
 1. Privacy Service
 1. Data Hygiene
 
-This document examines each of the different areas of governance to demonstrate how to be data compliant when using Query Service. 
+This document examines each of the different areas of governance and demonstrates how to facilitate data compliance when using Query Service. 
 
 >[!NOTE]
 >
->Datasets that are created, or appended to using Query Service are referred to as "derived datasets".
+>Datasets that are created or appended to using Query Service are referred to as "derived datasets".
 
 ## Security
 
-Data security is defined as a process of protecting data from unauthorized access and ensuring secure access throughout its lifecycle. Data security includes ensuring access control through roles and permissions (RBAC and FLAC) and securing data through the power of credentials, SSL, data encryption, and key management to ensure data protection across the platform. 
+Data security is the process of protecting data from unauthorized access and ensuring secure access throughout its lifecycle. Secure access is maintained in Experience Platform through the application of roles and permissions by capabilities such as role-based access control and attribute-based access control. Credentials, SSL, data encryption, and key management are used to ensure data protection across the platform. 
 
-This section further has 4 categories - we will be going deeper into each of these categories as explained below:
+Security in regards to data governance, is divided into the following categories:
 
-* Access Controls Enforcement by Query Service - through roles and permissions including dataset and column-level permissions
-* Securing Data: Connectivity - through the platform, external clients, limited connection with expiring credentials and non-expiring credentials
-* Securing Data: Encryption and Customer Management Key(CMK) - through encryption at rest
+* [Access controls enforcement by Query Service](#access-control-enforcement): through roles and permissions including dataset and column-level permissions
+* Securing data through [connectivity](#connectivity) - through the platform, external clients, limited connection with expiring credentials and non-expiring credentials
+* Securing data through [encryption and customer-managed keys (CMK)](encryption-and-customer-managed-keys) - through encryption at rest
 
-### Access Controls Enforcement by Query Service
+### Access control enforcement by Query Service {#access-control-enforcement}
 
-Access control in Adobe Experience Platform allows you to manage access to Query Service through roles and permissions. Similarly, the field-level access control is managed through label flow on the schema.
+Access control in Adobe Experience Platform allows you to manage access to Query Service through roles and permissions. Similarly, the attribute-based access control is managed through label management on schemas and data fields.
 
 This section serves as a guide for the required access to fully utilize the Query Service features.
 
-#### Query Execution Controls
+#### Query execution controls
 
-In order to be able to run queries within Query Service, a user needs to be assigned to a role with "Manage Queries" permission.
+To run queries within Query Service, a user must be assigned a role with the "Manage Queries" permission. This permission allows users to execute data exploration and batch queries, which can either read an existing dataset or write data on datasets. This relates to `INSERT INTO AS SELECT` (`CTAS`) and `INSERT INTO AS SELECT` (`ITAS`) queries.
 
-This permission allows users to execute data exploration and batch queries, which can either read an existing dataset or write data on datasets (CTAS and ITAS (INSERT INTO AS SELECT) queries).
-
-The detailed instructions for requesting access to the product profile "Query Manage" has been outlined in [Manage Permission for a Product Profile](https://experienceleague.adobe.com/docs/experience-platform/access-control/ui/permissions.html) and [Manage Users for a Product Profile](https://experienceleague.adobe.com/docs/experience-platform/access-control/ui/users.html).
+See the [Manage permissions for a product profile](../../access-control/ui/permissions.md) and [Manage users for a product profile](../../access-control/ui/users.md) documents for detailed instructions on requesting access to the product profile "[!UICONTROL Query Manage]" permission.
 
 #### Dataset level access control
 
@@ -88,7 +86,7 @@ Adobe Experience Platform Query Service provides the ability to use standard ANS
 
 For highly sensitive data workflows, a user needs to take extra discreet when creating views. 
 
-### Connectivity
+### Connectivity {#connectivity}
 
 Adobe Experience Platform Query Service is accessible through the platform UI or by forming a connection with external compatible clients. The accessibility to all the available fronts is controlled by the set of credentials.
 
@@ -126,7 +124,7 @@ For increased security, Adobe Experience Platform Query Service provides native 
 
 The detailed information on available SSL options for third-party client connections to Query Service and how to connect using the verify-full SSL parameter value is available at ["Query Service SSL options"](https://experienceleague.adobe.com/docs/experience-platform/query/clients/ssl-modes.html?lang=en).
 
-### Encryption and Customer Management Key(CMK)
+### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys}
 
 Encryption is defined as the use of an algorithmic process to transform data into an encoded and unreadable text to ensure the information is protected and inaccessible without a decryption key.  
 
