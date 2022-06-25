@@ -30,9 +30,9 @@ Data security is the process of protecting data from unauthorized access and ens
 
 Security in regards to data governance, is divided into the following categories:
 
-* [Access controls enforcement by Query Service](#access-control-enforcement): through roles and permissions including dataset and column-level permissions
-* Securing data through [connectivity](#connectivity) - through the platform, external clients, limited connection with expiring credentials and non-expiring credentials
-* Securing data through [encryption and customer-managed keys (CMK)](encryption-and-customer-managed-keys) - through encryption at rest
+* [Access controls enforcement by Query Service](#access-control-enforcement): Access controlled through roles and permissions including dataset and column-level permissions.
+* Securing data through [connectivity](#connectivity): Access controlled through the platform, external clients, limited connection with expiring credentials and non-expiring credentials.
+* Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest.
 
 ### Access control enforcement by Query Service {#access-control-enforcement}
 
@@ -104,7 +104,7 @@ Users can connect to these external clients by using either [expiring credential
 
 The [expiring credentials](https://experienceleague.adobe.com/docs/experience-platform/query/ui/credentials.html?lang=en) allow users to form a temporary connection with an external client. This set of credentials is only valid for 24 hours. The expiry of these types of credentials can be seen along with the credential tab in Query Service.
 
-![The credentials tab in Query Service workspace with expiring credentials highlighted.]()
+<!-- ![The credentials tab in Query Service workspace with expiring credentials highlighted.]() -->
 
 <!-- Check from her upwards in case of recent changes -->
 
@@ -148,7 +148,7 @@ The platform allows you to monitor and review the status of all queries that hav
 
 The query logs can be accessed either through the Platform UI or API. To access the "logs" in Platform UI requires you to have an Adobe ID and access to the Adobe Experience Platform.
 
-![The Queries log tab with the details panel highlighted.]()
+<!-- ![The Queries log tab with the details panel highlighted.]() -->
 
 ### Audit Service Logs
 
