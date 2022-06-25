@@ -88,21 +88,21 @@ For highly sensitive data workflows, you must enforce appropriate controls when 
 
 ### Connectivity {#connectivity}
 
-Adobe Experience Platform Query Service is accessible through the platform UI or by forming a connection with external compatible clients. The accessibility to all the available fronts is controlled by the set of credentials.
+Adobe Experience Platform Query Service is accessible through the Platform UI or by forming a connection with external compatible clients. The accessibility to all the available fronts is controlled by the set of credentials.
 
 #### Connectivity through Platform
 
 This is controlled by the user-specific credentials for the Adobe Experience Platform.
 
-#### Connectivity through External Clients
+#### Connectivity through external clients
 
-The accessibility can be formed by building a connection with the external clients through a set of credentials. These credentials are mandatory to access the Query Service with any of the compatible external clients.
+Access to Query Service is achieved by building a connection with external clients through a set of credentials. These credentials are mandatory to access Query Service with any of the compatible external clients.
 
-Users can connect to these external clients by using either [expiring credentials](https://experienceleague.adobe.com/docs/experience-platform/query/ui/credentials.html?lang=en) or [non-expiring credentials](https://experienceleague.adobe.com/docs/experience-platform/query/ui/credentials.html?lang=en#non-expiring-credentials).
+Users can connect to these external clients by using either [expiring credentials](../ui/credentials.md) or [non-expiring credentials](../ui/credentials.md#non-expiring-credentials).
 
-#### Limited Connection Time via Expiring Credentials
+#### Limited connection time via expiring credentials
 
-The [expiring credentials](https://experienceleague.adobe.com/docs/experience-platform/query/ui/credentials.html?lang=en) allow users to form a temporary connection with an external client. This set of credentials is only valid for 24 hours. The expiry of these types of credentials can be seen along with the credential tab in Query Service.
+[Expiring credentials](../ui/credentials.md) allow users to form a temporary connection with an external client. This set of credentials is only valid for 24 hours. The expiry of these types of credentials can be seen along with the credential tab in Query Service.
 
 <!-- ![The credentials tab in Query Service workspace with expiring credentials highlighted.]() -->
 
