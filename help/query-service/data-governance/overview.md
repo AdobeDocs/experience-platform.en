@@ -48,43 +48,43 @@ See the [Manage permissions for a product profile](../../access-control/ui/permi
 
 #### Dataset level access control
 
-Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. 
+Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using [Adobe Admin Console](https://adminconsole.adobe.com/). 
 
 This section serves as a guide for the required resource-based access in order to access datasets while querying data through Query Service.
 
-By the use of the permission interface the user can define resource-based access control (RBAC) on dataset and schema. Following are the available permissions:
+Through the permission interface you can define resource-based access control on datasets and schemas. The available permissions are as follows:
 
-* Dataset manage permission will allow for creating and viewing datasets using query service.
-* Dataset view permission will allow for views datasets using query service 
+* **[!UICONTROL Manage Datasets]** permission provides read-only access for schemas and allows access to read, create, edit, and delete datasets for use with Query Service.
+* **[!UICONTROL View Datasets]** permission allows read-only access for datasets and schemas for use with Query Service.
 
 #### Column Level Access Control
 
-The Data Governance in Query Service enables the feature to restrict access to the user-critical data based on the role/access assigned to each platform user or based on the field-level label applied to each individual column.
+The attribute-based access control feature enables Query Service users to restrict access to the user-critical data. Access is granted based on the role or level of access assigned to each Platform user, or based on the field-level label applied to each individual column.
 
-This enables you to allow access to a set of users to whom you would like to grant access rights on confidential columns. The access control on any column will restrict both the read and writing capabilities of a user on that restricted column.  
+This feature enables you to allow access to a set of users to whom you would like to grant access rights on confidential columns. The access control on any column will restrict both the read and writing capabilities of a user on that restricted column.  
 
 Column-level control can be applied at the schema level based on the type of schemas:
 
-1. Standard schemas: To restrict access to one or more columns use the permission-based labels and apply them to the XDM schema (including Adhoc XDM schema)  representing datasets.
-1. Ad hoc schemas: The permission labelling is consistently applied even for datasets created via query service either using a predefined schema or schema generated (Adhoc schema) as part of CTAS operation.
+1. Standard schemas: To restrict access to one or more columns use the permission-based labels and apply them to the XDM schema (including ad hoc XDM schema)  representing datasets.
+1. Ad hoc schemas: The permission labelling is consistently applied even for datasets created via query service either using a predefined schema or schema generated (ad hoc schema) as part of CTAS operation.
 
-Once the appropriate level of labels has been applied, the following is the **system behaviour** when a user tries to access the non-accessible data: 
+Once the appropriate level of access has been applied using labels, the following **system behavior** occurs when a user tries to access the non-accessible data: 
 
 1. When a user has been declined access to one of the columns within a schema, the  user will not be able to read or write on the restricted column.
   
-* **Case 1**: When a user tries to execute a query with only a restricted column, the system will throw an error that the column doesn't exist.
+* **Case 1**: When a user tries to execute a query effecting only a restricted column, the system will throw an error that the column doesn't exist.
   
-* **Case 2**: When a user tries to execute a query with multiple columns including a restricted column, the system will simply return output for all non-restricted columns only.
+* **Case 2**: When a user tries to execute a query with multiple columns including a restricted column, the system will return output for all non-restricted columns only.
 
-1. When a user tries to access a calculated field, the user is required to have access to all the fields used in the composition else the system will not allow access to the calculated field as well. 
+1. When a user tries to access a calculated field, the user is required to have access to all the fields used in the composition or the system will deny access to the calculated field as well. 
 
 #### Working with views
 
-Adobe Experience Platform Query Service provides the ability to use standard ANSI SQL for [`CREATE VIEW`](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=en#create-view) statements.
+Adobe Experience Platform Query Service provides the ability to use standard ANSI SQL for [`CREATE VIEW`](../sql/syntax.md#create-view) statements.
 
-`CREATE VIEW` defines a view of a query. The view is not physically materialized. Instead, the query is run every time the view is referenced in a query. When a user creates a view from a dataset, the data protection rules of RBAC and/or FLAC of the parent dataset are **not** hierarchically applied. Therefore, when a view is created it needs to be treated similarly to the ad-hoc schemas. This means a user is required to explicitly set permissions on each of the columns.
+The `CREATE VIEW` keyword defines a view of a query but the view is not physically materialized. Instead, the query is run every time the view is referenced in a query. When a user creates a view from a dataset, the data protection rules of role-based access control and/or attribute-based access control of the parent dataset are **not** hierarchically applied. As a result, you are required to explicitly set permissions on each of the columns when a view is created. This process is similar to the treatment of ad hoc schemas for data governance.
 
-For highly sensitive data workflows, a user needs to take extra discreet when creating views. 
+For highly sensitive data workflows, you must enforce appropriate controls when creating views.
 
 ### Connectivity {#connectivity}
 
