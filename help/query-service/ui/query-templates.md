@@ -1,6 +1,7 @@
 ---
 title: Query Templates
 description: Query templates are reusable saved SQL queries that can be reused by other users to save time and effort. They can be created using the Query Editor or the Query Service API and are available for use on all Experience Platform datasets.
+exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
 ---
 # Query Templates
 
