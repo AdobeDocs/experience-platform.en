@@ -104,25 +104,25 @@ Users can connect to these external clients by using either [expiring credential
 
 [Expiring credentials](../ui/credentials.md) allow users to form a temporary connection with an external client. This set of credentials is only valid for 24 hours. The expiry of these types of credentials can be seen along with the credential tab in Query Service.
 
-<!-- ![The credentials tab in Query Service workspace with expiring credentials highlighted.]() -->
+![The credentials tab in Query Service workspace with expiring credentials highlighted.](../images/data-governance/overview/expiring-credentials.png)
 
 <!-- Check from her upwards in case of recent changes -->
 
 #### Non-Expiring Credentials
 
-The [non-expiring credentials](https://experienceleague.adobe.com/docs/experience-platform/query/ui/credentials.html?lang=en#non-expiring-credentials) allow the users to form a permanent connection with an external client making it easier to connect without requiring the need for a manual password. To enable this kind of credentials for a user, a set of [pre-requisite workflow](https://experienceleague.adobe.com/docs/experience-platform/query/ui/credentials.html?lang=en#prerequisites) is required to be followed and inaccessible to all Query Service users. In the absence of completion of the pre-requisite workflow, the user will not be able to generate the non-expiring credentials. Thus, by restricting the creation of technical accounts, the AEP admin can restrict the use of such accounts. 
+[Non-expiring credentials](../ui/credentials.md#non-expiring-credentials) allow you to form a permanent connection with an external client and makes it easier to connect to Query Service without the need for a manual password. 
 
-Technical users created with non-expiring credential can be assigned to roles and once assigned follow the same user-level access control
+To enable the option of generating non-expiring credentials, you must follow the outlined [pre-requisite workflow](../ui/credentials.mdn#prerequisites). As part of this process your organization administrator is required to configure permissions for the product profile and as a result, the administrator has control to restrict the access of accounts to use non-expiring credentials.
 
-Once the pre-requisite workflow has been successfully processed, the user can now [generate the required connection credentials](https://experienceleague.adobe.com/docs/experience-platform/query/ui/credentials.html?lang=en#generate-credentials).
+Technical user accounts permitted with non-expiring credentials can be assigned roles which ensure appropriate data governance by following the user-level access control processes.
 
-The end-to-end guide for operationalizing the non-expiring credentials is available [here](https://experienceleague.adobe.com/docs/experience-platform/query/ui/credentials.html?lang=en#non-expiring-credentials). 
+Once the pre-requisite workflow has been successfully completed, authorized users can now [generate the required connection credentials](../ui/credentials.md#generate-credentials).
 
 #### SSL Data Encryption
 
-For increased security, Adobe Experience Platform Query Service provides native support for SSL connections to encrypt client/server communications. The platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange.
+For increased security, Adobe Experience Platform Query Service provides native support for SSL connections to encrypt client/server communications. Platform supports various SSL options to suit your data security needs and balance the processing overhead of encryption and key exchange.
 
-The detailed information on available SSL options for third-party client connections to Query Service and how to connect using the verify-full SSL parameter value is available at ["Query Service SSL options"](https://experienceleague.adobe.com/docs/experience-platform/query/clients/ssl-modes.html?lang=en).
+See the guide on available [SSL options for third-party client connections to Query Service](../clients/ssl-modes.md) and how to connect using the `verify-full` SSL parameter value.
 
 ### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys}
 
