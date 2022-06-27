@@ -255,8 +255,9 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 * If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK for file-based destinations:
   
   * [Amazon S3 authentication](authentication-configuration.md#s3)
-  * [Azure connection string](authentication-configuration.md#blob)
-  * [Azure service principal](authentication-configuration.md#adls)
+  * [Azure Blob](authentication-configuration.md#blob)
+  * [Azure Data Lake Storage](authentication-configuration.md#adls)
+  * [Google Cloud Storage](authentication-configuration.md#gcs)
   * [SFTP authentication with SSH key](authentication-configuration.md#sftp-ssh)
   * [SFTP authentication with password](authentication-configuration.md#sftp-password)
 

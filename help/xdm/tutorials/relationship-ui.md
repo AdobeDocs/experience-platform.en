@@ -9,6 +9,12 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 ---
 # Define a relationship between two schemas using the [!DNL Schema Editor]
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_relationships"
+>title="Schema relationships"
+>abstract="Schemas belonging to different classes can be contextually linked through relationship fields, allowing you to build more complex segmentation rules."
+>text="See the documentation for more information on schema relationships."
+
 >[!NOTE]
 >
 >If you are using Real-time Customer Data Platform B2B Edition, see the guide on [creating B2B relationships](./relationship-b2b.md) instead.
