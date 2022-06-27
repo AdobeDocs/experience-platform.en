@@ -1,6 +1,7 @@
 ---
 title: Deprecate an XDM Field
 description: Learn how to deprecate Experience Data Model (XDM) fields in the Schema Registry API.
+exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 ---
 # Deprecate an XDM field
 
