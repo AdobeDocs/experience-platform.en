@@ -1,6 +1,6 @@
 ---
-description: Learn how to use Destination SDK to configure an Amazon S3 destination with custom file formatting options
-title: (Beta) Use Destination SDK to configure an Amazon S3 destination with custom file formatting options file-based destination
+description: Learn how to use Destination SDK to configure an Amazon S3 destination with custom file formatting options.
+title: (Beta) Use Destination SDK to configure an Amazon S3 destination with custom file formatting options
 ---
 # (Beta) Use Destination SDK to configure an Amazon S3 destination with custom file formatting options
 
@@ -10,7 +10,7 @@ title: (Beta) Use Destination SDK to configure an Amazon S3 destination with cus
 >
 >The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-This page describes how to use Destination SDK to configure an Amazon S3 destination with custom file formatting options. You can create a private destination
+This page describes how to use Destination SDK to configure an Amazon S3 destination with custom file formatting options. This page shows all the configuration options available for Amazon S3 destinations. You can edit the configurations in the steps below or delete certain parts of the configurations, as needed.
 
 ## Prerequisites {#prerequisites}
 
@@ -105,9 +105,14 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
 
-After creating the destination server and file configuration in the previous step, you can now use the `/destinations` API endpoint to create a [destination configuration](./file-based-destination-configuration.md).
+After creating the destination server and file configuration in the previous step, you can now use the `/destinations` API endpoint to create a destination configuration.
 
 To connect the server and file configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
+
+Find descriptions of the parameters below in the pages:
+* [Batch destination configuration](./file-based-destination-configuration.md#batch-configuration)
+* [Authentication configuration](/help/destinations/destination-sdk/authentication-configuration.md#s3)
+* [File-based destination configuration API operations](/help/destinations/destination-sdk/destination-configuration-api.md#create-file-based)
 
 **API format**
 
@@ -344,4 +349,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
     }
 ```
 
-## Step 3: Test your destination {#test-destination}
+## Verify the Experience Platform UI {#verify-ui}
+
+Based on the configurations above, the Experience Platform user interface will now display a new private destination card for you to use, similar to the one in this recording:
+
