@@ -27,18 +27,15 @@ To help you better understand how and when you should use the Pega CDH destinati
 
 *In Financial Services:*
 
-*A marketer wants to optimize the offers for customers who subscribed or unsubscribed for Pension Plan or Retirement Plan News Letters. The Financial Services can ingest CustomerID's from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send profiles that are entering and exiting the segments to Pega CDH, for Next Best Action (NBA) decisioning in outbound channels.
+*A marketer wants to optimize the offers for customers who subscribed or unsubscribed for Pension Plan or Retirement Plan News Letters. The Financial Services can ingest CustomerID's from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send profiles that are entering and exiting the segments to Pega CDH, for Next Best Action (NBA) decisioning in outbound channels.*
 
 ## Prerequisites {#prerequisites}
 
-*Add information in this section about anything that customers need to be aware of before starting to set up the destination in the Adobe Experience Platform user interface. This can be about:*
+To use the  Pega Customer Decision Hub destination to export data out of Experience Platform, you must meet the following prerequisites:
 
-* *needing to be added to an allow list*
-* *requirements for email hashing*
-* *any account specifics on your side*
-* *how to obtain an API key to connect to your platform*
-
-*You can link out to your relevant documentation if that would be useful to customers.*
+* You must have configured the Adobe Segment Membership Component available in Pega MareketPlace in your Pega CDH instance.
+* You must have configured OAuth 2.0 Client Registration in your Pega CDH instance using Client Credentials grant type.
+* You must have configured to run Real-time processing of Adobe Segment Membership Data flow in your CDH instance.
 
 ## Supported identities {#supported-identities}
 
