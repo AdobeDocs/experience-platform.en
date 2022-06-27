@@ -118,7 +118,7 @@ Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], ma
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 The video below also demonstrates the steps to configure a [!DNL Facebook] destination and activate segments. 
 
@@ -126,11 +126,18 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
 
 >[!NOTE]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the [destination configuration tutorial](../../ui/connect-destination.md). 
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the [destination configuration tutorial](../../ui/connect-destination.md).
 
-### Connection parameters {#parameters}
+### Authenticate to destination {#authenticate}
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+1. Find the Facebook destination in the destination catalog and select **[!UICONTROL Set Up]**.
+2. Select **[!UICONTROL Connect to destination]**. 
+  ![Authenticate to Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. Enter your Facebook credentials and select **Log In**.
+
+### Fill in destination details {#destination-details}
+
+To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
