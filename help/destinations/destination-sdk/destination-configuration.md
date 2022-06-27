@@ -286,6 +286,8 @@ You can use the `backfillHistoricalProfileData` parameter in the destinations co
 |---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
 
+{style="table-layout:auto"}
+
 ## How this configuration connects all necessary information for your destination {#connecting-all-configurations}
 
 Some of your destination settings must be configured through the [destination server](./server-and-template-configuration.md) or the [audience metadata configuration](./audience-metadata-management.md). The destination configuration described here connects all these settings by referencing the two other configurations as follows:
