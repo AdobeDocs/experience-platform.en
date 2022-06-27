@@ -19,9 +19,13 @@ This page lists all the information you need to provide when submitting or updat
 * (For productized integrations only) a documentation PR (pull request), following the instructions described in the the [self-service documentation process](./docs-framework/documentation-instructions.md).
 * An image file which will be displayed as a logo for your destination card in the Experience Platform destinations catalog.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Adobe's standard response time to review destination publish requests is 5 business days.
+>* Adobe's standard response time to review destination publish requests is five business days.
+>
+>* If the Adobe team asks that you make any updates to your configurations following your initial submission, you must submit another destination publish request after you make the updates.
+>
+>* Even after your destination is live in the Experience Platform catalog, if you need to make any updates to your configurations, you must submit a new destination publish request for the updates to be reflected in the configurations.
 
 You can find detailed information about each item in the sections below:
 
@@ -50,7 +54,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[

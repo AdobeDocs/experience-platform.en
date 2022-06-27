@@ -457,11 +457,22 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en)
+Learn more about the `applyOffers` command from the [dedicated documentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+
 
 ### Using Web SDK
 
-This feature is not currently supported in Web SDK.
+You can apply the Target activities using the `applyPropositions` command.
+
+Example:
+
+```javascript
+alloy("applyPropositions", {
+    propositions: [...]
+});
+```
+
+Learn more about the `applyPropositions` command from the [dedicated documentation](../../personalization/rendering-personalization-content.md#applypropositions).
 
 ## How to track events
 
@@ -1224,5 +1235,5 @@ You have multiple debugging capabilities when using Web SDK:
 * Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
 * [Web SDK debug enabled](../../../edge/fundamentals/debugging.md)
 * Use [Web SDK monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Use [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=en)
+* Use [Adobe Experience Platform Debugger](../../../debugger/home.md)
 * Target Trace

@@ -20,7 +20,7 @@ Destination SDK uses the [Adobe I/O](https://www.adobe.io/) gateway for authenti
 To successfully make calls to Destination SDK API endpoints, follow the [Experience Platform authentication tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Start the tutorial from the "[Generate an API key, IMS Org ID, and client secret](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)" step. The Adobe Exchange team will handle the previous steps for you. Completing the authentication tutorial provides the values for each of the required headers in Destination SDK API calls, as shown below:
 
 * `x-api-key: {API_KEY}`, also referred to as Client ID
-* `x-gw-ims-org-id: {IMS_ORG}`, also referred to as Organization ID
+* `x-gw-ims-org-id: {ORG_ID}`, also referred to as Organization ID
 * `Authorization: Bearer {ACCESS_TOKEN}`. The access token has an expiration time of 24 hours, expressed in milliseconds, so you will have to refresh it. To refresh the access token, repeat the steps outlined in the authentication tutorial.
 
 <!--
@@ -32,7 +32,7 @@ To obtain the `{ACCESS_TOKEN}`, you must generate a JWT token and exchange it fo
 1. Follow the instructions in the [Generate JWT section](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) in the credentials guide.
 2. Follow the instructions in [Step 3: try it](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md) in the Service account connection guide.
 
-You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {IMS_ORG}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
+You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {ORG_ID}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
 
 >[!NOTE]
 >

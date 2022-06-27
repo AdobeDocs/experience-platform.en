@@ -45,6 +45,12 @@ Both record and time series schemas contain a map of identities (`xdm:identityMa
 
 ### [!UICONTROL Identity] {#identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identities"
+>title="Identities in schemas"
+>abstract="Identities are key fields within a schema that can be used to identify a subject, such as an email address or a marketing ID. These fields are used to construct the identity graph for each individual and build customer profiles."
+>text="See the documentation for more information on identities in schemas."
+
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
 To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
@@ -224,7 +230,7 @@ The valid ranges of these scalar types can be further constrained to certain pat
 
 >[!NOTE]
 >
->The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can only be defined at the system level, meaning you may encounter a map in an industry or vendor-defined schema, but it is not available for use in fields you define. The [Schema Registry API developer guide](../api/getting-started.md) contains more information on defining field types.
+>The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can be found in standard XDM classes and field groups, but you can also define custom maps using the Schema Registry API. See the tutorial on [defining custom fields](../tutorials/custom-fields-api.md#maps) for more information.
 
 ## Composition example
 

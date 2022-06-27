@@ -65,6 +65,8 @@ All promises returned from commands are resolved with a `result` object. The res
 alloy("getLibraryInfo")
   .then(function(result) {
     console.log(result.libraryInfo.version);
+    console.log(result.libraryInfo.commands);
+    console.log(result.libraryInfo.configs);
   });
 ```
 

@@ -71,6 +71,12 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 
 Yes. A Facebook destination in Experience Platform is 1:1 to an ad account in Facebook. You can create a separate Facebook destination for each Facebook ad account in your company. Follow the [destination connection tutorial](/help/destinations/ui/connect-destination.md) and connect to a separate Facebook account for each new Facebook destination in the Platform UI. There is no limit on the number of Facebook ad accounts that you can connect to.
 
+## Google Customer Match {#google-customer-match}
+
+**When exporting segments to Google Customer Match, why am I seeing extra numbers appended at the end of the segment names in the Google interface?**
+
+Google requires segment names to be unique. The numbers that you are seeing are [UNIX timestamps](https://www.unixtimestamp.com/) and they are appended to keep the segment names unique, if you mapped the same segment to multiple Google destinations.
+
 ## LinkedIn Matched Audiences {#linkedin}
 
 **Do I need to add any apps or pixels to my [!DNL LinkedIn] advertiser account?**

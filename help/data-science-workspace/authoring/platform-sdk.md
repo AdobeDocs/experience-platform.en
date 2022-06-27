@@ -31,7 +31,7 @@ If you are not using Jupyter Notebook or you need to change the IMS Org, please 
 ```python
 from platform_sdk.client_context import ClientContext
 client_context = ClientContext(api_key={API_KEY},
-              org_id={IMS_ORG},
+              org_id={ORG_ID},
               user_token={USER_TOKEN},
               service_token={SERVICE_TOKEN})
 ```
@@ -56,7 +56,7 @@ library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
 client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
-              org_id={IMS_ORG},
+              org_id={ORG_ID},
               user_token={USER_TOKEN},
               service_token={SERVICE_TOKEN})
 ```

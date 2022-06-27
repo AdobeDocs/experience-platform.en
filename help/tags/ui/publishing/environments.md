@@ -37,7 +37,7 @@ Different artifacts can exist in each environment. This allows you to test diffe
 >
 >Each environment can only be assigned one library build at a time. However, it is expected that a single environment will contain many different builds over time as you move them through the publishing workflow, reassigning builds between environments as necessary.
 
-## Installation
+## Installation {#installation}
 
 Each environment has a set of instructions used to connect it to your application. For web properties, these instructions provide embed codes. For mobile properties, these instructions provide the code necessary to instantiate the libraries you're using and retrieve the configuration at runtime.
 

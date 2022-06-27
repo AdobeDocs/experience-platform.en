@@ -1,54 +1,34 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor dataflows;flow service api;Flow Service
 solution: Experience Platform
-title: Monitor Dataflows Using the Flow Service API
+title: Monitor Sources Dataflows Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the Flow Service API.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 ---
-# Monitor dataflows using the Flow Service API
-
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
-
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+# Monitor sources dataflows using the Flow Service API
 
 This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Getting started
+>[!NOTE]
+>
+>This tutorial requires you to have the ID value of a valid dataflow. If you do not have a valid dataflow ID, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined to createa dataflow before attempting this tutorial.
 
-This tutorial requires you to have the ID value of a valid dataflow. If you do not have a valid dataflow ID, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
+## Getting started
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully monitor flow runs using the [!DNL Flow Service] API.
+### Using Platform APIs
 
-### Reading sample API calls
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+## Monitor dataflows
 
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
-
-## Monitor flow runs
-
-Once you have made a dataflow, perform a GET request to the [!DNL Flow Service] API.
+To see the status of your dataflow, make a GET request to the [!DNL Flow Service] API, while providing your dataflow's corresponding flow ID.
 
 **API format**
 
@@ -69,7 +49,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==c9cef9cb-c934-4467-8ef9-cbc934546741' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

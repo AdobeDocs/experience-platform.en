@@ -1,6 +1,7 @@
 ---
 description: The server and file configuration specs for file-based destinations can be configured in Adobe Experience Platform Destination SDK via the /destination-servers endpoint.
 title: (Beta) Configuration options for file-based destination server specs
+exl-id: 56434e36-0458-45d9-961d-f6505de998f7
 ---
 # (Beta) Server and file configuration for file-based destination server specs
 
@@ -31,7 +32,7 @@ The server and file configuration specs for file-based destinations can be confi
         }
     },
     "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -44,6 +45,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedS3Destination.bucket.value`|String|The name of the [!DNL Amazon S3] bucket to be used by this destination.|
 |`fileBasedS3Destination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedS3Destination.path.value`|String|The path to the destination folder that will host the exported files.|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 ## File-based SFTP destination server spec {#sftp-example}
 
@@ -64,7 +66,7 @@ The server and file configuration specs for file-based destinations can be confi
       "encryptionMode" : "PGP"
    },
     "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -79,6 +81,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedSftpDestination.hostName.value`|String|The host name of the destination storage.|
 |`port`|Integer|The SFTP file server port.|
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 ## File-based [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destination server spec {#adls-example}
 
@@ -93,7 +96,7 @@ The server and file configuration specs for file-based destinations can be confi
       }
    },
   "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -104,6 +107,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`destinationServerType`|String|Set this value according to your destination platform. For [!DNL Azure Data Lake Storage] destinations, set this to `FILE_BASED_ADLS_GEN2`.|
 |`fileBasedAdlsGen2Destination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedAdlsGen2Destination.path.value`|String|The path to the destination folder that will host the exported files.|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 ## File-based [!DNL Azure Blob Storage] destination server spec {#blob-example}
 
@@ -122,7 +126,7 @@ The server and file configuration specs for file-based destinations can be confi
       }
    },
   "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -135,6 +139,7 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedAzureBlobDestination.path.value`|String|The path to the destination folder that will host the exported files.|
 |`fileBasedAzureBlobDestination.container.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedAzureBlobDestination.container.value`|String|The name of the [!DNL Azure Blob Storage] container to be used by this destination.|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
 ## File-based [!DNL Data Landing Zone] ([!DNL DLZ]) destination server spec {#dlz-example}
 
@@ -150,7 +155,7 @@ The server and file configuration specs for file-based destinations can be confi
       "useCase": "Your use case"
    },
    "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -161,8 +166,41 @@ The server and file configuration specs for file-based destinations can be confi
 |`destinationServerType`|String|Set this value according to your destination platform. For [!DNL Data Landing Zone] destinations, set this to `FILE_BASED_DLZ`.|
 |`fileBasedDlzDestination.path.templatingStrategy`|String| *Required.*  Use `PEBBLE_V1`.|
 |`fileBasedDlzDestination.path.value`|String|The path to the destination folder that will host the exported files.|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
-## File-based destinations file configuration {#file-configuration}
+## File-based [!DNL Google Cloud Storage] destination server spec {#gcs-example}
+
+```json
+{
+   "name":"Google Cloud Storage Server",
+   "destinationServerType":"FILE_BASED_GOOGLE_CLOUD",
+   "fileBasedGoogleCloudStorageDestination":{
+      "bucket":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.bucket}}"
+      },
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   },
+   "fileConfigurations":{
+      // See the file formatting configuration section further below on this page
+   }
+}
+```
+
+|Parameter|Type|Description|
+|---|---|---|
+|`name`|String|The name of your destination connection.|
+|`destinationServerType`|String|Set this value according to your destination platform. For [!DNL Google Cloud Storage] destinations, set this to `FILE_BASED_GOOGLE_CLOUD`.|
+|`fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy`|String| *Required.*  Use `PEBBLE_V1`.|
+|`fileBasedGoogleCloudStorageDestination.bucket.value`|String|The name of the [!DNL Google Cloud Storage] bucket to be used by this destination.|
+|`fileBasedGoogleCloudStorageDestination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
+|`fileBasedGoogleCloudStorageDestination.path.value`|String|The path to the destination folder that will host the exported files.|
+|`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
+
+## File formatting configuration {#file-configuration}
 
 This section describes the file formatting settings for the exported `CSV` files. You can modify several properties of the exported files to match the requirements of the file reception system on your side, in order to optimally read and interpret the files received from Experience Platform.
 
@@ -233,7 +271,8 @@ This section describes the file formatting settings for the exported `CSV` files
                 "templatingStrategy": "NONE",
                 "value": "\n"
             }
-        }
+        },
+        "maxFileRowCount":5000000
     }
 ```
 
@@ -254,3 +293,4 @@ This section describes the file formatting settings for the exported `CSV` files
 |`csvOptions.charToEscapeQuoteEscaping.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping the escape for the quote character.|`\` when the escape and quote characters are different. `\0` when the escape and quote character are the same.|
 |`csvOptions.emptyValue.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets the string representation of an empty value.|`""`|
 |`csvOptions.lineSep.value`|Optional|*Only for `"fileType.value": "csv"`*. Defines the line separator that should be used for writing. Maximum length is 1 character.|`\n`|
+|`maxFileRowCount`|Optional|Maximum number of rows that the exported file can contain. Configure this based on your destination platform file size requirements.|N/A|
