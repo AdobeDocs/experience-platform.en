@@ -1,25 +1,21 @@
 ---
 title: Pega Customer Decision Hub connection
-description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send customer segment membership data to Pega Customer Decision Hub (Pega CDH) for Next Best Action (NBA) decisioning
+description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send profile segment membership data to Pega Customer Decision Hub (Pega CDH) for Next Best Action (NBA) decisioning
 ---
 
 # Pega Customer Decision Hub connection
 
-*As you go through this template, replace or delete all the paragraphs in italics (starting with this one).*
 
-*Start by updating the metadata (title and description) at the top of the page. Please ignore all instances of UICONTROL on this page. This is a tag that helps our machine translation processes correctly translate the page into the multiple languages that we support. We will add tags to your documentation after you submit it.*
 
 ## Overview {#overview}
 
-*Provide a short overview of your company, including the value it provides to customers. Include a link to your product documentation homepage, for further reading.*
+Send profile segment membership data to Pega Customer Descision Hub (Pega CDH) for Next Best Action (NBA) decisioning. 
 
->[!IMPORTANT]
->
->This documentation page was created by the *YOURDESTINATION* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*
+Adobe Experience Platform Profile Segment membership feed into Pega can be used as predictors in Pega CDH’s adaptive models and help deliver the right contextual and behavioral data for NBA decisioning purposes.
 
-## Use cases {#use-cases}
+## Use cases 
 
-To help you better understand how and when you should use the *YOURDESTINATION* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Pega CDH destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Use case #1
 
