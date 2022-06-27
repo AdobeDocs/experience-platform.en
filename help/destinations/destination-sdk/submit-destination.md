@@ -1,9 +1,9 @@
 ---
-description: This page provides all the information you need to submit for review a destination authored using Destination SDK.
-title: Submit for review a destination authored in Destination SDK
+description: This page provides all the information you need to submit for review a productized destination authored using Destination SDK.
+title: Submit for review a productized destination authored in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 ---
-# Submit for review a destination authored in Destination SDK
+# Submit for review a productized destination authored in Destination SDK
 
 ## Overview {#overview}
 

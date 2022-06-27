@@ -5,6 +5,10 @@ exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
 ---
 # Document your destination in Adobe Experience Platform
 
+>[!IMPORTANT]
+>
+>The process documented here is only required for partners submitting productized (public) destinations. If you are creating a private destination for your own use, you do not need to create and publish documentation for your destination.
+
 ## Overview {#overview}
 
 Welcome to Adobe Experience Platform, great to have you here!
