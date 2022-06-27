@@ -1,8 +1,6 @@
 ---
 title: Error handling
 description: Learn about the possible errors you might encounter when performing API requests to the Adobe Experience Platform Edge Network Server API.
-seo-description: Learn about the possible errors you might encounter when performing API requests to the Adobe Experience Platform Edge Network Server API.
-keywords: error;code;handling;edge;network;gateway;api
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
 ---
 # Error handling
