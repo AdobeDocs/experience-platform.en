@@ -4,6 +4,7 @@ type: Tutorial
 description: Learn how to export files on-demand to batch destinations using the Experience Platform UI.
 hide: true
 hidefromtoc: true
+exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 ---
 # (Beta) Export files on-demand to batch destinations using the Experience Platform UI
 
