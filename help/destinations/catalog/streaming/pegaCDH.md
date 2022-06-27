@@ -19,15 +19,15 @@ To help you better understand how and when you should use the Pega CDH destinati
 
 ### Use case #1
 
-*For mobile messaging platforms:*
+*In Telco:*
 
-*A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
+*A marketer wants to leverage insights from Data Science model-based NBA as delivered by Pega CDH for customer engagement, Pega CDH is heavily reliant on Customer Intent – for example "Interested_In_5G", "Interested_in_Unlimited_Dataplan" or "Interest_in_iPhone_accessories".*
 
 ### Use case #2
 
-*For social network platforms:*
+*In Financial Services:*
 
-*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YOURDESTINATION, to display ads in their customers' social media feeds.*
+*A marketer wants to optimize the offers for customers who subscribed or unsubscribed for Pension Plan or Retirement Plan News Letters. The Financial Services can ingest CustomerID's from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send profiles that are entering and exiting the segments to Pega CDH, for Next Best Action (NBA) decisioning in outbound channels.
 
 ## Prerequisites {#prerequisites}
 
