@@ -10,6 +10,10 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 >
 >Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
 
+>[!IMPORTANT]
+>
+>Access Control Service uses userId (an internal unique id assigned to a user) for granting permissions. When an Organization is migrated from Adobe IO to Business ID, all permissions set for users will be lost because the user ID changes as Access Control Service now uses the new userId.
+
 Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
 
 Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role.
