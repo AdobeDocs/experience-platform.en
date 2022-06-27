@@ -2,9 +2,7 @@
 keywords: activate profile request destinations;activate data;profile request destinations
 title: Activate audience data to profile request destinations
 type: Tutorial
-seo-title: Activate audience data to profile request destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 ---
 # Activate audience data to profile request destinations
