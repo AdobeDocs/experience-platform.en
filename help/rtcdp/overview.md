@@ -1,9 +1,7 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;Customer AI
 title: Real-time Customer Data Platform Overview
-seo-title: Real-time Customer Data Platform Overview
 description: Overview of Real-time Customer Data Platform
-seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
 ---
 # Real-time Customer Data Platform overview
