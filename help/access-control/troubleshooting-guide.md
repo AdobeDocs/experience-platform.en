@@ -27,3 +27,7 @@ If you do not have access permissions for a particular [!DNL Platform] feature, 
 Permissions are grouped and categorized by the [!DNL Platform] capabilities they apply to (such as [!DNL Data Management] and [!DNL Profile Management]). For a full list of available permissions and the groups they belong to, see the [permissions section](home.md#permissions) in the access control overview.
 
 See the [access control overview](home.md) for more information on providing role-based access control.
+
+## What happens to permissions after migrating from Adobe IO to Business ID?
+
+Access Control Service uses userId (an internal unique id assigned to a user) for granting permissions. When an Organization is configured for AdobeID authentication, users in the Organization have a userId that is only valid for AdobeID. When the Organization is migrated to BusinessID, all permissions set for users will be lost because the user ID changes and Access Control Service now uses the new userId.

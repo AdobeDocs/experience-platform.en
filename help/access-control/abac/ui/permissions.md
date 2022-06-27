@@ -12,7 +12,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 
 >[!IMPORTANT]
 >
->Access Control Service uses userId (an internal unique id assigned to a user) for granting permissions. When an Organization is migrated from Adobe IO to Business ID, all permissions set for users will be lost because the user ID changes as Access Control Service now uses the new userId.
+>Access Control Service uses userId (an internal unique id assigned to a user) for granting permissions. When an Organization is migrated from Adobe IO to Business ID, all permissions set for users will be lost because the user ID changes and Access Control Service now uses the new userId.
 
 Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
 
