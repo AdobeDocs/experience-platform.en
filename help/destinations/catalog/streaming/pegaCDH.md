@@ -1,9 +1,9 @@
 ---
-title: Pega Customer Decision Hub
-description: Use this template to create public documentation for your destination in the Adobe Experience Platform catalog. // Replace with the paragraph in the Overview section
+title: Pega Customer Decision Hub connection
+description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send customer segment membership data to Pega Customer Decision Hub (Pega CDH) for Next Best Action (NBA) decisioning
 ---
 
-# Pega Customer Decision Hub
+# Pega Customer Decision Hub connection
 
 *As you go through this template, replace or delete all the paragraphs in italics (starting with this one).*
 
