@@ -1,13 +1,17 @@
 ---
-title: Sample Anonymous Block Queries
-description: The Anonymous Block is an SQL syntax supported by Adobe Experience Platform Query Service, which allows you to efficiently execute a sequence of queries
+title: Anonymous Block in Query Service
+description: The anonymous block is an SQL syntax supported by Adobe Experience Platform Query Service, which allows you to efficiently execute a sequence of queries
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
 ---
-# Sample queries for Anonymous block
+# Anonymous block in Query Service
 
 Adobe Experience Platform Query Service supports anonymous blocks. The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
 
 The anonymous block feature is an efficient way to perform a sequence of operations or queries. The chain of queries within the block can be saved as a template and scheduled to run at a particular time or interval. These queries can be used to write and append data to create a new data set and are typically used where you have a dependency.
+
+>[!IMPORTANT]
+>
+>Scheduling queries using anonymous blocks is currently only possible through the [!DNL Query Service] API. See the documentation for [complete instructions on scheduling queries through the API](../api/scheduled-queries.md). 
 
 The table provides a breakdown of the block's main sections: execution, and exception-handling. The sections are defined by the keywords `BEGIN`, `END`, and `EXCEPTION`. 
 
@@ -27,18 +31,14 @@ It is worth noting that a block is an executable statement and can therefore be 
 The following query shows an example of chaining SQL statements. See the [SQL syntax in Query Service](../sql/syntax.md) document for more information on any of the SQL syntax used.
 
 ```SQL
-$$BEGIN
-     
+$$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
-    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
-     
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....; 
     EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
-     
-END$$;
+END
+$$;
 ```
-
-<!-- The block below uses `SET` to persist the result of a select query with a variable. It is used in the anonymous block to store the response from a query as a local variable for use with the `SNAPSHOT` feature. -->
 
 In the example below, `SET` persists the result of a `SELECT` query in the specified local variable. The variable is scoped to the anonymous block.
 
@@ -47,14 +47,15 @@ The snapshot ID is stored as a local variable (`@current_sid`). It is then used 
 A database snapshot is a read-only, static view of a SQL Server database. For more [information on the snapshot clause](../sql/syntax.md#SNAPSHOT-clause) see the SQL syntax documentation.
 
 ```SQL
-$$BEGIN                                             
+$$ BEGIN                                             
   SET @current_sid = SELECT parent_id  FROM (SELECT history_meta('your_table_name')) WHERE  is_current = true;
-  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                                     
-END$$;
+  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                           
+END
+$$;
 ```
 
 ## Next steps
 
 By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. [For more information on query execution](./writing-queries.md), please read the guide on query execution in Query Service.
 
-For more samples of queries that can be used within Query Service, please read the guides on [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md), or [ExperienceEvent sample queries](./experience-event-queries.md).
+You should also read about [how anonymous block is used with the incremental load design pattern](./incremental-load.md) to increase query efficiency.

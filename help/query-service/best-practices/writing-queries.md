@@ -4,7 +4,7 @@ solution: Experience Platform
 title: General Guidance for Query Execution in Query Service
 topic-legacy: queries
 type: Tutorial
-description: This document details important details to know when writing queries in Adobe Experience Platform Query Service.
+description: This document outlines important details to know when writing queries in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 ---
 # General guidance for query execution in [!DNL Query Service]
@@ -304,8 +304,16 @@ LIMIT 50;
 
 Query Service supports data deduplication, or the removal of duplicate rows from data. For more information on deduplication, please read the [Query Service deduplication guide](./deduplication.md).
 
+## Time zone computations in Query Service
+
+Query Service standardizes persisted data in Adobe Experience Platform using the UTC timestamp format. For more information on how to translate your time zone requirement to and from a UTC timestamp, please see the [FAQ section on how to change the time zone to and from a UTC Timestamp](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
+
 ## Next steps
 
 By reading this document, you have been introduced to some important considerations when writing queries using [!DNL Query Service]. For more information on how to use the SQL syntax to write your own queries, please read the [SQL syntax documentation](../sql/syntax.md).
 
-For more samples of queries that can be used within Query Service, please read the guides on [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md), or [ExperienceEvent sample queries](./experience-event-queries.md).
+For more samples of queries that can be used within Query Service, please read the following use case documentation:
+
+- [Analytics insights](../use-cases/analytics-insights.md)
+- [Activity analysis with Adobe Target](../use-cases/activity-analysis-with-adobe-target.md)
+- [ExperienceEvent sample queries](../sample-queries/experience-event.md).

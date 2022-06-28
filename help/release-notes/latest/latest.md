@@ -1,48 +1,75 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: The latest release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes June 2022
+description: The June 2022 release notes for Adobe Experience Platform.
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: October 27, 2021**
-
-## Updates to Experience Platform
-
-Updates to Experience Platform.
-
-### User interface {#ui}
-
-The user interface has been updated with the following changes:
-
-| Feature | Description |
-| --- | --- |
-| Dark theme | Use the Dark theme switch to toggle between light and dark themes in the Platform interface. The switch is located in the user profile below user name and email. |
-| Toggle left navigation | Use the improved navigation toggle at the top of the application header to show or hide the menu displaying your Experience Platform capabilities. The system remembers your last selection and shows you only the capabilities you have access to. |
-| Access visibility | The left navigation bar shows only the features that you are able to access. In previous versions of Adobe Experience Platform, unavailable items were visible, even if you were not able to access them. |
-
-See the [Platform UI Guide](../../landing/ui-guide.md) to learn more.
-
-## Updates to existing features
+**Release date: June 22, 2022**
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations]](#destinations)
+- [Query Service](#query-service)
 - [Sources](#sources)
 
-### [!DNL Data Prep] {#data-prep}
+## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions. One of the ways Data Science Workspace accomplishes this is through the use of JupyterLab. JupyterLab is a web-based user interface for <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
+
+| Feature | Description |
+| --- | --- |
+| JupyterLab Launcher | The JupyterLab Launcher now includes starters for Spark 3.2 notebooks. Spark 2.4 notebook starters are now replaced by Spark 3.2 notebooks and will be a part of this release. |
+| Spark 3.2 | New Scala (Spark) and PySpark recipes now use Spark 3.2 |
+| Kernels | Scala (Spark) notebooks are now authored via the Scala kernel. PySpark notebooks are now authored via the Python Kernel. The Spark and PySpark kernel are deprecated and set to be removed in a subsequent release. |
+| Recipes | New PySpark and Spark recipes now follow the Docker workflow similar to Python and R recipes. |
+
+{style="table-layout:auto"}
+
+For more general information on Data Science Workspace, see the [overview documentation](../../data-science-workspace/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+| (Beta) Destination SDK support for [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) file-based destinations and [configurable file names](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | You can now use the Destination SDK to create Google Cloud Storage destinations and define custom file names for exported files, via file name macros. <br><br> File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.|
+| Segment column in dataflow runs to batch destinations | For dataflow runs to batch destinations, the UI now displays the name of the segment associated with each dataflow run. Read more about [dataflow runs to batch destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations). |
+
+{style="table-layout:auto"}
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [(Beta) Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | The [!DNL Google Ad Manager 360] connection enables batch upload for [!DNL publisher provided identifiers] (PPID) into [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage] <br><br>This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Ad Manager 360] connection, contact your Adobe representative and provide your [!DNL IMS Organization ID]. |
+| [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Activate profiles for targeted Medallia surveys and feedback collection to better understand customer needs and expectations. |
+|[[!DNL Adobe Advertising Cloud DSP]](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md)|The Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) destination allows you to share authenticated first-party segments with approved advertisers and users for campaign activation with DSP.|
+
+{style="table-layout:auto"}
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+## Query Service {#query-service}
+
+Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
 
 **Updated features**
 
 | Feature | Description |
 | --- | --- |
-| `contains_key` function | The `contains_key` function has been introduced, which lets you check if the object exists within the source. This function replaces the `is_set` function, which is now deprecated. |
-| Error messages | Error messages returned by the `/mappingSets/preview` endpoint in the Data Prep API are now consistent with the error messages that are generated during runtime. |
+| Ad hoc schema labeling | Manage access to sensitive data by applying labels to data fields of ad hoc schemas that are automatically generated through Query Service CTAS queres. You can restrict the usage of certain fields, or datasets, of ad hoc schemas to control access to both sensitive personal data and personally identifiable information. By using the attribute-based access control capability you can you label ad hoc schema fields through the Platform UI. |
+| `FLATTEN` setting | When connecting to a database through third-party BI tools, the `FLATTEN` setting flattens nested data structures into separate columns where the attribute name becomes the column name that holds the row values. This improves the usability of ad hoc schemas and reduces the required workload to retrieve, analyze, transform and report data in BI tools that do not support nested data structures. |
 
-See the [[!DNL Data Prep] overview](../../data-prep/home.md) to learn more about this service.
+{style="table-layout:auto"}
 
-### Sources {#sources}
+For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
+
+## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
@@ -50,8 +77,8 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| [!DNL Amazon S3] source enhancements | You can now use the `s3SessionToken` parameter to connect your [!DNL Amazon S3] account to Platform using temporary security credentials. This token allows you to provide short-term, temporary access to your [!DNL Amazon S3] resources to users in untrusted environments. See the [[!DNL Amazon S3] documentation](../../sources/connectors/cloud-storage/s3.md#prerequisites) for more information. |
-| [!DNL Generic REST API] (Beta) | You can now create a [!DNL Generic REST API] source connection using the [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) or the [user interface](../../sources/tutorials/ui/create/protocols/generic-rest.md) to bring data from a generic REST application to Platform. See the [[!DNL Generic REST API] overview](../../sources/connectors/protocols/generic-rest.md) for more information. |
-| [!DNL Zoho CRM] (Beta) | You can now create a [!DNL Zoho CRM] source connection using the [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) or the [user interface](../../sources/tutorials/ui/create/crm/zoho.md) to bring data from your [!DNL Zoho CRM] account to Platform. See the [[!DNL Zoho CRM] overview](../../sources/connectors/crm/zoho.md) for more information. |
+| Beta release of [!DNL Mixpanel] source | You can now use the [!DNL Mixpanel] source to ingest analytics data from your [!DNL Mixpanel] account to Experience Platform. See the [[!DNL Mixpanel] source documentation](../../sources/connectors/analytics/mixpanel.md) for more information. |
+
+{style="table-layout:auto"}
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

@@ -34,8 +34,21 @@ For more information on enabling a dataset for [!DNL Profile] and [!DNL Identity
 
 | Destination | Expected latency | 
 | --------- | ---------------- |
-| Real-time Customer Profile | < 1 minute |
+| Real-time Customer Profile | < 15 minutes, at the 95th percentile |
 | Data Lake | < 60 minutes |
+
+## Request per seconds (RPS) guidance on streaming ingestion
+
+The table below displays guidance on the request per seconds limits for streaming ingestion.
+
+| RPS limit | Notes |
+| --- | --- |
+| 1000 requests per second | These can contain multiple messages when using `/collection/batch` endpoint. |
+| 10000 individual messages per second | The messages can be grouped into fewer actual requests when using the `/collection/batch` endpoint. |
+
+>[!IMPORTANT]
+>
+>The enforced limit becomes **60 requests per minute** when using synchronous validation as it is intended for debugging purposes.
 
 ## Adobe Experience Platform extension
 

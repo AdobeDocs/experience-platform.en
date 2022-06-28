@@ -6,11 +6,7 @@ topic-legacy: overview
 description: This document provides an overview of the Marketo Engage source connector, including information about its authentication, mapping, and data latency.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
 ---
-# (Beta) [!DNL Marketo Engage] connector
-
->[!IMPORTANT]
->
->The [!DNL Marketo Engage] source in Adobe Experience Platform is currently in beta. The documentation and functionality are subject to change.
+# [!DNL Marketo Engage] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -26,9 +22,13 @@ In order to connect [!DNL Marketo] to Platform, you must first retrieve values f
 
 See the steps outlined in the [Authenticate your Marketo source connector](./marketo-auth.md) document to retrieve your credentials.
 
-## Set up Adobe Experience Cloud Audience Sharing
+## Set up Adobe Organization Mapping
 
-Before you can establish mapping sets for [!DNL Marketo], you must first set up Adobe Experience Cloud Audience Sharing. For detailed steps on how to complete this, see the guide on [setting up Adobe Experience Cloud Audience Sharing for [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
+Before you can establish mapping sets for [!DNL Marketo], you must first set up Adobe Organization Mapping. For detailed steps on how to complete this, see the guide on [setting up Adobe Organization Mapping for [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## Set up B2B namespaces and schema auto-generation utility
+
+Next, use the B2B namespace and schema auto-generation utility to set up your Platform developer console and Postman environment. This allows you to auto-populate your B2B namespaces and schemas. For detailed instructions, see the guide on [setting up your B2B namespaces and schema auto-generation utility](./marketo-namespaces.md)
 
 ## Experience Data Model (XDM)
 

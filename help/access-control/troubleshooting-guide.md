@@ -10,7 +10,7 @@ exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 
 This document provides answers to frequently asked questions about access control in Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] leverages product profiles in the [Adobe Admin Console](http://adminconsole.adobe.com) to provide role-based access control, linking users with permissions and sandboxes.  See the [access control overview](home.md) for more information.
+[!DNL Experience Platform] leverages product profiles in the [Adobe Admin Console](https://adminconsole.adobe.com) to provide role-based access control, linking users with permissions and sandboxes.  See the [access control overview](home.md) for more information.
 
 ## Where can I find my current access permissions?
 
@@ -27,3 +27,7 @@ If you do not have access permissions for a particular [!DNL Platform] feature, 
 Permissions are grouped and categorized by the [!DNL Platform] capabilities they apply to (such as [!DNL Data Management] and [!DNL Profile Management]). For a full list of available permissions and the groups they belong to, see the [permissions section](home.md#permissions) in the access control overview.
 
 See the [access control overview](home.md) for more information on providing role-based access control.
+
+## What happens to permissions after migrating from Adobe IO to Business ID?
+
+Access control uses user ID (an internal unique id assigned to a user) for granting permissions. When an organization is migrated from Adobe ID to Business ID, all permissions set for its users will be lost because the user ID changes and access control will use the newly generated user ID. If your organization is migrated to Business ID, please contact your Adobe representative to migrate your user ID from Adobe ID to Business ID.

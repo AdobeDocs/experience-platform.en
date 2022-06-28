@@ -1,14 +1,10 @@
 ---
 keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
-title: Account Profile UI Guide (Beta)
+title: Account Profile UI Guide
 description: Through the use of account profiles, Real-time Customer Data Platform B2B Edition enables you to unify account information from multiple sources. This guide provides details for interacting with account profiles in the Adobe Experience Platform user interface.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 ---
-# Account profile UI guide (Beta)
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
+# Account profile UI guide
 
 >[!NOTE]
 >
@@ -16,21 +12,23 @@ exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 
 Account profiles enable you to unify account information from multiple sources. This unified view of an account brings together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer account information. This document provides a guide to interacting with account profiles using the Real-time CDP, B2B Edition capabilities available in the Adobe Experience Platform user interface (UI).
 
-## Browse account profiles
+To learn more about how account profiles are created as part of the B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md).
+
+## Browse account profiles {#browse-account-profiles}
 
 To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation. 
 
-![](images/b2b-account-browse.png)
+![Select Profiles in left navigation](images/b2b-account-browse.png)
 
 On the **[!UICONTROL Browse]** tab, you can explore account profiles using an account ID from a connected enterprise source or by entering source details directly.
 
-![](images/b2b-account-browse-by.png)
+![Use account ID to explore profiles](images/b2b-account-browse-by.png)
 
-### Browse by [!UICONTROL Connected enterprise source]
+### Browse by [!UICONTROL Connected enterprise source] {#browse-by-connected-enterprise-source}
 
 To browse account profiles by a connected enterprise source, select **[!UICONTROL Connected enterprise source]** from the **[!UICONTROL Browse by]** dropdown, then choose a connected source using the selector button next to the **[!UICONTROL Source]** field.
 
-![](images/b2b-account-browse.png)
+![Browse account profiles by connected enterprise source](images/b2b-account-browse.png)
 
 This opens the **[!UICONTROL Select source]** dialog, where you can select a source based on the connections that your organization has established.
 
@@ -40,7 +38,7 @@ This opens the **[!UICONTROL Select source]** dialog, where you can select a sou
 
 To learn more about connecting enterprise sources, please refer to the [sources overview](../sources/sources-overview.md).
 
-![](images/b2b-account-select-source.png)
+![Select source workflow](images/b2b-account-select-source.png)
 
 You can choose a source by selecting the radio button next to the connection name, and then use **[!UICONTROL Select]** to return to the [!UICONTROL Browse] tab.
 
@@ -52,9 +50,9 @@ With a source selected, you must now enter an **[!UICONTROL Account ID]** relate
 >
 >The most common, standard syntax is the Marketo account ID appended by `.mkto_org` (for example, `1234567.mkto_org`). Marketo Account-Based Marketing customers may have additional values that can be found using the Marketo account ID appended by `.mkto_account`. If you are unsure of which syntax to use, please check with your Marketo administrator.
 
-![](images/b2b-account-browse-id.png)
+![Account ID selection](images/b2b-account-browse-id.png)
 
-### Browse by [!UICONTROL Others]
+### Browse by [!UICONTROL Others] {#browse-by-others}
 
 Real-time CDP, B2B Edition supports the ability to perform a direct lookup by allowing you to enter a **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, and **[!UICONTROL Account ID]** for an account that you would like to view. By entering the source name and instance directly, you provide the context necessary for Experience Platform to search for, and display, the correct account profile data.
 
@@ -64,9 +62,9 @@ Another example could be that you are performing a transformation on the data be
 
 To begin a direct lookup, select **[!UICONTROL Others]** from the **[!UICONTROL Browse by]** dropdown, then enter a **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, and **[!UICONTROL Account ID]** for the account that you would like to view.
 
-![](images/b2b-account-browse-adhoc.png)
+![Browse by others](images/b2b-account-browse-adhoc.png)
 
-## View account profile details
+## View account profile details {#view-account-profile-details}
 
 After using the **[!UICONTROL Browse]** tab to locate an account profile, selecting the **[!UICONTROL Profile ID]** opens the **[!UICONTROL Detail]** tab for the account profile. The profile information displayed on the **[!UICONTROL Detail]** tab has been merged together from multiple profile fragments to form a single view of the individual account. This includes account details such as basic attributes and social media data. 
 
@@ -76,19 +74,19 @@ The default fields shown can also be changed at an organizational-level to displ
 >
 >Similar functionality is available for customer profiles and a step-by-step guide has been created with instructions for adding and removing attributes, resizing panels, etc. Please read the [profile detail customization guide](../../profile/ui/profile-customization.md) to learn more.
 
-![](images/b2b-account-details.png)
+![View account profile details](images/b2b-account-details.png)
 
 You can view additional details related to the account by selecting another of the available tabs. These tabs include attributes, people, and the opportunities tab that shows open and closed opportunities related to the account across your enterprise systems. Please refer to the following sections for more information about each tab.
 
-## Attributes tab
+## Attributes tab {#attributes-tab}
 
 The **[!UICONTROL Attributes]** tab lists all of the record information related to the account. This includes attribute data coming from multiple sources that has been merged together to form a single view of the account.
 
 In addition to being able to view the data in a list, you can use the search bar to search for specific attributes or view the record data as JSON.
 
-![](images/b2b-account-attributes.png)
+![Attributes tab](images/b2b-account-attributes.png)
 
-## People tab
+## People tab {#people-tab}
 
 The **[!UICONTROL People]** tab provides a list of individual people associated with the account. These people may be contacts and leads from different enterprise systems managed by different teams within your organization, but in Real-time CDP, B2B Edition they are presented together as a single list enabling you to see a more holistic view of your account contacts.
 
@@ -98,9 +96,9 @@ The **[!UICONTROL People]** tab provides a list of individual people associated 
 
 In addition to showing you a snapshot of information for the contact, each person listed also includes a **[!UICONTROL Profile ID]**, which is a clickable link that allows you to explore the Real-time Customer Profile for that individual. To learn more about viewing individual customer profiles related to your accounts, please visit the guide for [browsing profiles in Real-time CDP, B2B Edition](../profile/profile-browse.md).
 
-![](images/b2b-account-people.png)
+![People tab](images/b2b-account-people.png)
 
-## Opportunities tab
+## Opportunities tab {#opportunities-tab}
 
 The **[!UICONTROL Opportunities]** tab provides information for open and closed opportunities related to the account. These opportunities may be ingested into Experience Platform from multiple sources, however Real-time CDP, B2B Edition makes it easy for marketers to see all of these opportunities together in one place.
 
@@ -110,4 +108,19 @@ The **[!UICONTROL Opportunities]** tab provides information for open and closed 
 
 Each opportunity includes information such as the name of the opportunity, its amount, stage, and whether the opportunity is open, closed, won, or lost.
 
-![](images/b2b-account-opportunities.png)
+![Account opportunities tab](images/b2b-account-opportunities.png)
+
+## Related accounts tab {#related-accounts-tab}
+
+The **[!UICONTROL Related accounts]** tab provides information about other accounts that may be related to the account that you are browsing. For in-depth information about the functionality, read the [related accounts overview](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+
+>[!NOTE]
+>
+>* A Related accounts group can have maximum 30 account profiles. If more than 30 account profiles were found related, they are arbitrarily split into multiple groups, each having no more than 30 members. The Related accounts group of an account profile always includes itself.
+>* The [!UICONTROL Related accounts] tab currently displays a list of up to 25 related accounts associated with the account you are browsing. This is a limitation that will be addressed in a future update. Despite this UI limitation, when you use related accounts in segment definitions, for groups of 30 related account profiles all profiles are used for targeting.
+
+Each related account includes information such as the account profile ID and name, its account source key, and further information related to homepage, address, parent account, phone, industry, and annual revenue.
+
+![Related accounts tab](images/b2b-account-related-accounts.png)
+
+You can use the related accounts in this list for segmentation purposes. See a [segmentation example](/help/rtcdp/segmentation/b2b.md#related-account) to understand how to use related accounts to expand your reach in segment definitions.

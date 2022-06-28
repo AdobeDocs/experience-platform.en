@@ -109,7 +109,7 @@ model_train = ScikitLearn(params={
     "model_path": "resources/model.onnx",
     "params": {
         "model": "sklearn.linear_model.LogisticRegression",
-        "model_params": {"solver" : 'lbfgs'}
+        "model_params": {"solver": 'lbfgs'}
     }})
 msg6 = model_train.process(msg5)
 ```

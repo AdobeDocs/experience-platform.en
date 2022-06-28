@@ -27,7 +27,7 @@ Adobe Experience Platform supports the following cloud storage destinations:
 To send segments to cloud storage destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
 
 
-## Using macros to create a folder in your storage location {#use-macros}
+## Use macros to create a folder in your storage location {#use-macros}
 
 >[!NOTE]
 >

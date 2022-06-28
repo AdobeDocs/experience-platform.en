@@ -33,7 +33,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -64,7 +64,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "type": "object",
@@ -137,7 +137,7 @@ A successful response returns HTTP status 201 with details of your newly created
         "https://ns.adobe.com/xdm/context/experienceevent-environment-details",
         "https://ns.adobe.com/xdm/context/experienceevent"
     ],
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:immutableTags": [
         "union"
     ],
@@ -157,7 +157,7 @@ A successful response returns HTTP status 201 with details of your newly created
         "https://ns.adobe.com/experience/campaign/experienceevent-profile-work-details"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/experienceevent",
     "meta:registryMetadata": {
@@ -191,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "@type":"xdm:descriptorIdentity",
@@ -232,7 +232,7 @@ A successful response returns HTTP status 201 with information on the newly crea
     "@id": "ec31c09e0906561861be5a71fcd964e29ebe7923b8eb0d1e",
     "meta:containerId": "tenant",
     "version": "1",
-    "imsOrg": "{IMS_ORG}"
+    "imsOrg": "{ORG_ID}"
 }
 ```
 
@@ -257,7 +257,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name": "{DATASET_NAME}",
@@ -311,11 +311,13 @@ Ingesting time series data to a streaming connection can be done either with or 
 
 The example request below ingests time series data with a missing source name to Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
 
->[!IMPORTANT]
+Both `xdmEntity._id` and `xdmEntity.timestamp` are required fields for time-series data. The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID of the person or device whose record it is.
+
+You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp` for the record in a way that remains consistent if the record ever needs to be re-ingested. Ideally, your source system will contain these values. If an ID is not available, consider concatenating values of other fields in the record to create a unique value that can be consistently regenerated from the record on re-ingestion.
+
+>[!NOTE]
 >
->You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use the UUID function in Data Prep. More information about the UUID function can be found in the [Data Prep functions guide](../../data-prep/functions.md). The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID Of the person or device whose record it is. The person or device ID will be specific in any attributes that is assigned as a person or device identifier of the schema.
->
->Both `xdmEntity._id` and `xdmEntity.timestamp` are the only required fields for time-series data. Additionally, the following API call does **not** require any authentication headers.
+>The following API call does **not** require any authentication headers.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -388,7 +390,7 @@ If you want to include a source name, the following example shows how you would 
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample source name"
@@ -448,7 +450,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 
 ```

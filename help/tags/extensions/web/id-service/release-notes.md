@@ -11,13 +11,28 @@ exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 
 For release notes on the Experience Cloud Identity Service itself and not just the Adobe Experience Platform tag extension, please reference: [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)
 
-## Nov 3, 2020
+## Mar 9, 2022
 
-### Experience Cloud ID Extension 5.2.1
+### Experience Cloud ID Extension 5.4.0
 
 #### **Features**
 
-* This patch contains a fix for writing cookies from an iFrame with attribute `SameSite=None` in Google Chrome browser.
+* This version contains the latest Visitor 5.4.0, which has the following updates:
+
+  * Ability to configure the lifetime of the `s_ecid` cookie using cookieLifetime config
+  * Update for a Firefox browser issue that occurs when a page is loaded in a child iFrame
+
+## Oct 10, 2021
+
+### Experience Cloud ID Extension 5.3.1
+
+#### **Features**
+
+* This version contains the latest Visitor 5.3.0, which has the following new updates:
+
+  * Updated algorithm to generate local ECID
+  * Latest Opt-In with `Secure` and `SameSite` flags for the privacy cookie
+  * Fix for a Firefox browser issue when a page is loaded in a child iFrame
 
 ## Jan 12, 2021
 
@@ -26,6 +41,14 @@ For release notes on the Experience Cloud Identity Service itself and not just t
 #### **Features**
 
 * Updating to VisitorJS 5.2.0 patch with a fix for ECID DataElement could not get updated when receive consent.
+
+## Nov 3, 2020
+
+### Experience Cloud ID Extension 5.2.1
+
+#### **Features**
+
+* This patch contains a fix for writing cookies from an iFrame with attribute `SameSite=None` in Google Chrome browser.
 
 ## Oct 27, 2020
 

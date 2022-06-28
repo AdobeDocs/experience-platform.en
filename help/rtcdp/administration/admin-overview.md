@@ -1,9 +1,7 @@
 ---
 keywords: rtcdp administration overview;administration overview
 title: Real-time Customer Data Platform Administration Overview
-seo-title: Real-Time CDP administration overview
 description: This document provides an overview of the administration capabilities of Real-time Customer Data Platform, powered by Adobe Experience Platform. 
-seo-description: seo description
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
 ---
 # Real-time Customer Data Platform administration overview
@@ -16,7 +14,7 @@ The following sections provide introductions to the central components of [!DNL 
 
 ## Access control
 
-Access control is administered through the [Adobe Admin Console](http://adminconsole.adobe.com). This functionality leverages product profiles in [!DNL Admin Console], allowing you to link users with permissions and sandboxes. Using this feature, administrators can grant or restrict access to specific Real-time CDP capabilities for defined sets of users.
+Access control is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in [!DNL Admin Console], allowing you to link users with permissions and sandboxes. Using this feature, administrators can grant or restrict access to specific Real-time CDP capabilities for defined sets of users.
 
 To learn more about access control, see the [access control overview](../../access-control/home.md) in the [!DNL Experience Platform] documentation.
 

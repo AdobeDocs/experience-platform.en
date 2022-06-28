@@ -2,14 +2,13 @@
 keywords: destinations;destination;destinations detail page;destinations details page
 title: View destination details
 description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
-seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 ---
 # View destination details
 
 ## Overview {#overview}
 
-In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details for batch destinations also include metrics for activated profile records and a history of dataflow runs.
+In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details also include metrics for activated profile records, identities activated, failed, and excluded, and a history of dataflow runs.
 
 >[!NOTE]
 >
@@ -31,11 +30,11 @@ Follow the steps below to view more details about an existing destination.
 
     ![Select destination](../assets/ui/details-page/destination-select.png)
 
-1. The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
+1. The details page for the destination appears, showing its available controls. 
 
     ![Destination details](../assets/ui/details-page/destination-details.png)
 
-## Right rail
+## Right rail {#right-rail}
 
 The right rail displays the basic information about the selected destination.
 
@@ -45,7 +44,7 @@ The following table covers the controls and details provided by the right rail:
 
 | Right rail item | Description |
 | --- | --- |
-| [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guides on [activating audience data to segment streaming destinations](./activate-segment-streaming-destinations.md), [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md), and [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) for more information. |
+| [!UICONTROL Activate segments] | Select this control to edit which segments are mapped to the destination, update export schedules, or add and remove mapped attributes and identities. See the guides on [activating audience data to segment streaming destinations](./activate-segment-streaming-destinations.md), [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md), and [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) for more information. |
 | [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the segments that were previously activated, if any exist. |
 | [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
 | [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
@@ -61,21 +60,34 @@ The following table covers the controls and details provided by the right rail:
 
 {style="table-layout:auto"}
 
-## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle
+## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle {#enabled-disabled-toggle}
 
 You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start and pause all data exports to the destination.
 
-![Enable disable toggle](../assets/ui/details-page/enable-disable.png)
+![Enable or disable dataflow toggle](../assets/ui/details-page/enable-disable.png)
 
-## [!UICONTROL Dataflow runs]
+## [!UICONTROL Dataflow runs] {#dataflow-runs}
 
-The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch destinations. Refer to [Monitor dataflows](monitor-dataflows.md) for details.
+The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch and streaming destinations. Refer to [Monitor dataflows](monitor-dataflows.md) for details and metric definitions.
+
+>[!NOTE]
+>
+>* Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>* For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, identities excluded are currently not displayed.
+
+![Dataflow runs view](../assets/ui/details-page/dataflow-runs.png)
 
 ## [!UICONTROL Activation data] {#activation-data}
 
-The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable). To view the details about a particular segment, select its name from the list.
+The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular segment, select its name from the list.
 
-![Activation data](../assets/ui/details-page/activation-data.png)
+>[!TIP]
+>
+>To view and edit details about the attributes and identities mapped to a destination, select **[!UICONTROL Activate segments]** in the [right rail](#right-rail).
+
+![Activation data view batch destination](../assets/ui/details-page/activation-data-batch.png)
+
+![Activation data view streaming destination](../assets/ui/details-page/activation-data-streaming.png)
 
 >[!NOTE]
 >

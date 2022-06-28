@@ -42,9 +42,16 @@ Next, they can use their offline data including associated membership IDs and cu
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
-**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Facebook destination.
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Facebook destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Facebook account prerequisites {#facebook-account-prerequisites}
 
@@ -107,6 +114,10 @@ Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], ma
 
 ## Connect to the destination {#connect}
 
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
 The video below also demonstrates the steps to configure a [!DNL Facebook] destination and activate segments. 
@@ -126,6 +137,31 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **[!UICONTROL Account ID]**: your [!DNL Facebook Ad Account ID]. You can find this ID in your [!DNL Facebook Ads Manager] account. When entering this ID, always prefix it with `act_`.
 
 ## Activate segments to this destination {#activate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience"
+>title="Origin of audience"
+>abstract="Choose how the customer data in the segment was originally collected. The data will be displayed in Facebook when a user is targeted by the segment"
+>additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="Origin of audience"
+>abstract="Advertisers collected data directly from customers."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="Origin of audience"
+>abstract="Advertisers collected data directly from their partners."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="Origin of audience"
+>abstract="Advertisers collected data directly from their customers and partners."
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 

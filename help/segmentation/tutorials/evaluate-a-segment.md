@@ -26,7 +26,7 @@ This tutorial also requires you to have completed the [authentication tutorial](
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -40,7 +40,7 @@ All POST, PUT, and PATCH requests require an additional header:
 
 - Content-Type: application/json
 
-## Evaluate a segment
+## Evaluate a segment {#evaluate-a-segment}
 
 Once you have developed, tested, and saved your segment definition, you can then evaluate the segment through either scheduled evaluation or on-demand evaluation.
 
@@ -80,12 +80,11 @@ On-demand evaluation allows you to create a segment job in order to generate an 
 
 ### Create a segment job
 
-A segment job is an asynchronous process that creates a new audience segment. It references a segment definition, as well as any merge policies controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
+A segment job is an asynchronous process that creates an audience segment on demand. It references a segment definition, as well as any merge policies controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience. A segment job needs to be run every time you want to refresh the audience that currently qualifies for the segment definition.
 
 You can create a new segment job by making a POST request to the `/segment/jobs` endpoint in the [!DNL Real-time Customer Profile] API.
 
 More detailed information about using this endpoint can be found in the [segment jobs endpoint guide](../api/segment-jobs.md#create)
-
 
 ### Look up segment job status
 
@@ -144,11 +143,11 @@ After a segmentation job has successfully completed (the value of the `status` a
 The following steps are required to export your audience:
 
 - [Create a target dataset](#create-a-target-dataset) - Create the dataset to hold audience members.
-- [Generate audience profiles in the dataset](#generate-profiles-for-audience-members) - Populate the dataset with XDM Individual Profiles based on the results of a segment job.
+- [Generate audience profiles in the dataset](#generate-profiles) - Populate the dataset with XDM Individual Profiles based on the results of a segment job.
 - [Monitor export progress](#monitor-export-progress) - Check the current progress of the export process. 
 - [Read audience data](#next-steps) - Retrieve the resulting XDM Individual Profiles representing the members of your audience.
 
-### Create a target dataset
+### Create a target dataset {#create-dataset}
 
 When exporting an audience, a target dataset must first be created. It is important that the dataset be configured correctly to ensure the export is successful. 
 
@@ -157,9 +156,9 @@ One of the key considerations is the schema upon which the dataset is based (`sc
 There are two ways to create the necessary dataset:
 
 - **Using APIs:** The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile Union Schema] using the [!DNL Catalog] API. 
-- **Using the UI:** To use the [!DNL Adobe Experience Platform] user interface to create a dataset that references the union schema, follow the steps in the [UI tutorial](../ui/overview.md) and then return to this tutorial to proceed with the steps for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
+- **Using the UI:** To use the [!DNL Adobe Experience Platform] user interface to create a dataset that references the union schema, follow the steps in the [UI tutorial](../ui/overview.md) and then return to this tutorial to proceed with the steps for [generating audience profiles](#generate-profiles).
 
-If you already have a compatible dataset and know its ID, you can proceed directly to the step for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
+If you already have a compatible dataset and know its ID, you can proceed directly to the step for [generating audience profiles](#generate-profiles).
 
 **API format**
 
@@ -177,7 +176,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "name": "Segment Export",

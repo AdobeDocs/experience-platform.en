@@ -1,15 +1,15 @@
 ---
-title: Adobe Experience Platform Web SDK configuration
-description: Learn about the Adobe Experience Platform Web SDK tag extension.
+title: Configure the Adobe Experience Platform Web SDK Extension
+description: How to configure the Adobe Experience Platform Web SDK tag extension in the Data Collection UI.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
 ---
-# Overview
+# Configure the Adobe Experience Platform Web SDK extension
 
-The Adobe Experience Platform Web SDK extension sends data to Adobe Experience Cloud from web properties through the Adobe Experience Platform Edge Network. The extension allows you to stream data into Platform, synchronize identities, process customer consent signals, and automatically collect context data.
+The Adobe Experience Platform Web SDK tag extension sends data to Adobe Experience Cloud from web properties through the Adobe Experience Platform Edge Network. The extension allows you to stream data into Platform, synchronize identities, process customer consent signals, and automatically collect context data.
 
 This document covers how to configure the extension in the Data Collection UI.
 
-## Configure the extension
+## Getting started
 
 If the Platform Web SDK extension has already been installed for a property, open the property in the Data Collection UI and select the **[!UICONTROL Extensions]** tab. Under the Platform Web SDK, select **[!UICONTROL Configure]**.
 
@@ -39,13 +39,13 @@ The [!UICONTROL IMS Organization ID] is the organization that you would like the
 
 ### **[!UICONTROL Edge Domain]**
 
-The [!UICONTROL Edge Domain] is the domain that the Adobe Experience Platform extension sends and receives data from. The extension requires that you use a 1st-party CNAME for production traffic. The default 3rd-party domain works for development environments but is not suitable for production environments. Instructions on how to set up a first-party CNAME are listed [here](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+The [!UICONTROL Edge Domain] is the domain that the Adobe Experience Platform extension sends and receives data from. Adobe recommends using a 1st-party domain (CNAME) for this extension. The default 3rd-party domain works for development environments but is not suitable for production environments. Instructions on how to set up a first-party CNAME are listed [here](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 
 ## [!UICONTROL Datastreams]
 
 When a request is sent to the Adobe Experience Platform Edge Network, a datastream ID is used to reference the server-side configuration. You can update the configuration without having to make code changes on your website.
 
-See the guide on [datastreams](../fundamentals/datastreams.md) for more information.
+See the guide on [datastreams](../datastreams/overview.md) for more information.
 
 
 ## [!UICONTROL Privacy]

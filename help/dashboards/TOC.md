@@ -10,6 +10,7 @@ feature: Dashboards
 
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
+* [Dashboards inventory](inventory.md)
 * [Download dashboards to PDF](download.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
@@ -23,5 +24,7 @@ feature: Dashboards
   * [Standard widgets](customize/standard-widgets.md)
   * [Custom widgets](customize/custom-widgets.md)
   * [Edit schema](customize/edit-schema.md)
+* Application integrations {#integrations}
+  * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

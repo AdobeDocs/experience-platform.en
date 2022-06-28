@@ -1,24 +1,23 @@
 ---
 description: This configuration allows you to indicate basic information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
-title: Destination configuration options for Destination SDK
+title: Streaming destination configuration options for Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
 ---
-# Destination configuration {#destination-configuration}
+# Streaming destination configuration {#destination-configuration}
 
 ## Overview {#overview}
 
-This configuration allows you to indicate essential information like your destination name, category, description, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
+This configuration allows you to indicate essential information for your streaming destination, like your destination name, category, description, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
 
 This configuration also connects the other configurations required for your destination to work - destination server and audience metadata - to this one. Read how you can reference the two configurations in a [section further below](./destination-configuration.md#connecting-all-configurations).
 
 You can configure the functionality described in this document by using the `/authoring/destinations` API endpoint. Read [Destinations API endpoint operations](./destination-configuration-api.md) for a complete list of operations you can perform on the endpoint.
 
-## Example configuration {#example-configuration}
+## Streaming configuration example {#example-configuration}
 
-Below is an example configuration of a fictional destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category. The sections further below break down how this configuration is constructed.
+This is an example configuration of a fictional streaming destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category.
 
 ```json
-
 {
    "name":"Moviestar",
    "description":"Moviestar is a fictional destination, used for this example.",
@@ -93,8 +92,8 @@ Below is an example configuration of a fictional destination, Moviestar, which h
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -118,7 +117,6 @@ Below is an example configuration of a fictional destination, Moviestar, which h
    },
    "backfillHistoricalProfileData":true
 }
-
 ```
 
 |Parameter | Type | Description|
@@ -133,29 +131,28 @@ Below is an example configuration of a fictional destination, Moviestar, which h
 
 This section in the destinations configuration generates the [Configure new destination](/help/destinations/ui/connect-destination.md) page in the Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination. Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as follows:
 
-**Bearer authentication**
+### Bearer authentication
 
 When you configure the bearer authentication type, users are required to input the bearer token that they obtain from your destination.
 
-![UI render with bearer authentication](./assets/bearer-authentication-ui.png)
+![UI render with bearer authentication](assets/bearer-authentication-ui.png)
 
-**OAuth 2 authentication**
+### OAuth 2 authentication
 
-Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Tailored Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md).
+Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Custom Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md).
 
-![UI render with OAuth 2 authentication](./assets/oauth2-authentication-ui.png)
-
+![UI render with OAuth 2 authentication](assets/oauth2-authentication-ui.png)
 
 |Parameter | Type | Description|
 |---------|----------|------|
 |`customerAuthenticationConfigurations` | String | Indicates the configuration used to authenticate Experience Platform customers to your server. See `authType` below for accepted values. |
-|`authType` | String | Accepted values are `OAUTH2, BEARER`. <br><ul><li> If your destination supports OAuth 2 authentication, select the `OAUTH2` value and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md). Additionally, you should select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md). </li><li>For bearer authentication, select `BEARER` and select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md).</li></ul> |
+|`authType` | String | Accepted values for streaming destinations are:<ul><li>`BEARER`. If your destination supports bearer authentication, set `"authType":"Bearer"` and  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li><li>`OAUTH2`. If your destination supports OAuth 2 authentication, set `"authType":"OAUTH2"` and add the required fields for OAuth 2, as shown in the [Destination SDK OAuth 2 authentication page](./oauth2-authentication.md). Additionally, set `"authenticationRule":"CUSTOMER_AUTHENTICATION"` in the [destination delivery section](./destination-configuration.md).</li>|
 
 {style="table-layout:auto"}
 
 ## Customer data fields {#customer-data-fields}
 
-This section allows partners to introduce custom fields. In the example configuration above, `customerDataFields` requires users to select an endpoint in the authentication flow and indicate their customer ID with the destination. The configuration is reflected in the authentication flow as shown below:
+Use this section to ask users to fill in custom fields, specific to your destination, when connecting to the destination in the Experience Platform UI. The configuration is reflected in the authentication flow as shown below:
 
 ![Custom field authentication flow](./assets/custom-field-authentication-flow.png)
 
@@ -180,7 +177,7 @@ This section refers to the UI elements in the configuration above that Adobe sho
 |`documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en` |
 |`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 |`connectionType` | String | `Server-to-server` is currently the only available option. |
-|`frequency` | String | `Streaming` is currently the only available option. |
+|`frequency` | String | Refers to the type of data export supported by the destination. Supported values: <ul><li>`Streaming`</li><li>`Batch`</li></ul>|
 
 {style="table-layout:auto"}
 
@@ -199,6 +196,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 {style="table-layout:auto"}
 
+
 ## Identities and attributes {#identities-and-attributes}
 
 The parameters in this section determine which identities your destination accepts. This configuration also populates the target identities and attributes in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
@@ -216,7 +214,7 @@ Read more in the [Identity Namespace overview](https://experienceleague.adobe.co
 |---------|----------|------|
 |`acceptsAttributes` | Boolean | Indicates if your destination accepts standard profile attributes. Usually, these attributes are highlighted in partners' documentation. |
 |`acceptsCustomNamespaces` | Boolean | Indicates if customers can set up custom namespaces in your destination. |
-|`allowedAttributesTransformation` | String | *Not shown in example configuration*. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. In this object, you can the transformation that needs to be applied (for example, transform the email to lowercase, then hash). For an example, see `requiredTransformation` in the [destination configuration API reference](./destination-configuration-api.md#update). |
+|`transformation` | String | *Not shown in example configuration*. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. In this object, you can the transformation that needs to be applied (for example, transform the email to lowercase, then hash). For an example, see `requiredTransformation` in the [destination configuration API reference](./destination-configuration-api.md#update). |
 |`acceptedGlobalNamespaces` | - | Used for cases when your platform accepts [standard identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (for example, IDFA), so you can restrict Platform users to only selecting these identity namespaces. |
 
 {style="table-layout:auto"}
@@ -267,11 +265,16 @@ Use the `maxUsersPerRequest` parameter to specify the maximum number of profiles
 This option works best if you'd rather take large batches, with thousands of profiles on the same call. This option also allows you to aggregate the exported profiles based on complex aggregation rules.
 
 This option allows you to:
+
 * Set the maximum time and maximum number of profiles to aggregate before an API call is made to your destination.
 * Aggregate the exported profiles mapped to the destination based on:
   * Segment ID;
   * Segment status;
   * Identity or groups of identities.
+
+>[!NOTE]
+>
+>When using the configurable aggregation option for your destination, be mindful of the minimum and maximum values that you can use for the two parameters `maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600) and `maxNumEventsInBatch` (minimum 1.000, maximum 10.000).
 
 For detailed explanations of the aggregation parameters, refer to the [Destinations API endpoint operations](./destination-configuration-api.md) reference page, where each parameter is described.
 
@@ -282,6 +285,8 @@ You can use the `backfillHistoricalProfileData` parameter in the destinations co
 |Parameter | Type | Description|
 |---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
+
+{style="table-layout:auto"}
 
 ## How this configuration connects all necessary information for your destination {#connecting-all-configurations}
 

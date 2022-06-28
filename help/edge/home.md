@@ -6,7 +6,9 @@ exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 ---
 # Adobe Experience Platform Web SDK overview
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe Experience Platform Edge Network. In addition to the JavaScript library, there is a [tag extension](../tags/extensions/web/sdk/overview.md) to help with your Web SDK configurations.
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe Experience Platform Edge Network. In addition to the JavaScript library, there is a [tag extension](./extension/web-sdk-extension-configuration.md) to help with your Web SDK configurations.
+
+**For a step by step guide to setting up the Web SDK with tags and sending data to the solutions please see our [Implement Adobe Experience Cloud with Web SDK tutorial](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en)**
 
 ## Experience Edge
 
@@ -54,9 +56,4 @@ The following video demonstrates Adobe Experience Platform [!DNL Web SDK] and Ad
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-This product is constantly evolving and growing to support more and more use cases. To keep up with the latest, see the [supported use cases page](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). This page lists the use cases we currently support, with links to more information when available.
-
-* **Use Cases Not Yet Supported:** These are use cases that are on our roadmap to be supported in the future.
-* **Use Cases In Progress:** These are the use cases the team is currently working on completing for release.
-* **Supported Use Cases:** These are the use cases that are supported and work today. 
-* **Use Cases We Won't Support:** These are the use cases we have made a decision not to support.
+This product is constantly evolving and growing to support more and more use cases. To keep up with the latest and see what we currently support, see the [supported use cases page](https://github.com/orgs/adobe/projects/18/views/1). 

@@ -13,7 +13,7 @@ Tags in Adobe Experience Platform follow a rule-based system. They look for user
 
 Build rules to integrate the data and functionality of marketing and ad tech that unifies disparate products into a single solution.
 
-## Rule Structure
+## Rule structure
 
 **Events (If):** The event is what you want the rule to look for. This is defined by choosing an event, any applicable conditions, and any exceptions.
 
@@ -115,22 +115,18 @@ When creating or editing rules, you can save and build to your [active library](
 
 ## Rule ordering {#rule-ordering}
 
-Rule ordering allows you to control the order of execution for rules that share an event.
+Rule ordering allows you to control the order of execution for rules that share an event. Each rule contains an integer that determines its order priority (the default value being 50). Rules that contain lower values for their order are executed before those with higher values.
 
-It is often important to have your rules fire in a specific order. Examples: (1) you have several rules that conditionally set [!DNL Analytics] variables and you need to make sure that the rule with Send Beacon goes last. (2) you have a rule that fires [!DNL Target] and another rule that fires [!DNL Analytics] and you want the [!DNL Target] rule to run first.
+Consider a set of five rules which all share an event and all have default priority:
 
-Ultimately, the responsibility for executing actions in order lie with the extension developer of the event type that you're using. Adobe extension developers ensure their extensions work as intended. For 3rd-party extensions, Adobe provides guidance to extension developers to implement this properly, but it is up to them to do so.
+* If there is a rule that you want to run last, you can edit that one rule component and give it a number higher than 50 (60 for example).
+* If there is a rule that you want to run first, you can edit that one rule component and give it a number lower than 50 (40 for example).
 
-Adobe highly recommends that you order your rules with positive numbers between 1 and 100 (default is 50). Simpler is better. Remember you have to maintain your order. However, Adobe recognizes there might be edge cases where that will feel limiting, so other numbers are allowed. Tags support numbers between +/- 2,147,483,648. You can also use about a dozen decimal places - but if you're in a scenario where you think you need to do that, you should rethink some of the decisions you've made to get to where you are now.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->In the Action section of a rule, server-side rules are executed sequentially. Make sure the order is correct when you create the rule. 
+>Ultimately, the responsibility for executing actions in order lie with the extension developer of the event type that you are using. Adobe extension developers ensure their extensions work as intended. Adobe provides guidance to third-party extension developers to do this properly, but cannot guarantee how these guidelines are followed.
 
-### Scenarios
-
-* Five rules share an event. All have default priority. I want one of them to run last. I just need to edit that one rule component and give it a number higher than 50 (60 for example).
-* Five rules share an event. All have default priority. I want one of them to run first. I just need to edit that one rule component and give it a number lower than 50 (40 for example).
+It is highly recommended that you order your rules with positive numbers between 1 and 100 (the default being 50). Since rule order has to be manually maintained, it is best practice to keep your ordering scheme as simple as possible. If there are edge cases where this restriction is too limiting, tags support rule order numbers between +/- 2,147,483,648.
 
 ### Client-side rule handling
 
@@ -140,7 +136,7 @@ You can use `document.write` within your custom scripts regardless of the events
 
 You can order different custom code types among each other. For example, you can now have a JavaScript custom code action, then an HTML custom code action, then a JavaScript custom code action. Tags ensure that they are executed in that order.
 
-## Rule Bundling
+## Rule bundling
 
 Rule events and conditions are always bundled into the main tag library. Actions may be bundled in the main library or loaded late as sub-resources as needed. Whether the actions are bundled or not is determined by the rule's event type.
 
@@ -149,10 +145,6 @@ Rule events and conditions are always bundled into the main tag library. Actions
 These events need to be executed almost always (unless conditions evaluate to false), so for efficiency, they are bundled into the main library, the file referenced by your embed code.
 
 * **Javascript:** The JavaScript is embedded in the main tag library. The custom script is wrapped in a script tag and written to the document using `document.write`. If the rule has multiple custom scripts, they're written in order.
-
-   >[!NOTE]
-   >
-   >Tags uses ES5 JavaScript. Event forwarding uses ES6.
    
 * **HTML:** The HTML is embedded in the main tag library. `document.write` is used to write the HTML to the document. If the rule has multiple custom scripts, they're written in order.
 
@@ -163,21 +155,23 @@ Adobe cannot guarantee that any other rules will actually be triggered and that 
 * **JavaScript:** The JavaScript is loaded from the server as regular text, wrapped in a script tag, and added to the document using Postscribe. If the rule has multiple JavaScript custom scripts, they are loaded in parallel from the server, but executed in the same order that was configured in the rule.
 * **HTML:** The HTML is loaded from the server and added to the document using Postscribe. If the rule has multiple custom HTML scripts, they are loaded in parallel from the server, but executed in the same order that was configured in the rule.
 
-## Rule Component Sequencing {#sequencing}
+## Rule component sequencing {#sequencing}
 
-The tag runtime environment's behavior depends on whether **[!UICONTROL Run rule components in sequence]** is on or off for your property.
+The runtime environment's behavior depends on whether **[!UICONTROL Run rule components in sequence]** is on or off for your property. This setting determines whether a rule's components can be evaluated in parallel (asynchronously) or if they must be evaluated in sequence.
+
+>[!IMPORTANT]
+>
+>This setting only determines how conditions and actions are evaluated within each rule, and does not affect the sequence in which rules themselves are executed on your property. Refer to the previous section on [rule ordering](#rule-ordering) for more information on how to determine the execution order for multiple rules.
+>
+>In [event forwarding](../event-forwarding/overview.md) properties, rule actions are are always executed sequentially and this setting is not available. Make sure the order is correct when you create the rule. 
 
 ### Enabled
 
-If enabled, when an event is triggered at runtime, the rule's conditions and actions are added to a processing queue--based on the order you have defined--and processed one at a time on a FIFO basis. The tag waits for the completion of the component before moving onto the next one.
+If the setting is enabled when an event is triggered at runtime, the rule's conditions and actions are added to a processing queue (based on the order you have defined) and processed one at a time on a "first in, first out" (FIFO) basis. The rule waits for the completion of the component before moving onto the next one.
 
 If a condition evaluates as false or reaches its defined timeout, that rule's subsequent conditions and actions are removed from the queue.
 
 If an action fails or reaches its defined timeout, that rule's subsequent actions are removed from the queue.
-
->[!NOTE]
->
->With this setting enabled, all conditions and actions are executed asynchronously, even if you loaded the tag library synchronously.
 
 ### Disabled
 

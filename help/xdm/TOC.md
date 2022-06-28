@@ -12,20 +12,23 @@ feature: Schemas
 * Schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
   * [Best practices for data modeling](schema/best-practices.md)
+  * [Sensitive and personal data](./schema/sensitive-and-personal-data.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [Namespacing in XDM](./schema/namespaces.md)
-  * [XDM field dictionary](schema/field-dictionary.md)
   * Industry data models {#industries}
     * [Overview](./schema/industries/overview.md)
     * [Retail](./schema/industries/retail.md)
     * [Financial services](./schema/industries/financial.md)
     * [Telecommunications](./schema/industries/telecom.md)
     * [Travel and hospitality](./schema/industries/travel-hospitality.md)
+  * [XDM field dictionary](schema/field-dictionary.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
+  * [Policy](./classes/policy.md)
+  * [Product](./classes/product.md)
   * [Segment definition](./classes/segment-definition.md)
-  * B2B classes (Beta) {#b2b}
+  * B2B classes {#b2b}
     * [XDM Business Account](./classes/b2b/business-account.md)
     * [XDM Business Account Person Relation](./classes/b2b/business-account-person-relation.md)
     * [XDM Business Campaign](./classes/b2b/business-campaign.md)
@@ -34,8 +37,8 @@ feature: Schemas
     * [XDM Business Opportunity Person Relation](./classes/b2b/business-opportunity-person-relation.md)
     * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
     * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
-* Schema field groups {#field-groups}
-  * Profile field groups {#profile}
+* Field groups {#field-groups}
+  * XDM Individual Profile {#profile}
     * [Demographic Details](./field-groups/profile/demographic-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
     * [IdentityMap](./field-groups/profile/identitymap.md)
@@ -47,10 +50,14 @@ feature: Schemas
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
     * [XDM Business Person Components](./field-groups/profile/business-person-components.md)
     * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
-  * Event field groups {#event}
+  * XDM ExperienceEvent {#event}
+    * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+    * [Balance Transfers](./field-groups/event/balance-transfers.md)
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
+    * [Card Actions](./field-groups/event/card-actions.md)
     * [Channel Details](./field-groups/event/channel-details.md)
     * [Commerce Details](./field-groups/event/commerce-details.md)
+    * [Deposit Details](./field-groups/event/deposit-details.md)
     * [Device Trade-In Details](./field-groups/event/device-trade-in-details.md)
     * [Dining Reservation](./field-groups/event/dining-reservation.md)
     * [End User ID Details](./field-groups/event/enduserids.md)
@@ -58,10 +65,19 @@ feature: Schemas
     * [Flight Reservation](./field-groups/event/flight-reservation.md)
     * [IAB TCF 2.0 Consent](./field-groups/event/iab.md)
     * [Lodging Reservation](./field-groups/event/lodging-reservation.md)
+    * [Quote Request Details](./field-groups/event/quote-request-details.md)
     * [Reservation Details](./field-groups/event/reservation-details.md)
+    * [Support Site Search](./field-groups/event/support-site-search.md)
     * [Upgrade Details](./field-groups/event/upgrade-details.md)
     * [Upsell Details](./field-groups/event/upsell-details.md)
     * [Web Details](./field-groups/event/web-details.md)
+  * XDM Business Campaign {#b2b-campaign}
+    * [XDM Business Campaign Details](./field-groups/b2b-campaign/details.md)
+  * XDM Business Campaign Members {#b2b-campaign-members}
+    * [XDM Business Campaign Members Details](./field-groups/b2b-campaign-members/details.md)
+  * Product {#product}
+    * [Product Catalog](./field-groups/product/product-catalog.md)
+    * [Product Category](./field-groups/product/product-category.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
   * [Application](./data-types/application.md)
@@ -77,6 +93,7 @@ feature: Schemas
   * [Environment](./data-types/environment.md)
   * [Experience channel](./data-types/experience-channel.md)
   * [External Source System Audit Attributes](./data-types/external-source-system-audit-attributes.md)
+  * [Financial Account](./data-types/financial-account.md)
   * [Generic Consent Field](./data-types/consent-field.md)
   * [Generic Marketing Preference Field](./data-types/marketing-field.md)
   * [Generic Marketing Preference Field with Subscriptions](./data-types/marketing-field-subscriptions.md)
@@ -88,6 +105,8 @@ feature: Schemas
   * [Geo Shape](./data-types/geo-shape.md)
   * [Identity](./data-types/identity.md)
   * [Impressions](./data-types/impressions.md)
+  * [Internal site search](./data-types/internal-site-search.md)
+  * [Key Value Pair](./data-types/key-value-pair.md)
   * [Marketing](./data-types/marketing.md)
   * [Measure](./data-types/measure.md)
   * [Order](./data-types/order.md)
@@ -136,7 +155,9 @@ feature: Schemas
   * [Data types](api/data-types.md)
   * [Descriptors](api/descriptors.md)
   * [Unions](api/unions.md)
-  * [Export/Import](api/export-import.md)
+  * [CSV to schema conversion](api/csv-to-schema.md)
+  * [Export](api/export.md)
+  * [Import](api/import.md)
   * [Sample data](api/sample-data.md)
   * [Audit log](api/audit-log.md)
   * [Ad-hoc schemas](api/ad-hoc.md)
@@ -145,10 +166,14 @@ feature: Schemas
 * Tutorials {#tutorials}
   * [Create a schema in the UI](tutorials/create-schema-ui.md)
   * [Create a schema in the API](tutorials/create-schema-api.md)
+  * [Define custom fields in the API](./tutorials/custom-fields-api.md)
+  * [Add suggested values to a field (API)](tutorials/suggested-values.md)
+  * [Deprecate an XDM field](tutorials/field-deprecation.md)
   * [Define a schema relationship in the UI](tutorials/relationship-ui.md)
   * [Define a schema relationship in the API](tutorials/relationship-api.md)
-  * [Define a schema relationship in Real-time CDP B2B Edition (Beta)](tutorials/relationship-b2b.md)
-  * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
+  * [Define a schema relationship in Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
+  * [Manage data usage labels for a schema](tutorials/labels.md)
+  * [Create an ad hoc schema](tutorials/ad-hoc.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

@@ -1,17 +1,13 @@
 ---
 description: This page lists and describes the steps to configure a streaming destination using Destination SDK.
-title: How to use Destination SDK to configure a streaming destination
+title: Use Destination SDK to configure a streaming destination
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 ---
-# How to use Destination SDK to configure a streaming destination
+# Use Destination SDK to configure a streaming destination
 
 ## Overview {#overview}
 
 This page describes how to use the information in [Configuration options in Destinations SDK](./configuration-options.md) and in other Destination SDK functionality and API reference documents to configure a [streaming destination](/help/destinations/destination-types.md#streaming-destinations). The steps are laid out in sequential order below.
-
->[!NOTE]
->
->Configuring a batch destination through Destination SDK is currently not supported.
 
 ## Prerequisites {#prerequisites}
 
@@ -23,7 +19,7 @@ Before advancing to the steps illustrated below, please read the [Destination SD
 
 ## Step 1: Create a server and template configuration {#create-server-template-configuration}
 
-Start by creating a server and template configuration using the `/destinations-server` endpoint (read [API reference](./destination-server-api.md)). For more information about the server and template configuration, refer to [Server and template specs](./configuration-options.md#server-and-template) in the reference section.
+Start by creating a server and template configuration using the `/destinations-server` endpoint (read [API reference](destination-server-api.md)). For more information about the server and template configuration, refer to [Server and template specs](server-and-template-configuration.md) in the reference section.
 
 Shown below is an example configuration. Note that the message transformation template in the `requestBody.value` parameter is addressed in step 3, [Create transformation template](./configure-destination-instructions.md#create-transformation-template).
 
@@ -54,9 +50,13 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
 
-Shown below is an example configuration for a destination template, created by using the `/destinations` API endpoint. For more information about this template, refer to [Destination configuration](./destination-configuration.md).
+Shown below is an example configuration for a destination template, created by using the `/destinations` API endpoint. For more information about this configuration, refer to [Destination configuration](./destination-configuration.md).
 
 To connect the server and template configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
+
+>[!IMPORTANT]
+>
+>To create a correctly configured destination, you *must* add at least one target identity in `identityNamespaces`, as shown below. If no target identity is configured, users will not be able to proceed past the [Mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activation workflow.
 
 ```json
 
@@ -128,8 +128,8 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "groups":null
          },
          "splitUserById":true,
-         "maxBatchAgeInSecs":360,
-         "maxNumEventsInBatch":100
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000
       }
    },
    "destinationDelivery":[
@@ -154,7 +154,7 @@ For some destinations, Destination SDK requires that you configure an audience m
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
 
-## Step 5: Create credentials configuration / Set up authentication {#set-up-authentication}
+## Step 5: Set up authentication {#set-up-authentication}
 
 Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
 
@@ -163,7 +163,7 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 
 ## Step 6: Test your destination {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./test-destination.md) to test the integration between Adobe Experience Platform and your destination.
 
 As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
 
@@ -172,8 +172,16 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## Step 7: Publish your destination {#publish-destination}
 
+>[!NOTE]
+>
+>This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
+
 After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
 ## Step 8: Document your destination {#document-destination}
+
+>[!NOTE]
+>
+>This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).

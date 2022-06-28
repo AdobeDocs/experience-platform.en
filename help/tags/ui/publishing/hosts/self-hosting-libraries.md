@@ -35,7 +35,6 @@ There are a number of reasons to choose to host your own build files.
 
 * Some browsers block the assets.adobedtm.com domain based on the privacy settings the end-user has configured
 * Self-hosting reduces the required number of DNS lookups
-* You require the use of HTTP/2
 * You have specific headers you need to set for security
 * Your cache-control requirements differ from the Adobe default settings
 * You want more control over the location of edge nodes

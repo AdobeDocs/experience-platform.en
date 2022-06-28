@@ -19,7 +19,7 @@ An extension manifest must consist of the following:
 | --- | --- |
 | `name` | The name of your extension. It must be unique from all other extensions and must comply with [naming rules](#naming-rules). **This is used by tags as an identifier and should not be changed after you publish your extension.** |
 | `platform` | The platform for your extension. The only value accepted at this moment is `web`. |
-| `version` | The version of your extension. It must follow the [semver](http://semver.org/) versioning format. This is consistent with [npm version field](https://docs.npmjs.com/files/package.json#version). |
+| `version` | The version of your extension. It must follow the [semver](https://semver.org/) versioning format. This is consistent with [npm version field](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | The human-readable name of your extension. This will be shown to Platform users. There is no need to mention "tags" or "Extension"; users will already know they are looking at a tag extension. |
 | `description` | The description of your extension. This will be shown to Platform users. If your extension empowers users to implement your product on their website, describe what your product does. There is no need to mention "tags" or "Extension"; users will already know they are looking at a tag extension. |
 | `iconPath` *(Optional)* | The relative path to the icon that will be displayed for the extension. It should not not begin with a slash. It must reference an SVG file with a `.svg` extension. The SVG should be square and may be scaled by Platform. |
@@ -66,7 +66,7 @@ The configuration object should be structured as follows:
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>An object of <a href="http://json-schema.org/">JSON Schema</a> describing the format of a valid object being saved from the extension configuration view. Since you are the developer of the configuration view, it is your responsibility to ensure that any settings object saved matches this schema. This schema will also be used for validation when users attempt to save data using Platform services.<br><br>An example schema object is as follows:
+      <td>An object of <a href="https://json-schema.org/">JSON Schema</a> describing the format of a valid object being saved from the extension configuration view. Since you are the developer of the configuration view, it is your responsibility to ensure that any settings object saved matches this schema. This schema will also be used for validation when users attempt to save data using Platform services.<br><br>An example schema object is as follows:
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -83,7 +83,7 @@ The configuration object should be structured as follows:
   "additionalProperties": false
 }
 </pre>
-      We recommend using a tool like <a href="http://www.jsonschemavalidator.net/">JSON Schema validator</a> to manually test your schema.</td>
+      We recommend using a tool like <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> to manually test your schema.</td>
     </tr>
     <tr>
       <td><code>transforms</code> <em>(Optional)</em></td>
@@ -126,7 +126,7 @@ A type definition is an object used to describe an event, condition, action, or 
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>An object of <a href="http://json-schema.org/">JSON Schema</a> describing the format of a valid settings object that can be saved by the user. Settings are usually configured and saved by a user using the Data Collection user interface. In these cases, the extension&#39;s view can take necessary steps to validate user-provided settings. On the other hand, some users choose to use tags APIs directly without the aid of any user interface. The purpose of this schema is to allow Platform to properly validate that settings objects saved by users, regardless of whether a user interface is used, are in a format that is compatible with the library module that will act upon the settings object at runtime.<br><br>An example schema object is as follows:<br>
+      <td>An object of <a href="https://json-schema.org/">JSON Schema</a> describing the format of a valid settings object that can be saved by the user. Settings are usually configured and saved by a user using the Data Collection user interface. In these cases, the extension&#39;s view can take necessary steps to validate user-provided settings. On the other hand, some users choose to use tags APIs directly without the aid of any user interface. The purpose of this schema is to allow Platform to properly validate that settings objects saved by users, regardless of whether a user interface is used, are in a format that is compatible with the library module that will act upon the settings object at runtime.<br><br>An example schema object is as follows:<br>
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -143,7 +143,7 @@ A type definition is an object used to describe an event, condition, action, or 
   "additionalProperties": false
 }
 </pre>
-      We recommend using a tool like <a href="http://www.jsonschemavalidator.net/">JSON Schema validator</a> to manually test your schema.</td>
+      We recommend using a tool like <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> to manually test your schema.</td>
     </tr>
     <tr>
       <td><code>transforms</code> <em>(Optional)</em></td>

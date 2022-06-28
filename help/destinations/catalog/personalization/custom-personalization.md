@@ -1,42 +1,62 @@
 ---
 keywords: custom personalization; destination; experience platform custom destination;
-title: Custom personalization connection (Beta)
-description: This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrive segment information from Adobe Experience Platform. This destinatination provides real-time 1:1 and personalization based on a user profile's segment membership.
+title: Custom personalization connection
+description: This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrieve segment information from Adobe Experience Platform. This destination provides real-time personalization based on user profile segment membership.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 ---
-# Custom personalization connection (Beta) {#custom-personalization-connection} 
+# Custom personalization connection {#custom-personalization-connection} 
 
 ## Overview {#overview}
-
->[!IMPORTANT]
->
->The Custom personalization connection in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 
 This destination provides a way to retrieve segment information from Adobe Experience Platform to external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites.
 
 ## Prerequisites {#prerequisites}
 
-This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md). You must be using this SDK to use this destination.
+This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md) or the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). You must be using one of these SDKs to use this destination.
 
-## Export type {#export-type}
+>[!IMPORTANT]
+>
+>Before creating a custom personalization connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/configure-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components.
 
-**Profile request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../edge/fundamentals/datastreams.md).
+## Export type and frequency {#export-type-frequency}
+
+**Profile request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../edge/datastreams/overview.md).
 
 ## Use cases {#use-cases}
 
-This destination shares audiences with ad servers and non-Adobe personalization applications, to be used in real-time, for deciding which advertisement users should see on a website.
+The [!DNL Custom personalization connection] enables you to use your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), while also leveraging Experience Platform Edge Network data collection & segmentation capabilities, to power a deeper customer personalization experience.
 
-### Use Case #1
+The use cases described below include both site personalization and targeted on-site advertising.
 
-**Personalizing a home page**
+To enable these use cases, customers need a quick, streamlined way of retrieving segment information from Experience Platform and sending this information to their designated systems that they configured as custom personalization connections in the Experience Platform UI.
 
-A home rental and sales website wants to personalize their home page based on segment qualifications in Adobe Experience Platform. The company can select what audiences should get a personalized experience and map those to the custom personalization destination that had been set up for their non-Adobe personalization application as targeting criteria.
+These systems can be external personalization platforms, content management systems, ad servers, and other applications running across customers' web and mobile properties.
 
-**Targeted on-site advertising**
+### Same-page personalization {#same-page}
 
-Using a separate custom personalization destination for their ad server, the same website can target on-site advertising using a different set of segments from Adobe Experience Platform as targeting criteria.
+A user visits a page of your website. The customer can use the current page visit information (for example, referring URL, browser language, embedded product info) to select the next action / decision (for example, personalization), using the custom personalization connection for non-Adobe platforms (for example, [!DNL Pega], [!DNL Optimizely], etc.).
+
+### Next-page personalization {#next-page}
+
+A user visits Page A on your website. Based on this interaction, the user has qualified for a set of segments. The user then clicks on a link that takes them from Page A to Page B. The segments that the user had qualified for during the previous interaction on Page A, together with the profile updates determined by the current website visit, will be used to power the next action / decision (for example, which advertising banner to display to the visitor, or, in case of A/B testing, which version of the page to display).
+
+### Next-session personalization {#next-session}
+
+A user visits several pages on your website. Based on these interactions, the user has qualified for a set of segments. The user then terminates the current browsing session.
+
+The following day, the user returns to the same customer website. The segments they had qualified for during the previous interaction with all the visited website pages, together with the profile updates determined by the current website visit, will be used to select the next action / decision (for example, which advertising banner to display to the visitor, or, in case of A/B testing, which version of the page to display).
 
 ## Connect to the destination {#connect}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_custom_personalization_datastream"
+>title="About datastream IDs"
+>abstract="This option determines in which data collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Learn how to configure a datastream"
+
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -47,15 +67,19 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
 *  **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
-*  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/fundamentals/datastreams.md) for more details.
+*  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/datastreams/overview.md) for more details.
 
 ## Activate segments to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and segments to profile request destinations](../../ui/activate-profile-request-destinations.md) for instructions on activating audience segments to this destination.
 
 ## Exported data {#exported-data}
 
-If you are using [Adobe Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](../../../edge/extension/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
+If you are using [Tags in Adobe Experience Platform](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](../../../edge/extension/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
 
 Here is a sample value for the `event.destinations` variable:
 
@@ -67,19 +91,17 @@ Here is a sample value for the `event.destinations` variable:
       "alias":"personalizationAlias",
       "segments":[
          {
-            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          },
          {
-            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          }
       ]
    }
 ]
 ```
 
-If you are not using [Adobe Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality to see the exported data.
+If you are not using [Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality to see the exported data.
 
 The JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias of the application you are integrating with Adobe Experience Platform. The segment IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
 

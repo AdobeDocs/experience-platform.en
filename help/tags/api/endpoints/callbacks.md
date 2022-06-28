@@ -58,7 +58,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR66a3356c73fc4aabb67ee22caae53d70/callbacks \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -133,7 +133,7 @@ curl -X GET \
   https://reactor.adobe.io/callbacks/CBeef389cee8d84e69acef8665e4dcbef6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -197,8 +197,9 @@ curl -X POST \
   https://reactor.adobe.io/properties/PR5e22de986a7c4070965e7546b2bb108d/callbacks \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -256,12 +257,12 @@ A successful response return the details of the newly created callback.
 
 ## Update a callback
 
-You can update a callback by including its ID in the path of a PUT request.
+You can update a callback by including its ID in the path of a PATCH request.
 
 **API format**
 
 ```http
-PUT /callbacks/{CALLBACK_ID}
+PATCH /callbacks/{CALLBACK_ID}
 ```
 
 | Parameter | Description |
@@ -275,15 +276,17 @@ PUT /callbacks/{CALLBACK_ID}
 The following request updates the `subscriptions` array for an existing callback.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
+            "url": "https://www.example.net",
             "subscriptions": [
               "rule.created",
               "build.created"
@@ -363,7 +366,9 @@ curl -X DELETE \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **Response**

@@ -70,9 +70,13 @@ It's often helpful to access some of the details behind the library you have loa
 ```js
 alloy("getLibraryInfo").then(function(result) {
   console.log(result.libraryInfo.version);
+  console.log(result.libraryInfo.commands);
+  console.log(result.libraryInfo.configs);
 });
 ```
 
 Currently, the provided `libraryInfo` object contains the following properties:
 
-* `version` This is the version of the loaded library. For example, if the version of the library being loaded were 1.0.0, the value would be `1.0.0`. When the library is run inside the tag extension (named "AEP Web SDK"), the version is the library version and the tag extension version joined with a "+" sign. For example, if the version of the library were 1.0.0, and the version of the tag extension were 1.2.0, the value would be `1.0.0+1.2.0`.
+* `version`: This is the version of the loaded library. For example, if the version of the library being loaded were 1.0.0, the value would be `1.0.0`. When the library is run inside the tag extension (named "AEP Web SDK"), the version is the library version and the tag extension version joined with a "+" sign. For example, if the version of the library were 1.0.0, and the version of the tag extension were 1.2.0, the value would be `1.0.0+1.2.0`.
+* `commands`: These are all of the available commands supported by the loaded library. 
+* `configs`: These are all of the current configs in the loaded library.

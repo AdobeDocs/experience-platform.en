@@ -25,7 +25,7 @@ The Retail Sales Forecasting recipe uses machine learning to predict sale trends
 
 ## How do I get started?
 
-You can get started by following this [tutorial](../jupyterlab/create-a-recipe.md).
+You can get started by following this [tutorial](../jupyterlab/create-a-model.md).
 
 This tutorial will go over creating the Retail Sales recipe in a Jupyter Notebook and using the notebook to recipe workflow to create the recipe in Adobe Experience Platform.
 

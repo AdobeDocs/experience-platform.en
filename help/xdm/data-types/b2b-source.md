@@ -3,11 +3,7 @@ title: B2B Source Data Type
 description: This document provides an overview of the B2B Source Experience Data Model (XDM) data type.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 ---
-# [!UICONTROL B2B Source] data type (Beta)
-
->[!IMPORTANT]
->
->This data type is available as part of Real-time Customer Data Platform B2B Edition, which is currently in beta. The documentation and functionality are subject to change.
+# [!UICONTROL B2B Source] data type
 
 [!UICONTROL B2B Source] is a standard Experience Data Model (XDM) data type that represents a composite identifier for a B2B entity (such as an [account](../classes/b2b/business-account.md), an [opportunity](../classes/b2b/business-opportunity.md), or a [campaign](../classes/b2b/business-campaign.md)).
 

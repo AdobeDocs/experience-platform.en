@@ -6,26 +6,31 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
 feature: Sources
 ---
 
-# Source connectors {#sources}
+# Sources {#sources}
 
-- [Source connectors overview](home.md)
+- [Sources overview](home.md)
 - Available source connectors {#connectors}
   - Adobe applications {#adobe-applications}
-    - [Analytics Classifications source connector](connectors/adobe-applications/classifications.md)
-    - [Analytics source connector](connectors/adobe-applications/analytics.md)
-    - [Audience Manager source connector](connectors/adobe-applications/audience-manager.md)
-    - [Customer attributes source connector](connectors/adobe-applications/customer-attributes.md)
+    - [Analytics Classifications source](connectors/adobe-applications/classifications.md)
+    - [Analytics source](connectors/adobe-applications/analytics.md)
+    - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
+    - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
+    - [Data Collection source](connectors/adobe-applications/data-collection.md)
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target field mappings](connectors/adobe-applications/mapping/target.md)
       - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
+      - [Microsoft Dynamics field mappings](connectors/adobe-applications/mapping/dynamics.md)
+      - [Salesforce field mappings](connectors/adobe-applications/mapping/salesforce.md)
     - Marketo {#marketo}
       - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
       - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
       - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
     - [Google AdWords connector](connectors/advertising/ads.md)
+  - Analytics {#analytics}
+    - [Mixpanel connector](connectors/analytics/mixpanel.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Amazon S3 connector](connectors/cloud-storage/s3.md)
@@ -41,6 +46,8 @@ feature: Sources
     - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
+  - Consent & Preferences {#consent}
+    - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
@@ -49,6 +56,7 @@ feature: Sources
   - Customer success {#customer-success}
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
+    - [Zendesk connector](connectors/customer-success/zendesk.md)
   - Databases {#databases}
     - [Amazon Redshift connector](connectors/databases/redshift.md)
     - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
@@ -74,9 +82,12 @@ feature: Sources
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
+    - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
+    - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
+    - [Square connector](connectors/payments/square.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)
@@ -86,6 +97,8 @@ feature: Sources
   - Create a base connection {#create}
     - Advertising {#advertising}
       - [Google AdWords](tutorials/api/create/advertising/ads.md)
+    - Analytics {#analytics}
+      - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -100,6 +113,8 @@ feature: Sources
       - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
       - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
+    - Consent & Preferences {#consent}
+      - [OneTrust Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
@@ -108,6 +123,7 @@ feature: Sources
     - Customer success {#customer-success}
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
+      - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
     - Databases {#databases}
       - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/api/create/databases/hive.md)
@@ -133,9 +149,11 @@ feature: Sources
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
       - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
+      - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
+      - [Square](tutorials/api/create/payments/square.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
       - [Generic REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -151,6 +169,7 @@ feature: Sources
     - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
     - [Explore payment data](tutorials/api/explore/payments.md)
     - [Explore protocol data](tutorials/api/explore/protocols.md)
+    - [Explore data tables](tutorials/api/explore/tabular.md)
   - Collect data {#collect}
     - [Collect advertising data](tutorials/api/collect/advertising.md)
     - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
@@ -173,10 +192,13 @@ feature: Sources
       - [Adobe Analytics (report-suite data)](tutorials/ui/create/adobe-applications/analytics.md)
       - [Adobe Analytics (classifications data)](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
+      - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-    - Advertising {#create}
+    - Advertising {#advertising}
       - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+    - Analytics {#analytics}
+      - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -192,6 +214,8 @@ feature: Sources
       - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+    - Consent & Preferences {#consent}
+      - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -200,6 +224,7 @@ feature: Sources
     - Customer Success {#customer-success}
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
+      - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
     - Databases {#databases}
       - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights](tutorials/ui/create/databases/hive.md)
@@ -225,18 +250,23 @@ feature: Sources
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+      - [Mailchimp Campaigns](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
+      - [Mailchimp Members](tutorials/ui/create/marketing-automation/mailchimp-members.md)
+      - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
+      - [Square](tutorials/ui/create/payments/square.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
-      - [Generic REST API](tutorials/ui/create/protocols/generic-rest.md)
     - Streaming {#streaming}
       - [HTTP API](tutorials/ui/create/streaming/http.md)
   - Configure a dataflow {#dataflow}
     - [Advertising connection dataflow](tutorials/ui/dataflow/advertising.md)
+    - [Analytics connection dataflow](tutorials/ui/dataflow/analytics.md)
     - [Batch cloud storage connection dataflow](tutorials/ui/dataflow/batch/cloud-storage.md)
     - [Streaming cloud storage connection dataflow](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+    - [Consent & Preferences connection dataflow](tutorials/ui/dataflow/consent-and-preferences.md)
     - [CRM connection dataflow](tutorials/ui/dataflow/crm.md)
     - [Customer success connection dataflow](tutorials/ui/dataflow/customer-success.md)
     - [Database connection dataflow](tutorials/ui/dataflow/databases.md)
@@ -251,6 +281,24 @@ feature: Sources
   - [Update dataflows](tutorials/ui/update-dataflows.md)
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
+  - [Subscribe to sources alerts](tutorials/ui/alerts.md)
+- Sources SDK {#sdk}
+  - [Overview](sources-sdk/overview.md)
+  - [Configuration options](sources-sdk/config/config.md)
+  - [Configure authentication specification](sources-sdk/config/authspec.md)
+  - [Configure source specification](sources-sdk/config/sourcespec.md)
+  - [Configure explore specification](sources-sdk/config/explorespec.md)
+  - [Sources SDK API overview](sources-sdk/api/api-overview.md)
+  - [Getting started](sources-sdk/api/getting-started.md)
+  - [Create a connection specification](sources-sdk/api/create.md)
+  - [Update a connection specification](sources-sdk/api/update-connection-specs.md)
+  - [Update a flow specification](sources-sdk/api/update-flow-specs.md)
+  - [Submit your source](sources-sdk/api/submit.md)
+  - [Document your source in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
+  - [Use the GitHub web interface to create a sources documentation page](sources-sdk/documentation/github.md)
+  - [Use a text editor in your local environment to create a sources documentation page](sources-sdk/documentation/text-editor.md)
+  - [Documentation self-service API template](sources-sdk/documentation/template.md)
+  - [Documentation self-service UI template](sources-sdk/documentation/ui-template.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)

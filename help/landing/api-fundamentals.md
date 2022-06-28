@@ -111,7 +111,7 @@ There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch 
     * `test`
 * `path`: The part of the JSON structure to be updated, identified using [JSON Pointer](#json-pointer) notation.
 
-Depending on the operation type indicated in `op`, the JSON Patch object may require additional properties. For more information on the different JSON Patch operations and their required syntax, please refer to the [JSON Patch documentation](http://jsonpatch.com/).
+Depending on the operation type indicated in `op`, the JSON Patch object may require additional properties. For more information on the different JSON Patch operations and their required syntax, please refer to the [JSON Patch documentation](https://datatracker.ietf.org/doc/html/rfc6902).
 
 ## JSON Schema {#json-schema}
 

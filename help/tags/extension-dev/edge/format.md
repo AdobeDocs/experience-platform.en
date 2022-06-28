@@ -15,7 +15,7 @@ exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
 
 A library module is a piece of reusable code provided by an extension that is emitted inside the tag runtime library in Adobe Experience Platform (the library that runs on the edge node). For example, a `sendBeacon` action type will have a library module that will run on the edge node and send a beacon.
 
-The library module is structured as a [CommonJS module](http://wiki.commonjs.org/wiki/Modules/1.1.1). Within a CommonJS module, the following variables are available for usage:
+The library module is structured as a [CommonJS module](https://nodejs.org/api/modules.html#modules-commonjs-modules). Within a CommonJS module, the following variables are available for usage:
 
 ## [!DNL require]
 
