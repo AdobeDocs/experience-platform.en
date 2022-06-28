@@ -66,25 +66,23 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-*Add the fields that customers must fill in when authenticating to your destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below.*
+#### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
 
-To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
-![Add a link here to one or more sample screenshots that show users how to authenticate to your destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
-* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
+* **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
+* **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
+* **[!UICONTROL Client Secret]**: The [!DNL client secret] that your system assigns to Adobe Experience Platform.
 
 ### Fill in destination details {#destination-details}
 
-*Add the fields that customers must fill in when configuring a new destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below.*
-
 To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
-
-![Add a link here to one or more sample screenshots that show users how to fill in details for your destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your *YOURDESTINATION* account ID.
+*  **[!UICONTROL URL]**: Pega CDH Rest Segment membership Endpoint URL.
 
 ## Activate segments to this destination {#activate}
 
@@ -96,44 +94,27 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 ## Exported data / Validate data export {#exported-data}
 
-*Add a paragraph about how data is exported to your destination. This would help the customer make sure that they have correctly integrated with your destination. For example, you could provide a sample JSON like the one below. Or, you could provide screenshots and information from your destination's interface that show how customers should expect segments to be populating in the destination platform.*
-
-```
 {
-  "person": {
-    "email": "yourstruly@adobe.com"
-  },
-  "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
-      },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
-      }
-    }
-  },
-  "identityMap": {
-    "ecid": [
-      {
-        "id": "14575006536349286404619648085736425115"
-      },
-      {
-        "id": "66478888669296734530114754794777368480"
-      }
-    ],
-    "email_lc_sha256": [
-      {
-        "id": "655332b5fa2aea4498bf7a290cff017cb4"
-      },
-      {
-        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
-      }
-    ]
-  }
+	"CustomerID": "CUSTOMER-1021",
+	"Segments": [{
+		"SegmentID": "04a81716-43d6-4e7a-a49c-f1d8b3129ba91",
+		"Name": "Interested in iPhone 13",
+		"LastQualificationTime": "2020-05-25T21:24:39Z",
+		"Status": "existing",
+		"Version": "15",
+		"ValidUntil": "2020-06-25T21:24:39Z",
+		"Namespace": "AAM"
+	}, {
+		"SegmentID": "53cba6b2-a23b-454a-8069-fc41308f1c0f",
+		"Name": "Interested in Unlimited Data Plan",
+		"LastQualificationTime": "2020-05-25T23:37:33Z",
+		"Status": "exited",
+		"Version": "3",
+		"ValidUntil": "2020-07-25T23:37:33Z",
+		"Namespace": "AAM"
+	}]
 }
+
 
 ```
 
