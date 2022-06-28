@@ -65,8 +65,8 @@ This feature enables you to allow access to a set of users to whom you would lik
 
 Column-level control can be applied at the schema level based on the type of schemas:
 
-1. Standard schemas: To restrict access to one or more columns use the permission-based labels and apply them to the XDM schema (including ad hoc XDM schema)  representing datasets.
-1. Ad hoc schemas: The permission labelling is consistently applied even for datasets created via query service either using a predefined schema or schema generated (ad hoc schema) as part of CTAS operation.
+1. **Standard schemas**: To restrict access to one or more columns use the permission-based labels and apply them to the XDM schema (including ad hoc XDM schema) representing datasets.
+1. **Ad hoc schemas**: Permission labelling is consistently applied even for datasets created via Query Service either using a predefined schema or schema generated as part of CTAS operation (ad hoc schema).
 
 Once the appropriate level of access has been applied using labels, the following **system behavior** occurs when a user tries to access the non-accessible data: 
 
@@ -108,7 +108,7 @@ Users can connect to these external clients by using either [expiring credential
 
 <!-- Check from her upwards in case of recent changes -->
 
-#### Non-Expiring Credentials
+#### Non-Expiring Credentials {#non-expiring-credentials}
 
 [Non-expiring credentials](../ui/credentials.md#non-expiring-credentials) allow you to form a permanent connection with an external client and makes it easier to connect to Query Service without the need for a manual password. 
 
@@ -150,7 +150,7 @@ Query logs can be accessed either through the Platform UI or API. To access quer
 
 ![The Queries log tab with the details panel highlighted.](../images/data-governance/overview/queries-log.png)
 
-### Audit Logs
+### Audit Logs {#audit-logs}
 
 By providing an accurate record of user actions, an audit trail can help with troubleshooting issues and help your business effectively comply with corporate data stewardship policies and regulatory requirements. Audit logs provides a record of all Platform activites. To increase the transparency and visibility of actions performed in Query Service by users, you can audit user actions relating to query execution, templates, and scheduled queries. 
 
@@ -172,7 +172,7 @@ Below is a list of three extended logs that are only found within the query cate
 
 <!-- Q) Does the system create a session log when a query is executed as well? -->
 
-## Data usage
+## Data usage {#data-usage}
 
 The data usage labeling & enforcement framework provides a uniform way across all Adobe solutions, services, and platforms to capture, communicate, and use metadata across the Adobe Experience Cloud. Metadata helps data controllers label data accurately and appropriately. 
 
@@ -186,19 +186,27 @@ Query Service is not directly responsible for enforcing this framework as it doe
 
 There are two types of derived datasets formed by Query Service, and each has a particular method of labeling data. The following techniques enforce labeling on datasets created by Query Service for the purpose of data compliance:
 
-1. **Derived datasets with standard schemas**: When a query results in a derived dataset, the labeling needs will be taken care of at the schema level. Therefore, labeling at the schema level should be taken care of.
-1. **Derived datasets using an ad hoc schema**: Ad hoc schemas are a special type of schemas and each of these schemas is created by an individual user for its pre-defined purpose. Hence, the ad hoc schemas are made visible on the AEP UI but in a restricted read-only mode. These schemas are not visible by default and are hidden behind a toggle button, therefore, enable the toggle to view the list of ad hoc schemas available in the system. The ad-hoc schemas in AEP UI can be labeled at the schema level only. 
+1. **Derived datasets with standard schemas**: When a query results in a derived dataset that uses a standard schema, data labeling is conducted at the schema level and applies to all datasets that conform to that schema.
+1. **Derived datasets using an ad hoc schema**: Ad hoc schemas are created by an individual user for a specific purpose. The XDM schema fields are namespaced for that particular dataset and not intended for use across different datasets. As a result, ad hoc schemas are available through the Experience Platform UI but in a read-only mode and are not visible by default. They must be enabled for viewing using the filter function in the schema workspace. Ad hoc schemas in the Platform UI can only be labeled at the schema level. 
 
-## Privacy Service 
+<!-- Q) what does that last sentence mean? -->
 
-Privacy Service refers to the capability of the system to mark the unique identifier within the data that has been enriched through Query Service.  
+<!-- This can be linked to the guide in https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/ad-hoc-schema-labels.html#discover-ad-hoc-schemas-in-the-schema-inventory-of-the-platform-ui after it is made public. -->
 
-The Data Governance in Query Service simplifies and streamlines the process of data categorization and data usage regulations. Once the data has been identified, the query service enables you to identify the primary identity on all output datasets.  
+See the guide on [adding data labels to XDM schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html?lang=en) for more information.
 
-There are two key categorizations of ensuring Privacy Service: 
+## Privacy Service {#privacy-service}
 
-1. **Derived Datasets with Standard Schema**: When a query results in a derived dataset, the privacy measures are being taken care of at the data lake management level. 
-1. **Derived Datasets by using Ad-hoc Schema**: When a query creates an ad-hoc schema, you can mark the primary identities by using the SQL command ‘ALTER TABLE’. The command enables you to mark the desired column as a Primary identity in a dataset. 
+Privacy Service helps you manage customer requests to access and delete their data in accordance with legal privacy regulations. It does this by providing the capability to mark data that has been enriched through Query Service with a unique identifier.  
+
+Data must be properly labeled in order for the service to determine which fields to access or delete during privacy jobs. See the [Privacy Service overview](../../privacy-service/home.md) for more information on this service.
+
+Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets.  
+
+There are two key categorizations to facilitate privacy jobs when using Query Service: 
+
+1. **Derived Datasets with Standard Schema**: When a query results in a derived dataset that uses a standard schema, privacy measures are handled at the data lake management level.
+1. **Derived Datasets by using Ad-hoc Schema**: When a query creates an ad-hoc schema, you can mark the primary identities by using the SQL command ‘ALTER TABLE’.  Instructions on how to use the command to [mark a desired dataset column as a Primary identity](../sql/syntax.md#alter-table) can be found in the SQL syntax guide.
  
 ## Data Hygiene 
 
