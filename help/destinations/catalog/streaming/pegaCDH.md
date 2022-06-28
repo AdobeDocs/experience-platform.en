@@ -43,7 +43,7 @@ Pega CDH supports the activation of Custom user ID described in the table below.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|CustomerID|Custom user IDs|Select Pega CDH  target identity when your source identity is a custom namespace.|
+|CustomerID|Custom user IDs| Common User Identifier that uniquely identifies a profile in Pega CDH and Adobe Experience Platform
 
 ## Export type and frequency {#export-type-frequency}
 
