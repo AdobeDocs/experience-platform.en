@@ -54,7 +54,6 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Synchronous validation
 
-
 >[!WARNING]
 >
 >The `syncValidation` query parameter is only available for the single message endpoint and cannot be used for the batch endpoint.
