@@ -42,7 +42,7 @@ To use the  Pega Customer Decision Hub destination to export data out of Experie
 Pega CDH supports the activation of Custom user ID described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description
-|---|---|---|
+|---|---|
 |CustomerID|Common User Identifier that uniquely identifies a profile in Pega CDH and Adobe Experience Platform
 
 ## Export type and frequency {#export-type-frequency}
