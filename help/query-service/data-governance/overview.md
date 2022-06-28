@@ -28,10 +28,10 @@ This document examines each of the different areas of governance and demonstrate
 
 Data security is the process of protecting data from unauthorized access and ensuring secure access throughout its lifecycle. Secure access is maintained in Experience Platform through the application of roles and permissions by capabilities such as role-based access control and attribute-based access control. Credentials, SSL, data encryption, and key management are used to ensure data protection across the platform. 
 
-Security in regards to data governance, is divided into the following categories:
+Security in regards to data governance is divided into the following categories:
 
-* [Access controls enforcement by Query Service](#access-control-enforcement): Access controlled through roles and permissions including dataset and column-level permissions.
-* Securing data through [connectivity](#connectivity): Access controlled through the platform, external clients, limited connection with expiring credentials and non-expiring credentials.
+* [Access controls enforcement by Query Service](#access-control-enforcement): Access is controlled through roles and permissions including dataset and column-level permissions.
+* Securing data through [connectivity](#connectivity): Access controlled through the platform, external clients, limited connection with expiring credentials, and non-expiring credentials.
 * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest.
 
 ### Access control enforcement by Query Service {#access-control-enforcement}
@@ -52,7 +52,7 @@ Access control in Adobe Experience Platform allows you to manage roles and permi
 
 This section serves as a guide for the required resource-based access in order to access datasets while querying data through Query Service.
 
-Through the permission interface you can define resource-based access control on datasets and schemas. The available permissions are as follows:
+Through the permission interface, you can define resource-based access control on datasets and schemas. The available permissions are as follows:
 
 * **[!UICONTROL Manage Datasets]** permission provides read-only access for schemas and allows access to read, create, edit, and delete datasets for use with Query Service.
 * **[!UICONTROL View Datasets]** permission allows read-only access for datasets and schemas for use with Query Service.
@@ -66,13 +66,13 @@ This feature enables you to allow access to a set of users to whom you would lik
 Column-level control can be applied at the schema level based on the type of schemas:
 
 1. **Standard schemas**: To restrict access to one or more columns use the permission-based labels and apply them to the XDM schema (including ad hoc XDM schema) representing datasets.
-1. **Ad hoc schemas**: Permission labelling is consistently applied even for datasets created via Query Service either using a predefined schema or schema generated as part of CTAS operation (ad hoc schema).
+1. **Ad hoc schemas**: Permission labeling is consistently applied even for datasets created via Query Service either using a predefined schema or schema generated as part of CTAS operation (ad hoc schema).
 
 Once the appropriate level of access has been applied using labels, the following **system behavior** occurs when a user tries to access the non-accessible data: 
 
-1. When a user has been declined access to one of the columns within a schema, the  user will not be able to read or write on the restricted column.
+1. When a user has been declined access to one of the columns within a schema, the user will not be able to read or write on the restricted column.
   
-* **Case 1**: When a user tries to execute a query effecting only a restricted column, the system will throw an error that the column doesn't exist.
+* **Case 1**: When a user tries to execute a query affecting only a restricted column, the system will throw an error that the column doesn't exist.
   
 * **Case 2**: When a user tries to execute a query with multiple columns including a restricted column, the system will return output for all non-restricted columns only.
 
@@ -110,11 +110,11 @@ Users can connect to these external clients by using either [expiring credential
 
 [Non-expiring credentials](../ui/credentials.md#non-expiring-credentials) allow you to form a permanent connection with an external client and makes it easier to connect to Query Service without the need for a manual password. 
 
-To enable the option of generating non-expiring credentials, you must follow the outlined [pre-requisite workflow](../ui/credentials.md#prerequisites). As part of this process your organization administrator is required to configure permissions for the product profile and as a result, the administrator has control to restrict the access of accounts to use non-expiring credentials.
+To enable the option of generating non-expiring credentials, you must follow the outlined [pre-requisite workflow](../ui/credentials.md#prerequisites). As part of this process, your organization administrator is required to configure permissions for the product profile and as a result, the administrator has control to restrict the access of accounts to use non-expiring credentials.
 
-Technical user accounts permitted with non-expiring credentials can be assigned roles which ensure appropriate data governance by following the user-level access control processes.
+Technical user accounts permitted with non-expiring credentials can be assigned roles that ensure appropriate data governance by following the user-level access control processes.
 
-Once the pre-requisite workflow has been successfully completed, authorized users can now [generate the required connection credentials](../ui/credentials.md#generate-credentials).
+Once the pre-requisite workflow has been completed, authorized users can now [generate the required connection credentials](../ui/credentials.md#generate-credentials).
 
 #### SSL Data Encryption
 
@@ -132,7 +132,7 @@ Encryption is the use of an algorithmic process to transform data into encoded a
 
 Query Service data compliance ensures that data is always encrypted. Data-in-transit is always HTTPS compliant and similarly, the data-at-rest in the data lake is encrypted with system-level keys.
 
-<!-- Data-in-transit is always HTTPS compliant and similarly, when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
+<!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
 ## Logs {#logs}
 
@@ -142,7 +142,7 @@ Each log category reflects a different aspect of information collected and can b
 
 ### Query Logs {#query-logs}
 
-Query logs allows you to monitor and review the status of all queries that have been executed through Query Service. This brings transparency to the user experience by allowing users to monitor the metadata for ALL the queries that have been executed across Query Service. It includes ALL types of queries whether is an exploratory, batch or scheduled query. 
+Query logs allow you to monitor and review the status of all queries that have been executed through Query Service. This brings transparency to the user experience by allowing users to monitor the metadata for ALL the queries that have been executed across Query Service. It includes ALL types of queries whether is an exploratory, batch, or scheduled query. 
 
 Query logs can be accessed either through the Platform UI or API. To access query logs in Platform UI you must have an Adobe ID and access to the Adobe Experience Platform. Query Logs are located in the [!UICONTROL Logs] tab of the Query Service workspace.
 
@@ -150,9 +150,9 @@ Query logs can be accessed either through the Platform UI or API. To access quer
 
 ### Audit Logs {#audit-logs}
 
-By providing an accurate record of user actions, an audit trail can help with troubleshooting issues and help your business effectively comply with corporate data stewardship policies and regulatory requirements. Audit logs provides a record of all Platform activites. To increase the transparency and visibility of actions performed in Query Service by users, you can audit user actions relating to query execution, templates, and scheduled queries. 
+By providing an accurate record of user actions, an audit trail can help with troubleshooting issues and help your business effectively comply with corporate data stewardship policies and regulatory requirements. Audit logs provide a record of all Platform activities. To increase the transparency and visibility of actions performed in Query Service by users, you can audit user actions relating to query execution, templates, and scheduled queries. 
 
-The following query categories captured by audit logs: 
+The following query categories are captured by audit logs: 
 
 |  Category |  Action Type |
 |---|---|
@@ -164,7 +164,7 @@ The audit logs workspace contains **extended server logs**. These provide more d
 
 Below is a list of three extended logs that are only found within the query categories for audit logs:-
 
-1. **Meta query logs**: When a query is executed, various associated backend sub-queries (such as parsing) are executed. These types of queries known as "Metadata" queries. Their relevant details can be found in audit logs.
+1. **Meta query logs**: When a query is executed, various associated backend sub-queries (such as parsing) are executed. These types of queries are known as "Metadata" queries. Their relevant details can be found in audit logs.
 1. **Session logs**: The system creates a session entry log for a user when they log into Query Service and do not execute a query.
 1. **Third-part client connection logs**: A connectivity audit log is generated when a user successfully connects Query Service to a third-party client.
 
@@ -177,7 +177,7 @@ The data usage labeling & enforcement framework provides a uniform way across al
 
 Query Service is not directly responsible for enforcing this framework as it does not modify marketing or analytical data nor is it an activation product.
 
-<!-- Q) Surely every service is responsible for enforcing the framework? - Why provide details on data labelling. -->
+<!-- Q) Surely every service is responsible for enforcing the framework? - Why provide details on data labeling. -->
 
 <!-- Q) What is an activation product? -->
 
@@ -205,14 +205,14 @@ Query Service features for data governance simplify and streamline the process o
 There are two key categorizations to facilitate privacy jobs when using Query Service: 
 
 1. **Derived Datasets with Standard Schema**: When a query results in a derived dataset that uses a standard schema, privacy measures are handled at the data lake management level.
-1. **Derived Datasets by using Ad-hoc Schema**: When a query creates an ad-hoc schema, you can mark the primary identities by using the SQL command ‘ALTER TABLE’.  Instructions on how to use the command to [mark a desired dataset column as a Primary identity](../sql/syntax.md#alter-table) can be found in the SQL syntax guide.
+1. **Derived Datasets by using Ad-hoc Schema**: When a query creates an ad-hoc schema, you can mark the primary identities by using the SQL command ‘ALTER TABLE’.  Instructions on how to use the command to [mark the desired dataset column as a primary identity](../sql/syntax.md#alter-table) can be found in the SQL syntax guide.
  
 ## Data Hygiene 
 
-"Data Hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Adobe Experience Platform Query Service, this is either the data lake or the data warehouse.
+"Data Hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Adobe Experience Platform Query Service, this is either the data lake or the data warehouse.
 
-It is necessary to assign an identity to a derived datasets to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. 
+It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. 
 
-An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
+An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
 
 See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform.
