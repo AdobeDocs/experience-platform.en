@@ -18,7 +18,7 @@ The following five categories are instrumental in adhering to data compliance re
 1. Privacy Service
 1. Data Hygiene
 
-This document examines each of the different areas of governance and demonstrates how to facilitate data compliance when using Query Service. 
+This document examines each of the different areas of governance and demonstrates how to facilitate data compliance when using Query Service. See the [Data Governance overview](../../data-governance/home.md) for broader information on how Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance.
 
 >[!NOTE]
 >
@@ -106,8 +106,6 @@ Users can connect to these external clients by using either [expiring credential
 
 ![The credentials tab in Query Service workspace with expiring credentials highlighted.](../images/data-governance/overview/expiring-credentials.png)
 
-<!-- Check from her upwards in case of recent changes -->
-
 #### Non-Expiring Credentials {#non-expiring-credentials}
 
 [Non-expiring credentials](../ui/credentials.md#non-expiring-credentials) allow you to form a permanent connection with an external client and makes it easier to connect to Query Service without the need for a manual password. 
@@ -170,11 +168,12 @@ Below is a list of three extended logs that are only found within the query cate
 1. **Session logs**: The system creates a session entry log for a user when they log into Query Service and do not execute a query.
 1. **Third-part client connection logs**: A connectivity audit log is generated when a user successfully connects Query Service to a third-party client.
 
+See the [Audit logs overview](../../landing/governance-privacy-security/audit-logs/overview.md) for more information on how audit logs can help your organization achieve data compliance. 
 <!-- Q) Does the system create a session log when a query is executed as well? -->
 
 ## Data usage {#data-usage}
 
-The data usage labeling & enforcement framework provides a uniform way across all Adobe solutions, services, and platforms to capture, communicate, and use metadata across the Adobe Experience Cloud. Metadata helps data controllers label data accurately and appropriately. 
+The data usage labeling & enforcement framework provides a uniform way across all Adobe solutions, services, and platforms to capture, communicate, and use metadata across the Adobe Experience Cloud. Metadata helps data controllers label data accurately and appropriately. See the [data usage labels overview](../../data-governance/labels/overview.md) for more information on how Adobe Experience Platform Data Governance allows you to apply data usage labels to datasets and fields
 
 Query Service is not directly responsible for enforcing this framework as it does not modify marketing or analytical data nor is it an activation product.
 
@@ -212,11 +211,8 @@ There are two key categorizations to facilitate privacy jobs when using Query Se
 
 "Data Hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Adobe Experience Platform Query Service, this is either the data lake or the data warehouse.
 
-Derived datasets are generally key on an identity that could be marked for Identity and hence managed by the centralized data hygiene service. 
+It is necessary to assign an identity to a derived datasets to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. 
 
-Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. 
+An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
 
-Exception Scenario in case of deletion - if a Data Hygiene deletion is requested on a dataset and before the completion of the deletion, another derived dataset query has been executed. In this case, the derived dataset will capture the information from the original dataset. Therefore, you need to be mindful that if a dataset has been requested to be deleted then do not execute any new derived dataset queries on the same. 
-
-
- 
+See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform.
