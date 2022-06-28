@@ -61,9 +61,9 @@ After creating a streaming-enabled segment, you can view details of that segment
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Specifically, the **[!UICONTROL Total qualified]** metric is displayed, which shows the total number of qualified audiences, based on all segment evaluations ( including both batch and streaming evaluations).
+Specifically, the **[!UICONTROL Total qualified]** metric is displayed, which shows the total number of qualified audiences, based on batch and streaming evaluations for this segment.
 
-Underneath is a line graph that shows the number of new audiences that were updated in the last 24 hours. The dropdown can be adjusted to show the last 24 hours, last week, or last 30 days. The **[!UICONTROL New audience updated]** metric is based on the change in audience size during the selected time range, as evaluated by streaming segmentation. This metric does not include the total qualified audience from the daily segment batch evaluation.
+Underneath is a line graph that shows the number of new audiences that were updated in the last 24 hours using the streaming evaluation method. The dropdown can be adjusted to show the last 24 hours, last week, or last 30 days. The **[!UICONTROL New audience updated]** metric is based on the change in audience size during the selected time range, as evaluated by streaming segmentation. This metric does not include the total qualified audience from the daily segment batch evaluation.
 
 >[!NOTE]
 >
