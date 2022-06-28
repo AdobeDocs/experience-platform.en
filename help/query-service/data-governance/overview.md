@@ -112,7 +112,7 @@ Users can connect to these external clients by using either [expiring credential
 
 [Non-expiring credentials](../ui/credentials.md#non-expiring-credentials) allow you to form a permanent connection with an external client and makes it easier to connect to Query Service without the need for a manual password. 
 
-To enable the option of generating non-expiring credentials, you must follow the outlined [pre-requisite workflow](../ui/credentials.mdn#prerequisites). As part of this process your organization administrator is required to configure permissions for the product profile and as a result, the administrator has control to restrict the access of accounts to use non-expiring credentials.
+To enable the option of generating non-expiring credentials, you must follow the outlined [pre-requisite workflow](../ui/credentials.md#prerequisites). As part of this process your organization administrator is required to configure permissions for the product profile and as a result, the administrator has control to restrict the access of accounts to use non-expiring credentials.
 
 Technical user accounts permitted with non-expiring credentials can be assigned roles which ensure appropriate data governance by following the user-level access control processes.
 
@@ -124,37 +124,37 @@ For increased security, Adobe Experience Platform Query Service provides native 
 
 See the guide on available [SSL options for third-party client connections to Query Service](../clients/ssl-modes.md) and how to connect using the `verify-full` SSL parameter value.
 
-### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys}
+### Encryption {#encryption-and-customer-managed-keys}
 
-Encryption is defined as the use of an algorithmic process to transform data into an encoded and unreadable text to ensure the information is protected and inaccessible without a decryption key.  
+<!-- Commented out lines to be included when customer-managed keys is released. Link out to the new document. -->
 
-The data governance enforced in Query Service ensured that data is always encrypted. When the data is in transit, it is always ensured to be HTTPS compliant. Similarly, when the data is in siphon or data lake the encryption is done at rest with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. 
+<!-- ### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys} -->
 
-## Audit
+Encryption is the use of an algorithmic process to transform data into encoded and unreadable text to ensure the information is protected and inaccessible without a decryption key. 
 
-Adobe Experience Platform Query Service logs user activity in the form of different types of logs. Each category of logs reflects a different level of information as desired by the platform user.
+Query Service data compliance ensures that data is always encrypted. Data-in-transit is always HTTPS compliant and similarly, the data-at-rest in the data lake is encrypted with system-level keys.
 
-This section covers details of what we capture and where we capture these distinct user activities.
+<!-- Data-in-transit is always HTTPS compliant and similarly, when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
-### Query Logs
+## Logs {#logs}
 
-The Query Logs or the "Logs" tab within Queries is a holistic view of all the queries that have been executed through the power of Query Service.
+Adobe Experience Platform Query Service records user activity and categorizes that activity in different log types. Logs provide information on **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
-This section guides on how to monitor the queries executed through the Query Service.
+Each log category reflects a different aspect of information collected and can be requested as desired by a Platform user. This section provides details on the type of information captured and where this information can be accessed.
 
-<!-- This document does not exist yet therefore cant link to it.  -->
+### Query Logs {#query-logs}
 
-The platform allows you to monitor and review the status of all queries that have been executed through the Platform's Query Service. This brings transparency to the user experience by allowing to monitor the metadata for ALL the queries that have been executed across Query Service. It includes ALL types of queries whether is an exploratory query, batch query or scheduled query. 
+Query logs allows you to monitor and review the status of all queries that have been executed through Query Service. This brings transparency to the user experience by allowing users to monitor the metadata for ALL the queries that have been executed across Query Service. It includes ALL types of queries whether is an exploratory, batch or scheduled query. 
 
-The query logs can be accessed either through the Platform UI or API. To access the "logs" in Platform UI requires you to have an Adobe ID and access to the Adobe Experience Platform.
+Query logs can be accessed either through the Platform UI or API. To access query logs in Platform UI you must have an Adobe ID and access to the Adobe Experience Platform. Query Logs are located in the [!UICONTROL Logs] tab of the Query Service workspace.
 
-<!-- ![The Queries log tab with the details panel highlighted.]() -->
+![The Queries log tab with the details panel highlighted.](../images/data-governance/overview/queries-log.png)
 
-### Audit Service Logs
+### Audit Logs
 
-To increase the transparency and visibility of actions performed in the Query Service by users. The Adobe Experience Platform allows you to audit the user actions for the Query Execution, Template, and Scheduled Query. These audit logs form a tail within the platform that will further allow customers to trace back actions or troubleshoot issues. Additionally, by monitoring user actions, one can ensure that data usage regulations and policies have been followed. 
+By providing an accurate record of user actions, an audit trail can help with troubleshooting issues and help your business effectively comply with corporate data stewardship policies and regulatory requirements. Audit logs provides a record of all Platform activites. To increase the transparency and visibility of actions performed in Query Service by users, you can audit user actions relating to query execution, templates, and scheduled queries. 
 
-In general, the following are the Query categories captured by audit logs: 
+The following query categories captured by audit logs: 
 
 |  Category |  Action Type |
 |---|---|
@@ -162,21 +162,29 @@ In general, the following are the Query categories captured by audit logs:
 | Query Template | Create, Delete, Update  |
 | Scheduled Query | Create, Delete, Update |
 
-There are a few **extended server logs** that can be found within audit logs that are not available in query logs. Below is the list of such extended logs:-
+The audit logs workspace contains **extended server logs**. These provide more details than those held within the query logs.
 
-1. **Meta query logs**: When a user executes a query, there are various backend processing sub-queries(such as parsing) which are executed. These are called "Metadata" queries. These types of queries or their relevant details can be found in audit logs.
-1. **Session logs**: When a user logs into the query service and does not execute any query, the system will create a session entry log for the user. This can also be found in the audit logs.
-1. **Third-part client connection logs**: Similar to the session logs - when a user connects the query service to a third-party client, there is a connectivity audit log that gets generated on forming the connection. These can be easily located within the audit logs.
+Below is a list of three extended logs that are only found within the query categories for audit logs:-
+
+1. **Meta query logs**: When a query is executed, various associated backend sub-queries (such as parsing) are executed. These types of queries known as "Metadata" queries. Their relevant details can be found in audit logs.
+1. **Session logs**: The system creates a session entry log for a user when they log into Query Service and do not execute a query.
+1. **Third-part client connection logs**: A connectivity audit log is generated when a user successfully connects Query Service to a third-party client.
+
+<!-- Q) Does the system create a session log when a query is executed as well? -->
 
 ## Data usage
 
-The Data Usage Labeling & Enforcement (DULE) Framework is designed to provide a uniform way across all Adobe Solutions/Services/Platforms to capture, communicate, and use metadata about data across the Adobe Experience Cloud. The metadata helps data controllers label data. These are not enforced by the Query Service as we neither modify marketing/analytical data nor query service is an activation product.
+The data usage labeling & enforcement framework provides a uniform way across all Adobe solutions, services, and platforms to capture, communicate, and use metadata across the Adobe Experience Cloud. Metadata helps data controllers label data accurately and appropriately. 
 
-For example. if an attribute "name" of a specific type, then restricting the execution of aggregation query has not been enforced within the query service. Generally, the aggregation within queries is either for sum, count, etc.
+Query Service is not directly responsible for enforcing this framework as it does not modify marketing or analytical data nor is it an activation product.
 
-In this section, we will detail the available techniques to enforce labeling on the datasets created by the query service. 
+<!-- Q) Surely every service is responsible for enforcing the framework? - Why provide details on data labelling. -->
 
-There are two types of derived datasets formed from Query Service, and each has its way of taking care of labeling: 
+<!-- Q) What is an activation product? -->
+
+<!-- For example. if an attribute "name" of a specific type, then restricting the execution of aggregation query has not been enforced within the query service. Generally, the aggregation within queries is either for sum, count, etc. -->
+
+There are two types of derived datasets formed by Query Service, and each has a particular method of labeling data. The following techniques enforce labeling on datasets created by Query Service for the purpose of data compliance:
 
 1. **Derived datasets with standard schemas**: When a query results in a derived dataset, the labeling needs will be taken care of at the schema level. Therefore, labeling at the schema level should be taken care of.
 1. **Derived datasets using an ad hoc schema**: Ad hoc schemas are a special type of schemas and each of these schemas is created by an individual user for its pre-defined purpose. Hence, the ad hoc schemas are made visible on the AEP UI but in a restricted read-only mode. These schemas are not visible by default and are hidden behind a toggle button, therefore, enable the toggle to view the list of ad hoc schemas available in the system. The ad-hoc schemas in AEP UI can be labeled at the schema level only. 
