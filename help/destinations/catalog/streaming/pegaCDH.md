@@ -70,8 +70,6 @@ To connect to this destination, follow the steps described in the [destination c
 
 If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
-![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
-
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: The [!DNL client secret] that your system assigns to Adobe Experience Platform.
@@ -93,28 +91,34 @@ To configure details for the destination, fill in the required fields and select
 Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 ## Exported data / Validate data export {#exported-data}
+Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destination in JSON format. For example, the export below contains a profile that has qualified for a certain segment, is a member of another two segments, and exited another segment. The export also includes the profile attribute first name, last name, date of birth, and personal email address. The identitifier for this profile is CustomerID.
 
+```json
 {
-	"CustomerID": "CUSTOMER-1021",
-	"Segments": [{
-		"SegmentID": "04a81716-43d6-4e7a-a49c-f1d8b3129ba91",
-		"Name": "Interested in iPhone 13",
-		"LastQualificationTime": "2020-05-25T21:24:39Z",
-		"Status": "existing",
-		"Version": "15",
-		"ValidUntil": "2020-06-25T21:24:39Z",
-		"Namespace": "AAM"
-	}, {
-		"SegmentID": "53cba6b2-a23b-454a-8069-fc41308f1c0f",
-		"Name": "Interested in Unlimited Data Plan",
-		"LastQualificationTime": "2020-05-25T23:37:33Z",
-		"Status": "exited",
-		"Version": "3",
-		"ValidUntil": "2020-07-25T23:37:33Z",
-		"Namespace": "AAM"
-	}]
-}
-
+  "CustomerID": "CUSTOMER-1021",
+  "Attributes": {
+    "BirthDate": "1975-08-29",
+    "FirstName": "John",
+    "LastName":"Doe"
+  },
+  "Segments": [{
+    "SegmentID": "04a81716-43d6-4e7a-a49c-f1d8b3129ba91",
+    "Name": "Interested in iPhone 13",
+    "LastQualificationTime": "2020-05-25T21:24:39Z",
+    "Status": "existing",
+    "Version": "15",
+    "ValidUntil": "2020-06-25T21:24:39Z",
+    "Namespace": "AAM"
+    }, {
+    "SegmentID": "53cba6b2-a23b-454a-8069-fc41308f1c0f",
+    "Name": "Interested in Unlimited Data Plan",
+    "LastQualificationTime": "2020-05-25T23:37:33Z",
+    "Status": "exited",
+    "Version": "3",
+    "ValidUntil": "2020-07-25T23:37:33Z",
+    "Namespace": "AAM"
+    }]
+ }
 
 ```
 
@@ -122,6 +126,3 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
 
-## Additional resources {#additional-resources}
-
-*You can provide further links to your product documentation or any other resources you consider important for the customer to be successful.*
