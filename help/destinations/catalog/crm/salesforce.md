@@ -16,13 +16,13 @@ This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 Note the following details that are specific to the [!DNL Salesforce CRM] destination:
 
-* [!DNL Adobe Experience Platform] segments are exported to [!DNL Salesforce CRM] using a custom `AdobeExperiencePlatformSegments` field. Instructions are further below, in the [Prerequisites](#prerequisites) section.
+* [!DNL Adobe Experience Platform] segments are exported to [!DNL Salesforce CRM] using a custom `AdobeExperiencePlatformSegments` field. You need to create this custom field in [!DNL Salesforce] first, before you export data from Experience Platform. Instructions are further below, in the [Prerequisites](#prerequisites) section.
 
 * Salesforce CRM uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce CRM instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-As a marketer, I can deliver personalized experiences to my users, based on attributes from their Adobe Experience Platform profiles, build segments from my offline data, and send these segments to Salesforce CRM, to display in my users’ feeds, as soon as segments and profiles are updated in Adobe Experience Platform.
+As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to Salesforce CRM, to display in my users’ feeds as soon as segments and profiles are updated in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -115,35 +115,31 @@ To configure details for the destination, fill in the required fields and select
 
 Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-## Mapping Example {#mapping-example}
+## Mapping considerations and example {#mapping-considerations-example}
 
-* To correctly send your audience data from Adobe Experience Platform to the Salesforce CRM destination, you need to go through the field mapping step.
+To correctly send your audience data from Adobe Experience Platform to the Salesforce CRM destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the Salesforce CRM destination fields, follow these steps:
 
-* Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account, and their corresponding equivalents from the target destination.
+1. In the Mapping step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
+![Add new mapping](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 
-* To correctly map your XDM fields to the Salesforce CRM destination fields, follow these steps:
+1. In the select source field window, when selecting the source field choose the **[!UICONTROL Select attributes]** category and add the mappings desired.
+![Source mapping](../../assets/catalog/crm/salesforce/source-mapping.png)
 
-    1. In the Mapping step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
-    ![Add new mapping](../../assets/catalog/crm/salesforce/add-new-mapping.png)
+1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
+![Target mapping  SalesforceId](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
 
-    1. In the select source field window, when selecting the source field choose the **[!UICONTROL Select attributes]** category and add the mappings desired.
-    ![Source mapping](../../assets/catalog/crm/salesforce/source-mapping.png)
+1. For custom attributes, in the select target field window, select the target field and choose the **[!UICONTROL Select custom attributes]** category, Next provide the desired target attribute name and add the mappings desired.
+![Target mapping using LastName](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
 
-    1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
-    ![Target mapping  SalesforceId](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
+1. For instance, you could add the following mapping between your XDM profile schema and your [!DNL Salesforce CRM] instance:
 
-    1. For custom attributes, in the select target field window, select the target field and choose the **[!UICONTROL Select custom attributes]** category, Next provide the desired target attribute name and add the mappings desired.
-    ![Target mapping using LastName](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
+    ||XDM Profile Schema|[!DNL Salesforce CRM] Instance| Mandatory|
+    |---|---|---|---|
+    |Attributes|<ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>personalEmail.address</code></li></ul>|<ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>Email</code></li></ul>|
+    |Identities|<ul><li><code>crmID</code></li></ul>|<ul><li><code>SalesforceId</code></li></ul>|Yes|
 
-    1. For instance, you could add the following mapping between your XDM profile schema and your [!DNL Salesforce CRM] instance:
-
-        ||XDM Profile Schema|[!DNL Salesforce CRM] Instance| Mandatory|
-        |---|---|---|---|
-        |Attributes|<ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>personalEmail.address</code></li></ul>|<ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>Email</code></li></ul>|
-        |Identities|<ul><li><code>crmID</code></li></ul>|<ul><li><code>SalesforceId</code></li></ul>|Yes|
-
-    1. An example using these mappings is shown below:
-    ![Target mapping LastName](../../assets/catalog/crm/salesforce/mappings.png)
+1. An example using these mappings is shown below:
+![Target mapping LastName](../../assets/catalog/crm/salesforce/mappings.png)
 
 ## Validate data export {#exported-data}
 
