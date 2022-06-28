@@ -67,15 +67,22 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 ## Activate segments to this destination {#activate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_bing_mapping_id"
+>title="Mapping ID"
+>abstract="Enter the numeric Bing segment ID to which you want to map the selected segment. If the provided [!UICONTROL Mapping ID] does not correspond to a segment ID in the Bing destination, you will not see the expected audience data in your Bing account."
+
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your segments using the [!UICONTROL Mapping ID] field, to their corresponding segment ID or friendly name in the Bing destination.
+In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your segments using the [!UICONTROL Mapping ID] field, to their corresponding numeric segment ID in the Bing destination.
 
-When mapping segments, we recommend you use the [!DNL Platform] segment name or a shorter form of it, for ease of use. However, the segment ID or name in your destination does not need to match the one in your [!DNL Platform] account. Any value you insert in the mapping field will be reflected by the destination.
+![UI image showing the segment mapping screen with an example of Bing Mapping ID](../../assets/catalog/advertising/bing/mapping-id.png)
+
+If the provided [!UICONTROL Mapping ID] does not correspond to a segment ID in the Bing destination, you will not see the expected audience data in your Bing account.
 
 ## Exported data {#exported-data}
 
