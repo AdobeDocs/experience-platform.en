@@ -15,24 +15,21 @@ The following five categories are instrumental in adhering to data compliance re
 1. Security
 1. Audits
 1. Data Usage
-1. Privacy Service
+1. [!DNL Privacy Service]
 1. Data Hygiene
 
 This document examines each of the different areas of governance and demonstrates how to facilitate data compliance when using Query Service. See the [Data Governance overview](../../data-governance/home.md) for broader information on how Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance.
 
->[!NOTE]
->
->Datasets that are created or appended to using Query Service are referred to as "derived datasets".
-
 ## Security
 
-Data security is the process of protecting data from unauthorized access and ensuring secure access throughout its lifecycle. Secure access is maintained in Experience Platform through the application of roles and permissions by capabilities such as role-based access control and attribute-based access control. Credentials, SSL, data encryption, and key management are used to ensure data protection across the platform. 
+Data security is the process of protecting data from unauthorized access and ensuring secure access throughout its lifecycle. Secure access is maintained in Experience Platform through the application of roles and permissions by capabilities such as role-based access control and attribute-based access control. Credentials, SSL, data encryption, and key management are also used to ensure data protection across Platform. 
 
 Security in regards to data governance is divided into the following categories:
 
-* [Access controls enforcement by Query Service](#access-control-enforcement): Access is controlled through roles and permissions including dataset and column-level permissions.
-* Securing data through [connectivity](#connectivity): Access controlled through the platform, external clients, limited connection with expiring credentials, and non-expiring credentials.
-* Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest.
+* [Enforcement of Access control by Query Service](#access-control-enforcement): Access is controlled through roles and permissions including dataset and column-level permissions.
+* Securing data through [connectivity](#connectivity): Access is controlled through Platform and external clients by achieving a limited connection with expiring credentials, or non-expiring credentials.
+* Securing data through [encryption and system-level keys](#encryption-and-customer-managed-keys): Access is controlled through encryption when the data is at rest.
+<!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
 
 ### Access control enforcement by Query Service {#access-control-enforcement}
 
@@ -48,20 +45,18 @@ See the [Manage permissions for a product profile](../../access-control/ui/permi
 
 #### Dataset level access control
 
-Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using [Adobe Admin Console](https://adminconsole.adobe.com/). 
+Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using [Adobe Admin Console](https://adminconsole.adobe.com/). Through the permission interface, you can define resource-based access control on datasets and schemas.
 
-This section serves as a guide for the required resource-based access in order to access datasets while querying data through Query Service.
+The required resource-based access permissions to access datasets while querying data through Query Service are as follows:
 
-Through the permission interface, you can define resource-based access control on datasets and schemas. The available permissions are as follows:
-
-* **[!UICONTROL Manage Datasets]** permission provides read-only access for schemas and allows access to read, create, edit, and delete datasets for use with Query Service.
-* **[!UICONTROL View Datasets]** permission allows read-only access for datasets and schemas for use with Query Service.
+* The **[!UICONTROL Manage Datasets]** permission provides read-only access for schemas and allows access to read, create, edit, and delete datasets for use with Query Service.
+* The **[!UICONTROL View Datasets]** permission allows read-only access for datasets and schemas for use with Query Service.
 
 #### Column Level Access Control
 
 The attribute-based access control feature enables Query Service users to restrict access to the user-critical data. Access is granted based on the role or level of access assigned to each Platform user, or based on the field-level label applied to each individual column.
 
-This feature enables you to allow access to a set of users to whom you would like to grant access rights on confidential columns. The access control on any column will restrict both the read and writing capabilities of a user on that restricted column.  
+This feature enables you to allow access to a set of users to whom you would like to grant access rights on confidential columns. Access control on any column can restrict both the read and writing capabilities of a user on that restricted column.  
 
 Column-level control can be applied at the schema level based on the type of schemas:
 
@@ -102,7 +97,7 @@ Users can connect to these external clients by using either [expiring credential
 
 #### Limited connection time via expiring credentials
 
-[Expiring credentials](../ui/credentials.md) allow users to form a temporary connection with an external client. This set of credentials is only valid for 24 hours. The expiry of these types of credentials can be seen along with the credential tab in Query Service.
+[Expiring credentials](../ui/credentials.md) allow users to form a temporary connection with an external client. This set of credentials is only valid for 24 hours. The expiry of these types of credentials can be seen along with the credential tab in the Query Service dashboard.
 
 ![The credentials tab in Query Service workspace with expiring credentials highlighted.](../images/data-governance/overview/expiring-credentials.png)
 
@@ -144,7 +139,7 @@ Each log category reflects a different aspect of information collected and can b
 
 Query logs allow you to monitor and review the status of all queries that have been executed through Query Service. This brings transparency to the user experience by allowing users to monitor the metadata for ALL the queries that have been executed across Query Service. It includes ALL types of queries whether is an exploratory, batch, or scheduled query. 
 
-Query logs can be accessed either through the Platform UI or API. To access query logs in Platform UI you must have an Adobe ID and access to the Adobe Experience Platform. Query Logs are located in the [!UICONTROL Logs] tab of the Query Service workspace.
+Query logs can be accessed either through the Platform UI or API. To access query logs in Platform UI you must have an Adobe ID and access to the Adobe Experience Platform. Query logs are located in the [!UICONTROL Logs] tab of the Query Service workspace.
 
 ![The Queries log tab with the details panel highlighted.](../images/data-governance/overview/queries-log.png)
 
@@ -152,7 +147,7 @@ Query logs can be accessed either through the Platform UI or API. To access quer
 
 By providing an accurate record of user actions, an audit trail can help with troubleshooting issues and help your business effectively comply with corporate data stewardship policies and regulatory requirements. Audit logs provide a record of all Platform activities. To increase the transparency and visibility of actions performed in Query Service by users, you can audit user actions relating to query execution, templates, and scheduled queries. 
 
-The following query categories are captured by audit logs: 
+The following table indicates the query categories captured by audit logs and the action types they record: 
 
 |  Category |  Action Type |
 |---|---|
@@ -160,9 +155,7 @@ The following query categories are captured by audit logs:
 | Query Template | Create, Delete, Update  |
 | Scheduled Query | Create, Delete, Update |
 
-The audit logs workspace contains **extended server logs**. These provide more details than those held within the query logs.
-
-Below is a list of three extended logs that are only found within the query categories for audit logs:-
+The audit logs workspace contains **extended server logs**. These provide more details than those held within the query logs. Below is a list of three extended logs that are only found within the query categories for audit logs:
 
 1. **Meta query logs**: When a query is executed, various associated backend sub-queries (such as parsing) are executed. These types of queries are known as "Metadata" queries. Their relevant details can be found in audit logs.
 1. **Session logs**: The system creates a session entry log for a user when they log into Query Service and do not execute a query.
@@ -173,17 +166,15 @@ See the [Audit logs overview](../../landing/governance-privacy-security/audit-lo
 
 ## Data usage {#data-usage}
 
-The data usage labeling & enforcement framework provides a uniform way across all Adobe solutions, services, and platforms to capture, communicate, and use metadata across the Adobe Experience Cloud. Metadata helps data controllers label data accurately and appropriately. See the [data usage labels overview](../../data-governance/labels/overview.md) for more information on how Adobe Experience Platform Data Governance allows you to apply data usage labels to datasets and fields
+The data usage labeling & enforcement framework provides a uniform way across all Adobe solutions, services, and platforms to capture, communicate, and use metadata across the Adobe Experience Cloud. Metadata helps data controllers label data accurately and appropriately. See the [data usage labels overview](../../data-governance/labels/overview.md) for more information on how Adobe Experience Platform Data Governance allows you to apply data usage labels to datasets and fields.
 
-Query Service is not directly responsible for enforcing this framework as it does not modify marketing or analytical data nor is it an activation product.
-
-<!-- Q) Surely every service is responsible for enforcing the framework? - Why provide details on data labeling. -->
-
-<!-- Q) What is an activation product? -->
-
-<!-- For example. if an attribute "name" of a specific type, then restricting the execution of aggregation query has not been enforced within the query service. Generally, the aggregation within queries is either for sum, count, etc. -->
+Although Query Service is not an activation product and does not directly modify marketing or analytical data, it is still necessary to enforce this framework.
 
 There are two types of derived datasets formed by Query Service, and each has a particular method of labeling data. The following techniques enforce labeling on datasets created by Query Service for the purpose of data compliance:
+
+>[!NOTE]
+>
+>Datasets that are created or appended to using Query Service are referred to as "derived datasets".
 
 1. **Derived datasets with standard schemas**: When a query results in a derived dataset that uses a standard schema, data labeling is conducted at the schema level and applies to all datasets that conform to that schema.
 1. **Derived datasets using an ad hoc schema**: Ad hoc schemas are created by an individual user for a specific purpose. The XDM schema fields are namespaced for that particular dataset and not intended for use across different datasets. As a result, ad hoc schemas are available through the Experience Platform UI but in a read-only mode and are not visible by default. They must be enabled for viewing using the filter function in the schema workspace. Ad hoc schemas in the Platform UI can only be labeled at the schema level. 
@@ -194,18 +185,16 @@ There are two types of derived datasets formed by Query Service, and each has a 
 
 See the guide on [adding data labels to XDM schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html?lang=en) for more information.
 
-## Privacy Service {#privacy-service}
+## [!DNL Privacy Service] {#privacy-service}
 
-Privacy Service helps you manage customer requests to access and delete their data in accordance with legal privacy regulations. It does this by providing the capability to mark data that has been enriched through Query Service with a unique identifier.  
-
-Data must be properly labeled in order for the service to determine which fields to access or delete during privacy jobs. See the [Privacy Service overview](../../privacy-service/home.md) for more information on this service.
+[!DNL Privacy Service] helps you manage customer requests to access and delete their data in accordance with legal privacy regulations. It does this by providing the capability to mark data that has been enriched through Query Service with a unique identifier. Data must be properly labeled in order for the service to determine which fields to access or delete during privacy jobs. See the [[!DNL Privacy Service] overview](../../privacy-service/home.md) for more information on this service.
 
 Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets.  
 
 There are two key categorizations to facilitate privacy jobs when using Query Service: 
 
 1. **Derived Datasets with Standard Schema**: When a query results in a derived dataset that uses a standard schema, privacy measures are handled at the data lake management level.
-1. **Derived Datasets by using Ad-hoc Schema**: When a query creates an ad-hoc schema, you can mark the primary identities by using the SQL command ‘ALTER TABLE’.  Instructions on how to use the command to [mark the desired dataset column as a primary identity](../sql/syntax.md#alter-table) can be found in the SQL syntax guide.
+1. **Derived Datasets by using Ad-hoc Schema**: When a query creates an ad hoc schema, you can mark the primary identities by using the SQL command ‘ALTER TABLE’.  Instructions on how to use the command to [mark the desired dataset column as a primary identity](../sql/syntax.md#alter-table) can be found in the SQL syntax guide.
  
 ## Data Hygiene 
 
