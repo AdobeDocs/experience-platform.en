@@ -32,20 +32,20 @@ Note the following prerequisites in Salesforce, in order to export data from Pla
 
 1. You need to have a Salesforce account.
     * Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a Salesforce account, if you do not have one already.
-1. Next, You need to configure a [connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) within your Salesforce account, if you do not have one already. 
+1. Next, you need to configure a [connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) within your Salesforce account, if you do not have one already. 
     * Within the connected app ensure that [OAuth Settings](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) is enabled.
-    * Also ensure that [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mentioned below are selected.
-        * chatter_api
-        * lightning
-        * visualforce
-        * content
-        * openid
-        * full
-        * api
-        * web
-        * refresh_token
-        * offline_access
-1. Create the custom field which will allow Experience Platform to update your profiles within Salesforce CRM. Refer to the Salesforce documentation to [Create Custom Fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance.
+    * Also ensure that the [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mentioned below are selected.
+        * ``chatter_api``
+        * ``lightning``
+        * ``visualforce``
+        * ``content``
+        * ``openid``
+        * ``full``
+        * ``api``
+        * ``web``
+        * ``refresh_token``
+        * ``offline_access``
+1. Create the custom field which will allow Experience Platform to update your profiles within Salesforce CRM. Refer to the Salesforce documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance.
 
     | Field | Data Type |
     |---|---|
@@ -117,14 +117,33 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 ## Mapping Example {#mapping-example}
 
-In the select target window, When selecting the target field choose the **Select custom attributes** category and add the mappings' desired.
+* To correctly send your audience data from Adobe Experience Platform to the Salesforce CRM destination, you need to go through the field mapping step.
 
-For instance, your XDM profile schema and your [!DNL Salesforce CRM] instance could have the attribute mapping as below:
+* Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account, and their corresponding equivalents from the target destination.
 
-||XDM Profile Schema|[!DNL Salesforce CRM] Instance| Mandatory|
-|---|---|---|---|
-|Attributes|<ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>personalEmail.address</code></li></ul>|<ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>Email</code></li></ul>|
-|Identities|<ul><li><code>crmID</code></li></ul>|<ul><li><code>SalesforceId</code></li></ul>|Yes|
+* To correctly map your XDM fields to the Salesforce CRM destination fields, follow these steps:
+
+    1. In the Mapping step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
+    ![Add new mapping](../../assets/catalog/crm/salesforce/add-new-mapping.png)
+
+    1. In the select source field window, when selecting the source field choose the **[!UICONTROL Select attributes]** category and add the mappings desired.
+    ![Source mapping](../../assets/catalog/crm/salesforce/source-mapping.png)
+
+    1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
+    ![Target mapping  SalesforceId](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
+
+    1. For custom attributes, in the select target field window, select the target field and choose the **[!UICONTROL Select custom attributes]** category, Next provide the desired target attribute name and add the mappings desired.
+    ![Target mapping using LastName](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
+
+    1. For instance, you could add the following mapping between your XDM profile schema and your [!DNL Salesforce CRM] instance:
+
+        ||XDM Profile Schema|[!DNL Salesforce CRM] Instance| Mandatory|
+        |---|---|---|---|
+        |Attributes|<ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>personalEmail.address</code></li></ul>|<ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>Email</code></li></ul>|
+        |Identities|<ul><li><code>crmID</code></li></ul>|<ul><li><code>SalesforceId</code></li></ul>|Yes|
+
+    1. An example using these mappings is shown below:
+    ![Target mapping LastName](../../assets/catalog/crm/salesforce/mappings.png)
 
 ## Validate data export {#exported-data}
 
@@ -142,10 +161,10 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the segment summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Segment](../../assets/catalog/crm/salesforce/segment.png)
 
-1. Login to the Salesforce website then navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page and check if the profiles from the segment have been added.
+1. Login to the Salesforce website, then navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page and check if the profiles from the segment have been added.
 ![Salesforce Contacts](../../assets/catalog/crm/salesforce/contacts.png)
 
-1. Click a contact and check if the attribute is updated. You will notice the segment id's which were used to update against the `AdobeExperiencePlatformSegments` custom field.
+1. Click a contact and check if the attribute is updated. You will notice the segment IDs from Experience Platform in the `AdobeExperiencePlatformSegments` custom field.
 ![Salesforce Contacts](../../assets/catalog/crm/salesforce/contact-info.png)
 
 ## Data usage and governance {#data-usage-governance}
