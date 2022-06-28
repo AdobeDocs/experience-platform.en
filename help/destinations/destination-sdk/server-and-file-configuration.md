@@ -47,6 +47,8 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedS3Destination.path.value`|String|The path to the destination folder that will host the exported files.|
 |`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
+{style="table-layout:auto"}
+
 ## File-based SFTP destination server spec {#sftp-example}
 
 ```json
@@ -83,6 +85,8 @@ The server and file configuration specs for file-based destinations can be confi
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
 |`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
+{style="table-layout:auto"}
+
 ## File-based [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destination server spec {#adls-example}
 
 ```json
@@ -108,6 +112,8 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedAdlsGen2Destination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedAdlsGen2Destination.path.value`|String|The path to the destination folder that will host the exported files.|
 |`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
+
+{style="table-layout:auto"}
 
 ## File-based [!DNL Azure Blob Storage] destination server spec {#blob-example}
 
@@ -141,6 +147,8 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedAzureBlobDestination.container.value`|String|The name of the [!DNL Azure Blob Storage] container to be used by this destination.|
 |`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
 
+{style="table-layout:auto"}
+
 ## File-based [!DNL Data Landing Zone] ([!DNL DLZ]) destination server spec {#dlz-example}
 
 ```json
@@ -167,6 +175,8 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedDlzDestination.path.templatingStrategy`|String| *Required.*  Use `PEBBLE_V1`.|
 |`fileBasedDlzDestination.path.value`|String|The path to the destination folder that will host the exported files.|
 |`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
+
+{style="table-layout:auto"}
 
 ## File-based [!DNL Google Cloud Storage] destination server spec {#gcs-example}
 
@@ -199,6 +209,8 @@ The server and file configuration specs for file-based destinations can be confi
 |`fileBasedGoogleCloudStorageDestination.path.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
 |`fileBasedGoogleCloudStorageDestination.path.value`|String|The path to the destination folder that will host the exported files.|
 |`fileConfigurations`|Object|See [file formatting configuration](#file-configuration) for detailed explanations about this section.|
+
+{style="table-layout:auto"}
 
 ## File formatting configuration {#file-configuration}
 
@@ -294,3 +306,5 @@ This section describes the file formatting settings for the exported `CSV` files
 |`csvOptions.emptyValue.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets the string representation of an empty value.|`""`|
 |`csvOptions.lineSep.value`|Optional|*Only for `"fileType.value": "csv"`*. Defines the line separator that should be used for writing. Maximum length is 1 character.|`\n`|
 |`maxFileRowCount`|Optional|Maximum number of rows that the exported file can contain. Configure this based on your destination platform file size requirements.|N/A|
+
+{style="table-layout:auto"}
