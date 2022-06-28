@@ -1,6 +1,6 @@
 ---
 title: Pega Customer Decision Hub connection
-description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send profile segment membership data to Pega Customer Decision Hub (Pega CDH) for Next Best Action (NBA) decisioning
+description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send customer profile attributes, segment membership data to Pega Customer Decision Hub (Pega CDH) for Next Best Action (NBA) decisioning
 ---
 
 # Pega Customer Decision Hub connection
@@ -9,7 +9,7 @@ description: Use the Pega Customer Decision Hub destination in Adobe Experience 
 
 ## Overview {#overview}
 
-Send profile segment membership data to Pega Customer Descision Hub (Pega CDH) for Next Best Action (NBA) decisioning. 
+Send profile attributes, segment membership data to Pega Customer Descision Hub (Pega CDH) for Next Best Action (NBA) decisioning. 
 
 Adobe Experience Platform Profile Segment membership feed into Pega can be used as predictors in Pega CDH’s adaptive models and help deliver the right contextual and behavioral data for NBA decisioning purposes.
 
@@ -80,7 +80,7 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL URL]**: Pega CDH Rest Segment membership Endpoint URL.
+*  **[!UICONTROL URL]**: Pega CDH Service Rest Segment membership Endpoint URL.
 
 ## Activate segments to this destination {#activate}
 
