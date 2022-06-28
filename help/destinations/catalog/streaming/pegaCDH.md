@@ -84,7 +84,7 @@ To configure details for the destination, fill in the required fields and select
 
 
 ## Exported data / Validate data export {#exported-data}
-Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destination in JSON format. For example, the export below contains a profile that has qualified for a certain segment, is a member of another two segments, and exited another segment. The export also includes the profile attribute first name, last name, date of birth, and personal email address. The identitifier for this profile is CustomerID.
+Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destination in JSON format. For example, the export below contains a profile that has qualified for a certain segment, is a member of another two segments, and exited another segment. The export also includes the profile attribute first name, last name, date of birth, and Customer Identfier. The identitifier for this profile is CustomerID.
 
 ```json
 {
