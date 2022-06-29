@@ -12,7 +12,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.12.0 - June 29, 2022
 
-* Changed Experience Edge requests to use the cluster cookie location hint as part of the URL.
+* Change the requests to the Edge Network to use the `cluster` cookie location hint as part of the URL. This ensures that users who change their location (e.g. through a VPN or driving with mobile devices, etc) mid session hit the same edge and have the same personalization profile. 
 * Stringify configured functions in the getLibraryInfo command response.
 
 ## Version 2.11.0 - June 13, 2022
