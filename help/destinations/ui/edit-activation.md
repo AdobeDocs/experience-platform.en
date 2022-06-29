@@ -2,9 +2,7 @@
 keywords: edit activation, edit destination, edit destination
 title: Edit activation dataflows
 type: Tutorial
-seo-title: Edit activation dataflows
 description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
-seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 ---
 # Edit activation dataflows {#edit-activation-flows}

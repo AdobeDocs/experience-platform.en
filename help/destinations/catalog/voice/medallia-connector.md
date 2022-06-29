@@ -1,8 +1,8 @@
 ---
 title: Medallia connection
 description: Activate profiles for targeted Medallia surveys and feedback collection to better understand customer needs and expectations.
+exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
 ---
-
 # Medallia connection
 
 ## Overview {#overview}
