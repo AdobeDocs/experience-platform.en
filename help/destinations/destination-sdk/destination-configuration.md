@@ -265,6 +265,7 @@ Use the `maxUsersPerRequest` parameter to specify the maximum number of profiles
 This option works best if you'd rather take large batches, with thousands of profiles on the same call. This option also allows you to aggregate the exported profiles based on complex aggregation rules.
 
 This option allows you to:
+
 * Set the maximum time and maximum number of profiles to aggregate before an API call is made to your destination.
 * Aggregate the exported profiles mapped to the destination based on:
   * Segment ID;
@@ -284,6 +285,8 @@ You can use the `backfillHistoricalProfileData` parameter in the destinations co
 |Parameter | Type | Description|
 |---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
+
+{style="table-layout:auto"}
 
 ## How this configuration connects all necessary information for your destination {#connecting-all-configurations}
 

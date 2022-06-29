@@ -255,8 +255,9 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 * If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK for file-based destinations:
   
   * [Amazon S3 authentication](authentication-configuration.md#s3)
-  * [Azure connection string](authentication-configuration.md#blob)
-  * [Azure service principal](authentication-configuration.md#adls)
+  * [Azure Blob](authentication-configuration.md#blob)
+  * [Azure Data Lake Storage](authentication-configuration.md#adls)
+  * [Google Cloud Storage](authentication-configuration.md#gcs)
   * [SFTP authentication with SSH key](authentication-configuration.md#sftp-ssh)
   * [SFTP authentication with password](authentication-configuration.md#sftp-password)
 
@@ -274,8 +275,16 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## Step 5: Publish your destination {#publish-destination}
 
+>[!NOTE]
+>
+>This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
+
 After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
 ## Step 6: Document your destination {#document-destination}
+
+>[!NOTE]
+>
+>This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).

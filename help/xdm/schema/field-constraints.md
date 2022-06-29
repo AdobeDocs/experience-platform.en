@@ -16,7 +16,7 @@ Before using this guide, please review the [basics of schema composition](./comp
 
 If you plan on defining your own field types in the API, it is strongly recommended that you start with the [Schema Registry developer guide](../api/getting-started.md) to learn how to create field groups and data types to include your custom fields in. If you are using the Experience Platform UI to create your schemas, see the guide on [defining fields in the UI](../ui/fields/overview.md) to learn how implement constraints on fields that you define within custom field groups and data types.
 
-## Base structure and examples
+## Base structure and examples {#basic-types}
 
 XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar syntax when defining their type. Understanding how different field types are represented in JSON Schema can help indicate the base constraints of each type.
 
