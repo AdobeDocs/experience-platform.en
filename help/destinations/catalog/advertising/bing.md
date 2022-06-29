@@ -78,7 +78,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your segments using the [!UICONTROL Mapping ID] field, to their corresponding numeric segment ID in the Bing destination.
+In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your segments to their corresponding numeric segment ID in the [!DNL Bing] destination. Fill in the numeric segment ID from [!DNL Bing] in the [!UICONTROL Mapping ID] field.
 
 ![UI image showing the segment mapping screen with an example of Bing Mapping ID](../../assets/catalog/advertising/bing/mapping-id.png)
 
