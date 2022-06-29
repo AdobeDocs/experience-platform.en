@@ -24,7 +24,7 @@ An online retailer wants to reach existing customers through social platforms an
 
 ### Use case #2
 
-An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses. 
+An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses.
 
 To target them across social media, they can onboard the customer data from their CRM into Adobe Experience Platform, using the email addresses as identifiers.
 
@@ -84,7 +84,6 @@ There are two methods to activate phone numbers in [!DNL Facebook]:
 >
 >Phone numbers ingested into the `Phone` namespace cannot be activated in [!DNL Facebook].
 
-
 ## Email hashing requirements {#email-hashing-requirements}
 
 You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
@@ -137,11 +136,16 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
 
 ### Fill in destination details {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_facebook_accountid"
+>title="Account ID"
+>abstract="Your Facebook Ad Account ID. You can find this ID in your Facebook Ads Manager account. When entering this ID, always prefix it with `act_`."
+
 To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Account ID]**: your [!DNL Facebook Ad Account ID]. You can find this ID in your [!DNL Facebook Ads Manager] account. When entering this ID, always prefix it with `act_`.
+* **[!UICONTROL Account ID]**: Your [!DNL Facebook Ad Account ID]. You can find this ID in your [!DNL Facebook Ads Manager] account. When entering this ID, always prefix it with `act_`.
 
 ## Activate segments to this destination {#activate}
 
