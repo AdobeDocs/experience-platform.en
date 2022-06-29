@@ -79,6 +79,8 @@ Considering the message format, the corresponding transformations are as follows
 |`_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 |`personalEmail.address` | `attributes.external_id` | `external_id` |
 
+{style="table-layout:auto"}
+
 ## Profile structure in Experience Platform {#profile-structure}
 
 To understand the examples further below on the page, it is important to know the structure of a profile in Experience Platform.
@@ -1190,6 +1192,8 @@ The table below provides descriptions for the functions in the examples above.
 | `destination.segmentNames` | Map from segment names in the Adobe Experience Platform namespace to segment names in the partner's system. |
 | `addedSegments(listOfSegments)` | Returns only the segments that have status `realized` or `existing`. |
 | `removedSegments(listOfSegments)` | Returns only the segments that have status `exited`. |
+
+{style="table-layout:auto"}
 
 ## Next steps {#next-steps}
 

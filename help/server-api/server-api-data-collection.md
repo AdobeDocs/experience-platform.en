@@ -1,8 +1,6 @@
 ---
 title: Data collection
-description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
-keywords: data collection;collection;Adobe Experience Platform Edge Network;api;structure
+description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data.
 ---
 
 # Data collection

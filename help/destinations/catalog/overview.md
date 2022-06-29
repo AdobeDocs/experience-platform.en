@@ -1,9 +1,7 @@
 ---
 keywords: Catalog;catalog
 title: Destinations catalog overview
-seo-title: Destinations catalog overview
 description: The Destinations catalog provides a list of available destinations that are ready to receive data. These destinations include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, and more.
-seo-description: The Destinations catalog provides a list of available destinations that are ready to receive data. These destinations include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, and more.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
 ---
 # Destinations catalog overview
