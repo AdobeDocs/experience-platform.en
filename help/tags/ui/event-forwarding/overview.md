@@ -14,11 +14,11 @@ Event forwarding in Adobe Experience Platform allows you to send collected event
 
 This document provides a high-level overview of event forwarding in Platform.
 
-![Event forwarding in the data collection ecosystem](../../../collection/images/home/event-forwarding.png)
+![Event forwarding in the data collection ecosystem](../../../rtcdp-connections/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->For information on how event forwarding fits within the data collection ecosystem in Platform, see the [data collection overview](../../../collection/home.md).
+>For information on how event forwarding fits within the data collection ecosystem in Platform, see the [data collection overview](../../../rtcdp-connections/home.md).
 
 Event forwarding combined with the Adobe Experience Platform [Web SDK](../../../edge/home.md) and [Mobile SDK](https://aep-sdks.gitbook.io/docs/) provides the following benefits:
 
