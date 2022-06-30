@@ -60,15 +60,14 @@ You can define access control for datasets and schemas with the following permis
 
 #### Column/field level access control
 
-The attribute-based access control feature enables Query Service users to restrict access to critical user data. Access to resources can be granted or restricted based on defined roles and the set of permissions assigned to that role. 
+The attribute-based access control feature enables Query Service users to restrict access to critical user data. Access can be granted or restricted based on the permissions assigned to a role. User access to individual columns is controlled by the relevant data usage labels and the permission sets applied to the roles assigned to users. 
 
-Schema field groups and classes tagged with data usage labels impacts multiple schemas with the same field groups and classes. User access to individual columns is then controlled by the relevant data usage labels and the permission sets applied to the roles assigned to users.
+Tagging schema field groups and classes with data usage labels impacts all the schemas with the same field groups and classes by applying the same data usage restrictions. 
+
+See the [attribute-based access control overview](../../access-control/abac/overview.md) for comprehensive information on this feature.
  
-See the [attribute-based access control overview](../../access-control/abac/overview.md) for comprehensive information on this feature.  
-
-This feature enables you to allow access to a set of users to whom you would like to grant access rights on confidential columns. Access control on any column can restrict both the read and write capabilities for a particular type of user on that restricted column.  
-
-Column-level control can be applied at the schema level for both standard and ad hoc schemas. Apply permission-based labels to XDM schemas to restrict access to one or more columns. Permission labeling is consistently applied even for datasets created via Query Service using either a predefined schema or an ad hoc schema generated as part of CTAS operation.
+This feature enables you to grant access rights on confidential columns to the user groups of your choice. Access control on a column can restrict both the read and write capabilities for a particular type of user.
+Column-level control can be applied at the schema level for both standard and ad hoc schemas. Apply permission-based labels to XDM schemas to restrict access to one or more columns. Permission labeling is consistently applied even for datasets created via Query Service using either a predefined schema or an ad hoc schema generated as part of CTAS operation
 
 Once the appropriate level of access has been applied using labels and roles, the following system behavior occurs when a user tries to access the non-accessible data: 
 
