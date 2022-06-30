@@ -1,6 +1,6 @@
 ---
 title: Pega Customer Decision Hub connection
-description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send profile attributes, segment membership data to Pega Customer Decision Hub (Pega CDH) for Next Best Action (NBA) decisioning
+description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send profile attributes and segment membership data to Pega Customer Decision Hub for next-best-action decisioning.
 ---
 
 # Pega Customer Decision Hub connection
@@ -9,41 +9,41 @@ description: Use the Pega Customer Decision Hub destination in Adobe Experience 
 
 ## Overview {#overview}
 
-Send profile attributes, segment membership data to Pega Customer Descision Hub (Pega CDH) for Next Best Action (NBA) decisioning. 
+Send profile attributes and segment membership data to Pega Customer Descision Hub for next-best-action decisioning. 
 
-Adobe Experience Platform Profile Segment membership feed into Pega can be used as predictors in Pega CDH’s adaptive models and help deliver the right contextual and behavioral data for NBA decisioning purposes.
+Adobe Experience Platform Profile Segment membership, when loaded into Pega Customer Decision Hub, can be used as predictors in adaptive models and help deliver the right contextual and behavioral data for next-best-action decisioning purposes.
 
 ## Use cases 
 
-To help you better understand how and when you should use the Pega CDH destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Customer Decision Hub destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Use case #1
 
 *In Telco:*
 
-*A marketer wants to leverage insights from Data Science model-based NBA as delivered by Pega CDH for customer engagement, Pega CDH is heavily reliant on Customer Intent – for example "Interested_In_5G", "Interested_in_Unlimited_Dataplan" or "Interest_in_iPhone_accessories".*
+*A marketer wants to leverage insights from Data Science model-based next best action as delivered by Pega Customer Decision Hub for customer engagement, Pega Customer Decision Hub is heavily reliant on customer intent – for example "Interested_In_5G", "Interested_in_Unlimited_Dataplan" or "Interest_in_iPhone_accessories".*
 
 ### Use case #2
 
 *In Financial Services:*
 
-*A marketer wants to optimize the offers for customers who subscribed or unsubscribed for Pension Plan or Retirement Plan News Letters. The Financial Services can ingest CustomerID's from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send profiles that are entering and exiting the segments to Pega CDH, for Next Best Action (NBA) decisioning in outbound channels.*
+*A marketer wants to optimize the offers for customers who subscribed or unsubscribed for Pension Plan or Retirement Plan newsletters. The financial services can ingest multiple CustomerID from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send profiles that are entering and exiting the segments to Pega Customer Decision Hub for next-best-action (NBA) decisioning in outbound channels.*
 
 ## Prerequisites {#prerequisites}
 
-To use the  Pega Customer Decision Hub destination to export data out of Experience Platform, you must meet the following prerequisites:
+Before you use Pega Customer Decision Hub destination to export data out of Adobe Experience Platform:
 
-* You must have configured the Adobe Segment Membership Component in your Pega CDH instance.
-* You must have configured OAuth 2.0 Client Registration in your Pega CDH instance using Client Credentials grant type.
-* You must have configured to run Real-time processing of Adobe Segment Membership Data flow in your CDH instance.
+* Configure the Adobe Segment Membership Component in your Pega Customer Decision Hub instance.
+* Configure OAuth 2.0 Client Registration using Client Credentials grant type in your Pega Customer Decision Hub instance
+* Configure real-time processing of Adobe Segment Membership data flow to run in your Pega Customer Decision Hub instance.
 
 ## Supported identities {#supported-identities}
 
-Pega CDH supports the activation of Custom user ID described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+Pega Customer Decision Hub supports the activation of custom user ID described in the table below. For more details, see [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description
 |---|---|
-|CustomerID|Common User Identifier that uniquely identifies a profile in Pega CDH and Adobe Experience Platform
+|*CustomerID*|Common User Identifier that uniquely identifies a profile in Pega Customer Decision Hub and Adobe Experience Platform
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -51,24 +51,24 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment with identifier (CustomerID), attributes (last name, first name, location) and Segment membership data.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Profile-based]** | Export all members of a segment with identifier (*CustomerID*), attributes (last name, first name, location) and Segment Membership data.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are an always on API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. For more information, see [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
->[!IMPORTANT]
+>**[!IMPORTANT]**
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In the configure destination workflow, fill in the fields listed in the two sections below.
+Follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) to connect to this destination. In the configure destination workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
 
 #### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
 
-If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
+If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, fill in the fields below and select **[!UICONTROL Connect to destination]**:
 
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
@@ -80,11 +80,11 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL URL]**: Pega CDH Service Rest Segment membership Endpoint URL.
+*  **[!UICONTROL URL]**: Pega Customer Decision Hub Service Rest Segment membership Endpoint URL.
 
 
 ## Exported data / Validate data export {#exported-data}
-Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destination in JSON format. For example, the export below contains a profile that has qualified for a certain segment, is a member of another two segments, and exited another segment. The export also includes the profile attribute first name, last name, date of birth, and Customer Identfier. The identitifier for this profile is CustomerID.
+Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destination in JSON format. For example, the export snippet below contains a profile that is qualified for a certain segment, is a member of another two segments, and exited another segment. The export also includes the profile attribute first name (*FirstName*), last name (*LastName*), date of birth (*BirthDate*), and Customer Identfier (*CustomerID*) for this profile.
 
 ```json
 {
@@ -118,4 +118,3 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destinat
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
-
