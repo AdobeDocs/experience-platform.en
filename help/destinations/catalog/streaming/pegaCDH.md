@@ -58,19 +58,15 @@ Refer to the table below for information about the destination export type and f
 
 ## Connect to the destination {#connect}
 
->**[!IMPORTANT]**
-> 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
-
-Follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) to connect to this destination. In the configure destination workflow, fill in the fields listed in the two sections below.
+Follow the steps described  to connect to this destination. In the configure destination workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
 
 #### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
 
-If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, fill in the fields below and select **[!UICONTROL Connect to destination]**:
+Fill in the fields below and select **[!UICONTROL Connect to destination]**:
 
-* **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
+* **[!UICONTROL Access Token URL]**: The URL on your side which issues access token.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: The [!DNL client secret] that your system assigns to Adobe Experience Platform.
 
