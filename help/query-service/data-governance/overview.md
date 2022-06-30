@@ -33,40 +33,44 @@ Security in regards to Query Service is divided into the following categories:
 
 ### Access control {#access-control}
 
-Access control in Adobe Experience Platform allows you to manage access to Query Service through roles and permissions. Similarly, attribute-based access control is managed through label management on schemas and data fields.
+Access control in Adobe Experience Platform lets you manage access to Query Service through roles and permissions by using [Adobe Admin Console](https://adminconsole.adobe.com/). Similarly, attribute-based access control is managed through label management on schemas and data fields.
 
-This section outlines the required access control permissions that a user must have in order to fully utilize Query Service features.
-
-See the [Manage permissions for a product profile](../../access-control/ui/permissions.md) and [Manage users for a product profile](../../access-control/ui/users.md) documents for detailed instructions on requesting access to the product profile "[!UICONTROL Query Manage]" permission.
+This section outlines the required access control permissions that a user must have in order to fully utilize Query Service features. See the [Manage permissions for a product profile](../../access-control/ui/permissions.md) and [Manage users for a product profile](../../access-control/ui/users.md) documents for detailed instructions on assigning access to a product profile.
 
 #### Relevant permissions
 
-<!-- add table -->
+The relevant access control permissions are defined in the tables below according to their level of scope.
 
 **Query execution permissions**
 
-To run queries within Query Service, a user must be assigned a role with the "Manage Queries" permission. This permission allows users to execute data exploration and batch queries, which can either read an existing dataset or write data on datasets. This relates to `INSERT INTO AS SELECT` (`CTAS`) and `INSERT INTO AS SELECT` (`ITAS`) queries.
+To run queries within Query Service, a user must be assigned a role with the following permission. 
+
+| Permission | Description |
+|---|---|
+| [!UICONTROL `Manage Queries`] | This permission allows users to execute data exploration and batch queries, which can either read an existing dataset or write data on datasets. This includes both `INSERT INTO AS SELECT` (`CTAS`) and `INSERT INTO AS SELECT` (`ITAS`) queries. |
 
 **Dataset level access control**
 
-Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using [Adobe Admin Console](https://adminconsole.adobe.com/). Through the permission interface, you can define resource-based access control on datasets and schemas.
+You can define access control for datasets and schemas with the following permissions.
 
-The required resource-based access permissions to access datasets while querying data through Query Service are as follows:
-
-* The **[!UICONTROL Manage Datasets]** permission provides read-only access for schemas and allows access to read, create, edit, and delete datasets for use with Query Service.
-* The **[!UICONTROL View Datasets]** permission allows read-only access for datasets and schemas for use with Query Service.
+| Permission | Description |
+|---|---|
+| [!UICONTROL `Manage Datasets`] | This permission provides read-only access for schemas and allows access to read, create, edit, and delete datasets for use with Query Service.  |
+| [!UICONTROL `View Datasets`] | This permission allows read-only access for datasets and schemas for use with Query Service. | 
 
 #### Column/field level access control
 
-The attribute-based access control feature enables Query Service users to restrict access to critical user data. Access is granted based on the role or level of access assigned to each Platform user and the field-level label applied to each individual column.
+The attribute-based access control feature enables Query Service users to restrict access to critical user data. Access to resources can be granted or restricted based on defined roles and the set of permissions assigned to that role. 
 
-<!-- add link about ABAC what it is and how QS can integrate.  -->
+Schema field groups and classes tagged with data usage labels impacts multiple schemas with the same field groups and classes. User access to individual columns is then controlled by the relevant data usage labels and the permission sets applied to the roles assigned to users.
+ 
+See the [attribute-based access control overview](../../access-control/abac/overview.md) for comprehensive information on this feature.  
 
 This feature enables you to allow access to a set of users to whom you would like to grant access rights on confidential columns. Access control on any column can restrict both the read and write capabilities for a particular type of user on that restricted column.  
 
 Column-level control can be applied at the schema level for both standard and ad hoc schemas. Apply permission-based labels to XDM schemas to restrict access to one or more columns. Permission labeling is consistently applied even for datasets created via Query Service using either a predefined schema or an ad hoc schema generated as part of CTAS operation.
 
-Once the appropriate level of access has been applied using labels, the following system behavior occurs when a user tries to access the non-accessible data: 
+Once the appropriate level of access has been applied using labels and roles, the following system behavior occurs when a user tries to access the non-accessible data: 
 
 1. If a user has been denied access to one of the columns within a schema, the user is also denied permission to read or write on the restricted column. This applies to the following common scenarios:
   
@@ -156,12 +160,10 @@ The following table indicates the query categories captured by audit logs and th
 The [!UICONTROL Audits] workspace contains **extended server logs**. These provide more details than those held within the query logs. Below is a list of three extended logs that are only found within the query categories for audit logs:
 
 1. **Meta query logs**: When a query is executed, various associated backend sub-queries (such as parsing) are executed. These types of queries are known as "Metadata" queries. Their relevant details can be found in audit logs.
-1. **Session logs**: The system creates a session entry log for a user when they log into Query Service and do not execute a query.
+1. **Session logs**: The system creates a session entry log for a user when they log into Query Service regardless of whether they execute a query.
 1. **Third-part client connection logs**: A connectivity audit log is generated when a user successfully connects Query Service to a third-party client.
 
 See the [Audit logs overview](../../landing/governance-privacy-security/audit-logs/overview.md) for more information on how audit logs can help your organization approach data compliance. 
-
-<!-- Q) Does the system create a session log when a query is executed as well? -->
 
 ## Data usage {#data-usage}
 
@@ -170,7 +172,7 @@ The Data Governance framework in Platform provides a uniform way to responsibly 
 There are two types of derived datasets formed by Query Service, 
 <!-- they are tied to shcemas and can be labelled. intorduce the two types.  -->
 <!-- Point out there is NO differnce in labelling but BOTH standard and Ad hoc schemas need to be labelled and CAN be labelled. Ad hoc need to be made visable before labelling in the UI
-Q) Can the API label ad hc schemas?  CLARIFY THIS -->
+Q) Can the API label ad hc schemas?  CLARIFIED = through the UI NOT through the API -->
 
 The following techniques enforce labeling on datasets created by Query Service for the purpose of data compliance:
 
@@ -181,7 +183,7 @@ The following techniques enforce labeling on datasets created by Query Service f
 1. **Derived datasets with standard schemas**: When a query results in a derived dataset that uses a standard schema, data labeling is conducted at the schema level and applies to all datasets that conform to that schema.
 1. **Derived datasets using an ad hoc schema**: Ad hoc schemas are created by an individual user for a specific purpose. The XDM schema fields are namespaced for that particular dataset and not intended for use across different datasets. As a result, ad hoc schemas are available through the Experience Platform UI but in a read-only mode and are not visible by default. They must be enabled for viewing using the filter function in the schema workspace. Ad hoc schemas in the Platform UI can only be labeled at the schema level, this impacts all child datasets. (if this data is activated) Downstream this data will only be activated in destinations where it has appropriate labels.
 
-<!-- Q) what does that last sentence mean? -->
+
 
 <!-- This can be linked to the guide in https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/ad-hoc-schema-labels.html#discover-ad-hoc-schemas-in-the-schema-inventory-of-the-platform-ui after it is made public. -->
 
