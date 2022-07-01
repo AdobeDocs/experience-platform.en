@@ -44,6 +44,28 @@ To define the ranking of deciles based on a particular dimension (category) and 
 
 This guide uses an airline loyalty dataset to demonstrate how to use Query Service to build deciles based on the miles flown in the last 1, 3, or 6 months.
 
+## Use Query Service to create deciles
+
+Query Service provides an ideal way to create a dataset that contains categorical deciles. This can then also be used in conjunction with Segmentation Service to create audiences based on attribute ranking. The concepts displayed in the following examples can be applied to create other decile bucket datasets, as long as a category (dimension) is defined and a metric is available. The examples are based on data for an airline loyalty scheme. The airline loyalty data utilizes the Experience Events class where each event is a record of a business transaction for mileage, either credited or debited, and the membership loyalty status of either "Flyer", "Frequent", "Silver", or "Gold". The primary identity field is `membershipNumber`.
+
+### Sample Datasets
+
+The initial airline loyalty dataset for this example is "Airline Loyalty Data", and has the following schema and primary identity as `_profilefoundationreportingstg.membershipNumber`.
+
+![A diagram of the Airline Loyalty Data schema.](./images/derived-attributes/airline-loyalty-data.png)
+
+**Sample data**
+
+| `_profilefoundationreportingstg.membershipNumber` | `_profilefoundationreportingstg.emailAddress.address` | `_profilefoundationreportingstg.transactionDate` | `_profilefoundationreportingstg.transactionType` | `_profilefoundationreportingstg.transactionDetails` | `_profilefoundationreportingstg.mileage` | `_profilefoundationreportingstg.loyaltyStatus` |
+|---|---|---|---|---|---|---|
+| C435678623 | sfeldmark1vr@studiopress.com| 2022-01-01 | STATUS_MILES | New member | 5000 | FLYER |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | SILVER |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | SILVER |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK  | 5000 |SILVER |
+| A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | New credit card | 10000 | FLYER |
+
+{style="table-layout:auto"} 
+
 ### Create an identity namespace for the Profile schema {#identity-namespace}
 
 Identity namespaces are a component of [Identity Service](../identity-service/home.md) that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace. When matching and merging record data across profile fragments, both the identity value and the namespace must match.
@@ -85,11 +107,6 @@ The creation of the field group is a one-time step per sandbox. It can also be r
 
 See the documentation for instructions on how to [create filed groups through the UI](../xdm/ui/resources/field-groups.md#create)
 
-## Use Query Service to create deciles
-
-Query Service provides an ideal way to create a dataset that contains categorical deciles. This can then be used in conjunction with Segmentation Service to create audiences based on attribute ranking.
-
-The concepts displayed in the following examples can be applied to create other decile bucket datasets, as long as a category (dimension) is defined and a metric is available. The examples are based on data for an airline loyalty scheme. The airline loyalty data utilizes the Experience Events class where each event is a record of a business transaction for **mileage**, either credited or debited, and the membership **loyalty status** either "Flyer", "Frequent", "Silver", or "Gold". The primary identity field is `membershipNumber`.
 
 ### Create a query template {#create-a-query-template}
 
