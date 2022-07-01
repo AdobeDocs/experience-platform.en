@@ -1,18 +1,20 @@
 ---
 title: Derived Attributes
-description: Derived attributes allow you to compute attributes on a regular cadence and optionally publish these derived attributes into Real-time Customer Profile as profile attributes. This document provides an overview of how to use Query Service to create derived attributes for use with your Profile data.
+description: Derived attributes provide a convenient means to generate attributes of your choice that can be refreshed at any regular cadence and optionally published into your Real-Time Customer Profile data. This document provides an overview of how to use Query Service to create derived attributes for use with your Profile data.
 hide: true
 hidefromtoc: true
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
 ---
 # Derived attributes
 
-Derived attributes allow you to compute attributes on a regular cadence and optionally publish these derived attributes into Real-time Customer Profile as profile attributes. 
+The AEP Query Services derived attributes feature provides a convenient means to generate attributes of your choice. These attributes can be refreshed at any regular cadence and optionally published into your Real-Time Customer Profile data. Derived attributes addresses the need to build complex attributes such as decile, percentile, and quartile over simpler ones such as max, count, and mean. These attributes can be calculated specifically for an individual user or for a business identity. This enables you to derive attributes that can be directly accredited as an identifier such as zipcode, province, state, or gender and also derive attributes that are indirectly associated with that user or business profile.
 
-Derived attributes, such as those created with decile data, are necessary for a variety of use cases that analyze profile data. Using decile data you can create audiences from segments based on their percentile or ranking of a given attribute. For example, potential use cases might include:
+Derived attributes are needed for a variety of use cases during analysis on the data lake, but can also be marked for profile and used to create relevant audiences when analyzing profile data. Some potential use cases for this feature might include:
 
 * Identifying the lowest 10% of subscribers based on viewership by channel. This would allow marketers to target a particular audience and sell a new subscriber package.
 * Identifying an audience who are in the top 10% of flyers based on their total miles traveled and have "Flyer" status. This audience could be used to selectively target the sale of a new credit card offer.
+* Determine the churn rate based on subscription.
+* Identifying the top 1% of household income in a province or state and provide a measure of the number of individuals moving out of that collective group over the last "n" months.
 
 ## Getting started
 
