@@ -113,7 +113,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          }
       }
    }
-}
+}'
 ```
 
 ## Step 2: Create destination configuration {#create-destination-configuration}
@@ -404,7 +404,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       "backfillHistoricalProfileData":true
    }
-}
+}'
 ```
 
 ## Step 3: Verify the Experience Platform UI {#verify-ui}
