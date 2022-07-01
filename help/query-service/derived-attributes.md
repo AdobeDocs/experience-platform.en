@@ -68,7 +68,7 @@ The initial airline loyalty dataset for this example is "Airline Loyalty Data", 
 
 ## Generate Decile Datasets
 
-In the airline loyalty data seen above, the `_profilefoundationreportingstg.mileage` value contains the amount of miles flown by a member every time they fly. This data is used to create deciles for the amount of miles flown over lifetime look-backs and the 1 month, 3 months, 6 months, 9 months, and 12 months periods. For this purpose a dataset is created that contains deciles in a map data type for each loop back period, and an appropriate decile in a loop back period assigned to each `membershipNumber`.
+In the airline loyalty data seen above, the `_profilefoundationreportingstg.mileage` value contains the amount of miles flown by a member every time they fly. This data is used to create deciles for the amount of miles flown over lifetime look-backs and the 1 month, 3 months, 6 months, 9 months, and 12 months periods. For this purpose a dataset is created that contains deciles in a map data type for each loop-back period, and an appropriate decile in a loop-back period assigned to each `membershipNumber`.
 
 Next, the XDM schema must be enabled for Real-Time Customer Profile to ensure that the dataset is associated with a user profile as an attribute.
 
@@ -94,128 +94,108 @@ See the documentation for instructions on how to [create filed groups through th
 
 Identity namespaces are a component of [Identity Service](../identity-service/home.md) that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace. When matching and merging record data across profile fragments, both the identity value and the namespace must match.
 
-Datasets created relating to identity can be grouped together as a data group and help to maintain the data life cycle. Custom namespaces can be created using the [Identity Service API](../identity-service/api/create-custom-namespace.md) or through the UI. See the [manage custom namespaces documentation](../identity-service/namespaces.md#manage-namespaces) for guidance on how to do this through the UI.
+Custom namespaces can be created using the [Identity Service API](../identity-service/api/create-custom-namespace.md) or through the UI. See the [manage custom namespaces documentation](../identity-service/namespaces.md#manage-namespaces) for guidance on how to do this through the UI.
 
 The primary identity descriptor can either be assigned to a field in the Schemas UI or can be created using the Schema Registry API. See the documentation for instructions on how to [define an identity field in the Adobe Experience Platform UI](../xdm/ui/fields/identity.md#define-an-identity-field), or through the [Schema Registry API](../xdm/api/descriptors.md#create).
 
 Query Service also allows you to set an identity or a primary identity for ad hoc schema dataset fields directly through SQL. See the documentation on [setting a secondary identity and primary identity in ad hoc schema identities](./data-governance/ad-hoc-schema-identities.md) for more information.
 
-## Create derived attributes
+Using the key points outlined above, create an "Airline Loyalty Decile Schema" to create a decile dataset using Query Service.
 
-The example query provided in this document focuses on deciles to categorize large data sets and rank the data from the highest to lowest values (or vice versa), and filter based on time period.  
+![A diagram of the "Airline Loyalty Decile Schema".](./images/derived-attributes/airline-loyalty-decile-schema.png)
 
+### Create a query for calculating deciles over a loop-back period {#create-a-query}
 
-### Create the schema for decile buckets {#create-schema}
+The following example demonstrates the SQL query for calculating a decile over a loop-back period.
 
-The schema created for decile buckets has three integral parts: a data type, a field group for the data type (per source dataset), and a primary identity field. 
+A template can be made either using the Query Editor in the UI, or through the [Query Service API](./api/query-templates.md#create-a-query-template). 
 
->[!NOTE]
->
->An identity namespace must be created before the schema can be created. See the [identity namespace](#identity-namespace) section for more details.
-
-Adobe provides several standard (“core”) XDM classes, including XDM Individual Profile and XDM ExperienceEvent. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization. See the guides on how to [create and edit schemas in the UI](../xdm/ui/resources/schemas.md#create) or using the [schemas endpoint in the Schema Registry API](../xdm/api/schemas.md#create) for more details. 
-
-
-
-
-
-### Create a query template {#create-a-query-template}
-
-The template can be made either using the Query Editor in the UI, or through the [Query Service API](./api/query-templates.md#create-a-query-template). 
-
-Sections of the query template displayed below will be examined in greater detail.  
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/query/query-templates \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-         "name": "Airline Loyalty Deciles Insert into profile",
-         "sql":
-            "WITH summed_miles_1 AS (
-                SELECT _profilefoundationreportingstg.membershipNumber AS membershipNumber,
-                    _profilefoundationreportingstg.loyaltyStatus AS loyaltyStatus,
-                    SUM(_profilefoundationreportingstg.mileage) AS totalMiles
-                FROM airline_loyalty_data
-                WHERE _profilefoundationreportingstg.transactionDate < (MAKE_DATE(YEAR(CURRENT_DATE), MONTH(CURRENT_DATE), 1) - MAKE_YM_INTERVAL(0, 0))
-            GROUP BY 1,2
-            ),
-            summed_miles_3 AS (
-                SELECT _profilefoundationreportingstg.membershipNumber AS membershipNumber,
-                    _profilefoundationreportingstg.loyaltyStatus AS loyaltyStatus,
-                    SUM(_profilefoundationreportingstg.mileage) AS totalMiles
-                FROM airline_loyalty_data
-                WHERE _profilefoundationreportingstg.transactionDate < (MAKE_DATE(YEAR(CURRENT_DATE), MONTH(CURRENT_DATE), 1) - MAKE_YM_INTERVAL(0, 1))
-            GROUP BY 1,2
-            ),
-            summed_miles_6 AS (
-                SELECT _profilefoundationreportingstg.membershipNumber AS membershipNumber,
-                    _profilefoundationreportingstg.loyaltyStatus AS loyaltyStatus,
-                    SUM(_profilefoundationreportingstg.mileage) AS totalMiles
-                FROM airline_loyalty_data
-                WHERE _profilefoundationreportingstg.transactionDate < (MAKE_DATE(YEAR(CURRENT_DATE), MONTH(CURRENT_DATE), 1) - MAKE_YM_INTERVAL(0, 4))
-            GROUP BY 1,2
-            ),
-            rankings_1 AS (
-                SELECT membershipNumber,
-                    loyaltyStatus,
-                    totalMiles,
-                    NTILE(10) OVER (PARTITION BY loyaltyStatus ORDER BY totalMiles DESC) AS decileBucket
-                FROM summed_miles_1
-            ),
-            rankings_3 AS (
-                SELECT membershipNumber,
-                    loyaltyStatus,
-                    totalMiles,
-                    NTILE(10) OVER (PARTITION BY loyaltyStatus ORDER BY totalMiles DESC) AS decileBucket
-                FROM summed_miles_3
-            ),
-            rankings_6 AS (
-                SELECT membershipNumber,
-                    loyaltyStatus,
-                    totalMiles,
-                    NTILE(10) OVER (PARTITION BY loyaltyStatus ORDER BY totalMiles DESC) AS decileBucket
-                FROM summed_miles_6
-            ),
-            map_1 AS (
-                SELECT membershipNumber,
-                    MAP_FROM_ARRAYS(COLLECT_LIST(loyaltyStatus), COLLECT_LIST(decileBucket)) AS decileMonth1
-                FROM rankings_1
-                GROUP BY membershipNumber
-            ),
-            map_3 AS (
-                SELECT membershipNumber,
-                    MAP_FROM_ARRAYS(COLLECT_LIST(loyaltyStatus), COLLECT_LIST(decileBucket)) AS decileMonth3
-                FROM rankings_3
-                GROUP BY membershipNumber
-            ),
-            map_6 AS (
-                SELECT membershipNumber,
-                    MAP_FROM_ARRAYS(COLLECT_LIST(loyaltyStatus), COLLECT_LIST(decileBucket)) AS decileMonth6
-                FROM rankings_6
-                GROUP BY membershipNumber
-            ),
-            all_memberships AS (
-                SELECT DISTINCT _profilefoundationreportingstg.membershipNumber AS membershipNumber FROM airline_loyalty_data
-            )
-            SELECT STRUCT(
-                    all_memberships.membershipNumber AS membershipNumber,
-                    STRUCT(
-                            map_1.decileMonth1 AS decileMonth1,
-                            map_3.decileMonth3 AS decileMonth3,
-                            map_6.decileMonth6 AS decileMonth6
-                    ) AS decilesMileage
-                ) AS _profilefoundationreportingstg
-            FROM all_memberships
-                LEFT JOIN map_1 ON  (all_memberships.membershipNumber = map_1.membershipNumber)
-                LEFT JOIN map_3 ON  (all_memberships.membershipNumber = map_3.membershipNumber)
-                LEFT JOIN map_6 ON  (all_memberships.membershipNumber = map_6.membershipNumber)"
-        }'
+```sql
+CREATE TABLE AS airline_loyality_decile 
+{  WITH summed_miles_1 AS (
+        SELECT _profilefoundationreportingstg.membershipNumber AS membershipNumber,
+            _profilefoundationreportingstg.loyaltyStatus AS loyaltyStatus,
+            SUM(_profilefoundationreportingstg.mileage) AS totalMiles
+        FROM airline_loyalty_data
+        WHERE _profilefoundationreportingstg.transactionDate < (MAKE_DATE(YEAR(CURRENT_DATE), MONTH(CURRENT_DATE), 1) - MAKE_YM_INTERVAL(0, 0))
+    GROUP BY 1,2
+    ),
+    summed_miles_3 AS (
+        SELECT _profilefoundationreportingstg.membershipNumber AS membershipNumber,
+            _profilefoundationreportingstg.loyaltyStatus AS loyaltyStatus,
+            SUM(_profilefoundationreportingstg.mileage) AS totalMiles
+        FROM airline_loyalty_data
+        WHERE _profilefoundationreportingstg.transactionDate < (MAKE_DATE(YEAR(CURRENT_DATE), MONTH(CURRENT_DATE), 1) - MAKE_YM_INTERVAL(0, 1))
+    GROUP BY 1,2
+    ),
+    summed_miles_6 AS (
+        SELECT _profilefoundationreportingstg.membershipNumber AS membershipNumber,
+            _profilefoundationreportingstg.loyaltyStatus AS loyaltyStatus,
+            SUM(_profilefoundationreportingstg.mileage) AS totalMiles
+        FROM airline_loyalty_data
+        WHERE _profilefoundationreportingstg.transactionDate < (MAKE_DATE(YEAR(CURRENT_DATE), MONTH(CURRENT_DATE), 1) - MAKE_YM_INTERVAL(0, 4))
+    GROUP BY 1,2
+    ),
+    rankings_1 AS (
+        SELECT membershipNumber,
+            loyaltyStatus,
+            totalMiles,
+            NTILE(10) OVER (PARTITION BY loyaltyStatus ORDER BY totalMiles DESC) AS decileBucket
+        FROM summed_miles_1
+    ),
+    rankings_3 AS (
+        SELECT membershipNumber,
+            loyaltyStatus,
+            totalMiles,
+            NTILE(10) OVER (PARTITION BY loyaltyStatus ORDER BY totalMiles DESC) AS decileBucket
+        FROM summed_miles_3
+    ),
+    rankings_6 AS (
+        SELECT membershipNumber,
+            loyaltyStatus,
+            totalMiles,
+            NTILE(10) OVER (PARTITION BY loyaltyStatus ORDER BY totalMiles DESC) AS decileBucket
+        FROM summed_miles_6
+    ),
+    map_1 AS (
+        SELECT membershipNumber,
+            MAP_FROM_ARRAYS(COLLECT_LIST(loyaltyStatus), COLLECT_LIST(decileBucket)) AS decileMonth1
+        FROM rankings_1
+        GROUP BY membershipNumber
+    ),
+    map_3 AS (
+        SELECT membershipNumber,
+            MAP_FROM_ARRAYS(COLLECT_LIST(loyaltyStatus), COLLECT_LIST(decileBucket)) AS decileMonth3
+        FROM rankings_3
+        GROUP BY membershipNumber
+    ),
+    map_6 AS (
+        SELECT membershipNumber,
+            MAP_FROM_ARRAYS(COLLECT_LIST(loyaltyStatus), COLLECT_LIST(decileBucket)) AS decileMonth6
+        FROM rankings_6
+        GROUP BY membershipNumber
+    ),
+    all_memberships AS (
+        SELECT DISTINCT _profilefoundationreportingstg.membershipNumber AS membershipNumber FROM airline_loyalty_data
+    )
+    SELECT STRUCT(
+            all_memberships.membershipNumber AS membershipNumber,
+            STRUCT(
+                    map_1.decileMonth1 AS decileMonth1,
+                    map_3.decileMonth3 AS decileMonth3,
+                    map_6.decileMonth6 AS decileMonth6
+            ) AS decilesMileage
+        ) AS _profilefoundationreportingstg
+    FROM all_memberships
+        LEFT JOIN map_1 ON  (all_memberships.membershipNumber = map_1.membershipNumber)
+        LEFT JOIN map_3 ON  (all_memberships.membershipNumber = map_3.membershipNumber)
+        LEFT JOIN map_6 ON  (all_memberships.membershipNumber = map_6.membershipNumber)
+    }
 ```
+
+### Query review
+
+Sections of the example query are examined in greater detail below.
 
 #### Look-back periods
 
@@ -242,7 +222,7 @@ summed_miles_1 AS (
 
 The block is repeated twice in the template (`summed_miles_3` and `summed_miles_6`) with a change in the date calculation in order to generate the data for the other look-back periods.
 
-Please note the identity, dimension, and metric columns for the query (`membershipNumber`, `loyaltyStatus` and `totalMiles` respectively).
+It is important to note the identity, dimension, and metric columns for the query (`membershipNumber`, `loyaltyStatus` and `totalMiles` respectively).
 
 #### Ranking
 
@@ -323,31 +303,10 @@ GROUP BY rankings.membershipNumber
 
 ### Run the query template
 
-Queries can be [executed either through the UI](./ui/user-guide.md#executing-queries) or the [Query Service API](./api/queries.md#create-a-query).
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/query/queries \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "dbName": "prod:all",
-    "templateId": "{{airline_decile_query_template_id}}",
-    "insertIntoParameters": {
-        "datasetName": "airline_loyalty_decile"
-    }
-}'
-```
+Run the query to populate the decile dataset. If the query is to be scheduled then the query must be updated to use the create and insert pattern that references the `table_exists` command. More information on how to use the `table_exists`command can be found in the [SQL syntax guide](./sql/syntax.md#table-exists). 
 
 A correlation between the ranking number and the percentile is guaranteed in the query results because of the use of deciles. Each rank equates to 10%, so identifying an audience based on the top 30% only needs to target ranks 1, 2, and 3.
 
 ## Next steps
 
-Segmentation Service provides a user interface and RESTful API that allows you to generate audiences based on these decile buckets. See the [Segmentation Service overview](../segmentation/home.md) for information on how to create, evaluate, and access segments.
-
-For detailed information on how to create and use segments in the Segment Builder (the UI implementation of Segmentation Service), see the [Segment Builder guide](../segmentation/ui/overview.md).
-
-For information on building segment definitions using the API, see the tutorial on [creating audience segments using the API](../segmentation/tutorials/create-a-segment.md).
+The example provided above highlights steps to make decile attributes available in Real-Time Customer Profile. This allows for Segmentation Service, either via a user interface or RESTful API, to be able generate audiences based on these decile buckets. See the [Segmentation Service overview](../segmentation/home.md) for information on how to create, evaluate, and access segments.
