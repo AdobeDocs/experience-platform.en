@@ -24,9 +24,25 @@ This overview requires a working understanding of [Platform API calls](../landin
 * [Basics of schema composition](../xdm/schema/composition.md): An introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas.
 * [How to enable a schema for Real-time Customer Profile](../profile/tutorials/add-profile-data.md): This tutorial outlines the steps necessary to add data to Real-time Customer Profile.
 
-## SQL support for derived attributes
+## Build complex derived attributes using Query Service
 
-To define the ranking of deciles based on a particular dimension (category) and a corresponding metric (revenue, points, viewership duration, etc), a schema must be designed to allow for decile bucketing. This schema can be used as part of the larger Profile schema. 
+To create a ranking based on one or more metrics (such as revenue or viewership duration etc) on a particular dimension (category), the example given builds derived attributes for ranking using deciles.
+
+### Deciles {#deciles}
+
+A decile is a method of splitting up a set of ranked data into 10 equal parts. When the data is divided into deciles, a decile rank is assigned to each row in the data set. This allows the data to be sorted into descending or ascending order. 
+
+A decile rank arranges the data in order from lowest to highest and is done on a scale of 1 to 10 where each successive number corresponds to an increase of 10 percentage points.
+
+Decile buckets represent the number of ranked groups and are used to assign a ranking to a dimension (category) in the dataset. The bucket can be a number or an expression that evaluates to a positive integer value for each partition. The buckets must not have a null value.
+
+Quartiles are used to divide the distribution by four and percentiles by 100.
+
+### Build decile based derived attributes 
+
+To define the ranking of deciles based on a particular dimension (category) and a corresponding metric (revenue, points, viewership duration, etc), a schema must be designed to allow for decile bucketing.
+
+This guide uses an airline loyalty dataset to demonstrate how to use Query Service to build deciles based on the miles flown in the last 1, 3, or 6 months.
 
 ### Create an identity namespace for the Profile schema {#identity-namespace}
 
@@ -42,15 +58,6 @@ Query Service also allows you to set an identity or a primary identity for ad ho
 
 The example query provided in this document focuses on deciles to categorize large data sets and rank the data from the highest to lowest values (or vice versa), and filter based on time period.  
 
-### Deciles {#deciles}
-
-A decile is a method of splitting up a set of ranked data into 10 equal parts. When the data is divided into deciles, a decile rank is assigned to each row in the data set. This allows the data to be sorted into descending or ascending order. 
-
-A decile rank arranges the data in order from lowest to highest and is done on a scale of 1 to 10 where each successive number corresponds to an increase of 10 percentage points.
-
-Decile buckets represent the number of ranked groups and are used to assign a ranking to a dimension (category) in the dataset. The bucket can be a number or an expression that evaluates to a positive integer value for each partition. The buckets must not have a null value.
-
-Quartiles are used to divide the distribution by four and percentiles by 100.
 
 ### Create the schema for decile buckets {#create-schema}
 
