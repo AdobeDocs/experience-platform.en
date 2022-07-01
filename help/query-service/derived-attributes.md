@@ -1,20 +1,20 @@
 ---
 title: Derived Attributes
-description: Derived attributes provide a convenient means to generate attributes of your choice that can be refreshed at any regular cadence and optionally published into your Real-Time Customer Profile data. This document provides an overview of how to use Query Service to create derived attributes for use with your Profile data.
+description: Derived attributes provide a convenient means to generate attributes of your choice that can be refreshed at any regular cadence and optionally published into your Real-time Customer Profile data. This document provides an overview of how to use Query Service to create derived attributes for use with your Profile data.
 hide: true
 hidefromtoc: true
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
 ---
 # Derived attributes
 
-The AEP Query Services derived attributes feature provides a convenient means to generate attributes of your choice. These attributes can be refreshed at any regular cadence and optionally published into your Real-Time Customer Profile data. Derived attributes addresses the need to build complex attributes such as decile, percentile, and quartile over simpler ones such as max, count, and mean. These attributes can be calculated specifically for an individual user or for a business identity. This enables you to derive attributes that can be directly accredited as an identifier such as zipcode, province, state, or gender and also derive attributes that are indirectly associated with that user or business profile.
+The AEP Query Services derived attributes feature provides a convenient means to generate attributes of your choice. These attributes can be refreshed at any regular cadence and optionally published into your Real-time Customer Profile data. Derived attributes address the need to build complex attributes such as decile, percentile, and quartile over simpler ones such as max, count, and mean. These attributes can be calculated specifically for an individual user or for a business identity. This enables you to derive attributes that can be directly accredited as an identifier such as zip code, province, state, or gender, and also derive attributes that are indirectly associated with that user or business profile.
 
 Derived attributes are needed for a variety of use cases during analysis on the data lake, but can also be marked for profile and used to create relevant audiences when analyzing profile data. Some potential use cases for this feature might include:
 
 * Identifying the lowest 10% of subscribers based on viewership by channel. This would allow marketers to target a particular audience and sell a new subscriber package.
 * Identifying an audience who are in the top 10% of flyers based on their total miles traveled and have "Flyer" status. This audience could be used to selectively target the sale of a new credit card offer.
 * Determine the churn rate based on subscription.
-* Identifying the top 1% of household income in a province or state and provide a measure of the number of individuals moving out of that collective group over the last "n" months.
+* Identifying the top 1% of household income in a province or state and providing a measure of the number of individuals moving out of that collective group over the last "n" months.
 
 ## Getting started
 
@@ -38,7 +38,7 @@ Decile buckets represent the number of ranked groups and are used to assign a ra
 
 Quartiles are used to divide the distribution by four and percentiles by 100.
 
-### Build decile based derived attributes 
+### Build decile-based derived attributes 
 
 To define the ranking of deciles based on a particular dimension (category) and a corresponding metric (revenue, points, viewership duration, etc), a schema must be designed to allow for decile bucketing.
 
@@ -68,11 +68,11 @@ The initial airline loyalty dataset for this example is "Airline Loyalty Data", 
 
 ## Generate Decile Datasets
 
-In the airline loyalty data seen above, the `_profilefoundationreportingstg.mileage` value contains the amount of miles flown by a member every time they fly. This data is used to create deciles for the amount of miles flown over lifetime look-backs and the 1 month, 3 months, 6 months, 9 months, and 12 months periods. For this purpose a dataset is created that contains deciles in a map data type for each loop-back period, and an appropriate decile in a loop-back period assigned to each `membershipNumber`.
+In the airline loyalty data seen above, the `_profilefoundationreportingstg.mileage` value contains the number of miles flown by a member every time they fly. This data is used to create deciles for the number of miles flown over lifetime look-backs and the 1 month, 3 months, 6 months, 9 months, and 12 months periods. For this purpose, a dataset is created that contains deciles in a map data type for each loop-back period and an appropriate decile in a loop-back period assigned to each `membershipNumber`.
 
-Next, the XDM schema must be enabled for Real-Time Customer Profile to ensure that the dataset is associated with a user profile as an attribute.
+Next, the XDM schema must be enabled for Real-time Customer Profile to ensure that the dataset is associated with a user profile as an attribute.
 
-### Enable the schema for Real-Time Customer Profile
+### Enable the schema for Real-time Customer Profile
 
 Data being ingested into Experience Platform for use by Real-time Customer Profile must conform to an Experience Data Model (XDM) schema that is enabled for Profile. In order for a schema to be enabled for Profile, it must implement either the XDM Individual Profile or XDM ExperienceEvent class.
 
@@ -309,4 +309,4 @@ A correlation between the ranking number and the percentile is guaranteed in the
 
 ## Next steps
 
-The example provided above highlights steps to make decile attributes available in Real-Time Customer Profile. This allows for Segmentation Service, either via a user interface or RESTful API, to be able generate audiences based on these decile buckets. See the [Segmentation Service overview](../segmentation/home.md) for information on how to create, evaluate, and access segments.
+The example provided above highlights steps to make decile attributes available in Real-time Customer Profile. This allows for Segmentation Service, either via a user interface or RESTful API, to be able to generate audiences based on these decile buckets. See the [Segmentation Service overview](../segmentation/home.md) for information on how to create, evaluate, and access segments.
