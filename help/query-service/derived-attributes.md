@@ -66,7 +66,31 @@ The initial airline loyalty dataset for this example is "Airline Loyalty Data", 
 
 {style="table-layout:auto"} 
 
-### Create an identity namespace for the Profile schema {#identity-namespace}
+## Generate Decile Datasets
+
+In the airline loyalty data seen above, the `_profilefoundationreportingstg.mileage` value contains the amount of miles flown by a member every time they fly. This data is used to create deciles for the amount of miles flown over lifetime look-backs and the 1 month, 3 months, 6 months, 9 months, and 12 months periods. For this purpose a dataset is created that contains deciles in a map data type for each loop back period, and an appropriate decile in a loop back period assigned to each `membershipNumber`.
+
+Next, the XDM schema must be enabled for Real-Time Customer Profile to ensure that the dataset is associated with a user profile as an attribute.
+
+### Enable the schema for Real-Time Customer Profile
+
+Data being ingested into Experience Platform for use by Real-time Customer Profile must conform to an Experience Data Model (XDM) schema that is enabled for Profile. In order for a schema to be enabled for Profile, it must implement either the XDM Individual Profile or XDM ExperienceEvent class.
+
+You can [enable a schema for use in Real-time Customer Profile using the Schema Registry API](../xdm/tutorials/create-schema-api.md) or the [Schema Editor user interface](../xdm/tutorials/create-schema-ui.md).  Detailed instructions on how to enable a schema for Profile are available in their respective documentation.
+
+### Create a data type {#create-data-type}
+
+Data types are used as reference-type fields in classes or schema field groups and allow for the consistent use of a multi-field structure that can be included anywhere in the schema. Creation of the data type is a one-time step per sandbox, as it can be reused for all decile-related field groups.
+
+See the documentation for instructions on how to [define a custom data type](../xdm/api/data-types.md) using the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+
+### Create the decile field group {#create-field-group}
+
+The creation of the field group is a one-time step per sandbox. It can also be reused for all decile-related schemas.
+
+See the documentation for instructions on how to [create filed groups through the UI](../xdm/ui/resources/field-groups.md#create).
+
+### Create an identity namespace and mark it as the primary identifier {#identity-namespace}
 
 Identity namespaces are a component of [Identity Service](../identity-service/home.md) that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace. When matching and merging record data across profile fragments, both the identity value and the namespace must match.
 
@@ -91,21 +115,8 @@ The schema created for decile buckets has three integral parts: a data type, a f
 
 Adobe provides several standard (“core”) XDM classes, including XDM Individual Profile and XDM ExperienceEvent. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization. See the guides on how to [create and edit schemas in the UI](../xdm/ui/resources/schemas.md#create) or using the [schemas endpoint in the Schema Registry API](../xdm/api/schemas.md#create) for more details. 
 
-Data being ingested into Experience Platform for use by Real-time Customer Profile must conform to an Experience Data Model (XDM) schema that is enabled for Profile. In order for a schema to be enabled for Profile, it must implement either the XDM Individual Profile or XDM ExperienceEvent class.
 
-You can [enable a schema for use in Real-time Customer Profile using the Schema Registry API](../xdm/tutorials/create-schema-api.md) or the [Schema Editor user interface](../xdm/tutorials/create-schema-ui.md).  Detailed instructions on how to enable a schema for Profile are available in their respective documentation.
 
-### Create a data type {#create-data-type}
-
-Data types are used as reference-type fields in classes or schema field groups and allow for the consistent use of a multi-field structure that can be included anywhere in the schema. Creation of the data type is a one-time step per sandbox, as it can be reused for all decile-related field groups.
-
-See the documentation for instructions on how to [define a custom data type](../xdm/api/data-types.md) using the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
-
-### Create the decile field group {#create-field-group}
-
-The creation of the field group is a one-time step per sandbox. It can also be reused for all decile-related schemas.
-
-See the documentation for instructions on how to [create filed groups through the UI](../xdm/ui/resources/field-groups.md#create)
 
 
 ### Create a query template {#create-a-query-template}
