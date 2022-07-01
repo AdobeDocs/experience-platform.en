@@ -1,8 +1,8 @@
 ---
-description: Learn how to use Destination SDK to configure an Amazon S3 destination with custom file formatting options.
-title: (Beta) Use Destination SDK to configure an Amazon S3 destination with custom file formatting options
+description: Learn how to use Destination SDK to configure an Amazon S3 destination with custom file name and formatting options.
+title: (Beta) Configure an Amazon S3 destination with custom file name and formatting options.
 ---
-# (Beta) Use Destination SDK to configure an Amazon S3 destination with custom file name and formatting options
+# (Beta) Configure an Amazon S3 destination with custom file name and formatting options.
 
 ## Overview {#overview}
 
@@ -20,7 +20,7 @@ Before advancing to the steps outlined below, please read the [Destination SDK g
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
-Start by using the `/destinations-server` endpoint to create a server and file configuration. For detailed descriptions of the parameters in the call, read the [server and file configuration specifications for file-based destinations](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example) and the associated [file formatting configurations](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration).
+Start by using the `/destination-server` endpoint to create a server and file configuration. For detailed descriptions of the parameters in the call, read the [server and file configuration specifications for file-based destinations](server-and-file-configuration.md#s3-example) and the associated [file formatting configurations](server-and-file-configuration.md#file-configuration).
 
 **API format**
 
@@ -34,15 +34,14 @@ The following request creates a new destination server configuration, configured
 The payload below includes a generic Amazon S3 configuration, with custom [CSV file formatting](server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-{
-   "name":"Amazon S3 Destination server",
+ -d ' {
+   "name":"Amazon S3 destination server with custom file formatting options",
    "destinationServerType":"FILE_BASED_S3",
    "fileBasedS3Destination":{
       "bucket":{
@@ -55,6 +54,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    },
    "fileConfigurations":{
+      "compression":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.compression}}"
+      },
+      "fileType":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.fileType}}"
+      },
       "csvOptions":{
          "sep":{
             "templatingStrategy":"PEBBLE_V1",
@@ -103,14 +110,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "emptyValue":{
             "templatingStrategy":"PEBBLE_V1",
             "value":"{{customerData.dateFormat}}"
-         },
-         "compression":{
-            "templatingStrategy":"PEBBLE_V1",
-            "value":"{{customerData.compression}}"
-         },
-         "fileType":{
-            "templatingStrategy":"PEBBLE_V1",
-            "value":"{{customerData.fileType}}"
          }
       }
    }
@@ -146,25 +145,21 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-   "name":"Amazon S3 Destination with custom CSV formatting options",
-   "description":"Amazon S3 Destination with custom CSV formatting options",
-   "releaseNotes":"Amazon S3 Destination with custom CSV formatting options",
+   "name":"Amazon S3 destination with custom file formatting options and custom file name configuration",
+   "description":"Amazon S3 destination with custom file formatting options and custom file name configuration",
+   "releaseNotes":"Amazon S3 destination with custom file formatting options and custom file name configuration",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
          "authType":"S3"
       }
    ],
-   "customerEncryptionConfigurations":[
-      {
-         "encryptionAlgo":""
-      }
-   ],
+   "customerEncryptionConfigurations":[],
    "customerDataFields":[
       {
          "name":"bucket",
-         "title":"Select Amazon S3 Bucket",
-         "description":"Select Amazon S3 Bucket",
+         "title":"Enter the name of your Amazon S3 bucket",
+         "description":"Amazon S3 bucket name",
          "type":"string",
          "isRequired":true,
          "readOnly":false,
@@ -172,8 +167,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"path",
-         "title":"Select Amazon S3 path",
-         "description":"Select Amazon S3 Bucket",
+         "title":"Enter the path to your S3 bucket folder",
+         "description":"Enter the path to your S3 bucket folder",
          "type":"string",
          "isRequired":true,
          "pattern":"^[A-Za-z]+$",
@@ -182,8 +177,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"sep",
-         "title":"Select separator for each field and value",
-         "description":"Select separator for each field and value",
+         "title":"Enter your desired separator for each field and value",
+         "description":"Enter your desired separator for each field and value",
          "type":"string",
          "isRequired":false,
          "readOnly":false,
@@ -191,8 +186,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"encoding",
-         "title":"Specify encoding (charset) of saved CSV files",
-         "description":"Select encoding of csv files",
+         "title":"Select the desired CSV file encoding",
+         "description":"Select the desired CSV file encoding",
          "type":"string",
          "enum":[
             "UTF-8",
@@ -204,8 +199,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"quote",
-         "title":"Select a single character used for escaping quoted values",
-         "description":"Select single character for escaping quoted values",
+         "title":"Quoted values escape character",
+         "description":"Enter the desired character to be used for escaping quoted values.",
          "type":"string",
          "isRequired":false,
          "readOnly":false,
@@ -213,8 +208,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"quoteAll",
-         "title":"Quote All",
-         "description":"Select flag for escaping quoted values",
+         "title":"Escape all quoted values",
+         "description":"Select whether to escape all quoted values.",
          "type":"string",
          "enum":[
             "true",
@@ -227,8 +222,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"escape",
-         "title":"Select a single character used for escaping quotes",
-         "description":"Select a single character used for escaping quotes inside an already quoted value",
+         "title":"Quote escaping character",
+         "description":"Enter the desired character to be used for escaping quotes inside an already quoted value.",
          "type":"string",
          "isRequired":false,
          "readOnly":false,
@@ -236,8 +231,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"escapeQuotes",
-         "title":"Escape quotes",
-         "description":"A flag indicating whether values containing quotes should always be enclosed in quotes",
+         "title":"Enclose quoted values within quotes",
+         "description":"Select whether values containing quotes should always be enclosed in quotes.",
          "type":"string",
          "enum":[
             "true",
@@ -250,8 +245,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"header",
-         "title":"header",
-         "description":"Writes the names of columns as the first line.",
+         "title":"Generate file header.",
+         "description":"Select whether to write the names of columns as the first line of the exported files.",
          "type":"string",
          "isRequired":false,
          "enum":[
@@ -265,7 +260,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       {
          "name":"ignoreLeadingWhiteSpace",
          "title":"Ignore leading white space",
-         "description":"A flag indicating whether or not leading whitespaces from values being written should be skipped.",
+         "description":"Select whether leading whitespaces should be trimmed from exported values.",
          "type":"string",
          "isRequired":false,
          "enum":[
@@ -278,8 +273,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"nullValue",
-         "title":"Select the string representation of a null value",
-         "description":"Sets the string representation of a null value. ",
+         "title":"NULL value string format",
+         "description":"Enter the string representation of a NULL value. ",
          "type":"string",
          "isRequired":false,
          "readOnly":false,
@@ -288,7 +283,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       {
          "name":"dateFormat",
          "title":"Date format",
-         "description":"Select the string that indicates a date format. ",
+         "description":"Enter the desired date format. ",
          "type":"string",
          "default":"yyyy-MM-dd",
          "isRequired":false,
@@ -297,8 +292,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"charToEscapeQuoteEscaping",
-         "title":"Char to escape quote escaping",
-         "description":"Sets a single character used for escaping the escape for the quote character",
+         "title":"Quote escaping escape character",
+         "description":"Enter the desired character to be used for escaping the escaping of a quote character.",
          "type":"string",
          "isRequired":false,
          "readOnly":false,
@@ -306,8 +301,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"emptyValue",
-         "title":"Select the string representation of an empty value",
-         "description":"Select the string representation of an empty value",
+         "title":"Empty value string format",
+         "description":"Enter the string representation of an empty value.",
          "type":"string",
          "isRequired":false,
          "readOnly":false,
@@ -316,8 +311,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"compression",
-         "title":"Select compression",
-         "description":"Select compressiont",
+         "title":"Compression format",
+         "description":"Select the desired file compression format.",
          "type":"string",
          "isRequired":true,
          "readOnly":false,
@@ -330,8 +325,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       },
       {
          "name":"fileType",
-         "title":"Select a fileType",
-         "description":"Select fileType",
+         "title":"File type",
+         "description":"Select the exported file type.",
          "type":"string",
          "isRequired":true,
          "readOnly":false,
@@ -345,9 +340,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    ],
    "uiAttributes":{
-      "documentationLink":"https://www.adobe.io/apis/experienceplatform.html",
-      "category":"S3",
-      "iconUrl":"https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
+      "documentationLink":"https://www.adobe.com/go/destinations-amazon-s3-en",
+      "category":"cloudStorage",
+      "icon":{
+            "key": "amazonS3"
+        },
       "connectionType":"S3",
       "flowRunsSupported":true,
       "monitoringSupported":true,
@@ -412,7 +409,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## Step 3: Verify the Experience Platform UI {#verify-ui}
 
-Based on the configurations above, the Experience Platform user interface will now display a new private destination card for you to use, similar to the one in this recording:
+Based on the configurations above, the Experience Platform user interface will now display a new private destination card for you to use, similar to the one in the recording below.
+
+![Screen recording showing the destinations catalog page with a selected destination card.](assets/destination-card.gif)
 
 ## Step 4: Publish your destination {#publish-destination}
 
