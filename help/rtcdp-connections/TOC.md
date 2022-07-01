@@ -7,7 +7,7 @@ user-guide-description: Enable client-side data collection for Adobe Experience 
 feature: Data Collection
 ---
 
-# Real-Time Customer Data Platform Connections {#collection}
+# Real-Time Customer Data Platform Connections {#rtcdp-connections}
 
 - [RTCDP Connections overview](home.md)
 - [End-to-end overview](e2e.md)
