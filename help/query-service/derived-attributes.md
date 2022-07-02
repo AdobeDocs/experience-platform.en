@@ -7,7 +7,7 @@ exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
 ---
 # Derived attributes
 
-The AEP Query Services derived attributes feature provides a convenient means to generate attributes of your choice. These attributes can be refreshed at any regular cadence and optionally published into your Real-time Customer Profile data. Derived attributes address the need to build complex attributes such as decile, percentile, and quartile over simpler ones such as max, count, and mean. These attributes can be calculated specifically for an individual user or for a business identity. This enables you to derive attributes that can be directly accredited as an identifier such as zip code, province, state, or gender, and also derive attributes that are indirectly associated with that user or business profile.
+The Adobe Experience Platform Query Service derived attributes feature provides a convenient means to generate attributes of your choice. These attributes can be refreshed at any regular cadence and optionally published into your Real-time Customer Profile data. Derived attributes address the need to build complex attributes such as decile, percentile, and quartile over simpler ones such as max, count, and mean. These attributes can be calculated specifically for an individual user or for a business identity. This enables you to derive attributes that can be directly accredited as an identifier such as zip code, province, state, or gender, and also derive attributes that are indirectly associated with that user or business profile.
 
 Derived attributes are needed for a variety of use cases during analysis on the data lake, but can also be marked for profile and used to create relevant audiences when analyzing profile data. Some potential use cases for this feature might include:
 
@@ -18,7 +18,7 @@ Derived attributes are needed for a variety of use cases during analysis on the 
 
 ## Getting started
 
-This overview requires a working understanding of [Platform API calls](../landing/api-guide.md) and the following components of Adobe Experience Platform:
+This overview requires a working understanding of [query execution in Query Service](./best-practices/writing-queries.md) and the following components of Adobe Experience Platform:
 
 * [Real-time Customer Profile overview](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Basics of schema composition](../xdm/schema/composition.md): An introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas.
