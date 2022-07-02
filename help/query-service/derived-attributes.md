@@ -26,7 +26,7 @@ This overview requires a working understanding of [query execution in Query Serv
 
 ## Build complex derived attributes using Query Service
 
-To create a ranking based on one or more metrics (such as revenue or viewership duration etc) on a particular dimension (category), the example given builds derived attributes for ranking using deciles.
+To create a ranking based on one or more metrics (such as revenue or viewership duration etc) on a particular dimension (category), complex derived attributes are required. The example given in this document uses deciles to build derived attributes for ranking.
 
 ### Deciles {#deciles}
 
