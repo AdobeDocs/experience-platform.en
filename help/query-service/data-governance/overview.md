@@ -62,12 +62,11 @@ You can define access control for datasets and schemas with the following permis
 
 The attribute-based access control feature enables Query Service users to restrict access to critical user data. Access can be granted or restricted based on the permissions assigned to a role. User access to individual columns is controlled by the relevant data usage labels and the permission sets applied to the roles assigned to users. 
 
-Tagging schema field groups and classes with data usage labels impacts all the schemas with the same field groups and classes by applying the same data usage restrictions. 
-
-See the [attribute-based access control overview](../../access-control/abac/overview.md) for comprehensive information on this feature.
+Tagging schema field groups and classes with data usage labels impacts all the schemas with the same field groups and classes by applying the same data usage restrictions. See the [attribute-based access control overview](../../access-control/abac/overview.md) for comprehensive information on this feature.
  
 This feature enables you to grant access rights on confidential columns to the user groups of your choice. Access control on a column can restrict both the read and write capabilities for a particular type of user.
-Column-level control can be applied at the schema level for both standard and ad hoc schemas. Apply permission-based labels to XDM schemas to restrict access to one or more columns. Permission labeling is consistently applied even for datasets created via Query Service using either a predefined schema or an ad hoc schema generated as part of CTAS operation
+
+Access control for columns can be applied at the schema level for both standard and ad hoc schemas. Apply data usage labels to XDM schemas to restrict access to one or more columns. Data labeling is consistently applied, even for datasets created via Query Service using either a predefined schema or an ad hoc schema generated as part of CTAS operation.
 
 Once the appropriate level of access has been applied using labels and roles, the following system behavior occurs when a user tries to access the non-accessible data: 
 
@@ -168,62 +167,55 @@ See the [Audit logs overview](../../landing/governance-privacy-security/audit-lo
 
 The Data Governance framework in Platform provides a uniform way to responsibly use data across all Adobe solutions, services, and platforms. It coordinates the systemic approach to capture, communicate, and use metadata across the entire Adobe Experience Cloud. This in turn, helps data controllers label data according to the marketing actions needed, and the restrictions placed on that data from these intended marketing actions. See the [data usage labels overview](../../data-governance/labels/overview.md) for more information on how Adobe Experience Platform Data Governance allows you to apply data usage labels to datasets and fields.
 
-There are two types of derived datasets formed by Query Service, 
-<!-- they are tied to shcemas and can be labelled. intorduce the two types.  -->
-<!-- Point out there is NO differnce in labelling but BOTH standard and Ad hoc schemas need to be labelled and CAN be labelled. Ad hoc need to be made visable before labelling in the UI
-Q) Can the API label ad hc schemas?  CLARIFIED = through the UI NOT through the API -->
-
-The following techniques enforce labeling on datasets created by Query Service for the purpose of data compliance:
+There are two types of derived datasets formed by Query Service, a derived dataset that uses a standard schema and datasets derived using an ad hoc schemas.
 
 >[!NOTE]
 >
 >Datasets that are created or appended to using Query Service are referred to as "derived datasets".
 
-1. **Derived datasets with standard schemas**: When a query results in a derived dataset that uses a standard schema, data labeling is conducted at the schema level and applies to all datasets that conform to that schema.
-1. **Derived datasets using an ad hoc schema**: Ad hoc schemas are created by an individual user for a specific purpose. The XDM schema fields are namespaced for that particular dataset and not intended for use across different datasets. As a result, ad hoc schemas are available through the Experience Platform UI but in a read-only mode and are not visible by default. They must be enabled for viewing using the filter function in the schema workspace. Ad hoc schemas in the Platform UI can only be labeled at the schema level, this impacts all child datasets. (if this data is activated) Downstream this data will only be activated in destinations where it has appropriate labels.
+There is **no** difference in the application of data usage labelling between both standard and ad hoc schemas. 
 
+As ad hoc schemas are created by an individual user for a specific purpose, the XDM schema fields are namespaced for that particular dataset and not intended for use across different datasets. As a result, ad hoc schemas are not visible by default in the Experience Platform UI. Ad hoc schemas are available to view in a read-only mode and add data usage labels once enabled using the filter function in the schema workspace.
 
+Once a schema is marked with a data usage label this impacts all datasets that derive from that schema. If this data is activated to a destination, this downstream data is only activated in destinations where it has appropriate labels.
+
+See the guide on [adding data labels to XDM schemas](../../xdm/tutorials/labels.md) for more information.
+
+<!-- Q) Has this established why a QS user should care about labeling their created dataset schemas, when it doesn't necessarily affect any actual QS operation? -->
 
 <!-- This can be linked to the guide in https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/ad-hoc-schema-labels.html#discover-ad-hoc-schemas-in-the-schema-inventory-of-the-platform-ui after it is made public. -->
 
-See the guide on [adding data labels to XDM schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html?lang=en) for more information.
 
 ## [!DNL Privacy Service] {#privacy-service}
 
-[!DNL Privacy Service] helps you manage customer requests to access and delete their data in accordance with legal privacy regulations. It does this by searching the data for pre-existing identifiers, and either accesses or deletes that data depending on the privacy job requested. Data must be properly labeled in order for the service to determine which fields to access or delete during privacy jobs. Query Service can enrich the data it uses with a unique identifier for the purpose of satisfying privacy jobs. 
+[[!DNL Privacy Service]](../../privacy-service/home.md) helps you manage customer requests to access and delete their data in accordance with legal privacy regulations. It does this by searching the data for pre-existing identifiers, and either accesses or deletes that data depending on the privacy job requested. Data must be properly labeled in order for the service to determine which fields to access or delete during privacy jobs. Data that is subject to privacy requests must have customer identity information in order to tie the disparate pieces of data with the individual person to whom the privacy request applies to. Query Service can enrich the data it uses with a unique identifier for the purpose of satisfying privacy jobs. 
 
-<!-- Data that is subject to privacy requests must have customer identity information in order to tie the disparate pieces of data with the individual person to whom the privacy request applies to. -->
-
-<!-- link ot privacy request requirements for primary identities
-https://experienceleague.adobe.com/docs/experience-platform/privacy/identity-data.html
- -->
-
-See the [[!DNL Privacy Service] overview](../../privacy-service/home.md) for more information on this service.
+See the Privacy Service documentation for more information on [identity data for privacy requests](../../privacy-service/identity-data.md) and how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 
 Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets.  
 
+You **must** add identities into the dataset to facilitate data privacy requests and work towards data compliance. 
+
+Schema data fields can be set as an identity field through the Platform UI and Query Service also allows you to mark the primary identities by using the SQL command ‘ALTER TABLE’.. See the documentation on how to [define identity fields in the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html#define-an-identity-field). 
+  
+Instructions on how to use the command to [mark the desired dataset column as a primary identity](../sql/syntax.md#alter-table) can be found in the SQL syntax guide.
+
 <!-- 
-Then sepearte into 
-Q) why are these two key categorizations necessary?
+Questions for Sameeksha
+Q) why is it neecessary to sepearte this section into Derived Datasets with Standard Schemas and ad hoc schemas? Why these two 'key' categorizations necessary?
 
-There are two key categorizations to facilitate privacy jobs when using Query Service: 
+Q) there are two places where privacy requests can be sent: the data lake or the profile store. If records are deleted from the data lake are they deleted form the Profile store?
 
-there are two places where privacy requests can be sent: the data lake of the profile store. If records are delted from the data lake they are deleted form the Profile store. CHECK/CONFIRM
-
-Seperate these into :
-One MUST add identities. putting identities into the dataset
-how they are handled 
-
-1. **Derived Datasets with Standard Schema**: When a query results in a derived dataset that uses a standard schema, privacy measures are handled at the data lake management level. (this describes WHAT happens) https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html#define-an-identity-field
-1. **Derived Datasets by using Ad-hoc Schema**: When a query creates an ad hoc schema, you can mark the primary identities by using the SQL command ‘ALTER TABLE’.  Instructions on how to use the command to [mark the desired dataset column as a primary identity](../sql/syntax.md#alter-table) can be found in the SQL syntax guide. (describes what you need to DO for the privacy request)-->
+""**Derived Datasets with Standard Schema**: When a query results in a derived dataset that uses a standard schema, privacy measures are handled at the data lake management level. "" = What does ths mean?  
+-->
  
-<!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. ity is currently in Beta only
+<!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
 
 ## Data hygiene 
 
 "Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Adobe Experience Platform Query Service, this is either the data lake or the data warehouse.
 
-It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVCY USE CASE NAD NOT DATA HYGEINE ++  this si confusing.
+It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
 
 An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
 
