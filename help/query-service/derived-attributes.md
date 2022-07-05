@@ -7,9 +7,9 @@ exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
 ---
 # Derived attributes
 
-The Adobe Experience Platform Query Service derived attributes feature provides a convenient means to generate attributes of your choice. These attributes can be refreshed at any regular cadence and optionally published into your Real-time Customer Profile data. Derived attributes address the need to build complex attributes such as decile, percentile, and quartile over simpler ones such as max, count, and mean. These attributes can be calculated specifically for an individual user or for a business identity. This enables you to derive attributes that can be directly accredited as an identifier such as zip code, province, state, or gender, and also derive attributes that are indirectly associated with that user or business profile.
+The derived attributes feature provides a convenient means to generate attributes of your choice from other available information. These attributes can be refreshed at any regular cadence and optionally published into your Real-time Customer Profile data. Derived attributes address the need to build complex attributes such as decile, percentile, and quartile over simpler ones such as max, count, and mean. These attributes can be calculated specifically for an individual user or for a business entity. This enables you to derive attributes that can be directly accredited as an identifier such as email addresses, device IDs, and phone numbers, and also derive attributes that are indirectly associated with that user or business profile.
 
-Derived attributes are needed for a variety of use cases during analysis on the data lake, but can also be marked for profile and used to create relevant audiences when analyzing profile data. Some potential use cases for this feature might include:
+Derived attributes are needed for a variety of use cases when data is being analyzed on the data lake. This data can then be marked for use in Real-time Customer Profile and used in downstream use cases such as creating highly focussed audiences. Some potential use cases for this feature might include:
 
 * Identifying the lowest 10% of subscribers based on viewership by channel. This would allow marketers to target a particular audience and sell a new subscriber package.
 * Identifying an audience who are in the top 10% of flyers based on their total miles traveled and have "Flyer" status. This audience could be used to selectively target the sale of a new credit card offer.
@@ -23,10 +23,11 @@ This overview requires a working understanding of [query execution in Query Serv
 * [Real-time Customer Profile overview](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Basics of schema composition](../xdm/schema/composition.md): An introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas.
 * [How to enable a schema for Real-time Customer Profile](../profile/tutorials/add-profile-data.md): This tutorial outlines the steps necessary to add data to Real-time Customer Profile.
+* [How to define a custom data type](../xdm/api/data-types.md): Data types are used as reference-type fields in classes or schema field groups and allow for the consistent use of a multi-field structure that can be included anywhere in the schema.
 
-## Build complex derived attributes using Query Service
+## Build complex derived attributes
 
-To create a ranking based on one or more metrics (such as revenue or viewership duration etc) on a particular dimension (category), complex derived attributes are required. The example given in this document uses deciles to build derived attributes for ranking.
+To create a ranking based on one or more metrics (such as revenue, viewership duration, and so on) on a particular dimension (category), complex derived attributes are required. The example given in this document uses deciles to build derived attributes for ranking data from an airline loyalty scheme.
 
 ### Deciles {#deciles}
 
@@ -40,23 +41,31 @@ Quartiles are used to divide the distribution by four and percentiles by 100.
 
 ### Build decile-based derived attributes 
 
-To define the ranking of deciles based on a particular dimension (category) and a corresponding metric (revenue, points, viewership duration, etc), a schema must be designed to allow for decile bucketing.
+To define the ranking of deciles based on a particular dimension and a corresponding metric, a schema must be designed to allow for decile bucketing.
 
-This guide uses an airline loyalty dataset to demonstrate how to use Query Service to build deciles based on the miles flown in the last 1, 3, or 6 months.
+This guide uses an airline loyalty dataset to demonstrate how to use Query Service to build deciles based on the miles flown over various lookback periods.
 
 ## Use Query Service to create deciles
 
-Query Service provides an ideal way to create a dataset that contains categorical deciles. This can then also be used in conjunction with Segmentation Service to create audiences based on attribute ranking. The concepts displayed in the following examples can be applied to create other decile bucket datasets, as long as a category (dimension) is defined and a metric is available. The examples are based on data for an airline loyalty scheme. The airline loyalty data utilizes the Experience Events class where each event is a record of a business transaction for mileage, either credited or debited, and the membership loyalty status of either "Flyer", "Frequent", "Silver", or "Gold". The primary identity field is `membershipNumber`.
+Using Query Service, you can create a dataset that contains categorical deciles, which can then be segmented to create audiences based on attribute ranking. The concepts displayed in the following examples can be applied to create other decile bucket datasets, as long as a category is defined and a metric is available. 
 
-### Sample Datasets
+The example airline loyalty data uses an [XDM ExperienceEvents class](../xdm/classes/experienceevent.md). Each event is a record of a business transaction for mileage, either credited or debited, and the membership loyalty status of either "Flyer", "Frequent", "Silver", or "Gold". The primary identity field is `membershipNumber`.
 
-The initial airline loyalty dataset for this example is "Airline Loyalty Data", and has the following schema and primary identity as `_profilefoundationreportingstg.membershipNumber`.
+### Sample datasets
+
+The initial airline loyalty dataset for this example is "Airline Loyalty Data", and has the following schema. Note that the primary identity for the schema is `_profilefoundationreportingstg.membershipNumber`.
 
 ![A diagram of the Airline Loyalty Data schema.](./images/derived-attributes/airline-loyalty-data.png)
 
 **Sample data**
 
-| `_profilefoundationreportingstg.membershipNumber` | `_profilefoundationreportingstg.emailAddress.address` | `_profilefoundationreportingstg.transactionDate` | `_profilefoundationreportingstg.transactionType` | `_profilefoundationreportingstg.transactionDetails` | `_profilefoundationreportingstg.mileage` | `_profilefoundationreportingstg.loyaltyStatus` |
+The following table displays the sample data contained in the `_profilefoundationreportingstg` object used for this example. It provides context for the use of decile buckets to create complex derived attributes.
+
+>[!NOTE]
+>
+>For brevity, the tenet ID `_profilefoundationreportingstg` has been omitted from the start of the namespace in the column titles and subsequent mentions throughout the document. 
+
+| `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
 | C435678623 | sfeldmark1vr@studiopress.com| 2022-01-01 | STATUS_MILES | New member | 5000 | FLYER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | SILVER |
@@ -66,37 +75,21 @@ The initial airline loyalty dataset for this example is "Airline Loyalty Data", 
 
 {style="table-layout:auto"} 
 
-## Generate Decile Datasets
+## Generate decile datasets
 
-In the airline loyalty data seen above, the `_profilefoundationreportingstg.mileage` value contains the number of miles flown by a member every time they fly. This data is used to create deciles for the number of miles flown over lifetime look-backs and the 1 month, 3 months, 6 months, 9 months, and 12 months periods. For this purpose, a dataset is created that contains deciles in a map data type for each loop-back period and an appropriate decile in a loop-back period assigned to each `membershipNumber`.
-
-Next, the XDM schema must be enabled for Real-time Customer Profile to ensure that the dataset is associated with a user profile as an attribute.
+In the airline loyalty data seen above, the `.mileage` value contains the number of miles flown by a member every time they fly. This data is used to create deciles for the number of miles flown over lifetime look-backs and a variety of lookback periods. For this purpose, a dataset is created that contains deciles in a map data type for each lookback period, and an appropriate decile for each lookback period assigned under `membershipNumber`.
 
 ### Enable the schema for Real-time Customer Profile
 
-Data being ingested into Experience Platform for use by Real-time Customer Profile must conform to an Experience Data Model (XDM) schema that is enabled for Profile. In order for a schema to be enabled for Profile, it must implement either the XDM Individual Profile or XDM ExperienceEvent class.
+Data being ingested into Experience Platform for use by Real-time Customer Profile must conform to [an Experience Data Model (XDM) schema that is enabled for Profile](../xdm/ui/resources/schemas.md). In order for a schema to be enabled for Profile, it must implement either the XDM Individual Profile or XDM ExperienceEvent class.
 
-You can [enable a schema for use in Real-time Customer Profile using the Schema Registry API](../xdm/tutorials/create-schema-api.md) or the [Schema Editor user interface](../xdm/tutorials/create-schema-ui.md).  Detailed instructions on how to enable a schema for Profile are available in their respective documentation.
+[Enable your schema for use in Real-time Customer Profile using the Schema Registry API](../xdm/tutorials/create-schema-api.md) or the [Schema Editor user interface](../xdm/tutorials/create-schema-ui.md).  Detailed instructions on how to enable a schema for Profile are available in their respective documentation.
 
-### Create a data type {#create-data-type}
-
-Data types are used as reference-type fields in classes or schema field groups and allow for the consistent use of a multi-field structure that can be included anywhere in the schema. Creation of the data type is a one-time step per sandbox, as it can be reused for all decile-related field groups.
-
-See the documentation for instructions on how to [define a custom data type](../xdm/api/data-types.md) using the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
-
-### Create the decile field group {#create-field-group}
-
-The creation of the field group is a one-time step per sandbox. It can also be reused for all decile-related schemas.
-
-See the documentation for instructions on how to [create filed groups through the UI](../xdm/ui/resources/field-groups.md#create).
+Next, create a data type to be reused for all decile-related field groups. The creation of the decile field group is a one-time step per sandbox. It can also be reused for all decile-related schemas.
 
 ### Create an identity namespace and mark it as the primary identifier {#identity-namespace}
 
-Identity namespaces are a component of [Identity Service](../identity-service/home.md) that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace. When matching and merging record data across profile fragments, both the identity value and the namespace must match.
-
-Custom namespaces can be created using the [Identity Service API](../identity-service/api/create-custom-namespace.md) or through the UI. See the [manage custom namespaces documentation](../identity-service/namespaces.md#manage-namespaces) for guidance on how to do this through the UI.
-
-The primary identity descriptor can either be assigned to a field in the Schemas UI or can be created using the Schema Registry API. See the documentation for instructions on how to [define an identity field in the Adobe Experience Platform UI](../xdm/ui/fields/identity.md#define-an-identity-field), or through the [Schema Registry API](../xdm/api/descriptors.md#create).
+Any schema created for use with deciles must have a primary identity assigned. You can [define an identity field in the Adobe Experience Platform Schemas UI](../xdm/ui/fields/identity.md#define-an-identity-field), or through the [Schema Registry API](../xdm/api/descriptors.md#create).
 
 Query Service also allows you to set an identity or a primary identity for ad hoc schema dataset fields directly through SQL. See the documentation on [setting a secondary identity and primary identity in ad hoc schema identities](./data-governance/ad-hoc-schema-identities.md) for more information.
 
@@ -104,9 +97,9 @@ Using the key points outlined above, create an "Airline Loyalty Decile Schema" t
 
 ![A diagram of the "Airline Loyalty Decile Schema".](./images/derived-attributes/airline-loyalty-decile-schema.png)
 
-### Create a query for calculating deciles over a loop-back period {#create-a-query}
+### Create a query for calculating deciles over a lookback period {#create-a-query}
 
-The following example demonstrates the SQL query for calculating a decile over a loop-back period.
+The following example demonstrates the SQL query for calculating a decile over a lookback period.
 
 A template can be made either using the Query Editor in the UI, or through the [Query Service API](./api/query-templates.md#create-a-query-template). 
 
