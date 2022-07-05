@@ -39,7 +39,7 @@ Decile buckets represent the number of ranked groups and are used to assign a ra
 
 Quartiles are used to divide the distribution by four and percentiles by 100.
 
-### Build decile-based derived attributes 
+## Build decile-based derived attributes 
 
 To define the ranking of deciles based on a particular dimension and a corresponding metric, a schema must be designed to allow for decile bucketing.
 
@@ -77,7 +77,11 @@ The following table displays the sample data contained in the `_profilefoundatio
 
 ## Generate decile datasets
 
-In the airline loyalty data seen above, the `.mileage` value contains the number of miles flown by a member every time they fly. This data is used to create deciles for the number of miles flown over lifetime look-backs and a variety of lookback periods. For this purpose, a dataset is created that contains deciles in a map data type for each lookback period, and an appropriate decile for each lookback period assigned under `membershipNumber`.
+In the airline loyalty data seen above, the `.mileage` value contains the number of miles flown by a member every time they fly. This data is used to create deciles for the number of miles flown over lifetime look-backs and a variety of lookback periods. For this purpose, a dataset is created that contains deciles in a map data type for each lookback period and an appropriate decile for each lookback period assigned under `membershipNumber`.
+
+Create an "Airline Loyalty Decile Schema" to create a decile dataset using Query Service.
+
+![A diagram of the "Airline Loyalty Decile Schema".](./images/derived-attributes/airline-loyalty-decile-schema.png)
 
 ### Enable the schema for Real-time Customer Profile
 
@@ -92,10 +96,6 @@ Next, create a data type to be reused for all decile-related field groups. The c
 Any schema created for use with deciles must have a primary identity assigned. You can [define an identity field in the Adobe Experience Platform Schemas UI](../xdm/ui/fields/identity.md#define-an-identity-field), or through the [Schema Registry API](../xdm/api/descriptors.md#create).
 
 Query Service also allows you to set an identity or a primary identity for ad hoc schema dataset fields directly through SQL. See the documentation on [setting a secondary identity and primary identity in ad hoc schema identities](./data-governance/ad-hoc-schema-identities.md) for more information.
-
-Using the key points outlined above, create an "Airline Loyalty Decile Schema" to create a decile dataset using Query Service.
-
-![A diagram of the "Airline Loyalty Decile Schema".](./images/derived-attributes/airline-loyalty-decile-schema.png)
 
 ### Create a query for calculating deciles over a lookback period {#create-a-query}
 
