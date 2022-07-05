@@ -2,9 +2,7 @@
 keywords: activate profile destinations;activate destinations;activate data; activate email marketing destinations; activate cloud storage destinations
 title: Activate audience data to batch profile export destinations
 type: Tutorial
-seo-title: Activate audience data to batch profile export destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 ---
 # Activate audience data to batch profile export destinations
@@ -81,11 +79,6 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 >id="platform_destinations_activationchaining_scheduled"
 >title="Scheduled activation"
 >abstract="Activation runs at a fixed time of the day."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_activationchaining_activatenow"
->title="Activate on-demand"
->abstract="Select this control to deliver a full file export on top of any previously scheduled exports. The file export is triggered immediately."
 
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
 
