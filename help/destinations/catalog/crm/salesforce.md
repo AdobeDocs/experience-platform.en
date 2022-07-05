@@ -16,7 +16,7 @@ This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 Note the following details that are specific to the [!DNL Salesforce CRM] destination:
 
-* [!DNL Adobe Experience Platform] segments are exported to [!DNL Salesforce CRM] using a custom `AdobeExperiencePlatformSegments` field. You need to create this custom field in [!DNL Salesforce] first, before you export data from Experience Platform. Instructions are further below, in the [Prerequisites](#prerequisites) section.
+* [!DNL Adobe Experience Platform] segment status is exported to [!DNL Salesforce CRM] using a custom field attribute. You need to create this custom field attribute in [!DNL Salesforce] first, before you export data from Experience Platform. Instructions are further below, in the [Prerequisites](#prerequisites) section.
 
 * Salesforce CRM uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce CRM instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -45,11 +45,16 @@ Note the following prerequisites in Salesforce, in order to export data from Pla
         * ``web``
         * ``refresh_token``
         * ``offline_access``
-1. Create the custom field which will allow Experience Platform to update your profiles within Salesforce CRM. Refer to the Salesforce documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance.
+1. Create the custom field of type `Text Area Long` which Experience Platform will use to update the segment status within Salesforce CRM. 
+    * Refer to the Salesforce documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance.
 
-    | Field | Data Type |
-    |---|---|
-    | `AdobeExperiencePlatformSegments` | `Text Area Long` |
+        > [!NOTE]
+        >
+        > * Objects in Salesforce are restricted to 25 External fields, see [Custom Field Attributes](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5).
+        > * This restriction implies you will only be able to have at a maximum 25 Experience Platform segment memberships active at any time. 
+        > * If you have reached the custom field attribute limit you will have to remove the custom field attribute from Salesforce which you used to store the segment status against older segments within Experience Platform.
+
+    * Refer to Adobe's documentation for [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=en) if you need guidance on segment statuses.
 
 1. Note down the items below before you authenticate to the Salesforce CRM destination.
     * Note down your [Salesforce domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5). For example if your domain is *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, you need the highlighted value.
@@ -70,8 +75,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), according to your field mapping.[!DNL Adobe Experience Platform] segments are exported to [!DNL Salesforce CRM] under the `AdobeExperiencePlatformSegments` attribute.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Platform segment statuses are exported to [!DNL Salesforce CRM] by specifying their corresponding custom field attribute in [!DNL Salesforce CRM] in the **[!UICONTROL Activate Destination]** > **[!UICONTROL Schedule segment export]** > **[!UICONTROL Mapping ID]** field.</li></ul> |
+| Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
 
@@ -115,7 +120,7 @@ To configure details for the destination, fill in the required fields and select
 
 Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-## Mapping considerations and example {#mapping-considerations-example}
+### Mapping considerations and example {#mapping-considerations-example}
 
 To correctly send your audience data from Adobe Experience Platform to the Salesforce CRM destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the Salesforce CRM destination fields, follow these steps:
 
@@ -141,6 +146,13 @@ To correctly send your audience data from Adobe Experience Platform to the Sales
 1. An example using these mappings is shown below:
 ![Target mapping LastName](../../assets/catalog/crm/salesforce/mappings.png)
 
+### Schedule segment export and example {#schedule-segment-export-example}
+
+* When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step you will need to manually map Platform segments to a custom field attribute in Salesforce.
+* To do this, select each segment, then enter the corresponding custom field attribute from Salesforce in the **[!UICONTROL Mapping ID]** field.
+* An example is shown below:
+![Schedule segment export](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
+
 ## Validate data export {#exported-data}
 
 To validate that you have correctly set up the destination, follow the steps below:
@@ -160,7 +172,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Login to the Salesforce website, then navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page and check if the profiles from the segment have been added.
 ![Salesforce Contacts](../../assets/catalog/crm/salesforce/contacts.png)
 
-1. Click a contact and check if the attribute is updated. You will notice the segment IDs from Experience Platform in the `AdobeExperiencePlatformSegments` custom field.
+1. Click a contact and check if the fields are updated. You will notice the segment status from Experience Platform has been updated against the corresponding custom field attribute that was provided in the **Mapping ID** field during the **[!UICONTROL Activate destination]** > **[!UICONTROL Schedule segment export]** step.
 ![Salesforce Contacts](../../assets/catalog/crm/salesforce/contact-info.png)
 
 ## Data usage and governance {#data-usage-governance}
@@ -174,3 +186,6 @@ Additional useful information from the [Salesforce developer portal](https://dev
 * [Custom Recommendation Audiences](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)
 * [Using Composite Resources](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/using_composite_resources.htm?q=composite)
 * [Quick Start](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart.htm)
+
+When checking a dataflow run, if you obtain the below error message; Check that the Mapping ID you provided against your Platform segment is valid and exists within [!DNL Salesforce CRM].
+![Error](../../assets/catalog/crm/salesforce/error.png)
