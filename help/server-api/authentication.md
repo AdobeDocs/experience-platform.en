@@ -1,8 +1,6 @@
 ---
 title: Authentication
-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
-seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
-keywords: data collection; authentication; Adobe Experience Platform Edge Network api; authorization
+description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
 ---
 # Authentication {#authentication}

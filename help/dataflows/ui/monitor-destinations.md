@@ -135,6 +135,7 @@ For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data 
 Each individual dataflow run shows the following details:
 
 - **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
+- **[!UICONTROL Segment]**: The name of the segment associated with each dataflow run.
 - **[!UICONTROL Processing time]**: The amount of time it took for the dataflow run to be processed.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination as part of the dataflow run. This metric includes identities that are created, updated, and removed from exported segments.
