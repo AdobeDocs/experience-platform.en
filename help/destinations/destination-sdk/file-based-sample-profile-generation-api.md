@@ -17,24 +17,18 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Prerequisites {#prerequisites}
 
-Creating a sample profile requires an existing file-based destination created through the Destination SDK, along with an existing activation flow created in the Experience Platform UI.
+Before you can use the `/sample-profiles` endpoint, make sure you meet the following conditions:
 
-The `/sample-profiles` endpoint creates the sample profiles based on the source schema that you defined in your activation flow.
+* You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../ui/destinations-workspace.md).
+* You have created at least one activation flow for your destination in the Experience Platform UI. The `/sample-profiles` endpoint creates the profiles based on the source schema that you defined in your activation flow. See the [activation tutorial](../ui/activate-batch-profile-destinations.md) to learn how to create an activation flow.
+* To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
+
+   ![UI image showing how to get destination instance ID from the URL.](assets/get-destination-instance-id.png)
+
 
 ## Generate sample profiles for destination testing {#generate-sample-profiles}
 
 You can generate sample profiles based on your source schema by making a GET request to the `/sample-profiles` endpoint with the destination instance ID of the destination that you want to test.
-
-To get the ID of a destination instance, you must first create a connection to your destination in the Experience Platform UI.
-
-Read the [activate destination tutorial](/help/destinations/ui/activation-overview.md) and see the tip below for how to get the destinations instance ID to use for this API.
-
->[!TIP]
->
->Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
->
->![UI image showing how to get destination instance ID from the URL.](assets/get-destination-instance-id.png)
-
 
 **API endpoint**
 
@@ -52,7 +46,7 @@ GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?de
 
 | Query parameter | Description |
 | -------- | ----------- |
-| `destinationInstanceId` | The ID of the destination instance for which you are generating sample profiles. See [generate sample profiles](#generate-sample-profiles) for details on how to obtain this ID. |
+| `destinationInstanceId` | The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
 | `count` | *Optional*. The number of sample profiles that you want to generate. The parameter can take values between `1 - 1000`. If this property is not defined, then the API generate a single sample profile. |
 
 {style="table-layout:auto"}
@@ -120,7 +114,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 | `segmentMembership` | A map object which describes the individual’s segment memberships. For more information on `segmentMembership`, read [Segment Membership Details](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
 | `status` | Indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
-| `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, read [Basis of schema composition](../../xdm/schema/composition.md#identityMap). |
+| `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, see [basis of schema composition](../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}
 

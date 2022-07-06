@@ -1,35 +1,40 @@
 ---
-description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination.
-title: Destination testing API operations
+description: This page explains how to use the /testing/destinationInstance API endpoint to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination.
+title: Test your file-based destination with or without sample profiles
 ---
-# Test file-based destination configuration with the testing API {#test-destination-configuration-api}
+
+# Test your file-based destination with or without sample profiles {#test-destination-configuration-api}
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
->**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
+This page explains how to use the `/testing/destinationInstance` API endpoint to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination.
 
-This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination. For a description of the functionality supported by this endpoint, read [Test your destination configuration](./test-destination.md).
+You can make requests to the testing endpoint with or without adding [sample profiles](file-based-sample-profile-generation-api.md) to the call. If you don't send any profiles on the request, the API generates a sample profile automatically and adds it to the request.
 
-You make requests to the testing endpoint with or without adding profiles to the call. If you don't send any profiles on the request, Adobe will generate those internally for you and add them to the request.
+The auto-generated sample profiles contain generic data. If you want to test your destination with custom, more intuitive profile data, use the [sample profile generation API](file-based-sample-profile-generation-api.md) to generate a sample profile, then customize its response and include it in the request to the `/testing/destinationInstance` endpoint.
 
-You can use the [sample profile generation API](file-based-sample-profile-generation-api.md) to create profiles to use in requests to the destination testing API.
+## Getting started {#getting-started}
 
-## How to get the destination instance ID {#get-destination-instance-id}
+Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
->[!IMPORTANT]
->
->In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](../ui/connect-destination.md) and [activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) for more information. After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint from the URL when [browsing a connection with your destination](../ui/destination-details-page.md).
->![UI image that highlights how to get the destination instance ID from the browser URL.](./assets/get-destination-instance-id.png)
+## Prerequisites {#prerequisites}
 
-## Getting started with destination testing API operations {#get-started}
+Before you can use the `/testing/destinationInstance` endpoint, make sure you meet the following conditions:
 
-Before continuing, please review the [getting started guide](getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+* You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../ui/destinations-workspace.md).
+* You have created at least one activation flow for your destination in the Experience Platform UI.
+* To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
+
+   ![UI image showing how to get destination instance ID from the URL.](assets/get-destination-instance-id.png)
+* *Optional*: If you want to test your destination configuration with a sample profile added to the API call, use the [/sample-profiles](file-based-sample-profile-generation-api.md) endpoint to generate a sample profile based on your existing source schema. If you do not provide a sample profile, the API will generate one and return it in the response.
 
 ## Test your destination configuration without adding profiles to the call {#test-without-adding-profiles}
 
-You can test your destination configuration by making a POST request to the `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` endpoint and providing the destination instance ID of the destination that you are testing.
+**API endpoint**
+
+```http
+https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/
+```
 
 **API format**
 
@@ -37,131 +42,26 @@ You can test your destination configuration by making a POST request to the `aut
 POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 ```
 
-| Query parameter | Description |
-| -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | The destination instance ID of the destination that you are testing. |
-
 **Request**
 
-The following request calls your destination's REST API endpoint. The request is configured by the `{DESTINATION_INSTANCE_ID}` query parameter.
-
 ```shell
-curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/fd3449fb-b929-45c8-9f3d-06b9d6aac328' 
---header 'Content-Type: application/json' 
---header 'Accept: application/json' 
---header 'x-api-key: {API_KEY}' 
---header 'Authorization: Bearer {ACCESS_TOKEN}' 
---header 'x-gw-ims-org-id: {IMS_ORG}' 
---header 'x-sandbox-name: {SANDBOX_NAME}' 
+curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}' 
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
+
+| Query parameter | Description |
+| -------- | ----------- |
+| `{DESTINATION_INSTANCE_ID}` | The destination instance ID of the destination that you are testing.  The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
 
 **Response**
 
-A successful response returns HTTP status 200 along with the API response from your destination's REST API endpoint.
+A successful response returns HTTP status 200 along with the response payload.
 
-``` json
-{
-    "activations": [
-        {
-            "segment": "6fa55d3a-18e1-4f65-95ed-ac8fdb03b45b",
-            "flowRun": "81150d76-7909-46b6-83f4-fc855a92de07"
-        },
-        {
-            "segment": "5fa55d3a-18e1-4f65-95ed-ac8fdb03b45b",
-            "flowRun": "4706780a-2ab3-4d33-8c76-7c87fd318cd8"
-        }
-    ],
-    "results": "/authoring/testing/destinationInstance/fd3449fb-b929-45c8-9f3d-06b9d6aac328/results?flowRunIds=4706780a-2ab3-4d33-8c76-7c87fd318cd8,81150d76-7909-46b6-83f4-fc855a92de07",
-    "inputProfiles": [
-        {
-            .....
-        }
-    ]
-}
-```
-
-| Property | Description |
-| -------- | ----------- |
-| `activations` | The list of segments activated to the destination, and their corresponding flow run IDs.|
-| `inputProfiles` | Returns the profiles that were exported on the call to your destination. The profiles match your source schema.|
-| `results`| Returns the flow run IDs that you can use in a call to the [results API](file-based-destination-results-api.md), to test the integration.|
-
-{style="table-layout:auto"}
-
-## Test your destination configuration with profiles added to the call {#test-with-added-profiles}
-
-In addition to testing the destination configuration without profiles added to the call, you can also add profiles to the call, after [generating them using the sample profile API](file-based-sample-profile-generation-api.md).
-
-You can test your destination configuration by making a POST request to the `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` endpoint and providing the destination instance ID of the destination that you are testing.
-
-### API format
-
-```http
-POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
-```
-
-| Query parameter | Description |
-| -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | The destination instance ID of the destination that you are testing. |
-
-### Request
-
-The following request calls your destination's REST API endpoint. The request is configured by the parameters provided in the payload and the `{DESTINATION_INSTANCE_ID}` query parameter.
-
-```shell
-
-curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/fd3449fb-b929-45c8-9f3d-06b9d6aac328' \
---header 'Content-Type: application/json' \
---header 'Accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
---data-raw '{
-   "profiles":[
-      {
-         "segmentMembership":{
-            "ups":{
-               "fea8d394-5a8c-4cea-bebc-df020ce37f5c":{
-                  "lastQualificationTime":"2022-01-13T11:33:28.211895Z",
-                  "status":"realized"
-               },
-               "5fa55d3a-18e1-4f65-95ed-ac8fdb03b45b":{
-                  "lastQualificationTime":"2022-01-13T11:33:28.211893Z",
-                  "status":"realized"
-               }
-            }
-         },
-         "personalEmail":{
-            "address":"john.smith@abc.com"
-         },
-         "identityMap":{
-            "crmid":[
-               {
-                  "id":"crmid-P1A7l"
-               }
-            ]
-         },
-         "person":{
-            "name":{
-               "firstName":"string",
-               "lastName":"string"
-            }
-         }
-      }
-   ]
-}'
-```
-
-|Property|Description|
-|---|---|
-|`profiles`| Array that can include one or multiple profiles. Use the [sample profile API](file-based-sample-profile-generation-api.md) to generate profiles to use in this API call.|
-
-### Response
-
-A successful response returns HTTP status 200 along with the API response from your destination's REST API endpoint.
-
-``` json
+```json
 {
    "activations":[
       {
@@ -209,10 +109,139 @@ A successful response returns HTTP status 200 along with the API response from y
 }
 ```
 
-|Property| Description|
-|---|---|
-|`activations`| Returns the segment ID and flow run ID for each activated segment. The number of activation entries (and associated generated files) is equal to the number of segments mapped on the destination instance. <br><br> Example: If you mapped two segments to the destination instance, the `activations` array will contain two entries. Each activated segment will correspond to one exported file.|
-|`results`| Returns the destination instance ID and the flow run IDs that you can use to call the [results API](file-based-destination-results-api.md).|
+| Property | Description |
+| -------- | ----------- |
+| `activations` | Returns the segment ID and flow run ID for each activated segment. The number of activation entries (and associated generated files) is equal to the number of segments mapped on the destination instance. <br><br> Example: If you mapped two segments to the destination instance, the `activations` array will contain two entries. Each activated segment will correspond to one exported file.|
+| `results`| Returns the destination instance ID and the flow run IDs that you can use to call the [results API](file-based-destination-results-api.md), to further test the integration.|
+| `inputProfiles` | Returns the sample profiles auto-generated by the API.|
+
+
+{style="table-layout:auto"}
+
+## Test your destination configuration with profiles added to the call {#test-with-added-profiles}
+
+To test your destination with custom, more intuitive profile data, you can customize the response obtained from the [/sample-profiles](file-based-sample-profile-generation-api.md) endpoint with values of your choice, and include the custom profile in the request to the `/testing/destinationInstance` endpoint.
+
+**API endpoint**
+
+```http
+https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/
+```
+
+**API format**
+
+```http
+POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
+```
+
+**Request**
+
+```shell
+curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}' 
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+ {
+   "profiles":[
+      {
+         "segmentMembership":{
+            "ups":{
+               "fea8d394-5a8c-4cea-bebc-df020ce37f5c":{
+                  "lastQualificationTime":"2022-01-13T11:33:28.211895Z",
+                  "status":"realized"
+               },
+               "5fa55d3a-18e1-4f65-95ed-ac8fdb03b45b":{
+                  "lastQualificationTime":"2022-01-13T11:33:28.211893Z",
+                  "status":"realized"
+               }
+            }
+         },
+         "personalEmail":{
+            "address":"michaelsmith@example.com"
+         },
+         "identityMap":{
+            "crmid":[
+               {
+                  "id":"Custom CRM ID"
+               }
+            ]
+         },
+         "person":{
+            "name":{
+               "firstName":"Michael",
+               "lastName":"Smith"
+            }
+         }
+      }
+   ]
+}'
+```
+
+| Parameter | Description |
+| -------- | ----------- |
+| `{DESTINATION_INSTANCE_ID}` | The destination instance ID of the destination that you are testing.  The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID.|
+|`profiles`| Array that can include one or multiple profiles. Use the [sample profile API endpoint](file-based-sample-profile-generation-api.md) to generate profiles to use in this API call.|
+
+**Response**
+
+A successful response returns HTTP status 200 along with the response payload.
+
+``` json
+{
+   "activations":[
+      {
+         "segment":"6fa55d3a-18e1-4f65-95ed-ac8fdb03b45b",
+         "flowRun":"81150d76-7909-46b6-83f4-fc855a92de07"
+      },
+      {
+         "segment":"5fa55d3a-18e1-4f65-95ed-ac8fdb03b45b",
+         "flowRun":"4706780a-2ab3-4d33-8c76-7c87fd318cd8"
+      }
+   ],
+   "results":"/authoring/testing/destinationInstance/fd3449fb-b929-45c8-9f3d-06b9d6aac328/results?flowRunIds=4706780a-2ab3-4d33-8c76-7c87fd318cd8,81150d76-7909-46b6-83f4-fc855a92de07",
+   "inputProfiles":[
+      {
+         "segmentMembership":{
+            "ups":{
+               "fea8d394-5a8c-4cea-bebc-df020ce37f5c":{
+                  "lastQualificationTime":"2022-01-13T11:33:28.211895Z",
+                  "status":"realized"
+               },
+               "5fa55d3a-18e1-4f65-95ed-ac8fdb03b45b":{
+                  "lastQualificationTime":"2022-01-13T11:33:28.211893Z",
+                  "status":"realized"
+               }
+            }
+         },
+         "personalEmail":{
+            "address":"michaelsmith@example.com"
+         },
+         "identityMap":{
+            "crmid":[
+               {
+                  "id":"Custom CRM ID"
+               }
+            ]
+         },
+         "person":{
+            "name":{
+               "firstName":"Michael",
+               "lastName":"Smith"
+            }
+         }
+      }
+   ]
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `activations` | Returns the segment ID and flow run ID for each activated segment. The number of activation entries (and associated generated files) is equal to the number of segments mapped on the destination instance. <br><br> Example: If you mapped two segments to the destination instance, the `activations` array will contain two entries. Each activated segment will correspond to one exported file.|
+| `results`| Returns the destination instance ID and the flow run IDs that you can use to call the [results API](file-based-destination-results-api.md), to further test the integration.|
+| `inputProfiles` | Returns the custom sample profiles that you passed in the API request.|
 
 ## API error handling {#api-error-handling}
 
