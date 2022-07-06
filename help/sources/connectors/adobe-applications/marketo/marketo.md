@@ -14,6 +14,10 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 With the [!DNL Marketo] source connector, you can bring B2B data from [!DNL Marketo] to Platform and keep this data up to date using Platform-connected applications.
 
+>[!IMPORTANT]
+>
+>You must have access to [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for Marketo Engage to participate in [Real-time Customer Profile](../../../../profile/home.md).
+
 This document provides an overview of the [!DNL Marketo] source connector, including information about how to authenticate the connector, how to map [!DNL Marketo] fields to Experience Data Model (XDM), and the connector's data latency.
 
 ## Authenticate your [!DNL Marketo] connector
