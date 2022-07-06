@@ -31,7 +31,7 @@ Before continuing, please review the [getting started guide](getting-started.md)
 
 You can test your destination configuration by making a POST request to the `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` endpoint and providing the destination instance ID of the destination that you are testing.
 
-### API format
+**API format**
 
 ```http
 POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
@@ -41,7 +41,7 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | The destination instance ID of the destination that you are testing. |
 
-### Request
+**Request**
 
 The following request calls your destination's REST API endpoint. The request is configured by the `{DESTINATION_INSTANCE_ID}` query parameter.
 
@@ -55,7 +55,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-### Response
+**Response**
 
 A successful response returns HTTP status 200 along with the API response from your destination's REST API endpoint.
 

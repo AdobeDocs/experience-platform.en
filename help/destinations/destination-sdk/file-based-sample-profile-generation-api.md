@@ -1,59 +1,73 @@
 ---
-description: This page lists and describes all the API operations that you can perform using the `/authoring/sample-profiles` API endpoint, to generate sample profiles to use in file-based destination testing.
-title: Generate sample profiles with the testing API
+description: This page explains how to use the /sample-profiles API endpoint from Destination SDK to generate sample profiles based on a source schema. You can use these sample profiles to test your file-based destination configuration.
+title: Generate sample profiles based on a source schema
 ---
-# Generate sample profiles with the testing API {#sample-profile-api-operations}
 
->[!IMPORTANT]
->
->**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
+# Generate sample profiles based on a source schema {#sample-profile-api-operations}
 
-## Getting started with sample profile generation API operations {#get-started}
+## Overview {#overview}
+
+The first step in testing your file-based destination is to use the `/sample-profiles` endpoint to generate a sample profile based on your existing source schema.
+
+Sample profiles are meant to help you understand the JSON structure of a profile. Additionally, they give you a backbone to customize with your own profile data, for further testing.
+
+## Getting started {#getting-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
->[!IMPORTANT]
->
->Use this API endpoint to generate sample profiles to use when making calls to [test if your destination is configured correctly](file-based-destination-testing-api.md), by using *destination instance ID* as a query parameter.
+## Prerequisites {#prerequisites}
 
-## Generate sample profiles based on the source schema to use when testing your destination {#generate-sample-profiles-source-schema}
+Creating a sample profile requires an existing file-based destination created through the Destination SDK, along with an existing activation flow created in the Experience Platform UI.
 
-You can generate sample profiles based on the source schema by making a GET request to the `authoring/sample-profiles/` endpoint with the destination instance ID of the destination that you want to test. 
+The `/sample-profiles` endpoint creates the sample profiles based on the source schema that you defined in your activation flow.
 
-To get the ID of a destination instance, you must first create a connection in the Experience Platform UI to your destination before attempting to test your destination. Read the [activate destination tutorial](/help/destinations/ui/activation-overview.md) and see the tip below for how to get the destinations instance ID to use for this API.
+## Generate sample profiles for destination testing {#generate-sample-profiles}
+
+You can generate sample profiles based on your source schema by making a GET request to the `/sample-profiles` endpoint with the destination instance ID of the destination that you want to test.
+
+To get the ID of a destination instance, you must first create a connection to your destination in the Experience Platform UI.
+
+Read the [activate destination tutorial](/help/destinations/ui/activation-overview.md) and see the tip below for how to get the destinations instance ID to use for this API.
 
 >[!TIP]
 >
->* Get the destination instance ID that you should use here from the URL when browsing a connection with your destination.
->![UI image how to get destination instance ID](./assets/get-destination-instance-id.png)
+>Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
+>
+>![UI image showing how to get destination instance ID from the URL.](assets/get-destination-instance-id.png)
 
-### API format
+
+**API endpoint**
 
 ```http
-GET 'https://platform.adobe.io/data/core/activation/authoring/v1/sample-profiles?destinationInstanceId=d3ab41ee-fe25-476a-9fba-4baff6c0acb5''
+
+https://platform.adobe.io/data/core/activation/authoring/sample-profiles
+
+```
+
+**API format**
+
+```http
+GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count={NUMBER_OF_GENERATED_PROFILES}''
 ```
 
 | Query parameter | Description |
 | -------- | ----------- |
-| `destinationInstanceId` | The ID of the destination instance based on which you are generating sample profiles. |
-| `count` | *Optional*. The number of sample profiles that you are generating. The parameter can take values between `1 - 1000`. If this property is not defined, then Adobe will generate one sample profile. |
+| `destinationInstanceId` | The ID of the destination instance for which you are generating sample profiles. See [generate sample profiles](#generate-sample-profiles) for details on how to obtain this ID. |
+| `count` | *Optional*. The number of sample profiles that you want to generate. The parameter can take values between `1 - 1000`. If this property is not defined, then the API generate a single sample profile. |
 
 {style="table-layout:auto"}
 
+**Request**
 
-### Request
-
-The following request generates sample profiles, configured by the `destinationInstanceId` query parameter.
+The following request generates a sample profile based on the source schema defined in the destination instance with the corresponding `destinationInstanceId`.
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/v1/sample-profiles?destinationInstanceId=d3ab41ee-fe25-476a-9fba-4baff6c0acb5' 
---header 'Content-Type: application/json' 
---header 'Accept: application/json' 
---header 'x-api-key: {API_KEY}' 
---header 'Authorization: Bearer {TOKEN}' 
---header 'x-gw-ims-org-id: {IMS_ORG_ID}' 
---header 'x-sandbox-name: {SANDBOX_NAME}'
---header 'x-sandbox-id: {SANDBOX_ID}'
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' 
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 ### Response
@@ -65,41 +79,41 @@ A successful response returns HTTP status 200 with the specified number of sampl
 > The response returns only segment membership, identities, and profile attributes that are used in the destination instance. Even if your source schema has other fields, these are ignored.
 
 ```json
-
 [
-    {
-        "segmentMembership": {
-            "ups": {
-                "fea8d394-5a8c-4cea-bebc-df020ce37f5c": {
-                    "lastQualificationTime": "2022-01-13T11:33:28.211895Z",
-                    "status": "realized"
-                },
-                "5fa55d3a-18e1-4f65-95ed-ac8fdb03b45b": {
-                    "lastQualificationTime": "2022-01-13T11:33:28.211893Z",
-                    "status": "realized"
-                }
+   {
+      "segmentMembership":{
+         "ups":{
+            "fea8d394-5a8c-4cea-bebc-df020ce37f5c":{
+               "lastQualificationTime":"2022-01-13T11:33:28.211895Z",
+               "status":"realized"
+            },
+            "5fa55d3a-18e1-4f65-95ed-ac8fdb03b45b":{
+               "lastQualificationTime":"2022-01-13T11:33:28.211893Z",
+               "status":"realized"
             }
-        },
-        "personalEmail": {
-            "address": "john.smith@abc.com"
-        },
-        "identityMap": {
-            "crmid": [
-                {
-                    "id": "crmid-P1A7l"
-                }
-            ]
-        },
-        "person": {
-            "name": {
-                "firstName": "string",
-                "lastName": "string"
+         }
+      },
+      "personalEmail":{
+         "address":"john.smith@abc.com"
+      },
+      "identityMap":{
+         "crmid":[
+            {
+               "id":"crmid-P1A7l"
             }
-        }
-    }
+         ]
+      },
+      "person":{
+         "name":{
+            "firstName":"string",
+            "lastName":"string"
+         }
+      }
+   }
 ]
-
 ```
+
+![Image showing the mapping from the UI to the fields from the API response.](assets/sample-api-response-mapping.png)
 
 | Property | Description |
 | -------- | ----------- |
@@ -116,4 +130,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps
 
-After reading this document, you now know how to generate sample profiles to be used when [testing your file-based destination](file-based-destination-testing-api.md).
+After reading this document, you now know how to generate sample profiles to be used when testing your file-based destination. You can now use the generated sample profiles to further [test your file-based destination](file-based-destination-testing-api.md).
