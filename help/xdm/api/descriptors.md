@@ -383,7 +383,7 @@ Relationship descriptors describe a relationship between two different schemas, 
 
 #### Reference identity descriptor
 
-Reference identity descriptors provide a reference context to the primary identity of a schema field, allowing it to be referenced by fields in other schemas. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.
+Reference identity descriptors provide a reference context to the primary identity of a schema field, allowing it to be referenced by fields in other schemas. The destination schema must already have a primary identity field defined before it can be referred to by other schemas through this descriptor.
 
 ```json
 {
@@ -400,7 +400,7 @@ Reference identity descriptors provide a reference context to the primary identi
 | `@type` | The type of descriptor being defined. For a reference identity descriptor, this value must be set to `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | Path to the field in the source schema where the descriptor is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
+| `xdm:sourceProperty` | Path to the field in the source schema that will be used to refer to the destination schema. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | The identity namespace code for the source property. |
 
 {style="table-layout:auto"}
