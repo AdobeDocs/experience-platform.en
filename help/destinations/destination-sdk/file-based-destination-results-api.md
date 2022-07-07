@@ -1,8 +1,9 @@
 ---
 description: This page explains how to use the /testing/destinationInstance API endpoint to view the complete details of your testing results. This API endpoint returns the same result as you would obtain when using the Flow Service API to monitor dataflows.
-title: Test file-based destination results with the testing API
+title: View detailed activation results
 ---
-# View file-based destinations testing results {#view-test-results}
+
+# View detailed activation results {#view-test-results}
 
 ## Overview {#overview}
 

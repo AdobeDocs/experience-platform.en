@@ -185,8 +185,8 @@ feature: Destinations
             * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
         * File-based destination testing API {#file-based-destination-testing-api}
             * [Generate sample profiles based on a source schema](./destination-sdk/file-based-sample-profile-generation-api.md)
-            * [Test file-based destination configuration with the testing API](./destination-sdk/file-based-destination-testing-api.md)
-            * [Test file-based destination results with the testing API](./destination-sdk/file-based-destination-results-api.md)
+            * [Test your file-based destination with sample profiles](./destination-sdk/file-based-destination-testing-api.md)
+            * [View detailed activation results](./destination-sdk/file-based-destination-results-api.md)
             * [Render file-based destination template with the testing API](./destination-sdk/file-based-render-template-api.md)
     * Guides {#guides}
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)

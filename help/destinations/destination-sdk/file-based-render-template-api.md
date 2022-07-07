@@ -1,20 +1,26 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render/destination/` API endpoint, to render exported data for your destination, based on your destination configuration.
-title: Render template API operations
+title: Render customer fields configuration
 ---
-# Render file-based destination template with the testing API {#render-template-api-operations}
+
+# Render templatized customer fields configuration {#render-template-api-operations}
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
->**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render/destination'`
+The `/authoring/testing/template/render` endpoint helps you visualize how the templatized [customer data fields](file-based-destination-configuration.md#customer-data-fields) defined in your destination configuration woudld look like in the Experience Platform UI.
 
-This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render/destination` API endpoint, to render exported profiles that match your destination's expected format, based on your destination configuration.
+## Getting started {#getting-started}
 
-## Getting started with render template API operations {#get-started}
+Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
-Before continuing, please review the [getting started guide](getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+## Prerequisites {#prerequisites}
+
+Before you can use the `/template/render` endpoint, make sure you meet the following conditions:
+
+* You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../ui/destinations-workspace.md).
+* To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
+
+   ![UI image showing how to get destination instance ID from the URL.](assets/get-destination-instance-id.png)
 
 ## Render destination properties based on configured customer properties {#render-exported-data}
 

@@ -1,9 +1,9 @@
 ---
 description: This page explains how to use the /testing/destinationInstance API endpoint to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination.
-title: Test your file-based destination with or without sample profiles
+title: Test your file-based destination with sample profiles
 ---
 
-# Test your file-based destination with or without sample profiles {#test-destination-configuration-api}
+# Test your file-based destination with sample profiles {#test-destination-configuration-api}
 
 ## Overview {#overview}
 
@@ -12,8 +12,6 @@ This page explains how to use the `/testing/destinationInstance` API endpoint to
 You can make requests to the testing endpoint with or without adding [sample profiles](file-based-sample-profile-generation-api.md) to the call. If you don't send any profiles on the request, the API generates a sample profile automatically and adds it to the request.
 
 The auto-generated sample profiles contain generic data. If you want to test your destination with custom, more intuitive profile data, use the [sample profile generation API](file-based-sample-profile-generation-api.md) to generate a sample profile, then customize its response and include it in the request to the `/testing/destinationInstance` endpoint.
-
-
 
 ## Getting started {#getting-started}
 
