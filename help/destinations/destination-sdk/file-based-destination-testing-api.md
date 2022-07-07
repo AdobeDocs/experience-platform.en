@@ -13,6 +13,8 @@ You can make requests to the testing endpoint with or without adding [sample pro
 
 The auto-generated sample profiles contain generic data. If you want to test your destination with custom, more intuitive profile data, use the [sample profile generation API](file-based-sample-profile-generation-api.md) to generate a sample profile, then customize its response and include it in the request to the `/testing/destinationInstance` endpoint.
 
+
+
 ## Getting started {#getting-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
@@ -30,16 +32,10 @@ Before you can use the `/testing/destinationInstance` endpoint, make sure you me
 
 ## Test your destination configuration without adding profiles to the call {#test-without-adding-profiles}
 
-**API endpoint**
-
-```http
-https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/
-```
-
 **API format**
 
 ```http
-POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
+POST /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 ```
 
 **Request**
@@ -53,7 +49,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-| Query parameter | Description |
+| Path parameters | Description |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
 
@@ -121,16 +117,10 @@ A successful response returns HTTP status 200 along with the response payload.
 
 To test your destination with custom, more intuitive profile data, you can customize the response obtained from the [/sample-profiles](file-based-sample-profile-generation-api.md) endpoint with values of your choice, and include the custom profile in the request to the `/testing/destinationInstance` endpoint.
 
-**API endpoint**
-
-```http
-https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/
-```
-
 **API format**
 
 ```http
-POST  https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
+POST  /testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 ```
 
 **Request**

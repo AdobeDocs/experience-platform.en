@@ -37,24 +37,19 @@ Once you have [validated your destination configuration](file-based-destination-
 
 You can find the complete API URL that you need to use, in the `results` property returned in the [response of the destination testing call](file-based-destination-testing-api.md).
 
-**API endpoint**
-
-```http
-https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/
-```
-
 **API format**
 
 ```http
-GET authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flowRunIds={FLOWRUN_ID},{FLOWRUN_ID}'
+GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flowRunIds=id1,id2
 ```
 
-| Query parameter | Description |
+| Path parameters | Description |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
-| `{FLOWRUN_ID}`| The flow run IDs corresponding to the activated segments. You can find the flow run IDs in the `results` property returned in the [response of the destination testing call](file-based-destination-testing-api.md).|
 
-{style="table-layout:auto"}
+| Query string parameters | Description |
+| -------- | ----------- |
+| `flowRunIds` | The flow run IDs corresponding to the activated segments. You can find the flow run IDs in the `results` property returned in the [response of the destination testing call](file-based-destination-testing-api.md).|
 
 **Request**
 
@@ -67,7 +62,9 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-### Response
+**Response**
+
+The response contains the complete details of the activation flow. You can obtain the same response by calling the [Flow Service API](../api/update-destination-dataflows.md) to monitor dataflows.
 
 ```json
 {
