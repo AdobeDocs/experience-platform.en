@@ -68,7 +68,7 @@ The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows
 
 ![Hide inherited labels](../images/labels/inherited-labels.png)
 
-## Manage labels at the field level
+## Manage labels at the dataset field level
 
 Continuing the workflow for [adding and editing data usage labels at the dataset level](#add-labels), you can also manage field-level labels within the **[!UICONTROL Data Governance]** workspace for that dataset. 
 
@@ -93,6 +93,12 @@ You can repeat these steps to continue adding and editing field-level labels for
 ![Select multiple fields to apply field-level labels simultaneously.](../images/labels/multiple-fields.png)
 
 It is important to remember that inheritance moves from the top-level down only (dataset → fields), meaning that labels applied at the field level are not propagated to other fields or datasets.
+
+## Manage labels at the schema level
+
+You can add labels directly to a schema or fields within that schema. Any fields applied at the schema level will propagate to all datasets based on that schema.
+
+See the tutorial on [managing schema-level labels](../../xdm/tutorials/labels.md) for more information.
 
 ## Manage custom labels
 

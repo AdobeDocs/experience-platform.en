@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;relationship;Relationship;relationship descriptor;Relationship descriptor;reference identity;Reference identity;
-solution: Experience Platform
 title: Define a Relationship Between Two Schemas Using the Schema Registry API
 description: This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the Schema Registry API.
 topic-legacy: tutorial
@@ -51,7 +50,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
@@ -104,13 +103,13 @@ Record the `$id` values of the two schemas you want to define a relationship bet
 
 ## Define a reference field for the source schema
 
-Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a schema field group with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
+Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a schema field group with the new field and add it to the schema. This new field must have a `type` value of `string`.
 
 >[!IMPORTANT]
 >
->Unlike the destination schema, the source schema cannot use its primary identity as a reference field.
+>The source schema cannot use its primary identity as a reference field.
 
-In this tutorial, the destination schema "[!DNL Hotels]" contains an `hotelId` field that serves as the schema's primary identity, and therefore will also act as its reference field. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated field to be used as a reference, and must be given a new field group that adds a new field to the schema: `favoriteHotel`.
+In this tutorial, the destination schema "[!DNL Hotels]" contains an `hotelId` field that serves as the schema's primary identity. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated field to be used as a reference to `hotelId`, and therefore a custom field group needs to be created in order to add a new field to the schema: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -135,7 +134,7 @@ curl -X POST\
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -254,7 +253,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
     { 
@@ -313,7 +312,7 @@ A successful response returns the details of the updated schema, which now inclu
     "meta:abstract": false,
     "meta:extensible": false,
     "meta:tenantNamespace": "_{TENANT_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:extends": [
         "https://ns.adobe.com/xdm/context/profile",
         "https://ns.adobe.com/xdm/data/record",
@@ -338,9 +337,9 @@ A successful response returns the details of the updated schema, which now inclu
 
 ## Create a reference identity descriptor {#reference-identity}
 
-Schema fields must have a reference identity descriptor applied to them if they are being used as a reference from other schemas in a relationship. Since the `favoriteHotel` field in "[!DNL Loyalty Members]" will refer to the `hotelId` field in "[!DNL Hotels]", `hotelId` must be given a reference identity descriptor.
+Schema fields must have a reference identity descriptor applied to them if they are being used as a reference to another schema in a relationship. Since the `favoriteHotel` field in "[!DNL Loyalty Members]" will refer to the `hotelId` field in "[!DNL Hotels]", `favoriteHotel` must be given a reference identity descriptor.
 
-Create a reference descriptor for the destination schema by making a POST request to the `/tenant/descriptors` endpoint.
+Create a reference descriptor for the source schema by making a POST request to the `/tenant/descriptors` endpoint.
 
 **API format**
 
@@ -350,45 +349,45 @@ POST /tenant/descriptors
 
 **Request**
 
-The following request creates a reference descriptor for the `hotelId` field in the destination schema "[!DNL Hotels]".
+The following request creates a reference descriptor for the `favoriteHotel` field in the source schema "[!DNL Loyalty Members]".
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `@type` | The type of descriptor being defined. For reference descriptors the value must be "xdm:descriptorReferenceIdentity". |
-| `xdm:sourceSchema` | The `$id` URL of the destination schema. |
-| `xdm:sourceVersion` | The version number of the destination schema. |
-| `sourceProperty` | The path to the destination schema's primary identity field. |
-| `xdm:identityNamespace` | The identity namespace of the reference field. This must be the same namespace used when defining the field as the schema's primary identity. See the [identity namespace overview](../../identity-service/home.md) for more information. |
+| `@type` | The type of descriptor being defined. For reference descriptors the value must be `xdm:descriptorReferenceIdentity`. |
+| `xdm:sourceSchema` | The `$id` URL of the source schema. |
+| `xdm:sourceVersion` | The version number of the source schema. |
+| `sourceProperty` | The path to the field in the source schema that will be used to refer to the destination schema's primary identity. |
+| `xdm:identityNamespace` | The identity namespace of the reference field. This must be the same namespace as the destination schema's primary identity. See the [identity namespace overview](../../identity-service/home.md) for more information. |
 
 {style="table-layout:auto"}
 
 **Response**
 
-A successful response returns the details of the newly created reference descriptor for the destination schema.
+A successful response returns the details of the newly created reference descriptor for the source field.
 
 ```json
 {
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
@@ -397,7 +396,7 @@ A successful response returns the details of the newly created reference descrip
 
 ## Create a relationship descriptor {#create-descriptor}
 
-Relationship descriptors establish a one-to-one relationship between a source schema and a destination schema. Once you have defined a reference descriptor for the destination schema, you can create a new relationship descriptor by making a POST request to the `/tenant/descriptors` endpoint.
+Relationship descriptors establish a one-to-one relationship between a source schema and a destination schema. Once you have defined a reference identity descriptor for the appropriate field in the source schema, you can create a new relationship descriptor by making a POST request to the `/tenant/descriptors` endpoint.
 
 **API format**
 
@@ -407,14 +406,14 @@ POST /tenant/descriptors
 
 **Request**
 
-The following request creates a new relationship descriptor, with "[!DNL Loyalty Members]" as the source schema and "[!DNL Legacy Loyalty Members]" as the destination schema.
+The following request creates a new relationship descriptor, with "[!DNL Loyalty Members]" as the source schema and "[!DNL Hotels]" as the destination schema.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -430,13 +429,13 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- |
-| `@type` | The type of descriptor to be created. The `@type` value for relationship descriptors is "xdm:descriptorOneToOne". |
+| `@type` | The type of descriptor to be created. The `@type` value for relationship descriptors is `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | The `$id` URL of the source schema. |
 | `xdm:sourceVersion` | The version number of the source schema. |
 | `xdm:sourceProperty` | The path to the reference field in the source schema. |
 | `xdm:destinationSchema` | The `$id` URL of the destination schema. |
 | `xdm:destinationVersion` | The version number of the destination schema. |
-| `xdm:destinationProperty` | The path to the reference field in the destination schema. |
+| `xdm:destinationProperty` | The path to the primary identity field in the destination schema. |
 
 {style="table-layout:auto"}
 

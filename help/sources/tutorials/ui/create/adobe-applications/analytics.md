@@ -40,11 +40,17 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 ### Select data
 
-The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTROL Report Suite]** to start creating a source connection for Analytics Report Suite data, and then select the Report Suite you would like to ingest. Report Suites that are not selectable have already been ingested, either in this sandbox or in a different sandbox. Select **[!UICONTROL Next]** to proceed.
+The **[!UICONTROL Analytics source add data]** step provides you with a list of [!DNL Analytics] report suite data to create a source connection with. 
+
+A report suite can be ingested using only a single active dataflow. It cannot be used in multiple dataflows. Furthermore, a report suite must belong to the same region as the Platform sandbox instance in which the source connection is being created in. A report suite that is not selectable has already been ingested, either in this sandbox or in a different sandbox.
+
+Multiple in-bound connections can be made to bring multiple report suites into the same sandbox. If the report suites have differing schemas for variables (such as eVars or events), they should be mapped to specific fields in the custom field groups and avoid data conflicts using [Data Prep](../../../../../data-prep/ui/mapping.md). Report suites can only be added to a single sandbox.
 
 >[!NOTE]
 >
->Multiple in-bound connections can be made to bring in multiple Report Suites, however only one Report Suite may be used with Real-time Customer Data Platform at a time.
+>Data from multiple report suites can be enabled for Real-time Customer Data Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning, cannot be mapped to the same attribute in the XDM.
+
+To create an [!DNL Analytics] source connection, select a report suite and then select **[!UICONTROL Next]** to proceed.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -54,7 +60,7 @@ The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTRO
 
 >[!IMPORTANT]
 >
->Data Prep support for the [!DNL Analytics] source is currently in beta. The feature and documentation are subject to change.
+>Data Prep transformations may add latency to the overall dataflow. The additional latency added varies based on the complexity of the transformation logic. 
 
 Before you can map your [!DNL Analytics] data to target XDM schema, you must first select whether you are using a default schema or a custom schema.
 

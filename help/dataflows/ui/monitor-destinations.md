@@ -135,6 +135,7 @@ For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data 
 Each individual dataflow run shows the following details:
 
 - **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
+- **[!UICONTROL Segment]**: The name of the segment associated with each dataflow run.
 - **[!UICONTROL Processing time]**: The amount of time it took for the dataflow run to be processed.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination as part of the dataflow run. This metric includes identities that are created, updated, and removed from exported segments.
@@ -159,29 +160,6 @@ The details page also displays a list of identities that failed and identities t
 
 ![Dataflow records for batch destinations](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Monitoring Segment Jobs dashboard {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Segment Jobs"
->abstract="The segment jobs view contains information on the evaluation and export jobs for all your segments."
-
-To access the [!UICONTROL Segment Jobs] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Segment Jobs]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the segment evaluation and export jobs.
-
-![Segment jobs monitoring dashboard](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-Use the [!UICONTROL Segment Jobs] dashboard to understand if profile evaluation and export happens on time and without any exceptions, so the downstream services for destination activation can have the latest evaluated profile data.
-
-The following metrics are available for segment jobs:
-
-| Metric | Description |
----------|----------|
-| **[!UICONTROL Segment job]** | Indicates the name of the segment job. |
-| **[!UICONTROL Type]** | Indicates the type of segment job - export or evaluation. Note that in both cases, the segment job evaluates or exports *all* segments belonging to an organization. |
-| **[!UICONTROL Job start]** | The date and time when the segment job started. |
-| **[!UICONTROL Job end]** | The date and time when the segment job completed. |
-| **[!UICONTROL Status]** | The status of the completed job - success or failed. |
-
 ## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
 
 >[!CONTEXTUALHELP]
@@ -193,7 +171,8 @@ To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring
 
 >[!NOTE]
 >
->Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>- Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>- For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, identities excluded are currently not displayed.
 
 Use the [!UICONTROL Destinations] dashboard to get an overall idea of the health of your activation flows. Start by getting insights on an aggregated level for all batch and streaming destinations and then drill down into detailed views for dataflows, dataflow runs, and activated segments for an in-depth look at your activation data. The screens in the [!UICONTROL Monitoring] dashboard provide actionable insights through metrics and error descriptions to help you troubleshoot any problems that might arise in your activation scenarios.
 

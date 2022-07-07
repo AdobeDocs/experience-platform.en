@@ -19,7 +19,7 @@ Before starting this tutorial, you must have the following prerequisites:
 -   Authorization to make [!DNL Experience Platform] API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](https://www.adobe.com/go/platform-api-authentication-en) tutorial to obtain the following values in order to successful complete this tutorial:
     -   Authorization: `{ACCESS_TOKEN}`
     -   x-api-key: `{API_KEY}`
-    -   x-gw-ims-org-id: `{IMS_ORG}`
+    -   x-gw-ims-org-id: `{ORG_ID}`
     -   Client secret: `{CLIENT_SECRET}`
     -   Client certificate: `{PRIVATE_KEY}`
 -   Sample data and source files for the [Retail Sales Recipe](../pre-built-recipes/retail-sales.md). Download the assets required for this and other [!DNL Data Science Workspace] tutorials from the [Adobe public Git repository](https://github.com/adobe/experience-platform-dsw-reference/).
@@ -44,7 +44,7 @@ The Retail Sales schema and datasets are created automatically by using the prov
     ```yaml
     Enterprise:
         api_key: {API_KEY}
-        org_id: {IMS_ORG}
+        org_id: {ORG_ID}
         tech_acct: {technical_account_id}
         client_secret: {CLIENT_SECRET}
         priv_key_filename: {PRIVATE_KEY}

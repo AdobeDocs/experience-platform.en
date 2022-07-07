@@ -2,12 +2,14 @@
 keywords: activate profile destinations;activate destinations;activate data; activate email marketing destinations; activate cloud storage destinations
 title: Activate audience data to streaming profile export destinations
 type: Tutorial
-seo-title: Activate audience data to streaming profile export destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 ---
 # Activate audience data to streaming profile export destinations
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Overview {#overview}
 

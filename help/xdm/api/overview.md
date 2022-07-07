@@ -52,11 +52,23 @@ While Platform allows you to compose schemas for particular use cases, it also a
 
 To learn how to view unions in the Schema Registry API, see the [unions endpoint guide](./unions.md).
 
-## Export/Import
+## CSV to schema conversion {#csv-to-schema}
+
+You can automatically generate an XDM schema using a CSV file as a template, allowing you to create templates to bulk-import schema fields and cut down on manual API or UI work.
+
+See the [CSV to schema conversion endpoint guide](./export.md) for more information.
+
+## Export {#export}
 
 The Schema Registry API allows you to transfer and share XDM resources between sandboxes and IMS Organizations. For any schema, field group, or data type, you can generate an export payload containing the structure of the resource and any dependent resources. This payload can then be used to import the resource into a destination sandbox and IMS Org.
 
-See the [export/import endpoints guide](./export-import.md) for more information on how to use these endpoints.
+See the [export endpoint guide](./export.md) for more information on how to create an export payload for an existing XDM resource.
+
+## Import
+
+If you use the [export](#export) or [CSV to schema conversion](./import.md) endpoints to create an export payload, you can send that payload to a target organization and sandbox to import the specified resources.
+
+See the [import endpoint guide](./export.md) for more information on how to generate XDM resources from export payloads.
 
 ## Sample data
 

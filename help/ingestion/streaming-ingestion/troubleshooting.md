@@ -81,7 +81,7 @@ The following JSON is an example response object for an API request with two mes
             "statusCode": 400,
             "message": "inletId: [9b0cb233972f3b0092992284c7353f5eead496218e8441a
                 79b25e9421ea127f5] 
-                imsOrgId: [{IMS_ORG}] 
+                imsOrgId: [{ORG_ID}] 
                 Message has unknown xdm format"
         }
     ]
