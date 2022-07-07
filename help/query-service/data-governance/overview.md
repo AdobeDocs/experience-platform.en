@@ -175,19 +175,19 @@ Once a schema is marked with a data usage label this impacts all datasets that d
 
 ## [!DNL Privacy Service] {#privacy-service}
 
-[[!DNL Privacy Service]](../../privacy-service/home.md) helps you manage customer requests to access and delete their data in accordance with legal privacy regulations. It does this by searching the data for pre-existing identifiers, and either accesses or deletes that data depending on the privacy job requested. Data must be properly labeled in order for the service to determine which fields to access or delete during privacy jobs. Data that is subject to privacy requests must have customer identity information in order to tie the disparate pieces of data with the individual person to whom the privacy request applies to. Query Service can enrich the data it uses with a unique identifier for the purpose of satisfying privacy jobs. 
+[[!DNL Privacy Service]](../../privacy-service/home.md) helps you manage customer requests to access and delete their data in accordance with legal privacy regulations. It does this by searching the data for pre-existing identifiers, and either accesses or deletes that data depending on the privacy job requested. Data must be properly labeled in order for the service to determine which fields to access or delete during privacy jobs. Data that is subject to privacy requests must contain customer identity information in order to tie the disparate pieces of data with the individual person to whom the privacy request applies to. Query Service can enrich the data it uses with a unique identifier for the purpose of satisfying privacy jobs. 
 
 See the Privacy Service documentation for more information on [identity data for privacy requests](../../privacy-service/identity-data.md) and how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 
 Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets. You **must** add identities into the dataset to facilitate data privacy requests and work towards data compliance. 
 
-Schema data fields can be set as an identity field through the Platform UI and Query Service also allows you to [mark the primary identities by using the SQL command ‘ALTER TABLE’](). See the documentation on how to [define identity fields in the UI](../../xdm/ui/fields/identity.md). 
+Schema data fields can be set as an identity field through the Platform UI and Query Service also allows you to [mark the primary identities by using the SQL command ‘ALTER TABLE’](../sql/syntax.md#alter-table). See the documentation on how to [define identity fields in the UI](../../xdm/ui/fields/identity.md). 
   
 Instructions on how to use the command to [mark the desired dataset column as a primary identity](../sql/syntax.md#alter-table) can be found in the SQL syntax guide.
 
 <!-- 
 Questions for Sameeksha
-Q) why is it neecessary to sepearte this section into Derived Datasets with Standard Schemas and ad hoc schemas? Why these two 'key' categorizations necessary?
+Q) why is it necessary to separate this section into Derived Datasets with Standard Schemas and ad hoc schemas? Why these two 'key' categorizations necessary?
 
 Q) there are two places where privacy requests can be sent: the data lake or the profile store. If records are deleted from the data lake are they deleted form the Profile store?
 
