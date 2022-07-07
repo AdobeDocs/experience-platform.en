@@ -33,15 +33,13 @@ You can generate sample profiles based on your source schema by making a GET req
 **API endpoint**
 
 ```http
-
 https://platform.adobe.io/data/core/activation/authoring/sample-profiles
-
 ```
 
 **API format**
 
 ```http
-GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count={NUMBER_OF_GENERATED_PROFILES}''
+GET https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count={NUMBER_OF_GENERATED_PROFILES}'
 ```
 
 | Query parameter | Description |

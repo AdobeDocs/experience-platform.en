@@ -54,6 +54,8 @@ GET authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flow
 | `{DESTINATION_INSTANCE_ID}` | The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
 | `{FLOWRUN_ID}`| The flow run IDs corresponding to the activated segments. You can find the flow run IDs in the `results` property returned in the [response of the destination testing call](file-based-destination-testing-api.md).|
 
+{style="table-layout:auto"}
+
 **Request**
 
 ```shell
