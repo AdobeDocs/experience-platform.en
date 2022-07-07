@@ -33,7 +33,7 @@ Before you can use the `/testing/destinationInstance` endpoint, make sure you me
 
 ## View detailed destination testing results {#test-activation-results}
 
-Once you have [validated your destination configuration](destination-sdk/file-based-destination-testing-api.md), you can view detailed activation results by making a GET request to the `authoring/testing/destinationInstance/` endpoint and providing the destination instance ID of the destination that you are testing, and the flow run IDs of the activated segments.
+Once you have [validated your destination configuration](file-based-destination-testing-api.md), you can view detailed activation results by making a GET request to the `authoring/testing/destinationInstance/` endpoint and providing the destination instance ID of the destination that you are testing, and the flow run IDs of the activated segments.
 
 You can find the complete API URL that you need to use, in the `results` property returned in the [response of the destination testing call](file-based-destination-testing-api.md).
 
