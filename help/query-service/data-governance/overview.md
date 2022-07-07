@@ -151,11 +151,11 @@ The following table indicates the query categories captured by audit logs and th
 | Query Template | Create, Delete, Update  |
 | Scheduled Query | Create, Delete, Update |
 
-The [!UICONTROL Audits] workspace contains **extended server logs**. These provide more details than those held within the query logs. Below is a list of three extended logs that are only found within the query categories for audit logs:
+The [!UICONTROL Audits] workspace contains extended server logs. These provide more details than those held within the query logs. Below is a list of three extended logs that are only found within the query categories for audit logs:
 
 1. **Meta query logs**: When a query is executed, various associated backend sub-queries (such as parsing) are executed. These types of queries are known as "Metadata" queries. Their relevant details can be found in audit logs.
 1. **Session logs**: The system creates a session entry log for a user when they log into Query Service regardless of whether they execute a query.
-1. **Third-part client connection logs**: A connectivity audit log is generated when a user successfully connects Query Service to a third-party client.
+1. **Third-party client connection logs**: A connectivity audit log is generated when a user successfully connects Query Service to a third-party client.
 
 See the [Audit logs overview](../../landing/governance-privacy-security/audit-logs/overview.md) for more information on how audit logs can help your organization approach data compliance. 
 
@@ -171,9 +171,7 @@ It is best practice to work towards data compliance at every stage of the data's
 
 As ad hoc schemas are created by an individual user for a specific purpose, the XDM schema fields are namespaced for that particular dataset and not intended for use across different datasets. As a result, ad hoc schemas are not visible by default in the Experience Platform UI. Although there is **no** difference in the application of data usage labels between both standard and ad hoc schemas, the process for labeling ad hoc schemas through the UI requires that they first be made available to view in a read-only mode. See the guide on [discovering ad hoc schemas within the Platform UI](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas-in-the-schema-inventory-of-the-platform-ui) for more details. 
  
-Once a schema is marked with a data usage label this impacts all datasets that derive from that schema. If this data is activated to a destination, this downstream data is only activated in destinations where it has appropriate labels.
-
-See the guide on [adding data labels to XDM schemas](../../xdm/tutorials/labels.md) for more information.
+Once a schema is marked with a data usage label this impacts all datasets that derive from that schema. If this data is activated to a destination, this downstream data is only activated in destinations where it has appropriate labels. See the guide on [adding data labels to XDM schemas](../../xdm/tutorials/labels.md) for more information.
 
 ## [!DNL Privacy Service] {#privacy-service}
 
@@ -181,9 +179,7 @@ See the guide on [adding data labels to XDM schemas](../../xdm/tutorials/labels.
 
 See the Privacy Service documentation for more information on [identity data for privacy requests](../../privacy-service/identity-data.md) and how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 
-Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets.  
-
-You **must** add identities into the dataset to facilitate data privacy requests and work towards data compliance. 
+Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets. You **must** add identities into the dataset to facilitate data privacy requests and work towards data compliance. 
 
 Schema data fields can be set as an identity field through the Platform UI and Query Service also allows you to [mark the primary identities by using the SQL command ‘ALTER TABLE’](). See the documentation on how to [define identity fields in the UI](../../xdm/ui/fields/identity.md). 
   
