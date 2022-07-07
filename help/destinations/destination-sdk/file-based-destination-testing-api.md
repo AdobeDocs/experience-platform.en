@@ -45,7 +45,7 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 **Request**
 
 ```shell
-curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}' 
+curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -55,7 +55,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Query parameter | Description |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | The destination instance ID of the destination that you are testing.  The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
+| `{DESTINATION_INSTANCE_ID}` | The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
 
 **Response**
 
@@ -249,4 +249,8 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps
 
-After reading this document, you now know how to test your file-based destination configuration. You can now [submit your destination configuration](../destination-sdk/submit-destination.md) to Adobe for review.
+After reading this document, you now know how to test your file-based destination configuration.
+
+If you have received a valid API response, your destination is working correctly. If you want to see more detailed information about your activation flow, you can use the `results` property from the response to [view detailed activation results](file-based-destination-results-api.md).
+
+If you are building a public destination, you can now [submit your destination configuration](../destination-sdk/submit-destination.md) to Adobe for review.

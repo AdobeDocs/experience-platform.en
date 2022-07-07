@@ -1,33 +1,49 @@
 ---
-description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination.
+description: This page explains how to use the /testing/destinationInstance API endpoint to view the complete details of your testing results. This API endpoint returns the same result as you would obtain when using the Flow Service API to monitor dataflows.
 title: Test file-based destination results with the testing API
 ---
-# Test file-based destination results with the testing API {#test-destination-configuration-api}
+# View file-based destinations testing results {#view-test-results}
 
 ## Overview {#overview}
 
->[!IMPORTANT]
+This page explains how to use the `/testing/destinationInstance` API endpoint to view the complete details of your file-based destination testing results.
+
+If you have already [tested your destination](file-based-destination-testing-api.md) and received a valid API response, your destination is working correctly.
+
+If you want to see more detailed information about your activation flow, you can use the `results` property from the [destination testing](file-based-destination-testing-api.md) endpoint response, as described further below. 
+
+>[!NOTE]
 >
->**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
+>This API endpoint returns the same result as you would obtain when using the [Flow Service API](../api/update-destination-dataflows.md) to monitor dataflows.
 
-This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination. For a description of the functionality supported by this endpoint, read [Test your destination configuration](./test-destination.md).
+## Getting started {#getting-started}
 
-## How to get the destination instance ID {#get-destination-instance-id}
+Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
->[!IMPORTANT]
->
->In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](../ui/connect-destination.md) and [activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) for more information. After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint from the URL when [browsing a connection with your destination](../ui/destination-details-page.md).
->![UI image that highlights how to get the destination instance ID from the browser URL.](./assets/get-destination-instance-id.png)
+## Prerequisites {#prerequisites}
 
-## Getting started with destination testing API operations {#get-started}
+Before you can use the `/testing/destinationInstance` endpoint, make sure you meet the following conditions:
 
-Before continuing, please review the [getting started guide](getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
+* You have an existing file-based destination created through the Destination SDK and you can see it in your [destinations catalog](../ui/destinations-workspace.md).
+* You have created at least one activation flow for your destination in the Experience Platform UI.
+* To successfully make the API request, you need the destination instance ID corresponding to the destination instance that you will be testing. Get the destination instance ID that you should use in the API call, from the URL, when browsing a connection with your destination in the Platform UI.
 
-## Test activation results {#test-activation-results}
+   ![UI image showing how to get destination instance ID from the URL.](assets/get-destination-instance-id.png)
+* You have previously [tested your destination configuration](file-based-destination-testing-api.md), and received a valid API response, which includes a `results` property. You will use this `results` value to further test your destination.
 
-You can test your activation results by making a GET request to the `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` endpoint and providing the destination instance ID of the destination that you are testing, and the flow run IDs of the activated segments.
+## View detailed destination testing results {#test-activation-results}
 
-### API format
+Once you have [validated your destination configuration](destination-sdk/file-based-destination-testing-api.md), you can view detailed activation results by making a GET request to the `authoring/testing/destinationInstance/` endpoint and providing the destination instance ID of the destination that you are testing, and the flow run IDs of the activated segments.
+
+You can find the complete API URL that you need to use, in the `results` property returned in the [response of the destination testing call](file-based-destination-testing-api.md).
+
+**API endpoint**
+
+```http
+https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/
+```
+
+**API format**
 
 ```http
 GET authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flowRunIds={FLOWRUN_ID},{FLOWRUN_ID}'
@@ -35,21 +51,18 @@ GET authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flow
 
 | Query parameter | Description |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | The destination instance ID of the destination that you are testing.| 
-| `{FLOWRUN_ID}`| The flow run IDs of the activated segments. See the [Flow Service API documentation](../../dataflows/api/monitor.md#monitor-flow-runs) to learn how to obtain the flow run ID.|
+| `{DESTINATION_INSTANCE_ID}` | The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
+| `{FLOWRUN_ID}`| The flow run IDs corresponding to the activated segments. You can find the flow run IDs in the `results` property returned in the [response of the destination testing call](file-based-destination-testing-api.md).|
 
-### Request
-
-The following request calls your destination's REST API endpoint. The request is configured by the `{DESTINATION_INSTANCE_ID}` query parameter.
+**Request**
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/fd3449fb-b929-45c8-9f3d-06b9d6aac328/results?flowRunIds=30d34875-e7ba-4520-ab6e-5705e01dfb16,86c00ad7-443c-459a-855d-0e8cbee43c4f,12305c58-42a9-4230-8fad-1661ee49cb70' 
---header 'Content-Type: application/json' 
---header 'Accept: application/json'
---header 'x-api-key: {API_KEY}'
---header 'Authorization: Bearer {ACCESS_TOKEN}'
---header 'x-gw-ims-org-id: {IMS_ORG}'
---header 'x-sandbox-name: {SANDBOX_NAME}'
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/fd3449fb-b929-45c8-9f3d-06b9d6aac328/results?flowRunIds=30d34875-e7ba-4520-ab6e-5705e01dfb16,86c00ad7-443c-459a-855d-0e8cbee43c4f,12305c58-42a9-4230-8fad-1661ee49cb70' \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 ### Response
@@ -198,4 +211,6 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps
 
-After reading this document, you now know how to test your file-based destination configuration. You can now [submit your destination configuration](../destination-sdk/submit-destination.md) to Adobe for review.
+After reading this document, you now know how to test your file-based destination configuration and see the full details of your activation results.
+
+If you are building a public destination, you can now [submit your destination configuration](../destination-sdk/submit-destination.md) to Adobe for review.
