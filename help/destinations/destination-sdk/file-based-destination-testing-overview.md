@@ -25,7 +25,7 @@ Sample profiles are meant to help you understand the JSON structure of a profile
 
 See the [dedicated documentation](file-based-sample-profile-generation-api.md) to learn how to generate sample profiles.
 
-## Destination configuration testing endpoint {#sample-generation-endpoint}
+## Destination configuration testing endpoint {#destination-configuration-testing-endpoint}
 
 This endpoint helps you test if your file-based destination is configured correctly and verify the integrity of data flows to your configured destination.
 
