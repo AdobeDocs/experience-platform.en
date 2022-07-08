@@ -1,13 +1,15 @@
 ---
-description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render/destination/` API endpoint, to render exported data for your destination, based on your destination configuration.
-title: Render customer fields configuration
+description: This page explains how to use the /authoring/testing/template/render endpoint to visualize how the templatized customer data fields defined in your destination configuration would look like.
+title: Validate templatized customer fields
 ---
 
-# Render templatized customer fields configuration {#render-template-api-operations}
+# Validate templatized customer fields
 
 ## Overview {#overview}
 
-The `/authoring/testing/template/render` endpoint helps you visualize how the templatized [customer data fields](file-based-destination-configuration.md#customer-data-fields) defined in your destination configuration woudld look like in the Experience Platform UI.
+The `/authoring/testing/template/render` endpoint helps you visualize how the templatized [customer data fields](file-based-destination-configuration.md#customer-data-fields) defined in your destination configuration would look like.
+
+The endpoint generates random values for your customer data fields, and returns them in the response. This helps you validate the semantic structure of customer data fields, such as bucket names or folder paths.
 
 ## Getting started {#getting-started}
 
@@ -22,51 +24,67 @@ Before you can use the `/template/render` endpoint, make sure you meet the follo
 
    ![UI image showing how to get destination instance ID from the URL.](assets/get-destination-instance-id.png)
 
-## Render destination properties based on configured customer properties {#render-exported-data}
+## Render templatized customer fields {#render-customer-fields}
 
-You can render exported profiles by making a POST request to the `authoring/testing/template/render` endpoint and providing the destination ID of the destination configuration and the template you created using the [sample template API endpoint](./sample-template-api.md). 
-
->[!TIP]
->
->* The destination ID that you should use here is the `instanceId` that corresponds to a destination configuration, created using the `/destinations` endpoint. Refer to the [destination configuration API operations](./destination-configuration-api.md#retrieve-list).
-
-### API format
+**API format**
 
 ```http
-POST authoring/testing/template/render/destination
+POST /authoring/testing/template/render/destination
 ```
 
-### Request
+To illustrate the behavior of this API endpoint, let's consider a file-based destination with the following customer data fields configuration:
+
+```json
+"fileBasedS3Destination":{
+   "bucket":{
+      "templatingStrategy":"PEBBLE_V1",
+      "value":"{{customerData.bucket}}"
+   },
+   "path":{
+      "templatingStrategy":"PEBBLE_V1",
+      "value":"{{customerData.path}}"
+   }
+}
+```
+
+**Request**
+
+The request below calls the `/authoring/testing/template/render` endpoint, which returns a response with randomly generated values for the two customer data fields mentioned above.
 
 ```shell
-curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render/destination' \
---header 'Content-Type: application/json' \
---header 'Accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
---data-raw '{
-    "destinationId": "ca246623-2abd-428e-8f78-cc8a682f8768",
+curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render/destination' \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+ {
+    "destinationId": "{DESTINATION_CONFIGURATION_ID}",
     "templates": {
-        "bucket": "s3/{{customerData.bucket}}/{{customerData.path}}",
-        "rootDirectory": "s3/{{customerData.fileType}}/{{destination.name}}/{{destination.segments[0].name}}"
+        "bucket": "{{customerData.bucket}}",
+        "path": "{{customerData.bucket}}/{{customerData.path}}"
     }
 }'
 ```
 
-| Parameter | Description |
+| Parameters | Description |
 | -------- | ----------- |
-| `destinationId` | The destination instance ID of the destination that you are testing.| 
-| `templates`| The templated fields defined in your [destination server configuration](server-and-file-configuration.md). Provide key names that offer the most accurate meaning for the customer configuration.|
+| `destinationId` | The ID of the [destination configuration](file-based-destination-configuration.md) that you are testing.| 
+| `templates`| The templatized field names defined in your [destination server configuration](server-and-file-configuration.md).|
 
-### Response
+**Response**
+
+A successful response returns an `HTTP 200 OK` status, and the body includes randomly generated values for your templatized fields.
+
+This response is meant to help you validate the correct structure of your customer data fields, such as bucket names or folder paths.
+
 
 ```json
 {
     "results": {
-        "bucket": "s3/my-bucket/my-path",
-        "rootDirectory": "s3/my-fileType/my-destination/my-segment"
+        "bucket": "hfWpE-bucket",
+        "path": "hfWpE-bucket/ceC"
     }
 }
 ```
@@ -77,4 +95,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to generate exported profiles that match your destination's expected data format. Read [how to use Destination SDK to configure a file-based destination](configure-file-based-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
+After reading this document, you now know how to validate the customer data field configuration defined in your [destination server](server-and-file-configuration.md).

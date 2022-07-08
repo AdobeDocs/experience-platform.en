@@ -3,7 +3,7 @@ description: This page explains how to use the /sample-profiles API endpoint fro
 title: Generate sample profiles based on a source schema
 ---
 
-# Generate sample profiles based on a source schema {#sample-profile-api-operations}
+# Generate sample profiles based on a source schema
 
 ## Overview {#overview}
 
@@ -45,7 +45,7 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 The following request generates a sample profile based on the source schema defined in the destination instance with the corresponding `destinationInstanceId`.
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count=2' 
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count=2' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \

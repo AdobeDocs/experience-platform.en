@@ -3,7 +3,7 @@ description: This page explains how to use the /testing/destinationInstance API 
 title: Test your file-based destination with sample profiles
 ---
 
-# Test your file-based destination with sample profiles {#test-destination-configuration-api}
+# Test your file-based destination with sample profiles
 
 ## Overview {#overview}
 
