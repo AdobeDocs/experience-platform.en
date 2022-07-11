@@ -178,10 +178,17 @@ feature: Destinations
       * [Credentials endpoint API operations](./destination-sdk/credentials-configuration-api.md)
       * [Publish endpoint API operations](./destination-sdk/destination-publish-api.md)
       * Developer tools reference {#developer-tools-reference}
-        * [Get sample template API operations](./destination-sdk/sample-template-api.md)
-        * [Render template API operations](./destination-sdk/render-template-api.md)
-        * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
-        * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
+        * Streaming destination testing API {#streaming-destination-testing-api}
+            * [Get sample template API operations](./destination-sdk/sample-template-api.md)
+            * [Render template API operations](./destination-sdk/render-template-api.md)
+            * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
+            * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
+        * File-based destination testing API {#file-based-destination-testing-api}
+            * [File-based destination testing API overview](./destination-sdk/file-based-destination-testing-overview.md) 
+            * [Generate sample profiles based on a source schema](./destination-sdk/file-based-sample-profile-generation-api.md)
+            * [Test your file-based destination with sample profiles](./destination-sdk/file-based-destination-testing-api.md)
+            * [View detailed activation results](./destination-sdk/file-based-destination-results-api.md)
+            * [Validate templatized customer fields](./destination-sdk/file-based-render-template-api.md)
     * Guides {#guides}
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
