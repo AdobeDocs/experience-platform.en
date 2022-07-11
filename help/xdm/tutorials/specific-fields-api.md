@@ -1,6 +1,6 @@
 ---
 title: Add Specific Fields to a Schema Using the Schema Registry API
-description: Learn how add individual fields from pre-existing field groups to an Experience Data Model (XDM) schema using the Schema Registry API.
+description: Learn how to add individual fields from pre-existing field groups to an Experience Data Model (XDM) schema using the Schema Registry API.
 ---
 # Add specific fields to a schema using the Schema Registry API
 
@@ -49,7 +49,7 @@ When included as a string, `meta:refProperty` can refer to a single field in a g
 ```json
 {
   "title": "My Sample Schema",
-  "description": "My Sample Description",
+  "description": "An example schema that uses the XDM ExperienceEvent class.",
   "type": "object",
   "allOf": [
     {
@@ -72,7 +72,7 @@ Alternatively, `meta:refProperty` can be provided as an array, letting you speci
 ```json
 {
   "title": "My Sample Schema",
-  "description": "My Sample Description",
+  "description": "An example schema that uses the XDM ExperienceEvent class.",
   "type": "object",
   "allOf": [
     {
