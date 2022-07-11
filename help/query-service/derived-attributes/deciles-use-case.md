@@ -8,7 +8,7 @@ hidefromtoc: true
 
 Derived attributes facilitate complicated use cases for analyzing data from the data lake that can be used with other downstream Platform services or published into your Real-time Customer Profile data.
 
-This example use case demonstrates how to create decile-based derived attributes for use with your Real-time Customer Profile data. Using an airline loyalty scenario as an example, this guide instructs you how to create a dataset that uses categorical deciles to segment and create audiences based on ranked attributes.
+This example use case demonstrates how to create decile-based derived attributes for use with your Real-time Customer Profile data. Using an airline loyalty scenario as an example, this guide informs you how to create a dataset that uses categorical deciles to segment and create audiences based on ranked attributes.
 
 The following key concepts are illustrated:
 
@@ -29,7 +29,7 @@ This guide requires a working understanding of [query execution in Query Service
 
 ## Objectives
 
-The example given in this document uses deciles to build derived attributes for ranking data from an airline loyalty scheme. Derived attributes allow you to maximise the utility of your data by identifying an audience based on the top 'n' % for a chosen category. 
+The example given in this document uses deciles to build derived attributes for ranking data from an airline loyalty schema. Derived attributes allow you to maximise the utility of your data by identifying an audience based on the top 'n' % for a chosen category. 
 
 ## Build decile-based derived attributes 
 
