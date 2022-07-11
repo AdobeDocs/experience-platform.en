@@ -159,7 +159,7 @@ The **[!UICONTROL Add users to your team]** dialogue appears Enter the users ema
 
 Select the pencil icon to select products and user groups, select **[!UICONTROL Adobe Exoerience Platform]**, then select **[!UICONTROL Default Production All Access]**, then select  **[!UICONTROL Save]**.
 
-![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+![product-profile](../../images/flac-ui/product-profile.png)
 
 ## Next steps
 
