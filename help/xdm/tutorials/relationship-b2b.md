@@ -48,7 +48,7 @@ Schema relationships are represented by a dedicated field within a **source sche
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="Reference identity namespace"
->abstract="The namespace (type) for the reference schema's primary identity field. Both schemas must have established primary identity fields in order to participate in a relationship."
+>abstract="The namespace (type) for the reference schema's primary identity field. The reference schema must have an established primary identity field in order to participate in a relationship."
 >text="See the documentation to learn more about identities in B2B relationships."
 
 In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-time Customer Profile]. When setting a primary identity for a B2B entity, keep in mind that string-based entity IDs may overlap if you are collecting them across different systems or locations, which could lead to data conflicts in Platform.
