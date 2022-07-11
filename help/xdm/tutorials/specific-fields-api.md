@@ -187,7 +187,7 @@ A successful response returns the details of the updated schema.
 
 ## Add fields using a PATCH operation
 
-You can use a PATCH request to add individual fields to a schema without overwriting others. The Schema Registry supports all standard JSON Patch operations, including add, remove, and replace. For more information on JSON Patch, see the [API fundamentals guide](../../landing/api-fundamentals.md#json-patch).
+You can use a PATCH request to add individual fields to a schema without overwriting others. The Schema Registry supports all standard JSON Patch operations, including `add`, `remove`, and `replace`. For more information on JSON Patch, see the [API fundamentals guide](../../landing/api-fundamentals.md#json-patch).
 
 **API format**
 
