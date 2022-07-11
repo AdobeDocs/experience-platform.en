@@ -14,11 +14,11 @@ Event forwarding in Adobe Experience Platform allows you to send collected event
 
 This document provides a high-level overview of event forwarding in Platform.
 
-![Event forwarding in the data collection ecosystem](../../../collection/images/home/event-forwarding.png)
+![Event forwarding in the data collection ecosystem](../../../rtcdp-connections/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->For information on how event forwarding fits within the data collection ecosystem in Platform, see the [data collection overview](../../../collection/home.md).
+>For information on how event forwarding fits within the data collection ecosystem in Platform, see the [data collection overview](../../../rtcdp-connections/home.md).
 
 Event forwarding combined with the Adobe Experience Platform [Web SDK](../../../edge/home.md) and [Mobile SDK](https://aep-sdks.gitbook.io/docs/) provides the following benefits:
 
@@ -61,7 +61,7 @@ The types of data elements that are available in event forwarding are limited to
 
 While data elements themselves are created and configured the same way in event forwarding as they are for tags, there are some important syntax differences when it comes to how they reference data from Platform Edge Network.
 
-#### Referencing data from Platform Edge Network {#edge}
+#### Referencing data from Platform Edge Network {#data-element-path}
     
 To reference data from Platform Edge Network, you must create a data element that provides a valid path to that data. When creating the data element in the UI, select **[!UICONTROL Core]** for the extension and **[!UICONTROL Path]** for the type.
 

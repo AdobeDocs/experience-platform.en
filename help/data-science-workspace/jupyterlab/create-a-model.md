@@ -32,7 +32,7 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 >
 >The [!UICONTROL Recipe Builder] notebook supports working with all file formats but currently the create recipe functionality only supports [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe_builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
 When you select the [!UICONTROL Recipe Builder] notebook from the launcher, the notebook is opened in a new tab. 
 

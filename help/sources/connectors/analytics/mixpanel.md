@@ -2,8 +2,7 @@
 keywords: Experience Platform;home;popular topics;
 title: (Beta) Mixpanel Source Connector Overview
 description: Learn how to connect Mixpanel to Adobe Experience Platform using APIs or the user interface.
-hide: true
-hidefromtoc: true
+exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
 ---
 # (Beta) [!DNL Mixpanel]
 
@@ -55,4 +54,3 @@ The documentation below provides information on how to connect [!DNL Mixpanel] t
 
 * [Create a [!DNL Mixpanel] source connection in the UI](../../tutorials/ui/create/analytics/mixpanel.md)
 * [Create a dataflow for a customer success source connection in the UI](../../tutorials/ui/dataflow/analytics.md)
-
