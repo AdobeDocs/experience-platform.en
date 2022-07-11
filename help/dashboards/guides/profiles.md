@@ -100,6 +100,8 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Unsegmented profiles]](#unsegmented-profiles)
 * [[!UICONTROL Unsegmented profiles trend]](#unsegmented-profiles-trend)
 * [[!UICONTROL Unsegmented profiles by identity]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL Audiences]](#audiences)
+* [[!UICONTROL Audience overlap report]](#audience-overlap-report)
 * [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
 * [[!UICONTROL Profile count trend]](#profile-count-trend)
@@ -252,6 +254,22 @@ The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustr
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
+
+### [!UICONTROL Audiences] {#audiences}
+
+The total number of segments that are ready to be activated filtered by merge policy.
+
+<!-- ![The Audiences widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
+
+### [!UICONTROL Audience overlap report] {#audience-overlap-report}
+
+View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy.
+
+<!-- ![The Audiences overlap report widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
 
 ### [!UICONTROL Audiences mapped to destination status] {#audiences-mapped-to-destination-status}
 

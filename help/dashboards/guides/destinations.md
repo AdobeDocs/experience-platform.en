@@ -49,6 +49,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
+* [[!UICONTROL Mapped audiences]](#mapped-audiences)
 * [[!UICONTROL Mapped audience health]](#mapped-audience-health)
 * [[!UICONTROL Destinations count]](#destinations-count)
 * [[!UICONTROL Destination status]](#destination-status)
@@ -189,6 +190,14 @@ The **[!UICONTROL Common audiences]** widget provides a list of the top five seg
 The [!UICONTROL AUDIENCE SIZE] column provides the total profile count of each listed segment.
 
 ![The Common audiences widget.](../images/destinations/common-audiences.png)
+
+### Mapped audiences {#mapped-audiences}
+
+Description
+
+<!-- ![The Mapped audiences widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-116404 -->
 
 ### Mapped audience health {#mapped-audience-health}
 

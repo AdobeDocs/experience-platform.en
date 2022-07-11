@@ -69,6 +69,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
 * [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
 * [[!UICONTROL Audience overlap]](#audience-overlap)
+* [[!UICONTROL Audience overlap report]](#audience-overlap-report)
 
 ### [!UICONTROL Audience size] {#audience-size}
 
@@ -165,6 +166,14 @@ This widget represents the number of profiles from two segments that meet the cr
 This widget enables you to optimize your segmentation strategy by visualizing the similarities in the results of your segment definitions.
 
 ![The Audience overlap widget.](../images/segments/audience-overlap.png)
+
+### [!UICONTROL Audience overlap report] {#audience-overlap-report}
+
+View an ordered list of audiences by Highest or Lowest overlap percentages.
+
+![The Audience overlap report widget.]()
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ## Next steps
 
