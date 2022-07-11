@@ -145,9 +145,21 @@ To remove a user group from a role, select the **X** icon next to the user group
 
 The **[!UICONTROL Remove user group]** dialogue appears, prompting you to confirm deletion. 
 
-![flac-confirm-user-groups -delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 You will be returned to the **[!UICONTROL User groups]** tab.
+
+## Adding users to product profile
+
+To add a user to a product profile, log into the Admin Console and select **[!UICONTROL Add users]**
+
+![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+
+The **[!UICONTROL Add users to your team]** dialogue appears Enter the users email address, first name (optional) and last name (optional).
+
+Select the pencil icon to select products and user groups, select **[!UICONTROL Adobe Exoerience Platform]**, then select **[!UICONTROL Default Production All Access]**, then select  **[!UICONTROL Save]**.
+
+![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 
 ## Next steps
 
