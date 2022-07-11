@@ -73,7 +73,7 @@ In the airline loyalty data seen above, the `.mileage` value contains the number
 
 Create an "Airline Loyalty Decile Schema" to create a decile dataset using Query Service.
 
-![A diagram of the "Airline Loyalty Decile Schema".](../images/derived-attributes/airline-loyalty-decile-schema.png)
+![A diagram of the "Airline Loyalty Decile Schema".](../images/derived-attributes/deciles-use-case/airline-loyalty-decile-schema.png)
 
 ### Enable the schema for Real-time Customer Profile
 
