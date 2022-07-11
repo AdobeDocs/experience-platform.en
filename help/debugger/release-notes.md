@@ -7,6 +7,11 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.3.3 - June 20, 2022
+
+* Fixed issue that prevented opening popups from network event tables.
+* Fixed issue that prevented the loading of on-page Alloy information.
+
 ## Version 1.3.2 - June 9, 2022
 
 * Added a default avatar when the user is logged in.
