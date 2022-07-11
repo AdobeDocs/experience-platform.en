@@ -108,6 +108,10 @@ Selecting target fields:
 *  Select the `Email` namespace as target identity when your source namespace or attribute is `Email`. 
 *  Select the `Email_LC_SHA256` namespace as target identity when your source namespace or attribute is `Email_LC_SHA256`.
 
+>[!IMPORTANT]
+>
+> [!DNL The Trade Desk] CRM Destination does not accept raw and hashed email addresses as identities in the same activation flow. Create separate activation flows for raw and hashed email addresses. 
+
 ## Validate Data Export (#validate)
 
 To validate that data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the segments under the Adobe 1PD data tile within [!DNL The Trade Desk] Data Management Platform (DMP). Here are the steps to finding the corresponding ID within the TTD UI: 
