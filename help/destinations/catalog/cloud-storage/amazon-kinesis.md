@@ -80,6 +80,8 @@ The example below displays the minimum access rights required to successfully ex
 | `kinesis:PutRecord` | An action that writes a single data record into a Kinesis data stream. |
 | `kinesis:PutRecords` | An action that writes multiple data records into a Kinesis data stream in a single call. |
 
+{style="table-layout:auto"}
+
 For more information on controlling access for [!DNL Kinesis] data streams, read the following [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ## Connect to the destination {#connect}
