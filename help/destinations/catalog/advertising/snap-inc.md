@@ -29,7 +29,6 @@ To use this destination, you must have a Snapchat Ads account. Please refer to t
 * Snap Inc does not support renaming segments. To rename a segment, you must deactivate, rename it, and then activate it.
 * It is not possible to define a retention period for an audience segment's members. All members have lifetime retention and will be in the segment until they are removed.
 
-
 ## Supported identities {#supported-identities}
 
 The *Snap Inc* destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
@@ -105,7 +104,7 @@ To configure details for the destination, fill in the required fields and select
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 ## Validate data export {#exported-data}
 
