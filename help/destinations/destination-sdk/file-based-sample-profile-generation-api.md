@@ -9,7 +9,7 @@ title: Generate sample profiles based on a source schema
 
 The first step in testing your file-based destination is to use the `/sample-profiles` endpoint to generate a sample profile based on your existing source schema.
 
-Sample profiles are meant to help you understand the JSON structure of a profile. Additionally, they give you a backbone that you can customize with your own profile data, for further destination testing.
+Sample profiles can help you understand the JSON structure of a profile. Additionally, they give you a default that you can customize with your own profile data, for further destination testing.
 
 ## Getting started {#getting-started}
 
@@ -38,14 +38,14 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 | Query parameters | Description |
 | -------- | ----------- |
 | `destinationInstanceId` | The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
-| `count` | *Optional*. The number of sample profiles that you want to generate. The parameter can take values between `1 - 1000`. If this property is not defined, then the API generate a single sample profile. |
+| `count` | *Optional*. The number of sample profiles that you want to generate. The parameter can take values between `1 - 1000`. If this property is not defined, then the API generates a single sample profile. |
 
 **Request**
 
 The following request generates a sample profile based on the source schema defined in the destination instance with the corresponding `destinationInstanceId`.
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count=2' \
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \

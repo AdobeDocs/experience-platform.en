@@ -77,7 +77,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 A successful response returns an `HTTP 200 OK` status, and the body includes randomly generated values for your templatized fields.
 
-This response is meant to help you validate the correct structure of your customer data fields, such as bucket names or folder paths.
+This response can help you validate the correct structure of your customer data fields, such as bucket names or folder paths.
 
 
 ```json
