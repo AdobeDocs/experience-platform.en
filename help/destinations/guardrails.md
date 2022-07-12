@@ -40,7 +40,7 @@ The guardrails below generally apply to activation through all destination types
 |Maximum number of destinations | N/A | - | There is currently no limit to how many destinations per organization ID or per sandbox you can connect and activate data to.|
 |Maximum number of attributes mapped to a destination | N/A | - | For destinations that support attributes export (enterprise destinations, batch file-based destinations), there is currently no limit to how many attributes can be mapped to a single destination. [Edge personalization destinations](#edge-destinations-activation) are the exception, where a maximum number of attributes is enforced.|
 |Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile record attributes* to destinations. XDM attributes that describe event data are not supported for export at this time.|
-|Type of data activated to destinations - array attributes support | Not available | Hard| At this time, it is **not** possible to export *array attributes* to destinations.|
+|Type of data activated to destinations - array and map attributes support | Not available | Hard| At this time, it is **not** possible to export *array or map attributes* to destinations.|
 
 {style="table-layout:auto"}
 
