@@ -47,10 +47,12 @@ All identifiers sent to the *Snap Inc* destination must be hashed in SHA-256 for
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|Email Address |SHA-256 hashed email address | Map email addresses into the target identity field *emailAddress*.
+|Email Address |SHA-256 hashed email address | Map email addresses into the target identity field *emailAddress*.|
 |Phone Number |SHA-256 hashed phone number| Map email addresses into the target identity field *phoneNumber*.|
 |GAID |SHA-256 hashed Google Advertising ID| Map Google Advertising IDs into the target identity field *gaid*.|
-|IDFA |SHA-256 hashed Apple Advertising ID| Map Apple Advertising IDs into the target identity field *idfa*.
+|IDFA |SHA-256 hashed Apple Advertising ID| Map Apple Advertising IDs into the target identity field *idfa*.|
+
+{style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -74,22 +76,18 @@ Refer to the table below for information about the destination export type and f
 To authenticate to the destination, follow these steps:
 
 1. Find the *Snap Inc* destination from Adobe Experience Platform's Destination Catalog and select **Set Up**.
-
 2. Select **[!UICONTROL Connect to destination]**. You will be redirected to the following screen:
-
-![Auth Screen 1](assets/auth1.png)
-
+    ![Auth Screen 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Enter your Snapchat credentials and select **Log In**.
-
 4. You will be shown the Snapchat data that Adobe Experience Platform will be be able to access. Select **Continue** to proceed with the connection process. 
 
-![Auth Screen 2](assets/auth2.png)
+![Auth Screen 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
-After selecting continue, wait until you are redirected back to Adobe Experience Platform. 
+After selecting continue, wait until you are redirected back to Adobe Experience Platform.
 
 ### Fill in destination details {#destination-details}
 
-![Destination Details](assets/destinationdetails.png)
+![Destination Details](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
 To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
 
@@ -116,7 +114,7 @@ After activating segments to the *Snap Inc* destination, you will be able to see
 1. Log into the [Snap Ads Manager](https://ads.snapchat.com/)
 2. Select **Audiences** from the pulldown menu in the upper left corner of the screen. You will see the segments that you activated in Adobe Experience Platform in the Audience Library:
 
-![Audiences](assets/audiences.png)
+![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
 Please note that when an Adobe segment is first activated to Snap Inc, you will initially see it as an empty audience. This is because Adobe Experience Platform does not export member data to Snap Inc until it evaluates the segment. For more information about how segments are evaluated in Experience Platform, please refer to the [Segmentation Service overview](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
