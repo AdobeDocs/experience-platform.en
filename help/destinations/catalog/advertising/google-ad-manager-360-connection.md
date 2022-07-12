@@ -52,7 +52,9 @@ Refer to the table below for information about the destination export type and f
 >
 >The allow list is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
 
-Before creating the [!DNL Google Ad Manager 360] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
+>[!IMPORTANT]
+>
+>Google has simplified the process to connect Data Management Platforms (DMPs) to Google Ad Manager 360. You can now go through the process to link to Google Ad Manager 360 in a self-service manner. Read [Segments from data management platforms](https://support.google.com/admanager/answer/3289669?hl=en) in the Google documentation. You should have the IDs listed below at hand.
 
 * **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
 * **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
