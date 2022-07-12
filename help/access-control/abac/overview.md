@@ -56,9 +56,9 @@ Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product
 
 The attribute-based access control functionality is currently available in beta. The features of this functionality include:
 
-- Permissions interface: Provides an interface for you to define user roles, permissions and policies for attribute-based access control.
+* Permissions interface: Provides an interface for you to define user roles, permissions and policies for attribute-based access control.
 
-- Labeling: Add, edit, remove labels to user roles, schema fields, and segments in order to leverage access control policies. 
+* Labeling: Add, edit, remove labels to user roles, schema fields, and segments in order to leverage access control policies. 
 
 The administration workflows for all Experience Platform-powered applications from Admin Console to the new Permissions interface are being switched.
 
