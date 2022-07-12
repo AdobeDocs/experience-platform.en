@@ -54,17 +54,17 @@ The following sections provide information on how attribute-based access control
 
 Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration. Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Product Profiles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
 
-The Adobe Experience Platform Access Control Beta functionality is now available. The features of this functionality include:
+The attribute-based access control functionality is currently available in beta. The features of this functionality include:
 
-- New Permissions interface: Capability to define user roles, permissions, and a new policy interface for the attribute-based access control.  
+- Permissions interface: Provides an interface for you to define user roles, permissions and policies for attribute-based access control.
 
-- Labeling: Add/edit/remove labels to user roles, schema fields, and segments in order to leverage access control policies. 
+- Labeling: Add, edit, remove labels to user roles, schema fields, and segments in order to leverage access control policies. 
 
-The administration workflows for all AEP/ powered by AEP apps from Admin Console to the New Permissions Interface are being switched. 
+The administration workflows for all Experience Platform-powered applications from Admin Console to the new Permissions interface are being switched.
 
 >[!IMPORTANT]
 >
->As part of enabling your org with the new Access Controls, we will migrate all your product profiles to the new interface. The product profiles in Admin Console will remain as is for the time being. Please STOP modifying them after your org has been enabled. 
+>Your product profiles are automatically migrated to the Permissions interface when your organization is enabled. The product profiles in Admin Console will remain as is for the time being. Please **do not** modify your product profiles after your organization has been enabled.
 
 For more information on access control, see the [access control overview](../home.md).
 
