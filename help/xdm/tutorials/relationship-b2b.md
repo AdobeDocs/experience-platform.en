@@ -3,7 +3,7 @@ title: Define a Relationship Between Two Schemas in Real-time Customer Data Plat
 description: Learn how to define a many-to-one relationship between two schemas in Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 ---
-# Define a relationship between two schemas in Real-time Customer Data Platform B2B Edition
+# Define a many-to-one relationship between two schemas in Real-time Customer Data Platform B2B Edition
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
@@ -13,7 +13,7 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 
 >[!NOTE]
 >
->If you are not using Real-time Customer Data Platform B2B Edition, see the guide on [creating a non-B2B relationship](./relationship-ui.md) instead.
+>If you are not using Real-time Customer Data Platform B2B Edition or want to create a one-to-one relationship, see the guide on [creating a one-to-one relationship](./relationship-ui.md) instead.
 
 Real-time Customer Data Platform B2B Edition provides several Experience Data Model (XDM) classes that capture fundamental B2B data entities, including [accounts](../classes/b2b/business-account.md), [opportunities](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md), and more. By building schemas based on these classes and enabling them for use in [Real-time Customer Profile](../../profile/home.md), you can merge data from disparate sources into a unified representation called a union schema.
 
@@ -94,7 +94,7 @@ In order to define a relationship between two schemas, the source schema must ha
 
 >[!NOTE]
 >
->Currently, only many-to-one relationships can be defined from a source schema to a destination schema. For one-to-many relationships, you must define the relationship field in the schema that represents the "many".
+>Currently, only many-to-one and one-to-one relationships can be defined from a source schema to a destination schema. For one-to-many relationships, you must define the relationship field in the schema that represents the "many".
 
 To set a relationship field, select the arrow icon (![Arrow Icon](../images/tutorials/relationship-b2b/arrow.png)) next to the field in question within the canvas. In the case of the [!DNL Opportunities] schema, this is the `accountKey.sourceKey` field since the goal is to establish a many-to-one relationship with an account.
 
