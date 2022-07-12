@@ -119,7 +119,7 @@ Once your source schema has a dedicated reference field defined, you can designa
 
 >[!NOTE]
 >
->The steps below cover how to define a relationship field using the right-rail controls in the canvas. If you have access to Real-Time CDP B2B Edition, you can also define a one-to-one relationship using
+>The steps below cover how to define a relationship field using the right-rail controls in the canvas. If you have access to Real-Time CDP B2B Edition, you can also define a one-to-one relationship using the [same dialog](./relationship-b2b.md#relationship-field) as when creating many-to-one relationships.
 
 Select the `favoriteHotel` field in the canvas, then scroll down under **[!UICONTROL Field properties]** until the **[!UICONTROL Relationship]** checkbox appears. Select the checkbox to reveal the required parameters for configuring a relationship field.
 
