@@ -68,11 +68,17 @@ To connect to this destination, follow the steps described in the [destination c
 >title="Account ID"
 >abstract="Your Twitter Ads account ID. This can be found in your Twitter Ads settings."
 
-To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Account ID]**: Your [!DNL Twitter Ads] account ID. This can be found in your [!DNL Twitter Ads] settings.
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 

@@ -79,6 +79,12 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 |---|---|
 |<ul><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are not supported.</li><li>You can share segments to the Adobe Target connection only for the production sandbox.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul>|<ul><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are supported.</li><li>Segment sharing is supported for other sandboxes.</li></ul>|
 
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
 ## Activate segments to this destination {#activate}
 
 >[!IMPORTANT]

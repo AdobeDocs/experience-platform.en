@@ -34,7 +34,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Supported file formats {#file-formats}
 
-[!DNL Experience Platform] supports the following file format to be exported to [!DNL Blob]:
+[!DNL Experience Platform] supports the following file format to be exported to [!DNL Azure Blob]:
 
 * Comma-separated values (CSV): Support for exported data files is currently limited to comma-separated values.
 
