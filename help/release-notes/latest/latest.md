@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes June 2022
-description: The June 2022 release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes
+description: The latest release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
@@ -11,7 +11,9 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
+- [Real-Time Customer Data Platform Connections](#data-collection)
 - [Sources](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -54,6 +56,46 @@ For more general information on Data Science Workspace, see the [overview docume
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**New XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Class | [[!UICONTROL Medication]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | A healthcare industry class that captures details about a substance used for medical treament, especially a medicine or drug. |
+| Class | [[!UICONTROL Plan]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | A healthcare industry class that captures details about a medical plan, such as a health plan or insurance plan. |
+| Class | [[!UICONTROL Provider]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | A healthcare industry class that captures details about a healthcare provider. |
+| Class | [[!UICONTROL Payer]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | A healthcare industry class that captures details about an insurance company. |
+| Class | [[!UICONTROL Live Event Schedule]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | A sports and entertainment industry class that captures details about a live event schedule, such as a traveling concert schedule or a sports team's schedule. |
+| Class | [[!UICONTROL Location]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | A sports and entertainment industry class that captures the location of a live event, such as a concert hall or sports arena. |
+| Field group | [[!UICONTROL Healthcare medication]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | A field group for the [!UICONTROL Medication] class that captures details about the medication such as brand name, lot number, and quantity. |
+| Field group | [[!UICONTROL Healthcare Plan Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | A field group for the [!UICONTROL Plan] class that captures details such as network, type, and active status. |
+| Field group | [[!UICONTROL Healthcare Provider]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | A field group for the [!UICONTROL Provider] class that captures details of an individual health professional or a health facility organization licensed to provide healthcare diagnosis and treatment services. |
+| Field group | [[!UICONTROL Healthcare Member Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | A field group for the [!UICONTROL XDM Individual Profile] class that captures details of a person that has or will receive a service or care, such as contact information, primary care physician, and plan information. |
+| Field group | [[!UICONTROL Sitetool Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | A field group for the [!UICONTROL XDM ExperienceEvent] class that captures information collected by sitetools such as chatbot, survey, and so on. |
+| Field group | [[!UICONTROL Live Event Ticket Purchase]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | A field group for the [!UICONTROL XDM ExperienceEvent] class that captures the purchase history for tickets to a live event, such as a concert or sports game. |
+| Field group | [[!UICONTROL Sports and Entertainment Event Schedule]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | A field group for the [!UICONTROL Live Event Schedule] class that captures further details about the schedule, such as the attraction name, door opening times, and more. |
+| Field group | [[!UICONTROL Sports Entertainment Event Venue]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | A field group for the [!UICONTROL Location] class that captures further details about the event venue, such as seating capacity and Designated Market Areas (DMAs). |
+| Global schema | (Several) | New global schemas are available for destinations metrics for RTCDP Insights. See the following [pull request](https://github.com/adobe/xdm/pull/1560) for more details. |
+
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Update description |
+| --- | --- | --- |
+| Behavior | [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | Added a media states-update event type. |
+| Field group | [[!UICONTROL Lodging Reservation]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | Added a lodging checkout property. |
+| Data type | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Added states-start and states-end fields. |
+| Extension | [[!UICONTROL Workfront Change Event]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Added two fields used to store attributes to help identify the user and the time of a create event. |
+| Extension | [[!UICONTROL Adobe CJM ExperienceEvent - Message interaction details]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | Added subscription, consent, custom email, and additional data information in the landing page object. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+
 ## Query Service {#query-service}
 
 Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
@@ -68,6 +110,20 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 {style="table-layout:auto"}
 
 For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
+
+## Real-Time Customer Data Platform Connections {#data-collection}
+
+Real-Time Customer Data Platform Connections provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| [Access Type configuration for datastreams](../../edge/datastreams/overview.md#create)| When creating a new datastream, you can now select what type of requests you want the Edge Network to accept: <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the [!DNL Edge Network]. </li></ul> |
+|[Render propositions](../../edge/personalization/rendering-personalization-content.md#applypropositions) in single-page applications without incrementing metrics. | The newly added `applyPropositions` command allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the [!DNL Analytics] and [!DNL Target] metrics. This increases reporting accuracy. |
+|[Mobile-to-web and cross-domain ID sharing](../../edge/identity/id-sharing.md) | The Adobe Experience Platform Web SDK now supports visitor ID sharing capabilities that enable you to deliver personalized experiences more accurately, between mobile apps and mobile web content, and across domains. |
+
+For more information, please see the [Real-Time CDP Connections overview](../../rtcdp-connections/home.md).
 
 ## Sources {#sources}
 
