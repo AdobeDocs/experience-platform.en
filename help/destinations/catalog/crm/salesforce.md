@@ -46,7 +46,10 @@ Note the following prerequisites in Salesforce, in order to export data from Pla
         * ``refresh_token``
         * ``offline_access``
 1. Create the custom field of type `Text Area Long` which Experience Platform will use to update the segment status within Salesforce CRM. 
-    * Refer to the Salesforce documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance.
+    * Refer to the Salesforce documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance. 
+        > [!IMPORTANT]
+        >
+        > Ensure there are no whitespace characters in the name, instead use the underscore i.e. the `_` character as a separator.
 
         > [!NOTE]
         >
@@ -131,7 +134,7 @@ To correctly send your audience data from Adobe Experience Platform to the Sales
 ![Source mapping](../../assets/catalog/crm/salesforce/source-mapping.png)
 
 1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
-![Target mapping  SalesforceId](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
+![Target mapping using SalesforceId](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
 
 1. For custom attributes, in the select target field window, select the target field and choose the **[!UICONTROL Select custom attributes]** category, Next provide the desired target attribute name and add the mappings desired.
 ![Target mapping using LastName](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
@@ -148,8 +151,14 @@ To correctly send your audience data from Adobe Experience Platform to the Sales
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
-* When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step you will need to manually map Platform segments to a custom field attribute in Salesforce.
+* When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step you will need to manually map Platform segments to the custom field attribute in Salesforce.
 * To do this, select each segment, then enter the corresponding custom field attribute from Salesforce in the **[!UICONTROL Mapping ID]** field.
+
+    > [!IMPORTANT]
+    >
+    > * The value used for the Mapping ID should exactly match the name of the custom field attribute created within Salesforce.
+    > * Ensure that the name of the custom field attribute you have created in Salesforce doesn't use the whitespace character.
+
 * An example is shown below:
 ![Schedule segment export](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
 
