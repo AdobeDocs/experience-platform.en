@@ -44,8 +44,6 @@ Some potential use cases for this type of derived attribute might include:
 
 You are also able to calculate business metrics as a derived attribute and use them in conjunction with simple attributes such as zip code or an aggregated metric such as total count. For example, a total count based on a city or province, or total count based on a business category and a city/province.
 
-<!-- You are also able to calculate business metrics derived from attribute(s) at the user identity level or with one or more metrics at a higher level. For example the identity level metric used could be household income based on zip/postal code where as the higher (aggregated) level metric could be total count based on city/province or business category and city/province. -->
-
 ## Next steps and use cases
 
 By reading this document you have a better understanding of how Query Service derived attributes facilitate complex use cases for maximizing the utility of your data. Next, you should read the [decile-based derived attribute use case](./deciles-use-case.md) to see how this feature is applied in a real-world scenario.
