@@ -86,6 +86,12 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Account Type]**: AdWords is the only available option.
 *  **[!UICONTROL Account ID]**: Fill in your account ID with [!DNL Google Ads]. The ID format is typically 123-456-7890.
 
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
 ## Activate segments to this destination {#activate}
 
 >[!IMPORTANT]
