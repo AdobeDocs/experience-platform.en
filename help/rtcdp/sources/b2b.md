@@ -15,6 +15,10 @@ To understand how sources fit into your B2B workflow, please see the [end-to-end
 
 See the [source connectors overview](../../sources/home.md) for more information on the types of sources available in Adobe Experience Platform.
 
+>[!IMPORTANT]
+>
+>You must have access to [Real-time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-time Customer Profile](../proile/../../profile/home.md).
+
 The following documents provide more information on using [!DNL Marketo] to bring B2B data to Platform:
 
 * For information on how to connect your [!DNL Marketo] data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../sources/tutorials/ui/create/adobe-applications/marketo.md).

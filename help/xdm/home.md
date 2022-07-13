@@ -45,6 +45,11 @@ For more information on how to manage and interact with schemas in Platform, ref
 
 ## Data behaviors in XDM System {#data-behaviors}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_behavior"
+>title="Data behaviors"
+>abstract="Data intended for use in Experience Platform is grouped into three behavior types: record, time-series, and ad hoc. Record schemas provide information about the attributes of a subject, while time-series schemas capture a snapshot of the system at the time an action was taken. Ad hoc schemas capture fields that are namespaces for use only by a single dataset. See the documentation for more information on data behaviors in Platform."
+
 Data intended for use in Experience Platform is grouped into three behavior types:
 
 * **Record**: Provides information about the attributes of a subject. A subject could be an organization or an individual.

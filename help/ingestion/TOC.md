@@ -35,6 +35,7 @@ feature: Data Ingestion
   - [Retrieve failed batches](quality/retrieve-failed-batches.md)
   - [Streaming ingestion validation](quality/streaming-validation.md)
   - [Data ingestion notifications](quality/subscribe-events.md)
+- [Guardrails for data ingestion](guardrails.md)
 - [Source connectors](source-connectors.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

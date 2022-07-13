@@ -34,7 +34,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Veeva CRM], you must prov
 | `securityToken` | The security token for your [!DNL Veeva CRM] instance. |
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Veeva CRM] is: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
 
-For more information about these values, refer to this [[!DNL Veeva CRM] document](https://developer.veevacrm.com/api/#order-management-rest-api).
+For more information about these values, refer to this [[!DNL Veeva CRM] document](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ### Using Platform APIs
 

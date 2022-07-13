@@ -1,8 +1,6 @@
 ---
 title: Interactive data collection
-description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection
-keywords: data collection;collection;experience platform edge network;api;interactive data collection
+description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 ---
 # Interactive data collection
