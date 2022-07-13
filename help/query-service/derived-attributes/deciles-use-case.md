@@ -286,11 +286,11 @@ FROM rankings
 GROUP BY rankings.membershipNumber
 ```
 
+A correlation between the ranking number and the percentile is guaranteed in the query results because of the use of deciles. Each rank equates to 10%, so identifying an audience based on the top 30% only needs to target ranks 1, 2, and 3.
+
 ### Run the query template
 
-Run the query to populate the decile dataset. If the query is to be scheduled then the query must be updated to use the create and insert pattern that references the `table_exists` command. More information on how to use the `table_exists`command can be found in the [SQL syntax guide](../sql/syntax.md#table-exists). 
-
-A correlation between the ranking number and the percentile is guaranteed in the query results because of the use of deciles. Each rank equates to 10%, so identifying an audience based on the top 30% only needs to target ranks 1, 2, and 3.
+Run the query to populate the decile dataset. You can also save the query as a template and schedule it to run at a cadence. When saved as a template, the query can also be updated to use the create and insert pattern that references the `table_exists` command. More information on how to use the `table_exists`command can be found in the [SQL syntax guide](../sql/syntax.md#table-exists). 
 
 ## Next steps
 
