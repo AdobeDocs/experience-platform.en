@@ -133,13 +133,15 @@ Any of the log categories can be requested as desired by a Platform user. This s
 
 ### Query logs {#query-logs}
 
-Query logs allow you to monitor and review the status of all queries that have been executed through Query Service. This brings transparency to Query Service activities, allowing you to monitor the metadata for **all** the queries that have been executed across Query Service. It includes **all** types of queries whether it is an exploratory, batch, or scheduled query. 
+The query log UI allows you to monitor and review execution details for all queries that have been run either via the Query Editor or the Query Service API. This brings transparency to Query Service activities, allowing you to monitor the metadata for **all** the queries that have been executed across Query Service. It includes **all** types of queries whether it is an exploratory, batch, or scheduled query. 
 
 Query logs can be accessed either through the Platform UI or the [Audit Query API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Query logs are located in the [!UICONTROL Logs] tab of the [!UICONTROL Queries] workspace.
 
 ![The Queries log tab with the details panel highlighted.](../images/data-governance/overview/queries-log.png)
 
 ### Audit logs {#audit-logs}
+
+Audit logs contain more detailed information than query logs and enable you to filter logs based on attributes such as user, date, type of query, and so on. Beyond the details available in query log UI, Audit Logs stores details on individual users along with their session data or connectivity to a third-party client.
 
 By providing an accurate record of user actions, an audit trail can help with troubleshooting issues and help your business effectively comply with corporate data stewardship policies and regulatory requirements. Audit logs provide a record of all Platform activities. To increase the transparency and visibility of actions performed in Query Service by users, you can audit user actions relating to query execution, templates, and scheduled queries. 
 
@@ -152,8 +154,6 @@ The following table indicates the query categories captured by audit logs and th
 | Scheduled Query | Create, Delete, Update |
 
 The [!UICONTROL Audits] workspace contains extended server logs. These provide more details than those held within the query logs. Below is a list of three extended logs that are only found within the query categories for audit logs:
-
-<!-- Q) Is there a 1:1 correlation between "Query logs" that appear in the QS UI, and the audit logs that appear under the Audits UI? Are they just different views of the same thing? -->
 
 1. **Meta query logs**: When a query is executed, various associated backend sub-queries (such as parsing) are executed. These types of queries are known as "metadata" queries. Their relevant details can be found in audit logs.
 1. **Session logs**: The system creates a session entry log for a user when they log into Query Service regardless of whether they execute a query.
@@ -179,19 +179,17 @@ After you have accessed the schema, you can [apply labels to individual fields](
 
 [Privacy Service](../../privacy-service/home.md) helps you manage customer requests to access and delete their data in accordance with legal privacy regulations. It does this by searching the data for pre-existing identifiers, and either accesses or deletes that data depending on the privacy job requested. Data must be properly labeled in order for the service to determine which fields to access or delete during privacy jobs. Data that is subject to privacy requests must contain customer identity information in order to tie the disparate pieces of data with the individual person to whom the privacy request applies to. Query Service can enrich the data it uses with a unique identifier for the purpose of satisfying privacy jobs. 
 
+Privacy requests can be sent to the data lake or the Profile data store. Records deleted from the data lake do not result in the deletion of profiles that were made from those records. Also, a privacy job to delete personal information from the data lake does not delete their profile so any information (that contains that profile ID) ingested after the completion of the privacy job updates that profile as normal.
+
+For derived datasets that use standard schemas, privacy requests must be made to the data lake and not the Profile data store. This reaffirms the need to properly identify data that uses as hoc schemas.
+
+<!-- Q) I am still not sure why privacy requests must be made to the data lake and not the Profile data store for derived datasets that use standard schemas. -->
+
 See the Privacy Service documentation for more information on [identity data for privacy requests](../../privacy-service/identity-data.md) and how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 
 Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets. You **must** add identities into the dataset to facilitate data privacy requests and work towards data compliance. 
 
 Schema data fields can be set as an identity field through the Platform UI and Query Service also allows you to [mark the primary identities by using the SQL command ‘ALTER TABLE’](../sql/syntax.md#alter-table). Setting an identity using the `ALTER TABLE` command is especially useful when datasets are created using SQL rather than directly from a schema through the Platform UI. See the documentation for instructions on how to [define identity fields in the UI](../../xdm/ui/fields/identity.md) when using standard schemas.
-
-<!-- 
-Questions for Sameeksha
-
-Q) there are two places where privacy requests can be sent: the data lake or the profile store. If records are deleted from the data lake are they deleted form the Profile store?
-
-""**Derived Datasets with Standard Schema**: When a query results in a derived dataset that uses a standard schema, privacy measures are handled at the data lake management level. "" = What does ths mean?  
--->
  
 <!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
 
