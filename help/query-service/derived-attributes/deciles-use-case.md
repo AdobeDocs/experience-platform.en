@@ -69,7 +69,7 @@ The following table displays the sample data contained in the `_profilefoundatio
 
 ## Generate decile datasets
 
-In the airline loyalty data seen above, the `.mileage` value contains the number of miles flown by a member every time they fly. This data is used to create deciles for the number of miles flown over lifetime look-backs and a variety of lookback periods. For this purpose, a dataset is created that contains deciles in a map data type for each lookback period and an appropriate decile for each lookback period assigned under `membershipNumber`.
+In the airline loyalty data seen above, the `.mileage` value contains the number of miles flown by a member for every individual flight taken. This data is used to create deciles for the number of miles flown over lifetime lookbacks and a variety of lookback periods. For this purpose, a dataset is created that contains deciles in a map data type for each lookback period and an appropriate decile for each lookback period assigned under `membershipNumber`.
 
 Create an "Airline Loyalty Decile Schema" to create a decile dataset using Query Service.
 
@@ -182,17 +182,17 @@ CREATE TABLE AS airline_loyality_decile
 
 Sections of the example query are examined in greater detail below.
 
-#### Look-back periods
+#### Lookback periods
 
-The decile data type contains a bucket for 1, 3, 6, 9, 12, and lifetime look-backs. The query uses the look-back periods of 1, 3, and 6 months, so each section will contain some "repeated" queries in order to create temporary tables for each look-back period.
+The decile data type contains a bucket for 1, 3, 6, 9, 12, and lifetime lookbacks. The query uses the lookback periods of 1, 3, and 6 months, so each section will contain some "repeated" queries in order to create temporary tables for each lookback period.
 
 >[!NOTE]
 >
->If the source data does not have a column that can be used to determine a look-back period, then all decile class rankings will be performed under `decileMonthAll`.
+>If the source data does not have a column that can be used to determine a lookback period, then all decile class rankings will be performed under `decileMonthAll`.
 
 #### Aggregation
 
-Use common table expressions (CTE) to aggregate the mileage together before creating decile buckets. This provides the total miles for a specific look-back period. CTEs exist temporarily and are only usable within the scope of the larger query.
+Use common table expressions (CTE) to aggregate the mileage together before creating decile buckets. This provides the total miles for a specific lookback period. CTEs exist temporarily and are only usable within the scope of the larger query.
 
 ```sql
 summed_miles_1 AS (
@@ -205,7 +205,7 @@ summed_miles_1 AS (
 )
 ```
 
-The block is repeated twice in the template (`summed_miles_3` and `summed_miles_6`) with a change in the date calculation in order to generate the data for the other look-back periods.
+The block is repeated twice in the template (`summed_miles_3` and `summed_miles_6`) with a change in the date calculation in order to generate the data for the other lookback periods.
 
 It is important to note the identity, dimension, and metric columns for the query (`membershipNumber`, `loyaltyStatus` and `totalMiles` respectively).
 
@@ -225,7 +225,7 @@ rankings_1 AS (
 
 #### Map aggregation
 
-With multiple look-back periods, you need to create the decile bucket maps in advance using the `MAP_FROM_ARRAYS` and `COLLECT_LIST` functions. In the example snippet, `MAP_FROM_ARRAYS` creates a map with a pair of keys (`loyaltyStatus`) and values (`decileBucket`) arrays. `COLLECT_LIST` returns an array with all values in the specified column.
+With multiple lookback periods, you need to create the decile bucket maps in advance using the `MAP_FROM_ARRAYS` and `COLLECT_LIST` functions. In the example snippet, `MAP_FROM_ARRAYS` creates a map with a pair of keys (`loyaltyStatus`) and values (`decileBucket`) arrays. `COLLECT_LIST` returns an array with all values in the specified column.
 
 ```sql
 map_1 AS (
