@@ -24,7 +24,7 @@ This document examines each of the different areas of governance and demonstrate
 
 Data security is the process of protecting data from unauthorized access and ensuring secure access throughout its lifecycle. Secure access is maintained in Experience Platform through the application of roles and permissions by capabilities such as role-based access control and attribute-based access control. Credentials, SSL, and data encryption are also used to ensure data protection across Platform. 
 
-Security in regards to Query Service is divided into the following categories:
+Security in regard to Query Service is divided into the following categories:
 
 * [Access control](#access-control): Access is controlled through roles and permissions including dataset and column-level permissions.
 * Securing data through [connectivity](#connectivity): Data is secured through Platform and external clients by achieving a limited connection with expiring credentials, or non-expiring credentials.
@@ -121,19 +121,19 @@ See the guide on available [SSL options for third-party client connections to Qu
 
 Encryption is the use of an algorithmic process to transform data into encoded and unreadable text to ensure the information is protected and inaccessible without a decryption key. 
 
-Query Service data compliance ensures that data is always encrypted. Data-in-transit is always HTTPS compliant and data-at-rest is encrypted in an Azure Data Lake store using system-level keys. See the documentation on [how data is encrypted in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html) for more information. For details on how data at rest is encrypted in Azure Data Lake Storage, see the [official Azure documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+Query Service data compliance ensures that data is always encrypted. Data-in-transit is always HTTPS compliant, and data-at-rest is encrypted in an Azure Data Lake store using system-level keys. See the documentation on [how data is encrypted in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html) for more information. For details on how data at rest is encrypted in Azure Data Lake Storage, see the [official Azure documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
 <!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
 ## Logs {#logs}
 
-Query Service records user activity and categorizes that activity in different log types. Logs provide information on **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
+Query Service records user activity and categorizes that activity in different log types. Logs supply information on **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
 Any of the log categories can be requested as desired by a Platform user. This section provides details on the type of information captured for Query Service and where this information can be accessed.
 
 ### Query logs {#query-logs}
 
-The query log UI allows you to monitor and review execution details for all queries that have been run either via the Query Editor or the Query Service API. This brings transparency to Query Service activities, allowing you to monitor the metadata for **all** the queries that have been executed across Query Service. It includes **all** types of queries whether it is an exploratory, batch, or scheduled query. 
+The query log UI allows you to monitor and review execution details for all queries that have been run either via the Query Editor or the Query Service API. This brings transparency to Query Service activities, allowing you to check the metadata for **all** the queries that have been executed across Query Service. It includes all types of queries whether it is an exploratory, batch, or scheduled query. 
 
 Query logs can be accessed either through the Platform UI or the [Audit Query API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Query logs are located in the [!UICONTROL Logs] tab of the [!UICONTROL Queries] workspace.
 
@@ -143,7 +143,7 @@ Query logs can be accessed either through the Platform UI or the [Audit Query AP
 
 Audit logs contain more detailed information than query logs and enable you to filter logs based on attributes such as user, date, type of query, and so on. Beyond the details available in query log UI, Audit Logs stores details on individual users along with their session data or connectivity to a third-party client.
 
-By providing an accurate record of user actions, an audit trail can help with troubleshooting issues and help your business effectively comply with corporate data stewardship policies and regulatory requirements. Audit logs provide a record of all Platform activities. To increase the transparency and visibility of actions performed in Query Service by users, you can audit user actions relating to query execution, templates, and scheduled queries. 
+By providing an exact record of user actions, an audit trail can help with troubleshooting issues and help your business effectively comply with corporate data stewardship policies and regulatory requirements. Audit logs provide a record of all Platform activities. Using audit logs you can audit user actions relating to query execution, templates, and scheduled queries to increase the transparency and visibility of actions performed by users in Query Service.
 
 The following table indicates the query categories captured by audit logs and the action types they record: 
 
@@ -153,7 +153,7 @@ The following table indicates the query categories captured by audit logs and th
 | Query Template | Create, Delete, Update  |
 | Scheduled Query | Create, Delete, Update |
 
-The [!UICONTROL Audits] workspace contains extended server logs. These provide more details than those held within the query logs. Below is a list of three extended logs that are only found within the query categories for audit logs:
+Below is a list of three extended server logs that hold more details than those found within the query logs. The extended logs are found within the audit logs query categories:
 
 1. **Meta query logs**: When a query is executed, various associated backend sub-queries (such as parsing) are executed. These types of queries are known as "metadata" queries. Their relevant details can be found in audit logs.
 1. **Session logs**: The system creates a session entry log for a user when they log into Query Service regardless of whether they execute a query.
