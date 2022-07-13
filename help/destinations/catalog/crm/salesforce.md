@@ -22,7 +22,7 @@ Note the following details that are specific to the [!DNL Salesforce CRM] destin
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to Salesforce CRM, to display in my users’ feeds as soon as segments and profiles are updated in Adobe Experience Platform.
+As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to Salesforce CRM, to display in the users’ feeds as soon as segments and profiles are updated in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -89,7 +89,7 @@ Refer to the table below for information about the destination export type and f
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In the configure destination workflow, fill in the fields listed in the two sections below.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 ![Catalog](../../assets/catalog/crm/salesforce/catalog.png)
 
@@ -97,7 +97,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Account Info](../../assets/catalog/crm/salesforce/account-info.png)
+![Sample screenshot showing how to authenticate to Salesforce CRM](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
 *  **[!UICONTROL Password]**: Your Salesforce account password.
 *  **[!UICONTROL Client ID]**: Your Salesforce connected app Consumer Key.
@@ -108,12 +108,18 @@ If the details provided are valid, the UI displays a **Connected** status with a
 
 ### Fill in destination details {#destination-details}
 
-To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
-![Destination Details](../../assets/catalog/crm/salesforce/destination-details.png)
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+![Sample screenshot showing how to fill in details for Salesforce CRM](../../assets/catalog/crm/salesforce/destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Custom Domain]**: Your Salesforce domain.
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 
