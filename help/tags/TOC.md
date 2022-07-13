@@ -191,6 +191,7 @@ solution: Data Collection
     * [Secrets](./api/guides/secrets.md)
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
+* [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
 * Release notes {#release-notes}
   * [Latest](./release-notes/current.md)
   * [2020 release notes](./release-notes/2020.md)
