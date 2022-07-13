@@ -54,7 +54,7 @@ Refer to the table below for information about the destination export type and f
 
 >[!IMPORTANT]
 >
->Google has simplified the process to connect Data Management Platforms (DMPs) to Google Ad Manager 360. You can now go through the process to link to Google Ad Manager 360 in a self-service manner. Read [Segments from data management platforms](https://support.google.com/admanager/answer/3289669?hl=en) in the Google documentation. You should have the IDs listed below at hand.
+>Google has simplified the process to connect external audience management platforms to Google Ad Manager 360. You can now go through the process to link to Google Ad Manager 360 in a self-service manner. Read [Segments from data management platforms](https://support.google.com/admanager/answer/3289669?hl=en) in the Google documentation. You should have the IDs listed below at hand.
 
 * **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
 * **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
