@@ -61,15 +61,15 @@ Examples of [!DNL Identity Service] implementations include:
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
->title="About identity namespace"
+>title="Identity namespaces"
 >abstract="An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes “name<span>@email.com” as an email address or “443522” as a numeric CRM ID."
->additional-url="http://www.adobe.com/go/identity-namespaces-en" text="Learn more in documentation"
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
->title="About identity values"
->abstract="An identity value is an identifier that represents a unique individual, organization, or asset. When matching record data across profile fragments the namespace and identity value must match."
->additional-url="http://www.adobe.com/go/identity-namespaces-en" text="Learn more in documentation"
+>title="Identity values"
+>abstract="An identity value is an identifier that represents a unique individual, organization, or asset. The context or type of identity that the value represents is defined by a corresponding identity namespace. When matching record data across profile fragments, the namespace and identity value must matchWhen matching record data across profile fragments the namespace and identity value must match."
+>text="Learn more in documentation"
 
 If you asked a person "What is your ID?" without any further context, it would be difficult for them to provide a useful answer. By the same logic, a string value representing an identity value, whether it is a system generated ID or an email address, is only complete when supplied with a qualifier that gives the string value context: the identity namespace.
 
