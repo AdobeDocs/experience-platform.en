@@ -85,6 +85,12 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 >
 >When setting up a [!DNL Google Ad Manager] destination, please work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
 
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
 ## Activate segments to this destination {#activate}
 
 >[!IMPORTANT]
