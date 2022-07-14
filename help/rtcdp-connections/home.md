@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics;data collection;launch;web sdk
 solution: Experience Platform
-title: Data Collection Overview
+title: Real-Time Customer Data Platform Connections Overview
 topic-legacy: overview
 description: Learn about the various technologies involved with collect data on customer experiences in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 ---
-# Data collection overview
+# Real-Time Customer Data Platform Connections overview
 
-Adobe Experience Platform provides a suite of technologies that allow you to collect customer experience data from client-side sources, and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations in seconds.
+Real-Time Customer Data Platform (RTCDP) Connections provides a suite of technologies that allow you to collect customer experience data from client-side sources, and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations in seconds.
 
-Data collection is supported for the following client-side sources:
+RTCDP Connections is supported for the following client-side sources:
 
 * Web-based applications
 * Native mobile applications
 * Over-the-top (OTT) applications
 
-The data-collection technologies provided by Experience Platform focus on the discoverability and accessibility of ingested datasets. These technologies encompass the following:
+RTCDP Connections focuses on the discoverability and accessibility of ingested datasets, encompassing the following:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tags](../tags/home.md)
@@ -28,7 +28,7 @@ The data-collection technologies provided by Experience Platform focus on the di
 * [Experience Data Model (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-This guide provides a high-level introduction to the data collection framework and how it works to send data to Adobe Experience Cloud products and non-Adobe applications through the Platform Edge Network.
+This guide provides a high-level introduction RTCDP Connections and how it works to send data to Adobe Experience Cloud products and non-Adobe applications through the Platform Edge Network.
 
 ## Tags, Web SDK, and Mobile SDK
 
@@ -60,8 +60,8 @@ Platform Edge Network is a globally distributed, fast, and reliable network of s
 
 ## Next steps
 
-This document provided a high-level overview of how Platform's data collection technologies work to automate the process of sending your collected customer experience data to Adobe products and third-party destinations.
+This document provided a high-level overview of how RTCDP Connections works to automate the process of sending your collected customer experience data to Adobe products and third-party destinations.
 
 ![Data collection framework](./images/home/collection.png)
 
-For more information on the general workflow involved in sending event data through the Edge Network, refer to the [end-to-end overview for data collection](./e2e.md).
+For more information on the general workflow involved in sending event data through the Edge Network, refer to the [end-to-end overview](./e2e.md).

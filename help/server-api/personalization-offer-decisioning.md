@@ -1,7 +1,6 @@
 ---
 title: Personalization via Offer Decisioning
-description: Learn how to use the Server API to deliver and render personalized experiences via Offer Decisioning
-keywords: personalization; server api; Adobe Experience Platform Edge Network; retrieve personalization;target;offer decisioning;
+description: Learn how to use the Server API to deliver and render personalized experiences via Offer Decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
 ---
 # Personalization via Offer Decisioning

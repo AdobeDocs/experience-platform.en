@@ -2,6 +2,7 @@
 keywords: Experience Platform;query service;Query service;nested data structures;nested data;flatten;flatten nested data;
 title: Flatten Nested Data Structures For Use With BI Tools
 description: This document explains how to flatten XDM schemas for all tables and views during a session when using third-party BI tools with Query Service.
+exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
 ---
 # Flatten nested data structures for use with third-party BI tools
 
@@ -108,4 +109,4 @@ BI tools such as raw SQL editing are necessary to resolve both map and array lim
 
 ## Next steps
 
-This document covered how to flatten nested data structures for use with third-party BI tools. If you have not already connected your client, see [the client connection overview](../clients/overview.md) for a list of supported third-party clients. 
+This document covered how to flatten nested data structures for use with third-party BI tools. If you have not already connected your client, see [the client connection overview](../clients/overview.md) for a list of supported third-party clients.

@@ -1,6 +1,7 @@
 ---
 title: Import API Endpoint
 description: The /import endpoint in the Schema Registry API allows you to share XDM resources between IMS Organizations and sandboxes.
+exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
 ---
 # Import endpoint
 

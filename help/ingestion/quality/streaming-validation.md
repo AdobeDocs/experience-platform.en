@@ -58,6 +58,10 @@ Synchronous validation is a method of validation that provides immediate feedbac
 
 By default, synchronous validation is not turned on. To enable it, you must pass in the optional query parameter `syncValidation=true` when making API calls. In addition, synchronous validation is currently only available if your stream endpoint is on the VA7 data center.
 
+>[!NOTE]
+>
+>The `syncValidation` query parameter is only available for the single message endpoint and cannot be used for the batch endpoint.
+
 If a message fails during synchronous validation, the message will not be written to the output queue, which provides immediate feedback for users.
 
 >[!NOTE]
