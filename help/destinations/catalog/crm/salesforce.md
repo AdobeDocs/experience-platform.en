@@ -12,13 +12,7 @@ description: The Salesforce CRM destination allows you to export your account da
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts), which allows you to update identities within a segment into Salesforce CRM.
 
-## Destination specifics {#specifics}
-
-Note the following details that are specific to the [!DNL Salesforce CRM] destination:
-
-* [!DNL Adobe Experience Platform] segment status is exported to [!DNL Salesforce CRM] using a custom field attribute. You need to create this custom field attribute in [!DNL Salesforce] first, before you export data from Experience Platform. Instructions are further below, in the [Prerequisites](#prerequisites) section.
-
-* Salesforce CRM uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce CRM instance are further below, in the [Authenticate to destination](#authenticate) section.
+Salesforce CRM uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce CRM instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
@@ -194,6 +188,11 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
 
+## Errors and troubleshooting {#errors-and-troubleshooting}
+
+When checking a dataflow run, if you obtain the below error message; Check that the Mapping ID you provided against your Platform segment is valid and exists within [!DNL Salesforce CRM].
+![Error](../../assets/catalog/crm/salesforce/error.png)
+
 ## Additional resources {#additional-resources}
 
 Additional useful information from the [Salesforce developer portal](https://developer.salesforce.com/) is below:
@@ -201,6 +200,3 @@ Additional useful information from the [Salesforce developer portal](https://dev
 * [Custom Recommendation Audiences](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)
 * [Using Composite Resources](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/using_composite_resources.htm?q=composite)
 * [Quick Start](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart.htm)
-
-When checking a dataflow run, if you obtain the below error message; Check that the Mapping ID you provided against your Platform segment is valid and exists within [!DNL Salesforce CRM].
-![Error](../../assets/catalog/crm/salesforce/error.png)
