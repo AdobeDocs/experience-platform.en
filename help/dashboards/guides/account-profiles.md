@@ -8,9 +8,10 @@ description: Adobe Experience Platform provides a dashboard through which you ca
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your account profiles, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROl Account Profiles] dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
-For an overview of all of the Adobe Experience Platform Segmentation Service features within the Platform user interface, please visit the [RTCDP B2B UI guide]()
+For an overview of all of the features within the account profile user interface, please visit the [account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md)
 
-<!-- link to UI guide above -->
+To learn about other available B2B features, see the [Adobe Real-Time CDP, B2B Edition overview](../../rtcdp/b2b-overview.md).  
+
 
 {Perhaps a getting started section - discuss the necessary permissions / licencing info }
 
@@ -60,4 +61,4 @@ description
 
 ## Next steps
 
-By following this document you should now be able to locate the account profiles dashboard. You should also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/b2b-overview.md) for Adobe Real-Time CDP, B2B Edition.
+By following this document you should now be able to locate the account profiles dashboard. You should also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.
