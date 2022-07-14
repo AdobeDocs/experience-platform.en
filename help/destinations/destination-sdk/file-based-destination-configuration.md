@@ -705,6 +705,36 @@ Use the parameters in  `dynamicSchemaConfig` to define your own schema that Plat
 
 {style="table-layout:auto"}
 
+### Required mappings {#required-mappings}
+
+Within the schema configuration, you have the option of adding required, or predefined mappings. These are mappings that users will be able to view but not modify when they set up a connection to your destination.
+
+```json
+
+    "requiredMappings": [
+      {
+        "destination": "ppid",
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      },
+      {
+        "sourceType": "text/plain",
+        "source": "metadata.segment.alias",
+        "destination": "list_id"
+      },
+      {
+        "sourceType": "text/x.aep-xl",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
+        "destination": "delete"
+      }
+    ] 
+
+```
+
+![Image of the required mappings in the UI activation flow.](/help/destinations/destination-sdk/assets/required-mappings.png)
+
+Placeholder for table that describes the attributes
+
 ## Identities and attributes {#identities-and-attributes}
 
 The parameters in this section determine which identities your destination accepts. This configuration also populates the target identities and attributes in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
