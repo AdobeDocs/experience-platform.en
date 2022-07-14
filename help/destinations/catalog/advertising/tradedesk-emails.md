@@ -98,6 +98,10 @@ In the **[!UICONTROL Mapping]** page, you must select attributes or identity nam
 
 Below is an example of correct identity mapping when activating segments to [!DNL The Trade Desk] CRM destination. 
 
+>[!IMPORTANT]
+>
+> [!DNL The Trade Desk] CRM Destination does not accept raw and hashed email addresses as identities in the same activation flow. Create separate activation flows for raw and hashed email addresses.
+
 Selecting source fields: 
 
 *  Select the `Email` namespace or attribute as source identity if using the raw email address on data ingestion. 
@@ -107,10 +111,6 @@ Selecting target fields:
 
 *  Select the `Email` namespace as target identity when your source namespace or attribute is `Email`. 
 *  Select the `Email_LC_SHA256` namespace as target identity when your source namespace or attribute is `Email_LC_SHA256`.
-
->[!IMPORTANT]
->
-> [!DNL The Trade Desk] CRM Destination does not accept raw and hashed email addresses as identities in the same activation flow. Create separate activation flows for raw and hashed email addresses. 
 
 ## Validate Data Export (#validate)
 
