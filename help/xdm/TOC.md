@@ -56,6 +56,7 @@ feature: Schemas
     * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
   * XDM ExperienceEvent {#event}
     * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+    * [Application Details](./field-groups/event/application-details.md)
     * [Balance Transfers](./field-groups/event/balance-transfers.md)
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
     * [Card Actions](./field-groups/event/card-actions.md)
