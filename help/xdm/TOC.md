@@ -25,6 +25,8 @@ feature: Schemas
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
+  * [Payer](./classes/payer.md)
+  * [Plan](./classes/plan.md)
   * [Policy](./classes/policy.md)
   * [Product](./classes/product.md)
   * [Segment definition](./classes/segment-definition.md)
@@ -39,12 +41,13 @@ feature: Schemas
     * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
 * Field groups {#field-groups}
   * XDM Individual Profile {#profile}
+    * [Consents and Preferences](./field-groups/profile/consents.md)
     * [Demographic Details](./field-groups/profile/demographic-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
     * [IdentityMap](./field-groups/profile/identitymap.md)
+    * [Healthcare Member Deatils](./field-groups/profile/healthcare-member-details.md)
     * [Loyalty Details](./field-groups/profile/loyalty-details.md)
     * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
-    * [Consents and Preferences](./field-groups/profile/consents.md)
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
     * [Telecom Subscription](./field-groups/profile/telecom-subscription.md)
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
@@ -67,6 +70,7 @@ feature: Schemas
     * [Lodging Reservation](./field-groups/event/lodging-reservation.md)
     * [Quote Request Details](./field-groups/event/quote-request-details.md)
     * [Reservation Details](./field-groups/event/reservation-details.md)
+    * [Sitetool Details](./field-groups/event/sitetool-details.md)
     * [Support Site Search](./field-groups/event/support-site-search.md)
     * [Upgrade Details](./field-groups/event/upgrade-details.md)
     * [Upsell Details](./field-groups/event/upsell-details.md)
@@ -75,6 +79,8 @@ feature: Schemas
     * [XDM Business Campaign Details](./field-groups/b2b-campaign/details.md)
   * XDM Business Campaign Members {#b2b-campaign-members}
     * [XDM Business Campaign Members Details](./field-groups/b2b-campaign-members/details.md)
+  * Plan {#plan}
+    * [Healthcare Plan Details](./field-groups/plan/healthcare-plan-details.md)
   * Product {#product}
     * [Product Catalog](./field-groups/product/product-catalog.md)
     * [Product Category](./field-groups/product/product-category.md)
