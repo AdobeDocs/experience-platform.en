@@ -1,8 +1,6 @@
 ---
 title: Derived Attributes
 description: Derived attributes provide a convenient means to generate attributes of your choice that can be refreshed at any regular cadence and optionally published into your Real-time Customer Profile data. This document provides an overview of how to use Query Service to create derived attributes for use with your Profile data.
-hide: true
-hidefromtoc: true
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
 ---
 # Derived attributes
