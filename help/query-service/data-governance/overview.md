@@ -1,6 +1,7 @@
 ---
 title: Data Governance in Query Service
 description: This overview covers the major elements of data governance in Experience Platform Query Service.
+feature: Data Governance
 ---
 # Data governance in Query Service
 
