@@ -13,7 +13,7 @@ Organizations that routinely conduct data processing are recommended to outline,
 The following categories are instrumental in adhering to data compliance regulations when using Query Service:
 
 1. Security
-1. Logs
+1. Audit
 1. Data usage
 1. Privacy 
 <!-- 1. Data hygiene -->
@@ -47,11 +47,13 @@ To run queries within Query Service, a user must be assigned a role with the fol
 
 | Permission | Description |
 |---|---|
-| [!UICONTROL Manage Queries] | This permission allows users to execute data exploration and batch queries, which can either read an existing dataset or write data on datasets. This includes both `INSERT INTO AS SELECT` (`CTAS`) and `INSERT INTO AS SELECT` (`ITAS`) queries. |
+| [!UICONTROL Manage Queries] | This permission allows users to execute data exploration and batch queries, which can either read an existing dataset or write data on datasets. This includes both `CREATE TABLE AS SELECT` (`CTAS`) and `INSERT INTO AS SELECT` (`ITAS`) queries. |
 
 **Dataset permissions**
 
-You can define access control for datasets and schemas with the following permissions:
+This section serves as a guide for the resource-based access required to access datasets while querying data through Query Service.
+
+Through the Permissions interface you can define resource-based access control for a dataset and schema with the following permissions:
 
 | Permission | Description |
 |---|---|
@@ -125,7 +127,7 @@ Query Service data compliance ensures that data is always encrypted. Data-in-tra
 
 <!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
-## Logs {#logs}
+## Audit {#audit}
 
 Query Service records user activity and categorizes that activity in different log types. Logs supply information on **who** performed **what** action, and **when**. Each action recorded in a log contains metadata that indicates the action type, date and time, the email ID of the user who performed the action, and additional attributes relevant to the action type.
 
@@ -133,9 +135,9 @@ Any of the log categories can be requested as desired by a Platform user. This s
 
 ### Query logs {#query-logs}
 
-The query log UI allows you to monitor and review execution details for all queries that have been run either via the Query Editor or the Query Service API. This brings transparency to Query Service activities, allowing you to check the metadata for **all** the queries that have been executed across Query Service. It includes all types of queries whether it is an exploratory, batch, or scheduled query. 
+The query logs UI allows you to monitor and review execution details for all queries that have been run either via the Query Editor or the Query Service API. This brings transparency to Query Service activities, allowing you to check the metadata for **all** the queries that have been executed across Query Service. It includes all types of queries whether it is an exploratory, batch, or scheduled query. 
 
-Query logs can be accessed either through the Platform UI or the [Audit Query API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). Query logs are located in the [!UICONTROL Logs] tab of the [!UICONTROL Queries] workspace.
+Query logs can be accessed either through the Platform UI in the [!UICONTROL Logs] tab of the [!UICONTROL Queries] workspace.
 
 ![The Queries log tab with the details panel highlighted.](../images/data-governance/overview/queries-log.png)
 
@@ -169,9 +171,9 @@ It is best practice to work towards data compliance at every stage of the data's
 
 >[!NOTE]
 >
->Datasets that are created or appended to using Query Service are referred to as "derived datasets".
+>Datasets that are created using Query Service are referred to as "derived datasets".
 
-As ad hoc schemas are created by an individual user for a specific purpose, the XDM schema fields are namespaced for that particular dataset and not intended for use across different datasets. As a result, ad hoc schemas are not visible by default in the Experience Platform UI. Although there is no difference in the application of data usage labels between both standard and ad hoc schemas, the process for labeling ad hoc schemas through the UI requires that they first be made available to view in a read-only mode. See the guide on [discovering ad hoc schemas within the Platform UI](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) for more details. 
+As ad hoc schemas are created by an individual user for a specific purpose, the XDM schema fields are namespaced for that particular dataset and not intended for use across different datasets. As a result, ad hoc schemas are not visible by default in the Experience Platform UI. Although there is no difference in the application of data usage labels between both standard and ad hoc schemas, ad hoc schemas created by Query Service for the purpose of labelling must first be made visible in the Platform UI. See the guide on [discovering ad hoc schemas within the Platform UI](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) for more details. 
  
 After you have accessed the schema, you can [apply labels to individual fields](../../xdm/tutorials/labels.md). Once a schema has been labeled, all datasets that derive from that schema inherit those labels. From here, you can set up data usage policies that can restrict data with certain labels from being activated to certain destinations. For more information, see the overview on [data usage policies](../../data-governance/policies/overview.md).
 
@@ -179,11 +181,7 @@ After you have accessed the schema, you can [apply labels to individual fields](
 
 [Privacy Service](../../privacy-service/home.md) helps you manage customer requests to access and delete their data in accordance with legal privacy regulations. It does this by searching the data for pre-existing identifiers, and either accesses or deletes that data depending on the privacy job requested. Data must be properly labeled in order for the service to determine which fields to access or delete during privacy jobs. Data that is subject to privacy requests must contain customer identity information in order to tie the disparate pieces of data with the individual person to whom the privacy request applies to. Query Service can enrich the data it uses with a unique identifier for the purpose of satisfying privacy jobs. 
 
-Privacy requests can be sent to the data lake or the Profile data store. Records deleted from the data lake do not result in the deletion of profiles that were made from those records. Also, a privacy job to delete personal information from the data lake does not delete their profile so any information (that contains that profile ID) ingested after the completion of the privacy job updates that profile as normal.
-
-For derived datasets that use standard schemas, privacy requests must be made to the data lake and not the Profile data store. This reaffirms the need to properly identify data that uses as hoc schemas.
-
-<!-- Q) I am still not sure why privacy requests must be made to the data lake and not the Profile data store for derived datasets that use standard schemas. -->
+Privacy requests can be sent to the data lake or the Profile data store. Records deleted from the data lake do not result in the deletion of profiles that were made from those records. Also, a privacy job to delete personal information from the data lake does not delete their profile so any information (that contains that profile ID) ingested after the completion of the privacy job updates that profile as normal. This reaffirms the need to properly identify data used in hoc schemas.
 
 See the Privacy Service documentation for more information on [identity data for privacy requests](../../privacy-service/identity-data.md) and how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 
