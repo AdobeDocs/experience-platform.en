@@ -10,14 +10,13 @@ The Adobe Experience Platform user interface (UI) provides a dashboard through w
 
 For an overview of all of the features within the account profile user interface, please visit the [account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md). To learn about other available B2B features, see the [Adobe Real-Time CDP, B2B Edition overview](../../rtcdp/b2b-overview.md).  
 
-{Perhaps a getting started section - discuss the necessary permissions / licencing info }
+<!-- {Perhaps a getting started section - discuss the necessary permissions / licencing info } -->
 
-## Account Profiles data
+## Account profiles data
 
-<!-- Q) What data does the dashboard display? -->
-The [!UICONTROl Account Profiles] dashboard displays a snapshot of XXX 
+The [!UICONTROl Account Profiles] dashboard displays a snapshot of unified account information from the multiple sources across your many marketing channels and the diverse systems that your organization is currently using to store customer account information.
 
-The attribute data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the [!UICONTROl Account Profiles] dashboard is not updating in real-time.
+The profile data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the [!UICONTROl Account Profiles] dashboard is not updating in real-time.
 
 >[!NOTE]
 >
