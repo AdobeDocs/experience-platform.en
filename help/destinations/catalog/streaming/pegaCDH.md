@@ -5,13 +5,11 @@ description: Use the Pega Customer Decision Hub destination in Adobe Experience 
 
 # Pega Customer Decision Hub connection
 
-
-
 ## Overview {#overview}
 
-Send profile attributes and segment membership data to Pega Customer Descision Hub for next-best-action decisioning. 
+Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send profile attributes and segment membership data to Pega Customer Descision Hub for next-best-action decisioning. 
 
-Adobe Experience Platform Profile Segment membership, when loaded into Pega Customer Decision Hub, can be used as predictors in adaptive models and help deliver the right contextual and behavioral data for next-best-action decisioning purposes.
+Profile segment membership from Adobe Experience Platform, when loaded into Pega Customer Decision Hub, can be used as predictor in adaptive models and help deliver the right contextual and behavioral data for next-best-action decisioning purposes.
 
 ## Use cases 
 
@@ -31,7 +29,7 @@ To help you better understand how and when you should use the Customer Decision 
 
 ## Prerequisites {#prerequisites}
 
-Before you use Pega Customer Decision Hub destination to export data out of Adobe Experience Platform:
+Before you can use this destination to export data out of Adobe Experience Platform, make sure you complete the following prerequisites in Pega Customer Decision Hub:
 
 * Configure the Adobe Segment Membership Component in your Pega Customer Decision Hub instance.
 * Configure OAuth 2.0 Client Registration using Client Credentials grant type in your Pega Customer Decision Hub instance
