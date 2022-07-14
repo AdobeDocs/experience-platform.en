@@ -55,7 +55,7 @@ Note the following prerequisites in Salesforce, in order to export data from Pla
         >
         > * Objects in Salesforce are restricted to 25 External fields, see [Custom Field Attributes](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5).
         > * This restriction implies you will only be able to have at a maximum 25 Experience Platform segment memberships active at any time. 
-        > * If you have reached the custom field attribute limit you will have to remove the custom field attribute from Salesforce which you used to store the segment status against older segments within Experience Platform.
+        > * If you have reached this limit within Salesforce, you will need to remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new mappingId can be used.
 
     * Refer to Adobe's documentation for [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=en) if you need guidance on segment statuses.
 
