@@ -63,6 +63,7 @@ feature: Queries
   - [RStudio](clients/rstudio.md)
   - [Tableau](clients/tableau.md)
 - Data Governance {#data-governance}
+  - [Overview](data-governance/overview.md)
   - [Audit log guide](data-governance/audit-log-guide.md)
   - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
   - [Attribute-based access control support for ad hoc schemas](./data-governance/ad-hoc-schema-labels.md)
