@@ -182,9 +182,11 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
 
-## Additional resources {#additional-resources}
-
-* [Salesforce developer portal](https://developer.salesforce.com/)
+## Errors and troubleshooting {#errors-and-troubleshooting}
 
 When checking a dataflow run, if you obtain the below error message; Check that the Mapping ID you provided against your Platform segment is valid and exists within Salesforce.
 ![Error](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
+
+## Additional resources {#additional-resources}
+
+* [Salesforce developer portal](https://developer.salesforce.com/)
