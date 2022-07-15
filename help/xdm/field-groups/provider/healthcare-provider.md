@@ -4,7 +4,7 @@ description: This document provides an overview of the Healthcare Provider schem
 ---
 # [!UICONTROL Healthcare Provider] schema field group
 
-[!UICONTROL Healthcare Provider] is a standard schema field group for the [[!UICONTROL Plan] class](../../classes/plan.md). It provides a single object-type field `healthcarePlanDetails` which captures properties related to an individual health professional or a health facility organization licensed to provide health care diagnosis and treatment services.
+[!UICONTROL Healthcare Provider] is a standard schema field group for the [[!UICONTROL Provider] class](../../classes/provider.md). It provides a single object-type field `healthcareProvider` which captures properties related to an individual health professional or a health facility organization licensed to provide health care diagnosis and treatment services.
 
 ![](../../images/field-groups/healthcare-provider.png)
 

@@ -15,3 +15,5 @@ In Experience Data Model (XDM), the [!UICONTROL Plan] class captures the minimum
 | `planName` | [!UICONTROL String] | The name of the plan. |
 
 {style="table-layout:auto"}
+
+The class can be extended with the [[!UICONTROL Healthcare Plan Details] field group](../field-groups/plan/healthcare-plan-details.md) to describe further details about a health insurance plan.

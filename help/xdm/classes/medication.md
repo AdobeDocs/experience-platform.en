@@ -15,3 +15,5 @@ In Experience Data Model (XDM), the [!UICONTROL Medication] class captures the m
 | `medicationName` | [!UICONTROL String] | The name of the medication. |
 
 {style="table-layout:auto"}
+
+The class can be extended with the [[!UICONTROL Healthcare medication] field group](../field-groups/medication/healthcare-medication.md) to describe further details about the medicine or drug.

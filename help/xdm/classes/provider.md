@@ -4,7 +4,7 @@ description: This document provides an overview of the Provider class in Experie
 ---
 # [!UICONTROL Provider] class
 
-In Experience Data Model (XDM), the [!UICONTROL Provider] class captures the minimum set of properties that define a provider business entity (such as a health provider or insurance provider).
+In Experience Data Model (XDM), the [!UICONTROL Provider] class captures the minimum set of properties that define a provider business entity (such as a healthcare provider or insurance provider).
 
 ![Class structure](../images/classes/provider.png)
 
@@ -15,3 +15,5 @@ In Experience Data Model (XDM), the [!UICONTROL Provider] class captures the min
 | `providerId` | [!UICONTROL String] | A unique identifier for the provider. |
 
 {style="table-layout:auto"}
+
+The class can be extended with the [[!UICONTROL Healthcare Provider] field group](../field-groups/provider/healthcare-provider.md) to describe further details about a healthcare provider.
