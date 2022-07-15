@@ -24,20 +24,19 @@ As a marketer, you can deliver personalized experiences to your users, based on 
 
 Before activating data to the Salesforce CRM destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-### Prerequisites in Salesforce CRM
+### Prerequisites in Salesforce CRM {#prerequisites-destination}
 
 Note the following prerequisites in Salesforce, in order to export data from Platform to your Salesforce account:
 
-#### You need to have a Salesforce account
+#### You need to have a Salesforce account {#prerequisites-account}
 
 Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a Salesforce account, if you do not have one already.
 
-#### Configure a connected app
+#### Configure a connected app {#prerequisites-connected-app}
 
 Next, you need to configure a [connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) within your Salesforce account, if you do not have one already. 
 
 Within the connected app ensure that [OAuth Settings](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) is enabled.
-
 
 Also ensure that the [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mentioned below are selected.
 * ``chatter_api``
@@ -51,7 +50,7 @@ Also ensure that the [scopes](https://help.salesforce.com/s/articleView?id=conne
 * ``refresh_token``
 * ``offline_access``
 
-#### Create custom field within Salesforce
+#### Create custom field within Salesforce {#prerequisites-custom-field}
 
 Create the custom field of type `Text Area Long` which Experience Platform will use to update the segment status within Salesforce CRM. 
 Refer to the Salesforce documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance. 
@@ -68,7 +67,7 @@ Refer to the Salesforce documentation to [create custom fields](https://help.sal
 
 Refer to Adobe's documentation for [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=en) if you need guidance on segment statuses.
 
-#### Gather Salesforce credentials
+#### Gather Salesforce credentials {#gather-credentials}
 
 Note down the items below before you authenticate to the Salesforce CRM destination:
 
@@ -210,8 +209,8 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
-### Unknown errors encountered while pushing events to destination
-When checking a dataflow run, if you obtain the below error message; Check that the Mapping ID you provided against your Platform segment is valid and exists within [!DNL Salesforce CRM].
+### Unknown errors encountered while pushing events to destination {#unknown-errors}
+When checking a dataflow run, if you see the error message below, verify that the Mapping ID that you provided in [!DNL Salesforce CRM] for your Platform segment is valid and exists within [!DNL Salesforce CRM].
 ![Error](../../assets/catalog/crm/salesforce/error.png)
 
 ## Additional resources {#additional-resources}
