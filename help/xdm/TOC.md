@@ -30,6 +30,7 @@ feature: Schemas
   * [Plan](./classes/plan.md)
   * [Policy](./classes/policy.md)
   * [Product](./classes/product.md)
+  * [Provider](./classes/provider.md)
   * [Segment definition](./classes/segment-definition.md)
   * B2B classes {#b2b}
     * [XDM Business Account](./classes/b2b/business-account.md)
@@ -56,6 +57,7 @@ feature: Schemas
     * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
   * XDM ExperienceEvent {#event}
     * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+    * [Advertising Details](./field-groups/event/advertising-details.md)
     * [Application Details](./field-groups/event/application-details.md)
     * [Balance Transfers](./field-groups/event/balance-transfers.md)
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
@@ -86,9 +88,12 @@ feature: Schemas
   * Product {#product}
     * [Product Catalog](./field-groups/product/product-catalog.md)
     * [Product Category](./field-groups/product/product-category.md)
+  * Provider {#provider}
+    * [Healthcare Provider](./field-groups/provider/healthcare-provider.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
   * [Application](./data-types/application.md)
+  * [Ad break](./data-types/ad-break.md)
   * [Beacon](./data-types/beacon.md)
   * [Browser details](./data-types/browser-details.md)
   * [B2B Source](./data-types/b2b-source.md)
@@ -113,6 +118,7 @@ feature: Schemas
   * [Geo Shape](./data-types/geo-shape.md)
   * [Identity](./data-types/identity.md)
   * [Impressions](./data-types/impressions.md)
+  * [Implementation details](./data-types/implementation-details.md)
   * [Internal site search](./data-types/internal-site-search.md)
   * [Key Value Pair](./data-types/key-value-pair.md)
   * [Marketing](./data-types/marketing.md)
