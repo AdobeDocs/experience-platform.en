@@ -48,7 +48,7 @@ feature: Schemas
     * [Demographic Details](./field-groups/profile/demographic-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
     * [IdentityMap](./field-groups/profile/identitymap.md)
-    * [Healthcare Member Deatils](./field-groups/profile/healthcare-member-details.md)
+    * [Healthcare Member Details](./field-groups/profile/healthcare-member-details.md)
     * [Loyalty Details](./field-groups/profile/loyalty-details.md)
     * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
