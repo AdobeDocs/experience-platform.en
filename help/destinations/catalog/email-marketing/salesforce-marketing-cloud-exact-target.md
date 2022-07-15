@@ -10,6 +10,10 @@ description: The Salesforce Marketing Cloud (ExactTarget) destination allows you
 
 [[!DNL Salesforce Marketing Cloud (ExactTarget)]](https://www.salesforce.com/products/marketing-cloud/overview/) is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
+> [!IMPORTANT]
+> 
+> Kindly note a different [Salesforce Marketing Cloud connection](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/salesforce-marketing-cloud.html?lang=en) exists within Email marketing. However, its operation is to support file exports to a specified storage location, whereas this is an API-based streaming connection.
+
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce Update Contacts REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html), which allows you to add contacts / update contact data for your business needs after activating them within a new Salesforce segment.
 
 Salesforce Marketing Cloud (ExactTarget) uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce instance are further below, in the [Authenticate to destination](#authenticate) section.
@@ -24,29 +28,43 @@ The sales department of a home rental platform wants to broadcast a marketing em
 
 ## Prerequisites {#prerequisites}
 
+### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
+
 Before activating data to the Salesforce Marketing Cloud (ExactTarget) destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+
+### Prerequisites in Salesforce CRM
 
 Note the following prerequisites in Salesforce, in order to export data from Platform to your Salesforce Marketing Cloud account:
 
-1. You need to have a Salesforce Marketing Cloud account.
-    * Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a Salesforce account, if you do not have one already.
-1. Note down the items below before you authenticate to the Salesforce Marketing Cloud (ExactTarget) destination.
-    * Your [Salesforce Marketing Cloud domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5). 
-        * For example if your domain is *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, you will need the highlighted value.
-    * Your *Client ID* and *Client Secret*.
-        * Refer to the [Salesforce documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) if you need additional guidance.
-1. Create the custom attribute of type `Text Area Long` which Experience Platform will use to update the segment status within Salesforce Marketing Cloud. 
-    * Refer to the Salesforce Marketing Cloud documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need additional guidance.
-        > [!IMPORTANT]
-        >
-        > Ensure you create the custom attribute under the "Email Demographics" attribute-set within your Salesforce Marketing Cloud account.
+#### You need to have a Salesforce account
 
-        > [!NOTE]
-        >
-        > * The number of custom attributes allowed per object varies according to your Salesforce Edition. Refer to the Salesforce documentation for [custom fields allowed per object](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5) if you need additional guidance.
-        > * If you have reached this limit within Salesforce, you will need to remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new mappingId can be used.
+Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a Salesforce account, if you do not have one already.
 
-    * Refer to Adobe's documentation for [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=en) if you need guidance on segment statuses.
+#### Create custom field within Salesforce
+
+Create the custom attribute of type `Text Area Long` which Experience Platform will use to update the segment status within Salesforce Marketing Cloud. 
+
+Refer to the Salesforce Marketing Cloud documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need additional guidance.
+
+> [!IMPORTANT]
+>
+> Ensure you create the custom attribute under the "Email Demographics" attribute-set within your Salesforce Marketing Cloud account.
+
+> [!NOTE]
+>
+> * The number of custom attributes allowed per object varies according to your Salesforce Edition. Refer to the Salesforce documentation for [custom fields allowed per object](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5) if you need additional guidance.
+> * If you have reached this limit within Salesforce, you will need to remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new mappingId can be used.
+
+Refer to Adobe's documentation for [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=en) if you need guidance on segment statuses.
+
+#### Gather Salesforce credentials
+
+Note down the items below before you authenticate to the Salesforce Marketing Cloud (ExactTarget) destination.
+
+| Credential | Description | Example |
+| --- | --- | --- |
+| <ul><li>Salesforce Marketing Cloud prefix</li></ul> | See [Salesforce Marketing Cloud domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*</li></ul>
+|<ul><li>Client ID</li><li>Client Secret</li></ul> | Refer to the [Salesforce documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) if you need additional guidance. | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
 
 ## Supported identities {#supported-identities}
 
@@ -131,7 +149,7 @@ The list of attribute mappings that can be set-up for the [Salesforce REST API](
 1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
 ![Target mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping.png)
 
-1. To map any custom attributes select target field window, select the target field and choose the **[!UICONTROL Select attributes]** > **Email Demographics** category, Next provide the desired target attribute name and add the mappings desired.
+1. To map any custom attributes, select target field window, select the target field and choose the **[!UICONTROL Select attributes]** > **Email Demographics** category. Next provide the desired target attribute name and add the mappings desired.
 ![Target mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping-custom.png)
 
 1. For instance, you could add the following mapping between your XDM profile schema and your [!DNL Salesforce Marketing Cloud] instance:
@@ -146,14 +164,15 @@ The list of attribute mappings that can be set-up for the [Salesforce REST API](
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
-* When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step you will need to manually map Platform segments to the custom attribute in Salesforce.
-* To do this, select each segment, then enter the corresponding custom attribute from Salesforce in the **[!UICONTROL Mapping ID]** field.
+When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step you must manually map Platform segments to the custom attribute in Salesforce.
 
-    > [!IMPORTANT]
-    >
-    > * The value used for the Mapping ID should exactly match the name of the custom attribute created within Salesforce under the "Email Demographics" attribute-set.
+To do this, select each segment, then enter the corresponding custom attribute from Salesforce in the **[!UICONTROL Mapping ID]** field.
 
-* An example is shown below:
+> [!IMPORTANT]
+>
+> * The value used for the Mapping ID should exactly match the name of the custom attribute created within Salesforce under the "Email Demographics" attribute-set.
+
+An example is shown below:
 ![Schedule segment export](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 ## Validate data export {#exported-data}
@@ -184,7 +203,9 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
-When checking a dataflow run, if you obtain the below error message; Check that the Mapping ID you provided against your Platform segment is valid and exists within Salesforce.
+### Unknown errors encountered while pushing events to Salesforce Marketing Cloud
+
+When checking a dataflow run, if you obtain the below error message; Check that the Mapping ID you provided against your Platform segment is valid and exists within Salesforce Marketing Cloud.
 ![Error](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
 
 ## Additional resources {#additional-resources}
