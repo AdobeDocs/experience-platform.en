@@ -40,16 +40,16 @@ Within the connected app ensure that [OAuth Settings](https://help.salesforce.co
 
 
 Also ensure that the [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mentioned below are selected.
-    * ``chatter_api``
-    * ``lightning``
-    * ``visualforce``
-    * ``content``
-    * ``openid``
-    * ``full``
-    * ``api``
-    * ``web``
-    * ``refresh_token``
-    * ``offline_access``
+* ``chatter_api``
+* ``lightning``
+* ``visualforce``
+* ``content``
+* ``openid``
+* ``full``
+* ``api``
+* ``web``
+* ``refresh_token``
+* ``offline_access``
 
 #### Create custom field within Salesforce
 
