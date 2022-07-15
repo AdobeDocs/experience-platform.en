@@ -12,7 +12,7 @@ description: The Salesforce Marketing Cloud (ExactTarget) destination allows you
 
 > [!IMPORTANT]
 > 
-> Kindly note a different [Salesforce Marketing Cloud connection](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/salesforce-marketing-cloud.html?lang=en) exists within Email marketing. However, its operation is to support file exports to a specified storage location, whereas this is an API-based streaming connection.
+> Note the difference between this connection and the other [Salesforce Marketing Cloud connection](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/salesforce-marketing-cloud.html?lang=en) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection allows you to export files to a specified storage location, whereas this is an API-based streaming connection.
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce Update Contacts REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html), which allows you to add contacts / update contact data for your business needs after activating them within a new Salesforce segment.
 
@@ -22,7 +22,7 @@ Salesforce Marketing Cloud (ExactTarget) uses OAuth 2 with Client Credentials as
 
 To help you better understand how and when you should use the Salesforce Marketing Cloud (ExactTarget) destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
-### Send emails to contacts for marketing campaigns
+### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
 The sales department of a home rental platform wants to broadcast a marketing email to a targeted customer audience. The platform's marketing team can add new contacts / update existing contacts *(and their email addresses)* through Adobe Experience Platform, build segments from their own offline data, and send these segments to Salesforce Marketing Cloud (ExactTarget), which can then be used to send the marketing campaign email.
 
@@ -32,15 +32,15 @@ The sales department of a home rental platform wants to broadcast a marketing em
 
 Before activating data to the Salesforce Marketing Cloud (ExactTarget) destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-### Prerequisites in Salesforce CRM
+### Prerequisites in Salesforce CRM {#prerequisites-destination}
 
 Note the following prerequisites in Salesforce, in order to export data from Platform to your Salesforce Marketing Cloud account:
 
-#### You need to have a Salesforce account
+#### You need to have a Salesforce account {#prerequisites-account}
 
 Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a Salesforce account, if you do not have one already.
 
-#### Create custom field within Salesforce
+#### Create custom field within Salesforce {#prerequisites-custom-field}
 
 Create the custom attribute of type `Text Area Long` which Experience Platform will use to update the segment status within Salesforce Marketing Cloud. 
 
@@ -57,7 +57,7 @@ Refer to the Salesforce Marketing Cloud documentation to [create custom fields](
 
 Refer to Adobe's documentation for [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=en) if you need guidance on segment statuses.
 
-#### Gather Salesforce credentials
+#### Gather Salesforce credentials {#gather-credentials}
 
 Note down the items below before you authenticate to the Salesforce Marketing Cloud (ExactTarget) destination.
 
@@ -203,9 +203,9 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
-### Unknown errors encountered while pushing events to Salesforce Marketing Cloud
+### Unknown errors encountered while pushing events to Salesforce Marketing Cloud {#unknown-errors}
 
-When checking a dataflow run, if you obtain the below error message; Check that the Mapping ID you provided against your Platform segment is valid and exists within Salesforce Marketing Cloud.
+When checking a dataflow run, if you see the error message below, verify that the Mapping ID that you provided in [!DNL Salesforce CRM] for your Platform segment is valid and exists within [!DNL Salesforce CRM].
 ![Error](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
 
 ## Additional resources {#additional-resources}
