@@ -47,6 +47,7 @@ description: This document provides an overview of the Healthcare Member Details
 | `preferredAvailability` | String | The person's preferred day and time availability for an appointment. | 
 | `primaryMemberID` | String | A unique identifier of the primary subscriber if the person is a dependent. | 
 
+{style="table-layout:auto"}
 
 For more details on the field group, refer to the public XDM repository:
 
