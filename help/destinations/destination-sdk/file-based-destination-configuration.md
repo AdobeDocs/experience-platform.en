@@ -733,7 +733,17 @@ Within the schema configuration, you have the option of adding required, or pred
 
 ![Image of the required mappings in the UI activation flow.](/help/destinations/destination-sdk/assets/required-mappings.png)
 
-Placeholder for table that describes the attributes
+Use the parameters described in the table below if you would like to add required mappings in the activation workflow.
+
+|Parameter | Type | Description|
+|---------|----------|------|
+
+|`requiredMappings.destination`|String|Always set to `SCHEMA` when defining a custom schema.|
+|`requiredMappings.mandatoryRequired`|Boolean| Set to true if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+|`requiredMappings.primaryKeyRequired`|Boolean| Set to true if this field must be a used as a deduplication key in file exports to your destination. Read more about [deduplication keys](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+
+{style="table-layout:auto"}
+
 
 ## Identities and attributes {#identities-and-attributes}
 
