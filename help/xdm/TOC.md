@@ -26,6 +26,7 @@ feature: Schemas
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
+  * [Medication](./classes/medication.md)
   * [Payer](./classes/payer.md)
   * [Plan](./classes/plan.md)
   * [Policy](./classes/policy.md)
@@ -83,6 +84,8 @@ feature: Schemas
     * [XDM Business Campaign Details](./field-groups/b2b-campaign/details.md)
   * XDM Business Campaign Members {#b2b-campaign-members}
     * [XDM Business Campaign Members Details](./field-groups/b2b-campaign-members/details.md)
+  * Medication {#medication}
+    * [Healthcare medication](./field-groups/medication/healthcare-medication.md)
   * Plan {#plan}
     * [Healthcare Plan Details](./field-groups/plan/healthcare-plan-details.md)
   * Product {#product}
@@ -92,8 +95,9 @@ feature: Schemas
     * [Healthcare Provider](./field-groups/provider/healthcare-provider.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
-  * [Application](./data-types/application.md)
+  * [Account Details](./data-types/account-details.md)
   * [Ad break](./data-types/ad-break.md)
+  * [Application](./data-types/application.md)
   * [Beacon](./data-types/beacon.md)
   * [Browser details](./data-types/browser-details.md)
   * [B2B Source](./data-types/b2b-source.md)
