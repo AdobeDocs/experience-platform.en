@@ -10,11 +10,11 @@ description: This document provides an overview of the Healthcare Provider schem
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `addressDetails` | Array of objects | Lists the address details for the provider. Each object includes the following properties: <ul><li>`address`: ([!UICONTROL Postal address](../../data-types/postal-address.md)): The postal address for the provider.</li><li>`addressType`: (String) The type of address, indicating where the provider provides services.</li></ul> |
+| `addressDetails` | Array of objects | Lists the address details for the provider. Each object includes the following properties: <ul><li>`address`: ([[!UICONTROL Postal address]](../../data-types/postal-address.md)): The postal address for the provider.</li><li>`addressType`: (String) The type of address, indicating where the provider provides services.</li></ul> |
 | `emailAddress` | [[!UICONTROL Email address]](../../data-types/email-address.md) | The provider's email address. |
 | `fax` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | The provider's fax number. |
 | `phoneNumber` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | The provider's phone number. |
-| `qualifications` | Array of objects | Lists the certifications, licenses, or training pertaining to the provision of care. Each object includes the following properties: <ul><li>`issuer`: ([!UICONTROL Account details](../../data-types/account-details.md)): The organization that regulates and issues the qualification.</li><li>`activePeriod`: (Integer) The year until which the qualification is valid.</li><li>`code`: (String) A coded representation of the qualification.</li></ul> |
+| `qualifications` | Array of objects | Lists the certifications, licenses, or training pertaining to the provision of care. Each object includes the following properties: <ul><li>`issuer`: ([[!UICONTROL Account details]](../../data-types/account-details.md)): The organization that regulates and issues the qualification.</li><li>`activePeriod`: (Integer) The year until which the qualification is valid.</li><li>`code`: (String) A coded representation of the qualification.</li></ul> |
 | `classification` | String | The service provider classification based on class or category (such as patient care, non patient care, and so on). |
 | `isActive` | Boolean | Indicates whether the provider is active. |
 | `languages` | Array of strings | A list of languages that the provider conducts operations under. |
