@@ -6,7 +6,7 @@ topic-legacy: labels
 description: This document outlines all data usage labels currently supported by Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 ---
-# Data usage labels glossary
+# Data usage labels glossary {#data-usage-labels-glossary}
 
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
