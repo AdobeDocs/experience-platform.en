@@ -711,6 +711,7 @@ Within the schema configuration, you have the option of adding required, or pred
 
 ```json
 
+    "requiredMappingsOnly": true,
     "requiredMappings": [
       {
         "destination": "ppid",
@@ -737,10 +738,12 @@ Use the parameters described in the table below if you would like to add require
 
 |Parameter | Type | Description|
 |---------|----------|------|
-
-|`requiredMappings.destination`|String|Always set to `SCHEMA` when defining a custom schema.|
+|`requiredMappingsOnly`|Boolean|Indicates if users will be able to map other attributes and identities in the activation flow, *apart from* the required mappings that you define.|
 |`requiredMappings.mandatoryRequired`|Boolean| Set to true if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
-|`requiredMappings.primaryKeyRequired`|Boolean| Set to true if this field must be a used as a deduplication key in file exports to your destination. Read more about [deduplication keys](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+|`requiredMappings.primaryKeyRequired`|Boolean| Set to true if this field must be used as a deduplication key in file exports to your destination. Read more about [deduplication keys](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+|`requiredMappings.sourceType`|String| Indicates what type of field the source is. Available options are: <ul><li>`"text/plain"` when ....</li><li>`"text/x.aep-xl"` when ....</li><li>`"text/x.schema-path"` when ....</li></ul>.|
+|`requiredMappings.source`|String|Indicates what the required source field should be.|
+|`requiredMappings.destination`|String|Indicates what the required destination field should be.|
 
 {style="table-layout:auto"}
 
