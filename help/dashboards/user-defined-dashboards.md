@@ -46,13 +46,13 @@ The [!UICONTROL Select data] dialog appears.
 >
 >User-defined dashboards currently only supports the profile data model. More options will be supported.
 
-![The select data dialog](./images/user-defined-dashboards/select-data-dialog.png)
+![The select data dialog.](./images/user-defined-dashboards/select-data-dialog.png)
 
 Select a data model from the left column to display a preview list of all available tables. 
 
-The preview list provides details about the tables contained in the data model. The table below provides descriptions of the column elements and their potential values.
+The preview list provides details about the tables contained in the data model. The table below provides descriptions of the column fields and their potential values.
 
-| Element | Description |
+| Column field | Description |
 |---|---|
 |[!UICONTROL Title] | The name of the table.|
 |[!UICONTROL Table type] | The type of table. Potential types include: `fact`, `dimension`, and `none`. |
@@ -62,3 +62,12 @@ The preview list provides details about the tables contained in the data model. 
 
 Select **[!UICONTROL Next]** to confirm your choice of data model. The next view displays a list of the tables available in the left rail. Select a table to see a comprehensive breakdown of the data contained in your selected table.
 
+The [!UICONTROL Preview] panel contains tabs for [!UICONTROL Sample records] and [!UICONTROL Attributes]. [!UICONTROL Sample records] provides a tabulated view for all the table columns of the selected data model table. The [!UICONTROL Attributes] tab provides the attribute name, data type, and source table for every attribute associated with the selected table. 
+
+Select a table from the list available in the left rail to provide data for your widget and select [!UICONTROL Select].
+
+![The select data dialog with select highlighted.](./images/user-defined-dashboards/select-a-table.png)
+
+The widget composer is now populated with data form your chosen table.
+
+<!-- Populated widget composer image -->
