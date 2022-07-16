@@ -1,8 +1,8 @@
 ---
 title: (Beta) Snap Inc connection
 description: Learn how to connect to the Snapchat Ads Platform and export your audience segments from Experience Platform.
+exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
 ---
-
 # (Beta) Snap Inc
 
 ## Overview {#overview}

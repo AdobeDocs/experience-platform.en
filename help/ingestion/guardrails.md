@@ -2,6 +2,7 @@
 keywords: Experience Platform;troubleshooting;guardrails;guidelines;
 title: Guardrails for Data Ingestion
 description: This document provides guidance on guardrails for data ingestion in Adobe Experience Platform
+exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
 ---
 # Guardrails for Data Ingestion
 
