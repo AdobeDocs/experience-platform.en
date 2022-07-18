@@ -88,7 +88,7 @@ Next, select the type of graph or chart from the [!UICONTROL Marks] dropdown to 
 
 ![The widget composer with the Marks dropdown and widget title text field highlighted.](./images/user-defined-dashboards/marks-dropdown-widget-title.png)
 
-When you are satisfied with your widget select **[!UICONTROL Save]**. A green tick icon underneath the widget name indicates that the widget has been saved. 
+When you are satisfied with your widget select **[!UICONTROL Save]**. A tick icon underneath the widget name indicates that the widget has been saved. 
 
 ![New widget save confirmation.](./images/user-defined-dashboards/save-confirmation.png)
 
