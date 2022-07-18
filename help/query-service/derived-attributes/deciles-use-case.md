@@ -1,6 +1,7 @@
 ---
-title: Decile-based Derived Attributes Use Case 
+title: Decile-based Derived Attributes Use Case
 description: This guide demonstrates the steps required to use Query Service to create decile-based derived attributes for use with your Profile data.
+exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
 ---
 # Decile-based derived attributes use case
 
@@ -293,4 +294,3 @@ Run the query to populate the decile dataset. You can also save the query as a t
 ## Next steps
 
 The example use case provided above highlights steps to make decile attributes available in Real-time Customer Profile. This allows for Segmentation Service, either via a user interface or RESTful API, to be able to generate audiences based on these decile buckets. See the [Segmentation Service overview](../../segmentation/home.md) for information on how to create, evaluate, and access segments.
-
