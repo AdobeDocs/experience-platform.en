@@ -77,8 +77,25 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL URL]**: Pega Customer Decision Hub Service Rest Segment membership Endpoint URL.
+*  **[!UICONTROL URL]**: Pega Customer Decision Hub Service Rest Segment membership Endpoint URL. The Service endpoint URL is available by opening Service Rest rule type of Adobe Segment Membership Component enabled on your Pega instance.
 
+## Activate segments to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+See [Activate audience data to streaming profile export destinations](../../ui/activate-streaming-profile-destinations.md) for instructions on activating audience segments to this destination.
+
+### Destination attributes {#attributes}
+
+In the [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) step, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
+
+### Mapping example: activating profile updates in [!DNL Pega Customer Decision Hub] 
+
+Below is an example of correct identity mapping when activating profile updates in [!DNL Pega Customer Decision Hub].
+
+![Identity mapping](../../assets/catalog/http/pega/pega-source-destination-mapping.png)
 
 ## Exported data / Validate data export {#exported-data}
 Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destination in JSON format. For example, the export snippet below contains a profile that is qualified for a certain segment, is a member of another two segments, and exited another segment. The export also includes the profile attribute first name (*FirstName*), last name (*LastName*), date of birth (*BirthDate*), and Customer Identfier (*CustomerID*) for this profile.
