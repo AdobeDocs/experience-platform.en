@@ -17,15 +17,15 @@ To help you better understand how and when you should use the Customer Decision 
 
 ### Use case #1
 
-*In Telco:*
+### Telecommunications
 
-*A marketer wants to leverage insights from Data Science model-based next best action as delivered by Pega Customer Decision Hub for customer engagement, Pega Customer Decision Hub is heavily reliant on customer intent – for example "Interested_In_5G", "Interested_in_Unlimited_Dataplan" or "Interest_in_iPhone_accessories".*
+A marketer wants to leverage insights from data science model-based next best action as delivered by Pega Customer Decision Hub for customer engagement. Pega Customer Decision Hub is heavily reliant on customer intent – for example "Interested_In_5G", "Interested_in_Unlimited_Dataplan" or "Interest_in_iPhone_accessories".
 
 ### Use case #2
 
-*In Financial Services:*
+### Financial services
 
-*A marketer wants to optimize the offers for customers who subscribed or unsubscribed for Pension Plan or Retirement Plan newsletters. The financial services can ingest multiple CustomerID from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send profiles that are entering and exiting the segments to Pega Customer Decision Hub for next-best-action (NBA) decisioning in outbound channels.*
+A marketer wants to optimize the offers for customers who subscribed or unsubscribed from Pension Plan or Retirement Plan newsletters. Financial services companies can ingest multiple Customer IDs from their own CRMs into Adobe Experience Platform, build segments from their own offline data, and send profiles that are entering and exiting the segments to Pega Customer Decision Hub for next-best-action (NBA) decisioning in outbound channels.
 
 ## Prerequisites {#prerequisites}
 
@@ -37,11 +37,11 @@ Before you can use this destination to export data out of Adobe Experience Platf
 
 ## Supported identities {#supported-identities}
 
-Pega Customer Decision Hub supports the activation of custom user ID described in the table below. For more details, see [identities](/help/identity-service/namespaces.md).
+Pega Customer Decision Hub supports the activation of custom user IDs described in the table below. For more details, see [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description
 |---|---|
-|*CustomerID*|Common User Identifier that uniquely identifies a profile in Pega Customer Decision Hub and Adobe Experience Platform
+|*CustomerID*|Common User Identifier that uniquely identifies a profile in Pega Customer Decision Hub and Adobe Experience Platform|
 
 ## Export type and frequency {#export-type-frequency}
 
