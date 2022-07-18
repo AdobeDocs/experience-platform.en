@@ -28,6 +28,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `Fax` | `faxPhone.number`|
 | `FirstName`| `person.name.firstName`|
 | `HomePhone` | `homePhone.number`|
+| `isDeleted` | `isDeleted` |
 | `Id` | `b2b.personKey.sourceID`|  
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
@@ -77,6 +78,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `Fax` | `faxPhone.number`|
 | `FirstName`| `person.name.firstName`|
 | `IsConverted` | `b2b.isConverted` |
+| `isDeleted` | `isDeleted` |
 | `"Salesforce"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
 | `Id` | `b2b.personKey.sourceID`|
@@ -94,7 +96,6 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `LeadSource` | `personComponents.personSource`|
 | `Latitude` | `workAddress._schema.latitude` |
 | `Longitude` | `workAddress._schema.longitude` |
-| `MiddleName` | `person.name.middleName` |
 | `Name` | `person.name.fullName` |
 | `PostalCode` | `workAddress.postalCode` |
 | `Salutation` | `person.name.courtesyTitle` |
@@ -139,6 +140,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `Description` | `accountDescription`|
 | `DunsNumber`| `accountOrganization.DUNSNumber`| data.com feature |
 | `Fax` | `accountFax.number`|
+| `isDeleted` | `isDeleted` |
 | `Id` | `accountKey.sourceID`|
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `Industry` | `accountOrganization.industry`|
@@ -194,6 +196,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `ForecastCategoryName` | `forecastCategoryName`|
 | `Id` | `opportunityKey.sourceID`|
 | `IsClosed` | `isClosed` |
+| `isDeleted` | `isDeleted` |
 | `IsWon` | `isWon` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -223,6 +226,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Id` | `opportunityPersonKey.sourceID`|
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
+| `isDeleted` | `isDeleted` |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -239,6 +243,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
+| `isDeleted` | `isDeleted` |
 | `Id` | `campaignKey.sourceID`|
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `Name`| `campaignName`|
@@ -267,6 +272,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
+| `isDeleted` | `isDeleted` |
 | `Id` | `campaignMemberKey.sourceID`|
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | Primary identity. The value for `"${CRM_ORG_ID}"` will be automatically replaced. |
 | `"Salesforce"` | `campaignKey.sourceType` |
@@ -283,6 +289,29 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `FirstRespondedDate` | `firstRespondedDate` |
 | `Type` | `b2b.personType` |
+
+## Account contact relation {#account-contact-relation}
+
+| Source field | Target XDM field path | Notes |
+| --- | --- | --- |
+| `AccountId` | `accountKey.sourceID` |
+| `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` |
+| `ContactId` | `personKey.sourceID` |
+| `iif(ContactId != null && ContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personKey` |
+| `CreatedById` | `extSourceSystemAudit.createdBy` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `EndDate` | `relationEndDate` |
+| `IsDeleted` | `isDeleted` |
+| `Id` | `accountPersonKey.sourceID` |
+| `"Salesforce"` | `accountPersonKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `accountPersonKey.sourceInstanceID` |
+| `concat(Id, "@${CRM_ORG_ID}.Salesforce")` | `accountPersonKey.sourceKey` | Primary identity. |
+| `IsActive` | `IsActive` |
+| `IsDirect` | `IsDirect` |
+| `LastModifiedById` | `extSourceSystemAudit.lastUpdatedBy` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `explode(Roles,";")` | `personRoles[]` |
+| `StartDate` | `relationStartDate` |
 
 ## Next steps
 

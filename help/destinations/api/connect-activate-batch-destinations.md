@@ -627,7 +627,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         }
     },
     "params": {
-        "mode": "Cloud Storage",
+        "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
         "format": "CSV"
@@ -663,7 +663,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         }
     },
     "params": {
-        "mode": "Cloud Storage",
+        "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
         "format": "CSV"
@@ -822,7 +822,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         }
     },
     "params": {
-        "mode": "Cloud Storage",
+        "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
     }
 }'
@@ -1021,7 +1021,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | Property | Description |
 | --------- | ----------- |
 |`{DATAFLOW_ID}`| In the URL, use the ID of the dataflow that you created in the previous step. |
-|`{ETAG}` | Use the etag that you obtained in the previous step. |
+|`{ETAG}` | Get the `{ETAG}` from the response in the previous step, [Create a dataflow](#create-dataflow). The response format in the previous step has escaped quotes. You must use the unescaped values in the header of the request. See the example below: <br> <ul><li>Response example: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Value to use in your request: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> The etag value updates with every successful update of a dataflow. |
 | `{SEGMENT_ID}`| Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, see [retrieve a segment definition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in the Experience Platform API reference. |
 | `{PROFILE_ATTRIBUTE}`| For example, `"person.lastName"` |
 | `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To add a segment to a dataflow, use the `add` operation. |
@@ -1231,7 +1231,11 @@ The returned response should include in the `transformations` parameter the segm
 ]
 ```
 
-## Next steps
+## API error handling {#api-error-handling}
+
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
+
+## Next steps {#next-steps}
 
 By following this tutorial, you have successfully connected Platform to one of your preferred batch cloud storage or email marketing destinations and set up a dataflow to the respective destination to export data files. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
 
