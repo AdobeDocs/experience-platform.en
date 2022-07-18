@@ -56,13 +56,13 @@ Refer to the table below for information about the destination export type and f
 
 ## Connect to the destination {#connect}
 
-Follow the steps described  to connect to this destination. In the configure destination workflow, fill in the fields listed in the two sections below.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
 
 #### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
 
-Fill in the fields below and select **[!UICONTROL Connect to destination]**:
+![Image of the UI screen where you can connect to the Pega CDH destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/http/pega/pega-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access token.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
@@ -70,6 +70,9 @@ Fill in the fields below and select **[!UICONTROL Connect to destination]**:
 
 ### Fill in destination details {#destination-details}
 
+After establishing the authentication connection to the Pega Customer Decision Hub, provide the following information for the destination:
+
+![Image of the UI screen showing completed fields for the Pega CDH destination details](../../assets/catalog/http/pega/pega-connect-destination.png)
 To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
