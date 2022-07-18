@@ -2,7 +2,7 @@
 description: Learn how to use Destination SDK to configure an Amazon S3 destination with custom file name and formatting options.
 title: (Beta) Configure an Amazon S3 destination with custom file name and formatting options.
 ---
-# (Beta) Configure an Amazon S3 destination with custom file name and formatting options.
+# (Beta) Configure an Amazon S3 destination with custom file name and formatting options
 
 ## Overview {#overview}
 
@@ -10,17 +10,17 @@ title: (Beta) Configure an Amazon S3 destination with custom file name and forma
 >
 >The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-This page describes how to use Destination SDK to configure an Amazon S3 destination with custom [CSV file formatting options](server-and-file-configuration.md#file-configuration) and a custom [file name configuration](file-based-destination-configuration.md#file-name-configuration).
+This page describes how to use Destination SDK to configure an Amazon S3 destination with custom [file formatting options](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) and a custom [file name configuration](/help/destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration).
 
 This page shows all the configuration options available for Amazon S3 destinations. You can edit the configurations in the steps below or delete certain parts of the configurations, as needed.
 
 ## Prerequisites {#prerequisites}
 
-Before advancing to the steps outlined below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+Before advancing to the steps outlined below, please read the [Destination SDK getting started](/help/destinations/destination-sdk/getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
-Start by using the `/destination-server` endpoint to create a server and file configuration. For detailed descriptions of the parameters in the call, read the [server and file configuration specifications for file-based destinations](server-and-file-configuration.md#s3-example) and the associated [file formatting configurations](server-and-file-configuration.md#file-configuration).
+Start by using the `/destination-server` endpoint to create a server and file configuration. For detailed descriptions of the parameters in the HTTP request, read the [server and file configuration specifications for file-based destinations](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example) and the associated [file formatting configurations](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration).
 
 **API format**
 
@@ -31,7 +31,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Request**
 
 The following request creates a new destination server configuration, configured by the parameters provided in the payload.
-The payload below includes a generic Amazon S3 configuration, with custom [CSV file formatting](server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
+The payload below includes a generic Amazon S3 configuration, with custom [CSV file formatting](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -124,9 +124,9 @@ To connect the server configuration in [step 1](#create-server-file-configuratio
 
 For detailed descriptions of the parameters used below, see the following pages:
 
-* [Authentication configuration](authentication-configuration.md#s3)
-* [Batch destination configuration](file-based-destination-configuration.md#batch-configuration)
-* [File-based destination configuration API operations](destination-configuration-api.md#create-file-based)
+* [Authentication configuration](/help/destinations/destination-sdk/authentication-configuration.md#s3)
+* [Batch destination configuration](/help/destinations/destination-sdk/file-based-destination-configuration.md#batch-configuration)
+* [File-based destination configuration API operations](/help/destinations/destination-sdk/destination-configuration-api.md#create-file-based)
 
 **API format**
 
@@ -409,25 +409,34 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## Step 3: Verify the Experience Platform UI {#verify-ui}
 
-Based on the configurations above, the Experience Platform user interface will now display a new private destination card for you to use, similar to the one in the recording below.
+Based on the configurations above, the Experience Platform user interface will now display a new private destination card for you to use, similar to the one in the recording below. In the images below, note how the options in the activation workflow match the options you selected in the destination configuration.
 
-![Screen recording showing the destinations catalog page with a selected destination card.](assets/destination-card.gif)
+![Screen recording showing the destinations catalog page with a selected destination card.](/help/destinations/destination-sdk/assets/destination-card.gif)
 
-## Step 4: Publish your destination {#publish-destination}
+Authenticate to destination
+
+Connect to destination
+
+Scheduling
+
+Mapping
+
+
+## Step 4: (Optional) Publish your destination {#publish-destination}
 
 >[!NOTE]
 >
 >This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
-After configuring your destination, use the [destination publishing API](destination-publish-api.md) to submit your configuration to Adobe for review.
+After configuring your destination, use the [destination publishing API](/help/destinations/destination-sdk/destination-publish-api.md) to submit your configuration to Adobe for review.
 
-## Step 5: Document your destination {#document-destination}
+## Step 5: (Optional) Document your destination {#document-destination}
 
 >[!NOTE]
 >
 >This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
-If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
+If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](/help/destinations/destination-sdk/overview.md#productized-custom-integrations), use the [self-service documentation process](/help/destinations/destination-sdk/docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
 
 
 
