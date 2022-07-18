@@ -10,6 +10,8 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Contact {#contact}
 
+For more information about the schema field group please refer to [XDM Business Person Details](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md). 
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `AccountId` | `b2b.accountKey.sourceID`|
