@@ -10,7 +10,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Contact {#contact}
 
-For more information about the schema field group please refer to [XDM Business Person Details](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md). 
+See the documentations on [XDM Business Person Details](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) for more information. 
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -70,6 +70,8 @@ For more information about the schema field group please refer to [XDM Business 
 
 ## Lead {#lead}
 
+See the documentations on [XDM Business Person Details](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) for more information. 
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `City`| `workAddress.city`|
@@ -123,6 +125,8 @@ For more information about the schema field group please refer to [XDM Business 
 {style="table-layout:auto"}
 
 ## Account {#account}
+
+See the documentation on [XDM Business Account class](../../../../xdm/classes/b2b/business-account.md) for more information.
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -178,6 +182,8 @@ For more information about the schema field group please refer to [XDM Business 
 
 ## Opportunity {#opportunity}
 
+See the documentation on [XDM Business Opportunity class](../../../../xdm/classes/b2b/business-opportunity.md) for more information.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -217,6 +223,8 @@ For more information about the schema field group please refer to [XDM Business 
 
 ## Opportunity contact role {#opportunity-contact-role}
 
+See the documentation on [XDM Business Opportunity Person Relation class](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) for more information.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
@@ -240,6 +248,8 @@ For more information about the schema field group please refer to [XDM Business 
 {style="table-layout:auto"}
 
 ## Campaign {#campaign}
+
+See the documentation on [XDM Business Campaign class](../../../../xdm/classes/b2b/business-campaign.md) for more information.
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -270,6 +280,8 @@ For more information about the schema field group please refer to [XDM Business 
 
 ## Campaign member {#campaign-member}
 
+See the documentation on [XDM Business Campaign Members class](../../../../xdm/classes/b2b/business-campaign-members.md) for more information.
+
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
@@ -293,6 +305,8 @@ For more information about the schema field group please refer to [XDM Business 
 | `Type` | `b2b.personType` |
 
 ## Account contact relation {#account-contact-relation}
+
+See the documentation on [XDM Business Account Person Relation class](../../../../xdm/classes/b2b/business-account-person-relation.md) for more information.
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
