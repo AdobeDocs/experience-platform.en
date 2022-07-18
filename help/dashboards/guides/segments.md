@@ -55,7 +55,7 @@ The "last updated" date and time on a widget shows when the last snapshot of the
 
 ![](../images/segments/widget-timestamp.png)
 
-## Standard widgets
+## Standard widgets {#standard-widgets}
 
 Adobe provides multiple standard widgets that you can use to visualize different metrics related to your segments. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
 
