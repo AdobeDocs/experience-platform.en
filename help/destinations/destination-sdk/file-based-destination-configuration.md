@@ -707,7 +707,7 @@ Use the parameters in  `dynamicSchemaConfig` to define your own schema that Plat
 
 ### Required mappings {#required-mappings}
 
-Within the schema configuration, you have the option of adding required, or predefined mappings. These are mappings that users will be able to view but not modify when they set up a connection to your destination.
+Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users will be able to view but not modify when they set up a connection to your destination.
 
 ```json
 
@@ -746,7 +746,6 @@ Use the parameters described in the table below if you would like to add require
 |`requiredMappings.destination`|String|Indicates what the required destination field should be.|
 
 {style="table-layout:auto"}
-
 
 ## Identities and attributes {#identities-and-attributes}
 
