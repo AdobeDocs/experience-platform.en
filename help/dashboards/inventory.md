@@ -23,6 +23,6 @@ When selected, the dashboard opens either in the Platform UI or in a fully integ
 
 >[!IMPORTANT]
 >
->The [!DNL Shared Device Detection] feature is in beta. Its features and documentation are subject to change.
+>The user-defined dashboards feature is in beta. Its features and documentation are subject to change.
 
 Adobe Experience Platform Dashboards enables you to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization. See the [user defined dashboards guide](./user-defined-dashboards.md) for complete instructions on creating and configuring custom dashboards.

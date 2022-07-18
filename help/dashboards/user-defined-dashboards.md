@@ -80,9 +80,19 @@ The data model and currently selected table are displayed at the top of the left
 >
 >You can change the chosen data model by selecting the pencil icon (![Pencil icon.](./images/user-defined-dashboards/edit-icon.png)) in the left rail.
 
-Select the ellipses (...) next to an attribute name to add an attribute to either the X or the Y axis. Next, select the type of graph or chart from the [!UICONTROL Marks] dropdown to generate a preview visualization of your widget's current settings. In the [!UICONTROL Properties] rail on the right side of the screen, enter a name for the widget in the [!UICONTROL Widget title] text field. When you are satisfied with your widget select **[!UICONTROL Save]**. 
+Select the ellipses (`...`) next to an attribute name to add an attribute to either the X or the Y axis.
 
-A green tick icon underneath the widget name indicates that the widget has been saved. Select **[!UICONTROL Cancel]** to return to your custom dashboard.
+![The widget composer with the ellipses dropdown highlighted to add attributes a widget axis.](./images/user-defined-dashboards/attributes-dropdown.png)
+
+Next, select the type of graph or chart from the [!UICONTROL Marks] dropdown to generate a preview visualization of your widget's current settings. In the [!UICONTROL Properties] rail on the right side of the screen, enter a name for the widget in the [!UICONTROL Widget title] text field. 
+
+![The widget composer with the Marks dropdown and widget title text field highlighted.](./images/user-defined-dashboards/marks-dropdown-widget-title.png)
+
+When you are satisfied with your widget select **[!UICONTROL Save]**. A green tick icon underneath the widget name indicates that the widget has been saved. 
+
+![New widget save confirmation.](./images/user-defined-dashboards/save-confirmation.png)
+
+Select **[!UICONTROL Cancel]** to return to your custom dashboard.
 
 ![The widget composer with an example widget created.](./images/user-defined-dashboards/composed-widget.png)
 

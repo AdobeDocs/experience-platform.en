@@ -51,7 +51,7 @@ To choose a different segment, select the dropdown next to the segment name or u
 
 The segments dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. 
 
-The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or IMS Organization.
+The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or organization.
 
 ![](../images/segments/widget-timestamp.png)
 

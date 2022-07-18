@@ -53,7 +53,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## Browse profiles {#browse-profiles}
 
-The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your IMS Organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and segments 
+The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and segments 
 
 To learn more about the profile viewing capabilities provided in the Platform UI please see the documentation on [browsing profiles in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
@@ -83,7 +83,7 @@ See the union schema UI guide to learn more about [viewing union schemas within 
 
 The dashboard is composed of widgets, which are read-only metrics providing important information regarding your Profile data. 
 
-The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or IMS Organization.
+The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or organization.
 
 ## Standard widgets {#standard-widgets}
 
