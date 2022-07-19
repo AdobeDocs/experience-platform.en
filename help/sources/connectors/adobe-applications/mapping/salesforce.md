@@ -10,7 +10,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Contact {#contact}
 
-See the documentations on [XDM Business Person Details](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) for more information. 
+See the documentations on [XDM Business Person Details](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) for more information on the XDM Class and XDM Field Group(s). 
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -70,7 +70,7 @@ See the documentations on [XDM Business Person Details](../../../../xdm/field-gr
 
 ## Lead {#lead}
 
-See the documentations on [XDM Business Person Details](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) for more information. 
+See the documentations on [XDM Business Person Details](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) for more information on the XDM Class and XDM Field Group(s). 
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -126,7 +126,7 @@ See the documentations on [XDM Business Person Details](../../../../xdm/field-gr
 
 ## Account {#account}
 
-See the documentation on [XDM Business Account class](../../../../xdm/classes/b2b/business-account.md) for more information.
+See the documentation on [XDM Business Account class](../../../../xdm/classes/b2b/business-account.md) for more information on the XDM Class and XDM Field Group(s).
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -182,7 +182,7 @@ See the documentation on [XDM Business Account class](../../../../xdm/classes/b2
 
 ## Opportunity {#opportunity}
 
-See the documentation on [XDM Business Opportunity class](../../../../xdm/classes/b2b/business-opportunity.md) for more information.
+See the documentation on [XDM Business Opportunity class](../../../../xdm/classes/b2b/business-opportunity.md) for more information on the XDM Class and XDM Field Group(s).
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -223,7 +223,7 @@ See the documentation on [XDM Business Opportunity class](../../../../xdm/classe
 
 ## Opportunity contact role {#opportunity-contact-role}
 
-See the documentation on [XDM Business Opportunity Person Relation class](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) for more information.
+See the documentation on [XDM Business Opportunity Person Relation class](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) for more information on the XDM Class and XDM Field Group(s).
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -249,7 +249,7 @@ See the documentation on [XDM Business Opportunity Person Relation class](../../
 
 ## Campaign {#campaign}
 
-See the documentation on [XDM Business Campaign class](../../../../xdm/classes/b2b/business-campaign.md) for more information.
+See the documentation on [XDM Business Campaign class](../../../../xdm/classes/b2b/business-campaign.md) for more information on the XDM Class and XDM Field Group(s).
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -280,7 +280,7 @@ See the documentation on [XDM Business Campaign class](../../../../xdm/classes/b
 
 ## Campaign member {#campaign-member}
 
-See the documentation on [XDM Business Campaign Members class](../../../../xdm/classes/b2b/business-campaign-members.md) for more information.
+See the documentation on [XDM Business Campaign Members class](../../../../xdm/classes/b2b/business-campaign-members.md) for more information on the XDM Class and XDM Field Group(s).
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
@@ -306,7 +306,7 @@ See the documentation on [XDM Business Campaign Members class](../../../../xdm/c
 
 ## Account contact relation {#account-contact-relation}
 
-See the documentation on [XDM Business Account Person Relation class](../../../../xdm/classes/b2b/business-account-person-relation.md) for more information.
+See the documentation on [XDM Business Account Person Relation class](../../../../xdm/classes/b2b/business-account-person-relation.md) for more information on the XDM Class and XDM Field Group(s).
 
 | Source field | Target XDM field path | Notes |
 | --- | --- | --- |
