@@ -4,13 +4,13 @@ description: Adobe Experience Platform provides a dashboard through which you ca
 ---
 # [!UICONTROL Account Profiles] dashboard
 
-<!-- {descrtiption of  what it provides} -->
-
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your account profiles, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROl Account Profiles] dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
-For an overview of all of the features within the account profile user interface, please visit the [account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md). To learn about other available B2B features, see the [Adobe Real-Time CDP, B2B Edition overview](../../rtcdp/b2b-overview.md).  
+For an overview of all of the features within the account profile user interface, please visit the [account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md).
 
-<!-- {Perhaps a getting started section - discuss the necessary permissions / licencing info } -->
+## Getting started
+
+You must be entitled to [Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) in order to access the B2B account profiles dashboard. 
 
 ## Account profiles data
 
@@ -30,7 +30,7 @@ To navigate to the [!UICONTROl Account Profiles] dashboard within the Platform U
 
 ### Modifying the [!UICONTROl Account Profiles] dashboard
 
-You can modify the appearance of the Segments dashboard by selecting Modify dashboard. This enables you to move, add, and remove widgets from the dashboard as well as to access the Widget library to explore available widgets and create custom widgets for your organization.
+You can modify the appearance of the [!UICONTROl Account Profiles] dashboard by selecting [!UICONTROl Modify dashboard]. This enables you to move, add, and remove widgets from the dashboard as well as to access the Widget library to explore available widgets and create custom widgets for your organization.
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
 
@@ -44,16 +44,28 @@ Adobe provides standard widgets that you can use to visualize different metrics 
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
-* xxx
-* xxx
+* [Total accounts by industry](#total-accounts-by-industry)
+* [Account profiles added](#account-profiles-added)
 
-### xxx
+### Total accounts by industry {#total-accounts-by-industry}
 
-description
+This widget displays the total number of accounts in a single metric and uses a doughnut chart to illustrate the proportional sizes of counts for the industries that make up the overall number. The key provides colour coding information for the different industries that make up the donut chart. 
 
-### xxx
+Individual counts for the different industries are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
-description
+![Total accounts by industry widget.]()
+
+### [Account profiles added](#account-profiles-added)
+
+<!-- total account profile count change over time period
+Q) can it be negative numbers? The image always shows growth but? Yiftah says only added never removed
+Bart chart
+time period dropdown
+Colour coded key -->
+
+This widget uses a bar chart to illustrate the count of profiles added over a given time period as well as the proportion of different industries that constitute these added profiles. The different industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The time period is selected from the widget dropdown menus. The bar chart can be visualized over 30 days, 90 days, and 12 month periods.
+
+![The Account profiles added widget.]()
 
 ## Next steps
 
