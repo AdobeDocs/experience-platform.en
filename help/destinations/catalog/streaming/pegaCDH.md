@@ -138,6 +138,11 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destinat
  }
 
 ```
+For [!DNL Pega], a successful Segment membership update for a profile would insert the segment identifier, name and statuses in Pega Marketing segment membership extension schema table. The segment membership data can then be assoicated in Pega Customer Profile designer that can be used in Engagement polices for next-best-action decisioning and/or predictors in Adaptive models. 
+
+![exported-data](../../assets/catalog/http/pega/pega-profile-designer-associate.png)
+![exported-data](../../assets/catalog/http/pega/pega-profile-designer-engagment.png)
+![exported-data](../../assets/catalog/http/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Data usage and governance {#data-usage-governance}
 
