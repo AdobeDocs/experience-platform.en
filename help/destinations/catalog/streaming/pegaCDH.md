@@ -146,6 +146,13 @@ For [!DNL Pega], a successful Segment membership update for a profile would inse
 
 ![exported-data](../../assets/catalog/http/pega/pega-profile-designer-adaptivemodel.png)
 
+## Additional resources {#additional-resources}
+
+See [Setting up an OAuth 2.0 client registration] https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration in Pega Customer Decision Hub
+
+See [Creating a real-time run for data flows]https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows in Pega Customer Decision Hub
+
+
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
