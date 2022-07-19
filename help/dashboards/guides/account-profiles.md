@@ -22,23 +22,37 @@ The profile data in the snapshot shows the data exactly as it appears at the spe
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
-## Exploring the [!UICONTROL Account Profiles] dashboard
+## Explore the [!UICONTROL Account Profiles] dashboard
 
-To navigate to the [!UICONTROL Account Profiles] dashboard within the Platform UI, select [!UICONTROL Profiles] under [!UICONTROL Accounts] in the left rail. Next, select the [!UICONTROL Overview] tab to display the dashboard.
+To navigate to the [!UICONTROL Account Profiles] dashboard within the Platform UI, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left rail. 
 
-![The Platfrom UI with Account Profiles in the left navigation highlighted and the overview tab displayed.](../images/account-profiles/account-profiles-dashboard.png)
+![The Platform UI with Account Profiles in the left navigation highlighted and the overview tab displayed.](../images/account-profiles/account-profiles-dashboard.png)
 
-### Modifying the [!UICONTROL Account Profiles] dashboard
+From the [!UICONTROL Account Profiles] dashboard you can either [browse the account profiles ingested into your organization](#browse-account-profiles), or [view the entirety of your account profile data at a glance through widgets](#standard-widgets) that visualize aspects of the data.  
 
-You can modify the appearance of the [!UICONTROL Account Profiles] dashboard by selecting [!UICONTROL Modify dashboard]. This enables you to move, add, and remove widgets from the dashboard as well as to access the Widget library to explore available widgets and create custom widgets for your organization.
+## Browse account profiles {#browse-account-profiles}
 
-Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
+The [!UICONTROL Browse] tab allows you to search and view the read-only account profiles ingested into your organization using an account ID from a connected enterprise source or by entering source details directly. From here you can see important information belonging to the account profile including, their name, industry, revenue, and segment among others.
+
+Selecting the [!UICONTROL Profile ID] from the [!UICONTROL Browse] tab provides access to more profile information merged together from multiple profile fragments that form a single view of the individual account. To learn more about the account profile viewing capabilities provided in the Platform UI please see the documentation on [browsing account profiles in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles). 
+
+<!-- Q) Do you have an account ID or "source details" that i can use to investigate the 'browse' functionality? -->
 
 ## Widgets and metrics
 
-The [!UICONTROL Account Profiles] dashboard is composed of widgets, which are read-only metrics providing important information regarding your account profiles.
+The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles.
 
-## Standard widgets
+### Modifying the [!UICONTROL Account Profiles] dashboard
+
+You can modify the appearance of the [!UICONTROL Account Profiles] dashboard by selecting [!UICONTROL Modify dashboard]. This enables you to move and resize widgets.
+
+<!-- You can modify the appearance of the [!UICONTROL Account Profiles] dashboard by selecting [!UICONTROL Modify dashboard]. This enables you to move, add, and remove widgets from the dashboard as well as to access the Widget library to explore available widgets and create custom widgets for your organization. -->
+
+<!-- Q) Will the widget library (on the account profiles overview) store other upcoming widgets for account profiles in the future so that users can add and remove widgets from a pre-configured supply? -->
+
+Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
+
+## Standard widgets {#standard-widgets}
 
 Adobe provides standard widgets that you can use to visualize different metrics related to your account profiles.
 
@@ -63,7 +77,9 @@ Bart chart
 time period dropdown
 Colour coded key -->
 
-This widget uses a bar chart to illustrate the count of profiles added over a given time period as well as the proportion of different industries that constitute these added profiles. The different industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The time period is selected from the widget dropdown menus. The bar chart can be visualized over 30 days, 90 days, and 12 month periods.
+<!-- Q) Is there only ever one account in account profiles? How do widgets reflect data about other accounts? -->
+
+This widget uses a bar chart to illustrate the count of profiles added to an account over a given time period as well as the proportion of different industries that constitute these added profiles. The different industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The time period is selected from the widget dropdown menus. The bar chart can be visualized over 30 days, 90 days, and 12 month periods.
 
 ![The Account profiles added widget.]()
 
