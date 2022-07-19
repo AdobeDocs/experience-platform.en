@@ -36,21 +36,15 @@ The [!UICONTROL Browse] tab allows you to search and view the read-only account 
 
 Selecting the [!UICONTROL Profile ID] from the [!UICONTROL Browse] tab provides access to more profile information merged together from multiple profile fragments that form a single view of the individual account. To learn more about the account profile viewing capabilities provided in the Platform UI please see the documentation on [browsing account profiles in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles). 
 
-<!-- Q) Do you have an account ID or "source details" that i can use to investigate the 'browse' functionality? -->
-
 ## Widgets and metrics
 
-The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles.
+The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. The account used to generate visualizations of your account profiles data is dependant on the sandbox in use. See the documentation for [instructions on how to change your sandbox](../../sandboxes/ui/user-guide.md#switch-between-sandboxes).
+
+<!-- Q) I have reservations about the above sentence. I have not seen this in practice and i am unsure how that works when configuring a sandbox. -->
 
 ### Modifying the [!UICONTROL Account Profiles] dashboard
 
-You can modify the appearance of the [!UICONTROL Account Profiles] dashboard by selecting [!UICONTROL Modify dashboard]. This enables you to move and resize widgets.
-
-<!-- You can modify the appearance of the [!UICONTROL Account Profiles] dashboard by selecting [!UICONTROL Modify dashboard]. This enables you to move, add, and remove widgets from the dashboard as well as to access the Widget library to explore available widgets and create custom widgets for your organization. -->
-
-<!-- Q) Will the widget library (on the account profiles overview) store other upcoming widgets for account profiles in the future so that users can add and remove widgets from a pre-configured supply? -->
-
-Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
+You can modify the appearance of the [!UICONTROL Account Profiles] dashboard by selecting [!UICONTROL Modify dashboard]. This enables you to move and resize widgets. Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
 
 ## Standard widgets {#standard-widgets}
 
@@ -71,15 +65,11 @@ Individual counts for the different industries are displayed in a dialog when th
 
 ### [Account profiles added](#account-profiles-added)
 
-<!-- total account profile count change over time period
-Q) can it be negative numbers? The image always shows growth but? Yiftah says only added never removed
-Bart chart
-time period dropdown
-Colour coded key -->
+This widget uses a bar chart to illustrate the count of profiles added to an account over a given time period as well as the proportion of different industries that constitute these added profiles. The different industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The time period of analysis is selected from the widget dropdown menus. The bar chart can be visualized over 30 days, 90 days, and 12 month periods.
 
-<!-- Q) Is there only ever one account in account profiles? How do widgets reflect data about other accounts? -->
-
-This widget uses a bar chart to illustrate the count of profiles added to an account over a given time period as well as the proportion of different industries that constitute these added profiles. The different industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The time period is selected from the widget dropdown menus. The bar chart can be visualized over 30 days, 90 days, and 12 month periods.
+>[!NOTE]
+>
+>As profiles are only added to an account and never removed, the lowest possible number of profiles added over a period of time is zero. 
 
 ![The Account profiles added widget.]()
 
