@@ -13,17 +13,19 @@ description: Activate profiles to your Trade Desk account for audience targeting
 
 >[!IMPORTANT]
 >
-> This documentation page was created by the *[!DNL Trade Desk]*team. For any inquiries or update requests, please contact your [!DNL Trade Desk] representative.
+> This documentation page was created by the *[!DNL Trade Desk]* team. For any inquiries or update requests, please contact your [!DNL Trade Desk] representative.
 
 This document is designed to help you activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data.
 
-Use [!DNL The Trade Desk] CRM destination for CRM data mapping, like email or hashed email address. Use the [other Trade Desk destination](/help/destinations/catalog/advertising/tradedesk.md) in the Adobe Experience Platform catalog for cookies and device ID mappings.
+>[!TIP]
+>
+>Use [!DNL The Trade Desk] CRM destination for CRM data mapping, like email or hashed email address. Use the [other Trade Desk destination](/help/destinations/catalog/advertising/tradedesk.md) in the Adobe Experience Platform catalog for cookies and device ID mappings.
 
 [!DNL The Trade Desk] (TTD) does not directly handle the upload file of email addresses at any time nor does [!DNL The Trade Desk] store your raw (unhashed) emails.
 
 ## Prerequisites {#prerequisites}
 
-Before you can activate segments to [!DNL The Trade Desk], you must contact your TTD account manager to sign the CRM Onboarding contract. TTD will then give permission and share your advertiser ID to configure your destination.  
+Before you can activate segments to [!DNL The Trade Desk], you must contact your [!DNL The Trade Desk] account manager to sign the CRM Onboarding contract. [!DNL The Trade Desk] will then give permission and share your advertiser ID to configure your destination.  
 
 ## ID Matching Requirements (#id-matching-requirements)
 
@@ -33,12 +35,12 @@ Depending on the type of IDs you ingest into Adobe Experience Platform, you must
 
 [!DNL The Trade Desk] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the ID matching requirements section and use the appropriate namespaces for plain text and hashed email addresses, respectively.   
+Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the ID matching requirements section and use the appropriate namespaces for plain text and hashed email addresses, respectively.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
 |Email|Email addresses (clear text) |Select the `Email` target identity when your source identity is an Email namespace or attribute.|
-|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. Be sure to follow any [email normalization] (https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) rules required. You won't be able to change this setting later. |Select the `Email_LC_SHA256` target identity when your source identity is an Email_LC_SHA256 namespace or attribute.|
+|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. Be sure to follow any [email normalization](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) rules required. You won't be able to change this setting later. |Select the `Email_LC_SHA256` target identity when your source identity is an Email_LC_SHA256 namespace or attribute.|
 
 {style="table-layout:auto"}
 
@@ -46,13 +48,13 @@ Both plain text and SHA256 hashed email addresses are supported by Adobe Experie
 
 You can hash email addresses before ingesting them into Adobe Experience Platform or use raw email addresses. 
 
-To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview] (https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html?lang=en). 
+To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html?lang=en). 
 
 If you select to hash the email addresses yourself, make sure to comply with the following requirements: 
 
 *  Remove leading and trailing spaces. 
 *  Convert all ASCII characters to lowercase. 
-*  In gmail.com email addresses, remove the following characters from the username part of the email address: 
+*  In `gmail.com` email addresses, remove the following characters from the username part of the email address: 
       *  The period (. (ASCII code 46)). For example, normalize `jane.doe@gmail.com` to `janedoe@gmail.com`. 
       *  The plus sign (+ (ASCII code 43)) and all subsequent characters. For example, normalize `janedoe+home@gmail.com` to `janedoe@gmail.com`. 
 
@@ -80,9 +82,9 @@ Before you can send, or activate, audience data to a destination, you must set u
 *  **[!UICONTROL Account Type]**: Please choose the **[!UICONTROL Existing Account]** option. 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future. 
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Advertiser ID]**: your Trade Desk Advertiser ID, which can either be shared by your TTD Account Manager or be found under Advertiser Preferences in the TTD UI. 
+*  **[!UICONTROL Advertiser ID]**: your [!DNL Trade Desk Advertiser ID], which can either be shared by your [!DNL Trade Desk] Account Manager or be found under [!DNL Advertiser Preferences] in the [!DNL Trade Desk] UI. 
 
-When connecting to the destination, setting a Data Governance policy is completely optional. Please review Adobe’s [Data Usage Policy Overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) for more details.  
+When connecting to the destination, setting a Data Governance policy is completely optional. Please review the Experience Platform [data governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) for more details.  
 
 ## Activate segments to this destination {#activate}
 
@@ -102,24 +104,24 @@ Below is an example of correct identity mapping when activating segments to [!DN
 >
 > [!DNL The Trade Desk] CRM Destination does not accept raw and hashed email addresses as identities in the same activation flow. Create separate activation flows for raw and hashed email addresses.
 
-Selecting source fields: 
+Selecting source fields:
 
 *  Select the `Email` namespace or attribute as source identity if using the raw email address on data ingestion. 
 *  Select the `Email_LC_SHA256` namespace or attribute as source identity if you hashed customer email addresses on data ingestion into Platform.  
 
-Selecting target fields: 
+Selecting target fields:
 
 *  Select the `Email` namespace as target identity when your source namespace or attribute is `Email`. 
 *  Select the `Email_LC_SHA256` namespace as target identity when your source namespace or attribute is `Email_LC_SHA256`.
 
 ## Validate Data Export (#validate)
 
-To validate that data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the segments under the Adobe 1PD data tile within [!DNL The Trade Desk] Data Management Platform (DMP). Here are the steps to finding the corresponding ID within the TTD UI: 
+To validate that data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the segments under the Adobe 1PD data tile within [!DNL The Trade Desk] Data Management Platform (DMP). Here are the steps to finding the corresponding ID within the [!DNL Trade Desk] UI: 
 
 1. First, click on the **[!UICONTROL Data]** Tab, and review **[!UICONTROL First-Party]**.
-1. Scroll down the page, under **[!UICONTROL Imported Data]**, you will find the **[!UICONTROL Adobe 1PD Tile]**.
-1. Click on the**[!UICONTROL Adobe 1PD]** tile, and it will list out all Segments activated to the TTD Destination for your advertiser. You may also use the search function.
-1. The Segment ID # from Experience Platform will appear as the Segment Name in the TTD UI. 
+2. Scroll down the page, under **[!UICONTROL Imported Data]**, you will find the **[!UICONTROL Adobe 1PD Tile]**.
+3. Click on the**[!UICONTROL Adobe 1PD]** tile, and it will list out all segments activated to the [!DNL Trade Desk] destination for your advertiser. You may also use the search function.
+4. The Segment ID # from Experience Platform will appear as the Segment Name in the [!DNL Trade Desk] UI. 
 
 ## Data usage and governance {#data-usage-governance}
 
