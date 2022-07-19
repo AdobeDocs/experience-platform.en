@@ -150,7 +150,7 @@ For [!DNL Pega], a successful Segment membership update for a profile would inse
 
 See [Setting up an OAuth 2.0 client registration] https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration in Pega Customer Decision Hub
 
-See [Creating a real-time run for data flows]https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows in Pega Customer Decision Hub
+See [Creating a real-time run for data flows] https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows in Pega Customer Decision Hub
 
 
 ## Data usage and governance {#data-usage-governance}
