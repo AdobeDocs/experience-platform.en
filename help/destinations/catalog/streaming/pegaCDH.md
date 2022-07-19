@@ -32,7 +32,7 @@ A marketer wants to optimize the offers for customers who subscribed or unsubscr
 Before you can use this destination to export data out of Adobe Experience Platform, make sure you complete the following prerequisites in Pega Customer Decision Hub:
 
 * Configure the Adobe Segment Membership Component in your Pega Customer Decision Hub instance.
-* Configure OAuth 2.0 Client Registration using Client Credentials grant type in your Pega Customer Decision Hub instance
+* Configure OAuth 2.0 Client Registration using Client Credentials grant type in your Pega Customer Decision Hub instance.
 * Configure real-time processing of Adobe Segment Membership data flow to run in your Pega Customer Decision Hub instance.
 
 ## Supported identities {#supported-identities}
@@ -94,6 +94,16 @@ In the [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-dest
 ### Mapping example: activating profile updates in [!DNL Pega Customer Decision Hub] 
 
 Below is an example of correct identity mapping when activating profile updates in [!DNL Pega Customer Decision Hub].
+
+Selecting source fields:
+
+* Select an Identifier (For eg: CustomerID) as source identity that uniquely identifies a profile in Adobe Experience Platform and  Pega Customer Decision Hub.
+* Select XDM source profile attribute changes that need to be updated in Pega Customer Decision Hub.
+
+Selecting target fields:
+
+* Select the `CustomerID` namespace as target identity.
+* Select destination profile attribute names that need to be mapped to corresponding XDM source profile attributes.
 
 ![Identity mapping](../../assets/catalog/http/pega/pega-source-destination-mapping.png)
 
