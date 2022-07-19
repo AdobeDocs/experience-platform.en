@@ -4,7 +4,7 @@ description: Adobe Experience Platform provides a dashboard through which you ca
 ---
 # [!UICONTROL Account Profiles] dashboard
 
-The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your account profiles, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROl Account Profiles] dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
+The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your account profiles, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Account Profiles] dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
 For an overview of all of the features within the account profile user interface, please visit the [account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md).
 
@@ -14,29 +14,29 @@ You must be entitled to [Real-time Customer Data Platform B2B Edition](../../rtc
 
 ## Account profiles data
 
-The [!UICONTROl Account Profiles] dashboard displays a snapshot of unified account information from the multiple sources across your many marketing channels and the diverse systems that your organization is currently using to store customer account information.
+The [!UICONTROL Account Profiles] dashboard displays a snapshot of unified account information from the multiple sources across your many marketing channels and the diverse systems that your organization is currently using to store customer account information.
 
-The profile data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the [!UICONTROl Account Profiles] dashboard is not updating in real-time.
+The profile data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the [!UICONTROL Account Profiles] dashboard is not updating in real-time.
 
 >[!NOTE]
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
-## Exploring the [!UICONTROl Account Profiles] dashboard
+## Exploring the [!UICONTROL Account Profiles] dashboard
 
-To navigate to the [!UICONTROl Account Profiles] dashboard within the Platform UI, select [!UICONTROl Profiles] under [!UICONTROl Accounts] in the left rail. Next, select the [!UICONTROl Overview] tab to display the dashboard.
+To navigate to the [!UICONTROL Account Profiles] dashboard within the Platform UI, select [!UICONTROL Profiles] under [!UICONTROL Accounts] in the left rail. Next, select the [!UICONTROL Overview] tab to display the dashboard.
 
 ![The Platfrom UI with Account Profiles in the left navigation highlighted and the overview tab displayed.](../images/account-profiles/account-profiles-dashboard.png)
 
-### Modifying the [!UICONTROl Account Profiles] dashboard
+### Modifying the [!UICONTROL Account Profiles] dashboard
 
-You can modify the appearance of the [!UICONTROl Account Profiles] dashboard by selecting [!UICONTROl Modify dashboard]. This enables you to move, add, and remove widgets from the dashboard as well as to access the Widget library to explore available widgets and create custom widgets for your organization.
+You can modify the appearance of the [!UICONTROL Account Profiles] dashboard by selecting [!UICONTROL Modify dashboard]. This enables you to move, add, and remove widgets from the dashboard as well as to access the Widget library to explore available widgets and create custom widgets for your organization.
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
 
 ## Widgets and metrics
 
-The [!UICONTROl Account Profiles] dashboard is composed of widgets, which are read-only metrics providing important information regarding your account profiles.
+The [!UICONTROL Account Profiles] dashboard is composed of widgets, which are read-only metrics providing important information regarding your account profiles.
 
 ## Standard widgets
 
