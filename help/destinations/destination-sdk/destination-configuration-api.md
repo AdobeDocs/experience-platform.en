@@ -29,7 +29,7 @@ POST /authoring/destinations
 
 The following request creates a new streaming destination configuration, configured by the parameters provided in the payload. The payload below includes all parameters for streaming destinations accepted by the `/authoring/destinations` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
 
-```json
+```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`customerDataFields.isRequired` | Boolean | Indicates if this field is required in the destination setup workflow. |
 |`customerDataFields.enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user. |
 |`customerDataFields.pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. |
-|`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `https://www.adobe.com/go/destinations-moviestar-en`. |
+|`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `https://www.adobe.com/go/destinations-moviestar-en`. Note that this link works only after Adobe sets your destination live and the documentation is published.|
 |`uiAttributes.category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 |`uiAttributes.connectionType` | String | `Server-to-server` is currently the only available option. |
 |`uiAttributes.frequency` | String | `Streaming` is currently the only available option. |
@@ -194,7 +194,14 @@ POST /authoring/destinations
 
 The following request creates a new [!DNL Amazon S3] file-based destination configuration, configured by the parameters provided in the payload. The payload below includes all parameters for file-based destinations accepted by the `/authoring/destinations` endpoint. Note that you do not have to add all parameters on the call and that the template is customizable, according to your API requirements.
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
         "name": "S3 Destination with CSV Options",
         "description": "S3 Destination with CSV Options",
@@ -575,7 +582,7 @@ The following response returns HTTP status 200 with a list of destination config
 |`customerDataFields.isRequired` | Boolean | Indicates if this field is required in the destination setup workflow. |
 |`customerDataFields.enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user. |
 |`customerDataFields.pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. |
-|`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `https://www.adobe.com/go/destinations-moviestar-en` |
+|`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `https://www.adobe.com/go/destinations-moviestar-en`. Note that this link works only after Adobe sets your destination live and the documentation is published. |
 |`uiAttributes.category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
 |`uiAttributes.connectionType` | String | `Server-to-server` is currently the only available option. |
 |`uiAttributes.frequency` | String | `Streaming` is currently the only available option. |

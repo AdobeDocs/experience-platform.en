@@ -1,6 +1,7 @@
 ---
 title: Attribute-based Access Control Support for Ad Hoc Schemas
 description: An guide to restrict access to data fields in ad hoc schemas generated through Adobe Experience Platform Query Service.
+exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
 ---
 # Attribute-based access control support for ad hoc schemas
 
@@ -33,9 +34,9 @@ To add a data label, navigate to [!UICONTROL Schemas] dashboard browse tab by se
 >
 >Ad hoc schemas are not displayed by default in the schema inventory.
 
-## Discover ad hoc schemas in the schema inventory of the Platform UI
+## Discover ad hoc schemas in the schema inventory of the Platform UI {#discover-ad-hoc-schemas}
 
-To enable the display of ad hoc schemas in the Platform UI, select the filter icon (../images/data-governance/filter.png) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
+To enable the display of ad hoc schemas in the Platform UI, select the filter icon (![A filter icon.](../images/data-governance/filter.png)) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
 
 ![The Schema dashboard filter options left rail with 'Show adhoc schema' toggle enabled.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -87,4 +88,4 @@ If an identity or primary identity is set on ad hoc schema, the system automatic
 After reading this document you have a better understanding of how to add data usage labels to ad hoc schemas created through Query Service CTAS queries. If you have not done so already, the following documents are useful to improve your understanding of data governance in Query Service:
 
 * [Ad hoc schema identities](./ad-hoc-schema-identities.md)
-* [Data governance](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html) 
+* [Data governance](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)

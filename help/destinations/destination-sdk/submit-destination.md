@@ -1,11 +1,15 @@
 ---
-description: This page provides all the information you need to submit for review a destination authored using Destination SDK.
-title: Submit for review a destination authored in Destination SDK
+description: This page provides all the information you need to submit for review a productized destination authored using Destination SDK.
+title: Submit for review a productized destination authored in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 ---
-# Submit for review a destination authored in Destination SDK
+# Submit for review a productized destination authored in Destination SDK
 
 ## Overview {#overview}
+
+>[!IMPORTANT]
+>
+>The process documented here is only required for partners submitting productized (public) destinations. If you are creating a private destination for your own use, you do not need to produce and share these materials with Adobe.
 
 Before your destination can be published to the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md), you must provide Adobe with certain information about the destination and the testing you performed, to ensure that users enjoy the best possible experience when activating data to your platform.
 
@@ -16,7 +20,7 @@ This page lists all the information you need to provide when submitting or updat
   * An API call made to your destination endpoint.
   * The API response received from your destination endpoint.
 * Proof that you have submitted a destination publishing request for your destination using the [destination publishing API](./destination-publish-api.md).
-* (For productized integrations only) a documentation PR (pull request), following the instructions described in the the [self-service documentation process](./docs-framework/documentation-instructions.md).
+* A documentation PR (pull request), following the instructions described in the the [self-service documentation process](./docs-framework/documentation-instructions.md).
 * An image file which will be displayed as a logo for your destination card in the Experience Platform destinations catalog.
 
 >[!IMPORTANT]

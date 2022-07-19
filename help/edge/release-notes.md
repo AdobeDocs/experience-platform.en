@@ -10,6 +10,11 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](extension/web-sdk-ext-release-notes.md).
 
+## Version 2.12.0 - June 29, 2022
+
+* Change the requests to the Edge Network to use the `cluster` cookie location hint as part of the URL. This ensures that users who change their location (e.g. through a VPN or driving with mobile devices, etc) mid session hit the same edge and have the same personalization profile. 
+* Stringify configured functions in the getLibraryInfo command response.
+
 ## Version 2.11.0 - June 13, 2022
 
 **New features**
