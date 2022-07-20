@@ -14,7 +14,7 @@ You must be entitled to [Real-time Customer Data Platform B2B Edition](../../rtc
 
 ## Account profiles data
 
-The [!UICONTROL Account Profiles] dashboard displays a snapshot of unified account information from the multiple sources across your many marketing channels and the diverse systems that your organization is currently using to store customer account information.
+The [!UICONTROL Account Profiles] dashboard displays a snapshot of unified account information from the multiple sources across your marketing channels and the diverse systems that your organization currently uses to store customer account information.
 
 The profile data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the [!UICONTROL Account Profiles] dashboard does not update in real-time.
 
@@ -24,7 +24,7 @@ The profile data in the snapshot shows the data exactly as it appears at the spe
 
 ## Explore the [!UICONTROL Account Profiles] dashboard
 
-To navigate to the [!UICONTROL Account Profiles] dashboard within the Platform UI, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left rail. 
+To navigate to the [!UICONTROL Account Profiles] dashboard within the Platform UI, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation panel. 
 
 ![The Platform UI with Account Profiles in the left navigation highlighted and the overview tab displayed.](../images/account-profiles/account-profiles-dashboard.png)
 
@@ -61,7 +61,7 @@ To learn more about each of the available standard widgets, select the name of a
 
 ### Total accounts by industry {#total-accounts-by-industry}
 
-This widget displays the total number of accounts in a single metric and uses a doughnut chart to illustrate the proportional sizes of counts for the industries that make up the overall number. The key provides colour coding information for the different industries that make up the donut chart. 
+This widget displays the total number of accounts in a single metric and uses a donut chart to illustrate the proportional sizes of counts for the industries that make up the overall number. The key provides colour coding information for the different industries that make up the donut chart. 
 
 Individual counts for the different industries are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
@@ -69,7 +69,7 @@ Individual counts for the different industries are displayed in a dialog when th
 
 ### [Account profiles added](#account-profiles-added)
 
-This widget uses a colour coded bar chart to illustrate the count of profiles added to an account over a given period of time, and the proportion of different industries that constitute these added profiles. The industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The time period of analysis is selected from the widget dropdown menus. The bar chart can be visualized over 30 days, 90 days, and 12 month periods.
+This widget uses a colour coded bar chart to illustrate the count of profiles added to an account over a given period of time, and the proportion of different industries that constitute these added profiles. The industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The time period of analysis is selected from the widget dropdown menus. The bar chart can be visualized over a 30 day, 90 day, and a 12 month period.
 
 >[!NOTE]
 >
