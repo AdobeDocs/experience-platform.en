@@ -1,14 +1,14 @@
 ---
-keywords: email;Email;e-mail;email destinations;salesforce;salesforce destination
-title: Salesforce Marketing Cloud (ExactTarget) connection
-description: The Salesforce Marketing Cloud (ExactTarget) destination allows you to export your account data and activate it within Salesforce Marketing Cloud (ExactTarget) for your business needs.attribute set
+keywords: email;Email;e-mail;email destinations;salesforce;api salesforce marketing cloud destination
+title: (API) Salesforce Marketing Cloud connection
+description: The Salesforce Marketing Cloud (formerly known as ExactTarget) destination allows you to export your account data and activate it within Salesforce Marketing Cloud for your business needs.attribute set
 ---
 
-# [!DNL Salesforce Marketing Cloud (ExactTarget)] connection
+# [!DNL (API) Salesforce Marketing Cloud] connection
 
 ## Overview {#overview}
 
-[[!DNL Salesforce Marketing Cloud (ExactTarget)]](https://www.salesforce.com/products/marketing-cloud/overview/) is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) (formerly known as ExactTarget) is a digital marketing suite that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
 > [!IMPORTANT]
 > 
@@ -16,21 +16,21 @@ description: The Salesforce Marketing Cloud (ExactTarget) destination allows you
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce Update Contacts REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html), which allows you to add contacts / update contact data for your business needs after activating them within a new Salesforce segment.
 
-Salesforce Marketing Cloud (ExactTarget) uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce instance are further below, in the [Authenticate to destination](#authenticate) section.
+Salesforce Marketing Cloud uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Salesforce Marketing Cloud (ExactTarget) destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Salesforce Marketing Cloud destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
 ### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
-The sales department of a home rental platform wants to broadcast a marketing email to a targeted customer audience. The platform's marketing team can add new contacts / update existing contacts *(and their email addresses)* through Adobe Experience Platform, build segments from their own offline data, and send these segments to Salesforce Marketing Cloud (ExactTarget), which can then be used to send the marketing campaign email.
+The sales department of a home rental platform wants to broadcast a marketing email to a targeted customer audience. The platform's marketing team can add new contacts / update existing contacts *(and their email addresses)* through Adobe Experience Platform, build segments from their own offline data, and send these segments to Salesforce Marketing Cloud, which can then be used to send the marketing campaign email.
 
 ## Prerequisites {#prerequisites}
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
-Before activating data to the Salesforce Marketing Cloud (ExactTarget) destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the Salesforce Marketing Cloud destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
 ### Prerequisites in Salesforce CRM {#prerequisites-destination}
 
@@ -59,7 +59,7 @@ Refer to Adobe's documentation for [Segment Membership Details schema field grou
 
 #### Gather Salesforce credentials {#gather-credentials}
 
-Note down the items below before you authenticate to the Salesforce Marketing Cloud (ExactTarget) destination.
+Note down the items below before you authenticate to the Salesforce Marketing Cloud destination.
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ Note down the items below before you authenticate to the Salesforce Marketing Cl
 
 ## Supported identities {#supported-identities}
 
-Salesforce Marketing Cloud (ExactTarget) supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+Salesforce Marketing Cloud supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
