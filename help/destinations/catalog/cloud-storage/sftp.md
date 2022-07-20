@@ -33,9 +33,9 @@ Refer to the table below for information about the destination export type and f
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-### Connection parameters {#parameters}
+### Authentication information {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
@@ -45,11 +45,7 @@ To connect to this destination, follow the steps described in the [destination c
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Private SSH key"
->abstract="The private SSH key must be formatted as a Base64-encoded string and must not be password-protected. "
-
-When [connecting](../../ui/connect-destination.md) to this destination, you must provide the following information:
-
-#### Authentication information {#authentication-information}
+>abstract="The private SSH key must be formatted as a Base64-encoded string and must not be password-protected."
 
 If you select the **[!UICONTROL Basic authentication]** type to connect to your SFTP location:
 
@@ -77,7 +73,7 @@ If you select the **[!UICONTROL SFTP with SSH key]** authentication type to conn
 
     ![PGP key](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
     
-#### Destination details {#destination-details}
+### Destination details {#destination-details}
 
 After establishing the authentication connection to the SFTP location, provide the following information for the destination:
 

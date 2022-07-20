@@ -1,15 +1,15 @@
 ---
 description: This page explains how to use the /sample-profiles API endpoint from Destination SDK to generate sample profiles based on a source schema. You can use these sample profiles to test your file-based destination configuration.
 title: Generate sample profiles based on a source schema
+exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 ---
-
 # Generate sample profiles based on a source schema
 
 ## Overview {#overview}
 
 The first step in testing your file-based destination is to use the `/sample-profiles` endpoint to generate a sample profile based on your existing source schema.
 
-Sample profiles are meant to help you understand the JSON structure of a profile. Additionally, they give you a backbone that you can customize with your own profile data, for further destination testing.
+Sample profiles can help you understand the JSON structure of a profile. Additionally, they give you a default that you can customize with your own profile data, for further destination testing.
 
 ## Getting started {#getting-started}
 
@@ -38,14 +38,14 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 | Query parameters | Description |
 | -------- | ----------- |
 | `destinationInstanceId` | The ID of the destination instance for which you are generating sample profiles. See the [prerequisites](#prerequisites) section for details on how to obtain this ID. |
-| `count` | *Optional*. The number of sample profiles that you want to generate. The parameter can take values between `1 - 1000`. If this property is not defined, then the API generate a single sample profile. |
+| `count` | *Optional*. The number of sample profiles that you want to generate. The parameter can take values between `1 - 1000`. If this property is not defined, then the API generates a single sample profile. |
 
 **Request**
 
 The following request generates a sample profile based on the source schema defined in the destination instance with the corresponding `destinationInstanceId`.
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count=2' \
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -102,7 +102,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 | -------- | ----------- |
 | `segmentMembership` | A map object which describes the individual’s segment memberships. For more information on `segmentMembership`, read [Segment Membership Details](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
-| `status` | Indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
+| `status` | A string field that indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, see [basis of schema composition](../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}
