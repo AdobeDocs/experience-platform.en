@@ -31,7 +31,7 @@ If you already have a valid [!DNL Veeva CRM] account, you may skip the remainder
 | `password` | The password for the [!DNL Veeva CRM] user account. |
 | `securityToken` | The security token for the [!DNL Veeva CRM] user account. |
 
-For more information on getting started, refer to this [[!DNL Veeva CRM] document](https://developer.veevacrm.com/api/#order-management-rest-api).
+For more information on getting started, refer to this [[!DNL Veeva CRM] document](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ## Connect your [!DNL Veeva CRM] account
 

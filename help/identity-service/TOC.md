@@ -23,6 +23,7 @@ feature: Identities
 - Identity Service UI {#ui}
   - [Identity graph viewer](ui/identity-graph-viewer.md)
   - [Shared device detection](ui/shared-devices.md)
+  - [Define identity fields in the UI](ui/label-identities.md)
 - [ECID overview](ecid.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)

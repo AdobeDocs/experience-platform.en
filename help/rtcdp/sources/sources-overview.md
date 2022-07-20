@@ -1,9 +1,7 @@
 ---
 keywords: rtcdp sources;sources rtcdp;real time customer data platform sources
 title: Sources in Real-time Customer Data Platform
-seo-title: Sources in Real-time Customer Data Platform
 description: This document provides an overview of Sources in Real-Time Customer Data Platform
-seo-description: This document provides an overview of Sources in Real-Time Customer Data Platform
 exl-id: 15b3ee9b-6faf-4091-9641-e653e4cdd7fb
 ---
 # Sources in Real-time Customer Data Platform
