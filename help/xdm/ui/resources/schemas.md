@@ -219,8 +219,7 @@ After applying your changes, the new field appears under your tenant ID namespac
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Enable a schema for Profile"
->abstract="When a schema is enabled for Profile, any datasets created from this schema participate in Real-time Customer Profile, which merges data from disparate sources to construct a complete view of each customer. Once a schema is used to ingest data into Profile, it cannot be disabled."
->text="See the documentation for more information on enabling a schema for Profile."
+>abstract="When a schema is enabled for Profile, any datasets created from this schema participate in Real-time Customer Profile, which merges data from disparate sources to construct a complete view of each customer. Once a schema is used to ingest data into Profile, it cannot be disabled. See the documentation for more information."
 
 [Real-time Customer Profile](../../../profile/home.md) merges data from disparate sources to construct a complete view of each individual customer. If you want the data captured by a schema to participate in this process, you must enable the schema for use in [!DNL Profile].
 

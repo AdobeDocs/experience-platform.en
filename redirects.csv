@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes.html,https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/collection/(*),https://experienceleague.adobe.com/docs/experience-platform/rtcdp-connections/
 https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries/adobe-target.html, https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/activity-analysis-with-adobe-target.html
 https://experienceleague.adobe.com/docs/experience-platform/catalog/data-protection.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html

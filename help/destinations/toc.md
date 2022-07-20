@@ -64,6 +64,7 @@ feature: Destinations
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
+        * [(Beta) Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
