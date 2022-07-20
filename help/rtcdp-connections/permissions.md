@@ -10,17 +10,17 @@ This guide shows you how to manage permissions for data collection features.
 
 ## Getting started
 
-In order to configure access control for data collection, you must have administrator privileges for an organization that has a product integration with Adobe Experience Platform Data Collection. The minimum role that can grant or withdraw permissions is a product profile administrator. Other administrator roles that can manage permissions are product administrators (can manage all profiles within a product) and system administrators (no restrictions). See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
+In order to configure access control for data collection, you must have administrator privileges for an organization that has a product integration with Adobe Experience Platform Data Collection. The minimum role that can grant or withdraw permissions is a product profile administrator. Other administrator roles that can manage permissions are product administrators (can manage all profiles within a product) and system administrators (no restrictions). See the article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) in the Adobe Enterprise administration guide for more information.
 
 This guide assumes you are familiar with basic Admin Console concepts like product profiles and how they grant product permissions to individual users and groups. For more information, see the [Admin Console user guide](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 ## Available permissions
 
-The relevant permissions for Data Collection are provided through two product designations in Admin Console: **Adobe Experience Platform** and **Adobe Experience Platform Data Collection**. The sections below outline the permissions provided under each product along with descriptions of the specific capabilities they grant access to.
+The relevant permissions for Data Collection are provided through two product designations in Admin Console: **Adobe Experience Platform** and **Adobe Experience Platform Data Collection**. The sections below outline the permissions provided under each product along with descriptions of the specific capabilities that they grant access to.
 
 ### Adobe Experience Platform permissions
 
-Permissions under Adobe Experience Platform include access to datastreams, identites, schemas, and sandboxes. For steps on how to configure Adobe Experience Platform permissions, see the [access control user guide](../access-control/ui/overview.md).
+Permissions under Adobe Experience Platform include access to datastreams, identities, schemas, and sandboxes. For steps on how to configure Adobe Experience Platform permissions, see the [access control user guide](../access-control/ui/overview.md).
 
 | Category | Permission | Description |
 | --- | --- | --- |
@@ -67,9 +67,9 @@ Permissions under Adobe Experience Platform Data Collection control access to ta
 
 >[!IMPORTANT]
 >
->This section only covers how to manage permissions for the Adobe Experience Platform Data Collection product in Admin Console. However, the steps for managing permissions under the Adobe Experience Platform product are very similar.
+>This section only covers how to manage permissions for the Adobe Experience Platform Data Collection product in Admin Console. However, the steps for managing permissions under the Adobe Experience Platform product are similar.
 >
->See the [access control UI guide](../access-control/ui/overview.md) for detailed instructions on managing Platform permissions. Note that depending on the product SKUs your organization has access to, you may not have every permission available to you.
+>See the [access control UI guide](../access-control/ui/overview.md) for detailed instructions on managing Platform permissions. Depending on the product SKUs your organization has access to, you may not have every permission available to you.
 
 To manage permissions for Data Collection, log in to [Admin Console](https://adminconsole.adobe.com/) and select **[!UICONTROL Products]** from the top navigation. From here, select the card for **[!UICONTROL Adobe Experience Platform Data Collection]**.
 
