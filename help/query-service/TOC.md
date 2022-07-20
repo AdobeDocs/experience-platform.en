@@ -38,7 +38,9 @@ feature: Queries
   - [Anonymous block](best-practices/anonymous-block.md)
   - [Incremental loading](best-practices/incremental-load.md)
   - [Data deduplication](best-practices/deduplication.md)
-- [Derived attributes](derived-attributes.md)
+- Derived attributes {#derived-attributes}
+  - [Overview](derived-attributes/overview.md)
+  - [Deciles use case](derived-attributes/deciles-use-case.md)
 - Sample Queries {#sample-queries}
   - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
@@ -61,6 +63,7 @@ feature: Queries
   - [RStudio](clients/rstudio.md)
   - [Tableau](clients/tableau.md)
 - Data Governance {#data-governance}
+  - [Overview](data-governance/overview.md)
   - [Audit log guide](data-governance/audit-log-guide.md)
   - [Identities in ad hoc schema datasets](data-governance/ad-hoc-schema-identities.md)
   - [Attribute-based access control support for ad hoc schemas](./data-governance/ad-hoc-schema-labels.md)
