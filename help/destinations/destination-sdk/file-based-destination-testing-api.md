@@ -1,8 +1,8 @@
 ---
 description: This page explains how to use the /testing/destinationInstance API endpoint to test if your file-based destination is configured correctly and to verify the integrity of data flows to your configured destination.
 title: Test your file-based destination with sample profiles
+exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 ---
-
 # Test your file-based destination with sample profiles
 
 ## Overview {#overview}
