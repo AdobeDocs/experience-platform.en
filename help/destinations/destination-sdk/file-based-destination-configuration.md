@@ -364,6 +364,8 @@ Use this section to ask users to fill in custom fields, specific to your destina
 
 In the example below, `customerDataFields` requires users to enter a name for their destination and provide an [!DNL Amazon S3] bucket name and folder path, as well as a compression type, file format, and several other file export options.
 
+You can access and use the customer inputs from customer data fields in templating. Use the macro `customerData.{name}`. For example, if you ask users to input an Amazon S3 bucket field, with the name `bucket`, you can access it in templating by using the macro `customerData.bucket`. View an example of how a customer data field is used in the [destination server configuration](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
+
 ```json
  "customerDataFields":[
       {
