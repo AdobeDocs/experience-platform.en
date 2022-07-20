@@ -62,7 +62,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 #### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
 
-![Image of the UI screen where you can connect to the Pega CDH destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/http/pega/pega-api-authentication-oauth2-client-credentials.png)
+![Image of the UI screen where you can connect to the Pega CDH destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access token.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
@@ -72,7 +72,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 After establishing the authentication connection to the Pega Customer Decision Hub, provide the following information for the destination:
 
-![Image of the UI screen showing completed fields for the Pega CDH destination details](../../assets/catalog/http/pega/pega-connect-destination.png)
+![Image of the UI screen showing completed fields for the Pega CDH destination details](../../assets/catalog/personalization/pega/pega-connect-destination.png)
 To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**.
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
@@ -105,7 +105,7 @@ Selecting target fields:
 * Select the `CustomerID` namespace as target identity.
 * Select destination profile attribute names that need to be mapped to corresponding XDM source profile attributes.
 
-![Identity mapping](../../assets/catalog/http/pega/pega-source-destination-mapping.png)
+![Identity mapping](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)
 
 ## Exported data / Validate data export {#exported-data}
 Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destination in JSON format. For example, the export snippet below contains a profile that is qualified for a certain segment, is a member of another two segments, and exited another segment. The export also includes the profile attribute first name (*FirstName*), last name (*LastName*), date of birth (*BirthDate*), and Customer Identfier (*CustomerID*) for this profile.
@@ -140,11 +140,11 @@ Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destinat
 ```
 For [!DNL Pega], a successful Segment membership update for a profile would insert the segment identifier, name and statuses in Pega Marketing segment membership datastore. The segment membership data can be assoicated in Pega Customer Profile designer that can be used in Engagement polices for next-best-action decisioning and/or predictors in Adaptive models. 
 
-![exported-data](../../assets/catalog/http/pega/pega-profile-designer-associate.png)
+![exported-data](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-![exported-data](../../assets/catalog/http/pega/pega-profile-designer-engagment.png)
+![exported-data](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-![exported-data](../../assets/catalog/http/pega/pega-profile-designer-adaptivemodel.png)
+![exported-data](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Additional resources {#additional-resources}
 
