@@ -81,7 +81,7 @@ To configure details for the destination, fill in the required fields and select
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL URL]**: Pega Customer Decision Hub Service Rest Segment membership Endpoint URL. The Service endpoint URL is available by opening Service Rest rule type of Adobe Segment Membership Component enabled on your Pega instance.
+*  **[!UICONTROL Host Name]**: The Pega Customer Decision Hub Host Name to which the profile gets exported as json data.
 
 ## Activate segments to this destination {#activate}
 
