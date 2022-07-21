@@ -51,7 +51,7 @@ Permissions under Adobe Experience Platform Data Collection control access to ta
 | Property Rights | Approve | Grants the ability to approve a library build as part of the [publishing flow](../tags/ui/publishing/publishing-flow.md). |
 | Property Rights | Develop | Grants the ability to develop a library build as part of the [publishing flow](../tags/ui/publishing/publishing-flow.md). |
 | Property Rights | Edit Property | Grants the ability to edit the basic configuration for the properties a user has access to. |
-| Property Rights | Manage Environments |  Grants the ability to manage the [environments](../tags/ui/publishing/environments.md) for the properties a user has access to. |
+| Property Rights | Manage Environments | Grants the ability to manage the [environments](../tags/ui/publishing/environments.md) for the properties a user has access to. |
 | Property Rights | Manage Extensions | Grants the ability to manage the [extensions](../tags/ui/managing-resources/extensions/overview.md) for the properties a user has access to. |
 | Property Rights | Publish | Grants the ability to publish a library build as part of the [publishing flow](../tags/ui/publishing/publishing-flow.md). |
 | Company Rights | Develop Extensions | Grants the ability to create and modify extension packages that are owned by your organization, including private releases and requests for public release. |
