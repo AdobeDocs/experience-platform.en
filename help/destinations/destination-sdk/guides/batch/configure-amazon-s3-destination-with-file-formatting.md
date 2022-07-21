@@ -409,17 +409,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## Step 3: Verify the Experience Platform UI {#verify-ui}
 
-Based on the configurations above, the Experience Platform user interface will now display a new private destination card for you to use, similar to the one in the recording below. In the images below, note how the options in the activation workflow match the options you selected in the destination configuration.
+Based on the configurations above, the Experience Platform user interface will now display a new private destination card for you to use. In the images and recordings below, note how the options in the activation workflow match the options that you selected in the destination configuration.
 
 ![Screen recording showing the destinations catalog page with a selected destination card.](/help/destinations/destination-sdk/assets/destination-card.gif)
 
-Authenticate to destination
+When filling in details about the destination, notice how the fields surfaced are the custom data fields that you set up in the configuration.
+![fill in destination details](/help/destinations/destination-sdk/assets/file-configuration-options.gif)
 
-Connect to destination
+When scheduling export intervals notice how the fields surfaced are the fields you set up in the `batchConfig` configuration.
+![export scheduling options](/help/destinations/destination-sdk/assets/file-export-scheduling.png)
 
-Scheduling
-
-Mapping
+When viewing the filename configuration options, notice how the fields surfaced represent the `filenameConfig` options that you set up in the configuration.
+![filename configuration options](/help/destinations/destination-sdk/assets/file-naming-options.gif)
 
 
 ## Step 4: (Optional) Publish your destination {#publish-destination}
