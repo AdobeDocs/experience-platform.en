@@ -195,9 +195,9 @@ The [!UICONTROL AUDIENCE SIZE] column provides the total profile count of each l
 
 The [!UICONTROL Mapped audiences] widget displays the total number of mapped audiences that can be activated to the destination selected at the top of the page.
 
-Select [!UICONTROL Segments] to navigate to Segmentation UI [!UICONTROL Browse] tab. This workspace displays a list of all the segment definitions for your organization. 
+Select **[!UICONTROL Audiences]** to navigate to Segments dashboard [!UICONTROL Browse] tab. This workspace displays a list of all the segment definitions for your organization. 
 
-<!-- ![The Mapped audiences widget.]() -->
+![The Mapped audiences widget.](../images/destinations/mapped-audiences.png)
 
 <!-- https://jira.corp.adobe.com/browse/PLAT-116404 -->
 
