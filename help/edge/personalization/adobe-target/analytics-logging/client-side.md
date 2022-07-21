@@ -130,7 +130,7 @@ The following is an example of an `interact` response when Analytics client-side
 }
 ```
 
-Propositions for Form-based Experience Composer activities can contain both content and click metric items under the same proposition. Thus, instead of having a single analytics token for content display in `scopeDetails.characteristics.analyticsToken` property, these can have both a display and a click analytics token specified under `scopeDetails.characteristics.analyticsTokens` object, in `display` and `click` properties, correspondingly.
+Propositions for Form-based Experience Composer activities can contain both content and click metric items under the same proposition. Thus, instead of having a single analytics token for content display in `scopeDetails.characteristics.analyticsToken` property, these can have both a display and a click analytics token specified in `scopeDetails.characteristics.analyticsDisplayToken` and `scopeDetails.characteristics.analyticsClickToken` properties, correspondingly.
 
 ```json
 {
@@ -160,10 +160,8 @@ Propositions for Form-based Experience Composer activities can contain both cont
                 "display": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
                 "click": "E0gb6q1+WyFW3FMbbQJmrg=="
               },
-              "analyticsTokens": {
-                "display": "434689:0:0|2,434689:0:0|1",
-                "click": "434689:0:0|32767"
-              }
+              "analyticsDisplayToken": "434689:0:0|2,434689:0:0|1", 
+              "analyticsClickToken": "434689:0:0|32767"
             }
           },
           "items": [
@@ -392,7 +390,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-A proposition can have different types of items, as indicated by the `schema` property of the item in question. There are four proposition item schemas supported for Form-Based Experience Composer activities: 
+A proposition can have different types of items, as indicated by the `schema` property of the item in question. There are four proposition item schemas supported for Form-Based Experience Composer activities:
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -430,8 +428,8 @@ In summary, the following steps must be executed when applying Form-Based Experi
 1. Collect the Analytics display tokens from the SDK response and construct a payload for the Analytics hit;
 1. Send the payload to Analytics using the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 1. If there are any click metrics in delivered propositions, click listeners should be setup so that when a click is performed, it sends the `decisioning.propositionInteract` notification event. The `onBeforeEventSend` handler should be configured so that when intercepting `decisioning.propositionInteract` events, the following actions happen:
-    1. Collecting the click Analytics tokens from `xdm._experience.decisioning.propositions`
-    1. Sending the click Analytics hit with the collected Analytics payload via [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
+   1. Collecting the click Analytics tokens from `xdm._experience.decisioning.propositions`
+   1. Sending the click Analytics hit with the collected Analytics payload via [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 
 ```javascript
 alloy("sendEvent", {
