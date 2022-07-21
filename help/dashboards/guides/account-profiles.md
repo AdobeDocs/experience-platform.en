@@ -38,13 +38,9 @@ The [!UICONTROL Browse] tab allows you to search and view the read-only account 
 
 Selecting the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL Browse] tab opens the [!UICONTROL Details] tab for the account profile. The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
 
-## Widgets and metrics
+## The [!UICONTROL Account Profiles] [!UICONTROL Overview] {#overview}
 
-The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. The account used to generate visualizations of your account profiles data is dependant on the sandbox in use. See the documentation for [instructions on how to change your sandbox](../../sandboxes/ui/user-guide.md#switch-between-sandboxes).
-
-### Modifying the [!UICONTROL Account Profiles] dashboard
-
-You can modify the appearance of the [!UICONTROL Account Profiles] dashboard by selecting [!UICONTROL Modify dashboard]. This enables you to move and resize widgets. 
+The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. You can modify the appearance of the [!UICONTROL Overview] tab by selecting [!UICONTROL Modify dashboard]. This enables you to move and resize widgets. 
 
 ![The Account Profiles overview tab with Modify dashboard highlighted.](../images/account-profiles/modify-dashboard.png)
 
