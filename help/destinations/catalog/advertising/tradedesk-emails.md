@@ -27,7 +27,7 @@ This document is designed to help you activate profiles to your [!DNL Trade Desk
 
 Before you can activate segments to [!DNL The Trade Desk], you must contact your [!DNL The Trade Desk] account manager to sign the CRM Onboarding contract. [!DNL The Trade Desk] will then give permission and share your advertiser ID to configure your destination.  
 
-## ID Matching Requirements (#id-matching-requirements)
+## ID Matching Requirements {#id-matching-requirements}
 
 Depending on the type of IDs you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en) for more information.  
 
@@ -44,7 +44,7 @@ Both plain text and SHA256 hashed email addresses are supported by Adobe Experie
 
 {style="table-layout:auto"}
 
-## Email hashing requirements (#hashing-requirements)
+## Email hashing requirements {#hashing-requirements}
 
 You can hash email addresses before ingesting them into Adobe Experience Platform or use raw email addresses. 
 
@@ -71,11 +71,11 @@ Refer to the table below for information about the destination export type and f
 
 ## Connect to the destination {#connect}
 
-### Authenticate to Destination (#authenticate)
+### Authenticate to Destination {#authenticate}
 
 [!DNL The Trade Desk] CRM Destination is a daily batch file upload and does not require authentication by the user.
 
-### Fill in Destination Details (#fill-in-details)
+### Fill in Destination Details {#fill-in-details}
 
 Before you can send, or activate, audience data to a destination, you must set up a connection to your own destination platform. While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) this destination, you must provide the following information:
 
@@ -114,7 +114,7 @@ Selecting target fields:
 *  Select the `Email` namespace as target identity when your source namespace or attribute is `Email`. 
 *  Select the `Email_LC_SHA256` namespace as target identity when your source namespace or attribute is `Email_LC_SHA256`.
 
-## Validate Data Export (#validate)
+## Validate Data Export {#validate}
 
 To validate that data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the segments under the Adobe 1PD data tile within [!DNL The Trade Desk] Data Management Platform (DMP). Here are the steps to finding the corresponding ID within the [!DNL Trade Desk] UI: 
 
