@@ -64,9 +64,9 @@ To connect to this destination, follow the steps described in the [destination c
 
 ![Image of the UI screen where you can connect to the Pega CDH destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
 
-* **[!UICONTROL Access Token URL]**: The URL on your side which issues access token.
-* **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
-* **[!UICONTROL Client Secret]**: The [!DNL client secret] that your system assigns to Adobe Experience Platform.
+* **[!UICONTROL Access Token URL]**: The OAuth 2 access token URL on your Pega Customer Decision Hub instance.
+* **[!UICONTROL Client ID]**: The OAuth 2 [!DNL client ID] that you generated in your Pega Customer Decision Hub instance.
+* **[!UICONTROL Client Secret]**: The OAuth 2 [!DNL client secret] that you generated in your Pega Customer Decision Hub instance.
 
 ### Fill in destination details {#destination-details}
 
