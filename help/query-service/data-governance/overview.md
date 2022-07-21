@@ -1,7 +1,6 @@
 ---
 title: Data Governance in Query Service
 description: This overview covers the major elements of data governance in Experience Platform Query Service.
-feature: Data Governance
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
 ---
 # Data governance in Query Service
