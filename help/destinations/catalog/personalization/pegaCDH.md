@@ -32,8 +32,8 @@ A marketer wants to optimize the offers for customers who subscribed or unsubscr
 Before you can use this destination to export data out of Adobe Experience Platform, make sure you complete the following prerequisites in Pega Customer Decision Hub:
 
 * Configure the Adobe Segment Membership Component in your Pega Customer Decision Hub instance.
-* Configure OAuth 2.0 Client Registration using Client Credentials grant type in your Pega Customer Decision Hub instance.
-* Configure real-time processing of Adobe Segment Membership data flow to run in your Pega Customer Decision Hub instance.
+* Configure OAuth 2.0 [Client Registration using Client Credentials] https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration grant type in your Pega Customer Decision Hub instance.
+* Configure [real-time run data flow] https://docs.pega.com/decision-management/87/creating-real-time-run-data-flow  for  Adobe Segment Membership data flow in your Pega Customer Decision Hub instance.
 
 ## Supported identities {#supported-identities}
 
