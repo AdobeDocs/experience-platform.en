@@ -11,6 +11,9 @@ Use the Pega Customer Decision Hub destination in Adobe Experience Platform to s
 
 Profile segment membership from Adobe Experience Platform, when loaded into Pega Customer Decision Hub, can be used as predictor in adaptive models and help deliver the right contextual and behavioral data for next-best-action decisioning purposes.
 
+>[!IMPORTANT]
+>
+>This documentation page was created by the Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
 ## Use cases 
 
 To help you better understand how and when you should use the Customer Decision Hub destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
@@ -93,12 +96,12 @@ In the [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-dest
 
 ### Mapping example: activating profile updates in [!DNL Pega Customer Decision Hub] 
 
-Below is an example of correct identity mapping when activating profile updates in [!DNL Pega Customer Decision Hub].
+Below is an example of correct identity mapping when exporting profiles to [!DNL Pega Customer Decision Hub].
 
 Selecting source fields:
 
-* Select an Identifier (For eg: CustomerID) as source identity that uniquely identifies a profile in Adobe Experience Platform and  Pega Customer Decision Hub.
-* Select XDM source profile attribute changes that need to be updated in Pega Customer Decision Hub.
+* Select an identifier (For example: CustomerID) as source identity that uniquely identifies a profile in Adobe Experience Platform and  Pega Customer Decision Hub.
+* Select XDM source profile attribute changes that need to be exported and updated in Pega Customer Decision Hub.
 
 Selecting target fields:
 
@@ -108,37 +111,8 @@ Selecting target fields:
 ![Identity mapping](../../assets/catalog/personalization/pega/pega-source-destination-mapping.png)
 
 ## Exported data / Validate data export {#exported-data}
-Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destination in JSON format. For example, the export snippet below contains a profile that is qualified for a certain segment, is a member of another two segments, and exited another segment. The export also includes the profile attribute first name (*FirstName*), last name (*LastName*), date of birth (*BirthDate*), and Customer Identfier (*CustomerID*) for this profile.
 
-```json
-{
-  "CustomerID": "CUSTOMER-1021",
-  "Attributes": {
-    "BirthDate": "1975-08-29",
-    "FirstName": "John",
-    "LastName":"Doe"
-  },
-  "Segments": [{
-    "SegmentID": "04a81716-43d6-4e7a-a49c-f1d8b3129ba91",
-    "Name": "Interested in iPhone 13",
-    "LastQualificationTime": "2020-05-25T21:24:39Z",
-    "Status": "existing",
-    "Version": "15",
-    "ValidUntil": "2020-06-25T21:24:39Z",
-    "Namespace": "AAM"
-    }, {
-    "SegmentID": "53cba6b2-a23b-454a-8069-fc41308f1c0f",
-    "Name": "Interested in Unlimited Data Plan",
-    "LastQualificationTime": "2020-05-25T23:37:33Z",
-    "Status": "exited",
-    "Version": "3",
-    "ValidUntil": "2020-07-25T23:37:33Z",
-    "Namespace": "AAM"
-    }]
- }
-
-```
-For [!DNL Pega], a successful Segment membership update for a profile would insert the segment identifier, name and statuses in Pega Marketing segment membership datastore. The segment membership data can be assoicated in Pega Customer Profile designer that can be used in Engagement polices for next-best-action decisioning and/or predictors in Adaptive models. 
+A successful segment membership update for a profile would insert the segment identifier, name and statuses in the Pega marketing segment membership datastore. The segment membership data can be associated in Pega Customer Profile designer that can be used in Engagement polices for next-best-action decisioning and/or predictors in Adaptive models.
 
 ![exported-data](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
@@ -148,9 +122,9 @@ For [!DNL Pega], a successful Segment membership update for a profile would inse
 
 ## Additional resources {#additional-resources}
 
-See [Setting up an OAuth 2.0 client registration] https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration in Pega Customer Decision Hub
+See [Setting up an OAuth 2.0 client registration] https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration in Pega Customer Decision Hub.
 
-See [Creating a real-time run for data flows] https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows in Pega Customer Decision Hub
+See [Creating a real-time run for data flows] https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows in Pega Customer Decision Hub.
 
 
 ## Data usage and governance {#data-usage-governance}
