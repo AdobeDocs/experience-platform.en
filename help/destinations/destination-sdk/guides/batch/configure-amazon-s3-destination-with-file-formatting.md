@@ -12,7 +12,7 @@ title: (Beta) Configure an Amazon S3 destination with custom file name and forma
 
 This page describes how to use Destination SDK to configure an Amazon S3 destination with custom [file formatting options](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) and a custom [file name configuration](/help/destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration).
 
-This page shows all the configuration options available for Amazon S3 destinations. You can edit the configurations in the steps below or delete certain parts of the configurations, as needed.
+This page shows all the configuration options available for Amazon S3 destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.
 
 ## Prerequisites {#prerequisites}
 
@@ -116,6 +116,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
+A successful response returns the new destination server configuration, including the unique identifier (`instanceId`) of the configuration. Store this value as it is required in the next step.
+
 ## Step 2: Create destination configuration {#create-destination-configuration}
 
 After creating the destination server and file formatting configuration in the previous step, you can now use the `/destinations` API endpoint to create a destination configuration.
@@ -154,7 +156,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "authType":"S3"
       }
    ],
-   "customerEncryptionConfigurations":[],
+   "customerEncryptionConfigurations":[
+      
+   ],
    "customerDataFields":[
       {
          "name":"bucket",
@@ -342,9 +346,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "uiAttributes":{
       "documentationLink":"https://www.adobe.com/go/destinations-amazon-s3-en",
       "category":"cloudStorage",
-      "icon":{
-            "key": "amazonS3"
-        },
       "connectionType":"S3",
       "flowRunsSupported":true,
       "monitoringSupported":true,
@@ -369,7 +370,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "segmentRequired":true,
       "identityRequired":true
    },
-      "batchConfig":{
+   "batchConfig":{
       "allowMandatoryFieldSelection":true,
       "allowDedupeKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
@@ -407,21 +408,26 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
+A successful response returns the new destination configuration, including the unique identifier (`instanceId`) of the configuration. Store this value as it is required if you need to make further HTTP requests to update your destination configuration.
+
 ## Step 3: Verify the Experience Platform UI {#verify-ui}
 
-Based on the configurations above, the Experience Platform user interface will now display a new private destination card for you to use. In the images and recordings below, note how the options in the activation workflow match the options that you selected in the destination configuration.
+Based on the configurations above, the Experience Platform catalog will now display a new private destination card for you to use.
 
 ![Screen recording showing the destinations catalog page with a selected destination card.](/help/destinations/destination-sdk/assets/destination-card.gif)
+
+In the images and recordings below, note how the options in the [activation workflow for file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md) match the options that you selected in the destination configuration.
 
 When filling in details about the destination, notice how the fields surfaced are the custom data fields that you set up in the configuration.
 ![fill in destination details](/help/destinations/destination-sdk/assets/file-configuration-options.gif)
 
-When scheduling export intervals notice how the fields surfaced are the fields you set up in the `batchConfig` configuration.
+When scheduling export intervals, notice how the fields surfaced are the fields you set up in the `batchConfig` configuration.
 ![export scheduling options](/help/destinations/destination-sdk/assets/file-export-scheduling.png)
 
 When viewing the filename configuration options, notice how the fields surfaced represent the `filenameConfig` options that you set up in the configuration.
 ![filename configuration options](/help/destinations/destination-sdk/assets/file-naming-options.gif)
 
+If you want to adjust any of the fields mentioned above, repeat [steps one](#create-server-file-configuration) and [two](#create-destination-configuration) to modify the configurations according to your needs.
 
 ## Step 4: (Optional) Publish your destination {#publish-destination}
 
@@ -439,5 +445,6 @@ After configuring your destination, use the [destination publishing API](/help/d
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](/help/destinations/destination-sdk/overview.md#productized-custom-integrations), use the [self-service documentation process](/help/destinations/destination-sdk/docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).
 
+## Next steps {#next-steps}
 
-
+By reading this article, you now know how to author a custom Amazon S3 destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md) to export data to the destination.
