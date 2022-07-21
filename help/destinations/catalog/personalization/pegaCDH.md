@@ -66,6 +66,7 @@ To connect to this destination, follow the steps described in the [destination c
 #### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
 
 ![Image of the UI screen where you can connect to the Pega CDH destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
+Fill in the fields below and select **[!UICONTROL Connect to destination]**:
 
 * **[!UICONTROL Access Token URL]**: The OAuth 2 access token URL on your Pega Customer Decision Hub instance.
 * **[!UICONTROL Client ID]**: The OAuth 2 [!DNL client ID] that you generated in your Pega Customer Decision Hub instance.
@@ -114,10 +115,13 @@ Selecting target fields:
 
 A successful segment membership update for a profile would insert the segment identifier, name and statuses in the Pega marketing segment membership datastore. The segment membership data can be associated in Pega Customer Profile designer that can be used in Engagement polices for next-best-action decisioning and/or predictors in Adaptive models.
 
+![Image of the UI screen where you can associate Adobe Segment Membership data to Customer, using Customer Profile Designer]
 ![exported-data](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
+![Image of the UI screen where you can add Segment membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer]
 ![exported-data](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
+![Image of the UI screen where you can add Segment membership fields as predicators in Adaptive models, using Prediction Studio]
 ![exported-data](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Additional resources {#additional-resources}
@@ -125,6 +129,8 @@ A successful segment membership update for a profile would insert the segment id
 See [Setting up an OAuth 2.0 client registration] https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration in Pega Customer Decision Hub.
 
 See [Creating a real-time run for data flows] https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows in Pega Customer Decision Hub.
+
+See [Manage customer records in Customer Profile Designer] https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86.
 
 
 ## Data usage and governance {#data-usage-governance}
