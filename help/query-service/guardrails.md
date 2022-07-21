@@ -15,3 +15,8 @@ This document provides default use and rate limits for Query Service data to hel
 
 <!-- The following Experience Platform services are involved with modeling Query Service data: -->
 
+The two key Query service capabilities are as follows:
+
+1. Ad hoc Queries:  For executing SELECT queries (to explore, experiment and validate data) where the result of the query is not written back to the data lake.
+
+1. Batch Query - for executing ITAS and CTAS queries (to clean, shape, manipulate and enrich data) where the result of the query will be written back to the data lake. The metric for measuring the consumption of this functionality is compute hours
