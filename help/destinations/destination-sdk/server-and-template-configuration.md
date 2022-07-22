@@ -49,7 +49,7 @@ The template spec allows you to configure how to format the exported message to 
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.endpointRegion}}/items"
       }
    },
    "httpTemplate":{
