@@ -116,7 +116,7 @@ A successful segment membership update for a profile would insert the segment id
 The segment membership data is used in Pega Next-Best-Action Designer Engagement polices for next-best-action decisioning as shown below.
 ![Image of the UI screen where you can add Segment membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-The customer segment membership data fields are added as predictors in Adaptive models in Pega Prediction Studio as shown below.
+The customer segment membership data fields are added as predictors in Adaptive models as shown below.
 ![Image of the UI screen where you can add Segment membership fields as predicators in Adaptive models, using Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Additional resources {#additional-resources}
