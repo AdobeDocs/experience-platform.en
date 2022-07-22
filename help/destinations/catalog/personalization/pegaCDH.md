@@ -14,17 +14,14 @@ Profile segment membership from Adobe Experience Platform, when loaded into Pega
 >[!IMPORTANT]
 >
 >This documentation page was created by the Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
+
 ## Use cases 
 
 To help you better understand how and when you should use the Customer Decision Hub destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1
-
 ### Telecommunications
 
 A marketer wants to leverage insights from data science model-based next best action as delivered by Pega Customer Decision Hub for customer engagement. Pega Customer Decision Hub is heavily reliant on customer intent – for example "Interested_In_5G", "Interested_in_Unlimited_Dataplan" or "Interest_in_iPhone_accessories".
-
-### Use case #2
 
 ### Financial services
 
@@ -35,8 +32,8 @@ A marketer wants to optimize the offers for customers who subscribed or unsubscr
 Before you can use this destination to export data out of Adobe Experience Platform, make sure you complete the following prerequisites in Pega Customer Decision Hub:
 
 * Configure the Adobe Segment Membership Component in your Pega Customer Decision Hub instance.
-* Configure OAuth 2.0 [Client Registration using Client Credentials] https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration grant type in your Pega Customer Decision Hub instance.
-* Configure [real-time run data flow] https://docs.pega.com/decision-management/87/creating-real-time-run-data-flow  for  Adobe Segment Membership data flow in your Pega Customer Decision Hub instance.
+* Configure OAuth 2.0 [Client Registration using Client Credentials](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) grant type in your Pega Customer Decision Hub instance.
+* Configure [real-time run data flow](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flow)  for  Adobe Segment Membership data flow in your Pega Customer Decision Hub instance.
 
 ## Supported identities {#supported-identities}
 
@@ -126,11 +123,11 @@ A successful segment membership update for a profile would insert the segment id
 
 ## Additional resources {#additional-resources}
 
-See [Setting up an OAuth 2.0 client registration] https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration in Pega Customer Decision Hub.
+See [Setting up an OAuth 2.0 client registration](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) in Pega Customer Decision Hub.
 
-See [Creating a real-time run for data flows] https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows in Pega Customer Decision Hub.
+See [Creating a real-time run for data flows](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) in Pega Customer Decision Hub.
 
-See [Manage customer records in Customer Profile Designer] https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86.
+See [Manage customer records in Customer Profile Designer](https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86).
 
 
 ## Data usage and governance {#data-usage-governance}
