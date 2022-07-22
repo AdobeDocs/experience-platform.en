@@ -113,10 +113,10 @@ Selecting target fields:
 A successful segment membership update for a profile would insert the segment identifier, name and statuses in the Pega marketing segment membership datastore. The membership data is associated to a customer using Customer Profile Designer in Pega Next-Best-Action Designer as shown below.
 ![Image of the UI screen where you can associate Adobe Segment Membership data to Customer, using Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-The segment membership data is used in  in Pega Next-Best-Action Designer Engagement polices for next-best-action decisioning as shown below.
+The segment membership data is used in Pega Next-Best-Action Designer Engagement polices for next-best-action decisioning as shown below.
 ![Image of the UI screen where you can add Segment membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-The customer segment membership data fields are marked as predicators in Adaptive models in Pega Prediction Studio as shown below.
+The customer segment membership data fields are added as predictors in Adaptive models in Pega Prediction Studio as shown below.
 ![Image of the UI screen where you can add Segment membership fields as predicators in Adaptive models, using Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Additional resources {#additional-resources}
