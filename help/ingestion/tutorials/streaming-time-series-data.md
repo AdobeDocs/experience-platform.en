@@ -21,31 +21,9 @@ This tutorial requires a working knowledge of various Adobe Experience Platform 
 
 Additionally, this tutorial requires that you have already created a streaming connection. For more information on creating a streaming connection, please read the [create a streaming connection tutorial](./create-streaming-connection.md).
 
-The following sections provide additional information that you will need to know in order to successfully make calls to streaming ingestion APIs.
+### Using Platform APIs
 
-### Reading sample API calls
-
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
-
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
-
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-- Content-Type: application/json
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../landing/api-guide.md).
 
 ## Compose a schema based off of the XDM ExperienceEvent class
 
@@ -336,7 +314,15 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
                 "contentType": "application/vnd.adobe.xed-full+json;version=1"
-            }
+            },
+        "identityMap": {
+                "Email": [
+                  {
+                    "id": "acme_user@gmail.com",
+                    "primary": true
+                  }
+                ]
+              },
         },
         "xdmEntity":{
             "_id": "9af5adcc-db9c-4692-b826-65d3abe68c22",
