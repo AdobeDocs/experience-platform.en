@@ -110,7 +110,7 @@ Selecting target fields:
 
 ## Exported data / Validate data export {#exported-data}
 
-A successful segment membership update for a profile would insert the segment identifier, name and statuses in the Pega marketing segment membership datastore. The membership data is associated to a customer using Customer Profile Designer in Pega Next-Best-Action Designer as shown below.
+A successful segment membership update for a profile would insert the segment identifier, name and statuses in the Pega marketing segment membership datastore. The membership data is associated to a customer using Customer Profile Designer in Pega Customer Decision Hub as shown below.
 ![Image of the UI screen where you can associate Adobe Segment Membership data to Customer, using Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 The segment membership data is used in Pega Next-Best-Action Designer Engagement polices for next-best-action decisioning as shown below.
