@@ -36,10 +36,7 @@ The [!UICONTROL Browse] tab allows you to search and view the read-only account 
 
 Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL Browse] tab to open the [!UICONTROL Details] tab for the account profile.
 
-<!-- Image needs updating to display actual results from a browse.
-![The Account Profiles browse tab with results displayed and the Profile ID highlighted.]() -->
-
-![The Platform UI with the Account Profiles Browse tab displayed.](../images/account-profiles/account-profiles-browse-tab.png)
+![The Account Profiles browse tab with results displayed and the Profile ID highlighted.](../images/account-profiles/account-profiles-browse-tab.png) -->
 
 The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
 
