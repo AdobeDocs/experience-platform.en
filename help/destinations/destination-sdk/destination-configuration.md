@@ -158,7 +158,7 @@ Use this section to ask users to fill in custom fields, specific to your destina
 
 >[!TIP]
 >
->You can access and use the customer inputs from customer data fields in templating. Use the macro `customerData.{name}`. For example, if you ask users to input a Customer ID field, with the name `userId`, you can access it in templating by using the macro `customerData.userId`. View an example of how a customer data field is used in the URL of your API endpoint, in the [destination server configuration](/help/destinations/destination-sdk/server-and-template-configuration.md#server-specs).
+>You can access and use the customer inputs from customer data fields in templating. Use the macro `{{customerData.name}}`. For example, if you ask users to input a Customer ID field, with the name `userId`, you can access it in templating by using the macro `{{customerData.userId}}`. View an example of how a customer data field is used in the URL of your API endpoint, in the [destination server configuration](/help/destinations/destination-sdk/server-and-template-configuration.md#server-specs).
 
 |Parameter | Type | Description|
 |---------|----------|------|
@@ -181,7 +181,7 @@ This section refers to the UI elements in the configuration above that Adobe sho
 |Parameter | Type | Description|
 |---------|----------|------|
 |`documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en`. Note that this link works only after Adobe sets your destination live and the documentation is published. |
-|`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br> Note that you can currently select one category only per destination.|
+|`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br> Note that you can currently select only one category per destination.|
 |`connectionType` | String | `Server-to-server` is currently the only available option. |
 |`frequency` | String | Refers to the type of data export supported by the destination. Supported values: <ul><li>`Streaming`</li><li>`Batch`</li></ul>|
 
