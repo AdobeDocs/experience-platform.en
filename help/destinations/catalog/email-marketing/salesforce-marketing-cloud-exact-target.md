@@ -170,7 +170,7 @@ To do this, select each segment, then enter the corresponding custom attribute f
 
 > [!IMPORTANT]
 >
-> * The value used for the Mapping ID should exactly match the name of the custom attribute created within Salesforce under the "Email Demographics" attribute-set.
+> The value used for the Mapping ID should exactly match the name of the custom attribute created within Salesforce under the "Email Demographics" attribute-set.
 
 An example is shown below:
 ![Schedule segment export](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
