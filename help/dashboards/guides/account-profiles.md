@@ -34,13 +34,18 @@ From the [!UICONTROL Account Profiles] dashboard you can either [browse the acco
 
 The [!UICONTROL Browse] tab allows you to search and view the read-only account profiles ingested into your organization using an account ID from a connected enterprise source or by entering source details directly. From here you can see important information belonging to the account profile including, their name, industry, revenue, and segment among others.
 
+Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL Browse] tab to open the [!UICONTROL Details] tab for the account profile.
+
+<!-- Image needs updating to display actual results from a browse.
+![The Account Profiles browse tab with results displayed and the Profile ID highlighted.]() -->
+
 ![The Platform UI with the Account Profiles browse tab displayed.](../images/account-profiles/account-profiles-browse-tab.png)
 
-Selecting the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL Browse] tab opens the [!UICONTROL Details] tab for the account profile. The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
+The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
 
 ## The [!UICONTROL Account Profiles] [!UICONTROL Overview] {#overview}
 
-The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. You can modify the appearance of the [!UICONTROL Overview] tab by selecting [!UICONTROL Modify dashboard]. This enables you to move and resize widgets. 
+The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. Select **[!UICONTROL Modify dashboard]** to change the appearance of the [!UICONTROL Overview] tab by moving and resizing widgets. 
 
 ![The Account Profiles overview tab with Modify dashboard highlighted.](../images/account-profiles/modify-dashboard.png)
 
@@ -63,9 +68,9 @@ Individual counts for the different industries are displayed in a dialog when th
 
 ![The total accounts by industry widget.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
-### [Account profiles added](#account-profiles-added)
+### Account profiles added {#account-profiles-added}
 
-This widget uses a colour coded bar chart to illustrate the count of profiles added to an account over a given period of time, and the proportion of different industries that constitute these added profiles. The industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The time period of analysis is selected from the widget dropdown menus. The bar chart can be visualized over a 30 day, 90 day, and a 12 month period.
+This widget uses a colour coded bar chart to illustrate the count of profiles added to an account over a given period of time, and the proportion of different industries that constitute these added profiles. The industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The period of analysis is selected from the widget dropdown menus. The bar chart can be visualized over a 30 day, 90 day, and a 12 month period.
 
 >[!NOTE]
 >
