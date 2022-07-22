@@ -110,16 +110,14 @@ Selecting target fields:
 
 ## Exported data / Validate data export {#exported-data}
 
-A successful segment membership update for a profile would insert the segment identifier, name and statuses in the Pega marketing segment membership datastore. The segment membership data can be associated in Pega Customer Profile designer that can be used in Engagement polices for next-best-action decisioning and/or predictors in Adaptive models.
+A successful segment membership update for a profile would insert the segment identifier, name and statuses in the Pega marketing segment membership datastore. The Adobe profile segment membership data is associated to a customer in Pega using the Pega Customer Profile designer feature in Next-Best-Action Designer as shown below.
+![Image of the UI screen where you can associate Adobe Segment Membership data to Customer, using Customer Profile Designer(../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-![Image of the UI screen where you can associate Adobe Segment Membership data to Customer, using Customer Profile Designer]
-![exported-data](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+The segment membership data can be associated in Pega Customer Profile designer that can be used in Engagement polices for next-best-action decisioning and/or predictors in Adaptive models.
 
-![Image of the UI screen where you can add Segment membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer]
-![exported-data](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+![Image of the UI screen where you can add Segment membership fields as conditions in Engagement Policies of Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-![Image of the UI screen where you can add Segment membership fields as predicators in Adaptive models, using Prediction Studio]
-![exported-data](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+![Image of the UI screen where you can add Segment membership fields as predicators in Adaptive models, using Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Additional resources {#additional-resources}
 
