@@ -39,7 +39,7 @@ Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL
 <!-- Image needs updating to display actual results from a browse.
 ![The Account Profiles browse tab with results displayed and the Profile ID highlighted.]() -->
 
-![The Platform UI with the Account Profiles browse tab displayed.](../images/account-profiles/account-profiles-browse-tab.png)
+![The Platform UI with the Account Profiles Browse tab displayed.](../images/account-profiles/account-profiles-browse-tab.png)
 
 The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
 
@@ -70,7 +70,7 @@ Individual counts for the different industries are displayed in a dialog when th
 
 ### Account profiles added {#account-profiles-added}
 
-This widget uses a colour coded bar chart to illustrate the count of profiles added to an account over a given period of time, and the proportion of different industries that constitute these added profiles. The industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The period of analysis is selected from the widget dropdown menus. The bar chart can be visualized over a 30 day, 90 day, and a 12 month period.
+This widget uses a colour coded bar chart to illustrate the count of profiles added to an account over a given period of time, and the proportion of different industries that constitute these added profiles. The industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over a 30 day, 90 day, and a 12 month period.
 
 >[!NOTE]
 >
@@ -80,4 +80,4 @@ This widget uses a colour coded bar chart to illustrate the count of profiles ad
 
 ## Next steps
 
-By following this document you should now be able to locate the account profiles dashboard. You should also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.
+By following this document you should now be able to locate the [!UICONTROL Account Profiles] dashboard. You should also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.
