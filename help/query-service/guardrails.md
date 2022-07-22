@@ -5,21 +5,21 @@ description: This document provides information on use and rate limits for Query
 ---
 # Guardrails for Query Service data
 
-This document provides default use and rate limits for Query Service data to help you optimize system performance when querying data. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
+Guardrails are thresholds that provide guidance for data and system usage, performance optimization, and avoidance of errors or unexpected results in Adobe Experience Platform.
 
->[!NOTE]
->
->Most customers do not exceed these default limits. If you would like to learn about custom limits, please contact your customer care representative.
+This document provides default use and rate limits for Query Service data to help you optimize system performance when querying data in relation to your licensing entitlements.
 
-## Getting started
+## Prerequisites
 
-<!-- The following Experience Platform services are involved with modeling Query Service data: -->
+Before continuing with this document, you are recommended to have a good understanding of the two key Query Service capabilities described below:
 
-The two key Query service capabilities are as follows:
+1. Ad hoc queries: For executing `SELECT` queries to explore, experiment, and validate data where the results of the queries **are not stored** on the data lake.
 
-1. Ad hoc Queries:  For executing SELECT queries (to explore, experiment and validate data) where the result of the query is not written back to the data lake.
+1. Batch queries: For executing `INSERT TABLE AS SELECT` and `CREATE TABLE AS SELECT` queries to clean, shape, manipulate, and enrich data. The results of these queries **are stored** on the data lake. The metric for measuring the consumption of this functionality is computational hours.
 
-1. Batch Query - for executing ITAS and CTAS queries (to clean, shape, manipulate and enrich data) where the result of the query will be written back to the data lake. The metric for measuring the consumption of this functionality is compute hours
+The illustration below summarizes how Query Service capabilities are currently packaged and licensed:
+
+![A diagram to explain the distribution and packaging of Query Service capabilities in relation to licencing.](./images/guardrails/query-capabilities.png)
 
 ## Limit types
 
@@ -31,7 +31,7 @@ There are two types of default limits within this document:
 
 >[!NOTE]
 >
->The limits outlined in this document are constantly being improved. Please check back regularly for updates. If you are interested in learning about custom limits, please contact your customer care representative.
+>The limits outlined in this document are constantly being improved. Please check back regularly for updates. If you would like to learn about custom limits, please contact your customer care representative.
 
 ## Primary entity performance guardrails
 
