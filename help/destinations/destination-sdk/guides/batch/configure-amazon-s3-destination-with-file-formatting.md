@@ -419,6 +419,11 @@ Based on the configurations above, the Experience Platform catalog will now disp
 In the images and recordings below, note how the options in the [activation workflow for file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md) match the options that you selected in the destination configuration.
 
 When filling in details about the destination, notice how the fields surfaced are the custom data fields that you set up in the configuration.
+
+>[!TIP]
+>
+>The order in which you add the custom data fields to the destination configuration is not reflected in the UI. The custom data fields are always displayed in the order displayed in the screen recording below.
+
 ![fill in destination details](/help/destinations/destination-sdk/assets/file-configuration-options.gif)
 
 When scheduling export intervals, notice how the fields surfaced are the fields you set up in the `batchConfig` configuration.
