@@ -11,6 +11,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [[Data collection]](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Real-Time Customer Data Platform Connections](#data-collection)
@@ -55,6 +56,19 @@ For more general information on Data Science Workspace, see the [overview docume
 {style="table-layout:auto"}
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New tag extensions**
+
+| Feature | Description |
+| --- | --- |
+| Google Data Layer tag extension | The Google Data Layer extension allows you to use a Google data layer in your tags implementation. See the [overview documentation](../../tags/extensions/web/google-data-layer/overview.md) for more information. |
+| Mailchimp event forwarding extension | The Mailchimp event forwarding extension sends events to the Mailchimp Marketing API that can trigger emails for Mailchimp marketing campaigns, journeys, or transactions. See the [overview documentation](../../tags/extensions/web/mailchimp/overview.md) for more information. |
+
+For more information, please see the [data collection overview](../../rtcdp-connections/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
