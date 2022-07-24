@@ -145,6 +145,8 @@ To correctly send your audience data from Adobe Experience Platform to the Micro
 1. An example using these mappings is shown below:
 ![Target mapping](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
+Refer to [Dynamics 365 documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) for a comprehensive list of supported attributes.
+
 > [!NOTE]
 >
 > When mapping to a Dynamics 365 [date or timestamp](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest), the corresponding attribute value in the dataset should not be empty else during execution, else you will encounter [errors](#unknown-errors).
