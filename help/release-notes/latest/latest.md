@@ -71,7 +71,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | [Google Ads Enhanced Conversions event forwarding extension](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | The Google Ads Enhanced Conversions extension allows you to enhance your Google Ads conversions in real time. |
 | [Mailchimp event forwarding extension](../../tags/extensions/web/mailchimp/overview.md) | The Mailchimp event forwarding extension sends events to the Mailchimp Marketing API that can trigger emails for Mailchimp marketing campaigns, journeys, or transactions. |
 
-For more information, please see the [data collection overview](../../rtcdp-connections/home.md).
+For more information, please see the [data collection overview](../../collection/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 

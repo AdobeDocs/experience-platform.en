@@ -1,6 +1,7 @@
 ---
 title: Permission management for data collection in Experience Platform
-description: A high-level overview of how to manage permissions and control access to features in Real-Time Customer Data Platform (RTCDP) Connections.
+description: A high-level overview of how to manage permissions and control access to data collection features in Adobe Experience Platform.
+exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 ---
 # Permission management for data collection in Experience Platform
 
