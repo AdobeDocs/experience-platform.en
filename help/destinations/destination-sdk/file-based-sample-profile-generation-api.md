@@ -1,8 +1,8 @@
 ---
 description: This page explains how to use the /sample-profiles API endpoint from Destination SDK to generate sample profiles based on a source schema. You can use these sample profiles to test your file-based destination configuration.
 title: Generate sample profiles based on a source schema
+exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 ---
-
 # Generate sample profiles based on a source schema
 
 ## Overview {#overview}
@@ -102,7 +102,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 | -------- | ----------- |
 | `segmentMembership` | A map object which describes the individual’s segment memberships. For more information on `segmentMembership`, read [Segment Membership Details](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
-| `status` | Indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
+| `status` | A string field that indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, see [basis of schema composition](../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}

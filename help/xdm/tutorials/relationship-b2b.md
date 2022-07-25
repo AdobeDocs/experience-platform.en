@@ -3,17 +3,12 @@ title: Define a Relationship Between Two Schemas in Real-time Customer Data Plat
 description: Learn how to define a many-to-one relationship between two schemas in Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 ---
-# Define a many-to-one relationship between two schemas in Real-time Customer Data Platform B2B Edition
+# Define a many-to-one relationship between two schemas in Real-time Customer Data Platform B2B Edition {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Reference schema"
->abstract="Select the schema you want to establish a relationship with. Depending on the schema's class, it may also have existing relationships with other entities in the B2B context."
->text="See the documentation to learn how B2B schema classes relate to each other."
-
->[!NOTE]
->
->If you are not using Real-time Customer Data Platform B2B Edition or want to create a one-to-one relationship, see the guide on [creating a one-to-one relationship](./relationship-ui.md) instead.
+>abstract="Select the schema you want to establish a relationship with. Depending on the schema's class, it may also have existing relationships with other entities in the B2B context. See the documentation to learn how B2B schema classes relate to each other."
 
 Real-time Customer Data Platform B2B Edition provides several Experience Data Model (XDM) classes that capture fundamental B2B data entities, including [accounts](../classes/b2b/business-account.md), [opportunities](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md), and more. By building schemas based on these classes and enabling them for use in [Real-time Customer Profile](../../profile/home.md), you can merge data from disparate sources into a unified representation called a union schema.
 
@@ -26,6 +21,8 @@ The following diagram provides an example of how the different B2B classes can r
 This tutorial covers the steps to define a many-to-one relationship between two schemas in Real-time CDP B2B Edition.
 
 >[!NOTE]
+>
+>If you are not using Real-time Customer Data Platform B2B Edition or want to create a one-to-one relationship, see the guide on [creating a one-to-one relationship](./relationship-ui.md) instead.
 >
 >This tutorial focuses on how to manually establish relationships between B2B schemas in the Platform UI. If you are bringing in data from a B2B source connection, you can use an auto-generation utility to create the required schemas, identities, and relationships instead. See the sources documentation on B2B namespaces and schemas for more information on [using the auto-generation utility](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -48,8 +45,7 @@ Schema relationships are represented by a dedicated field within a **source sche
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="Reference identity namespace"
->abstract="The namespace (type) for the reference schema's primary identity field. The reference schema must have an established primary identity field in order to participate in a relationship."
->text="See the documentation to learn more about identities in B2B relationships."
+>abstract="The namespace (type) for the reference schema's primary identity field. The reference schema must have an established primary identity field in order to participate in a relationship. See the documentation to learn more about identities in B2B relationships."
 
 In order to establish a relationship, the destination schema must have a defined primary identity. When setting a primary identity for a B2B entity, keep in mind that string-based entity IDs may overlap if you are collecting them across different systems or locations, which could lead to data conflicts in Platform.
 
@@ -82,14 +78,12 @@ The destination schema "[!DNL Accounts]" is based on the [!UICONTROL XDM Account
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
 >title="Relationship name from current schema"
->abstract="A label that describes the relationship from the current schema to the reference schema (for example, 'Related Account'). This label is used in Profile and Segmentation to give context to data from related B2B entities."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="A label that describes the relationship from the current schema to the reference schema (for example, 'Related Account'). This label is used in Profile and Segmentation to give context to data from related B2B entities. See the documentation to learn more about building B2B schema relationships."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
 >title="Relationship name from reference schema"
->abstract="A label that describes the relationship from the reference schema to the current schema (for example, 'Related Opportunities'). This label is used in Profile and Segmentation to give context to data from related B2B entities."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="A label that describes the relationship from the reference schema to the current schema (for example, 'Related Opportunities'). This label is used in Profile and Segmentation to give context to data from related B2B entities. See the documentation to learn more about building B2B schema relationships."
 
 In order to define a relationship between two schemas, the source schema must have a dedicated field that references the primary identity of the destination schema. Standard B2B classes include dedicated source key fields for commonly related business entities. For example, the [!UICONTROL XDM Business Opportunity] class contains source key fields for a related account (`accountKey`) and a related campaign (`campaignKey`). However, you can also add other [!UICONTROL B2B Source] fields to the schema by using custom field groups if you require more than the default components.
 
