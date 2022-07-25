@@ -15,7 +15,7 @@ This guide provides an overview of the different types of permissions available 
 
 >[!NOTE]
 >
->For steps on how to configure permissions for users using Admin Console, please refer to the tutorial on [managing permissions for data collection](../../../rtcdp-connections/permissions.md).
+>For steps on how to configure permissions for users using Admin Console, please refer to the tutorial on [managing permissions for data collection](../../../collection/permissions.md).
 
 ## Permission types
 
@@ -115,4 +115,4 @@ The following table provides some examples of the types of roles you might have 
 
 ## Next steps
 
-This document provided an overview of the available permissions for tags in Experience Platform. For steps on how to configure product profiles for tags in Adobe Admin Console, see the guide on [managing user permissions for data collection](../../../rtcdp-connections/permissions.md).
+This document provided an overview of the available permissions for tags in Experience Platform. For steps on how to configure product profiles for tags in Adobe Admin Console, see the guide on [managing user permissions for data collection](../../../collection/permissions.md).
