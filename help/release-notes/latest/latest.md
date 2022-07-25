@@ -11,9 +11,9 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [[Data collection]](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
-- [Real-Time Customer Data Platform Connections](#data-collection)
 - [Sources](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -55,6 +55,23 @@ For more general information on Data Science Workspace, see the [overview docume
 {style="table-layout:auto"}
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| [Access Type configuration for datastreams](../../edge/datastreams/overview.md#create)| When creating a new datastream, you can now select what type of requests you want the Edge Network to accept: <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the [!DNL Edge Network]. </li></ul> |
+|[Render propositions](../../edge/personalization/rendering-personalization-content.md#applypropositions) in single-page applications without incrementing metrics. | The newly added `applyPropositions` command allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the [!DNL Analytics] and [!DNL Target] metrics. This increases reporting accuracy. |
+|[Mobile-to-web and cross-domain ID sharing](../../edge/identity/id-sharing.md) | The Adobe Experience Platform Web SDK now supports visitor ID sharing capabilities that enable you to deliver personalized experiences more accurately, between mobile apps and mobile web content, and across domains. |
+| [Google Data Layer tag extension](../../tags/extensions/web/google-data-layer/overview.md) | The Google Data Layer extension allows you to use a Google data layer in your tags implementation. |
+| [Google Ads Enhanced Conversions event forwarding extension](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | The Google Ads Enhanced Conversions extension allows you to enhance your Google Ads conversions in real time. |
+| [Mailchimp event forwarding extension](../../tags/extensions/web/mailchimp/overview.md) | The Mailchimp event forwarding extension sends events to the Mailchimp Marketing API that can trigger emails for Mailchimp marketing campaigns, journeys, or transactions. |
+
+For more information, please see the [data collection overview](../../collection/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -110,20 +127,6 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 {style="table-layout:auto"}
 
 For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
-
-## Real-Time Customer Data Platform Connections {#data-collection}
-
-Real-Time Customer Data Platform Connections provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| [Access Type configuration for datastreams](../../edge/datastreams/overview.md#create)| When creating a new datastream, you can now select what type of requests you want the Edge Network to accept: <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the [!DNL Edge Network]. </li></ul> |
-|[Render propositions](../../edge/personalization/rendering-personalization-content.md#applypropositions) in single-page applications without incrementing metrics. | The newly added `applyPropositions` command allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the [!DNL Analytics] and [!DNL Target] metrics. This increases reporting accuracy. |
-|[Mobile-to-web and cross-domain ID sharing](../../edge/identity/id-sharing.md) | The Adobe Experience Platform Web SDK now supports visitor ID sharing capabilities that enable you to deliver personalized experiences more accurately, between mobile apps and mobile web content, and across domains. |
-
-For more information, please see the [Real-Time CDP Connections overview](../../rtcdp-connections/home.md).
 
 ## Sources {#sources}
 
