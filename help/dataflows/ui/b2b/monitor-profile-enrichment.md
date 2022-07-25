@@ -9,7 +9,11 @@ exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 
 Use the [!UICONTROL Profile Enrichment] dashboard to understand if profile enrichment jobs ran and completed successfully, and to view the basic metrics to gauge the effectiveness of the enrichments.
 
-In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. In the view selector, select **B2B Flow** to see the dashboard elements specific to [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  The [!UICONTROL Monitoring] dashboard includes the basic metrics from the latest successful run, and daily job status up to 90 days in the past. The [!UICONTROL Related accounts] dashboard shows the basic metrics and daily job status specific to the [Related Accounts](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) profile enrichment.
+In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. In the view selector, select **B2B Flow** to see the dashboard elements specific to [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  The [!UICONTROL Monitoring] dashboard includes the basic metrics from the latest successful run, and daily job status up to 90 days in the past. 
+
+## Related accounts profile enrichment
+
+The [!UICONTROL Related accounts] dashboard shows the basic metrics and daily job status specific to the [Related Accounts](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) profile enrichment. 
 
 ![Visual indication of how to get to the Profile enrichment jobs monitoring screen in the Experience Platform UI.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
@@ -18,7 +22,7 @@ The data in the **[!UICONTROL Metrics]** card includes the basic metrics from th
 The following metrics are available for related accounts profile enrichment jobs:
 
 | Metric | Description |
----------|----------|
+| --------- | ---------- |
 | **[!UICONTROL Total account profiles]** | Indicates the total account profiles that your organization has access to. |
 | **[!UICONTROL Account groups]** | Indicates the number of account groups clustered by the Related Accounts machine learning job. |
 | **[!UICONTROL Single-account groups]** | Indicates the number of accounts which are not grouped together with other accounts. |
@@ -27,6 +31,24 @@ The following metrics are available for related accounts profile enrichment jobs
 | **[!UICONTROL Last successful run]** | Indicates the date and time of the last successful Related Accounts job run. |
 | **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the Related Accounts job. |
 | **[!UICONTROL Message]** | Indicates an error or warning message for a particular job run. |
+
+## Lead to account matching profile enrichment
+
+The [!UICONTROL Lead to account matching] dashboard shows the basic metrics and daily job-run status specific to the [Lead to account matching](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) profile enrichment.
+
+![Lead to account matching profile enrichment](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-lead-to-account-matching.png)
+
+The following metrics are available for lead to account matching profile enrichment jobs:
+
+| Metric | Description |
+| --------- | ---------- |
+| **[!UICONTROL Total persons with accounts]** | Indicates the total number of people that are already associated with an account. |
+| **[!UICONTROL Total accounts]** | Indicates the total number of accounts found by the lead to account matching job. |
+| **[!UICONTROL Existing persons with accounts]** | Indicates the number of people that are already linked to an account. |
+| **[!UICONTROL Persons matched]** | Indicates the number of people that have successfully been matched to an account. |
+| **[!UICONTROL Persons unmatched]** | Indicates the number of people that were not successfully matched to an account.  |
+| **[!UICONTROL Last successful run]** | Indicates the date and time of the last successful Related Accounts job run. |
+| **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the lead to account mathcing job. |
 
 ## UI controls {#ui-controls}
 
@@ -50,3 +72,4 @@ By following this tutorial, you can now successfully monitor and understand metr
 
 * [Related accounts in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Related accounts tab in the Account profile UI guide](/help/rtcdp/accounts/account-profile-ui-guide.md)
+* [Lead to account matching in CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
