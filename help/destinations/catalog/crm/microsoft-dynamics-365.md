@@ -50,7 +50,7 @@ Note down the items below before you authenticate to the Microsoft Dynamics 365 
 | --- | --- | --- |
 | Username | Your Dynamics 365 account username | - |
 | Password | Your Dynamics 365 account password | - |
-| Environment URL | See [Dynamics 365 documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) for additional guidance. | *org57771b33.crm.dynamics.com* |
+| Environment URL | See [Dynamics 365 documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) for additional guidance. | If your domain is as below, you need the highlighted value.<br> *`org57771b33`.crm.dynamics.com* |
 
 ## Supported identities {#supported-identities}
 
@@ -201,4 +201,8 @@ When checking a dataflow run, if you see the error message below, verify that th
 
 Additional useful information from the [Dynamics 365 documentation](https://docs.microsoft.com/en-us/dynamics365/) is below:
 * [IOrganizationService.Update(Entity) Method](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dataverse-sdk-latest)
-* [Update and delete table rows using the Web API](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update])
+* [Update and delete table rows using the Web API](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
+
+### Limits
+
+The [Requests limits and allocations](https://docs.microsoft.com/en-us/power-platform/admin/api-request-limits-allocations) page details the Dynamics 365 API limits associated with your Dynamics 365 license.
