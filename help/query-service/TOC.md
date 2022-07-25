@@ -56,6 +56,7 @@ feature: Queries
   - [SSL modes](./clients/ssl-modes.md)
   - [Aqua Data Studio](clients/aqua-data-studio.md)
   - [Db Visualizer](./clients/dbvisulaizer.md)
+  - [Jupyter Notebook](clients//jupyter-notebook.md)
   - [Looker](clients/looker.md)
   - [Postico](clients/postico.md)
   - [Power BI](clients/power-bi.md)
