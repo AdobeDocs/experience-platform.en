@@ -714,14 +714,14 @@ Within the schema configuration, you have the option of adding required (or pred
     "requiredMappingsOnly": true,
     "requiredMappings": [
       {
-        "destination": "ppid",
+        "destination": "ppid", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
         "mandatoryRequired": true,
         "primaryKeyRequired": true
       },
       {
         "sourceType": "text/plain",
         "source": "metadata.segment.alias",
-        "destination": "list_id"
+        "destination": "list_id" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
       },
       {
         "sourceType": "text/x.aep-xl",
