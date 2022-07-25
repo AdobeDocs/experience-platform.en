@@ -11,6 +11,7 @@ feature: Data Collection
 
 - [RTCDP Connections overview](home.md)
 - [End-to-end overview](e2e.md)
+- [Permission management](permissions.md)
 - [Client state management](client-state.md)
 - Visitor identification {#visitor-identification}
   - [Overview](visitor-identification.md)
