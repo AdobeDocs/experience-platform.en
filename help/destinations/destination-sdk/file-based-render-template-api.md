@@ -1,8 +1,8 @@
 ---
 description: This page explains how to use the /authoring/testing/template/render endpoint to visualize how the templatized customer data fields defined in your destination configuration would look like.
 title: Validate templatized customer fields
+exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
 ---
-
 # Validate templatized customer fields
 
 ## Overview {#overview}
@@ -77,7 +77,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 A successful response returns an `HTTP 200 OK` status, and the body includes randomly generated values for your templatized fields.
 
-This response is meant to help you validate the correct structure of your customer data fields, such as bucket names or folder paths.
+This response can help you validate the correct structure of your customer data fields, such as bucket names or folder paths.
 
 
 ```json
