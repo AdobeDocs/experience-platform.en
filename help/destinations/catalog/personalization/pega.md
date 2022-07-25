@@ -39,9 +39,11 @@ Before you can use this destination to export data out of Adobe Experience Platf
 
 [!DNL Pega Customer Decision Hub] supports the activation of custom user IDs described in the table below. For more details, see [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Description
+|Target Identity|Description|
 |---|---|
 |*CustomerID*|Common User Identifier that uniquely identifies a profile in [!DNL Pega Customer Decision Hub] and Adobe Experience Platform|
+
+{style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
 
