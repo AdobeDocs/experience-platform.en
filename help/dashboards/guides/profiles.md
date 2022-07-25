@@ -265,13 +265,12 @@ Select **[!UICONTROL Audiences]** to navigate to the [!UICONTROL Segments] dashb
 
 <!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
 
-### [!UICONTROL Audiences change trend] {#audiences-change-trend}
+<!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
 
 This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
 
-The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences.
+The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
 
-<!-- NO image available -->
 <!-- ![The Audiences change trend widget.]() -->
 
 <!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
