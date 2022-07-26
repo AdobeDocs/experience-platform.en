@@ -1,8 +1,8 @@
 ---
 description: This page explains how to use the /sample-profiles API endpoint from Destination SDK to generate sample profiles based on a source schema. You can use these sample profiles to test your file-based destination configuration.
 title: Generate sample profiles based on a source schema
+exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
 ---
-
 # Generate sample profiles based on a source schema
 
 ## Overview {#overview}

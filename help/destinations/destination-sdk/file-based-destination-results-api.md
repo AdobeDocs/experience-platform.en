@@ -1,8 +1,8 @@
 ---
 description: This page explains how to use the /testing/destinationInstance API endpoint to view the complete details of your testing results. This API endpoint returns the same result as you would obtain when using the Flow Service API to monitor dataflows.
 title: View detailed activation results
+exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 ---
-
 # View detailed activation results {#view-test-results}
 
 ## Overview {#overview}

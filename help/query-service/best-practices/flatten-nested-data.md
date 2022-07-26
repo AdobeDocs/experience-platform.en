@@ -50,7 +50,7 @@ prod:all?FLATTEN
 
 The example schema used in this guide employs the standard field group [!UICONTROL Commerce Details], which utilizes the `commerce` object structure and the `productListItems` array. See the XDM documentation for [more information on the [!UICONTROL Commerce Details] field group](../../xdm/field-groups/event/commerce-details.md). A representation of the schema structure can be seen in the image below.
 
-![A schema diagram of the Commerce Details field group including the `commerce` and `productListItems` structures.](../images/best-practices/final-subscription-schema.png)
+![A schema diagram of the Commerce Details field group including the `commerce` and `productListItems` structures.](../images/best-practices/flatten-nested-data/commerce-details.png)
 
 If your BI tool does not support nested data structures, it can be difficult to reference nested fields should they contain serialized values (such as `commerce` and `productListItems` in the example schema). These values may appear as parts of a single encoded `commerce` string field and are not realistically unusable. 
 
