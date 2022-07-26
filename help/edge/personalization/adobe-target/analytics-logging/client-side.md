@@ -156,12 +156,10 @@ Propositions for Form-based Experience Composer activities can contain both cont
               }
             ],
             "characteristics": {
-              "eventTokens": {
-                "display": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
-                "click": "E0gb6q1+WyFW3FMbbQJmrg=="
-              },
-              "analyticsDisplayToken": "434689:0:0|2,434689:0:0|1", 
-              "analyticsClickToken": "434689:0:0|32767"
+               "displayToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+               "clickToken": "E0gb6q1+WyFW3FMbbQJmrg==",
+               "analyticsDisplayToken": "434689:0:0|2,434689:0:0|1", 
+               "analyticsClickToken": "434689:0:0|32767"
             }
           },
           "items": [
@@ -200,11 +198,11 @@ Propositions for Form-based Experience Composer activities can contain both cont
 }
 ```
 
-All the values from `scopeDetails.characteristics.analyticsToken`, as well as `scopeDetails.characteristics.analyticsTokens.display` (for displayed content) and `scopeDetails.characteristics.analyticsTokens.click` (for click metrics) are the A4T payloads that need to be collected and included as `tnta` tag in the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
+All the values from `scopeDetails.characteristics.analyticsToken`, as well as `scopeDetails.characteristics.analyticsDisplayToken` (for displayed content) and `scopeDetails.characteristics.analyticsClickToken` (for click metrics) are the A4T payloads that need to be collected and included as `tnta` tag in the [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) call.
 
 >[!IMPORTANT]
 >
->Note that some `analyticsToken`/`analyticsTokens` properties can contain multiple tokens, concatenated as a single comma-delineated string.
+>Note that some `analyticsToken`,`analyticsDisplayToken`,`analyticsClickToken` properties can contain multiple tokens, concatenated as a single comma-delineated string.
 >
 >In the implementation examples provided in the next section, multiple Analytics tokens are being collected iteratively. To concatenate an array of Analytics tokens, use a function similar this:
 >
@@ -335,13 +333,10 @@ From here, you must implement code to execute the propositions and construct a p
         }
       ],
       "characteristics": {
-        "eventTokens": {
-          "display": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
-          "click": "Tagb6q1+WyFW3FMbbQJrtg=="
-        },
-        "analyticsTokens": {
-          "display": "434688:0:0|2,434688:0:0|1",
-          "click": "434688:0:0|32767"
+          "displayToken": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
+          "clickToken": "Tagb6q1+WyFW3FMbbQJrtg==",
+          "analyticsDisplayTokens": "434688:0:0|2,434688:0:0|1",
+          "analyticsClickTokens": "434688:0:0|32767"
         }
       }
     },
@@ -383,8 +378,8 @@ function getDisplayAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.display;
+  if (characteristics.analyticsDisplayToken) {
+    return characteristics.analyticsDisplayToken;
   }
   return characteristics.analyticsToken;
 }
@@ -411,8 +406,8 @@ function getClickAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.click;
+  if (characteristics.analyticsClickToken) {
+    return characteristics.analyticsClickToken;
   }
   return characteristics.analyticsToken;
 }
