@@ -5,6 +5,8 @@ description: This tutorial covers the steps to create an ad hoc flow run using t
 ---
 # Create an ad hoc flow run using the [!DNL Flow Service] API
 
+Ad hoc flow runs provide you with the capability to create a flow run against a given dataflow. This allows end users to create a flow run, based on given parameters and create an ingestion cycle, without service tokens.
+
 This tutorial covers the steps to create an ad hoc flow run using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
@@ -23,6 +25,12 @@ This tutorial requires you to have a working understanding of the following comp
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
 
 ## Create an ad hoc flow run for a table-based source
+
+To create an ad hoc flow for a table-based source, make a POST request to the [!DNL Flow Service] API while providing the ID of the flow you want to create the run against, as well as values for start time, end time, and delta column.
+
+>[!TIP]
+>
+>Table-based sources include sources categorized as: advertising, analytics, consent and preferences, CRMs, customer success, database, marketing automation, payments, and protocols.
 
 **API format**
 
@@ -54,13 +62,15 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- |
-| `flowId` |  |
+| `flowId` | The ID of the flow in which your flow run will be created against.  |
 | `params.windowStartTime` | |
 | `params.windowEndTime` | |
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. |
 | `params.deltaColumn.name` | The name of the delta column. |
 
 **Response**
+
+A successful response returns the details of the newly created flow run, including its unique `id`.
 
 ```json
 {
