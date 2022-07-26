@@ -37,9 +37,9 @@ With lead to account matching, CDP B2B matches known person profiles to account 
 
 - Account person profile: The person profile is already associated to at least one account profile through the relationship from a data source. This implies that there is at least one contact fragment. 
 
->[!IMPORTANT]
+>[!NOTE]
 >
-> Account person profiles are not matched.
+> Account person profiles are not matched when running lead to account matching jobs.
 
 - Known person profile: The person profile is NOT associated to any account profile, and at least one of the following person profile attributes has a value:
 
@@ -53,7 +53,7 @@ With lead to account matching, CDP B2B matches known person profiles to account 
     - Company name
     - Company website
 
->[!IMPORTANT]
+>[!NOTE]
 >
 > A person profile may be related to multiple account profiles however, the lead to account matching process will only match to the best match. If a broader set of matches is required, couple the lead to account matching with the related accounts feature.
 
@@ -65,7 +65,7 @@ Daily-run jobs use both deterministic and probabilistic factors to match known l
 - b2b.companyWebsite
 - workEmail
 
->[!IMPORTANT]
+>[!NOTE]
 >
 > The b2b.personKey.sourceKey attribute must exist.
 
@@ -73,7 +73,7 @@ Profiles will be best matched only if the match score is over an internal confid
 
 The lead to account matching service runs when a new person profile snapshot becomes available which is once every 24 hours.
 
-See the documentation for more information about the [Lead to account matching configuration](/).
+See the documentation for more information about the [Lead to account matching configuration](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
 ## How to view lead to account matching output {#how-to-view}
 
@@ -85,4 +85,4 @@ See the documentation for more information about the [Lead to account matching o
 
 You have the option to monitor any person-to-account mapping jobs where you can look at the jobs detailed metrics and their status.
 
-See the documentation for more information about the [Monitoring lead to account matching jobs](/).
+See the documentation for more information about the [Monitoring lead to account matching jobs](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png).
