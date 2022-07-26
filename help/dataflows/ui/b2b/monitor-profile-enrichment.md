@@ -48,7 +48,7 @@ The following metrics are available for lead to account matching profile enrichm
 | **[!UICONTROL Persons matched]** | Indicates the number of people that have successfully been matched to an account. |
 | **[!UICONTROL Persons unmatched]** | Indicates the number of people that were not successfully matched to an account.  |
 | **[!UICONTROL Last successful run]** | Indicates the date and time of the last successful Related Accounts job run. |
-| **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the lead to account mathcing job. |
+| **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the lead to account matching job. |
 
 ## UI controls {#ui-controls}
 
