@@ -63,7 +63,7 @@ Note down the items below before you authenticate to the Salesforce Marketing Cl
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| <ul><li>Salesforce Marketing Cloud prefix</li></ul> | See [Salesforce Marketing Cloud domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*</li></ul>
+| <ul><li>Salesforce Marketing Cloud prefix</li></ul> | See [Salesforce Marketing Cloud domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com<i></li></ul>
 |<ul><li>Client ID</li><li>Client Secret</li></ul> | Refer to the [Salesforce documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) if you need additional guidance. | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
 
 ## Supported identities {#supported-identities}
