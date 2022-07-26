@@ -18,7 +18,7 @@ All data in transit between Platform and any external component is conducted ove
 
 In general, data is brought into Platform in three ways:
 
-* [Data collection](../../rtcdp-connections/home.md) capabilities allow websites and mobile applications to send data to the Platform Edge Network for staging and preparation for ingestion.
+* [Data collection](../../collection/home.md) capabilities allow websites and mobile applications to send data to the Platform Edge Network for staging and preparation for ingestion.
 * [Source connectors](../../sources/home.md) stream data directly to Platform from Adobe Experience Cloud applications and other enterprise data sources.
 * Non-Adobe ETL (extract, transform, load) tools send data to the [batch ingestion API](../../ingestion/batch-ingestion/overview.md) for consumption.
 
