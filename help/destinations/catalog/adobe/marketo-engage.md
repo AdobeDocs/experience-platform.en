@@ -5,6 +5,15 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 ---
 # Marketo Engage destination {#beta-marketo-engage-destination}
 
+>[!IMPORTANT]
+>
+>With the release of the enhanced Marketo destination connector (link to release notes for list of enhancements), you are now seeing two Marketo cards in the destination catalog.
+>* For customers with dataflows set up to the old Marketo destination: Please create new dataflows to the new Marketo destination by INSERT DATE. As of that date, the old Marketo destination card will be deprecated.
+>* For customers who have not yet created any dataflows, please use the new card to connect to Marketo and export data
+
+Also add image of side-by-side view
+Also, further below we need to talk about:  Fields returned in the Describe API call what we display in AEP https://developers.marketo.com/rest-api/lead-database/leads/#describe
+
 ## Overview {#overview}
 
 Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
