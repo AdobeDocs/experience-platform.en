@@ -9,7 +9,7 @@ exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 
 Use the [!UICONTROL Profile Enrichment] dashboard to understand if profile enrichment jobs ran and completed successfully, and to view the basic metrics to gauge the effectiveness of the enrichments.
 
-In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. In the view selector, select **B2B Flow** to see the dashboard elements specific to [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  The [!UICONTROL Monitoring] dashboard includes the basic metrics from the latest successful run, and daily job status up to 90 days in the past. 
+In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. In the view selector, select **B2B Flow** to see the dashboard elements specific to [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  The [!UICONTROL Monitoring] dashboard includes the basic metrics from the latest successful run, and daily job status up to 90 days in the past.
 
 ## Related accounts profile enrichment
 
