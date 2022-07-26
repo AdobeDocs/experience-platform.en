@@ -73,7 +73,7 @@ Note down the items below before you authenticate to the Salesforce CRM destinat
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| <ul><li>Salesforce domain prefix</li></ul> | See [Salesforce domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*</li></ul>
+| <ul><li>Salesforce domain prefix</li></ul> | See [Salesforce domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> <i>`d5i000000isb4eak-dev-ed`.my.salesforce.com</i></li></ul>
 |<ul><li>Consumer Key</li><li>Consumer Secret</li></ul> | Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) if you need additional guidance. | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
 
 ## Supported identities {#supported-identities}
