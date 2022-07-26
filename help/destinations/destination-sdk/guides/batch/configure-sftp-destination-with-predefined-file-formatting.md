@@ -1,8 +1,8 @@
 ---
-description: Learn how to use Destination SDK to configure an Amazon S3 destination with predefined default file formatting options and custom file name configuration.
-title: (Beta) Configure an Amazon S3 destination with predefined default file formatting options and custom file name configuration.
+description: Learn how to use Destination SDK to configure an SFTP destination with predefined file formatting options and custom file name configuration.
+title: (Beta) Configure an SFTP destination with predefined file formatting options and custom file name configuration.
 ---
-# (Beta) Configure an Amazon S3 destination with predefined default file formatting options and custom file name configuration
+# (Beta) Configure an SFTP destination with predefined file formatting options and custom file name configuration
 
 ## Overview {#overview}
 
@@ -10,9 +10,9 @@ title: (Beta) Configure an Amazon S3 destination with predefined default file fo
 >
 >The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-This page describes how to use Destination SDK to configure an Amazon S3 destination with predefined, default [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
+This page describes how to use Destination SDK to configure an SFTP destination with predefined, default [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
 
-This page shows all the configuration options available for Amazon S3 destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.
+This page shows all the configuration options available for SFTP destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.
 
 ## Prerequisites {#prerequisites}
 
@@ -20,7 +20,7 @@ Before advancing to the steps outlined below, please read the [Destination SDK g
 
 ## Step 1: Create a server and file configuration {#create-server-file-configuration}
 
-Start by using the `/destination-server` endpoint to create a server and file configuration. For detailed descriptions of the parameters in the HTTP request, read the [server and file configuration specifications for file-based destinations](../../server-and-file-configuration.md#s3-example) and the associated [file formatting configurations](../../server-and-file-configuration.md#file-configuration).
+Start by using the `/destination-server` endpoint to create a server and file configuration. For detailed descriptions of the parameters in the HTTP request, read the [server and file configuration specifications for file-based destinations](../../server-and-file-configuration.md#sftp-example) and the associated [file formatting configurations](../../server-and-file-configuration.md#file-configuration).
 
 **API format**
 
@@ -31,7 +31,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Request**
 
 The following request creates a new destination server configuration, configured by the parameters provided in the payload.
-The payload below includes a generic Amazon S3 configuration, with predefined, default [CSV file formatting](../../server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
+The payload below includes a generic SFTP configuration, with predefined, default [CSV file formatting](../../server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -42,17 +42,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-    "name": "Amazon S3 destination server with predefined default CSV options",
-    "destinationServerType": "FILE_BASED_S3",
-    "fileBasedS3Destination": {
-        "bucket": {
-            "templatingStrategy": "PEBBLE_V1",
-            "value": "{{customerData.bucket}}"
+    "name": "SFTP destination with predefined CSV formatting options",
+    "destinationServerType": "FILE_BASED_SFTP",
+    "fileBasedSFTPDestination": {
+        "hostname": {
+            "templatingStrategy": "NONE",
+            "value": "{{customerData.hostname}}"
         },
-        "path": {
+        "rootDirectory": {
             "templatingStrategy": "PEBBLE_V1",
-            "value": "{{customerData.path}}"
-        }
+            "value": "{{customerData.remotePath}}"
+        },
+        "port": 22
     },
     "fileConfigurations": {
         "compression": {
@@ -131,7 +132,7 @@ To connect the server configuration in [step 1](#create-server-file-configuratio
 
 For detailed descriptions of the parameters used below, see the following pages:
 
-* [Authentication configuration](../../authentication-configuration.md#s3)
+* [Authentication configuration](../../authentication-configuration.md#sftp)
 * [Batch destination configuration](../../file-based-destination-configuration.md#batch-configuration)
 * [File-based destination configuration API operations](../../destination-configuration-api.md#create-file-based)
 
@@ -152,13 +153,16 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-   "name":"Amazon S3 destination with predefined CSV formatting options",
-   "description":"Amazon S3 destination with predefined CSV formatting options",
-   "releaseNotes":"Amazon S3 destination with predefined CSV formatting options",
+   "name":"SFTP destination with predefined CSV formatting options",
+   "description":"SFTP destination with predefined CSV formatting options",
+   "releaseNotes":"",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
-         "authType":"S3"
+         "authType":"SFTP_WITH_PASSWORD"
+      },
+      {
+         "authType":"SFTP_WITH_SSH_KEY"
       }
    ],
    "customerEncryptionConfigurations":[
@@ -166,63 +170,30 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    ],
    "customerDataFields":[
       {
-         "name":"bucket",
-         "title":"Enter the name of your Amazon S3 bucket",
-         "description":"Amazon S3 bucket name",
+         "name":"remotePath",
+         "title":"Root directory",
+         "description":"Enter root directory",
          "type":"string",
          "isRequired":true,
          "readOnly":false,
          "hidden":false
       },
       {
-         "name":"path",
-         "title":"Enter the path to your S3 bucket folder",
-         "description":"Enter the path to your S3 bucket folder",
+         "name":"hostname",
+         "title":"Hostname",
+         "description":"Enter hostname",
          "type":"string",
          "isRequired":true,
-         "pattern":"^[A-Za-z]+$",
          "readOnly":false,
          "hidden":false
-      },
-      {
-         "name":"compression",
-         "title":"Compression format",
-         "description":"Select the desired file compression format.",
-         "type":"string",
-         "isRequired":true,
-         "readOnly":false,
-         "enum":[
-            "SNAPPY",
-            "GZIP",
-            "DEFLATE",
-            "NONE"
-         ]
-      },
-      {
-         "name":"fileType",
-         "title":"File type",
-         "description":"Select the exported file type.",
-         "type":"string",
-         "isRequired":true,
-         "readOnly":false,
-         "hidden":false,
-         "enum":[
-            "csv",
-            "json",
-            "parquet"
-         ],
-         "default":"csv"
       }
    ],
    "uiAttributes":{
-      "documentationLink":"https://www.adobe.com/go/destinations-amazon-s3-en",
-      "category":"cloudStorage",
-      "icon":{
-         "key":"amazonS3"
-      },
-      "connectionType":"S3",
-      "flowRunsSupported":true,
+      "documentationLink":"https://www.adobe.com/go/destinations-sftp-en",
+      "category":"SFTP",
+      "connectionType":"SFTP",
       "monitoringSupported":true,
+      "flowRunsSupported":true,
       "frequency":"Batch"
    },
    "destinationDelivery":[
@@ -236,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             }
          ],
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"{{destinationServerId}}"
+         "destinationServerId":"{{instanceID of your destination server}}"
       }
    ],
    "schemaConfig":{
@@ -326,4 +297,4 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 
 ## Next steps {#next-steps}
 
-By reading this article, you now know how to author a custom Amazon S3 destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.
+By reading this article, you now know how to author a custom SFTP destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.
