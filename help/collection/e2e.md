@@ -1,13 +1,13 @@
 ---
-title: Real-Time Customer Data Platform Connections End-to-End Overview
-description: A high-level overview of how to send event data to Adobe Experience Cloud solutions using Real-Time Customer Data Platform Connections.
+title: Data Collection End-to-End Overview
+description: A high-level overview of how to send event data to Adobe Experience Cloud solutions using Adobe Experience Platform's data collection capabilities.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 ---
-# Real-Time Customer Data Platform Connections end-to-end overview
+# Data collection end-to-end overview
 
-Real-Time Customer Data Platform (RTCDP) Connections collects and transfers your data to other Adobe products and third-party destinations. In order to send event data from your application to the Adobe Experience Platform Edge Network, it is important to understand these core technologies and how to configure them to deliver your data to the destinations you require, when you require it.
+Adobe Experience Platform collects and transfers your data to other Adobe products and third-party destinations. In order to send event data from your application to the Experience Platform Edge Network, it is important to understand these core technologies and how to configure them to deliver your data to the destinations you require, when you require it.
 
-This guide provides a high-level tutorial of how to send an event through the Edge Network using RTCDP Connections. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI (formerly Adobe Experience Platform Launch).
+This guide provides a high-level tutorial of how to send an event through the Edge Network using Platform's data collection capabilities. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI (formerly Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ This tutorial uses the Data Collection UI to create a schema, configure a datast
 * Develop
 * Manage Extensions
 
-See the guide on [managing permissions for tags](../tags/ui/administration/manage-permissions.md) to learn how to grant access to properties and property rights.
+See the guide on [managing permissions for data collection](./permissions.md) to learn how to grant access to properties and property rights.
 
 To use the various Data Collection products mentioned in this guide, you must also have access to datastreams and the ability to create and manage schemas. If you need access to either of these features, please contact your CSM to help you get the necessary access. Please note that if you have not purchased Adobe Experience Platform, Adobe will provision you with the necessary access to use the SDK at no extra charge.
 
@@ -33,7 +33,7 @@ See the [access control UI overview](../access-control/ui/overview.md) to learn 
 
 ## Process summary
 
-The process of configuring RTCDP Connections for your website can be summarized as follows:
+The process of configuring data collection for your website can be summarized as follows:
 
 1. [Create a schema](#schema) to determine how your data will be structured when being sent to the Edge Network.
 1. [Create a datastream](#datastream) to configure which destinations you want your data to be sent to.
