@@ -18,11 +18,11 @@ Use the following legend to interpret this ERD:
 * All the properties that could be used to identify individual customers are marked as "identity", with one of these properties marked as a "primary identity".
 * Entity relationships are marked as non-dependent, since cookie-based events often cannot determine the person or individual who did the transaction.
 
-<!-- PLACEHOLDER FOR ERD IMAGE -->
+![Image showing the entity relationship diagram for the healthcare industry data model](../../images/industries/healthcare.png)
 
 >[!NOTE]
 >
->The Experience Event entity includes an "_ID" field, which represents the unique identifier (`_id`) attribute provided by the XDM ExperienceEvent class. See the reference document on [XDM ExperienceEvent](../../classes/experienceevent.md) for more details on what is expected for this value.
+>Each entity includes an "_ID" field, which represents the unique string identifier (`_id`) attribute for the record or event in question. This field is used to track the uniqueness of the individual record or event, prevent duplication of data, and look up that data in downstream services. In some cases, `_id` can be a [Universally Unique Identifier (UUID)](https://tools.ietf.org/html/rfc4122) or [Globally Unique Identifier (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>It is important to distinguish that **this field does not represent an identity related to an individual person**, but rather the record of data itself. Identity data relating to a person, event, or business entity should be relegated to [identity fields](../schema/composition.md#identity) provided by compatible field groups instead.
 
 ## [!UICONTROL Healthcare] use cases
 
