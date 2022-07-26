@@ -77,9 +77,15 @@ See the documentation for more information about the [Lead to account matching c
 
 ## How to view lead to account matching output {#how-to-view}
 
-After the algorithm is run, the results are saved in a new dataset of the existing account person relation XDM. This dataset will contain the lead to accounts matching as well as the confidence score per match. The **Relationship Source** field indicates whether it came from the lead to account matching process. Results will also be updated with each respective profile in the backend. 
+After the algorithm is run, the results are saved in a new dataset of the existing account person relation XDM.
+
+![New dataset](/help/rtcdp/accounts/images/b2b-dataset-output.png)
+
+This **[!UICONTROL Preview dataset]** will contain the lead to accounts matching as well as the confidence score per match. The **[!UICONTROL Relationship Source]** field indicates whether it came from the lead to account matching process. 
   
-See the documentation for more information about the [Lead to account matching output](/).
+![Preview dataset](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
+
+Results will also be updated with each respective profile in the backend.
 
 ## Monitoring lead to account matching jobs {#monitoring-jobs}
 
