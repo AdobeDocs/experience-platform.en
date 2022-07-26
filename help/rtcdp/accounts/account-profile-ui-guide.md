@@ -16,6 +16,10 @@ To learn more about how account profiles are created as part of the B2B workflow
 
 ## Configure account profiles for lead to account matching (#configure-account-profiles)
 
+>[!NOTE]
+>
+> Only B2B AI administrators can enable, disable, and configure the lead to account matching service.
+
 To configure account profiles for lead to account matching, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation. On the **[!UICONTROL Overview]** tab, select **[!UICONTROL Settings]** in the top right.
 
 ![Select Settings](images/b2b-configuring-accounts-profile.png)
