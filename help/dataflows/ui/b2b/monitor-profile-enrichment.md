@@ -34,7 +34,7 @@ The following metrics are available for related accounts profile enrichment jobs
 
 ## Lead to account matching profile enrichment
 
-The [!UICONTROL Lead to account matching] dashboard shows the basic metrics and daily job-run status specific to the [Lead to account matching](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) profile enrichment.
+The [!UICONTROL Lead to account matching] dashboard shows the basic metrics and daily job-run status specific to the [Lead to account matching](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) profile enrichment. 
 
 ![Lead to account matching profile enrichment](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-lead-to-account-matching.png)
 
