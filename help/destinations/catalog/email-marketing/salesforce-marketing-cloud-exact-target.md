@@ -10,7 +10,7 @@ description: The Salesforce Marketing Cloud (formerly known as ExactTarget) dest
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) (formerly known as ExactTarget) is a digital marketing suite that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
 > Note the difference between this connection and the other [Salesforce Marketing Cloud connection](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/salesforce-marketing-cloud.html?lang=en) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection allows you to export files to a specified storage location, whereas this is an API-based streaming connection.
 
@@ -46,11 +46,11 @@ Create the custom attribute of type `Text Area Long` which Experience Platform w
 
 Refer to the Salesforce Marketing Cloud documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need additional guidance.
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
 > Ensure you create the custom attribute under the "Email Demographics" attribute-set within your Salesforce Marketing Cloud account.
 
-> [!NOTE]
+>[!NOTE]
 >
 > * The number of custom attributes allowed per object varies according to your Salesforce Edition. Refer to the Salesforce documentation for [custom fields allowed per object](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5) if you need additional guidance.
 > * If you have reached this limit within Salesforce, you will need to remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new mappingId can be used.
@@ -136,7 +136,7 @@ To correctly send your audience data from Adobe Experience Platform to the Sales
 
 The list of attribute mappings that can be set-up for the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) is given below. The destination uses the [Salesforce Search Attribute-Set Definitions REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to retrieve attributes defined within Salesforce for your contacts and specific to your account. 
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
 > Although your attribute names would be as per your Salesforce account, the mappings for `contactKey` and `personalEmail.address` are mandatory.
 
@@ -168,7 +168,7 @@ When performing the [Schedule segment export](../../ui/activate/activate-segment
 
 To do this, select each segment, then enter the corresponding custom attribute from Salesforce in the **[!UICONTROL Mapping ID]** field.
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
 > The value used for the Mapping ID should exactly match the name of the custom attribute created within Salesforce under the "Email Demographics" attribute-set.
 
