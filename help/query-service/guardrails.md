@@ -42,7 +42,7 @@ The tables below provide the recommended guardrail limits and descriptions for q
 | **Guardrail**| **Limit** | **Limit type** | **Description** |
 |---|---|---|---|
 | Maximum execution time  | 10 minutes  | Hard  | This defines the maximum output time for an ad-hoc SQL query. Exceeding the time limit to return a result throws the error code 53400.  |
-| Query concurrency | <ul><li>As specified in the application product description.</li><li>+1 (with every additional ad hoc query users add-on SKU pack purchased)</li></ul> | Hard | This defines how many queries can be executed concurrently for a particular organization. If the concurrency limit is exceeded, the queries are queued.  |
+| Query concurrency | <ul><li>As specified in the application product description.</li><li>+1 (with every additional ad hoc query user add-on SKU pack purchased)</li></ul> | Hard | This defines how many queries can be executed concurrently for a particular organization. If the concurrency limit is exceeded, the queries are queued.  |
 | Client connector and result output Limit | Client Connector<ul><li>Query UI (100 rows)</li><li>Third-party client (50,000)</li><li>[!DNL PostgresSQL] client (50,000)</li></ul> | Hard | The result of a query can be received through the following means:<ul><li>Query Service UI</li><li>Third-party client</li><li>[!DNL PostgresSQL] client</li></ul>Note: Adding a limitation to the output count may return results faster. For example, `LIMIT 5`, `LIMIT 10`, and so on. |
 | Results returned via | Client UI  | N/A  | This defines how the results are made available to the users. |
 
