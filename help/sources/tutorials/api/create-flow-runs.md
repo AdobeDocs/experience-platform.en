@@ -30,7 +30,7 @@ To create an ad hoc flow for a table-based source, make a POST request to the [!
 
 >[!TIP]
 >
->Table-based sources include sources categorized as: advertising, analytics, consent and preferences, CRMs, customer success, database, marketing automation, payments, and protocols.
+>Table-based sources include the following source categories: advertising, analytics, consent and preferences, CRMs, customer success, database, marketing automation, payments, and protocols.
 
 **API format**
 
@@ -39,6 +39,8 @@ POST /runs/
 ```
 
 **Request**
+
+The following request creates a flow run for flow ID `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
 
 ```shell
 curl -X POST \
@@ -63,27 +65,27 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
-| `params.windowStartTime` | |
-| `params.windowEndTime` | |
+| `params.windowStartTime` | An integer that defines the start time for the flow run in epoch time. |
+| `params.windowEndTime` | An integer that defines the end time for the flow run in epoch time. |
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. |
 | `params.deltaColumn.name` | The name of the delta column. |
 
 **Response**
 
-A successful response returns the details of the newly created flow run, including its unique `id`.
+A successful response returns the details of the newly created flow run, including its unique run `id`.
 
 ```json
 {
     "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
     "createdAt": 1651587212543,
     "updatedAt": 1651587223839,
-    "createdBy": "3B82767F5458DA190A4C86F0@AdobeID",
-    "updatedBy": "3B82767F5458DA190A4C86F0@AdobeID",
-    "createdClient": "exc_app",
-    "updatedClient": "exc_app",
-    "sandboxId": "d1e74830-c5c7-11e9-aafb-87c71c35cac8",
+    "createdBy": "{CREATED_BY}",
+    "updatedBy": "{UPDATED_BY}",
+    "createdClient": "{CREATED_CLIENT}",
+    "updatedClient": "{UPDATED_CLIENT}",
+    "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "prod",
-    "imsOrgId": "1C44331D59D7C69F0A494204@AdobeOrg",
+    "imsOrgId": "{ORGANIZATION_ID}",
     "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
     "params": {
         "windowStartTime": "1651584991",
@@ -104,7 +106,7 @@ A successful response returns the details of the newly created flow run, includi
 
 | Property | Description |
 | --- | --- |
-| `id` | The ID of the newly created flow run. |
+| `id` | The ID of the newly created flow run. See the guide on [retrieving flow specifications](../api/collect/database-nosql.md#specs) for more information on table-based run specifications. |
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
 | `createdBy` | The organization ID of the user who created the flow run. |
@@ -115,17 +117,105 @@ A successful response returns the details of the newly created flow run, includi
 | `sandboxName` | The name of the sandbox that contains the flow run. |
 | `imsOrgId` | The organization ID. |
 | `flowId` | The ID of the flow in which the flow run is created against. |
-| `params.windowStartTime` | |
-| `params.windowEndTime` | |
+| `params.windowStartTime` | An integer that defines the start time for the flow run in epoch time. |
+| `params.windowEndTime` | An integer that defines the end time for the flow run in epoch time.  |
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. |
 | `params.deltaColumn.name` | The name of the delta column. |
 | `etag` | The resource version of the flow run. |
-| `metrics` | |
-| `activities` | |
+| `metrics` | This property displays a status summary for the flow run. |
 
 ## Create an ad hoc flow run for a file-based source
 
-## Limitations
+To create an ad hoc flow for a file-based source, make a POST request to the [!DNL Flow Service] API while providing the ID of the flow you want to create the run against and values for start time and end time.
 
-## Next steps
+>[!TIP]
+>
+>File-based sources include all cloud storage sources.
 
+**API format**
+
+```http
+POST /runs/
+```
+
+**Request**
+
+The following request creates a flow run for flow ID `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/runs' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json'
+  -d '{
+      "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
+      "params": {
+          "windowStartTime": "1651584991",
+          "windowEndTime": "16515859567"
+      }
+  }'
+```
+
+| Parameter | Description |
+| --- | --- |
+| `flowId` | The ID of the flow in which your flow run will be created against.  |
+| `params.windowStartTime` | An integer that defines the start time for the flow run in epoch time. |
+| `params.windowEndTime` | An integer that defines the end time for the flow run in epoch time. |
+
+**Response**
+
+A successful response returns the details of the newly created flow run, including its unique run `id`.
+
+
+```json
+{
+    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+    "createdAt": 1651587212543,
+    "updatedAt": 1651587223839,
+    "createdBy": "{CREATED_BY}",
+    "updatedBy": "{UPDATED_BY}",
+    "createdClient": "{CREATED_CLIENT}",
+    "updatedClient": "{UPDATED_CLIENT}",
+    "sandboxId": "{SANDBOX_ID}",
+    "sandboxName": "prod",
+    "imsOrgId": "{ORGANIZATION_ID}",
+    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
+    "params": {
+        "windowStartTime": "1651584991",
+        "windowEndTime": "16515859567"
+    },
+    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
+    "metrics": {
+        "statusSummary": {
+            "status": "scheduled"
+        }
+    },
+    "activities": []
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `id` | The ID of the newly created flow run. See the guide on [retrieving flow specifications](../api/collect/cloud-storage.md#specs) for more information on file-based run specifications. |
+| `createdAt` | The unix timestamp that designates when the flow run was created. |
+| `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
+| `createdBy` | The organization ID of the user who created the flow run. |
+| `updatedBy` | The organization ID of the user who last updated the flow run. |
+| `createdClient` | The application client that created the flow run. |
+| `updatedClient` | The application client that last updated the flow run. |
+| `sandboxId` | The ID of the sandbox that contains the flow run. |
+| `sandboxName` | The name of the sandbox that contains the flow run. |
+| `imsOrgId` | The organization ID. |
+| `flowId` | The ID of the flow in which the flow run is created against. |
+| `params.windowStartTime` | An integer that defines the start time for the flow run in epoch time. |
+| `params.windowEndTime` | An integer that defines the end time for the flow run in epoch time.  |
+| `etag` | The resource version of the flow run. |
+| `metrics` | This property displays a status summary for the flow run. |
+
+
+## Monitor your flow runs
+
+Once your ad hoc flow run has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. To monitor your flow runs using the API, see the tutorial on [monitoring dataflows in the API ](./monitor.md). To monitor your flow runs using Platform UI, see the guide on [monitoring sources dataflows using the monitoring dashboard](../../../dataflows/ui/monitor-sources.md).
