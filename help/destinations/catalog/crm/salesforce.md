@@ -55,11 +55,11 @@ Also ensure that the [scopes](https://help.salesforce.com/s/articleView?id=conne
 Create the custom field of type `Text Area Long` which Experience Platform will use to update the segment status within Salesforce CRM. 
 Refer to the Salesforce documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance. 
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
 > Ensure there are no whitespace characters in the name, instead use the underscore i.e. the `_` character as a separator.
 
-> [!NOTE]
+>[!NOTE]
 >
 > * Objects in Salesforce are restricted to 25 External fields, see [Custom Field Attributes](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5).
 > * This restriction implies you will only be able to have at a maximum 25 Experience Platform segment memberships active at any time. 
@@ -173,10 +173,10 @@ When performing the [Schedule segment export](../../ui/activate/activate-segment
 
 To do this, select each segment, then enter the corresponding custom field attribute from Salesforce in the **[!UICONTROL Mapping ID]** field.
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
-> * The value used for the Mapping ID should exactly match the name of the custom field attribute created within Salesforce.
-> * Ensure that the name of the custom field attribute you have created in Salesforce doesn't use the whitespace character.
+>* The value used for the **[!UICONTROL Mapping ID]** should exactly match the name of the custom field attribute created within Salesforce.
+>* Ensure that the name of the custom field attribute you have created in Salesforce doesn't use the whitespace character.
 
 An example is shown below:
 ![Schedule segment export](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
@@ -210,6 +210,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
 ### Unknown errors encountered while pushing events to destination {#unknown-errors}
+
 When checking a dataflow run, if you see the error message below, verify that the Mapping ID that you provided in [!DNL Salesforce CRM] for your Platform segment is valid and exists within [!DNL Salesforce CRM].
 ![Error](../../assets/catalog/crm/salesforce/error.png)
 
@@ -222,4 +223,5 @@ Additional useful information from the [Salesforce developer portal](https://dev
 * [Quick Start](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart.htm)
 
 ### Limits {#limits}
+
 Salesforce balances transaction loads by imposing request, rate and timeout limits. Refer to the [API Request Limits and Allocations](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm) for details.
