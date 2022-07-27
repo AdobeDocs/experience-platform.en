@@ -110,8 +110,8 @@ To learn more about [!DNL Data Prep], see the [[!DNL Data Prep] overview](../../
 
 | Destination | Description |
 | ----------- | ----------- |
-| [Marketo V2](add link) | The Marketo Engage destination update allows you to streamline the static list creation process with automation and enable users to bring in additional fields on their Leads |
-| [Pega Customer Decision Hub](../../destinations/catalog/advertising/snap-inc.md) | Pega Customer Decision Hub: Use profile attribute and segment membership information from Adobe Experience Platform in Pega Customer Decision Hub as predictors in adaptive models and help deliver the next-best-action decisioning|
+| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | The Marketo Engage destination update allows you to streamline the static list creation process with automation and enable users to bring in additional fields on their Leads.  |
+| [Pega Customer Decision Hub](../../destinations/catalog/advertising/snap-inc.md) | Use profile attribute and segment membership information from Adobe Experience Platform in Pega Customer Decision Hub as predictors in adaptive models and help deliver the next-best-action decisioning|
 | [(API) Salesforce Marketing Cloud](../../destinations/catalog/advertising/snap-inc.md) | This destination allows marketers to import user segments created in Experience Platform into Snapchat Ads and use them to target their ads. |
 | [Salesforce CRM](../../destinations/catalog/advertising/tradedesk-emails.md) | Update contact information in Salesforce Marketing Cloud with profile and segment info in Experience Platform |
 | [(Beta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | This destination allows marketers to import user segments created in Experience Platform into Snapchat Ads and use them to target their ads. <br><br>This destination is currently in Beta. The documentation and functionality are subject to change.|
