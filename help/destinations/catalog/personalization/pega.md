@@ -13,7 +13,7 @@ Profile segment membership from Adobe Experience Platform, when loaded into [!DN
 
 >[!IMPORTANT]
 >
->This documentation page was created by the Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
+>This documentation page was created by Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
 
 ## Use cases 
 
@@ -51,7 +51,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | Export all members of a segment with identifier (*CustomerID*), attributes (last name, first name, location,..) and Segment Membership data.|
+| Export type | **[!UICONTROL Profile-based]** | Export all members of a segment with identifier (*CustomerID*), attributes (last name, first name, location, etc.) and Segment Membership data.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are always-on API-based connections. As soon as a profile is updated in Experience Platform, based on segment evaluation, the connector sends the update downstream to the destination platform. For more information, see [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -65,6 +65,7 @@ To connect to this destination, follow the steps described in the [destination c
 #### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
 
 ![Image of the UI screen where you can connect to the Pega CDH destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
+
 Fill in the fields below and select **[!UICONTROL Connect to destination]**:
 
 * **[!UICONTROL Access Token URL]**: The OAuth 2 access token URL on your [!DNL Pega Customer Decision Hub] instance.
@@ -113,7 +114,7 @@ Selecting target fields:
 
 ## Exported data / Validate data export {#exported-data}
 
-A successful segment membership update for a profile would insert the segment identifier, name and statuses in the Pega marketing segment membership datastore. The membership data is associated to a customer using Customer Profile Designer in [!DNL Pega Customer Decision Hub] , as shown below.
+A successful segment membership update for a profile would insert the segment identifier, name and statuses in the Pega marketing segment membership datastore. The membership data is associated to a customer using Customer Profile Designer in [!DNL Pega Customer Decision Hub], as shown below.
 ![Image of the UI screen where you can associate Adobe Segment Membership data to Customer, using Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 The segment membership data is used in Pega Next-Best-Action Designer Engagement polices for next-best-action decisioning, as shown below.
