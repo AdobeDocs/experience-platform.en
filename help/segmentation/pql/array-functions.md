@@ -160,12 +160,12 @@ person.orders.storeId.distinct().count() > 1
 
 ## Group by
 
-The `groupBy` function is used to partition values of an array or list into a group based on the value of the expression.
+The `groupBy` function is used to partition values of an array or list into a group based on the value of the expression, returning a map from unique values of the grouping expression to arrays which are partitions of the value of the array expression.
 
 **Format**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | Argument | Description |
@@ -175,10 +175,10 @@ The `groupBy` function is used to partition values of an array or list into a gr
 
 **Example**
 
-The following PQL query groups all the orders by which store the order was placed at.
+The following PQL query groups all the orders by which store the order was placed at, having the total price greater than 100. Within the sum expression which follows the groupBy, the map entries returned by groupBy are accessible using the parameter references $1 and $2.  $1 refers to the key and $2 to the array value.
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId).sum($2.commerce.order.priceTotal) > 100
 ```
 
 ## Filter
