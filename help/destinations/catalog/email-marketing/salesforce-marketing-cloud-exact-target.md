@@ -1,7 +1,7 @@
 ---
 keywords: email;Email;e-mail;email destinations;salesforce;api salesforce marketing cloud destination
 title: (API) Salesforce Marketing Cloud connection
-description: The Salesforce Marketing Cloud (formerly known as ExactTarget) destination allows you to export your account data and activate it within Salesforce Marketing Cloud for your business needs.attribute set
+description: The Salesforce Marketing Cloud (formerly known as ExactTarget) destination allows you to export your account data and activate it within Salesforce Marketing Cloud for your business needs.
 ---
 
 # [!DNL (API) Salesforce Marketing Cloud] connection
@@ -30,7 +30,7 @@ The sales department of a home rental platform wants to broadcast a marketing em
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
-Before activating data to the Salesforce Marketing Cloud destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the Salesforce Marketing Cloud destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
 ### Prerequisites in Salesforce CRM {#prerequisites-destination}
 
@@ -55,7 +55,7 @@ Refer to the Salesforce Marketing Cloud documentation to [create custom fields](
 > * The number of custom attributes allowed per object varies according to your Salesforce Edition. Refer to the Salesforce documentation for [custom fields allowed per object](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5) if you need additional guidance.
 > * If you have reached this limit within Salesforce, you will need to remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new mappingId can be used.
 
-Refer to Adobe's documentation for [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=en) if you need guidance on segment statuses.
+Refer to the Adobe Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
 #### Gather Salesforce credentials {#gather-credentials}
 
@@ -110,6 +110,7 @@ If the details provided are valid, the UI displays a **Connected** status with a
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+
 ![Sample screenshot showing how to fill in details for Salesforce Marketing Cloud](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
@@ -180,22 +181,28 @@ An example is shown below:
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** to navigate to the list of destinations.
-![Browse Destinations](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)
+    
+    ![Browse Destinations](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)
 
 1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
-![Destinations Dataflow Run](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
+
+    ![Destinations Dataflow Run](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
 
 1. Switch to the **[!DNL Activation data]** tab, then select a segment name.
-![Destinations Activation Data](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destinations-activation-data.png)
+
+    ![Destinations Activation Data](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destinations-activation-data.png)
 
 1. Monitor the segment summary and ensure that the count of profiles corresponds to the count created within the segment.
-![Segment](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
+    
+    ![Segment](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
 
-1. Login to the Salesforce Marketing Cloud website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the segment have been added.
-![Salesforce Contacts](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
+1. Log in to the Salesforce Marketing Cloud website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the segment have been added.
 
-1. To check if any profiles have been updated, navigate to the **[!DNL Email]** page check if the attribute values for the profile from the segment have been updated. 
-![Salesforce Contacts](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
+    ![Salesforce Contacts](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
+
+1. To check if any profiles have been updated, navigate to the **[!DNL Email]** page check if the attribute values for the profile from the segment have been updated.
+    
+    ![Salesforce Contacts](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
 
 ## Data usage and governance {#data-usage-governance}
 
