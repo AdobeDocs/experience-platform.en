@@ -1,6 +1,7 @@
 ---
 title: Healthcare Industry Data Model ERD
 description: View an entity relationship diagram (ERD) that describes a standardized data model for the healthcare industry. This data model is compatible with Experience Data Model (XDM) for use in Adobe Experience Platform.
+exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
 ---
 # [!UICONTROL Healthcare] industry data model ERD
 
