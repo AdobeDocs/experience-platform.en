@@ -51,7 +51,7 @@ The [!UICONTROL Select data] dialog appears. Select a data model from the left c
 >
 >User-defined dashboards currently only supports the profile data model. More options will be supported.
 
-![The select data dialog.](./images/user-defined-dashboards/select-data-dialog.png)
+![The Select data dialog.](./images/user-defined-dashboards/select-data-dialog.png)
 
 The preview list provides details about the tables contained in the data model. The table below provides descriptions of the column fields and their potential values.
 
@@ -63,9 +63,9 @@ The preview list provides details about the tables contained in the data model. 
 
 Select **[!UICONTROL Next]** to confirm your choice of data model. The next view displays a list of the available tables in the left rail. Select a table to see a comprehensive breakdown of the data contained in your selected table.
 
-The [!UICONTROL Preview] panel contains tabs for [!UICONTROL Sample records] and [!UICONTROL Attributes].The [!UICONTROL Sample records] tab provides a subset of the records from the selected table in a tabulated view. The [!UICONTROL Attributes] tab provides the attribute name, data type, and source table for every attribute associated with the selected table. 
+The [!UICONTROL Preview] panel contains tabs for [!UICONTROL Sample records] and [!UICONTROL Attributes]. The [!UICONTROL Sample records] tab provides a subset of the records from the selected table in a tabulated view. The [!UICONTROL Attributes] tab provides the attribute name, data type, and source table for every attribute associated with the selected table. 
 
-Select a table from the list available in the left rail to provide data for your widget and select [!UICONTROL Select] to return to the widget composer.
+Select a table from the list available in the left rail to provide data for your widget and select **[!UICONTROL Select]** to return to the widget composer.
 
 ![The select data dialog with select highlighted.](./images/user-defined-dashboards/select-a-table.png)
 
