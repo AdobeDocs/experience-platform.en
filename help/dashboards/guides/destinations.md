@@ -49,6 +49,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
+* [[!UICONTROL Mapped audiences]](#mapped-audiences)
 * [[!UICONTROL Mapped audience health]](#mapped-audience-health)
 * [[!UICONTROL Destinations count]](#destinations-count)
 * [[!UICONTROL Destination status]](#destination-status)
@@ -189,6 +190,14 @@ The **[!UICONTROL Common audiences]** widget provides a list of the top five seg
 The [!UICONTROL AUDIENCE SIZE] column provides the total profile count of each listed segment.
 
 ![The Common audiences widget.](../images/destinations/common-audiences.png)
+
+### Mapped audiences {#mapped-audiences}
+
+The [!UICONTROL Mapped audiences] widget displays the total number of mapped audiences that can be activated to the destination selected at the top of the page.
+
+Select **[!UICONTROL Segments]** to navigate to Segments dashboard [!UICONTROL Browse] tab. This workspace displays a list of all the segment definitions for your organization. 
+
+![The Mapped audiences widget.](../images/destinations/mapped-audiences.png)
 
 ### Mapped audience health {#mapped-audience-health}
 
