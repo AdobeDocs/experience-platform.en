@@ -42,6 +42,10 @@ POST /runs/
 
 The following request creates a flow run for flow ID `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
 
+>[!NOTE]
+>
+>You only need to provide the `deltaColumn` when creating your first ad hoc flow run. After that, `deltaColumn` will be patched as part of `copy` transformation in the flow and will be treated as the source of truth. Any attempts to change the `deltaColumn` value through the flow run parameters will result in an error.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/runs' \
@@ -65,8 +69,8 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
-| `params.windowStartTime` | An integer that defines the start time for the flow run in epoch time. |
-| `params.windowEndTime` | An integer that defines the end time for the flow run in epoch time. |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. |
 | `params.deltaColumn.name` | The name of the delta column. |
 
@@ -117,9 +121,9 @@ A successful response returns the details of the newly created flow run, includi
 | `sandboxName` | The name of the sandbox that contains the flow run. |
 | `imsOrgId` | The organization ID. |
 | `flowId` | The ID of the flow in which the flow run is created against. |
-| `params.windowStartTime` | An integer that defines the start time for the flow run in epoch time. |
-| `params.windowEndTime` | An integer that defines the end time for the flow run in epoch time.  |
-| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your first ad hoc flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 | `etag` | The resource version of the flow run. |
 | `metrics` | This property displays a status summary for the flow run. |
@@ -162,8 +166,8 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
-| `params.windowStartTime` | An integer that defines the start time for the flow run in epoch time. |
-| `params.windowEndTime` | An integer that defines the end time for the flow run in epoch time. |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
 
 **Response**
 
@@ -210,8 +214,8 @@ A successful response returns the details of the newly created flow run, includi
 | `sandboxName` | The name of the sandbox that contains the flow run. |
 | `imsOrgId` | The organization ID. |
 | `flowId` | The ID of the flow in which the flow run is created against. |
-| `params.windowStartTime` | An integer that defines the start time for the flow run in epoch time. |
-| `params.windowEndTime` | An integer that defines the end time for the flow run in epoch time.  |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
 | `etag` | The resource version of the flow run. |
 | `metrics` | This property displays a status summary for the flow run. |
 
