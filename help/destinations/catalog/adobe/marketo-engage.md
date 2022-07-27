@@ -8,15 +8,15 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 >[!IMPORTANT]
 >
 >With the release of the [enhanced Marketo V2 destination connector](/help/release-notes/2022/july-2022.md#destinations), you are now seeing two Marketo cards in the destinations catalog.
->* If you are already activating data to the Marketo V1 destination: Please create new dataflows to the Marketo V2 destination and delete existing dataflows to the Marketo V1 destination by February 2023. As of that date, the Marketo V1 destination card will be removed.
->* If you have not yet created any dataflows to the Marketo V1 destination, please use the new Marketo V2 card to connect to and export data to Marketo.
+>* If you are already activating data to the **[!UICONTROL Marketo V1]** destination: Please create new dataflows to the **[!UICONTROL Marketo V2]** destination and delete existing dataflows to the **[!UICONTROL Marketo V1]** destination by February 2023. As of that date, the **[!UICONTROL Marketo V1]** destination card will be removed.
+>* If you have not yet created any dataflows to the **[!UICONTROL Marketo V1]** destination, please use the new **[!UICONTROL Marketo V2]** card to connect to and export data to Marketo.
 
 ![Image of the two Marketo destination cards in a side-by-side view.](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
 Also, further below we need to talk about:  Fields returned in the Describe API call what we display in AEP https://developers.marketo.com/rest-api/lead-database/leads/#describe
 
 ## Overview {#overview}
 
-Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
+[!DNL Marketo Engage] is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 
 The destination enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists.
 
@@ -45,7 +45,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the Marketo Engage destination.|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the [!DNL Marketo Engage] destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
