@@ -35,7 +35,7 @@ The destination enables marketers to push segments created in Adobe Experience P
 
 {style="table-layout:auto"}
 
-### Supported attributes {#supported-identities}
+### Supported attributes {#supported-attributes}
 
 You can map attributes from Experience Platform to any of the attributes that your organization has access to in Marketo. In Marketo, you can use the [Describe API request](https://developers.marketo.com/rest-api/lead-database/leads/#describe) to retrieve the attribute fields that your organization has access to.
 
