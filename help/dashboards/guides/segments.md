@@ -51,11 +51,11 @@ To choose a different segment, select the dropdown next to the segment name or u
 
 The segments dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. 
 
-The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or IMS Organization.
+The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or organization.
 
 ![](../images/segments/widget-timestamp.png)
 
-## Standard widgets
+## Standard widgets {#standard-widgets}
 
 Adobe provides multiple standard widgets that you can use to visualize different metrics related to your segments. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
 
@@ -165,6 +165,15 @@ This widget represents the number of profiles from two segments that meet the cr
 This widget enables you to optimize your segmentation strategy by visualizing the similarities in the results of your segment definitions.
 
 ![The Audience overlap widget.](../images/segments/audience-overlap.png)
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+
+<!-- ![The Audience overlap report widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ## Next steps
 
