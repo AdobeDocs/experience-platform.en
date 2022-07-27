@@ -100,6 +100,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Unsegmented profiles]](#unsegmented-profiles)
 * [[!UICONTROL Unsegmented profiles trend]](#unsegmented-profiles-trend)
 * [[!UICONTROL Unsegmented profiles by identity]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
 * [[!UICONTROL Profile count trend]](#profile-count-trend)
@@ -252,6 +253,32 @@ The [!UICONTROL Unsegmented Profiles Trend] widget provides a line graph illustr
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png)
+
+### [!UICONTROL Audiences] {#audiences}
+
+This widget provides the total number of segments that are ready to be activated, according to the chosen merge policy applied to your profile data. 
+
+Select **[!UICONTROL Audiences]** to navigate to the [!UICONTROL Segments] dashboard [!UICONTROL Browse] tab. From there you can see a list of all the segment definitions for your organization.
+
+![The Audiences widget.](../images/profiles/audiences.png)
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
+
+<!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
+<!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
+
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+
+The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
+
+<!-- ![The Audiences change trend widget.]() -->
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
+<!-- ![The Audiences overlap report widget.]() -->
+<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
 
 ### [!UICONTROL Audiences mapped to destination status] {#audiences-mapped-to-destination-status}
 
