@@ -22,7 +22,7 @@ As a marketer, you can deliver personalized experiences to your users, based on 
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
-Before activating data to the Salesforce CRM destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the Salesforce CRM destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
 ### Prerequisites in Salesforce CRM {#prerequisites-destination}
 
@@ -36,9 +36,10 @@ Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial
 
 Next, you need to configure a [connected app](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) within your Salesforce account, if you do not have one already. 
 
-Within the connected app ensure that [OAuth Settings](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) is enabled.
+Within the connected app, ensure that [OAuth Settings](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) is enabled.
 
 Also ensure that the [scopes](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mentioned below are selected.
+
 * ``chatter_api``
 * ``lightning``
 * ``visualforce``
@@ -57,7 +58,7 @@ Refer to the Salesforce documentation to [create custom fields](https://help.sal
 
 >[!IMPORTANT]
 >
-> Ensure there are no whitespace characters in the name, instead use the underscore i.e. the `_` character as a separator.
+> Ensure there are no whitespace characters in the field name. Instead, use the underscore `(_)` character as a separator.
 
 >[!NOTE]
 >
@@ -65,7 +66,7 @@ Refer to the Salesforce documentation to [create custom fields](https://help.sal
 > * This restriction implies you will only be able to have at a maximum 25 Experience Platform segment memberships active at any time. 
 > * If you have reached this limit within Salesforce, you will need to remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new mappingId can be used.
 
-Refer to Adobe's documentation for [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=en) if you need guidance on segment statuses.
+Refer to the Adobe Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
 #### Gather Salesforce credentials {#gather-credentials}
 
@@ -146,16 +147,20 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 To correctly send your audience data from Adobe Experience Platform to the Salesforce CRM destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the Salesforce CRM destination fields, follow these steps:
 
 1. In the Mapping step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
-![Add new mapping](../../assets/catalog/crm/salesforce/add-new-mapping.png)
+
+    ![Add new mapping](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 
 1. In the select source field window, when selecting the source field choose the **[!UICONTROL Select attributes]** category and add the mappings desired.
-![Source mapping](../../assets/catalog/crm/salesforce/source-mapping.png)
+
+    ![Source mapping](../../assets/catalog/crm/salesforce/source-mapping.png)
 
 1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
-![Target mapping using SalesforceId](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
+
+    ![Target mapping using SalesforceId](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
 
 1. For custom attributes, in the select target field window, select the target field and choose the **[!UICONTROL Select custom attributes]** category, Next provide the desired target attribute name and add the mappings desired.
-![Target mapping using LastName](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
+
+    ![Target mapping using LastName](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
 
 1. For instance, you could add the following mapping between your XDM profile schema and your [!DNL Salesforce CRM] instance:
 
@@ -165,11 +170,12 @@ To correctly send your audience data from Adobe Experience Platform to the Sales
     |Identities|<ul><li><code>crmID</code></li></ul>|<ul><li><code>SalesforceId</code></li></ul>|Yes|
 
 1. An example using these mappings is shown below:
-![Target mapping](../../assets/catalog/crm/salesforce/mappings.png)
+
+    ![Target mapping](../../assets/catalog/crm/salesforce/mappings.png)
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
-When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step you must manually map Platform segments to the custom field attribute in Salesforce.
+When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step, you must manually map Platform segments to the custom field attribute in Salesforce.
 
 To do this, select each segment, then enter the corresponding custom field attribute from Salesforce in the **[!UICONTROL Mapping ID]** field.
 
