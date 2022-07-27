@@ -2,6 +2,7 @@
 keywords: Experience Platform;query;query service;troubleshooting;guardrails;guidelines;limit;
 title: Guardrails for Query Service
 description: This document provides information on usage limits for Query Service data to help you optimize your query use.
+exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
 ---
 # Guardrails for Query Service data
 

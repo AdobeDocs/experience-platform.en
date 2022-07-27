@@ -1,16 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Data Explorer;azure data explorer
 solution: Experience Platform
-title: Azure Data Explorer Source Connector Overview
+title: Azure Data Explorer Source Overview
 topic-legacy: overview
 description: Learn how to connect Azure Data Explorer to Adobe Experience Platform using APIs or the user interface.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
 ---
-# (Beta) [!DNL Azure Data Explorer] connector
-
->[!NOTE]
->
->The [!DNL Azure Data Explorer] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL Azure Data Explorer] source
 
 Adobe Experience Platform provides native connectivity for database providers like [!DNL Microsoft], MySQL, and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
 
