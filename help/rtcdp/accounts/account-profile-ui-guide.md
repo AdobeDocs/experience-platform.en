@@ -18,19 +18,17 @@ To learn more about how account profiles are created as part of the B2B workflow
 
 >[!NOTE]
 >
-> Only B2B AI administrators can enable, disable, and configure the Lead to account matching service.
+> Only B2B AI administrators can enable, disable, and configure the lead to account matching service.
 
-To configure account profiles for lead to account matching, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation. On the **[!UICONTROL Overview]** tab, select **[!UICONTROL Settings]** in the top right.
+To configure account profiles for lead to account matching, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation. On the **[!UICONTROL Overview]** tab, select **[!UICONTROL Settings]** in the top right.
 
 ![Select Settings](images/b2b-configuring-accounts-profile.png)
 
-This opens the **[!UICONTROL Account settings]** dialog, where you can toggle to **[!UICONTROL Enable lead-to-account-matching]**. Using the dropdown, select **[!UICONTROL Daily]** for the [!UICONTROL Matching cadence]. Finally select the [!UICONTROL Matching criteria] and select **[!UICONTROL Save]**.
+The **[!UICONTROL Account settings]** dialog opens. From here select the **[!UICONTROL Enable lead-to-account-matching]** toggle to enable the feature. Use the dropdown menu to select **[!UICONTROL Daily]** for the **[!UICONTROL Matching cadence]** setting. Finally, select the relevant **[!UICONTROL Matching criteria]** options followed by **[!UICONTROL Save]** to confirm your settings and return to the **[!UICONTROL Account Profiles]** screen.
 
 ![Configure Account settings](images/b2b-configuring-account-settings.png)
 
-You are returned to the **[!UICONTROL Account Profiles]** screen.
-
-To learn more about lead to account matching, please refer to the [Lead to account matching in CDP B2B overview](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+To learn more about lead to account matching, please refer to the [Lead to account matching in Real-time CDP B2B overview](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Browse account profiles {#browse-account-profiles}
 
