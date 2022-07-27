@@ -12,7 +12,6 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 >* If you have not yet created any dataflows to the **[!UICONTROL Marketo V1]** destination, please use the new **[!UICONTROL Marketo V2]** card to connect to and export data to Marketo.
 
 ![Image of the two Marketo destination cards in a side-by-side view.](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
-Also, further below we need to talk about:  Fields returned in the Describe API call what we display in AEP https://developers.marketo.com/rest-api/lead-database/leads/#describe
 
 ## Overview {#overview}
 
