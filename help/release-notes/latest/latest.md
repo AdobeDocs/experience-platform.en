@@ -12,6 +12,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [Data collection](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Sources](#sources)
@@ -72,6 +73,29 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | [Mailchimp event forwarding extension](../../tags/extensions/web/mailchimp/overview.md) | The Mailchimp event forwarding extension sends events to the Mailchimp Marketing API that can trigger emails for Mailchimp marketing campaigns, journeys, or transactions. |
 
 For more information, please see the [data collection overview](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+| [Export file now (Beta)](../../destinations/ui/export-file-now.md) | Export a full file without interrupting the current export schedule of a previously scheduled segment. This export happens in addition to previously scheduled exports and does not change the export frequency of the segment. <br> The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs. <br> <br>Contact your Adobe representative for access to this functionality.|
+
+{style="table-layout:auto"}
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [(Beta) The [!DNL Trade Desk] - CRM connection](../../destinations/catalog/advertising/tradedesk-emails.md) | Use [!DNL The Trade Desk] CRM destination to activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data. <br><br>This destination is currently in Beta. The documentation and functionality are subject to change. |
+| [(Beta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | This destination allows marketers to import user segments created in Experience Platform into Snapchat Ads and use them to target their ads. <br><br>This destination is currently in Beta. The documentation and functionality are subject to change.|
+
+{style="table-layout:auto"}
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
