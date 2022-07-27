@@ -202,7 +202,7 @@ All the values from `scopeDetails.characteristics.analyticsToken`, as well as `s
 
 >[!IMPORTANT]
 >
->Note that some `analyticsToken`,`analyticsDisplayToken`,`analyticsClickToken` properties can contain multiple tokens, concatenated as a single comma-delineated string.
+>The `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` properties can contain multiple tokens, concatenated as a single comma-delineated string.
 >
 >In the implementation examples provided in the next section, multiple Analytics tokens are being collected iteratively. To concatenate an array of Analytics tokens, use a function similar this:
 >
