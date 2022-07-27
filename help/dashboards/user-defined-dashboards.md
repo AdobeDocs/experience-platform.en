@@ -104,7 +104,7 @@ Select **[!UICONTROL Cancel]** to return to your custom dashboard.
 
 Widgets can be re-arranged and resized while in this workspace. Select **[!UICONTROL Save]** to preserve your dashboard name and configured layout.
 
-![The user-defined dashboard with a custom widget and the save button highlighted.](./images/user-defined-dashboards/user-defined-dashboard.md)
+![The user-defined dashboard with a custom widget and the save button highlighted.](./images/user-defined-dashboards/user-defined-dashboard.png)
 
 ## Next steps
 
