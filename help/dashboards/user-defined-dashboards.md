@@ -60,11 +60,9 @@ The preview list provides details about the tables contained in the data model. 
 |[!UICONTROL Table type] | The type of table. Potential types include: `fact`, `dimension`, and `none`. |
 |[!UICONTROL Lookups] | The number of tables joined to the chosen table.|
 
-<!-- accurate descriptions required -->
+Select **[!UICONTROL Next]** to confirm your choice of data model. The next view displays a list of the available tables in the left rail. Select a table to see a comprehensive breakdown of the data contained in your selected table.
 
-Select **[!UICONTROL Next]** to confirm your choice of data model. The next view displays a list of the tables available in the left rail. Select a table to see a comprehensive breakdown of the data contained in your selected table.
-
-The [!UICONTROL Preview] panel contains tabs for [!UICONTROL Sample records] and [!UICONTROL Attributes]. [!UICONTROL Sample records] provides a tabulated view for all the table columns of the selected data model table. The [!UICONTROL Attributes] tab provides the attribute name, data type, and source table for every attribute associated with the selected table. 
+The [!UICONTROL Preview] panel contains tabs for [!UICONTROL Sample records] and [!UICONTROL Attributes].The [!UICONTROL Sample records] tab provides a subset of the records from the selected table in a tabulated view. The [!UICONTROL Attributes] tab provides the attribute name, data type, and source table for every attribute associated with the selected table. 
 
 Select a table from the list available in the left rail to provide data for your widget and select [!UICONTROL Select] to return to the widget composer.
 
@@ -90,6 +88,10 @@ Next, select the type of graph or chart from the [!UICONTROL Marks] dropdown to 
 
 When you are satisfied with your widget select **[!UICONTROL Save]**. A tick icon underneath the widget name indicates that the widget has been saved. 
 
+>[!NOTE]
+>
+>Saving in the widget composer saves the widget locally to your dashboard. If you exit the dashboard editor without saving the dashboard, the widget will not be saved to the dashboard.
+
 ![New widget save confirmation.](./images/user-defined-dashboards/save-confirmation.png)
 
 Select **[!UICONTROL Cancel]** to return to your custom dashboard.
@@ -100,7 +102,9 @@ Select **[!UICONTROL Cancel]** to return to your custom dashboard.
 >
 >Select the setting icon next to the dashboard name to see details about its creation. You can change the name of your dashboard in the dialog that appears.
 
-Select **[!UICONTROL Save]** to confirm your dashboard name and layout.
+Widgets can be re-arranged and resized while in this workspace. Select **[!UICONTROL Save]** to preserve your dashboard name and configured layout.
+
+![The user-defined dashboard with a custom widget and the save button highlighted.](./images/user-defined-dashboards/user-defined-dashboard.md)
 
 ## Next steps
 
