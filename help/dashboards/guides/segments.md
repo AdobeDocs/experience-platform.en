@@ -51,11 +51,11 @@ To choose a different segment, select the dropdown next to the segment name or u
 
 The segments dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. 
 
-The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or IMS Organization.
+The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or organization.
 
 ![](../images/segments/widget-timestamp.png)
 
-## Standard widgets
+## Standard widgets {#standard-widgets}
 
 Adobe provides multiple standard widgets that you can use to visualize different metrics related to your segments. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
 
