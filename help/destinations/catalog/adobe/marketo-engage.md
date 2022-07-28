@@ -5,6 +5,8 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 ---
 # Marketo Engage destination {#beta-marketo-engage-destination}
 
+## Destination changelog {#changelog}
+
 >[!IMPORTANT]
 >
 >With the release of the [enhanced Marketo V2 destination connector](/help/release-notes/2022/july-2022.md#destinations), you are now seeing two Marketo cards in the destinations catalog.
@@ -12,6 +14,11 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 >* If you have not yet created any dataflows to the **[!UICONTROL Marketo V1]** destination, please use the new **[!UICONTROL Marketo V2]** card to connect to and export data to Marketo.
 
 ![Image of the two Marketo destination cards in a side-by-side view.](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+
+Improvements in the Marketo V2 destination include:
+
+* In the **[!UICONTROL Schedule segment]** step of the activation workflow, in Marketo V1, you needed to manually add a **Mapping ID** to successfully export data to Marketo. This manual step is not required anymore in Marketo V2.
+* In the **[!UICONTROL Mapping]** step of the activation workflow, in Marketo V1, you were able to map XDM fields to only three target fields in Marketo: `firstName`, `lastName`, and `companyName`. With the Marketo V2 release, you can now map XDM fields to many more fields in Marketo. For more information, read the [supported attributes](#supported-attributes) section further below.
 
 ## Overview {#overview}
 
