@@ -20,7 +20,7 @@ Select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigat
 
 ![Overview tab displaying widgets](images/b2b-account-profile-overview.png)
 
-See the documentation on the [[!UICONTROL Account Profiles]]((../../dashboards/guides/account-profiles.md) dashboard to learn more.
+See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard to learn more.
 
 ## Browse account profiles {#browse-account-profiles}
 
