@@ -88,11 +88,14 @@ For more information, please see the [data collection overview](../../collection
 | Feature | Description | 
 | --- | --- |
 | Enhancements to [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations are now smarter and faster. New validation checks significantly reduce the most common mapping errors, further reducing the time-to-value. |
-| Hierarchical support for streaming upsets | You can now use functions `upsert_array_append` and `upsert_array_replace` to update arrays and objects when streaming upserts to Profile. See the [[!DNL Data Prep] mapping functions guide](../../data-prep/functions.md) for more information. |
 
 {style="table-layout:auto"}
 
 To learn more about [!DNL Data Prep], see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+<!--
+| Hierarchical support for streaming upsets | You can now use functions `upsert_array_append` and `upsert_array_replace` to update arrays and objects when streaming upserts to Profile. See the [[!DNL Data Prep] mapping functions guide](../../data-prep/functions.md) for more information. |
+-->
 
 ## [!DNL Destinations] {#destinations}
 

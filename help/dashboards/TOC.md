@@ -11,6 +11,7 @@ feature: Dashboards
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
 * [Dashboards inventory](inventory.md)
+* [User defined dashboards](user-defined-dashboards.md)
 * [Download dashboards to PDF](download.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
