@@ -13,6 +13,12 @@ The [!DNL Segmentation Service] API provides multiple endpoints that allow you t
 
 To view all available endpoints and CRUD operations, please refer to the [Segmentation Service API reference](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
+## Audiences
+
+Audiences are blah blah blah...
+
+For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md).
+
 ## Export jobs
 
 Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint to retrieve all export jobs, create a new export job, retrieve details of a specific export job, or cancel a specific export job.
