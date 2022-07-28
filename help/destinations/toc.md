@@ -98,6 +98,8 @@ feature: Destinations
         * [Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+    * Customer Relationship Management (CRM) destinations {#crm-destinations}
+        * [Salesforce CRM connection](./catalog/crm/salesforce.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
