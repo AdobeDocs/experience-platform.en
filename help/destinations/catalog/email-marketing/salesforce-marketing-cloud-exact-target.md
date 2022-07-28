@@ -2,8 +2,8 @@
 keywords: email;Email;e-mail;email destinations;salesforce;api salesforce marketing cloud destination
 title: (API) Salesforce Marketing Cloud connection
 description: The Salesforce Marketing Cloud (formerly known as ExactTarget) destination allows you to export your account data and activate it within Salesforce Marketing Cloud for your business needs.
+exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 ---
-
 # [!DNL (API) Salesforce Marketing Cloud] connection
 
 ## Overview {#overview}
@@ -226,4 +226,3 @@ When checking a dataflow run, if you see the error message below, verify that th
 * Refer to the [Salesforce Marketing Cloud Engagement Pricing](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) page to *Download the Full Edition Comparison Chart* as a pdf which details the limits imposed by your plan.
 * The [API overview](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) page details additional limits.
 * A KB item collating these details is available [here](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&text=As%20has%20been%20added%20in,interacting%20with%20the%20REST%2DAPI).
-

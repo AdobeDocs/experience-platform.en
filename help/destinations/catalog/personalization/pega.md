@@ -1,8 +1,8 @@
 ---
 title: Pega Customer Decision Hub connection
 description: Use the Pega Customer Decision Hub destination in Adobe Experience Platform to send profile attributes and segment membership data to Pega Customer Decision Hub for next-best-action decisioning.
+exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 ---
-
 # Pega Customer Decision Hub connection
 
 ## Overview {#overview}
