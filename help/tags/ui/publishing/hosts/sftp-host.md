@@ -43,7 +43,7 @@ You may need to approve a set of IP addresses to be used within your company fir
 
 For more detailed information, refer to the following Medium article on [how to set up SFTP servers to deliver a build](https://medium.com/launch-by-adobe/configuring-an-sftp-server-for-use-with-adobe-launch-bc626027e5a6).
 
-## Create an SFTP host
+## Create an SFTP host {#create}
 
 In the Data Collection UI, select **[!UICONTROL Hosts]** in the left navigation, followed by **[!UICONTROL Add Host]**.
 
@@ -52,6 +52,8 @@ In the Data Collection UI, select **[!UICONTROL Hosts]** in the left navigation,
 The host creation dialog appears. Provide a name for the host, and under **[!UICONTROL Type]**, select **[!UICONTROL SFTP]**.
 
 ![Image showing the SFTP hosting option being selected](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
+
+### Configure the SFTP host {#configure}
 
 The dialog expands to include additional configuration options for the SFTP host. These are explained below.
 
