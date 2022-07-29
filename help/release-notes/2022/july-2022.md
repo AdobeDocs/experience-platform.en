@@ -88,14 +88,11 @@ For more information, please see the [data collection overview](../../collection
 | Feature | Description | 
 | --- | --- |
 | Enhancements to [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations are now smarter and faster. New validation checks significantly reduce the most common mapping errors, further reducing the time-to-value. |
+| Hierarchical support for streaming upsets | You can now use functions `upsert_array_append` and `upsert_array_replace` to update arrays and objects when streaming upserts to Profile. See the [[!DNL Data Prep] mapping functions guide](../../data-prep/functions.md) for more information. |
 
 {style="table-layout:auto"}
 
 To learn more about [!DNL Data Prep], see the [[!DNL Data Prep] overview](../../data-prep/home.md).
-
-<!--
-| Hierarchical support for streaming upsets | You can now use functions `upsert_array_append` and `upsert_array_replace` to update arrays and objects when streaming upserts to Profile. See the [[!DNL Data Prep] mapping functions guide](../../data-prep/functions.md) for more information. |
--->
 
 ## [!DNL Destinations] {#destinations}
 
@@ -113,8 +110,12 @@ To learn more about [!DNL Data Prep], see the [[!DNL Data Prep] overview](../../
 
 | Destination | Description |
 | ----------- | ----------- |
-| [(Beta) The [!DNL Trade Desk] - CRM connection](../../destinations/catalog/advertising/tradedesk-emails.md) | Use [!DNL The Trade Desk] CRM destination to activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data. <br><br>This destination is currently in Beta. The documentation and functionality are subject to change. |
+| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | The Marketo Engage destination update allows you to streamline the static list creation process with automation and enable users to bring in additional fields on their Leads. See more information on the enhancements in Marketo V2 below: <br><ul><li>In the **[!UICONTROL Schedule segment]** step of the activation workflow, in Marketo V1, you needed to manually add a **Mapping ID** to successfully export data to Marketo. This manual step is not required anymore in Marketo V2.</li><li>In the **[!UICONTROL Mapping]** step of the activation workflow, in Marketo V1, you were able to map XDM fields to only three target fields in Marketo: `firstName`, `lastName`, and `companyName`. With the Marketo V2 release, you can now map XDM fields to many more fields in Marketo. For more information, read [supported attributes in Marketo V2](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes).  </li></ul>  |
+| [Pega Customer Decision Hub](../../destinations/catalog/personalization/pega.md)| Use profile attribute and segment membership information from Adobe Experience Platform in Pega Customer Decision Hub as predictors in adaptive models and help deliver the next-best-action decisioning|
+| [(API) Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | This destination allows marketers to import user segments created in Experience Platform into Snapchat Ads and use them to target their ads. |
+| [Salesforce CRM](../../destinations/catalog/crm/salesforce.md) | Update contact information in Salesforce Marketing Cloud with profile and segment info in Experience Platform |
 | [(Beta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | This destination allows marketers to import user segments created in Experience Platform into Snapchat Ads and use them to target their ads. <br><br>This destination is currently in Beta. The documentation and functionality are subject to change.|
+| [(Beta) The [!DNL Trade Desk] - CRM connection](../../destinations/catalog/advertising/tradedesk-emails.md) | Use [!DNL The Trade Desk] CRM destination to activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data. <br><br>This destination is currently in Beta. The documentation and functionality are subject to change. |
 
 {style="table-layout:auto"}
 
