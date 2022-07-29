@@ -8,10 +8,6 @@ description: An overview and more information about the lead to account matching
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
-> Lead to account matching may increase the number of business-person profiles, which may result in a higher licensing cost to the customer.
-
 Account-based marketing is an increasingly important strategy for B2B marketing. Account-based marketing provides the following key benefits to acquire specific high-value customers:
 
 - Clear ROI 
@@ -72,17 +68,15 @@ The lead to account matching service runs when a new person profile snapshot bec
 
 ## How to view lead to account matching output {#how-to-view}
 
-After the algorithm has run, the results are saved in a new dataset of the existing account person relation XDM. 
+After the job run, the results are saved in a new dataset of the existing account person relation XDM. 
 
 To preview the dataset, select **[!UICONTROL Preview dataset]** in the top right. 
 
 ![New dataset](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-The dataset preview contains the the lead to accounts matching as well as the confidence score per match for your chosen dataset. The **[!UICONTROL Relationship Source]** field indicates whether it came from the lead to account matching process. 
+The dataset includes the matched account information as well as the match score for your chosen dataset. The **[!UICONTROL Relationship Source]** field indicates whether it came from the lead to account matching process. 
   
 ![Preview dataset confidence scores and output](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
-
-Results will also be updated with each respective profile in the backend.
 
 ## Monitoring lead to account matching jobs {#monitoring-jobs}
 

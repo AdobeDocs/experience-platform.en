@@ -42,11 +42,11 @@ The following metrics are available for lead to account matching profile enrichm
 
 | Metric | Description |
 | --------- | ---------- |
-| **[!UICONTROL Total persons with accounts]** | Indicates the total number of people that are already associated with an account. |
-| **[!UICONTROL Total accounts]** | Indicates the total number of accounts found by the lead to account matching job. |
-| **[!UICONTROL Existing persons with accounts]** | Indicates the number of people that are already linked to an account. |
-| **[!UICONTROL Persons matched]** | Indicates the number of people that have successfully been matched to an account. |
-| **[!UICONTROL Persons unmatched]** | Indicates the number of people that were not successfully matched to an account.  |
+| **[!UICONTROL Total persons with accounts]** | Indicates the total number of people that are associated with an account. |
+| **[!UICONTROL Total accounts]** | Indicates the total number of accounts. |
+| **[!UICONTROL Existing persons with accounts]** | Indicates the number of people that are already associated with an account from the data sources. |
+| **[!UICONTROL Persons matched]** | Indicates the number of people that were matched to an account. |
+| **[!UICONTROL Persons unmatched]** | Indicates the number of people that were not matched to an account. |
 | **[!UICONTROL Last successful run]** | Indicates the date and time of the last successful lead to account matching job run. |
 | **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the lead to account matching job. |
 
@@ -68,7 +68,8 @@ Use the **[!UICONTROL Show failures only]** toggle to only display the failed pr
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you can now successfully monitor and understand metrics for related accounts profile enrichment jobs. See the following documents for more details:
+
+By following this tutorial, you can now successfully monitor and understand metrics for profile enrichment jobs. See the following documents for more details:
 
 * [Related accounts in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Related accounts tab in the Account profile UI guide](/help/rtcdp/accounts/account-profile-ui-guide.md)
