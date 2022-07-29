@@ -82,4 +82,4 @@ The dataset includes the matched account information as well as the match score 
 
 You can monitor the job status and associated metrics for any person-to-account mapping jobs through the dashboard.
 
-See the documentation for more information about the [monitoring jobs for lead to account matching](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.md).
+See the documentation for more information about the [monitoring jobs for lead to account matching](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
