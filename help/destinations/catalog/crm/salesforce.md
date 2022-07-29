@@ -2,8 +2,8 @@
 keywords: crm;CRM;crm destinations;salesforce crm;salesforce crm destination
 title: Salesforce CRM connection
 description: The Salesforce CRM destination allows you to export your account data and activate it within Salesforce CRM for your business needs.
+exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 ---
-
 # [!DNL Salesforce CRM] connection
 
 ## Overview {#overview}
