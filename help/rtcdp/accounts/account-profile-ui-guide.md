@@ -34,6 +34,14 @@ The **[!UICONTROL Account settings]** dialog opens. From here select the **[!UIC
 
 To learn more about lead to account matching, please refer to the [Lead to account matching in Real-time CDP B2B overview](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
+## Account profiles overview {#account-profiles-overview}
+
+Select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation to view the overview of account profiles. Under the [!UICONTROL Overview] tab, the dashboard shows a graphic or chart displaying widgets in a single entry point.
+
+![Overview tab displaying widgets](images/b2b-account-profile-overview.png)
+
+See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard to learn more.
+
 ## Browse account profiles {#browse-account-profiles}
 
 To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation. 
