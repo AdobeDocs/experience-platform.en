@@ -112,6 +112,8 @@ A successful response returns ...
 | `` | The ... |
 | `` | The ... |
 
+## Subscribe users to an alert {#alerts-api-2}
+
 ## Subscribe multiple users to an alert {#subscribe-multiple-users}
 
 You can subscribe a user to receive an alert by making a `POST` request to the `/alertSubscriptions` endpoint.
@@ -207,6 +209,14 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 <!-- Q) Why is the AssetID returned in the response different to the one in the request?  -->
 <!-- Q) What is the ID in the response that starts with: "query_service_flow_run_failure-5"? -->
 
+## Get the alert name for a specific query or schedule ID and alertType {#alert-api-3}
+
+<!-- Alert api content -->
+
+## update the status of an alert {#alert-api-4}
+
+<!-- Alert api content -->
+
 ## Enable or disable an alert {#enable-or-disable-alert}
 
 You can enable or disable an alert by making a `PATCH` request to the `/alertSubscriptions/<queryId>/<alertType>` or `/alertSubscriptions/<scheduleId>/<alertType>` endpoint. 
@@ -267,18 +277,24 @@ A successful response returns HTTP status 200 with details of the alert status, 
 | `alertType` | The potential values are `Enable` or `Disable`. |
 | `status` | The ... |
 
-## Retrieve all subscriptions for a particular query/schedule id
+## Filter a list of alerts based on query or schedule ID {alerts-api-5}
 
-Description
+<!-- Alert api content -->
+
+## Retrieve all subscriptions for a particular query or schedule ID {#retrieve-subscriptions-with-id}
+
+Retrieve the alert subscription information for particular query ID or schedule ID by making a GET request to the `alertSubscriptions/{queryId}` endpoint.
 
 **API format**
 
 ```http
-
+alertSubscriptions/{queryId}
 ```
 
-<!-- | Property | Description |
-| -------- | ----------- | -->
+| Parameter | Description |
+| -------- | ----------- |
+|  |  |
+|  |  |
 
 **Request**
 
