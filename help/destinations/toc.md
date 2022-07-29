@@ -66,7 +66,7 @@ feature: Destinations
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
         * [(Beta) Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
-        * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
+        * [(Beta) The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
     * Analytics destinations {#analytics}
@@ -98,6 +98,8 @@ feature: Destinations
         * [Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+    * Customer Relationship Management (CRM) destinations {#crm}
+        * [Salesforce CRM connection](./catalog/crm/salesforce.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
@@ -111,7 +113,8 @@ feature: Destinations
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
         * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
-        * [Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
+        * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+        * [(Files) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
         * [Tag extension overview](./catalog/launch-extensions/overview.md)  
@@ -132,6 +135,7 @@ feature: Destinations
         * [Gainsight extension](./catalog/personalization/gainsight.md)
         * [KickFire extension](./catalog/personalization/kickfire.md)
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
+        * [Pega Customer Decision Hub connection](./catalog/personalization/pega.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)

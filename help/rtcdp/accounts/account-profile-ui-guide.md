@@ -16,11 +16,11 @@ To learn more about how account profiles are created as part of the B2B workflow
 
 ## Account profiles overview {#account-profiles-overview}
 
-For an account profile overview, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation. Under the [!UICONTROL Overview] tab, the dashboard shows a graphic or chart displaying widgets in a single entry point.
+Select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation to view the overview of account profiles. Under the [!UICONTROL Overview] tab, the dashboard shows a graphic or chart displaying widgets in a single entry point.
 
-![Overview tab](images/b2b-account-profile-overview.png)
+![Overview tab displaying widgets](images/b2b-account-profile-overview.png)
 
-To learn more about account profiles dashboard, please refer to the [Account Profiles dashboard](../../dashboards/guides/account-profiles.md) documentation.
+See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard to learn more.
 
 ## Browse account profiles {#browse-account-profiles}
 
