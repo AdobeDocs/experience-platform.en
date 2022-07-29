@@ -7,7 +7,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Healthcare Shield.
 
 The **[!UICONTROL Data Hygiene]** workspace in the Adobe Experience Platform UI allows you to create and monitor various data hygiene tasks, including deleting consumer identities and scheduling time-to-live (TTL) protocols for datasets.
 
