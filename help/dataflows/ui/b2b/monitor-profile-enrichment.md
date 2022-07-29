@@ -68,7 +68,6 @@ Use the **[!UICONTROL Show failures only]** toggle to only display the failed pr
 
 ## Next steps {#next-steps}
 
-
 By following this tutorial, you can now successfully monitor and understand metrics for profile enrichment jobs. See the following documents for more details:
 
 * [Related accounts in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
