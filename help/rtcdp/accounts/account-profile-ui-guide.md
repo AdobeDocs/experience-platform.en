@@ -22,7 +22,7 @@ To learn more about how account profiles are created as part of the B2B workflow
 
 To configure lead to account matching, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation. On the **[!UICONTROL Overview]** tab, select **[!UICONTROL Settings]** in the top right.
 
-![Select Settings](images/b2b-configuring-accounts-profile.png)
+![Select Settings](images/b2b-configuring-accounts-profile.png) 
 
 The **[!UICONTROL Account settings]** dialog opens. From here select the **[!UICONTROL Enable lead-to-account-matching]** toggle to enable the feature. Use the dropdown menu to select **[!UICONTROL Daily]** for the **[!UICONTROL Matching cadence]** setting. Finally, select the relevant **[!UICONTROL Matching criteria]** options followed by **[!UICONTROL Save]** to confirm your settings and return to the **[!UICONTROL Account Profiles]** screen.
 
