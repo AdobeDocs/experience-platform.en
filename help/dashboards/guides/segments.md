@@ -54,7 +54,6 @@ The segments dashboard is composed of widgets, which are read-only metrics provi
 The date and time of the most recent snapshot is displayed at the top of the [!UICONTROL Overview] tab next to the segment dropdown. All widget data is accurate as of that date and time. The timestamp of the snapshot is provided in UTC; it is not in the timezone of the individual user or organization.
 
 ![The Segments Overview tab with a widget timestamp highlighted.](../images/segments/widget-timestamp.png)
-<!-- IMAGE NEEDS UPDATING to reflect the most recent snapshot time  -->
 
 ## Standard widgets {#standard-widgets}
 

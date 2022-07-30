@@ -85,7 +85,7 @@ The dashboard is composed of widgets, which are read-only metrics providing impo
 
 The date and time of the most recent snapshot is displayed at the top of the [!UICONTROL Overview] tab next to the merge policy dropdown. All widget data is accurate as of that date and time. The timestamp of the snapshot is provided in UTC; it is not in the timezone of the individual user or organization.
 
-<!-- IMAGE NEEDS ADDING to reflect the most recent snapshot time  -->
+![The Profiles dashboard overview tab with the most recent snapshot timestamp highlighted.](../images/profiles/snapshot-timestamp.png)
 
 ## Standard widgets {#standard-widgets}
 
