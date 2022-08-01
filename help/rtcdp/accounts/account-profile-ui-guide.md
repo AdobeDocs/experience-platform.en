@@ -14,6 +14,14 @@ Account profiles enable you to unify account information from multiple sources. 
 
 To learn more about how account profiles are created as part of the B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md).
 
+## Account profiles overview {#account-profiles-overview}
+
+Select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation to view the overview of account profiles. Under the [!UICONTROL Overview] tab, the dashboard shows a graphic or chart displaying widgets in a single entry point.
+
+![Overview tab displaying widgets](images/b2b-account-profile-overview.png)
+
+See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard to learn more.
+
 ## Browse account profiles {#browse-account-profiles}
 
 To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation. 

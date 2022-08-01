@@ -64,7 +64,9 @@ feature: Destinations
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
+        * [(Beta) Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
+        * [(Beta) The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
     * Analytics destinations {#analytics}
@@ -96,6 +98,8 @@ feature: Destinations
         * [Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+    * Customer Relationship Management (CRM) destinations {#crm}
+        * [Salesforce CRM connection](./catalog/crm/salesforce.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
@@ -109,7 +113,8 @@ feature: Destinations
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
         * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
-        * [Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
+        * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+        * [(Files) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
         * [Tag extension overview](./catalog/launch-extensions/overview.md)  
@@ -130,6 +135,7 @@ feature: Destinations
         * [Gainsight extension](./catalog/personalization/gainsight.md)
         * [KickFire extension](./catalog/personalization/kickfire.md)
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
+        * [Pega Customer Decision Hub connection](./catalog/personalization/pega.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
@@ -178,10 +184,17 @@ feature: Destinations
       * [Credentials endpoint API operations](./destination-sdk/credentials-configuration-api.md)
       * [Publish endpoint API operations](./destination-sdk/destination-publish-api.md)
       * Developer tools reference {#developer-tools-reference}
-        * [Get sample template API operations](./destination-sdk/sample-template-api.md)
-        * [Render template API operations](./destination-sdk/render-template-api.md)
-        * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
-        * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
+        * Streaming destination testing API {#streaming-destination-testing-api}
+            * [Get sample template API operations](./destination-sdk/sample-template-api.md)
+            * [Render template API operations](./destination-sdk/render-template-api.md)
+            * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
+            * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
+        * File-based destination testing API {#file-based-destination-testing-api}
+            * [File-based destination testing API overview](./destination-sdk/file-based-destination-testing-overview.md) 
+            * [Generate sample profiles based on a source schema](./destination-sdk/file-based-sample-profile-generation-api.md)
+            * [Test your file-based destination with sample profiles](./destination-sdk/file-based-destination-testing-api.md)
+            * [View detailed activation results](./destination-sdk/file-based-destination-results-api.md)
+            * [Validate templatized customer fields](./destination-sdk/file-based-render-template-api.md)
     * Guides {#guides}
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)

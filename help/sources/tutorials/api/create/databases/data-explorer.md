@@ -9,10 +9,6 @@ exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
 ---
 # Create an [!DNL Azure Azure Data Explorer] base connection using the [!DNL Flow Service] API
 
->[!NOTE]
->
->The [!DNL Azure Azure Data Explorer] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL Azure Data Explorer] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).

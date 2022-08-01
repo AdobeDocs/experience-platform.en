@@ -23,11 +23,13 @@ The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations 
 
 To navigate to the destinations dashboard within the Platform UI, select **[!UICONTROL Destinations]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
+The date and time of the most recent snapshot is displayed at the top of the [!UICONTROL Overview] next to the destination dropdown. All widget data is accurate as of that date and time. The timestamp of the snapshot is provided in UTC; it is not in the timezone of the individual user or organization.
+
 >[!NOTE]
 >
 >If your organization is new to Experience Platform and does not yet have active destinations, the [!UICONTROL Destinations] dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [!UICONTROL Catalog] tab. To learn more about the [!UICONTROL Catalog] tab, refer to the [[!UICONTROL Destinations] workspace guide](../../destinations/ui/destinations-workspace.md).
 
-![](../images/destinations/dashboard-overview.png)
+![The Platform UI Destinations Overview with the most recent snapshot highlighted.](../images/destinations/snapshot-timestamp.png)
 
 ### Modifying the destinations dashboard
 
@@ -35,7 +37,7 @@ You can modify the appearance of the destinations dashboard by selecting **[!UIC
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
 
-## Standard widgets
+## Standard widgets {#standard-widgets}
 
 Adobe provides multiple standard widgets that you can use to visualize different metrics related to your destinations and assess the completeness of the segments available for your data analysis. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [Widget library overview](../customize/widget-library.md).
 
@@ -49,6 +51,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Unmapped segments by identity]](#unmapped-segments-by-identity)
 * [[!UICONTROL Mapped segments by identity]](#mapped-segments-by-identity)
 * [[!UICONTROL Common audiences]](#common-audiences)
+* [[!UICONTROL Mapped audiences]](#mapped-audiences)
 * [[!UICONTROL Mapped audience health]](#mapped-audience-health)
 * [[!UICONTROL Destinations count]](#destinations-count)
 * [[!UICONTROL Destination status]](#destination-status)
@@ -189,6 +192,14 @@ The **[!UICONTROL Common audiences]** widget provides a list of the top five seg
 The [!UICONTROL AUDIENCE SIZE] column provides the total profile count of each listed segment.
 
 ![The Common audiences widget.](../images/destinations/common-audiences.png)
+
+### Mapped audiences {#mapped-audiences}
+
+The [!UICONTROL Mapped audiences] widget displays the total number of mapped audiences that can be activated to the destination selected at the top of the page.
+
+Select **[!UICONTROL Segments]** to navigate to Segments dashboard [!UICONTROL Browse] tab. This workspace displays a list of all the segment definitions for your organization. 
+
+![The Mapped audiences widget.](../images/destinations/mapped-audiences.png)
 
 ### Mapped audience health {#mapped-audience-health}
 

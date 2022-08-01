@@ -103,7 +103,7 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 
 >[!IMPORTANT]
 >
->Consent policies are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+>Consent policies are currently only available for organizations that have purchased Healthcare Shield.
 
 If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies affect the percentage of profiles that are included in the activation.
 

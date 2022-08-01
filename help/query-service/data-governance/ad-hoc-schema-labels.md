@@ -34,9 +34,9 @@ To add a data label, navigate to [!UICONTROL Schemas] dashboard browse tab by se
 >
 >Ad hoc schemas are not displayed by default in the schema inventory.
 
-## Discover ad hoc schemas in the schema inventory of the Platform UI
+## Discover ad hoc schemas in the schema inventory of the Platform UI {#discover-ad-hoc-schemas}
 
-To enable the display of ad hoc schemas in the Platform UI, select the filter icon (../images/data-governance/filter.png) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
+To enable the display of ad hoc schemas in the Platform UI, select the filter icon (![A filter icon.](../images/data-governance/filter.png)) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
 
 ![The Schema dashboard filter options left rail with 'Show adhoc schema' toggle enabled.](../images/data-governance/adhoc-schema-toggle.png)
 

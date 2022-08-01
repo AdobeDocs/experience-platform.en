@@ -57,10 +57,21 @@ Examples of [!DNL Identity Service] implementations include:
 - A bank may prefer "account number" in offline data sets, such as branch transactions. They may depend on "login ID" in online data sets, because most visitors would be authenticated during their visit.
 - Your customers may also have unique proprietary IDs, such as GUID or other universally unique identifiers.
 
-## Identity namespaces
+## Identity namespace {#identity-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="Identity namespaces"
+>abstract="An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes “name<span>@email.com” as an email address or “443522” as a numeric CRM ID."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="Identity values"
+>abstract="An identity value is an identifier that represents a unique individual, organization, or asset. The context or type of identity that the value represents is defined by a corresponding identity namespace. When matching record data across profile fragments, the namespace and identity value must matchWhen matching record data across profile fragments the namespace and identity value must match."
+>text="Learn more in documentation"
 
 If you asked a person "What is your ID?" without any further context, it would be difficult for them to provide a useful answer. By the same logic, a string value representing an identity value, whether it is a system generated ID or an email address, is only complete when supplied with a qualifier that gives the string value context: the identity namespace.
-
 
 Your customers may interact with your brand through a combination of online and offline channels, resulting in the challenge of how to reconcile those fragmented interactions into a single customer identity.
 
