@@ -2,7 +2,7 @@
 description: Learn how to use Destination SDK to configure an Amazon S3 destination with predefined file formatting options and custom file name configuration.
 title: (Beta) Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration.
 ---
-# (Beta) Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration
+# (Beta) Configure an [!DNL Amazon S3] destination with predefined file formatting options and custom file name configuration
 
 ## Overview {#overview}
 
@@ -12,7 +12,7 @@ title: (Beta) Configure an Amazon S3 destination with predefined file formatting
 
 This page describes how to use Destination SDK to configure an Amazon S3 destination with predefined, default [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
 
-This page shows all the configuration options available for Amazon S3 destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.
+This page shows all the configuration options available for [!DNL Amazon S3] destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.
 
 ## Prerequisites {#prerequisites}
 
@@ -31,7 +31,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Request**
 
 The following request creates a new destination server configuration, configured by the parameters provided in the payload.
-The payload below includes a generic Amazon S3 configuration, with predefined, default [CSV file formatting](../../server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
+The payload below includes a generic [!DNL Amazon S3] configuration, with predefined, default [CSV file formatting](../../server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -127,7 +127,7 @@ A successful response returns the new destination server configuration, includin
 
 After creating the destination server and file formatting configuration in the previous step, you can now use the `/destinations` API endpoint to create a destination configuration.
 
-To connect the server configuration in [step 1](#create-server-file-configuration) to this destination configuration, replace the `destinationServerId` value in the API request below with the value obtained when creating your destination server in [step 1](#create-server-file-configuration).
+To connect the server configuration in [step 1](#create-server-file-configuration) to this destination configuration, replace the `destinationServerId` value in the API request below with the `instanceId` value obtained when creating your destination server in [step 1](#create-server-file-configuration).
 
 For detailed descriptions of the parameters used below, see the following pages:
 
@@ -296,9 +296,9 @@ When filling in details about the destination, notice how the fields surfaced ar
 
 >[!TIP]
 >
->The order in which you add the custom data fields to the destination configuration is not reflected in the UI. The custom data fields are always displayed in the order displayed in the screen recording below.
+>The order in which you add the custom data fields to the destination configuration is not reflected in the UI. The customer data fields are always displayed in the order displayed in the screen recording below.
 
-![fill in destination details](../../assets/file-configuration-options.gif)
+![Screen recording showing the customer data fields defined in your configuration.](../../assets/file-configuration-options.gif)
 
 When scheduling export intervals, notice how the fields surfaced are the fields you set up in the `batchConfig` configuration.
 ![export scheduling options](../../assets/file-export-scheduling.png)
@@ -326,4 +326,4 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 
 ## Next steps {#next-steps}
 
-By reading this article, you now know how to author a custom Amazon S3 destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.
+By reading this article, you now know how to author a custom [!DNL Amazon S3] destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.

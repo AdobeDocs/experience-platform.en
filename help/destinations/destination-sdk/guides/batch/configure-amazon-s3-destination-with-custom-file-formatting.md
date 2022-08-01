@@ -452,4 +452,4 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 
 ## Next steps {#next-steps}
 
-By reading this article, you now know how to author a custom Amazon S3 destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md) to export data to the destination.
+By reading this article, you now know how to author a custom [!DNL Amazon S3] destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md) to export data to the destination.

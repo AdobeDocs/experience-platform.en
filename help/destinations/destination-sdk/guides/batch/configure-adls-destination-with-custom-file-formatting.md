@@ -2,7 +2,7 @@
 description: Learn how to use Destination SDK to configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration.
 title: (Beta) Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration.
 ---
-# (Beta) Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration
+# (Beta) Configure an [!DNL Azure Data Lake Storage] destination with custom file formatting options and custom file name configuration
 
 ## Overview {#overview}
 
@@ -10,7 +10,7 @@ title: (Beta) Configure an Azure Data Lake Storage destination with custom file 
 >
 >The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-This page describes how to use Destination SDK to configure an Azure Data Lake Storage destination with custom [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
+This page describes how to use Destination SDK to configure an [!DNL Azure Data Lake Storage] destination with custom [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
 
 This page shows all the configuration options available for Azure Data Lake Storage destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.
 
@@ -31,7 +31,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Request**
 
 The following request creates a new destination server configuration, configured by the parameters provided in the payload.
-The payload below includes a generic Azure Data Lake Storage configuration, with custom [CSV file formatting](../../server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
+The payload below includes a generic [!DNL Azure Data Lake Storage] configuration, with custom [CSV file formatting](../../server-and-file-configuration.md#file-configuration) configuration parameters that users can define in the Experience Platform UI.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -441,4 +441,4 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 
 ## Next steps {#next-steps}
 
-By reading this article, you now know how to author a custom Azure Data Lake Storage destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.
+By reading this article, you now know how to author a custom [!DNL Azure Data Lake Storage] destination by using Destination SDK. Next, your team can use the [activation workflow for file-based destinations](../../../ui/activate-batch-profile-destinations.md) to export data to the destination.
