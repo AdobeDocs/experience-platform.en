@@ -62,6 +62,14 @@ Daily-run jobs use both deterministic and probabilistic factors to match known l
 >
 > The b2b.personKey.sourceKey attribute must exist.
 
+The b2b.companyName, b2b.companyWebsite and b2b.personKey.sourceKey attributes can be located in the b2b field group in the B2B person schema.
+
+![B2B person schema showing attributes](/help/rtcdp/accounts/images/b2b-person-schema.png)
+
+The workEmail attribute can be found as a top-level field group in the B2B person schema.
+
+![B2B person schema showing workEmail](/help/rtcdp/accounts/images/b2b-person-workemail.png)
+
 Profiles will be best matched only if the match score is over an internal confidence threshold. The results are saved in a new system dataset of the existing account person relation XDM. 
 
 The lead to account matching service runs when a new person profile snapshot becomes available which is once every 24 hours. See the documentation for more information about the the [configuration of lead to account matching](/help/rtcdp/accounts/account-profile-ui-guide.md).
