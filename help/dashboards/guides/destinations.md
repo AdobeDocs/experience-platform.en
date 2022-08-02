@@ -23,11 +23,13 @@ The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations 
 
 To navigate to the destinations dashboard within the Platform UI, select **[!UICONTROL Destinations]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
+The date and time of the most recent snapshot is displayed at the top of the [!UICONTROL Overview] next to the destination dropdown. All widget data is accurate as of that date and time. The timestamp of the snapshot is provided in UTC; it is not in the timezone of the individual user or organization.
+
 >[!NOTE]
 >
 >If your organization is new to Experience Platform and does not yet have active destinations, the [!UICONTROL Destinations] dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [!UICONTROL Catalog] tab. To learn more about the [!UICONTROL Catalog] tab, refer to the [[!UICONTROL Destinations] workspace guide](../../destinations/ui/destinations-workspace.md).
 
-![](../images/destinations/dashboard-overview.png)
+![The Platform UI Destinations Overview with the most recent snapshot highlighted.](../images/destinations/snapshot-timestamp.png)
 
 ### Modifying the destinations dashboard
 

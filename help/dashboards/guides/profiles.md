@@ -83,7 +83,9 @@ See the union schema UI guide to learn more about [viewing union schemas within 
 
 The dashboard is composed of widgets, which are read-only metrics providing important information regarding your Profile data. 
 
-The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot are provided in UTC; it is not in the timezone of the individual user or organization.
+The date and time of the most recent snapshot is displayed at the top of the [!UICONTROL Overview] tab next to the merge policy dropdown. All widget data is accurate as of that date and time. The timestamp of the snapshot is provided in UTC; it is not in the timezone of the individual user or organization.
+
+![The Profiles dashboard overview tab with the most recent snapshot timestamp highlighted.](../images/profiles/snapshot-timestamp.png)
 
 ## Standard widgets {#standard-widgets}
 
@@ -99,13 +101,13 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Single identity profiles]](#single-identity-profiles)
+* [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Unsegmented profiles]](#unsegmented-profiles)
 * [[!UICONTROL Unsegmented profiles trend]](#unsegmented-profiles-trend)
 * [[!UICONTROL Unsegmented profiles by identity]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
-* [[!UICONTROL Single identity profiles by identity]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Audience overlap by merge policy]](#audience-overlap-by-merge-policy)
 
 ### [!UICONTROL Profile count] {#profile-count}
@@ -232,6 +234,14 @@ The [!UICONTROL Single Identity Profiles] widget provides a count of your organi
 
 ![Single Identity Profiles widget.](../images/profiles/single-identity-profiles.png)
 
+### [!UICONTROL Single identity profiles by identity] {#single-identity-profiles-by-identity}
+
+This widget uses a bar chart to illustrate the total number of profiles that are identified with only a single unique identifier. The widget supports up to five of the most commonly occurring identities. 
+
+Hover over individual bars to see a dialog detailing the total count of profiles for an identity.
+
+![The Single identity profiles by identity widget.](../images/profiles/single-identity-profiles-by-identity.png)
+
 ### [!UICONTROL Unsegmented profiles] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
@@ -313,14 +323,6 @@ To see comprehensive information on a segment, select a segment name from the li
 ![The Audiences size widget with a segment name and view all segments text highlighted.](../images/profiles/audiences-size-view-all-segments.png)
 
 See the documentation for more information on the [[!UICONTROL Segments] [!UICONTROL  Browse] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
-
-### [!UICONTROL Single identity profiles by identity] {#single-identity-profiles-by-identity}
-
-This widget uses a bar chart to illustrate the total number of profiles that are identified with only a single unique identifier. The widget supports up to five of the most commonly occurring identities. 
-
-Hover over individual bars to see a dialog detailing the total count of profiles for an identity.
-
-![The Single identity profiles by identity widget.](../images/profiles/single-identity-profiles-by-identity.png)
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
