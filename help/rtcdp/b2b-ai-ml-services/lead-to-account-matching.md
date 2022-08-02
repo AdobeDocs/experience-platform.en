@@ -40,7 +40,7 @@ Lead to account matching enables you to join known person profiles to account pr
     - Company name
     - Company website
 
-- **Anonymous profile:** The person profile is NOT associated to any account profile, and none of the following person profile attributes has a value:
+- **Anonymous person profile:** The person profile is NOT associated to any account profile, and none of the following person profile attributes has a value:
   
     - Email address
     - Company name
@@ -88,6 +88,6 @@ The dataset includes the matched account information as well as the match score 
 
 ## Monitoring lead to account matching jobs {#monitoring-jobs}
 
-You can monitor the job status and associated metrics for any person-to-account mapping jobs through the dashboard.
+You can monitor the job status and associated metrics for any lead to account matching jobs through the dashboard.
 
 See the documentation for more information about the [monitoring jobs for lead to account matching](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
