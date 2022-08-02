@@ -36,7 +36,7 @@ Select the plus icon to **Add matches expression** or **Add expression group** f
 
 Using the dropdown, select the **Resource**.
 
-![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
+![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
 Next, using the dropdown select the **Matches**.
 
