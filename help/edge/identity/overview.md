@@ -96,6 +96,10 @@ alloy("sendEvent", {
 
 Each property within `identityMap` represents identities belonging to a particular [identity namespace](../../identity-service/namespaces.md). The property name should be the identity namespace symbol, which you can find listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]". The property value should be an array of identities pertaining to that identity namespace.
 
+>[!IMPORTANT]
+>
+>The namespace ID passed in the `identityMap` is case sensitive. Make sure to use the correct namespace ID to avoid incomplete data collection.
+
 Each identity object in the identities array contains the following properties:
 
 | Property | Data type | Description |
