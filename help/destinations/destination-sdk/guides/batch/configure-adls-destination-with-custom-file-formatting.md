@@ -1,6 +1,7 @@
 ---
 description: Learn how to use Destination SDK to configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration.
 title: (Beta) Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration.
+exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
 ---
 # (Beta) Configure an [!DNL Azure Data Lake Storage] destination with custom file formatting options and custom file name configuration
 

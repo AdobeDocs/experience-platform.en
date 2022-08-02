@@ -1,6 +1,7 @@
 ---
 description: Learn how to use Destination SDK to configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration.
 title: (Beta) Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration.
+exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
 ---
 # (Beta) Configure an [!DNL Azure Blob Storage] destination with custom file formatting options and custom file name configuration
 

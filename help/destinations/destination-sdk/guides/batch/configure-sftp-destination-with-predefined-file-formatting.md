@@ -1,6 +1,7 @@
 ---
 description: Learn how to use Destination SDK to configure an SFTP destination with predefined file formatting options and custom file name configuration.
 title: (Beta) Configure an SFTP destination with predefined file formatting options and custom file name configuration.
+exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
 ---
 # (Beta) Configure an SFTP destination with predefined file formatting options and custom file name configuration
 
