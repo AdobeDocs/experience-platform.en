@@ -5,7 +5,7 @@ title: Monitor profile enrichment jobs
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
 ---
-# Monitor profile enrichment jobs in the UI (#monitor-profile-enrichment)
+# Monitor profile enrichment jobs in the UI {#monitor-profile-enrichment}
 
 Use the [!UICONTROL Profile Enrichment] dashboard to understand if profile enrichment jobs ran and completed successfully, and to view the basic metrics to gauge the effectiveness of the enrichments.
 
@@ -32,7 +32,7 @@ The following metrics are available for related accounts profile enrichment jobs
 | **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the related accounts job. |
 | **[!UICONTROL Message]** | Indicates an error or warning message for a particular job run. |
 
-## Lead to account matching profile enrichment (#lead-to-account-matching)
+## Lead to account matching profile enrichment {#lead-to-account-matching}
 
 The [!UICONTROL Lead to account matching] dashboard shows the basic metrics and daily job-run status specific to the [Lead to account matching](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) profile enrichment. 
 
