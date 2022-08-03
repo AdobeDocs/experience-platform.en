@@ -280,6 +280,7 @@ A successful response returns an HTML status of 200 and the subscription informa
     ]
 }
 ```
+
 <!-- update this response with appropriate parameter type instead of madeup@adobne example -->
 
 <!-- Q) Property Descriptions -->
