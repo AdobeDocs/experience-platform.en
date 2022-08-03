@@ -10,6 +10,7 @@ feature: Queries
 
 - [Query Service overview](home.md)
 - [Guardrails for Query Service](guardrails.md)
+- [Query Service packaging](packages.md)
 - Get started {#get-started}
   - [Prerequisites](get-started/prerequisites.md)
 - Use cases {#use-cases}
