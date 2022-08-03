@@ -9,14 +9,18 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Dashboards](#dashboards)
-- [Data collection](#collection)
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-<!-- - [Real-time Customer Data Platform B2B Edition](#b2b) -->
-- [Real-time Customer Profile](#profile)
-- [Sources](#sources)
+- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
+  - [Dashboards {#dashboards}](#dashboards-dashboards)
+    - [Account Profiles dashboards](#account-profiles-dashboards)
+    - [Profile dashboards](#profile-dashboards)
+    - [Destinations dashboards](#destinations-dashboards)
+  - [Data collection {#collection}](#data-collection-collection)
+  - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+  - [[!DNL Destinations] {#destinations}](#dnl-destinations-destinations)
+  - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
+  - [Real-time Customer Data Platform B2B Edition {#b2b}](#real-time-customer-data-platform-b2b-edition-b2b)
+  - [Real-time Customer Profile {#profile}](#real-time-customer-profile-profile)
+  - [Sources {#sources}](#sources-sources)
 
 ## Dashboards {#dashboards}
 
@@ -163,16 +167,23 @@ XDM is an open-source specification that provides common structures and definiti
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
-<!-- ## Real-time Customer Data Platform B2B Edition {#b2b}
+## Real-time Customer Data Platform B2B Edition {#b2b}
 
 Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
+**New features**
+
 | Feature | Description |
-| Lead to account matching | Lead to account matching allows you to use Real-time CDP B2B edition to match known person profiles to account profiles so that these profiles can be segmented and targeted with B2B context data like account, opportunity (and add something else like don't use etc. to the description). For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md). For instructions on how to use related accounts in segment definitions, see the guide on [Segmentation use cases for Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts)."|
+| --- | --- |
+| Lead to account matching | Lead-to-account matching enables you to join known person profiles to account profiles. You can then segment and target data in a B2B context such as accounts or opportunities. The daily-run jobs use both deterministic and probabilistic factors to match person profiles that are not already associated to any account to a best-matched account. You can then decide whether to include such matches in your segment definitions |
 
-{style="table-layout:auto"}
+For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
-To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md). -->
+For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
+
+For instructions on how to use related accounts in segment definitions, see the guide on [Segmentation use cases for Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts).
+
+To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md).
 
 ## Real-time Customer Profile {#profile}
 
