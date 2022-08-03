@@ -5,9 +5,20 @@ description: The following sections walks through the various API calls you can 
 ---
 # Alert Subscriptions API Endpoint
 
-Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad-hoc and scheduled queries.
+Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries.
 
-Without subscription the following alerts apply:
+Query alerts can be subscribe to through the Platform UI and the Query Service API. 
+
+<!-- See the UI alert subscriptions documentation for information on how to subscribe to an alert using the Platform UI. -->
+
+Alerts support the following query scenarios:
+
+* Alerts for ad hoc queries that use CTAS, ITAS, anonymous block (including templates), saved, and parameterized templates, are possible for successful or failed executions.
+* Alerts for scheduled queries are available for a started, successful, or failed query.
+
+All executed queries, whether ad-hoc or scheduled, can send alerts but queries used for testing can be excluded from alerts if configured appropriately. Also, you do not need to be the query creator to subscribe to an alert. Other users can enrol for alerts on a query that they did not create.
+
+The following alerts apply without an alert subscription :
 
 * When a batch query job finishes, customers will receive a notification.
 
@@ -17,17 +28,6 @@ Without subscription the following alerts apply:
 >
 >The content for in-platform alert and email will be the same 
 
-<!-- ## Getting started -->
-
-Alerts support the following query scenarios:
-
-* Alerts are possible for both a successful or failed execution are available for ad hoc queries that use CTAS, ITAS, anonymous block (including templates), saved, and parameterized templates.
-* Alerts for a started, successful, or failed scheduled query.
-* Any testing queries can be excluded from alerts if you configure them appropriately. 
-<!-- All queries (whether ad hoc execution or scheduled) that are being executed as part of a test can be excluded from alerts. -->
-* You do not need to be the query creator to subscribe to an alert.
-* All queries executed, whether ad-hoc or scheduled, can send alerts.
-* Other users can enrol for alerts on a query that they did not create.
 
 >[!NOTE]
 >
@@ -37,17 +37,13 @@ The following sections walk through the various API calls you can make using the
 
 ## 1) POST Subscribe multiple users to an alert {#subscribe-multiple-users}
 
-You can subscribe a user to receive an alert by making a `POST` request to the `/alertSubscriptions` endpoint.
-
-<!-- Q) Does this create an alert as well? -->
+Making a `POST` request to the `/alertSubscriptions` endpoint creates an alert and subscribes a user to receive it.
 
 **API format**
 
 ```http
 POST /alertSubscriptions
 ```
-
-<!-- Q) Is this appropriate? "emailIds": ["{USER_EMAIL_ID}"] -->
 
 **Request**
 
@@ -63,7 +59,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alertSubscriptions
     "alertType": "failure",
     "subscriptions": {
         "emailIds": [
-            "{USER_EMAIL_ID}",
+            "{ADOBE_REGISTERED_EMAIL}",
             "madeup@adobe.com"
         ],
         "inContextNotifications": true,
@@ -72,18 +68,22 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alertSubscriptions
 }'
 ```
 
-<!-- Q) Property descriptions? -->
+<!-- <ul><li>`start` : Notifies</li><li>`success`</li><li>`failure`</li></ul> -->
 
 | Property | Description |
 | -------- | ----------- |
-| `assetId` | The query ID that associated the alert with a particular query. |
-| `alertType` | A boolean value that indicates ... |
-| `subscriptions` | The ... |
-| `subscriptions.emailIds` | The email IDs for the recipients of the alert. |
-| `subscriptions.inContextNotifications` | A boolean value to allow other users to subscribe for alert notifications. |
-| `subscriptions.emailNotifications` | A boolean value for ... |
+| `assetId` | The alert is associated with this ID. The ID can be either a query ID or a schedule ID. |
+| `alertType` | There are three potential values. They are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
+| `subscriptions` | An object used to pass the email IDs associated with the alerts. |
+| `subscriptions.emailIds` | An array of email address to identify the users who should receive the alerts. The email addresses **must** be registered to an Adobe account. |
+| `subscriptions.inContextNotifications` | A boolean value that determines how the users receive alert notifications. A `true` value confirms that alerts should be provided through the UI. A `false` value ensures that the users are not be notified through that channel. |
+| `subscriptions.emailNotifications` | A boolean value that determines how the users receive alert notifications. A `true` value confirms that alerts should be provided by email. A `false` value ensures that the users are not be notified through that channel. |
 
 {style="table-layout:auto"}
+
+>[!IMPORTANT]
+>
+>There is a maximum limit of five `emailId`s that can be passed in a single request. To subscribe more than five users to an alert, subsequent requests must be made.
 
 **Response**
 
@@ -128,15 +128,10 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 }
 ```
 
-<!-- Q) Property Descriptions -->
-
 | Property | Description |
 | -------- | ----------- |
-| `id` | The ... |
-| `_links` | The ... |
-
-<!-- Q) Why is the AssetID returned in the response different to the one in the request?  -->
-<!-- Q) What is the ID in the response that starts with: "query_service_flow_run_failure-5"? -->
+| `id` | The name of the alert. This name is gernerated by the Alerts service and is used on the Alerts dashboard. The alert name is comprised of the folder that stores the alert, the alertType and the flow ID. Information about the available alerts can be found in the [Platform Alerts dashboard documentation](../../observability/alerts/ui.md). |
+| `_links` | Provides information on the available methods and endpoints that can be used to retrieve, update, edit, or delete information related to this alert ID. |
 
 ## 2) PATCH Enable or disable an alert {#enable-or-disable-alert}
 
@@ -155,7 +150,7 @@ PATCH /alertSubscriptions/<scheduleId>/<alertType>
 | -------- | ----------- |
 | `alertType` | You must specify the current alert type in the final namespace of the endpoint in order to change it. There are three potential values. These include ... |
 | `queryId` | The unique identifier for the query to be updated. |
-| `ScheduleId` | The unique identifier for the scheduled query to be updated. |
+| `scheduleId` | The unique identifier for the scheduled query to be updated. |
 
 **Request**
 
