@@ -24,9 +24,13 @@ GET /audiences?{QUERY_PARAMETERS}
 | `start` | Specifies the starting offset for the audiences returned. | `start=5` |
 | `limit` | Specifies the maximum number of audiences returned per page. | `limit=10` |
 | `property` | A filter that allows you to specify audiences that **exactly** match an attribute's value. Written in the format `property=` | `sort=updateTime:desc` |
-| `name` | A filter that allows you to specify audiences whose name **contain** the provided value. This value is case insensitive. | `name=Sample` |
-| `description` | A filter that allows you to specify audiences whose description **contain** the provided value. This value is case insensitive.  | `description=Test Description` |
-| `withMetrics` | | `property=withMetrics==true` |
+| `name` | A filter that allows you to specify audiences whose names **contain** the provided value. This value is case insensitive. | `name=Sample` |
+| `description` | A filter that allows you to specify audiences whose descriptions **contain** the provided value. This value is case insensitive.  | `description=Test Description` |
+| `withMetrics` | A filter that returns the metrics in addition to the audiences. | `property=withMetrics==true` |
+
+>[!IMPORTANT]
+>
+>For audiences, metrics are returned under the `metrics` attribute, and contains information on profile counts, creation, and update timestamps.
 
 **Request**
 
