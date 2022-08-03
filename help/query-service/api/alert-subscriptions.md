@@ -35,94 +35,19 @@ Alerts support the following query scenarios:
 
 The following sections walk through the various API calls you can make using the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
-## Create an alert {#alerts-api}
-
-You can create an alert by making a POST reques to the `/alert/registeredevents` endpoint.
-
-**API format**
-
-```http
-POST /alert/registeredevents
-```
-
-<!-- confirm this endpoint? otherwise should be in the alerts API documentation 
-Is this a public facing endpoint? -must be otherwise how would users get to the {#subscribe-multiple-users} step -->
-
-**Request**
-
-```shell
-curl -X POST 'https://platform-int.adobe.io/data/infrastructure/observability/alert/registeredevents' \
- -H 'Authorization: Bearer <TOKEN>' \
- -H 'x-gw-ims-org-id: D5A906E85E835AC60A49423D@AdobeOrg' \
- -H 'x-sandbox-name: prod' \
- -H 'Content-Type: application/json' \
- -H 'x-api-key: acp_foundation_queryService' \
- -H 'x-sandbox-id: c64f4580-7360-11ea-875b-2bd1229e1c1e' \
- -d '[
-    {
-        "name": "query_service_flow_run_start-f80f6e92-68bf-4eca-8f6e-9268bf6eca2c",
-        "folder": "query_service_flow_run",
-        "title": "query service Flow Run Start",
-        "artifactId": "f80f6e92-68bf-4eca-8f6e-9268bf6eca2c",
-        "artifactType": "flowRun",
-        "artifactName": "f80f6e92-68bf-4eca-8f6e-9268bf6eca2c",
-        "description": "Query  service Run Start f80f6e92-68bf-4eca-8f6e-9268bf6eca2c",
-
-        "sourceIdentifier": "4422fc69-eaa7-464e-945b-63cfd435d3d1",  
-        "notificationChannels": [
-            {
-                "name": "Email",
-                "subscribed": true
-            },
-            {
-                "name": "UI",
-                "subscribed": true
-            }
-        ]
-    }
-]'
-```
-
-| Property | Description |
-| -------- | ----------- |
-| `name` | The ... |
-| `folder` | The .... |
-| `title` | The ... |
-| `artifactId` | The .... |
-| `artifactType` | The ... |
-| `artifactName` | The .... |
-| `description` | The ... |
-| `sourceIdentifier` | The .... |
-| `notificationChannels` | The .... |
-| `notificationChannels.name` | The ... |
-| `notificationChannels.subscribed` | The .... |
-
-{style="table-layout:auto"}
-
-**Response**
-
-A successful response returns ...
-
-```json
-// Response missing from Wiki
-```
-
-| Property | Description |
-| -------- | ----------- |
-| `` | The ... |
-| `` | The ... |
-
-## Subscribe users to an alert {#alerts-api-2}
-
-## Subscribe multiple users to an alert {#subscribe-multiple-users}
+## 1) POST Subscribe multiple users to an alert {#subscribe-multiple-users}
 
 You can subscribe a user to receive an alert by making a `POST` request to the `/alertSubscriptions` endpoint.
+
+<!-- Q) Does this create an alert as well? -->
 
 **API format**
 
 ```http
 POST /alertSubscriptions
 ```
+
+<!-- Q) Is this appropriate? "emailIds": ["{USER_EMAIL_ID}"] -->
 
 **Request**
 
@@ -139,13 +64,15 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alertSubscriptions
     "subscriptions": {
         "emailIds": [
             "{USER_EMAIL_ID}",
-            "akshatb@adobe.com"
+            "madeup@adobe.com"
         ],
         "inContextNotifications": true,
         "emailNotifications": true
     }
 }'
 ```
+
+<!-- Q) Property descriptions? -->
 
 | Property | Description |
 | -------- | ----------- |
@@ -201,6 +128,8 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 }
 ```
 
+<!-- Q) Property Descriptions -->
+
 | Property | Description |
 | -------- | ----------- |
 | `id` | The ... |
@@ -209,21 +138,9 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 <!-- Q) Why is the AssetID returned in the response different to the one in the request?  -->
 <!-- Q) What is the ID in the response that starts with: "query_service_flow_run_failure-5"? -->
 
-## Get the alert name for a specific query or schedule ID and alertType {#alert-api-3}
-
-<!-- Alert api content -->
-
-## update the status of an alert {#alert-api-4}
-
-<!-- Alert api content -->
-
-## Enable or disable an alert {#enable-or-disable-alert}
+## 2) PATCH Enable or disable an alert {#enable-or-disable-alert}
 
 You can enable or disable an alert by making a `PATCH` request to the `/alertSubscriptions/<queryId>/<alertType>` or `/alertSubscriptions/<scheduleId>/<alertType>` endpoint. 
-
->[!NOTE]
->
->The alert type is required because ... 
 
 **API format**
 
@@ -231,6 +148,14 @@ You can enable or disable an alert by making a `PATCH` request to the `/alertSub
 PATCH /alertSubscriptions/<queryId>/<alertType>
 PATCH /alertSubscriptions/<scheduleId>/<alertType>
 ```
+
+<!-- Q) Parameter descriptions / values? -->
+
+| Parameters | Description |
+| -------- | ----------- |
+| `alertType` | You must specify the current alert type in the final namespace of the endpoint in order to change it. There are three potential values. These include ... |
+| `queryId` | The unique identifier for the query to be updated. |
+| `ScheduleId` | The unique identifier for the scheduled query to be updated. |
 
 **Request**
 
@@ -248,6 +173,8 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alertSubscription
         "value": "Enable/Disable"
 }'
 ```
+
+<!-- Q) Property Descriptions -->
 
 | Property | Description |
 | -------- | ----------- |
@@ -270,44 +197,340 @@ A successful response returns HTTP status 200 with details of the alert status, 
 }
 ```
 
-| Parameter | Description |
+<!-- Q) Property Descriptions -->
+
+| Property | Description |
 | -------- | ----------- |
 | `id` | The ... |
 | `assetId` | The .... |
-| `alertType` | The potential values are `Enable` or `Disable`. |
+| `alertType` | The potential values ... |
 | `status` | The ... |
 
-## Filter a list of alerts based on query or schedule ID {alerts-api-5}
+## 3) GET Retrieve all subscriptions for a particular query or schedule ID {#retrieve-all-alert-subscriptions-by-id}
 
-<!-- Alert api content -->
-
-## Retrieve all subscriptions for a particular query or schedule ID {#retrieve-subscriptions-with-id}
-
-Retrieve the alert subscription information for particular query ID or schedule ID by making a GET request to the `alertSubscriptions/{queryId}` endpoint.
+Retrieve the alert subscription information for particular query ID or schedule ID by making a GET request to the `alertSubscriptions/{QUERY_ID}` or the `alertSubscriptions/{SCHEDULE_ID}` endpoint.
 
 **API format**
 
 ```http
-alertSubscriptions/{queryId}
+GET /alertSubscriptions/{QUERY_ID}
+GET /alertSubscriptions/{SCHEDULE_ID}
 ```
 
 | Parameter | Description |
 | -------- | ----------- |
-|  |  |
-|  |  |
+| `{QUERY_ID}` | The ID of the query that you want to return the subscription information for. |
+| `{SCHEDULE_ID}` | The ID of the scheduled query that you want to return the subscription information for. |
 
 **Request**
 
 ```shell
+curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1' \
+-H 'Authorization: Bearer {ACCESS_TOKEN}' \
+-H 'x-gw-ims-org-id: {ORG_ID}' \
+-H 'x-sandbox-name: {SANDBOX_NAME}' \
+-H 'Content-Type: application/json' \
+-H 'x-api-key: {API_KEY}' \
+-H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
-| Parameter | Description |
+**Response**
+
+A successful response returns an HTML status of 200 and the subscription information for provided query or schedule ID.
+
+```json
+{
+    "alerts": [
+        {
+            "assetId": "6df22232-f427-4250-a4e1-43cd30990641",
+            "id": "query_service_flow_run_failure-5cdc3bbe-750a-4d80-9c43-96e5e09f1a96",
+            "status": "enabled",
+            "alertType": "failure",
+            "subscriptions": {
+                "emailNotifications": [
+                    "madeup@adobe.com",
+                    "madeup2b@adobe.com",
+                    "madeup3@adobe.com"
+                ],
+                "inContextNotifications": [
+                    "madeup@adobe.com",
+                    "madeup2@adobe.com",
+                    "madeup3@adobe.com"
+                ]
+            },
+            "_links": {
+            }
+        },
+        {
+            "assetId": "6df22232-f427-4250-a4e1-43cd30990641",
+            "id": "query_service_flow_run_start-5cdc3bbe-750a-4d80-9c43-96e5e09f1a96",
+            "status": "enabled",
+            "alertType": "start",
+            "subscriptions": {
+                "emailNotifications": [
+                    "madeup@adobe.com"
+                ],
+                "inContextNotifications": [
+                    "madeup@adobe.com"
+                ]
+            },
+            "_links": {
+            }
+        }
+    ]
+}
+```
+<!-- update this response with appropriate parameter type instead of madeup@adobne example -->
+
+<!-- Q) Property Descriptions -->
+
+| Property | Description |
 | -------- | ----------- |
-| `` | The ... |
-| `` | The .... |
+| `assetId` | The .... |
+| `id` | The ... |
+| `status` | The ... |
+| `alertType` | The potential values are ... |
+| `subscriptions.emailNotifications` | The ... |
+| `subscriptions.inContextNotifications` | The ... |
 
-## Retrieve subscription information for a particular query/schedule id and alertType
+## 4) GET Retrieve subscription information for a particular query/schedule id and alertType {#get-alert-info-by-id}
 
-## Delete an alert for a query/schedule ID for given alertType
+Retrieve a list of alert subscribers for a particular ID and alert type by making a GET request to the `/alertSubscriptions/{queryId}/{AlertType}` endpoint. This is applicable to both query or scheduled query ID.
 
-## Retrieve list of all alerts that a user is subscribed to
+**API format**
+
+```http
+GET /alertSubscriptions/{QUERY_ID}/{AlertType}
+GET /alertSubscriptions/{SCHEDULE_ID}/{AlertType}
+```
+
+<!-- Q) Parameter Descriptions -->
+
+| Parameters | Description |
+| -------- | ----------- |
+| `alertType` | You must specify the current alert type in the final namespace of the endpoint in order to change it. There are three potential values. These include ... |
+| `queryId` | The unique identifier for the query to be updated. |
+| `ScheduleId` | The unique identifier for the scheduled query to be updated. |
+
+**Request**
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
+-H 'Authorization: Bearer {ACCESS_TOKEN}' \
+-H 'x-gw-ims-org-id: {ORG_ID}' \
+-H 'x-sandbox-name: {SANDBOX_NAME}' \
+-H 'Content-Type: application/json' \
+-H 'x-api-key: {API_KEY}' \
+-H 'x-sandbox-id: {SANDBOX_ID}'
+```
+
+**Response**
+
+```json
+{
+    "alerts": [
+        {
+            "assetId": "6df22232-f427-4250-a4e1-43cd30990641",
+            "id": "query_service_flow_run_success-5cdc3bbe-750a-4d80-9c43-96e5e09f1a96",
+            "status": "enabled",
+            "alertType": "success",
+            "subscriptions": {
+                "emailNotifications": [
+                    "madeUph@adobe.com",
+                    "madeUp@adobe.com"
+                ],
+                "inContextNotifications": [
+                    "madeUp@adobe.com"
+                ]
+            },
+            "_links": {
+            }
+        }
+    ]
+}
+```
+
+<!-- Q) Property descriptions? -->
+
+| Property | Description |
+| -------- | ----------- |
+| `assetId` | The query ID that associated the alert with a particular query. |
+| `alertType` | A boolean value that indicates ... |
+| `subscriptions` | The ... |
+| `subscriptions.inContextNotifications` | A boolean value to allow other users to subscribe for alert notifications. |
+| `subscriptions.emailNotifications` | A boolean value for ... |
+
+## 5) DELETE Delete an alert for a query/schedule ID for given alertType {#delete-alert-info-by-id}
+
+Delete an alert for a particular query or schedule id and alertType by making a DELETE request to the `/alertSubscriptions/{queryId}/{AlertType}` endpoint.
+
+```http
+DELETE /alertSubscriptions/{queryId}/{alertType}
+DELETE /alertSubscriptions/{scheduleId}/{alertType}
+```
+
+<!-- Q) Parameter Descriptions -->
+
+| Parameters | Description |
+| -------- | ----------- |
+| `alertType` | You must specify the current alert type in the final namespace of the endpoint in order to change it. There are three potential values. These include ... |
+| `queryId` | The unique identifier for the query to be updated. |
+| `ScheduleId` | The unique identifier for the scheduled query to be updated. |
+
+**Request**
+
+```shell
+curl -X DELETE 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start' \
+-H 'Authorization: Bearer {ACCESS_TOKEN}' \
+-H 'x-gw-ims-org-id: {ORG_ID}' \
+-H 'x-sandbox-name: {SANDBOX_NAME}' \
+-H 'Content-Type: application/json' \
+-H 'x-api-key: {API_KEY}' \
+-H 'x-sandbox-id: {SANDBOX_ID}'
+```
+
+**Response**
+
+A successful response returns HTTP 200 success status response with confirmation message. 
+
+```json
+{
+"message": "Alert Deleted Successfully for assetId: 6df22232-f427-4250-a4e1-43cd30990641 and alertType: success",
+"statusCode": 200
+}
+```
+
+## 6) GET Retrieve a list of all the alerts that a user is subscribed to {#}
+
+Retrieve a list of all the alerts that a user is subscribed to by making a GET request to the `alertSubscriptions/subscriptions/{emailId}` endpoint.
+
+**API format**
+
+```http
+GET /alertSubscriptions/subscriptions/{emailId}
+```
+
+<!-- Q) Parameter Descriptions -->
+
+| Parameters | Description |
+| -------- | ----------- |
+| `{emailId}` | The ... |
+
+**Request**
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/subscriptions/rrunner@acme.com' \
+-H 'Authorization: Bearer {ACCESS_TOKEN}' \
+-H 'x-gw-ims-org-id: {ORG_ID}' \
+-H 'x-sandbox-name: {SANDBOX_NAME}' \
+-H 'Content-Type: application/json' \
+-H 'x-api-key: {API_KEY}' \
+-H 'x-sandbox-id: {SANDBOX_ID}'
+```
+
+**Response**
+
+A successful response returns HTTP status 200 with details of the alerts subscribed to by the `emailId` provided. 
+
+```json
+{
+    "items": [
+        {
+            "name": "query_service_flow_run_success-8f057161-b312-4274-b629-f346c7d15c1f",
+            "assetId": "39e65373-e47a-4feb-9e5a-dffa2f677bca",
+            "status": "enabled",
+            "alertType": "success",
+            "subscriptions": {
+                "inContextNotification": true,
+                "emailNotifications": true
+            }
+        },
+        {
+            "name": "query_service_flow_run_start-8f057161-b312-4274-b629-f346c7d15c1f",
+            "assetId": "39e65373-e47a-4feb-9e5a-dffa2f677bca",
+            "status": "enabled",
+            "alertType": "start",
+            "subscriptions": {
+                "inContextNotification": true,
+                "emailNotifications": true
+            }
+        }
+    ]
+}
+```
+
+<!-- Q) Property descriptions? -->
+
+| Property | Description |
+| -------- | ----------- |
+| `name` | The ... |
+| `assetId` | The query ID that associated the alert with a particular query. |
+| `status` | The ... |
+| `alertType` | A boolean value that indicates ... |
+| `subscriptions` | The ... |
+| `subscriptions.inContextNotifications` | A boolean value to allow other users to subscribe for alert notifications. |
+| `subscriptions.emailNotifications` | A boolean value for ... |
+
+## 7) GET Retrieve a list of all alerts for an organization and a sandbox
+
+Retrieve a list of all alerts for an organization and a sandbox by making a GET request to the `alertSubscriptions` endpoint.
+
+**API format**
+
+```http
+GET /alertSubscriptions
+```
+
+**Request**
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions' \
+-H 'Authorization: Bearer {ACCESS_TOKEN}' \
+-H 'x-gw-ims-org-id: {ORG_ID}' \
+-H 'x-sandbox-name: {SANDBOX_NAME}' \
+-H 'Content-Type: application/json' \
+-H 'x-api-key: {API_KEY}' \
+-H 'x-sandbox-id: {SANDBOX_ID}'
+-d ''
+```
+
+<!-- Q) Was this a typo in the wiki: --data-raw '' -->
+
+**Response**
+
+A successful response returns an HTTP 200 status with details of all the alerts subscribed to by an organization for a particular sandbox.
+
+```json
+{
+    "alerts": [
+        {
+            "assetId": "0ca168f4-e46b-4f7f-be6a-bdc386271b4a",
+            "id": "query_service_flow_run_start-dcf7b4be-ccd7-4c73-ae0c-a4bb34a40adada84",
+            "status": "enabled",
+            "alertType": "start"
+        },
+        {
+            "assetId": "0ca168f4-e46b-4f7f-be6a-bdc386271b4a",
+            "id": "query_service_flow_run_success-dcf7b4be-ccd7-4c73-ae0c-a4bb34a40adada84",
+            "status": "enabled",
+            "alertType": "success"
+        },
+        {
+            "assetId": "700d43d9-3b99-4d4c-8dbb-29c911c0e0df",
+            "id": "query_service_flow_run_start-75da972a-e859-47a5-934c-629904daa1ef",
+            "status": "enabled",
+            "alertType": "start"
+
+        }
+    ]
+}
+```
+
+<!-- Q) Property descriptions? -->
+
+| Property | Description |
+| -------- | ----------- |
+| `assetId` | The query ID that associated the alert with a particular query. |
+| `id` | The ... |
+| `status` | The ... |
+| `alertType` | A boolean value that indicates ... |
