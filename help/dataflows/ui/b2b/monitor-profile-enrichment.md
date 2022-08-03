@@ -11,7 +11,7 @@ Use the [!UICONTROL Profile Enrichment] dashboard to understand if profile enric
 
 In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. In the view selector, select **B2B Flow** to see the dashboard elements specific to [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  The [!UICONTROL Monitoring] dashboard includes the basic metrics from the latest successful run, and daily job status up to 90 days in the past.
 
-## Related accounts profile enrichment (#related-accounts)
+## Related accounts profile enrichment {#related-accounts}
 
 The [!UICONTROL Related accounts] dashboard shows basic metrics and the status of the daily job specific to the [Related Accounts](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) profile enrichment. 
 
