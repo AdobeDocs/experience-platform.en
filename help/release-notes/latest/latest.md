@@ -9,15 +9,14 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [Dashboards](#dashboards)
-  - [Data collection](#data-collection)
-  - [[!DNL Data Prep]](#data-prep)
-  - [[!DNL Destinations]](#destinations)
-  - [Experience Data Model (XDM)](#xdm)
-  - [Real-time Customer Data Platform B2B Edition](#b2b)
-  - [Real-time Customer Profile](#profile)
-  - [Sources](#sources)
+- [Dashboards](#dashboards)
+- [Data collection](#data-collection)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Real-time Customer Data Platform B2B Edition](#b2b)
+- [Real-time Customer Profile](#profile)
+- [Sources](#sources)
 
 ## Dashboards {#dashboards}
 
