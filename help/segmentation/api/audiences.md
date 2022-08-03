@@ -8,7 +8,7 @@ The endpoints used in this guide are part of the [!DNL Adobe Experience Platform
 
 ## Retrieve a list of audiences {#list}
 
-You can retrieve a list of all schedules for your organization by making a GET request to the `/audiences` endpoint.
+You can retrieve a list of all audiences for your organization by making a GET request to the `/audiences` endpoint.
 
 **API format**
 
@@ -19,14 +19,14 @@ GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
-| `start` | |
-| `limit` | |
-| `property` | |
-| `name` | |
-| `description` | |
-| `withMetrics` | |
+| Parameter | Description | Example |
+| --------- | ----------- | ------- |
+| `start` | Specifies the starting offset for the audiences returned. | `start=5` |
+| `limit` | Specifies the maximum number of audiences returned per page. | `limit=10` |
+| `property` | A filter that allows you to specify audiences that **exactly** match an attribute's value. Written in the format `property=` | `sort=updateTime:desc` |
+| `name` | A filter that allows you to specify audiences whose name **contain** the provided value. This value is case insensitive. | `name=Sample` |
+| `description` | A filter that allows you to specify audiences whose description **contain** the provided value. This value is case insensitive.  | `description=Test Description` |
+| `withMetrics` | | `property=withMetrics==true` |
 
 **Request**
 
@@ -333,3 +333,332 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
     "namespace": "AEPSegments"
 }
 ```
+
+## Retrieve a specified audience {#get}
+
+You can retrieve detailed information about a specific audience by making a GET request to the `/audiences` endpoint and providing the ID of the audience you wish to retrieve in the request path.
+
+**API format**
+
+```http
+GET /audiences/{AUDIENCE_ID}
+GET /audiences/{AUDIENCE_ID}?property=withmetrics==true
+```
+
+| Parameter | Description |
+| --------- | ----------- | 
+| `{AUDIENCE_ID}` | The ID of the audience you are trying to retrieve. |
+| `property=withmetrics==true` | An optional query parameter that you can use if want to retrieve a specified audience with the audience metrics. |
+
+**Request**
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns HTTP status 200 with information about the specified audience. The response will differ depending if the audience is generated with Adobe Experience Platform or external sources.
+
+**Platform generated**
+
+```json
+{
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
+    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "ttlInDays": 60,
+    "profileInstanceId": "ups",
+    "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "isSystem": false,
+    "name": "People who ordered in the last 30 days",
+    "description": "Last 30 days",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country = \"US\""
+    },
+    "mergePolicyId": "ef006bbe-750e-4e81-85f0-0c6902192dcc",
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": true
+        },
+        "synchronous": {
+            "enabled": false
+        }
+    },
+    "dataGovernancePolicy": {
+        "excludeOptOut": true
+    },
+    "creationTime": 1650374572000,
+    "updateEpoch": 1650374573,
+    "updateTime": 1650374573000,
+    "createEpoch": 1650374572,
+    "_etag": "\"33120d7c-0000-0200-0000-625eb7ad0000\"",
+    "dependents": [],
+    "definedOn": [
+        {
+            "meta:resourceType": "unions",
+            "meta:containerId": "tenant",
+            "$ref": "https://ns.adobe.com/xdm/context/profile__union"
+        }
+    ],
+    "dependencies": [],
+    "type": "SegmentDefinition",
+    "overridePerformanceWarnings": false,
+    "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+    "lifecycle": "active",
+    "labels": [
+        "core/C1"
+    ],
+    "namespace": "AEPSegments"
+}
+```
+
+**Non-Platform generated**
+
+```json
+{
+    "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+    "audienceId": "test-external-audience-id",
+    "name": "externalSegment1",
+    "namespace": "aam",
+    "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "isSystem":false,
+    "description": "Last 30 days",
+    "type": "ExternalSegment",
+    "lifecycle": "active",
+    "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "labels": [
+        "core/C1"
+    ],
+    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+    "creationTime": 1650251290000,
+    "updateEpoch": 1650251290,
+    "updateTime": 1650251290000,
+    "createEpoch": 1650251290
+}
+```
+
+## Update a specified field for an audience {#update-field}
+
+You can update the fields of specific audience by making a PATCH request to the `/audiences` endpoint and providing the ID of the audience you wish to update in the request path.
+
+**API format**
+
+```http
+PATCH /audiences/{AUDIENCE_ID}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | The ID of the audience that you want to update. |
+
+**Request**
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+     [
+        {
+            "op": "add",
+            "path": "/expression",
+            "value": {
+                "type": "PQL",
+                "format": "pql/text",
+                "value": "workAddress.country = \"CA\""
+            }
+        }
+      ]'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `op` | For updating audiences, this value is always "add". |
+| `path` | The path of the value you want to update. |
+| `value` | The value that you want to update. |
+
+**Response**
+
+A successful response returns HTTP status 200 with information about your newly updated audience.
+
+```json
+{
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
+    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "ttlInDays": 60,
+    "profileInstanceId": "ups",
+    "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "name": "People who ordered in the last 30 days",
+    "description": "Last 30 days",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country = \"CA\""
+    },
+    "mergePolicyId": "ef006bbe-750e-4e81-85f0-0c6902192dcc",
+    "evaluationInfo": {
+        "batch": {
+          "enabled": false
+        },
+        "continuous": {
+          "enabled": true
+        },
+        "synchronous": {
+          "enabled": false
+        }
+    },
+    "dataGovernancePolicy": {
+      "excludeOptOut": true
+    },
+    "creationTime": 1650374572000,
+    "updateEpoch": 1650374573,
+    "updateTime": 1650374573000,
+    "createEpoch": 1650374572,
+    "_etag": "\"33120d7c-0000-0200-0000-625eb7ad0000\"",
+    "dependents": [],
+    "definedOn": [
+        {
+          "meta:resourceType": "unions",
+          "meta:containerId": "tenant",
+          "$ref": "https://ns.adobe.com/xdm/context/profile__union"
+        }
+    ],
+    "dependencies": [],
+    "type": "SegmentDefinition",
+    "overridePerformanceWarnings": false,
+    "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+    "lifecycle": "active",
+    "labels": [
+      "core/C1"
+    ],
+    "namespace": "AEPSegments"
+}
+```
+
+## Update a specified audience {#put}
+
+You can update (overwrite) a specific audience by making a PUT request to the `/audiences` endpoint and providing the ID of the audience you wish to update in the request path.
+
+**API format**
+
+```http
+PUT /audiences/{AUDIENCE_ID}
+```
+
+**Request**
+
+```shell
+curl -X UPDATE https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "audienceId":"test-external-audience-id",
+    "name":"new externalSegment",
+    "namespace":"aam",
+    "description":"Last 30 days",
+    "type":"ExternalSegment",
+    "lifecycle":"published",
+    "datasetId":"6254cf3c97f8e31b639fb14d",
+    "labels":[
+        "core/C1"
+    ]
+}' 
+```
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly updated audience. Please note that the details of your audience will differ, depending if it is a Platform-generated audience or an externally generated audience.
+
+```json
+{
+    "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+    "audienceId": "test-external-audience-id",
+    "name": "new externalSegment",
+    "namespace": "aam",
+    "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "type": "ExternalSegment",
+    "lifecycle": "published",
+    "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+    "creationTime": 1650251290000,
+    "updateEpoch": 1650251290,
+    "updateTime": 1650251290000,
+    "createEpoch": 1650251290
+}
+```
+
+## Delete a specified audience {#delete}
+
+You can request to delete a specific audience by making a DELETE request to the `/audiences` endpoint and providing the ID of the audience you wish to delete in the request path.
+
+**API format**
+
+```http
+DELETE /audiences/{AUDIENCE_ID}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | The ID of the audience that you want to delete. |
+
+**Request**
+
+```shell
+curl -X DELETE https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5 \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns HTTP status 201 with no message.
