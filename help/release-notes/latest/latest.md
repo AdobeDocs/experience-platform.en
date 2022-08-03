@@ -17,7 +17,7 @@ Updates to existing features in Adobe Experience Platform:
   - [Experience Data Model (XDM)](#xdm)
   - [Real-time Customer Data Platform B2B Edition](#b2b)
   - [Real-time Customer Profile](#profile)
-  - [Sources ](#sources)
+  - [Sources](#sources)
 
 ## Dashboards {#dashboards}
 
