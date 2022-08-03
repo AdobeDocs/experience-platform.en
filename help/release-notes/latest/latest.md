@@ -10,17 +10,14 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 Updates to existing features in Adobe Experience Platform:
 
 - [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [Dashboards {#dashboards}](#dashboards-dashboards)
-    - [Account Profiles dashboards](#account-profiles-dashboards)
-    - [Profile dashboards](#profile-dashboards)
-    - [Destinations dashboards](#destinations-dashboards)
-  - [Data collection {#collection}](#data-collection-collection)
-  - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
-  - [[!DNL Destinations] {#destinations}](#dnl-destinations-destinations)
-  - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-  - [Real-time Customer Data Platform B2B Edition {#b2b}](#real-time-customer-data-platform-b2b-edition-b2b)
-  - [Real-time Customer Profile {#profile}](#real-time-customer-profile-profile)
-  - [Sources {#sources}](#sources-sources)
+  - [Dashboards](#dashboards)
+  - [Data collection](#data-collection)
+  - [[!DNL Data Prep]](#data-prep)
+  - [[!DNL Destinations]](#destinations)
+  - [Experience Data Model (XDM)](#xdm)
+  - [Real-time Customer Data Platform B2B Edition](#b2b)
+  - [Real-time Customer Profile](#profile)
+  - [Sources ](#sources)
 
 ## Dashboards {#dashboards}
 
@@ -181,7 +178,7 @@ For more information, see the document on [lead to account matching](../../rtcdp
 
 For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
 
-For instructions on how to use related accounts in segment definitions, see the guide on [Segmentation use cases for Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts).
+For instructions on how to configure lead to account matching, see the [Account profile UI guide](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
 
 To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md).
 
