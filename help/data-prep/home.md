@@ -35,6 +35,10 @@ Calculated fields allow for values to be created based on the attributes in the 
 
 To learn more about calculated fields, please read the [calculated fields guide guide](./functions.md#calculated-fields).
 
+### Escape characters
+
+You can escape special characters in a field by using `${...}`. However, JSON files that contains fields with a period (`.`) is not supported by this mechanism. When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For example, `address` is an object that contents the attribute `street.name`, this can then be referred to as `address.street\.name` instead of `address.street.name`.
+
 ## Mapping set
 
 A set of mappings that transform one schema to another are collectively known as a mapping set. A single mapping set is created as part of each data flow. A mapping set is an integral part of the data flows and is created, edited, and monitored as part of the data flows.
