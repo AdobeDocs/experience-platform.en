@@ -142,9 +142,9 @@ The following section outlines how to make privacy requests for the [!DNL Data L
 
 ### Using the UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake].
 
-<img src="images/privacy/product-value.png" width=450><br>
+![Image showing the Data Lake product selected in the privacy request creation dialog](./images/privacy/product-value.png)
 
 ### Using the API
 
