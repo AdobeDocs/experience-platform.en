@@ -1,8 +1,8 @@
 ---
 title: Location hints
 description: This article explains how location hints work in Edge Network Server API, so that end user requests can always be routed to the same server.
+exl-id: 8cd2f8e2-2065-4b7e-8d35-4ed1a716f1b3
 ---
-
 # Location hints
 
 ## Overview {#overview}
