@@ -23,4 +23,4 @@ Any rows that are invalid even without any transformation errors, will also be r
 
 ### How can I escape special characters in a field?
 
-You can escape special characters in a field by using `${...}`. However, JSON files that contains fields with a period (`.`) is not supported by this mechanism. When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For example, `address` is an object that contains the attribute `street.name`, this can then be referred to as `address.street\.name` instead of `address.street.name`.
+You can escape special characters in a field by using `${...}`. However, JSON files that contain fields with a period (`.`) is not supported by this mechanism. When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For example, `address` is an object that contains the attribute `street.name`, this can then be referred to as `address.street\.name` instead of `address.street.name`.
