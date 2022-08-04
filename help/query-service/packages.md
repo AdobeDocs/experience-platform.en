@@ -18,11 +18,6 @@ Query Service capabilities are packaged with the following products and add-ons:
 
 The following table outlines the key Query Service entitlements based on how they are packaged:
 
-<!-- Q) Does Data Distiller provide access to ad hoc queries? -->
-<!-- Q) are those approved branding acronyms -->
-<!-- Q) compute or computational? -->
-<!-- Q) in the table it says that only Ad hoc queries are provided for Platform-based application. But in the access control section it says that both ad hoc and batch queries are provided. What have i missunderstood?  -->
-
 | Query Service Entitlement | Packaged With Platform-based Applications | Packaged With [!DNL Data Distiller] |
 |---|---|---|
 | Maximum Execution Time  | 10 minutes  | 24 hours |
