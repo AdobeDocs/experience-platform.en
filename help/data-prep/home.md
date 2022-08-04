@@ -33,7 +33,7 @@ To learn more about the different mapping functions, please read the [mapping fu
 
 Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
 
-To learn more about calculated fields, please read the [calculated fields guide guide](./functions.md#calculated-fields).
+To learn more about calculated fields, please read the [calculated fields guide](./functions.md#calculated-fields).
 
 ### Escape special characters
 
