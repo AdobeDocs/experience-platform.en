@@ -23,16 +23,6 @@ Location hints are included in the response of the initial Edge Network request,
 {
    "payload":[
       {
-         "scope":"Target",
-         "hint":"35",
-         "ttlSeconds":1800
-      },
-      {
-         "scope":"AAM",
-         "hint":"9",
-         "ttlSeconds":1800
-      },
-      {
          "scope":"EdgeNetwork",
          "hint":"or2",
          "ttlSeconds":1800
@@ -56,68 +46,10 @@ The hint associated with the `EdgeNetwork` scope can contain one of the followin
 
 **API format**
 
-```http
-POST 'https://edge.adobedc.net/ee/{LOCATION_HINT}/v2/interact?dataStreamId={DataStream_ID}'
-```
-
-**Request**
-
 To ensure subsequent requests are routed correctly, insert the location hint in the URL path of subsequent API calls between the base path, typically `ee`, and `v2` API version.
 
-```shell
-curl -X POST 'https://edge.adobedc.net/ee/or2/v2/interact?dataStreamId={Data_Stream_ID}' \
--H 'cookie: FPID=e98f38e6-6183-442d-8cd2-0e384f4c8aa8' \
--H 'Content-Type: application/json' \
--d '
-{
-   "event":{
-      "xdm":{
-         "web":{
-            "webPageDetails":{
-               "URL":"https://alloystore.dev"
-            },
-            "webReferrer":{
-               "URL":""
-            }
-         },
-         "device":{
-            "screenHeight":1440,
-            "screenWidth":3440,
-            "screenOrientation":"landscape"
-         },
-         "environment":{
-            "type":"browser",
-            "browserDetails":{
-               "viewportWidth":1907,
-               "viewportHeight":545
-            }
-         },
-         "placeContext":{
-            "localTime":"2022-03-21T21:32:59.991-06:00",
-            "localTimezoneOffset":360
-         },
-         "timestamp":"2022-03-22T03:32:59.992Z",
-         "implementationDetails":{
-            "name":"https://ns.adobe.com/experience/server",
-            "version":"1.0",
-            "environment":"server"
-         }
-      }
-   },
-   "query":{
-      "identity":{
-         "fetch":[
-            "ECID"
-         ]
-      }
-   },
-   "meta":{
-      "state":{
-         "domain":"alloystore.dev",
-         "cookiesEnabled":true
-      }
-   }
-}'
+```http
+POST 'https://edge.adobedc.net/ee/{LOCATION_HINT}/v2/interact?dataStreamId={DataStream_ID}'
 ```
 
 ## Storing location hints in cookies {#storing-hints-in-cookies}
