@@ -5,9 +5,9 @@ description: The following sections walks through the various API calls you can 
 ---
 # Alert Subscriptions API Endpoint
 
-Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries.
+Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. 
 
-Query alerts can be subscribe to through the Platform UI and the Query Service API. 
+A query alert can be subscribe to using both the Query Service API and the Platform UI. 
 
 <!-- See the UI alert subscriptions documentation for information on how to subscribe to an alert using the Platform UI. -->
 
@@ -20,9 +20,9 @@ All executed queries, whether ad-hoc or scheduled, can send alerts but queries u
 
 The following alerts apply without an alert subscription :
 
-* When a batch query job finishes, customers will receive a notification.
+* When a batch query job finishes, users receive a notification.
 
-* When a batch query job's duration exceeds a threshold, an alert is triggered to the person that scheduled the query
+* When a batch query job's duration exceeds a threshold, an alert is triggered to the person that scheduled the query.
 
 >[!NOTE]
 >
@@ -59,8 +59,8 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alertSubscriptions
     "alertType": "failure",
     "subscriptions": {
         "emailIds": [
-            "{ADOBE_REGISTERED_EMAIL}",
-            "madeup@adobe.com"
+            "rrunner@adobe.com",
+            "jsnow@adobe.com"
         ],
         "inContextNotifications": true,
         "emailNotifications": true
@@ -146,7 +146,7 @@ PATCH /alertSubscriptions/{scheduleId}/{alertType}
 
 | Parameters | Description |
 | -------- | ----------- |
-| `alertType` | Each alert can have three different alert types. They are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul>You must specify the current alert type in the endpoint namespace in order to change it. |
+| `alertType` | The type of alert. Each alert can have three different alert types, they are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul>You must specify the current alert type in the endpoint namespace in order to change it. |
 | `queryId` | The unique identifier for the query to be updated. |
 | `scheduleId` | The unique identifier for the scheduled query to be updated. |
 
@@ -163,11 +163,9 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alertSubscription
 -d '{
         "op": "replace",
         "path" : "/status",
-        "value": "{ENABLE_OR_DISABLE}"
+        "value": "enable"
 }'
 ```
-
-<!-- Q) in the example request should i use enable for it as the response says enabled? -->
 
 | Property | Description |
 | -------- | ----------- |
@@ -189,8 +187,6 @@ A successful response returns HTTP status 200 with details of the alert status, 
     "status": "enabled"
 }
 ```
-
-<!-- Q) Property Descriptions 16.20  -->
 
 | Property | Description |
 | -------- | ----------- |
@@ -241,14 +237,14 @@ A successful response returns an HTML status of 200 and the subscription informa
             "alertType": "failure",
             "subscriptions": {
                 "emailNotifications": [
-                    "madeup@adobe.com",
-                    "madeup2b@adobe.com",
-                    "madeup3@adobe.com"
+                    "rrunner@adobe.com",
+                    "jsnow@adobe.com",
+                    "keverdeen@adobe.com"
                 ],
                 "inContextNotifications": [
-                    "madeup@adobe.com",
-                    "madeup2@adobe.com",
-                    "madeup3@adobe.com"
+                    "rrunner@adobe.com",
+                    "jsnow@adobe.com",
+                    "keverdeen@adobe.com"
                 ]
             },
             "_links": {
@@ -261,10 +257,10 @@ A successful response returns an HTML status of 200 and the subscription informa
             "alertType": "start",
             "subscriptions": {
                 "emailNotifications": [
-                    "madeup@adobe.com"
+                    "rrunner@adobe.com"
                 ],
                 "inContextNotifications": [
-                    "madeup@adobe.com"
+                    "rrunner@adobe.com"
                 ]
             },
             "_links": {
@@ -273,8 +269,6 @@ A successful response returns an HTML status of 200 and the subscription informa
     ]
 }
 ```
-
-<!-- Q) update this response with appropriate parameter type instead of madeup@adobne example -->
 
 | Property | Description |
 | -------- | ----------- |
@@ -285,11 +279,9 @@ A successful response returns an HTML status of 200 and the subscription informa
 | `subscriptions.emailNotifications` | An array of Adobe registered email addresses for users who have subscribed to receive emails for the alert. |
 | `subscriptions.inContextNotifications` | An array of Adobe registered email addresses for users who have subscribed to UI notifications for the alert. |
 
-<!-- <ul><li>`enabled` : An alert is actively listening for the events</li><li>`disabled`: The alert settings are still avialbe with all subscribers still assgined </li><li>`failure`</li></ul> -->
-
 ## 4) GET Retrieve subscription information for a particular query/schedule id and alertType {#get-alert-info-by-id}
 
-Retrieve a list of alert subscribers for a particular ID and alert type by making a GET request to the `/alertSubscriptions/{queryId}/{AlertType}` endpoint. This is applicable to both query or scheduled query ID.
+Retrieve a list of alert subscribers for a particular ID and alert type by making a GET request to the `/alertSubscriptions/{queryId}/{alertType}` endpoint. This is applicable to both query or scheduled query ID.
 
 **API format**
 
@@ -297,8 +289,6 @@ Retrieve a list of alert subscribers for a particular ID and alert type by makin
 GET /alertSubscriptions/{QUERY_ID}/{AlertType}
 GET /alertSubscriptions/{SCHEDULE_ID}/{AlertType}
 ```
-
-<!-- Q) Parameter Descriptions -->
 
 | Parameters | Description |
 | -------- | ----------- |
@@ -330,11 +320,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/
             "alertType": "success",
             "subscriptions": {
                 "emailNotifications": [
-                    "madeUph@adobe.com",
-                    "madeUp@adobe.com"
+                    "rrunner@adobe.com",
+                    "jsnow@adobe.com"
                 ],
                 "inContextNotifications": [
-                    "madeUp@adobe.com"
+                    "jsnow@adobe.com"
                 ]
             },
             "_links": {
@@ -343,8 +333,6 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/
     ]
 }
 ```
-
-<!-- Q) Property descriptions? -->
 
 | Property | Description |
 | -------- | ----------- |
@@ -356,16 +344,12 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/
 
 ## 5) DELETE Delete an alert for a query/schedule ID for given alertType {#delete-alert-info-by-id}
 
-<!-- Q) When referring to alert type. can i write it as two words or do I stick with the property name alertType? -->
-
-Delete an alert for a particular query or schedule ID and alert type by making a DELETE request to the `/alertSubscriptions/{queryId}/{AlertType}` endpoint.
+Delete an alert for a particular query or schedule ID and alert type by making a DELETE request to the `/alertSubscriptions/{queryId}/{alertType}` endpoint.
 
 ```http
 DELETE /alertSubscriptions/{queryId}/{alertType}
 DELETE /alertSubscriptions/{scheduleId}/{alertType}
 ```
-
-<!-- Q) Parameter Descriptions -->
 
 | Parameters | Description |
 | -------- | ----------- |
@@ -405,8 +389,6 @@ Retrieve a list of all the alerts that a user is subscribed to by making a GET r
 ```http
 GET /alertSubscriptions/subscriptions/{emailId}
 ```
-
-<!-- Q) Parameter Descriptions -->
 
 | Parameters | Description |
 | -------- | ----------- |
@@ -485,10 +467,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions'
 -H 'Content-Type: application/json' \
 -H 'x-api-key: {API_KEY}' \
 -H 'x-sandbox-id: {SANDBOX_ID}'
--d ''
 ```
-
-<!-- Q) Was this a typo in the wiki: --data-raw '' -->
 
 **Response**
 
