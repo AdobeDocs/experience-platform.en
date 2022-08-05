@@ -23,7 +23,8 @@ GET /audiences?{QUERY_PARAMETERS}
 | --------- | ----------- | ------- |
 | `start` | Specifies the starting offset for the audiences returned. | `start=5` |
 | `limit` | Specifies the maximum number of audiences returned per page. | `limit=10` |
-| `property` | A filter that allows you to specify audiences that **exactly** match an attribute's value. Written in the format `property=` | `sort=updateTime:desc` |
+| `sort` | Specifies the order to sort the results by. This is written in the format `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
+| `property` | A filter that allows you to specify audiences that **exactly** match an attribute's value. This is written in the format `property=` | `property=audienceId==test-audience-id` |
 | `name` | A filter that allows you to specify audiences whose names **contain** the provided value. This value is case insensitive. | `name=Sample` |
 | `description` | A filter that allows you to specify audiences whose descriptions **contain** the provided value. This value is case insensitive.  | `description=Test Description` |
 | `withMetrics` | A filter that returns the metrics in addition to the audiences. | `property=withMetrics==true` |
@@ -44,7 +45,7 @@ curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
  -H 'x-sandbox-name:  {SANDBOX_NAME}'
 ```
 
-**Response**
+**Response** {#no-metrics}
 
 A successful response returns HTTP status 200 with a list of audiences that were created in your organization as JSON.
 
@@ -109,7 +110,7 @@ A successful response returns HTTP status 200 with a list of audiences that were
             "dependencies": [],
             "type": "SegmentDefinition",
             "overridePerformanceWarnings": false,
-            "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+            "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
             "lifecycle": "published",
             "labels": [
                 "core/C1"
@@ -118,6 +119,26 @@ A successful response returns HTTP status 200 with a list of audiences that were
       }
 }
 ```
+
+| Property | Audience type | Description |
+| -------- | ------------- | ----------- | 
+| `id` | Both | A system-generated read-only identifier for the audience. |
+| `audienceId` | Both | If the audience is a Platform-generated audience, this is the same value as the `id`. If the audience is externally generated, this value is provided by the client. |
+| `schema` | Both | The XDM schema of the audience. |
+| `imsOrgId` | Both | The ID of the organization that the audience belongs to. |
+| `sandbox` | Both | Information about the sandbox that the audience belongs to. More information about sandboxes can be found in LINK. |
+| `name` | Both | The name of the audience. |
+| `description` | Both | A description of the audience. |
+| `expression` | Platform-generated | The PQL expression of the audience. More information about PQL expressions can be found in LINK. |
+| `mergePolicyId` | Platform-generated | The ID of the merge policy that the audience is associated with. More information about merge policies can be found in LINK. |
+| `evaluationInfo` | Platform-generated | Shows how the audience will be evaluated. Possible evaluation methods include batch, streaming, or edge. |
+| `dependents` | Both | An array of audience IDs that depend on the current audience. |
+| `dependencies` | Both | An array of audience IDs that the audience depends on. |
+| `type` | Both | A system-generated field that displays whether the audience is Platform-generated or is an externally generated audience. Possible values include `SegmentDefinition` and `ExternalAudience`. |
+| `createdBy` | Both | The ID of the user who created the audience. |
+| `labels` | Both | Object-level data usage and attribute-based access control labels that are relevant to the audience. |
+| `namespace` | Both | The namespace that the audience belongs to. Possible values include `AAM`, `AAMSegments`, `AAMTraits`, and `AEPSegments`. |
+| `audienceMeta` | External | Externally-created metadata from the externally created audience. |
 
 **`withMetrics` request**
 
@@ -212,7 +233,7 @@ A successful response returns HTTP status 200 with a list of audiences, with met
             },
             "type": "SegmentDefinition",
             "overridePerformanceWarnings": false,
-            "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+            "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
             "lifecycle": "published",
             "labels": [
                 "core/C1"
@@ -232,6 +253,19 @@ A successful response returns HTTP status 200 with a list of audiences, with met
    }
 }
 ```
+
+The following lists properties **exclusive** to the `withMetrics` response. If you want to know the standard audience properties, please read the [previous section](#no-metrics).
+
+| Property | Description |
+| -------- | ----------- |
+| `metrics.imsOrgId` | The organization ID of the audience. |
+| `metrics.sandbox` | The sandbox information related to the audience. |
+| `metrics.jobId` | The ID of the segment job that is processing the audience. |
+| `metrics.type` | The segment job type. This can either be `export` or `batch_segmentation`. |
+| `metrics.id` | The audience's ID. |
+| `metrics.data` | Metrics that are related to the audience. This includes information such as the total number of profiles, the total number of profiles on a per-namespace basis, and the total number of profiles on a per-status basis. |
+| `metrics.createEpoch` | A timestamp that shows when the audience was created. |
+| `metrics.updateEpoch` | A timestamp that shows when the audience was last updated. |
 
 ## Create a new audience {#create}
 
@@ -329,7 +363,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
     "dependencies": [],
     "type": "SegmentDefinition",
     "overridePerformanceWarnings": false,
-    "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+    "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
     "lifecycle": "active",
     "labels": [
       "core/C1"
@@ -368,7 +402,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 A successful response returns HTTP status 200 with information about the specified audience. The response will differ depending if the audience is generated with Adobe Experience Platform or external sources.
 
-**Platform generated**
+**Platform-generated**
 
 ```json
 {
@@ -425,7 +459,7 @@ A successful response returns HTTP status 200 with information about the specifi
     "dependencies": [],
     "type": "SegmentDefinition",
     "overridePerformanceWarnings": false,
-    "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+    "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
     "lifecycle": "active",
     "labels": [
         "core/C1"
@@ -434,7 +468,7 @@ A successful response returns HTTP status 200 with information about the specifi
 }
 ```
 
-**Non-Platform generated**
+**Externally generated**
 
 ```json
 {
@@ -453,7 +487,7 @@ A successful response returns HTTP status 200 with information about the specifi
     "description": "Last 30 days",
     "type": "ExternalSegment",
     "lifecycle": "active",
-    "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+    "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
         "core/C1"
@@ -567,7 +601,7 @@ A successful response returns HTTP status 200 with information about your newly 
     "dependencies": [],
     "type": "SegmentDefinition",
     "overridePerformanceWarnings": false,
-    "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+    "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
     "lifecycle": "active",
     "labels": [
       "core/C1"
@@ -629,7 +663,7 @@ A successful response returns HTTP status 200 with details of your newly updated
     "description": "Last 30 days",
     "type": "ExternalSegment",
     "lifecycle": "published",
-    "createdBy": "acp_core_unifiedProfile_feeds@AdobeID",
+    "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
     "creationTime": 1650251290000,
