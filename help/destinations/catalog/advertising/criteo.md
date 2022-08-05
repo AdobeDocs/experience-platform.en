@@ -113,7 +113,7 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 You can see the exported segments in the [Criteo management center](https://marketing.criteo.com/audience-manager/dashboard).
 
-The request body received by the [!DNL Criteo] connection looks similar to this:
+The request body of adding a user profile received by the [!DNL Criteo] connection looks similar to this:
 
 ```json
 {
@@ -140,7 +140,33 @@ The request body received by the [!DNL Criteo] connection looks similar to this:
   }
 }
 ```
+The request body of removing user profile  received by the [!DNL Criteo] connection looks similar to this:
 
+```json
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "remove",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
 ## Data usage and governance {#data-usage}
 
 All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=en).
