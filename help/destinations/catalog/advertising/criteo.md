@@ -22,7 +22,6 @@ Criteo powers trusted and impactful advertising to bring richer experiences to e
 
 ## Limitations {#limitations}
 
-* Criteo does not currently support removing users from audiences.
 * Criteo only accepts [!DNL SHA-256]-hashed and plain-text emails (to be transformed into [!DNL SHA-256] before sending). Please do not send any PII (Personal Identifiable Information, such as individuals' names or phone numbers).
 * Criteo needs at least one identifier to be provided by the client. It prioritizes [!DNL GUM ID] as identifier over hashed email as it contributes to better matching rate.
 
