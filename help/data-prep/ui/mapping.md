@@ -143,7 +143,7 @@ When finished, select the schema icon to close the target schema interface.
 
 #### Calculated fields {#calculated-fields}
 
-Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
+Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference. Calculated fields have a maximum length of 4096 characters.
 
 To create a calculated field, select **[!UICONTROL New field type]** and then select **[!UICONTROL Add calculated field]**
 
