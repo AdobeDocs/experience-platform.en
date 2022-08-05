@@ -11,21 +11,19 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 
 Adobe Experience Platform Dashboards helps you to expedite insights and customize visualization through the user-defined dashboards feature. This feature enables you to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization.
 
+<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
+
 ## Getting started
 
-To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions.
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
 ## Create custom dashboards
 
 To create a custom dashboard, first, navigate to the dashboard inventory. Select **[!UICONTROL Dashboards]** from the left navigation of the Platform UI followed by **[!UICONTROL Create dashboard]**.
 
-To learn more about the available pre-configured dashboards, see the [dashboard inventory overview](./inventory.md).
+![The dashboard inventory with Dashboards in the left navigation and "Create dashboard" highlighted.](./images/user-defined-dashboards/create-dashboard.png)
 
->[!NOTE]
->
->By adding a custom dashboard, the list of pre-configured dashboards is removed from the dashboard inventory. Instead, the dashboard inventory comprises solely of user-defined dashboards.
-
-![The dashboard inventory with "Create dashboard" highlighted.](./images/user-defined-dashboards/create-dashboard.png)
+Before adding a custom dashboard, the dashboards inventory is empty and displays a "No dashboards found." message. Once created, all of your user-defined dashboards are listed in the dashboard inventory.
 
 The [!UICONTROL Create dashboard] dialog appears. Enter a human-friendly, descriptive name for the collection of widgets you intend to create, and select **[!UICONTROL Save]**.
 
@@ -51,7 +49,7 @@ The [!UICONTROL Select data] dialog appears. Select a data model from the left c
 >
 >User-defined dashboards currently only supports the profile data model. More options will be supported.
 
-![The select data dialog.](./images/user-defined-dashboards/select-data-dialog.png)
+![The Select data dialog.](./images/user-defined-dashboards/select-data-dialog.png)
 
 The preview list provides details about the tables contained in the data model. The table below provides descriptions of the column fields and their potential values.
 
@@ -63,9 +61,9 @@ The preview list provides details about the tables contained in the data model. 
 
 Select **[!UICONTROL Next]** to confirm your choice of data model. The next view displays a list of the available tables in the left rail. Select a table to see a comprehensive breakdown of the data contained in your selected table.
 
-The [!UICONTROL Preview] panel contains tabs for [!UICONTROL Sample records] and [!UICONTROL Attributes].The [!UICONTROL Sample records] tab provides a subset of the records from the selected table in a tabulated view. The [!UICONTROL Attributes] tab provides the attribute name, data type, and source table for every attribute associated with the selected table. 
+The [!UICONTROL Preview] panel contains tabs for [!UICONTROL Sample records] and [!UICONTROL Attributes]. The [!UICONTROL Sample records] tab provides a subset of the records from the selected table in a tabulated view. The [!UICONTROL Attributes] tab provides the attribute name, data type, and source table for every attribute associated with the selected table. 
 
-Select a table from the list available in the left rail to provide data for your widget and select [!UICONTROL Select] to return to the widget composer.
+Select a table from the list available in the left rail to provide data for your widget and select **[!UICONTROL Select]** to return to the widget composer.
 
 ![The select data dialog with select highlighted.](./images/user-defined-dashboards/select-a-table.png)
 
@@ -79,9 +77,9 @@ The data model and currently selected table are displayed at the top of the left
 >
 >You can change the chosen data model by selecting the pencil icon (![Pencil icon.](./images/user-defined-dashboards/edit-icon.png)) in the left rail.
 
-Select the ellipses (`...`) next to an attribute name to add an attribute to either the X or the Y axis.
+Select the add icon (./images/user-defined-dashboards/add-icon.png) next to an attribute name to add an attribute to either the X or the Y axis.
 
-![The widget composer with the ellipses dropdown highlighted to add attributes a widget axis.](./images/user-defined-dashboards/attributes-dropdown.png)
+![The widget composer with the add icon dropdown highlighted to add attributes a widget axis.](./images/user-defined-dashboards/attributes-dropdown.png)
 
 Next, select the type of graph or chart from the [!UICONTROL Marks] dropdown to generate a preview visualization of your widget's current settings. In the [!UICONTROL Properties] rail on the right side of the screen, enter a name for the widget in the [!UICONTROL Widget title] text field. 
 
