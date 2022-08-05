@@ -1,8 +1,7 @@
 ---
 keywords: platform;destinations;destinations workspace;workspace;ui;destinations ui;catalog;destinations catalog;
 title: Destinations workspace
-description: The Destinations workspace consists of four sections, Catalog, Browse, Accounts, and System View. They are described in the sections below.
-seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
+description: The Destinations workspace consists of five sections, Overview, Catalog, Browse, Accounts, and System View. They are described in the sections below.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 ---
 # Destinations workspace {#destinations-workspace}
@@ -21,7 +20,7 @@ The **[!UICONTROL Overview]** tab displays the [!UICONTROL Destinations] dashboa
 >
 >If your organization is new to Experience Platform and does not yet have active destinations, the [!UICONTROL Destinations] dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [[!UICONTROL Catalog] tab](#catalog).
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![The Destinations dashboard Overview tab.](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 

@@ -27,6 +27,7 @@ feature: Destinations
         * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
         * [Activate audience data to profile request destinations](./ui/activate-profile-request-destinations.md)
         * [Configure personalization destinations for same-page and next-page personalization](./ui/configure-personalization-destinations.md)
+        * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
@@ -55,6 +56,7 @@ feature: Destinations
         * [Google Ads connection](./catalog/advertising/google-ads-destination.md)
         * [Google Ads extension](./catalog/advertising/google-ads-extension.md)
         * [Google Ad Manager connection](./catalog/advertising/google-ad-manager.md)
+        * [(Beta) Google Ad Manager 360 connection](./catalog/advertising/google-ad-manager-360-connection.md)
         * [Google Customer Match connection](./catalog/advertising/google-customer-match.md)
         * [Google Display & Video 360 connection](./catalog/advertising/google-dv360.md)
         * [Google gtag extension](./catalog/advertising/gtag-advertising.md)
@@ -62,7 +64,9 @@ feature: Destinations
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
+        * [(Beta) Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
+        * [(Beta) The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
     * Analytics destinations {#analytics}
@@ -94,6 +98,8 @@ feature: Destinations
         * [Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+    * Customer Relationship Management (CRM) destinations {#crm}
+        * [Salesforce CRM connection](./catalog/crm/salesforce.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
@@ -107,7 +113,8 @@ feature: Destinations
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
         * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
-        * [Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
+        * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+        * [(Files) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
         * [Tag extension overview](./catalog/launch-extensions/overview.md)  
@@ -128,6 +135,7 @@ feature: Destinations
         * [Gainsight extension](./catalog/personalization/gainsight.md)
         * [KickFire extension](./catalog/personalization/kickfire.md)
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
+        * [Pega Customer Decision Hub connection](./catalog/personalization/pega.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
@@ -147,6 +155,7 @@ feature: Destinations
         * [Voice of the Customer destinations overview](./catalog/voice/overview.md)
         * [Confirmit Digital Feedback extension](./catalog/voice/confirmit-digital-feedback.md)
         * [Invoca Tags extension](./catalog/voice/invoca.md)
+        * [Medallia connection](./catalog/voice/medallia-connector.md)
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
 * Destination SDK {#destination-sdk}
@@ -175,14 +184,27 @@ feature: Destinations
       * [Credentials endpoint API operations](./destination-sdk/credentials-configuration-api.md)
       * [Publish endpoint API operations](./destination-sdk/destination-publish-api.md)
       * Developer tools reference {#developer-tools-reference}
-        * [Get sample template API operations](./destination-sdk/sample-template-api.md)
-        * [Render template API operations](./destination-sdk/render-template-api.md)
-        * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
-        * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
+        * Streaming destination testing API {#streaming-destination-testing-api}
+            * [Get sample template API operations](./destination-sdk/sample-template-api.md)
+            * [Render template API operations](./destination-sdk/render-template-api.md)
+            * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
+            * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
+        * File-based destination testing API {#file-based-destination-testing-api}
+            * [File-based destination testing API overview](./destination-sdk/file-based-destination-testing-overview.md) 
+            * [Generate sample profiles based on a source schema](./destination-sdk/file-based-sample-profile-generation-api.md)
+            * [Test your file-based destination with sample profiles](./destination-sdk/file-based-destination-testing-api.md)
+            * [View detailed activation results](./destination-sdk/file-based-destination-results-api.md)
+            * [Validate templatized customer fields](./destination-sdk/file-based-render-template-api.md)
     * Guides {#guides}
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
+      * Configure file-based destinations {#configure-file-based-destinations}
+        * [(Beta) Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+        * [(Beta) Configure an Amazon S3 destination with custom file name and formatting options](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+        * [(Beta) Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+        * [(Beta) Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+        * [(Beta) Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
     * Reference {#reference}
       * [Rate limiting and retry policy for streaming destinations](./destination-sdk/rate-limiting-retry-policy.md)
       * [Supported transformation functions](./destination-sdk/supported-functions.md)

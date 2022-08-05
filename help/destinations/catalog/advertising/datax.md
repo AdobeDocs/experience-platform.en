@@ -100,6 +100,12 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL MDM ID]**: This is a unique identifier in Yahoo DataX and it is a mandatory field for setting up data exports to this destination. If you don't know this Id, contact your Yahoo Data X account manager.  With MDM IDs, data can be restricted for use only with a certain set of exclusive users (such as first party data for advertisers).
 
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
 ## Activate segments to this destination {#activate}
 
 >[!IMPORTANT]

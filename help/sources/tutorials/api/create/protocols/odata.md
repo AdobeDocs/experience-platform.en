@@ -9,10 +9,6 @@ exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
 ---
 # Create a [!DNL Generic OData] base connection using the [!DNL Flow Service] API
 
->[!NOTE]
->
->The [!DNL Generic OData] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL Generic OData] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
