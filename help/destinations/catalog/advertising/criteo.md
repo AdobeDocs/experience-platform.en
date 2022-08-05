@@ -93,7 +93,6 @@ After authenticating to the destination, please fill in the following connection
 | --- | --- | --- |
 | Name | A name to help you recognize this destination in the future. The name you choose here will be the [!DNL Audience] name in Criteo Management Center and cannot be modified at later stage. | Yes |
 | Description | A description to help you identify this destination in the future. | No |
-| API Version | Criteo API Version. Please select Preview. | Yes |
 | Advertiser ID | Criteo Advertiser ID of your organization. Please contact your Criteo account manager to obtain this information. | Yes |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] of your organization. Please reach out to your Criteo account team for the appropriate [!DNL GUM Caller ID] or to get more information on this [!DNL GUM] sync, if needed. | Yes, whenever [!DNL GUM ID] is provided as an identifier |
 
