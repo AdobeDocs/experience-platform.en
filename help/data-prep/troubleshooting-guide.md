@@ -27,4 +27,4 @@ You can escape special characters in a field by using `${...}`. However, JSON fi
 
 ### What is the maximum length of calculated fields?
 
-The maximum length of a calculated field is 4096 characters. 
+Calculated fields have a maximum length of 4096 characters.
