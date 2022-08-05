@@ -140,6 +140,7 @@ The request body of adding a user profile received by the [!DNL Criteo] connecti
   }
 }
 ```
+
 The request body of removing user profile  received by the [!DNL Criteo] connection looks similar to this:
 
 ```json
@@ -167,6 +168,7 @@ The request body of removing user profile  received by the [!DNL Criteo] connect
   }
 }
 ```
+
 ## Data usage and governance {#data-usage}
 
 All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=en).
