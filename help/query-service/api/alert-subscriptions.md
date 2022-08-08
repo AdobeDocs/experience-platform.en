@@ -64,8 +64,6 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alertSubscriptions
 }'
 ```
 
-<!-- Q) I have this as a boolean value: `subscriptions.emailNotifications` and also an array of strings on 287. Which is correct. what have i missed? -->
-
 | Property | Description |
 | -------- | ----------- |
 | `assetId` | The alert is associated with this ID. The ID can be either a query ID or a schedule ID. |
@@ -306,8 +304,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/
 
 **Response**
 
-<!-- double check this -->
-A successful response returns an HTML status of 200 and all emailIds subscribed to by a particular assetId per alertType. 
+A successful response returns an HTML status of 200 and all the alerts that are subscribed to. This includes the alert ID, type of alert, subscriber's Adobe registered emailIds, and their preferred notification channel. 
 
 ```json
 {
@@ -469,8 +466,6 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions'
 ```
 
 **Response**
-
-<!-- Double check this -->
 
 A successful response returns an HTTP 200 status with details of all the alerts for an organization and a particular sandbox. A maximum of three alerts are available per response, one alert per each alertType is contained in the response body.
 
