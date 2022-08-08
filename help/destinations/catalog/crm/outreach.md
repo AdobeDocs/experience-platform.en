@@ -32,7 +32,7 @@ Note the following prerequisites in [!DNL Outreach], in order to export data fro
 
 #### You need to have an Outreach account {#prerequisites-account}
 
-Go to the Outreach [sign in](https://accounts.outreach.io/users/sign_in) page to register and create an account, if you do not have one already. Also see the [!DNL Outreach] support [page](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) for more details.
+Go to the [!DNL Outreach] [sign in](https://accounts.outreach.io/users/sign_in) page to register and create an account, if you do not have one already. Also see the [!DNL Outreach] support [page](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) for more details.
 
 #### Gather Outreach credentials {#gather-credentials}
 
@@ -63,7 +63,7 @@ Note down the items below before you authenticate to the [!DNL Outreach] CRM des
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-| `OutreachId` | <ul><li>[!DNL Outreach] identifier, this is a numeric value corresponding to the prospect profile.</li><li>The ID must match the ID within the Outreach URL for the prospect being updated.</li><li>Refer to the [Outreach documentation](https://api.outreach.io/api/v2/docs#update-an-existing-resource) for further details.</li></ul>|Mandatory |
+| `OutreachId` | <ul><li>[!DNL Outreach] identifier, this is a numeric value corresponding to the prospect profile.</li><li>The ID must match the ID within the [!DNL Outreach] URL for the prospect being updated.</li><li>Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs#update-an-existing-resource) for further details.</li></ul>|Mandatory |
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -162,7 +162,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 
 * When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step you must manually map Platform segments to the custom field attribute in [!DNL Outreach].
 
-* To do this, select each segment, then enter the corresponding numeric value which corresponds to the *Custom Field `N` Label* field from Outreach in the **[!UICONTROL Mapping ID]** field.
+* To do this, select each segment, then enter the corresponding numeric value which corresponds to the *Custom Field `N` Label* field from [!DNL Outreach] in the **[!UICONTROL Mapping ID]** field.
     > [!IMPORTANT]
     >
     > * The numeric value *(`N`)* used within the Mapping ID should match the custom attribute key suffixed with the numeric value i.e. *Custom Field `N` Label* within [!DNL Outreach]. 
