@@ -8,57 +8,57 @@ description: The Microsoft Dynamics 365 destination allows you to export your ac
 
 ## Overview {#overview}
 
-[Microsoft Dynamics 365](https://dynamics.microsoft.com/en-us/) is a cloud-based business application platform that combines Enterprise Resource Planning (ERP) and Customer Relationship Management (CRM) along with productivity applications and AI tools, to bring end-to-end smoother and more controlled operations, better growth potential and reduced costs.
+[!DNL Microsoft Dynamics 365](https://dynamics.microsoft.com/en-us/) is a cloud-based business application platform that combines Enterprise Resource Planning (ERP) and Customer Relationship Management (CRM) along with productivity applications and AI tools, to bring end-to-end smoother and more controlled operations, better growth potential and reduced costs.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Contact Entity Reference API](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), which allows you to update identities within a segment into Dynamics 365.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Contact Entity Reference API](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), which allows you to update identities within a segment into [!DNL Dynamics 365].
 
-Dynamics 365 uses OAuth 2 with Authorization Grant as the authentication mechanism to communicate with the Contact Entity Reference API. Instructions to authenticate to your Dynamics 365 instance are further below, in the [Authenticate to destination](#authenticate) section.
+[!DNL Dynamics 365] uses OAuth 2 with Authorization Grant as the authentication mechanism to communicate with the Contact Entity Reference API. Instructions to authenticate to your [!DNL Dynamics 365] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to Dynamics 365, to display in the users’ feeds as soon as segments and profiles are updated in Adobe Experience Platform.
+As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to [!DNL Dynamics 365], to display in the users’ feeds as soon as segments and profiles are updated in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
-### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
+### Experience Platform Prerequisites {#prerequisites-in-experience-platform}
 
-Before activating data to the Microsoft Dynamics 365 destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
-
-### Prerequisites in Microsoft Dynamics 365 {#prerequisites-destination}
-
-Note the following prerequisites in Microsoft Dynamics 365, in order to export data from Platform to your Dynamics 365 account:
-
-#### You need to have a Microsoft Dynamics 365 account {#prerequisites-account}
-
-Go to the Dynamics 365 [trial](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) page to register and create an account, if you do not have one already.
-
-#### Create field within Dynamics 365 {#prerequisites-custom-field}
-
-Create the custom field of type `Simple` with field data type as `Single Line of Text` which Experience Platform will use to update the segment status within Dynamics 365.
-Refer to the Dynamics 365 documentation to [create a field (attribute)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) if you need additional guidance.
-
-An example setup within Dynamics 365 is shown below:
-![Target mapping](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-fields.png)
+Before activating data to the [!DNL Microsoft Dynamics 365] destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
 Refer to Adobe's documentation for [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=en) if you need guidance on segment statuses.
 
+### Microsoft Dynamics 365 Prerequisites {#prerequisites-destination}
+
+Note the following prerequisites in [!DNL Microsoft Dynamics 365], in order to export data from Platform to your [!DNL Dynamics 365] account:
+
+#### You need to have a Microsoft Dynamics 365 account {#prerequisites-account}
+
+Go to the [!DNL Dynamics 365] [trial](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) page to register and create an account, if you do not have one already.
+
+#### Create field within Dynamics 365 {#prerequisites-custom-field}
+
+Create the custom field of type `Simple` with field data type as `Single Line of Text` which Experience Platform will use to update the segment status within [!DNL Dynamics 365].
+Refer to the [!DNL Dynamics 365] documentation to [create a field (attribute)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) if you need additional guidance.
+
+An example setup within [!DNL Dynamics 365] is shown below:
+![Target mapping](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-fields.png)
+
 #### Gather Dynamics 365 credentials {#gather-credentials}
 
-Note down the items below before you authenticate to the Microsoft Dynamics 365 CRM destination:
+Note down the items below before you authenticate to the [!DNL Microsoft Dynamics 365] CRM destination:
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Username | Your Dynamics 365 account username | - |
-| Password | Your Dynamics 365 account password | - |
-| Environment URL | See [Dynamics 365 documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) for additional guidance. | If your domain is as below, you need the highlighted value.<br> *`org57771b33`.crm.dynamics.com* |
+| Username | Your [!DNL Dynamics 365] account username | - |
+| Password | Your [!DNL Dynamics 365] account password | - |
+| Environment URL | See [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) for additional guidance. | If your domain is as below, you need the highlighted value.<br> *`org57771b33`.crm.dynamics.com* |
 
 ## Supported identities {#supported-identities}
 
-Microsoft Dynamics 365 supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Microsoft Dynamics 365] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Description|Considerations|
-|---|---|---|
-| contactId |Custom Microsoft Dynamics 365 identifier that supports mapping of any identity.|Mandatory. You can send any [identity](../../../identity-service/namespaces.md) to the [!DNL Microsoft Dynamics 365] destination, as long as you map it to the `contactId`. |
+|Target Identity|Example|Description|Considerations|
+|---|---|---|---|
+| `contactId` | `7eb682f1-ca75-e511-80d4-00155d2a68d1` | Unique identifier for a contact.| **Mandatory**, Refer to the [[!DNL Microsoft Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) for further details. |
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -85,25 +85,25 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
-![Sample screenshot showing how to authenticate to Microsoft Dynamics 365](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
+![Sample screenshot showing how to authenticate to Dynamics 365](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
-You will be shown the Dynamics 365 login page. Select your account if you are already signed-in or login with your credentials.
+You will be shown the [!DNL Dynamics 365] login page. Select your account if you are already signed-in or login with your credentials.
 
 ![Sample screenshot showing how to authenticate to Dynamics 365](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination-login.png)
 
-*  **[!UICONTROL Password]**: Your Dynamics 365 account password.
-*  **[!UICONTROL Username]**: Your Dynamics 365 account username.
+*  **[!UICONTROL Password]**: Your [!DNL Dynamics 365] account password.
+*  **[!UICONTROL Username]**: Your [!DNL Dynamics 365] account username.
 
 If the details provided are valid, the UI displays a **Connected** status with a green check mark, you can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Sample screenshot showing how to fill in details for Microsoft Dynamics 365 destination](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
+![Sample screenshot showing how to fill in details for Dynamics 365 destination](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Environment URL]**: Your Dynamics 365 Environment URL.
+*  **[!UICONTROL Environment URL]**: Your [!DNL Dynamics 365] Environment URL.
 
 ### Enable alerts {#enable-alerts}
 
@@ -121,7 +121,7 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the Microsoft Dynamics 365 destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the Microsoft Dynamics 365 destination fields, follow these steps:
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Microsoft Dynamics 365] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Dynamics 365] destination fields, follow these steps:
 
 1. In the Mapping step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
 ![Add new mapping](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
@@ -129,37 +129,42 @@ To correctly send your audience data from Adobe Experience Platform to the Micro
 1. In the select source field window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
 ![Source mapping](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
-1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
-![Target mapping using contactId](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-1. For custom attributes, in the select target field window, select the target field and choose the **[!UICONTROL Select custom attributes]** category, Next provide the desired target attribute name and add the mappings desired.
-![Target mapping using LastName](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+1. In the "[!UICONTROL Select target field]" window, select the target field 
+    * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
+    ![Target mapping using contactId](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-1. For instance, you could add the following mapping between your XDM profile schema and your [!DNL Dynamics 365] instance:
+    * Add the following mapping between your XDM profile schema and your [!DNL Outreach] instance:
+        |XDM Profile Schema|[!DNL Outreach] Instance| Mandatory|
+        |---|---|---|
+        |`contactId`|`contactId`| Yes |
 
-    ||XDM Profile Schema|[!DNL Dynamics 365] Instance| Mandatory|
-    |---|---|---|---|
-    |Attributes|<ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>personalEmail.address</code></li></ul>|<ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>Email</code></li></ul>|
-    |Identities|<ul><li><code>contactId</code></li></ul>|<ul><li><code>contactId</code></li></ul>|Yes|
+    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the [!UICONTROL Attribute name] field. Refer to [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) for a comprehensive list of supported attributes.
+    ![Target mapping using LastName](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+
+    * For instance, depending on the values you want to update, add the following mapping between your XDM profile schema and your [!DNL Outreach] instance:
+        |XDM Profile Schema|[!DNL Dynamics 365] Instance|
+        |---|---|
+        |`person.name.firstName`|`FirstName`|
+        |`person.name.lastName`|`LastName`|
+        |`personalEmail.address`|`Email`|
 
 1. An example using these mappings is shown below:
 ![Target mapping](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
-Refer to [Dynamics 365 documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) for a comprehensive list of supported attributes.
-
-> [!NOTE]
+> [!IMPORTANT]
 >
 > When mapping to a Dynamics 365 [date or timestamp](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest), the corresponding attribute value in the dataset should not be empty else during execution, else you will encounter [errors](#unknown-errors).
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
-When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step you must manually map Platform segments to the custom field attribute in Dynamics 365.
+When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step you must manually map Platform segments to the custom field attribute in [!DNL Dynamics 365].
 
-To do this, select each segment, then enter the corresponding custom field attribute from Dynamics 365 in the **[!UICONTROL Mapping ID]** field.
+To do this, select each segment, then enter the corresponding custom field attribute from [!DNL Dynamics 365] in the **[!UICONTROL Mapping ID]** field.
 
 > [!IMPORTANT]
 >
-> The value used for the Mapping ID should exactly match the name of the custom field attribute created within Dynamics 365.
+> The value used for the Mapping ID should exactly match the name of the custom field attribute created within [!DNL Dynamics 365].
 
 An example is shown below:
 ![Schedule segment export](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
@@ -190,7 +195,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
 ### Authentication errors encountered while pushing events to destination {#auth-errors}
-During execution the Dynamics 365 access token might become invalid, in such scenarios you will obtain the error message below, To resolve re-authenticate and reattempt the execution.
+During execution the [!DNL Dynamics 365] access token might become invalid, in such scenarios you will obtain the error message below, To resolve re-authenticate and reattempt the execution.
 ![Error](../../assets/catalog/crm/microsoft-dynamics-365/error-auth.png)
 
 ### Unknown errors encountered while pushing events to destination {#unknown-errors}
@@ -199,10 +204,10 @@ When checking a dataflow run, if you see the error message below, verify that th
 
 ## Additional resources {#additional-resources}
 
-Additional useful information from the [Dynamics 365 documentation](https://docs.microsoft.com/en-us/dynamics365/) is below:
+Additional useful information from the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/) is below:
 * [IOrganizationService.Update(Entity) Method](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dataverse-sdk-latest)
 * [Update and delete table rows using the Web API](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
 
 ### Limits
 
-The [Requests limits and allocations](https://docs.microsoft.com/en-us/power-platform/admin/api-request-limits-allocations) page details the Dynamics 365 API limits associated with your Dynamics 365 license.
+The [Requests limits and allocations](https://docs.microsoft.com/en-us/power-platform/admin/api-request-limits-allocations) page details the [!DNL Dynamics 365] API limits associated with your [!DNL Dynamics 365] license.
