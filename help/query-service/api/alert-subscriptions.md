@@ -5,33 +5,27 @@ description: The following sections walks through the various API calls you can 
 ---
 # Alert Subscriptions API Endpoint
 
-Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. 
+Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. The notification content is the same for in-platform alerts and email alerts. Currently, query alerts can only be subscribed to using the Query Service API. 
 
-A query alert can be subscribe to using both the Query Service API and the Platform UI. 
+The following query scenarios support alerts:
 
-<!-- See the UI alert subscriptions documentation for information on how to subscribe to an alert using the Platform UI. -->
-
-Alerts support the following query scenarios:
-
-* Alerts for ad hoc queries that use CTAS, ITAS, anonymous block (including templates), saved, and parameterized templates, are possible for successful or failed executions.
+* Alerts for ad hoc queries are available for successful or failed executions. 
 * Alerts for scheduled queries are available for a started, successful, or failed query.
 
-All executed queries, whether ad-hoc or scheduled, can send alerts but queries used for testing can be excluded from alerts if configured appropriately. Also, you do not need to be the query creator to subscribe to an alert. Other users can enrol for alerts on a query that they did not create.
+>[!NOTE]
+>
+>All executed queries support alert subscriptions, but you do not need to be the query creator to subscribe to an alert. Other users can also enrol for alerts on a query that they did not create.
 
 The following alerts apply without an alert subscription :
 
 * When a batch query job finishes, users receive a notification.
-
 * When a batch query job's duration exceeds a threshold, an alert is triggered to the person that scheduled the query.
 
 >[!NOTE]
 >
->The content for in-platform alert and email will be the same 
+>Queries used for testing can be excluded from these alerts if appropriately configured. 
 
-
->[!NOTE]
->
->Email notifications need to be subscribed to from the profile settings page.
+## Sample API calls
 
 The following sections walk through the various API calls you can make using the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
@@ -153,7 +147,7 @@ PATCH /alertSubscriptions/{scheduleId}/{alertType}
 **Request**
 
 ```shell
-curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/{queryId}/{alertType}' \
+curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'x-gw-ims-org-id: {ORG_ID}' \
 -H 'x-api-key: {API_KEY}' \
@@ -309,6 +303,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/
 ```
 
 **Response**
+
+<!-- double check this -->
+A successful response returns an HTML status of 200 and all emailIds subscribed to by a particular assetId per alertType. 
 
 ```json
 {
@@ -471,7 +468,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions'
 
 **Response**
 
-A successful response returns an HTTP 200 status with details of all the alerts subscribed to by an organization for a particular sandbox.
+<!-- Double check this -->
+
+A successful response returns an HTTP 200 status with details of all the alerts for an organization and a particular sandbox. A maximum of three alerts are available per response, one alert per each alertType is contained in the response body.
 
 ```json
 {
