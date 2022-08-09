@@ -48,6 +48,8 @@ You can ingest report suites from any region (US, UK, or Singapore) as long as t
 
 Multiple in-bound connections can be made to bring multiple report suites into the same sandbox. If the report suites have differing schemas for variables (such as eVars or events), they should be mapped to specific fields in the custom field groups and avoid data conflicts using [Data Prep](../../../../../data-prep/ui/mapping.md). Report suites can only be added to a single sandbox.
 
+![](../../../../images/tutorials/create/analytics/report-suite.png)
+
 >[!NOTE]
 >
 >Data from multiple report suites can be enabled for Real-time Customer Data Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning.
