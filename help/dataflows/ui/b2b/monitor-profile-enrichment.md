@@ -50,6 +50,23 @@ The following metrics are available for lead to account matching profile enrichm
 | **[!UICONTROL Last successful run]** | Indicates the date and time of the last successful lead to account matching job run. |
 | **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the lead to account matching job. |
 
+## Predictive lead to account scoring profile enrichment {#predictive-lead-to-account-scoring}
+
+The [!UICONTROL Predictive lead and account scoring] dashboard shows the basic metrics and daily job-run status specific to the [Predictive lead and account scoring](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) profile enrichment. 
+
+![Predictive lead and account scoring profile enrichment](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+The following metrics are available for predictive lead and account scoring profile enrichment jobs:
+
+| Metric | Description |
+| --------- | ---------- |
+| **[!UICONTROL Job start]** | Indicates the start date and time of the predictive lead and account scoring job run. |
+| **[!UICONTROL Processing time]** | Indicates the total time taken for the job to run. |
+| **[!UICONTROL Score name]** | Indicates the name of the job run. |
+| **[!UICONTROL Profile type]** | Indicates the type of profile: <ul><li>Person</li><li>Account</li></ul>. |
+| **[!UICONTROL Job type]** | Indicates the job type that was run:<ul><li>Scoring</li><li>Training</li>. |
+| **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the predictive lead and account scoring job. |
+
 ## UI controls {#ui-controls}
 
 This section describes various user interface (UI) options in the monitoring interface, which allow you to filter the metrics that are displayed on the page.
