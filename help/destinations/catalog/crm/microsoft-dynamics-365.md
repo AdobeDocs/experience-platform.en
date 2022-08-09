@@ -24,7 +24,7 @@ As a marketer, you can deliver personalized experiences to your users, based on 
 
 Before activating data to the [!DNL Microsoft Dynamics 365] destination, you must have a [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-Refer to Adobe's documentation for [Segment Membership Details schema field group](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=en) if you need guidance on segment statuses.
+Refer to Adobe's documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
 ### Microsoft Dynamics 365 Prerequisites {#prerequisites-destination}
 
@@ -94,7 +94,7 @@ You will be shown the [!DNL Dynamics 365] login page. Select your account if you
 *  **[!UICONTROL Password]**: Your [!DNL Dynamics 365] account password.
 *  **[!UICONTROL Username]**: Your [!DNL Dynamics 365] account username.
 
-If the details provided are valid, the UI displays a **Connected** status with a green check mark, you can then proceed to the next step.
+If the details provided are valid, the UI displays a **Connected** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
@@ -123,14 +123,13 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Microsoft Dynamics 365] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Dynamics 365] destination fields, follow these steps:
 
-1. In the Mapping step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
+1. In the [UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
 ![Add new mapping](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. In the select source field window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
+1. In the [!UICONTROL Select source field] window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and add the desired mappings.
 ![Source mapping](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
-
-1. In the "[!UICONTROL Select target field]" window, select the target field 
+1. In the [!UICONTROL Select target field] window, select the type of target field that you want to map the Outreach ID to.
     * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
     ![Target mapping using contactId](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
