@@ -13,11 +13,11 @@ An AI-driven approach would address this inaccurate, tedious and time-consuming 
 
 Predictive lead and account scoring helps marketers to focus on high-value leads and account early in the process by replacing the manual processes with an automated computation job that produces relative predictive propensity scores for all prospects in the system. This feature eliminates the need for rule-based scoring rules which rely on human heuristics which require constant recalibration.
 
-## How it works {#how-it-works}
+## Understanding predictive lead and account scoring {#how-it-works}
 
-> NOTE
+>[!NOTE]
 >
-> Marketo data source is currently required as it's the only data source that can provide the conversion events at the person/ profile level.
+> [!DNL Marketo] data source is currently required as it's the only data source that can provide the conversion events at the person/ profile level.
 
 Administrators have the ability to configure multiple profile scoring goals, one for each configured success event, allowing for separate scores to be generated for each configured goal. Administrators can configure profile scoring goals with opportunity attributes: creation, status values, close win and so on. 
 
@@ -25,8 +25,8 @@ Predictive lead and account scoring supports the following conversion goal types
 
 | Goal type | Fields |
 | --- | --- |
-| leadOperation.convertLead | <ul><li>leadOperation.convertLead.convertedStatus</li><li>leadOperation.convertLead.assignTo</li>**Example: leadOperation.convertLead.convertedStatus equals 'true'**</ul> |
-| opportunityEvent.opportunityUpdated | <ul><li>opportunityEvent.dataValueChanges.attributeName</li><li>opportunityEvent.dataValueChanges.newValue</li><li>opportunityEvent.dataValueChanges.oldValue</li>**Example: opportunityEvent.dataValueChanges.attributeName equals 'status' and opportunityEvent.dataValueChanges.newValue equals 'Contract'**</ul> |
+| `leadOperation.convertLead` | <ul><li>`leadOperation.convertLead.convertedStatus`</li><li>`leadOperation.convertLead.assignTo`</li>Example: `leadOperation.convertLead.convertedStatus` equals `true`</ul> |
+| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>Example: `opportunityEvent.dataValueChanges.attributeName` equals `status` and `opportunityEvent.dataValueChanges.newValue` equals `Contract`</ul> |
 
 The algorithm takes the following attributes and input data into consideration:
 
@@ -34,12 +34,12 @@ The algorithm takes the following attributes and input data into consideration:
 
 | XDM field | Required/ Optional |
 | --- | --- |
-| personComponents.sourceAccountKey.sourceKey | Required |
-| workAddress.country | Optional |
-| extSourceSystemAudit.createdDate | Required |
-| extendedWorkDetails.jobTitle | Optional |
+| `personComponents.sourceAccountKey.sourceKey` | Required |
+| `workAddress.country` | Optional |
+| `extSourceSystemAudit.createdDate` | Required |
+| `extendedWorkDetails.jobTitle` | Optional |
 
-> NOTE
+>[!NOTE]
 > 
 > The algorithm currently only works with the person-account relationship from the Person:personComponents field group.
 
@@ -47,30 +47,30 @@ The algorithm takes the following attributes and input data into consideration:
 
 | XDM field | Required/ Optional |
 | --- | --- |
-| accountKey.sourceKey | Required |
-| extSourceSystemAudit.createdDate | Required |
-| accountOrganization.industry | Optional |
-| accountOrganization.numberOfEmployees | Optional |
-| accountOrganization.annualRevenue.amount | Optional |
+| `accountKey.sourceKey` | Required |
+| `extSourceSystemAudit.createdDate` | Required |
+| `accountOrganization.industry` | Optional |
+| `accountOrganization.numberOfEmployees` | Optional |
+| `accountOrganization.annualRevenue.amount` | Optional |
 
 * Experience Event
 
 | XDM field | Required/ Optional |
 | --- | --- |
-| _id | Required |
-| personKey.sourceKey | Required|
-| timestamp | Required |
-| eventType | Required |
+| `_id` | Required |
+| `personKey.sourceKey` | Required|
+| `timestamp` | Required |
+| `eventType` | Required |
 
 Multiple models are supported, with the following hard limits set in place:
 
 * One model for each goal.
-* Each production sandbox is entitled to 5 models.
-* Each development sandbox is entitled to 1 model.
+* Each production sandbox is entitled to five models.
+* Each development sandbox is entitled to one model.
 
 Scores are run daily and saved as profile attributes and account attributes, which can then be used in segment definitions and personalization. Canned analytics insights are also available on the account overview dashboard.
 
-## How to view predictive lead and account scoring output {#how-to-view}
+## View predictive lead and account scoring output {#how-to-view}
 
 After the job run, the results are saved in a new system dataset for each model under the name **LeadsAI Scores - *the score name***. Each score field group can be located at **custom field group>.LeadsAI.*the score name***.
 
