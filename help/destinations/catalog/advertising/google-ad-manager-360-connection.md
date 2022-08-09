@@ -87,6 +87,10 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 * **[!UICONTROL Bucket name]**: Enter the name of the [!DNL Google Cloud Storage] bucket to be used by this destination.
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
+*  **[!UICONTROL Account ID]**: Fill in your Audience Link ID with [!DNL Google].
+*  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
+   * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
+   * Use `AdX buyer` for [!DNL Google AdX]
 
 ### Enable alerts {#enable-alerts}
 
