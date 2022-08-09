@@ -134,10 +134,10 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 1. In the "[!UICONTROL Mapping]" step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
 ![Add new mapping](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
-1. In the "[!UICONTROL Select source field]" window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
+1. In the "[!UICONTROL Select source field]" window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and add the desired mappings.
 ![Source mapping](../../assets/catalog/crm/outreach/source-mapping.png)
 
-1. In the "[!UICONTROL Select target field]" window, select the target field 
+1. In the "[!UICONTROL Select target field]" window, select the type of target field that you want to map the Outreach ID to.
     * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
     ![Target mapping using OutreachId](../../assets/catalog/crm/outreach/target-mapping.png)
 
