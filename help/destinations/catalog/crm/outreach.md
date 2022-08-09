@@ -84,7 +84,7 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-![Catalog](../../assets/catalog/crm/outreach/catalog.png)
+Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL Outreach]. Alternatively you can locate it under the CRM category.
 
 ### Authenticate to destination {#authenticate}
 
@@ -137,7 +137,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 1. In the "[!UICONTROL Select source field]" window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and add the desired mappings.
 ![Source mapping](../../assets/catalog/crm/outreach/source-mapping.png)
 
-1. In the "[!UICONTROL Select target field]" window, select the type of target field that you want to map the Outreach ID to.
+1. In the "[!UICONTROL Select target field]" window, select the type of target field that you want to map your source field to.
     * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
     ![Target mapping using OutreachId](../../assets/catalog/crm/outreach/target-mapping.png)
 
@@ -160,7 +160,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
-* When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.html?lang=en#scheduling) step you must manually map Platform segments to the custom field attribute in [!DNL Outreach].
+* When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.md) step you must manually map Platform segments to the custom field attribute in [!DNL Outreach].
 
 * To do this, select each segment, then enter the corresponding numeric value which corresponds to the *Custom Field `N` Label* field from [!DNL Outreach] in the **[!UICONTROL Mapping ID]** field.
     > [!IMPORTANT]
@@ -193,7 +193,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the segment summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Segment](../../assets/catalog/crm/outreach/segment.png)
 
-1. Login to the [!DNL Outreach] website, then navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page and check if the profiles from the segment have been added. You will also notice the segment status from Experience Platform has been updated against the corresponding custom field attribute *(identified through the friendly label name)* that was provided in the **Mapping ID** field during the **[!UICONTROL Activate destination]** > **[!UICONTROL Schedule segment export]** step.
+1. Log in to the [!DNL Outreach] website, then navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page and check if the profiles from the segment have been added. You will also notice the segment status from Experience Platform has been updated against the corresponding custom field attribute *(identified through the friendly label name)* that was provided in the **Mapping ID** field during the **[!UICONTROL Activate destination]** > **[!UICONTROL Schedule segment export]** step.
 ![[!DNL Outreach] Prospects](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
 ## Data usage and governance {#data-usage-governance}
@@ -203,9 +203,11 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
 ### Unknown errors encountered while pushing events to destination {#unknown-errors}
-When checking a dataflow run, if you see the error message below, verify that the Mapping ID that you have used is valid within [!DNL Outreach] for your Platform segment.
+When checking a dataflow run, if you obtain the following error message: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
+
 ![Error](../../assets/catalog/crm/outreach/error.png)
 
+To fix this error, verify that the Mapping ID you provided in [!DNL Outreach] for your Platform segment is valid and exists within [!DNL Outreach].
 ## Additional resources {#additional-resources}
 
 The [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs/) has details on [Error Responses](https://api.outreach.io/api/v2/docs#error-responses) which you can use to debug any issues.
