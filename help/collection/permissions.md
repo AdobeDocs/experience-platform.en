@@ -64,19 +64,36 @@ Permissions under Adobe Experience Platform Data Collection control access to ta
 >
 >For more information on how these permissions affect capabilities in tags, including administration strategies for common scenarios, see the tags documentation on [user permissions](../tags/ui/administration/user-permissions.md).
 
-## Manage permissions for Adobe Experience Platform Data Collection {#manage}
+## Manage permissions {#manage}
 
->[!IMPORTANT]
->
->This section only covers how to manage permissions for the Adobe Experience Platform Data Collection product in Admin Console. However, the steps for managing permissions under the Adobe Experience Platform product are similar.
->
->See the [access control UI guide](../access-control/ui/overview.md) for detailed instructions on managing Platform permissions. Depending on the product SKUs your organization has access to, you may not have every permission available to you.
+As outlined in the previous section, permissions for data collection are managed through two product designations in Admin Console: **Adobe Experience Platform** and **Adobe Experience Platform Data Collection**.
 
-To manage permissions for Data Collection, log in to [Admin Console](https://adminconsole.adobe.com/) and select **[!UICONTROL Products]** from the top navigation. From here, select the card for **[!UICONTROL Adobe Experience Platform Data Collection]**.
+To manage these permissions, log in to [Admin Console](https://adminconsole.adobe.com/) and select **[!UICONTROL Products]** from the top navigation. From here, select the product card for the permissions you want to configure. Refer to the subsections below for steps on how to manage the relevant permissions under each product in Admin Console:
+
+* [Adobe Experience Platform permissions](#manage-platform)
+* [Adobe Experience Platform Data Collection permissions](#manage-collection)
+
+### Manage permissions under Adobe Experience Platform {#manage-platform}
+
+From the **[!UICONTROL Products]** view in Admin Console, select **[!UICONTROL Adobe Experience Platform Data Collection]**. Select the product profile that you want to edit permissions for, then navigate to the **[!UICONTROL Permissions]** tab.
+
+In order to access data collection features, you must enable all permissions in the **[!UICONTROL Sandboxes]**, **[!UICONTROL Data Modeling]**, **[!UICONTROL Identity Management]**, and **[!UICONTROL Data Collection]** categories.
+
+![Image showing the Data Collection product card in Admin Console](./images/permissions/platform-permission-card.png)
+
+See the [access control UI guide](../access-control/ui/overview.md) for detailed instructions on managing Platform permissions.
+
+>[!NOTE]
+>
+>Depending on the product SKUs your organization has access to, you may not have every Platform permission available to you.
+
+### Manage permissions under Adobe Experience Platform Data Collection {#manage-collection}
+
+From the **[!UICONTROL Products]** view in Admin Console, select **[!UICONTROL Adobe Experience Platform Data Collection]**.
 
 ![Image showing the Data Collection product card in Admin Console](./images/permissions/data-collection-card.png)
 
-### Select or create a product profile
+#### Select or create a product profile
 
 The next screen shows a list of available product profiles for Data Collection under your organization, the default profile being **[!DNL Default Data Collection All Access]**. You can choose to edit the default product profile if you wish, or you can select **[!UICONTROL New Profile]** to create one. If you have multiple roles or user groups in your organization that require different levels of access, you should create a separate product profile for each of them.
 
@@ -86,7 +103,7 @@ After selecting or creating a product profile, you can use the **[!UICONTROL Edi
 
 ![Image showing the permissions tab for a product profile Admin Console](./images/permissions/edit-permission-categories.png)
 
-### Edit permissions for the product profile {#edit-permissions}
+#### Edit permissions for the product profile {#edit-permissions}
 
 When editing permissions for a profile, available permissions are listed in the left column while those that are included in the profile are listed in the right column. Select the listed permissions to move them between either column.
 
@@ -104,7 +121,7 @@ The product profile view reappears with the added permissions reflected.
 
 ![Image showing the added permissions for the product profile](./images/permissions/permissions-added.png)
 
-### Assign users to the product profile {#assign-users}
+#### Assign users to the product profile {#assign-users}
 
 To assign users to the product profile (and grant them the profile's configured permissions), select the **[!UICONTROL Users]** tab, followed by **[!UICONTROL Add user]**.
 

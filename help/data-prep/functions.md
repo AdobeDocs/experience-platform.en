@@ -19,7 +19,7 @@ If a field name does not follow this convention, the field name must be wrapped 
 Additionally, if a field name is **any** of the following reserved keywords, it must be wrapped with `${}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
 ```
 
 Data within sub-fields can be accessed by using the dot notation. For example, if there was a `name` object, to access the `firstName` field, use `name.firstName`.
