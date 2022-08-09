@@ -83,7 +83,7 @@ The following data is output once a job has completed:
 | Percentile | This value provides information regarding the performance of a profile relative to other similarly scored profiles. For example, a profile with a percentile rank of 99 for churn indicates that it is at a higher risk of churning compared to 99% of all other profiles that were scored. Percentiles range from 1 to 100. |
 | Model type | The selected model type, indicates whether this is a person or account score. |
 |Score date | The date on which scoring occurred. |
-|Influential factors | Predicted reasons on why a profile is likely to convert. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile’s predicted score.</li> <li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight that the profile or behavioral attribute has on the predicted score (low, medium, high).</li></ul>
+|Influential factors | Predicted reasons on why a profile is likely to convert. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile’s predicted score.</li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight that the profile or behavioral attribute has on the predicted score (low, medium, high).</li></ul> |
 
 ## Monitoring predictive lead and account scoring jobs {#monitoring-jobs}
 
