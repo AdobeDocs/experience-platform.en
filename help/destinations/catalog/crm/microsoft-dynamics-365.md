@@ -123,25 +123,25 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Microsoft Dynamics 365] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Dynamics 365] destination fields, follow these steps:
 
-1. In the [UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
+1. In the "[UICONTROL Mapping]" step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
 ![Add new mapping](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. In the [!UICONTROL Select source field] window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and add the desired mappings.
+1. In the "[!UICONTROL Select source field]" window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and add the desired mappings.
 ![Source mapping](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
-1. In the [!UICONTROL Select target field] window, select the type of target field that you want to map the Outreach ID to.
+1. In the "[!UICONTROL Select target field]" window, select the type of target field that to complete the desired mapping.
     * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
     ![Target mapping using contactId](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-    * Add the following mapping between your XDM profile schema and your [!DNL Outreach] instance:
-        |XDM Profile Schema|[!DNL Outreach] Instance| Mandatory|
+    * Add the following mapping between your XDM profile schema and your [!DNL Dynamics 365] instance:
+        |XDM Profile Schema|[!DNL Dynamics 365] Instance| Mandatory|
         |---|---|---|
         |`contactId`|`contactId`| Yes |
 
     * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the [!UICONTROL Attribute name] field. Refer to [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) for a comprehensive list of supported attributes.
     ![Target mapping using LastName](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
 
-    * For instance, depending on the values you want to update, add the following mapping between your XDM profile schema and your [!DNL Outreach] instance:
+    * For instance, depending on the values you want to update, add the following mapping between your XDM profile schema and your [!DNL Dynamics 365] instance:
         |XDM Profile Schema|[!DNL Dynamics 365] Instance|
         |---|---|
         |`person.name.firstName`|`FirstName`|
