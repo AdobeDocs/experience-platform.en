@@ -173,4 +173,4 @@ The main page of the [!UICONTROL Datastreams] workspace reappears with the new d
 
 ## Next steps
 
-This guide covered how to manage datastreams in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../rtcdp-connections/e2e.md#install).
+This guide covered how to manage datastreams in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../collection/e2e.md#install).

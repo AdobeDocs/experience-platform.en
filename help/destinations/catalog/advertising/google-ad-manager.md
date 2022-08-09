@@ -79,7 +79,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
    * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
    * Use `AdX buyer` for [!DNL Google AdX]
-*  **[!UICONTROL Account ID]**: Fill in your account ID with [!DNL Google]. This can be your Network ID or your Audience Link ID. Typically, this is an eight digit ID.
+*  **[!UICONTROL Account ID]**: Fill in your Audience Link ID with [!DNL Google].
 
 >[!NOTE]
 >
