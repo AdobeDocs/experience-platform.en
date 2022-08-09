@@ -31,7 +31,7 @@ The following alerts apply without an alert subscription :
 
 The following sections walk through the various API calls you can make using the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
-## Subscribe users to an alert {#subscribe-users}
+## Create an alert and subscribe users {#subscribe-users}
 
 Making a `POST` request to the `/alertSubscriptions` endpoint creates an alert and subscribes a user to receive it.
 
