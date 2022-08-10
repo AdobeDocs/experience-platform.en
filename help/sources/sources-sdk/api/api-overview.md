@@ -1,17 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Sources SDK API Guide (Beta)
+title: Sources SDK API Guide
 topic-legacy: overview
 description: This document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the Flow Service API.
 hide: true
 hidefromtoc: true
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
 ---
-# Sources SDK API Guide (Beta)
-
->[!IMPORTANT]
->
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+# Sources SDK API Guide
 
 This document provides an overview of the process of creating a new source, including steps on how to write and submit a new connection specification using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

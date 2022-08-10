@@ -10,10 +10,6 @@ exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
 ---
 # Document your source
 
->[!IMPORTANT]
->
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
-
 The final step before your new source can be set live in Adobe Experience Platform is to document your new source.
 
 This documentation guide includes:

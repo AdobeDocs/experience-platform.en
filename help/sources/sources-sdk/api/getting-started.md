@@ -1,18 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Getting Started with Sources SDK (Beta)
+title: Getting Started with Sources SDK
 topic-legacy: developer guide
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Sources SDK.
 hide: true
 hidefromtoc: true
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
 ---
-# Getting Started with Sources SDK (Beta)
-
->[!IMPORTANT]
->
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+# Getting Started with Sources SDK
 
 Sources SDK allows you to integrate your own REST-based source to bring data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

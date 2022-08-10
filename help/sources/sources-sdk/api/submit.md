@@ -1,17 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Submit Your Source (Beta)
+title: Submit Your Source
 topic-legacy: overview
 description: The following document provides steps on how to test and verify a new source using the Flow Service API and integrate a new source through Sources SDK.
 hide: true
 hidefromtoc: true
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
 ---
-# Submit your source (Beta)
-
->[!IMPORTANT]
->
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+# Submit your source
 
 The final step to integrating your new source to Adobe Experience Platform using [!DNL Sources SDK] is to test your source for verification. Once successful, you can then submit your new source by contacting your Adobe representative.
 

@@ -9,10 +9,6 @@ exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
 ---
 # Configuration options in Sources SDK
 
->[!IMPORTANT]
->
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
-
 This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
 
 ## Connection specification
