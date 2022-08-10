@@ -1,19 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;
-title: Create an ad hoc flow run using the Flow Service API
-description: This tutorial covers the steps to create an ad hoc flow run using the Flow Service API.
+title: (Beta) Create a Flow Run for On-Demand Ingestion Using the Flow Service API
+description: This tutorial covers the steps to create a flow run for on-demand ingestion using the Flow Service API
 ---
-# Create an ad hoc flow run using the [!DNL Flow Service] API
+# (Beta) Create a flow run for on-demand ingestion using the [!DNL Flow Service] API 
 
-Ad hoc flow runs provide you with the capability to create a flow run against a given dataflow. This allows end users to create a flow run, based on given parameters and create an ingestion cycle, without service tokens.
+>[!IMPORTANT]
+>
+>On-demand ingestion is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
-This tutorial covers the steps to create an ad hoc flow run using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Flow runs represent an instance of flow execution. For example, if a flow is scheduled to run hourly at 9:00 AM, 10:00 AM, and 11:00 AM, then you would have three instances of a flow run. Flow runs are specific to your particular organization.
+
+On-demand ingestion provides you with the capability to create a flow run against a given dataflow. This allows your users to create a flow run, based on given parameters and create an ingestion cycle, without service tokens.
+
+This tutorial covers the steps on how to use on-demand ingestion and create a flow run using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
 >[!NOTE]
 >
->Before you can create an ad hoc flow run using the [!DNL Flow Service] API, you must first have the flow ID of a dataflow that is scheduled for a one-time ingestion.
+>In order to create a flow run, you must first have the flow ID of a dataflow that is scheduled for one-time ingestion.
 
 This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -24,9 +30,9 @@ This tutorial requires you to have a working understanding of the following comp
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../landing/api-guide.md).
 
-## Create an ad hoc flow run for a table-based source
+## Create a flow run for a table-based source
 
-To create an ad hoc flow for a table-based source, make a POST request to the [!DNL Flow Service] API while providing the ID of the flow you want to create the run against, as well as values for start time, end time, and delta column.
+To create a flow for a table-based source, make a POST request to the [!DNL Flow Service] API while providing the ID of the flow you want to create the run against, as well as values for start time, end time, and delta column.
 
 >[!TIP]
 >
@@ -44,7 +50,7 @@ The following request creates a flow run for flow ID `3abea21c-7e36-4be1-bec1-d3
 
 >[!NOTE]
 >
->You only need to provide the `deltaColumn` when creating your first ad hoc flow run. After that, `deltaColumn` will be patched as part of `copy` transformation in the flow and will be treated as the source of truth. Any attempts to change the `deltaColumn` value through the flow run parameters will result in an error.
+>You only need to provide the `deltaColumn` when creating your first flow run. After that, `deltaColumn` will be patched as part of `copy` transformation in the flow and will be treated as the source of truth. Any attempts to change the `deltaColumn` value through the flow run parameters will result in an error.
 
 ```shell
 curl -X POST \
@@ -123,14 +129,14 @@ A successful response returns the details of the newly created flow run, includi
 | `flowId` | The ID of the flow in which the flow run is created against. |
 | `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
 | `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
-| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your first ad hoc flow run. |
+| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 | `etag` | The resource version of the flow run. |
 | `metrics` | This property displays a status summary for the flow run. |
 
-## Create an ad hoc flow run for a file-based source
+## Create a flow run for a file-based source
 
-To create an ad hoc flow for a file-based source, make a POST request to the [!DNL Flow Service] API while providing the ID of the flow you want to create the run against and values for start time and end time.
+To create a flow for a file-based source, make a POST request to the [!DNL Flow Service] API while providing the ID of the flow you want to create the run against and values for start time and end time.
 
 >[!TIP]
 >
@@ -222,4 +228,4 @@ A successful response returns the details of the newly created flow run, includi
 
 ## Monitor your flow runs
 
-Once your ad hoc flow run has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. To monitor your flow runs using the API, see the tutorial on [monitoring dataflows in the API ](./monitor.md). To monitor your flow runs using Platform UI, see the guide on [monitoring sources dataflows using the monitoring dashboard](../../../dataflows/ui/monitor-sources.md).
+Once your flow run has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. To monitor your flow runs using the API, see the tutorial on [monitoring dataflows in the API ](./monitor.md). To monitor your flow runs using Platform UI, see the guide on [monitoring sources dataflows using the monitoring dashboard](../../../dataflows/ui/monitor-sources.md).
