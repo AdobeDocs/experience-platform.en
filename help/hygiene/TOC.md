@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Data Hygiene Help
 breadcrumb-title: Data Hygiene Guide
 user-guide-description: Manage consumer data requests to comply with legal privacy regulations like GDPR and CCPA.
-feature: Privacy
+feature: Data Hygiene
 ---
 
 # Data hygiene {#hygiene}
