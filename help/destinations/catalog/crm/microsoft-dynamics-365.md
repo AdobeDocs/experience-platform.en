@@ -22,13 +22,13 @@ As a marketer, you can deliver personalized experiences to your users, based on 
 
 ### Experience Platform Prerequisites {#prerequisites-in-experience-platform}
 
-Before activating data to the [!DNL Microsoft Dynamics 365] destination, you must have a [schema](/help/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the [!DNL Dynamics 365] destination, you must have a [schema](/help/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
 Refer to Adobe's documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
 ### Microsoft Dynamics 365 Prerequisites {#prerequisites-destination}
 
-Note the following prerequisites in [!DNL Microsoft Dynamics 365], in order to export data from Platform to your [!DNL Dynamics 365] account:
+Note the following prerequisites in [!DNL Dynamics 365], in order to export data from Platform to your [!DNL Dynamics 365] account:
 
 #### You need to have a Microsoft Dynamics 365 account {#prerequisites-account}
 
@@ -40,11 +40,11 @@ Create the custom field of type `Simple` with field data type as `Single Line of
 Refer to the [!DNL Dynamics 365] documentation to [create a field (attribute)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) if you need additional guidance.
 
 An example setup within [!DNL Dynamics 365] is shown below:
-![Target mapping](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-fields.png)
+![Dynamics 365 UI screenshot showing the Target mapping](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-fields.png)
 
 #### Gather Dynamics 365 credentials {#gather-credentials}
 
-Note down the items below before you authenticate to the [!DNL Microsoft Dynamics 365] CRM destination:
+Note down the items below before you authenticate to the [!DNL Dynamics 365] CRM destination:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -54,11 +54,11 @@ Note down the items below before you authenticate to the [!DNL Microsoft Dynamic
 
 ## Supported identities {#supported-identities}
 
-[!DNL Microsoft Dynamics 365] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Dynamics 365] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Example|Description|Considerations|
 |---|---|---|---|
-| `contactId` | `7eb682f1-ca75-e511-80d4-00155d2a68d1` | Unique identifier for a contact.| **Mandatory**, Refer to the [[!DNL Microsoft Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) for further details. |
+| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Unique identifier for a contact.| **Mandatory**, Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) for further details. |
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -66,7 +66,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Platform segment statuses are exported to [!DNL Dynamics 365] by specifying their corresponding custom field attribute in [!DNL Dynamics 365], within the **[!UICONTROL Activate Destination]** > **[!UICONTROL Schedule segment export]** > **[!UICONTROL Mapping ID]** field.</li></ul> |
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li>Platform segment statuses are exported to [!DNL Dynamics 365] by entering their [!DNL Dynamics 365] custom field attribute in the [!UICONTROL Mapping ID] field, during the [!UICONTROL Schedule segment export] step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -79,17 +79,17 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL Microsoft Dynamics 365]. Alternatively you can locate it under the CRM category.
+Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL Dynamics 365]. Alternatively you can locate it under the CRM category.
 
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, select **[!UICONTROL Connect to destination]**.
 
-![Sample screenshot showing how to authenticate to Dynamics 365](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
+![Dynamics 365 UI screenshot showing how to authenticate](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
 You will be shown the [!DNL Dynamics 365] login page. Select your account if you are already signed-in or login with your credentials.
 
-![Sample screenshot showing how to authenticate to Dynamics 365](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination-login.png)
+![Dynamics 365 UI screenshot showing how to authenticate](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination-login.png)
 
 *  **[!UICONTROL Password]**: Your [!DNL Dynamics 365] account password.
 *  **[!UICONTROL Username]**: Your [!DNL Dynamics 365] account username.
@@ -99,11 +99,11 @@ If the details provided are valid, the UI displays a **Connected** status with a
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-![Sample screenshot showing how to fill in details for Dynamics 365 destination](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
+![Dynamics 365 UI screenshot showing the destination details](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Environment URL]**: Your [!DNL Dynamics 365] Environment URL.
+*  **[!UICONTROL Environment URL]**: Your [!DNL Dynamics 365] Environment URL. See [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) for additional guidance.
 
 ### Enable alerts {#enable-alerts}
 
@@ -121,17 +121,17 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the [!DNL Microsoft Dynamics 365] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Dynamics 365] destination fields, follow these steps:
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Dynamics 365] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Dynamics 365] destination fields, follow these steps:
 
-1. In the "[UICONTROL Mapping]" step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
-![Add new mapping](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
+1. In the [UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
+![Dynamics 365 UI screenshot example for Add new mapping](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. In the "[!UICONTROL Select source field]" window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and select `contactId`.
-![Source mapping](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
+1. In the [!UICONTROL Select source field] window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and select `contactId`.
+![Dynamics 365 UI screenshot example for Source mapping](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
-1. In the "[!UICONTROL Select target field]" window, select the type of target field that you want to map your source field to.
+1. In the [!UICONTROL Select target field] window, select the type of target field that you want to map your source field to.
     * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
-    ![Target mapping using contactId](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+    ![Dynamics 365 UI screenshot showing Target mapping for contactId](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
     * Add the following mapping between your XDM profile schema and your [!DNL Dynamics 365] instance:
         |XDM Profile Schema|[!DNL Dynamics 365] Instance| Mandatory|
@@ -139,7 +139,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
         |`contactId`|`contactId`| Yes |
 
     * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the [!UICONTROL Attribute name] field. Refer to [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) for a comprehensive list of supported attributes.
-    ![Target mapping using LastName](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+    ![Dynamics 365 UI screenshot showing Target mapping for LastName](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
 
         > [!IMPORTANT]
         >
@@ -153,39 +153,39 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
         |`personalEmail.address`|`Email`|
 
     * An example using these mappings is shown below:
-    ![Target mapping](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+    ![Dynamics 365 UI screenshot example showing Target mappings](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
 When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.md) step you must manually map Platform segments to the custom field attribute in [!DNL Dynamics 365].
 
-To do this, select each segment, then enter the corresponding custom field attribute from [!DNL Dynamics 365] in the **[!UICONTROL Mapping ID]** field.
+To do this, select each segment, then enter the corresponding custom field attribute from [!DNL Dynamics 365] in the [!UICONTROL Mapping ID] field.
 
 > [!IMPORTANT]
 >
-> The value used for the Mapping ID should exactly match the name of the custom field attribute created within [!DNL Dynamics 365]. See [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) if you need guidance on finding your custom field attributes.
+> The value used for the [!UICONTROL Mapping ID] should exactly match the name of the custom field attribute created within [!DNL Dynamics 365]. See [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) if you need guidance on finding your custom field attributes.
 
 An example is shown below:
-![Schedule segment export](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
+![Dynamics 365 UI screenshot example showing Schedule segment export](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
 
 ## Validate data export {#exported-data}
 
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** to navigate to the list of destinations.
-![Browse Destinations](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
+![Dynamics 365 UI screenshot showing Browse Destinations](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
 
 1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
-![Destinations Dataflow Run](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
+![Dynamics 365 UI screenshot showing Destinations Dataflow Run](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
 1. Switch to the **[!DNL Activation data]** tab, then select a segment name.
-![Destinations Activation Data](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
+![Dynamics 365 UI screenshot example showing Destinations Activation Data](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
 1. Monitor the segment summary and ensure that the count of profiles corresponds to the count created within the segment.
-![Segment](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
+![Dynamics 365 UI screenshot example showing Segment](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. Log in to the Dynamics 365 website, then navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page and check if the profiles from the segment have been added. You will also notice the segment status from Experience Platform has been updated against the corresponding custom field attribute that was provided in the **Mapping ID** field during the **[!UICONTROL Activate destination]** > **[!UICONTROL Schedule segment export]** step.
-![Dynamics 365 Contacts](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
+1. Log in to the Dynamics 365 website, then navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page and check if the profiles from the segment have been added. You will also notice the segment status from Experience Platform has been updated against the corresponding custom field attribute that was provided in the **Mapping ID** field during the Platform **[!UICONTROL Activate destination]** > **[!UICONTROL Schedule segment export]** step.
+![Dynamics 365 UI screenshot showing the Contacts page with updated segment statuses](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -196,16 +196,16 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ### Authentication errors encountered while pushing events to destination {#auth-errors}
 During activation, the [!DNL Dynamics 365] access token might become invalid, resulting in the following error message: `Authentication error reported while pushing events to the destination. Please check authentication credentials and try again.`
 
-![Error](../../assets/catalog/crm/microsoft-dynamics-365/error-auth.png)
+![Platform UI screenshot showing Authentication Error](../../assets/catalog/crm/microsoft-dynamics-365/error-auth.png)
 
 To fix this error, re-authenticate to the destination and create a new activation flow.
 
 ### Unknown errors encountered while pushing events to destination {#unknown-errors}
 When checking a dataflow run, if you obtain the following error message: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-![Error](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
+![Platform UI screenshot showing Bad request Error](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
 
-To fix this error, verify that the Mapping ID you provided in [!DNL Dynamics 365] for your Platform segment is valid and exists within [!DNL Dynamics 365].
+To fix this error, verify that the [!UICONTROL Mapping ID] you provided in [!DNL Dynamics 365] for your Platform segment is valid and exists within [!DNL Dynamics 365].
 
 ## Additional resources {#additional-resources}
 
