@@ -304,7 +304,9 @@ Once you have gathered the required artifacts, copy and paste the connection spe
               "type": "string",
               "enum": [
                 "OFFSET",
-                "POINTER"
+                "POINTER",
+                "CONTINUATION_TOKEN",
+                "NONE"
               ]
             },
             "limitName": {
