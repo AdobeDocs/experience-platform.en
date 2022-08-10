@@ -42,7 +42,7 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 The **[!UICONTROL Analytics source add data]** step provides you with a list of [!DNL Analytics] report suite data to create a source connection with. 
 
-A report suite is a silo of data that [!DNL Analytics] uses to pull reports. An organization can have many report suites, each containing different datasets. 
+A report suite is a container of data that forms the basis of [!DNL Analytics] reporting. An organization can have many report suites, each containing different datasets. 
 
 You can ingest report suites from any region (US, UK, or Singapore) as long as they are mapped to the same organization as the Experience Platform sandbox instance in which the source connection is being created in. A report suite can be ingested using only a single active dataflow. A report suite that is not selectable has already been ingested, either in the the sandbox that you are using or in a different sandbox.
 
