@@ -70,6 +70,8 @@ Multiple models are supported, with the following hard limits set in place:
 
 Scores are run daily and saved as profile attributes and account attributes, which can then be used in segment definitions and personalization. Canned analytics insights are also available on the account overview dashboard.
 
+See the documentation for more information about how to [setup a predictive lead and account score](/help/rtcdp/b2b-ai-ml-services/setup-predictive-lead-and-account-scoring.md).
+
 ## View predictive lead and account scoring output {#how-to-view}
 
 After the job run, the results are saved in a new system dataset for each model under the name **LeadsAI Scores - *the score name***. Each score field group can be located at **custom field group>.LeadsAI.*the score name***.
