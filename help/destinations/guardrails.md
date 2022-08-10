@@ -83,8 +83,9 @@ The guardrails below apply to activation through [edge personalization destinati
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Maximum number of destinations | N/A | - | There is currently no limit to how many personalization destinations per organization ID or per sandbox you can connect and activate data to.|
+|Maximum number of Custom personalization destinations | 10 | Soft | You can set up dataflows to ten Custom personalization destinations per sandbox.|
 |Maximum number of attributes mapped to a personalization destination | 20 | Hard | A maximum of 20 attributes can be mapped in a dataflow to a personalization destination.|
+|Maximum number of segments mapped to a single destination | 200 | Soft | You can activate a maximum of 200 segments in an activation flow to a single personalization destination platform.|
 
 {style="table-layout:auto"}
 
@@ -102,7 +103,7 @@ Details on throttling thresholds or limitations for given destinations. This sec
 
 | Type of destination | Description |
 | --- | --- |
-| Enterprise destinations (HTTP API, Amazon Kinesis, Azure EventHubs)| In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10.000 requests per second for each dataflow to an enterprise destination. <br> In case of failed requests to your enterprise destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.|
+| Enterprise destinations (HTTP API, Amazon Kinesis, Azure EventHubs)| In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10 thousand requests per second for each dataflow to an enterprise destination. <br> In case of failed requests to your enterprise destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.|
 
 ## Guardrails for other Experience Platform services {#guardrails-other-services}
 
