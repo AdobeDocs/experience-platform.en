@@ -45,6 +45,11 @@ Both record and time series schemas contain a map of identities (`xdm:identityMa
 
 ### [!UICONTROL Identity] {#identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identities"
+>title="Identities in schemas"
+>abstract="Identities are key fields within a schema that can be used to identify a subject, such as an email address or a marketing ID. These fields are used to construct the identity graph for each individual and build customer profiles. See the documentation for more information on identities in schemas."
+
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
 To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
@@ -119,19 +124,27 @@ The following table breaks down which changes are supported when editing schemas
 
 | Supported changes | Breaking changes (Not supported) |
 | --- | --- |
-| <ul><li>Adding new fields to the resource</li><li>Making a mandatory field optional</li><li>Introducing new mandatory fields*</li><li>Changing the resource's display name and description</li><li>Enabling the schema to participate in Profile</li></ul> | <ul><li>Removing previously defined fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving existing fields to a different location in the tree</li><li>Deleting the schema</li><li>Disabling the schema from participating in Profile</li></ul> |
+| <ul><li>Adding new fields to the resource</li><li>Making a required field optional</li><li>Introducing new required fields*</li><li>Changing the resource's display name and description</li><li>Enabling the schema to participate in Profile</li></ul> | <ul><li>Removing previously defined fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving existing fields to a different location in the tree</li><li>Deleting the schema</li><li>Disabling the schema from participating in Profile</li></ul> |
 
-\**Refer to the [subsection below](#post-ingestion-required-fields) for important considerations regarding setting new mandatory fields.*
+\**Refer to the section below for important considerations regarding [setting new required fields](#post-ingestion-required-fields).*
 
-#### Setting fields as mandatory after ingestion {#post-ingestion-required-fields}
+### Required fields
+
+Individual schema fields can be [marked as required](../ui/fields/required.md), which means that any ingested records must contain data in those fields in order to pass validation. For example, setting a schema's primary identity field as required can help ensure that all ingested records will participate in Real-time Customer Profile, while setting a timestamp field as required ensures that all time-series events are chronologically preserved.
+
+>[!IMPORTANT]
+>
+>Regardless of whether a schema field is required or not, Platform does not accept `null` or empty values for any ingested field. If there is no value for particular field in a record or event, the key for that field should be excluded from the ingestion payload.
+
+#### Setting fields as required after ingestion {#post-ingestion-required-fields}
 
 If a field has been used to ingest data and was not originally set as required, that field may have a null value for some records. If you set this field as required post-ingestion, all future records must contain a value for this field even though historical records may be null.
 
-When setting a previously optional field as mandatory, keep the following in mind:
+When setting a previously optional field as required, keep the following in mind:
 
 1. If you query historical data and write the results into a new dataset, some rows will fail because they contain null values for the required field.
 1. If the field participates in [Real-time Customer Profile](../../profile/home.md) and you export data before setting it as required, it may be null for some profiles.
-1. You can use the Schema Registry API to view a timestamped changelog for all XDM resources in Platform, including new mandatory fields. See the guide on the [audit log endpoint](../api/audit-log.md) for more information.
+1. You can use the Schema Registry API to view a timestamped changelog for all XDM resources in Platform, including new required fields. See the guide on the [audit log endpoint](../api/audit-log.md) for more information.
 
 ### Schemas and data ingestion
 
@@ -149,6 +162,11 @@ Schemas are composed using the following formula:
 
 ### Class {#class}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class"
+>title="Class"
+>abstract="Every schema is based on a single class. The class defines the schema's behavior and the common properties that all schemas based on that class must contain. See the documentation to learn more about how classes are involved in schema composition."
+
 Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged. 
 
 A schema's class determines which field groups will be eligible for use in that schema. This is discussed in more detail in the [next section](#field-group). 
@@ -162,6 +180,11 @@ The following screenshot demonstrates how classes are represented in the Platfor
 For the most up-to-date list of available standard XDM classes, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/classes). Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
 
 ### Field group {#field-group}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup"
+>title="Field group"
+>abstract="Field groups are reusable components that allow you to extend schemas with additional attributes. Most field groups are only compatible with certain classes. You can use standard field groups defined by Adobe or you can manually define your own custom field groups. See the documentation to learn more about how field groups are involved in schema composition."
 
 A field group is a reusable component that defines one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
 

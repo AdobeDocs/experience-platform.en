@@ -27,7 +27,7 @@ In the [!DNL Experience Platform] UI, select **[!UICONTROL Policies]** to open t
 
 ![](../images/policies/browse-policies.png)
 
-If you have access to consent policies (currently in beta), select the **[!UICONTROL Consent policies]** toggle to view them in the [!UICONTROL Browse] tab.
+If you have access to consent policies, select the **[!UICONTROL Consent policies]** toggle to view them in the [!UICONTROL Browse] tab.
 
 ![](../images/policies/consent-policy-toggle.png)
 
@@ -77,7 +77,7 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 
 >[!IMPORTANT]
 >
->Consent policies are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+>Consent policies are currently only available for organizations that have purchased Healthcare Shield.
 
 If you chose to create a consent policy, a new screen appears that allows you to configure the new policy.
 

@@ -1,8 +1,6 @@
 ---
 title: Personalization overview
-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
-seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
-keywords: personalization; server api; Adobe Experience Platform Edge Network; retrieve personalization
+description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
 ---
 # Personalization overview
@@ -257,7 +255,7 @@ POST /ee/v2/collect
 ### Request {#notifications-request}
 
 ```shell
-url -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
+curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}"
