@@ -44,7 +44,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Next steps
 
-We have now implemented role-based access control with **View Customer AI** and **Manage Customer AI** and depending on your privileges, you can access different functionalities of Customer AI. **Manage Customer AI**` lets you **create**,**update**, **delete**, **enable**, or **disable** an instance while **View Customer AI** only lets you read or view it. The **create**, **update** and **delete** actions are recorded by audit logs.
+We have now implemented role-based access control with **View Customer AI** and **Manage Customer AI** and depending on your privileges, you can access different functionalities of Customer AI. **Manage Customer AI** lets you **create**,**update**, **delete**, **enable**, or **disable** an instance while **View Customer AI** only lets you read or view it. The **create**, **update** and **delete** actions are recorded by audit logs.
 
 To learn more about assigning permissions, refer to the [attribute based access control documentation](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=en) and to the [Audit Logs documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=en) to learn more about Audit Logs.
 
