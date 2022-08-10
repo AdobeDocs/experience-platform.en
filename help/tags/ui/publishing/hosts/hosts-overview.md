@@ -20,4 +20,4 @@ For detailed information about each host type, please use the links above.
 
 The same host can be used for multiple environments within a property.
 
-For more information to help you decide between self-hosting and having Adobe manage the hosting for you, please read the [Self-hosting Guide](./self-hosting-libraries.md).
+For more information to help you decide between self-hosting and having Adobe manage the hosting for you, please read the [self-hosting guide](./self-hosting-libraries.md).
