@@ -5,13 +5,11 @@ description: An overview and more information about the predictive lead and acco
 ---
 # Predictive lead and account scoring in Real-time CDP B2B
 
-## Overview {#overview}
-
-Account-based marketing marketers require propensity scores at the account level so that they can focus on marketing to the top accounts or take different approaches with prospect accounts at different propensity levels. Marketers often face the dilemma of acquiring as many prospects as possible to increase their reach. The challenge with more prospects is the time and effort marketers expend going through each prospect manually to qualify the best prospects for their propensity to convert/ buy. 
+Account-based marketing marketers require propensity scores at the account level so that they can focus on marketing to the top accounts or take different approaches with prospect accounts at different propensity levels. Marketers often face the dilemma of acquiring as many prospects as possible to increase their reach. The challenge with more prospects is the time and effort marketers expend going through each prospect manually to qualify the best prospects for their propensity to convert/buy. 
 
 An AI-driven approach would address this inaccurate, tedious and time-consuming process, as long as there is sufficient data in the system for the algorithm to learn and derive the propensity pattern, and use it to predict future outcomes. This requires no human instructions as it will learn the pattern from the data, and requires no manual recalibration as it self-adjusts as the data change.
 
-Predictive lead and account scoring helps marketers to focus on high-value leads and account early in the process by replacing the manual processes with an automated computation job that produces relative predictive propensity scores for all prospects in the system. This feature eliminates the need for rule-based scoring rules which rely on human heuristics which require constant recalibration.
+Predictive lead and account scoring helps marketers to to focus on high-value leads and accounts early in the process by replacing the manual processes with an automated computation job that produces relative predictive propensity scores for all prospects in the system. This feature eliminates the need for rule-based scoring rules which rely on human heuristics which require constant recalibration.
 
 ## Understanding predictive lead and account scoring {#how-it-works}
 
@@ -89,13 +87,13 @@ The following data is output once a job has completed:
 
 ### View customer profile scores
 
-To view the customer predictive scores, select the **[!UICONTROL Profiles]** tab under the customer section in the left panel. Enter the identity namespace and identity value and select **[!UICONTROL View]**.
+To view the customer predictive scores, select **[!UICONTROL Profiles]** under the customer section in the left panel, and then enter the identity namespace and identity value. Once finished, select **[!UICONTROL View]**.
 
-Select the profile from the list.
+The interface updates with the queried customer profile scores. Next, select the profile from the list.
 
 ![Customer profile](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-You are taken to the **[!UICONTROL Detail]** tab for the profile. This tab contains customer profile details and predictive scores. Select the graph icon beside the predictive score.
+The **[!UICONTROL Detail]** page contains customer profile details and predictive scores. Select the graph icon beside the predictive score.
 
 ![Customer profile predictive score](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
@@ -111,4 +109,4 @@ You can monitor basic metrics and daily job-run status through the dashboard. Th
 * Next scoring job (date)
 * Next training job (date)
 
-See the documentation for more information about the [monitoring jobs for predictive lead and account scoring](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+For more information, see the documentation on [monitoring jobs for predictive lead and account scoring](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

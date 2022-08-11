@@ -3,13 +3,13 @@ title: Manage predictive lead and account scoring in Real-time CDP B2B
 type: Documentation
 description: This document provides information on managing the predictive lead and account scoring feature in Experience Platform CDP B2B.
 ---
-# Manage predictive lead and account scoring in Real-time CDP B2B
+# Manage predictive lead and account scoring in Real-time Customer Data Platform, B2B Edition
 
 This tutorial walks you through the steps to manage a score as part of the predictive lead and account scoring feature. Scores can be managed for either an account profile or person profile.
 
 ## Create a new score 
 
-To create a new score, select the **[!UICONTROL Services]** tab in the sidebar and select **[!UICONTROL Create score]**.
+To create a new score, select the **[!UICONTROL Services]** in the sidebar and select **[!UICONTROL Create score]**.
 
 ![plas-new-score](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
@@ -17,31 +17,31 @@ The **[!UICONTROL Basic information]** screen appears, prompting you to select a
 
 ![plas-enter-basic-information](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
-The **[!UICONTROL Define your goal]** screen appears. Using the dropdown arrow select a goal.
+The **[!UICONTROL Define your goal]** screen appears. Select the dropdown arrow and then select a goal from the dropdown window that appears.
 
 ![plas-select-a-goal](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
-The **[!UICONTROL Goal specifics]** dialogue opens. Using the dropdown arrow select a goal field name.
+The **[!UICONTROL Goal specifics]** dialogue opens. Select the dropdown arrow and then select goal field name from the dropdown window that appears..
 
 ![plas-select-a-goal-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
-The **[!UICONTROL Goal conditions]** selection appears. Using the dropdown arrow select the condition.
+The **[!UICONTROL Goal conditions]** selection appears. Select the dropdown arrow and then select condition from the dropdown window that appears..
 
 ![plas-goal-specifics-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
-The **[!UICONTROL Goal value]** field appears. Enter the goal value and press enter. The goal value appears on the right side of the field. 
+The **[!UICONTROL Goal value]** field appears. Next, configure your [!UICONTROL Goal specifics]. Select the [!UICONTROL Enter Field Value] panel and enter your goal value.
 
 >[!NOTE]
 >
-> Multiple goal values can be added.
+>Multiple goal values can be added.
 
 ![plas-goal-specifics-field-value](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
 
-Select the **[!UICONTROL Add event]** button to add additional events.
+To add additional events, select **[!UICONTROL Add event]**.
 
 ![plas-goal-specifics-add-event](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
 
-Using the dropdown arrow, select the prediction timeframe and select **[!UICONTROL Finish]**
+To configure the prediction timeframe, select the dropdown arrow and then select your timeframe of choice and then select **[!UICONTROL Finish]**.
 
 ![plas-prediction-timeframe](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
 
@@ -57,7 +57,7 @@ You are returned to the **[!UICONTROL Services]** tab where you can see the new 
 
 ![plas-score-created](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
 
-Select the score to view details, and additional information about the last run details on the right side of the screen. 
+Select the score to view details and additional information about the last run details.
 
 ![plas-score-additional-information](../assets/../b2b-ai-ml-services/assets/plas-score-info.png)
 
@@ -101,7 +101,7 @@ To delete a score, select a score from the **[!UICONTROL Services]** tab and sel
 
 ![plas-delete-score](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
-The **[!UICONTROL Delete documentation]** confirmation dialogue appears. Select **[!UICONTROL Delete]**.
+The **[!UICONTROL Delete documentation]** confirmation dialog appears. Select **[!UICONTROL Delete]**.
 
 ![plas-delete-score-confirmation](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 
