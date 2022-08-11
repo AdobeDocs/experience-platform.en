@@ -20,13 +20,13 @@ As a marketer, you can deliver personalized experiences to your prospects, based
 
 ## Prerequisites {#prerequisites}
 
-### Experience Platform Prerequisites {#prerequisites-in-experience-platform}
+### Experience Platform prerequisites {#prerequisites-in-experience-platform}
 
 Before activating data to the [!DNL Outreach] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
 Refer to Adobe's documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
-### Outreach Prerequisites {#prerequisites-destination}
+### Outreach prerequisites {#prerequisites-destination}
 
 Note the following prerequisites in [!DNL Outreach], in order to export data from Platform to your [!DNL Outreach] account:
 
@@ -42,6 +42,12 @@ Note down the items below before you authenticate to the [!DNL Outreach] CRM des
 |---|---|
 | Email | Your [!DNL Outreach] account email |
 | Password | Your [!DNL Outreach] account password |
+
+## Guardrails
+
+The [!DNL Outreach] API is rate-limited on a per-user basis, with a fixed limit of 10,000 requests per one-hour period. If you encounter this limit you will encounter a `429` response with a message similar to *`You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`*. You will need to accordingly adapt your segment export to conform to the rate threshold.
+
+Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs#rate-limiting) for additional details.
 
 #### Setup custom field labels
 
@@ -71,8 +77,8 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li>Platform segment statuses are exported to [!DNL Outreach] by entering their [!DNL Outreach] custom field attribute in the [!UICONTROL Mapping ID] field, during the [!UICONTROL Schedule segment export] step.</li></ul> |
-| Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li> You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Outreach] gets updated with the corresponding segment status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [segment scheduling](#schedule-segment-export-example) step.</li></ul> |
+| Export frequency | **[!UICONTROL Streaming]** | <ul><li> Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
 
@@ -134,7 +140,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 1. In the [!UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
 ![Platform UI screenshot showing how to Add new mapping](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
-1. In the [!UICONTROL Select source field] window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and add the desired mappings.
+1. In the [!UICONTROL Select source field] window, choose the **[!UICONTROL Select identity namespace]** category and add the desired mappings.
 ![Platform UI screenshot showing Source mapping](../../assets/catalog/crm/outreach/source-mapping.png)
 
 1. In the [!UICONTROL Select target field] window, select the type of target field that you want to map your source field to.
@@ -155,8 +161,8 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
         |`person.name.firstName`|`firstName`|
         |`person.name.lastName`|`lastName`|
 
-1. An example using these mappings is shown below:
-![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/outreach/mappings.png)
+    * An example using these mappings is shown below:
+    ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/outreach/mappings.png)
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
@@ -193,7 +199,8 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the segment summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Platform UI screenshot showing Segment summary.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Log in to the [!DNL Outreach] website, then navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page and check if the profiles from the segment have been added. You will also notice the segment status from Experience Platform has been updated against the corresponding custom field attribute *(identified through the friendly label name)* that was provided in the Platform **Mapping ID** field during the **[!UICONTROL Activate destination]** > **[!UICONTROL Schedule segment export]** step.
+1. Log in to the [!DNL Outreach] website, then navigate to the [!DNL Apps] > [!DNL Contacts] page and check if the profiles from the segment have been added. You can see that each segment status in [!DNL Outreach] was updated with the corresponding segment status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [segment scheduling](#schedule-segment-export-example) step.
+
 ![Outreach UI screenshot showing the Outreach Prospects page with the updated segment statuses.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
 ## Data usage and governance {#data-usage-governance}
@@ -211,9 +218,3 @@ To fix this error, verify that the Mapping ID you provided in [!DNL Outreach] fo
 ## Additional resources {#additional-resources}
 
 The [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs/) has details on [Error Responses](https://api.outreach.io/api/v2/docs#error-responses) which you can use to debug any issues.
-
-### Limits
-
-The [!DNL Outreach] API is rate-limited on a per-user basis, with a fixed limit of 10,000 requests per one-hour period. If you encounter this limit you will encounter a `429` response with a message similar to *`You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`*
-
-Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs#rate-limiting) for additional details.
