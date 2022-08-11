@@ -50,7 +50,7 @@ The following metrics are available for lead to account matching profile enrichm
 | **[!UICONTROL Last successful run]** | Indicates the date and time of the last successful lead to account matching job run. |
 | **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the lead to account matching job. |
 
-## Predictive lead to account scoring profile enrichment {#predictive-lead-to-account-scoring}
+## Predictive lead and account scoring profile enrichment {#predictive-lead-to-account-scoring}
 
 The [!UICONTROL Predictive lead and account scoring] dashboard shows the basic metrics and daily job-run status specific to the [Predictive lead and account scoring](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) profile enrichment. 
 
