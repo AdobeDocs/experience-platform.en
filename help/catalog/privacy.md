@@ -3,18 +3,18 @@ keywords: Experience Platform;home;popular topics;data lake privacy;identity nam
 solution: Experience Platform
 title: Privacy Request Processing in the Data Lake
 topic-legacy: overview
-description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations. This document covers essential concepts related to processing privacy requests for customer data stored in the Data Lake.
+description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations. This document covers essential concepts related to processing privacy requests for customer data stored in the data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 ---
-# Privacy request processing in the [!DNL Data Lake]
+# Privacy request processing in the data lake
 
 Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations.
 
-This document covers essential concepts related to processing privacy requests for customer data stored in the [!DNL Data Lake].
+This document covers essential concepts related to processing privacy requests for customer data stored in the data lake.
 
 >[!NOTE]
 >
->This guide only covers how to make privacy requests for the Data Lake in Experience Platform. If you also plan to make privacy requests for the Real-time Customer Profile data store, refer to the guide on [privacy request processing for Profile](../profile/privacy.md) in addition to this tutorial.
+>This guide only covers how to make privacy requests for the data lake in Experience Platform. If you also plan to make privacy requests for the Real-time Customer Profile data store, refer to the guide on [privacy request processing for Profile](../profile/privacy.md) in addition to this tutorial.
 >
 >For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
@@ -37,7 +37,7 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ## Adding identity data to datasets
 
-When creating privacy requests for the [!DNL Data Lake], valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an identity descriptor in their associated XDM schema.
+When creating privacy requests for the data lake, valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an identity descriptor in their associated XDM schema.
 
 >[!NOTE]
 >
@@ -132,27 +132,27 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 
 >[!NOTE]
 >
->This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+>This section covers how to format privacy requests for the data lake. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
-The following section outlines how to make privacy requests for the [!DNL Data Lake] using the [!DNL Privacy Service] UI or API.
+The following section outlines how to make privacy requests for the data lake using the [!DNL Privacy Service] UI or API.
 
 >[!IMPORTANT]
 >
->The amount of time a privacy request can take to complete cannot be guaranteed. If changes occur within the Data Lake while a request is still processing, whether or not those records are processed also cannot be guaranteed.
+>The amount of time a privacy request can take to complete cannot be guaranteed. If changes occur within the data lake while a request is still processing, whether or not those records are processed also cannot be guaranteed.
 
 ### Using the UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** under **[!UICONTROL Products]** in order to process jobs for data stored in the data lake.
 
-<img src="images/privacy/product-value.png" width=450><br>
+![Image showing the data lake product selected in the privacy request creation dialog](./images/privacy/product-value.png)
 
 ### Using the API
 
-When creating job requests in the API, any `userIDs` that are provided must use a specific `namespace` and `type` depending on the data store they apply to. IDs for the [!DNL Data Lake] must use `unregistered` for their `type` value, and a `namespace` value that matches one the [privacy labels](#privacy-labels) that have been added to applicable datasets.
+When creating job requests in the API, any `userIDs` that are provided must use a specific `namespace` and `type` depending on the data store they apply to. IDs for the data lake must use `unregistered` for their `type` value, and a `namespace` value that matches one the [privacy labels](#privacy-labels) that have been added to applicable datasets.
 
-In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to the [!DNL Data Lake], the array must include the value `aepDataLake`.
+In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to the data lake, the array must include the value `aepDataLake`.
 
-The following request creates a new privacy job for the [!DNL Data Lake], using the unregistered `email_label` namespace. It also includes the product value for the [!DNL Data Lake] in the `include` array:
+The following request creates a new privacy job for the data lake, using the unregistered `email_label` namespace. It also includes the product value for the data lake in the `include` array:
 
 ```shell
 curl -X POST \
@@ -199,19 +199,19 @@ curl -X POST \
 
 ## Delete request processing
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the [!DNL Data Lake] within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the data lake within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
 
-In future releases, [!DNL Platform] will send confirmation to [!DNL Privacy Service] after data has been physically deleted.
+If you also included `ProfileService` or `identity` in the privacy request, their associated data is handled separately. See the section on [delete request processing for Profile](../profile/privacy.md#delete) for more information.
 
 ## Next steps
 
-By reading this document, you have been introduced to the important concepts involved with processing privacy requests for the [!DNL Data Lake]. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
+By reading this document, you have been introduced to the important concepts involved with processing privacy requests for the data lake. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
 
 See the document on [privacy request processing for Real-time Customer Profile](../profile/privacy.md) for steps on processing privacy requests for the [!DNL Profile] store.
 
 ## Appendix
 
-The following section contains additional information for processing privacy requests in the [!DNL Data Lake].
+The following section contains additional information for processing privacy requests in the data lake.
 
 ### Labeling nested map-type fields {#nested-maps}
 

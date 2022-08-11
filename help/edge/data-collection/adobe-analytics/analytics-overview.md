@@ -22,7 +22,7 @@ The Adobe Experience Platform [!DNL Edge Network] automatically maps many XDM va
 
 ## Manually mapped data
 
-All data collected by the edge network can be accessed via processing rules. The data is flattened using dot notation and available as contextData.
+Any data not automatically mapped by the edge network can be accessed via processing rules. The data is flattened using dot notation and available as contextData.
 
 If you had a schema that looked like this.
 

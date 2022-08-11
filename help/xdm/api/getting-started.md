@@ -205,6 +205,7 @@ The following table lists compatible `Accept` header values, including those wit
 | `application/vnd.adobe.xed-notext+json; version=1` | Raw XDM with `$ref` and `allOf`. No titles or descriptions. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` attributes and `allOf` resolved. No titles or descriptions. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` attributes and `allOf` resolved. Descriptors are included. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` |  `$ref` and `allOf` resolved, has titles and descriptions. Deprecated fields are indicated with a `meta:status` attribute of `deprecated`. |
 
 {style="table-layout:auto"}
 

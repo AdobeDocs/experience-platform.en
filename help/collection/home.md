@@ -16,7 +16,7 @@ Data collection is supported for the following client-side sources:
 * Native mobile applications
 * Over-the-top (OTT) applications
 
-The data-collection technologies provided by Experience Platform focus on the discoverability and accessibility of ingested datasets. These technologies encompass the following:
+Data collection focuses on the discoverability and accessibility of ingested datasets, encompassing the following:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tags](../tags/home.md)
@@ -28,7 +28,7 @@ The data-collection technologies provided by Experience Platform focus on the di
 * [Experience Data Model (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-This guide provides a high-level introduction to the data collection framework and how it works to send data to Adobe Experience Cloud products and non-Adobe applications through the Platform Edge Network.
+This guide provides a high-level introduction to data collection and how it works to send data to Adobe Experience Cloud products and non-Adobe applications through the Platform Edge Network.
 
 ## Tags, Web SDK, and Mobile SDK
 
@@ -60,8 +60,8 @@ Platform Edge Network is a globally distributed, fast, and reliable network of s
 
 ## Next steps
 
-This document provided a high-level overview of how Platform's data collection technologies work to automate the process of sending your collected customer experience data to Adobe products and third-party destinations.
+This document provided a high-level overview of how data collection works to automate the process of sending your collected customer experience data to Adobe products and third-party destinations.
 
 ![Data collection framework](./images/home/collection.png)
 
-For more information on the general workflow involved in sending event data through the Edge Network, refer to the [end-to-end overview for data collection](./e2e.md).
+For more information on the general workflow involved in sending event data through the Edge Network, refer to the [end-to-end overview](./e2e.md).

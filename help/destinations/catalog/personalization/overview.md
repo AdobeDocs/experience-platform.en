@@ -18,6 +18,7 @@ Currently, Platform supports the personalization destinations listed below. For 
 
 * [Adobe Target](adobe-target-connection.md)
 * [Custom personalization connection](custom-personalization.md)
+* [Pega Customer Decision Hub connection](pega.md)
 
 **Extensions**
 

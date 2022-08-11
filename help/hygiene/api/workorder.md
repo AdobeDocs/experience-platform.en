@@ -9,7 +9,7 @@ hidefromtoc: true
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Healthcare Shield.
 
 The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for consumer identities in Adobe Experience Platform.
 

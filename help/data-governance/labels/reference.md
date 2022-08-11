@@ -6,7 +6,13 @@ topic-legacy: labels
 description: This document outlines all data usage labels currently supported by Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 ---
-# Data usage labels glossary
+# Data usage labels glossary {#data-usage-labels-glossary}
+
+>[!CONTEXTUALHELP]
+>id="platform_policies_labeltype"
+>title="Label types"
+>abstract="There are several categories of data usage labels. Adobe-defined labels include contract labels, identity labels, and sensitive labels. Labels defined by your organization are categorized as custom labels."
+>text="See the data usage labels glossary for more information on these label types."
 
 Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Adobe Experience Platform Data Governance provides several core data usage labels out-of-the-box that you can use to start categorizing your data.
 
