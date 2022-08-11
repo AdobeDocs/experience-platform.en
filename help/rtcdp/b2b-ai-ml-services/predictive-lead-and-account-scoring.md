@@ -87,6 +87,22 @@ The following data is output once a job has completed:
 |Score date | The date on which scoring occurred. |
 |Influential factors | Predicted reasons on why a profile is likely to convert. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile’s predicted score.</li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight that the profile or behavioral attribute has on the predicted score (low, medium, high).</li></ul> |
 
+### View customer profile scores
+
+To view the customer predictive scores, select the **[!UICONTROL Profiles]** tab under the customer section in the left panel. Enter the identity namespace and identity value and select **[!UICONTROL View]**.
+
+Select the profile from the list.
+
+![Customer profile](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
+
+You are taken to the **[!UICONTROL Detail]** tab for the profile. This tab contains customer profile details and predictive scores. Select the graph icon beside the predictive score.
+
+![Customer profile predictive score](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
+
+A score dialog box appears which shows a view of scores, the date the score was generated, events and conditions used to generate the score.
+
+![Customer profile predictive score details](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
+
 ## Monitoring predictive lead and account scoring jobs {#monitoring-jobs}
 
 You can monitor basic metrics and daily job-run status through the dashboard. The metrics include:
