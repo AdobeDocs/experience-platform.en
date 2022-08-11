@@ -20,13 +20,13 @@ As a marketer, you can deliver personalized experiences to your users, based on 
 
 ## Prerequisites {#prerequisites}
 
-### Experience Platform Prerequisites {#prerequisites-in-experience-platform}
+### Experience Platform prerequisites {#prerequisites-in-experience-platform}
 
-Before activating data to the [!DNL Dynamics 365] destination, you must have a [schema](/help/xdm/schema/composition.html), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the [!DNL Dynamics 365] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
 Refer to Adobe's documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
-### Microsoft Dynamics 365 Prerequisites {#prerequisites-destination}
+### Microsoft Dynamics 365 prerequisites {#prerequisites-destination}
 
 Note the following prerequisites in [!DNL Dynamics 365], in order to export data from Platform to your [!DNL Dynamics 365] account:
 
@@ -52,13 +52,17 @@ Note down the items below before you authenticate to the [!DNL Dynamics 365] CRM
 | Password | Your [!DNL Dynamics 365] account password | MyDynamicsPassword |
 | Environment URL | See [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) for additional guidance. | If your domain is as below, you need the highlighted value.<br> *`org57771b33`.crm.dynamics.com* |
 
+## Guardrails
+
+The [Requests limits and allocations](https://docs.microsoft.com/en-us/power-platform/admin/api-request-limits-allocations) page details the [!DNL Dynamics 365] API limits associated with your [!DNL Dynamics 365] license.
+
 ## Supported identities {#supported-identities}
 
 [!DNL Dynamics 365] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Example|Description|Considerations|
 |---|---|---|---|
-| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Unique identifier for a contact.| **Mandatory**, Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) for further details. |
+| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Unique identifier for a contact.| **Mandatory**. Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) for further details. |
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -66,7 +70,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li>Platform segment statuses are exported to [!DNL Dynamics 365] by entering their [!DNL Dynamics 365] custom field attribute in the [!UICONTROL Mapping ID] field, during the [!UICONTROL Schedule segment export] step.</li></ul> |
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Dynamics 365] gets updated with the corresponding segment status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [segment scheduling](#schedule-segment-export-example) step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -123,10 +127,10 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Dynamics 365] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Dynamics 365] destination fields, follow these steps:
 
-1. In the [UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
+1. In the [UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. In the [!UICONTROL Select source field] window, when selecting the source field choose the **[!UICONTROL Select identity namespace]** category and select `contactId`.
+1. In the [!UICONTROL Select source field] window, choose the **[!UICONTROL Select identity namespace]** category and select `contactId`.
 ![Platform UI screenshot example for Source mapping.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. In the [!UICONTROL Select target field] window, select the type of target field that you want to map your source field to.
@@ -143,7 +147,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 
         > [!IMPORTANT]
         >
-        > When mapping to a [!DNL Dynamics 365] [date or timestamp](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) attribute, the corresponding attribute value in the dataset should not be empty. During execution if the value is empty you will encounter errors.
+        > If you have a date or timestamp source field which is mapped to a [!DNL Dynamics 365] [date or timestamp](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) target field, ensure that the value being passed should not be empty. If the value passed is empty you will encounter a *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* error message and the data will not be updated. This is because of a [!DNL Dynamics 365] field limitation.
 
     * For instance, depending on the values you want to update, add the following mapping between your XDM profile schema and your [!DNL Dynamics 365] instance:
         |XDM Profile Schema|[!DNL Dynamics 365] Instance|
@@ -184,7 +188,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the segment summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Platform UI screenshot example showing Segment.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. Log in to the Dynamics 365 website, then navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page and check if the profiles from the segment have been added. You will also notice the segment status from Experience Platform has been updated against the corresponding custom field attribute that was provided in the **Mapping ID** field during the Platform **[!UICONTROL Activate destination]** > **[!UICONTROL Schedule segment export]** step.
+1. Log in to the [!DNL Dynamics 365] website, then navigate to the [!DNL Customers] > [!DNL Contacts] page and check if the profiles from the segment have been added. You can see that each segment status in [!DNL Dynamics 365] was updated with the corresponding segment status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [segment scheduling](#schedule-segment-export-example) step.
 ![Dynamics 365 UI screenshot showing the Contacts page with updated segment statuses.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Data usage and governance {#data-usage-governance}
@@ -212,7 +216,3 @@ To fix this error, verify that the [!UICONTROL Mapping ID] you provided in [!DNL
 Additional useful information from the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/) is below:
 * [IOrganizationService.Update(Entity) Method](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dataverse-sdk-latest)
 * [Update and delete table rows using the Web API](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
-
-### Limits
-
-The [Requests limits and allocations](https://docs.microsoft.com/en-us/power-platform/admin/api-request-limits-allocations) page details the [!DNL Dynamics 365] API limits associated with your [!DNL Dynamics 365] license.
