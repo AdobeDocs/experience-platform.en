@@ -16,9 +16,18 @@ This page describes rules that you should follow when [authoring your destinatio
 * In Experience Platform documentation, Adobe writers use **bold formatting** to refer to user interface controls, like this:
   * Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. View an example of how user interface controls are documented in a [destinations tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
 
+## Writing style
+
+>[!IMPORTANT]
+>
+>Read [Writing guidance for Adobe Documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) before you start authoring the destination documentation page.
+
+* Keep your sentences short and get to the point fast. If your sentence is over 20 words long or uses multiple commas, consider breaking it up into separate sentences. Sentences over 20 words in length can be especially challenging for readers.
+* Don't be excessively polite. Avoid using "please" or "kindly do ..." in technical documentation.
+
 ## Linking {#linking}
 
-Please follow the provided documentation template and don't edit the existing links in the template. When including new links, read [using links in documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) in the contributor guide.
+Follow the provided documentation template and don't edit the existing links in the template. When including new links, read [using links in documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) in the contributor guide.
 
 ## Branding guidelines {#branding}
 

@@ -14,6 +14,10 @@ Labels allow you to categorize datasets and fields according to usage policies t
 
 ## Create a new label
 
+>[!NOTE]
+>
+>You must have administrative rights to create a custom label. Currently, deleting labels is not supported.
+
 To create a new label, select the **[!UICONTROL Labels]** tab in the sidebar and select **[!UICONTROL Create Label]**.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
