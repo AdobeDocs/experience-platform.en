@@ -244,7 +244,7 @@ If you select an invalid evaluation method, you will be prompted to either chang
 
 ![](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
-More information about the different segment definition evaluation methods can be found in the LINK.
+More information about the different segment definition evaluation methods can be found in the [segmentation overview](../home.md#evaluate-segments).
 
 ## Next steps {#next-steps}
 
