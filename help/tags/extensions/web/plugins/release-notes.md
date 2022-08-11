@@ -11,7 +11,7 @@ exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
 
 #### Features
 
-Plugins that set cookies now use the secure flag
+* Plugins that set cookies now use the secure flag
 
 ## June 23, 2021
 
