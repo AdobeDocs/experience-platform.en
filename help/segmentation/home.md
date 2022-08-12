@@ -65,7 +65,7 @@ To learn more about streaming segmentation, please read the [streaming segmentat
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
->title="Streaming evaluation"
+>title="Batch evaluation"
 >abstract="As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, the segment is saved and stored so that you can export it for use."
 
 As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so that you can export it for use. 
@@ -76,7 +76,7 @@ Batch segments are automatically evaluated every 24 hours. If you want to evalua
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
->title="Streaming evaluation"
+>title="Edge evaluation"
 >abstract="Edge segmentation is the ability to evaluate segments in Platform instantaneously on Experience Edge, enabling same-page and next-page personalization use cases."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge segmentation UI guide"
 
