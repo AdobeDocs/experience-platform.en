@@ -208,7 +208,7 @@ If you have more than 1500 segments being run in your segment job, the `children
                     "endTimeInMs": 1573204395655,
                     "totalTimeInMs": 128928
                 },
-                "totalProfiles":13146432,
+                "totalProfiles": 13146432,
                 "segmentedProfileCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":1033
                 },
