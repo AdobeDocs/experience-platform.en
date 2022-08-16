@@ -306,6 +306,7 @@ Once you have gathered the required artifacts, copy and paste the connection spe
                 "OFFSET",
                 "POINTER",
                 "CONTINUATION_TOKEN",
+                "PAGE",
                 "NONE"
               ]
             },
