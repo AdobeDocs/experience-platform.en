@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Amazon Redshift;Amazon redshift;redshift;Redshift
+keywords: Experience Platform;home;popular topics;teradata;teradata vantage
 title: Teradata Vantage Source Connector Overview
 description: Learn how to connect Teradata Vantage to Adobe Experience Platform using APIs or the user interface.
 ---
