@@ -86,8 +86,8 @@ The following alert rules are specific to [query service](../../query-service/ho
 
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
-| Query Service Ad Hoc Info | Query Service Ad Hoc Success | This alert triggers when a ad hoc query job completes successfully. |
-| Query Service Ad Hoc Delays, Failures and Errors | Query Service Ad Hoc Failure | This alert triggers when a ad hoc query job fails. |
+| Query Service Ad hoc Info | Query Service Ad hoc Success | This alert triggers when a ad hoc query job completes successfully. |
+| Query Service Ad hoc Delays, Failures and Errors | Query Service Ad hoc Failure | This alert triggers when a ad hoc query job fails. |
 | Query Service Scheduled Query Info | Query Service Scheduled Query Start | This alert triggers when a scheduled query starts running. |
 | Query Service Scheduled Query Info | Query Service Scheduled Query Success | This alert triggers when a scheduled query job completes successfully. |
 | Query Service Scheduled Query Delays, Failures and Errors | Query Service Scheduled Query Failure | This alert triggers when a scheduled query job fails. |
