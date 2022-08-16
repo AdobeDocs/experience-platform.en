@@ -9,7 +9,7 @@ description: This document provides information on managing the predictive lead 
 >
 >Only users with Manage B2B AI permission can create, change, and delete score goals.
 
-This tutorial walks you through the steps to manage a score as part of the predictive lead and account scoring feature. Scores can be managed for either an account profile or person profile.
+This tutorial walks you through the steps to manage score goals of the predictive lead and account scoring service. Score goals can be for either person profile or account profile
 
 ## Create a new score 
 
