@@ -146,6 +146,16 @@ The following documentation provides further resources on understanding Data Pre
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
 * [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
+### Filtering
+
+Once you have completed mappings for your [!DNL Analytics] report suite data, you can start applying filtering rules to define conditions on which data is sent to [!DNL Profile Service] and which data is excluded.
+
+#### Row-level filtering
+
+#### Column-level filtering
+
+Select [!UICONTROL Column] from the header to apply column-level filtering. 
+
 ### Provide dataflow details
 
 The **[!UICONTROL Dataflow detail]** step appears, where you must provide a name and an optional description for the dataflow. Select **[!UICONTROL Next]** when finished.
