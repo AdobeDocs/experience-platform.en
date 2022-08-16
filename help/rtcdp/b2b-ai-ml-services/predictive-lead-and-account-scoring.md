@@ -19,6 +19,8 @@ The predictive lead and account scoring service addresses the above challenges b
 >
 >[!DNL Marketo] data source is currently required as it's the only data source that can provide the conversion events at the person profile level.
 
+Predictive Lead and Account Scoring uses a tree-based (random forest/gradient boosting) machine learning method to build the predictive lead scoring model.
+
 Administrators have the ability to configure multiple profile scoring goals, also referred to as models, one for each configured conversion event, allowing for separate scores to be generated for each configured goal. 
 
 Predictive lead and account scoring supports the following conversion goal types and fields:
@@ -66,6 +68,12 @@ Multiple models are supported, with the following hard limits set in place:
 
 * Each production sandbox is entitled to five models.
 * Each development sandbox is entitled to one model.
+
+The data quality requirements are as follows:
+
+* Ideally there is two year’s of most recent data for training purposes. 
+* The minimum length of data required is six months plus prediction window. 
+* For each prediction goal, at least 10 qualified conversion events are required.
 
 Scoring jobs are run daily and the results are saved as profile attributes and account attributes, which can then be used in segment definitions and personalization. Out-of-the-box analytics insights are also available on the account overview dashboard.
 

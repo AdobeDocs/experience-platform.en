@@ -57,15 +57,17 @@ The **[!UICONTROL Scoring setup is complete]** dialogue appears confirming the n
 
 >[!NOTE]
 >
-> It can take up to 24 hours for each scoring process to complete.
+>It can take up to 24 hours for each scoring process to complete.
 
 You are returned to the **[!UICONTROL Services]** tab where you can see the new score created in the list of scores.
 
 ![plas-score-created](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
 
-Select the score to view details and additional information about the last run details.
+Select the score to view details and additional information about the last run details. 
 
 ![plas-score-additional-information](../assets/../b2b-ai-ml-services/assets/plas-score-info.png)
+
+For more detailed information about the error codes that can be seen under the last run details, please refer to the section on [leads AI pipeline error codes](#leads-ai-pipeline-error-codes) in this document.
 
 ## Edit a score
 
@@ -99,7 +101,7 @@ You are returned to the **[!UICONTROL Services]** tab where you can see the newl
 
 >[!NOTE]
 >
-> The **[!UICONTROL Define your goal]** section is not cloned from the original score.
+>The **[!UICONTROL Define your goal]** section is not cloned from the original score.
 
 ## Delete a score
 
@@ -116,6 +118,32 @@ The **[!UICONTROL Delete documentation]** confirmation dialog appears. Select **
 >Deleting the score definition would also delete all the predicted scores on person profile or account profile, but not the field group created for the score definition. The field group will be left "orphaned" in the data model.
 
 You are returned to the **[!UICONTROL Services]** tab where you can no longer see the score in the list.
+
+## Leads AI pipeline error codes
+
+| Error code | Error message |
+| --- | --- |
+| 401 | ERROR 401. Leads AI pipeline stopped: not enough valid accounts for account scoring. Count of accounts: {}. |
+| 402 | ERROR 402. Leads AI pipeline stopped: not enough valid contacts for contact scoring. Count of contacts: {}. |
+| 403 | ERROR 403. Leads AI pipeline stopped: not enough activity volume for model training. Count of events: {}. |
+| 404 | ERROR 404. Leads AI pipeline stopped: not enough conversions for model training. Count of conversions: {}. |
+| 405 | ERROR 405. Leads AI pipeline stopped: activity too sparse for valid model training. Only {} percent of accounts has activity. |
+| 406 | ERROR 406. Leads AI pipeline stopped: activity too sparse for valid model training. Only {} percent of contacts has activity. |
+| 407 | ERROR 407. Leads AI pipeline stopped: scoring data activity types do not match with training data. |
+| 408 | ERROR 408. Leads AI pipeline stopped: missing rate is too high for activity features. Missing rate: {}. |
+| 409 | ERROR 409. Leads AI pipeline stopped: test auc is too low. Test auc: {}. |
+| 410 | ERROR 410. Leads AI pipeline stopped: test auc is too low after parameter tuning. Test auc: {}. |
+| 411 | ERROR 411. Leads AI pipeline stopped: training data does not have enough conversions to produce reliable model. Conversions: {}. |
+| 412 | ERROR 412. Leads AI pipeline stopped: test data does not have any conversion to calculate AUC-ROC. |
+
+| Warning/info code | Message |
+| --- | --- |
+| 100 | INFO 100. Leads AI quality check: the count of accounts is: {}. |
+| 101 | INFO 101. Leads AI quality check: the count of contacts is: {}. |
+| 102 | INFO 102. Leads AI quality check: the count of opportunities is: {}. |
+| 103 | INFO 103. Leads AI quality check: testing auc is low. Start parameter tuning. Testing auc: {}. |
+| 200 | WARNING 200. Leads AI quality check: the missing rate of firmographic features is: {}. |
+| 201 | WARNING 201. Leads AI quality check: the missing rate of activity features is: {}. |
 
 ## Next steps
 
