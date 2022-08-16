@@ -5,6 +5,10 @@ description: This document provides information on managing the predictive lead 
 ---
 # Manage predictive lead and account scoring in Real-time Customer Data Platform, B2B Edition
 
+>[!NOTE]
+>
+>Only users with Manage B2B AI permission can create, change, and delete score goals.
+
 This tutorial walks you through the steps to manage a score as part of the predictive lead and account scoring feature. Scores can be managed for either an account profile or person profile.
 
 ## Create a new score 
@@ -17,7 +21,7 @@ The **[!UICONTROL Basic information]** screen appears, prompting you to select a
 
 ![plas-enter-basic-information](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
-The **[!UICONTROL Define your goal]** screen appears. Select the dropdown arrow and then select a goal from the dropdown window that appears.
+The **[!UICONTROL Define your goal]** screen appears. Select the dropdown arrow and then select a goal type from the dropdown window that appears.
 
 ![plas-select-a-goal](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
@@ -37,13 +41,15 @@ The **[!UICONTROL Goal value]** field appears. Next, configure your [!UICONTROL 
 
 ![plas-goal-specifics-field-value](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
 
-To add additional events, select **[!UICONTROL Add event]**.
+To add additional fields, select **[!UICONTROL Add field]**.
 
 ![plas-goal-specifics-add-event](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
 
-To configure the prediction timeframe, select the dropdown arrow and then select your timeframe of choice and then select **[!UICONTROL Finish]**.
+To configure the prediction timeframe, select the dropdown arrow and then select your timeframe of choice.
 
 ![plas-prediction-timeframe](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
+
+The selected merge policy determines how the field values of a person profile are selected. Using the dropdown arrow select your merge policy of choice and then select **[!UICONTROL Finish]**.
 
 The **[!UICONTROL Scoring setup is complete]** dialogue appears confirming the new score has been created. Select **[!UICONTROL OK]**.
 
@@ -73,7 +79,7 @@ The **[!UICONTROL Edit instance]** dialogue appears, where you can edit the desc
 
 >[!NOTE]
 >
-> To edit the configuration of the score, you will need to clone this score or create a new score.
+>The score configuration cannot be changed as this will trigger model retraining and re-scoring. It is the equivalent of deleting the score and creating a new score. To edit the configuration of the score, you will need to clone this score or create a new score.
 
 You are returned to the **[!UICONTROL Services]** tab. Select the score to view the updated description details in the additional details panel on the right side of the screen.
 
@@ -105,6 +111,10 @@ The **[!UICONTROL Delete documentation]** confirmation dialog appears. Select **
 
 ![plas-delete-score-confirmation](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 
+>[!NOTE]
+>
+>Deleting the score definition would also delete all the predicted scores on person profile or account profile, but not the field group created for the score definition. The field group will be left "orphaned" in the data model.
+
 You are returned to the **[!UICONTROL Services]** tab where you can no longer see the score in the list.
 
 ## Next steps
@@ -112,4 +122,4 @@ You are returned to the **[!UICONTROL Services]** tab where you can no longer se
 By following this tutorial, you can now successfully create and manage scores. See the following documents for more details:
 
 * [Predictive lead and account scoring](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
-* [Monitor profile enrichment for predictive lead and account scoring](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)
+* [Monitor predictive lead and account scoring jobs](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)

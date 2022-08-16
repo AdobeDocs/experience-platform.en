@@ -61,10 +61,10 @@ The following metrics are available for predictive lead and account scoring prof
 | Metric | Description |
 | --------- | ---------- |
 | **[!UICONTROL Job start]** | Indicates the start date and time of the predictive lead and account scoring job run. |
-| **[!UICONTROL Processing time]** | Indicates the total time taken for the job to run. |
-| **[!UICONTROL Score name]** | Indicates the name of the job run. |
-| **[!UICONTROL Profile type]** | Indicates the type of profile: <ul><li>Person</li><li>Account</li></ul>. |
-| **[!UICONTROL Job type]** | Indicates the job type that was run:<ul><li>Scoring</li><li>Training</li>. |
+| **[!UICONTROL Processing time]** | The total time taken for the job to complete. |
+| **[!UICONTROL Score name]** | The score name of the job. |
+| **[!UICONTROL Profile type]** | The type of the score: <ul><li>Person</li><li>Account</li></ul>. |
+| **[!UICONTROL Job type]** | The type of the job:<ul><li>Scoring</li><li>Training</li>. |
 | **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the predictive lead and account scoring job. |
 
 ## UI controls {#ui-controls}
@@ -90,3 +90,4 @@ By following this tutorial, you can now successfully monitor and understand metr
 * [Related accounts in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Related accounts tab in the Account profile UI guide](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [Lead to account matching in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Predictive lead and account scoring in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

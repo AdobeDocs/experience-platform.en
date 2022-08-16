@@ -100,9 +100,9 @@ Find all the people who work in a Human Resources (HR) department and are relate
 
 ![UI displaying segmentation for related accounts](../assets/segmentation/segmentation-related-accounts.png)
 
-### Example 9: Use predictive lead and account scoring to find scores for an account {#account-scoring}
+### Example 9: Use lead scores and/or account scores to qualify profile {#account-scoring}
 
-Find scores for an account where scores are greater than 80. This segment requires a link between the [!UICONTROL XDM Individual Profile] class and [!UICONTROL XDM Business Account] class.
+Find all profiles with the lead score over 80. 
 
 ![UI displaying segmentation for predictive lead and account scoring](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
 
