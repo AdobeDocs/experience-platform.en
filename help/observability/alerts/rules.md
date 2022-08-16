@@ -82,15 +82,15 @@ The following alert rules are specific to [destinations](../../destinations/home
 
 ## Query Service
 
-The following alert rules are specific to [query service](../../query-service/home.md):
+The following alert rules are specific to [Query Service](../../query-service/home.md):
 
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
-| Query Service Ad hoc Info | Query Service Ad hoc Success | This alert triggers when a ad hoc query job completes successfully. |
-| Query Service Ad hoc Delays, Failures and Errors | Query Service Ad hoc Failure | This alert triggers when a ad hoc query job fails. |
-| Query Service Scheduled Query Info | Query Service Scheduled Query Start | This alert triggers when a scheduled query starts running. |
-| Query Service Scheduled Query Info | Query Service Scheduled Query Success | This alert triggers when a scheduled query job completes successfully. |
-| Query Service Scheduled Query Delays, Failures and Errors | Query Service Scheduled Query Failure | This alert triggers when a scheduled query job fails. |
+| Query Service ad hoc info | Query Service ad hoc success | This alert triggers when an ad hoc schema job completes successfully. |
+| Query Service ad hoc delays, failures and errors | Query Service ad hoc failure | This alert triggers when a ad hoc schema job fails. |
+| Query Service scheduled query info | Query Service scheduled query start | This alert triggers when a scheduled query starts running. |
+| Query Service scheduled query info | Query Service scheduled query success | This alert triggers when a scheduled query job completes successfully. |
+| Query Service scheduled query delays, failures and errors | query service scheduled query failure | This alert triggers when a scheduled query job fails. |
 
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
