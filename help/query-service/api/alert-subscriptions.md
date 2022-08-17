@@ -5,7 +5,7 @@ description: This guide provides sample HTTP requests and responses for the vari
 ---
 # Alert Subscriptions API Endpoint
 
-Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. The notification content is the same for in-platform alerts and email alerts. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/). 
+Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. The notification content is the same for in-Platform alerts and email alerts. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/). 
 
 The table below explains the supported alert types for different types of queries: 
 
@@ -33,7 +33,7 @@ The following sections walk through the various API calls you can make using the
 
 ## Retrieve a list of all alerts for an organization and a sandbox {#get-list-of-org-alert-subs}
 
-Retrieve a list of all alerts for an organization sandbox by making a GET request to the `alert-subscriptions` endpoint.
+Retrieve a list of all alerts for an organization sandbox by making a GET request to the `/alert-subscriptions` endpoint.
 
 **API format**
 
@@ -45,12 +45,12 @@ GET /alert-subscriptions
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -H 'x-sandbox-id: {SANDBOX_ID}'
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
@@ -116,7 +116,7 @@ A successful response returns an HTTP 200 status and the `alerts` array with pag
 
 ## Retrieve the alert subscription information for a particular query or schedule ID {#retrieve-all-alert-subscriptions-by-id}
 
-Retrieve the alert subscription information for a particular query ID or schedule ID by making a GET request to the `alert-subscriptions/{QUERY_ID}` or the `alert-subscriptions/{SCHEDULE_ID}` endpoint.
+Retrieve the alert subscription information for a particular query ID or schedule ID by making a GET request to the `/alert-subscriptions/{QUERY_ID}` or the `/alert-subscriptions/{SCHEDULE_ID}` endpoint.
 
 **API format**
 
@@ -134,17 +134,17 @@ GET /alert-subscriptions/{SCHEDULE_ID}
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1' \
--H 'Authorization: Bearer {ACCESS_TOKEN}' \
--H 'x-gw-ims-org-id: {ORG_ID}' \
--H 'x-api-key: {API_KEY}' \
--H 'x-sandbox-name: {SANDBOX_NAME}' \
--H 'Content-Type: application/json' \
--H 'x-sandbox-id: {SANDBOX_ID}'
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
 
-A successful response returns an HTML status of 200 and the `alerts` array that contains subscription information for provided query or schedule ID.
+A successful response returns an HTTP status of 200 and the `alerts` array that contains subscription information for provided query or schedule ID.
 
 ```json
 {
@@ -263,12 +263,12 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -H 'x-sandbox-id: {SANDBOX_ID}'
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
@@ -331,7 +331,7 @@ A successful response returns an HTML status of 200 and all the alerts that are 
 
 ## Retrieve a list of all the alerts that a user is subscribed to {#get-alert-subscription-list}
 
-Retrieve a list of all the alerts that a user is subscribed to by making a GET request to the `alert-subscriptions/user-subscriptions/{EMAIL_ID}` endpoint. The response includes the alert name, IDs, status, alert type, and notification channels.
+Retrieve a list of all the alerts that a user is subscribed to by making a GET request to the `/alert-subscriptions/user-subscriptions/{EMAIL_ID}` endpoint. The response includes the alert name, IDs, status, alert type, and notification channels.
 
 **API format**
 
@@ -347,12 +347,12 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/user-subscriptions/rrunner@adobe.com' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -H 'x-sandbox-id: {SANDBOX_ID}'
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
@@ -462,12 +462,12 @@ POST /alert-subscriptions
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '
- {
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -d '
+    {
     "assetId": "a679dd0e-bcb2-4e69-a610-22d17ba98cac",
     "alertType": "failure",
     "subscriptions": {
@@ -561,17 +561,17 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 ```shell
 curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'Content-Type: application/json' \
-    -H 'x-sandbox-id: {SANDBOX_ID}' \
-    -d '{
-            "op": "replace",
-            "path" : "/status",
-            "value": "enable"
-        }'
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+        "op": "replace",
+        "path" : "/status",
+        "value": "enable"
+      }'
 ```
 
 | Property | Description |
@@ -621,12 +621,12 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 ```shell
 curl -X DELETE 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -H 'x-sandbox-id: {SANDBOX_ID}'
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
@@ -640,3 +640,8 @@ A successful response returns an HTTP 200 status and a confirmation message that
 }
 ```
 
+## Next steps
+
+This guide covered the use of the `/alert-subscriptions` endpoint in the Query Service API. After reading this guide you now have a better understanding of how to create an alert for a query, subscribe users to the alert, the types of alerts available and how alert subscription information can be retrieved, updated, and deleted. 
+
+See the [Query Service API guide](./getting-started.md) to learn more about other available features and operations.
