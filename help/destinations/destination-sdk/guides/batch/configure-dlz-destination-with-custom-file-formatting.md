@@ -1,6 +1,7 @@
 ---
 description: Learn how to use Destination SDK to configure a Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration.
 title: (Beta) Configure a Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration.
+exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
 ---
 # (Beta) Configure a [!DNL Data Landing Zone (DLZ)] destination with custom file formatting options and custom file name configuration
 
