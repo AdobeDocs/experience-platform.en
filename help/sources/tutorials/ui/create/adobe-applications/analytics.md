@@ -166,6 +166,18 @@ An interactive schema hierarchy appears. Use the left rail to navigate through t
 
 ![left-rail-hierarchy](../../../../images/tutorials/create/analytics/left-rail-hierarchy.png)
 
+| Condition | Description |
+| --- | --- |
+| equals |
+| does not equal |
+| starts with |
+| ends with |
+| does not end with |
+| contains |
+| does not contain |
+| exists |
+| does not exist |
+
 #### Column-level filtering
 
 Select **[!UICONTROL Column filter]** from the header to apply column-level filtering. 
