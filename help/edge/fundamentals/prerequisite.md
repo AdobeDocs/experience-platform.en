@@ -19,14 +19,4 @@ To use the Adobe Experience Platform Web SDK, you must first:
 
 ## Managing permissions for Adobe Experience Platform Web SDK
 
-To start using Adobe Experience Platform, you need to have the right [permissions](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=en) to create your schemas and manage identities. The minimum permissions needed can be found in the Data Modeling and Identities category.  
-
-![](../images/AEP-permission-categories.png) 
-
-Within the Data Modeling category, grant users the Manage Schemas and View Schemas permissions.
-
-![](../images/data-modeling-permissions.png) 
-
-Within the Identity Management category, grant users the Manage Identity Namespaces and View Identity Namespaces permissions.
-
-![](../images/identity-management-permissions.png) 
+To start using Adobe Experience Platform Web SDK you will need to have the right permissions configured. To read more on how to set up your configuration see our documentation on [data collection permissions management](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
