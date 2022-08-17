@@ -14,7 +14,7 @@ Adobe Experience Platform Sources SDK is a set of configuration APIs that allow 
 
 With Sources SDK, you can:
 
-* Configure a new source to the Platform catalog, complete with create, read, update, and delete functionalities using the [!DNL Flow Service] API.
+* Configure a new source to the Experience Platform catalog, complete with create, read, update, and delete functionalities using the [!DNL Flow Service] API.
 * Define specifications for your source, including information pertaining to supported authentication types and how resource data is fetched.
 * Create user-facing documentation for your new source.
 

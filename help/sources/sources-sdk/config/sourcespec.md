@@ -364,6 +364,95 @@ The following is a completed source specification using [!DNL MailChimp Members]
   }
 ```
 
+### Pagination {#pagination}
+
+The following are examples of other pagination types supported by [!DNL Sources SDK]:
+
+#### `CONTINUATION_TOKEN`
+
+A continuation token type of pagination returns a string token that signifies the existence of more items that could not be returned due to a pre-determined maximum number of items that can be returned in a single response. 
+
+A source that supports continuation token type of pagination may have a pagination parameter similar to:
+
+```json
+"paginationParams": {
+  "type": "CONTINUATION_TOKEN",
+  "continuationTokenPath": "$.meta.after_cursor",
+  "parameterType": "QUERYPARAM",
+  "parameterName": "page[after]",
+  "delayRequestMillis": "850"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `type` | The type of pagination used to return data. |
+| `continuationTokenPath` | |
+| `parameterType` | The `parameterType` property defines where the `parameterName` must be added. The `QUERYPARAM` type allows you to append your query with the `parameterName`. The `HEADERPARAM` allows you to add your `parameterName` to your header request.   |
+| `parameterName` | The name of the parameter used to incorporate the continuation token. The format is as follows: `{PARAMETER_NAME}={CONTINUATION_TOKEN}. | 
+| `delayRequestMillis` | The `delayRequestMillis` property in pagination allows you to control the rate of requests made to your source. Some sources can have a limit to the number of requests you can make per minute. For example, [!DNL Zendesk] has a limit of 100 requests per minute and defining  `delayRequestMillis` to `850` allows you to configure the source to make calls at just around 80 requests per minute, well under the 100 request per minute threshold.  |
+
+The following is an example of response returned using continuation token type of pagination:
+
+```json
+{
+  "results": [
+    {
+      "id": 5624716025745,
+      "url": "https://dev.zendesk.com/api/v2/users/5624716025745.json",
+      "name": "newinctest@zenaep.com",
+      "email": "newinctest@zenaep.com",
+      "created_at": "2022-04-22T10:27:30Z",
+      
+    }
+  ],
+  "facets": null,
+  "meta": {
+    "has_more": false,
+    "after_cursor": "eyJmaWVsZCI6ImNyZWF0ZWRfYXQiLCJk",
+    "before_cursor": null
+  },
+  "links": {
+    "prev": null,
+    "next": "https://dev.zendesk.com/api/v2/search/export.json?filter%5Btype%5D=user&page%5Bafter%5D=eyJmaWVsZCI6"
+  }
+}
+```
+
+#### `PAGE`
+
+The `PAGE` type of pagination allows you to traverse through return data by number of pages starting from zero. When using `PAGE` type pagination, you must provide the number of records given in a single page.
+
+```json
+"paginationParams": {
+  "type": "PAGE",
+  "limitName": "records",
+  "limitValue": "100",
+  "pageParamName": "page",
+  "maximumRequest": 10000
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `type` | The type of pagination used to return data. |
+| `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
+| `limitValue` | The number of records to be fetched in a page. |
+| `pageParamName` |
+| `maximumRequest` | The maximum number of request a source can make for a given incremental run. The current default limit is 10000. |
+
+#### `NONE`
+
+The `NONE` pagination type can be used for sources that don't support any of the available pagination types. Sources that use the pagination type of `NONE` simply returns all retrievable records when a GET request is made.
+
+```json
+"paginationParams": {
+  "type": "NONE"
+}
+```
+
+### Advanced scheduling in [!DNL Sources SDK]
+
 ## Next steps
 
 With your source specifications populated, you can proceed to configure the explore specifications for the source that you want to integrate to Platform. See the the document on [configuring explore specifications](./explorespec.md) for more information.
