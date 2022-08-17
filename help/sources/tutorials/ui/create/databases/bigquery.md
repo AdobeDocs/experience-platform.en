@@ -9,10 +9,6 @@ exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
 ---
 # Create a [!DNL Google Big Query] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL Google BigQuery] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Google Big Query] (hereinafter referred to as "BigQuery") source connector using the [!DNL Platform] user interface.
 
 ## Getting started

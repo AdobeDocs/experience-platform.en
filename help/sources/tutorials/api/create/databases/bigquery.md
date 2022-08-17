@@ -9,10 +9,6 @@ exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 ---
 # Create a [!DNL Google BigQuery] base connection using the [!DNL Flow Service] API
 
->[!NOTE]
->
->The [!DNL Google BigQuery] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL Google BigQuery] (hereinafter referred to as "[!DNL BigQuery]") using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
