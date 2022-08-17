@@ -146,15 +146,39 @@ The following documentation provides further resources on understanding Data Pre
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
 * [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtering
+### Filtering (Beta)
 
-Once you have completed mappings for your [!DNL Analytics] report suite data, you can start applying filtering rules to define conditions on which data is sent to [!DNL Profile Service] and which data is excluded.
+>[!IMPORTANT]
+>
+>Support for filtering [!DNL Analytics] data is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+
+Once you have completed mappings for your [!DNL Analytics] report suite data, you can start applying filtering rules to define the conditions that decide which data is sent to [!DNL Profile Service] and which data is excluded. Support for filtering is available only for [!DNL Analytics data] and the [!DNL Analytics] data is only filtered prior to entering [!DNL Profile.] All other data are ingested into the data lake.
 
 #### Row-level filtering
 
+You can filter data for [!DNL Profile] ingestion at the row-level and the column-level. Row-level filtering allows you to define criteria such as string contains, equals to, begins, or ends with. You can also use row-level filtering to join conditions using `AND` as well as `OR`, and negate conditions using `NOT`. 
+
+To filter your [!DNL Analytics] data at the row-level, select **[!UICONTROL Row filter]**.
+
+![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
+
+An interactive schema hierarchy appears. Use the left rail to navigate through the schema hierarchy and select the schema attribute of your choice to further drill down a particular schema. Once you have identified the attribute that you want to configure, select and drag the attribute from the left rail to the filtering panel.
+
+![left-rail-hierarchy](../../../../images/tutorials/create/analytics/left-rail-hierarchy.png)
+
 #### Column-level filtering
 
-Select [!UICONTROL Column] from the header to apply column-level filtering. 
+Select **[!UICONTROL Column filter]** from the header to apply column-level filtering. 
+
+![column-filter](../../../../images/tutorials/create/analytics/column-filter.png)
+
+The page updates into an interactive schema tree, displaying your schema attributes at the column-level. From here, you can select the columns of data that you would like to exclude from [!DNL Profile] ingestion. Alternatively, you can expand a column and select specific attributes for exclusion.
+
+By default, all [!DNL Analytics] go to [!DNL Profile] and this process allows for branches of XDM data to be excluded from [!DNL Profile] ingestion.
+
+![columns-selected](../../../../images/tutorials/create/analytics/column-selected.png)
+
+When finished, select **[!UICONTROL Next]**.
 
 ### Provide dataflow details
 
