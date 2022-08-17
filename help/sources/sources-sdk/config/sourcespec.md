@@ -453,6 +453,7 @@ The `NONE` pagination type can be used for sources that don't support any of the
 
 ### Advanced scheduling in [!DNL Sources SDK]
 
+
 ## Next steps
 
 With your source specifications populated, you can proceed to configure the explore specifications for the source that you want to integrate to Platform. See the the document on [configuring explore specifications](./explorespec.md) for more information.
