@@ -68,8 +68,8 @@ The process to configure your destination in Experience Platform is outlined bel
 
 1. If you are an ISV or SI, see the getting access information in the section above. [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) customers can skip this step.
 2. [Request to provision an Experience Platform sandbox](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) and enable the destination authoring permission.
-3. Build your integration following the product documentation. Follow the instructions to configure [streaming destinations](./configure-destination-instructions.md) or [file-based destinations (beta)](./configure-file-based-destination-instructions.md).
-4. Test your integration following the product documentation. Follow the instructions to test [streaming destinations](./test-destination.md) or [file-based destinations (beta)](./file-based-destination-testing-overview.md).
+3. Build your integration. Follow the instructions in the product documentation to configure [streaming destinations](./configure-destination-instructions.md) or [file-based destinations (beta)](./configure-file-based-destination-instructions.md).
+4. Test your integration. Follow the instructions in the product documentation to test [streaming destinations](./test-destination.md) or [file-based destinations (beta)](./file-based-destination-testing-overview.md).
 5. If you are an ISV or SI creating a [productized integration](./overview.md#productized-custom-integrations), [submit your integration](./submit-destination.md) for Adobe’s review (the standard response time is five business days).
 6. If you are an ISV or SI creating a productized integration, use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page on Experience League for your destination.
 7. For productized integrations, once approved by Adobe, your integration will show up in the [Experience Platform catalog](/help/destinations/catalog/overview.md).
