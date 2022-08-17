@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;alert;
 title: Alert Subscriptions API Endpoint
-description: This guide provides sample HTTP requests and responses for the various API calls you can make to the alert-subscriptions endpoint with the Query Service API.
+description: This guide provides sample HTTP requests and responses for the various API calls you can make to the alert subscriptions endpoint with the Query Service API.
 ---
 # Alert Subscriptions API Endpoint
 
-Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. The notification content is the same for in-platform alerts and email alerts. Currently, query alerts can only be subscribed to using the Query Service API. 
+Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. The notification content is the same for in-platform alerts and email alerts. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/). 
 
 The table below explains the supported alert types for different types of query: 
 
@@ -18,7 +18,7 @@ The table below explains the supported alert types for different types of query:
 >
 >All executed queries support alert subscriptions, but you do not need to be the query creator to subscribe to an alert. Other users can also enroll for alerts on a query that they did not create.
 
-The following alerts apply without an alert subscription :
+The following alerts apply without an alert subscription:
 
 * When a batch query job finishes, users receive a notification.
 * When a batch query job's duration exceeds a threshold, an alert is triggered to the person that scheduled the query.
@@ -33,7 +33,11 @@ The following sections walk through the various API calls you can make using the
 
 ## Create an alert and subscribe users {#subscribe-users}
 
-Making a `POST` request to the `/alertSubscriptions` endpoint creates an alert and subscribes a user to receive it.
+To create an alert and subscribe a user to receive it, make a `POST` request to the `/alertSubscriptions` endpoint. This request associates a query to a newly created alert using an `assetId` property, and subscribes users to alerts for that query through the use of `emailIds`. 
+
+>[!IMPORTANT]
+>
+>You can pass up to five email IDs in a single request. To subscribe more than five users to an alert, subsequent requests must be made.
 
 **API format**
 
@@ -75,10 +79,6 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alertSubscriptions
 
 {style="table-layout:auto"}
 
->[!IMPORTANT]
->
->There is a maximum limit of five `emailId`s that can be passed in a single request. To subscribe more than five users to an alert, subsequent requests must be made.
-
 **Response**
 
 A successful response returns HTTP status 202 (Accepted) with details of your newly created alert.
@@ -97,25 +97,25 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
     },
     "_links": {
         "self": {
-            "href": "https://platform-int.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+            "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
             "method": "GET"
         },
         "subscribe": {
-            "href": "https://platform-int.adobe.io/data/foundation/query/alertSubscriptions",
+            "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
             "method": "POST",
             "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
         },
         "patch_status": {
-            "href": "https://platform-int.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+            "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
             "method": "PATCH",
             "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
         },
         "get_list_of_subscribers_by_alert_type": {
-            "href": "https://platform-int.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+            "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
             "method": "GET"
         },
         "delete": {
-            "href": "https://platform-int.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+            "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
             "method": "DELETE"
         }
     }
@@ -129,20 +129,20 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 
 ## Enable or disable an alert {#enable-or-disable-alert}
 
-You can update the status of an alert to either `enable` or `disable` by making a `PATCH` request to the `/alertSubscriptions/<queryId>/<alertType>` or `/alertSubscriptions/<scheduleId>/<alertType>` endpoint. 
+This request references a particular alert using a query or schedule ID and an alert type and updates the alert status to either `enable` or `disable`. You can update the status of an alert by making a `PATCH` request to the `/alertSubscriptions/{queryId}/{alertType}` or `/alertSubscriptions/{scheduleId}/{alertType}` endpoint. 
 
 **API format**
 
 ```http
-PATCH /alertSubscriptions/{queryId}/{alertType}
-PATCH /alertSubscriptions/{scheduleId}/{alertType}
+PATCH /alertSubscriptions/{QUERY_ID}/{ALERT_TYPE}
+PATCH /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 ```
 
 | Parameters | Description |
 | -------- | ----------- |
-| `alertType` | The type of alert. There are three potential values for an alert, they are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul>You must specify the current alert type in the endpoint namespace in order to change it. |
-| `queryId` | The unique identifier for the query to be updated. |
-| `scheduleId` | The unique identifier for the scheduled query to be updated. |
+| `ALERT_TYPE` | The type of alert. There are three potential values for an alert, they are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul>You must specify the current alert type in the endpoint namespace in order to change it. |
+| `QUERY_ID` | The unique identifier for the query to be updated. |
+| `SCHEDULE_ID` | The unique identifier for the scheduled query to be updated. |
 
 **Request**
 
@@ -189,7 +189,7 @@ A successful response returns HTTP status 200 with details of the alert status, 
 | `alertType` | Each alert can have three different alert types. They are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
 | `status` | The alert has two status values `enabled` and `disabled`. An alert is either actively listening for the events or paused for future use while retaining all the relevant subscribers and settings. |
 
-## Retrieve all subscriptions for a particular query or schedule ID {#retrieve-all-alert-subscriptions-by-id}
+## Retrieve the alert subscription information for a particular query or schedule ID {#retrieve-all-alert-subscriptions-by-id}
 
 Retrieve the alert subscription information for a particular query ID or schedule ID by making a GET request to the `alertSubscriptions/{QUERY_ID}` or the `alertSubscriptions/{SCHEDULE_ID}` endpoint.
 
@@ -273,15 +273,15 @@ A successful response returns an HTML status of 200 and the subscription informa
 | `subscriptions.emailNotifications` | An array of Adobe registered email addresses for users who have subscribed to receive emails for the alert. |
 | `subscriptions.inContextNotifications` | An array of Adobe registered email addresses for users who have subscribed to UI notifications for the alert. |
 
-## Retrieve subscription information for a particular query or schedule ID and alert type {#get-alert-info-by-id}
+## Retrieve alert subscription information for a particular query or schedule ID and alert type {#get-alert-info-by-id-and-alert-type}
 
-Retrieve a list of alert subscribers for a particular ID and alert type by making a GET request to the `/alertSubscriptions/{queryId}/{alertType}` endpoint. This is applicable to both query or scheduled query IDs.
+Retrieve the alert subscription information for a particular ID and alert type by making a GET request to the `/alertSubscriptions/{QUERY_ID}/{ALERT_TYPE}` endpoint. This is applicable to both query or scheduled query IDs.
 
 **API format**
 
 ```http
-GET /alertSubscriptions/{QUERY_ID}/{AlertType}
-GET /alertSubscriptions/{SCHEDULE_ID}/{AlertType}
+GET /alertSubscriptions/{QUERY_ID}/{ALERT_TYPE}
+GET /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 ```
 
 | Parameters | Description |
@@ -338,7 +338,7 @@ A successful response returns an HTML status of 200 and all the alerts that are 
 | `subscriptions.inContextNotifications` | An array of Adobe registered email addresses for users who have subscribed to UI notifications for the alert. |
 | `subscriptions.emailNotifications` | An array of Adobe registered email addresses for users who have subscribed to receive emails for the alert. |
 
-## Delete the alert for a query or schedule ID with given alert type {#delete-alert-info-by-id}
+## Delete the alert for a particular query and alert type {#delete-alert-info-by-id-and-alert-type}
 
 Delete an alert for a particular query or schedule ID and alert type by making a DELETE request to the `/alertSubscriptions/{queryId}/{alertType}` endpoint.
 
@@ -378,7 +378,7 @@ A successful response returns an HTTP 200 status and a confirmation message that
 
 ## Retrieve a list of all the alerts that a user is subscribed to {#get-alert-subscription-list}
 
-Retrieve a list of all the alerts that a user is subscribed to by making a GET request to the `alertSubscriptions/subscriptions/{emailId}` endpoint.
+Retrieve a list of all the alerts that a user is subscribed to by making a GET request to the `alertSubscriptions/subscriptions/{emailId}` endpoint. The response includes the alert name, IDs, status, alert type, and notification channels.
 
 **API format**
 
@@ -445,7 +445,7 @@ A successful response returns HTTP status 200 with details of the alerts subscri
 
 ## Retrieve a list of all alerts for an organization and a sandbox {#get-list-of-org-alert-subs}
 
-Retrieve a list of all alerts for an organization and a sandbox by making a GET request to the `alertSubscriptions` endpoint.
+Retrieve a list of all alerts for an organization sandbox by making a GET request to the `alertSubscriptions` endpoint.
 
 **API format**
 
@@ -491,9 +491,27 @@ A successful response returns an HTTP 200 status with details of all the alerts 
             "alertType": "start"
 
         }
-    ]
+    ], 
+    "_page": {
+        "orderby": "-created",
+        "page": 1,
+        "count": 26,
+        "pageSize": 50
+    },
+    "_links": {
+        "next": {
+            "href": "https://platform.adobe.io/data/foundation/query/queries/alert-subscriptions?orderby=-created&page=2"
+        },
+        "prev": {
+            "href": "https://platform.adobe.io/data/foundation/query/queries/alert-subscriptions?orderby=-created&page=0"
+        }
+    },
+    "version": 1
+}
 }
 ```
+
+<!-- added pagination info. Need to update the table below -->
 
 | Property | Description |
 | -------- | ----------- |
