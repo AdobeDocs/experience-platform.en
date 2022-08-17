@@ -7,7 +7,7 @@ description: This guide provides sample HTTP requests and responses for the vari
 
 Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. The notification content is the same for in-platform alerts and email alerts. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/). 
 
-The table below explains the supported alert types for different types of query: 
+The table below explains the supported alert types for different types of queries: 
 
 | Query type | Supported alert types |
 |---|---|
@@ -47,15 +47,15 @@ GET /alert-subscriptions
 curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-api-key: {API_KEY}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -H 'x-api-key: {API_KEY}' \
     -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
 
-A successful response returns an HTTP 200 status and the `alerts` array with pagination and version information. The `alerts` array contains details of all the alerts for an organization and a particular sandbox. A maximum of three alerts are available per response, one alert per each alertType is contained in the response body.
+A successful response returns an HTTP 200 status and the `alerts` array with pagination and version information. The `alerts` array contains details of all the alerts for an organization and a particular sandbox. A maximum of three alerts are available per response, one alert per each alert type is contained in the response body.
 
 >[!NOTE]
 >
@@ -136,9 +136,9 @@ GET /alert-subscriptions/{SCHEDULE_ID}
 curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'x-gw-ims-org-id: {ORG_ID}' \
+-H 'x-api-key: {API_KEY}' \
 -H 'x-sandbox-name: {SANDBOX_NAME}' \
 -H 'Content-Type: application/json' \
--H 'x-api-key: {API_KEY}' \
 -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
@@ -265,15 +265,15 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-api-key: {API_KEY}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -H 'x-api-key: {API_KEY}' \
     -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
 
-A successful response returns an HTML status of 200 and all the alerts that are subscribed to. This includes the alert ID, type of alert, subscriber's Adobe registered emailIds, and their preferred notification channel. 
+A successful response returns an HTML status of 200 and all the alerts that are subscribed to. This includes the alert ID, type of alert, subscriber's Adobe registered email IDs, and their preferred notification channel. 
 
 ```json
 {
@@ -349,9 +349,9 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/user-subscriptions/rrunner@adobe.com' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-api-key: {API_KEY}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -H 'x-api-key: {API_KEY}' \
     -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
@@ -602,10 +602,6 @@ A successful response returns HTTP status 200 with details of the alert status, 
 | `alertType` | Each alert can have three different alert types. They are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
 | `status` | The alert has two status values `enabled` and `disabled`. An alert is either actively listening for the events or paused for future use while retaining all the relevant subscribers and settings. |
 
-
-
-
-
 ## Delete the alert for a particular query and alert type {#delete-alert-info-by-id-and-alert-type}
 
 Delete an alert for a particular query or schedule ID and alert type by making a DELETE request to the `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` or `/alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}` endpoint.
@@ -627,9 +623,9 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 curl -X DELETE 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-api-key: {API_KEY}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -H 'x-api-key: {API_KEY}' \
     -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
