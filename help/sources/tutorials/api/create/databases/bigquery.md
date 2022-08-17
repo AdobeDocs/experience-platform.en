@@ -32,6 +32,7 @@ In order for [!DNL Flow Service] to connect [!DNL BigQuery] to Platform, you mus
 | `clientID` | The ID value used to generate the refresh token. |
 | `clientSecret` | The secret value used to generate the refresh token. |
 | `refreshToken` | The refresh token obtained from [!DNL Google] used to authorize access to [!DNL BigQuery]. |
+| `largeResultsDataSetId` | The pre-created  [!DNL Google BigQuery] dataset ID that is required in order to enable support for large result sets.|
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL BigQuery] is: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 For more information about these values, refer to this [[!DNL BigQuery] document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
