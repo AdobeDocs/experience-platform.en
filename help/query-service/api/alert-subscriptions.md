@@ -33,7 +33,7 @@ The following sections walk through the various API calls you can make using the
 
 ## Create an alert and subscribe users {#subscribe-users}
 
-To create an alert and subscribe a user to receive it, make a `POST` request to the `/alertSubscriptions` endpoint. This request associates a query to a newly created alert using an `assetId` property, and subscribes users to alerts for that query through the use of `emailIds`. 
+To create an alert and subscribe a user to receive it, make a `POST` request to the `/alert-subscriptions` endpoint. This request associates a query to a newly created alert using an `assetId` property, and subscribes users to alerts for that query through the use of `emailIds`. 
 
 >[!IMPORTANT]
 >
@@ -42,13 +42,13 @@ To create an alert and subscribe a user to receive it, make a `POST` request to 
 **API format**
 
 ```http
-POST /alertSubscriptions
+POST /alert-subscriptions
 ```
 
 **Request**
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/alertSubscriptions
+curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -97,25 +97,25 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
     },
     "_links": {
         "self": {
-            "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+            "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928",
             "method": "GET"
         },
         "subscribe": {
-            "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+            "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions",
             "method": "POST",
             "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
         },
         "patch_status": {
-            "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+            "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
             "method": "PATCH",
             "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
         },
         "get_list_of_subscribers_by_alert_type": {
-            "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+            "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
             "method": "GET"
         },
         "delete": {
-            "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+            "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
             "method": "DELETE"
         }
     }
@@ -129,13 +129,13 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 
 ## Enable or disable an alert {#enable-or-disable-alert}
 
-This request references a particular alert using a query or schedule ID and an alert type and updates the alert status to either `enable` or `disable`. You can update the status of an alert by making a `PATCH` request to the `/alertSubscriptions/{queryId}/{alertType}` or `/alertSubscriptions/{scheduleId}/{alertType}` endpoint. 
+This request references a particular alert using a query or schedule ID and an alert type and updates the alert status to either `enable` or `disable`. You can update the status of an alert by making a `PATCH` request to the `/alert-subscriptions/{queryId}/{alertType}` or `/alert-subscriptions/{scheduleId}/{alertType}` endpoint. 
 
 **API format**
 
 ```http
-PATCH /alertSubscriptions/{QUERY_ID}/{ALERT_TYPE}
-PATCH /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
+PATCH /alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}
+PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 ```
 
 | Parameters | Description |
@@ -147,7 +147,7 @@ PATCH /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 **Request**
 
 ```shell
-curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
+curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-api-key: {API_KEY}' \
@@ -191,13 +191,13 @@ A successful response returns HTTP status 200 with details of the alert status, 
 
 ## Retrieve the alert subscription information for a particular query or schedule ID {#retrieve-all-alert-subscriptions-by-id}
 
-Retrieve the alert subscription information for a particular query ID or schedule ID by making a GET request to the `alertSubscriptions/{QUERY_ID}` or the `alertSubscriptions/{SCHEDULE_ID}` endpoint.
+Retrieve the alert subscription information for a particular query ID or schedule ID by making a GET request to the `alert-subscriptions/{QUERY_ID}` or the `alert-subscriptions/{SCHEDULE_ID}` endpoint.
 
 **API format**
 
 ```http
-GET /alertSubscriptions/{QUERY_ID}
-GET /alertSubscriptions/{SCHEDULE_ID}
+GET /alert-subscriptions/{QUERY_ID}
+GET /alert-subscriptions/{SCHEDULE_ID}
 ```
 
 | Parameter | Description |
@@ -208,7 +208,7 @@ GET /alertSubscriptions/{SCHEDULE_ID}
 **Request**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1' \
+curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'x-gw-ims-org-id: {ORG_ID}' \
 -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -243,25 +243,25 @@ A successful response returns an HTML status of 200 and the `alerts` array that 
             },
             "_links": {
                 "self": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928",
                     "method": "GET"
                 },
                 "subscribe": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions",
                     "method": "POST",
                     "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
                 },
                 "patch_status": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "PATCH",
                     "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
                 },
                 "get_list_of_subscribers_by_alert_type": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "GET"
                 },
                 "delete": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "DELETE"
                 }
             }
@@ -281,25 +281,25 @@ A successful response returns an HTML status of 200 and the `alerts` array that 
             },
             "_links": {
                 "self": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928",
                     "method": "GET"
                 },
                 "subscribe": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions",
                     "method": "POST",
                     "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
                 },
                 "patch_status": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "PATCH",
                     "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
                 },
                 "get_list_of_subscribers_by_alert_type": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "GET"
                 },
                 "delete": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "DELETE"
                 }
             }
@@ -319,13 +319,13 @@ A successful response returns an HTML status of 200 and the `alerts` array that 
 
 ## Retrieve alert subscription information for a particular query or schedule ID and alert type {#get-alert-info-by-id-and-alert-type}
 
-Retrieve the alert subscription information for a particular ID and alert type by making a GET request to the `/alertSubscriptions/{QUERY_ID}/{ALERT_TYPE}` endpoint. This is applicable to both query or scheduled query IDs.
+Retrieve the alert subscription information for a particular ID and alert type by making a GET request to the `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` endpoint. This is applicable to both query or scheduled query IDs.
 
 **API format**
 
 ```http
-GET /alertSubscriptions/{QUERY_ID}/{ALERT_TYPE}
-GET /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
+GET /alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}
+GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 ```
 
 | Parameters | Description |
@@ -337,7 +337,7 @@ GET /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 **Request**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
+curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -369,25 +369,25 @@ A successful response returns an HTML status of 200 and all the alerts that are 
             },
             "_links": {
                 "self": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928",
                     "method": "GET"
                 },
                 "subscribe": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions",
                     "method": "POST",
                     "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
                 },
                 "patch_status": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "PATCH",
                     "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
                 },
                 "get_list_of_subscribers_by_alert_type": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "GET"
                 },
                 "delete": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "DELETE"
                 }
             }
@@ -406,11 +406,11 @@ A successful response returns an HTML status of 200 and all the alerts that are 
 
 ## Delete the alert for a particular query and alert type {#delete-alert-info-by-id-and-alert-type}
 
-Delete an alert for a particular query or schedule ID and alert type by making a DELETE request to the `/alertSubscriptions/{QUERY_ID}/{ALERT_TYPE}` or `/alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}` endpoint.
+Delete an alert for a particular query or schedule ID and alert type by making a DELETE request to the `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` or `/alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}` endpoint.
 
 ```http
-DELETE /alertSubscriptions/{QUERY_ID}/{ALERT_TYPE}
-DELETE /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
+DELETE /alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}
+DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 ```
 
 | Parameters | Description |
@@ -422,7 +422,7 @@ DELETE /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 **Request**
 
 ```shell
-curl -X DELETE 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start' \
+curl -X DELETE 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -444,12 +444,12 @@ A successful response returns an HTTP 200 status and a confirmation message that
 
 ## Retrieve a list of all the alerts that a user is subscribed to {#get-alert-subscription-list}
 
-Retrieve a list of all the alerts that a user is subscribed to by making a GET request to the `alertSubscriptions/user-subscriptions/{EMAIL_ID}` endpoint. The response includes the alert name, IDs, status, alert type, and notification channels.
+Retrieve a list of all the alerts that a user is subscribed to by making a GET request to the `alert-subscriptions/user-subscriptions/{EMAIL_ID}` endpoint. The response includes the alert name, IDs, status, alert type, and notification channels.
 
 **API format**
 
 ```http
-GET /alertSubscriptions/user-subscriptions/{EMAIL_ID}
+GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 ```
 
 | Parameters | Description |
@@ -459,7 +459,7 @@ GET /alertSubscriptions/user-subscriptions/{EMAIL_ID}
 **Request**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/user-subscriptions/rrunner@adobe.com' \
+curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions/user-subscriptions/rrunner@adobe.com' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -486,25 +486,25 @@ A successful response returns HTTP status 200 and the `items` array with details
             },
             "_links": {
                 "self": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928",
                     "method": "GET"
                 },
                 "subscribe": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions",
                     "method": "POST",
                     "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
                 },
                 "patch_status": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "PATCH",
                     "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
                 },
                 "get_list_of_subscribers_by_alert_type": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "GET"
                 },
                 "delete": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "DELETE"
                 }
             }
@@ -520,25 +520,25 @@ A successful response returns HTTP status 200 and the `items` array with details
             },
             "_links": {
                 "self": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928",
                     "method": "GET"
                 },
                 "subscribe": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions",
                     "method": "POST",
                     "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
                 },
                 "patch_status": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "PATCH",
                     "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
                 },
                 "get_list_of_subscribers_by_alert_type": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "GET"
                 },
                 "delete": {
-                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "href": "https://platform.adobe.io/data/foundation/query/alert-subscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
                     "method": "DELETE"
                 }
             }
@@ -559,18 +559,18 @@ A successful response returns HTTP status 200 and the `items` array with details
 
 ## Retrieve a list of all alerts for an organization and a sandbox {#get-list-of-org-alert-subs}
 
-Retrieve a list of all alerts for an organization sandbox by making a GET request to the `alertSubscriptions` endpoint.
+Retrieve a list of all alerts for an organization sandbox by making a GET request to the `alert-subscriptions` endpoint.
 
 **API format**
 
 ```http
-GET /alertSubscriptions
+GET /alert-subscriptions
 ```
 
 **Request**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions' \
+curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
