@@ -35,10 +35,10 @@ Select the funnel icon (![Image of the funnel icon](../images/ui/browse/funnel-i
 
 | Filter | Description |
 | --- | --- |
-| [!UICONTROL Status] | Filter based on the current status of the work order. |
-| [!UICONTROL Date created] | Filter based on the when the dataset TTL request was made. |
-| [!UICONTROL Deletion date] | Filter based on the deletion date that the TTL has scheduled. |
-| [!UICONTROL Date updated] | Filter based on the when the dataset TTL was last updated. TTL creations and expiries are counted as updates. |
+| [!UICONTROL Status] | Filter based on the current status of the work order:<ul><li>**[!UICONTROL Completed]**: The job has been completed.</li><li>**[!UICONTROL Pending]**: The job has been created but has not been executed yet. A [dataset time-to-live (TTL) request](./ttl.md) assumes this status before the scheduled deletion date. Once the deletion date arrives, the status updates to [!UICONTROL Executing] unless the job is cancelled beforehand.</li><li>**[!UICONTROL Executing]**: The TTL request has started and is currently processing.</li><li>**[!UICONTROL Cancelled]**: The job has been cancelled as part of a manual user request.</li></ul> |
+| [!UICONTROL Date created] | Filter based on the when the work order was made. |
+| [!UICONTROL Expiration date] | Filter TTL requests based on the scheduled deletion date for the dataset in question. |
+| [!UICONTROL Date updated] | Filter TTL requests based on the when the work order was last updated. TTL creations and expiries are counted as updates. |
 
 {style="table-layout:auto"}
 
