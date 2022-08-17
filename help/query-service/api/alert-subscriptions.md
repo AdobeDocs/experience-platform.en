@@ -88,7 +88,7 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
     "assetId": "c4f67291-1161-4943-bc29-8736469bb928",
     "id": "query_service_flow_run_failure-5f4cb942-b67c-4ea4-a90d-5b6245e60aca",
     "alertType": "failure",
-    "notifications": {
+    "subscriptions": {
         "emailIds": [
             "{USER_EMAIL_ID}"
         ],
@@ -148,17 +148,17 @@ PATCH /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 ```shell
 curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
--H 'Authorization: Bearer {ACCESS_TOKEN}' \
--H 'x-gw-ims-org-id: {ORG_ID}' \
--H 'x-api-key: {API_KEY}' \
--H 'x-sandbox-name: {SANDBOX_NAME}'
--H 'Content-Type: application/json' \
--H 'x-sandbox-id: {SANDBOX_ID}' \
--d '{
-        "op": "replace",
-        "path" : "/status",
-        "value": "enable"
-}'
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'Content-Type: application/json' \
+    -H 'x-sandbox-id: {SANDBOX_ID}' \
+    -d '{
+            "op": "replace",
+            "path" : "/status",
+            "value": "enable"
+        }'
 ```
 
 | Property | Description |
@@ -219,7 +219,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/
 
 **Response**
 
-A successful response returns an HTML status of 200 and the subscription information for provided query or schedule ID.
+A successful response returns an HTML status of 200 and the `alerts` array that contains subscription information for provided query or schedule ID.
 
 ```json
 {
@@ -242,6 +242,28 @@ A successful response returns an HTML status of 200 and the subscription informa
                 ]
             },
             "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+                    "method": "GET"
+                },
+                "subscribe": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+                    "method": "POST",
+                    "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
+                },
+                "patch_status": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "PATCH",
+                    "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
+                },
+                "get_list_of_subscribers_by_alert_type": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "GET"
+                },
+                "delete": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "DELETE"
+                }
             }
         },
         {
@@ -258,6 +280,28 @@ A successful response returns an HTML status of 200 and the subscription informa
                 ]
             },
             "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+                    "method": "GET"
+                },
+                "subscribe": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+                    "method": "POST",
+                    "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
+                },
+                "patch_status": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "PATCH",
+                    "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
+                },
+                "get_list_of_subscribers_by_alert_type": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "GET"
+                },
+                "delete": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "DELETE"
+                }
             }
         }
     ]
@@ -286,20 +330,20 @@ GET /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameters | Description |
 | -------- | ----------- |
-| `alertType` | Each alert can have three different alert types. They are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
-| `queryId` | The unique identifier for the query to be updated. |
-| `ScheduleId` | The unique identifier for the scheduled query to be updated. |
+| `ALERT_TYPE` | Each alert can have three different alert types. They are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
+| `QUERY_ID` | The unique identifier for the query to be updated. |
+| `SCHEDULE_ID` | The unique identifier for the scheduled query to be updated. |
 
 **Request**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start'' \
--H 'Authorization: Bearer {ACCESS_TOKEN}' \
--H 'x-gw-ims-org-id: {ORG_ID}' \
--H 'x-sandbox-name: {SANDBOX_NAME}' \
--H 'Content-Type: application/json' \
--H 'x-api-key: {API_KEY}' \
--H 'x-sandbox-id: {SANDBOX_ID}'
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
@@ -324,6 +368,28 @@ A successful response returns an HTML status of 200 and all the alerts that are 
                 ]
             },
             "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+                    "method": "GET"
+                },
+                "subscribe": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+                    "method": "POST",
+                    "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
+                },
+                "patch_status": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "PATCH",
+                    "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
+                },
+                "get_list_of_subscribers_by_alert_type": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "GET"
+                },
+                "delete": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "DELETE"
+                }
             }
         }
     ]
@@ -340,29 +406,29 @@ A successful response returns an HTML status of 200 and all the alerts that are 
 
 ## Delete the alert for a particular query and alert type {#delete-alert-info-by-id-and-alert-type}
 
-Delete an alert for a particular query or schedule ID and alert type by making a DELETE request to the `/alertSubscriptions/{queryId}/{alertType}` endpoint.
+Delete an alert for a particular query or schedule ID and alert type by making a DELETE request to the `/alertSubscriptions/{QUERY_ID}/{ALERT_TYPE}` or `/alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}` endpoint.
 
 ```http
-DELETE /alertSubscriptions/{queryId}/{alertType}
-DELETE /alertSubscriptions/{scheduleId}/{alertType}
+DELETE /alertSubscriptions/{QUERY_ID}/{ALERT_TYPE}
+DELETE /alertSubscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 ```
 
 | Parameters | Description |
 | -------- | ----------- |
-| `alertType` | The type of alert. There are three potential values for an alert, they are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> The DELETE request only applies to the specific alert type provided. |
-| `queryId` | The unique identifier for the query to be updated. |
-| `ScheduleId` | The unique identifier for the scheduled query to be updated. |
+| `ALERT_TYPE` | The type of alert. There are three potential values for an alert, they are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> The DELETE request only applies to the specific alert type provided. |
+| `QUERY_ID` | The unique identifier for the query to be updated. |
+| `SCHEDULE_ID` | The unique identifier for the scheduled query to be updated. |
 
 **Request**
 
 ```shell
 curl -X DELETE 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/4422fc69-eaa7-464e-945b-63cfd435d3d1/start' \
--H 'Authorization: Bearer {ACCESS_TOKEN}' \
--H 'x-gw-ims-org-id: {ORG_ID}' \
--H 'x-sandbox-name: {SANDBOX_NAME}' \
--H 'Content-Type: application/json' \
--H 'x-api-key: {API_KEY}' \
--H 'x-sandbox-id: {SANDBOX_ID}'
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
@@ -378,33 +444,33 @@ A successful response returns an HTTP 200 status and a confirmation message that
 
 ## Retrieve a list of all the alerts that a user is subscribed to {#get-alert-subscription-list}
 
-Retrieve a list of all the alerts that a user is subscribed to by making a GET request to the `alertSubscriptions/subscriptions/{emailId}` endpoint. The response includes the alert name, IDs, status, alert type, and notification channels.
+Retrieve a list of all the alerts that a user is subscribed to by making a GET request to the `alertSubscriptions/user-subscriptions/{EMAIL_ID}` endpoint. The response includes the alert name, IDs, status, alert type, and notification channels.
 
 **API format**
 
 ```http
-GET /alertSubscriptions/subscriptions/{emailId}
+GET /alertSubscriptions/user-subscriptions/{EMAIL_ID}
 ```
 
 | Parameters | Description |
 | -------- | ----------- |
-| `{emailId}` | An email address that is registered to an Adobe account, is used to identify the users subscribed to alerts. |
+| `{EMAIL_ID}` | An email address that is registered to an Adobe account, is used to identify the users subscribed to alerts. |
 
 **Request**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/subscriptions/rrunner@acme.com' \
--H 'Authorization: Bearer {ACCESS_TOKEN}' \
--H 'x-gw-ims-org-id: {ORG_ID}' \
--H 'x-sandbox-name: {SANDBOX_NAME}' \
--H 'Content-Type: application/json' \
--H 'x-api-key: {API_KEY}' \
--H 'x-sandbox-id: {SANDBOX_ID}'
+curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions/user-subscriptions/rrunner@adobe.com' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
 
-A successful response returns HTTP status 200 with details of the alerts subscribed to by the `emailId` provided. 
+A successful response returns HTTP status 200 and the `items` array with details of the alerts subscribed to by the `emailId` provided. 
 
 ```json
 {
@@ -417,6 +483,30 @@ A successful response returns HTTP status 200 with details of the alerts subscri
             "subscriptions": {
                 "inContextNotification": true,
                 "emailNotifications": true
+            },
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+                    "method": "GET"
+                },
+                "subscribe": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+                    "method": "POST",
+                    "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
+                },
+                "patch_status": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "PATCH",
+                    "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
+                },
+                "get_list_of_subscribers_by_alert_type": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "GET"
+                },
+                "delete": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "DELETE"
+                }
             }
         },
         {
@@ -427,6 +517,30 @@ A successful response returns HTTP status 200 with details of the alerts subscri
             "subscriptions": {
                 "inContextNotification": true,
                 "emailNotifications": true
+            },
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928",
+                    "method": "GET"
+                },
+                "subscribe": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions",
+                    "method": "POST",
+                    "body": "{\"assetId\": \"queryId/scheduleId\", \"alertType\": \"start/success/failure\", \"subscriptions\": {\n\"emailIds\": [\"xyz@example.com\", \"abc@example.com\"], \"email\": true, \"inContext\": false}}"
+                },
+                "patch_status": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "PATCH",
+                    "body": "{ \"op\": \"replace\", \"path\": \"/status\", \"value\": \"enable/disable\" }"
+                },
+                "get_list_of_subscribers_by_alert_type": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "GET"
+                },
+                "delete": {
+                    "href": "https://platform.adobe.io/data/foundation/query/alertSubscriptions/c4f67291-1161-4943-bc29-8736469bb928/failure",
+                    "method": "DELETE"
+                }
             }
         }
     ]
@@ -457,17 +571,21 @@ GET /alertSubscriptions
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/query/alertSubscriptions' \
--H 'Authorization: Bearer {ACCESS_TOKEN}' \
--H 'x-gw-ims-org-id: {ORG_ID}' \
--H 'x-sandbox-name: {SANDBOX_NAME}' \
--H 'Content-Type: application/json' \
--H 'x-api-key: {API_KEY}' \
--H 'x-sandbox-id: {SANDBOX_ID}'
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
 
 **Response**
 
-A successful response returns an HTTP 200 status with details of all the alerts for an organization and a particular sandbox. A maximum of three alerts are available per response, one alert per each alertType is contained in the response body.
+A successful response returns an HTTP 200 status and the `alerts` array with pagination and version information. The `alerts` array contains details of all the alerts for an organization and a particular sandbox. A maximum of three alerts are available per response, one alert per each alertType is contained in the response body.
+
+>[!NOTE]
+>
+>The `alerts._links` object in the `alerts` array has been truncated for brevity. A full example of the `alerts._links` object can be found in the [response of the POST request](#subscribe-users).
 
 ```json
 {
@@ -476,20 +594,22 @@ A successful response returns an HTTP 200 status with details of all the alerts 
             "assetId": "0ca168f4-e46b-4f7f-be6a-bdc386271b4a",
             "id": "query_service_flow_run_start-dcf7b4be-ccd7-4c73-ae0c-a4bb34a40adada84",
             "status": "enabled",
-            "alertType": "start"
+            "alertType": "start",
+            "_links":{}
         },
         {
             "assetId": "0ca168f4-e46b-4f7f-be6a-bdc386271b4a",
             "id": "query_service_flow_run_success-dcf7b4be-ccd7-4c73-ae0c-a4bb34a40adada84",
             "status": "enabled",
-            "alertType": "success"
+            "alertType": "success",
+            "_links":{}
         },
         {
             "assetId": "700d43d9-3b99-4d4c-8dbb-29c911c0e0df",
             "id": "query_service_flow_run_start-75da972a-e859-47a5-934c-629904daa1ef",
             "status": "enabled",
-            "alertType": "start"
-
+            "alertType": "start",
+            "_links":{}
         }
     ], 
     "_page": {
@@ -508,14 +628,14 @@ A successful response returns an HTTP 200 status with details of all the alerts 
     },
     "version": 1
 }
-}
 ```
-
-<!-- added pagination info. Need to update the table below -->
 
 | Property | Description |
 | -------- | ----------- |
-| `assetId` | The query ID that associated the alert with a particular query. |
-| `id` | The name of the alert. This name is generated by the Alerts service and is used on the Alerts dashboard. The alert name is comprised of the folder that stores the alert, the `alertType`, and the flow ID. Information about the available alerts can be found in the [Platform Alerts dashboard documentation](../../observability/alerts/ui.md). |
-| `status` | The alert has two status values `enabled` and `disabled`. An alert is either actively listening for the events or paused for future use while retaining all the relevant subscribers and settings. |
-| `alertType` | The type of alert. There are three potential values for an alert, they are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
+| `alerts.assetId` | The query ID that associated the alert with a particular query. |
+| `alerts.id` | The name of the alert. This name is generated by the Alerts service and is used on the Alerts dashboard. The alert name is comprised of the folder that stores the alert, the `alertType`, and the flow ID. Information about the available alerts can be found in the [Platform Alerts dashboard documentation](../../observability/alerts/ui.md). |
+| `alerts.status` | The alert has two status values `enabled` and `disabled`. An alert is either actively listening for the events or paused for future use while retaining all the relevant subscribers and settings. |
+| `alerts.alertType` | The type of alert. There are three potential values for an alert, they are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
+| `alerts._links` | Provides information on the available methods and endpoints that can be used to retrieve, update, edit, or delete information related to this alert ID. |
+| `_page` | The object contains properties to describe the order, size, total number of pages, and current page. |
+| `_links` | The object contains URI references that can be used to obtain the next or previous page of resources. |
