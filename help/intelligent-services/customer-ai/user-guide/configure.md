@@ -7,11 +7,12 @@ topic-legacy: Instance creation
 description: Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 ---
+
+# Configure a Customer AI instance
+
 >[!IMPORTANT]
 >
 >Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
-# Configure a Customer AI instance
 
 Customer AI, as part of Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
 
