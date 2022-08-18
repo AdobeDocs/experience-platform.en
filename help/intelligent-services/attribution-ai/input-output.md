@@ -212,20 +212,20 @@ The table below maps the aggregated scores to the raw scores. If you wish to dow
 
 | Column Name | Raw Score reference column |
 | --- | --- |
-customerevents_date | timestamp |
-mediatouchpoints_date | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
-segment | _tenantID.your_schema_name.segmentation |
-conversion_scope | _tenantID.your_schema_name.conversion.conversionName |
-touchpoint_scope | _tenantID.your_schema_name.touchpointsDetail.element.touchpointName |
-product | _tenantID.your_schema_name.conversion.product |
-product_type | _tenantID.your_schema_name.conversion.product_type |
-geo | _tenantID.your_schema_name.conversion.geo |
-event_type | eventType |
-media_type | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaType |
-channel | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
-action | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
-campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
-campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
+| customerevents_date | timestamp |
+| mediatouchpoints_date | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
+| segment | _tenantID.your_schema_name.segmentation |
+| conversion_scope | _tenantID.your_schema_name.conversion.conversionName |
+| touchpoint_scope | _tenantID.your_schema_name.touchpointsDetail.element.touchpointName |
+| product | _tenantID.your_schema_name.conversion.product |
+| product_type | _tenantID.your_schema_name.conversion.product_type |
+| geo | _tenantID.your_schema_name.conversion.geo |
+| event_type | eventType |
+| media_type | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaType |
+| channel | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
+| action | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
+| campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
+| campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
 
 ## Next steps {#next-steps}
 
