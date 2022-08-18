@@ -1,5 +1,5 @@
 ---
-title: Manage Dataset expirations
+title: Manage Dataset Expirations
 description: Learn how to schedule a dataset expiration in the Adobe Experience Platform UI.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 ---
