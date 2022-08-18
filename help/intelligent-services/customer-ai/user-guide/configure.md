@@ -7,7 +7,6 @@ topic-legacy: Instance creation
 description: Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 ---
-
 >[!IMPORTANT]
 >
 >Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
@@ -72,11 +71,11 @@ To create a new instance, select **[!UICONTROL Create instance]**.
 
 ![](../images/user-guide/dashboard.png)
 
-When you select datasets with restricted schema on the **c[UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name. On selecting the popover, "Restricted information is excluded" is displayed.
+When you select datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name. On selecting the popover, "Restricted information is excluded" is displayed.
 
 ![](../images/user-guide/restricted-info-excluded.png)
 
-When you preview datasets with restricted schema on the **[UICONTROL Create instance workflow]** page, a warning appears to let you know that "Due to access restrictions, certain information isn't displayed in the dataset preview."
+When you preview datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning appears to let you know that "Due to access restrictions, certain information isn't displayed in the dataset preview."
 
 ![](../images/user-guide/restricted-dataset-preview.png)
 
