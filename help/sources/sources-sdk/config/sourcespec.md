@@ -232,7 +232,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Defines the HTTP method to be used to make the request to the resource to fetch data. | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Defines the supported query parameters that can be used to append the source URL when making a request to fetch data. **Note**: Any user-provided parameter value must be formatted as a placeholder. For example: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` will be appended to the source URL as: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Defines headers that need to be supplied in the HTTP request to source URL while fetching data. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.contentPath` | Defines the node that contains the list of items required to be ingested to Platform. This attribute should follow valid JSON path syntax and must point to a particular array. | See the [appendix](#content-path) for an example of the resource contained within a content path. |
+| `sourceSpec.attributes.spec.properties.contentPath` | Defines the node that contains the list of items required to be ingested to Platform. This attribute should follow valid JSON path syntax and must point to a particular array. | View the [additional resources section](#content-path) for an example of the resource contained within a content path. |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | The path that points to the collection records to be ingested to Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | This property allows you to identify specific items from the resource identified in the content path that are to be excluded from being ingested. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | This property allows you to explicitly specify the individual attributes that you want to keep. |  `[total_items]` |
@@ -253,11 +253,11 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Defines the end time parameter name | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Defines the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Defines the supported format for the `scheduleEndParamName`.| `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | Defines the user-provided parameters to fetch resource values. | See the [appendix](#user-input) for an example user-inputted parameters for `spec.properties`. |
+| `sourceSpec.spec.properties` | Defines the user-provided parameters to fetch resource values. | See the [additional resources](#user-input) for an example user-inputted parameters for `spec.properties`. |
 
 {style="table-layout:auto"}
 
-## Appendix {#appendix}
+## Additional resources {#appendix}
 
 ### Content path example {#content-path}
 
@@ -452,6 +452,107 @@ The `NONE` pagination type can be used for sources that don't support any of the
 ```
 
 ### Advanced scheduling in [!DNL Sources SDK]
+
+You can configure scheduling parameters to header and body using advanced scheduling. 
+
+
+### Custom schema
+
+```json
+      "schema": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "organization_id": {
+                  "type": "integer",
+                  "minimum": -9007199254740992,
+                  "maximum": 9007199254740991
+                }
+                "active": {
+                  "type": "boolean"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "iana_time_zone": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "integer"
+                },
+                "locale": {
+                  "type": "string"
+                },
+                "locale_id": {
+                  "type": "integer"
+                },
+                "moderator": {
+                  "type": "boolean"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "only_private_comments": {
+                  "type": "boolean"
+                },
+                "report_csv": {
+                  "type": "boolean"
+                },
+                "restricted_agent": {
+                  "type": "boolean"
+                },
+                "result_type": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "integer"
+                },
+                "shared": {
+                  "type": "boolean"
+                },
+                "shared_agent": {
+                  "type": "boolean"
+                },
+                "suspended": {
+                  "type": "boolean"
+                },
+                "ticket_restriction": {
+                  "type": "string"
+                },
+                "time_zone": {
+                  "type": "string"
+                },
+                "two_factor_auth_enabled": {
+                  "type": "boolean"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "verified": {
+                  "type": "boolean"
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+```
 
 
 ## Next steps
