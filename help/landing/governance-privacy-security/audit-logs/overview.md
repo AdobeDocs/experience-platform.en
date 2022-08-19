@@ -3,11 +3,7 @@ title: Audit Logs Overview
 description: Learn how audit logs allow you to see who did what actions in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 ---
-# Audit logs (Beta)
-
->[!IMPORTANT]
->
->The audit logs feature in Adobe Experience Platform is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+# Audit logs
 
 In order to increase the transparency and visibility of activities performed in the system, Adobe Experience Platform allows you to audit user activity for various services and capabilities in the form of "audit logs". These logs form an audit trail that can help with troubleshooting issues on Platform, and help your business effectively comply with corporate data stewardship policies and regulatory requirements.
 
@@ -21,13 +17,28 @@ The following table outlines which actions on which resources are recorded by au
 
 | Resource | Actions |
 | --- | --- |
-| [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-time Customer Profile](../../../profile/home.md)</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Access control policy (attribute based access control)](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Account (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Audit logs](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Export</li></ul> |
 | [Class](../../../xdm/schema/composition.md#class) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Computed attribute](../../../profile/computed-attributes/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-time Customer Profile](../../../profile/home.md)</li><li>Disable for Profile</li><li>Add data</li><li>Delete batch</li></ul> |
+| [Data types](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Destination](../../../destinations/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset Activate</li><li>Dataset Remove</li><li>Profile Activate</li><li>Profile Remove</li></ul> |
 | [Field group](../../../xdm/schema/composition.md#field-group) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Data type](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Identity graph](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>View</li></ul> |
+| [Identity namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Create</li><li>Update</li></ul> |
+| [Merge policy](../../../profile/merge-policies/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Product profile](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Query](../../../query-service/ui/overview.md) | <ul><li>Execute</li></ul> |
+| [Query template](../../../query-service/ui/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Role (attribute based access control)](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Add user</li><li>Remove user</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Create</li><li>Update</li><li>Reset</li><li>Delete</li></ul> |
-| [Destination](../../../destinations/home.md) | <ul><li>Activate</li></ul> |
+| [Scheduled query](../../../query-service/ui/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for Profile</li></ul> |
+| [Segment](../../../segmentation/home.md) | <ul><li>Create</li><li>Delete</li><li>Segment Activate</li><li>Segment Remove</li></ul> |
+| [Source data flow](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset activate</li><li>Dataset remove</li><li>Profile ativate</li><li>Profile remove</li></ul> |
+| [Work order](../../../hygiene/home.md) | <ul><li>Create</li></ul> |
 
 ## Access to audit logs
 
@@ -41,7 +52,7 @@ You can view audit logs for different Experience Platform features within the **
 
 ![Audit logs dashboard](../../images/audit-logs/audits.png)
 
-The system only displays audit logs from the last year. Any logs that exceed this limit are automatically removed from the system.
+Audit logs are retained for 365 days after which they will be deleted from the system. Therefore, you can only go back for a maximum period of 365 days. If you require data of more than 365 days, you should export logs at a regular cadence to meet your internal policy requirements.
 
 Select an event from the list to view its details in the right rail.
 
@@ -49,7 +60,12 @@ Select an event from the list to view its details in the right rail.
 
 ### Filter audit logs
 
-Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results.
+>[!NOTE]
+>
+>Since this a new feature, the data displayed only goes back to March 2022. Depending on the resource selected, earlier data may be available from January 2022.
+
+
+Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
 
 ![Filters](../../images/audit-logs/filters.png)
 
@@ -59,8 +75,9 @@ The following filters are available for audit events in the UI:
 | --- | --- |
 | [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
 | [!UICONTROL Action] | Filter by action. Currently only [!UICONTROL Create] and [!UICONTROL Delete] actions can be filtered. |
+| [!UICONTROL User] | Enter the complete user ID (for example, `johndoe@acme.com`) to filter by user. |
 | [!UICONTROL Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
-| [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. |
+| [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. Data can be exported with a 90-day lookback period (for example, 2021-12-15 to 2022-03-15). This can differ by event type. |
 
 To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
 
@@ -84,6 +101,10 @@ All actions that you can perform in the UI can also be done using API calls. See
 
 To learn how to manage audit logs for activities in Adobe Admin Console, refer to the following [document](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
-## Next steps
+## Next steps and additional resources
 
 This guide covered how to manage audit logs in Experience Platform. For more information on how to monitor Platform activities, see the documentation on [Observability Insights](../../../observability/home.md) and [monitoring data ingestion](../../../ingestion/quality/monitor-data-ingestion.md).
+
+To reinforce your understanding of audit logs in Experience Platform, watch the following video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

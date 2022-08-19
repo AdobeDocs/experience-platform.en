@@ -1,13 +1,13 @@
 ---
 title: Data Collection End-to-End Overview
-description: A high-level overview of how to send event data to Adobe Experience Cloud solutions using the data collection technologies provided by Adobe Experience Platform.
+description: A high-level overview of how to send event data to Adobe Experience Cloud solutions using Adobe Experience Platform's data collection capabilities.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 ---
 # Data collection end-to-end overview
 
-In Adobe Experience Platform, data collection refers to several technologies that work together to collect transfer your data to other Adobe products or third-party destinations. In order to send event data from your application to the Adobe Experience Platform Edge Network, it is important to understand these core technologies and how to configure them to deliver your data to the destinations you require, when you require it.
+Adobe Experience Platform collects and transfers your data to other Adobe products and third-party destinations. In order to send event data from your application to the Experience Platform Edge Network, it is important to understand these core technologies and how to configure them to deliver your data to the destinations you require, when you require it.
 
-This guide provides a high-level tutorial of how to send an event through the Edge Network using data collection technologies. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI (formerly Adobe Experience Platform Launch).
+This guide provides a high-level tutorial of how to send an event through the Edge Network using Platform's data collection capabilities. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI (formerly Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ This tutorial uses the Data Collection UI to create a schema, configure a datast
 * Develop
 * Manage Extensions
 
-See the guide on [managing permissions for tags](../tags/ui/administration/manage-permissions.md) to learn how to grant access to properties and property rights.
+See the guide on [managing permissions for data collection](./permissions.md) to learn how to grant access to properties and property rights.
 
 To use the various Data Collection products mentioned in this guide, you must also have access to datastreams and the ability to create and manage schemas. If you need access to either of these features, please contact your CSM to help you get the necessary access. Please note that if you have not purchased Adobe Experience Platform, Adobe will provision you with the necessary access to use the SDK at no extra charge.
 
@@ -95,7 +95,7 @@ In the Data Collection UI, select **[!UICONTROL Datastreams]**. From here, you c
 
 ![Datastreams](./images/e2e/datastreams.png)
 
-The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](../edge/fundamentals/datastreams.md).
+The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](../edge/datastreams/overview.md).
 
 ## Install and configure the Web SDK {#install}
 

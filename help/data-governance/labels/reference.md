@@ -6,7 +6,13 @@ topic-legacy: labels
 description: This document outlines all data usage labels currently supported by Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 ---
-# Data usage labels glossary
+# Data usage labels glossary {#data-usage-labels-glossary}
+
+>[!CONTEXTUALHELP]
+>id="platform_policies_labeltype"
+>title="Label types"
+>abstract="There are several categories of data usage labels. Adobe-defined labels include contract labels, identity labels, and sensitive labels. Labels defined by your organization are categorized as custom labels."
+>text="See the data usage labels glossary for more information on these label types."
 
 Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Adobe Experience Platform Data Governance provides several core data usage labels out-of-the-box that you can use to start categorizing your data.
 
@@ -49,6 +55,8 @@ One type of data you may consider to be sensitive may be different types of geog
 | --- | --- |
 | **S1** | Data specifying latitude and longitude that can be used to determine the precise location of a device. |
 | **S2** | Data that can be used to determine a broadly defined geofence area. |
+| **PSPD** | Permitted Sensitive Personal Data (PSPD) refers to data that you are contractually permitted by Adobe to upload that is deemed “sensitive”, “special category of data”, or a similar term used by applicable laws. This specifically excludes Protected Health Information (PHI) and other regulated health data. |
+| **RHD** | Data that refers to Protected Health Information (PHI) or information about a patient that you are contractually permitted by Adobe to upload. |
 
 ## Appendix
 

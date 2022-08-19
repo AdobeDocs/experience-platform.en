@@ -87,10 +87,6 @@ alloy("setConsent", {
 });
 ```
 
->[!NOTE]
->
->After a user has opted out, the SDK will not allow you to set the users collect consent to `y`.
-
 ### Using the Adobe standard version 1.0
 
 If the user opts in, execute the `setConsent` command with the `general` option set to `in` as follows:
@@ -120,10 +116,6 @@ alloy("setConsent", {
     }]
 });
 ```
-
->[!NOTE]
->
->After a user has opted out, the SDK will not allow you to set the users consent to `in`.
 
 ## Communicating consent preferences via the IAB TCF standard
 

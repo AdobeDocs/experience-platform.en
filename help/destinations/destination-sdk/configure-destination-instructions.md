@@ -128,8 +128,8 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "groups":null
          },
          "splitUserById":true,
-         "maxBatchAgeInSecs":360,
-         "maxNumEventsInBatch":100
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000
       }
    },
    "destinationDelivery":[
@@ -172,8 +172,16 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## Step 7: Publish your destination {#publish-destination}
 
+>[!NOTE]
+>
+>This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
+
 After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
 ## Step 8: Document your destination {#document-destination}
+
+>[!NOTE]
+>
+>This step is not required if you are creating a private destination for your own use, and are not looking to publish it in the destinations catalog for other customers to use.
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md).

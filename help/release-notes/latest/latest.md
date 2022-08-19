@@ -5,45 +5,94 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: March 7, 2022**
-
->[!NOTE]
->
->This release was shifted from the original date of February 23 to March 7.
+**Release date: July 27, 2022**
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Dashboards]](#dashboards)
-- [[!DNL Data collection]](#data-collection)
+- [Dashboards](#dashboards)
+- [Data collection](#data-collection)
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
-- [[!DNL Identity Service]](#identity)
-- [[!DNL Sources]](#sources)
+- [Experience Data Model (XDM)](#xdm)
+- [Real-time Customer Data Platform B2B Edition](#b2b)
+- [Real-time Customer Profile](#profile)
+- [Sources](#sources)
 
-## [!DNL Dashboards] {#dashboards}
+## Dashboards {#dashboards}
 
-Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important insights about your organization’s data, as captured during daily snapshots.
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important information about your organization’s data, as captured during daily snapshots.
+
+### Account Profiles dashboards
+
+The Account Profiles dashboard displays a snapshot of unified account information from the multiple sources across your marketing channels and the diverse systems that your organization currently uses to store customer account information.
 
 **Updated features**
 
-| Feature | Description |
+| Feature | Description | 
 | --- | --- |
-| New standard destinations widgets | The following standard widgets allow you to visualize different metrics related to your destinations.<ul><li>Recently activated segments by destination. This widget displays the top five most recently activated segments in descending order according to the chosen destination.</li><li>Audience size trend. This widget depicts the relationship of the profile count over a period of time for a segment that has been mapped to that destination account.</li><li>Unmapped segments by identity. This widget lists the top five unmapped segments ranked by descending identity count for a given destination and identity.</li><li>Mapped segments by identity. This widget lists the top five mapped segments. Segments are ordered from high to low according to their respective counts of source IDs that match the destination ID selected from the widget's dropdown menu.</li><li>Common audiences. This widget provides a list of the top five segments activated across the destination account chosen at the top of the page, and the destination selected in the widget dropdown.</li></ul> For more information on the available standard widgets, see the [destinations dashboard documentation.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+| Total accounts by industry widget | This widget displays the total number of accounts in a single metric and uses a donut chart to illustrate the proportional sizes of counts for the industries that make up the overall number. |
+| Account profiles added widget | This widget uses a color coded bar chart to illustrate the count of profiles added to an account over a given period of time, and the proportion of different industries that constitute these added profiles. |
 
-For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
+{style="table-layout:auto"}
 
-## Data collection {#data-collection}
+See the [Real-time CDP, B2B Edition overview](../../rtcdp/b2b-overview.md) to learn more about available B2B features, or the [end-to-end tutorial](../../rtcdp/b2b-tutorial.md) To learn more about how account profiles are created as part of the B2B workflow. 
 
-Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+For more information on the widgets available to visualize your account profile related metrics, see the [account profiles widgets documentation](../../dashboards/guides/account-profiles.md#standard-widgets).
+
+### Profile dashboards
+
+The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. 
+
+**Updated features**
+
+| Feature | Description | 
+| --- | --- |
+| Mapped audiences widget  |  This widget displays the total number of mapped audiences that can be activated to the destination selected from the Profiles dashboard dropdown.  |
+
+For more information on the Profiles dashboard, see the [Profiles dashboards overview](../../dashboards/guides/profiles.md).
+
+### Destinations dashboards
+
+The Destinations dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform.
+
+**Updated features**
+
+| Feature | Description | 
+| --- | --- |
+| Audiences widget | This widget provides the total number of segments that are ready to be activated, according to the chosen merge policy applied to your profile data. |
+
+{style="table-layout:auto"}
+
+To learn more about the Destinations dashboard, see the [the Destinations dashboard overview](../../dashboards/guides/destinations.md).
+
+## Data collection {#collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
 
 **New features**
 
 | Feature | Description |
 | --- | --- |
-| Improved UI workflow for datastream configuration | The workflow for creating a new datastream in the Data Collection UI has been updated. When adding services to a datastream, only the services you have access to will be included in the list of options. See the guide on [configuring a datastream](../../edge/fundamentals/datastreams.md) for more information. |
-| Data Prep for Data Collection | If you are using the Adobe Experience Platform Web SDK, you can now leverage Data Prep capabilities to map your data to Experience Data Model (XDM) on the server side. See the section on [Data Prep for Data Collection](../../edge/fundamentals/datastreams.md#data-prep) in the datastreams guide for more information. |
-| First-party device IDs | You can now send your own device IDs to the Adobe Experience Platform Edge Network when collecting customer data using the Platform Web SDK, providing a workaround for recent browser restrictions on third-party cookie lifespans. See the guide on [first-party device IDs](../../edge/identity/first-party-device-ids.md) for more information. |
+| Permission management through Adobe Admin Console | Access to data collection capabilities is now managed through Adobe Admin Console under the card for Adobe Experience Platform Data Collection. See the guide on [data collection permissions](../../collection/permissions.md) for more information.<br><br>Permissions for datastreams are also now managed through Admin Console under the card for Adobe Experience Platform, improving security over the previous method of setting these permissions manually for each user. |
 
-For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
+{style="table-layout:auto"}
+
+For more information, please see the [data collection overview](../../collection/home.md).
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+
+**Updated features**
+
+| Feature | Description | 
+| --- | --- |
+| Enhancements to [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations are now smarter and faster. New validation checks significantly reduce the most common mapping errors, further reducing the time-to-value. |
+| Hierarchical support for streaming upsets | You can now use functions `upsert_array_append` and `upsert_array_replace` to update arrays and objects when streaming upserts to Profile. See the [[!DNL Data Prep] mapping functions guide](../../data-prep/functions.md) for more information. |
+
+{style="table-layout:auto"}
+
+To learn more about [!DNL Data Prep], see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -53,21 +102,96 @@ For more information on data collection in Platform, please see the [data collec
 
 | Feature | Description |
 | ----------- | ----------- |
-| (Beta) Destination SDK support for file-based destinations | [Destination SDK support for file-based destinations](../../destinations/destination-sdk/file-based-destination-configuration.md) is currently in private beta and is only available to a select number of partners and customers. The functionality and associated documentation are subject to change before general availability release.<br><br>Contact your Adobe account representative to learn how to access the feature. Adobe-internal account representatives should reach out to the Experience Platform destinations product and engineering teams to discuss supported use cases. <br><br> In the beta phase of Destination SDK support for file-based destinations, beta partners and customers can use the [Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to build private destinations to benefit from the following functionality: <ul><li>Create a file-based (batch) destination via Amazon S3, SFTP servers, Azure Blob, Azure Data Lake Storage, Data Landing Zone storage.</li><li>Configure and set default file export scheduling and frequency options.</li><li>Configure and set options to format your exported CSV files (delimiters, escape characters, and other options).</li><li>Ability to set and edit custom file headers.</li><li>Ability to receive event notifications about the export of files and segments.</li><li>Ability to export additional file types such as CSV, TSV, JSON, Parquet.</li></ul>  <br>To get started with the new functionality, read [(Beta) Use Destination SDK to configure a file-based destination](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> The functionality to create private or productized *streaming* destinations by using Destination SDK is already available to all Experience Platform customers and partners. Read the guide on how to [use Destination SDK to configure a streaming destination](/help/destinations/destination-sdk/configure-destination-instructions.md) for details. |
+| [Export file now (Beta)](../../destinations/ui/export-file-now.md) | Export a full file without interrupting the current export schedule of a previously scheduled segment. This export happens in addition to previously scheduled exports and does not change the export frequency of the segment. <br> The file export is triggered immediately and it picks up the latest results from Experience Platform segmentation runs. <br> <br>Contact your Adobe representative for access to this functionality.|
 
-## [!DNL Identity Service] {#identity}
+{style="table-layout:auto"}
 
-Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
+**New destinations**
 
-Adobe Experience Platform [!DNL Identity Service] helps you gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+| Destination | Description |
+| ----------- | ----------- |
+| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | The Marketo Engage destination update allows you to streamline the static list creation process with automation and enable users to bring in additional fields on their Leads. See more information on the enhancements in Marketo V2 below: <br><ul><li>In the **[!UICONTROL Schedule segment]** step of the activation workflow, in Marketo V1, you needed to manually add a **Mapping ID** to successfully export data to Marketo. This manual step is not required anymore in Marketo V2.</li><li>In the **[!UICONTROL Mapping]** step of the activation workflow, in Marketo V1, you were able to map XDM fields to only three target fields in Marketo: `firstName`, `lastName`, and `companyName`. With the Marketo V2 release, you can now map XDM fields to many more fields in Marketo. For more information, read [supported attributes in Marketo V2](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes).  </li></ul>  |
+| [Pega Customer Decision Hub](../../destinations/catalog/personalization/pega.md)| Use profile attribute and segment membership information from Adobe Experience Platform in Pega Customer Decision Hub as predictors in adaptive models and help deliver the next-best-action decisioning|
+| [(API) Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | This destination allows marketers to import user segments created in Experience Platform into Snapchat Ads and use them to target their ads. |
+| [Salesforce CRM](../../destinations/catalog/crm/salesforce.md) | Update contact information in Salesforce Marketing Cloud with profile and segment info in Experience Platform |
+| [(Beta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | This destination allows marketers to import user segments created in Experience Platform into Snapchat Ads and use them to target their ads. <br><br>This destination is currently in Beta. The documentation and functionality are subject to change.|
+| [(Beta) The [!DNL Trade Desk] - CRM connection](../../destinations/catalog/advertising/tradedesk-emails.md) | Use [!DNL The Trade Desk] CRM destination to activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data. <br><br>This destination is currently in Beta. The documentation and functionality are subject to change. |
 
-**Updated features**
+{style="table-layout:auto"}
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**New features**
 
 | Feature | Description |
 | --- | --- |
-| New permission for `view-identity-graph` | You can now use the `view-identity-graph` permission to control whether users in your organization are able to view identity graph data. Users without this permission will be forbidden from accessing the identity graph viewer in the UI or when accessing [!DNL Identity Service] APIs which return identities. See the [access control overview](../../access-control/home.md) for more information on permissions. |
+| Healthcare industry data model | A standard healthcare data model has been introduced to support five common industry use cases related to increasing digital acquisition, improving program enrollment, and promoting drug information. See the overview on the [healthcare data model](../../xdm/schema/industries/healthcare.md) for more information on these use cases and the standard XDM components that support them.<br><br>A new industry filter has been added to the [!UICONTROL Schemas] UI to help you browse healthcare-related components when building custom schemas. |
 
-For more general information on [!DNL Identity Service], refer to the [Identity Service overview](../../identity-service/home.md).
+{style="table-layout:auto"}
+
+**New XDM components**
+
+>[!WARNING]
+>
+>The new XDM components listed in the table below are experimental and currently in testing. These components are expected to update with breaking changes (if required) before they are stabilized. Please plan your development efforts accordingly.
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Class | [[!UICONTROL Weather]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | A record-based class used for capturing weather data. |
+| Field group | [[!UICONTROL Current Weather]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | A field group for the [!UICONTROL XDM ExperienceEvent] and [!UICONTROL Weather] classes, used for capturing the current weather conditions for a postal code. |
+| Field group | [[!UICONTROL Forecasted Weather]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | A field group for the [!UICONTROL XDM ExperienceEvent] and [!UICONTROL Weather] classes, used for capturing the forecasted weather conditions for a postal code. |
+| Field group | [[!UICONTROL Product Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | A field group for the [!UICONTROL XDM ExperienceEvent] and [!UICONTROL Weather] classes, used for capturing product-specific triggers that leverage weather conditions known to drive consumer behavior. |
+| Field group | [[!UICONTROL Relative Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | A field group for the [!UICONTROL XDM ExperienceEvent] and [!UICONTROL Weather] classes, used for capturing relative triggers that leverage weather conditions known to drive consumer behavior. |
+| Field group | [[!UICONTROL Severe Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | A field group for the [!UICONTROL XDM ExperienceEvent] and [!UICONTROL Weather] classes, used for capturing triggers that leverage severe weather conditions known to drive consumer behavior. |
+| Field group | [[!UICONTROL Weather Triggers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/weather-triggers.schema.json) | A field group for the [!UICONTROL XDM ExperienceEvent] and [!UICONTROL Weather] classes, used for capturing general triggers that leverage weather conditions known to drive consumer behavior. |
+| Field group | [[!UICONTROL MediaCollection Interaction Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-collection.schema.json) | A field group for the [!UICONTROL XDM ExperienceEvent] class which captures details about a media interaction. |
+| Field group | [[!UICONTROL MediaReporting Interaction Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-reporting.schema.json) | A field group for the [!UICONTROL XDM ExperienceEvent] class which captures details about an interaction with media reporting. |
+| Data type | [[!UICONTROL Advertising details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | Captures details about an advertising asset. |
+| Data type | [[!UICONTROL Advertising Pod details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) | Captures details about an advertising pod, which is a sequence of multiple ads played back-to-back within a single ad break. |
+| Data type | [[!UICONTROL Chapter details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json) | Captures details about a chapter or segment in a piece of video content. |
+| Data type | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | Captures details about a video playback error. |
+| Data type | [[!UICONTROL Player event details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/playereventdetails.schema.json) | Captures event-related details about a video player, including the playhead position and session ID. |
+| Data type | [[!UICONTROL Player state data information]](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) | Captures state-related details about a video player. |
+| Data type | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Captures quality-of-experience (QoE) details about a video playback event. |
+| Data type | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Captures session details about a video playback event. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+
+## Real-time Customer Data Platform B2B Edition {#b2b}
+
+Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Lead to account matching | Lead to account matching enables you to join known person profiles to account profiles. You can then segment and target data in a B2B context such as accounts or opportunities. The daily-run jobs use both deterministic and probabilistic factors to match person profiles that are not already associated to any account to a best-matched account. You can then decide whether to include such matches in your segment definitions |
+
+For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+
+For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
+
+For instructions on how to configure lead to account matching, see the [Account profile UI guide](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
+
+To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md).
+
+## Real-time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+| Feature | Description |
+| ------- | ----------- |
+| Orphaned profile edge attribute cleanup (limited release) | If your organization has access to this feature, Profile Service now removes leftover edge attributes of user activity region on a daily basis to give a more accurate representation of your profiles in your system. This clean up occurs after all the profile fragments for a given profile are deleted and should impact profiles being merged from datasets where `com_adobe_aep_profile_region_dataset` is marked as true. This may show a drop in the “Addressable audience” metric in the license usage dashboard and may show a drop in the “Profile count” metric in the Profile dashboard, since these metrics included leftover edge attribute fragments prior to this release. |
+
+{style="table-layout:auto"}
+
+To learn more about Real-time Customer Profile, including tutorials and best practices for working with profile data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
 ## Sources {#sources}
 
@@ -75,10 +199,14 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**Updated features**
+**New features**
 
 | Feature | Description |
 | --- | --- |
-| Beta sources moving to GA | The following sources have been promoted from beta to GA: <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
+| General availability of the [!DNL Azure Data Explorer] source | Use the Azure Data Explorer source to bring data from your [!DNL Azure] instance to Experience Platform. See the [[!DNL Azure Data Explorer] source overview](../../sources/connectors/databases/data-explorer.md) for more information. |
+| General availability of [!DNL Generic OData] source | Use the [!DNL Generic OData] source to bring resources from systems that support open data protocol to Experience Platform. See the [[!DNL Generic OData] source overview](../../sources/connectors/protocols/odata.md) for more information. |
+| Support for auto-detection of source file properties for [!DNL Data Landing Zone] in Experience Platform UI | The [!DNL Data Landing Zone] source now supports auto-detection of file properties when using Experience Platform UI. See the documentation on [creating a [!DNL Data Landing Zone] source connection](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) for more information. |
+
+{style="table-layout:auto"}
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

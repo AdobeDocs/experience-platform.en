@@ -29,6 +29,7 @@ See the following for detailed information on the field mapping rules between [!
 - [Opportunity contact roles](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [Campaigns](../adobe-applications/mapping/salesforce.md#campaign)
 - [Campaign members](../adobe-applications/mapping/salesforce.md#campaign-member)
+- [Account contact relation](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
 ## Set up the [!DNL Salesforce] namespace and schema auto-generation utility
 
@@ -54,7 +55,7 @@ The following table contains example values as well as additional information on
 | `PRIVATE_KEY` | A credential used to authenticate your [!DNL Postman] instance to Experience Platform APIs. See the tutorial on setting up developer console and [setting up developer console and [!DNL Postman]](../../../landing/postman.md) for instructions on how to retrieve your {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | A credential used to integrate to Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | The Identity Management System (IMS) provides the framework for authentication to Adobe services. With regards to [!DNL Marketo], this value is fixed and is always set to: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | A corporate entity that can own or license products and services and allow access to its members. See the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md) for instructions on how to retrieve your `{IMS_ORG}` information. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | A corporate entity that can own or license products and services and allow access to its members. See the tutorial on [setting up developer console and [!DNL Postman]](../../../landing/postman.md) for instructions on how to retrieve your `{ORG_ID}` information. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | The name of the virtual sandbox partition that you are using. | `prod` |
 | `TENANT_ID` | An ID used to ensure that the resources you create are namespaced properly and are contained within your IMS Organization. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | The URL endpoint that you are making API calls to. This value is fixed and is always set to: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
@@ -84,7 +85,7 @@ A successful request creates the B2B namespaces and schemas according to beta sp
 The documentation below provides information on how to connect [!DNL Salesforce] to Platform using APIs or the user interface:
 
 - [Create a Salesforce base connection using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
-- [Explore the data structure and contents of a CRM source using the Flow Service API](../../tutorials/api/explore/crm.md)
+- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Salesforce] to Platform using the UI

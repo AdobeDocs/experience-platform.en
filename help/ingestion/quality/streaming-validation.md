@@ -28,7 +28,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -57,6 +57,10 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 Synchronous validation is a method of validation that provides immediate feedback about why an ingestion failed. However, upon failure, the records that fail validation are dropped and prevented from being sent downstream. As a result, synchronous validation should only be used during the development process. When doing synchronous validation, the callers are informed of both the result of the XDM validation, and, if it failed, the reason for failure. 
 
 By default, synchronous validation is not turned on. To enable it, you must pass in the optional query parameter `syncValidation=true` when making API calls. In addition, synchronous validation is currently only available if your stream endpoint is on the VA7 data center.
+
+>[!NOTE]
+>
+>The `syncValidation` query parameter is only available for the single message endpoint and cannot be used for the batch endpoint.
 
 If a message fails during synchronous validation, the message will not be written to the output queue, which provides immediate feedback for users.
 

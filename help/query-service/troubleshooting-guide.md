@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;tr
 solution: Experience Platform
 title: Query Service Troubleshooting Guide
 topic-legacy: troubleshooting
-description: This document contains information on common error codes you encounter and the possible causes.
+description: This document contains common questions and answers related to Query Service. Topics include, exporting data, third-party tools, and PSQL errors.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
 # [!DNL Query Service] troubleshooting guide
@@ -13,8 +13,10 @@ This document provides answers to frequently asked questions about Query Service
 The following list of answers to frequently asked questions is divided into the following categories:
 
 - [General](#general)
-- [Exporting Data](#exporting-data)
+- [Exporting data](#exporting-data)
 - [Third-party tools](#third-party-tools)
+- [PostgreSQL API errors](#postgresql-api-errors)
+- [REST API errors](#rest-api-errors)
 
 ## General Query Service questions {#general}
 
@@ -271,6 +273,8 @@ Query Service provides several built-in SQL helper functions to extend SQL funct
 First, check the logs to find out the details of the error. The FAQ section on [finding errors within logs](#error-logs) provides more information on how to do this.
 
 You should also check the documentation for guidance on how to perform [scheduled queries in the UI](./ui/user-guide.md#scheduled-queries) and through [the API](./api/scheduled-queries.md). 
+
+The following is a list of considerations for scheduled queries when using the [!DNL Query Editor]. They do not apply to the [!DNL Query Service] API:<br/>You can only add a schedule to a query that has already been created, saved, and run.<br/>You **cannot** add a schedule to a parameterized query.<br/>Scheduled queries **cannot** contain an anonymous block.<br/>You can only schedule **one** query template using the UI. If you want to add additional schedules to a query template, you will need to use the API. If a schedule has already been added using the API, you will not be able to add additional schedules using the UI.
 +++
 
 ### What does the "Session Limit Reached" error mean?
@@ -459,40 +463,11 @@ WHERE T2.ID IS NULL
 
 +++
 
-## REST API errors
-
-| HTTP status code | Description           | Possible causes            |
-|------------------|-----------------------|----------------------------|
-| 400              | Bad request           | Malformed or illegal query |
-| 401              | Authentication failed | Invalid auth token         |
-| 500              | Internal server error | Internal system failure    |
-
-## PostgreSQL API errors
-
-| Error code | Connection state          | Description | Possible cause |
-|------------|---------------------------|-------------|----------------|
-| **08P01**  | N/A                       | Unsupported message type                               | Unsupported message type                                                                            |
-| **28P01**  | Start-up - authentication | Invalid password                                       | Invalid authentication token                                                                        |
-| **28000**  | Start-up - authentication | Invalid authorization type                             | Invalid authorization type. Must be `AuthenticationCleartextPassword`.                              |
-| **42P12**  | Start-up - authentication | No tables found                                        | No tables found for use                                                                             |
-| **42601**  | Query                     | Syntax error                                           | Invalid command or syntax error                                                                     |
-| **42P01**  | Query                     | Table not found                                        | Table specified in the query was not found                                                          |
-| **42P07**  | Query                     | Table exists                                           | A table with the same name already exists (CREATE TABLE)                                            |
-| **53400**  | Query                     | LIMIT exceeds max value                                | User specified a LIMIT clause higher than 100,000                                                   |
-| **53400**  | Query                     | Statement timeout                                      | The live statement submitted took more than the maximum of 10 minutes                               |
-| **58000**  | Query                     | System error                                           | Internal system failure                                                                             |
-| **0A000**  | Query/Command             | Not supported                                          | The feature/functionality in the query/command is not supported                                     |
-| **42501**  | DROP TABLE Query          | Dropping table not created by Query Service            | The table that is being dropped was not created by Query Service using the `CREATE TABLE` statement |
-| **42501**  | DROP TABLE Query          | Table not created by the authenticated user            | The table that is being dropped was not created by the currently logged in user                     |
-| **42P01**  | DROP TABLE Query          | Table not found                                        | The table specified in the query was not found                                                      |
-| **42P12**  | DROP TABLE Query          | No table found for `dbName`: please check the `dbName` | No tables were found in the current database                                                        |
-
-## Exporting Data {#exporting-data}
+## Exporting data {#exporting-data}
 
 This section provides information on exporting data and limits.
 
-
-### Is there a way to extract data from Query Service after query processing and save the results in a CSV file?
+### Is there a way to extract data from Query Service after query processing and save the results in a CSV file? {#export-csv}
 
 +++Answer
 Yes. Data can be extracted from Query Service and there is also the option to store the results in CSV format via a SQL command. 
@@ -557,3 +532,52 @@ The purpose of adding the cache server layer is to cache the data from Query Ser
 +++Answer
 No, pgAdmin connectivity is not supported. A [list of available third-party clients and instructions on how to connect them to Query Service](./clients/overview.md) can be found in the documentation.
 +++
+
+## PostgreSQL API errors {#postgresql-api-errors}
+
+The following table provides PSQL error codes and their possible causes.  
+
+| Error code | Connection state          | Description | Possible cause |
+|------------|---------------------------|-------------|----------------|
+| **08P01**  | N/A                       | Unsupported message type                               | Unsupported message type                                                                            |
+| **28P01**  | Start-up - authentication | Invalid password                                       | Invalid authentication token                                                                        |
+| **28000**  | Start-up - authentication | Invalid authorization type                             | Invalid authorization type. Must be `AuthenticationCleartextPassword`.                              |
+| **42P12**  | Start-up - authentication | No tables found                                        | No tables found for use                                                                             |
+| **42601**  | Query                     | Syntax error                                           | Invalid command or syntax error                                                                     |
+| **42P01**  | Query                     | Table not found                                        | Table specified in the query was not found                                                          |
+| **42P07**  | Query                     | Table exists                                           | A table with the same name already exists (CREATE TABLE)                                            |
+| **53400**  | Query                     | LIMIT exceeds max value                                | User specified a LIMIT clause higher than 100,000                                                   |
+| **53400**  | Query                     | Statement timeout                                      | The live statement submitted took more than the maximum of 10 minutes                               |
+| **58000**  | Query                     | System error                                           | Internal system failure                                                                             |
+| **0A000**  | Query/Command             | Not supported                                          | The feature/functionality in the query/command is not supported                                     |
+| **42501**  | DROP TABLE Query          | Dropping table not created by Query Service            | The table that is being dropped was not created by Query Service using the `CREATE TABLE` statement |
+| **42501**  | DROP TABLE Query          | Table not created by the authenticated user            | The table that is being dropped was not created by the currently logged in user                     |
+| **42P01**  | DROP TABLE Query          | Table not found                                        | The table specified in the query was not found                                                      |
+| **42P12**  | DROP TABLE Query          | No table found for `dbName`: please check the `dbName` | No tables were found in the current database                                                        |
+
+### Why did I receive a 58000 error code when using the history_meta() method on my table?
+
++++Answer
+The `history_meta()` method is used to access a snapshot from a dataset. Previously, if you were to run a query on an empty dataset in Azure Data Lake Storage (ADLS), you would receive a 58000 error code saying that the data set does not exist. An example of the old system error is displayed below.
+
+```shell
+ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
+```
+
+This error occurred because there was no return value for the query. This behavior has now been fixed to return the following message:
+
+```text
+Query complete in {timeframe}. 0 rows returned. 
+```
+
++++
+
+## REST API errors {#rest-api-errors}
+
+The following table provides HTTP error codes and their possible causes.
+
+| HTTP status code | Description           | Possible causes            |
+|------------------|-----------------------|----------------------------|
+| 400              | Bad request           | Malformed or illegal query |
+| 401              | Authentication failed | Invalid auth token         |
+| 500              | Internal server error | Internal system failure    |

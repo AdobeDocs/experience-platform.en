@@ -12,13 +12,17 @@ The Adobe Experience Platform [!DNL Web SDK] can send data to Adobe Analytics. T
 
 Adobe Analytics automatically picks up the data you are sending if you have a report suite mapped in the Customer Config UI. Here you can map one or more reportings to a given config. After a report suite is mapped, the data will automatically begin flowing.
 
+## XDM field group
+
+To make it easier to capture the most common Adobe Analytics metrics, we provide an Analytics field group that you can use. For more details on this schema, see the documenation for the [Adobe Analytics ExperienceEvent Full Extension schema field group](../../../xdm/field-groups/event/analytics-full-extension.md)
+
 ## Automatically mapped data
 
 The Adobe Experience Platform [!DNL Edge Network] automatically maps many XDM variables. The complete list of these variables is listed [here](automatically-mapped-vars.md).
 
 ## Manually mapped data
 
-All data collected by the edge network can be accessed via processing rules. The data is flattened using dot notation and available as contextData.
+Any data not automatically mapped by the edge network can be accessed via processing rules. The data is flattened using dot notation and available as contextData.
 
 If you had a schema that looked like this.
 

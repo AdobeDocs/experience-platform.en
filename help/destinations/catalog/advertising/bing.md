@@ -24,9 +24,20 @@ As a marketer, I want to be able to use segments built off of [!DNL Microsoft Ad
 |---|---|
 |MAID|Microsoft Advertising ID|
 
-## Export type {#export-type}
+{style="table-layout:auto"}
+
+## Export type and frequency {#export-type-frequency}
 
 **[!DNL Segment Export]** - you are exporting all members of a segment (audience) to the [!DNL Microsoft Bing] destination.
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) to the [!DNL Microsoft Bing] destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
 
 ## Prerequisites {#prerequisites}
 
@@ -40,6 +51,10 @@ When configuring the destination, you must provide the following information:
 
 ## Connect to the destination {#connect}
 
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
 ### Connection parameters {#parameters}
@@ -50,13 +65,30 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Account ID]**: Your [!DNL Bing Ads CID].
 
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
 ## Activate segments to this destination {#activate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_bing_mapping_id"
+>title="Mapping ID"
+>abstract="Enter the numeric Bing segment ID to which you want to map the selected segment. If the provided [!UICONTROL Mapping ID] does not correspond to a segment ID in the Bing destination, you will not see the expected audience data in your Bing account."
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your segments to their corresponding ID or friendly name in the destination.
+In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your segments to their corresponding numeric segment ID in the [!DNL Bing] destination. Fill in the numeric segment ID from [!DNL Bing] in the [!UICONTROL Mapping ID] field.
 
-When mapping segments, we recommend you use the [!DNL Platform] segment name or a shorter form of it, for ease of use. However, the segment ID or name in your destination does not need to match the one in your [!DNL Platform] account. Any value you insert in the mapping field will be reflected by the destination.
+![UI image showing the segment mapping screen with an example of Bing Mapping ID](../../assets/catalog/advertising/bing/mapping-id.png)
+
+If the provided [!UICONTROL Mapping ID] does not correspond to a segment ID in the Bing destination, you will not see the expected audience data in your Bing account.
 
 ## Exported data {#exported-data}
 
