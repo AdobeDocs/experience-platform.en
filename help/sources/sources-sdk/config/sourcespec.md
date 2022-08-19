@@ -364,7 +364,7 @@ The following is a completed source specification using [!DNL MailChimp Members]
   }
 ```
 
-### Pagination {#pagination}
+### Configure different pagination types for your source {#pagination}
 
 The following are examples of other pagination types supported by [!DNL Sources SDK]:
 
@@ -453,10 +453,32 @@ The `NONE` pagination type can be used for sources that don't support any of the
 
 ### Advanced scheduling in [!DNL Sources SDK]
 
-You can configure scheduling parameters to header and body using advanced scheduling. 
+Configure your source's incremental and backfill scheduling using advanced scheduling. You can also use advanced scheduling to incorporate your source's scheduling parameters to be part of the header or body parameters instead of query.
+
+```json
+"scheduleParams": {
+        "type": "ADVANCE",
+        "paramFormat": "yyyy-MM-ddTHH:mm:ssK",
+        "incremental": "{TYPE}:user updated > {START_TIME} updated < {END_TIME}",
+        "backfill": "{TYPE}:user updated < {END_TIME}"
+      }
+```
+
+| Property | Description |
+| --- | --- |
+| `type` | The type of scheduling your source will use. Set this value to `ADVANCE` to use advanced scheduling type. |
+| `paramFormat` | The defined format of your scheduling parameter. This value can be the same as your source's `scheduleStartParamFormat` and `scheduleEndParamFormat` values.  |
+| `incremental` | The incremental query of your source. For incremental, the updated time must be greater than the start time and the start time must be less than the end time. |
+| `backfill` | The backfill query of your source. Backfill allows you to get all data in the current time, thus updated should be less than the end time. |
+
+The `incremental` property allows you to configure incremental ingestion schedule for your source. The expression template for `incremental` is: `{TYPE}:user updated > {START_TIME} updated < {END_TIME}`. In this case, the `{TYPE}` property can be `query`, `header`, or `body`, depending on where you want to apply your scheduling attribute. For `incremental`, the updated time must be greater than the start time and the start time must be less than the end time. For example, `https://zendesk.com?query=type:user updated > 10:00 updated < 10:15` creates a scheduling query parameter that ingests incrementally every 15 minutes.
 
 
-### Custom schema
+### Add a custom schema to define your source's dynamic attributes
+
+You can include a custom schema to your `sourceSpec` to define all attributes required for your source, including any dynamic attributes that you might need. You can update your source's corresponding connection specification by making a PUT request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API while providing your custom schema in the `sourceSpec` section of your connection specification.
+
+The following is an example of a custom schema that you can add to your source's connection specification:
 
 ```json
       "schema": {
