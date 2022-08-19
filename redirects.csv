@@ -1,4 +1,6 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/ttl.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/dataset-expiration.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/ttl.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html
 https://experienceleague.adobe.com/docs/experience-platform/tags/admin/manage-permissions.html,https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html
 https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes.html,https://experienceleague.adobe.com/docs/experience-platform/query/derived-attributes/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp-connections/(*),https://experienceleague.adobe.com/docs/experience-platform/collection/

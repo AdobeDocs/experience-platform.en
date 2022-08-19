@@ -171,7 +171,7 @@ Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edi
 
 | Feature | Description |
 | --- | --- |
-| Lead to account matching | Lead-to-account matching enables you to join known person profiles to account profiles. You can then segment and target data in a B2B context such as accounts or opportunities. The daily-run jobs use both deterministic and probabilistic factors to match person profiles that are not already associated to any account to a best-matched account. You can then decide whether to include such matches in your segment definitions |
+| Lead to account matching | Lead to account matching enables you to join known person profiles to account profiles. You can then segment and target data in a B2B context such as accounts or opportunities. The daily-run jobs use both deterministic and probabilistic factors to match person profiles that are not already associated to any account to a best-matched account. You can then decide whether to include such matches in your segment definitions |
 
 For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
