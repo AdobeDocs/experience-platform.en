@@ -47,15 +47,15 @@ For information on building segment definitions using the API, see the tutorial 
 >title="Evaluation methods"
 >abstract="Platform currently supports three methods of evaluating segments: streaming segmentation, batch segmentation, and edge segmentation."
 
-Platform currently supports three methods of evaluating segments: streaming segmentation, batch segmentation, and edge segmentation.
-
-### Streaming segmentation {#streaming}
-
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Streaming evaluation"
->abstract="Platform currently supports three methods of evaluating segments: streaming segmentation, batch segmentation, and edge segmentation."
+>abstract="Streaming segmentation is an ongoing data selection process that updates your segments in response to user activity."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evaluate events in near real-time with streaming segmentation"
+
+Platform currently supports three methods of evaluating segments: streaming segmentation, batch segmentation, and edge segmentation.
+
+### Streaming segmentation {#streaming}
 
 Streaming segmentation is an ongoing data selection process that updates your segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-time Customer Profile]. Segment additions and removals are processed regularly, ensuring your target audience remains relevant. 
 
