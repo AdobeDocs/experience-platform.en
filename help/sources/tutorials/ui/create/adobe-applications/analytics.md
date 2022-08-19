@@ -152,7 +152,7 @@ The following documentation provides further resources on understanding Data Pre
 >
 >Support for filtering [!DNL Analytics] data is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Once you have completed mappings for your [!DNL Analytics] report suite data, you can start applying filtering rules to define the conditions that decide which data is sent to [!DNL Profile Service] and which data is excluded. Support for filtering is available only for [!DNL Analytics data] and the [!DNL Analytics] data is only filtered prior to entering [!DNL Profile.] All other data are ingested into the data lake.
+Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the [!DNL Profile Service]. Support for filtering is available only for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All other data are ingested into the data lake.
 
 #### Row-level filtering
 
@@ -162,7 +162,7 @@ To filter your [!DNL Analytics] data at the row-level, select **[!UICONTROL Row 
 
 ![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
 
-An interactive schema hierarchy appears. Use the left rail to navigate through the schema hierarchy and select the schema attribute of your choice to further drill down a particular schema. Once you have identified the attribute that you want to configure, select and drag the attribute from the left rail to the filtering panel.
+Use the left rail to navigate through the schema hierarchy and select the schema attribute of your choice to further drill down a particular schema. Once you have identified the attribute that you want to configure, select and drag the attribute from the left rail to the filtering panel.
 
 ![left-rail-hierarchy](../../../../images/tutorials/create/analytics/left-rail-hierarchy.png)
 
