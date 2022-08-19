@@ -50,27 +50,29 @@ To minimize your development time, it is recommended that you develop your queri
 
 ![Image](../images/ui/query-editor/syntax-highlight.png)
 
-- **SQL key word auto-complete:** Start typing your query then use the arrow keys to navigate to the desired term and press **Enter**.
+- **SQL keyword auto-complete:** Start typing your query then use the arrow keys to navigate to the desired term and press **Enter**.
 
 ![Image](../images/ui/query-editor/syntax-auto.png)
 
 - **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete will recognize fields in that table. 
 
-![Image](../images/ui/query-editor/tables-auto.png)
+![The Query Editor command line interface displaying drop down suggestions.](../images/ui/query-editor/tables-auto.png)
 
-### (Beta) Auto-complete toggle
+### Auto-complete UI configurational toggle
 
->[!IMPORTANT]
->
->The auto-complete toggle is currently in beta and are not available to all users. The documentation and the functionality are subject to change.
+The [!DNL Query Editor] automatically suggests potential SQL keywords along with table or column details for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point by selecting the [!UICONTROL Syntax auto-complete] toggle to the top right of the Query Editor.
 
-[!DNL Query Editor] automatically suggests potential keywords for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point by selecting the [!UICONTROL syntax auto-complete] toggle to the top right of the Query Editor.
+The auto-complete configuration setting is per user, and remembered for the consecutive logins for that user.
 
 ![Query Editor with the syntax auto-complete toggle highlighted.](../images/ui/query-editor/auto-complete-toggle.png)
 
->[!NOTE]
+Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the editor during query editing.
+
+When you use the toggle to enable the auto-complete feature, recommend suggestions for table and column names as well as SQL keywords become available after a short pause. A success message indicates the feature is active. If you disable the auto-complete feature when writing a query, a page refresh is required for the feature to take effect.
+
+>[!IMPORTANT]
 >
->Disabling this feature stops several metadata commands from being processed which can benefit the speed of the editor during query editing.
+>You must save any changes to your query before refreshing the page or all progress will be lost.  
 
 ### Error detection
 
