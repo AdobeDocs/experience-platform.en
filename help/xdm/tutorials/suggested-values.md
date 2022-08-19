@@ -144,7 +144,63 @@ After applying the descriptor, the Schema Registry responds with the following w
 
 ### Remove suggested values {#remove-suggested-standard}
 
-<!-- Waiting for detailed info -->
+If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
+
+**API format**
+
+```http
+POST /tenant/descriptors
+```
+
+**Request**
+
+The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "@type": "xdm:alternateDisplayInfo",
+        "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+        "xdm:sourceVersion": 1,
+        "xdm:sourceProperty": "/xdm:eventType",
+        "xdm:excludeMetaEnum": {
+          "web.formFilledOut": "Web Form Filled Out",
+          "media.ping": "Media ping"
+        }
+      }'
+```
+
+| Property | Description |
+| --- | --- |
+| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema. |
+| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
+
+**Response**
+
+A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
+
+```json
+{
+  "@type": "xdm:alternateDisplayInfo",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out"
+  },
+  "meta:containerId": "tenant",
+  "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
+}
+```
 
 ## Manage suggested values for a custom field {#suggested-custom}
 
@@ -208,4 +264,4 @@ After applying the change, the Schema Registry responds with the following when 
 
 ## Next steps
 
-This guide covered how to add suggested values to string fields in the Schema Registry API. See the guide on [defining custom fields in the API](./custom-fields-api.md) for more information on how to create different field types.
+This guide covered how to manage suggested values for string fields in the Schema Registry API. See the guide on [defining custom fields in the API](./custom-fields-api.md) for more information on how to create different field types.
