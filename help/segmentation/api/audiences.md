@@ -124,7 +124,8 @@ A successful response returns HTTP status 200 with a list of audiences that were
                 "core/C1"
             ],
             "namespace": "AEPSegments"
-      }
+        }
+    ]
 }
 ```
 
