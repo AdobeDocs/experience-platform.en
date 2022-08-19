@@ -69,6 +69,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audience overlap]](#audience-overlap)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+* [[!UICONTROL Scheduled activations]](#scheduled-activations)
 
 ### [!UICONTROL Audience size] {#audience-size}
 
@@ -174,6 +175,14 @@ Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 A machine learning model automatically generates data insights by analyzing the overall distribution and key dimensions of the data.
 
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
+
+### Scheduled activations {#scheduled-activations}
+
+The [!UICONTROL Scheduled activations] widget provides a tabled view of the five most recently activated destinations. The table includes the destination platform, the name of your activation flow to this destination, and activation start and end date for the selected segment. The segment chosen for analysis is selected from the dropdown at the top of the page. 
+
+The widget allows you to discover at a glance where and when the audience is being activated and makes duplicate or unnecessary activations more transparent. This accumulated information also makes any activations that have been left out, more obvious.
+
+![The Scheduled activations widget.](../images/segments/scheduled-activations.png)
 
 ## Next steps
 
