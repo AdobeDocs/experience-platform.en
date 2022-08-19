@@ -58,21 +58,29 @@ To minimize your development time, it is recommended that you develop your queri
 
 ![The Query Editor command line interface displaying drop down suggestions.](../images/ui/query-editor/tables-auto.png)
 
-### Auto-complete UI configurational toggle
+### Auto-complete UI configurational toggle {#auto-complete}
 
 The [!DNL Query Editor] automatically suggests potential SQL keywords along with table or column details for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point by selecting the [!UICONTROL Syntax auto-complete] toggle to the top right of the Query Editor.
 
-The auto-complete configuration setting is per user, and remembered for the consecutive logins for that user.
+The auto-complete configuration setting is per user and remembered for the consecutive logins for that user.
 
 ![Query Editor with the syntax auto-complete toggle highlighted.](../images/ui/query-editor/auto-complete-toggle.png)
 
 Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the editor during query editing.
 
-When you use the toggle to enable the auto-complete feature, recommend suggestions for table and column names as well as SQL keywords become available after a short pause. A success message indicates the feature is active. If you disable the auto-complete feature when writing a query, a page refresh is required for the feature to take effect.
+When you use the toggle to enable the auto-complete feature, recommend suggestions for table and column names as well as SQL keywords become available after a short pause. A success message indicates the feature is active. 
+
+If you disable the auto-complete feature, a page refresh is required for the feature to take effect. A dialog appears with three options when you disable the [!UICONTROL Syntax auto-complete] toggle :
+
+- [!UICONTROL Cancel]
+- [!UICONTROL Save changes and refresh]
+- [!UICONTROL Refresh without saving changes]
 
 >[!IMPORTANT]
 >
->You must save any changes to your query before refreshing the page or all progress will be lost.  
+>If you are writing or editing a query when disabling this feature, you must save any changes to your query before refreshing the page or all progress will be lost.  
+
+Select the appropriate option to disable the auto-complete feature.
 
 ### Error detection
 
