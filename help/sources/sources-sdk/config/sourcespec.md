@@ -259,6 +259,8 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
 
 ## Additional resources {#appendix}
 
+The following sections provides information on additional configurations you can make to your `sourceSpec`, including advanced scheduling and custom schemas. 
+
 ### Content path example {#content-path}
 
 The following is an example of the contents of the `contentPath` property in a [!DNL MailChimp Campaigns] connection specification.
