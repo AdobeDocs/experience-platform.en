@@ -21,6 +21,10 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Cross-region support for Adobe Analytics source | You can now ingest report suites from any region (United States, United Kingdom, or Singapore). Report suites must be mapped to the same organization as the Experience Platform Sandbox instance in which the source connection is being created in. For more information, see the guide on [creating an Adobe Analytics source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| General availability of Self-Serve Sources (Batch SDK) |
+| General availability of [!DNL Google BigQuery] source |
+| [!DNL Teradata Vantage] source (Beta) |
+
 
 {style="table-layout:auto"}
 
