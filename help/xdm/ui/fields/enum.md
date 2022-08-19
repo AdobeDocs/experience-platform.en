@@ -6,7 +6,7 @@ description: Learn how to define enums and suggested values for string fields in
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 ---
-# Define enums and suggested values in the UI {#enum}
+# Define enums and suggested values in the UI {#enums-and-suggested-values}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enumsuggestedvalue"
@@ -61,8 +61,19 @@ Similar to custom fields, select **[!UICONTROL Add row]** to add your own sugges
 
 >[!NOTE]
 >
->Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled, but they cannot be removed outright.
+>Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled, but they cannot be removed outright. See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields.
 
-<!-- ## Next steps
+## Schema evolution rules for enums and suggested values {#evolution}
 
-This guide covered how to define enums and suggested values for string fields in the the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor]. -->
+After a schema with an enum field has been used to ingest data into Platform, any further changes made to the schema definition must comply with the data already in the system. When it comes to enums and suggested values, the following rules apply post-ingestion:
+
+* You CANNOT remove existing enum values for standard and custom fields.
+* You CAN add and remove suggested values for standard and custom fields.
+* You CAN add new enum values for an existing custom field, but NOT a standard field.
+* You CAN switch a custom field's enum values to suggested values only, but you CANNOT do this with a standard field.
+
+## Next steps
+
+This guide covered how to define enums and suggested values for string fields in the the UI. For information on how to manage enums and suggested values using the Schema Registry API, refer to the following [tutorial](../../tutorials/suggested-values.md).
+
+To learn how to define other XDM field types in the [!DNL Schema Editor], see the overview on [defining fields in the UI](./overview.md#special).
