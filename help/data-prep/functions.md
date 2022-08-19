@@ -120,7 +120,6 @@ The following tables list all supported mapping functions, including sample expr
 | zone_date_to_zone | Converts a date from one timezone to another timezone. | <ul><li>DATE: **Required** The date that you are trying to convert.</li><li>ZONE: **Required** The timezone that you are trying to convert the date to.</li></ul> | zone_date_to_zone​(DATE, ZONE) | `zone_date_to_utc​(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style="table-layout:auto"}
-​
 
 ### Hierarchies - Objects {#objects}
 
