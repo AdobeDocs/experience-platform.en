@@ -1,13 +1,30 @@
 ---
-title: Add Suggested Values to a Field
+title: Manage Enums and Suggested Values in the API
 description: Learn how to add suggested values to a string field in the Schema Registry API.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 ---
-# Add suggested values to a field
+# Manage enums and suggested values in the API
 
-In Experience Data Model (XDM), an enum field represents a string field that is constrained to a pre-defined subset of values. Enum fields can provide validation to ensure that ingested data conforms to a set of accepted values. However, you can also also define a set of suggested values for a string field without enforcing them as constraints.
+In Experience Data Model (XDM), a string field can be given a predefined set of accepted or suggested values to better control what values are ingested into that field or how it will behave in segmentation.
 
-In the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/), the constrained values for an enum field are represented by an `enum` array, while a `meta:enum` object provides friendly display names for those values:
+An **enum** constrains the values that can be ingested for a string field to a predefined set. If you attempt to ingest data to an enum field and the value does not match any of those defined in its configuration, ingestion will be denied.
+
+In contrast to enums, adding **suggested values** to a string field does not constrain the values that it can ingest. Instead, suggested values affect what predefined values are available in the [Segmentation UI](../../segmentation/ui/overview.md) when including the string field as an attribute.
+
+This guide covers how to manage enums and suggested values using the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). For steps on how to do this in the Adobe Experience Platform user interface, see the [UI guide on enums and suggested values](../ui/fields/enum.md).
+
+## Prerequisites
+
+This guide assumes you are familiar with the elements of schema composition in XDM and how to use the Schema Registry API to create and edit XDM resources. Please refer to the following documentation if you require an introduction:
+
+* [Basics of schema composition](../schema/composition.md)
+* [Schema Registry API guide](../api/overview.md)
+
+It is also strongly recommended that you review the [evolution rules for enums and suggested values](../ui/fields/enum.md#evolution) if you are updating existing fields.
+
+## Composition 
+
+In the API, the constrained values for an **enum** field are represented by an `enum` array, while a `meta:enum` object provides friendly display names for those values:
 
 ```json
 "exampleStringField": {
@@ -28,7 +45,7 @@ In the [Schema Registry API](https://developer.adobe.com/experience-platform-api
 
 For enum fields, the Schema Registry does not allow `meta:enum` to be extended beyond the values provided under `enum`, since attempting to ingest string values outside of those constraints would not pass validation.
 
-Alternatively, you can define a string field that does not contain an `enum` array and only uses the `meta:enum` object to denote suggested values:
+Alternatively, you can define a string field that does not contain an `enum` array and only uses the `meta:enum` object to denote **suggested values**:
 
 ```json
 "exampleStringField": {
@@ -42,16 +59,13 @@ Alternatively, you can define a string field that does not contain an `enum` arr
 }
 ```
 
-Since the string does not have an `enum` array to define constraints, its `meta:enum` property can be extended to include new values. This tutorial covers how to add suggested values to standard and custom string fields in the Schema Registry API.
+Since the string does not have an `enum` array to define constraints, its `meta:enum` property can be extended to include new values.
 
-## Prerequisites
+## Manage suggested values for standard fields
 
-This guide assumes you are familiar with the elements of schema composition in XDM and how to use the Schema Registry API to create and edit XDM resources. Please refer to the following documentation if you require an introduction:
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard).
 
-* [Basics of schema composition](../schema/composition.md)
-* [Schema Registry API guide](../api/overview.md)
-
-## Add suggested values to a standard field
+### Add suggested values {#add-suggested-standard}
 
 To extend the `meta:enum` of a standard string field, you can create a [friendly name descriptor](../api/descriptors.md#friendly-name) for the field in question in a particular schema.
 
@@ -128,9 +142,13 @@ After applying the descriptor, the Schema Registry responds with the following w
 >}
 >```
 
-## Add suggested values to a custom field
+### Remove suggested values {#remove-suggested-standard}
 
-To extend the `meta:enum` of a custom field, you can update the field's parent class, field group, or data type through a PATCH request.
+<!-- Waiting for detailed info -->
+
+## Manage suggested values for a custom field {#suggested-custom}
+
+To manage the `meta:enum` of a custom field, you can update the field's parent class, field group, or data type through a PATCH request.
 
 >[!WARNING]
 >
