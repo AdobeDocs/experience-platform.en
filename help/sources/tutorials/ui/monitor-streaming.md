@@ -61,7 +61,7 @@ The lower half of the page displays information on the number of records receive
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_metrics"
 >title="Datflow run metrics"
->abstract=""
+>abstract="<ul><li>Records received: Total count of records received in the datagflow.</li><li>Records ingested: Total count of records ingested into data lake.</li><li>Records failed: Total count of records not ingested to data lake due to errors in the data.</li><li>Records with warnings: Total count of records ingested with mapper transformation warnings."
 >text="Learn more in documentation"
 
 Each individual dataflow run shows the following details:
@@ -74,7 +74,6 @@ Each individual dataflow run shows the following details:
 * **[!UICONTROL Records Failed]**: The number of records that were not ingested into [!DNL Data Lake] due to errors in the data.
 * **[!UICONTROL Ingestion Rate]**: The success rate of records ingested into [!DNL Data Lake]. This metric is applicable when [!UICONTROL Partial Ingestion] is enabled.
 * **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all records for the corresponding dataflow run were processed within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
-
 
 The [!UICONTROL Dataflow run overview] page contains additional information on your dataflow, such as its corresponding dataflow run ID, target dataset, and organization ID.
 
