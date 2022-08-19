@@ -57,6 +57,8 @@ To learn more about each of the available standard widgets, select the name of a
 
 * [Total accounts by industry](#total-accounts-by-industry)
 * [Account profiles added](#account-profiles-added)
+* [Predictive scoring distribution](#predictive-scoring-distribution)
+* [Predictive scoring top influential factors](#predictive-scoring-top-influential-factors)
 
 ### Total accounts by industry {#total-accounts-by-industry}
 
@@ -75,6 +77,25 @@ This widget uses a colour coded bar chart to illustrate the count of profiles ad
 >As profiles are only added to an account and never removed, the lowest possible number of profiles added over a period of time is zero. 
 
 ![The Account profiles added widget.](../images/account-profiles/accounts-profiles-added-widget.png)
+
+### Predictive scoring distribution {#predictive-scoring-distribution}
+
+<!-- This widget displays the total number of account profiles in a single metric and uses a donut chart to illustrate the proportion of your account profiles with a high,medium and low propensity of XXX. The key provides colour coding information for the different propensities that make up the donut chart.
+Further breakdown of the low, medium and high propensities is provided by a bar chart that differnetiate the number of account profiles by their scoring bracket. Scoring brackets are divided in increments of five.
+
+Individual account profile counts are displayed in a dialog when the cursor hovers over the respective section of the donut chart or bar chart.
+
+The XXX is selected from the widget dropdown.  -->
+
+![The Predictive scoring distribution widget.](../images/account-profiles/predictive-scoring-distribution.png)
+
+### Predictive scoring top influential factors {#predictive-scoring-top-influential-factors}
+
+<!-- This widget provides the total number of account profiles in you each XXX by low, medium and high propensities. A bar chart illustrates the percentage of these XXX that comprise the total number of low, medium and high propensities. The XXX is selected from the widget dropdown below the title.
+
+Individual account profile counts are displayed in a dialog when the cursor hovers over a section of the bar chart.-->
+
+![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
 ## Next steps
 
