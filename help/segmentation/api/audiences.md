@@ -8,7 +8,7 @@ description: The audiences endpoint in the Adobe Experience Platform Segmentatio
 
 # Audiences endpoint
 
-A blurb about audiences that I will write later
+Audiences are a collection of people who share similar behaviors and/or characteristics. These collections of people can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint in the Segmentation API, which allows you to programatically retrieve, create, update, and delete audiences.
 
 ## Getting started
 
