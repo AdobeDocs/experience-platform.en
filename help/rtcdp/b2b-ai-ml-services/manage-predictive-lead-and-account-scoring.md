@@ -25,11 +25,11 @@ The **[!UICONTROL Define your goal]** screen appears. Select the dropdown arrow 
 
 ![plas-select-a-goal](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
-The **[!UICONTROL Goal specifics]** dialogue opens. Select the dropdown arrow and then select goal field name from the dropdown window that appears..
+The **[!UICONTROL Goal specifics]** dialogue opens. Select the dropdown arrow and then select goal field name from the dropdown window that appears.
 
 ![plas-select-a-goal-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
-The **[!UICONTROL Goal conditions]** selection appears. Select the dropdown arrow and then select condition from the dropdown window that appears..
+The **[!UICONTROL Goal conditions]** selection appears. Select the dropdown arrow and then select condition from the dropdown window that appears.
 
 ![plas-goal-specifics-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 

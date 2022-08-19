@@ -81,7 +81,7 @@ See the documentation for more information about how to [manage predictive lead 
 
 ## View predictive lead and account scoring results {#how-to-view}
 
-After the job run, the results are saved in a new system dataset for each model under the name **.LeadsAI.Scores - *the score name***. Each score field group can be located at **custom field group>.LeadsAI.*the score name***.
+After the job run, the results are saved in a new system dataset for each model under the name `LeadsAI.Scores` - ***the score name***. Each score field group can be located at `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
 
 | Attribute | Description |
 | --- | --- |
