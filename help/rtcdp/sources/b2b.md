@@ -11,13 +11,13 @@ exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
 
 Real-time Customer Data Platform B2B Edition allows you to bring your B2B data through various sources including the [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) source connector, Salesforce, Amazon S3, and ADLS among others. This range of sources provides you with the ability to structure, label, and enhance incoming data using services.
 
->[!TIP]
->
->While Real-time Customer Data Platform B2B Edition offers a broad range of external sources from which to ingest data, it does not have as many as those available for Real-time Customer Data Platform. To learn which source connectors are available to your organization, you can view the sources catalog in the Platform UI. To access the catalog, select **Sources** in the left navigation, then select **Catalog**.
-
 To understand how sources fit into your B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 See the [source connectors overview](../../sources/home.md) for more information on the types of sources available in Adobe Experience Platform.
+
+>[!IMPORTANT]
+>
+>You must have access to [Real-time Customer Data Platform B2B Edition](../../rctcdp/../rtcdp/b2b-overview.md) in order for B2B schemas to participate in [Real-time Customer Profile](../proile/../../profile/home.md).
 
 The following documents provide more information on using [!DNL Marketo] to bring B2B data to Platform:
 

@@ -74,7 +74,7 @@ To begin, find the desired field type and use the sample code provided to build 
   },
   "default": "value1"
 }</pre>
-    <br>Note that the <code>meta:enum</code> value does <strong>not</strong> declare an enumeration or drive any data validation on its own. In most cases, strings provided under <code>meta:enum</code> are also provided under <code>enum</code> to ensure that data is constrained. However, there are some use cases where <code>meta:enum</code> is provided without a corresponding <code>enum</code> array. See the tutorial on <a href="../tutorials/extend-soft-enum.md">extending soft enums</a> for more information.
+    <br>Note that the <code>meta:enum</code> value does <strong>not</strong> declare an enumeration or drive any data validation on its own. In most cases, strings provided under <code>meta:enum</code> are also provided under <code>enum</code> to ensure that data is constrained. However, there are some use cases where <code>meta:enum</code> is provided without a corresponding <code>enum</code> array. See the tutorial on <a href="../tutorials/suggested-values.md">defining suggested values</a> for more information.
     </td>
   </tr>
   <tr>
@@ -238,16 +238,18 @@ To begin, find the desired field type and use the sample code provided to build 
 
 ## Creating custom map types {#maps}
 
-In order to support "map-like" data efficiently in XDM, objects may be annotated with a `meta:xdmType` set to `map` to make it clear that an object should be managed as if the key set were unconstrained. XDM places the following restrictions on the use of this storage hint:
+In order to support "map-like" data efficiently in XDM, objects may be annotated with a `meta:xdmType` set to `map` to make it clear that an object should be managed as if the key set were unconstrained. Data that is ingested into map fields must use string keys, and only string or integer values (as determined by `additionalProperties.type`).
 
-* Map types MUST be of type `object`
-* Map types MUST NOT have properties defined (in other words, they define "empty" objects)
-* Map types MUST include a single `additionalProperties` schema that describes the values that may be placed within the map
+XDM places the following restrictions on the use of this storage hint:
+
+* Map types MUST be of type `object`.
+* Map types MUST NOT have properties defined (in other words, they define "empty" objects).
+* Map types MUST include an `additionalProperties.type` field that describes the values that may be placed within the map, either `string` or `integer`.
 
 Ensure that you are only using map-type fields when absolutely necessary, as they carry the following performance drawbacks:
 
-* Response time from Adobe Experience Platform Query Service degrades from three seconds to ten seconds for 100 million records
-* Maps must have fewer than 16 keys or else risk further degradation
+* Response time from Adobe Experience Platform Query Service degrades from three seconds to ten seconds for 100 million records.
+* Maps must have fewer than 16 keys or else risk further degradation.
 
 The Platform user interface also has limitations in how it can extract the keys of map-type fields. Whereas object-type fields can be expanded, maps are displayed as a single field instead.
 

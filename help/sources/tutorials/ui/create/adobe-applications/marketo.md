@@ -9,12 +9,17 @@ exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 ---
 # Create a [!DNL Marketo Engage] source connector in the UI
 
+>[!IMPORTANT]
+>
+>Before creating a [!DNL Marketo Engage] source connection and a dataflow, you must first ensure that you have [mapped your Adobe IMS Organization ID](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Furthermore, you must also ensure that you have completed [auto-populating your [!DNL Marketo] B2B namespaces and schemas](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) prior to creating a source connection and a dataflow.
+
 This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector in the UI to bring B2B data into Adobe Experience Platform.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
+* [B2B namespaces and schema auto-generation utility](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): The B2B namespaces and schema auto-generation utility allows you to use [!DNL Postman] to auto-generate values for your B2B namespaces and schemas. You must complete your B2B namespaces and schemas first, before creating a [!DNL Marketo] source connection and dataflow.
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Create and edit schemas in the UI](../../../../../xdm/ui/resources/schemas.md): Learn how to create and edit schemas in the UI.

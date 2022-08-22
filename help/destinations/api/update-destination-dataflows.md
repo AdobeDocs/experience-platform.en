@@ -36,7 +36,7 @@ In order to make calls to Platform APIs, you must first complete the [authentica
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 All resources in Experience Platform, including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
@@ -73,7 +73,7 @@ curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -94,7 +94,7 @@ A successful response returns the current details of your dataflow including its
          "updatedClient":"{UPDATED_CLIENT}",
          "sandboxId":"{SANDBOX_ID}",
          "sandboxName":"prod",
-         "imsOrgId":"{IMS_ORG}",
+         "imsOrgId":"{ORG_ID}",
          "name":"2021 winter campaign",
          "description":"ACME company holiday campaign for high fidelity customers",
          "flowSpec":{
@@ -361,7 +361,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -416,7 +416,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=enable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -427,7 +427,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc/action?op=disable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -461,7 +461,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -478,8 +478,8 @@ curl -X PATCH \
             "schedule":{
                "startDate":"2022-01-05",
                "frequency":"DAILY",
-               "endData":"2022-03-10"
-               "startTime":"16:00",
+               "triggerType": "AFTER_SEGMENT_EVAL",
+               "endDate":"2022-03-10"
             }
          }
       }
@@ -498,6 +498,7 @@ curl -X PATCH \
 | `exportMode` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Mandatory. Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. |
 | `startDate` | Select the date when the segment should start exporting profiles to your destination. |
 | `frequency` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Mandatory. <br> <ul><li>For the `"DAILY_FULL_EXPORT"` export mode, you can select `ONCE` or `DAILY`.</li><li>For the `"FIRST_FULL_THEN_INCREMENTAL"` export mode, you can select `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul>   |
+| `triggerType` | For *batch destinations* only. This field is required only when selecting the `"DAILY_FULL_EXPORT"` mode in the `frequency` selector. <br> Mandatory. <br> <ul><li>Select `"AFTER_SEGMENT_EVAL"` to have the activation job run immediately after the daily Platform batch segmentation job completes. This ensures that when the activation job runs, the most up-to-date profiles are exported to your destination.</li><li>Select `"SCHEDULED"` to have the activation job run at a fixed time. This ensures that Experience Platform profile data is exported at the same time each day, but the profiles you export may not be the most up-to-date, depending on whether the batch segmentation job has completed before the activation job starts. When selecting this option, you must also add a `startTime` to indicate at which time in UTC the daily exports should occur.</li></ul> |
 | `endDate` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Not applicable when selecting `"exportMode":"DAILY_FULL_EXPORT"` and `"frequency":"ONCE"`. <br> Sets the date when segment members stop being exported to the destination. |
 | `startTime` | For *batch destinations* only. This field is required only when adding a segment to a dataflow in batch file export destinations like Amazon S3, SFTP, or Azure Blob. <br> Mandatory. Select the time when files containing members of the segment should be generated and exported to your destination. |
 
@@ -531,7 +532,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -592,7 +593,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -634,6 +635,120 @@ A successful response returns your flow ID and an updated etag. You can verify t
 }
 ```
 
+See the examples below for more examples of segment components that you can update in a dataflow.
+
+## Update the export mode of a segment from scheduled to after segment evaluation {#update-export-mode}
+
++++ Click to see an example where a segment export is updated from being activated every day at a specified time to being activated every day after the Platform batch segmentation job completes.
+
+The segment is exported every day at 16:00 UTC.
+
+```json
+
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+
+```
+
+The segment is exported every day after the daily batch segmentation job completes.
+
+```json
+
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "AFTER_SEGMENT_EVAL",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+
+```
+
++++
+
+## Update the file name template to include additional fields in the file name {#update-filename-template}
+
++++ Click to see an example where the file name template is updated to include additional fields in the file name
+
+The exported files contain the destination name and Experience Platform segment ID
+
+```json
+
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+
+```
+
+The exported files contain the destination name, Experience Platform segment ID, the date and time when the file was generated by Experience Platform, and custom text appended at the end of the files.
+
+
+```json
+
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%_%this is custom text%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+
+```
+
++++
+
 ## Add a profile attribute to a dataflow {#add-profile-attribute}
 
 To add a profile attribute to the destination dataflow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the profile attribute you want to add.
@@ -653,7 +768,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -707,7 +822,7 @@ curl -X PATCH \
     'https://platform.adobe.io/data/foundation/flowservice/flows/226fb2e1-db69-4760-b67e-9e671e05abfc' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
@@ -743,8 +858,8 @@ A successful response returns your flow ID and an updated etag. You can verify t
 
 ## API error handling {#api-error-handling}
 
-The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) and [request header errors](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) in the Platform troubleshooting guide.
+The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have learned how to update various components of a destination dataflow, like adding or removing segments or profile attributes using [!DNL Flow Service] API. For more information on destinations, see the [destinations overview](../home.md).

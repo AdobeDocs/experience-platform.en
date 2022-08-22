@@ -9,6 +9,10 @@ Adobe Experience Platform Query Service supports anonymous blocks. The anonymous
 
 The anonymous block feature is an efficient way to perform a sequence of operations or queries. The chain of queries within the block can be saved as a template and scheduled to run at a particular time or interval. These queries can be used to write and append data to create a new data set and are typically used where you have a dependency.
 
+>[!IMPORTANT]
+>
+>Scheduling queries using anonymous blocks is currently only possible through the [!DNL Query Service] API. See the documentation for [complete instructions on scheduling queries through the API](../api/scheduled-queries.md). 
+
 The table provides a breakdown of the block's main sections: execution, and exception-handling. The sections are defined by the keywords `BEGIN`, `END`, and `EXCEPTION`. 
 
 | section  | description |

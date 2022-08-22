@@ -1,13 +1,15 @@
 ---
 keywords: activate profile request destinations;activate data;profile request destinations
-title: Activate audience data to profile request destinations (Beta)
+title: Activate audience data to profile request destinations
 type: Tutorial
-seo-title: Activate audience data to profile request destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 ---
 # Activate audience data to profile request destinations
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Overview {#overview}
 
@@ -73,6 +75,12 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ![Review](../assets/ui/activate-profile-request-destinations/review.png)
 
+<!--
+
+Commenting out this part since destination monitoring is not available currently for the Adobe Target and Custom Personalization destinations.
+
 ## Verify segment activation {#verify}
 
 Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
+
+-->

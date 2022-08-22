@@ -3,6 +3,7 @@ title: Using Adobe Target with the Platform Web SDK
 description: Learn how to render personalized content with the Experience Platform Web SDK using Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;system diagram;diagram
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
+
 ---
 # Using [!DNL Adobe Target] with the [!DNL Platform Web SDK]
 
@@ -43,7 +44,7 @@ The following diagram helps you understand the workflow of [!DNL Target] and [!D
 
 To enable [!DNL Target], do the following:
 
-1. Enable [!DNL Target] in your [datastream](../../fundamentals/datastreams.md) with the appropriate client code.
+1. Enable [!DNL Target] in your [datastream](../../datastreams/overview.md) with the appropriate client code.
 1. Add the `renderDecisions` option to your events.
 
 Then, optionally, you can also add the following options:
@@ -83,7 +84,7 @@ For more information, see [Categories for audiences](https://experienceleague.ad
 Response tokens are mainly used to send metadata to third parties like Google, Facebook, etc. Response tokens are returned
 in the `meta` field within `propositions` -> `items`. Here is a sample:
 
-```          
+```json      
 {
   "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
   "scope": "__view__",
@@ -108,7 +109,7 @@ To collect the response tokens, you have to subscribe to `alloy.sendEvent` promi
 and extract the details from `items` -> `meta`. Every `proposition` has a `renderAttempted` boolean field
 indicating whether the `proposition` was rendered or not. See the sample below:
 
-```
+```js
 alloy("sendEvent",
   {
     renderDecisions: true,
@@ -179,7 +180,7 @@ Typical [!DNL Platform Web SDK] code using this command looks like the following
 
 **`sendEvent` with profile data**
 
-```
+```js
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
@@ -189,7 +190,7 @@ alloy("sendEvent", {
 
 **How to send Profile attributes to Adobe Target:**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
@@ -228,7 +229,7 @@ The following table lists [!DNL Recommendations] attributes and whether each one
 
 **How to send Recommendations attributes to Adobe Target:**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {

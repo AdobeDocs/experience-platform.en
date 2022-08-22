@@ -29,6 +29,17 @@ Before you can send your audience segments to [!DNL Airship], you must:
 >
 >Create an [!DNL Airship] account via [this signup link](https://go.airship.eu/accounts/register/plan/starter/) if you have not already.
 
+## Export type and frequency {#export-type-frequency}
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name) and/or identities, according to your field mapping.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
+
 ## Enable attributes {#enable-attributes}
 
 Adobe Experience Platform profile attributes are similar to [!DNL Airship] attributes and can be easily mapped to one another in Platform using the mapping tool demonstrated further below on this page.
@@ -59,18 +70,37 @@ Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airsh
 
 ## Connect to the destination {#connect}
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-### Connection parameters {#parameters}
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+### Authenticate to destination {#authenticate}
+
+To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 * **[!UICONTROL Bearer token]**: the bearer token that you generated from the [!DNL Airship] dashboard.
+
+### Fill in destination details {#destination-details}
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+
 * **[!UICONTROL Name]**: enter a name that will help you identify this destination.
 * **[!UICONTROL Description]**: enter a description for this destination.
 * **[!UICONTROL Domain]**: select either a US or EU data center, depending on which [!DNL Airship] data center applies to this destination.
 
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
 ## Activate segments to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 

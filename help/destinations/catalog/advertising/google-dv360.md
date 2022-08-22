@@ -23,7 +23,7 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 
 ## Supported identities {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+[!DNL Google Display & Video 360] supports the activation of identities described in the table below.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -35,17 +35,23 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 |MAID|Microsoft Advertising ID. This ID uniquely identifies devices running Windows 10.||
 |Amazon Fire TV ID|This ID uniquely identifies Amazon Fire TVs.||
 
-## Export type {#export-type}
+## Export type and frequency {#export-type-frequency}
 
-**Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) to the Google destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 ## Prerequisites {#prerequisites}
 
-### Allow-listing
+### Allow-listing {#allow-listing}
 
 >[!NOTE]
 >
->Allow-listing is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Platform. Please ensure the allow-listing process described below has been completed by Google before creating a destination.
+>Allow-listing is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Platform. Please ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
+>The exception to this rule is for [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
 
 Before creating the [!DNL Google Display & Video 360] destination in Platform, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
 
@@ -54,6 +60,10 @@ Before creating the [!DNL Google Display & Video 360] destination in Platform, y
 * **Your account type**: use **[!DNL Invite advertiser]** to allow audiences to be shared only to a specific brand in your Display & Video 360 account or use **[!DNL Invite partner]** to allow audiences to be shared to all brands in your Display & Video 360 account.
 
 ## Connect to the destination {#connect}
+
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -72,7 +82,17 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 >
 >When setting up a [!DNL Google Display & Video 360] destination, please work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
 
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
 ## Activate segments to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
