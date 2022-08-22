@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Sources SDK Overview
+title: Self-Serve Sources Overview
 topic-legacy: overview
-description: Adobe Experience Platform Sources SDK is a set of configuration APIs that allow you to integrate a REST API-based source using the Flow Service API to bring your data to Experience Platform.
+description: Adobe Experience Platform Self-Serve Sources is a set of configuration APIs that allow you to integrate a REST API-based source using the Flow Service API to bring your data to Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
 ---
-# Sources SDK overview
+# Self-Serve Sources (Batch SDK) overview
 
-Adobe Experience Platform Sources SDK is a set of configuration APIs that allow you to integrate a REST API-based source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to bring your data to Experience Platform.
+Adobe Experience Platform Self-Serve Sources (Batch SDK) is a set of configuration APIs that allow you to integrate a REST API-based source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to bring your data to Experience Platform.
 
 With Sources SDK, you can:
 
-* Configure a new source to the Experience Platform catalog, complete with create, read, update, and delete functionalities using the [!DNL Flow Service] API.
+* Configure and integrate a new source to the Experience Platform catalog using the [!DNL Flow Service] API.
 * Define specifications for your source, including information pertaining to supported authentication types and how resource data is fetched.
 * Create user-facing documentation for your new source.
 
