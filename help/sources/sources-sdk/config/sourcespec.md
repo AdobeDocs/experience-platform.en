@@ -389,7 +389,7 @@ A source that supports continuation token type of pagination may have a paginati
 | Property | Description |
 | --- | --- |
 | `type` | The type of pagination used to return data. |
-| `continuationTokenPath` | |
+| `continuationTokenPath` | The value that must be appended to the query params in order to move to the next page of the returned results. |
 | `parameterType` | The `parameterType` property defines where the `parameterName` must be added. The `QUERYPARAM` type allows you to append your query with the `parameterName`. The `HEADERPARAM` allows you to add your `parameterName` to your header request.   |
 | `parameterName` | The name of the parameter used to incorporate the continuation token. The format is as follows: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. | 
 | `delayRequestMillis` | The `delayRequestMillis` property in pagination allows you to control the rate of requests made to your source. Some sources can have a limit to the number of requests you can make per minute. For example, [!DNL Zendesk] has a limit of 100 requests per minute and defining  `delayRequestMillis` to `850` allows you to configure the source to make calls at just around 80 requests per minute, well under the 100 request per minute threshold.  |
@@ -430,7 +430,7 @@ The `PAGE` type of pagination allows you to traverse through return data by numb
   "type": "PAGE",
   "limitName": "records",
   "limitValue": "100",
-  "pageParamName": "page",
+  "pageParamName": "pageIndex",
   "maximumRequest": 10000
 }
 ```
@@ -440,7 +440,7 @@ The `PAGE` type of pagination allows you to traverse through return data by numb
 | `type` | The type of pagination used to return data. |
 | `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
 | `limitValue` | The number of records to be fetched in a page. |
-| `pageParamName` |
+| `pageParamName` | The name of the parameter that you must append to query parameters in order to traverse through different pages of the return data. For example, `https://abc.com?pageIndex=1` would return the second page of an API's return payload. |
 | `maximumRequest` | The maximum number of request a source can make for a given incremental run. The current default limit is 10000. |
 
 #### `NONE`
