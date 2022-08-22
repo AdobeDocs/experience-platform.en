@@ -2,6 +2,7 @@
 title: Predictive lead and account scoring in Real-time CDP B2B
 type: Documentation
 description: An overview and more information about the predictive lead and account scoring feature in Experience Platform CDP B2B.
+exl-id: d3afbabb-005d-4537-831a-857c88043759
 ---
 # Predictive lead and account scoring in Real-time CDP B2B
 
