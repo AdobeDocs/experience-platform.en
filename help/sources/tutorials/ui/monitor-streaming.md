@@ -57,11 +57,28 @@ The lower half of the page displays information on the number of records receive
 
 ### Dataflow run metrics {#dataflow-run-metrics}
 
+>[!CONTEXTUALHELP]
+>id="platform_sources_dataflow_records_received"
+>title="Records received"
+>abstract="The Records Received metric indicates the total count of records received in the dataflow."
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
->id="platform_sources_dataflow_metrics"
->title="Datflow run metrics"
->abstract="<ul><li>Records received: Total count of records received in the datagflow.</li><li>Records ingested: Total count of records ingested into data lake.</li><li>Records failed: Total count of records not ingested to data lake due to errors in the data.</li><li>Records with warnings: Total count of records ingested with mapper transformation warnings."
+>id="platform_sources_dataflow_records_ingested"
+>title="Records ingested"
+>abstract="The Records Ingested metric indicates the total count of records ingested into data lake."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_dataflow_records_failed"
+>title="Records failed"
+>abstract="The Records Failed metric indicates the total count of records that were not ingested to the data lake because of  errors in the data."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_dataflow_records_warnings"
+>title="Records with warnings"
+>abstract="The Records with Warnings indicates the total count of records ingested with mapper transformation warnings. All mapper transformation errors are reported as warnings and rows that are partially ingested are considered successful with a warning"
 >text="Learn more in documentation"
 
 Each individual dataflow run shows the following details:
