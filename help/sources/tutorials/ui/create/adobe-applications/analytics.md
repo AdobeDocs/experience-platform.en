@@ -208,7 +208,6 @@ When finished, select **[!UICONTROL Next]**.
 
 ![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-
 #### Column-level filtering
 
 Select **[!UICONTROL Column filter]** from the header to apply column-level filtering. 
