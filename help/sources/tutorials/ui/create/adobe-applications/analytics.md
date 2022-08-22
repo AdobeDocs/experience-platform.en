@@ -172,19 +172,19 @@ Once you have identified the attribute that you want to configure, select and dr
 
 To configure different conditions, select **[!UICONTROL equals]** and then select a condition from the dropdown window that appears.
 
-![conditions](../../../../images/tutorials/create/analytics/conditions.png)
+The list of configurable conditions include:
 
-| Condition | Description |
-| --- | --- |
-| equals |
-| does not equal |
-| starts with |
-| ends with |
-| does not end with |
-| contains |
-| does not contain |
-| exists |
-| does not exist |
+* [!UICONTROL equals] 
+* [!UICONTROL does not equal ]
+* [!UICONTROL starts with] 
+* [!UICONTROL ends with] 
+* [!UICONTROL does not end with] 
+* [!UICONTROL contains] 
+* [!UICONTROL does not contain] 
+* [!UICONTROL exists] 
+* [!UICONTROL does not exist] 
+
+![conditions](../../../../images/tutorials/create/analytics/conditions.png)
 
 Next, enter the values that you want to include based on the attribute that you selected. In the example below, [!DNL Apple] and [!DNL Google] are selected for ingestion as part of the **[!UICONTROL Manufacturer]** attribute.
 
@@ -219,7 +219,7 @@ The page updates into an interactive schema tree, displaying your schema attribu
 
 By default, all [!DNL Analytics] go to [!DNL Profile] and this process allows for branches of XDM data to be excluded from [!DNL Profile] ingestion.
 
-![columns-selected](../../../../images/tutorials/create/analytics/column-selected.png)
+![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 When finished, select **[!UICONTROL Next]**.
 
