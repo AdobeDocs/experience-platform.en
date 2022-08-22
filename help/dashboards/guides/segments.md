@@ -182,7 +182,6 @@ The [!UICONTROL Scheduled activations] widget provides a tabularized view of the
 
 The widget allows you to discover at a glance where and when the audience is being activated and makes duplicate or unnecessary activations more transparent. This accumulated information also highlights where any activations have been left out.
 
-
 ![The Scheduled activations widget.](../images/segments/scheduled-activations.png)
 
 ## Next steps
