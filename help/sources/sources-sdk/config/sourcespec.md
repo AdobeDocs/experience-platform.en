@@ -243,7 +243,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | This property allows you to explicitly specify the individual attributes that you want to keep. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | This property allows you to override the value of attribute name you specified in `explodeEntityPath`. | `activity` |
 | `sourceSpec.attributes.spec.properties.paginationParams` | Defines the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
-| `sourceSpec.attributes.spec.properties.paginationParams.type` | Displays the type of the supported pagination type for your source. | <ul><li>`offset`: This pagination type allows you to parse through results by specifying an index from where to start the resulting array, and a limit on how many results are returned.</li><li>`pointer`: This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request. The pointer type pagination requires path in payload that point to next page</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | Displays the type of the supported pagination type for your source. | <ul><li>`OFFSET`: This pagination type allows you to parse through results by specifying an index from where to start the resulting array, and a limit on how many results are returned.</li><li>`POINTER`: This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request. The pointer type pagination requires path in payload that point to next page.</li><li>`CONTINUATION_TOKEN`: This pagination type allows you to append your query or header parameters with a continuation token to retrieve remaining return data from your source, that was not initially returned due to a pre-determined maximum.</li><li>`PAGE`: This pagination type allows you to append your query parameter with a paging parameter to traverse through return data by pages, starting from page zero.</li><li>`NONE`: This pagination type can be used for sources that do not support any of the available pagination types. Pagination type `NONE` returns the entire response data after a request.</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. | `limit` or `count` |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | The number of records to be fetched in a page. | `limit=10` or `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | The offset attribute name. This is required if pagination type is set to `offset`. | `offset` |
@@ -263,7 +263,7 @@ The following sections provides information on additional configurations you can
 
 ### Content path example {#content-path}
 
-The following is an example of the contents of the `contentPath` property in a [!DNL MailChimp Campaigns] connection specification.
+The following is an example of the contents of the `contentPath` property in a [!DNL MailChimp Members] connection specification.
 
 ```json
 "contentPath": {
