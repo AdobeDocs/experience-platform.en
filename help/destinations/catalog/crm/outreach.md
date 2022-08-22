@@ -12,7 +12,7 @@ description: The Outreach destination allows you to export your account data and
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Outreach Update Resource API](https://api.outreach.io/api/v2/docs#update-an-existing-resource), which allows you to update identities within a segment corresponding to prospects in [!DNL Outreach].
 
-[!DNL Outreach] uses OAuth 2 with Authorization Grant as the authentication mechanism to communicate with the [!DNL Outreach] Update Resource API. Instructions to authenticate to your [!DNL Outreach] instance are further below, within [Authenticate to destination](#authenticate) section.
+[!DNL Outreach] uses OAuth 2 with Authorization Grant as the authentication mechanism to communicate with the [!DNL Outreach] [!DNL Update Resource API]. Instructions to authenticate to your [!DNL Outreach] instance are further below, within [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
@@ -34,8 +34,6 @@ Note the following prerequisites in [!DNL Outreach], in order to export data fro
 
 Go to the [!DNL Outreach] [sign in](https://accounts.outreach.io/users/sign_in) page to register and create an account, if you do not have one already. Also see the [!DNL Outreach] support [page](https://support.outreach.io/hc/en-us/articles/207238607-Claim-Your-Outreach-Account) for more details.
 
-#### Gather Outreach credentials {#gather-credentials}
-
 Note down the items below before you authenticate to the [!DNL Outreach] CRM destination:
 
 | Credential | Description |
@@ -43,13 +41,7 @@ Note down the items below before you authenticate to the [!DNL Outreach] CRM des
 | Email | Your [!DNL Outreach] account email |
 | Password | Your [!DNL Outreach] account password |
 
-## Guardrails
-
-The [!DNL Outreach] API is rate-limited on a per-user basis, with a fixed limit of 10,000 requests per one-hour period. If you encounter this limit you will encounter a `429` response with a message similar to *`You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`*. You will need to accordingly adapt your segment export to conform to the rate threshold.
-
-Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs#rate-limiting) for additional details.
-
-#### Setup custom field labels
+#### Set up custom field labels {#prerequisites-custom-fields}
 
 [!DNL Outreach] supports custom fields for [prospects](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Refer to [How To add a custom field in Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) for additional guidance. For ease of identification it is recommended to manually update the labels to their corresponding segment names instead of keeping the defaults. For example as below:
 
@@ -59,17 +51,25 @@ Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs
 [!DNL Outreach] settings page for prospects displaying custom fields with *user-friendly* labels matching to the segment names. You can view the segment status on the prospect page against these labels.
 ![Outreach UI screenshot showing custom fields with associated labels on the settings page.](../../assets/catalog/crm/outreach/outreach-custom-field-labels.png)
 
-> [!NOTE]
+>[!NOTE]
 >
-> Label names are for ease of identification only, they are not used when updating prospects.
+> Label names are for ease of identification only. They are not used when updating prospects.
+
+## Guardrails
+
+The [!DNL Outreach] API has a rate limit of 10,000 requests per hour per user. If you reach this limit you will receive a `429` response with the following message: `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
+
+If you received this message, you must update your segment export schedule to conform to the rate threshold.
+
+Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs#rate-limiting) for additional details.
 
 ## Supported identities {#supported-identities}
 
 [!DNL Outreach] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Description|Considerations|
+|Target identity|Description|Considerations|
 |---|---|---|
-| `OutreachId` | <ul><li>[!DNL Outreach] identifier, this is a numeric value corresponding to the prospect profile.</li><li>The ID must match the ID within the [!DNL Outreach] URL for the prospect being updated.</li><li>Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs#update-an-existing-resource) for further details.</li></ul>|Mandatory |
+| `OutreachId` | <ul><li>[!DNL Outreach] identifier. This is a numeric value corresponding to the prospect profile.</li><li>The ID must match the ID within the [!DNL Outreach] URL for the prospect being updated.</li><li>Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs#update-an-existing-resource) for further details.</li></ul>|Mandatory |
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -84,7 +84,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Connect to the destination {#connect}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
 > To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -127,7 +127,7 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate segments to this destination {#activate}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
 > To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -209,12 +209,12 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
-### Unknown errors encountered while pushing events to destination {#unknown-errors}
-When checking a dataflow run, if you obtain the following error message: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
+When checking a dataflow run, you might see the following error message: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
 ![Platform UI screenshot showing the Bad request Error.](../../assets/catalog/crm/outreach/error.png)
 
-To fix this error, verify that the Mapping ID you provided in [!DNL Outreach] for your Platform segment is valid and exists within [!DNL Outreach].
+To fix this error, verify that the [!UICONTROL Mapping ID] you provided in Platform for your [!DNL Outreach] segment is valid and exists in [!DNL Outreach].
+
 ## Additional resources {#additional-resources}
 
 The [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs/) has details on [Error Responses](https://api.outreach.io/api/v2/docs#error-responses) which you can use to debug any issues.
