@@ -170,7 +170,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 
 * To do this, select each segment, then enter the corresponding numeric value which corresponds to the *Custom Field `N` Label* field from [!DNL Outreach] in the **[!UICONTROL Mapping ID]** field.
     
-    > [!IMPORTANT]
+    >[!IMPORTANT]
     >
     > * The numeric value *(`N`)* used within the [!UICONTROL Mapping ID] should match the custom attribute key suffixed with the numeric value within [!DNL Outreach]. Example: *Custom Field `N` Label*.
     > * You only need to specify the numeric value, not the whole custom field label.
