@@ -3,15 +3,17 @@ title: Manage Enums and Suggested Values in the API
 description: Learn how to add suggested values to a string field in the Schema Registry API.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 ---
-# Manage enums and suggested values in the API
+# Manage suggested values in the API
 
-In Experience Data Model (XDM), a string field can be given a predefined set of accepted or suggested values to better control what values are ingested into that field or how it will behave in segmentation.
-
-An **enum** constrains the values that can be ingested for a string field to a predefined set. If you attempt to ingest data to an enum field and the value does not match any of those defined in its configuration, ingestion will be denied.
+For any string field in Experience Data Model (XDM), you can define an **enum** that constrains the values that the field can ingest to a predefined set. If you attempt to ingest data to an enum field and the value does not match any of those defined in its configuration, ingestion will be denied.
 
 In contrast to enums, adding **suggested values** to a string field does not constrain the values that it can ingest. Instead, suggested values affect what predefined values are available in the [Segmentation UI](../../segmentation/ui/overview.md) when including the string field as an attribute.
 
-This guide covers how to manage enums and suggested values using the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). For steps on how to do this in the Adobe Experience Platform user interface, see the [UI guide on enums and suggested values](../ui/fields/enum.md).
+>[!NOTE]
+>
+>There is an approximate five-minute delay for a field's updated suggested values to be reflected in the Segmentation UI.
+
+This guide covers how to manage suggested values using the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). For steps on how to do this in the Adobe Experience Platform user interface, see the [UI guide on enums and suggested values](../ui/fields/enum.md).
 
 ## Prerequisites
 

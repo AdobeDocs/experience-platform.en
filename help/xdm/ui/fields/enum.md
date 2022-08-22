@@ -49,6 +49,10 @@ When finished, select **[!UICONTROL Apply]** to apply the changes to the schema.
 
 ![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/suggested-confirm.png)
 
+>[!NOTE]
+>
+>There is an approximate five-minute delay for a field's updated suggested values to be reflected in the Segmentation UI.
+
 ### Manage suggested values for standard fields
 
 Some fields from standard XDM components contain their own suggested values, such as `eventType` from the [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). When using these fields in your schemas, you can use the available toggles to control which existing suggested values are to be used.
