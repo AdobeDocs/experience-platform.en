@@ -162,9 +162,17 @@ To filter your [!DNL Analytics] data at the row-level, select **[!UICONTROL Row 
 
 ![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
 
-Use the left rail to navigate through the schema hierarchy and select the schema attribute of your choice to further drill down a particular schema. Once you have identified the attribute that you want to configure, select and drag the attribute from the left rail to the filtering panel.
+Use the left rail to navigate through the schema hierarchy and select the schema attribute of your choice to further drill down a particular schema. 
 
-![left-rail-hierarchy](../../../../images/tutorials/create/analytics/left-rail-hierarchy.png)
+![left-rail](../../../../images/tutorials/create/analytics/left-rail.png)
+
+Once you have identified the attribute that you want to configure, select and drag the attribute from the left rail to the filtering panel.
+
+![filtering-panel](../../../../images/tutorials/create/analytics/filtering-panel.png)
+
+To configure different conditions, select **[!UICONTROL equals]** and then select a condition from the dropdown window that appears.
+
+![conditions](../../../../images/tutorials/create/analytics/conditions.png)
 
 | Condition | Description |
 | --- | --- |
@@ -177,6 +185,29 @@ Use the left rail to navigate through the schema hierarchy and select the schema
 | does not contain |
 | exists |
 | does not exist |
+
+Next, enter the values that you want to include based on the attribute that you selected. In the example below, [!DNL Apple] and [!DNL Google] are selected for ingestion as part of the **[!UICONTROL Manufacturer]** attribute.
+
+![include-manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+
+To further specify your filtering conditions, add another attribute from the schema and then add values based on that attribute. In the example below, the **[!UCONTROL Model]** attribute is added and models such as the [!DNL iPhone 13] and [!DNL Google Pixel 6] are filtered for ingestion.
+
+![include-model](../../../../images/tutorials/create/analytics/include-model.png)
+
+To add a new container, select the ellipses (`...`) on the top right of the filtering interface and then select **[!UICONTROL Add container]**.
+
+![add-container](../../../../images/tutorials/create/analytics/add-container.png)
+
+Once a new container is added, select **[!UICONTROL Include]** and then select **[!UICONTROL Exclude]** from the dropdown window that appears.
+
+![exclude](../../../../images/tutorials/create/analytics/exclude.png)
+
+Next, complete the same process by dragging schema attributes and adding their corresponding values that you want to exclude from filtering. In the example below, the [!DNL iPhone 12], [!DNL iPhone 12 mini], and [!DNL Google Pixel 5] are all filtered from exclusion from the **[!UICONTROL Model]** attribute, landscape is excluded from the **[!UICONTROL Screen orientation]**, and model number [!DNL A1633] is excluded from **[!UICONTROL Model number]**.
+
+When finished, select **[!UICONTROL Next]**.
+
+![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
+
 
 #### Column-level filtering
 
