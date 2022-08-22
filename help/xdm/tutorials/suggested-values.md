@@ -1,5 +1,5 @@
 ---
-title: Manage Enums and Suggested Values in the API
+title: Manage Suggested Values in the API
 description: Learn how to add suggested values to a string field in the Schema Registry API.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 ---
