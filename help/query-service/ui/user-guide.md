@@ -66,9 +66,9 @@ The auto-complete configuration setting is per user and remembered for the conse
 
 ![Query Editor with the syntax auto-complete toggle highlighted.](../images/ui/query-editor/auto-complete-toggle.png)
 
-Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the editor during query editing.
+Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the author when editing queries.
 
-When you use the toggle to enable the auto-complete feature, recommend suggestions for table and column names as well as SQL keywords become available after a short pause. A success message indicates the feature is active. 
+When you use the toggle to enable the auto-complete feature, recommended suggestions for table and column names as well as SQL keywords become available after a short pause. A success message indicates the feature is active. 
 
 If you disable the auto-complete feature, a page refresh is required for the feature to take effect. A dialog appears with three options when you disable the [!UICONTROL Syntax auto-complete] toggle :
 
