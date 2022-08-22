@@ -70,7 +70,7 @@ Disabling this feature stops several metadata commands from being processed and 
 
 When you use the toggle to enable the auto-complete feature, recommended suggestions for table and column names as well as SQL keywords become available after a short pause. A success message indicates the feature is active. 
 
-If you disable the auto-complete feature, a page refresh is required for the feature to take effect. A dialog appears with three options when you disable the [!UICONTROL Syntax auto-complete] toggle :
+If you disable the auto-complete feature, a page refresh is required for the feature to take effect. A confirmation dialog appears with three options when you disable the [!UICONTROL Syntax auto-complete] toggle :
 
 - [!UICONTROL Cancel]
 - [!UICONTROL Save changes and refresh]
@@ -79,6 +79,8 @@ If you disable the auto-complete feature, a page refresh is required for the fea
 >[!IMPORTANT]
 >
 >If you are writing or editing a query when disabling this feature, you must save any changes to your query before refreshing the page or all progress will be lost.  
+
+![The confirmation dialog to disable the auto-complete feature.](../images/ui/query-editor/confirmation-dialog.png)
 
 Select the appropriate option to disable the auto-complete feature.
 
