@@ -190,7 +190,7 @@ Next, enter the values that you want to include based on the attribute that you 
 
 ![include-manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
 
-To further specify your filtering conditions, add another attribute from the schema and then add values based on that attribute. In the example below, the **[!UCONTROL Model]** attribute is added and models such as the [!DNL iPhone 13] and [!DNL Google Pixel 6] are filtered for ingestion.
+To further specify your filtering conditions, add another attribute from the schema and then add values based on that attribute. In the example below, the **[!UICONTROL Model]** attribute is added and models such as the [!DNL iPhone 13] and [!DNL Google Pixel 6] are filtered for ingestion.
 
 ![include-model](../../../../images/tutorials/create/analytics/include-model.png)
 
