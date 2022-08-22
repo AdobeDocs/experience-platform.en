@@ -1,5 +1,5 @@
 ---
-title: Account Profiles Dashboard
+title: Account Profiles Dashboard Guide
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's B2B account profiles.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 ---
