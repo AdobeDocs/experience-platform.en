@@ -46,7 +46,7 @@ Customer AI works by analyzing existing Consumer Experience Event data to predic
 
 >[!NOTE]
 >
-> - When you request to update data, Customer AI uses only the updated data for further training and scoring. Likewise, when you request to delete data, AAI refrains from using the deleted data.
+> - When you request to update data, Customer AI uses only the updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data.
 > - Customer AI is GDPR compliant and your data is deleted when requested.
 > - All data is encrypted in transit and at rest.
 

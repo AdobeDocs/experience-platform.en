@@ -16,7 +16,7 @@ This document serves as a guide for interacting with Attribution AI in the Intel
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+>Attribute-based access control is currently available in a limited release for US-based healthcare customers.
 
 In the [!DNL Adobe Experience Platform] UI, select **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays available Adobe intelligent services. In the container for Attribution AI, select **[!UICONTROL Open]**.
 
