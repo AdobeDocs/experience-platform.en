@@ -169,19 +169,21 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 * When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.md) step you must manually map Platform segments to the custom field attribute in [!DNL Outreach].
 
 * To do this, select each segment, then enter the corresponding numeric value which corresponds to the *Custom Field `N` Label* field from [!DNL Outreach] in the **[!UICONTROL Mapping ID]** field.
+    
     > [!IMPORTANT]
     >
-    > * The numeric value *(`N`)* used within the Mapping ID should match the custom attribute key suffixed with the numeric value i.e. *Custom Field `N` Label* within [!DNL Outreach]. 
-    > * Note you only need to specify the number.
-    > * A maximum of *Custom Field `1` Label* ... *Custom Field `150` Label* fields are supported within [!DNL Outreach].
+    > * The numeric value *(`N`)* used within the [!UICONTROL Mapping ID] should match the custom attribute key suffixed with the numeric value within [!DNL Outreach]. Example: *Custom Field `N` Label*.
+    > * You only need to specify the numeric value, not the whole custom field label.
+    > * [!DNL Outreach] supports a maximum of 150 custom label fields.
     > * Refer to [[!DNL Outreach] prospect documentation](https://api.outreach.io/api/v2/docs#prospect) for details.
 
-* For example:
-    |[!DNL Outreach] Field|Platform Mapping ID|
-    |---|---|
-    | Custom Field `4` Label | `4` |
+    * For example:
+    
+        |[!DNL Outreach] Field|Platform Mapping ID|
+        |---|---|
+        | Custom Field `4` Label | `4` |
 
-    ![Platform UI screenshot showing an example Mapping Id during Schedule segment export.](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+        ![Platform UI screenshot showing an example Mapping Id during Schedule segment export.](../../assets/catalog/crm/outreach/schedule-segment-export.png)
 
 ## Validate data export {#exported-data}
 
