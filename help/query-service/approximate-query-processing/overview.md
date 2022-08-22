@@ -1,26 +1,22 @@
 ---
 title: Approximate Query Processing in Query Service
-description: Approximate query processing is a strategy that returns an approximate answer using similar information to the source from which the query would be answered. Approximations allow us to summarize massive amounts of data much faster and more cost effectively by trading accuracy in the results.
+description: Approximate query processing returns an approximate answer to a query using similar information to the source data that would normally be used to answer the query. Query approximations are a faster and more cost effective means to summarize massive amounts of data by trading accuracy in the results.
 ---
 # Approximate query processing in [!DNL Query Service]
 
-Approximate query processing (AQP) is a strategy that returns an approximate answer using similar information to the source from which the query would be answered. Approximations allow you to summarize massive amounts of data much faster and more cost-effectively by trading accuracy in the results.
+Adobe Experience Platform Query service enables you to mange dataset samples through approximate query processing. Approximate query processing returns an approximate answer to a query using similar information to the source data that would normally be used to answer the query. Query approximations are a faster and more cost effective means to summarize massive amounts of data by trading accuracy in the results.
 
-This feature is primarily intended for use with aggregate queries such as count, sum, and avg, etc. Any tradeoffs made to reduce latency and diminish resource costs are logged. This ensures that the SQL client can inspect the log to return feedback on the approximate query's efficiency.
+<!-- This feature is primarily intended for use with aggregate queries such as count, sum, and avg, etc. Any tradeoffs made to reduce latency and diminish resource costs are logged. This ensures that the SQL client can inspect the log to return feedback on the approximate query's efficiency.
 
-## Approaches to approximate query processing
+## Approaches to approximate query processing -->
 
-There are three distinctive use cases for approximate query processing. They are as follows:
+The three distinctive use cases for approximate query processing are as follows:
 
-- To speed up interactive queries. Typically when PQS users run ad hoc exploratory queries, the speed of the returned result is more important than the accuracy of the results. This allows approximate query processing to conduct fast exploration of massive data lake datasets while keeping computational costs and end-to-end latency low.
+- To speed up interactive queries. Typically, when [!UICONTROL PostgreSQL] users run ad hoc exploratory queries, the speed of the returned result is more important than the accuracy of the results. Approximate query processing allows you to conduct fast exploration of massive data lake datasets while keeping computational costs and end-to-end latency low.
 
-- To provide quick insights on large datasets in the DataLake through the use of PRISM UI. This approach is typically directed towards dimension discovery and data modeling as they require fast interactive style reporting on large datasets which don't require high accuracy of data. Running approximate queries allows for fast recommendations in Helios.
+- To provide quick insights on large datasets in the data lake. This approach is typically directed towards dimension discovery and data modeling as they require fast interactive style reporting on large datasets which don't require high accuracy of data.
 
 - To gain a quick understanding of unpublished content as though it were published. The Data Access API is often used to preview data lake datasets via non-standard APIs with custom handling. Sampled datasets can be used to meet this requirement.
-
-## Getting started
-
-Depending on the approach taken the prerequisites will vary. You should have a good understanding of the [!DNL Query Editor], and how to make calls to the [!DNL Query Service] API.
 
 ## Sampling methods
 
@@ -28,13 +24,16 @@ Dataset sampling can be done either online or offline. The benefits and drawback
 
 ### Online sampling
 
-Online sampling estimates the results at runtime. As a result, they do not require a prior sample collection nor does it require sample caching. This means that potentially any dataset can be sampled at any time and potentially used with any SQL query. Although online sampling techniques can add significant computational resource requirements, they require extremely low-level handling of runtime data preparation. Other solutions such as [!DNL BlinkDB] and [!DNL Google BigQuery] use online sampling.
+Online sampling estimates the results at runtime. This means that they do not require a prior sample collection or sample caching and can potentially sample any dataset at any time and with any SQL query. Although online sampling techniques can add significant computational resource requirements, they require extremely low-level handling of data at runtime. Online sampling is the method used by other solutions such as [!DNL BlinkDB] and [!DNL Google BigQuery].
 
 ### Offline sampling
 
-Offline sampling estimates results based on alternate datasets or structures that are created earlier during a separate extract, transform, and load (ETL) process. The new dataset must be prepared for sampling prior to the query runtime. At the query runtime, these newly created structures are queried instead of the actual dataset. Query runtime requires some reformulation and translation to be able to redirect original SQL to the sample datasets and structures. The bulk of the required workload is at the time of the sample's creation which is offline.
+Offline sampling estimates results based on alternate datasets or structures. These alternate datasets and structures are created earlier during a separate extract, transform, and load (ETL) process and must be prepared for sampling prior to the query runtime. At the query runtime, these newly created structures are queried instead of the actual dataset. The query runtime requires some reformulation and translation to be able to redirect the original SQL to the sample datasets and structures. The majority of the required workload is conducted offline at the time of the sample's creation.
 
+<!-- 
 Although there are benefits to both approaches, offline sampling is the recommended approach.
+Q) Why is offline sampling recommended?
+ -->
 
 ## Types of sample techniques
  

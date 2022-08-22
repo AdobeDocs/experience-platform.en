@@ -42,6 +42,9 @@ feature: Queries
 - Derived attributes {#derived-attributes}
   - [Overview](derived-attributes/overview.md)
   - [Deciles use case](derived-attributes/deciles-use-case.md)
+- Approximate query processing {#approximate-query-processing}
+  - [Overview](approximate-query-processing/overview.md)
+  - [Manage samples](approximate-query-processing/manage-samples.md)
 - Sample Queries {#sample-queries}
   - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
