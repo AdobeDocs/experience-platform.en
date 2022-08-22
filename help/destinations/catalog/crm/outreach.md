@@ -131,7 +131,7 @@ When you are finished providing details for your destination connection, select 
 > 
 > To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
@@ -166,7 +166,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
-* When performing the [Schedule segment export](../../ui/activate/activate-segment-streaming-destinations.md) step you must manually map Platform segments to the custom field attribute in [!DNL Outreach].
+* When performing the [Schedule segment export](../../ui/activate-segment-streaming-destinations.md) step you must manually map Platform segments to the custom field attribute in [!DNL Outreach].
 
 * To do this, select each segment, then enter the corresponding numeric value which corresponds to the *Custom Field `N` Label* field from [!DNL Outreach] in the **[!UICONTROL Mapping ID]** field.
     
