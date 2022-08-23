@@ -8,17 +8,17 @@ hide: true
 hidefromtoc: true
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
 ---
-# Self-Serve Sources (Batch SDK) overview
+# Self-Serve Sources overview
 
-Adobe Experience Platform Self-Serve Sources (Batch SDK) is a set of configuration APIs that allow you to integrate a REST API-based source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to bring your data to Experience Platform.
+Adobe Experience Platform Self-Serve Sources is a framework that allows you to integrate a REST API-based source to the Experience Platform catalog using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Included in Self-Serve Sources is Batch SDK, which provides with a set of configuration APIs to build your own source and bring your batch data to Experience Platform.
 
-With Sources SDK, you can:
+With Self-Serve Sources, you can:
 
 * Configure and integrate a new source to the Experience Platform catalog using the [!DNL Flow Service] API.
 * Define specifications for your source, including information pertaining to supported authentication types and how resource data is fetched.
 * Create user-facing documentation for your new source.
 
-The Sources SDK documentation provides instructions for you to use the Adobe Experience Platform Sources SDK to configure, test and release a REST API-based source integration with Platform, and have your source become part of the ever-growing sources catalog.
+The Self-Serve Sources documentation provides instructions to configure, test, and release a REST API-based source integration with Experience Platform, and have your source become part of the ever-growing sources catalog.
 
 ![catalog](./assets/catalog.png)
 
@@ -30,7 +30,7 @@ For more information on sources, and to see a list of different sources currentl
 
 ## Create a source
 
-Through Sources SDK, you can integrate your own REST API-based source and bring your data to Platform with [!DNL Flow Service]. Sources SDK allows you to integrate a new source with Platform, by creating and submitting new connection specification through the [!DNL Flow Service] API.
+Through Self-Serve Sources, you can integrate your own REST API-based source and bring your data to Experience Platform with [!DNL Flow Service]. You can integrate a source to the Experience Platform sources catalog by creating, configuring, and submitting new connection specification through the [!DNL Flow Service] API.
 
 See the guide on [creating a new connection specification](./api/api-overview.md) for information on how to integrate a new source to Platform.
 
@@ -42,18 +42,18 @@ Once your source is created, see the [documentation guide](./documentation/doc-o
 
 The step-by-step process to configure your source in Experience Platform is outlined below:
 
-* Read the [Sources SDK API guide](./api/api-overview.md);
-  * Read the [getting started guide](./api/getting-started.md);
-  * Follow the tutorial on [creating a new connection specification](./api/create.md);
-  * Follow the tutorial on [updating your connection specification](./api/update-connection-specs.md);
+* Read the [Self-Serve Sources API guide](./api/api-overview.md).
+  * Read the [getting started guide](./api/getting-started.md).
+  * Follow the tutorial on [creating a new connection specification](./api/create.md).
+  * Follow the tutorial on [updating your connection specification](./api/update-connection-specs.md).
   * Follow the tutorial on [adding your new connection specification ID to a flow specification](./api/update-flow-specs.md)
   * [Submit your new source](./api/submit.md).
-* To gain a better understanding of the structure and properties of a connection specification, see the guide on [configuration options for Sources SDK](./config/config.md);
-  * See the guide on [configuring your authentication specifications](./config/authspec.md);
-  * See the guide on [configuring your source specifications](./config/sourcespec.md);
-  * See the guide on [configuring your explore specifications](./config/explorespec.md);
-* To start documenting your source, see the [overview on creating documentation for Sources SDK](./documentation/doc-overview.md)
-  * You can use this [sources API documentation template](./documentation/template.md) to structure your API documentation;
-  * You can use this [sources UI documentation template](./documentation/ui-template.md) to structure your UI documentation;
-  * See the guide on [using the GitHub web interface](./documentation/github.md) for steps on how to create documentation using GitHub;
+* To gain a better understanding of the structure and properties of a connection specification, read the guide on [configuration options for Self-Serve Sources (Batch SDK)](./config/config.md).
+  * Read the guide on [configuring your authentication specifications](./config/authspec.md) to gain a better understanding of the different authentication types that you can use for your source.
+  * Read the guide on [configuring your source specifications](./config/sourcespec.md) for information on the different pagination types, scheduling formats, and custom schemas that can be configured for your source.
+  * Read the guide on [configuring your explore specifications](./config/explorespec.md) for information on how to define the parameters required for exploring and inspecting objects contained in your source.
+* To start documenting your source, read the [overview on creating documentation for Self-Serve Sources](./documentation/doc-overview.md)
+  * You can use this [sources API documentation template](./documentation/template.md) to structure your API documentation.
+  * You can use this [sources UI documentation template](./documentation/ui-template.md) to structure your UI documentation.
+  * See the guide on [using the GitHub web interface](./documentation/github.md) for steps on how to create documentation using GitHub.
   * See the guide on [using a text editor](./documentation/text-editor.md) for steps on how to create documentation using your local machine.
