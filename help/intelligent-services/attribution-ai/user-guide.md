@@ -14,10 +14,6 @@ This document serves as a guide for interacting with Attribution AI in the Intel
 
 ## Create an instance
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release only.
-
 In the [!DNL Adobe Experience Platform] UI, select **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays available Adobe intelligent services. In the container for Attribution AI, select **[!UICONTROL Open]**.
 
 ![Accessing your instance](./images/user-guide/open_Attribution_ai.png)
@@ -44,6 +40,20 @@ Service instances can be edited, cloned, and deleted by using the controls on th
 
 ![](./images/user-guide/side_panel_2.png)
 
+Select **[!UICONTROL Create instance]** to begin.
+
+![Create instance](./images/user-guide/landing_page.png)
+
+Next, the set up page for Attribution AI appears where you can provide a name and optional description for your service instance.
+
+![naming an instance](./images/user-guide/naming_instance.png)
+
+### Attribute-based access control
+
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release only.
+
 Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
 
 This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
@@ -65,14 +75,6 @@ Attribute-based access control involves the following components:
 | User groups | User groups are multiple users that have been grouped together and have the access to execute the same functions. |
 
 With attribute-based access control, some fields and functionalities would have access restricted and be unavailable for certain Attribution AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
-
-Select **[!UICONTROL Create instance]** to begin.
-
-![Create instance](./images/user-guide/landing_page.png)
-
-Next, the set up page for Attribution AI appears where you can provide a name and optional description for your service instance.
-
-![naming an instance](./images/user-guide/naming_instance.png)
 
 On top of the **insights page**, the fields that show access are restricted.
 

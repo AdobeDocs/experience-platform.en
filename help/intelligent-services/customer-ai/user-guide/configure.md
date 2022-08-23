@@ -10,10 +10,6 @@ exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 
 # Configure a Customer AI instance
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release only.
-
 Customer AI, as part of Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
 
 Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
@@ -40,6 +36,16 @@ Service instances can be edited, cloned, and deleted by using the controls on th
 - **[!UICONTROL Score definition]**: A quick overview of the goal you configured for this instance.
 
 ![](../images/user-guide/service-instance-panel.png)
+
+To create a new instance, select **[!UICONTROL Create instance]**.
+
+![](../images/user-guide/dashboard.png)
+
+### Attribute-based access control
+
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release only.
 
 Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
 
@@ -68,10 +74,6 @@ With attribute-based access control, some fields and functionalities would have 
 On top of the **insights page**, notice that the score definition, identity, and profile attributes all show "Access Restricted."
 
 ![](../images/user-guide/access-restricted.png)
-
-To create a new instance, select **[!UICONTROL Create instance]**.
-
-![](../images/user-guide/dashboard.png)
 
 When you select datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name. On selecting the popover, "Restricted information is excluded" is displayed.
 
