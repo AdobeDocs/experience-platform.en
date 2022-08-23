@@ -35,12 +35,12 @@ Once provided, you must structure your private git repository like so:
 
 | Artifacts | Description | Example |
 | --- | --- | --- |
-| {YOUR_SOURCE} | The name of your source. This folder should contain all artifacts related to your source, within your private git repository. | <ul><li>`mailchimp-members`</li><li>`onetrust-integration`</li><li>`zendesk`</li></ul> |
-| {YOUR_SOURCE}-category.txt | The category in which your source belongs to, formatted as a text file. The list of available source categories supported by Batch SDK include: <ul><li>Advertising</li><li>Analytics</li><li>Consent and Preferences</li><li>CRM</li><li>Customer Success</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Payments</li><li>Protocols</li></ul> **Note**: Please let your Adobe representative know if you need a new category to be implemented for your source. | <ul><li>`mailchimp-members-marketingAutomation.txt`</li><li>`onetrust-integration-consentAndPreferences.txt`</li><li>`zendesk-customerSuccess.txt`</li></ul>  |
+| {YOUR_SOURCE} | The name of your source. This folder should contain all artifacts related to your source, within your private git repository. | <ul><li>`mailchimp-members`</li><li>`onetrust-integration`</li><li>`mixpanel`</li></ul> |
+| {YOUR_SOURCE}-category.txt | The category in which your source belongs to, formatted as a text file. The list of available source categories supported by Batch SDK include: <ul><li>Advertising</li><li>Analytics</li><li>Consent and Preferences</li><li>CRM</li><li>Customer Success</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Payments</li><li>Protocols</li></ul> **Note**: Please let your Adobe representative know if you need a new category to be implemented for your source. | <ul><li>`mailchimp-members-marketingAutomation.txt`</li><li>`onetrust-integration-consentAndPreferences.txt`</li><li>`mixpanel-analytics.txt`</li></ul>  |
 | {YOUR_SOURCE}-description.txt | A brief description of your source. | [!DNL Mixpanel] is a product analytics tool that enables you to capture data on how users interact with a digital product. |
 | {YOUR_SOURCE}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. |
-| {YOUR_SOURCE}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | <ul><li>Mailchimp Members</li><li>OneTrust Integration</li><li>Zendesk</li></ul> | 
-| {YOUR_SOURCE}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. |
+| {YOUR_SOURCE}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | <ul><li>Mailchimp Members</li><li>OneTrust Integration</li><li>Mixpanel</li></ul> | 
+| {YOUR_SOURCE}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `mixpanel-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
