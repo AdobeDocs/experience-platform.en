@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Getting Started with Sources SDK
+title: Getting Started with Self-Serve Sources (Batch SDK)
 topic-legacy: developer guide
-description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Sources SDK.
+description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Self-Serve Sources (Batch SDK).
 hide: true
 hidefromtoc: true
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
 ---
-# Getting Started with Sources SDK
+# Getting Started with Self-Serve Sources (Batch SDK)
 
-Sources SDK allows you to integrate your own REST-based source to bring data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Self-Serve Sources (Batch SDK) allows you to integrate your own REST-based source to bring batch data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Prerequisites
 
-To use Sources SDK, you must ensure that you have access to an IMS Organization Sandbox provisioned with Adobe Experience Platform Sources.
+To use Batch SDK, you must ensure that you have access to an IMS Organization Sandbox provisioned with Adobe Experience Platform Sources.
 
 This guide also requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -23,7 +23,7 @@ This guide also requires a working understanding of the following components of 
 
 ## Reading sample API calls
 
-The Sources SDK and [!DNL Flow Service] API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+The Batch SDK and [!DNL Flow Service] API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
 
 ## Gather values for required headers
 
@@ -47,4 +47,4 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Next steps
 
-To begin creating a new source with Sources SDK, see the tutorial on [creating a new source](./create.md).
+To begin creating a new source with Batch SDK, see the tutorial on [creating a new source](./create.md).
