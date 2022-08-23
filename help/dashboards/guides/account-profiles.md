@@ -80,20 +80,25 @@ This widget uses a colour coded bar chart to illustrate the count of profiles ad
 
 ### Predictive scoring distribution {#predictive-scoring-distribution}
 
-<!-- This widget displays the total number of account profiles in a single metric and uses a donut chart to illustrate the proportion of your account profiles with a high,medium and low propensity of XXX. The key provides colour coding information for the different propensities that make up the donut chart.
-Further breakdown of the low, medium and high propensities is provided by a bar chart that differnetiate the number of account profiles by their scoring bracket. Scoring brackets are divided in increments of five.
+This widget displays the total number of account profiles for each data model in a single metric and uses a donut and bar chart to illustrate the propensity to buy scores for each account profile. 
 
-Individual account profile counts are displayed in a dialog when the cursor hovers over the respective section of the donut chart or bar chart.
+The donut chart represents the proportion of your total account profiles with a high, medium and low propensity to buy using color coded sections. The key provides colour coding information for the different propensity catchments that make up the charts. Further breakdown of account profile's propensity to buy is provided by a bar chart. Each bar visualizes the total number of account profiles by their propensity to buy score. Scoring brackets are divided into increments of five percentiles. Individual account profile counts are displayed in a dialog when the cursor hovers over the respective section of the donut chart or bar chart.
 
-The XXX is selected from the widget dropdown.  -->
+The data model used for analysis is selected from the widget dropdown. 
 
 ![The Predictive scoring distribution widget.](../images/account-profiles/predictive-scoring-distribution.png)
 
+The widget helps you understand the relative health of your conversion pipeline at a glance, with a bell curve being the suggested optimal distribution for the buying propensity of your account profiles.
+
+<!-- or -->
+
+The analysis provided by the widget provides insights into the relative health of your conversion pipeline. A bell curve is the suggested optimal distribution for your account profile buying propensity.
+
 ### Predictive scoring top influential factors {#predictive-scoring-top-influential-factors}
 
-<!-- This widget provides the total number of account profiles in you each XXX by low, medium and high propensities. A bar chart illustrates the percentage of these XXX that comprise the total number of low, medium and high propensities. The XXX is selected from the widget dropdown below the title.
+This widget provides a single metric for the number of account profiles in your data model by low, medium, and high propensity to buy. Each propensity category is divided into a ranked bar chart of influential factors for that category. These influential factors explain the scoring of the account profiles and why they were placed into that category. The most frequently occurring factors that effect propensity to buy are listed at the top of the chart. The count of account profiles that contain each influential factor are displayed in a dialog when the cursor hovers over a section of the bar chart.
 
-Individual account profile counts are displayed in a dialog when the cursor hovers over a section of the bar chart.-->
+The data model used for analysis is selected from the widget dropdown below the title.
 
 ![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
