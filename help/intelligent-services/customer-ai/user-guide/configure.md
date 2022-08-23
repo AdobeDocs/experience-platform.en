@@ -12,7 +12,7 @@ exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release for US-based healthcare customers.
+>Attribute-based access control is currently available in a limited release only.
 
 Customer AI, as part of Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
 
@@ -234,7 +234,7 @@ You can define important Profile dataset fields (with timestamps) in your data i
 
 You can also choose to include profile attributes from the UPS snapshot export, which is updated daily. These attributes are synced to UPS and the latest value is available. 
 
-**Warning**: Be careful not to select a profile attribute that is updated as a result of the prediction goal or highly correlated with the prediction goal. This causes data leakage and over-fitting of the model. An example of such an attribute is `“total_purchases_in_the_last_3_months”` that predicts purchase conversion. 
+**Warning**: Be careful not to select a profile attribute that is updated as a result of the prediction goal or highly correlated with the prediction goal. This causes data leakage and over-fitting of the model. An example of such an attribute is `total_purchases_in_the_last_3_months` that predicts purchase conversion. 
 
 >[!NOTE]
 >Support for using profile attributes from the UPS snapshot export is available in the UI upon request. 

@@ -278,6 +278,12 @@ You can find the output dataset under **Datasets** in Platform. All Customer AI 
 | Score date | The date on which scoring occurred. |
 | Influential factors | Predicted reasons on why a profile is likely to convert or churn. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile's predicted score. </li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight of the profile or behavioral attribute has on the predicted score (low, medium, high)</li></ul> |
 
+>[!NOTE]
+>
+> - When you request to update data, Customer AI uses only the updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data.
+> - Customer AI is GDPR compliant and your data is deleted when requested.
+> - All data is encrypted in transit and at rest.
+
 ## Next steps {#next-steps}
 
 Once you have prepared your data and have all your credentials and schemas in place, start by following the [Configure a Customer AI Instance](./user-guide/configure.md) guide. This guide walks you through creating an instance for Customer AI.

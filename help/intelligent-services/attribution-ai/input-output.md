@@ -227,6 +227,12 @@ The table below maps the aggregated scores to the raw scores. If you wish to dow
 | campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
 | campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
 
+>[!IMPORTANT]
+>
+> - When you request to update data, Attribution AI uses only the updated data for further training and scoring. Likewise, when you request to delete data, Attribution AI refrains from using the deleted data.
+> - Attribution AI is GDPR compliant and your data is deleted when requested.
+> - All data is encrypted in transit and at rest.
+
 ## Next steps {#next-steps}
 
 Once you have prepared your data and have all your credentials and schemas in place, start by following the [Attribution AI user guide](./user-guide.md). This guide walks you through creating an instance for Attribution AI.

@@ -44,12 +44,6 @@ The following video is designed to support your understanding of Customer AI.
 
 Customer AI works by analyzing existing Consumer Experience Event data to predict churn or conversion propensity scores. Adobe realizes that the definition of churn and conversion is not uniform across all the use cases and for this reason, you have the ability to define custom target goals as a set of conditions. You can configure the predicted goal as long as the event of interest is present within the input Consumer Experience Event data.
 
->[!NOTE]
->
-> - When you request to update data, Customer AI uses only the updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data.
-> - Customer AI is GDPR compliant and your data is deleted when requested.
-> - All data is encrypted in transit and at rest.
-
 ## Next steps
 
 You can begin by following the [getting started](./getting-started.md) guide. This guide walks you through setting up all the required prerequisites for Customer AI. If you already have all your credentials and data ready, visit  [configuring a Customer AI instance](./user-guide/configure.md). It provides steps for using Customer AI.
