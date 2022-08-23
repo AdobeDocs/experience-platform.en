@@ -18,7 +18,7 @@ The endpoints used in this guide are part of the [!DNL Adobe Experience Platform
 
 ## Retrieve a list of segment jobs {#retrieve-list}
 
-You can retrieve a list of all segment jobs for your IMS Organization by making a GET request to the `/segment/jobs` endpoint.
+You can retrieve a list of all segment jobs for your organization by making a GET request to the `/segment/jobs` endpoint.
 
 **API format**
 
@@ -51,7 +51,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of segment jobs for the specified IMS organization as JSON. However, the response will differ, depending on the number of segments within the organization.
+A successful response returns HTTP status 200 with a list of segment jobs for the specified IMS organization as JSON. However, the response will differ, depending on the number of segments within the segment job.
 
 **Less than or equal to 1500 segments in your segment job**
 
@@ -283,6 +283,8 @@ You can create a new segment job by making a POST request to the `/segment/jobs`
 POST /segment/jobs
 ```
 
+When creating a new segment job, the request and response will differ depending on the number of segments within the segment job.
+
 **Less than or equal to 1500 segments in your segment job**
 
 **Request**
@@ -303,7 +305,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Property | Description |
 | -------- | ----------- |
-| `segments.segmentId` | The ID of the segment definition that you want to create a segment job for. These segment definitions can belong to different merge policies. More information about segment definitions can be found in the [segment definition endpoint guide](./segment-definitions.md). |
+| `segmentId` | The ID of the segment definition that you want to create a segment job for. These segment definitions can belong to different merge policies. More information about segment definitions can be found in the [segment definition endpoint guide](./segment-definitions.md). |
 
 **Response**
 
@@ -408,6 +410,8 @@ A successful response returns HTTP status 200 with information about your newly 
 | `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 
 **More than 1500 segments**
+
+**Request**
 
 >[!NOTE]
 >
@@ -521,7 +525,7 @@ A successful response returns HTTP status 200 with details of your newly created
 | Property | Description |
 | -------- | ----------- |
 | `id` | A system-generated read-only identifier for the newly created segment job. | 
-| `status` | The current status for the segment job. Since the segment job is newly created, the status will always be "NEW". |
+| `status` | The current status for the segment job. Since the segment job is newly created, the status will always be `NEW`. |
 | `segments` | An object that contains information about the segment definitions that this segment job is running for. |
 | `segments.segment.id` | The `*` means that this segment job is running for all the segments within your organization. |
 
@@ -551,7 +555,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Response**
 
-A successful response returns HTTP status 200 with detailed information about the specified segment job.  However, the response will differ, depending on the number of segments within the organization.
+A successful response returns HTTP status 200 with detailed information about the specified segment job.  However, the response will differ depending on the number of segments within the segment job.
 
 **Less than or equal to 1500 segments in your segment job**
 
@@ -740,7 +744,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Response**
 
-A successful response returns HTTP status 207 with the requested segment jobs. However, the value of the `children.segments` attribute differs, depending if the segment job is running for more than 1500 segments.
+A successful response returns HTTP status 207 with the requested segment jobs. However, the value of the `children.segments` attribute differs depending if the segment job is running for more than 1500 segments.
 
 >[!NOTE]
 >
