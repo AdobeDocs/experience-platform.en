@@ -3,7 +3,11 @@ keywords: Experience Platform;home;popular topics;Teradata Vantage
 title: Create a Teradata Vantage  Source Connection in the UI
 description: Learn how to create a Teradata Vantage source connection using the Adobe Experience Platform UI.
 ---
-# Create a [!DNL Teradata Vantage] source connection in the UI
+# (Beta) Create a [!DNL Teradata Vantage] source connection in the UI
+
+>[!NOTE]
+>
+> The [!DNL Teradata Vantage] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 This tutorial provides steps for creating a [!DNL Teradata Vantage] source connector using the Adobe Experience Platform user interface.
 
