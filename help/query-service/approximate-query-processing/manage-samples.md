@@ -29,6 +29,10 @@ To help you manage your samples for approximate query processing, Query Service 
 
 You can create a uniform random sample by using the `ANALYZE TABLE` command. The sample created contains a certain percentage of the size of the original data as defined by the `TABLESAMPLE SAMPLERATE` keywords. The sample rate is the percentage of the original data used in the sample.
 
+>[!IMPORTANT]
+>
+>The system allows a maximum of five samples for each dataset. If you try to create a sixth sample dataset, an error message appears on the screen stating that the sample limit has been reached.
+
 **example**
 
 ```sql
@@ -38,3 +42,10 @@ ANALYZE TABLE geometrixxx_999_xdm_pqs_1batch_10k_rows_samples TABLESAMPLE SAMPLE
 | Parameters | Description |
 | ------ | ------ |
 | `ANALYZE TABLE` |  |
+
+
+## Delete dataset samples
+
+The delete operation allows you to circumvent the maximum of 5 dataset samples per dataset
+
+Add the `WITHAPPROXIMATE` keyword to the end of a query and QS fetches the latest sample created on the dataset named in the query.
