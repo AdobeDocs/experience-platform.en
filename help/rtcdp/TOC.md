@@ -42,6 +42,9 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Real-time CDP B2B Edition AI/ML services {#b2b-cdp-ai-ml}
   * [Related accounts](b2b-ai-ml-services/related-accounts.md)
   * [Lead to account matching](b2b-ai-ml-services/lead-to-account-matching.md)
+  * Predictive lead and account scoring {#predictive-lead-and-account-scoring-intro}
+    * [Predictive lead and account scoring overview](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+    * [Manage predictive lead and account scoring](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schemas {#schemas}
   * [Schemas overview](schemas/overview.md)
   * [Schemas in Real-time CDP B2B Edition](schemas/b2b.md)
