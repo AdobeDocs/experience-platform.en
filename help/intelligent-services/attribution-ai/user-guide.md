@@ -53,6 +53,7 @@ Through attribute-based access control, administrators of your organization can 
 Attribute-based access control involves the following components:
 
 | Terminology | Definition |
+|----|----|
 | Attributes | Attributes are the identifiers that indicate the correlation between a user and the Platform resources that they have access to. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions. |
 | Labels | Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Platform, or as soon as data becomes available for use in Platform. |
 | Permissions | Permissions include the ability to view and/or use Platform features, such as creating sandboxes, defining schemas, and managing datasets. |

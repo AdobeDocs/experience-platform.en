@@ -50,6 +50,7 @@ Through attribute-based access control, administrators of your organization can 
 Attribute-based access control involves the following components:
 
 | Terminology | Definition |
+|----|----|
 | Attributes | Attributes are the identifiers that indicate the correlation between a user and the Platform resources that they have access to. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions. |
 | Labels | Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Platform, or as soon as data becomes available for use in Platform. |
 | Permissions | Permissions include the ability to view and/or use Platform features, such as creating sandboxes, defining schemas, and managing datasets. |
@@ -228,6 +229,15 @@ You can define important Profile dataset fields (with timestamps) in your data i
 >Adding a custom Profile attribute follows the same workflow as adding a custom event. Similar to custom events, custom profile attributes affect your model scoring in the same way. For an in-depth explanation, visit the [Custom event example](#custom-event) section.
 
 ![add a custom profile attribute](../images/user-guide/profile-attributes.png)
+
+#### Selecting profile attributes from the UPS snapshot export
+
+You can also choose to include profile attributes from the UPS snapshot export, which is updated daily. These attributes are synced to UPS and the latest value is available. 
+
+**Warning**: Be careful not to select a profile attribute that is updated as a result of the prediction goal or highly correlated with the prediction goal. This causes data leakage and over-fitting of the model. An example of such an attribute is `“total_purchases_in_the_last_3_months”` that predicts purchase conversion. 
+
+>[!NOTE]
+>Support for using profile attributes from the UPS snapshot export is available in the UI upon request. 
 
 ### Adding a custom event example {#custom-event}
 
