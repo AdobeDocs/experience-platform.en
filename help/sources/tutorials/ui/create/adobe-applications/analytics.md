@@ -146,13 +146,13 @@ The following documentation provides further resources on understanding Data Pre
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
 * [Add calculated fields](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### Filtering (Beta)
+### Filtering for [!DNL Profile Service] (Beta)
 
 >[!IMPORTANT]
 >
 >Support for filtering [!DNL Analytics] data is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the [!DNL Profile Service]. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All other data are ingested into the data lake.
+Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the [!DNL Profile Service]. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
 
 #### Row-level filtering
 
@@ -175,7 +175,7 @@ To configure different conditions, select **[!UICONTROL equals]** and then selec
 The list of configurable conditions include:
 
 * [!UICONTROL equals] 
-* [!UICONTROL does not equal ]
+* [!UICONTROL does not equal]
 * [!UICONTROL starts with] 
 * [!UICONTROL ends with] 
 * [!UICONTROL does not end with] 
