@@ -90,10 +90,6 @@ The data model used for analysis is selected from the widget dropdown.
 
 The widget helps you understand at a glance the relative health of your conversion pipeline, with a bell curve being the suggested optimal distribution for the buying propensity of your account profiles.
 
-<!-- or -->
-
-The analysis provided by the widget provides insights into the relative health of your conversion pipeline. A bell curve is the suggested optimal distribution for your account profile buying propensity.
-
 ### Predictive scoring top influential factors {#predictive-scoring-top-influential-factors}
 
 This widget provides a single metric for the number of account profiles in your data model by low, medium, and high propensity to buy. Each propensity category is divided into a ranked bar chart of influential factors for that category. These influential factors explain the scoring of the account profiles and why they were placed into that category. The most frequently occurring factors that effect propensity to buy are listed at the top of the chart. The count of account profiles that contain each influential factor are displayed in a dialog when the cursor hovers over a section of the bar chart.
