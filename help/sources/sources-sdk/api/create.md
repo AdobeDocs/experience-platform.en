@@ -20,6 +20,18 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Collect artifacts
 
+First, you must connect with your Adobe representative and request a private git repository. Once provided, the git repo must then be structured as follows:
+
+* Sources
+  * {YOUR_SOURCE}
+    * Artifacts
+      * {YOUR_SOURCE}-category.txt
+      * {YOUR_SOURCE}-connectionSpec.json
+      * {YOUR_SOURCE}-description.txt
+      * {YOUR_SOURCE}-icon.svg
+      * {YOUR_SOURCE}-label.txt
+
+
 In order to create a new batch source using Self-Serve Sources, you must first request a private Git repository from Adobe and align with your Adobe representative on details regarding the label, description, category, and icon to be used for your source. 
 
 | Artifacts | Description | Example |
