@@ -20,28 +20,33 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Collect artifacts
 
-First, you must connect with your Adobe representative and request a private git repository. Once provided, the git repo must then be structured as follows:
+In order to create a new batch source using Self-Serve Sources, you must first coordinate with Adobe, request a private git repository, and align with Adobe on the details regarding the label, description, category, and icon for your source.
+
+Once provided, you must structure your private git repository like so:
 
 * Sources
   * {YOUR_SOURCE}
     * Artifacts
       * {YOUR_SOURCE}-category.txt
-      * {YOUR_SOURCE}-connectionSpec.json
       * {YOUR_SOURCE}-description.txt
       * {YOUR_SOURCE}-icon.svg
       * {YOUR_SOURCE}-label.txt
-
-
-In order to create a new batch source using Self-Serve Sources, you must first request a private Git repository from Adobe and align with your Adobe representative on details regarding the label, description, category, and icon to be used for your source. 
+      * {YOUR_SOURCE}-connectionSpec.json
 
 | Artifacts | Description | Example |
 | --- | --- | --- |
-| Label | The name of your source. | [!DNL MailChimp Members] |
-| Description | A brief description of your source. | Create a live inbound connection to your [!DNL Mailchimp Members] instance, to ingest both historic and scheduled data into Experience Platform. |
-| Icon | The image or logo that represents your source. The icon is displayed in the Platform UI rendering of your source. | `mailchimp-members-icon.svg` |
-| Category | The category of your source. | <ul><li>`advertising`</li<li>`analytics`</li><li>`consent and preferences`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| {YOUR_SOURCE} | The name of your source. This folder should contain all artifacts related to your source, within your private git repository. | <ul><li>`mailchimp-members`</li><li>`onetrust-integration`</li><li>`zendesk`</li></ul> |
+| {YOUR_SOURCE}-category.txt | The category in which your source belongs to, formatted as a text file. The list of available source categories supported by Batch SDK include: <ul><li>Advertising</li><li>Analytics</li><li>Consent and Preferences</li><li>CRM</li><li>Customer Success</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Payments</li><li>Protocols</li></ul> **Note**: Please let your Adobe representative know if you need a new category to be implemented for your source. | <ul><li>`mailchimp-members-marketingAutomation.txt`</li><li>`onetrust-integration-consentAndPreferences.txt`</li><li>`zendesk-customerSuccess.txt`</li></ul>  |
+| {YOUR_SOURCE}-description.txt | A brief description of your source. | [!DNL Mixpanel] is a product analytics tool that enables you to capture data on how users interact with a digital product. |
+| {YOUR_SOURCE}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. |
+| {YOUR_SOURCE}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | <ul><li>Mailchimp Members</li><li>OneTrust Integration</li><li>Zendesk</li></ul> | 
+| {YOUR_SOURCE}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. |
 
 {style="table-layout:auto"}
+
+Once you have added the necessary files to your private git repository, you must then create a pull request (PR) for Adobe to review. When your PR is approved and merged, you will be provided with an ID that can be used for your connection specification to refer to your source's label, description, and icon.
+
+Next, follow the steps outlined below to configure your connection specification. For additional guidance on the different functionalities that you can add to your source, such as advanced scheduling, custom schema, or different pagination types, please review the guide on [configuring source specifications](../config/sourcespec.md).
 
 ## Copy connection specification template
 
