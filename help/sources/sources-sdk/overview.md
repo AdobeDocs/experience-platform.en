@@ -42,7 +42,7 @@ Once your source is created, see the [documentation guide](./documentation/doc-o
 
 The step-by-step process to configure your source in Experience Platform is outlined below:
 
-* Read the [Self-Serve Sources API guide](./api/api-overview.md).
+* Read the [Self-Serve Sources (Batch SDK) API guide](./api/api-overview.md).
   * Read the [getting started guide](./api/getting-started.md).
   * Follow the tutorial on [creating a new connection specification](./api/create.md).
   * Follow the tutorial on [updating your connection specification](./api/update-connection-specs.md).

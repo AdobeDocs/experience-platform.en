@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Configure source specifications for Sources SDK
+title: Configure source specifications for Self-Serve Sources (Batch SDK)
 topic-legacy: overview
-description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
+description: This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 hide: true
 hidefromtoc: true
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 ---
-# Configure source specification for Sources SDK
+# Configure source specification for Self-Serve Sources (Batch SDK)
 
 Source specifications contain information specific to a source, including attributes pertaining to a source's category, beta status, and catalog icon. They also contain useful information such as URL parameters, content, header, and schedule. Source specifications also describe the schema of the parameters required to create a source connection from a base connection. The schema is necessary in order to create a source connection.
 
@@ -369,7 +369,7 @@ The following is a completed source specification using [!DNL MailChimp Members]
 
 ### Configure different pagination types for your source {#pagination}
 
-The following are examples of other pagination types supported by [!DNL Sources SDK]:
+The following are examples of other pagination types supported by Batch SDK:
 
 #### `CONTINUATION_TOKEN`
 
@@ -454,7 +454,7 @@ The `NONE` pagination type can be used for sources that don't support any of the
 }
 ```
 
-### Advanced scheduling in [!DNL Sources SDK]
+### Advanced scheduling for Batch SDK
 
 Configure your source's incremental and backfill scheduling using advanced scheduling. You can also use advanced scheduling to incorporate your source's scheduling parameters to be part of the header or body parameters instead of query.
 

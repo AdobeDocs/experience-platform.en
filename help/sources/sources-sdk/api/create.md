@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 solution: Experience Platform
 title: Create a new connection specification using the Flow Service API
 topic-legacy: tutorial
-description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Sources SDK.
+description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Self-Serve Sources.
 hide: true
 hidefromtoc: true
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
@@ -12,7 +12,7 @@ exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 
 A connection specification represents the structure of a source. It contains information on a source's authentication requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. The `/connectionSpecs` endpoint in the [!DNL Flow Service] API allows you to programmatically manage the connection specifications within your organization.
 
-The following document provides steps on how to create a connection specification using the [!DNL Flow Service] API and integrate a new source through Sources SDK.
+The following document provides steps on how to create a connection specification using the [!DNL Flow Service] API and integrate a new source through Self-Serve Sources (Batch SDK).
 
 ## Getting started
 
@@ -20,7 +20,7 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Collect artifacts
 
-The first step in creating a new source through [!DNL Sources SDK] is to coordinate with your Adobe representative and identify values for your source's corresponding **icon**, **description**, **label**, and **category**.
+The first step in creating a new source through Batch SDK is to coordinate with your Adobe representative and identify values for your source's corresponding **icon**, **description**, **label**, and **category**.
 
 | Artifacts | Description | Example |
 | --- | --- | --- |
