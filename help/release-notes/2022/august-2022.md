@@ -8,9 +8,9 @@ description: The August 2022 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 
-## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
 AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company’s needs using business-level configurations without the need for data science expertise.
 
@@ -30,7 +30,7 @@ For more information on Attribution AI, please see the [Attribution AI](../../in
 
 ### Customer AI
 
-Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
+Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
 
 **Updated features**
 
@@ -40,4 +40,4 @@ Customer AI available in Real-time Customer Data Platform, is used to generate c
 
 {style="table-layout:auto"}
  
-For more information on Attribution AI, please see the [Customer AI](../../intelligent-services/customer-ai/overview.md) overview.
+For more information on Customer AI, please see the [Customer AI](../../intelligent-services/customer-ai/overview.md) overview.
