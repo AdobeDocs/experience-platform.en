@@ -9,7 +9,13 @@ exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 
 >[!IMPORTANT]
 >
->The process documented here is only required for partners submitting productized (public) destinations. If you are creating a private destination for your own use, you do not need to produce and share these materials with Adobe.
+>* The process documented here is only required for partners submitting productized (public) destinations. If you are creating a private destination for your own use, you do not need to produce and share these materials with Adobe.
+>
+>* Adobe's standard response time to review destination publish requests is five business days.
+>
+>* If the Adobe team asks that you make any updates to your configurations following your initial submission, you must submit another destination publish request after you make the updates.
+>
+>* Even after your destination is live in the Experience Platform catalog, if you need to make any updates to your configurations, you must submit a new destination publish request for the updates to be reflected in the configurations.
 
 Before your destination can be published to the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md), you must provide Adobe with certain information about the destination and the testing you performed, to ensure that users enjoy the best possible experience when activating data to your platform.
 
@@ -22,14 +28,6 @@ This page lists all the information you need to provide when submitting or updat
 * Proof that you have submitted a destination publishing request for your destination using the [destination publishing API](./destination-publish-api.md).
 * A documentation PR (pull request), following the instructions described in the the [self-service documentation process](./docs-framework/documentation-instructions.md).
 * An image file which will be displayed as a logo for your destination card in the Experience Platform destinations catalog.
-
->[!IMPORTANT]
->
->* Adobe's standard response time to review destination publish requests is five business days.
->
->* If the Adobe team asks that you make any updates to your configurations following your initial submission, you must submit another destination publish request after you make the updates.
->
->* Even after your destination is live in the Experience Platform catalog, if you need to make any updates to your configurations, you must submit a new destination publish request for the updates to be reflected in the configurations.
 
 You can find detailed information about each item in the sections below:
 
