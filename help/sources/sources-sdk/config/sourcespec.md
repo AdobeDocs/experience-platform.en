@@ -482,8 +482,8 @@ With advanced scheduling, you can use expressions and functions specific to your
 | --- | --- |
 | `type` | The type of scheduling your source will use. Set this value to `ADVANCE` to use advanced scheduling type. |
 | `paramFormat` | The defined format of your scheduling parameter. This value can be the same as your source's `scheduleStartParamFormat` and `scheduleEndParamFormat` values.  |
-| `incremental` | The incremental query of your source. For incremental, the updated time must be greater than the start time and the start time must be less than the end time. |
-| `backfill` | The backfill query of your source. Backfill allows you to get all data in the current time, thus updated should be less than the end time. |
+| `incremental` | The incremental query of your source. Incremental refers to an ingestion method where only new or modified data get ingested. |
+| `backfill` | The backfill query of your source. Backfill refer to an ingestion method where historical data get ingested. |
 
 ### Add a custom schema to define your source's dynamic attributes
 
