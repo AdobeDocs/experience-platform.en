@@ -102,6 +102,8 @@ The data model used for analysis is selected from the widget dropdown below the 
 
 ![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
+This widget helps you understand at a glance, which influential factors are commonly associated with a high, medium, and low propensity to buy among your account profiles.
+
 ## Next steps
 
 By following this document you should now be able to locate the [!UICONTROL Account Profiles] dashboard. You should also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.
