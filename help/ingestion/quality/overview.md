@@ -50,3 +50,14 @@ The following validations are done for streaming ingestion:
 | Header | Ensures that the header is specified and is valid. |
 
 More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).
+
+## Identity value validation
+
+The following table outlines existing rules you must follow to ensure a successful validation of your identity value.
+
+| Namespace | Validation rule | System behavior when rule is violated |
+| --- | --- | --- |
+| ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li></ul> |
+| Non-ECID | The identity value cannot exceed 1024 characters. | If the identity value exceeds 1024 characters, then the record is skipped. |
+
+For more information on [!DNL Identity Service] guardrails, see the [[!DNL Identity Service] guardrails overview](../../identity-service/guardrails.md).

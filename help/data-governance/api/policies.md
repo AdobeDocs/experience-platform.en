@@ -1,14 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
 solution: Experience Platform
-title: Policies API Endpoint
+title: Data Usage Policies API Endpoint
 topic-legacy: developer guide
 description: Data usage policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform. The /policies endpoint is used for all API calls related to viewing, creating, updating, or deleting data usage policies.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 ---
-# Policies endpoint
+# Data usage policies endpoint
 
 Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. The `/policies` endpoint in the [!DNL Policy Service API] allows you to programmatically manage data usage policies for your organization.
+
+>[!IMPORTANT]
+>
+>This endpoint is not to be confused with the `/policies` endpoint in the [Access Control API](../../access-control/abac/api/policies.md), which is used to manage access control policies.
 
 ## Getting started
 
