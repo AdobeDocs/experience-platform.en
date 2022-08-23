@@ -6,6 +6,15 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 ---
 # Custom personalization connection {#custom-personalization-connection} 
 
+## Destination changelog {#changelog}
+
+>[!IMPORTANT]
+>
+>With the beta release of the enhanced Custom personalization destination connector, you might be seeing two Custom personalization cards in the destinations catalog.
+>The Custom personalization V2 destination connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the Custom personalization V1 card, the Custom personalization V2 connector adds a [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to your custom personalization destination, enabling attribute-based same-page and next-page personalization.
+
+![Image of the two Custom personalization destination cards in a side-by-side view.](/help/destinations/assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
+
 ## Overview {#overview}
 
 This destination provides a way to retrieve segment information from Adobe Experience Platform to external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites.
