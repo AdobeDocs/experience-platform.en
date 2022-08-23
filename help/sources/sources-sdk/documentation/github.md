@@ -30,19 +30,19 @@ Once the fork is complete, select **master** and enter a name for your new branc
 
 ![create-branch](../assets/create-branch.png)
 
-In the GitHub folder structure of your forked repository, navigate to [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) and then select the appropriate category for your source from the list. For example, if you are creating documentation for a new cloud storage source, select **cloud-storage**.
+In the GitHub folder structure of your forked repository, navigate to [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) and then select the appropriate category for your source from the list. For example, if you are creating documentation for a new CRM source, select **crm**.
 
 >[!TIP]
 >
 >If you are creating documentation for the UI, then navigate to [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) and select the appropriate category for your source. To add your images, navigate to [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) then add your screenshots to the `sdk` folder.
 
-![cloud-storage](../assets/cloud-storage.png)
+![crm](../assets/crm.png)
 
-A folder of existing cloud storage sources appears. To add documentation for a new source, select **Add file** and then select **Create new file** from the dropdown menu that appears.
+A folder of existing CRM sources appears. To add documentation for a new source, select **Add file** and then select **Create new file** from the dropdown menu that appears.
 
 ![create-new-file](../assets/create-new-file.png)
 
-Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Platform. For example, if your company is [!DNL Mailchimp], then your file name should be `mailchimp.md`.
+Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Platform. For example, if your company is ACME CRM, then your file name should be `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 

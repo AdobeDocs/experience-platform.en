@@ -66,7 +66,7 @@ Next, enter `Adobe Markdown Authoring` into the search bar and then select **Ins
 
 ![install](../assets/install.png)
 
-With your local machine ready, download the [sources documentation template](../assets/template.zip) and extract the file to `experience-platform.en/help/sources/tutorials/api/create/...` with [`...`] representing the category of your choice. For example, if you are creating a cloud storage source, select the cloud storage folder.
+With your local machine ready, download the [sources documentation template](../assets/template.zip) and extract the file to `experience-platform.en/help/sources/tutorials/api/create/...` with [`...`] representing the category of your choice. For example, if you are creating a database source, select the database folder.
 
 Finally, follow the instructions outlined on the template and edit the template with the relevant information pertaining to your source.
 
