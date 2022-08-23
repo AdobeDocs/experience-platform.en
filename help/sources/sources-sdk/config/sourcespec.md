@@ -456,14 +456,25 @@ The `NONE` pagination type can be used for sources that don't support any of the
 
 ### Advanced scheduling for Batch SDK
 
-Configure your source's incremental and backfill scheduling using advanced scheduling. You can also use advanced scheduling to incorporate your source's scheduling parameters to be part of the header or body parameters instead of query.
+Configure your source's incremental and backfill schedule using advanced scheduling. The `incremental` property allows you to configure a schedule in which your source will ingest only new or modified records, while the `backfill` property allows you to create a schedule to ingest historical data.
+
+With advanced scheduling, you can use expressions and functions specific to your source to configure incremental and backfill schedules. In the example below, the [!DNL Zendesk] source requires incremental schedule to be formatted as `type:user updated > {START_TIME} updated < {END_TIME}` and backfill as `type:user updated < {END_TIME}`. Once you configure your advanced scheduling, you must then refer to your `scheduleParams` in the URL, body, or header params section, depending on what your particular source supports.
 
 ```json
+"urlParams": {
+        "path": "/api/v2/search/export@{if(empty(coalesce(pipeline()?.parameters?.ingestionStart,'')),'?query=type:user&filter[type]=user&','')}",
+        "method": "GET",
+        "queryParams": {
+          "query": "{SCHEDULE_QUERY}",
+          "filter[type]": "user"
+        }
+      }
+
 "scheduleParams": {
         "type": "ADVANCE",
         "paramFormat": "yyyy-MM-ddTHH:mm:ssK",
-        "incremental": "{TYPE}:user updated > {START_TIME} updated < {END_TIME}",
-        "backfill": "{TYPE}:user updated < {END_TIME}"
+        "incremental": "type:user updated > {START_TIME} updated < {END_TIME}",
+        "backfill": "type:user updated < {END_TIME}"
       }
 ```
 
@@ -473,9 +484,6 @@ Configure your source's incremental and backfill scheduling using advanced sched
 | `paramFormat` | The defined format of your scheduling parameter. This value can be the same as your source's `scheduleStartParamFormat` and `scheduleEndParamFormat` values.  |
 | `incremental` | The incremental query of your source. For incremental, the updated time must be greater than the start time and the start time must be less than the end time. |
 | `backfill` | The backfill query of your source. Backfill allows you to get all data in the current time, thus updated should be less than the end time. |
-
-The `incremental` property allows you to configure incremental ingestion schedule for your source. The expression template for `incremental` is: `{TYPE}:user updated > {START_TIME} updated < {END_TIME}`. In this case, the `{TYPE}` property can be `query`, `header`, or `body`, depending on where you want to apply your scheduling attribute. For `incremental`, the updated time must be greater than the start time and the start time must be less than the end time. For example, `https://zendesk.com?query=type:user updated > 10:00 updated < 10:15` creates a scheduling query parameter that ingests incrementally every 15 minutes.
-
 
 ### Add a custom schema to define your source's dynamic attributes
 
