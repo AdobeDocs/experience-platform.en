@@ -230,7 +230,7 @@ The table below maps the aggregated scores to the raw scores. If you wish to dow
 >[!IMPORTANT]
 >
 > - When you request to update data, Attribution AI uses only the updated data for further training and scoring. Likewise, when you request to delete data, Attribution AI refrains from using the deleted data.
-> - Attribution AI is GDPR compliant and your data is deleted when requested.
+> - Attribution AI is GDPR-ready and your data is deleted when requested.
 > - All data is encrypted in transit and at rest.
 
 ## Next steps {#next-steps}

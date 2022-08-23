@@ -281,7 +281,7 @@ You can find the output dataset under **Datasets** in Platform. All Customer AI 
 >[!NOTE]
 >
 > - When you request to update data, Customer AI uses only the updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data.
-> - Customer AI is GDPR compliant and your data is deleted when requested.
+> - Customer AI is GDPR-ready and your data is deleted when requested.
 > - All data is encrypted in transit and at rest.
 
 ## Next steps {#next-steps}
