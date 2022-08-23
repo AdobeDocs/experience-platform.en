@@ -20,14 +20,14 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Collect artifacts
 
-The first step in creating a new source through Batch SDK is to coordinate with your Adobe representative and identify values for your source's corresponding **icon**, **description**, **label**, and **category**.
+In order to create a new batch source using Self-Serve Sources, you must first request a private Git repository from Adobe and align with your Adobe representative on details regarding the label, description, category, and icon to be used for your source. 
 
 | Artifacts | Description | Example |
 | --- | --- | --- |
 | Label | The name of your source. | [!DNL MailChimp Members] |
 | Description | A brief description of your source. | Create a live inbound connection to your [!DNL Mailchimp Members] instance, to ingest both historic and scheduled data into Experience Platform. |
 | Icon | The image or logo that represents your source. The icon is displayed in the Platform UI rendering of your source. | `mailchimp-members-icon.svg` |
-| Category | The category of your source. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| Category | The category of your source. | <ul><li>`advertising`</li<li>`analytics`</li><li>`consent and preferences`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 
 {style="table-layout:auto"}
 
