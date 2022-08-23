@@ -88,7 +88,7 @@ The data model used for analysis is selected from the widget dropdown.
 
 ![The Predictive scoring distribution widget.](../images/account-profiles/predictive-scoring-distribution.png)
 
-The widget helps you understand the relative health of your conversion pipeline at a glance, with a bell curve being the suggested optimal distribution for the buying propensity of your account profiles.
+The widget helps you understand at a glance the relative health of your conversion pipeline, with a bell curve being the suggested optimal distribution for the buying propensity of your account profiles.
 
 <!-- or -->
 
