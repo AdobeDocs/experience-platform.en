@@ -2,8 +2,8 @@
 keywords: crm;CRM;crm destinations;Outreach;Outreach crm destination
 title: Outreach connection
 description: The Outreach destination allows you to export your account data and activate it within Outreach for your business needs.
+exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
 ---
-
 # [!DNL Outreach] connection
 
 ## Overview {#overview}
