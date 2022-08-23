@@ -152,7 +152,7 @@ The following documentation provides further resources on understanding Data Pre
 >
 >Support for filtering [!DNL Analytics] data is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the [!DNL Profile Service]. Support for filtering is available only for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All other data are ingested into the data lake.
+Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the [!DNL Profile Service]. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All other data are ingested into the data lake.
 
 #### Row-level filtering
 
@@ -218,9 +218,9 @@ The page updates into an interactive schema tree, displaying your schema attribu
 
 By default, all [!DNL Analytics] go to [!DNL Profile] and this process allows for branches of XDM data to be excluded from [!DNL Profile] ingestion.
 
-![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
-
 When finished, select **[!UICONTROL Next]**.
+
+![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 ### Provide dataflow details
 
