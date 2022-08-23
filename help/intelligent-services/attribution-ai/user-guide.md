@@ -63,7 +63,7 @@ Attribute-based access control involves the following components:
 | Subject | A subject is the user requesting access to a resource to perform an action. |
 | User groups | User groups are multiple users that have been grouped together and have the access to execute the same functions. |
 
-With attribute-based access control, some functionalities on the landing page such as "Identity", "Conversion Events", "Profile Segmentation" and "Touchpoints", "Access Restricted", and "Clone" are unavailable for Attribution AI service instances.
+With attribute-based access control, some fields and functionalities would have access restricted and be unavailable for certain Attribution AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
 
 Select **[!UICONTROL Create instance]** to begin.
 
