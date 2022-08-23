@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;audiences;audience;API;api;
-solution: Experience Platform
 title: Audiences API Endpoint
 topic-legacy: developer guide
 description: The audiences endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage audiences for your organization.
@@ -8,7 +7,7 @@ description: The audiences endpoint in the Adobe Experience Platform Segmentatio
 
 # Audiences endpoint
 
-Audiences are a collection of people who share similar behaviors and/or characteristics. These collections of people can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint in the Segmentation API, which allows you to programatically retrieve, create, update, and delete audiences.
+An audience is a collection of people who share similar behaviors and/or characteristics. These collections of people can be generated either by using Adobe Experience Platform or from external sources. You can use the `/audiences` endpoint in the Segmentation API, which allows you to programmatically retrieve, create, update, and delete audiences.
 
 ## Getting started
 
@@ -20,15 +19,17 @@ You can retrieve a list of all audiences for your organization by making a GET r
 
 **API format**
 
-The `/audiences` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all audiences available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
+The `/audiences` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead when listing resources. If you make a call to this endpoint with no parameters, all audiences available for your organization will be retrieved. Multiple parameters can be included, separated by ampersands (`&`). 
 
 ```http
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Description | Example |
-| --------- | ----------- | ------- |
+The following query parameters can be used when retrieving a list of audiences:
+
+| Query parameter | Description | Example |
+| --------------- | ----------- | ------- |
 | `start` | Specifies the starting offset for the audiences returned. | `start=5` |
 | `limit` | Specifies the maximum number of audiences returned per page. | `limit=10` |
 | `sort` | Specifies the order to sort the results by. This is written in the format `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
@@ -43,7 +44,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 **Request**
 
-The following request will retrieve the last five audiences created in your organization.
+The following request retrieves the last five audiences created in your organization.
 
 ```shell
 curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
@@ -72,7 +73,7 @@ A successful response returns HTTP status 200 with a list of audiences that were
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
                 "sandboxName": "prod",
@@ -118,7 +119,7 @@ A successful response returns HTTP status 200 with a list of audiences that were
             "dependencies": [],
             "type": "SegmentDefinition",
             "overridePerformanceWarnings": false,
-            "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
+            "createdBy": "{CREATED_BY_ID}",
             "lifecycle": "published",
             "labels": [
                 "core/C1"
@@ -133,17 +134,17 @@ A successful response returns HTTP status 200 with a list of audiences that were
 | -------- | ------------- | ----------- | 
 | `id` | Both | A system-generated read-only identifier for the audience. |
 | `audienceId` | Both | If the audience is a Platform-generated audience, this is the same value as the `id`. If the audience is externally generated, this value is provided by the client. |
-| `schema` | Both | The XDM schema of the audience. |
+| `schema` | Both | The Experience Data Model (XDM) schema of the audience. |
 | `imsOrgId` | Both | The ID of the organization that the audience belongs to. |
-| `sandbox` | Both | Information about the sandbox that the audience belongs to. More information about sandboxes can be found in LINK. |
+| `sandbox` | Both | Information about the sandbox that the audience belongs to. More information about sandboxes can be found in the [sandboxes overview](../../sandboxes/home.md). |
 | `name` | Both | The name of the audience. |
 | `description` | Both | A description of the audience. |
-| `expression` | Platform-generated | The PQL expression of the audience. More information about PQL expressions can be found in LINK. |
-| `mergePolicyId` | Platform-generated | The ID of the merge policy that the audience is associated with. More information about merge policies can be found in LINK. |
-| `evaluationInfo` | Platform-generated | Shows how the audience will be evaluated. Possible evaluation methods include batch, streaming, or edge. |
+| `expression` | Platform-generated | The Profile Query Language (PQL) expression of the audience. More information about PQL expressions can be found in the [PQL expressions guide](../pql/overview.md). |
+| `mergePolicyId` | Platform-generated | The ID of the merge policy that the audience is associated with. More information about merge policies can be found in the [merge policies guide](../../profile/api/merge-policies.md). |
+| `evaluationInfo` | Platform-generated | Shows how the audience will be evaluated. Possible evaluation methods include batch, streaming, or edge. More information about the evaluation methods can be found in the [segmentation overview](../home.md) |
 | `dependents` | Both | An array of audience IDs that depend on the current audience. |
 | `dependencies` | Both | An array of audience IDs that the audience depends on. |
-| `type` | Both | A system-generated field that displays whether the audience is Platform-generated or is an externally generated audience. Possible values include `SegmentDefinition` and `ExternalAudience`. |
+| `type` | Both | A system-generated field that displays whether the audience is Platform-generated or is an externally generated audience. Possible values include `SegmentDefinition` and `ExternalAudience`. A `SegmentDefinition` refers to an audience that was generated in Platform, while an `ExternalAudience` refers to an audience that was not generated in Platform. |
 | `createdBy` | Both | The ID of the user who created the audience. |
 | `labels` | Both | Object-level data usage and attribute-based access control labels that are relevant to the audience. |
 | `namespace` | Both | The namespace that the audience belongs to. Possible values include `AAM`, `AAMSegments`, `AAMTraits`, and `AEPSegments`. |
@@ -151,7 +152,7 @@ A successful response returns HTTP status 200 with a list of audiences that were
 
 **`withMetrics` request**
 
-The following request will retrieve the last five audiences, with metrics, created in your organization.
+The following request retrieves the last five audiences, with metrics, created in your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences?propoerty=withMetrics==true&limit=5&sort=totalProfiles:desc \
@@ -180,7 +181,7 @@ A successful response returns HTTP status 200 with a list of audiences, with met
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
                 "sandboxName": "prod",
@@ -242,7 +243,7 @@ A successful response returns HTTP status 200 with a list of audiences, with met
             },
             "type": "SegmentDefinition",
             "overridePerformanceWarnings": false,
-            "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
+            "createdBy": "{CREATED_BY_ID}",
             "lifecycle": "published",
             "labels": [
                 "core/C1"
@@ -272,7 +273,7 @@ The following lists properties **exclusive** to the `withMetrics` response. If y
 | `metrics.jobId` | The ID of the segment job that is processing the audience. |
 | `metrics.type` | The segment job type. This can either be `export` or `batch_segmentation`. |
 | `metrics.id` | The audience's ID. |
-| `metrics.data` | Metrics that are related to the audience. This includes information such as the total number of profiles, the total number of profiles on a per-namespace basis, and the total number of profiles on a per-status basis. |
+| `metrics.data` | Metrics that are related to the audience. This includes information such as the total number of profiles included in the audience, the total number of profiles on a per-namespace basis, and the total number of profiles on a per-status basis. |
 | `metrics.createEpoch` | A timestamp that shows when the audience was created. |
 | `metrics.updateEpoch` | A timestamp that shows when the audience was last updated. |
 
@@ -310,10 +311,18 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
         },
         "labels": [
           "core/C1"
-        ],
-        "ttlInDays": 60
+        ]
     }'
 ```
+
+| Property | Description |
+| -------- | ----------- | 
+| `name` | The name of the audience. |
+| `description` | A description of the audience. |
+| `type` | A field that displays whether the audience is Platform-generated or is an externally generated audience. Possible values include `SegmentDefinition` and `ExternalAudience`. A `SegmentDefinition` refers to an audience that was generated in Platform, while an `ExternalAudience` refers to an audience that was not generated in Platform. |
+| `expression` | The Profile Query Language (PQL) expression of the audience. More information about PQL expressions can be found in the [PQL expressions guide](../pql/overview.md). |
+| `schema` | The Experience Data Model (XDM) schema of the audience. |
+| `labels` | Object-level data usage and attribute-based access control labels that are relevant to the audience. |
 
 **Response**
 
@@ -326,7 +335,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
         "sandboxName": "prod",
@@ -372,7 +381,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
     "dependencies": [],
     "type": "SegmentDefinition",
     "overridePerformanceWarnings": false,
-    "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
+    "createdBy": "{CREATED_BY_ID}",
     "lifecycle": "active",
     "labels": [
       "core/C1"
@@ -381,9 +390,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 }
 ```
 
-## Retrieve a specified audience {#get}
+## Look up a specified audience {#get}
 
-You can retrieve detailed information about a specific audience by making a GET request to the `/audiences` endpoint and providing the ID of the audience you wish to retrieve in the request path.
+You can look up detailed information about a specific audience by making a GET request to the `/audiences` endpoint and providing the ID of the audience you wish to retrieve in the request path.
 
 **API format**
 
@@ -422,7 +431,7 @@ A successful response returns HTTP status 200 with information about the specifi
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
         "sandboxName": "prod",
@@ -468,7 +477,7 @@ A successful response returns HTTP status 200 with information about the specifi
     "dependencies": [],
     "type": "SegmentDefinition",
     "overridePerformanceWarnings": false,
-    "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
+    "createdBy": "{CREATED_BY_ID}",
     "lifecycle": "active",
     "labels": [
         "core/C1"
@@ -485,7 +494,7 @@ A successful response returns HTTP status 200 with information about the specifi
     "audienceId": "test-external-audience-id",
     "name": "externalSegment1",
     "namespace": "aam",
-    "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
         "sandboxName": "prod",
@@ -496,7 +505,7 @@ A successful response returns HTTP status 200 with information about the specifi
     "description": "Last 30 days",
     "type": "ExternalSegment",
     "lifecycle": "active",
-    "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
+    "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
         "core/C1"
@@ -509,7 +518,7 @@ A successful response returns HTTP status 200 with information about the specifi
 }
 ```
 
-## Update a specified field for an audience {#update-field}
+## Update a field in an audience {#update-field}
 
 You can update the fields of specific audience by making a PATCH request to the `/audiences` endpoint and providing the ID of the audience you wish to update in the request path.
 
@@ -548,9 +557,9 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 
 | Property | Description |
 | -------- | ----------- |
-| `op` | For updating audiences, this value is always "add". |
-| `path` | The path of the value you want to update. |
-| `value` | The value that you want to update. |
+| `op` | For updating audiences, this value is always `add`. |
+| `path` | The path of the field you want to update. |
+| `value` | The value that you want to update the field to. |
 
 **Response**
 
@@ -565,7 +574,7 @@ A successful response returns HTTP status 200 with information about your newly 
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
         "sandboxName": "prod",
@@ -610,7 +619,7 @@ A successful response returns HTTP status 200 with information about your newly 
     "dependencies": [],
     "type": "SegmentDefinition",
     "overridePerformanceWarnings": false,
-    "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
+    "createdBy": "{CREATED_BY_ID}",
     "lifecycle": "active",
     "labels": [
       "core/C1"
@@ -619,7 +628,7 @@ A successful response returns HTTP status 200 with information about your newly 
 }
 ```
 
-## Update a specified audience {#put}
+## Update an audience {#put}
 
 You can update (overwrite) a specific audience by making a PUT request to the `/audiences` endpoint and providing the ID of the audience you wish to update in the request path.
 
@@ -652,9 +661,20 @@ curl -X UPDATE https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4
 }' 
 ```
 
+| Property | Description |
+| -------- | ----------- | 
+| `audienceId` | The ID of the audience. This is used by external audiences  |
+| `name` | The name of the audience. |
+| `namespace` | |
+| `description` | A description of the audience. |
+| `type` | A system-generated field that displays whether the audience is Platform-generated or is an externally generated audience. Possible values include `SegmentDefinition` and `ExternalAudience`. A `SegmentDefinition` refers to an audience that was generated in Platform, while an `ExternalAudience` refers to an audience that was not generated in Platform. |
+| `lifecycle` | The status of the audience. Possible values include `draft`, `published`, `inactive`, and `archived`. `draft` represents when the audience is created, `published` when the audience is published, `inactive` when the audience is no longer active, and `archived` if the audience is deleted. |
+| `datasetId` | The ID of the dataset that the audience data can be found. |
+| `labels` | Object-level data usage and attribute-based access control labels that are relevant to the audience. |
+
 **Response**
 
-A successful response returns HTTP status 200 with details of your newly updated audience. Please note that the details of your audience will differ, depending if it is a Platform-generated audience or an externally generated audience.
+A successful response returns HTTP status 200 with details of your newly updated audience. Please note that the details of your audience will differ depending if it is a Platform-generated audience or an externally generated audience.
 
 ```json
 {
@@ -662,7 +682,7 @@ A successful response returns HTTP status 200 with details of your newly updated
     "audienceId": "test-external-audience-id",
     "name": "new externalSegment",
     "namespace": "aam",
-    "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
         "sandboxName": "prod",
@@ -672,7 +692,7 @@ A successful response returns HTTP status 200 with details of your newly updated
     "description": "Last 30 days",
     "type": "ExternalSegment",
     "lifecycle": "published",
-    "createdBy": "3BF132EF5BC636C10A49400B@AdobeID",
+    "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
     "creationTime": 1650251290000,
@@ -682,9 +702,9 @@ A successful response returns HTTP status 200 with details of your newly updated
 }
 ```
 
-## Delete a specified audience {#delete}
+## Delete an audience {#delete}
 
-You can request to delete a specific audience by making a DELETE request to the `/audiences` endpoint and providing the ID of the audience you wish to delete in the request path.
+You can delete a specific audience by making a DELETE request to the `/audiences` endpoint and providing the ID of the audience you wish to delete in the request path.
 
 **API format**
 
@@ -708,4 +728,4 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4
 
 **Response**
 
-A successful response returns HTTP status 201 with no message.
+A successful response returns HTTP status 204 with no message.
