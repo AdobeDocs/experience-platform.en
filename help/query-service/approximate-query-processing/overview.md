@@ -6,17 +6,13 @@ description: Approximate query processing returns an approximate answer to a que
 
 Adobe Experience Platform Query service enables you to mange dataset samples through approximate query processing. Approximate query processing returns an approximate answer to a query using similar information to the source data that would normally be used to answer the query. Query approximations are a faster and more cost effective means to summarize massive amounts of data by trading accuracy in the results.
 
-<!-- This feature is primarily intended for use with aggregate queries such as count, sum, and avg, etc. Any tradeoffs made to reduce latency and diminish resource costs are logged. This ensures that the SQL client can inspect the log to return feedback on the approximate query's efficiency.
-
-## Approaches to approximate query processing -->
-
 The three distinctive use cases for approximate query processing are as follows:
 
-- To speed up interactive queries. Typically, when [!UICONTROL PostgreSQL] users run ad hoc exploratory queries, the speed of the returned result is more important than the accuracy of the results. Approximate query processing allows you to conduct fast exploration of massive data lake datasets while keeping computational costs and end-to-end latency low.
+- **Speed up interactive queries**: Typically, when [!DNL PostgreSQL] users run ad hoc exploratory queries, the speed of the returned result is more important than the accuracy of the results. Approximate query processing allows you to conduct fast exploration of massive data lake datasets while keeping computational costs and end-to-end latency low.
 
-- To provide quick insights on large datasets in the data lake. This approach is typically directed towards dimension discovery and data modeling as they require fast interactive style reporting on large datasets which don't require high accuracy of data.
+- **Provide quick insights on large datasets in the data lake**: This approach is typically directed towards dimension discovery and data modeling as they require fast interactive style reporting on large datasets which do not require high accuracy of data.
 
-- To gain a quick understanding of unpublished content as though it were published. The Data Access API is often used to preview data lake datasets via non-standard APIs with custom handling. Sampled datasets can be used to meet this requirement.
+- **Preview and analyze unpublished content**: The Data Access API is often used to preview data lake datasets via non-standard APIs with custom handling. Sampled datasets can be used to meet this requirement.
 
 ## Sampling methods
 
@@ -29,11 +25,6 @@ Online sampling estimates the results at runtime. This means that they do not re
 ### Offline sampling
 
 Offline sampling estimates results based on alternate datasets or structures. These alternate datasets and structures are created earlier during a separate extract, transform, and load (ETL) process and must be prepared for sampling prior to the query runtime. At the query runtime, these newly created structures are queried instead of the actual dataset. The query runtime requires some reformulation and translation to be able to redirect the original SQL to the sample datasets and structures. The majority of the required workload is conducted offline at the time of the sample's creation.
-
-<!-- 
-Although there are benefits to both approaches, offline sampling is the recommended approach.
-Q) Why is offline sampling recommended?
- -->
 
 ## Types of sample techniques
  
@@ -51,18 +42,6 @@ You are recommended to pre-compute an offline sample when creating approximate s
 
 Sample creation can be achieved in two ways:  **Ad Hoc Sample Creation** and **Automatic Sample Creation**.
 
-## Limitations
+## Next steps
 
-
-
-<!-- WHY? What is their reasoning? "Given the initial use cases for custom dashboards we have prioritized Offline Sampling as initial approach."  -->
-
-<!-- Moving forwards: -->
-
-<!-- "This is so that we can focus on ..."  wiki is missing information -->
-
-<!-- Is this possible through the UI or just in the API? -->
-
-<!-- Need query examples on its use. -->
-
-<!-- Is 'QS interactive' the [!DNL Query Editor]? -->
+Now that you better understand the role of approximate query processing within Experience Platform, you are ready to start composing your own sample datasets. See the documentation to learn how to [create and manage your sample datasets](./manage-samples.md) for approximate query processing.  
