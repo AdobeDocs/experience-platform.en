@@ -4,22 +4,17 @@ description: Query Service sample datasets enable you to conduct exploratory que
 ---
 # Dataset samples
 
-Dataset samples are part of Query Service's approximate query processing capabilities and allows you to create uniform random samples from existing Azure Data Lake Storage (ADLS) datasets. 
+Adobe Experience Platform Query Service provides sample datasets as part of it's approximate query processing capabilities. Sample datasets are created with uniform random samples from existing Azure Data Lake Storage (ADLS) datasets using only a percentage of records from the original. This percentage is known as the sampling rate. By adjusting the sampling rate to control the balance of accuracy and processing time it allows you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy.
 
-A sample dataset contains only a small subset of the data from the original dataset which enables you to conduct exploratory queries on big data as they trade query accuracy for an improved response time. A sample dataset is created by using a percentage of records from the original dataset. This percentage is the sampling rate.
-
-
-As many users do not need an exact answer for an aggregate operation over a dataset, they will be issuing an approximate query to get an approximate answer, where the trade-off is of the read time. By giving the approximate answer instead of exact one, we will return results much faster than the original query, with an extended scope to have error bound answers. Query Service does this with Dataset Samples. 
- 
-As the sample dataset contains only a percentage of the data from the original dataset, at read time Query Service needs to scan much fewer number of rows, resulting in faster results.
+As many users do not need an exact answer for an aggregate operation over a dataset, issuing an approximate query to return an approximate answer is more efficient for exploratory queries on large datasets. As sample datasets contains only a percentage of the data from the original dataset, it enables you to trade query accuracy for an improved response time. At read time Query Service has to scan fewer rows which produces results faster than if you were to query the entire dataset.  
 
 To help you manage your samples for approximate query processing, Query Service supports the following operations for dataset samples:
 
-- Create a uniform random dataset sample.
-- View the list of samples for an ADLS table.
-- Query the samples directly.
-- Delete a sample.
-- Delete associated samples when original ADLS table is dropped.
+- [Create a uniform random dataset sample.](#create-a-sample)
+- [View the list of samples for an ADLS table.](#view-list-of-samples)
+- [Query the sample datasets directly.](#query-sample-datasets)
+- [Delete a sample.](#delete-a-sample)
+- Delete associated samples when the original ADLS table is dropped.
 
 ## Getting started
 
@@ -29,11 +24,13 @@ To use the approximate query processing capabilities detailed above you must set
 >
 >You must enable the session flag each time you log into Platform.
 
-![The Query Editor with the SET aqp=true; command highlighted.](../images/approximate-query-processing/set-session-flag.png)
+![The Query Editor with the 'SET aqp=true;' command highlighted.](../images/approximate-query-processing/set-session-flag.png)
 
 ## Create a uniform random dataset sample {#create-a-sample}
 
-Use the `ANALYZE TABLE` command to create a uniform random sample. The sample created contains a certain percentage of the size of the original data as defined by the `TABLESAMPLE SAMPLERATE` keywords. The sample rate is the percentage of records taken from the original dataset. In this example, the value of 5.0 equates to a 50% sample rate. A value of 2.5 would equate to 25% and so on.
+Use the `ANALYZE TABLE` command with a dataset name to create a uniform random sample from that dataset. 
+
+The sample rate is the percentage of records taken from the original dataset. You can control the sample rate by using the `TABLESAMPLE SAMPLERATE` keywords. In this example, the value of 5.0 equates to a 50% sample rate. A value of 2.5 would equate to 25% and so on.
 
 >[!IMPORTANT]
 >
@@ -51,7 +48,7 @@ Use the `sample_meta()` function to view the list of samples associated with an 
 SELECT sample_meta('example_dataset_name')
 ```
 
-The list of dataset samples are displayed as shown in the example below.
+The list of dataset samples are displayed in the format of the example below.
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
@@ -70,7 +67,7 @@ SELECT * FROM example_dataset_name WITHAPPROXIMATE;
 
 ## Delete dataset samples {#delete-a-sample}
 
-The delete operation allows you to circumvent the maximum of 5 dataset samples per dataset
+The delete operation allows you to create new samples once the maximum limit of five dataset samples has been reached.
 
 ```sql
 DROP TABLESAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
