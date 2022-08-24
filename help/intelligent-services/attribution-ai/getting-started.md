@@ -48,9 +48,9 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Permissions {#permissions}
 
-Now that you have implemented role-based access control with **View Attribution AI** and **Manage Attribution AI** and depending on your privileges, you can access different functionalities of Attribution AI. **Manage Attribution AI** lets you **create**, **clone**, **edit**, **delete**, **enable**, or **disable** an instance while **View Attribution AI** only lets you **read** or **view** it. The **create**, **edit** and **delete** actions are recorded by audit logs.
+When using role-based access control, the **View Attribution AI** and **Manage Attribution AI** privileges grant access to different functionalities of Attribution AI. The **Manage Attribution AI** lets you **create**, **clone**, **edit**, **delete**, **enable**, or **disable** an instance while **View Attribution AI** lets you **read** or **view** it. The **create**, **edit** and **delete** actions are recorded by audit logs.
 
-To learn more about assigning permissions, refer to the [attribute based access control documentation](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=en) and to the [Audit Logs documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=en) to learn more about Audit logs.
+See the documentation to learn [assigning permissions for access control](../../../help/access-control/home.md) or how to [use audit logs to monitor access and activity](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Next steps {#next-steps}
 

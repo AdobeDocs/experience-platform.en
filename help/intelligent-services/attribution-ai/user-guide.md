@@ -270,11 +270,11 @@ Through attribute-based access control, administrators can control users’ acce
 
 Due to attribute-based access control, some fields and functionalities might have access restricted and be unavailable for certain Attribution AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
 
-On top of the **insights page**, the fields that show access are restricted.
+At the top of the Attribution AI workspace **insights page**, the fields that show access are restricted.
 
 ![](./images/user-guide/access-restricted.png)
 
-When you select datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name. On selecting the popover, "Restricted information is excluded" is displayed.
+If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name. If the popover is selected, a [!UICONTROL Restricted information is excluded] notification is displayed.
 
 ![](./images/user-guide/restricted-info-excluded.png)
 
