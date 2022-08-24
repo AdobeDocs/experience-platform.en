@@ -8,11 +8,24 @@ description: The August 2022 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Dashboards]](#dashboards)
 - [Data Prep](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Profile](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important insights about your organization’s data, as captured during daily snapshots.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Scheduled activations widget | The [!UICONTROL Scheduled activations] widget provides a tabularized view of the most recently activated destinations. For each segment, it includes the name, destination platform, and activation start and end date. This widget allows you to discover at a glance where and when the audience is being activated and makes duplicate or unnecessary activations more transparent. This accumulated information also highlights where any activations have been left out. | 
+
+For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
