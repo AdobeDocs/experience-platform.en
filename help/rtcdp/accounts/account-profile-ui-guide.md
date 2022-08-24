@@ -14,13 +14,33 @@ Account profiles enable you to unify account information from multiple sources. 
 
 To learn more about how account profiles are created as part of the B2B workflow, please see the [end-to-end tutorial](../b2b-tutorial.md).
 
-## Account profiles overview (#account-profiles-overview)
+## Account profiles overview {#account-profiles-overview}
 
-For an account profile overview, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation. Under the [!UICONTROL Overview] tab, the dashboard shows a graphic or chart displaying widgets in a single entry point.
+Select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation to view the overview of account profiles. Under the [!UICONTROL Overview] tab, the dashboard shows a graphic or chart displaying widgets in a single entry point.
 
-![Overview tab](images/b2b-account-profile-overview.png)
+![Overview tab displaying widgets](images/b2b-account-profile-overview.png)
 
-To learn more about account profiles dashboard, please refer to the [Account Profiles dashboard](../../dashboards/guides/account-profiles.md) documentation.
+See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard to learn more.
+
+## Configure lead to account matching {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> Only B2B AI administrators can enable, disable, and configure the lead to account matching service. Upon disabling the service, matching results will be deleted within 24 hours.
+
+To configure lead to account matching, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation. On the **[!UICONTROL Overview]** tab, select **[!UICONTROL Settings]** in the top right.
+
+![Select Settings](images/b2b-configuring-accounts-profile.png) 
+
+The **[!UICONTROL Account settings]** dialog opens. From here select the **[!UICONTROL Enable lead-to-account-matching]** toggle to enable the feature. Use the dropdown menu to select **[!UICONTROL Daily]** for the **[!UICONTROL Matching cadence]** setting. Finally, select the relevant **[!UICONTROL Matching criteria]** options followed by **[!UICONTROL Save]** to confirm your settings and return to the **[!UICONTROL Account Profiles]** screen.
+
+>[!NOTE]
+>
+> The Address cannot be used as the only matching criteria. One or more of the other matching criteria must be selected.
+
+![Configure Account settings](images/b2b-configuring-account-settings.png)
+
+To learn more about lead to account matching, please refer to the [Lead to account matching in Real-time CDP B2B overview](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Browse account profiles {#browse-account-profiles}
 

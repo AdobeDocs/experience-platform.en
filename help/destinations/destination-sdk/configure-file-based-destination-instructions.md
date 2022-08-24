@@ -104,10 +104,6 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }

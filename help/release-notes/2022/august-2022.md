@@ -8,6 +8,7 @@ description: The August 2022 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Data Prep](#data-prep)
@@ -153,3 +154,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
+
