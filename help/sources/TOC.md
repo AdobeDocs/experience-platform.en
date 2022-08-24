@@ -286,13 +286,13 @@ feature: Sources
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
-- Sources SDK {#sdk}
+- Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - [Configuration options](sources-sdk/config/config.md)
   - [Configure authentication specification](sources-sdk/config/authspec.md)
   - [Configure source specification](sources-sdk/config/sourcespec.md)
   - [Configure explore specification](sources-sdk/config/explorespec.md)
-  - [Sources SDK API overview](sources-sdk/api/api-overview.md)
+  - [Self-Serve Sources (Batch SDK) overview](sources-sdk/api/api-overview.md)
   - [Getting started](sources-sdk/api/getting-started.md)
   - [Create a connection specification](sources-sdk/api/create.md)
   - [Update a connection specification](sources-sdk/api/update-connection-specs.md)

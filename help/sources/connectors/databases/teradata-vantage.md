@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;teradata;teradata vantage
 title: Teradata Vantage Source Connector Overview
 description: Learn how to connect Teradata Vantage to Adobe Experience Platform using APIs or the user interface.
+exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
 ---
 # (Beta) [!DNL Teradata Vantage] source
 
