@@ -47,18 +47,17 @@ Through Destination SDK, Adobe Experience Platform supports real-time integratio
 
 Read about the technical requirements on the destinations side in the [integration prerequisites](./integration-prerequisites.md) article.
 
-
 ## Get access to Destination SDK {#get-access}
 
-Destination SDK access varies based on your status as a partner or Experience Platform customer. Please see the table below for more information.
+Destination SDK access varies based on your status as a partner or Experience Platform, Real-Time CDP customer. Please see the table below for more information.
 
 
 |Type of partner or customer | How to access Destination SDK |
 ---------|----------|
 | Independent Software Vendor (ISV) | Join the [Adobe Exchange program](https://partners.adobe.com/exchangeprogram/experiencecloud.html) and request to get an Experience Platform sandbox provisioned to access Destination SDK. |
 | System Integrator (SI) | You need to be at either Gold or Platinum level in the [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html), and you will get an Experience Platform sandbox provisioned and access to Destination SDK. |
-| Experience Platform customer on the [Activation package](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | By default, you get access to Experience Platform sandboxes and Destination SDK. |
-| Experience Platform customer on the [Real-time CDP Ultimate package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | You do not have access to Destination SDK, but you have access to all the productized destinations configured by other companies using Destination SDK and published across Experience Platform organizations. |
+| Experience Platform customer on the [Activation package](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | By default, you get access to Experience Platform sandboxes and Destination SDK. <br> You also get access to all the productized destinations configured by other companies using Destination SDK and published across Experience Platform organizations. |
+| Experience Platform customer on the [Real-Time CDP Ultimate package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | By default, you get access to Experience Platform sandboxes and Destination SDK. <br> You also get access to all the productized destinations configured by other companies using Destination SDK and published across Experience Platform organizations. |
 
 {style="table-layout:auto"}
 

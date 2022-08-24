@@ -76,6 +76,7 @@ feature: Sources
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
+    - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - eCommerce {#ecommerce}
     - [Shopify connector](connectors/ecommerce/shopify.md)
   - Local system {#local-system}
@@ -142,6 +143,7 @@ feature: Sources
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
       - [Snowflake](tutorials/api/create/databases/snowflake.md)
+      - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -181,6 +183,7 @@ feature: Sources
     - [Collect payment data](tutorials/api/collect/payments.md)
     - [Collect protocol data](tutorials/api/collect/protocols.md)
     - [Collect streaming data](tutorials/api/collect/streaming.md)
+  - [On-demand ingestion](tutorials/api/on-demand-ingestion.md)
   - [Monitor dataflows](tutorials/api/monitor.md)
   - [Update accounts](tutorials/api/update.md)
   - [Update dataflows](tutorials/api/update-dataflows.md)
@@ -244,6 +247,7 @@ feature: Sources
       - [Phoenix](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+      - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
     - Local system {#local-system}
@@ -282,13 +286,13 @@ feature: Sources
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
-- Sources SDK {#sdk}
+- Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - [Configuration options](sources-sdk/config/config.md)
   - [Configure authentication specification](sources-sdk/config/authspec.md)
   - [Configure source specification](sources-sdk/config/sourcespec.md)
   - [Configure explore specification](sources-sdk/config/explorespec.md)
-  - [Sources SDK API overview](sources-sdk/api/api-overview.md)
+  - [Self-Serve Sources (Batch SDK) overview](sources-sdk/api/api-overview.md)
   - [Getting started](sources-sdk/api/getting-started.md)
   - [Create a connection specification](sources-sdk/api/create.md)
   - [Update a connection specification](sources-sdk/api/update-connection-specs.md)
