@@ -23,13 +23,13 @@ To help you manage your samples for approximate query processing, Query Service 
 
 ## Getting started
 
-To use the approximate query processing capabilities detailed above you must set the session flag to `true`. From the command line of either the Query Editor or your PSQL client enter the `Set aqp=true;` command.
+To use the approximate query processing capabilities detailed above you must set the session flag to `true`. From the command line of either the Query Editor or your PSQL client enter the `SET aqp=true;` command.
 
 >[!NOTE]
 >
 >You must enable the session flag each time you log into Platform.
 
-![The Query Editor with the Set aqp=true; command highlighted.]()
+![The Query Editor with the SET aqp=true; command highlighted.](../images/approximate-query-processing/set-session-flag.png)
 
 ## Create a uniform random dataset sample {#create-a-sample}
 
