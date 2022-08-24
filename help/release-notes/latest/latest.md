@@ -19,7 +19,7 @@ Updates to existing features in Adobe Experience Platform:
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
-AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up models specific to a company’s needs using business-level configurations without the need for data science expertise.
+AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up models specific to a company's needs using business-level configurations without the need for data science expertise.
 
 ### Attribution AI
 
@@ -55,7 +55,7 @@ For more information on Customer AI, please see the [Customer AI](../../intellig
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important insights about your organization’s data, as captured during daily snapshots.
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important insights about your organization's data, as captured during daily snapshots.
 
 **Updated features**
 
@@ -117,7 +117,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | ------- | ----------- |
-| Orphaned profile edge attribute cleanup | For all organizations, Profile Service now removes leftover edge attributes of user activity region on a daily basis to give a more accurate representation of your profiles in your system. This cleanup occurs after all the profile fragments for a given profile are deleted and should impact profiles being merged from datasets where `com_adobe_aep_profile_region_dataset` is marked as `true`. This may show a drop in the “Addressable audience” metric in the license usage dashboard and may show a drop in the “Profile count” metric in the Profile dashboard, since these metrics included leftover edge attribute fragments prior to this release. |
+| Orphaned profile edge attribute cleanup | For all organizations, Profile Service now removes leftover edge attributes of user activity region on a daily basis to give a more accurate representation of your profiles in your system. This cleanup occurs after all the profile fragments for a given profile are deleted and should impact profiles being merged from datasets where `com_adobe_aep_profile_region_dataset` is marked as `true`. This may show a drop in the "Addressable audience" metric in the license usage dashboard and may show a drop in the "Profile count" metric in the Profile dashboard, since these metrics included leftover edge attribute fragments prior to this release. |
 
 {style="table-layout:auto"}
 
@@ -149,7 +149,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | General availability of [!DNL Google BigQuery] source | Use the [!DNL Google BigQuery] source to ingest data from your [!DNL Google BigQuery] data warehouse to Experience Platform. For more information, read the documentation on the [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
 | [!DNL Teradata Vantage] source (Beta) | Use the [!DNL Teradata Vantage] source to ingest data from hybrid multi-cloud environments to Experience Platform. For more information, read the documentation on the [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
 | Cross-region support for Adobe Analytics source | You can now ingest report suites from any region (United States, United Kingdom, or Singapore). Report suites must be mapped to the same organization as the Experience Platform Sandbox instance in which the source connection is being created in. For more information, read the guide on [creating an Adobe Analytics source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
-| API support for on-demand ingestion | Use on-demand ingestion to create ad hoc flow runs for a given dataflow with the [!DNL Flow Service] API. Flow runs created must be set to one-time ingestion. For more information, read the guide on [creating a flow run for on-demand ingestion using the API](../../sources/tutorials/api/on-demand-ingestion.md) for more information. |
 
 {style="table-layout:auto"}
 
