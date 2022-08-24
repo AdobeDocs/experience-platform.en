@@ -4,9 +4,9 @@ description: Query Service sample datasets enable you to conduct exploratory que
 ---
 # Dataset samples
 
-Adobe Experience Platform Query Service provides sample datasets as part of it's approximate query processing capabilities. Sample datasets are created with uniform random samples from existing Azure Data Lake Storage (ADLS) datasets using only a percentage of records from the original. This percentage is known as the sampling rate. By adjusting the sampling rate to control the balance of accuracy and processing time it allows you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy.
+Adobe Experience Platform Query Service provides sample datasets as part of its approximate query processing capabilities. Sample datasets are created with uniform random samples from existing Azure Data Lake Storage (ADLS) datasets using only a percentage of records from the original. This percentage is known as the sampling rate. Adjusting the sampling rate to control the balance of accuracy and processing time allows you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy.
 
-As many users do not need an exact answer for an aggregate operation over a dataset, issuing an approximate query to return an approximate answer is more efficient for exploratory queries on large datasets. As sample datasets contains only a percentage of the data from the original dataset, it enables you to trade query accuracy for an improved response time. At read time Query Service has to scan fewer rows which produces results faster than if you were to query the entire dataset.  
+As many users do not need an exact answer for an aggregate operation over a dataset, issuing an approximate query to return an approximate answer is more efficient for exploratory queries on large datasets. As sample datasets contain only a percentage of the data from the original dataset, it enables you to trade query accuracy for an improved response time. At read-time, Query Service has to scan fewer rows which produces results faster than if you were to query the entire dataset.  
 
 To help you manage your samples for approximate query processing, Query Service supports the following operations for dataset samples:
 
@@ -48,7 +48,7 @@ Use the `sample_meta()` function to view the list of samples associated with an 
 SELECT sample_meta('example_dataset_name')
 ```
 
-The list of dataset samples are displayed in the format of the example below.
+The list of dataset samples is displayed in the format of the example below.
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
