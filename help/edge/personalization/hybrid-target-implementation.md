@@ -1,22 +1,22 @@
 ---
-title: Personalization via hybrid implementation and single-page application
-description: 
-keywords:
+title: Personalization via hybrid implementation
+description: Hybdrid implementation describes a way of deploying personalization while eliminating page flicker and reducing latency.
+keywords: personalization; hybrid; server api; server-side; hybrid implementation;
 ---
 
-# Personalization via hybrid implementation and single-page applications (SPA)
+# Personalization via hybrid implementation
 
 ## Overview {#overview}
 
-Hybdrid Target implementation describes a way of deploying Adobe Target personalization while eliminating page flicker and reducing latency.
+Hybdrid implementation describes a way of deploying personalization while eliminating page flicker and reducing latency.
 
-This is done by retrieving personalization content server-side, using the [Edge Network Server API](../../..//server-api/overview.md), and rendering the personalized content on a client-side single-page app (SPA), using the [Web SDK](../../home.md), through the `applyResponse` command.
+This is done by retrieving personalization content server-side, using the [Edge Network Server API](../../..//server-api/overview.md), and rendering the personalized content on the client side, using the [Web SDK](../../home.md) `applyResponse` command.
 
 The table below shows an example of personalized and non-personalized content.
 
 | Sample page without personalization | Sample page with personalization|
 |---|---|
-| ![Example web page with no personalization](assets/spa-plain.png) | ![Example web page with Target personalization](assets/spa-personalized.png) |
+| ![Example web page with no personalization](assets/spa-plain.png) | ![Example web page with personalization](assets/spa-personalized.png) |
 
 ## Sample React application {#sample-app}
 
@@ -202,6 +202,10 @@ The application server returns a response with the HTML content and the identity
 
 On the client app page, the [!DNL Web SDK] `applyResponse` command is invoked, passing in the headers and body of the server-side response.
 
+The `personalize` command is a custom example designed to illustrate the handling of offers that are not automatically rendered by the Web SDK, such as [!DNL JSON] offers. It is not a command from the Web SDK.
+
+The `applyResponse` command returns information from the response, similar to the `sendEvent` command.
+
 ```javascript
 alloy("applyResponse", {
     "renderDecisions": true,
@@ -247,10 +251,15 @@ alloy("applyResponse", {
       ]
     }
   }
-).then(applyPersonalization("sample-json-offer"));
+).then(personalize("sample-json-offer"));
 ```
 
-The client app uses the `sendEvent` command to tell the Web SDK when a view has been rendered. Each time a primary navigation link is clicked, a `sendEvent` command is invoked, with the corresponding view name.
+|Parameter|Description|
+|---|---|
+|`renderDecisions:true`|*Optional.* You can use this command to request the Web SDK to render the available offers.|
+
+
+The client app must use the `sendEvent` command to tell the Web SDK when a view has been rendered. Each time a primary navigation link is clicked, a `sendEvent` command is invoked, with the corresponding view name.
 
 When the command is fired, the Web SDK automatically updates the page with relevant personalization experiences.
 
