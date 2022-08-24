@@ -92,7 +92,7 @@ The widget helps you understand the relative health of your conversion pipeline 
 
 ### Predictive scoring top influential factors {#predictive-scoring-top-influential-factors}
 
-This widget provides a single metric for the number of account profiles in your data model by low, medium, and high propensity to buy. Each propensity category is divided into a ranked bar chart of influential factors for that category. These influential factors explain the scoring of the account profiles and why they were placed into that category. The most frequently occurring factors that effect propensity to buy are listed at the top of the chart. The count of account profiles that contain each influential factor are displayed in a dialog when the cursor hovers over a section of the bar chart.
+This widget provides a single metric for the number of account profiles in your data model by low, medium, and high propensity to buy. Each propensity category is divided into a ranked bar chart of influential factors for that category. These influential factors explain the scoring of the account profiles and why they were placed into that category. The most frequently occurring factors that effect propensity to buy are listed at the top of the chart. When the cursor hovers over a section of the bar chart, the count of account profiles contained in each influential factor are displayed in a dialog.
 
 The data model used for analysis is selected from the widget dropdown below the title.
 
