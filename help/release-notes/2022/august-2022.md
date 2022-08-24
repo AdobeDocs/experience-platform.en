@@ -154,4 +154,3 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
-

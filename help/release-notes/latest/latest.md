@@ -111,19 +111,6 @@ XDM is an open-source specification that provides common structures and definiti
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
-## Real-time Customer Data Platform B2B Edition {#b2b}
-
-Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| Lead to account matching | Lead to account matching enables you to join known person profiles to account profiles. You can then segment and target data in a B2B context such as accounts or opportunities. The daily-run jobs use both deterministic and probabilistic factors to match person profiles that are not already associated to any account to a best-matched account. You can then decide whether to include such matches in your segment definitions. <br><br>For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). For instructions on how to configure lead to account matching, see the [Account profile UI guide](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).</li>|
-|Predictive lead and account scoring | Predictive Lead and Account Scoring uses a tree-based (random forest/gradient boosting) machine learning method which involves learning from and predicting for the opportunity stage conversion events, and aggregating person activities onto the account level to produce the account scores. Top influential factors are also available at both the aggregate and the unit level to help B2B marketers better understand what elements drove the scores. <br><br>For more information, see the document on [predictive lead and account scoring](../../rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md). For information on how to manage your scores, see the guide on [managing predictive lead and account scoring in Real-time Customer Data Platform, B2B Edition.](../../rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) |
-
-For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md). To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md).
-
 ## Real-time Customer Profile {#profile}
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
