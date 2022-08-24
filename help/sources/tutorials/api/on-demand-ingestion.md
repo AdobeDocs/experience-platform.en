@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;flow service;
 title: (Beta) Create a Flow Run for On-Demand Ingestion Using the Flow Service API
 description: This tutorial covers the steps to create a flow run for on-demand ingestion using the Flow Service API
+exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 ---
 # (Beta) Create a flow run for on-demand ingestion using the [!DNL Flow Service] API 
 
