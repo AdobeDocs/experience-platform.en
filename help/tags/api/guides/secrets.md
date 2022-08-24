@@ -21,7 +21,7 @@ This guide provides a high-level overview of how to configure secrets for use in
 
 ## Credentials
 
-Each secret contains a `credentials` attribute that holds its respective credential values. Each type of secret has different required attributes, as shown in the sections below:
+Each secret contains a `credentials` attribute that holds its respective credential values. When [creating a secret in the API](../endpoints/secrets.md#create), each type of secret has different required attributes as shown in the sections below:
 
 * [`token`](#token)
 * [`simple-http`](#simple-http)
