@@ -20,31 +20,35 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Collect artifacts
 
-In order to create a new batch source using Self-Serve Sources, you must first coordinate with Adobe, request a private git repository, and align with Adobe on the details regarding the label, description, category, and icon for your source.
+In order to create a new batch source using Self-Serve Sources, you must first coordinate with Adobe, request a private Git repository, and align with Adobe on the details regarding the label, description, category, and icon for your source.
 
-Once provided, you must structure your private git repository like so:
+Once provided, you must structure your private Git repository like so:
 
 * Sources
-  * {YOUR_SOURCE}
+  * {your_source}
     * Artifacts
-      * {YOUR_SOURCE}-category.txt
-      * {YOUR_SOURCE}-description.txt
-      * {YOUR_SOURCE}-icon.svg
-      * {YOUR_SOURCE}-label.txt
-      * {YOUR_SOURCE}-connectionSpec.json
+      * {your_source}-category.txt
+      * {your_source}-description.txt
+      * {your_source}-icon.svg
+      * {your_source}-label.txt
+      * {your_source}-connectionSpec.json
 
-| Artifacts | Description | Example |
+| Artifacts (file names) | Description | Example |
 | --- | --- | --- |
-| {YOUR_SOURCE} | The name of your source. This folder should contain all artifacts related to your source, within your private git repository. | <ul><li>`mailchimp-members`</li><li>`onetrust-integration`</li><li>`mixpanel`</li></ul> |
-| {YOUR_SOURCE}-category.txt | The category to which your source belongs, formatted as a text file. The list of available source categories supported by Self-Serve Sources (Batch SDK) include: <ul><li>Advertising</li><li>Analytics</li><li>Consent and Preferences</li><li>CRM</li><li>Customer Success</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Payments</li><li>Protocols</li></ul> **Note**: Please let your Adobe representative know if you need a new category to be implemented for your source. | <ul><li>`mailchimp-members-marketingAutomation.txt`</li><li>`onetrust-integration-consentAndPreferences.txt`</li><li>`mixpanel-analytics.txt`</li></ul>  |
-| {YOUR_SOURCE}-description.txt | A brief description of your source. | [!DNL Mixpanel] is a product analytics tool that enables you to capture data on how users interact with a digital product. |
-| {YOUR_SOURCE}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. |
-| {YOUR_SOURCE}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | <ul><li>Mailchimp Members</li><li>OneTrust Integration</li><li>Mixpanel</li></ul> | 
-| {YOUR_SOURCE}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `mixpanel-connectionSpec.json` |
+| {your_source} | The name of your source. This folder should contain all artifacts related to your source, within your private Git repository. | `mailchimp-members`|
+| {your_source}-category.txt | The category to which your source belongs, formatted as a text file. The list of available source categories supported by Self-Serve Sources (Batch SDK) include: <ul><li>Advertising</li><li>Analytics</li><li>Consent and Preferences</li><li>CRM</li><li>Customer Success</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Payments</li><li>Protocols</li></ul> **Note**: If you believe that your source does not fit in any of the above categories, please contact your Adobe representative to discuss. | `mailchimp-members-category.txt` Inside the file, please specify the category of your source, like: `marketingAutomation`. |
+| {your_source}-description.txt | A brief description of your source. | [!DNL Mailchimp Members] is marketing automation source that you can use to bring [!DNL Mailchimp Members] data to Experience Platform. |
+| {your_source}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. |
+| {your_source}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | Mailchimp Members | 
+| {your_source}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `mixpanel-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
-Once you have added the necessary files to your private git repository, you must then create a pull request (PR) for Adobe to review. When your PR is approved and merged, you will be provided with an ID that can be used for your connection specification to refer to your source's label, description, and icon.
+>[!TIP]
+>
+>During the testing period of your connection specification, in place of key values, you can use `text` in the connection specification.
+
+Once you have added the necessary files to your private Git repository, you must then create a pull request (PR) for Adobe to review. When your PR is approved and merged, you will be provided with an ID that can be used for your connection specification to refer to your source's label, description, and icon.
 
 Next, follow the steps outlined below to configure your connection specification. For additional guidance on the different functionalities that you can add to your source, such as advanced scheduling, custom schema, or different pagination types, please review the guide on [configuring source specifications](../config/sourcespec.md).
 
@@ -75,10 +79,6 @@ Once you have gathered the required artifacts, copy and paste the connection spe
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -213,6 +213,10 @@ Once you have gathered the required artifacts, copy and paste the connection spe
         "urlParams": {
           "type": "object",
           "properties": {
+            "host": {
+            "type": "string",
+            "description": "Enter resource url host path."
+          },
             "path": {
               "type": "string",
               "description": "Enter resource path",
@@ -487,9 +491,9 @@ curl -X POST \
                   "type": "object",
                   "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path"
+                      “domain”: {
+                        “type”: “string”,
+                        “description”: “Enter domain name for host url”
                       },
                       "authorizationTestUrl": {
                           "description": "Authorization test url to validate accessToken.",
@@ -502,7 +506,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "accessToken"
                   ]
               }
@@ -515,9 +519,9 @@ curl -X POST \
                   "type": "object",
                   "description": "defines auth params required for connecting to rest service.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path."
+                      “domain”: {
+                        “type”: “string”,
+                        “description”: “Enter domain name for host url”
                       },
                       "username": {
                           "description": "Username to connect mailChimp endpoint.",
@@ -530,7 +534,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "username",
                       "password"
                   ]
@@ -554,6 +558,7 @@ curl -X POST \
                   }
               },
               "urlParams": {
+                  "host": "https://${domain}.api.mailchimp.com",
                   "path": "/3.0/lists/${listId}/members",
                   "method": "GET"
               },

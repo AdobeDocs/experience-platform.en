@@ -42,6 +42,10 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
         "urlParams": {
           "type": "object",
           "properties": {
+            "host": {
+              "type": "string",
+              "description": "Enter resource url host path."
+            },
             "path": {
               "type": "string",
               "description": "Enter resource path",
