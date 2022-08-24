@@ -373,7 +373,7 @@ The following are examples of other pagination types supported by Batch SDK:
 
 #### `CONTINUATION_TOKEN`
 
-A continuation token type of pagination returns a string token that signifies the existence of more items that could not be returned due to a pre-determined maximum number of items that can be returned in a single response. 
+A continuation token type of pagination returns a string token that signifies the existence of more items that could not be returned, due to a pre-determined maximum number of items that can be returned in a single response.
 
 A source that supports continuation token type of pagination may have a pagination parameter similar to:
 
@@ -391,11 +391,11 @@ A source that supports continuation token type of pagination may have a paginati
 | --- | --- |
 | `type` | The type of pagination used to return data. |
 | `continuationTokenPath` | The value that must be appended to the query params in order to move to the next page of the returned results. |
-| `parameterType` | The `parameterType` property defines where the `parameterName` must be added. The `QUERYPARAM` type allows you to append your query with the `parameterName`. The `HEADERPARAM` allows you to add your `parameterName` to your header request.   |
+| `parameterType` | The `parameterType` property defines where the `parameterName` must be added. The `QUERYPARAM` type allows you to append your query with the `parameterName`. The `HEADERPARAM` allows you to add your `parameterName` to your header request. |
 | `parameterName` | The name of the parameter used to incorporate the continuation token. The format is as follows: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. | 
-| `delayRequestMillis` | The `delayRequestMillis` property in pagination allows you to control the rate of requests made to your source. Some sources can have a limit to the number of requests you can make per minute. For example, [!DNL Zendesk] has a limit of 100 requests per minute and defining  `delayRequestMillis` to `850` allows you to configure the source to make calls at just around 80 requests per minute, well under the 100 request per minute threshold.  |
+| `delayRequestMillis` | The `delayRequestMillis` property in pagination allows you to control the rate of requests made to your source. Some sources can have a limit to the number of requests you can make per minute. For example, [!DNL Zendesk] has a limit of 100 requests per minute and defining  `delayRequestMillis` to `850` allows you to configure the source to make calls at just around 80 requests per minute, well under the 100 request per minute threshold. |
 
-The following is an example of response returned using continuation token type of pagination:
+The following is an example of a response returned using continuation token type of pagination:
 
 ```json
 {
@@ -442,11 +442,11 @@ The `PAGE` type of pagination allows you to traverse through return data by numb
 | `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
 | `limitValue` | The number of records to be fetched in a page. |
 | `pageParamName` | The name of the parameter that you must append to query parameters in order to traverse through different pages of the return data. For example, `https://abc.com?pageIndex=1` would return the second page of an API's return payload. |
-| `maximumRequest` | The maximum number of request a source can make for a given incremental run. The current default limit is 10000. |
+| `maximumRequest` | The maximum number of requests a source can make for a given incremental run. The current default limit is 10000. |
 
 #### `NONE`
 
-The `NONE` pagination type can be used for sources that don't support any of the available pagination types. Sources that use the pagination type of `NONE` simply returns all retrievable records when a GET request is made.
+The `NONE` pagination type can be used for sources that don't support any of the available pagination types. Sources that use the pagination type of `NONE` simply return all retrievable records when a GET request is made.
 
 ```json
 "paginationParams": {
@@ -458,7 +458,7 @@ The `NONE` pagination type can be used for sources that don't support any of the
 
 Configure your source's incremental and backfill schedule using advanced scheduling. The `incremental` property allows you to configure a schedule in which your source will ingest only new or modified records, while the `backfill` property allows you to create a schedule to ingest historical data.
 
-With advanced scheduling, you can use expressions and functions specific to your source to configure incremental and backfill schedules. In the example below, the [!DNL Zendesk] source requires incremental schedule to be formatted as `type:user updated > {START_TIME} updated < {END_TIME}` and backfill as `type:user updated < {END_TIME}`. Once you configure your advanced scheduling, you must then refer to your `scheduleParams` in the URL, body, or header params section, depending on what your particular source supports.
+With advanced scheduling, you can use expressions and functions specific to your source to configure incremental and backfill schedules. In the example below, the [!DNL Zendesk] source requires the incremental schedule to be formatted as `type:user updated > {START_TIME} updated < {END_TIME}` and backfill as `type:user updated < {END_TIME}`. Once you configure your advanced scheduling, you must then refer to your `scheduleParams` in the URL, body, or header params section, depending on what your particular source supports.
 
 ```json
 "urlParams": {
@@ -480,14 +480,14 @@ With advanced scheduling, you can use expressions and functions specific to your
 
 | Property | Description |
 | --- | --- |
-| `type` | The type of scheduling your source will use. Set this value to `ADVANCE` to use advanced scheduling type. |
+| `type` | The type of scheduling your source will use. Set this value to `ADVANCE` to use the advanced scheduling type. |
 | `paramFormat` | The defined format of your scheduling parameter. This value can be the same as your source's `scheduleStartParamFormat` and `scheduleEndParamFormat` values.  |
-| `incremental` | The incremental query of your source. Incremental refers to an ingestion method where only new or modified data get ingested. |
-| `backfill` | The backfill query of your source. Backfill refer to an ingestion method where historical data get ingested. |
+| `incremental` | The incremental query of your source. Incremental refers to an ingestion method where only new or modified data is ingested. |
+| `backfill` | The backfill query of your source. Backfill refer to an ingestion method where historical data is ingested. |
 
 ### Add a custom schema to define your source's dynamic attributes
 
-You can include a custom schema to your `sourceSpec` to define all attributes required for your source, including any dynamic attributes that you might need. You can update your source's corresponding connection specification by making a PUT request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API while providing your custom schema in the `sourceSpec` section of your connection specification.
+You can include a custom schema to your `sourceSpec` to define all attributes required for your source, including any dynamic attributes that you might need. You can update your source's corresponding connection specification by making a PUT request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API, while providing your custom schema in the `sourceSpec` section of your connection specification.
 
 The following is an example of a custom schema that you can add to your source's connection specification:
 
