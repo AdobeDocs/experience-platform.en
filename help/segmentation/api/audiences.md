@@ -42,6 +42,10 @@ The following query parameters can be used when retrieving a list of audiences:
 >
 >For audiences, metrics are returned under the `metrics` attribute, and contains information on profile counts, creation, and update timestamps.
 
+**No metrics**
+
+The following request/response pair is used when the `withMetrics` query parameter is not present.
+
 **Request**
 
 The following request retrieves the last five audiences created in your organization.
@@ -142,15 +146,19 @@ A successful response returns HTTP status 200 with a list of audiences that were
 | `expression` | Platform-generated | The Profile Query Language (PQL) expression of the audience. More information about PQL expressions can be found in the [PQL expressions guide](../pql/overview.md). |
 | `mergePolicyId` | Platform-generated | The ID of the merge policy that the audience is associated with. More information about merge policies can be found in the [merge policies guide](../../profile/api/merge-policies.md). |
 | `evaluationInfo` | Platform-generated | Shows how the audience will be evaluated. Possible evaluation methods include batch, streaming, or edge. More information about the evaluation methods can be found in the [segmentation overview](../home.md) |
-| `dependents` | Both | An array of audience IDs that depend on the current audience. |
-| `dependencies` | Both | An array of audience IDs that the audience depends on. |
+| `dependents` | Both | An array of audience IDs that depend on the current audience. This would be used if you are creating an audience that is a segment of a segment. |
+| `dependencies` | Both | An array of audience IDs that the audience depends on. This would be used if you are creating an audience that is a segment of a segment. |
 | `type` | Both | A system-generated field that displays whether the audience is Platform-generated or is an externally generated audience. Possible values include `SegmentDefinition` and `ExternalAudience`. A `SegmentDefinition` refers to an audience that was generated in Platform, while an `ExternalAudience` refers to an audience that was not generated in Platform. |
 | `createdBy` | Both | The ID of the user who created the audience. |
 | `labels` | Both | Object-level data usage and attribute-based access control labels that are relevant to the audience. |
 | `namespace` | Both | The namespace that the audience belongs to. Possible values include `AAM`, `AAMSegments`, `AAMTraits`, and `AEPSegments`. |
 | `audienceMeta` | External | Externally-created metadata from the externally created audience. |
 
-**`withMetrics` request**
+**With metrics**
+
+The following request/response pair is used when the `withMetrics` query parameter is present.
+
+**Request**
 
 The following request retrieves the last five audiences, with metrics, created in your organization.
 
@@ -162,7 +170,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?propoerty=withMetr
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**`withMetrics` response**
+**Response**
 
 A successful response returns HTTP status 200 with a list of audiences, with metrics, for the specified organization as JSON.
 
@@ -641,7 +649,7 @@ PUT /audiences/{AUDIENCE_ID}
 **Request**
 
 ```shell
-curl -X UPDATE https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
+curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
