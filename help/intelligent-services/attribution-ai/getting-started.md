@@ -46,10 +46,12 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the Experience Platform troubleshooting guide.
 
-## Next steps {#next-steps}
+## Permissions {#permissions}
 
-We have now implemented role-based access control with **View Attribution AI** and **Manage Attribution AI** and depending on your privileges, you can access different functionalities of Attribution AI. **Manage Attribution AI** lets you **create**, **clone**, **edit**, **delete**, **enable**, or **disable** an instance while **View Attribution AI** only lets you **read** or **view** it. The **create**, **edit** and **delete** actions are recorded by audit logs.
+Now that you have implemented role-based access control with **View Attribution AI** and **Manage Attribution AI** and depending on your privileges, you can access different functionalities of Attribution AI. **Manage Attribution AI** lets you **create**, **clone**, **edit**, **delete**, **enable**, or **disable** an instance while **View Attribution AI** only lets you **read** or **view** it. The **create**, **edit** and **delete** actions are recorded by audit logs.
 
 To learn more about assigning permissions, refer to the [attribute based access control documentation](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=en) and to the [Audit Logs documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=en) to learn more about Audit logs.
+
+## Next steps {#next-steps}
 
 Once you are ready and have all your credentials and schemas in place, start by following the [Attribution AI user interface guide](./user-guide.md). This guide walks you through creating an instance and submitting it for training and scoring.

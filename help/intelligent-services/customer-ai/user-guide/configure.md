@@ -4,15 +4,15 @@ solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Configure a Customer AI Instance
 topic-legacy: Instance creation
-description: Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
+description: AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 ---
 
 # Configure a Customer AI instance
 
-Customer AI, as part of Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
+Customer AI, as part of AI/ML Services enables you to generate custom propensity scores without having to worry about machine learning.
 
-Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
+AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 
 ## Create an instance {#set-up-your-instance}
 
@@ -186,13 +186,16 @@ You can define important Profile dataset fields (with timestamps) in your data i
 
 ![add a custom profile attribute](../images/user-guide/profile-attributes.png)
 
-#### Selecting profile attributes from the UPS snapshot export
+#### Select profile attributes from the Profile snapshot export
 
-You can also choose to include profile attributes from the UPS snapshot export, which is updated daily. These attributes are synced to UPS and the latest value is available. 
+You can also choose to include profile attributes from the daily Profile snapshot export. These attributes are synced to the Profile snapshot export and display the most recently available value. 
 
-**Warning**: Be careful not to select a profile attribute that is updated as a result of the prediction goal or highly correlated with the prediction goal. This causes data leakage and over-fitting of the model. An example of such an attribute is `total_purchases_in_the_last_3_months` that predicts purchase conversion. 
+>[!WARNING]
+>
+> Be careful not to select a profile attribute that is updated as a result of the prediction goal or highly correlated with the prediction goal. This causes data leakage and over-fitting of the model. An example of such an attribute is `total_purchases_in_the_last_3_months` that predicts purchase conversion. 
 
 >[!NOTE]
+>
 >Support for using profile attributes from the UPS snapshot export is available in the UI upon request. 
 
 ### Adding a custom event example {#custom-event}

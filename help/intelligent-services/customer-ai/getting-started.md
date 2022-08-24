@@ -46,6 +46,6 @@ This guide provides example API calls to demonstrate how to format your requests
 
 We have now implemented role-based access control with **View Customer AI** and **Manage Customer AI** and depending on your privileges, you can access different functionalities of Customer AI. **Manage Customer AI** lets you **create**,**update**, **delete**, **enable**, or **disable** an instance while **View Customer AI** only lets you read or view it. The **create**, **update** and **delete** actions are recorded by audit logs.
 
-To learn more about assigning permissions, refer to the [attribute based access control documentation](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=en) and to the [Audit Logs documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=en) to learn more about Audit Logs.
+To learn more about assigning permissions, refer to the [attribute based access control documentation](../../../help/access-control/home.md) and to the [audit logs documentation](../../../help/landing/governance-privacy-security/audit-logs/overview.md) to learn more about audit logs.
 
 Once you have completed the steps outlined in the document above, visit the [Input and Output](./input-output.md) documentation. This document give a brief overview of what types of data are used and produced in Customer AI.
