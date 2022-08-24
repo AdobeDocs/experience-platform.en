@@ -8,6 +8,8 @@ description: The August 2022 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Data Prep](#data-prep)
 - [Experience Data Model (XDM)](#xdm)
@@ -15,9 +17,45 @@ Updates to existing features in Adobe Experience Platform:
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up models specific to a company's needs using business-level configurations without the need for data science expertise.
+
+### Attribution AI
+
+Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+
+**Updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Support for Privacy | <li> Attribution AI now supports defining user roles and access policies to manage [permissions](../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li> <li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes, which can be metadata added to an object, such as labels.Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li> <li>[Data Hygiene](../../help/hygiene/home.md) capabilities within Attribution AI allow you to only use updated data for further training and scoring. Likewise, when you request to delete data, Attribution AI refrains from using the deleted data.</li><li>Attribution AI leverages Platform datasets. To help facilitate GDPR compliance, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile. All data is encrypted in transit and at rest.</li>|
+
+{style="table-layout:auto"}
+
+**Note**: Attribution AI will not be available for Healthcare Shield customers until the end of Q4 2022.
+ 
+For more information on Attribution AI, please see the [Attribution AI](../../intelligent-services/attribution-ai/overview.md) overview.
+
+### Customer AI
+
+Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
+
+**Updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Support for Privacy | <li> Customer AI now supports defining user roles and access policies to manage [permissions](../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li> <li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes. These attributes can be metadata added to an object, such as labels. Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li> <li>[Data Hygiene](../../help/hygiene/home.md) capabilities within Customer AI allow you to only use updated data for further training and scoring. Similarly, when you request to delete data, Customer AI refrains from using the deleted data.</li><li>Customer AI leverages Platform datasets. To help facilitate GDPR compliance, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile. All data is encrypted in transit and at rest.</li>|
+
+{style="table-layout:auto"}
+
+**Note**: Customer AI will not be available for Healthcare Shield customers until the end of Q4 2022.
+ 
+For more information on Customer AI, please see the [Customer AI](../../intelligent-services/customer-ai/overview.md) overview.
+
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important insights about your organization’s data, as captured during daily snapshots.
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important insights about your organization's data, as captured during daily snapshots.
 
 **Updated features**
 
@@ -79,7 +117,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | ------- | ----------- |
-| Orphaned profile edge attribute cleanup | For all organizations, Profile Service now removes leftover edge attributes of user activity region on a daily basis to give a more accurate representation of your profiles in your system. This cleanup occurs after all the profile fragments for a given profile are deleted and should impact profiles being merged from datasets where `com_adobe_aep_profile_region_dataset` is marked as `true`. This may show a drop in the “Addressable audience” metric in the license usage dashboard and may show a drop in the “Profile count” metric in the Profile dashboard, since these metrics included leftover edge attribute fragments prior to this release. |
+| Orphaned profile edge attribute cleanup | For all organizations, Profile Service now removes leftover edge attributes of user activity region on a daily basis to give a more accurate representation of your profiles in your system. This cleanup occurs after all the profile fragments for a given profile are deleted and should impact profiles being merged from datasets where `com_adobe_aep_profile_region_dataset` is marked as `true`. This may show a drop in the "Addressable audience" metric in the license usage dashboard and may show a drop in the "Profile count" metric in the Profile dashboard, since these metrics included leftover edge attribute fragments prior to this release. |
 
 {style="table-layout:auto"}
 
@@ -111,7 +149,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | General availability of [!DNL Google BigQuery] source | Use the [!DNL Google BigQuery] source to ingest data from your [!DNL Google BigQuery] data warehouse to Experience Platform. For more information, read the documentation on the [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
 | [!DNL Teradata Vantage] source (Beta) | Use the [!DNL Teradata Vantage] source to ingest data from hybrid multi-cloud environments to Experience Platform. For more information, read the documentation on the [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
 | Cross-region support for Adobe Analytics source | You can now ingest report suites from any region (United States, United Kingdom, or Singapore). Report suites must be mapped to the same organization as the Experience Platform Sandbox instance in which the source connection is being created in. For more information, read the guide on [creating an Adobe Analytics source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
-| API support for on-demand ingestion | Use on-demand ingestion to create ad hoc flow runs for a given dataflow with the [!DNL Flow Service] API. Flow runs created must be set to one-time ingestion. For more information, read the guide on [creating a flow run for on-demand ingestion using the API](../../sources/tutorials/api/on-demand-ingestion.md) for more information. |
 
 {style="table-layout:auto"}
 
