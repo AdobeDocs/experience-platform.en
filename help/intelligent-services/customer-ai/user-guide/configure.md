@@ -256,23 +256,23 @@ Through attribute-based access control, administrators of your organization can 
 
 Due to attribute-based access control, some fields and functionalities would have access restricted and be unavailable for certain Customer AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
 
-![](../images/user-guide/unavailable-functionalities.png)
+![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/unavailable-functionalities.png)
 
 At the top of the Customer AI workspace **insights page**, notice that the details in the sidebar, score definition, identity, and profile attributes all show "Access Restricted."
 
-![](../images/user-guide/access-restricted.png)
+![The Customer AI workspace with the restricted fields of the schema highlighted.](../images/user-guide/access-restricted.png)
 
-If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
+<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
 
-![](../images/user-guide/restricted-info-excluded.png)
+![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
 
 When you preview datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
-![](../images/user-guide/restricted-dataset-preview.png)
+![The Customer AI workspace with the restricted fields of the preview datasets with restricted schema results highlighted.](../images/user-guide/restricted-dataset-preview.png)
 
 After you create an instance with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
-![](../images/user-guide/information-not-displayed.png)
+![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/information-not-displayed.png)
 
 ## Next steps {#next-steps}
 
