@@ -258,7 +258,7 @@ Due to attribute-based access control, some fields and functionalities would hav
 
 ![](../images/user-guide/unavailable-functionalities.png)
 
-On top of the **insights page**, notice that the score definition, identity, and profile attributes all show "Access Restricted."
+At the top of the Customer AI workspace **insights page**, notice that the score definition, identity, and profile attributes all show "Access Restricted."
 
 ![](../images/user-guide/access-restricted.png)
 
