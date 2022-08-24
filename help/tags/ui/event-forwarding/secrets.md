@@ -13,7 +13,8 @@ There are currently three supported secret types:
 | --- | --- |
 | [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
-| [!UICONTROL OAuth2] | Contains several attributes to support the [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. Currently only the [Client Credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) version of OAuth2 is supported. |
+| [!UICONTROL OAuth 2] | Contains several attributes to support the [Client Credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) version of the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 
 {style="table-layout:auto"}
 
@@ -59,7 +60,8 @@ From here, the steps to create the secret differ depending on the type of secret
 
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
-* [[!UICONTROL OAuth2]](#oauth2)
+* [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -77,11 +79,11 @@ To create an HTTP secret, select **[!UICONTROL Simple HTTP]** from the **[!UICON
 
 ![HTTP secret](../../images/ui/event-forwarding/secrets/http-secret.png)
 
-### [!UICONTROL OAuth2] {#oauth2}
+### [!UICONTROL OAuth 2] {#oauth2}
 
-To create an OAuth2 secret, select **[!UICONTROL OAuth2]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide your [[!UICONTROL Client ID] and [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), as well as your [Authorization URL](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for your OAuth integration. The [!UICONTROL Authorization URL] field in the Data Collection UI is a concatenation between the authorization server host and the token path.
+To create an OAuth 2 secret, select **[!UICONTROL OAuth 2]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide your [[!UICONTROL Client ID] and [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), as well as your [Authorization URL](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for your OAuth integration. The [!UICONTROL Authorization URL] field in the Data Collection UI is a concatenation between the authorization server host and the token path.
 
-![OAuth2 secret](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
+![OAuth 2 secret](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
 Under **[!UICONTROL Credential Options]**, you can provide other credential options such as `scope` and `audience` in the form of key-value pairs. To add more key-value pairs, select **[!UICONTROL Add another]**.
 
@@ -101,7 +103,19 @@ For example, if the refresh offset is set to the default value of `14400` (four 
 
 When finished, select **[!UICONTROL Create Secret]** to save the secret.
 
-![Save OAuth2 Offset](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+![Save OAuth 2 Offset](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL Google OAuth 2] {#google-oauth2}
+
+To create a Google OAuth 2 secret, select **[!UICONTROL Google OAuth 2]** from the **[!UICONTROL Type]** dropdown, followed by **[!UICONTROL Create Secret]**.
+
+![Google OAuth 2 secret](../../images/ui/event-forwarding/secrets/google-oauth-secret.png)
+
+A popover appears informing you that the secret needs to be manually authorized through Google. Select **[!UICONTROL Create & Authorize]** to continue.
+
+![Google authorization popover](../../images/ui/event-forwarding/secrets/google-authorization.png)
+
+A dialog appears that allows you to enter the credentials for your Google account. Follow the prompts to grant event forwarding access to your Google Ads data. Once the authorization process is complete, the secret is created.
 
 ## Edit a secret
 
@@ -125,7 +139,7 @@ You can retry or refresh a secret exchange from the editing screen. This process
 | --- | --- |
 | [!UICONTROL Token] | Select **[!UICONTROL Exchange Secret]** to retry the secret exchange. This control is only available when there is an environment attached to the secret. |
 | [!UICONTROL HTTP] | If there is no environment attached to the secret, select **[!UICONTROL Exchange Secret]** to exchange the credential to base64. If an environment is attached, select elect **[!UICONTROL Exchange and Deploy Secret]** to exchange to base64 and deploy the secret. |
-| [!UICONTROL OAuth2] | Select **[!UICONTROL Generate Token]** to exchange the credentials and return an access token from the authentication provider. |
+| [!UICONTROL OAuth 2] | Select **[!UICONTROL Generate Token]** to exchange the credentials and return an access token from the authentication provider. |
 
 ## Delete a secret
 
