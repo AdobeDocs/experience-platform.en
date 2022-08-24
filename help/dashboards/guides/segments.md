@@ -77,7 +77,6 @@ To learn more about each of the available standard widgets, select the name of a
 >id="platform_dashboards_segments_audiencesize"
 >title="Audience size"
 >abstract="This widget displays the total number of merged profiles within the selected segment. This number depends on the merge policy applied to your data and is correct at the time of the most recent snapshot."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="Learn more from documentation"
 
 The **[!UICONTROL Audience size]** widget displays the total number of merged profiles within the selected segment at the time the snapshot was taken. This number is the result of applying the segment merge policy to your Profile data in order to merge profile fragments together to form a single profile for each individual in the segment. 
 
@@ -91,7 +90,6 @@ For more information on fragments and merged profiles, please begin by reading t
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="Audience size trend"
 >abstract="This widget provides information regarding the total number of profiles that meet the criteria of **any** segment definition, as captured during the daily snapshot, for the last 30 days, 90 days, or 12 months."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Learn more from documentation"
 
 The **[!UICONTROL Audience size trend]** widget provides a line graph illustration for the total number of profiles that meet the criteria of **any** segment definition over a given period of time. The audience size trend can be visualized over 30 days, 90 days, and 12 month periods. The time period is chosen from a dropdown menu in the widget. The audience size is reflected on the y-axis and time on the x-axis.
 
@@ -146,7 +144,6 @@ This widget enables you to optimize your segmentation strategy by visualizing th
 >id="platform_dashboards_segments_identityoverlap"
 >title="Identity overlap"
 >abstract="This widget shows the overlap of profiles in your segment containing both chosen identities. The circles display the relative size of each identity. The number of profiles containing both namespaces are represented by the overlap between the circles."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="Learn more from documentation"
 
 The **[!UICONTROL Identity overlap]** widget displays a Venn diagram, or set diagram, showing the overlap of profiles in your segment containing multiple identities. 
 
@@ -164,7 +161,6 @@ To learn more about identities, please visit the [Adobe Experience Platform Iden
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Profiles by identity"
 >abstract="This widget displays the breakdown of identities across every merged profile in your selected segment."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="Learn more from documentation"
 
 The **[!UICONTROL Profiles by identity]** widget displays the breakdown of identities across every merged profile in your selected segment. The total number of profiles by identity may be higher than the total number of profiles in the segment because one profile could have multiple identities associated with it. In other words, adding together the values shown for each identity may total more than the total audience size in the segment because if a customer interacts with your brand on more than one channel, multiple identities may be associated with that individual customer.
 
