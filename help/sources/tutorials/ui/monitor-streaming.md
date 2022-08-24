@@ -112,7 +112,7 @@ To view error diagnostics, select **[!UICONTROL Preview error diagnostics]**.
 
 ![records-with-warnings](../../images/tutorials/monitor-streaming/records-with-warnings.png)
 
-The [!UICONTROL Error diagnostics preview] window allows you too preview up to 100 errors and/or warnings regarding your dataflow run. From here, you can also download the ingestion failure manifest for more information, using the [!DNL Data Access] API.
+The [!UICONTROL Error diagnostics preview] window allows you to preview up to 100 errors and/or warnings regarding your dataflow run. From here, you can also download the ingestion failure manifest for more information, using the [!DNL Data Access] API.
 
 ![diagnostics](../../images/tutorials/monitor-streaming/diagnostics.png)
 
