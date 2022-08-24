@@ -3,8 +3,6 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Update a connection specification using the Flow Service API
 topic-legacy: developer guide
 description: You can update the properties of a connection specification through a PUT operation.
-hide: true
-hidefromtoc: true
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
 ---
 # Update a connection specification using the Flow Service API

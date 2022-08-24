@@ -4,8 +4,6 @@ solution: Experience Platform
 title: Getting Started with Self-Serve Sources (Batch SDK)
 topic-legacy: developer guide
 description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Self-Serve Sources (Batch SDK).
-hide: true
-hidefromtoc: true
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
 ---
 # Getting Started with Self-Serve Sources (Batch SDK)

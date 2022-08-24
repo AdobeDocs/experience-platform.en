@@ -4,8 +4,6 @@ solution: Experience Platform
 title: Use the GitHub Web Interface to Create a Sources Documentation Page
 topic-legacy: tutorial
 description: This document provides steps on how to use the GitHub web interface to author documentation and submit a pull request (PR).
-hide: true
-hidefromtoc: true
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
 ---
 # Use the GitHub web interface to create a source documentation page

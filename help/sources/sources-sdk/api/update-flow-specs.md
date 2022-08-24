@@ -3,8 +3,6 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 title: Update flow specifications using the Flow Service API
 topic-legacy: developer guide
 description: The following document provides steps on how to retrieve and update flow specifications using the Flow Service API for Self-Serve Sources (Batch SDK).
-hide: true
-hidefromtoc: true
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
 ---
 # Update flow specifications using the [!DNL Flow Service] API
