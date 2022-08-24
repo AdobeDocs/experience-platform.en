@@ -17,8 +17,6 @@ Updates to existing features in Adobe Experience Platform:
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
-
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
 AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up models specific to a company’s needs using business-level configurations without the need for data science expertise.
