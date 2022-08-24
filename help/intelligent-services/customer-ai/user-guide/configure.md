@@ -258,11 +258,11 @@ Due to attribute-based access control, some fields and functionalities would hav
 
 ![](../images/user-guide/unavailable-functionalities.png)
 
-At the top of the Customer AI workspace **insights page**, notice that the score definition, identity, and profile attributes all show "Access Restricted."
+At the top of the Customer AI workspace **insights page**, notice that the details in the sidebar, score definition, identity, and profile attributes all show "Access Restricted."
 
 ![](../images/user-guide/access-restricted.png)
 
-If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name. If the popover is selected, a [!UICONTROL Restricted information is excluded] notification is displayed.
+If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
 
 ![](../images/user-guide/restricted-info-excluded.png)
 
