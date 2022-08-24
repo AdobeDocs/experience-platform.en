@@ -38,7 +38,7 @@ Once provided, you must structure your private Git repository like so:
 | {your_source}-description.txt | A brief description of your source. | [!DNL Mailchimp Members] is marketing automation source that you can use to bring [!DNL Mailchimp Members] data to Experience Platform. |
 | {your_source}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. |
 | {your_source}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | Mailchimp Members | 
-| {your_source}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `mixpanel-connectionSpec.json` |
+| {your_source}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `mailchimp-members-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
@@ -489,9 +489,9 @@ curl -X POST \
                   "type": "object",
                   "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                   "properties": {
-                      “domain”: {
-                        “type”: “string”,
-                        “description”: “Enter domain name for host url”
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "authorizationTestUrl": {
                           "description": "Authorization test url to validate accessToken.",
@@ -517,9 +517,9 @@ curl -X POST \
                   "type": "object",
                   "description": "defines auth params required for connecting to rest service.",
                   "properties": {
-                      “domain”: {
-                        “type”: “string”,
-                        “description”: “Enter domain name for host url”
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "username": {
                           "description": "Username to connect mailChimp endpoint.",
