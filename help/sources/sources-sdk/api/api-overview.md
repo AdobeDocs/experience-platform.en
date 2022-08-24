@@ -13,7 +13,7 @@ This document provides an overview of the process of creating a new source, incl
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Platform. The service provides a user interface and RESTful API that lets you set up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
 
-The [!DNL Flow Service] API provides several endpoints that allow you to programmatically manage the connection and flow specifications for a new source that you are integrating through Batch SDK.
+The [!DNL Flow Service] API provides several endpoints that allow you to programmatically manage the connection and flow specifications for a new source that you are integrating through Self-Serve Sources (Batch SDK).
 
 ## Create a new connection specification
 
@@ -41,4 +41,4 @@ To submit your source for integration to Experience Platform, you must first com
 
 ## Next steps
 
-To begin using the [!DNL Flow Service] API and create a new source through Batch SDK, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
+To begin using the [!DNL Flow Service] API and create a new source through Self-Serve Sources (Batch SDK), read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.

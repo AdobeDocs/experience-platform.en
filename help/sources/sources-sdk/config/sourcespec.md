@@ -369,7 +369,7 @@ The following is a completed source specification using [!DNL MailChimp Members]
 
 ### Configure different pagination types for your source {#pagination}
 
-The following are examples of other pagination types supported by Batch SDK:
+The following are examples of other pagination types supported by Self-Serve Sources (Batch SDK):
 
 #### `CONTINUATION_TOKEN`
 
@@ -454,7 +454,7 @@ The `NONE` pagination type can be used for sources that don't support any of the
 }
 ```
 
-### Advanced scheduling for Batch SDK
+### Advanced scheduling for Self-Serve Sources (Batch SDK)
 
 Configure your source's incremental and backfill schedule using advanced scheduling. The `incremental` property allows you to configure a schedule in which your source will ingest only new or modified records, while the `backfill` property allows you to create a schedule to ingest historical data.
 

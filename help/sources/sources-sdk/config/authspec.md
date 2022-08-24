@@ -15,7 +15,7 @@ The `authSpec` array contains information on the authentication parameters requi
 
 ## Authentication specifications
 
-Batch SDK supports OAuth 2 refresh codes and basic authentication. See the tables below for guidance on using an OAuth 2 refresh code and basic authentication
+Self-Serve Sources (Batch SDK) supports OAuth 2 refresh codes and basic authentication. See the tables below for guidance on using an OAuth 2 refresh code and basic authentication
 
 ### OAuth 2 refresh code
 

@@ -14,7 +14,7 @@ Self-Serve Sources (Batch SDK) allows you to integrate your own REST-based sourc
 
 ## Prerequisites
 
-To use Batch SDK, you must ensure that you have access to an IMS Organization Sandbox provisioned with Adobe Experience Platform Sources.
+To use Self-Serve Sources (Batch SDK), you must ensure that you have access to an IMS Organization Sandbox provisioned with Adobe Experience Platform Sources.
 
 This guide also requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -23,7 +23,7 @@ This guide also requires a working understanding of the following components of 
 
 ## Reading sample API calls
 
-The Batch SDK and [!DNL Flow Service] API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+The Self-Serve Sources (Batch SDK) and [!DNL Flow Service] API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
 
 ## Gather values for required headers
 
@@ -47,4 +47,4 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Next steps
 
-To begin creating a new source with Batch SDK, see the tutorial on [creating a new source](./create.md).
+To begin creating a new source with Self-Serve Sources (Batch SDK), see the tutorial on [creating a new source](./create.md).

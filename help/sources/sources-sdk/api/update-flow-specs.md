@@ -13,7 +13,7 @@ Once you have generated a new connection specification ID, you must add this ID 
 
 Flow specifications contain information that defines a flow, including the source and target connection IDs that it supports, transformation specifications that are needed to be applied to the data, and scheduling parameters required to generate a flow. You can edit flow specifications by using the `/flowSpecs` endpoint.
 
-The following document provides steps on how to retrieve and update flow specifications using the [!DNL Flow Service] API for Batch SDK.
+The following document provides steps on how to retrieve and update flow specifications using the [!DNL Flow Service] API for Self-Serve Sources (Batch SDK).
 
 ## Getting started
 
