@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Release Notes August 2022
 description: The August 2022 release notes for Adobe Experience Platform.
+exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 ---
 # Adobe Experience Platform release notes 
 
 **Release date: August 24, 2022**
 
 Updates to existing features in Adobe Experience Platform:
-
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
@@ -30,7 +30,7 @@ Attribution AI is used to attribute credits to touchpoints leading to conversion
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for Privacy | <li> Attribution AI now supports defining user roles and access policies to manage [permissions](../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li> <li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes, which can be metadata added to an object, such as labels.Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li> <li>[Data Hygiene](../../help/hygiene/home.md) capabilities within Attribution AI allow you to only use updated data for further training and scoring. Likewise, when you request to delete data, Attribution AI refrains from using the deleted data.</li><li>Attribution AI leverages Platform datasets. To help facilitate GDPR compliance, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile. All data is encrypted in transit and at rest.</li>|
+| Support for Privacy | <li>Attribution AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application.</li><li>Audit log resources are recorded automatically as the activity occurs.</li><li>Through [attribute-based access control](../../../help/access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes, which can be metadata added to an object, such as labels.Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>[Data Hygiene](../../../help/hygiene/home.md) capabilities within Attribution AI allow you to only use updated data for further training and scoring. Likewise, when you request to delete data, Attribution AI refrains from using the deleted data.</li><li>Attribution AI leverages Platform datasets. To help facilitate GDPR compliance, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile. All data is encrypted in transit and at rest.</li>|
 
 {style="table-layout:auto"}
 
@@ -46,7 +46,7 @@ Customer AI available in Real-time Customer Data Platform, is used to generate c
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for Privacy | <li> Customer AI now supports defining user roles and access policies to manage [permissions](../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li> <li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes. These attributes can be metadata added to an object, such as labels. Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li> <li>[Data Hygiene](../../help/hygiene/home.md) capabilities within Customer AI allow you to only use updated data for further training and scoring. Similarly, when you request to delete data, Customer AI refrains from using the deleted data.</li><li>Customer AI leverages Platform datasets. To help facilitate GDPR compliance, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile. All data is encrypted in transit and at rest.</li>|
+| Support for Privacy |<li>Customer AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application.</li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes. These attributes can be metadata added to an object, such as labels. Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>[Data Hygiene](../../../help/hygiene/home.md) capabilities within Customer AI allow you to only use updated data for further training and scoring. Similarly, when you request to delete data, Customer AI refrains from using the deleted data.</li><li>Customer AI leverages Platform datasets. To help facilitate GDPR compliance, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile. All data is encrypted in transit and at rest.</li>|
 
 {style="table-layout:auto"}
 
