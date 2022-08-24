@@ -11,7 +11,6 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
-- [[!DNL Data collection]](#data-collection)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
@@ -66,16 +65,6 @@ Adobe Experience Platform provides multiple [!DNL dashboards] through which you 
 | Scheduled activations widget | The [!UICONTROL Scheduled activations] widget provides a tabularized view of the most recently activated destinations. For each segment, it includes the name, destination platform, and activation start and end date. This widget allows you to discover at a glance where and when the audience is being activated and makes duplicate or unnecessary activations more transparent. This accumulated information also highlights where any activations have been left out. | 
 
 For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
-
-## Data collection {#collection}
-
-Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| Hybrid personalization | TBU |
 
 ## [!DNL Data Prep] {#data-prep}
 
