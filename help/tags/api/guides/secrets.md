@@ -55,10 +55,6 @@ When the secret is created, the two attributes are exchanged with a BASE64 encod
 
 ### `oauth2-client_credentials` {#oauth2-client_credentials}
 
->[!NOTE]
->
->Currently, only the [Client Credentials grant type](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) is supported for OAuth secrets.
-
 Secrets with a `type_of` value of `oauth2-client_credentials` require the following attributes under `credentials`:
 
 | Credential attribute | Data type | Description |
