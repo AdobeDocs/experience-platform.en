@@ -8,10 +8,14 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 ## Destination changelog {#changelog}
 
+With the beta release of the enhanced **[!UICONTROL Custom personalization]** destination connector, you might be seeing two **[!UICONTROL Custom personalization]** cards in the destinations catalog.
+
+The **[!UICONTROL Custom Personalization With Attributes]** connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the **[!UICONTROL Custom Personalization]**, the **[!UICONTROL Custom Personalization With Attributes]** connector adds a [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to your custom personalization destination, enabling attribute-based same-page and next-page personalization.
+
 >[!IMPORTANT]
 >
->With the beta release of the enhanced Custom personalization destination connector, you might be seeing two Custom personalization cards in the destinations catalog.
->The Custom personalization V2 destination connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the Custom personalization V1 card, the Custom personalization V2 connector adds a [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to your custom personalization destination, enabling attribute-based same-page and next-page personalization.
+>To benefit from the attribute-based personalization offered by the **[!UICONTROL Custom Personalization With Attributes]** destination connector, you must be using the [Edge Network Server API](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html) for data collection. Furthermore, the HTTP calls made by the Edge Network Server API must be made in an [authenticated context](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/authentication.html).
+> If you do not follow the requirements above, personalization will be based on segment membership only, identical to the experience offered by the **[!UICONTROL Custom Personalization]** connector.
 
 ![Image of the two Custom personalization destination cards in a side-by-side view.](/help/destinations/assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
