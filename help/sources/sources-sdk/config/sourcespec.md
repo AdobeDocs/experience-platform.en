@@ -458,18 +458,9 @@ The `NONE` pagination type can be used for sources that don't support any of the
 
 Configure your source's incremental and backfill schedule using advanced scheduling. The `incremental` property allows you to configure a schedule in which your source will ingest only new or modified records, while the `backfill` property allows you to create a schedule to ingest historical data.
 
-With advanced scheduling, you can use expressions and functions specific to your source to configure incremental and backfill schedules. In the example below, the [!DNL Zendesk] source requires the incremental schedule to be formatted as `type:user updated > {START_TIME} updated < {END_TIME}` and backfill as `type:user updated < {END_TIME}`. Once you configure your advanced scheduling, you must then refer to your `scheduleParams` in the URL, body, or header params section, depending on what your particular source supports.
+With advanced scheduling, you can use expressions and functions specific to your source to configure incremental and backfill schedules. In the example below, the [!DNL Zendesk] source requires the incremental schedule to be formatted as `type:user updated > {START_TIME} updated < {END_TIME}` and backfill as `type:user updated < {END_TIME}`. 
 
 ```json
-"urlParams": {
-        "path": "/api/v2/search/export@{if(empty(coalesce(pipeline()?.parameters?.ingestionStart,'')),'?query=type:user&filter[type]=user&','')}",
-        "method": "GET",
-        "queryParams": {
-          "query": "{SCHEDULE_QUERY}",
-          "filter[type]": "user"
-        }
-      }
-
 "scheduleParams": {
         "type": "ADVANCE",
         "paramFormat": "yyyy-MM-ddTHH:mm:ssK",
@@ -480,10 +471,23 @@ With advanced scheduling, you can use expressions and functions specific to your
 
 | Property | Description |
 | --- | --- |
-| `type` | The type of scheduling your source will use. Set this value to `ADVANCE` to use the advanced scheduling type. |
-| `paramFormat` | The defined format of your scheduling parameter. This value can be the same as your source's `scheduleStartParamFormat` and `scheduleEndParamFormat` values.  |
-| `incremental` | The incremental query of your source. Incremental refers to an ingestion method where only new or modified data is ingested. |
-| `backfill` | The backfill query of your source. Backfill refer to an ingestion method where historical data is ingested. |
+| `scheduleParams.type` | The type of scheduling your source will use. Set this value to `ADVANCE` to use the advanced scheduling type. |
+| `scheduleParams.paramFormat` | The defined format of your scheduling parameter. This value can be the same as your source's `scheduleStartParamFormat` and `scheduleEndParamFormat` values.  |
+| `scheduleParams.incremental` | The incremental query of your source. Incremental refers to an ingestion method where only new or modified data is ingested. |
+| `scheduleParams.backfill` | The backfill query of your source. Backfill refer to an ingestion method where historical data is ingested. |
+
+Once you configure your advanced scheduling, you must then refer to your `scheduleParams` in the URL, body, or header params section, depending on what your particular source supports. In the example below, `{SCHEDULE_QUERY}` is a placeholder used to specify where the incremental and backfill scheduling expressions will be used. In the case of a [!DNL Zendesk] source, `query` is used in the `queryParams` to specify advanced scheduling.
+
+```json
+"urlParams": {
+        "path": "/api/v2/search/export@{if(empty(coalesce(pipeline()?.parameters?.ingestionStart,'')),'?query=type:user&filter[type]=user&','')}",
+        "method": "GET",
+        "queryParams": {
+          "query": "{SCHEDULE_QUERY}",
+          "filter[type]": "user"
+        }
+      }
+```
 
 ### Add a custom schema to define your source's dynamic attributes
 
