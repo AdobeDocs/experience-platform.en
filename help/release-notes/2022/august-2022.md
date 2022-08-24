@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes August 2022
 description: The August 2022 release notes for Adobe Experience Platform.
+exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 ---
 # Adobe Experience Platform release notes 
 
