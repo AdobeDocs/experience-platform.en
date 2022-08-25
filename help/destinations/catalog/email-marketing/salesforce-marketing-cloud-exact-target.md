@@ -16,25 +16,25 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce Update Contacts REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html), which allows you to add contacts / update contact data for your business needs after activating them within a new Salesforce segment.
 
-Salesforce Marketing Cloud uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce instance are further below, in the [Authenticate to destination](#authenticate) section.
+[!DNL Salesforce Marketing Cloud] uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Salesforce Marketing Cloud destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Salesforce Marketing Cloud] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
 ### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
-The sales department of a home rental platform wants to broadcast a marketing email to a targeted customer audience. The platform's marketing team can add new contacts / update existing contacts *(and their email addresses)* through Adobe Experience Platform, build segments from their own offline data, and send these segments to Salesforce Marketing Cloud, which can then be used to send the marketing campaign email.
+The sales department of a home rental platform wants to broadcast a marketing email to a targeted customer audience. The platform's marketing team can add new contacts / update existing contacts *(and their email addresses)* through Adobe Experience Platform, build segments from their own offline data, and send these segments to [!DNL Salesforce Marketing Cloud], which can then be used to send the marketing campaign email.
 
 ## Prerequisites {#prerequisites}
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
-Before activating data to the Salesforce Marketing Cloud destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the [!DNL Salesforce Marketing Cloud] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-### Prerequisites in Salesforce CRM {#prerequisites-destination}
+### Prerequisites in Salesforce {#prerequisites-destination}
 
-Note the following prerequisites in Salesforce, in order to export data from Platform to your Salesforce Marketing Cloud account:
+Note the following prerequisites in Salesforce, in order to export data from Platform to your [!DNL Salesforce Marketing Cloud] account:
 
 #### You need to have a Salesforce account {#prerequisites-account}
 
@@ -44,7 +44,7 @@ Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial
 
 You must create a custom attribute of the type `Text Area Long`, which Experience Platform will use to update the segment status within Salesforce Marketing Cloud. In the workflow to activate segments to the destination, in the **[Segment schedule](#schedule-segment-export-example)** step, you will use the custom attribute as mapping ID for each segment you activate.
 
-Refer to the Salesforce Marketing Cloud documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need additional guidance.
+Refer to the [!DNL Salesforce Marketing Cloud] documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need additional guidance.
 
 >[!IMPORTANT]
 >
@@ -59,11 +59,11 @@ Refer to the Adobe Experience Platform documentation for [Segment Membership Det
 
 #### Gather Salesforce credentials {#gather-credentials}
 
-Note down the items below before you authenticate to the Salesforce Marketing Cloud destination.
+Note down the items below before you authenticate to the [!DNL Salesforce Marketing Cloud] destination.
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| <ul><li>Salesforce Marketing Cloud prefix</li></ul> | See [Salesforce Marketing Cloud domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul>|
+| <ul><li>[!DNL Salesforce Marketing Cloud] prefix</li></ul> | See [Salesforce Marketing Cloud domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul>|
 |<ul><li>Client ID</li><li>Client Secret</li></ul> | Refer to the [Salesforce documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) if you need additional guidance. | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
 
 {style="table-layout:auto"}
@@ -110,7 +110,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ![Sample screenshot showing how to authenticate to Salesforce Marketing Cloud](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
-*  **[!UICONTROL Subdomain]**: Your Salesforce Marketing Cloud domain prefix. For example if your domain is *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, you need the highlighted value.
+*  **[!UICONTROL Subdomain]**: Your [!DNL Salesforce Marketing Cloud] domain prefix. For example if your domain is *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, you need the highlighted value.
 *  **[!UICONTROL Client ID]**: Your Salesforce Client ID.
 *  **[!UICONTROL Client Secret]**: Your Salesforce Client Secret.
 
@@ -142,7 +142,7 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the Salesforce Marketing Cloud destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the Salesforce Marketing Cloud destination fields, follow the steps below.
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Salesforce Marketing Cloud] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Salesforce Marketing Cloud] destination fields, follow the steps below.
 
 The list of attribute mappings that can be set up for the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) is given below. The destination uses the [Salesforce Search Attribute-Set Definitions REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to retrieve attributes defined within Salesforce for your contacts and specific to your account. 
 
@@ -221,7 +221,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ### Unknown errors encountered while pushing events to Salesforce Marketing Cloud {#unknown-errors}
 
-When checking a dataflow run, if you see the error message below, verify that the Mapping ID that you provided in [!DNL Salesforce CRM] for your Platform segment is valid and exists within [!DNL Salesforce CRM].
+When checking a dataflow run, if you see the error message below, verify that the Mapping ID that you provided in [!DNL Salesforce Marketing Cloud] for your Platform segment is valid and exists within [!DNL Salesforce].
 ![Error](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
 
 ## Additional resources {#additional-resources}
