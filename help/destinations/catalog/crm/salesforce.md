@@ -112,6 +112,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 ![Sample screenshot showing how to authenticate to Salesforce CRM](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
 *  **[!UICONTROL Password]**: Your Salesforce account password.
+*  **[!UICONTROL Custom Domain]**: Your Salesforce domain.
 *  **[!UICONTROL Client ID]**: Your Salesforce connected app Consumer Key.
 *  **[!UICONTROL Client Secret]**: Your Salesforce connected app Consumer Secret.
 *  **[!UICONTROL Username]**: Your Salesforce account username.
@@ -125,7 +126,6 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Custom Domain]**: Your Salesforce domain.
 
 ### Enable alerts {#enable-alerts}
 
