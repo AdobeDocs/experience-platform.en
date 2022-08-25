@@ -8,11 +8,11 @@ exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 
 ## Overview {#overview}
 
-[Salesforce CRM](https://www.salesforce.com/) is a popular Customer Relationship Management (CRM) platform.
+[!DNL Salesforce CRM](https://www.salesforce.com/) is a popular Customer Relationship Management (CRM) platform.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts), which allows you to update identities within a segment into Salesforce CRM.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts), which allows you to update identities within a segment into [!DNL Salesforce CRM].
 
-Salesforce CRM uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce CRM instance are further below, in the [Authenticate to destination](#authenticate) section.
+[!DNL Salesforce CRM] uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your [!DNL Salesforce CRM] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
@@ -26,7 +26,7 @@ Before activating data to the Salesforce CRM destination, you must have a [schem
 
 ### Prerequisites in Salesforce CRM {#prerequisites-destination}
 
-Note the following prerequisites in Salesforce, in order to export data from Platform to your Salesforce account:
+Note the following prerequisites in [!DNL Salesforce CRM], in order to export data from Platform to your Salesforce account:
 
 #### You need to have a Salesforce account {#prerequisites-account}
 
@@ -83,11 +83,11 @@ Salesforce balances transaction loads by imposing request, rate and timeout limi
 
 ## Supported identities {#supported-identities}
 
-Salesforce CRM supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Salesforce CRM] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-| SalesforceId |Custom Salesforce CRM identifier that supports mapping of any identity.|Mandatory. You can send any [identity](../../../identity-service/namespaces.md) to the [!DNL Salesforce CRM] destination, as long as you map it to the `SalesforceId`. |
+| SalesforceId |Custom [!DNL Salesforce CRM] identifier that supports mapping of any identity.|Mandatory. You can send any [identity](../../../identity-service/namespaces.md) to the [!DNL Salesforce CRM] destination, as long as you map it to the `SalesforceId`. |
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -148,7 +148,7 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the Salesforce CRM destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the Salesforce CRM destination fields, follow these steps:
+To correctly send your audience data from Adobe Experience Platform to the [!DNL Salesforce CRM] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Salesforce CRM] destination fields, follow these steps:
 
 1. In the Mapping step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
 
