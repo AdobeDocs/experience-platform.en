@@ -244,9 +244,9 @@ By following this section, you have configured an instance of Customer AI and ex
 
 ## Attribute-based access control
 
->[!IMPORTANT]
+<!-- >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release only.
+>Attribute-based access control is currently available in a limited release only. -->
 
 [Attribute-based access control](../../../access-control/abac/overview.md) is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
 
