@@ -256,7 +256,7 @@ Through attribute-based access control, administrators of your organization can 
 
 Due to attribute-based access control, some fields and functionalities would have access restricted and be unavailable for certain Customer AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
 
-<!-- ![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/unavailable-functionalities.png) -->
+![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/unavailable-functionalities.png)
 
 At the top of the Customer AI workspace **insights page**, notice that the details in the sidebar, score definition, identity, and profile attributes all show "Access Restricted."
 
