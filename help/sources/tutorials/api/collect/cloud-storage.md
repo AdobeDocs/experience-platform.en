@@ -280,134 +280,220 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
+>[!NOTE]
+>
+>The JSON response payload below is hidden for brevity. Select "payload" to see the response payload.
+
++++ View payload
+
 **Response**
 
 A successful response returns the details of the dataflow specification responsible for bringing data from your source into Platform. The response includes the unique flow spec `id` required to create a new dataflow.
 
 ```json
 {
-    "items": [
-        {
-            "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
-            "name": "CloudStorageToAEP",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "sourceConnectionSpecIds": [
-                "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
-                "ecadc60c-7455-4d87-84dc-2a0e293d997b",
-                "b7829c2f-2eb0-4f49-a6ee-55e33008b629",
-                "4c10e202-c428-4796-9208-5f1f5732b1cf",
-                "fb2e94c9-c031-467d-8103-6bd6e0a432f2",
-                "32e8f412-cdf7-464c-9885-78184cb113fd",
-                "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-                "998b8ae3-cec0-43b7-8abe-40b1eb4ee069",
-                "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8"
-            ],
-            "targetConnectionSpecIds": [
-                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
-            ],
-            "transformationSpecs": [
-                {
-                    "name": "Mapping",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines various params required for different mapping from source to target",
-                        "properties": {
-                            "mappingId": {
-                                "type": "string"
-                            },
-                            "mappingVersion": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                }
-            ],
-            "scheduleSpec": {
-                "name": "PeriodicSchedule",
-                "type": "Periodic",
-                "spec": {
-                    "$schema": "http://json-schema.org/draft-07/schema#",
-                    "type": "object",
-                    "properties": {
-                        "startTime": {
-                            "description": "epoch time",
-                            "type": "integer"
-                        },
-                        "endTime": {
-                            "description": "epoch time",
-                            "type": "integer"
-                        },
-                        "interval": {
-                            "type": "integer"
-                        },
-                        "frequency": {
-                            "type": "string",
-                            "enum": [
-                                "minute",
-                                "hour",
-                                "day",
-                                "week"
-                            ]
-                        },
-                        "backfill": {
-                            "type": "boolean",
-                            "default": true
-                        }
-                    },
-                    "required": [
-                        "startTime",
-                        "frequency",
-                        "interval"
-                    ],
-                    "if": {
-                        "properties": {
-                            "frequency": {
-                                "const": "minute"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 15
-                            }
-                        }
-                    },
-                    "else": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 1
-                            }
-                        }
-                    }
-                }
-            },
-            "permissionsInfo": {
-                "view": [
-                    {
-                        "@type": "lowLevel",
-                        "name": "EnterpriseSource",
-                        "permissions": [
-                            "read"
-                        ]
-                    }
-                ],
-                "manage": [
-                    {
-                        "@type": "lowLevel",
-                        "name": "EnterpriseSource",
-                        "permissions": [
-                            "write"
-                        ]
-                    }
-                ]
-            }
-        }
+  "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+  "name": "CloudStorageToAEP",
+  "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+  "version": "1.0",
+  "attributes": {
+    "isSourceFlow": true,
+    "frequency": "batch",
+    "notification": {
+      "category": "sources",
+      "flowRun": {
+        "enabled": true
+      }
+    }
+  },
+  "sourceConnectionSpecIds": [
+    "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+    "ecadc60c-7455-4d87-84dc-2a0e293d997b",
+    "b7829c2f-2eb0-4f49-a6ee-55e33008b629",
+    "4c10e202-c428-4796-9208-5f1f5732b1cf",
+    "fb2e94c9-c031-467d-8103-6bd6e0a432f2",
+    "32e8f412-cdf7-464c-9885-78184cb113fd",
+    "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+    "998b8ae3-cec0-43b7-8abe-40b1eb4ee069",
+    "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+    "54e221aa-d342-4707-bcff-7a4bceef0001",
+    "c85f9425-fb21-426c-ad0b-405e9bd8a46c",
+    "26f526f2-58f4-4712-961d-e41bf1ccc0e8"
+  ],
+  "targetConnectionSpecIds": [
+    "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+  ],
+  "permissionsInfo": {
+    "view": [
+      {
+        "@type": "lowLevel",
+        "name": "EnterpriseSource",
+        "permissions": [
+          "read"
+        ]
+      }
+    ],
+    "manage": [
+      {
+        "@type": "lowLevel",
+        "name": "EnterpriseSource",
+        "permissions": [
+          "write"
+        ]
+      }
     ]
+  },
+  "optionSpec": {
+    "name": "OptionSpec",
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "errorDiagnosticsEnabled": {
+          "title": "Error diagnostics.",
+          "description": "Flag to enable detailed and sample error diagnostics summary.",
+          "type": "boolean",
+          "default": false
+        },
+        "partialIngestionPercent": {
+          "title": "Partial ingestion threshold.",
+          "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    }
+  },
+  "scheduleSpec": {
+    "name": "PeriodicSchedule",
+    "type": "Periodic",
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "startTime": {
+          "description": "epoch time",
+          "type": "integer"
+        },
+        "frequency": {
+          "type": "string",
+          "enum": [
+            "once",
+            "minute",
+            "hour",
+            "day",
+            "week"
+          ]
+        },
+        "interval": {
+          "type": "integer"
+        },
+        "backfill": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "required": [
+        "startTime",
+        "frequency"
+      ],
+      "if": {
+        "properties": {
+          "frequency": {
+            "const": "once"
+          }
+        }
+      },
+      "then": {
+        "allOf": [
+          {
+            "not": {
+              "required": [
+                "interval"
+              ]
+            }
+          },
+          {
+            "not": {
+              "required": [
+                "backfill"
+              ]
+            }
+          }
+        ]
+      },
+      "else": {
+        "required": [
+          "interval"
+        ],
+        "if": {
+          "properties": {
+            "frequency": {
+              "const": "minute"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "interval": {
+              "minimum": 15
+            }
+          }
+        },
+        "else": {
+          "properties": {
+            "interval": {
+              "minimum": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "transformationSpec": [
+    {
+      "name": "Mapping",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "defines various params required for different mapping from source to target",
+        "properties": {
+          "mappingId": {
+            "type": "string"
+          },
+          "mappingVersion": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "runSpec": {
+      "name": "ProviderParams",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "defines various params required for creating flow run.",
+        "properties": {
+          "windowStartTime": {
+            "type": "integer",
+            "description": "The start time for the dataflow in epoch time."
+          },
+          "windowEndTime": {
+            "type": "integer",
+            "description": "The end time for the dataflow in epoch time."
+          }
+        },
+        "required": [
+          "windowStartTime",
+          "windowEndTime"
+        ]
+      }
+    }
 }
 ```
+
++++
 
 ## Create a dataflow
 

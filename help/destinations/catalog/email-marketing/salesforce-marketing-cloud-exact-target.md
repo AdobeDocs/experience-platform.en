@@ -42,7 +42,7 @@ Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial
 
 #### Create custom field within Salesforce {#prerequisites-custom-field}
 
-Create the custom attribute of type `Text Area Long` which Experience Platform will use to update the segment status within Salesforce Marketing Cloud. 
+You must create a custom attribute of the type `Text Area Long`, which Experience Platform will use to update the segment status within Salesforce Marketing Cloud. In the workflow to activate segments to the destination, in the **[Segment schedule](#schedule-segment-export-example)** step, you will use the custom attribute as mapping ID for each segment you activate.
 
 Refer to the Salesforce Marketing Cloud documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need additional guidance.
 
@@ -65,6 +65,8 @@ Note down the items below before you authenticate to the Salesforce Marketing Cl
 | --- | --- | --- |
 | <ul><li>Salesforce Marketing Cloud prefix</li></ul> | See [Salesforce Marketing Cloud domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul>|
 |<ul><li>Client ID</li><li>Client Secret</li></ul> | Refer to the [Salesforce documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) if you need additional guidance. | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
+
+{style="table-layout:auto"}
 
 ## Supported identities {#supported-identities}
 
@@ -133,18 +135,18 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
-To correctly send your audience data from Adobe Experience Platform to the Salesforce Marketing Cloud destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the Salesforce Marketing Cloud destination fields, follow these steps:
+To correctly send your audience data from Adobe Experience Platform to the Salesforce Marketing Cloud destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the Salesforce Marketing Cloud destination fields, follow the steps below.
 
-The list of attribute mappings that can be set-up for the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) is given below. The destination uses the [Salesforce Search Attribute-Set Definitions REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to retrieve attributes defined within Salesforce for your contacts and specific to your account. 
+The list of attribute mappings that can be set up for the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) is given below. The destination uses the [Salesforce Search Attribute-Set Definitions REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to retrieve attributes defined within Salesforce for your contacts and specific to your account. 
 
 >[!IMPORTANT]
 > 
 > Although your attribute names would be as per your Salesforce account, the mappings for `contactKey` and `personalEmail.address` are mandatory.
 
-1. In the Mapping step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
+1. In the Mapping step, click **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 ![Add new mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
-1. In the select source field window, when selecting the source field choose the **[!UICONTROL Select attributes]** category and add the mappings desired.
+1. In the select source field window, when selecting the source field, choose the **[!UICONTROL Select attributes]** category and add the mappings desired.
 ![Source mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/source-mapping.png)
 
 1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
@@ -165,7 +167,7 @@ The list of attribute mappings that can be set-up for the [Salesforce REST API](
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
-When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step you must manually map Platform segments to the custom attribute in Salesforce.
+When performing the [Schedule segment export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform segments to the custom attribute in Salesforce.
 
 To do this, select each segment, then enter the corresponding custom attribute from Salesforce in the **[!UICONTROL Mapping ID]** field.
 

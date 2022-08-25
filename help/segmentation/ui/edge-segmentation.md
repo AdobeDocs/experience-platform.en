@@ -24,7 +24,7 @@ Edge segmentation is the ability to evaluate segments in Adobe Experience Platfo
 
 Currently only select query types can be evaluated with edge segmentation. The following sections provide a list of query types that can be evaluated with edge segmentation and those that are not currently supported.
 
-### Supported query types
+### Supported query types {#query-types}
 
 A query can be evaluated with edge segmentation if it meets any of the criteria outlined in the following table.
 
