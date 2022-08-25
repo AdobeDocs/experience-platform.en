@@ -5,7 +5,7 @@ exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
 ---
 # View configured dashboards
 
-If your organization has multiple dashboards available within Adobe Experience Platform, you can review these dashboards within the user interface (UI).
+If your organization has multiple dashboards available within Adobe Experience Platform, you can review the dashboard inventory within the user interface (UI).
 
 To view the dashboards that your organization has configured, select **[!UICONTROL Dashboards]** in the left navigation and then select the **[!UICONTROL Browse]** tab.
 
@@ -18,3 +18,11 @@ You can view an individual dashboard by selecting the name of the dashboard from
 ![Browse tab with a name of a dashboard highlighted.](./images/inventory/dashboard-name.png)
 
 When selected, the dashboard opens either in the Platform UI or in a fully integrated application workspace that requires you to log in using the necessary credentials.
+
+## Create custom dashboards (Beta)
+
+>[!IMPORTANT]
+>
+>The user-defined dashboards feature is in beta. Its features and documentation are subject to change.
+
+Adobe Experience Platform Dashboards enables you to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization. See the [user defined dashboards guide](./user-defined-dashboards.md) for complete instructions on creating and configuring custom dashboards.

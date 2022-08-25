@@ -22,5 +22,6 @@ feature: Data Collection
   * [Personalization overview](personalization-overview.md)
   * [Personalization via Adobe Target](personalization-target.md)
   * [Personalization via Offer Decisioning](personalization-offer-decisioning.md)
+* [Location hints](location-hints.md)
 * [Error handling](error-handling.md)
 * [Troubleshooting](troubleshooting.md)
