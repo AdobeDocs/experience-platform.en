@@ -11,7 +11,8 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
-- [Data Prep](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Real-time Customer Profile](#profile)
 - [Segmentation Service](#segmentation)
@@ -29,11 +30,11 @@ Attribution AI is used to attribute credits to touchpoints leading to conversion
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for Privacy | <li>Attribution AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application.</li><li>Audit log resources are recorded automatically as the activity occurs.</li><li>Through [attribute-based access control](../../../help/access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes, which can be metadata added to an object, such as labels.Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>[Data Hygiene](../../../help/hygiene/home.md) capabilities within Attribution AI allow you to only use updated data for further training and scoring. Likewise, when you request to delete data, Attribution AI refrains from using the deleted data.</li><li>Attribution AI leverages Platform datasets. To help facilitate GDPR compliance, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile. All data is encrypted in transit and at rest.</li>|
+| Support for Privacy | <ul><li> Attribution AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes, which can be metadata added to an object, such as labels.Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>Attribution AI leverages Platform datasets. To help facilitate GDPR compliance, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile. All data is encrypted in transit and at rest.</li></ul>|
 
 {style="table-layout:auto"}
 
-**Note**: Attribution AI will not be available for Healthcare Shield customers until the end of Q4 2022.
+**Note**: Attribution AI will not be available with existing Healthcare Shield or Privacy Shield customers until further notice.
  
 For more information on Attribution AI, please see the [Attribution AI](../../intelligent-services/attribution-ai/overview.md) overview.
 
@@ -45,11 +46,11 @@ Customer AI available in Real-time Customer Data Platform, is used to generate c
 
 | Feature | Description |
 | ------- | ----------- |
-| Support for Privacy |<li>Customer AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application.</li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes. These attributes can be metadata added to an object, such as labels. Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>[Data Hygiene](../../../help/hygiene/home.md) capabilities within Customer AI allow you to only use updated data for further training and scoring. Similarly, when you request to delete data, Customer AI refrains from using the deleted data.</li><li>Customer AI leverages Platform datasets. To help facilitate GDPR compliance, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile. All data is encrypted in transit and at rest.</li>|
+| Support for Privacy | <ul><li> Customer AI now supports defining user roles and access policies to manage [permissions](../../../help/access-control/abac/ui/permissions.md) for features and objects within a product application. </li><li>Audit log resources are recorded automatically as the activity occurs.</li><li> Through [attribute-based access control](../../access-control/abac/overview.md), administrators can control access to specific objects and/or capabilities based on certain attributes. These attributes can be metadata added to an object, such as labels. Administrators can also define user roles that have access to only specific fields and data that correspond to those fields.</li><li>Customer AI leverages Platform datasets. To help facilitate GDPR compliance, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile. All data is encrypted in transit and at rest.</li></ul>|
 
 {style="table-layout:auto"}
 
-**Note**: Customer AI will not be available for Healthcare Shield customers until the end of Q4 2022.
+**Note**: Customer AI will not be available with existing Healthcare Shield or Privacy Shield customers until further notice.
  
 For more information on Customer AI, please see the [Customer AI](../../intelligent-services/customer-ai/overview.md) overview.
 
@@ -78,6 +79,32 @@ For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] ove
 {style="table-layout:auto"}
 
 To learn more about [!DNL Data Prep], see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+<!--
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+|  ||
+
+{style="table-layout:auto"}
+
+-->
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) is a Sales Execution Platform with the most B2B buyer-seller interaction data in the world and significant investments in proprietary AI technologies to translate sales data into intelligence. [!DNL Outreach] helps organizations automate sales engagement and act on revenue intelligence to improve their efficiency, predictability, and growth. |
+
+{style="table-layout:auto"}
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -117,6 +144,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | ------- | ----------- |
+| Merge policies hard limit | Platform will now enforce a hard limit of **five** merge policies per sandbox. If your sandbox currently has more than five merge policies, you will **not** be able to create new merge policies until the sandbox has less than five merge policies. |
 | Orphaned profile edge attribute cleanup | For all organizations, Profile Service now removes leftover edge attributes of user activity region on a daily basis to give a more accurate representation of your profiles in your system. This cleanup occurs after all the profile fragments for a given profile are deleted and should impact profiles being merged from datasets where `com_adobe_aep_profile_region_dataset` is marked as `true`. This may show a drop in the "Addressable audience" metric in the license usage dashboard and may show a drop in the "Profile count" metric in the Profile dashboard, since these metrics included leftover edge attribute fragments prior to this release. |
 
 {style="table-layout:auto"}
