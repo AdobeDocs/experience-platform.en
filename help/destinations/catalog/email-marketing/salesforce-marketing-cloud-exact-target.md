@@ -102,7 +102,7 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-![Catalog](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/catalog.png)
+Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL (API) Salesforce Marketing Cloud]. Alternatively you can locate it under the Email marketing category.
 
 ### Authenticate to destination {#authenticate}
 
