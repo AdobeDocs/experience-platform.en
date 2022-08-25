@@ -26,6 +26,8 @@ Online sampling estimates the results at runtime. This means that they do not re
 
 Offline sampling estimates results based on alternate datasets or structures. These alternate datasets and structures are created earlier during a separate extract, transform, and load (ETL) process and must be prepared for sampling prior to the query runtime. At the query runtime, these newly created structures are queried instead of the actual dataset. The query runtime requires some reformulation and translation to be able to redirect the original SQL to the sample datasets and structures. The majority of the required workload is conducted offline at the time of the sample's creation.
 
+<!-- This section is commented out as some of this is still in development. 
+
 ## Types of sample techniques
  
 Multiple sample datasets can be made for the original dataset. This allows one sample dataset for each sampling technique or for each identified column set to be stratified. At query runtime, the query engine selects the correct sample version based on the supplied parameters and query conditions.
@@ -34,7 +36,7 @@ There are three commonly used sampling techniques:
 
 - **Uniform Random Sampling**: A technique that is used as a baseline when there is no additional context of how a dataset is queried. Any dataset can be sampled using this technique with very few to no assumptions about query patterns. The drawback to this technique is that it can have a higher error rate than the alternatives.
 - **Uniform Stratified Sampling**: A technique of sampling from a population that can be partitioned into sub-populations or sub-groups. It captures the variations between sub-populations by sampling each population independently. This technique performs better than random sampling and with a lower error rate but it requires additional context on how to pick the sub-populations. They typically use the column sets that are frequently queried on a dataset.
-- **Systematic Sampling**: A method where a sampling interval is used to pick a sample after the initial random sample. `K = N/n` where `N` is the population size and `n` is the sample size. This also requires information about query patterns to be able to stratify the samples according to the groups.
+- **Systematic Sampling**: A method where a sampling interval is used to pick a sample after the initial random sample. `K = N/n` where `N` is the population size and `n` is the sample size. This also requires information about query patterns to be able to stratify the samples according to the groups. -->
 
 ## Build a sample
 

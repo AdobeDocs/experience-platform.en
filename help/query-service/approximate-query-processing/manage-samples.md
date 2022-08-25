@@ -18,7 +18,7 @@ To help you manage your samples for approximate query processing, Query Service 
 
 ## Getting started
 
-To use the approximate query processing capabilities detailed above you must set the session flag to `true`. From the command line of either the Query Editor or your PSQL client enter the `SET aqp=true;` command.
+To use the approximate query processing capabilities detailed above, you must set the session flag to `true`. From the command line of either the Query Editor or your PSQL client enter the `SET aqp=true;` command.
 
 >[!NOTE]
 >
