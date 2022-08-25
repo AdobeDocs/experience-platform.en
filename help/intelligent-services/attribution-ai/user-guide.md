@@ -256,7 +256,7 @@ Once you have selected your training window, select **[!UICONTROL Finish]** in t
 
 ![setup complete](./images/user-guide/instance_setup_complete.png)
 
-### Attribute-based access control
+## Attribute-based access control
 
 >[!IMPORTANT]
 >
