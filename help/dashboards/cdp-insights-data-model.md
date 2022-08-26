@@ -203,7 +203,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### Most used destinations use case
 
-The logic used in the [!UICONTROL Most used destinations] widget lists your organization’s most used destinations according to the number of segments mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the[[!UICONTROL Most used destinations] widget](./guides/destinations#most-used-destinations) for more information.
+The logic used in the [!UICONTROL Most used destinations] widget lists your organization’s most used destinations according to the number of segments mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the[[!UICONTROL Most used destinations] widget](./guides/destinations.md#most-used-destinations) for more information.
 
 The SQL that generates the [!UICONTROL Most used destinations] widget is seen in the collapsible section below.
 
