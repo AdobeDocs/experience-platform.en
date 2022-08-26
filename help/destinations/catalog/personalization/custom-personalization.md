@@ -14,10 +14,11 @@ The **[!UICONTROL Custom Personalization With Attributes]** connector is current
 
 >[!IMPORTANT]
 >
->To benefit from the attribute-based personalization offered by the **[!UICONTROL Custom Personalization With Attributes]** destination connector, you must be using the [Edge Network Server API](/help/server-api/overview.md) for data collection. Furthermore, the HTTP calls made by the Edge Network Server API must be made in an [authenticated context](/help/server-api/authentication.md).
+>Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization With Attributes]** destination requires you to use the [Edge Network Server API](/help/server-api/overview.md) for data collection. Furthermore, all the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
+>
 > If you do not follow the requirements above, personalization will be based on segment membership only, identical to the experience offered by the **[!UICONTROL Custom Personalization]** connector.
 
-![Image of the two Custom personalization destination cards in a side-by-side view.](/help/destinations/assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
+![Image of the two Custom personalization destination cards in a side-by-side view.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## Overview {#overview}
 
@@ -141,11 +142,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }

@@ -55,7 +55,7 @@ Use the check boxes to the left of the segment names to select the segments that
 
 Select the attributes based on which you want to enable personalization use cases for your users. This means that if the value of an attribute changes or if an attribute is added to a profile, that profile will become a member of the segment and will be activated to the personalization destination.
 
-Adding attributes is optional and you can still proceed to the next step and enable same-page and next-page personalization without selecting attributes. If you do not add any attributes in this step, personalization will still occur based on the segmentMembership and identityMap qualifications for profiles.
+Adding attributes is optional and you can still proceed to the next step and enable same-page and next-page personalization without selecting attributes. If you do not add any attributes in this step, personalization will still occur based on the segment membership and identity map qualifications for profiles.
 
 ![Image showing the mapping step with an attribute selected](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
