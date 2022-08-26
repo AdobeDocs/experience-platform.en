@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Configure authentication specifications for Sources SDK
+title: Configure authentication specifications for Self-Serve Sources (Batch SDK)
 topic-legacy: overview
-description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
-hide: true
-hidefromtoc: true
+description: This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 ---
-# Configure authentication specifications for Sources SDK
+# Configure authentication specifications for Self-Serve Sources (Batch SDK)
 
 Authentication specifications define how Adobe Experience Platform users can connect to your source.
 
@@ -15,7 +13,7 @@ The `authSpec` array contains information on the authentication parameters requi
 
 ## Authentication specifications
 
-Currently, [!DNL Sources SDK] supports OAuth 2 refresh codes and basic authentication. See the tables below for guidance on using an OAuth 2 refresh code and basic authentication
+Self-Serve Sources (Batch SDK) supports OAuth 2 refresh codes and basic authentication. See the tables below for guidance on using an OAuth 2 refresh code and basic authentication
 
 ### OAuth 2 refresh code
 
@@ -30,10 +28,6 @@ An OAuth 2 refresh code allows for secure access to an application by generating
     "type": "object",
     "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path."
-      },
       "authorizationTestUrl": {
         "description": "Authorization test url to validate accessToken.",
         "type": "string"
