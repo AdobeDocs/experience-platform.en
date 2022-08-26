@@ -31,7 +31,7 @@ At a high level, to create documentation for your source, you need to create a f
 
 ## Documentation template
 
-You can use a pre-filled [documentation template](./api-template.md) to assist in creating documentation for your source. Further below, you can find instructions on how to edit the template and open a pull request. Submitted documentation for your new source will be reviewed and published by the Adobe documentation team.
+You can use a pre-filled [documentation template](./template.md) to assist in creating documentation for your source. Further below, you can find instructions on how to edit the template and open a pull request. Submitted documentation for your new source will be reviewed and published by the Adobe documentation team.
 
 You can also download the documentation templates below:
 
