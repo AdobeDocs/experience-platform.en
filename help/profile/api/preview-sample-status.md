@@ -461,7 +461,7 @@ This report provides the following information:
 
 ## Generate the unstitched profiles report
 
-You can gain further visibility into the composition of your organization's Profile Store through the unstitched profiles report. An "unstitched" profile is a profile that is associated with pseudonymous identity namespaces such as `ECID` and `AAID` and are inactive, which is any profile that has not added new events for the specified time period. A subset of unstitched profiles is known as "unknown" profiles. The unstitched profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
+You can gain further visibility into the composition of your organization's Profile Store through the unstitched profiles report. An "unstitched" profile is a profile that contains only one profile fragment. An "unknown" profile is a profile that is associated with pseudonymous identity namespaces such as `ECID` and `AAID`. Unknown profiles are inactive, which means they have not added new events for the specified time period. The unstitched profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
 
 You can generate the unstitched profiles report by performing a GET request to the `/previewsamplestatus/report/unstitchedProfiles` endpoint.
 
