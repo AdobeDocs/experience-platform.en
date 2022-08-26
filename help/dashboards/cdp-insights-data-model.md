@@ -24,7 +24,13 @@ CDP reporting provides insights into your profile data and its relationship with
 
 ### Profile model {#profile-model}
 
-The profile model is comprised of three datasets: `adwh_dim_date`, `adwh_fact_profile`, `adwh_dim_merge_policies`. The image below contains the relevant data fields in each.
+The profile model is comprised of three datasets: 
+
+- `adwh_dim_date`
+- `adwh_fact_profile`
+- `adwh_dim_merge_policies`
+
+The image below contains the relevant data fields in each.
 
 ![An ERD of the profile model.](./images/cdp-insights/profile-model.png)
 
