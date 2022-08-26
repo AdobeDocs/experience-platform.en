@@ -1,18 +1,18 @@
 ---
-title: CDP Insights Data Model
-description: Learn how to use SQl queries from CDP Insights Data Models to customize your own CDP reports for your marketing and KPI use cases.
+title: Customer Data Platform (CDP) Insights Data Model
+description: Learn how to use SQL queries from CDP Insights Data Models to customize your own CDP reports for your marketing and KPI use cases.
 ---
-# (Beta) CDP Insights Data Model
+# (Beta) Customer Data Platform (CDP) Insights Data Model
 
 >[!IMPORTANT]
 >
 >The CDP Insights Data Models feature is in beta. Its features and documentation are subject to change.
 
-The CDP Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create bespoke CDP reports for your marketing and KPI use cases. These insights can then be used as custom widgets for your used defined dashboards.
+The Customer Data Platform (CDP) Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your used-defined dashboards.
 
 ## Prerequisites
 
-This guide requires a working understanding of [the user-defined dashboards feature](./user-defined-dashboards.md). Please read the documentation before continuing with this guide.
+This guide requires a working understanding of the [user-defined dashboards feature](./user-defined-dashboards.md). Please read the documentation before continuing with this guide.
 
 ## CDP insight reports and use cases
 
@@ -30,7 +30,7 @@ The profile model is comprised of three datasets:
 - `adwh_fact_profile`
 - `adwh_dim_merge_policies`
 
-The image below contains the relevant data fields in each.
+The image below contains the relevant data fields in each dataset.
 
 ![An ERD of the profile model.](./images/cdp-insights/profile-model.png)
 
@@ -58,7 +58,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 The logic used for the [!UICONTROL Single identity profiles] widget provides a count of your organization’s profiles that only have one type of ID type that creates their identity. See the[[!UICONTROL Single identity profiles] widget documentation](./guides/profiles.md#single-identity-profiles) for more information.
 
-The SQl that generates the [!UICONTROL Single identity profiles] widget is seen in the collapsible section below.
+The SQL that generates the [!UICONTROL Single identity profiles] widget is seen in the collapsible section below.
 
 +++SQL query
 
@@ -83,7 +83,7 @@ The namespace model is comprised of the following datasets:
 - `adwh_dim_namespaces`
 - `adwh_dim_merge_policies`
 
-The image below contains the relevant data fields in each.
+The image below contains the relevant data fields in each dataset.
 
 ![An ERD of the namespace model.](./images/cdp-insights/namespace-model.png)
 
@@ -161,7 +161,7 @@ The image below contains the relevant data fields in each dataset.
 
 The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected segment at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](./guides/segments.md#audience-size) for more information.
 
-The SQl that generates the [!UICONTROL Audience size] widget is seen in the collapsible section below.
+The SQL that generates the [!UICONTROL Audience size] widget is seen in the collapsible section below.
 
 +++SQL query
 
@@ -209,7 +209,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### Most used destinations use case
 
-The logic used in the [!UICONTROL Most used destinations] widget lists your organization’s most used destinations according to the number of segments mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the[[!UICONTROL Most used destinations] widget](./guides/destinations.md#most-used-destinations) for more information.
+The logic used in the [!UICONTROL Most used destinations] widget lists your organization’s most used destinations according to the number of segments mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the [[!UICONTROL Most used destinations] widget](./guides/destinations.md#most-used-destinations) for more information.
 
 The SQL that generates the [!UICONTROL Most used destinations] widget is seen in the collapsible section below.
 
@@ -292,7 +292,7 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 
 +++
 
-### Overlap Namespace model 
+### Overlap namespace model 
 
 The overlap namespace model is comprised of the following datasets: 
 
@@ -301,13 +301,13 @@ The overlap namespace model is comprised of the following datasets:
 - `adwh_fact_profile_overlap_of_namespace`
 - `adwh_dim_merge_policies`
 
-The image below contains the relevant data fields in each.
+The image below contains the relevant data fields in each dataset.
 
 ![An ERD of the segment model.](./images/cdp-insights/overlap-namespace-model.png)
 
 #### Identity overlap (profiles) use case
 
-The logic used in the [!UICONTROL Identity overlap] widget displays the overlap of profiles in your **Profile Store** that contain the two selected identities. See the [!UICONTROL Profiles] dashboard, [[!UICONTROL Identity overlap] widget documentation](./guides/profiles.md#identity-overlap) for more information.
+The logic used in the [!UICONTROL Identity overlap] widget displays the overlap of profiles in your **Profile Store** that contain the two selected identities. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Profiles] dashboard documentation](./guides/profiles.md#identity-overlap).
 
 The SQL that generates the [!UICONTROL Identity overlap] widget is seen in the collapsible section below.
 
@@ -369,13 +369,13 @@ The overlap namespace by segment model is comprised of the following datasets:
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
 
-The image below contains the relevant data fields in each.
+The image below contains the relevant data fields in each dataset.
 
 ![An ERD of the segment model.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
 #### Identity overlap (segments) use case
 
-The logic used in the [!UICONTROL Segments] dashboard [!UICONTROL Identity overlap] widget illustrates the overlap of profiles that contain the two selected identities for a particular segment. See the [[!UICONTROL Profiles] dashboard, [!UICONTROL Identity overlap] widget documentation](./guides/segments.md#identity-overlap) for more information.
+The logic used in the [!UICONTROL Segments] dashboard [!UICONTROL Identity overlap] widget illustrates the overlap of profiles that contain the two selected identities for a particular segment. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Segmentation] dashboard documentation](./guides/segments.md#identity-overlap).
 
 The SQL that generates the [!UICONTROL Identity overlap] widget is seen in the collapsible section below.
 

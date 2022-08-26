@@ -29,5 +29,5 @@ feature: Dashboards
 * Application integrations {#integrations}
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
-* [CDP Insights Data Model](cdp-insights-data-model.md)
+* [Customer Data Platform (CDP) Insights Data Model](cdp-insights-data-model.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
