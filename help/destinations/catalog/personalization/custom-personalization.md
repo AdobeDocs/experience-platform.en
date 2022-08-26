@@ -10,11 +10,16 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 With the beta release of the enhanced **[!UICONTROL Custom personalization]** destination connector, you might be seeing two **[!UICONTROL Custom personalization]** cards in the destinations catalog.
 
-The **[!UICONTROL Custom Personalization With Attributes]** connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the **[!UICONTROL Custom Personalization]**, the **[!UICONTROL Custom Personalization With Attributes]** connector adds a [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to your custom personalization destination, enabling attribute-based same-page and next-page personalization.
+The **[!UICONTROL Custom Personalization With Attributes]** connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the **[!UICONTROL Custom Personalization]**, the **[!UICONTROL Custom Personalization With Attributes]** connector adds an optional [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to your custom personalization destination, enabling attribute-based same-page and next-page personalization.
 
 >[!IMPORTANT]
 >
 >Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization With Attributes]** destination requires you to use the [Edge Network Server API](/help/server-api/overview.md) for data collection. Furthermore, all the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
+>
+>If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Server API in two ways:
+>
+> * Add a server-side integration which retrieves attributes via the Server API.
+> * Update your client-side configuration with a custom Javascript code to retrieve attributes via the Server API.
 >
 > If you do not follow the requirements above, personalization will be based on segment membership only, identical to the experience offered by the **[!UICONTROL Custom Personalization]** connector.
 
@@ -157,6 +162,37 @@ alloy("sendEvent", {
   });
 ```
 
+### Example response for [!UICONTROL Custom Personalization With Attributes]
+
+When using **[!UICONTROL Custom Personalization With Attributes]**, the API response will look similar to the example below.
+
+The difference between **[!UICONTROL Custom Personalization With Attributes]** and **[!UICONTROL Custom Personalization]** is the inclusion of the `attributes` section in the API response.
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## Data usage and governance {#data-usage-governance}
 
