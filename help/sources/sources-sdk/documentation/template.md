@@ -1,8 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-solution: Experience Platform
 title: Documentation self-service template
-topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to YOURSOURCE using the Flow Service API.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
 ---
@@ -14,7 +12,7 @@ exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
 
 ## Overview
 
-*Provide a short overview of your company, including the value it provides to customers. Include a link to your product documentation homepage, for further reading.*
+*Provide a short overview of your company, including the value it provides to customers. Include a link to your product documentation homepage for further reading.*
 
 >[!IMPORTANT]
 >
@@ -28,6 +26,18 @@ exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
 * *requirements for email hashing*
 * *any account specifics on your side*
 * *how to obtain an API key to connect to your platform*
+
+### Gather required credentials
+
+In order to connect *YOURSOURCE* to Experience Platform, you must provide values for the following connection properties:
+
+| Credential | Description | Example |
+| --- | --- | --- |
+| *credential one* | *Please add a brief description to your source's authentication credential here* | *Please add an example of your source's authentication credential here* |
+| *credential two* | *Please add a brief description to your source's authentication credential here* | *Please add an example of your source's authentication credential here* |
+| *credential three* | *Please add a brief description to your source's authentication credential here* | *Please add an example of your source's authentication credential here* |
+
+For more information on these credentials, see the *YOURSOURCE* authentication documentation. *Please add link to your platform's authentication documentation here*.
 
 ## Connect *YOURSOURCE* to Platform using the [!DNL Flow Service] API
 
