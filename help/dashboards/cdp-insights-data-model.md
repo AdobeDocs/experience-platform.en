@@ -447,10 +447,3 @@ FROM
 ```
 
 +++
-
-<!-- ### Segment model {#segment-model-2} 
-
-The segment model is comprised of the following datasets: ``, ``, ``. The image below contains the relevant data fields in each.
-
-![An ERD of the segment model.](./images/cdp-insights/segment-model.png) -->
-
