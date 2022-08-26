@@ -43,7 +43,7 @@ The profile model is comprised of three datasets: `adwh_dim_date`, `adwh_fact_pr
 
 #### The profile count use case
 
-The logic used for the profile count widget returns the total number of merged profiles within the Profile Store at the time the snapshot was taken. See the [[!UICONTROL Profile count] widget documentation](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=en#profile-count) for more information. 
+The logic used for the profile count widget returns the total number of merged profiles within the Profile Store at the time the snapshot was taken. See the [[!UICONTROL Profile count] widget documentation](./guides/profiles.md#profile-count) for more information. 
 
 The SQL that generates the [!UICONTROL Profile count] widget is seen in the collapsible section below.
 
@@ -63,7 +63,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 #### The Single identity profiles use case
 
-The logic used for the [!UICONTROL Single identity profiles] widget provides a count of your organization’s profiles that only have one type of ID type that creates their identity. See the[[!UICONTROL Single identity profiles] widget documentation](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=en#single-identity-profiles) for more information.
+The logic used for the [!UICONTROL Single identity profiles] widget provides a count of your organization’s profiles that only have one type of ID type that creates their identity. See the[[!UICONTROL Single identity profiles] widget documentation](./guides/profiles.md#single-identity-profiles) for more information.
 
 The SQl that generates the [!UICONTROL Single identity profiles] widget is seen in the collapsible section below.
 
@@ -89,7 +89,7 @@ The namespace model is comprised of the following datasets: `adwh_fact_profile_b
 
 #### Profiles by identity use case
 
-The [!UICONTROL Profiles by identity] widget displays the breakdown of identities across all of the merged profiles in your Profile Store. See the [[!UICONTROL Profiles by identity] widget documentation](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=en#profiles-by-identity) for more information.
+The [!UICONTROL Profiles by identity] widget displays the breakdown of identities across all of the merged profiles in your Profile Store. See the [[!UICONTROL Profiles by identity] widget documentation](./guides/profiles.md#profiles-by-identity) for more information.
 
 The SQL that generates the [!UICONTROL Profiles by identity] widget is seen in the collapsible section below.
 
@@ -114,7 +114,7 @@ LIMIT 5;
 
 #### Single identity profiles by identity use case
 
-The logic used for the [!UICONTROL Single identity profiles by identity] widget illustrates the total number of profiles that are identified with only a single unique identifier. See the [Single identity profiles by identity widget documentation](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=en#single-identity-profiles-by-identity) for more information.
+The logic used for the [!UICONTROL Single identity profiles by identity] widget illustrates the total number of profiles that are identified with only a single unique identifier. See the [Single identity profiles by identity widget documentation](./guides/profiles.md#single-identity-profiles-by-identity) for more information.
 
 The SQL that generates the [!UICONTROL Single identity profiles by identity] widget is seen in the collapsible section below.
 
@@ -143,13 +143,13 @@ GROUP BY
 
 ### Segment model {#segment-model}
 
-The segment model is comprised of the following datasets: ``, ``, ``. The image below contains the relevant data fields in each.
+The segment model is comprised of the following datasets: `adwh_dim_date`, `adwh_dim_merge_policies`, `adwh_dim_segments`, `adwh_fact_profile_by_segment`, `adwh_dim_br_segment_destinations`, `adwh_dim_destination`, and `adwh_dim_destination_platform`. The image below contains the relevant data fields in each.
 
-![An ERD of the segment model.](./images/cdp-insights/segment.png)
+![An ERD of the segment model.](./images/cdp-insights/segment-model.png)
 
 #### Audience size use case
 
-The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected segment at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html?lang=en#audience-size) for more information.
+The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected segment at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](./guides/segments.md#audience-size) for more information.
 
 The SQl that generates the [!UICONTROL Audience size] widget is seen in the collapsible section below.
 
@@ -178,7 +178,7 @@ LIMIT 20;
 
 #### Audience size change trend use case
 
-The logic used for the [!UICONTROL Audience size change trend] widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. See the [[!UICONTROL Audience size change trend] widget documentation](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html?lang=en#audience-size-change-trend) for more information.
+The logic used for the [!UICONTROL Audience size change trend] widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given segment between the most recent daily snapshots. See the [[!UICONTROL Audience size change trend] widget documentation](./guides/segments.md#audience-size-change-trend) for more information.
 
 The SQL that generates the [!UICONTROL Audience size change trend] widget is seen in the collapsible section below.
 
@@ -205,7 +205,7 @@ The namespace-segment model is comprised of the following datasets: ``, ``, ``. 
 
 #### Profiles by identity for a segment use case
 
-The logic used in the [!UICONTROL Profiles by identity] widget provides a breakdown of identities across all of the merged profiles in your Profile Store for a given segment. See the [[!UICONTROL Profiles by identity] widget documentation](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html?lang=en#profiles-by-identity) for more information.
+The logic used in the [!UICONTROL Profiles by identity] widget provides a breakdown of identities across all of the merged profiles in your Profile Store for a given segment. See the [[!UICONTROL Profiles by identity] widget documentation](./guides/segments.md#profiles-by-identity) for more information.
 
 The SQL that generates the [!UICONTROL Profiles by identity] widget is seen in the collapsible section below.
 
@@ -234,7 +234,7 @@ The overlap namespace model is comprised of the following datasets: ``, ``, ``. 
 
 #### Identity overlap (profiles) use case
 
-The logic used in the [!UICONTROL Identity overlap] widget displays the overlap of profiles in your **Profile Store** that contain the two selected identities. See the [!UICONTROL Profiles] dashboard, [[!UICONTROL Identity overlap] widget documentation](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html?lang=en#identity-overlap) for more information.
+The logic used in the [!UICONTROL Identity overlap] widget displays the overlap of profiles in your **Profile Store** that contain the two selected identities. See the [!UICONTROL Profiles] dashboard, [[!UICONTROL Identity overlap] widget documentation](./guides/profiles.md#identity-overlap) for more information.
 
 The SQL that generates the [!UICONTROL Identity overlap] widget is seen in the collapsible section below.
 
@@ -291,7 +291,7 @@ The overlap namespace by segment model is comprised of the following datasets: `
 
 #### Identity overlap (segments) use case
 
-The logic used in the [!UICONTROL Segments] dashboard [!UICONTROL Identity overlap] widget illustrates the overlap of profiles that contain the two selected identities for a particular segment. See the [[!UICONTROL Profiles] dashboard, [!UICONTROL Identity overlap] widget documentation](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html?lang=en#identity-overlap) for more information.
+The logic used in the [!UICONTROL Segments] dashboard [!UICONTROL Identity overlap] widget illustrates the overlap of profiles that contain the two selected identities for a particular segment. See the [[!UICONTROL Profiles] dashboard, [!UICONTROL Identity overlap] widget documentation](./guides/segments.md#identity-overlap) for more information.
 
 The SQL that generates the [!UICONTROL Identity overlap] widget is seen in the collapsible section below.
 
@@ -378,7 +378,7 @@ The segment model is comprised of the following datasets: ``, ``, ``. The image 
 
 #### Most used destinations use case
 
-The logic used in the [!UICONTROL Most used destinations] widget lists your organization’s most used destinations according to the number of segments mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the[[!UICONTROL Most used destinations] widget](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#most-used-destinations) for more information.
+The logic used in the [!UICONTROL Most used destinations] widget lists your organization’s most used destinations according to the number of segments mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the[[!UICONTROL Most used destinations] widget](./guides/destinations#most-used-destinations) for more information.
 
 The SQL that generates the [!UICONTROL Most used destinations] widget is seen in the collapsible section below.
 
@@ -405,7 +405,7 @@ FROM
 
 #### Recently activated segments use case
 
-The logic for the [!UICONTROL Recently activated segments] widget provides a list of the segments most recently mapped to a destination. This list provides a snapshot of the segments and destinations that are actively in use in the system and can help in troubleshooting any erroneous mappings. See the [[!UICONTROL Recently activated segments] widget documentation](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#recently-activated-segments) for more information.
+The logic for the [!UICONTROL Recently activated segments] widget provides a list of the segments most recently mapped to a destination. This list provides a snapshot of the segments and destinations that are actively in use in the system and can help in troubleshooting any erroneous mappings. See the [[!UICONTROL Recently activated segments] widget documentation](./guides/destinations.md#recently-activated-segments) for more information.
 
 The SQL that generates the [!UICONTROL Recently activated segments] widget is seen in the collapsible section below.
 
