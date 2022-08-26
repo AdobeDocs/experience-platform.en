@@ -43,7 +43,7 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 ## Use cases {#use-cases}
 
-The [!DNL Custom personalization connection] enables you to use your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), while also leveraging Experience Platform Edge Network data collection & segmentation capabilities, to power a deeper customer personalization experience.
+The [!DNL Custom Personalization Connection] enables you to use your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), as well as proprietary systems (for example, in-house CMS), while also leveraging Experience Platform Edge Network data collection & segmentation capabilities, to power a deeper customer personalization experience.
 
 The use cases described below include both site personalization and targeted on-site advertising.
 
