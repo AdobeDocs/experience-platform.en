@@ -22,7 +22,7 @@ The Adobe Experience Platform [!DNL Edge Network] automatically maps many XDM va
 
 ## Manually mapped data
 
-Any data not automatically mapped by the edge network can be accessed via processing rules. The data is flattened using dot notation and available as contextData.
+Any data that is not automatically mapped by the [!DNL Edge Network] can be accessed via processing rules. The data is flattened using dot notation and available as contextData.
 
 If you had a schema that looked like this.
 
@@ -65,3 +65,7 @@ a.x.arrayofobjects.1.obj2key //objval1
 Here is an example of a processing rule that would use this data.
 
 ![Processing Rules Interface](./assets/edge_analytics_processing_rules.png)
+
+>[!NOTE]
+>
+>With Experience Edge collection, all events are sent to Analytics as well as to any other services you have configured for your datastream. For example, if you have both Analytics and Target configured as services and you make separate calls for personalization and for Analytics, both events will be sent to Analytics as well as Target. These events will be recorded in Analytics reporting and can affect metrics like bounce rate.
