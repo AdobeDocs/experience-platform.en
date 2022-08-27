@@ -287,3 +287,7 @@ You can find the output dataset under **Datasets** in Platform. All Customer AI 
 ## Next steps {#next-steps}
 
 Once you have prepared your data and have all your credentials and schemas in place, start by following the [Configure a Customer AI Instance](./user-guide/configure.md) guide. This guide walks you through creating an instance for Customer AI.
+
+
+
+
