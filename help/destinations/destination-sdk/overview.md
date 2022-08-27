@@ -56,8 +56,7 @@ Destination SDK access varies based on your status as a partner or Experience Pl
 ---------|----------|
 | Independent Software Vendor (ISV) | Join the [Adobe Exchange program](https://partners.adobe.com/exchangeprogram/experiencecloud.html) and request to get an Experience Platform sandbox provisioned to access Destination SDK. |
 | System Integrator (SI) | You need to be at either Gold or Platinum level in the [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html), and you will get an Experience Platform sandbox provisioned and access to Destination SDK. |
-| Experience Platform customer on the [Activation package](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | By default, you get access to Experience Platform sandboxes and Destination SDK. <br> You also get access to all the productized destinations configured by other companies using Destination SDK and published across Experience Platform organizations. |
-| Experience Platform customer on the [Real-Time CDP Ultimate package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | By default, you get access to Experience Platform sandboxes and Destination SDK. <br> You also get access to all the productized destinations configured by other companies using Destination SDK and published across Experience Platform organizations. |
+| Experience Platform customer on the [Activation package](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) or [Real-Time CDP Ultimate package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | By default, you get access to Experience Platform sandboxes and Destination SDK, allowing you to build private destinations for your organization.|
 
 {style="table-layout:auto"}
 
