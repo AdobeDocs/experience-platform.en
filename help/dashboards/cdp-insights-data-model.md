@@ -1,6 +1,7 @@
 ---
 title: Customer Data Platform (CDP) Insights Data Model
 description: Learn how to use SQL queries from CDP Insights Data Models to customize your own CDP reports for your marketing and KPI use cases.
+exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 ---
 # (Beta) Customer Data Platform (CDP) Insights Data Model
 
