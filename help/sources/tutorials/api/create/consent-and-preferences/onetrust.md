@@ -65,8 +65,7 @@ curl -X POST \
       "auth": {
           "specName": "OAuth2 Refresh Code",
           "params": {
-              "host": "{HOST}",
-              "accessToken": "{ACCESS_TOKEN_OT}"
+              "accessToken": "{ACCESS_TOKEN}"
           }
       }
   }'
@@ -78,8 +77,7 @@ curl -X POST \
 | `description` | An optional value that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
-| `auth.params.` | Contains the credentials required to authenticate your source. The root host and the access token to connect to the API.|
-| `auth.params.host` | The environment from which the [!DNL OneTrust Integration] data needs to be pulled from. |
+| `auth.params.` | Contains the credentials required to authenticate your source, including the access token to connect to the API.|
 | `auth.params.accessToken` | The access token that corresponds with your [!DNL OneTrust Integration] account. |
 
 **Response**
