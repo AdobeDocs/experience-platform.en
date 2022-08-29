@@ -42,9 +42,6 @@ feature: Queries
 - Derived attributes {#derived-attributes}
   - [Overview](derived-attributes/overview.md)
   - [Deciles use case](derived-attributes/deciles-use-case.md)
-- Approximate query processing {#approximate-query-processing}
-  - [Overview](approximate-query-processing/overview.md)
-  - [Manage samples](approximate-query-processing/manage-samples.md)
 - Sample Queries {#sample-queries}
   - [Sample Experience Event queries](sample-queries/experience-event.md)
   - [Sample Adobe Analytics queries](sample-queries/adobe-analytics.md)
@@ -55,6 +52,7 @@ feature: Queries
   - [Spark SQL functions](sql/spark-sql-functions.md)
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
+  - [Dataset Samples](sql/dataset-samples.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
   - [SSL modes](./clients/ssl-modes.md)
