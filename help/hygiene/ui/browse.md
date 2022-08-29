@@ -42,7 +42,7 @@ Select the funnel icon (![Image of the funnel icon](../images/ui/browse/funnel-i
 
 {style="table-layout:auto"}
 
-## View the details of a work order
+## View the details of a work order {#view-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
