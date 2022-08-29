@@ -27,7 +27,6 @@ In order to connect [!DNL Mixpanel] to Platform, you must provide values for the
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| `host` | The [!DNL Mixpanel] raw data export API endpoint. See the [!DNL Raw Data Export API] section in the [Mixpanel API reference documentation](https://developer.mixpanel.com/reference/overview) for more information. | `https://data.mixpanel.com` |
 | `username` | The service account username that corresponds with your [!DNL Mixpanel] account. See the [[!DNL Mixpanel] service accounts documentation](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) for more information. | `Test8.6d4ee7.mp-service-account` |
 | `password` | The service account password that corresponds with your [!DNL Mixpanel] account. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | `projectId` | Your [!DNL Mixpanel] project ID. This ID is required to create a source connection. See the [[!DNL Mixpanel] project settings documentation](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) and the [[!DNL Mixpanel] guide on creating and managing projects](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) for more information. | `2384945` |
@@ -69,7 +68,6 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "host": "https://data.mixpanel.com",
               "username": "{USERNAME}",
               "password": "{PASSWORD}"
           }
@@ -84,7 +82,6 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
 | `auth.params.` | Contains the credentials required to authenticate your source. |
-| `auth.params.host` | The unique domain specific to your account created during the registration process. |
 | `auth.params.username` | The username that corresponds with your [!DNL Mixpanel] account. |
 | `auth.params.password` | The password that corresponds with your [!DNL Mixpanel] account. |
 
