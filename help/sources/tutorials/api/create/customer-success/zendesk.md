@@ -29,7 +29,6 @@ In order to access your [!DNL Zendesk] account on Platform, you must provide val
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| `host` | The unique domain specific to your account created during the registration process.| `https://yoursubdomain.zendesk.com`|
 | `accessToken` | Zendesk API token. |`0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 For more information on authenticating your [!DNL Zendesk] source, see the [[!DNL Zendesk] source overview](../../../../connectors/customer-success/zendesk.md).
@@ -72,7 +71,6 @@ curl -X POST \
         "auth": {
             "specName": "OAuth2 Refresh Code",
             "params": {
-                "host": "{HOST}",
                 "accessToken": "{ACCESS_TOKEN}"
             }
         }
@@ -86,7 +84,6 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
 | `auth.params.` | Contains the credentials required to authenticate your source. |
-| `auth.params.host` | The unique domain specific to your account created during the registration process. The format for the subdomain is `https://yoursubdomain.zendesk.com`.|
 | `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
 **Response**
