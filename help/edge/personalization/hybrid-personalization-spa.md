@@ -1,10 +1,10 @@
 ---
-title: Hybrid personalization with Web SDK and Edge Network Server API on single-page applications (SPAs)
+title: Hybrid personalization using Web SDK and Edge Network Server API on single-page applications (SPAs)
 description: This article demonstrates how you can use the Web SDK in conjunction with the Server API to deploy hybrid personalization on your web properties.
 keywords: personalization; hybrid; server api; server-side; hybrid implementation;
 ---
 
-# Hybrid personalization with Web SDK and Edge Network Server API on single-page applications (SPAs)
+# Hybrid personalization using Web SDK and Edge Network Server API on single-page applications (SPAs)
 
 ## Overview {#overview}
 
