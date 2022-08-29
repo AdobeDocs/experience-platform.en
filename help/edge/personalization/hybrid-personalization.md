@@ -201,6 +201,7 @@ Follow the steps below to run the sample app.
    }
    ).then(applyPersonalization("sample-json-offer"));
    ```
+
 1. The [!DNL Web SDK] renders page load [!DNL Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) offers automatically, because the `renderDecisions` flag is set to `true`.
 1. Form-based [!DNL JSON] offers are manually applied by the sample implementation code through the `applyPersonalization` method, to update the [!DNL DOM] based on the personalization offer.
 1. For form-based activities, display events must manually be sent, to indicate when the offer has been displayed. This is done via the `sendEvent` command.
