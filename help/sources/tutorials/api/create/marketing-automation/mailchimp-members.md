@@ -24,7 +24,7 @@ A base connection retains information between your source and Platform, includin
 
 ### Create a [!DNL Mailchimp] base connection using basic authentication
 
-To create a [!DNL Mailchimp] base connection using basic authentication, make a POST request to the `/connections` endpoint of [!DNL Flow Service] API while providing credentials for your `host`, `authorizationTestUrl`, `username`, and `password`.
+To create a [!DNL Mailchimp] base connection using basic authentication, make a POST request to the `/connections` endpoint of [!DNL Flow Service] API while providing credentials for your `authorizationTestUrl`, `username`, and `password`.
 
 **API format**
 
@@ -54,7 +54,6 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "username": "{USERNAME}",
               "password": "{PASSWORD}"
@@ -69,7 +68,6 @@ curl -X POST \
 | `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to connect your source to Platform. |
-| `auth.params.host` | The root URL used to connect to [!DNL Mailchimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
 | `auth.params.authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.username` | The username that corresponds with your [!DNL Mailchimp] account. This is required for basic authentication. |
 | `auth.params.password` | The password that corresponds with your [!DNL Mailchimp] account. This is required for basic authentication. |
@@ -87,7 +85,7 @@ A successful response returns the newly created base connection, including its u
 
 ### Create a [!DNL Mailchimp] base connection using OAuth 2 refresh code
 
-To create a [!DNL Mailchimp] base connection using OAuth 2 refresh code, make a POST request to the `/connections` endpoint while providing credentials for your `host`, `authorizationTestUrl`, and `accessToken`.
+To create a [!DNL Mailchimp] base connection using OAuth 2 refresh code, make a POST request to the `/connections` endpoint while providing credentials for your `authorizationTestUrl`, and `accessToken`.
 
 **API format**
 
@@ -117,7 +115,6 @@ curl -X POST \
       "auth": {
           "specName": "oAuth2RefreshCode",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "accessToken": "{ACCESS_TOKEN}"
           }
@@ -131,7 +128,6 @@ curl -X POST \
 | `description` | (Optional) A property that you can include to provide more information on your base connection. |
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after registering your source using the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
-| `auth.params.host` | The root URL used to connect to [!DNL Mailchimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
 | `auth.params.authorizationTestUrl` | (Optional) The authorization test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
