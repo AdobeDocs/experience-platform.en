@@ -1,14 +1,16 @@
 ---
-title: Hybrid personalization with Web SDK and Edge Network Server API
+title: Hybrid personalization with Web SDK and Edge Network Server API on single-page applications (SPAs)
 description: This article demonstrates how you can use the Web SDK in conjunction with the Server API to deploy hybrid personalization on your web properties.
 keywords: personalization; hybrid; server api; server-side; hybrid implementation;
 ---
 
-# Hybrid personalization with Web SDK and Edge Network Server API
+# Hybrid personalization with Web SDK and Edge Network Server API on single-page applications (SPAs)
 
 ## Overview {#overview}
 
 Hybdrid personalization describes the process of retrieving personalization content server-side, using the [Edge Network Server API](../../..//server-api/overview.md), and rendering it client-side, using the [Web SDK](../../home.md) `applyResponse` command.
+
+The example in this article uses a React single-page application (SPA).
 
 The table below shows an example of personalized and non-personalized content.
 
@@ -33,8 +35,8 @@ Server API requests are required to get propositions and send a display notifica
 
 | Request | Made by | 
 |---|---|
-| Interact request to retrieve propositions | Application server |
-| Interact request to send display notifications | Application server |
+| Interact request to retrieve propositions | Application server calling the Server API |
+| Interact request to send display notifications | Web SDK |
 
 ### Analytics implications {#analytics}
 
@@ -51,7 +53,7 @@ This way, the server-side request do not register any Analytics events, but the 
 
 ## Sample application {#sample-app}
 
-The process described below uses a sample application which can serve as a starting point for you to experiment and learn more about this type of personalization. 
+The process described below uses a sample [!DNL React] single-page application that can serve as a starting point for you to experiment and learn more about this type of personalization. 
 
 You can download this sample and customize it for your own needs. For example, you can change environment variables so that the sample app pulls in offers from your own Experience Platform configuration.
 
@@ -62,10 +64,10 @@ To do so, open the `.env` file at the root of the repository and modify the vari
 Follow the steps below to run the sample app.
 
 1. Clone [this repository](https://github.com/adobe/alloy-samples) to your local machine.
-2. Open a terminal and navigate to the `personalization-hybrid` folder.
+2. Open a terminal and navigate to the `personalization-hybrid-spa` folder.
 3. Run `npm install`.
 4. Run `npm start`.
-5. Open your web browser and navigate to `http://localhost`.
+5. Open your web browser and navigate to `http://localhost`
 
 ## Process overview
 
@@ -202,29 +204,17 @@ Follow the steps below to run the sample app.
    ).then(applyPersonalization("sample-json-offer"));
    ```
 
-6. The [!DNL Web SDK] renders page load [!DNL Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) offers automatically, because the `renderDecisions` flag is set to `true`.
-7. Form-based [!DNL JSON] offers are manually applied by the sample implementation code through the `applyPersonalization` method, to update the [!DNL DOM] based on the personalization offer.
-8. For form-based activities, display events must manually be sent, to indicate when the offer has been displayed. This is done via the `sendEvent` command.
+6. The client app uses the `sendEvent` command to tell the Web SDK when a view has been rendered. Each time a primary navigation link is clicked, a `sendEvent` command is invoked, with the corresponding view name. When the command is fired, the Web SDK automatically updates the page with relevant personalization experiences.
 
    ```js
-   function sendDisplayEvent(decision) {
-   const { id, scope, scopeDetails = {} } = decision;
-
    alloy("sendEvent", {
-      xdm: {
-         eventType: "decisioning.propositionDisplay",
-         _experience: {
-         decisioning: {
-            propositions: [
-               {
-               id: id,
-               scope: scope,
-               scopeDetails: scopeDetails,
-               },
-            ],
-         },
-         },
-      },
-   });
+   "renderDecisions": true,
+   "xdm": {
+      "web": {
+         "webPageDetails": {
+         "viewName":"home"
+         }
+      }
    }
+   });
    ```
