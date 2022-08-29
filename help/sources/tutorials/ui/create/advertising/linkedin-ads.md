@@ -15,9 +15,9 @@ This tutorial provides steps for creating a [!DNL LinkedIn Ads] source connector
 
 ## Overview
 
-[[!DNL LinkedIn Ads]](https://business.linkedin.com/marketing-solutions/ads) is a marketing solution by LinkedIn to reach over 830 million professionals on the world's largest professional network. The LinkedIn Reporting & ROI APIs provide key insights on performance such as clicks, impressions, and ad spend, and demographics information such as metrics by demographic values at the account, campaign, and creative levels.
+[[!DNL LinkedIn Ads]](https://business.linkedin.com/marketing-solutions/ads) is a marketing solution by LinkedIn that can reach over 830 million professionals on the world's largest professional network. The LinkedIn Reporting & ROI APIs provide key insights on performance such as clicks, impressions, and ad spend, as well as demographic information like metrics by demographic values at the account, campaign, and creative levels.
 
-This Adobe Experience Platform [source](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [LinkedIn Reporting & ROI APIs](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting) to retrieve your LinkedIn campaign data, along with all performance and metrics into Experience Platform allowing you to execute analytics. The data is returned from a specified date for the default 6 month retention on a daily basis. Refer to [guardrails](#guardrails) for details.
+This Adobe Experience Platform [source](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [LinkedIn Reporting & ROI APIs](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting) to retrieve your LinkedIn campaign data, along with all performance and metrics. You can then bring that data to Experience Platform, where you can execute analytics. The data is returned from a specified date within the six month default retention period for daily data. Refer to [guardrails](#guardrails) for details.
 
 [!DNL LinkedIn Ads] uses bearer tokens as an authentication mechanism to communicate with the LinkedIn Reporting & ROI APIs.
 
@@ -33,15 +33,19 @@ In order to connect [!DNL LinkedIn Ads] to Platform, you must provide values for
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Host | LinkedIn API endpoint. | `https://api.linkedin.com` |
-| Access Token | Assuming you have a LinkedIn Developer Application follow this LinkedIn tutorial [Authorization Code Flow (3-legged OAuth)](https://docs.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow) to generate the access token. | `AQV4FClIuE2BbDkQeDatkhMFs................qNAmFmlcr9A` |
-| Account IDs | You can find guidance to obtain the Account ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `508670032` |
-| Campaign Group IDs | Campaign Group IDs can be obtained by navigating to the Campaign Groups page and selecting the desired CIDs. | `611138362` |
-| Campaign IDs | You can find guidance to obtain the Campaign Group ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `1991010101,1992020202` |
+| *`Host`* | LinkedIn API endpoint. | `https://api.linkedin.com` |
+| *`Access Token`* | Assuming you have a LinkedIn Developer Application follow this LinkedIn tutorial [Authorization Code Flow (3-legged OAuth)](https://docs.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow) to generate the access token. | `AQV4FClIuE2BbDkQeDatkhMFs................qNAmFmlcr9A` |
+| *`Account IDs`* | You can find guidance to obtain the Account ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `508670032` |
+| *`Campaign Group IDs`* | Campaign Group IDs can be obtained by navigating to the Campaign Groups page and selecting the desired CIDs. | `611138362` |
+| *`Campaign IDs`* | You can find guidance to obtain the Campaign Group ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `1991010101,1992020202` |
 
 ### Guardrails {#guardrails}
 
-See the Retention, Restrictions, Delays and Accuracy sections on the [LinkedIn Reporting & ROI APIs](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting) page. Note, [!DNL LinkedIn Ads] only allows data retrieval from campaigns that are active. The data is returned from a specified date for the default 6 month retention on a daily basis.
+See the Retention, Restrictions, Delays and Accuracy sections on the [LinkedIn Reporting & ROI APIs](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting) page. 
+
+>[!Note]
+>
+>[!DNL LinkedIn Ads] only allows data retrieval from active campaigns. The data is returned from a specified date within the six month default retention period for daily data.
 
 ### Create Platform Schema
 
@@ -77,18 +81,18 @@ Next, Depending on how you want the data to be grouped you must select a *pivot*
    * CAMPAIGN GROUP
    * CAMPAIGN
    * CREATIVE
-They will enable you to restrict export to the specified Account IDs, Campaign Group IDs or Campaign IDs. Refer to [LinkedIn Reporting & ROI API Query Parameters](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting?view=li-lms-2022-07&tabs=http#query-parameters) to understand pivoting.
+Grouping by an element is known as a pivot. Choosing one of these options enables you to restrict export to the specified Account IDs, Campaign Group IDs or Campaign IDs. Refer to [LinkedIn Reporting & ROI API Query Parameters](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting) for further details on pivoting.
 
 Finally, you must provide as a mandatory input one or more of the field values below:
 | Field | Description |
 | --- | --- |
-| accountIds | Your LinkedIn account IDs. |
-| campaignGroupIds | Your LinkedIn Campaign Group IDs. |
-| campaignIds | Your LinkedIn Campaign IDs. |
+| `accountIds` | Your LinkedIn account IDs. |
+| `campaignGroupIds` | Your LinkedIn Campaign Group IDs. |
+| `campaignIds` | Your LinkedIn Campaign IDs. |
 
-> [!NOTE]
+>[!NOTE]
 >
-> Multiple IDs can be specified by passing comma separated values.
+>Multiple IDs can be specified by passing comma separated values.
 
 If you fail to provide a value on selecting **[!UICONTROL Select]** you will get a `Failed to parse JSON.` or `Unknown error while processing request.` error message.
 
@@ -98,13 +102,13 @@ If you fail to provide a value on selecting **[!UICONTROL Select]** you will get
 
 By following this tutorial, you have established a connection to your [!DNL LinkedIn Ads] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](/help/sources/ui-tutorials/dataflow/crm.md).
 
-> [!NOTE]
+>[!NOTE]
 >
-> On the **[!UICONTROL Scheduling]** step you need to set one of the below:
-> | Frequency | Interval |
-> | --- | --- |
-> | Day | 1 |
-> | Hour | 24 |
+>On the **[!UICONTROL Scheduling]** step you need to set one of the below to ensure that daily data will be retrieved.
+>| Frequency | Interval |
+>| --- | --- |
+>| `Day` | 1 |
+>| `Hour` | 24 |
 
 ![Platform UI screenshot for LinkedIn Ads showing scheduling](../../../../images/tutorials/create/linkedin-ads/scheduling.png?lang=en)
 
@@ -112,7 +116,7 @@ By following this tutorial, you have established a connection to your [!DNL Link
 
 ### Validation {#validation}
 
-To validate that you have correctly set up the source; and [!DNL LinkedIn Ads] events are being ingested, follow the steps below:
+To validate that you have correctly set up the source and [!DNL LinkedIn Ads] events are being ingested, follow the steps below:
 
 1. In the Platform UI, select View Dataflows besides the [!DNL LinkedIn Ads] card menu on the Catalog page. You can then select [!UIControl Preview dataset] to verify the data that was ingested.
 ![Platform UI screenshot for LinkedIn Ads Preview Dataset](../../../../images/tutorials/create/linkedin-ads/preview-dataset.png?lang=en)

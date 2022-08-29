@@ -13,9 +13,9 @@ hidefromtoc: true
 >
 >The [!DNL LinkedIn Ads] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
-[[!DNL LinkedIn Ads]](https://business.linkedin.com/marketing-solutions/ads) is a marketing solution by LinkedIn to reach over 830 million professionals on the world's largest professional network. The LinkedIn Reporting & ROI APIs provide key insights on performance such as clicks, impressions, and ad spend, and demographics information such as metrics by demographic values at the account, campaign, and creative levels.
+[[!DNL LinkedIn Ads]](https://business.linkedin.com/marketing-solutions/ads) is a marketing solution by LinkedIn that can reach over 830 million professionals on the world's largest professional network. The LinkedIn Reporting & ROI APIs provide key insights on performance such as clicks, impressions, and ad spend, as well as demographic information like metrics by demographic values at the account, campaign, and creative levels.
 
-This Adobe Experience Platform [source](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [LinkedIn Reporting & ROI APIs](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting) to retrieve your LinkedIn campaign data, along with all performance and metrics into Experience Platform allowing you to execute analytics. The data is returned from a specified date for the default 6 month retention on a daily basis. Refer to [guardrails](#guardrails) for details.
+This Adobe Experience Platform [source](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en) leverages the [LinkedIn Reporting & ROI APIs](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting) to retrieve your LinkedIn campaign data, along with all performance and metrics. You can then bring that data to Experience Platform, where you can execute analytics. The data is returned from a specified date within the six month default retention period for daily data. Refer to [guardrails](#guardrails) for details.
 
 [!DNL LinkedIn Ads] uses bearer tokens as an authentication mechanism to communicate with the LinkedIn Reporting & ROI APIs.
 
@@ -31,15 +31,19 @@ In order to connect [!DNL LinkedIn Ads] to Platform, you must provide values for
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Host | LinkedIn API endpoint. | `https://api.linkedin.com` |
-| Access Token | Assuming you have a LinkedIn Developer Application follow this [!DNL LinkedIn] tutorial [Authorization Code Flow (3-legged OAuth)](https://docs.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow) to generate the access token. | `AQV4FClIuE2BbDkQeDatkhMFs................qNAmFmlcr9A` |
-| Account IDs | You can find guidance to obtain the Account ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `508670032` |
-| Campaign Group IDs | Campaign Group IDs can be obtained by navigating to the Campaign Groups page and selecting the desired CIDs. | `611138362` |
-| Campaign IDs | You can find guidance to obtain the Campaign Group ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `1991010101,1992020202` |
+| *`Host`* | LinkedIn API endpoint. | `https://api.linkedin.com` |
+| *`Access Token`* | Assuming you have a LinkedIn Developer Application follow this [!DNL LinkedIn] tutorial [Authorization Code Flow (3-legged OAuth)](https://docs.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow) to generate the access token. | `AQV4FClIuE2BbDkQeDatkhMFs................qNAmFmlcr9A` |
+| *`Account IDs`* | You can find guidance to obtain the Account ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `508670032` |
+| *`Campaign Group IDs`* | Campaign Group IDs can be obtained by navigating to the Campaign Groups page and selecting the desired CIDs. | `611138362` |
+| *`Campaign IDs`* | You can find guidance to obtain the Campaign Group ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `1991010101,1992020202` |
 
 ### Guardrails {#guardrails}
 
-See the Retention, Restrictions, Delays and Accuracy sections on the [LinkedIn Reporting & ROI APIs](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting) page. Note, [!DNL LinkedIn Ads] only allows data retrieval from campaigns that are active. The data is returned from a specified date for the default 6 month retention on a daily basis.
+See the Retention, Restrictions, Delays and Accuracy sections on the [LinkedIn Reporting & ROI APIs](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting) page. 
+
+>[!Note]
+>
+>[!DNL LinkedIn Ads] only allows data retrieval from active campaigns. The data is returned from a specified date within the six month default retention period for daily data.
 
 ## Connect LinkedIn Ads to Platform using the [!DNL Flow Service] API
 
@@ -359,7 +363,7 @@ curl -X POST \
 | `accountIds` | Your LinkedIn account IDs |
 | `campaignGroupIds` | Your LinkedIn Campaign Group IDs. |
 | `campaignIds` | Your LinkedIn Campaign IDs. |
-| `pivot` | One of `ACCOUNT`, `CAMPAIGN GROUP`, `CAMPAIGN` or `CREATIVE` |
+| `pivot` | One of `ACCOUNT`, `CAMPAIGN GROUP`, `CAMPAIGN` or `CREATIVE`. Grouping by an element is known as a pivot. Specifying one of these options enables you to restrict export to the specified Account IDs, Campaign Group IDs or Campaign IDs. Refer to [LinkedIn Reporting & ROI API Query Parameters](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ads-reporting) for further details on pivoting. |
 
 **Response**
 
@@ -594,8 +598,7 @@ The last step towards bringing data from LinkedIn Ads to Platform is to create a
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
-To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions however, creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
-
+To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of `hour` or `day`. The interval value designates the period between two consecutive ingestions. Interval value should be set as `1` or `24` depending on `scheduleParams.frequency` selection of either `hour` or `day`.
 
 **API format**
 
@@ -636,8 +639,8 @@ curl -X POST \
         ],
         "scheduleParams": {
             "startTime": "1625040887",
-            "frequency": "minute",
-            "interval": 15
+            "frequency": "hour",
+            "interval": 1
         }
     }'
 ```
@@ -655,8 +658,8 @@ curl -X POST \
 | `transformations.params.mappingId` | The [mapping ID](#mapping) generated in an earlier step. |
 | `transformations.params.mappingVersion` | The corresponding version of the mapping ID. This value defaults to `0`. |
 | `scheduleParams.startTime` | This property contains information on the ingestion scheduling of the dataflow. |
-| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
-| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
+| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `hour` or `day`. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval value should be set as `1` or `24` depending on `scheduleParams.frequency` selection of either `hour` or `day`. |
 
 **Response**
 
