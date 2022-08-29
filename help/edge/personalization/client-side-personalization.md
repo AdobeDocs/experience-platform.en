@@ -4,7 +4,7 @@ description: This article demonstrates how you can use the Web SDK to deploy cli
 keywords: personalization; web sdk; client-side;
 ---
 
-# Client-side personalization using Adobe Experience Platform Web SDK
+# Client-side personalization using Web SDK
 
 ## Overview {#overview}
 
