@@ -39,7 +39,7 @@ The three required driver properties are seen in the table below.
 | Property | Description|
 | ------ | ------ |
 | `PGHOST` | The host name for the [!DNL PostgreSQL] server. This value is your Experience Platform [!UICONTROL Host] credential. |
-| `SSL` | This controls the use of SSL requirements. You **must** use the value "1" to enable this requirement. |
+| `SSL` | This controls the use of SSL requirements. You **must** use the value `require` to enable this requirement. |
 | `user` | The username connected to the database is your Organization ID. It is an alphanumeric string ending in `@adobe.org` |
 
 >[!IMPORTANT]
