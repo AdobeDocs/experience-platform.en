@@ -44,6 +44,11 @@ Select the funnel icon (![Image of the funnel icon](../images/ui/browse/funnel-i
 
 ## View the details of a work order
 
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_statusbyservice"
+>title="Status by service"
+>abstract="Data hygiene requests are independently processed by multiple Experience Platform services. This section outlines the request's current processing status for each respective service. To learn more, refer to the data hygiene UI guide."
+
 Select the ID of a listed work order to view its details.
 
 ![Image showing a work order ID being selected](../images/ui/browse/select-work-order.png)
