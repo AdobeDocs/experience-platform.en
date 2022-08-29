@@ -7,7 +7,8 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 
 ## July 27, 2022
 
-Access to tags and event forwarding capabilities is now managed through Adobe Admin Console under the card for Adobe Experience Platform Data Collection. See the guide on [data collection permissions](../../collection/permissions.md) for more information.
+* Access to tags and event forwarding capabilities is now managed through Adobe Admin Console under the card for Adobe Experience Platform Data Collection. See the guide on [data collection permissions](../../collection/permissions.md) for more information.
+* Support for Internet Explorer 10 and 11 has been [deprecated](../ie-deprecation.md).
 
 ## June 22, 2022
 
