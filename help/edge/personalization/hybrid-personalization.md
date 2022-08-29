@@ -70,8 +70,8 @@ Follow the steps below to run the sample app.
 ## Process overview
 
 1. [Express](https://expressjs.com/) is used for a lean server-side implementation. This handles basic server requests and routing.
-2. The browser requests the web page. Any cookies previously stored by the browser, prefixed with `kndctr_`, are included.
-3. When the page is requested from the app server, an event is sent to the [interactive data collection endpoint](../../../server-api/interactive-data-collection.md) to fetch personalization content. The sample app uses helper methods to simplify building and sending requests to the API (see [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). The `POST` request contains an `event` and a `query`. The cookies from the previous step, if available, are included in the `meta>state>entries` array.
+1. The browser requests the web page. Any cookies previously stored by the browser, prefixed with `kndctr_`, are included.
+1. When the page is requested from the app server, an event is sent to the [interactive data collection endpoint](../../../server-api/interactive-data-collection.md) to fetch personalization content. The sample app uses helper methods to simplify building and sending requests to the API (see [aepEdgeClient.js](https://github.com/adobe/alloy-samples/blob/main/common/aepEdgeClient.js)). The `POST` request contains an `event` and a `query`. The cookies from the previous step, if available, are included in the `meta>state>entries` array.
 
    ```js
    fetch(
@@ -151,8 +151,8 @@ Follow the steps below to run the sample app.
    ).then((res) => res.json());
    ```
 
-4. The application server returns a response with the HTML content and the identity and cluster cookies.
-5. On the client app page, the [!DNL Web SDK] `applyResponse` command is invoked, passing in the headers and body of the server-side response.
+1. The application server returns a response with the HTML content and the identity and cluster cookies.
+1. On the client app page, the [!DNL Web SDK] `applyResponse` command is invoked, passing in the headers and body of the server-side response.
 
    ```js
    alloy("applyResponse", {
@@ -202,9 +202,9 @@ Follow the steps below to run the sample app.
    ).then(applyPersonalization("sample-json-offer"));
    ```
 
-6. The [!DNL Web SDK] renders page load [!DNL Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) offers automatically, because the `renderDecisions` flag is set to `true`.
-7. Form-based [!DNL JSON] offers are manually applied by the sample implementation code through the `applyPersonalization` method, to update the [!DNL DOM] based on the personalization offer.
-8. For form-based activities, display events must manually be sent, to indicate when the offer has been displayed. This is done via the `sendEvent` command.
+1. The [!DNL Web SDK] renders page load [!DNL Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) offers automatically, because the `renderDecisions` flag is set to `true`.
+1. Form-based [!DNL JSON] offers are manually applied by the sample implementation code through the `applyPersonalization` method, to update the [!DNL DOM] based on the personalization offer.
+1. For form-based activities, display events must manually be sent, to indicate when the offer has been displayed. This is done via the `sendEvent` command.
 
    ```js
    function sendDisplayEvent(decision) {
