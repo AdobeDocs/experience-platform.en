@@ -37,7 +37,7 @@ Attribution AI can be used to assist with the following example use cases:
 
 ### Additional features
 
-Attribution AI also offers integration with other Adobe solutions such as [!DNL Adobe Analytics]. This enables you to use these solutions to utilize the customizable algorithmic model to evaluate media performance and provide analytical insights.
+Attribution AI also offers integration with other Adobe solutions such as [!DNL Customer Journey Analytics]. This enables you to use these solutions to utilize the customizable algorithmic model to evaluate media performance and provide analytical insights.
   
 ## Next steps
 
