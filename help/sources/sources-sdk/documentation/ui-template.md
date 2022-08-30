@@ -2,8 +2,6 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Self-service documentation template for the UI
 description: Learn how to create a YOURSOURCE source connection using the Adobe Experience Platform UI.
-hide: true
-hidefromtoc: true
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
 ---
 # Create a *YOURSOURCE* source connection in the UI
