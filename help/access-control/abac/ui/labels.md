@@ -17,7 +17,7 @@ Labels allow you to categorize datasets and fields according to usage policies t
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"
 >title="Label usage"
->abstract="Specify the type to enable your label for specific use, such as for data governance or organization entitlement. If the type is not specified, then the label is only available for access control."
+>abstract="You can use custom labels to apply data governance and access control configurations to your data."
 
 >[!NOTE]
 >

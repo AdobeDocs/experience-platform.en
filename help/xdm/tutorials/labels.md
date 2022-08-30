@@ -54,12 +54,7 @@ To edit the labels for the entire schema, select the pencil icon (![](../images/
 >
 >![Label usage disclaimer](../images/tutorials/labels/disclaimer.png)
 
-## Edit the labels for the schema or field {#edit-labels-for-schema-field}
-
->[!CONTEXTUALHELP]
->id="platform_governance_createlabels"
->title="Create labels"
->abstract="Labels allow you to categorize datasets and fields according to usage policies that apply to that data. You can also create custom labels that are specific to your organization."
+## Edit the labels for the schema or field
 
 A dialog appears that allows you to edit the labels for the selected field. If you selected an individual object-type field, the right rail lists the sub-fields that the applied labels will propagate to.
 
