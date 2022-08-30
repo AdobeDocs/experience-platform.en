@@ -281,9 +281,13 @@ You can find the output dataset under **Datasets** in Platform. All Customer AI 
 >[!NOTE]
 >
 > - Customer AI uses only updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data.
-> - To help facilitate GDPR compliance in Customer AI, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile.
-> - All data is encrypted in transit and at rest. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md)
+> - Customer AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-time Customer Profile. 
+> - All datasets we use for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Next steps {#next-steps}
 
 Once you have prepared your data and have all your credentials and schemas in place, start by following the [Configure a Customer AI Instance](./user-guide/configure.md) guide. This guide walks you through creating an instance for Customer AI.
+
+
+
+

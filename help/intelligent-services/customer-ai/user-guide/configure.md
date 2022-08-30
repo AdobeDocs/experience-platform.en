@@ -242,7 +242,7 @@ If the instance is created successfully, a prediction run is immediately trigger
 
 By following this section, you have configured an instance of Customer AI and executed a prediction run. Upon the run's successful completion, scored insights automatically populate profiles with predicted scores if the profile toggle is enabled. Please wait up to 24 hours before continuing to the next section of this tutorial.
 
-### Attribute-based access control
+## Attribute-based access control
 
 >[!IMPORTANT]
 >
