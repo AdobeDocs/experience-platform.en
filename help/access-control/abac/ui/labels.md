@@ -14,6 +14,11 @@ Labels allow you to categorize datasets and fields according to usage policies t
 
 ## Create a new label {#create-new-label}
 
+>[!CONTEXTUALHELP]
+>id="platform_abac_labelusage"
+>title="Label usage"
+>abstract="Specify the type to enable your label for specific use, such as for data governance or organization entitlement. If the type is not specified, then the label is only available for access control."
+
 >[!NOTE]
 >
 >You must have administrative rights to create a custom label. Currently, deleting labels is not supported.
