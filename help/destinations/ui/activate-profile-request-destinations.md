@@ -59,14 +59,13 @@ Adding attributes is optional and you can still proceed to the next step and ena
 
 ![Image showing the mapping step with an attribute selected](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-
 ### Select source attributes {#select-source-attributes}
 
 To add source attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Source field]** column and search or navigate to your desired XDM attribute field, as shown below.
 
-![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+![Screen recording showing how to select a target attribute in the mapping step](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
 
-### Select target attributes {#select-source-attributes}
+### Select target attributes {#select-target-attributes}
 
 >[!NOTE]
 >
