@@ -46,7 +46,7 @@ Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your sourc
 
 ## Author the documentation page for your source
 
-To start documenting your new source, paste the content of the [sources documentation template](./template.md) into the GitHub web editor. You can also download the template [here](../assets/template.zip).
+To start documenting your new source, paste the content of the [sources documentation template](./template.md) into the GitHub web editor. You can also download the template [here](../assets/api-template.zip).
 
 With the template copied over to the GitHub web editor interface, follow the instructions outlined on the template and edit the values containing relevant information for your source.
 
