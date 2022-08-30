@@ -59,9 +59,24 @@ Adding attributes is optional and you can still proceed to the next step and ena
 
 ![Image showing the mapping step with an attribute selected](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-To add attributes, select the **[!UICONTROL Add new field]** control and search or navigate to your desired XDM attribute field, as shown below.
+
+### Select source attributes {#select-source-attributes}
+
+To add source attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Source field]** column and search or navigate to your desired XDM attribute field, as shown below.
 
 ![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+
+### Select target attributes {#select-source-attributes}
+
+>[!NOTE]
+>
+>Some destinations require you to only select source attributes, while others require both source and target attributes.
+>
+>Currently, the [Adobe Target V2](../catalog/personalization/adobe-target-connection.md) destination requires only source attributes, while [Custom Personalization with Attributes](../catalog/personalization/custom-personalization.md) requires both source and target attributes.
+
+To add target attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Target field]** column and type in the custom attribute name that you want to map the source attribute to.
+
+![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
 
 ## Schedule segment export {#scheduling}
 
