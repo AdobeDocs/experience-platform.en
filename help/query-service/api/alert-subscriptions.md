@@ -16,7 +16,7 @@ The table below explains the supported alert types for different types of querie
 
 >[!NOTE]
 >
->All non-select queries support alert subscriptions, but you do not need to be the query creator to subscribe to an alert. Other users can also enroll for alerts on a query that they did not create.
+>All non-SELECT queries support alert subscriptions, but you do not need to be the query creator to subscribe to an alert. Other users can also enroll for alerts on a query that they did not create.
 
 The following alerts apply without an alert subscription:
 
