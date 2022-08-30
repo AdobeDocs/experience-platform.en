@@ -16,7 +16,7 @@ The table below explains the supported alert types for different types of querie
 
 >[!NOTE]
 >
->All executed queries support alert subscriptions, but you do not need to be the query creator to subscribe to an alert. Other users can also enroll for alerts on a query that they did not create.
+>All non-select queries support alert subscriptions, but you do not need to be the query creator to subscribe to an alert. Other users can also enroll for alerts on a query that they did not create.
 
 The following alerts apply without an alert subscription:
 
@@ -325,7 +325,7 @@ A successful response returns an HTML status of 200 and all the alerts that are 
 | -------- | ----------- |
 | `assetId` | The query ID that associated the alert with a particular query. |
 | `alertType` | The type of alert. There are three potential values for an alert, they are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
-| `subscriptions` | An object used to pass the email IDs associated with the alerts, and the channels in which the users will receive the alerts. |
+| `subscriptions` | An object used to pass the Adobe registered email IDs associated with the alerts, and the channels in which the users will receive the alerts. |
 | `subscriptions.inContextNotifications` | An array of Adobe registered email addresses for users who have subscribed to UI notifications for the alert. |
 | `subscriptions.emailNotifications` | An array of Adobe registered email addresses for users who have subscribed to receive emails for the alert. |
 
@@ -440,7 +440,7 @@ A successful response returns HTTP status 200 and the `items` array with details
 | `assetId` | The query ID that associated the alert with a particular query. |
 | `status` | The alert has two status values `enabled` and `disabled`. An alert is either actively listening for the events or paused for future use while retaining all the relevant subscribers and settings. |
 | `alertType` | The type of alert. There are three potential values for an alert, they are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
-| `subscriptions` | An object used to pass the email IDs associated with the alerts, and the channels in which the users will receive the alerts. |
+| `subscriptions` | An object used to pass the Adobe registered email IDs associated with the alerts, and the channels in which the users will receive the alerts. |
 | `subscriptions.inContextNotifications` | A boolean value that determines how the users receive alert notifications. A `true` value confirms that alerts should be provided through the UI. A `false` value ensures that the users are not notified through that channel. |
 | `subscriptions.emailNotifications` | A boolean value that determines how the users receive alert notifications. A `true` value confirms that alerts should be provided by email. A `false` value ensures that the users are not notified through that channel. |
 
@@ -450,7 +450,7 @@ To create an alert and subscribe a user to receive it, make a `POST` request to 
 
 >[!IMPORTANT]
 >
->You can pass up to five email IDs in a single request. To subscribe more than five users to an alert, subsequent requests must be made.
+>You can pass up to five Adobe registered email IDs in a single request. To subscribe more than five users to an alert, subsequent requests must be made.
 
 **API format**
 
@@ -485,7 +485,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | -------- | ----------- |
 | `assetId` | The alert is associated with this ID. The ID can be either a query ID or a schedule ID. |
 | `alertType` | The type of alert. There are three potential values for an alert, they are: <ul><li>`start`: Notifies a user when the query execution has begun.</li><li>`success`: Notifies the user when the query completes.</li><li>`failure`: Notifies the user if the query fails.</li></ul> |
-| `subscriptions` | An object used to pass the email IDs associated with the alerts, and the channels in which the users will receive the alerts. |
+| `subscriptions` | An object used to pass the Adobe registered email IDs associated with the alerts, and the channels in which the users will receive the alerts. |
 | `subscriptions.emailIds` | An array of email addresses to identify the users who should receive the alerts. The email addresses **must** be registered to an Adobe account. |
 | `subscriptions.inContextNotifications` | A boolean value that determines how the users receive alert notifications. A `true` value confirms that alerts should be provided through the UI. A `false` value ensures that the users are not notified through that channel. |
 | `subscriptions.emailNotifications` | A boolean value that determines how the users receive alert notifications. A `true` value confirms that alerts should be provided by email. A `false` value ensures that the users are not notified through that channel. |
