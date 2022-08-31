@@ -3,7 +3,7 @@ title: Adobe Campaign Managed Services
 description: Adobe Campaign provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution.
 ---
 
-# Adobe Campaign Managed Services connection {#your-destination}
+# Adobe Campaign Managed Services connection {#campaign-managed-services}
 
 ## Overview {#overview}
 
