@@ -154,7 +154,7 @@ The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ing
 
 ### [!UICONTROL Decisioning]
 
-Offer Decisioning is an Application Service integrated with Adobe Experience Platform. It allows you to use Experience Platform to deliver the best offer and experience to your customers across all touch points at the right time. To learn more about Offer Decisioning, including working with [!UICONTROL Offers] and [!UICONTROL Activities] visit the [Offer Decisioning documentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+Adobe Journey Optimizer is an application service built on top of Experience Platform. It allows you to use powerful decisioning technologies to deliver the best offer and experience to your customers across all touch points at the right time. To learn more about Journey Optimizer, including working with [!UICONTROL Offers] and [!UICONTROL Activities] visit the [Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer.html).
 
 ### [!UICONTROL Administration]
 
