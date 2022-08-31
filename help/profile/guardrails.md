@@ -103,9 +103,9 @@ The guardrails outlined in this section refer to the number and nature of segmen
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Segments per sandbox | 10,000 | Soft | An organization can have more than 10,000 segments in total, as long as there are less than 10,000 segments in each individual sandbox. Attempting to create additional segments may affect system performance.|
+| Segments per sandbox | 4000 | Soft | An organization can have more than 4000 segments in total, as long as there are less than 4000 segments in each individual sandbox. Attempting to create additional segments may affect system performance.|
 | Streaming segments per sandbox | 500 | Soft | An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments may affect system performance.|
-| Batch segments per sandbox | 10,000 | Soft | An organization can have more than 10,000 batch segments in total, as long as there are less than 10,000 batch segments in each individual sandbox. Attempting to create additional batch segments may affect system performance.|
+| Batch segments per sandbox | 4000 | Soft | An organization can have more than 4000 batch segments in total, as long as there are less than 4000 batch segments in each individual sandbox. Attempting to create additional batch segments may affect system performance.|
 
 {style="table-layout:auto"}
 
