@@ -12,10 +12,6 @@ See [Get Started with Campaign](https://experienceleague.adobe.com/docs/campaign
 
 To send segment data to Adobe Campaign, you must first [connect the destination](#connect) in Adobe Experience Platform, and then set up a data import from your storage location into Adobe Campaign.
 
->[!IMPORTANT]
->
->This documentation page was created by the Adobe Campaign team. For any inquiries or update requests, please contact them directly at [this email adress](campaign-documentation@adobe.com).
-
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -58,9 +54,6 @@ When you are finished providing details for your destination connection, select 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
-
-## Exported data / Validate data export {#exported-data}
-
 
 ## Data usage and governance {#data-usage-governance}
 
