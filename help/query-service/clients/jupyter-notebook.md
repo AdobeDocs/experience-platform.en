@@ -38,7 +38,7 @@ You must now provide your Adobe Experience Platform credentials by entering the 
 
 >[!IMPORTANT]
 >
->When copying credentials from the Platform UI, ensure that there is no additional formatting of the credentials. They should all be in one line, with a single space between the properties and values. The credentials are enclosed in quotation marks and **not** comma separated.
+>When copying credentials from the Platform UI, ensure that there is no additional formatting of the credentials. They should all be in one line, with a single space between the properties and values. The credentials are enclosed in quotation marks and **not** comma-separated.
 
 ![Image of the Notebook UI with the connection credentials highlighted.](../images/clients/jupyter-notebook/provide-credentials.png)
 
