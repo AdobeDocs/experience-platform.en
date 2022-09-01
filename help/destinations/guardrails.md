@@ -36,7 +36,7 @@ The guardrails below generally apply to activation through all destination types
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Maximum number of segments to a single destination | N/A | - | There is currently no limit to how many segments you can activate in an activation flow to a single destination platform.|
+|Maximum number of segments to a single destination | 250 | Soft | The recommendation is to map a maximum of 250 segments to a single destination in a dataflow. <br><br> If you need to activate more than 250 segments to a destination, you can either: <ul><li>Unmap segments that you don't want to activate anymore, or</li><li>Create a new dataflow to the desired destination and map segments to this new dataflow.</li></ul> |
 |Maximum number of destinations | N/A | - | There is currently no limit to how many destinations per organization ID or per sandbox you can connect and activate data to.|
 |Maximum number of attributes mapped to a destination | N/A | - | For destinations that support attributes export (enterprise destinations, batch file-based destinations), there is currently no limit to how many attributes can be mapped to a single destination. [Edge personalization destinations](#edge-destinations-activation) are the exception, where a maximum number of attributes is enforced.|
 |Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile record attributes* to destinations. XDM attributes that describe event data are not supported for export at this time.|
@@ -61,6 +61,7 @@ The guardrails below apply to activation through batch file-based destinations.
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 |Activation frequency | One daily full export or more frequent incremental exports every 3, 6, 8, 12 hour increments | Hard| Read the [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentation sections for more information about the frequency increments for batch exports.|
+|Maximum number of segments that can pe exported at a given hour | 100 | Soft | The recommendation is to add a maximum of 100 segments to batch destination dataflows. |
 |Maximum size per file to activate | 5GB | Hard | The maximum size of exported files is 5 GB. |
 |Maximum number of rows (records) per file to activate | 5 million | Hard| Adobe Experience Platform automatically splits the export files at 5 million records (rows) per file. Each row represents one profile. Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.|
 
@@ -83,9 +84,9 @@ The guardrails below apply to activation through [edge personalization destinati
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Maximum number of Custom personalization destinations | 10 | Soft | You can set up dataflows to ten Custom personalization destinations per sandbox.|
+|Maximum number of Custom personalization destinations | 10 | Soft | You can set up dataflows to 10 Custom personalization destinations per sandbox.|
 |Maximum number of attributes mapped to a personalization destination | 20 | Hard | A maximum of 20 attributes can be mapped in a dataflow to a personalization destination.|
-|Maximum number of segments mapped to a single destination | 200 | Soft | You can activate a maximum of 200 segments in an activation flow to a single personalization destination platform.|
+|Maximum number of segments mapped to a single Custom personalization destination | 200 | Soft | You can activate a maximum of 200 segments in an activation flow to a single personalization destination platform.|
 
 {style="table-layout:auto"}
 
@@ -109,5 +110,7 @@ Details on throttling thresholds or limitations for given destinations. This sec
 
 View guardrails information for other Experience Platform services:
 
+* Guardrails for [data ingestion](/help/ingestion/guardrails.md)
 * Guardrails for [[!DNL Identity Service] data](/help/identity-service/guardrails.md)
 * Guardrails for [[!DNL Real-time Customer Profile] data](/help/profile/guardrails.md)
+* Guardrails for [[!DNL Query Service] data](/help/query-service/guardrails.md)
