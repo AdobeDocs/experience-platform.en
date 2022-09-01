@@ -20,7 +20,7 @@ To acquire the necessary credentials for connecting [!DNL Jupyter Notebook] to E
 
 After you have opened a new [!DNL Jupyter Notebook] web application, select the **[!UICONTROL New]** dropdown followed by **[!UICONTROL Python 3]** to create a new Notebook. The Notebook editor appears.
 
-![The Jupiter Notebook file tab with the New dropdown and Python 3 highlighted.](new-notebook)
+![The Jupiter Notebook file tab with the New dropdown and Python 3 highlighted.](../images/clients/jupyter-notebook/new-notebook.png)
 
 On the first line of the notebook editor, enter the following value: `pip install psycopg2-binary` and select **[!UICONTROL Run]** from the command bar. A success message appears below the input line. 
 
@@ -28,11 +28,11 @@ On the first line of the notebook editor, enter the following value: `pip instal
 >
 >As part of this process to form a connection, you must select **[!UICONTROL Run]** to execute each line of code.
 
-![Image of the Notebook UI with the install libraries command highlighted.](install-library)
+![Image of the Notebook UI with the install libraries command highlighted.](../images/clients/jupyter-notebook/install-library.png)
 
 Next, import a PostgreSQL database adapter for Python. Enter the value: `import psycopg2`and select **[!UICONTROL Run]**. There is no success message for this process. If there is no error message continue to the next step. 
 
-![Image of the Notebook UI with the import database driver code highlighted.](import-dbdriver)
+![Image of the Notebook UI with the import database driver code highlighted.](../images/clients/jupyter-notebook/import-dbdriver.png)
 
 You must now provide your Adobe Experience Platform credentials by entering the value: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Your connection credentials can be found in the [!UICONTROL Queries] [!UICONTROL Credentials] section of the Platform UI. See the documentation on [how find your organization credentials](../ui/credentials.md) for detailed instructions.
 
@@ -40,7 +40,7 @@ You must now provide your Adobe Experience Platform credentials by entering the 
 >
 >When copying credentials from the Platform UI, ensure that there is no additional formatting of the credentials. They should be all in one line, with a single space between the properties and values. The credentials are enclosed in quotation marks and **not** comma separated.
 
-![Image of the Notebook UI with the connection credentials highlighted.](provide-credentials)
+![Image of the Notebook UI with the connection credentials highlighted.](../images/clients/jupyter-notebook/provide-credentials.png)
 
 Your [!DNL Jupyter Notebook] instance is now connected to Query Service. 
 
