@@ -421,7 +421,7 @@ The `inline` function separates the elements of an array of structs and generate
 
 The `inline` function **cannot** be placed in a select list where there are other generator functions.
 
-By default, the columns produced are named “col1”, “col2”, and so on. If the expression is `NULL` then no rows are produced.
+By default, the columns produced are named "col1", "col2", and so on. If the expression is `NULL` then no rows are produced.
 
 >[!TIP]
 >
@@ -547,20 +547,18 @@ EXECUTE name [ ( parameter ) ]
 The `EXPLAIN` command displays the execution plan for the supplied statement. The execution plan shows how the tables referenced by the statement will be scanned.  If multiple tables are referenced, it will show what join algorithms are used to bring together the required rows from each input table.
 
 ```sql
-EXPLAIN option statement
+EXPLAIN statement
 ```
 
-Where `option` can be one of:
+Use the `FORMAT` keyword with the `EXPLAIN` command to define the format of the response.
 
 ```sql
-ANALYZE
-FORMAT { TEXT | JSON }
+EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
 | Parameters | Description|
 | ------ | ------ |
-| `ANALYZE` | If the `option` contains `ANALYZE`, the run times and other statistics are shown. |
-| `FORMAT` | If the `option` contains `FORMAT`, it specifies the output format, which can be `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`. |
+| `FORMAT` | Use the `FORMAT` command to specify the output format. The available options are `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`. |
 | `statement` | Any `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, or `CREATE MATERIALIZED VIEW AS` statement, whose execution plan you want to see. |
 
 >[!IMPORTANT]
