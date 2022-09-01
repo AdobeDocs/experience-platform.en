@@ -12,9 +12,9 @@ This guide requires that you already have access to [!DNL Jupyter Notebook] and 
 
 To acquire the necessary credentials for connecting [!DNL Jupyter Notebook] to Experience Platform, you must have access to the [!UICONTROL Queries] workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace.
 
-<!-- >[!TIP]
+>[!TIP]
 >
->Anaconda Navigator is a desktop graphical user interface (GUI) and provides an easier way to launch common Python programs such as [!DNL Jupyter Notebook]. It helps to manage packages, environments, and channels without using command-line commands. More information can be found in their [documentation](https://docs.anaconda.com/anaconda/navigator/). -->
+>[!DNL Anaconda Navigator] is a desktop graphical user interface (GUI) that provides an easier way to install and launch common Python programs such as [!DNL Jupyter Notebook]. It also helps to manage packages, environments, and channels without using command-line commands. More information can be found in their [official documentation](https://docs.anaconda.com/anaconda/navigator/).
 
 ## Launch [!DNL Jupyter Notebook]
 
