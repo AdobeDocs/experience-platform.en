@@ -67,9 +67,9 @@ The dashboard will automatically select a merge policy to use. The applied merge
 
 >[!NOTE]
 >
->The dropdown menu shows only merge policies related to the XDM Individual Profile Class. However, if your organization has created multiple merge policies, it may mean that you will need to scroll in order to view the complete list of available merge policies.
+>The dropdown menu shows only merge policies that use the `_xdm.context.profile` schema. However, if your organization has created multiple merge policies, it may mean that you need to scroll in order to view the complete list of available merge policies.
 
-![](../images/profiles/select-merge-policy.png)
+![The Profiles overview tab with the merge policy dropdown highlighted.](../images/profiles/select-merge-policy.png)
 
 ## Union schemas
 
