@@ -699,7 +699,10 @@ A successful response returns the details of the updated secret. From here, you 
       "refresh_at": null, 
       "status": "pending", 
       "credentials": { 
-        "scopes": ["https://www.googleapis.com/auth/adwords"], 
+        "scopes": [
+          "https://www.googleapis.com/auth/adwords",
+          "https://www.googleapis.com/auth/pubsub"
+        ], 
       } 
     }, 
     "relationships": { 

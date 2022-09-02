@@ -99,7 +99,7 @@ Secrets with a `type_of` value of `oauth2-google` require the following attribut
 
 | Credential attribute | Data type | Description |
 | --- | --- | --- |
-| `scopes` | Array | Lists the Google product scopes for authentication. Currently only Google Ads is supported, so the array must only contain a single URL string value: `https://www.googleapis.com/auth/adwords`. |
+| `scopes` | Array | Lists the Google product scopes for authentication. The following scopes are supported:<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
 After creating the `oauth2-google` secret, the response includes a `meta.authorization_url` property. You must copy and paste this URL into a browser to complete the Google authentication flow.
 
