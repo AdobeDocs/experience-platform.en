@@ -49,25 +49,29 @@ Select the funnel icon (![Image of the funnel icon](../images/ui/browse/funnel-i
 >title="Status by service"
 >abstract="Data hygiene requests are independently processed by multiple Experience Platform services. This section outlines the request's current processing status for each respective service. To learn more, refer to the data hygiene UI guide."
 
-Select the ID of a listed work order to view its details.
-
-![Image showing a work order ID being selected](../images/ui/browse/select-work-order.png)
-
-<!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
-
-### Consumer delete details
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_numberofidentities"
+>title="Number of identities"
+>abstract="The number of identities that were requested to be deleted as part of this work order. The identities included in the count may not necessarily exist in the affected datasets. To learn more, refer to the data hygiene UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Consumer delete response"
 >abstract="When a consumer deletion process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
 
+Select the ID of a listed work order to view its details.
+
+![Image showing a work order ID being selected](../images/ui/browse/select-work-order.png)
+
+<!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
+
+### Consumer delete details {#consumer-delete}
 
 The details of a consumer delete request are read-only, displaying its basic attributes such as its current status and the time elapsed since the request was made.
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset expiration details -->
+### Dataset expiration details {#dataset-expiration} -->
 
 The details page for a dataset expiration provides information on its basic attributes, including the scheduled expiration date on the days remaining before the deletion occurs. In the right rail, you can use controls to edit or cancel the expiration.
 
