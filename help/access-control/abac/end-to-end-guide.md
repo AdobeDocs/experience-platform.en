@@ -20,66 +20,68 @@ This tutorial requires a working understanding of the following Platform compone
 
 ### Use case overview
 
-This guide uses an example use case of restricting access to sensitive data to demonstrate the workflow.
+This guide uses an example use case of restricting access to sensitive data to demonstrate the workflow. You will go through an example attribute-based access control workflow where you will create and assign roles, labels, and policies to configure whether your users can or can't access certain resources in your organization.
 
-In this guide you will:
+#### Use case
 
-* Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies. 
-* Assign the [!UICONTROL Protected Health Information (PHI)] label to the ACME Business Group role and to the schema resources and segments. 
-* Create a policy to link the labels in your attribute to the labels in your role. This denies access to the schema field and segments. This will deny access to the schema field and segment in all sandboxes for users who do not have matching labels.
+You are a healthcare provider and you want to configure access to resources in your organization
 
-The basic requirements required are as follows:
+* Your internal marketing team should be able to access **[!UICONTROL PHI/ Regulated Health Data]** data.
+* Your external agency should not be able to access **[!UICONTROL PHI/ Regulated Health Data]** data.
 
-* The internal marketing team can see or use PHI or Regulated Health Data (RHD) in their marketing campaigns.
-* The external agency should not be able to see or use this type of data.
-* The three components that must be configured for attribute-based access are:
-  * Label roles.
-  * Label schema fields and segments.
-  * Create a policy which uses the labels to link user roles with the Platform resources that can, or cannot be accessed.
+In order to do this, you must configure roles, resources, and policies.
+
+You will:
+
+* Label the roles for your users: Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
+* Label your resources (schema fields and segments): Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and segments.
+* Create the policy that will link them together: Create a policy to link the labels in your attribute to the labels in your role denying access to schema fields and segments. This will deny access to the schema field and segment in all sandboxes for users who do not have matching labels.
 
 ## Permissions
 
-In order to access attribute-based access control permissions for [!DNL Experience Cloud], you must be an administrator for your organization.
+Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
+
+Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role.
 
 If you do not have admin privileges, contact your system administrator to gain access.
 
 Once you have admin privileges, go to [Adobe Experience Cloud](https://experience.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products that your organization is subscribed to, along with other controls to add users and admins to the organization as a whole. Select **[!UICONTROL Permissions]** to open the attribute-based access control workspace for your Platform integration.
 
-![abac-select-product](../images/flac-ui/flac-select-product.png)
+![Image showing the Permissions product being selected in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
-The Permissions workspace for Adobe Experience Cloud appears, opening on the **[!UICONTROL Roles]** page.
+The Permissions workspace for Platform UI appears, opening on the **[!UICONTROL Roles]** page.
 
 ## Apply labels to a role
 
-Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need.
+Roles are ways to categorize the types of users that are interacting with your Platform instance, and are building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need.
 
-To get started, select [!UICONTROL ACME Business Group] from the from the **[!UICONTROL Roles]** page.
+To get started, select **[!UICONTROL ACME Business Group]** from the from the **[!UICONTROL Roles]** page.
 
-![abac-select-role](../images/abac-end-to-end-user-guide/abac-select-role.png)
+![Image showing the ACME Business Role being selected in Roles](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
 Next, select **[!UICONTROL Labels]** and then select **[!UICONTROL Add Labels]**.
 
-![abac-select-add-labels](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![Image showing Add labels being selected on the Labels tab](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-A list of all labels in your organization appears. Select [!UICONTROL RHD] to add the label for [!UICONTROL PHI/Regulated Health Data]. Allow for a few moments for a blue check mark to appear beside the label, and then select **[!UICONTROL Save]**.
+A list of all labels in your organization appears. Select **[!UICONTROL RHD]** to add the label for **[!UICONTROL PHI/Regulated Health Data]**. Allow for a few moments for a blue check mark to appear beside the label, and then select **[!UICONTROL Save]**.
 
-![abac-select-role-label](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
+![Image showing the RHD label being selected and saved](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
 ## Apply labels to schema fields
 
 Now that you have configured a user role with the RHD label, the next step is to add that same label to the resources that you want to control for that role.
 
-Select **[!UICONTROL Schemas]** from the left navigation and then select [!UICONTROL ACME Healthcare] from the list of schemas that appear.
+Select **[!UICONTROL Schemas]** from the left navigation and then select **[!UICONTROL ACME Healthcare]** from the list of schemas that appear.
 
-![abac-select-schema](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![Image showing the ACME Healthcare schema being selected from the Schemas tab](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Next, select **[!UICONTROL Labels]** to see a list that displays the fields associated with your schema. From here, you can assign labels to one or multiple fields at once. Select the [!UICONTROL BloodGlucose] and [!UICONTROL InsulinLevel] fields, and then select **[!UICONTROL Edit governance labels]**.
+Next, select **[!UICONTROL Labels]** to see a list that displays the fields associated with your schema. From here, you can assign labels to one or multiple fields at once. Select the **[!UICONTROL BloodGlucose]** and **[!UICONTROL InsulinLevel]** fields, and then select **[!UICONTROL Edit governance labels]**.
 
-![abac-select-schema-labels](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Image showing the BloodGlucose and InsulinLevel being selected and edit governance labels being selected](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-The **[!UICONTROL Edit labels]** dialog appears, allowing you to choose the labels that you want to apply to the schema fields. For this use case, select the [!UICONTROL PHI/ Regulated Health Data] label, then select **[!UICONTROL Save]**.
+The **[!UICONTROL Edit labels]** dialog appears, allowing you to choose the labels that you want to apply to the schema fields. For this use case, select the **[!UICONTROL PHI/ Regulated Health Data]** label, then select **[!UICONTROL Save]**.
 
-![abac-select-schema-labels](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
+![Image showing the RHD label being selected and saved](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
 >[!NOTE] 
 >
@@ -94,17 +96,19 @@ Select **[!UICONTROL Segments]** from the left navigation. A list of segments av
 * Blood Glucose >100
 * Insulin <50
 
-Select [!UICONTROL Blood Glucose>100] to start labeling the segment.
+Select **[!UICONTROL Blood Glucose >100]** to start labeling the segment.
 
-![abac-select-segment](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![Image showing the Blood Glucose >100 being selected from the Segments tab](../images/abac-end-to-end-user-guide/abac-select-segment.png)
 
 The segment **[!UICONTROL Details]** screen appears. Select **[!UICONTROL Manage Access]**.
 
-![abac-segment-fields-manage-access](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
+![Image showing the selection of Manages access](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
 
-The **[!UICONTROL Edit labels]** dialog appears, allowing you to choose the labels that you want to apply to the segment. For this use case, select the [!UICONTROL PHI/ Regulated Health Data] label, then select **[!UICONTROL Save]**.
+The **[!UICONTROL Edit labels]** dialog appears, allowing you to choose the labels that you want to apply to the segment. For this use case, select the **[!UICONTROL PHI/ Regulated Health Data]** label, then select **[!UICONTROL Save]**.
 
-![abac-select-segment-labels](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+![Image showing the selection of the RHD label and save being selected](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+
+Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 ## Create an access control policy
 
@@ -112,19 +116,19 @@ Access control policies leverage labels to define which user roles have access t
 
 To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
-![abac-create-policy](../images/abac-end-to-end-user-guide/abac-create-policy.png)
+![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
 
 The **[!UICONTROL Create new policy]** dialog appears, prompting you to enter a name and an optional description. Once you enter your policy name and description, select **[!UICONTROL Confirm]**.
 
-![abac-create-policy-details](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
+![Image showing the Create new policy dialog and selecting Confirm](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
 
-To deny access to all schema fields, use the dropdown arrow and select [!UICONTROL Deny access to] and then select [!UICONTROL No resource selected]. Using the dropdown select [!UICONTROL Schema Field]. A permissions box appears, using the dropdown select [!UICONTROL All].
+To deny access to the schema fields, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Using the dropdown select **[!UICONTROL Schema Field]**. A permissions box appears, using the dropdown select **[!UICONTROL All]**.
 
-![abac-create-policy-deny-access-schema](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
+![Image showing Deny access and resources selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
 
-The table below shows the resource configurations available when creating a policy:
+The table below shows the conditions available when creating a policy:
 
-| Resource Configuration | Description |
+| Conditions | Description |
 | --- | --- |
 |The following being false| Access will be restricted if the criteria selected is false. |
 |The following being true| Access will be restricted if the criteria selected is true.|
@@ -135,23 +139,23 @@ The table below shows the resource configurations available when creating a poli
 
 Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Select the user **[!UICONTROL Core label]** using the dropdown, then using the dropdown select **[!UICONTROL Matches all]**, and then select the resource **[!UICONTROL Core label]** using the dropdown. Next, select **[!UICONTROL Add resource]**.
 
-![abac-create-policy-deny-access-schema-expression](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
+![Image showing the conditions being selected and Add resource being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
 
 >[!TIP]
 >
->A resource is the asset or object that a subject can or cannot access. Resources can be files, applications, servers, or even APIs.
+>A resource is the asset or object that a subject can or cannot access. Resources can be segments or schemas.
 
-To deny access to all segments, select **[!UICONTROL Deny access to]** a resource and then select **[!UICONTROL No resource selected]**. Using the dropdown select **[!UICONTROL Segment]**. A permissions box appears, using the dropdown select **[!UICONTROL All]**.
+To deny access to the segments, select **[!UICONTROL Deny access to]** a resource and then select **[!UICONTROL No resource selected]**. Using the dropdown select **[!UICONTROL Segment]**. A permissions box appears, using the dropdown select **[!UICONTROL All]**.
 
 Using the dropdown arrow select **[!UICONTROL The following being false]**, then select **[!UICONTROL No attribute selected]**. 
 
-Select the user as **[!UICONTROL Core label]** using the dropdown, then using the dropdown select **[!UICONTROL Matches all]**, and then select the resource **[!UICONTROL Core label]** using the dropdown. Finally, select **[!UICONTROL Save]**.
+Using the dropdowns select the user as **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**, and then select the resource **[!UICONTROL Core label]**. Finally, select **[!UICONTROL Save]**.
 
-![abac-create-policy-deny-access-segment](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
+![Image showing conditions selected and Save being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
 
 Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![abac-create-policy-activation](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png)
+![Image showing the Policy been activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png)
 
 ## Next steps
 
