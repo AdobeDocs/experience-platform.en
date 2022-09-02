@@ -229,9 +229,9 @@ The table below maps the aggregated scores to the raw scores. If you wish to dow
 
 >[!IMPORTANT]
 >
-> - Attribution AI uses only updated data for further training and scoring. Likewise, when you request to delete data, Attribution AI refrains from using the deleted data.
-> - To help facilitate GDPR compliance in Attribution AI, you can use Adobe Experience Platform Privacy Service to set up protocols to honor customer requests to access and delete their data across the data lake, Identity Service, and Real-time Customer Profile.
-> - All data is encrypted in transit and at rest. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md)
+> - Attribution AI uses only updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data.
+> - Attribution AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-time Customer Profile. 
+> - All datasets we use for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Next steps {#next-steps}
 

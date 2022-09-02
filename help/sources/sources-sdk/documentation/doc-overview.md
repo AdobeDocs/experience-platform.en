@@ -35,7 +35,7 @@ You can use a pre-filled [documentation template](./template.md) to assist in cr
 
 You can also download the documentation templates below:
 
-* [API documentation template](../assets/template.zip)
+* [API documentation template](../assets/api-template.zip)
 * [UI documentation template](../assets/ui-template.zip)
 
 ## Create your new source page
