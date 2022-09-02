@@ -18,3 +18,4 @@ feature: Data Hygiene
   * [Overview](./api/overview.md)
   * [Dataset expirations](./api/dataset-expiration.md)
   * [Consumer delete jobs](./api/jobs.md)
+  * [Quota](./api/quota.md)
