@@ -95,7 +95,7 @@ If the exchange fails, the operation is attempted three more times with the last
 
 ### `oauth2-google` {#oauth2-google}
 
-Secrets with a `type_of` value of `oauth2-google` require the following attributes under `credentials`:
+Secrets with a `type_of` value of `oauth2-google` requires the following attribute under `credentials`:
 
 | Credential attribute | Data type | Description |
 | --- | --- | --- |

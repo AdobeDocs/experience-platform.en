@@ -682,7 +682,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns the details of the updated secret. From here, you must copy and paste the `authorization_url` into a browser to complete the authorization process.
+A successful response returns the details of the updated secret. From here, you must copy and paste the `meta.authorization_url` into a browser to complete the authorization process.
 
 ```json
 {

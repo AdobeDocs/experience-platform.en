@@ -13,7 +13,7 @@ There are currently three supported secret types:
 | --- | --- |
 | [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
-| [!UICONTROL OAuth 2] | Contains several attributes to support the [Client Credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) version of the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| [!UICONTROL OAuth 2] | Contains several attributes to support the [client credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) for the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 
 {style="table-layout:auto"}
