@@ -10,11 +10,20 @@ hidefromtoc: true
 >
 >Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Healthcare Shield.
 
-The `/quota` endpoint in the Data Hygiene API allows you to monitor your data hygiene usage against your organization's monthly quota limits for each job type.
+The `/quota` endpoint in the Data Hygiene API allows you to monitor your data hygiene usage against your organization's quota limits for each job type.
+
+Quotas are enforced for each data hygiene job type in the following ways:
+
+* Consumer deletes and field updates are limited to a certain number of requests each month.
+* Dataset expirations have a flat limit for the number of concurrently active jobs, regardless of when the expirations will be executed.
 
 ## Getting started
 
-The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [overview](./overview.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [overview](./overview.md) for the following information:
+
+* Links to related documentation
+* A guide to reading the sample API calls in this document
+* Important information regarding required headers that are needed to successfully make calls to any Experience Platform API
 
 ## List quotas {#list}
 
@@ -73,6 +82,6 @@ A successful response returns the details of your data hygiene quotas.
 
 | Property | Description |
 | --- | --- |
-| `quotas` | Lists the quota information for each data hygiene job type. Each quota object contains the following properties:<ul><li>`name`: The data hygiene job type:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Consumer deletions</li><li>`fieldUpdateWorkOrderDatasetQuota`: Field updates</li></ul></li><li>`description`: A description of the data hygiene job type.</li><li>`consumed`: The number of jobs of this type run in the current monthly period.</li><li>`quota`: The limit for the amount of jobs of this type that can be run for the current monthly period based on your organization's licensing.</li></ul> |
+| `quotas` | Lists the quota information for each data hygiene job type. Each quota object contains the following properties:<ul><li>`name`: The data hygiene job type:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Consumer deletions</li><li>`fieldUpdateWorkOrderDatasetQuota`: Field updates</li></ul></li><li>`description`: A description of the data hygiene job type.</li><li>`consumed`: The number of jobs of this type run in the current monthly period.</li><li>`quota`: The quota limit for this job type. For consumer deletes and field updates, this represents the number of jobs that can be run for each monthly period. For dataset expirations, this represents the number of jobs that can be concurrently active at any given time.</li></ul> |
 
 {style="table-layout:auto"}
