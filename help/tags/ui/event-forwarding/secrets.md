@@ -14,7 +14,7 @@ There are currently three supported secret types:
 | [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
 | [!UICONTROL OAuth 2] | Contains several attributes to support the [Client Credentials](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) version of the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
-| [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 
 {style="table-layout:auto"}
 
@@ -107,15 +107,20 @@ When finished, select **[!UICONTROL Create Secret]** to save the secret.
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
-To create a Google OAuth 2 secret, select **[!UICONTROL Google OAuth 2]** from the **[!UICONTROL Type]** dropdown, followed by **[!UICONTROL Create Secret]**.
+To create a Google OAuth 2 secret, select **[!UICONTROL Google OAuth 2]** from the **[!UICONTROL Type]** dropdown. Under **[!UICONTROL Scopes]**, select the Google APIs that you want to use this secret to grant access to. The following products are currently supported:
 
-![Google OAuth 2 secret](../../images/ui/event-forwarding/secrets/google-oauth-secret.png)
+* [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview)
+* [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
+
+When finished, select **[!UICONTROL Create Secret]**.
+
+![Google OAuth 2 secret](../../images/ui/event-forwarding/secrets/google-oauth.png)
 
 A popover appears informing you that the secret needs to be manually authorized through Google. Select **[!UICONTROL Create & Authorize]** to continue.
 
 ![Google authorization popover](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
-A dialog appears that allows you to enter the credentials for your Google account. Follow the prompts to grant event forwarding access to your Google Ads data. Once the authorization process is complete, the secret is created.
+A dialog appears that allows you to enter the credentials for your Google account. Follow the prompts to grant event forwarding access to your data under the selected scope. Once the authorization process is complete, the secret is created.
 
 ## Edit a secret
 
