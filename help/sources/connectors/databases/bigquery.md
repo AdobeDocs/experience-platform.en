@@ -6,11 +6,7 @@ topic-legacy: overview
 description: Learn how to connect Google BigQuery to Adobe Experience Platform using APIs or the user interface.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 ---
-# (Beta) [!DNL Google BigQuery] connector
-
->[!NOTE]
->
->The [!DNL Google BigQuery] is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL Google BigQuery]
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -34,6 +30,7 @@ To connect [!DNL Google BigQuery] to Platform, you need to generate values for t
 | `clientID` | The client ID is one half of your [!DNL Google BigQuery] OAuth 2.0 credentials. |
 | `clientSecret` | The client secret is the other half of your [!DNL Google BigQuery] OAuth 2.0 credentials. |
 | `refreshToken` | The refresh token allows you to obtain new access tokens for your API. Access tokens have limited lifetimes and can expire during the course of your project. You can use the refresh token to authenticate and request subsequent access tokens for your project when needed. |
+| `largeResultsDataSetId` | The pre-created  [!DNL Google BigQuery] dataset ID that is required in order to enable support for large result sets.|
 
 For detailed instructions on how to generate OAuth 2.0 credentials for [!DNL Google] APIs, see the following [[!DNL Google] OAuth 2.0 authentication guide](https://developers.google.com/identity/protocols/oauth2).
 
