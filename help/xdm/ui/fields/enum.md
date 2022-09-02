@@ -71,10 +71,12 @@ Similar to custom fields, select **[!UICONTROL Add row]** to add your own sugges
 
 After a schema with an enum field has been used to ingest data into Platform, any further changes made to the schema definition must comply with the data already in the system. When it comes to enums and suggested values, the following rules apply post-ingestion:
 
-* You CANNOT remove existing enum values for standard and custom fields.
-* You CAN add and remove suggested values for standard and custom fields.
-* You CAN add new enum values for an existing custom field, but NOT a standard field.
-* You CAN switch a custom field's enum values to suggested values only, but you CANNOT do this with a standard field.
+* You **CAN** add and remove suggested values for standard and custom fields with existing suggested values.
+* You **CAN** add new enum values for an existing enum field (custom fields only).
+* You **CAN** switch a field's enum values to suggested values only, or convert it to a string with no enum or suggested values. **This switch cannot be undone once applied.**
+* You **CANNOT** add enum values to a field with no existing enum.
+* You **CANNOT** remove fewer than all existing enum values for a field.
+* You **CANNOT** switch from suggested values to an enum.
 
 ## Next steps
 
