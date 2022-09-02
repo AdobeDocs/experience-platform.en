@@ -32,11 +32,11 @@ The following guardrails provide recommended limits when activating Real-time Cu
 
 ### General activation guardrails {#general-activation-guardrails}
 
-The guardrails below generally apply to activation through all destination types.
+The guardrails below generally apply to activation through [all destination types](/help/destinations/destination-types.md#destination-types).
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Maximum number of segments to a single destination | 250 | Soft | The recommendation is to map a maximum of 250 segments to a single destination in a dataflow. <br><br> If you need to activate more than 250 segments to a destination, you can either: <ul><li>Unmap segments that you don't want to activate anymore, or</li><li>Create a new dataflow to the desired destination and map segments to this new dataflow.</li></ul> |
+|Maximum number of segments to a single destination | 250 | Soft | The recommendation is to map a maximum of 250 segments to a single destination in a dataflow. <br><br> If you need to activate more than 250 segments to a destination, you can either: <ul><li>Unmap segments that you don't want to activate anymore, or</li><li>Create a new dataflow to the desired destination and map segments to this new dataflow.</li></ul> <br> Note that in the case of some destinations, you may have be limited to fewer than 250 segments mapped to the destination. Those destinations are called out further below on the page, in their respective sections. |
 |Maximum number of destinations | N/A | - | There is currently no limit to how many destinations per organization ID or per sandbox you can connect and activate data to.|
 |Maximum number of attributes mapped to a destination | N/A | - | For destinations that support attributes export (enterprise destinations, batch file-based destinations), there is currently no limit to how many attributes can be mapped to a single destination. [Edge personalization destinations](#edge-destinations-activation) are the exception, where a maximum number of attributes is enforced.|
 |Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile record attributes* to destinations. XDM attributes that describe event data are not supported for export at this time.|
@@ -46,7 +46,7 @@ The guardrails below generally apply to activation through all destination types
 
 ### Streaming activation {#streaming-activation}
 
-The guardrails below apply to activation through streaming destinations.
+The guardrails below apply to activation through [streaming destinations](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
@@ -56,7 +56,7 @@ The guardrails below apply to activation through streaming destinations.
 
 ### Batch (file-based) activation {#batch-file-based-activation}
 
-The guardrails below apply to activation through batch file-based destinations.
+The guardrails below apply to activation through [batch file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
@@ -84,9 +84,10 @@ The guardrails below apply to activation through [edge personalization destinati
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Maximum number of Custom personalization destinations | 10 | Soft | You can set up dataflows to 10 Custom personalization destinations per sandbox.|
+|Maximum number of [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations | 10 | Soft | You can set up dataflows to 10 Custom personalization destinations per sandbox.|
 |Maximum number of attributes mapped to a personalization destination | 20 | Hard | A maximum of 20 attributes can be mapped in a dataflow to a personalization destination.|
 |Maximum number of segments mapped to a single Custom personalization destination | 200 | Soft | You can activate a maximum of 200 segments in an activation flow to a single personalization destination platform.|
+|Maximum number of segments mapped to a single [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Soft | You can activate a maximum of 50 segments in an activation flow to a single Adobe Target destination.|
 
 {style="table-layout:auto"}
 
@@ -96,7 +97,10 @@ The guardrails below apply to activation through [edge personalization destinati
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600)</li><li>`maxNumEventsInBatch` (minimum 1.000, maximum 10.000)</li></ul> | Hard| When using the [configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and how many profiles the messages should include.|
+| Profile export policy for Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimum 1.800 and maximum 3.600)</li><li>`maxNumEventsInBatch` (minimum 1.000, maximum 10.000)</li></ul> | Hard| When using the [configurable aggregation](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) option for your destination, be mindful of the minimum and maximum values that determine how often HTTP messages are sent to your API-based destination and 
+how many profiles the messages should include.|
+
+{style="table-layout:auto"}
 
 ### Destination throttling and retry policy {#destination-throttling-and-retry-policy}
 
@@ -105,6 +109,8 @@ Details on throttling thresholds or limitations for given destinations. This sec
 | Type of destination | Description |
 | --- | --- |
 | Enterprise destinations (HTTP API, Amazon Kinesis, Azure EventHubs)| In 95 percent of the time, Experience Platform attempts to offer a throughput latency of less than 10 minutes for successfully sent messages with a rate of less than 10 thousand requests per second for each dataflow to an enterprise destination. <br> In case of failed requests to your enterprise destination, Experience Platform stores the failed requests and retries twice to send the requests to your endpoint.|
+
+{style="table-layout:auto"}
 
 ## Guardrails for other Experience Platform services {#guardrails-other-services}
 
