@@ -42,7 +42,8 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
           "properties": {
             "host": {
               "type": "string",
-              "description": "Enter resource url host path."
+              "description": "Enter resource url host path.",
+              "example": "https://{domain}.api.mailchimp.com"
             },
             "path": {
               "type": "string",
@@ -63,6 +64,7 @@ See the [appendix](#source-spec) for an example of a fully-populated source spec
             }
           },
           "required": [
+            "host",
             "path",
             "method"
           ]
@@ -330,6 +332,7 @@ The following is a completed source specification using [!DNL MailChimp Members]
         }
       },
       "urlParams": {
+        "host": "https://{domain}.api.mailchimp.com",
         "path": "/3.0/lists/${listId}/members",
         "method": "GET"
       },

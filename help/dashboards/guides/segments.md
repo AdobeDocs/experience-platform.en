@@ -43,6 +43,10 @@ The dashboard automatically selects a segment to display, however you can change
 
 To choose a different segment, select the dropdown next to the segment name or use the segment selector to open the segment selection dialog.
 
+>[!IMPORTANT]
+>
+>Only segments with a profile count above zero are displayed in the list of selectable segments.
+
 ![](../images/segments/change-segment.png)
 
 ![](../images/segments/select-segment-dialog.png)
