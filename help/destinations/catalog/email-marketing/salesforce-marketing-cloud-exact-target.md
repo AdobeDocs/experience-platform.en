@@ -153,10 +153,10 @@ The list of attribute mappings that can be set up for the [Salesforce REST API](
 1. In the Mapping step, click **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 ![Add new mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
-1. In the select source field window, when selecting the source field, choose the **[!UICONTROL Select attributes]** category and add the mappings desired.
+1. In the select source field window, when selecting the source field, choose the **[!UICONTROL Select attributes]** category and select `contactKey`.
 ![Source mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/source-mapping.png)
 
-1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and add the mappings desired.
+1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and select `salesforceContactKey`.
 ![Target mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping.png)
 
 1. To map any custom attributes, select target field window, select the target field and choose the **[!UICONTROL Select attributes]** > **Email Demographics** category. Next provide the desired target attribute name and add the mappings desired.
