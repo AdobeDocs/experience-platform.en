@@ -212,21 +212,26 @@ The table below maps the aggregated scores to the raw scores. If you wish to dow
 
 | Column Name | Raw Score reference column |
 | --- | --- |
-customerevents_date | timestamp |
-mediatouchpoints_date | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
-segment | _tenantID.your_schema_name.segmentation |
-conversion_scope | _tenantID.your_schema_name.conversion.conversionName |
-touchpoint_scope | _tenantID.your_schema_name.touchpointsDetail.element.touchpointName |
-product | _tenantID.your_schema_name.conversion.product |
-product_type | _tenantID.your_schema_name.conversion.product_type |
-geo | _tenantID.your_schema_name.conversion.geo |
-event_type | eventType |
-media_type | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaType |
-channel | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
-action | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
-campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
-campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
+| customerevents_date | timestamp |
+| mediatouchpoints_date | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
+| segment | _tenantID.your_schema_name.segmentation |
+| conversion_scope | _tenantID.your_schema_name.conversion.conversionName |
+| touchpoint_scope | _tenantID.your_schema_name.touchpointsDetail.element.touchpointName |
+| product | _tenantID.your_schema_name.conversion.product |
+| product_type | _tenantID.your_schema_name.conversion.product_type |
+| geo | _tenantID.your_schema_name.conversion.geo |
+| event_type | eventType |
+| media_type | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaType |
+| channel | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
+| action | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
+| campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
+| campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
 
+>[!IMPORTANT]
+>
+> - Attribution AI uses only updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data.
+> - Attribution AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-time Customer Profile. 
+> - All datasets we use for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Next steps {#next-steps}
 
