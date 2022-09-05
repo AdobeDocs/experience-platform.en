@@ -10,10 +10,6 @@ A datastream represents the server-side configuration when implementing the Adob
 
 This document covers the steps for configuring a datastream in the Data Collection UI. 
 
->[!NOTE]
->
->Your organization must be provisioned for this feature in order to access it in the UI. Please fill out the following [form](https://adobe.ly/websdkaccess) to request the necessary access. To manage datastreams, your user account must be added to a product profile for tags in [!DNL Adobe Experience Platform].
-
 ## Access the [!UICONTROL Datastreams] workspace
 
 You can create and manage datastreams in the Data Collection UI by selecting **[!UICONTROL Datastreams]** in the left navigation.

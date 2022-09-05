@@ -16,7 +16,7 @@ With the [!DNL Marketo] source connector, you can bring B2B data from [!DNL Mark
 
 >[!IMPORTANT]
 >
->You must have access to [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) in order for Marketo Engage to participate in [Real-time Customer Profile](../../../../profile/home.md).
+>You must have access to [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) to use all Marketo datasets for segmentation with the [Real-time Customer Profile](../../../../profile/home.md). Without Real-time CDP B2B Edition, you can still use the Marketo source to bring data from the people and activities datasets to Real-time Customer Profile for segmentation.
 
 This document provides an overview of the [!DNL Marketo] source connector, including information about how to authenticate the connector, how to map [!DNL Marketo] fields to Experience Data Model (XDM), and the connector's data latency.
 
