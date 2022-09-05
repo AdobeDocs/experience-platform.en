@@ -28,7 +28,7 @@ The two attributes used to extract data for bot detection are:
 
 >[!NOTE]
 >
->The use of `mcid` is still found in namespace references to the Experience CLoud Visitor ID as seen in the example below.
+>The use of `mcid` is still found in namespace references to the Experience Cloud Visitor ID as seen in the example below.
 
 The following SQL statement provides an initial example to identify bot activity. The statement assumes that if a visitor performs 50 clicks within one minute, then the user is a bot.
 
