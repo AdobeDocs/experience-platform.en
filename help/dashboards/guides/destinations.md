@@ -208,7 +208,11 @@ All audience sizes in the system are sorted from high to low audience size, as i
 
 If your segment mapped profile count is outside one standard deviation from the average mapped profile size over the past 30 days, this indicates an anomaly in the system and it should be investigated.
 
-If a segment within the [!UICONTROL Mapped audience health] widget is deviating by a wide margin, you should refer to the audience size trend chart and locate the anomalous segment. The trend can provide further insight into your segment's health.   
+If a segment within the [!UICONTROL Mapped audience health] widget is deviating by a wide margin, you should refer to the audience size trend chart and locate the anomalous segment. The trend can provide further insight into your segment's health.  
+
+>[!NOTE]
+>
+>The default size of the Mapped audience health widget can obstruct the table information. Please modify the size of the widget to improve the legibility of your mapped segment names and column titles. See the modify dashboards documentation for guidance on [how to resize a widget](../customize/modify.md).
 
 ![The Mapped audience health widget.](../images/destinations/mapped-audience-health.png)
 
