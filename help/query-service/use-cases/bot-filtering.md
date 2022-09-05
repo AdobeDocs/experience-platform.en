@@ -23,8 +23,12 @@ This example uses [!DNL Jupyter Notebook] as a development environment. Although
 
 The two attributes used to extract data for bot detection are:
 
-* Marketing Cloud ID (MCID): This provides a universal, persistent ID that identifies your visitors across all Adobe solutions.
+* Experience Cloud Visitor ID (ECID, also known as MCID): This provides a universal, persistent ID that identifies your visitors across all Adobe solutions.
 * Timestamp: This provides the time and date in UTC format when an activity occurred on the website.  
+
+>[!NOTE]
+>
+>The use of `mcid` is still found in references to datasets and is seen in the example below. It refers to the Experience CLoud Visitor ID.
 
 The following SQL statement provides an initial example to identify bot activity. The statement assumes that if a visitor performs 50 clicks within one minute, then the user is a bot.
 
@@ -39,7 +43,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-The expression filters the MCIDs of all visitors that meet the threshold but does not address spikes in traffic from other intervals. 
+The expression filters the ECIDs (`mcid`) of all visitors that meet the threshold but does not address spikes in traffic from other intervals. 
 
 ## Improve bot detection with machine learning
 
@@ -161,4 +165,4 @@ The example model determined with a high degree of accuracy that any visitors wi
 
 By reading this document you have a better understanding of how to use [!DNL Query Service] and machine learning to determine and filter bot activity. 
 
-Other documents that demonstrate the benefits of [!DNL Query Service] to your organization’s strategic business insights are the [abandoned browse use case](./abandoned-browse.md) example.
+Other documents that demonstrate the benefits of [!DNL Query Service] to your organization's strategic business insights are the [abandoned browse use case](./abandoned-browse.md) example.
