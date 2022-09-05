@@ -51,7 +51,7 @@ The initial SQL statement can be refined to become a feature extraction query fo
 
 The example statement is expanded from one minute with up to 60 clicks, to include five minute and 30 minutes periods with click counts of 300, and 1800 respectively.
 
-The example statement collects the maximum number of clicks for each MCID over the various durations. The initial statement has been expanded to include one minute (60 seconds), 5 minutes (300 seconds), and one hour (i.e. 1800 seconds) periods.
+The example statement collects the maximum number of clicks for each ECID (`mcid`) over the various durations. The initial statement has been expanded to include one minute (60 seconds), 5 minutes (300 seconds), and one hour (i.e. 1800 seconds) periods.
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
