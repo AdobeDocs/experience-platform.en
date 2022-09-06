@@ -45,7 +45,7 @@ To access a field within an object in your query, you can use either dot notatio
 
 >[!NOTE]
 >
->The Experience Cloud Visitor ID (ECID) is also known as MCID and continues to be used in namespaces.
+>The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces.
 
 ```sql
 SELECT endUserIds._experience.mcid

@@ -14,7 +14,7 @@ This document provides information for Adobe-defined functions available in [!DN
 
 >[!NOTE]
 >
->The Experience Cloud Visitor ID (ECID) is also known as MCID and continues to be used in namespaces.
+>The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces.
 
 ## Window functions {#window-functions}
 
