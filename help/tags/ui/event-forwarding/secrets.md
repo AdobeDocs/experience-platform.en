@@ -81,7 +81,7 @@ To create an HTTP secret, select **[!UICONTROL Simple HTTP]** from the **[!UICON
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-To create an OAuth 2 secret, select **[!UICONTROL OAuth 2]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide your [[!UICONTROL Client ID] and [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), as well as your [Authorization URL](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for your OAuth integration. The [!UICONTROL Authorization URL] field in the Data Collection UI is a concatenation between the authorization server host and the token path.
+To create an OAuth 2 secret, select **[!UICONTROL OAuth 2]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide your [[!UICONTROL Client ID] and [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), as well as your [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for your OAuth integration. The [!UICONTROL Token URL] field in the Data Collection UI is a concatenation between the authorization server host and the token path.
 
 ![OAuth 2 secret](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 

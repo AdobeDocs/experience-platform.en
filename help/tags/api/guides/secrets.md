@@ -61,11 +61,11 @@ Secrets with a `type_of` value of `oauth2-client_credentials` require the follow
 | --- | --- | --- |
 | `client_id` | String | The client ID for the OAuth integration. |
 | `client_secret` | String | The client secret for the OAuth integration. This value is not included in the API response. |
-| `authorization_url` | String | The authorization URL for the OAuth integration. |
+| `token_url` | String | The authorization URL for the OAuth integration. |
 | `refresh_offset` | Integer | *(Optional)* The value, in seconds, to offset the refresh operation by. If this attribute is omitted when creating the secret, the value is set to `14400` (four hours) by default. |
 | `options` | Object | *(Optional)* Specifies additional options for the OAuth integration:<ul><li>`scope`: A string that represents the [OAuth 2.0 scope](https://oauth.net/2/scope/) for the credentials.</li><li>`audience`: A string that represents an [Auth0 access token](https://auth0.com/docs/protocols/protocol-oauth2).</li></ul> |
 
-When an `oauth2-client_credentials` secret is created or updated, the `client_id` and `client_secret` (and possibly `options`) are exchanged in a POST request to the `authorization_url`, according to the Client Credentials flow of the OAuth protocol.
+When an `oauth2-client_credentials` secret is created or updated, the `client_id` and `client_secret` (and possibly `options`) are exchanged in a POST request to the `token_url`, according to the Client Credentials flow of the OAuth protocol.
 
 >[!NOTE]
 >
@@ -101,11 +101,11 @@ Secrets with a `type_of` value of `oauth2-google` requires the following attribu
 | --- | --- | --- |
 | `scopes` | Array | Lists the Google product scopes for authentication. The following scopes are supported:<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-After creating the `oauth2-google` secret, the response includes a `meta.authorization_url` property. You must copy and paste this URL into a browser to complete the Google authentication flow.
+After creating the `oauth2-google` secret, the response includes a `meta.token_url` property. You must copy and paste this URL into a browser to complete the Google authentication flow.
 
 #### Reauthorize an `oauth2-google` secret
 
-The authorization URL for an `oauth2-google` secret expires one hour after the secret is created (as indicated by `meta.authorization_url_expires_at`). After this time, the secret must be reauthorized in order to renew the authentication process.
+The authorization URL for an `oauth2-google` secret expires one hour after the secret is created (as indicated by `meta.token_url_expires_at`). After this time, the secret must be reauthorized in order to renew the authentication process.
 
 Refer to the [secrets endpoint guide](../endpoints/secrets.md#reauthorize) for details on how reauthorize an `oauth2-google` secret by making a PATCH request to the Reactor API.
 
