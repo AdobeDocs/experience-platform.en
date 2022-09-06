@@ -142,33 +142,36 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Salesforce Marketing Cloud] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Salesforce Marketing Cloud] destination fields, follow the steps below.
 
-The list of attribute mappings that can be set up for the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) is given below. The destination uses the [Salesforce Search Attribute-Set Definitions REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to retrieve attributes defined within Salesforce for your contacts and specific to your account. 
-
 >[!IMPORTANT]
 > 
-> Although your attribute names would be as per your Salesforce account, the mappings for `contactKey` and `personalEmail.address` are mandatory.
+> Although your attribute names would be as per your Salesforce account, the mappings for both `contactKey` and `personalEmail.address` are mandatory.
 
-1. In the Mapping step, click **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
+1. In the [!UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
-1. In the select source field window, when selecting the source field, choose the **[!UICONTROL Select attributes]** category and select `contactKey`.
+1. In the [!UICONTROL Select source field] window, choose the **[!UICONTROL Select attributes]** category and select `contactKey`.
 ![Platform UI screenshot example for Source mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/source-mapping.png)
 
-1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and select `salesforceContactKey`.
-![Platform UI screenshot showing Target mapping for salesforceContactKey.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping.png)
+1. In the [!UICONTROL Select target field] window, select the type of target field that you want to map your source field to.
+    * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
+    ![Platform UI screenshot showing Target mapping for salesforceContactKey.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping.png)
 
-1. To map any custom attributes, select target field window, select the target field and choose the **[!UICONTROL Select attributes]** > **Email Demographics** category. Next provide the desired target attribute name and add the mappings desired.
-![Platform UI screenshot showing Target mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping-custom.png)
+    * Add the following mapping between your XDM profile schema and your [!DNL Salesforce Marketing Cloud] instance:
+        |XDM Profile Schema|[!DNL Salesforce Marketing Cloud] Instance| Mandatory|
+        |---|---|---|
+        |`contactKey`|`salesforceContactKey`| Yes |
 
-1. For instance, you could add the following mapping between your XDM profile schema and your [!DNL Salesforce Marketing Cloud] instance:
+    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the [!UICONTROL Attribute name] field. Refer to [[!DNL Salesforce REST API] documentation](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) is given below. Also note that the destination uses the [Salesforce Search Attribute-Set Definitions REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to retrieve attributes defined within Salesforce for your contacts and specific to your account.
+    ![Platform UI screenshot showing Target mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping-custom.png)
 
-    ||XDM Profile Schema|[!DNL Salesforce Marketing Cloud] Instance| Mandatory|
-    |---|---|---|---|
-    |Attributes|<ul><li><code>person.name.firstName</code></li><li><code>personalEmail.address</code></li></ul>|<ul><li><code>Email Demographics.First Name</code></li><li><code>Email Addresses.Email Address</code></li></ul>|<ul><li>-</li><li><code>Yes</code></li></ul>|
-    |Identities|<ul><li><code>contactKey</code></li></ul>|<ul><li><code>salesforceContactKey</code></li></ul>|Yes|
+    * For instance, depending on the values you want to update, add the following mapping between your XDM profile schema and your [!DNL Salesforce Marketing Cloud] instance:
+        |XDM Profile Schema|[!DNL Salesforce Marketing Cloud] Instance|
+        |---|---|
+        |`person.name.firstName`|`Email Demographics.First Name`|
+        |`personalEmail.address`|`Email Addresses.Email Address`|
 
-1. An example using these mappings is shown below:
-![Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
+    * An example using these mappings is shown below:
+    ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
