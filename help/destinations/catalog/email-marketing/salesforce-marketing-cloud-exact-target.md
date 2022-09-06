@@ -212,9 +212,11 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
 ### Unknown errors encountered while pushing events to Salesforce Marketing Cloud {#unknown-errors}
+When checking a dataflow run, if you obtain the following error message: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
 
-When checking a dataflow run, if you see the error message below, verify that the Mapping ID that you provided in [!DNL Salesforce Marketing Cloud] for your Platform segment is valid and exists within [!DNL Salesforce].
-![Platform UI screenshot showing Bad request error.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
+![Platform UI screenshot showing error.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
+
+To fix this error, verify that the [!UICONTROL Mapping ID] that you provided in [!DNL Salesforce Marketing Cloud] for your Platform segment is valid and exists within [!DNL Salesforce].
 
 ## Additional resources {#additional-resources}
 
