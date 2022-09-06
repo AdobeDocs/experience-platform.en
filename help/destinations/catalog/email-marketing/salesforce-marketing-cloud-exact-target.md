@@ -107,8 +107,7 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
-
-![Sample screenshot showing how to authenticate to Salesforce Marketing Cloud](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
+![Platform UI screenshot showing how to authenticate to Salesforce Marketing Cloud](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
 *  **[!UICONTROL Subdomain]**: Your [!DNL Salesforce Marketing Cloud] domain prefix. For example if your domain is *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, you need the highlighted value.
 *  **[!UICONTROL Client ID]**: Your Salesforce Client ID.
@@ -119,8 +118,7 @@ If the details provided are valid, the UI displays a **Connected** status with a
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-
-![Sample screenshot showing how to fill in details for Salesforce Marketing Cloud](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-details.png)
+![Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -151,16 +149,16 @@ The list of attribute mappings that can be set up for the [Salesforce REST API](
 > Although your attribute names would be as per your Salesforce account, the mappings for `contactKey` and `personalEmail.address` are mandatory.
 
 1. In the Mapping step, click **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
-![Add new mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
+![Platform UI screenshot example for Add new mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
 1. In the select source field window, when selecting the source field, choose the **[!UICONTROL Select attributes]** category and select `contactKey`.
-![Source mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/source-mapping.png)
+![Platform UI screenshot example for Source mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/source-mapping.png)
 
 1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and select `salesforceContactKey`.
-![Target mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping.png)
+![Platform UI screenshot showing Target mapping for salesforceContactKey.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping.png)
 
 1. To map any custom attributes, select target field window, select the target field and choose the **[!UICONTROL Select attributes]** > **Email Demographics** category. Next provide the desired target attribute name and add the mappings desired.
-![Target mapping](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping-custom.png)
+![Platform UI screenshot showing Target mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping-custom.png)
 
 1. For instance, you could add the following mapping between your XDM profile schema and your [!DNL Salesforce Marketing Cloud] instance:
 
@@ -170,7 +168,7 @@ The list of attribute mappings that can be set up for the [Salesforce REST API](
     |Identities|<ul><li><code>contactKey</code></li></ul>|<ul><li><code>salesforceContactKey</code></li></ul>|Yes|
 
 1. An example using these mappings is shown below:
-![Target mapping LastName](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
+![Platform UI screenshot example showing Target mappings.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
@@ -183,35 +181,29 @@ To do this, select each segment, then enter the corresponding custom attribute f
 > The value used for the Mapping ID should exactly match the name of the custom attribute created within Salesforce under the "Email Demographics" attribute-set.
 
 An example is shown below:
-![Schedule segment export](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
+![Platform UI screenshot example showing Schedule segment export.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 ## Validate data export {#exported-data}
 
 To validate that you have correctly set up the destination, follow the steps below:
 
 1. Select **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** to navigate to the list of destinations.
-    
-    ![Browse Destinations](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)
+![Platform UI screenshot showing Browse Destinations.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)
 
 1. Select the destination and validate that the status is **[!UICONTROL enabled]**.
-
-    ![Destinations Dataflow Run](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
+![Platform UI screenshot showing Destinations Dataflow Run.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
 
 1. Switch to the **[!DNL Activation data]** tab, then select a segment name.
-
-    ![Destinations Activation Data](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destinations-activation-data.png)
+![Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destinations-activation-data.png)
 
 1. Monitor the segment summary and ensure that the count of profiles corresponds to the count created within the segment.
-    
-    ![Segment](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
+![Platform UI screenshot example showing Segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
 
 1. Log in to the Salesforce Marketing Cloud website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the segment have been added.
+![Salesforce Marketing Cloud UI screenshot showing the Contacts page with profiles used in the segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
-    ![Salesforce Contacts](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
-
-1. To check if any profiles have been updated, navigate to the **[!DNL Email]** page check if the attribute values for the profile from the segment have been updated.
-    
-    ![Salesforce Contacts](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
+1. To check if any profiles have been updated, navigate to the **[!DNL Email]** page check if the attribute values for the profile from the segment have been updated. You can see that each segment status in [!Salesforce Marketing Cloud] was updated with the corresponding segment status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [segment scheduling](#schedule-segment-export-example) step.
+![Salesforce Marketing Cloud UI screenshot showing the selected Contacts Email page with updated segment statuses.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -222,7 +214,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ### Unknown errors encountered while pushing events to Salesforce Marketing Cloud {#unknown-errors}
 
 When checking a dataflow run, if you see the error message below, verify that the Mapping ID that you provided in [!DNL Salesforce Marketing Cloud] for your Platform segment is valid and exists within [!DNL Salesforce].
-![Error](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
+![Platform UI screenshot showing Bad request error.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
 
 ## Additional resources {#additional-resources}
 
