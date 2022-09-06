@@ -34,7 +34,7 @@ Select **[!UICONTROL Widget library]** to open the widget library and view all a
 
 From the Widget library, select any widget from the list of available standard or custom widgets. A check mark in the corner of the widget indicates your selection.
 
-![The Widget Library Standard tab for the Profiles category with a selected widget and check mark highlighted.]()
+![The Profiles category of the widget library Standard tab with a selected widget and check mark highlighted.](../images/customization/confirm-selected-widget-to-add.png)
 
 Once you have selected all the required widgets, select **[!UICONTROL Add widgets]** to confirm your choice and add the widgets to your dashboard.
 

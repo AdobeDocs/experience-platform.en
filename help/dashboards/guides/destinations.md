@@ -41,7 +41,7 @@ Please refer to the [modifying dashboards](../customize/modify.md) and [Widget l
 
 Select **[!UICONTROL Add widget]** to navigate to the widget library and see a list of the available widgets to add to your dashboard.
 
-![The Destinations dashboard overview with Add widget highlighted.]()
+![The Destinations dashboard overview with Add widget highlighted.](../images/destinations/destinations-overview-add-widget.png)
 
 From the widget library you can browse the selection of standard and custom segment widgets.For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
 
