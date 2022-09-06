@@ -1,8 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;Google Ads;google ads
-solution: Experience Platform
 title: Google Ads Source Overview
-topic-legacy: overview
 description: Learn how to connect Google Ads to Adobe Experience Platform using APIs or the user interface.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 ---
