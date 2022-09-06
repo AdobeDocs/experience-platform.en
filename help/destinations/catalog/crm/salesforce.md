@@ -214,10 +214,12 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
-### Unknown errors encountered while pushing events to destination {#unknown-errors}
+### Unknown errors encountered while pushing events to the destination {#unknown-errors}
+When checking a dataflow run, if you obtain the following error message: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
 
-When checking a dataflow run, if you see the error message below, verify that the Mapping ID that you provided in [!DNL Salesforce CRM] for your Platform segment is valid and exists within [!DNL Salesforce CRM].
-![Platform UI screenshot showing Bad request error.](../../assets/catalog/crm/salesforce/error.png)
+![Platform UI screenshot showing error.](../../assets/catalog/crm/salesforce/error.png)
+
+To fix this error, verify that the [!UICONTROL Mapping ID] you provided in [!DNL Salesforce CRM] for your Platform segment is valid and exists within [!DNL Salesforce CRM].
 
 ## Additional resources {#additional-resources}
 
