@@ -267,6 +267,18 @@ This feature is currently a work-in-progress. Details will be made available in 
 Query Service provides several built-in SQL helper functions to extend SQL functionality. See the document for a complete list of the [SQL functions supported by Query Service](./sql/spark-sql-functions.md).
 +++
 
+### Are all native Spark SQL functions supported or are users restricted to only the wrapper Spark SQL functions provided by Adobe?
+
++++Answer
+As yet, not all open-source Spark SQL functions have been tested on data lake data. Once tested and confirmed, they will be added to the supported list. Please refer the [list of supported Spark SQL functions](./sql/spark-sql-functions.md) to check for a specific function. 
++++
+
+### Can users define their own user defined functions (UDF) that can be used across other queries?
+
++++Answer
+Due to data security considerations, the custom definition of UDFs is not allowed.
++++
+
 ### What should I do if my scheduled query fails?
 
 +++Answer
@@ -463,6 +475,12 @@ WHERE T2.ID IS NULL
 
 +++
 
+### Why can I not create a dataset using a CTAS query with double underscore names like `test_table_001` even though double underscore names are displayed in the UI?
+
++++Answer
+This is an Experience Platform level limitation and applies to more Adobe services than just Query Service. A name with two underscores is acceptable as a schema and dataset name, but the table name for the dataset can only contain a single underscore. 
++++
+
 ## Exporting data {#exporting-data}
 
 This section provides information on exporting data and limits.
@@ -487,6 +505,26 @@ FROM <table_name>
 
 +++Answer
 No. There is currently no feature available for the extraction of ingested data.
++++
+
+### Why is the Analytics data connector not returning data?
+
++++Answer
+A common problem is querying time-series data without a time filter. For example:
+
+```sql
+SELECT * FROM prod_table LIMIT 1;
+```
+
+Should be written as:
+
+```sql
+SELECT * FROM prod_table
+WHERE
+timestamp >= to_timestamp('2022-07-22')
+and timestamp < to_timestamp('2022-07-23');
+```
+
 +++
 
 ## Third-party tools {#third-party-tools}
