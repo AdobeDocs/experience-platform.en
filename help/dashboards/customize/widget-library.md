@@ -18,13 +18,25 @@ For information on how to modify the location and size of the widgets already di
 
 ## Access the widget library
 
-From any dashboard (for example, the Profiles dashboard), select **[!UICONTROL Modify dashboard]** in order to display the **[!UICONTROL Widget library]** button.
+From any dashboard (for example, the Profiles dashboard), select **[!UICONTROL Add widget]** to navigate directly to the widget library where you can [add widgets](#add-widgets) to your dashboard.
+
+![The Profiles dashboard overview tab with the with the Add widget button highlighted.]()
+
+Select **[!UICONTROL Modify dashboard]** you can move, resize, or remove widgets from your dashboard. From this display you can also select **[!UICONTROL Widget library]** to browse and [add widgets](#add-widgets). To learn how to edit widget sizes and layout, see the [Modify dashboards documentation](./modify.md).
 
 ![](../images/customization/modify-dashboard.png)
 
 Select **[!UICONTROL Widget library]** to open the widget library and view all available standard metrics or begin creating custom widgets.
 
 ![](../images/customization/widget-library-button.png)
+
+## Add widgets {#add-widgets}
+
+From the Widget library, select any widget from the list of available standard or custom widgets. A check mark in the corner of the widget indicates your selection.
+
+![The Widget Library Standard tab for the Profiles category with a selected widget and check mark highlighted.]()
+
+Once you have selected all the required widgets, select **[!UICONTROL Add widgets]** to confirm your choice and add the widgets to your dashboard.
 
 ## Standard and custom widgets
 
