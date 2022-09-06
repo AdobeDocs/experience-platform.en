@@ -267,10 +267,10 @@ This feature is currently a work-in-progress. Details will be made available in 
 Query Service provides several built-in SQL helper functions to extend SQL functionality. See the document for a complete list of the [SQL functions supported by Query Service](./sql/spark-sql-functions.md).
 +++
 
-### Are all native Spark SQL functions supported or are users restricted to only the wrapper Spark SQL functions provided by Adobe?
+### Are all native [!DNL Spark SQL] functions supported or are users restricted to only the wrapper [!DNL Spark SQL] functions provided by Adobe?
 
 +++Answer
-As yet, not all open-source Spark SQL functions have been tested on data lake data. Once tested and confirmed, they will be added to the supported list. Please refer the [list of supported Spark SQL functions](./sql/spark-sql-functions.md) to check for a specific function. 
+As yet, not all open-source [!DNL Spark SQL] functions have been tested on data lake data. Once tested and confirmed, they will be added to the supported list. Please refer the [list of supported [!DNL Spark SQL] functions](./sql/spark-sql-functions.md) to check for a specific function. 
 +++
 
 ### Can users define their own user defined functions (UDF) that can be used across other queries?
@@ -510,7 +510,7 @@ No. There is currently no feature available for the extraction of ingested data.
 ### Why is the Analytics data connector not returning data?
 
 +++Answer
-A common problem is querying time-series data without a time filter. For example:
+A common cause for this problem is querying time-series data without a time filter. For example:
 
 ```sql
 SELECT * FROM prod_table LIMIT 1;
