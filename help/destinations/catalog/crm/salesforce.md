@@ -87,7 +87,7 @@ Salesforce balances transaction loads by imposing request, rate and timeout limi
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-| SalesforceId |Custom [!DNL Salesforce CRM] identifier that supports mapping of any identity.|Mandatory. You can send any [identity](../../../identity-service/namespaces.md) to the [!DNL Salesforce CRM] destination, as long as you map it to the `SalesforceId`. |
+| `SalesforceId` |Custom [!DNL Salesforce CRM] identifier that supports mapping of any identity.|Mandatory. You can send any [identity](../../../identity-service/namespaces.md) to the [!DNL Salesforce CRM] destination, as long as you map it to the `SalesforceId`. |
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -150,27 +150,33 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Salesforce CRM] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Salesforce CRM] destination fields, follow these steps:
 
-1. In the Mapping step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
+1. In the [!UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 
-1. In the select source field window, when selecting the source field choose the **[!UICONTROL Select attributes]** category and select `crmID`.
+1. In the [!UICONTROL Select source field] window, choose the **[!UICONTROL Select attributes]** category and select `crmID`.
 ![Platform UI screenshot example for Source mapping.](../../assets/catalog/crm/salesforce/source-mapping.png)
 
-1. In the select target field window, select the target field and choose the **[!UICONTROL Select identity namespace]** category and select `SalesforceId`.
-![Platform UI screenshot showing Target mapping for SalesforceId.](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
+1. In the [!UICONTROL Select target field] window, choose the **[!UICONTROL Select identity namespace]** category and select `SalesforceId`.
+    * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
+    ![Platform UI screenshot showing Target mapping for SalesforceId.](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
+    * Add the following mapping between your XDM profile schema and your [!DNL Salesforce CRM] instance:
 
-1. For custom attributes, in the select target field window, select the target field and choose the **[!UICONTROL Select custom attributes]** category, Next provide the desired target attribute name and add the mappings desired.
-![Platform UI screenshot showing Target mapping for LastName.](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
+    |XDM Profile Schema|[!DNL Salesforce CRM] Instance| Mandatory |
+    |---|---|---|
+    |`crmID`|`SalesforceId`|Yes|
 
-1. For instance, you could add the following mapping between your XDM profile schema and your [!DNL Salesforce CRM] instance:
+    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the [!UICONTROL Attribute name] field. Refer to [[!Salesforce CRM] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5) for guidance on these attributes.
+    ![Platform UI screenshot showing Target mapping for LastName.](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
 
-    ||XDM Profile Schema|[!DNL Salesforce CRM] Instance| Mandatory|
-    |---|---|---|---|
-    |Attributes|<ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>personalEmail.address</code></li></ul>|<ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>Email</code></li></ul>|
-    |Identities|<ul><li><code>crmID</code></li></ul>|<ul><li><code>SalesforceId</code></li></ul>|Yes|
+    * For instance, depending on the values you want to update, add the following mapping between your XDM profile schema and your [!DNL Salesforce CRM] instance:
+    |XDM Profile Schema|[!DNL Salesforce CRM] Instance|
+    |---|---|
+    |`person.name.firstName`|`FirstName`|
+    |`person.name.lastName`|`LastName`|
+    |`personalEmail.address`|`Email`|
 
-1. An example using these mappings is shown below:
-![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings.png)
+    * An example using these mappings is shown below:
+    ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings.png)
 
 ### Schedule segment export and example {#schedule-segment-export-example}
 
