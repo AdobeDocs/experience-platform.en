@@ -14,7 +14,11 @@ To acquire the necessary credentials for connecting [!DNL Jupyter Notebook] to E
 
 >[!TIP]
 >
->[!DNL Anaconda Navigator] is a desktop graphical user interface (GUI) that provides an easier way to install and launch common [!DNL Python] programs such as [!DNL Jupyter Notebook]. It also helps to manage packages, environments, and channels without using command-line commands. More information can be found in their [official documentation](https://docs.anaconda.com/anaconda/navigator/).
+>[!DNL Anaconda Navigator] is a desktop graphical user interface (GUI) that provides an easier way to install and launch common [!DNL Python] programs such as [!DNL Jupyter Notebook]. It also helps to manage packages, environments, and channels without using command-line commands.
+>You can [install your preferred version of the application](https://docs.anaconda.com/anaconda/install/) from their website. 
+>Follow the guided installation process. From the Anaconda Navigator home screen, select **[!DNL Jupyter Notebook]** from the list of supported applications to launch the program.
+>![The [!DNL Anaconda Navigator] home screen with [!DNL Jupyter Notebook] highlighted.](../images/clients/jupyter-notebook/anaconda-navigator-home.png)
+>More information can be found in their [official documentation](https://docs.anaconda.com/anaconda/navigator/).
 
 ## Launch [!DNL Jupyter Notebook]
 
