@@ -7,7 +7,7 @@ description: This document provides an end-to-end guide on attribute-based acces
 
 Attribute-based access control is an Adobe Experience Platform feature that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
 
-This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage which users or groups (internal, external, or third-party users) can access those fields.
+This functionality allows you to label Experience Data Model (XDM) schema fields, segments, AJO journey, AJO offers, and so on with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage which users or groups (internal, external, or third-party users) can access those fields.
 
 ## Getting started
 
