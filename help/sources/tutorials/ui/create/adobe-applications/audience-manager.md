@@ -18,6 +18,13 @@ Under [!UICONTROL Adobe Application], select **[!UICONTROL Adobe Audience Manage
 
 ![catalog](../../../../images/tutorials/create/aam/catalog.png)
 
+### Select traits and segments {#select-traits-and-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_aam_segments"
+>title=""
+>abstract="You can select this box to enable all segments from Adobe Audience Manager. Please note that selecting all segments can potentially cause Profile overages that exceeds your license usage entitlement."
+
 The [!UICONTROL Select traits and segments] step appears, providing you with an interactive interface to explore and select your traits, segments, and data.
 
 * The left panel of the interface contains the [!UICONTROL Select traits and segments] options, as well as a hierarchical directory of all segments available to you.
