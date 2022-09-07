@@ -34,7 +34,7 @@ Next, import a [!DNL PostgreSQL] database adapter for [!DNL Python]. Enter the v
 
 ![The [!DNL Notebook] UI with the import database driver code highlighted.](../images/clients/jupyter-notebook/import-dbdriver.png)
 
-You must now provide your Adobe Experience Platform credentials by entering the value: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Your connection credentials can be found in the [!UICNTONROL Queries] section, under the [!UICONTROL Credentials] tab of the Platform UI. See the documentation on how to [find your organization credentials](../ui/credentials.md) for detailed instructions.
+You must now provide your Adobe Experience Platform credentials by entering the value: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Your connection credentials can be found in the [!UICONTROL Queries] section, under the [!UICONTROL Credentials] tab of the Platform UI. See the documentation on how to [find your organization credentials](../ui/credentials.md) for detailed instructions.
 
 The use of non-expiring credentials is recommended when using third-party clients to save the effort of repeatedly entering your details. See the documentation for instructions on [how to generate and use non-expiring credentials](../ui/credentials.md#non-expiring-credentials).
 
