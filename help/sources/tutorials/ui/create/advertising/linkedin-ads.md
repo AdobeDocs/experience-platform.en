@@ -37,7 +37,7 @@ In order to connect [!DNL LinkedIn Ads] to Platform, you must provide values for
 | *`Access Token`* | Assuming you have a LinkedIn Developer Application follow this LinkedIn tutorial [Authorization Code Flow (3-legged OAuth)](https://docs.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow) to generate the access token. | `AQV4FClIuE2BbDkQeDatkhMFs................qNAmFmlcr9A` |
 | *`Account IDs`* | You can find guidance to obtain the Account ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `508670032` |
 | *`Campaign Group IDs`* | Campaign Group IDs can be obtained by navigating to the Campaign Groups page and selecting the desired CIDs. | `611138362` |
-| *`Campaign IDs`* | You can find guidance to obtain the Campaign Group ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `1991010101,1992020202` |
+| *`Campaign IDs`* | You can find guidance to obtain the Campaign ID [here](https://www.linkedin.com/help/lms/answer/a424270). | `1991010101,1992020202` |
 
 ### Guardrails {#guardrails}
 
