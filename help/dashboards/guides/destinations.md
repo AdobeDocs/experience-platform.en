@@ -19,7 +19,7 @@ The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations 
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
-## Exploring the destinations dashboard
+## Explore the [!UICONTROL Destinations] dashboard {#explore}
 
 To navigate to the destinations dashboard within the Platform UI, select **[!UICONTROL Destinations]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
@@ -31,11 +31,19 @@ The date and time of the most recent snapshot is displayed at the top of the [!U
 
 ![The Platform UI Destinations Overview with the most recent snapshot highlighted.](../images/destinations/snapshot-timestamp.png)
 
-### Modifying the destinations dashboard
+### Modify the [!UICONTROL Destinations] dashboard {#modify}
 
-You can modify the appearance of the destinations dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the **[!UICONTROL Widget library]** to explore available widgets and create custom widgets for your organization. 
+Select **[!UICONTROL Modify dashboard]** to change the appearance of the destinations dashboard. This enables you to move, add, and remove widgets from the dashboard as well as to access the widget library. From the widget library, you can explore the available widgets and create custom widgets for your organization. 
 
-Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
+Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
+
+### Add widgets {#add-widget}
+
+Select **[!UICONTROL Add widget]** to navigate to the widget library and see a list of the available widgets to add to your dashboard.
+
+![The Destinations dashboard overview with Add widget highlighted.](../images/destinations/destinations-overview-add-widget.png)
+
+From the widget library, you can browse the selection of standard and custom segment widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
 
 ## Standard widgets {#standard-widgets}
 
@@ -74,7 +82,7 @@ The number of mapped segments shown in the segment count column is accurate as o
 
 Selecting the name of a destination from the list shown on the widget will take you to the destination details as linked from the **[!UICONTROL Browse]** tab. You can also select **[!UICONTROL View All]** to navigate to the **[!UICONTROL Browse]** tab and then select the name of a destination to view its details.
 
-![](../images/destinations/most-used-destinations.png)
+![The Overview tab of the Destinations dashboard with the Most used destinations widget highlighted.](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL Recently created destinations] {#recently-created-destinations}
 
@@ -91,7 +99,7 @@ Selecting the name of a destination from the list shown on the widget will take 
 
 To learn more about how to configure specific types of destinations, visit the [destinations documentation](../../destinations/home.md).
 
-![](../images/destinations/recently-created-destinations.png)
+![The Overview tab of the Destinations dashboard with the Recently created destinations widget highlighted.](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL Recently activated segments] {#recently-activated-segments}
 
@@ -108,7 +116,7 @@ Selecting the name of a segment from the list shown on the widget will take you 
 
 For more information on working with segments in Experience Platform, please begin by reading the [Segmentation Service overview](../../segmentation/home.md).
 
-![](../images/destinations/recently-activated-segments.png)
+![The Overview tab of the Destinations dashboard with the Recently activated segments widget highlighted.](../images/destinations/recently-activated-segments.png)
 
 ### [!UICONTROL Recently activated segments by destination] {#recently-activated-segments-by-destination}
 
@@ -123,7 +131,7 @@ This widget contains two metrics: the segment name and the date that the segment
 
 You can view a segment's details by selecting the name of a segment from the list shown.
 
-![Recently activated segments by destination widget.](../images/destinations/recently-activated-segments-by-destination.png)
+![The Recently activated segments by destination widget.](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
@@ -138,7 +146,7 @@ A time period for the audience trend over the past 30 days, 90 days, or 12 month
 
 The second dropdown menu lists every available segment that can be sent to the destination account chosen at the top of the dashboard. 
 
-![The audience size trend widget.](../images/destinations/audience-size-trend.png)
+![The Audience size trend widget.](../images/destinations/audience-size-trend.png)
 
 The **[!UICONTROL Audience size trend]** widget provides a [!UICONTROL Captions] button in the top right of the widget. Select **[!UICONTROL Captions]** to open the automatic captions dialog. A machine learning model automatically generates captions to describe the key trends and important events by analyzing the chart and segment data.
 
