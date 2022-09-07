@@ -62,7 +62,7 @@ Next, call the parameter (`data` in the example above) to display the query resu
 
 ![The [!DNL Notebook] UI with commands to return and display SQL results within the Notebook.](../images/clients/jupyter-notebook/example-query.png)
 
-To format the results in a more human readable way, use the following commands:
+To format the results in a more human-readable way, use the following commands:
 
 - `colnames = [desc[0] for desc in cur.description]`
 - `import pandas as pd`
