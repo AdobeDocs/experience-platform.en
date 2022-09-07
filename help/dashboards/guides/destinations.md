@@ -19,7 +19,7 @@ The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations 
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
-## Exploring the destinations dashboard {#explore}
+## Explore the destinations dashboard {#explore}
 
 To navigate to the destinations dashboard within the Platform UI, select **[!UICONTROL Destinations]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 

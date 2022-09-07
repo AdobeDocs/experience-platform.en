@@ -20,7 +20,7 @@ For information on how to modify the location and size of the widgets already di
 
 From any dashboard (for example, the Profiles dashboard), select **[!UICONTROL Add widget]** to navigate directly to the widget library where you can [add widgets](#add-widgets) to your dashboard.
 
-![The Profiles dashboard overview tab with the with the Add widget button highlighted.]()
+![The Profiles dashboard overview tab with the with the Add widget button highlighted.](../images/customization/profiles-overview-add-widget.png)
 
 Select **[!UICONTROL Modify dashboard]** you can move, resize, or remove widgets from your dashboard. From this display you can also select **[!UICONTROL Widget library]** to browse and [add widgets](#add-widgets). To learn how to edit widget sizes and layout, see the [Modify dashboards documentation](./modify.md).
 
