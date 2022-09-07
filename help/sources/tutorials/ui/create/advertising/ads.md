@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;Google Ads;Google Ads source connector;google ads connector
-title: Create a Google Ads  Source Connection in the UI
+title: Create a Google Ads Source Connection in the UI
 description: Learn how to create a Google Ads source connection using the Adobe Experience Platform UI.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
 ---
@@ -35,7 +35,7 @@ In order to access your Google Ads account Platform, you must provide the follow
 | Client ID | The client ID is used in tandem with the client secret as part of [!DNL OAuth2] authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to Google. |
 | Client secret | The client secret is used in tandem with the client ID as part of [!DNL OAuth2] authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to Google. |
 
-For more information about getting started, refer to this [Google Ads API document](https://developers.google.com/google-ads/api/docs/first-call/overview).
+Read the API overview document for [more information about getting started with Google Ads](https://developers.google.com/google-ads/api/docs/first-call/overview).
 
 ## Connect your Google Ads account
 
@@ -43,9 +43,9 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Advertising* category, select **[!UICONTROL Google Ads]**, and then select **[!UICONTROL Add data]**.
+Under the **[!UICONTROL Advertising]** category, select **[!UICONTROL Google Ads]**, and then select **[!UICONTROL Add data]**.
 
-![An image of the Google Ads source in the Experience Platform UI sources catalog](../../../../images/tutorials/create/ads/catalog.png)
+![An image of the Google Ads source in the Experience Platform UI sources catalog](../../../../images/tutorials/create/ads/catalog.png).
 
 The **[!UICONTROL Connect to Google Ads]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -53,13 +53,13 @@ The **[!UICONTROL Connect to Google Ads]** page appears. On this page, you can e
 
 To connect an existing account, select the  Google Ads account you want to connect with, then select **[!UICONTROL Next]** to proceed.
 
-![An image of a list of existing accounts that you can use to create a Google Ads dataflow with](../../../../images/tutorials/create/ads/existing.png)
+![An image of a list of existing accounts that you can use to create a Google Ads dataflow with](../../../../images/tutorials/create/ads/existing.png).
 
 ### New account
 
 If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your Google Ads credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![An image of the new account connection screen on Experience Platform UI](../../../../images/tutorials/create/ads/connect.png)
+![An image of the new account connection screen on Experience Platform UI](../../../../images/tutorials/create/ads/connect.png).
 
 ## Next steps
 
