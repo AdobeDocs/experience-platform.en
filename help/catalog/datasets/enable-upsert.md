@@ -76,7 +76,7 @@ curl -X POST \
         },
         "tags": {
             "unifiedIdentity": [
-                "enabled": true"
+                "enabled: true"
             ],
             "unifiedProfile": [
                 "enabled: true",
@@ -144,6 +144,9 @@ curl -X GET \
         "tags": {
             "adobe/pqs/table": [
                 "unifiedprofileingestiontesteventsdataset"
+            ],
+            "unifiedIdentity": [
+                "enabled:true"
             ],
             "unifiedProfile": [
                 "enabled:true"
