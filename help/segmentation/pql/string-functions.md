@@ -243,7 +243,7 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->If you are using regular expression functions such as `\w`, you **must** escape the backslash character. So, instead of writing just `\w`, you will need to write `\\w`.
+>If you are using regular expression functions such as `\w`, you **must** escape the backslash character. So, instead of writing just `\w`, you must include an extra backslash and write `\\w`.
 
 ## Regular expression group
 
@@ -265,7 +265,7 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->If you are using regular expression functions such as `\w`, you **must** escape the backslash character. So, instead of writing just `\w`, you will need to write `\\w`.
+>If you are using regular expression functions such as `\w`, you **must** escape the backslash character. So, instead of writing just `\w`, you must include an extra backslash and write `\\w`.
 
 ## Next steps
 
