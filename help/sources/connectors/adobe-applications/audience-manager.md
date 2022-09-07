@@ -70,6 +70,8 @@ Adobe Audience Manager creates one connection in Catalog: Audience Manager Conne
 
 Segment population sizes have a 1:1 impact on Profile numbers when you first send an Audience Manager segment to Platform. This means that selecting all segments can potentially cause Profile overages that exceeds your license usage entitlement.
 
+You can also check the Profile usage your account has available through the [License Usage Dashboard](../../../dashboards/guides/license-usage.md).
+
 ## What is the expected latency for Audience Manager Data on Platform?
 
 | Audience Manager Data | Latency | Notes |
