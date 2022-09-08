@@ -162,7 +162,7 @@ Once you have completed mappings for your [!DNL Analytics] report suite data, yo
 
 >[!IMPORTANT]
 >
->The conditions that you define in row-level filtering dictate which data is to be included for Profile ingestion and the conditions that  you define in column-level filtering dictate which data is to be excluded for Profile ingestion.
+>Use row-level filtering to apply conditions and dictate which data to include for Profile ingestion. Use column-level filtering to select the columns of data that you want to exclude for Profile ingestion.
 
 You can filter data for [!DNL Profile] ingestion at the row-level and the column-level. Row-level filtering allows you to define criteria such as string contains, equals to, begins, or ends with. You can also use row-level filtering to join conditions using `AND` as well as `OR`, and negate conditions using `NOT`. 
 
