@@ -37,6 +37,14 @@ You can modify the appearance of the [!UICONTROL Profiles] dashboard by selectin
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
 
+### Add widgets {#add-widget}
+
+Select **[!UICONTROL Add widget]** to navigate to the widget library and see a list of the available widgets to add to your dashboard.
+
+![The Profiles dashboard overview with add widget highlighted.](../images/profiles/profiles-overview-add-widget.png)
+
+From the widget library you can browse the selection of standard and custom segment widgets.For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
+
 ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
 >[!IMPORTANT]
@@ -67,9 +75,9 @@ The dashboard will automatically select a merge policy to use. The applied merge
 
 >[!NOTE]
 >
->The dropdown menu shows only merge policies related to the XDM Individual Profile Class. However, if your organization has created multiple merge policies, it may mean that you will need to scroll in order to view the complete list of available merge policies.
+>The dropdown menu shows only merge policies that use the `_xdm.context.profile` schema. However, if your organization has created multiple merge policies, it may mean that you need to scroll in order to view the complete list of available merge policies.
 
-![](../images/profiles/select-merge-policy.png)
+![The Profiles overview tab with the merge policy dropdown highlighted.](../images/profiles/select-merge-policy.png)
 
 ## Union schemas
 
@@ -165,9 +173,9 @@ The **[!UICONTROL Profiles count change trend]** widget displays a 'captions' bu
 
 ![The Profile overview tab displaying the Profiles count change trend widget with the captions button highlighted.](../images/profiles/profiles-count-change-trend-captions.png)
 
-A machine learning model automatically generates captions for describing the key trends and important events by analyzing the chart and the data.
+A machine learning model automatically generates captions for describing the key trends and important events by analyzing the chart and the data. Annotations are added to the chart based on the captions. Select a caption to focus on its corresponding annotation.
 
-![The automatic captions dialog for the Profiles count change trend widget.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![The automatic captions dialog for the Profiles count change trend widget.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL Profiles count change trend by identity] {#profiles-count-change-trend-by-identity}
 
