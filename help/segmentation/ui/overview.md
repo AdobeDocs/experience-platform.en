@@ -52,9 +52,9 @@ To learn more, visit the [segment dashboard guide](../../dashboards/guides/segme
 >abstract="Evaluation methods for segments include batch, streaming, and edge."
 
 >[!CONTEXTUALHELP]
->id="platform_segments_browse_addallsegmentstoschedule"
+>id="platform_segments_browse_addAllSegmentsToSchedule"
 >title="Add all segments to schedule"
->abstract="Enable to include all batch evaluation segments in the daily scheduled update at 11:30 AM EDT. Disable to remove all segments from the scheduled update."
+>abstract="Enable to include all batch evaluation segments in the daily scheduled update at 3:30 PM UTC. Disable to remove all segments from the scheduled update."
 
 Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your IMS Organization. 
 
