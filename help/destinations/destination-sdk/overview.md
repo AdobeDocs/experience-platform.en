@@ -47,18 +47,16 @@ Through Destination SDK, Adobe Experience Platform supports real-time integratio
 
 Read about the technical requirements on the destinations side in the [integration prerequisites](./integration-prerequisites.md) article.
 
-
 ## Get access to Destination SDK {#get-access}
 
-Destination SDK access varies based on your status as a partner or Experience Platform customer. Please see the table below for more information.
+Destination SDK access varies based on your status as a partner or Experience Platform, Real-Time CDP customer. Please see the table below for more information.
 
 
 |Type of partner or customer | How to access Destination SDK |
 ---------|----------|
 | Independent Software Vendor (ISV) | Join the [Adobe Exchange program](https://partners.adobe.com/exchangeprogram/experiencecloud.html) and request to get an Experience Platform sandbox provisioned to access Destination SDK. |
 | System Integrator (SI) | You need to be at either Gold or Platinum level in the [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html), and you will get an Experience Platform sandbox provisioned and access to Destination SDK. |
-| Experience Platform customer on the [Activation package](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | By default, you get access to Experience Platform sandboxes and Destination SDK. |
-| Experience Platform customer on the [Real-time CDP Ultimate package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | You do not have access to Destination SDK, but you have access to all the productized destinations configured by other companies using Destination SDK and published across Experience Platform organizations. |
+| Experience Platform customer on the [Real-Time CDP Ultimate package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | By default, you get access to Experience Platform sandboxes and Destination SDK, allowing you to build private destinations for your organization.|
 
 {style="table-layout:auto"}
 
@@ -68,12 +66,12 @@ The process to configure your destination in Experience Platform is outlined bel
 
 1. If you are an ISV or SI, see the getting access information in the section above. [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) customers can skip this step.
 2. [Request to provision an Experience Platform sandbox](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) and enable the destination authoring permission.
-3. [Build your integration](./configure-destination-instructions.md) following the product documentation.
-4. [Test your integration](./test-destination.md) following the product documentation.
-5. [Submit your integration](./submit-destination.md) for Adobe’s review (the standard response time is five business days).
-6. If you are an ISV or SI creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page on Experience League for your destination.
-7. Once approved by Adobe, your integration will show up in the [Experience Platform catalog](/help/destinations/catalog/overview.md).
-8. If you’d like to update your integration, follow the same process.
+3. Build your integration. Follow the instructions in the product documentation to configure [streaming destinations](./configure-destination-instructions.md) or [file-based destinations (beta)](./configure-file-based-destination-instructions.md).
+4. Test your integration. Follow the instructions in the product documentation to test [streaming destinations](./test-destination.md) or [file-based destinations (beta)](./file-based-destination-testing-overview.md).
+5. If you are an ISV or SI creating a [productized integration](./overview.md#productized-custom-integrations), [submit your integration](./submit-destination.md) for Adobe's review (the standard response time is five business days).
+6. If you are an ISV or SI creating a productized integration, use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page on Experience League for your destination.
+7. For productized integrations, once approved by Adobe, your integration will show up in the [Experience Platform catalog](/help/destinations/catalog/overview.md).
+8. If you'd like to update your integration, follow the same process.
 
 ## Reference {#reference}
 

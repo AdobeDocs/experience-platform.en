@@ -90,16 +90,21 @@ Once you have finished configuring the extension, it can be integrated into your
 
 ## Making consent-change commands {#commands}
 
-Once you have integrated the SDK extension into your website, you can start using the Platform Web SDK `setConsent` command to send consent data to Platform. 
+Once you have integrated the SDK extension into your website, you can start using the Platform Web SDK `setConsent` command to send consent data to Platform.
 
->[!IMPORTANT]
->
->The `setConsent` command only updates data directly in the Profile store, and does not send any data to the Data Lake.
+The `setConsent` command performs two actions: 
+
+1. Updates the user's profile attributes directly in the Profile store. This does not send any data to the data lake.
+1. Creates an [Experience Event](../../../xdm/classes/experienceevent.md) that records a timestamped account of the consent change event. This data is sent directly to the data lake and can be used to keep track of consent preference changes over time.
+
+### When to call `setConsent`
 
 There are two scenarios where `setConsent` should be called on your site:
 
 1. When consent is loaded on the page (in other words, on every page load)
 1. As part of a CMP hook or event listener that detects changes in consent settings
+
+### `setConsent` syntax
 
 >[!NOTE]
 >

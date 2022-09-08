@@ -43,6 +43,10 @@ Queries submitted through the [!DNL Query Service] API are run non-interactively
 
 To access a field within an object in your query, you can use either dot notation (`.`) or bracket notation (`[]`). The following SQL statement uses dot notation to traverse the `endUserIds` object down to the `mcid` object.
 
+>[!NOTE]
+>
+>The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces.
+
 ```sql
 SELECT endUserIds._experience.mcid
 FROM {ANALYTICS_TABLE_NAME}

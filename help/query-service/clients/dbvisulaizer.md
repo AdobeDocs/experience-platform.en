@@ -34,12 +34,13 @@ From the Database Connection workspace, select the **[!DNL Properties]** tab, fo
 
 ![The Database Connection workspace with the properties tab highlighted.](../images/clients/dbvisualizer/driver-properties.png)
 
-The three required driver properties are seen in the table below. 
+The driver properties seen in the table below are recommended to enable the use of SSL with DBVisualizer.
 
 | Property | Description|
 | ------ | ------ |
 | `PGHOST` | The host name for the [!DNL PostgreSQL] server. This value is your Experience Platform [!UICONTROL Host] credential. |
-| `SSL` | This controls the use of SSL requirements. You **must** use the value "1" to enable this requirement. |
+| `ssl` | Define the SSL value `1` to enable the use of SSL. |
+| `sslmode` | This controls the use of SSL requirements. You **must** use the value `require` to enable this requirement. |
 | `user` | The username connected to the database is your Organization ID. It is an alphanumeric string ending in `@adobe.org` |
 
 >[!IMPORTANT]

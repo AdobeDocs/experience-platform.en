@@ -100,6 +100,12 @@ Find all the people who work in a Human Resources (HR) department and are relate
 
 ![UI displaying segmentation for related accounts](../assets/segmentation/segmentation-related-accounts.png)
 
+### Example 9: Use lead scores and/or account scores to qualify profile {#account-scoring}
+
+Find all profiles with the lead score over 80. 
+
+![UI displaying segmentation for predictive lead and account scoring](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
+
 ## Next steps {#next-steps}
 
 After reading this overview, you now have an understanding of the segmentation possibilities that are available using Real-time CDP, B2B Edition. For more information about the Segmentation Service, please read the [Segmentation documentation](../../segmentation/home.md).
