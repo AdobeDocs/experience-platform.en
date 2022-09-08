@@ -52,7 +52,7 @@ To learn more, visit the [segment dashboard guide](../../dashboards/guides/segme
 >abstract="Evaluation methods for segments include batch, streaming, and edge."
 
 >[!CONTEXTUALHELP]
->id="platform_segments_browse_addAllSegmentsToSchedule"
+>id="platform_segments_browse_addallsegmentstoschedule"
 >title="Add all segments to schedule"
 >abstract="Enable to include all batch evaluation segments in the daily scheduled update at 3:30 PM UTC. Disable to remove all segments from the scheduled update."
 
