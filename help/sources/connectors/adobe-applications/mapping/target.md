@@ -27,7 +27,7 @@ The following table outlines the fields of an Experience Event schema (*XDM Expe
 | **`channel`** | `context.channel` | Only works with view delivery. Options are "web" and "mobile", with "web" being the default. |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
-| `endUserIds.experience.mcId` | `marketingCloudVisitorId` |
+| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces. |
 | **`environment`** |
 | `environment.browserDetails.userAgent` | `mboxRequest.userAgent` |
 | `environment.browserDetails.viewPortHeight` | `mboxRequest.browserHeight` |
