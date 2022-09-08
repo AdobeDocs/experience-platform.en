@@ -27,7 +27,7 @@ For example, if a customer interacts with your brand across several channels, yo
 
 When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the merge policy determines which information to include in the profile for the individual.
 
-Merge policies are private to your IMS Organization, allowing you to create different policies to merge schemas in the specific ways that you need. You can also specify a default merge policy that will be used if one is not explicitly provided. See the section on [default merge policies](#default-merge-policy) later in this document to learn more.
+Merge policies are private to your organization, allowing you to create different policies to merge schemas in the specific ways that you need. You can also specify a default merge policy that will be used if one is not explicitly provided. See the section on [default merge policies](#default-merge-policy) later in this document to learn more. Please note that there is a maximum of five merge policies allowed per organization.
 
 ## Merge methods {#merge-methods}
 

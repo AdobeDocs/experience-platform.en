@@ -58,7 +58,7 @@ POST /dataSets
 
 **Request**
 
-By including `unifiedProfile` under `tags` in the request body, the dataset will be enabled for [!DNL Profile] upon creation. Within the `unifiedProfile` array, adding `isUpsert:true` will add the ability for the dataset to support updates.
+By including both the `unifiedIdentity` and the `unifiedProfile` under `tags` in the request body, the dataset will be enabled for [!DNL Profile] upon creation. Within the `unifiedProfile` array, adding `isUpsert:true` will add the ability for the dataset to support updates.
 
 ```shell
 curl -X POST \
@@ -69,24 +69,27 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "fields":[],
+        "fields": [],
         "schemaRef": {
-          "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
-          "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "tags": {
-          "unifiedProfile": [
-            "enabled:true",
-            "isUpsert:true"
-          ]
+            "unifiedIdentity": [
+                "enabled: true"
+            ],
+            "unifiedProfile": [
+                "enabled: true",
+                "isUpsert: true"
+            ]
         }
       }'
 ```
 
-|Property|Description|
-|---|---|
-|`schemaRef.id`|The ID of the [!DNL Profile]-enabled schema upon which the dataset will be based.|
-|`{TENANT_ID}`|The namespace within the [!DNL Schema Registry] which contains resources belonging to your IMS Organization. See the [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) section of the [!DNL Schema Registry] developer guide for more information.|
+| Property | Description |
+| -------- | ----------- |
+|`schemaRef.id` | The ID of the [!DNL Profile]-enabled schema upon which the dataset will be based. |
+|`{TENANT_ID}` | The namespace within the [!DNL Schema Registry] which contains resources belonging to your organization. See the [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) section of the [!DNL Schema Registry] developer guide for more information. |
 
 **Response**
 
@@ -141,6 +144,9 @@ curl -X GET \
         "tags": {
             "adobe/pqs/table": [
                 "unifiedprofileingestiontesteventsdataset"
+            ],
+            "unifiedIdentity": [
+                "enabled:true"
             ],
             "unifiedProfile": [
                 "enabled:true"
