@@ -111,6 +111,10 @@ One of the fields in your schema must be set as a primary identity field, which 
 
 You must determine the best field to use as a primary identity based on the source and nature of your data. An identity field must include an **identity namespace** that indicates the type of identity data the field expects as a value. Some valid namespace values include:
 
+>[!NOTE]
+>
+>The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces.
+
 * "email"
 * "phone"
 * "mcid" (for Adobe Audience Manager IDs)
