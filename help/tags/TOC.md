@@ -4,6 +4,7 @@ user-guide-title: Tags Help
 breadcrumb-title: Tags
 user-guide-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
 feature: Tags
+solution: Data Collection
 ---
 
 # Tags {#tags}
@@ -38,6 +39,7 @@ feature: Tags
   * [Libraries](./ui/publishing/libraries.md)
   * [Self-hosting libraries](./ui/publishing/hosts/self-hosting-libraries.md)
   * [Republish a library](./ui/publishing/republish.md)
+  * [Premium CDN support (Beta)](./ui/publishing/premium-cdn.md)
 * Client-side information {#client-side}
   * [Overview](./ui/client-side/overview.md)
   * [Asynchronous deployment](./ui/client-side/asynchronous-deployment.md)
@@ -49,11 +51,11 @@ feature: Tags
   * [Overview](./ui/event-forwarding/overview.md)
   * [Getting started](./ui/event-forwarding/getting-started.md)
   * [Configuring secrets](./ui/event-forwarding/secrets.md)
+  * [Monitoring (Beta)](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
   * [User permissions](./ui/administration/user-permissions.md)
-  * [Manage permissions](./ui/administration/manage-permissions.md)
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
   * Adobe extensions {#adobe}
@@ -98,6 +100,9 @@ feature: Tags
     * Adobe Target v2 {#target-v2}
       * [Overview](./extensions/web/target-v2/overview.md)
       * [Release notes](./extensions/web/target-v2/release-notes.md)
+    * [!DNL BrightCove] video tracking {#brightcove}
+      * [Overview](./extensions/web/brightcove/overview.md)
+      * [Release notes](./extensions/web/brightcove/release-notes.md)
     * Common Analytics Plugins {#plugins}
       * [Overview](./extensions/web/plugins/overview.md)
       * [Release notes](./extensions/web/plugins/release-notes.md)
@@ -105,12 +110,14 @@ feature: Tags
       * [Overview](./extensions/web/core/overview.md)
       * [Event forwarding](./extensions/web/core/event-forwarding.md)
       * [Release notes](./extensions/web/core/release-notes.md)
+    * [!DNL Mailchimp] Edge {#mailchimp-edge}
+      * [Overview](./extensions/web/mailchimp/overview.md)
     * [!DNL Marketo Munchkin] {#marketo}
       * [Overview](./extensions/web/marketo/overview.md)
       * [Release notes](./extensions/web/marketo/release-notes.md)
-    * [!DNL BrightCove] video tracking {#brightcove}
-      * [Overview](./extensions/web/brightcove/overview.md)
-      * [Release notes](./extensions/web/brightcove/release-notes.md)
+    * Google Data Layer {#google-data-layer}
+      * [Overview](./extensions/web/google-data-layer/overview.md)
+      * [Release notes](./extensions/web/google-data-layer/release-notes.md)
     * [!DNL YouTube] video tracking extension {#youtube}
       * [Overview](./extensions/web/youtube/overview.md)
       * [Release notes](./extensions/web/youtube/release-notes.md)
@@ -183,8 +190,10 @@ feature: Tags
     * [Secrets](./api/guides/secrets.md)
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
+* [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
 * Release notes {#release-notes}
   * [Latest](./release-notes/current.md)
+  * [2021 release notes](./release-notes/2021.md)
   * [2020 release notes](./release-notes/2020.md)
   * [2019 release notes](./release-notes/2019.md)
   * [2018 release notes](./release-notes/2018.md)

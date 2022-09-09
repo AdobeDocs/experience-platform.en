@@ -13,6 +13,7 @@ This section explains how to connect to [!DNL Query Service] from a variety of d
 Instructions are provided for the following clients:
 
 - [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
+- [[!DNL DbVisualizer]](./dbvisulaizer.md)
 - [[!DNL Looker]](./looker.md)
 - [[!DNL Postico (Mac)]](./postico.md)
 - [[!DNL Power BI (PC)]](./power-bi.md)

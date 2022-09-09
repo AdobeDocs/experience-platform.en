@@ -9,6 +9,10 @@ exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
 
 This tutorial covers the process of enabling a dataset with "upsert" capabilities in order to make updates to Real-time Customer Profile data. This includes steps for creating a new dataset and configuring an existing dataset. 
 
+>[!NOTE]
+>
+>The upsert workflow only works for batch ingestion. Streaming ingestion is **not** supported.
+
 ## Getting started
 
 This tutorial requires a working understanding of several Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for these related [!DNL Platform] services:
@@ -16,7 +20,7 @@ This tutorial requires a working understanding of several Adobe Experience Platf
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Catalog Service]](../../catalog/home.md): A RESTful API that allows you to create datasets and configure them for [!DNL Real-time Customer Profile] and [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
-- [Batch ingestion](../../ingestion/batch-ingestion/overview.md)
+- [Batch ingestion](../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the Platform APIs.
 
@@ -30,7 +34,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional `Content-Type` header. The correct value for this header is shown in the sample requests where necessary.
 
@@ -54,7 +58,7 @@ POST /dataSets
 
 **Request**
 
-By including `unifiedProfile` under `tags` in the request body, the dataset will be enabled for [!DNL Profile] upon creation. Within the `unifiedProfile` array, adding `isUpsert:true` will add the ability for the dataset to support updates.
+By including both the `unifiedIdentity` and the `unifiedProfile` under `tags` in the request body, the dataset will be enabled for [!DNL Profile] upon creation. Within the `unifiedProfile` array, adding `isUpsert:true` will add the ability for the dataset to support updates.
 
 ```shell
 curl -X POST \
@@ -62,27 +66,30 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "fields":[],
+        "fields": [],
         "schemaRef": {
-          "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
-          "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "tags": {
-          "unifiedProfile": [
-            "enabled:true",
-            "isUpsert:true"
-          ]
+            "unifiedIdentity": [
+                "enabled: true"
+            ],
+            "unifiedProfile": [
+                "enabled: true",
+                "isUpsert: true"
+            ]
         }
       }'
 ```
 
-|Property|Description|
-|---|---|
-|`schemaRef.id`|The ID of the [!DNL Profile]-enabled schema upon which the dataset will be based.|
-|`{TENANT_ID}`|The namespace within the [!DNL Schema Registry] which contains resources belonging to your IMS Organization. See the [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) section of the [!DNL Schema Registry] developer guide for more information.|
+| Property | Description |
+| -------- | ----------- |
+|`schemaRef.id` | The ID of the [!DNL Profile]-enabled schema upon which the dataset will be based. |
+|`{TENANT_ID}` | The namespace within the [!DNL Schema Registry] which contains resources belonging to your organization. See the [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) section of the [!DNL Schema Registry] developer guide for more information. |
 
 **Response**
 
@@ -96,11 +103,11 @@ A successful response shows an array containing the ID of the newly created data
 
 ## Configure an existing dataset {#configure-an-existing-dataset}
 
-The following steps cover how to configure an existing Profile-enabled dataset for update ("upsert") functionality. 
+The following steps cover how to configure an existing Profile-enabled dataset for update (upsert) functionality. 
 
 >[!NOTE]
 >
->In order to configure an existing Profile-enabled dataset for "upsert", you must first disable the dataset for Profile and then re-enable it alongside the `isUpsert` tag. If the existing dataset is not enabled for Profile, you can proceed directly to the steps for [enabling the dataset for Profile and upsert](#enable-the-dataset). If you are unsure, the following steps show you how to check if the dataset is enabled already.
+>In order to configure an existing Profile-enabled dataset for upsert, you must first disable the dataset for Profile and then re-enable it alongside the `isUpsert` tag. If the existing dataset is not enabled for Profile, you can proceed directly to the steps for [enabling the dataset for Profile and upsert](#enable-the-dataset). If you are unsure, the following steps show you how to check if the dataset is enabled already.
 
 ### Check if the dataset is enabled for Profile
 
@@ -112,18 +119,17 @@ Using the [!DNL Catalog] API, you can inspect an existing dataset to determine w
 GET /dataSets/{DATASET_ID}
 ```
 
-|Parameter|Description|
-|---|---|
-|`{DATASET_ID}`|The ID of a dataset you want to inspect.|
+| Parameter | Description |
+| --------- | ----------- |
+| `{DATASET_ID}` | The ID of a dataset you want to inspect.|
 
 **Request**
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -133,10 +139,13 @@ curl -X GET \
 {
     "5b020a27e7040801dedbf46e": {
         "name": "{DATASET_NAME}",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "tags": {
             "adobe/pqs/table": [
                 "unifiedprofileingestiontesteventsdataset"
+            ],
+            "unifiedIdentity": [
+                "enabled:true"
             ],
             "unifiedProfile": [
                 "enabled:true"
@@ -180,11 +189,11 @@ Under the `tags` property, you can see that `unifiedProfile` is present with the
 
 ### Disable the dataset for Profile
 
-In order to configure a Profile-enabled dataset for updates, you must first disable the `unifiedProfile` tag and then re-enable it alongside the `isUpsert` tag. This is done using two PATCH requests, once to disable and one to re-enable.
+In order to configure a Profile-enabled dataset for updates, you must first disable the `unifiedProfile` and `unifiedIdentity` tags and then re-enable them alongside the `isUpsert` tag. This is done using two PATCH requests, once to disable and one to re-enable.
 
 >[!WARNING]
 >
->Data ingested into the dataset while it is disabled will not be ingested into the Profile Store. It is recommended to avoid ingesting data into the dataset until it has been re-enabled for Profile.
+>Data ingested into the dataset while it is disabled will not be ingested into the Profile Store. You should avoid ingesting data into the dataset until it has been re-enabled for Profile.
 
 **API format**
 
@@ -192,29 +201,38 @@ In order to configure a Profile-enabled dataset for updates, you must first disa
 PATCH /dataSets/{DATASET_ID}
 ```
 
-|Parameter|Description|
-|---|---|
-|`{DATASET_ID}`|The ID of a dataset you want to update.|
+| Parameter | Description |
+| --------- | ----------- |
+|`{DATASET_ID}` | The ID of the dataset you want to update.|
 
 **Request**
 
-The first PATCH request body includes a `path` to `unifiedProfile` setting the `value` to `enabled:false` in order to disable the tag.
+The first PATCH request body includes a `path` to `unifiedProfile` and a `path` to `unifiedIdentity`, setting the `value` to `enabled:false` for both of these paths in order to disable the tags.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] },
+        { 
+            "op": "replace", 
+            "path": "/tags/unifiedProfile", 
+            "value": ["enabled:false"] 
+        },
+        {
+            "op": "replace",
+            "path": "/tags/unifiedIdentity",
+            "value": ["enabled:false"]
+        }
       ]'
 ```
 
 **Response**
-A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` tag has now been disabled.
+
+A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` and `unifiedIdentity` tags have now been disabled.
 
 ```json
 [
@@ -232,29 +250,43 @@ An existing dataset can be enabled for Profile and attribute updates using a sin
 PATCH /dataSets/{DATASET_ID}
 ```
 
-|Parameter|Description|
-|---|---|
-|`{DATASET_ID}`|The ID of a dataset you want to update.|
+| Parameter | Description |
+| --------- | ----------- |
+|`{DATASET_ID}` | The ID of a dataset you want to update. |
 
 **Request**
 
-The request body includes a `path` to `unifiedProfile` setting the `value` to include the `enabled` and `isUpsert` tags, both set to `true`.
+The request body includes a `path` to `unifiedProfile` setting the `value` to include the `enabled` and `isUpsert` tags, both set to `true`, and a `path` to `unifiedIdentity` setting the `value` to include the `enabled` tag set to `true`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },
+        { 
+            "op": "add", 
+            "path": "/tags/unifiedProfile", 
+            "value": [
+                "enabled:true",
+                "isUpsert:true"
+            ] 
+        },
+        {
+            "op": "add",
+            "path": "/tags/unifiedIdentity",
+            "value": [
+                "enabled:true"
+            ]
+        }
       ]'
 ```
 
 **Response**
-A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` tag has now been enabled and configured for attribute updates.
+
+A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` tag and `unifiedIdentity` tag have now been enabled and configured for attribute updates.
 
 ```json
 [
@@ -262,6 +294,6 @@ A successful PATCH request returns HTTP Status 200 (OK) and an array containing 
 ]
 ```
 
-## Next Steps
+## Next steps
 
-Your Profile and upsert-enabled dataset can now be used by batch and streaming ingestion workflows to make updates to profile data. To learn more about ingesting data into Adobe Experience Platform, please begin by reading the [data ingestion overview](../../ingestion/home.md).
+Your Profile and upsert-enabled dataset can now be used by batch ingestion workflows to make updates to profile data. To learn more about ingesting data into Adobe Experience Platform, please begin by reading the [data ingestion overview](../../ingestion/home.md).

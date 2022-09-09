@@ -1,9 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data prep;api guide;schemas;
-solution: Experience Platform
-title: Schemas API Endpoint
-topic-legacy: schemas
-description: You can use the `/functions` endpoint in the Adobe Experience Platform API to validate your mapping expressions and list available mapping set functions.
+title: Functions API Endpoint
+description: You can use the `/functions` endpoint in the Data Prep API to validate your mapping expressions and list available mapping set functions.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 ---
 # Functions endpoints
@@ -27,7 +25,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -62,7 +60,7 @@ GET /languages/el/functions
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/functions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -127,7 +125,7 @@ GET /languages/el/operators
 curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/operators \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

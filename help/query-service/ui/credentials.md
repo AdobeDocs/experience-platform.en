@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;query;query editor;Query Editor;Query editor;
 solution: Experience Platform
-title: Query Service UI Guide
+title: Query Service Credentials Guide
 topic-legacy: guide
 description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
@@ -14,7 +14,7 @@ Adobe Experience Platform Query Service allows you to connect with external clie
 
 You can use expiring credentials to quickly set up a connection to an external client.
 
-![](../images/ui/credentials/expiring-credentials.png)
+![The Queries dashboard Credentials tab with the Expiring credentials section highlighted.](../images/ui/credentials/expiring-credentials.png)
 
 The **[!UICONTROL Expiring credentials]** section provides the following information:
 
@@ -26,7 +26,7 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 - **[!UICONTROL PSQL command]**: A command that automatically has inserted all the relevant information for you to connect to Query Service using PSQL on the command line.
 - **[!UICONTROL Expires]**: The expiry date for the expiring credentials. The credentials expire 24 hours after they are generated.
 
-## Non-expiring credentials 
+## Non-expiring credentials {#non-expiring-credentials}
 
 You can use non-expiring credentials to set up a more permanent connection to an external client.
 
@@ -49,7 +49,7 @@ All the required permissions are now configured in Adobe Developer Console for t
 
 To create a set of non-expiring credentials, return to the Platform UI and select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
 
-![](../images/ui/credentials/generate-credentials.png)
+![The Queries dashboard with the Credentials tab and Generate credentials highlighted.](../images/ui/credentials/generate-credentials.png)
 
 A dialog appears that allows you to generate credentials. To create non-expiring credentials, you must provide the following details:
 
@@ -60,11 +60,11 @@ A dialog appears that allows you to generate credentials. To create non-expiring
 
 Once you have provided all the required details, select **[!UICONTROL Generate credentials]** to generate your credentials.
 
-![](../images/ui/credentials/create-account.png)
+![The Generate credentials dialog is highlighted.](../images/ui/credentials/create-account.png)
 
 >[!IMPORTANT]
 >
->Once the **[!UICONTROL Generate credentials]** button is selected, a configuration JSON file is downloaded to your local machine. Since Adobe does **not** record the generated credentials, you must securely store the downloaded file and keep a record of the credential.
+>When **[!UICONTROL Generate credentials]** is selected, a configuration JSON file is downloaded to your local machine. Since Adobe does **not** record the generated credentials, you must securely store the downloaded file and keep a record of the credential.
 >
 >Additionally, if the credentials are not used for 90 days, the credentials will be expunged.
 
@@ -76,7 +76,7 @@ The configuration JSON file contains information such as technical account name,
 
 After you have saved your generated credentials, select **[!UICONTROL Close]**. You can now see a list of all your non-expiring credentials.
 
-![](../images/ui/credentials/list-credentials.png)
+![The Queries dashboard Credentials tab with the Non-expiring Credentials section expanded.](../images/ui/credentials/list-credentials.png)
 
 You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![](../images/ui/credentials/edit-icon.png)). To delete a non-expiring credential, select the delete icon (![](../images/ui/credentials/delete-icon.png)).
 
@@ -86,7 +86,7 @@ When editing a non-expiring credential, a modal appears. You can provide the fol
 - **[!UICONTROL Description]**: (Optional) A description for the credentials you are generating.
 - **[!UICONTROL Assigned to]**: The user to which the credentials will be assigned. This value should be the email address of the user who is creating the credentials.
 
-![](../images/ui/credentials/update-credentials.png)
+![The Update account dialog.](../images/ui/credentials/update-credentials.png)
 
 Once you have provided all the required details, select **[!UICONTROL Update account]** to complete the update to your credentials.
 
@@ -106,11 +106,11 @@ The table below outlines the parameters that are typically required to connect t
 
 | Parameter | Description |
 |---|---|
-| Server/Host  | The name of the server/host that you are connecting to. <ul><li>This value is used for both expiring credentials and non-expiring credentials and takes the form of `server.adobe.io`. The value is found under **[!UICONTROL Host]** in the [!UICONTROL EXPIRING CREDENTIALS] section.</ul></li> |
-| Port  | The port for the server/host you are connecting to. <ul><li>This value is used for both expiring credentials and non-expiring credentials and is found under **[!UICONTROL Port]** in the [!UICONTROL EXPIRING CREDENTIALS] section. An example value for the port would be `80`.</ul></li>  |
-| Database  | The database that you are connecting to. <ul><li>This value is used for both expiring credentials and non-expiring credentials and found under **[!UICONTROL Database]** in the [!UICONTROL EXPIRING CREDENTIALS] section. An example value for the database would be `prod:all`.</ul></li> |
-| Username  | The username for the user who is connecting to the external client. <ul><li>This value is used for both expiring credentials and non-expiring credentials. It takes the form of an alphanumeric string before `@AdobeOrg`. This value is found under **[!UICONTROL Username]**.</li></ul>  |
-| Password  | The password for the user who is connecting to the external client. <ul><li>If you're using expiring credentials, this can be found under **[!UICONTROL Password]** within the [!UICONTROL EXPIRING CREDENTIALS] section.</li><li>If you're using non-expiring credentials, this value is the concatenated arguments from the technicalAccountID and the credential taken from the configuration JSON file. The password value takes the form: `{technicalAccountId}:{credential}`.</li></ul>  |
+| **Server/Host**  | The name of the server/host that you are connecting to. <ul><li>This value is used for both expiring credentials and non-expiring credentials and takes the form of `server.adobe.io`. The value is found under **[!UICONTROL Host]** in the [!UICONTROL EXPIRING CREDENTIALS] section.</ul></li> |
+| **Port**  | The port for the server/host you are connecting to. <ul><li>This value is used for both expiring credentials and non-expiring credentials and is found under **[!UICONTROL Port]** in the [!UICONTROL EXPIRING CREDENTIALS] section. An example value for the port would be `80`.</ul></li>  |
+| **Database**  | The database that you are connecting to. <ul><li>This value is used for both expiring credentials and non-expiring credentials and found under **[!UICONTROL Database]** in the [!UICONTROL EXPIRING CREDENTIALS] section. An example value for the database would be `prod:all`.</ul></li> |
+| **Username**  | The username for the user who is connecting to the external client. <ul><li>This value is used for both expiring credentials and non-expiring credentials. It takes the form of an alphanumeric string before `@AdobeOrg`. This value is found under **[!UICONTROL Username]**.</li></ul>  |
+| **Password**  | The password for the user who is connecting to the external client. <ul><li>If you're using expiring credentials, this can be found under **[!UICONTROL Password]** within the [!UICONTROL EXPIRING CREDENTIALS] section.</li><li>If you're using non-expiring credentials, this value is the concatenated arguments from the technicalAccountID and the credential taken from the configuration JSON file. The password value takes the form: `{technicalAccountId}:{credential}`.</li></ul>  |
 
 ## Next steps
 

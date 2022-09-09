@@ -1,22 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Create a new connection specification using the Flow Service API (Beta)
+title: Create a new connection specification using the Flow Service API
 topic-legacy: tutorial
-description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Sources SDK.
-hide: true
-hidefromtoc: true
+description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Self-Serve Sources.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 ---
-# Create a new connection specification using the [!DNL Flow Service] API (Beta)
-
->[!IMPORTANT]
->
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+# Create a new connection specification using the [!DNL Flow Service] API
 
 A connection specification represents the structure of a source. It contains information on a source's authentication requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. The `/connectionSpecs` endpoint in the [!DNL Flow Service] API allows you to programmatically manage the connection specifications within your organization.
 
-The following document provides steps on how to create a connection specification using the [!DNL Flow Service] API and integrate a new source through Sources SDK.
+The following document provides steps on how to create a connection specification using the [!DNL Flow Service] API and integrate a new source through Self-Serve Sources (Batch SDK).
 
 ## Getting started
 
@@ -24,16 +18,37 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Collect artifacts
 
-The first step in creating a new source through [!DNL Sources SDK] is to coordinate with your Adobe representative and identify values for your source's corresponding **icon**, **description**, **label**, and **category**.
+In order to create a new batch source using Self-Serve Sources, you must first coordinate with Adobe, request a private Git repository, and align with Adobe on the details regarding the label, description, category, and icon for your source.
 
-| Artifacts | Description | Example |
+Once provided, you must structure your private Git repository like so:
+
+* Sources
+  * {your_source}
+    * Artifacts
+      * {your_source}-category.txt
+      * {your_source}-description.txt
+      * {your_source}-icon.svg
+      * {your_source}-label.txt
+      * {your_source}-connectionSpec.json
+
+| Artifacts (file names) | Description | Example |
 | --- | --- | --- |
-| Label | The name of your source. | [!DNL MailChimp Members] |
-| Description | A brief description of your source. | Create a live inbound connection to your [!DNL Mailchimp Members] instance, to ingest both historic and scheduled data into Experience Platform. |
-| Icon | The image or logo that represents your source. The icon is displayed in the Platform UI rendering of your source. | `mailchimp-members-icon.svg` |
-| Category | The category of your source. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| {your_source} | The name of your source. This folder should contain all artifacts related to your source, within your private Git repository. | `mailchimp-members`|
+| {your_source}-category.txt | The category to which your source belongs, formatted as a text file. The list of available source categories supported by Self-Serve Sources (Batch SDK) include: <ul><li>Advertising</li><li>Analytics</li><li>Consent and Preferences</li><li>CRM</li><li>Customer Success</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Payments</li><li>Protocols</li></ul> **Note**: If you believe that your source does not fit in any of the above categories, please contact your Adobe representative to discuss. | `mailchimp-members-category.txt` Inside the file, please specify the category of your source, like: `marketingAutomation`. |
+| {your_source}-description.txt | A brief description of your source. | [!DNL Mailchimp Members] is marketing automation source that you can use to bring [!DNL Mailchimp Members] data to Experience Platform. |
+| {your_source}-icon.svg | The image to be used to represent your source in the Experience Platform sources catalog. This icon must be an SVG file. |
+| {your_source}-label.txt | The name of your source as it should appear in the Experience Platform sources catalog. | Mailchimp Members | 
+| {your_source}-connectionSpec.json | A JSON file that contains the connection specification of your source. This file is not initially required as you will be populating your connection specification as you complete this guide. | `mailchimp-members-connectionSpec.json` |
 
 {style="table-layout:auto"}
+
+>[!TIP]
+>
+>During the testing period of your connection specification, in place of key values, you can use `text` in the connection specification.
+
+Once you have added the necessary files to your private Git repository, you must then create a pull request (PR) for Adobe to review. When your PR is approved and merged, you will be provided with an ID that can be used for your connection specification to refer to your source's label, description, and icon.
+
+Next, follow the steps outlined below to configure your connection specification. For additional guidance on the different functionalities that you can add to your source, such as advanced scheduling, custom schema, or different pagination types, please review the guide on [configuring source specifications](../config/sourcespec.md).
 
 ## Copy connection specification template
 
@@ -62,10 +77,6 @@ Once you have gathered the required artifacts, copy and paste the connection spe
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -200,6 +211,10 @@ Once you have gathered the required artifacts, copy and paste the connection spe
         "urlParams": {
           "type": "object",
           "properties": {
+            "host": {
+            "type": "string",
+            "description": "Enter resource url host path."
+          },
             "path": {
               "type": "string",
               "description": "Enter resource path",
@@ -449,7 +464,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -474,9 +489,9 @@ curl -X POST \
                   "type": "object",
                   "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path"
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "authorizationTestUrl": {
                           "description": "Authorization test url to validate accessToken.",
@@ -489,7 +504,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "accessToken"
                   ]
               }
@@ -502,9 +517,9 @@ curl -X POST \
                   "type": "object",
                   "description": "defines auth params required for connecting to rest service.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path."
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "username": {
                           "description": "Username to connect mailChimp endpoint.",
@@ -517,7 +532,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "username",
                       "password"
                   ]
@@ -541,10 +556,19 @@ curl -X POST \
                   }
               },
               "urlParams": {
+                  "host": "https://${domain}.api.mailchimp.com",
                   "path": "/3.0/lists/${listId}/members",
                   "method": "GET"
               },
-              "contentPath": "$.members",
+              "contentPath": {
+                  "path": "$.members",
+                  "skipAttributes": [
+                    "_links",
+                    "total_items",
+                    "list_id"
+                  ],
+                  "overrideWrapperAttribute": "member"
+                },
               "paginationParams": {
                   "type": "OFFSET",
                   "limitName": "count",
@@ -630,7 +654,7 @@ A successful response returns the newly created connection specification, includ
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "MailChimp Members source",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",

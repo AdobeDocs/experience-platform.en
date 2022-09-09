@@ -22,9 +22,17 @@ You can now enter values to connect with Adobe Experience Platform. For more inf
 
 Ensure that you have checked the **[!UICONTROL SSL Required]** box before trying to connect.
 
-After filling in all your credentials, select **[!DNL Sign In]** to continue.
-    
+>[!IMPORTANT]
+>
+>See the [[!DNL Query Service] SSL documentation](./ssl-modes.md) to learn about SSL support for third-party connections to Adobe Experience Platform Query Service, and how to connect using `verify-full` SSL mode.
+
 ![](../images/clients/tableau/sign-in.png)
+    
+>[!IMPORTANT]
+>
+>Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See the documentation on the[`FLATTEN` feature](../best-practices/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database. 
+
+After filling in all your credentials, select **[!DNL Sign In]** to continue.
 
 You have now connected with Adobe Experience Platform, with a list of your tables displayed on the side.
 

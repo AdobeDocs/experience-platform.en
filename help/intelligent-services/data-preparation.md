@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
-solution: Experience Platform, Intelligent Services
+solution: Experience Platform
 title: Prepare Data for Use in Intelligent Services
 topic-legacy: Intelligent Services
 description: In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services use Experience Data Model (XDM) schemas in order to achieve this.
@@ -41,6 +41,22 @@ Depending on the [!DNL Intelligent Service] you wish to use, different fields ma
 Customer AI and Attribution AI natively support Adobe Analytics data. To use Adobe Analytics data, follow the steps outlined in the documentation to set up an [Analytics source connector](../sources/tutorials/ui/create/adobe-applications/analytics.md). 
 
 Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Analytics as a data source followed by a dataset during your instance configuration. All of the required schema field groups and individual fields are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
+
+If you compare the data flown through the Adobe Analytics source connector onto Adobe Experience Platform with Adobe Analytics data, you may notice some discrepancies. The Analytics Source connector might drop rows during the transformation to an Experience Data Model (XDM) schema. There can be multiple reasons for the whole row to be unfit for transformation which include missing timestamps, missing personIDs, invalid or large person IDs, invalid analytic values, and more.
+
+For more information and examples, visit the documentation for [comparing Adobe Analytics and Customer Journey Analytics data](https://www.adobe.com/go/compare-aa-data-to-cja-data). This article is designed to help you diagnose and solve for those differences so that you and your team can use Adobe Experience Platform data for Intelligent Services unimpeded by concerns about data integrity.
+
+In Adobe Experience Platform Query Services, run the following Total Records between start and end timestamp by channel.typeAtSource query to find the count by marketing channels.
+
+```SELECT channel.typeAtSource as typeAtSource, 
+       Count(_id) AS Records 
+FROM  df_hotel
+WHERE timestamp>=from_utc_timestamp('2021-05-15','UTC')
+        AND timestamp<from_utc_timestamp('2022-01-10','UTC')
+        AND timestamp IS NOT NULL
+        AND enduserids._experience.aaid.id IS NOT NULL
+GROUP BY channel.typeAtSource
+```        
 
 >[!IMPORTANT]
 >
@@ -94,6 +110,10 @@ While the use of all key fields is strongly recommended, there are two fields th
 One of the fields in your schema must be set as a primary identity field, which allows [!DNL Intelligent Services] to link each instance of time-series data to an individual person.
 
 You must determine the best field to use as a primary identity based on the source and nature of your data. An identity field must include an **identity namespace** that indicates the type of identity data the field expects as a value. Some valid namespace values include:
+
+>[!NOTE]
+>
+>The Experience Cloud ID (ECID) is also known as MCID and continues to be used in namespaces.
 
 * "email"
 * "phone"

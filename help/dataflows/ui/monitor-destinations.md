@@ -50,25 +50,21 @@ See the following table for more information on statuses:
 >id="platform_monitoring_profiles_received_streaming"
 >title="Profiles received"
 >abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Identities activated"
 >abstract="The count of individual profile identities successfully activated to the selected destination. This metric includes identities that are created, updated, and removed from exported segments."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="Identities excluded"
 >abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Identities failed"
 >abstract="The count of individual profile identities which failed for the selected destination. Please check error diagnostics for details."
->text="Learn more in documentation"
 
 For streaming destinations, the [!UICONTROL Dataflow runs] tab provides an hourly update for metric data on your dataflow runs. The most prominent statistics labelled are for identities.
 
@@ -112,29 +108,22 @@ The details page also displays a list of identities that failed and identities t
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Dataflow run details"
 >abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_activation_batch"
->title="Dataflow run details"
->abstract="The destination dataflow run details contain information on the segment's activation status and metrics taken from Real-time Customer Profile to generate unique identities. To learn more, please review the metric definitions guide."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Dataflow runs for streaming destinations"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="Profiles received"
 >abstract="The total number of profiles received in the dataflow. This value is updated every 60 minutes."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identities activated"
 >abstract="The count of individual profile identities successfully activated to the selected destination. This metric includes identities that are created, updated, and removed from exported segments."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="Identities excluded"
 >abstract="The count of individual profile records excluded from activation for the selected destination based on missing attributes and consent violation."
->text="Learn more in documentation"
 
 For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
@@ -146,6 +135,7 @@ For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data 
 Each individual dataflow run shows the following details:
 
 - **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
+- **[!UICONTROL Segment]**: The name of the segment associated with each dataflow run.
 - **[!UICONTROL Processing time]**: The amount of time it took for the dataflow run to be processed.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination as part of the dataflow run. This metric includes identities that are created, updated, and removed from exported segments.
@@ -170,30 +160,12 @@ The details page also displays a list of identities that failed and identities t
 
 ![Dataflow records for batch destinations](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Monitoring Segment Jobs dashboard {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Segment Jobs"
->abstract="The segment jobs view contains information on the evaluation and export jobs for all your segments."
-
-To access the [!UICONTROL Segment Jobs] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Segment Jobs]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the segment evaluation and export jobs.
-
-![Segment jobs monitoring dashboard](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-Use the [!UICONTROL Segment Jobs] dashboard to understand if profile evaluation and export happens on time and without any exceptions, so the downstream services for destination activation can have the latest evaluated profile data.
-
-The following metrics are available for segment jobs:
-
-| Metric | Description |
----------|----------|
-| **[!UICONTROL Segment job]** | Indicates the name of the segment job. |
-| **[!UICONTROL Type]** | Indicates the type of segment job - export or evaluation. Note that in both cases, the segment job evaluates or exports *all* segments belonging to an organization. |
-| **[!UICONTROL Job start]** | The date and time when the segment job started. |
-| **[!UICONTROL Job end]** | The date and time when the segment job completed. |
-| **[!UICONTROL Status]** | The status of the completed job - success or failed. |
-
 ## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
+
+>[!NOTE]
+>
+>- Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>- For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, identities excluded are currently not displayed.
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"

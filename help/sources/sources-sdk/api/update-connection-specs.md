@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Update a connection specification using the Flow Service API (Beta)
+title: Update a connection specification using the Flow Service API
 topic-legacy: developer guide
 description: You can update the properties of a connection specification through a PUT operation.
-hide: true
-hidefromtoc: true
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
 ---
-# Update a connection specification using the Flow Service API (Beta)
+# Update a connection specification using the Flow Service API
 
 You can update the properties of a connection specification through a PUT operation. When updating a connection specification through a PUT request, the body must include all of the fields that would be required when creating a new connection specification in a POST request.
 
@@ -27,7 +25,7 @@ PUT -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
       "name": "MailChimp source update 1.0",
@@ -215,7 +213,7 @@ A successful call returns the updated connection specification details, includin
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "MailChimp source update 1.0",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",

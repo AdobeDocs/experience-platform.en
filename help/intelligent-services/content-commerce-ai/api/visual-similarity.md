@@ -1,6 +1,6 @@
 ---
 keywords: Visual similarity;visual similarity;ccai api
-solution: Experience Platform, Intelligent Services
+solution: Experience Platform
 title: Visual Similarity in the Content and Commerce AI API
 topic-legacy: Developer guide
 description: The visual similarity service, when given an image, automatically finds visually similar images from a catalog.

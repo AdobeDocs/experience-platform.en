@@ -52,7 +52,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}'\
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "birthdayCurrentMonth",
@@ -87,7 +87,7 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
 ```json
 {
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "prod",
@@ -165,7 +165,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}'\
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "averageSpend",
@@ -200,7 +200,7 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
 ```json
 {
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",
@@ -294,7 +294,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/computedAttributes/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -313,7 +313,7 @@ The response also includes a `children` array composed of one or more objects, e
     "children": [
         {
             "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
                 "sandboxName": "prod",
@@ -355,7 +355,7 @@ The response also includes a `children` array composed of one or more objects, e
         },
         {
             "id": "ae0c6552-cf49-4725-8979-116366e8e8d3",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
                 "sandboxName": "",
@@ -436,7 +436,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/config/computedAttributes/2afcf410-450e-4a39-984d-2de99ab58877 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -445,7 +445,7 @@ curl -X GET \
 ```json
 {
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
         "sandboxName": "prod",
@@ -510,7 +510,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'\
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \  
   -d '[
         {
@@ -559,7 +559,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/core/ups/config/computedAttributes/ae0c6552-cf49-4725-8979-116366e8e8d3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
   -H 'x-sandbox-name: {SANDBOX_NAME}' \ 
 ```
 
@@ -587,7 +587,7 @@ POST /segment/definitions
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -634,7 +634,7 @@ A successful response returns HTTP status 200 with details of your newly created
     },
     "ttlInDays": 60,
     "id": "119835c3-5fab-4c18-ae01-4ccab328fc5c",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "{SANDBOX_NAME}",

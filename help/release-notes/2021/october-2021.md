@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: The latest release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes October 2021
+description: The October 2021 release notes for Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
 ---
 # Adobe Experience Platform release notes 

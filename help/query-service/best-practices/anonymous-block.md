@@ -1,13 +1,17 @@
 ---
-title: Sample Anonymous Block Queries
+title: Anonymous Block in Query Service
 description: The anonymous block is an SQL syntax supported by Adobe Experience Platform Query Service, which allows you to efficiently execute a sequence of queries
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
 ---
-# Sample queries for anonymous block
+# Anonymous block in Query Service
 
 Adobe Experience Platform Query Service supports anonymous blocks. The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
 
 The anonymous block feature is an efficient way to perform a sequence of operations or queries. The chain of queries within the block can be saved as a template and scheduled to run at a particular time or interval. These queries can be used to write and append data to create a new data set and are typically used where you have a dependency.
+
+>[!IMPORTANT]
+>
+>Scheduling queries using anonymous blocks is currently only possible through the [!DNL Query Service] API. See the documentation for [complete instructions on scheduling queries through the API](../api/scheduled-queries.md). 
 
 The table provides a breakdown of the block's main sections: execution, and exception-handling. The sections are defined by the keywords `BEGIN`, `END`, and `EXCEPTION`. 
 
@@ -54,4 +58,4 @@ $$;
 
 By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. [For more information on query execution](./writing-queries.md), please read the guide on query execution in Query Service.
 
-For more samples of queries that can be used within Query Service, please read the guides on [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md), or [ExperienceEvent sample queries](./experience-event-queries.md).
+You should also read about [how anonymous block is used with the incremental load design pattern](./incremental-load.md) to increase query efficiency.

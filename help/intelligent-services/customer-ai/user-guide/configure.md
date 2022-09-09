@@ -1,17 +1,18 @@
 ---
 keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Configure a Customer AI Instance
 topic-legacy: Instance creation
-description: Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
+description: AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 ---
+
 # Configure a Customer AI instance
 
-Customer AI, as part of Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
+Customer AI, as part of AI/ML Services enables you to generate custom propensity scores without having to worry about machine learning.
 
-Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
+AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 
 ## Create an instance {#set-up-your-instance}
 
@@ -58,7 +59,7 @@ Provide the required values and then select **[!UICONTROL Next]** to continue.
 
 ## Select data {#select-data}
 
-By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience Event, and Consumer Experience Event data to calculate propensity scores. When selecting a dataset, only ones that are compatible with Customer AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
+By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience Events in general, and Consumer Experience Event data to calculate propensity scores. When selecting a dataset, only ones that are compatible with Customer AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
 
 ![Select and search for dataset](../images/user-guide/configure-dataset-page.png)
 
@@ -84,7 +85,9 @@ There is a dataset completeness percentage value in the dataset preview. This va
 
 ### Select an identity {#identity}
 
-In order for multiple datasets to join on one another, you must select a identity type (also known as an "identity namespace") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
+You can now join multiple datasets to one another based on the identity map (field). You must select an identity type (also known as an "identity namespace") and an identity value within that namespace. If you have assigned more than one field as an identity within your schema under the same namespace, all the assigned identity values appear in the identity dropdown prepended by the namespace such as `EMAIL (personalEmail.address)` or `EMAIL (workEmail.address)`.
+
+[select same namespace](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -92,7 +95,8 @@ In order for multiple datasets to join on one another, you must select a identit
 
 To select an identity, select the underlined value located in the identity column. The select an identity popover appears.
 
-![select same namespace](../images/user-guide/identity-type.png)
+<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
+[select same namespace](../images/user-guide/cai-identity-namespace.png)
 
 In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and be more useful in individual predictions. This means that `EMAIL (personalEmail.address)` would be selected as the identity.
 
@@ -110,7 +114,8 @@ The **[!UICONTROL Define goal]** step appears and it provides an interactive env
 
 To create a goal, select **[!UICONTROL Enter Field Name]** and followed by a field from the dropdown list. Select the second input, a clause for the event's condition, then optionally provide the target value to complete the event. Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
 
-![](../images/user-guide/define-a-goal.png)
+<!-- ![](../images/user-guide/define-a-goal.png) -->
+![](../images/user-guide/cai-define-a-goal.png)
 
 ### Will occur and will not occur
 
@@ -118,7 +123,8 @@ While defining your goal, you have the option to select **[!UICONTROL Will occur
 
 For example, if you would like to set up an app to predict whether a customer will make a purchase, you can select **[!UICONTROL Will occur]** followed by **[!UICONTROL All of]** and then enter **commerce.purchases.id** (or a similar field) and **[!UICONTROL exists]** as the operator.
 
-![will occur](../images/user-guide/occur.png)
+<!-- ![will occur](../images/user-guide/occur.png) -->
+![will occur](../images/user-guide/cai-will-occur.png)
 
 However, there may be cases when you are interested in predicting whether some event will not happen in a certain timeframe. To configure a goal with this option, select **[!UICONTROL Will not occur]** from the top-level dropdown.
 
@@ -180,6 +186,18 @@ You can define important Profile dataset fields (with timestamps) in your data i
 
 ![add a custom profile attribute](../images/user-guide/profile-attributes.png)
 
+#### Select profile attributes from the Profile snapshot export
+
+You can also choose to include profile attributes from the daily Profile snapshot export. These attributes are synced to the Profile snapshot export and display the most recently available value. 
+
+>[!WARNING]
+>
+> Be careful not to select a profile attribute that is updated as a result of the prediction goal or highly correlated with the prediction goal. This causes data leakage and over-fitting of the model. An example of such an attribute is `total_purchases_in_the_last_3_months` that predicts purchase conversion. 
+
+>[!NOTE]
+>
+>Support for using profile attributes from the UPS snapshot export is available in the UI upon request. 
+
 ### Adding a custom event example {#custom-event}
 
 In the following example, a custom event and profile attribute is added to a Customer AI instance. The goal of the Customer AI instance is to predict the likelihood of a customer to buy another Luma product in the next 60 days. Normally, product data is linked to a product SKU. In this case, the SKU is `prd1013`. After the Customer AI model is trained/scored, this SKU can be linked to an event and displayed as an influential factor for a propensity bucket.
@@ -223,6 +241,38 @@ If the instance is created successfully, a prediction run is immediately trigger
 >Depending on the size of the input data, prediction runs can take up to 24 hours to complete.
 
 By following this section, you have configured an instance of Customer AI and executed a prediction run. Upon the run's successful completion, scored insights automatically populate profiles with predicted scores if the profile toggle is enabled. Please wait up to 24 hours before continuing to the next section of this tutorial.
+
+## Attribute-based access control
+
+>[!IMPORTANT]
+>
+>Attribute-based access control is currently available in a limited release only.
+
+[Attribute-based access control](../../../access-control/abac/overview.md) is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
+
+This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
+
+Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+
+Due to attribute-based access control, some fields and functionalities would have access restricted and be unavailable for certain Customer AI service instances. Examples include, "Identity", "Score Definition", and "Clone."
+
+![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/unavailable-functionalities.png)
+
+At the top of the Customer AI workspace **insights page**, notice that the details in the sidebar, score definition, identity, and profile attributes all show "Access Restricted."
+
+![The Customer AI workspace with the restricted fields of the schema highlighted.](../images/user-guide/access-restricted.png)
+
+<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
+
+![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
+
+When you preview datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
+
+![The Customer AI workspace with the restricted fields of the preview datasets with restricted schema results highlighted.](../images/user-guide/restricted-dataset-preview.png)
+
+After you create an instance with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
+
+![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/information-not-displayed.png)
 
 ## Next steps {#next-steps}
 

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Export Jobs API Endpoint
+title: Profile Export Jobs API Endpoint
 topic-legacy: guide
 type: Documentation
 description: Real-time Customer Profile enables you to build a single view of individual customers within Adobe Experience Platform by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 ---
-# Export jobs endpoint
+# Profile export jobs endpoint
 
 [!DNL Real-time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing. For example, audience segments from [!DNL Profile] data can be exported for activation, and profile attributes can be exported for reporting.
 
@@ -52,7 +52,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "Profile Data Export",
@@ -98,7 +98,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fields": "identities.id,personalEmail.address",
@@ -168,7 +168,7 @@ A successful response returns a dataset populated with Profile data as specified
       "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
     "updateTime": 1559674261868,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "creationTime": 1559674261657
 }
 ```
@@ -198,7 +198,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/export/jobs/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -248,7 +248,7 @@ The response includes a `records` object containing the export jobs created by y
           "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
       },
       "updateTime": 1538616233239,
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "creationTime": 1538615973895
     },
     {
@@ -303,7 +303,7 @@ The response includes a `records` object containing the export jobs created by y
           "batchId": ""
       },
       "updateTime": 1538573922551,
-      "imsOrgId": "{IMS_ORG}",
+      "imsOrgId": "{ORG_ID}",
       "creationTime": 1538573416687
     }
   ],
@@ -340,7 +340,7 @@ curl -X GET \
   https://platform.adobe.io/data/core/ups/export/jobs/24115 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -387,7 +387,7 @@ curl -X GET \
       "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
     "updateTime": 1559674261868,
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "creationTime": 1559674261657
 }
 ```
@@ -417,7 +417,7 @@ curl -X POST \
   https://platform.adobe.io/data/core/ups/export/jobs/726 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

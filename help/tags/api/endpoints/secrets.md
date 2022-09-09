@@ -36,7 +36,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PRe005d921bb724bc88c3ff28e3e916f04/secrets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/vnd.api+json'
 ```
@@ -132,7 +132,7 @@ curl -X GET \
   https://reactor.adobe.io/environments/EN0a1b00749daf4ff48a34d2ec37286aa7/secrets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/vnd.api+json'
 ```
@@ -228,7 +228,7 @@ curl -X GET \
   https://reactor.adobe.io/secrets/SEa3756b962e964fadb61e31df1f7dd5a3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/vnd.api+json'
 ```
@@ -317,7 +317,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PR9eff664dc6014217b76939bb78b83976/secrets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
@@ -438,7 +438,7 @@ curl -X PATCH \
   https://reactor.adobe.io/secrets/SE6c15a7a64f9041b5985558ed3e19a449 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
@@ -477,7 +477,7 @@ A successful response returns the details of the secret, with the the authorizat
       "activated_at": null, 
       "created_at": "2021-07-14T19:33:25.628Z", 
       "credentials": { 
-        "authorization_url": "https://athorization_url.test/token/authorize?required_param=value",
+        "token_url": "https://token_url.test/token/authorize?required_param=value",
         "client_id": "test_client_id", 
         "client_secret": "test_client_secret", 
         "refresh_offset": 14400, 
@@ -555,7 +555,7 @@ curl -X PATCH \
   https://reactor.adobe.io/secrets/SEa3756b962e964fadb61e31df1f7dd5a3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
@@ -638,6 +638,113 @@ A successful response returns the details of the secret, with its status reset t
 }
 ```
 
+## Reauthorize an `oauth2-google` secret {#reauthorize}
+
+Each `oauth2-google` secret contains a `meta.authorization_url_expires_at` property that indicates when the authorization URL will expire. After this time, the secret must be reauthorized in order for it to renew the authentication process.
+
+To reauthorize an `oauth2-google` secret, make a PATCH request for the secret in question.
+
+**API format**
+
+```http
+PATCH /secrets/{SECRET_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{SECRET_ID}` | The `id` of the secret that you want to reauthorize. |
+
+**Request**
+
+The `data` object in the request payload must contain a `meta.action` property set to `reauthorize`.
+
+```shell
+curl -X PATCH \
+  https://reactor.adobe.io/secrets/SEa3756b962e964fadb61e31df1f7dd5a3 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
+  -H 'Content-Type: application/vnd.api+json' \
+  -d '{
+        "data": {
+          "attributes": {
+            "type_of": "oauth2-google"
+          },
+          "meta": {
+            "action": "reauthorize"
+          },
+          "id": "SEa3756b962e964fadb61e31df1f7dd5a3",
+          "type": "secrets"
+        }
+      }'
+```
+
+**Response**
+
+A successful response returns the details of the updated secret. From here, you must copy and paste the `meta.authorization_url` into a browser to complete the authorization process.
+
+```json
+{
+  "data": {
+    "id": "SE5fdfa4c0a2d8404e8b1bc38827cc41c9",
+    "type": "secrets",
+    "attributes": {
+      "created_at": "2021-07-15T19:00:25.628Z", 
+      "updated_at": "2021-07-15T19:00:25.628Z", 
+      "name": "Example Secret", 
+      "type_of": "oauth2-google", 
+      "activated_at": null, 
+      "expires_at": null, 
+      "refresh_at": null, 
+      "status": "pending", 
+      "credentials": { 
+        "scopes": [
+          "https://www.googleapis.com/auth/adwords",
+          "https://www.googleapis.com/auth/pubsub"
+        ], 
+      } 
+    }, 
+    "relationships": { 
+      "property": { 
+        "links": { 
+          "related": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9/property" 
+        }, 
+        "data": { 
+          "id": "PR9eff664dc6014217b76939bb78b83976", 
+          "type": "properties" 
+        } 
+      }, 
+      "environment": { 
+        "links": { 
+          "related": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9/environment" 
+        }, 
+        "data": { 
+          "id": "EN04cdddbdb6574170bcac9f470f3b8087", 
+          "type": "environments" 
+        }, 
+        "meta": { 
+          "stage": "development" 
+        } 
+      }, 
+      "notes": { 
+        "links": { 
+          "related": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9/notes" 
+        } 
+      } 
+    }, 
+    "links": { 
+      "self": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9", 
+      "property": "https://reactor.adobe.io/secrets/SE5fdfa4c0a2d8404e8b1bc38827cc41c9/property" 
+    }, 
+    "meta": { 
+      "authorization_url": "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=434635668552-0qvlu519fdjtnkvk8hu8c8dj8rg3723r.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Freactor.adobe.io%2Foauth2%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fadwords&state=state", 
+      "authorization_url_expires_at": "2021-07-15T20:00:25.628Z" 
+    } 
+  } 
+}
+```
+
 ## Delete a secret {#delete}
 
 You can delete a secret by including its ID in the path of a DELETE request. This is a hard delete with an immediate effect and does not require a library republish.
@@ -667,7 +774,7 @@ curl -X DELETE \
   https://reactor.adobe.io/secrets/SEa3756b962e964fadb61e31df1f7dd5a3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/vnd.api+json'
 ```
@@ -705,7 +812,7 @@ curl -X GET \
   https://reactor.adobe.io/secrets/SE591d3b86910f4e6883f0e1c36e54bff1/notes \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/vnd.api+json'
 ```
@@ -784,7 +891,7 @@ curl -X GET \
   https://reactor.adobe.io/secrets/SEa3756b962e964fadb61e31df1f7dd5a3/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/vnd.api+json'
 ```
@@ -893,7 +1000,7 @@ curl -X GET \
   https://reactor.adobe.io/secrets/SEa3756b962e964fadb61e31df1f7dd5a3/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -H 'Content-Type: application/vnd.api+json'
 ```

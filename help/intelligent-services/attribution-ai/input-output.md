@@ -15,10 +15,14 @@ The following document outlines the different input and outputs utilized in [!DN
 Attribution AI works by analyzing the following datasets to calculate algorithmic scores:
 
 - Adobe Analytics datasets using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Experience Event (EE) dataset
-- Consumer Experience Event (CEE) dataset
+- Experience Event (EE) datasets in general from Adobe Experience Platform schema
+- Consumer Experience Event (CEE) datasets
 
-You can add multiple datasets from different sources if each of the datasets shares the same identity type (namespace) such as an ECID. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
+You can now add multiple datasets from different sources based on the **identity map** (field) if each of the datasets shares the same identity type (namespace) such as an ECID. After you select an identity and a namespace, ID Column completeness metrics appear which indicate the volume of data being stitched. To learn more about adding multiple datasets, visit the [Attribution AI user guide](./user-guide.md#identity).
+
+The channel information is not always mapped by default. In some cases, if the mediaChannel (field) is blank, you would not be able to  "continue" until you map a field to mediaChannel as it is a required column. If the channel is detected in the dataset, it is mapped to mediaChannel by default. The other columns such as **media type** and **media action** are still optional.
+
+After you map the channel field, continue to the 'Define events' step where you can select the conversion events, touchpoint events, and choose specific fields from individual datasets.
 
 >[!IMPORTANT]
 >
@@ -28,11 +32,9 @@ For more details on setting up the [!DNL Consumer Experience Event] (CEE) schema
 
 Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are mandatory for Attribution AI. 
 
->[!NOTE]
->
-> The following 9 columns are mandatory, additional columns are optional but recommended/necessary if you want to use the same data for other Adobe solutions such as [!DNL Customer AI] and [!DNL Journey AI].
+You can configure the touch points using any fields recommended below in the schema or selected dataset.
 
-| Mandatory columns | Needed for |
+| Recommended columns | Needed for |
 | --- | --- |
 | Primary Identity Field | Touchpoint / Conversion |
 | Timestamp | Touchpoint / Conversion |
@@ -46,17 +48,11 @@ Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are man
 
 Typically, attribution is run on conversion columns such as order, purchases, and checkouts under "commerce". The columns for "channel" and "marketing" are used to define touchpoints for Attribution AI (for example, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). For optimal results and insights, it is highly recommended that you include as many conversion and touchpoint columns as possible. Additionally, you are not limited to just the above columns. You can include any other recommended or custom columns as a conversion or touchpoint definition.
 
+Experience event (EE) Datasets do not need to explicitly have Channel and Marketing mixins as long as the channel or campaign information relevant to configure a touchpoint is present in one of mixin or pass through fields.
+
 >[!TIP]
 >
 >If you are using Adobe Analytics data in your CEE schema, the touchpoint information for Analytics is typically stored in `channel.typeAtSource` (for example, `channel.typeAtSource = 'email'`).
-
-The columns below are not required but it is recommended that you include them in your CEE schema if you have the information available.
-
-**Additional recommended columns:**
-- web.webReferer
-- web.webInteraction
-- web.webPageDetails
-- xdm:productListItems
 
 ## Historical data {#data-requirements}
 
@@ -134,7 +130,7 @@ The following table outlines the schema fields in the raw scores example output:
 | commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city: San Jose |
 | customerProfile (Object) | False | Identity details of the user used to build the model. |
 | identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
-| id (String) | True | Identity ID of the user such as cookie ID or AAID or MCID etc. <br> **Example:** 17348762725408656344688320891369597404 |
+| id (String) | True | Identity ID of the user such as cookie ID, Adobe Analytics ID (AAID), or Experience Cloud ID (ECID, also known as MCID or as visitor ID) etc. <br> **Example:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
 | touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by | touchpoint occurrence or timestamp. |
 | touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |
@@ -150,7 +146,6 @@ You can view the path to your raw scores in the UI. Start by selecting **[!UICON
 Next, select a field within the **[!UICONTROL Structure]** window of the UI, the **[!UICONTROL Field properties]** tab opens. Within **[!UICONTROL Field properties]** is the path field that maps to your raw scores.
 
 ![Pick a Schema](./images/input-output/field_properties.png)
-
 
 ### Aggregated attribution scores {#aggregated-attribution-scores}
 
@@ -217,21 +212,26 @@ The table below maps the aggregated scores to the raw scores. If you wish to dow
 
 | Column Name | Raw Score reference column |
 | --- | --- |
-customerevents_date | timestamp |
-mediatouchpoints_date | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
-segment | _tenantID.your_schema_name.segmentation |
-conversion_scope | _tenantID.your_schema_name.conversion.conversionName |
-touchpoint_scope | _tenantID.your_schema_name.touchpointsDetail.element.touchpointName |
-product | _tenantID.your_schema_name.conversion.product |
-product_type | _tenantID.your_schema_name.conversion.product_type |
-geo | _tenantID.your_schema_name.conversion.geo |
-event_type | eventType |
-media_type | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaType |
-channel | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
-action | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
-campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
-campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
+| customerevents_date | timestamp |
+| mediatouchpoints_date | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.timestamp |
+| segment | _tenantID.your_schema_name.segmentation |
+| conversion_scope | _tenantID.your_schema_name.conversion.conversionName |
+| touchpoint_scope | _tenantID.your_schema_name.touchpointsDetail.element.touchpointName |
+| product | _tenantID.your_schema_name.conversion.product |
+| product_type | _tenantID.your_schema_name.conversion.product_type |
+| geo | _tenantID.your_schema_name.conversion.geo |
+| event_type | eventType |
+| media_type | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaType |
+| channel | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
+| action | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
+| campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
+| campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
 
+>[!IMPORTANT]
+>
+> - Attribution AI uses only updated data for further training and scoring. Likewise, when you request to delete data, Customer AI refrains from using the deleted data.
+> - Attribution AI leverages Platform datasets. To support consumer rights requests a brand may receive, brands should use Platform Privacy Service to submit consumer requests of access and delete to remove their data across the data lake, Identity Service, and Real-time Customer Profile. 
+> - All datasets we use for input/output of models will follow Platform guidelines. Platform Data Encryption applies for data at-rest and in-transit. See the documentation to learn more about [data encryption](../../../help/landing/governance-privacy-security/encryption.md)
 
 ## Next steps {#next-steps}
 
