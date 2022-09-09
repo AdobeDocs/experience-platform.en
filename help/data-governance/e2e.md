@@ -4,7 +4,7 @@ description: Follow the complete process for enforcing data usage constraints fo
 ---
 # Data Governance end-to-end guide
 
-In order to control which marketing actions can be taken on certain datasets and fields in Adobe Experience Platform, you must set up the following:
+In order to control which marketing actions can be performed on certain datasets and fields in Adobe Experience Platform, you must set up the following:
 
 1. [Apply labels](#labels) to the datasets and fields whose usage you want to restrict.
 1. [Configure and enable data governance policies](#policy) that determine which kinds of labeled data can be used for certain marketing actions.
@@ -15,7 +15,7 @@ Once you have finished configuring your labels, policies, and marketing actions,
 This guide walks through the full process of configuring and enforcing a data governance policy in the Platform UI. For more detailed information on the features used in this guide, refer to the overview documentation on the following topics:
 
 * [Adobe Experience Platform Data Governance](./home.md)
-* [Data usage labels](./labels/overviewmd)
+* [Data usage labels](./labels/overview.md)
 * [Data usage policies](./policies/overview.md)
 * [Policy enforcement](./enforcement/overview.md)
 
@@ -59,11 +59,11 @@ Select **[!UICONTROL Schemas]** in the left navigation, then select the schema t
 >
 >If you are not sure which schema applies to a particular dataset, select **[!UICONTROL Datasets]** in the left navigation, then select the link under the **[!UICONTROL Schema]** column for the desired dataset. Select the schema name in the popover that appears to open the schema in the Schema Editor.
 >
->![Image showing all fields highlighted for a dataset](./images/e2e/schema-from-dataset.png)
+>![Image showing a link to a dataset's schema](./images/e2e/schema-from-dataset.png)
 
 The schema's structure appears in the Schema Editor. From here, select the **[!UICONTROL Labels]** tab to show a list view of the schema's fields and the labels that have already been applied to them. Select the checkboxes next to the fields that you want to add labels to, then select **[!UICONTROL Edit governance labels]** in the right rail.
 
-![Image showing all fields highlighted for a dataset](./images/e2e/schema-field-label.png)
+![Image showing a single schema field being selected for governance labels](./images/e2e/schema-field-label.png)
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ The schema's structure appears in the Schema Editor. From here, select the **[!U
 
 In the next dialog, select the labels that you want to apply to the schema fields that you chose earlier. When finished, select **[!UICONTROL Save]**.
 
-![Image showing all fields highlighted for a schema](./images/e2e/save-schema-labels.png)
+![Image showing multiple labels being added to a schema field](./images/e2e/save-schema-labels.png)
 
 Continue following the above steps to apply labels to different fields (or different schemas) as needed. When finished, you can continue to the next step of [enabling data governance policies](#policy).
 
@@ -123,7 +123,7 @@ For example, consider an enabled policy that prevents any data containing a `C2`
 
 When [connecting a destination in the UI](../destinations/ui/connect-destination.md), the **[!UICONTROL Governance]** step in the workflow allows you to select the marketing actions that apply to this destination, which ultimately determine which data governance policies are enforced for the destination.
 
-![Image showing the created policy being enabled in the UI](./images/e2e/destination-marketing-actions.png)
+![Image showing marketing actions being selected for a destination](./images/e2e/destination-marketing-actions.png)
 
 ## Test policy enforcement {#test}
 
@@ -137,6 +137,6 @@ See the document on [automatic policy enforcement](./enforcement/auto-enforcemen
 
 This guide covered the required steps for configuring and enforcing data governance policies in your activation workflows. For more detailed information on the Data Governance components involved in this guide, refer to the following documentation:
 
-* [Data usage labels](./labels/overviewmd)
+* [Data usage labels](./labels/overview.md)
 * [Data usage policies](./policies/overview.md)
 * [Policy enforcement](./enforcement/overview.md)
