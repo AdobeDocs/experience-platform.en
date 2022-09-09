@@ -74,6 +74,8 @@ Once you have your key vault configured, the next step is to register for the CM
 >[!NOTE]
 >
 >Registering the CMK app requires you to make calls to Platform APIs. For details on how to gather the required authentication headers to make these calls, see the [Platform API authentication guide](../../landing/api-authentication.md).
+>
+>While the authentication guide provides instructions on how to generate your own unique value for the required `x-api-key` request header, all API operations in this guide use the static value `acp_provisioning` instead. You must still provide your own values for `{ACCESS_TOKEN}` and `{ORG_ID}`, however.
 
 ### Send a registration request
 
@@ -85,8 +87,8 @@ To start the registration process, make a POST request to the app registration e
 curl -X POST \
   https://platform.adobe.io/data/infrastructure/manager/byok/app-registration \ 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-api-key: acp_provisioning' \
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 >[!NOTE]
@@ -112,7 +114,7 @@ A successful response returns the details of the registration job, confirming th
         "x-request-id": "FRbDemUrUxZvi4BrOzoAKQ0RjJTjWvkQ",
         "userId": ""
     },
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "executionComplete": false,
     "recovered": false,
     "timeOutForCurrentStateInMins": 5,
@@ -133,8 +135,8 @@ Once you have sent the initial registration request, make a GET request to the s
 curl -X GET \
   https://platform.adobe.io/data/infrastructure/manager/byok/app-registration \ 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-api-key: acp_provisioning' \
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Response**
@@ -185,12 +187,12 @@ Once you have obtained the key identifier, you can send it using a POST request 
 curl -X POST \
   https://platform.adobe.io/data/infrastructure/manager/customer/config \ 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key: acp_provisioning' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
         "name": "config1",
         "type": "BYOK_CONFIG",
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
           "keyVaultUri": "https://adobecmkexample1.vault.azure.net/keys/adobeCMK-key/02cee357ad5d4c72b2b04881fdffd626",
@@ -233,10 +235,10 @@ A successful response returns the details of the configuration job.
         "keyVaultUri": "https://adobecmkexample1.vault.azure.net/keys/adobeCMK-key/02cee357ad5d4c72b2b04881fdffd626",
         "keyName": "key1"
       },
-      "imsOrgId": "{IMS_ORG}"
+      "imsOrgId": "{ORG_ID}"
     }
   },
-  "imsOrgId": "{IMS_ORG}",
+  "imsOrgId": "{ORG_ID}",
   "executionComplete": false,
   "recovered": false,
   "timeOutForCurrentStateInMins": 5,
@@ -251,14 +253,14 @@ The job should should complete processing within a few minutes. To check the sta
 
 **Request**
 
-The request path appends a `config1` namespace and must contain a `configType` parameter set to `BYOK_CONFIG`.
+To check the status of a request, you must append the `name` of the configuration to the path (`config1` in the example below) and include a `configType` query parameter set to `BYOK_CONFIG`.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/infrastructure/manager/customer/config/config1?configType=BYOK_CONFIG \ 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-api-key: acp_provisioning' \
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Response**
@@ -275,7 +277,7 @@ A successful response returns the status of the job. A complete job contains a `
     "keyName": "key1",
     "providerType": "AZURE_KEYVAULT"
   },
-  "imsOrgId": "{IMS_ORG}",
+  "imsOrgId": "{ORG_ID}",
   "subscriptionId": "undefined",
   "id": "282397ed-ab19-47fb-9bf2-057270d401aa",
   "rowType": "BYOK_KEY"
