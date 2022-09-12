@@ -64,6 +64,10 @@ Selecting the info icon ![info icon](./images/user-guide/info-icon.png) next to 
 
 The dataset preview contains data such as the last update time, source schema, and a preview of the first ten columns.
 
+You can now also save draft model configurations using the `save and exit` button. Without this ability, you could lose all selections during the configuration workflow if it is not submitted for processing. This is particularly helpful when you need to define multiple fields in the configuration workflow.
+
+![Save and exit](./images/user-guide/AAI-save-and-exit.png)
+
 ### Dataset completeness {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
