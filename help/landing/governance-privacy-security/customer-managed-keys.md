@@ -1,43 +1,45 @@
 ---
-title: Customer-Managed Keys in Real-Time Customer Data Platform
-description: Learn how to set up your own encryption keys for data stored in Real-Time Customer Data Platform.
+title: Customer-Managed Keys in Adobe Experience Platform
+description: Learn how to set up your own encryption keys for data stored in Adobe Experience Platform.
 ---
-# Customer-managed keys in Real-Time Customer Data Platform (Beta)
+# Customer-managed keys in Adobe Experience Platform
 
->[!IMPORTANT]
->
->This feature is currently in beta and your organization may not have access to it yet. The documentation and functionality are subject to change.
+All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform such as Real-Time Customer Data Platform and Adobe Journey Optimizer, you can opt to use your own encryption keys instead, giving you greater control over your data security.
 
-All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. In Real-Time Customer Data Platform (Real-Time CDP), you can opt to use your own encryption keys instead, giving you greater control over your data security.
-
-This document covers the process for enabling the customer-managed keys (CMK) feature in Real-Time CDP.
+This document covers the process for enabling the customer-managed keys (CMK) feature in Platform.
 
 ## Process summary
 
-CMK is included in the Healthcare Shield and the Privacy and Security Shield offerings from Adobe. After your organization purchases one of these offerings, the process for setting up CMK can be summarized as follows:
+CMK is included in the Healthcare Shield and the Privacy and Security Shield offerings from Adobe. After your organization purchases one of these offerings, you can begin a one-time process for setting up the feature.
 
-1. [Create an Azure Key Vault](#create-key-vault), then [generate or import an encryption key](#generate-or-import-key) (based on your organization's policies) that will ultimately be shared with Adobe.
-1. Use API calls to [register the CMK app](#register-app) with your Azure tenant.
+>[!WARNING]
+>
+>Once the set-up process is complete, you cannot revert to system-managed keys. You are responsible for securely managing your keys to prevent losing access to your data.
+
+The process is as follows:
+
+1. [Create a [!UICONTROL Microsoft Azure] Key Vault](#create-key-vault), then [generate or import an encryption key](#generate-or-import-key) (based on your organization's policies) that will ultimately be shared with Adobe.
+1. Use API calls to [register the CMK app](#register-app) with your [!DNL Azure] tenant.
 1. [Assign the service principal for the CMK app](#assign-to-role) to an appropriate role for the key vault. 
 1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe).
 
-Once the setup process is complete, your organization's data across all sandboxes will be encrypted using your Azure key setup.
+Once the setup process is complete, your organization's data across all sandboxes will be encrypted using your [!DNL Azure] key setup, specific to your [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) and [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) resources. CMK leverages [!DNL Azure]'s [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) to make this possible.
 
-## Create an Azure Key Vault {#create-key-vault}
+## Create an [!DNL Azure] Key Vault {#create-key-vault}
 
-CMK only supports keys from a Microsoft Azure Key Vault. To get started, you must work with Azure to create a new enterprise account, or use an existing enterprise account  and follow the steps below to create the Key Vault.
+CMK only supports keys from a [!UICONTROL Microsoft Azure] Key Vault. To get started, you must work with [!DNL Azure] to create a new enterprise account, or use an existing enterprise account  and follow the steps below to create the Key Vault.
 
 >[!NOTE]
 >
 >The documentation below only covers the basic steps to create the key vault. Outside of this guidance, you should configure the key vault as per your organization's policies.
 
-Log in to the Azure portal and use the search bar to locate **[!DNL Key vaults]** under the list of services.
+Log in to the [!DNL Azure] portal and use the search bar to locate **[!DNL Key vaults]** under the list of services.
 
-![Search and select key vaults](./assets/customer-managed-keys/access-key-vaults.png)
+![Search and select key vaults](../images/governance-privacy-security/customer-managed-keys/access-key-vaults.png)
 
 The **[!DNL Key vaults]** page appears after selecting the service. From here, select **[!DNL Create]**.
 
-![Create key vault](./assets/customer-managed-keys/create-key-vault.png)
+![Create key vault](../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
 
 Using the provided form, fill in the basic details for the key vault, including a name and an assigned resource group.
 
@@ -45,31 +47,31 @@ Using the provided form, fill in the basic details for the key vault, including 
 >
 >While most options can be left as their default values, **make sure that you enable the purge protection option**. If you do not turn this feature on, you could risk losing access to your data if the key vault is deleted.
 >
->![Enable purge protection](./assets/customer-managed-keys/basic-config.png)
+>![Enable purge protection](../images/governance-privacy-security/customer-managed-keys/basic-config.png)
 
 From here, continue going through the key vault creation workflow and configure the different options according to your organization's policies.
 
 Once you arrive at the **[!DNL Review + create]** step, you can review the details of the key vault while it goes through validation. Once validation passes, select **[!DNL Create]** to complete the process.
 
-![Basic config for the key vault](./assets/customer-managed-keys/finish-creation.png)
+![Basic config for the key vault](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
 ## Generate or import a key {#generate-or-import-key}
 
 Once you have created a key vault, you can import an existing key or generate a new one. Navigate to the **[!DNL Keys]** tab and select **[!DNL Generate/Import]**.
 
-![Generate a key](./assets/customer-managed-keys/view-keys.png)
+![Generate a key](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
 Use the provided form to configure the key you want to generate or import. When finished, select **[!DNL Create]**.
 
-![Configure key](./assets/customer-managed-keys/configure-key.png)
+![Configure key](../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 The configured key appears in the list of keys for the vault.
 
-![Key added](./assets/customer-managed-keys/key-added.png)
+![Key added](../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
 ## Register the CMK app {#register-app}
 
-Once you have your key vault configured, the next step is to register for the CMK application that will link to your Azure tenant.
+Once you have your key vault configured, the next step is to register for the CMK application that will link to your [!DNL Azure] tenant.
 
 >[!NOTE]
 >
@@ -153,31 +155,31 @@ A successful response returns an `applicationRedirectUrl` property, containing t
 }
 ```
 
-Copy and paste the `applicationRedirectUrl` link into your browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your Azure tenant.
+Copy and paste the `applicationRedirectUrl` link into your browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant.
 
-![Accept permission request](./assets/customer-managed-keys/app-permission.png)
+![Accept permission request](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 ## Assign the CMK app to a role {#assign-to-role}
 
-After completing the authentication process, navigate back to your Azure Key Vault and select **[!DNL Access control]** in the left navigation. From here, select **[!DNL Add]** followed by **[!DNL Add role assignment]**.
+After completing the authentication process, navigate back to your [!DNL Azure] Key Vault and select **[!DNL Access control]** in the left navigation. From here, select **[!DNL Add]** followed by **[!DNL Add role assignment]**.
 
-![Add role assignment](./assets/customer-managed-keys/add-role-assignment.png)
+![Add role assignment](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 The next screen prompts you to choose a role for this assignment. Select **[!DNL Key Vault Crypto Service Encryption User]** before selecting **[!DNL Next]** to continue.
 
-![Select role](./assets/customer-managed-keys/select-role.png)
+![Select role](../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 On the next screen, choose **[!DNL Select members]** to open a dialog in the right rail. Use the search bar to locate the service principal for the CMK application and select it from the list. When finished, select **[!DNL Save]**.
 
 ## Send your key URI to Adobe {#send-to-adobe}
 
-After installing the CMK app on Azure, you can send your encryption key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
+After installing the CMK app on [!DNL Azure], you can send your encryption key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
 
-![Select key](./assets/customer-managed-keys/select-key.png)
+![Select key](../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 Select the latest version of the key and its details page appears. From here, select the copy icon for the **[!UICONTROL Key Identifier]** field to copy the URI to your clipboard.
 
-![Copy key URL](./assets/customer-managed-keys/copy-key-url.png)
+![Copy key URL](../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
 Once you have obtained the key identifier, you can send it using a POST request to the CMK configuration endpoint.
 
@@ -286,6 +288,6 @@ A successful response returns the status of the job. A complete job contains a `
 
 ## Next steps
 
-By completing the above steps, you have successfully enabled CMK for your organization. All data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your Azure Key Vault. If you want to revoke Platform access to your data, you can disable the key within Azure.
+By completing the above steps, you have successfully enabled CMK for your organization. All data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. If you want to revoke Platform access to your data, you can disable the key within [!DNL Azure].
 
 After disabling a key, it takes 5-10 minutes for data to no longer by accessible in Platform. When enabling a previously disabled key, it takes 45-50 minutes for data to become available again.
