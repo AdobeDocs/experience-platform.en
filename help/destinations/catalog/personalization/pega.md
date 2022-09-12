@@ -96,7 +96,7 @@ See [Activate audience data to streaming profile export destinations](../../ui/a
 
 In the [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) step, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
 
-### Mapping example: activating profile updates in [!DNL Pega Customer Decision Hub] 
+### Mapping example: activating profile updates in [!DNL Pega Customer Decision Hub] {#mapping-example}
 
 Below is an example of correct identity mapping when exporting profiles to [!DNL Pega Customer Decision Hub].
 

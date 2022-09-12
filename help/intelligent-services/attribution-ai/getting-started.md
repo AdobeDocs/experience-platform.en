@@ -46,7 +46,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the Experience Platform troubleshooting guide.
 
-## ## GDPR and encryption {#gdpr-and-encryption}
+## Access control {#access-control}
 
 When using role-based access control, the **View Attribution AI** and **Manage Attribution AI** privileges grant access to different functionalities of Attribution AI. The **Manage Attribution AI** lets you **create**, **clone**, **edit**, **delete**, **enable**, or **disable** an instance while **View Attribution AI** lets you **read** or **view** it. The **create**, **edit** and **delete** actions are recorded by audit logs.
 
