@@ -95,7 +95,7 @@ A popover appears, prompting you to select the type of policy you want to create
 
 ![Image showing the [!UICONTROL Data governance policy] option being selected](./images/e2e/governance-policy.png)
 
-On the next screen, provide a **[!UICONTROL Name]** and optional **[!UICONTROL Description]** for the policy. In the table below, select the labels that you want this policy to check for. In order words, these are the labels that the policy will prevent from being used for the marketing action(s) you specify in the next step.
+On the next screen, provide a **[!UICONTROL Name]** and optional **[!UICONTROL Description]** for the policy. In the table below, select the labels that you want this policy to check for. In other words, these are the labels that the policy will prevent from being used for the marketing action(s) you specify in the next step.
 
 If you select multiple labels, you can use the options in the right rail to determine whether all labels must be present in order for the policy to enforce usage restrictions, or if only one of the labels needs to be present. When finished, select **[!UICONTROL Next]**.
 
