@@ -55,11 +55,9 @@ In order for Campaign to be able to retrieve data from Adobe Experience Platform
 
 1. Select the `<Instance Name> - admin` product profile and click **[!UICONTROL Save configured API]**.
 
-1. Your API project is created. Note down the **[!UICONTROL Client ID]** displayed in your project.
+1. Your API project is created. Note down the **[!UICONTROL Client ID]** displayed in your project. Reach out to Adobe Customer Care and ask them to add your Client ID to an allow list.
 
     ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/client-id.png)
-
-1. Reach out to Adobe Customer Care and ask them to add your Client ID to allow list.
 
 ## Supported identities {#supported-identities}
 
@@ -96,18 +94,17 @@ Refer to the table below for information about the destination export type and f
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
-
-<!--To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 ![Sample screenshot showing how to authenticate to the destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
-* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.-->
+* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Sample screenshot showing how to fill in details for your destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
