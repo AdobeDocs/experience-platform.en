@@ -128,9 +128,9 @@ Sets the user's default consent. Use this setting when there is no consent prefe
 * `"out"`: When this setting is set, work is discarded until the user provides consent preferences.
 After the user's preferences have been provided, work either proceeds or is aborted based on the user's preferences. See [Supporting Consent](../consent/supporting-consent.md) for more information.
 
-## Personalization options
+## Personalization options {#personalization}
 
-### `prehidingStyle`
+### `prehidingStyle` {#prehidingStyle}
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
@@ -145,6 +145,16 @@ For example, if an element on your web page has an ID of `container`, whose defa
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
 ```
+
+### `targetMigrationEnabled` {#targetMigrationEnabled}
+
+This option is useful when migrating individual pages from [!DNL at.js] to Web SDK.
+
+Use this option to enable the Web SDK to read and write the legacy `mbox` and `mboxEdgeCluster` that are used by [!DNL at.js]. This helps you keep the visitor profile while moving from a page that uses the Web SDK to a page that uses the [!DNL at.js] library.
+
+| **Type** | **Required** | **Default Value** |
+| -------- | ------------ | ----------------- |
+| Boolean   | No           | `false`              |
 
 ## Audiences options
 
