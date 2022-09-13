@@ -109,7 +109,7 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Select instance]**: Your Campaign marketing instance.
-* **[!UICONTROL Target mapping]**: Select the target mapping that you are using in Adobe Campaign to send deliveries. <!--add link to doc-->
+* **[!UICONTROL Target mapping]**: Select the target mapping that you are using in Adobe Campaign to send deliveries. [Learn more](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 
 ### Enable alerts {#enable-alerts}
 
@@ -129,7 +129,7 @@ For more information about marketing actions, see the [data usage policies overv
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to streaming segment export destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) for instructions on activating audience segments to this destination.
+Read [Activate audience data to batch profile export destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) for instructions on activating audience data to this destination.
 
 ### Map attributes and identities {#map}
 
@@ -141,34 +141,38 @@ Select XDM fields to export with the profiles and map them with the correspondin
 
 1. Select source fields:
 
-  * Select an identifier (For example: the email field) as source identity that uniquely identifies a profile in Adobe Experience Platform and Adobe Campaign.
-  * Select all other XDM source profile attribute that need to be exported to Adobe Campaign.
+    * Select an identifier (For example: the email field) as source identity that uniquely identifies a profile in Adobe Experience Platform and Adobe Campaign.
+    * Select all other XDM source profile attribute that need to be exported to Adobe Campaign.
 
-1. Map each field with its target field in Adobe Campaign.
-
-  >[!NOTE]
-  >
-  >Available target fields are determined by the target mapping selected when creating the destination.
-
-<!-- screenshot avec champs first name, lastname, email address mandatory, id-->
+1. Map each field with its target field in Adobe Campaign. Available target fields are determined by the target mapping selected when creating the destination.
 
 1. Identify mandatory attributes and deduplication keys.
 
-  * [Mandatory attributes](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) ensure that all profile records contain the selected attribute(s). For example: all exported profiles contain an email address. Recommendation is to set to mandatory both the identity field and the field used as deduplication key.
-  * [A deduplication key](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) is a primary key which determines the identity by which users want their profiles to be deduplicated.
+    * [Mandatory attributes](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) ensure that all profile records contain the selected attribute(s). For example: all exported profiles contain an email address. Recommendation is to set to mandatory both the identity field and the field used as deduplication key.
+    * [A deduplication key](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) is a primary key which determines the identity by which users want their profiles to be deduplicated.
 
-    >[!IMPORTANT]
-    >
-    >Make sure that the deduplication key matches the primary key of the selected target mapping. For example, if you are using the `CustomerID` field as deduplication key, make sure that the field exists both on the source XDM schema and the Adobe Campaign target mapping.
+      >[!IMPORTANT]
+      >
+      >Make sure that the deduplication key matches the primary key of the selected target mapping. For example, if you are using the `CustomerID` field as deduplication key, make sure that the field exists both on the source XDM schema and the Adobe Campaign target mapping.
+
+![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
 ## Exported data / Validate data export {#exported-data
 
-ACC : profile and target / list
+Once a destination has been activated, you can access the corresponding export job and exported data in Campaign.
+
+### Monitor data export jobs {#jobs}
+
+Navigate to the **[!UICONTROL Administration]** / **[!UICONTROL Audit]** / **[!UICONTROL Audience load jobs]** menu to monitor all export jobs activated from Adobe Experience Platform.
+
+![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
+
+### Access exported data {#data}
+
+Navigate to the **[!UICONTROL Profile and target]** / **[!UICONTROL List]** / **[!UICONTROL AEP audiences]** menu  to access audiences created after activating a destination.
+
+![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
-
-## Additional resources {#additional-resources}
-
-*You can provide further links to your product documentation or any other resources that you consider important for the customer to be successful.*
