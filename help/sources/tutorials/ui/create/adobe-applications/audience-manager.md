@@ -23,7 +23,7 @@ Under [!UICONTROL Adobe Application], select **[!UICONTROL Adobe Audience Manage
 >[!CONTEXTUALHELP]
 >id="platform_sources_aam_segments"
 >title="Select segments"
->abstract="Selecting this box will send all segments from Audience Manager, which can potentially cause Profile overages that exceeds your license usage entitlement."
+>abstract="Selecting this box will send all segments from Audience Manager, which can potentially cause profile overages that exceeds your license usage entitlement."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/landing/license/license-usage-dashboard.html?lang=en" text="Learn more about your license usage entitlement"
 
 >[!NOTE]
