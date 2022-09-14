@@ -68,13 +68,14 @@ Adobe Audience Manager creates one connection in Catalog: Audience Manager Conne
 
 ### Segment population to Profile impact
 
-Segment population sizes have a 1:1 impact on Profile numbers when you first send an Audience Manager segment to Platform. This means that selecting all segments can potentially cause Profile overages that exceeds your license usage entitlement. Platform also distinguishes new data from historical data for Profile ingestion. A segment with 100 first-party based data will create 100 profiles. However, if the population of that same segment was raised to 150 and was ingested to Platform, the number of profiles will only increase by 50, as there are only 50 new profiles.
+Segment population sizes have a direct impact on Profile numbers when you first send an Audience Manager segment to Platform. This means that selecting all segments can potentially cause Profile overages that exceeds your license usage entitlement. Platform also distinguishes new data from historical data for Profile ingestion. A segment with 100 first-party based identities will create 100 profiles. However, if the population of that same segment was raised to 150 and was ingested to Platform, the number of profiles will only increase by 50, as there are only 50 new profiles.
 
 You can also check the Profile usage your account has available through the [License Usage Dashboard](../../../dashboards/guides/license-usage.md).
 
 ## What is the expected latency for Audience Manager Data on Platform?
 
-| Audience Manager Data | Latency | Notes |
-| --- | --- | --- |
-| Real-time data | 5 to 10 minutes. | Time from being captured at Audience Manager Edge node to appearing in data lake. |
-| Profile data | 24 to 36 hours  | Time from being captured via DCS/PCS Edge data and on-boarded data, being processed to a user profile, to then appearing in Profile. This data does not land in data lake directly today. Profile toggle can be enabled for Audience Manager Profile datasets to ingest this data directly into Profile. |
+| Audience Manager Data | Type | Latency | Notes |
+| --- | --- | --- | --- |
+| Real-time data | Events | <25 minutes | Time from being captured at Audience Manager Edge node to appearing in data lake. |
+| Real-time data | Profile updates | <10 minutes | Time to land in Profile Service. |
+| Real-time and onboarded data | Profile updates | 24 to 36 hours | Time from being captured via DCS/PCS Edge data and on-boarded data, being processed to a user profile, to then appearing in Profile. This data does not land in data lake directly today. Profile toggle can be enabled for Audience Manager Profile datasets to ingest this data directly into Profile. |
