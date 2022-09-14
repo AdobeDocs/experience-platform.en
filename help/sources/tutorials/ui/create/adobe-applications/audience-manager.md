@@ -22,8 +22,12 @@ Under [!UICONTROL Adobe Application], select **[!UICONTROL Adobe Audience Manage
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_aam_segments"
->title=""
+>title="Select segments"
 >abstract="You can select this box to enable all segments from Adobe Audience Manager. Please note that selecting all segments can potentially cause Profile overages that exceeds your license usage entitlement."
+
+>[!NOTE]
+>
+>You cannot ingest regional data from the Audience Manager source to Experience Platform. If you have Analytics use cases that require regional data, then please use the [Analytics source connector](../adobe-applications/analytics.md).
 
 The [!UICONTROL Select traits and segments] step appears, providing you with an interactive interface to explore and select your traits, segments, and data.
 
