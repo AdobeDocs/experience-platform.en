@@ -21,7 +21,7 @@ Working with segment definitions requires an understanding of the various [!DNL 
 
 It is also important to know two key terms that are used through this document and understand the difference between them:
 - **Segment definition**: The rule set used to describe key characteristics or behaviors of a target audience.
-- **Audience**: The resulting set of profiles that meet the criteria of a segment definition.
+- **Audience**: The resulting set of profiles that meet the criteria of a segment definition. This can either be created through Adobe Experience Platform (Platform-generated audience) or from an external source (externally generated audience).
 
 ## Overview
 
@@ -56,7 +56,7 @@ To learn more, visit the [segment dashboard guide](../../dashboards/guides/segme
 >title="Add all segments to schedule"
 >abstract="Enable to include all batch evaluation segments in the daily scheduled update at 3:30 PM UTC. Disable to remove all segments from the scheduled update."
 
-Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your IMS Organization. 
+Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your organization. 
 
 ![](../images/ui/overview/segment-browse-all.png)
 
@@ -86,7 +86,7 @@ Selecting **[!UICONTROL Create segment]** will take you to the Segment Builder. 
 
 ![](../images/ui/overview/segment-browse-top.png)
 
-The right sidebar contains information about all the segments within the IMS organization, listing the total number of segments, the last evaluation date, the next evaluation date, as well as a breakdown of the segments by evaluation method.
+The right sidebar contains information about all the segments within the organization, listing the total number of segments, the last evaluation date, the next evaluation date, as well as a breakdown of the segments by evaluation method.
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
@@ -185,6 +185,14 @@ Enabling your segment definitions for scheduled evaluation can be done using the
 Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segment results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
+
+## Audiences {#audiences}
+
+Select the **Audiences** tab to see a list of all the audiences for your organization.
+
+IMAGE.
+
+This view lists information about the audiences including the name, profile count, origin, created date, and last modified date.
 
 ## Streaming segmentation {#streaming-segmentation}
 
