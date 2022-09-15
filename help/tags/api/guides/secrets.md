@@ -101,11 +101,11 @@ Secrets with a `type_of` value of `oauth2-google` requires the following attribu
 | --- | --- | --- |
 | `scopes` | Array | Lists the Google product scopes for authentication. The following scopes are supported:<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-After creating the `oauth2-google` secret, the response includes a `meta.token_url` property. You must copy and paste this URL into a browser to complete the Google authentication flow.
+After creating the `oauth2-google` secret, the response includes a `meta.authorization_url` property. You must copy and paste this URL into a browser to complete the Google authentication flow.
 
 #### Reauthorize an `oauth2-google` secret
 
-The authorization URL for an `oauth2-google` secret expires one hour after the secret is created (as indicated by `meta.token_url_expires_at`). After this time, the secret must be reauthorized in order to renew the authentication process.
+The authorization URL for an `oauth2-google` secret expires one hour after the secret is created (as indicated by `meta.authorization_url_expires_at`). After this time, the secret must be reauthorized in order to renew the authentication process.
 
 Refer to the [secrets endpoint guide](../endpoints/secrets.md#reauthorize) for details on how reauthorize an `oauth2-google` secret by making a PATCH request to the Reactor API.
 
