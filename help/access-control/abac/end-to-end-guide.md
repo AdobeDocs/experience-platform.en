@@ -7,7 +7,7 @@ description: This document provides an end-to-end guide on attribute-based acces
 
 Attribute-based access control is an Adobe Experience Platform feature that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
 
-This functionality allows you to label Experience Data Model (XDM) schema fields, segments, AJO journey, AJO offers, and so on with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage which users or groups (internal, external, or third-party users) can access those fields.
+This functionality allows you to categorize schema fields, segments, and so on with labels that define organizational or data usage scopes. In Adobe Journey Optimizer, you can apply these same labels to journeys and offers. In parallel, administrators can define access policies surrounding XDM schema fields and better manage which users or groups (internal, external, or third-party users) can access those fields.
 
 ## Getting started
 
@@ -20,11 +20,9 @@ This tutorial requires a working understanding of the following Platform compone
 
 ### Use case overview
 
-This guide uses an example use case of restricting access to sensitive data to demonstrate the workflow. You will go through an example attribute-based access control workflow where you will create and assign roles, labels, and policies to configure whether your users can or can't access certain resources in your organization.
+This guide uses an example use case of restricting access to sensitive data to demonstrate the workflow. You will go through an example attribute-based access control workflow where you will create and assign roles, labels, and policies to configure whether your users can or cannot access certain resources in your organization. This use case is outlined below:
 
-#### Use case
-
-You are a healthcare provider and you want to configure access to resources in your organization
+You are a healthcare provider and you want to configure access to resources in your organization.
 
 * Your internal marketing team should be able to access **[!UICONTROL PHI/ Regulated Health Data]** data.
 * Your external agency should not be able to access **[!UICONTROL PHI/ Regulated Health Data]** data.
@@ -33,27 +31,27 @@ In order to do this, you must configure roles, resources, and policies.
 
 You will:
 
-* Label the roles for your users: Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
-* Label your resources (schema fields and segments): Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and segments.
-* Create the policy that will link them together: Create a policy to link the labels in your attribute to the labels in your role denying access to schema fields and segments. This will deny access to the schema field and segment in all sandboxes for users who do not have matching labels.
+* [Label the roles for your users]{#label-roles}: Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
+* [Label your resources (schema fields and segments)]{#label-resources}: Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and segments.
+* [Create the policy that will link them together]{#policy}: Create a policy to link the labels in your attribute to the labels in your role denying access to schema fields and segments. This will deny access to the schema field and segment in all sandboxes for users who do not have matching labels.
 
 ## Permissions
 
-Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
+[!UICONTROL Permissions] is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application.
 
-Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role.
+Through [!UICONTROL Permissions], you can create and manage roles, as well as assign the desired resource permissions for these roles. [!UICONTROL Permissions] also allow you to manage the labels, sandboxes, and users associated with a specific role.
 
 If you do not have admin privileges, contact your system administrator to gain access.
 
-Once you have admin privileges, go to [Adobe Experience Cloud](https://experience.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products that your organization is subscribed to, along with other controls to add users and admins to the organization as a whole. Select **[!UICONTROL Permissions]** to open the attribute-based access control workspace for your Platform integration.
+Once you have admin privileges, go to [Adobe Experience Cloud](https://experience.adobe.com/) and sign in using your Adobe credentials. Once logged in, the **[!UICONTROL Overview]** page appears for your organization you have admin privileges for. This page shows the products that your organization is subscribed to, along with other controls to add users and admins to the organization as a whole. Select **[!UICONTROL Permissions]** to open the workspace for your Platform integration.
 
 ![Image showing the Permissions product being selected in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
 The Permissions workspace for Platform UI appears, opening on the **[!UICONTROL Roles]** page.
 
-## Apply labels to a role
+## Apply labels to a role {#label-roles}
 
-Roles are ways to categorize the types of users that are interacting with your Platform instance, and are building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need.
+Roles are ways to categorize the types of users that are interacting with your Platform instance, and are building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of access they need.
 
 To get started, select **[!UICONTROL ACME Business Group]** from the from the **[!UICONTROL Roles]** page.
 
@@ -67,9 +65,9 @@ A list of all labels in your organization appears. Select **[!UICONTROL RHD]** t
 
 ![Image showing the RHD label being selected and saved](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
-## Apply labels to schema fields
+## Apply labels to schema fields {#label-resources}
 
-Now that you have configured a user role with the RHD label, the next step is to add that same label to the resources that you want to control for that role.
+Now that you have configured a user role with the [!UICONTROL RHD] label, the next step is to add that same label to the resources that you want to control for that role.
 
 Select **[!UICONTROL Schemas]** from the left navigation and then select **[!UICONTROL ACME Healthcare]** from the list of schemas that appear.
 
@@ -110,19 +108,19 @@ The **[!UICONTROL Edit labels]** dialog appears, allowing you to choose the labe
 
 Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
-## Create an access control policy
+## Create an access control policy {#policy}
 
-Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global, and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes, for users who don't have the corresponding labels in the schema field.
+Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global, and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
 ![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
 
-The **[!UICONTROL Create new policy]** dialog appears, prompting you to enter a name and an optional description. Once you enter your policy name and description, select **[!UICONTROL Confirm]**.
+The **[!UICONTROL Create new policy]** dialog appears, prompting you to enter a name and an optional description. Select **[!UICONTROL Confirm]** when finished.
 
 ![Image showing the Create new policy dialog and selecting Confirm](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
 
-To deny access to the schema fields, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Using the dropdown select **[!UICONTROL Schema Field]**. A permissions box appears, using the dropdown select **[!UICONTROL All]**.
+To deny access to the schema fields, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Next, select **[!UICONTROL Schema Field]** and then select **[!UICONTROL All]**.
 
 ![Image showing Deny access and resources selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
 
@@ -130,14 +128,14 @@ The table below shows the conditions available when creating a policy:
 
 | Conditions | Description |
 | --- | --- |
-|The following being false| Access will be restricted if the criteria selected is false. |
-|The following being true| Access will be restricted if the criteria selected is true.|
-|Matches any| The user matches any resource.|
-|Matches all| The user matches all resources.|
-|Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
-|Custom label| A custom label is a label that has been created by your organization.|
+| The following being false| Access will be restricted if the criteria selected is false. |
+| The following being true| Access will be restricted if the criteria selected is true.|
+| Matches any| The user matches any resource.|
+| Matches all| The user matches all resources.|
+| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Custom label| A custom label is a label that has been created by your organization.|
 
-Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Select the user **[!UICONTROL Core label]** using the dropdown, then using the dropdown select **[!UICONTROL Matches all]**, and then select the resource **[!UICONTROL Core label]** using the dropdown. Next, select **[!UICONTROL Add resource]**.
+Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.
 
 ![Image showing the conditions being selected and Add resource being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
 
@@ -145,17 +143,15 @@ Select **[!UICONTROL The following being false]** and then select **[!UICONTROL 
 >
 >A resource is the asset or object that a subject can or cannot access. Resources can be segments or schemas.
 
-To deny access to the segments, select **[!UICONTROL Deny access to]** a resource and then select **[!UICONTROL No resource selected]**. Using the dropdown select **[!UICONTROL Segment]**. A permissions box appears, using the dropdown select **[!UICONTROL All]**.
+To deny access to the segments, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Next, select **[!UICONTROL Segment]** and then select **[!UICONTROL All]**.
 
-Using the dropdown arrow select **[!UICONTROL The following being false]**, then select **[!UICONTROL No attribute selected]**. 
-
-Using the dropdowns select the user as **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**, and then select the resource **[!UICONTROL Core label]**. Finally, select **[!UICONTROL Save]**.
+Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Save]**.
 
 ![Image showing conditions selected and Save being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
 
 Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![Image showing the Policy been activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png)
+![Image showing the Policy being activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png)
 
 ## Next steps
 
