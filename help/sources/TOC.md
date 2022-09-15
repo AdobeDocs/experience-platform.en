@@ -28,7 +28,7 @@ feature: Sources
       - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
       - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
-    - [Google AdWords connector](connectors/advertising/ads.md)
+    - [Google Ads connector](connectors/advertising/ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
   - Cloud storage {#cloud-storage}
@@ -97,7 +97,7 @@ feature: Sources
 - API tutorials {#api-tutorials}
   - Create a base connection {#create}
     - Advertising {#advertising}
-      - [Google AdWords](tutorials/api/create/advertising/ads.md)
+      - [Google Ads](tutorials/api/create/advertising/ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
     - Cloud storage {#cloud-storage}
@@ -199,7 +199,7 @@ feature: Sources
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
     - Advertising {#advertising}
-      - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+      - [Google Ads](tutorials/ui/create/advertising/ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
     - Cloud storage {#cloud-storage}

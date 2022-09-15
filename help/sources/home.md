@@ -37,7 +37,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 
 Experience Platform provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md)
+- [Google Ads](connectors/advertising/ads.md)
 
 ### Analytics {#analytics}
 
@@ -167,10 +167,10 @@ For more information about the available permissions granted through the Admin C
 
 ## Terms and conditions {#terms-and-conditions}
 
-By using any of the Sources labeled as beta (“Beta”), You hereby acknowledge that the Beta is provided ***“as is” without warranty of any kind***.
+By using any of the Sources labeled as beta ("Beta"), You hereby acknowledge that the Beta is provided ***"as is" without warranty of any kind***.
 
 Adobe shall have no obligation to maintain, correct, update, change, modify, or otherwise support the Beta. You are advised to use caution and not to rely in any way on the correct functioning or performance of such Beta and/or accompanying materials. The Beta is considered Confidential Information of Adobe.
 
-Any “Feedback” (information regarding the Beta including but not limited to problems or defects you encounter while using the Beta, suggestions, improvements, and recommendations) provided by You to Adobe is hereby assigned to Adobe including all rights, title, and interest in and to such Feedback.
+Any "Feedback" (information regarding the Beta including but not limited to problems or defects you encounter while using the Beta, suggestions, improvements, and recommendations) provided by You to Adobe is hereby assigned to Adobe including all rights, title, and interest in and to such Feedback.
 
 Submit Open Feedback or create a Support Ticket to share your suggestions or report a bug, seek a feature enhancement.
