@@ -25,7 +25,7 @@ When [defining a new field](./overview.md#define) in the Adobe Experience Platfo
 
 ## Define an enum {#enum}
 
-Select **[!UICONTROL Enums and Suggested Values]**, then select **[!UICONTROL Enums]**.Additional controls appear, allowing you to specify the value constraints for the enum. To add a constraint, select **[!UICONTROL Add row]**.
+Select **[!UICONTROL Enums and Suggested Values]**, then select **[!UICONTROL Enums]**. Additional controls appear, allowing you to specify the value constraints for the enum. To add a constraint, select **[!UICONTROL Add row]**.
 
 ![Image showing the Enums option selected in the UI](../../images/ui/fields/enum/enum-add-row.png)
 
