@@ -53,6 +53,35 @@ The Permissions workspace for Platform UI appears, opening on the **[!UICONTROL 
 
 ## Apply labels to a role {#label-roles}
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about"
+>title="What are labels?"
+>abstract="Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Platform provides several "core" data usage labels out-of-the-box, which cover a wide variety of common restrictions applicable to data governance. For example, Sensitive "S" labels such as RHD (Regulated Health Data) allows you to categorize data that refers to Protected Health Information (PHI). You can also define your own custom labels that fit the needs of your organization."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Data usage labels overview"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="Create new label"
+>abstract="You can create your own custom labels to fit the needs of your organization. Custom labels can be used to apply both data governance and access control configurations to your data."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="Manage custom labels"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="What are roles?"
+>abstract="Roles are ways to categorize the types of users that are interacting with your Platform instance and are building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="Manage roles"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Create new role"
+>abstract="You can create a new role to better categorize users that are accessing your Platform instance. For example, you can create a role for an Internal Marketing Team and apply the RHD label to that role, to allow your Internal Marketing Team to access Protected Health Information (PHI). Alternatively, you can also create a role for an External Agency and deny that role access to PHI data by not applying the RHD label to that role."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Create a new role"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Role overview"
+>abstract="The role overview dialog displays the resources and sandboxes that a given role is permitted to access."
+
 Roles are ways to categorize the types of users that are interacting with your Platform instance, and are building blocks of access control policies. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of access they need.
 
 To get started, select **[!UICONTROL ACME Business Group]** from the from the **[!UICONTROL Roles]** page.
@@ -111,6 +140,35 @@ The **[!UICONTROL Edit labels]** dialog appears, allowing you to choose the labe
 Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 ## Create an access control policy {#policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="What are policies?"
+>abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate in order to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Manage policies"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about_create"
+>title="Create a policy"
+>abstract="Create a policy to define the actions that your users can and can't take against your segments and schema fields."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Create a policy"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_permitdeny"
+>title="Configure permissible and impermissible actions for a policy"
+>abstract="Select permit access to, to configure permissible actions that your users can make against resources. Select deny access to, to configure impermissible actions that your users can't make against resources."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_resource"
+>title="Configure permissions for a resource"
+>abstract="A resource is the asset or object that a user can or cannot access. Resources can be segments or schemas. You can configure write, read, or delete permissions for segments and schema fields."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_condition"
+>title="Edit conditions"
+>abstract="Apply conditional statements to your policy to configure user access to certain resources. Select "match all" to require users to have roles with the exact same labels as a resource in order to be permitted access. Select "match any" to only require users to have a role with just one label that matches a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Data usage labels overview"
 
 Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global, and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
