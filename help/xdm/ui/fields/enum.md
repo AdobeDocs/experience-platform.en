@@ -63,13 +63,23 @@ Similar to custom fields, select **[!UICONTROL Add row]** to add your own sugges
 
 ![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/suggested-standard.png)
 
->[!NOTE]
->
->Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled, but they cannot be removed outright. See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields.
+### Removing suggested values for standard fields
 
-## Schema evolution rules for enums and suggested values {#evolution}
+Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
-After a schema with an enum field has been used to ingest data into Platform, any further changes made to the schema definition must comply with the data already in the system. When it comes to enums and suggested values, the following rules apply post-ingestion:
+For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
+
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
+
+In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
+
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields.
+
+## Evolution rules for enums and suggested values {#evolution}
+
+After a schema with an enum field has been used to ingest data into Platform, any further changes made to the schema definition must comply with the data already in the system. In general, changes made to an existing field can only make that field **less** restrictive. An field cannot be made more restrictive than it already is.
+
+When it comes to enums and suggested values, the following rules apply post-ingestion:
 
 * You **CAN** add and remove suggested values for standard and custom fields with existing suggested values.
 * You **CAN** add new enum values for an existing enum field (custom fields only).
@@ -77,6 +87,22 @@ After a schema with an enum field has been used to ingest data into Platform, an
 * You **CANNOT** add enum values to a field with no existing enum.
 * You **CANNOT** remove fewer than all existing enum values for a field.
 * You **CANNOT** switch from suggested values to an enum.
+
+## Merging rules for enums and suggested values {#merging}
+
+If multiple schemas use the same enum field with different configurations, and those schemas are included in a union, certain rules apply when it comes to how enum differences are reconciled. The exact rules depend on whether the schemas referencing the same standard field (like `eventType`) or if they're referencing the same custom field path in different field groups.
+
+If referencing the same standard field:
+
+* Any additional suggested values are **APPENDED** in the union.
+* Updates made to the suggested values for the same enum key are **UPDATED** in the union.
+
+If referencing the same custom field path in different field groups:
+
+* Any additional suggested values are **APPENDED** in the union.
+* If the same additional suggested value is defined in more than one schema, those values are **MERGED** in the union. In other words, the same suggested value will not appear twice after merging.
+
+
 
 ## Next steps
 
