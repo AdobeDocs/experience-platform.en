@@ -197,7 +197,10 @@ feature: Destinations
             * [View detailed activation results](./destination-sdk/file-based-destination-results-api.md)
             * [Validate templatized customer fields](./destination-sdk/file-based-render-template-api.md)
     * Guides {#guides}
-      * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
+      * Streaming {#streaming}
+        * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
+      * Batch {#batch} 
+        * [Configure file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
       * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
       * Configure file-based destinations {#configure-file-based-destinations}
