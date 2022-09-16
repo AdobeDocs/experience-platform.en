@@ -5,13 +5,34 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 ---
 # Marketo Engage destination {#beta-marketo-engage-destination}
 
+## Destination changelog {#changelog}
+
+>[!IMPORTANT]
+>
+>With the release of the [enhanced Marketo V2 destination connector](/help/release-notes/2022/july-2022.md#destinations), you are now seeing two Marketo cards in the destinations catalog.
+>* If you are already activating data to the **[!UICONTROL Marketo V1]** destination: Please create new dataflows to the **[!UICONTROL Marketo V2]** destination and delete existing dataflows to the **[!UICONTROL Marketo V1]** destination by February 2023. As of that date, the **[!UICONTROL Marketo V1]** destination card will be removed.
+>* If you have not yet created any dataflows to the **[!UICONTROL Marketo V1]** destination, please use the new **[!UICONTROL Marketo V2]** card to connect to and export data to Marketo.
+
+![Image of the two Marketo destination cards in a side-by-side view.](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+
+Improvements in the Marketo V2 destination include:
+
+* In the **[!UICONTROL Schedule segment]** step of the activation workflow, in Marketo V1, you needed to manually add a **Mapping ID** to successfully export data to Marketo. This manual step is not required anymore in Marketo V2.
+* In the **[!UICONTROL Mapping]** step of the activation workflow, in Marketo V1, you were able to map XDM fields to only three target fields in Marketo: `firstName`, `lastName`, and `companyName`. With the Marketo V2 release, you can now map XDM fields to many more fields in Marketo. For more information, read the [supported attributes](#supported-attributes) section further below.
+
 ## Overview {#overview}
 
-Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
+[!DNL Marketo Engage] is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 
 The destination enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists.
 
-## Supported identities {#supported-identities}
+## Supported identities and attributes {#supported-identities-attributes}
+
+>[!NOTE]
+>
+>In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activate destination workflow, it is *mandatory* to map identities and *optional* to map attributes. Mapping Email and/or ECID from the Identity Namespace tab is the most important thing to do to ensure the person is matched in Marketo. Mapping Email ensures the highest match rate.
+
+### Supported identities {#supported-identities}
 
 |Target Identity|Description|
 |---|---|
@@ -20,9 +41,9 @@ The destination enables marketers to push segments created in Adobe Experience P
 
 {style="table-layout:auto"}
 
->[!NOTE]
->
->In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the activate destination workflow, it is *mandatory* to map identities and *optional* to map attributes. Mapping Email and/or ECID from the Identity Namespace tab is the most important thing to do to ensure the person is matched in Marketo. Mapping Email ensures the highest match rate.
+### Supported attributes {#supported-attributes}
+
+You can map attributes from Experience Platform to any of the attributes that your organization has access to in Marketo. In Marketo, you can use the [Describe API request](https://developers.marketo.com/rest-api/lead-database/leads/#describe) to retrieve the attribute fields that your organization has access to.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -30,7 +51,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the Marketo Engage destination.|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the [!DNL Marketo Engage] destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}

@@ -26,8 +26,8 @@ A datastream is a configuration that tells the Edge Network where you want your 
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-For comprehensive steps on how to use the Data Collection UI, see the [data collection end-to-end overview](../../../rtcdp-connections/e2e.md).
+For comprehensive steps on how to use the Data Collection UI, see the [data collection end-to-end overview](../../../collection/e2e.md).
 
 ## Next steps
 
-By reading this document, you have learned how to access the Data Collection UI using the sources workspace. For more information on Data Collection, see the [Data Collection overview](../../../rtcdp-connections/e2e.md).
+By reading this document, you have learned how to access the Data Collection UI using the sources workspace. For more information on Data Collection, see the [Data Collection overview](../../../collection/e2e.md).

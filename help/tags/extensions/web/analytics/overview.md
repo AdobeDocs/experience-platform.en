@@ -216,7 +216,7 @@ Configure field descriptions for the Cookies global settings used for deploying 
 
 Unique value that represents a customer in both the online and offline systems.
 
-See [visitorID](https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html).
+See [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html).
 
 ### Visitor Namespace
 

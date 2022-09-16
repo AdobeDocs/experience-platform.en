@@ -66,7 +66,7 @@ feature: Destinations
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
         * [(Beta) Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
-        * [The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
+        * [(Beta) The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
     * Analytics destinations {#analytics}
@@ -98,6 +98,9 @@ feature: Destinations
         * [Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+    * Customer Relationship Management (CRM) destinations {#crm}
+        * [Salesforce CRM connection](./catalog/crm/salesforce.md)
+        * [Outreach connection](catalog/crm/outreach.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
@@ -109,9 +112,11 @@ feature: Destinations
     * Email marketing destinations {#email-marketing}
         * [Email marketing destinations overview](./catalog/email-marketing/overview.md)
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
+        * [Adobe Campaign Managed Services connection](./catalog/email-marketing/adobe-campaign-managed-services.md)
         * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
-        * [Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
+        * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+        * [(Files) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
         * [SendGrid connection](./catalog/email-marketing/sendgrid.md)
     * Tag extensions {#launch-extensions}
         * [Tag extension overview](./catalog/launch-extensions/overview.md)  
@@ -132,6 +137,7 @@ feature: Destinations
         * [Gainsight extension](./catalog/personalization/gainsight.md)
         * [KickFire extension](./catalog/personalization/kickfire.md)
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
+        * [Pega Customer Decision Hub connection](./catalog/personalization/pega.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
@@ -195,6 +201,13 @@ feature: Destinations
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
+      * Configure file-based destinations {#configure-file-based-destinations}
+        * [(Beta) Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+        * [(Beta) Configure an Amazon S3 destination with custom file name and formatting options](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+        * [(Beta) Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+        * [(Beta) Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+        * [(Beta) Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+        * [(Beta) Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
     * Reference {#reference}
       * [Rate limiting and retry policy for streaming destinations](./destination-sdk/rate-limiting-retry-policy.md)
       * [Supported transformation functions](./destination-sdk/supported-functions.md)

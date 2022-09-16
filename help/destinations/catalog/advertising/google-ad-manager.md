@@ -52,7 +52,8 @@ If you are looking to create your first destination with [!DNL Google Ad Manager
 
 >[!NOTE]
 >
->The allow list is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
+>Allow-listing is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Please ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
+>The exception to this rule is for [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
 
 Before creating the [!DNL Google Ad Manager] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
 
@@ -79,7 +80,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
    * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
    * Use `AdX buyer` for [!DNL Google AdX]
-*  **[!UICONTROL Account ID]**: Fill in your account ID with [!DNL Google]. This can be your Network ID or your Audience Link ID. Typically, this is an eight digit ID.
+*  **[!UICONTROL Account ID]**: Fill in your Audience Link ID with [!DNL Google].
 
 >[!NOTE]
 >
