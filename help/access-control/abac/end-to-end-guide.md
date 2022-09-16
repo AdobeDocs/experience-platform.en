@@ -56,7 +56,7 @@ The Permissions workspace for Platform UI appears, opening on the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="What are labels?"
->abstract="Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Platform provides several "core" data usage labels out-of-the-box, which cover a wide variety of common restrictions applicable to data governance. For example, Sensitive "S" labels such as RHD (Regulated Health Data) allows you to categorize data that refers to Protected Health Information (PHI). You can also define your own custom labels that fit the needs of your organization."
+>abstract="Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Platform provides several Adobe-define "core" data usage labels, which cover a wide variety of common restrictions applicable to data governance. For example, Sensitive "S" labels such as RHD (Regulated Health Data) allow you to categorize data that refers to Protected Health Information (PHI). You can also define your own custom labels that fit the needs of your organization."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="Data usage labels overview"
 
 >[!CONTEXTUALHELP]
@@ -74,7 +74,7 @@ The Permissions workspace for Platform UI appears, opening on the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Create new role"
->abstract="You can create a new role to better categorize users that are accessing your Platform instance. For example, you can create a role for an Internal Marketing Team and apply the RHD label to that role, to allow your Internal Marketing Team to access Protected Health Information (PHI). Alternatively, you can also create a role for an External Agency and deny that role access to PHI data by not applying the RHD label to that role."
+>abstract="You can create a new role to better categorize users that are accessing your Platform instance. For example, you can create a role for an Internal Marketing Team and apply the RHD label to that role, which will allow your Internal Marketing Team to access Protected Health Information (PHI). Alternatively, you can also create a role for an External Agency and deny that role access to PHI data by not applying the RHD label to that role."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="Create a new role"
 
 >[!CONTEXTUALHELP]
@@ -150,13 +150,13 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
->abstract="Create a policy to define the actions that your users can and can't take against your segments and schema fields."
+>abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
->abstract="Select permit access to, to configure permissible actions that your users can make against resources. Select deny access to, to configure impermissible actions that your users can't make against resources."
+>abstract="Select permit access to, to configure permissible actions that your users can make against resources. Select deny access to, to configure impermissible actions that your users cannot make against resources."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
