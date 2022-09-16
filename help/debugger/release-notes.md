@@ -7,11 +7,11 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
-## Version 1.4.0 - August 24, 2022
+<!-- ## Version 1.4.0 - August 24, 2022
 
 * Added support for Web SDK hybrid implementation.
 * Added error message when enabling Target Trace fails.
-* Updated dependencies.
+* Updated dependencies. -->
 
 ## Version 1.3.3 - June 20, 2022
 
