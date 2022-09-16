@@ -105,7 +105,7 @@ On the next screen, select the marketing actions that this policy will restrict 
 
 ![Image showing the a marketing action being assigned to a policy in the UI](./images/e2e/select-marketing-action.png)
 
-The final screen shows a summary of the policy's details and the actions it will restrict for which labels. Select **[!UICONTROL Finish]** to create and enable the policy.
+The final screen shows a summary of the policy's details and the actions it will restrict for which labels. Select **[!UICONTROL Finish]** to create the policy.
 
 ![Image showing the policy configuring being confirmed in the UI](./images/e2e/confirm-policy.png)
 
