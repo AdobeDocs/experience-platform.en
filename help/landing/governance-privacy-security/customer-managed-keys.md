@@ -14,7 +14,7 @@ CMK is included in the Healthcare Shield and the Privacy and Security Shield off
 
 >[!WARNING]
 >
->Once the set-up process is complete, you cannot revert to system-managed keys. You are responsible for securely managing your keys to prevent losing access to your data.
+>Once the setup process is complete, you cannot revert to system-managed keys. You are responsible for securely managing your keys to prevent losing access to your data.
 
 The process is as follows:
 
