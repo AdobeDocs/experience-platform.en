@@ -59,7 +59,7 @@ Once you arrive at the **[!DNL Review + create]** step, you can review the detai
 
 If your key vault is configured to restrict public access to certain virtual networks or disable public access entirely, you must grant Microsoft a firewall exception.
 
-Select **[!DNL Networking]** in the left navigation. Under **[!DNL Firewalls and virtual networks]**, select the checkbox **[!DNL Allow trusted Microsoft services to bypass this firewall]**, then select **[!UICONTROL Apply]**.
+Select **[!DNL Networking]** in the left navigation. Under **[!DNL Firewalls and virtual networks]**, select the checkbox **[!DNL Allow trusted Microsoft services to bypass this firewall]**, then select **[!DNL Apply]**.
 
 ![Basic config for the key vault](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
@@ -69,7 +69,7 @@ Once you have created a key vault, you can generate a new key. Navigate to the *
 
 ![Generate a key](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Use the provided form to provide a name for the key, and select **RSA** for the key type. At a minimum, the the **[!DNL RSA key size]** must be at least **3072** bits as required by CosmosDB. Azure Data Lake Storage is also compatible with RSA 3027.
+Use the provided form to provide a name for the key, and select **RSA** for the key type. At a minimum, the the **[!DNL RSA key size]** must be at least **3072** bits as required by [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] is also compatible with RSA 3027.
 
 >[!NOTE]
 >
