@@ -22,7 +22,7 @@ This guide assumes you are familiar with the elements of schema composition in X
 * [Basics of schema composition](../schema/composition.md)
 * [Schema Registry API guide](../api/overview.md)
 
-It is also strongly recommended that you review the [evolution rules for enums and suggested values](../ui/fields/enum.md#evolution) if you are updating existing fields.
+It is also strongly recommended that you review the [evolution rules for enums and suggested values](../ui/fields/enum.md#evolution) if you are updating existing fields. If you are managing suggested values for schemas that participate in a union, see the [rules for merging enums and suggested values](../ui/fields/enum.md#merging).
 
 ## Composition 
 
