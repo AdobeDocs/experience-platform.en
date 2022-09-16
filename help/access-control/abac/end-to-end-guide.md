@@ -33,7 +33,7 @@ You will:
 
 * [Label the roles for your users]{#label-roles}: Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
 * [Label your resources (schema fields and segments)]{#label-resources}: Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and segments.
-* [Create the policy that will link them together]{#policy}: Create a policy to link the labels in your attribute to the labels in your role denying access to schema fields and segments. This will deny access to the schema field and segment in all sandboxes for users who do not have matching labels.
+* [Create the policy that will link them together]{#policy}: Create a policy to link the labels on your resources to the labels in your role denying access to schema fields and segments. This will deny access to the schema field and segment in all sandboxes for users who do not have matching labels.
 
 ## Permissions
 
@@ -128,10 +128,10 @@ The table below shows the conditions available when creating a policy:
 
 | Conditions | Description |
 | --- | --- |
-| The following being false| Access will be restricted if the criteria selected is false. |
-| The following being true| Access will be restricted if the criteria selected is true.|
-| Matches any| The user matches any resource.|
-| Matches all| The user matches all resources.|
+| The following being false| When 'Deny access to' is set, access will be restricted if the user does not meet the criteria selected. |
+| The following being true| When 'Permit access to' is set, access will be restricted permitted if the user meets the selected criteria. |
+| Matches any| The user has a label that matches any label applied to a resource. |
+| Matches all| The user has all labels that matches all labels applied to a resource. |
 | Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
 | Custom label| A custom label is a label that has been created by your organization.|
 
