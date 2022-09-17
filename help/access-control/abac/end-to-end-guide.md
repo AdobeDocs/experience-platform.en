@@ -166,7 +166,7 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
->title="Edit conditions
+>title="Edit conditions"
 >abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the exact same labels as a resource in order to be permitted access. Select match any to only require users to have a role with just one label that matches a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
 Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global, and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
