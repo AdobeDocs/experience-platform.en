@@ -12,19 +12,17 @@ This page provides default use and rate limits with regard to activation behavio
 
 >[!NOTE]
 >
->Most customers do not exceed these default limits. If you would like to learn about custom limits, please contact your customer care representative.
+>* Most customers do not exceed these default limits. If you would like to learn about custom limits, please contact your customer care representative.
+>* The limits outlined in this document are constantly being improved. Please check back regularly for updates.
+>* Depending on individual downstream limitations, some destinations might have tighter guardrails than the ones documented on this page. Make sure to also check the documentation page of the destination you are connecting and activating data to. 
 
 ## Limit types {#limit-types}
 
 There are two types of default limits within this document:
 
 * **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance.
-
 * **Hard limit:** A hard limit provides an absolute maximum.
 
->[!NOTE]
->
->The limits outlined in this document are constantly being improved. Please check back regularly for updates. If you are interested in learning about custom limits, please contact your customer care representative.
 
 ## Activation limits {#activation-limits}
 
@@ -36,8 +34,9 @@ The guardrails below generally apply to activation through [all destination type
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Maximum number of segments to a single destination | 250 | Soft | The recommendation is to map a maximum of 250 segments to a single destination in a dataflow. <br><br> If you need to activate more than 250 segments to a destination, you can either: <ul><li>Unmap segments that you don't want to activate anymore, or</li><li>Create a new dataflow to the desired destination and map segments to this new dataflow.</li></ul> <br> Note that in the case of some destinations, you may have be limited to fewer than 250 segments mapped to the destination. Those destinations are called out further below on the page, in their respective sections. |
-|Maximum number of destinations | N/A | - | There is currently no limit to how many destinations per organization ID or per sandbox you can connect and activate data to. [Edge personalization destinations (Custom personalization)](#edge-destinations-activation) are the exception, where a maximum number of destination dataflows per sandbox is enforced.|
+|Maximum number of segments to a single destination | 250 | Soft | The recommendation is to map a maximum of 250 segments to a single destination in a dataflow. <br><br> If you need to activate more than 250 segments to a destination, you can either: <ul><li> Unmap segments that you don't want to activate anymore, or</li><li>Create a new dataflow to the desired destination and map segments to this new dataflow.</li></ul> <br> Note that in the case of some destinations, you may have be limited to fewer than 250 segments mapped to the destination. Those destinations are called out further below on the page, in their respective sections. |
+|Maximum number of destinations | 100 | Soft | The recommendation is to create a maximum of 100 destinations that you can connect and activate data to *per sandbox*. [Edge personalization destinations (Custom personalization)](#edge-destinations-activation) can make up a maximum of 10 of the 100 recommended destinations.|
+|Maximum number of attributes mapped to a destination | 50 | Soft | In the case of several destinations and destination types, you can select profile attributes and identities to map for export. For optimal performance, a maximum of 50 attributes should be mapped in a dataflow to a destination.|
 |Type of data activated to destinations | Profile data | Hard| Currently, it is only possible to export *profile record attributes* to destinations. XDM attributes that describe event data are not supported for export at this time.|
 |Type of data activated to destinations - array and map attributes support | Not available | Hard| At this time, it is **not** possible to export *array or map attributes* to destinations.|
 
@@ -49,7 +48,7 @@ The guardrails below apply to activation through [streaming destinations](/help/
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Number of activations (HTTP messages with profile exports) per second | N/A | - | There is currently no limit to the number of messages per second sent from Experience Platform to partner destinations' API endpoints. <br> Any limits or latencies are dictated by the endpoint where Experience Platform is sending data. |
+|Number of activations (HTTP messages with profile exports) per second | N/A | - | There is currently no limit to the number of messages per second sent from Experience Platform to partner destinations' API endpoints. <br> Any limits or latencies are dictated by the endpoint where Experience Platform is sending data. Make sure to also check the documentation page of the destination you are connecting and activating data to. |
 
 {style="table-layout:auto"}
 
@@ -61,7 +60,6 @@ The guardrails below apply to activation through [batch file-based destinations]
 | --- | --- | --- | --- |
 |Activation frequency | One daily full export or more frequent incremental exports every 3, 6, 8, 12 hour increments | Hard| Read the [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentation sections for more information about the frequency increments for batch exports.|
 |Maximum number of segments that can pe exported at a given hour | 100 | Soft | The recommendation is to add a maximum of 100 segments to batch destination dataflows. |
-|Maximum number of attributes mapped to a file-based destination | 200 | Soft | For optimal performance, a maximum of 200 attributes should be mapped in a dataflow to a personalization destination.|
 |Maximum size per file to activate | 5GB | Hard | The maximum size of exported files is 5 GB. |
 |Maximum number of rows (records) per file to activate | 5 million | Hard| Adobe Experience Platform automatically splits the export files at 5 million records (rows) per file. Each row represents one profile. Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.|
 
@@ -86,7 +84,6 @@ The guardrails below apply to activation through [edge personalization destinati
 | --- | --- | --- | --- |
 |Maximum number of [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations | 10 | Soft | You can set up dataflows to 10 Custom personalization destinations per sandbox.|
 |Maximum number of attributes mapped to a personalization destination | 20 | Hard | A maximum of 20 attributes can be mapped in a dataflow to a personalization destination.|
-|Maximum number of segments mapped to a single Custom personalization destination | 200 | Soft | You can activate a maximum of 200 segments in an activation flow to a single personalization destination platform.|
 |Maximum number of segments mapped to a single [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Soft | You can activate a maximum of 50 segments in an activation flow to a single Adobe Target destination.|
 
 {style="table-layout:auto"}
