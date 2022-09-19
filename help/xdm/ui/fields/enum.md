@@ -81,11 +81,13 @@ After a schema with an enum field has been used to ingest data into Platform, an
 
 When it comes to enums and suggested values, the following rules apply post-ingestion:
 
-* You **CAN** add and remove suggested values for standard and custom fields with existing suggested values.
-* You **CAN** add new enum values for an existing enum field (custom fields only).
-* You **CAN** switch a field's enum values to suggested values only, or convert it to a string with no enum or suggested values. **This switch cannot be undone once applied.**
+* You **CAN** add suggested values for standard and custom fields with existing suggested values.
+* You **CAN** remove suggested values from custom fields with existing suggested values.
+* You **CAN** add new enum values for an existing custom enum field.
+* You **CAN** switch a custom field's enum values to suggested values only, or convert it to a string with no enum or suggested values. **This switch cannot be undone once applied.**
+* You **CANNOT** remove enums or suggested values from standard fields.
 * You **CANNOT** add enum values to a field with no existing enum.
-* You **CANNOT** remove fewer than all existing enum values for a field.
+* You **CANNOT** remove fewer than all existing enum values for a custom field.
 * You **CANNOT** switch from suggested values to an enum.
 
 ## Merging rules for enums and suggested values {#merging}
@@ -101,8 +103,6 @@ If referencing the same custom field path in different field groups:
 
 * Any additional suggested values are **APPENDED** in the union.
 * If the same additional suggested value is defined in more than one schema, those values are **MERGED** in the union. In other words, the same suggested value will not appear twice after merging.
-
-
 
 ## Next steps
 
