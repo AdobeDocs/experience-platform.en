@@ -13,6 +13,7 @@ feature: Segments
 - Segmentation API {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
+    - [Audiences](api/audiences.md)
     - [Edge segmentation](api/edge-segmentation.md)
     - [Export jobs](api/export-jobs.md)
     - [Previews and estimates](api/previews-and-estimates.md)
