@@ -22,6 +22,7 @@ feature: Web SDK
   * [Supported use cases](fundamentals/supported-use-cases.md)
 * Datastreams {#datastreams}
   * [Overview](./datastreams/overview.md)
+  * [Configure a datastream](./datastreams/configure.md)
   * [Data Prep for Data Collection](./datastreams/data-prep.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
