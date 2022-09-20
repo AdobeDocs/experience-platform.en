@@ -114,7 +114,7 @@ When you are finished providing details for your destination connection, select 
 
 Select the marketing actions applicable to the data that you want to export to the destination. For Adobe Campaign, we recommend you select the **[!UICONTROL Email Targeting]** marketing action.
 
-For more information about marketing actions, see the [data usage policies overview](../../data-governance/policies/overview.md) page.
+For more information about marketing actions, see the [data usage policies overview](/help/data-governance/policies/overview.md) page.
 
 ## Activate segments to this destination {#activate}
 
