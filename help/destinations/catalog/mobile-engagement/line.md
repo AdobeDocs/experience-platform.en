@@ -8,7 +8,7 @@ description: The LINE destination allows you to add profiles to your Platform se
 
 ## Overview {#overview}
 
-[!DNL LINE](https://line.me/en/) is a popular communication platform that connects people, services and information and has grown from a chat app into a hub for entertainment, social and day-to-day activities.
+[[!DNL LINE]](https://line.me/en/) is a popular communication platform that connects people, services and information and has grown from a chat app into a hub for entertainment, social and day-to-day activities.
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL LINE] Messaging API](https://developers.line.biz/en/reference/messaging-api/), add profiles to your segment and activate them as connections within [!DNL LINE] for your business needs.
 
@@ -54,7 +54,6 @@ Refer to the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/mes
 
 | Target Identity | Description | Considerations |
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
 |UserID| Identifier for the LINE contact.|Select the UserID target identity when your source identity is UserID. |
 
@@ -71,7 +70,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Connect to the destination {#connect}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
 > To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -96,8 +95,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Select Endpoint]**: One of Japan / Taiwan / Thailand, the selection depends on which region your Line account has been created.
-* **[!UICONTROL Audience Type, Select true for IFA/GAID or false for UserID]**: Select *True* if you are using IFA / GAID or *False* if you are working with UserID.
+* **[!UICONTROL Audience Type]**: Select either IDFA or UserID. Refer to [Supported identities](#supported-identities) if you need guidance.
 
 ### Enable alerts {#enable-alerts}
 
@@ -107,7 +105,7 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate segments to this destination {#activate}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
 > To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -118,7 +116,7 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 To correctly send your audience data from Adobe Experience Platform to the [!DNL LINE] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL LINE] destination fields, follow these steps:
 
 The following target identity namespace(s) must be mapped:
-* **UserID** must be mapped as a target field using **Target field** > **[!UICONTROL Select identity namespace]** > **id**
+* **UserID** must be mapped as a target field using **Target field** > **[!UICONTROL Select identity namespace]** > **LineId**
 
 * An example is shown below:
 ![Platform UI screenshot example showing the Target mapping.](../../assets/catalog/mobile-engagement/line/mappings.png)
