@@ -174,7 +174,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
     |---|---|---|
     |`crmID`|`SalesforceId`|Yes|
 
-    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you have defined in the **[!UICONTROL Attribute name]** field. Refer to [[!Salesforce CRM] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5) for guidance on supported attributes.
+    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you have defined in the **[!UICONTROL Attribute name]** field. Refer to [[!DNL Salesforce CRM] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5) for guidance on supported attributes.
     ![Platform UI screenshot showing Target mapping for LastName.](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
 
     * If you are working with *Contacts* within your segment, refer to the Object Reference in Salesforce for [Contact](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) to define mappings for the fields to be updated.
