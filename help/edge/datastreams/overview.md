@@ -42,7 +42,11 @@ If a schema is being used in an existing datastream with non-HIPAA-ready service
 
 ### Audit logs
 
-In Experience Platform, datastream activities can be monitored in the form of audit logs. An audit log tells **who** performed **what** action, and **when**, along with other contextual data that can help you troubleshoot issues related to datastreams. See the documentation on [audit logs](../../landing/governance-privacy-security/audit-logs/overview.md) for more information on how to interpret logs from datastreams and other supported services.
+In Experience Platform, datastream activities can be monitored in the form of audit logs. An audit log tells **who** performed **what** action, and **when**, along with other contextual data that can help you troubleshoot issues related to datastreams.
+
+Whenever a user creates, updates, or deletes a datastream, an audit log is created to record the action. The same occurs whenever a user creates, updates, or deletes a mapping through [Data Prep for Data Collection](./data-prep.md). Regardless of whether it was a datastream or a mapping that was updated, the resulting audit log is categorized under the [!UICONTROL Datastreams] resource type.
+
+See the documentation on [audit logs](../../landing/governance-privacy-security/audit-logs/overview.md) for more information on how to interpret logs from datastreams and other supported services.
 
 ## Next steps
 
