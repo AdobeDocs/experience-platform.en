@@ -48,7 +48,7 @@ Refer to the [!DNL Salesforce Marketing Cloud] documentation to [create custom f
 
 >[!IMPORTANT]
 >
-> Ensure you create the custom attribute under the "Email Demographics" attribute-set within your Salesforce Marketing Cloud account.
+> Ensure you create the custom attribute under the "Email Demographics" attribute-set within your [!DNL Salesforce Marketing Cloud] account.
 
 Refer to the Adobe Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
@@ -58,7 +58,7 @@ Note down the items below before you authenticate to the [!DNL Salesforce Market
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| <ul><li>[!DNL Salesforce Marketing Cloud] prefix</li></ul> | See [Salesforce Marketing Cloud domain prefix](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul>|
+| <ul><li>[!DNL Salesforce Marketing Cloud] prefix</li></ul> | See [[!DNL Salesforce Marketing Cloud domain prefix]](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul>|
 |<ul><li>Client ID</li><li>Client Secret</li></ul> | Refer to the [Salesforce documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) if you need additional guidance. | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
 
 {style="table-layout:auto"}
@@ -66,7 +66,7 @@ Note down the items below before you authenticate to the [!DNL Salesforce Market
 ## Limits in Salesforce {#limits}
 * Salesforce imposes certain [rate limits](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting.html).
     * Refer to the [Salesforce documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting-errors.html) to address any probable limits that you might encounter and reduce errors during execution.
-    * Refer to the [Salesforce Marketing Cloud Engagement Pricing](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) page to *Download the Full Edition Comparison Chart* as a pdf which details the limits imposed by your plan.
+    * Refer to the [[!DNL Salesforce Marketing Cloud] Engagement Pricing](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) page to *Download the Full Edition Comparison Chart* as a pdf which details the limits imposed by your plan.
     * The [API overview](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) page details additional limits.
     * Refer [here](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&text=As%20has%20been%20added%20in,interacting%20with%20the%20REST%2DAPI) for a page which collates these details.
 * The count of *custom fields allowed per object* varies according to your Salesforce Edition.
@@ -77,7 +77,7 @@ Note down the items below before you authenticate to the [!DNL Salesforce Market
 
 ## Supported identities {#supported-identities}
 
-Salesforce Marketing Cloud supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Salesforce Marketing Cloud] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
