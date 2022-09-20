@@ -176,3 +176,4 @@ Navigate to the **[!UICONTROL Profile and target]** / **[!UICONTROL List]** / **
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
+
