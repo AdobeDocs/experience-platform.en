@@ -95,7 +95,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Audience Type]**: Select either IDFA or UserID. Refer to [Supported identities](#supported-identities) if you need guidance.
+* **[!UICONTROL Audience Type]**: If the identities in Platform are of type *IDFA* select **[!UICONTROL IDFA]**. If the identities in Platform are of type *UserID* select **[!UICONTROL UserID]**. Refer to [Supported identities](#supported-identities) if you need guidance.
 
 ### Enable alerts {#enable-alerts}
 
@@ -129,7 +129,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 1. Log in to the [Manager console](https://manager.line.biz/).
 
-1. Next, navigate to [!UICONTROL Data Controls] > [!UICONTROL Audiences] and check the name matching the selected segment within the [!UICONTROL Audience name] column.
+1. Next, navigate to **[!UICONTROL Data Controls]** > **[!UICONTROL Audiences]** and check the name matching the selected segment within the **[!UICONTROL Audience name]** column.
 
 1. The updated volume would match the count within the segment.
 
