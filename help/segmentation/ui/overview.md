@@ -106,7 +106,7 @@ The segment details page appears. On the top, there is a summary of the segment 
 
 ![](../images/ui/overview/segment-details-summary.png)
 
-### Segment summary
+### Segment summary {#segment-summary}
 
 The **[!UICONTROL Segment summary]** section provides information such as the ID, name, description, and details of the attributes. 
 
@@ -192,7 +192,53 @@ Select the **Audiences** tab to see a list of all the audiences for your organiz
 
 IMAGE.
 
-This view lists information about the audiences including the name, profile count, origin, created date, and last modified date.
+By default, this view lists information about the audiences including the name, profile count, origin, created date, and last modified date.
+
+You can select the ![Customize table]() icon to change which fields are displayed.
+
+IMAGE
+
+A popover appears, listing all the fields that can be displayed within the table.
+
+IMAGE
+
+| Field | Description |
+| ----- | ----------- | 
+| Name | |
+| Profile count | |
+| Origin | |
+| Lifecycle status | |
+| Update frequency | |
+| Last updated by | |
+| Created | | 
+| Last updated | |
+| Access labels | |
+
+Selecting **[!UICONTROL Create Audience]** will take you to the Audience Builder. To learn more about creating audiences, please read the [Audience Builder guide](audiences.md).
+
+IMAGE
+
+## Audience details {#audience-details}
+
+To see more details about a specific audience, select an audience's name within the Audiences tab.
+
+The audience details page appears. This page differs in details, depending on whether the audience was generated with Adobe Experience Platform or from an external source, such as Audience Orchestration.
+
+### Platform-generated audience
+
+For more information on Platform-generated audiences, please read the [segment summary section](#segment-summary). 
+
+### Externally generated audience
+
+On the top, there is a summary of the audience and details about the dataset the audience is saved in.
+
+IMAGE
+
+The **[!UICONTROL Audience summary]** section provides information such as the ID, name, description, and details of the attributes.
+
+The **[!UICONTROL Dataset details]** section provides information such as the name, description, table name, source, and schema. You can select **[!UICONTROL View dataset]** to see more information about the dataset.
+
+To learn more about datasets, please read the [dataset overview](../../catalog/datasets/overview.md).
 
 ## Streaming segmentation {#streaming-segmentation}
 
