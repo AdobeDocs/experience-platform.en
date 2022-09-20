@@ -10,12 +10,10 @@ Destination SDK allows you to extensively adjust the formatting and compression 
 
 This page describes how to use Destination SDK to configure file formatting options for file-based destinations.
 
-We recommend that you read the following documentation as well:
+Adobe recommends that you read the following documentation as well:
 
 * The individual file formatting options are documented individually in the [File formatting configuration](../../server-and-file-configuration.md#file-configuration) section.
 * Complete steps to [configure a file-based destination](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) using Destination SDK.
-
-
 
 ## Prerequisites {#prerequisites}
 
@@ -98,6 +96,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ```
 
 ## Add the file formatting options to the destination configuration {#create-destination-configuration}
+
+>[!TIP]
+>
+>**Verify the Experience Platform UI**. As you configure the file formatting options with the configurations demonstrated in the sections below, you should check the Experience Platform UI for how these are rendered.
 
 After adding the desired file formatting options to the destination server and file formatting configuration in the previous step, you can now use the `/destinations` API endpoint to add the desired fields as customer data fields to the destination configuration.
 
@@ -284,7 +286,7 @@ You can create conditional file formatting options, which appear in the activati
             }
 ```
 
-In a wider context, you can see the `conditional` field used in the destination configuration below, alongside the `fileType` string and the `csvOptions` object in which it is defined.
+In a wider context, you can see the `conditional` field being used in the destination configuration below, alongside the `fileType` string and the `csvOptions` object in which it is defined.
 
 ```json
 
@@ -460,6 +462,8 @@ To do this, use the `namedEnum` object as shown below and configure a `default` 
 },
 
 ```
+
+![Screen recording showing an example of dropdown selectors created with the configuration shown above.](/help/destinations/destination-sdk/assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### Complete API request which includes all options shown above
 
@@ -687,19 +691,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ```
 
 A successful response returns the destination configuration, including the unique identifier (`instanceId`) of the configuration.
-
-## Verify the Experience Platform UI {#verify-ui}
-
-As you configure the file formatting options, you should check the Experience Platform UI for how these are rendered.
-
-![Screen recording showing the destinations catalog page with a selected destination card.](../../assets/destination-card.gif)
-
-In the images and recordings below, note how the options in the [activation workflow for file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md) match the options that you selected in the destination configuration.
-
-When filling in details about the destination, notice how the fields surfaced are the custom data fields that you set up in the configuration.
-
-
-![Screen recording showing the customer data fields defined in your configuration.](../../assets/file-configuration-options.gif)
 
 ## Next steps {#next-steps}
 
