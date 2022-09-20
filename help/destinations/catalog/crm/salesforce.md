@@ -8,9 +8,13 @@ exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 
 ## Overview {#overview}
 
-[!DNL Salesforce CRM](https://www.salesforce.com/) is a popular Customer Relationship Management (CRM) platform.
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) is a popular Customer Relationship Management (CRM) platform and supports the below:
+* [Leads](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - A lead is the name of a person or company who may (or may not) be interested in the products or services you sell.
+* [Contacts](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - A contact is an individual with whom one of your reps has established a relationship and has been qualified as a potential customer.	 
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm), which allows you to update [Contact](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) and [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) objects within a segment into [!DNL Salesforce CRM].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [!DNL[Salesforce composite API]](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm) which supports yboth types.
+
+When [activating segments](#activate) you can select between either leads or contacts and update attributes and segment data into [!DNL Salesforce CRM].
 
 [!DNL Salesforce CRM] uses OAuth 2 with Password Grant as an authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your [!DNL Salesforce CRM] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -56,15 +60,15 @@ Also ensure that the [scopes](https://help.salesforce.com/s/articleView?id=conne
 Create the custom field of type `Text Area Long` which Experience Platform will use to update the segment status within Salesforce CRM. 
 Refer to the Salesforce documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance. 
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
 > Ensure there are no whitespace characters in the field name. Instead, use the underscore `(_)` character as a separator.
 
-> [!NOTE]
+>[!NOTE]
 > 
 > * Objects in Salesforce are restricted to 25 External fields, see [Custom Field Attributes](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5).
 > * This restriction implies you will only be able to have at a maximum 25 Experience Platform segment memberships active at any time. 
-> * If you have reached this limit within Salesforce, you will need to remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new [!UICONTROL Mapping ID] can be used.
+> * If you have reached this limit within Salesforce, you will need to remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new **[!UICONTROL Mapping ID]** can be used.
 
 Refer to the Adobe Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
@@ -81,9 +85,9 @@ Note down the items below before you authenticate to the Salesforce CRM destinat
 
 Salesforce balances transaction loads by imposing request, rate and timeout limits. Refer to the [API Request Limits and Allocations](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm) for details.
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
-> Ensure that you populate either *Contact* or *Lead* objects and not both within a Platform segment.
+> When [activating segments](#activate) you will have to select between either *Contact* or *Lead* types. You will need to ensure that your segments have the appropriate data mapping according to the type selected.
 
 ## Supported identities {#supported-identities}
 
@@ -99,20 +103,20 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Salesforce CRM] gets updated with the corresponding segment status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [segment scheduling](#schedule-segment-export-example) step.</li></ul> |
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each segment status in [!DNL Salesforce CRM] gets updated with the corresponding segment status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [segment scheduling](#schedule-segment-export-example) step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
 > To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL Salesforce CRM]. Alternatively you can locate it under the CRM category.
+Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL Salesforce CRM]. Alternatively you can locate it under the **[!UICONTROL CRM]** category.
 
 ### Authenticate to destination {#authenticate}
 
@@ -135,7 +139,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Salesforce ID Type]**: Select either *Contact* or *Lead* depending on the type of identities within your Platform segment.
+*  **[!UICONTROL Salesforce ID Type]**: If the identities within your Platform are of type *Contact* select **[!UICONTROL Contact]**. If the identities within your Platform are of type *Lead* select **[!UICONTROL Lead]**.
 
 ### Enable alerts {#enable-alerts}
 
@@ -145,7 +149,7 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate segments to this destination {#activate}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >  
 > To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -155,13 +159,13 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Salesforce CRM] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Salesforce CRM] destination fields, follow these steps:
 
-1. In the [!UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
+1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 
-1. In the [!UICONTROL Select source field] window, choose the **[!UICONTROL Select identity namespace]** category and select `crmID`.
+1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** category and select `crmID`.
 ![Platform UI screenshot example for Source mapping.](../../assets/catalog/crm/salesforce/source-mapping.png)
 
-1. In the [!UICONTROL Select target field] window, choose the **[!UICONTROL Select identity namespace]** category and select `SalesforceId`.
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** category and select `SalesforceId`.
     * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
     ![Platform UI screenshot showing Target mapping for SalesforceId.](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
     * Add the following mapping between your XDM profile schema and your [!DNL Salesforce CRM] instance:
@@ -170,11 +174,12 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
     |---|---|---|
     |`crmID`|`SalesforceId`|Yes|
 
-    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the [!UICONTROL Attribute name] field. Refer to [[!Salesforce CRM] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5) for guidance on these attributes.
+    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you have defined in the **[!UICONTROL Attribute name]** field. Refer to [[!Salesforce CRM] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5) for guidance on supported attributes.
     ![Platform UI screenshot showing Target mapping for LastName.](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
 
-    * If you are working with *Contacts* within your segment, refer to the Object Reference in Salesforce for [Contact](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) and make a note of the mandatory fields.
-    * Depending on the values you want to update, add mappings between your XDM profile schema and your [!DNL Salesforce CRM] instance:
+    * If you are working with *Contacts* within your segment, refer to the Object Reference in Salesforce for [Contact](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) to define mappings for the fields to be updated.
+    * Mandatory fields can be identified by searching for the word *Required* which is mentioned in its field description.
+    * Depending on the fields you want to export or update, add mappings between your XDM profile schema and your [!DNL Salesforce CRM] instance:
 
     | XDM Profile Schema | [!DNL Salesforce CRM] Instance | Notes |
     | --- | --- | --- |
@@ -185,8 +190,9 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
-    * If you are working with *Leads* within your segment, refer to the Object Reference in Salesforce for [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) and make a note of the mandatory fields.
-    * Depending on the values you want to update, add mappings between your XDM profile schema and your [!DNL Salesforce CRM] instance:
+    * If you are working with *Leads* within your segment, refer to the Object Reference in Salesforce for [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) to define mappings for the fields to be updated.
+    * Mandatory fields can be identified by searching for the word *Required* which is mentioned in its field description.
+    * Depending on the fields you want to export or update, add mappings between your XDM profile schema and your [!DNL Salesforce CRM] instance:
 
     | XDM Profile Schema | [!DNL Salesforce CRM] Instance | Notes |
     | --- | --- | --- |
@@ -203,7 +209,7 @@ When performing the [Schedule segment export](/help/destinations/ui/activate-seg
 
 To do this, select each segment, then enter the corresponding custom field attribute from Salesforce in the **[!UICONTROL Mapping ID]** field.
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
 > * The value used for the **[!UICONTROL Mapping ID]** should exactly match the name of the custom field attribute created within Salesforce.
 > * Ensure that the name of the custom field attribute you have created in Salesforce doesn't use the whitespace character.
@@ -231,13 +237,13 @@ To validate that you have correctly set up the destination, follow the steps bel
     * If you had *Contacts* within your Platform segment, navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page.
     ![Salesforce CRM screenshot showing the Contacts page with the profiles from the segment.](../../assets/catalog/crm/salesforce/contacts.png)
 
-    * Click a *Contact* and check if the fields are updated. You can see that each segment status in [!Salesforce CRM] was updated with the corresponding segment status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [segment scheduling](#schedule-segment-export-example).
+    * Select a *Contact* and check if the fields are updated. You can see that each segment status in [!Salesforce CRM] was updated with the corresponding segment status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [segment scheduling](#schedule-segment-export-example).
     ![Salesforce CRM screenshot showing the Contact Details page with updated segment statuses.](../../assets/catalog/crm/salesforce/contact-info.png)
 
     * If you had *Leads* within your Platform segment, then navigate to the **[!DNL Apps]** > **[!DNL Leads]** page.
     ![Salesforce CRM screenshot showing the Leads page with the profiles from the segment.](../../assets/catalog/crm/salesforce/leads.png)
 
-    * Click a *Lead* and check if the fields are updated. You can see that each segment status in [!Salesforce CRM] was updated with the corresponding segment status from Platform, based on the [!UICONTROL Mapping ID] value provided during the [segment scheduling](#schedule-segment-export-example).
+    * Select a *Lead* and check if the fields are updated. You can see that each segment status in [!Salesforce CRM] was updated with the corresponding segment status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [segment scheduling](#schedule-segment-export-example).
     ![Salesforce CRM screenshot showing the Lead Details page with updated segment statuses.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Data usage and governance {#data-usage-governance}
@@ -251,7 +257,7 @@ When checking a dataflow run, if you obtain the following error message: `Unknow
 
 ![Platform UI screenshot showing error.](../../assets/catalog/crm/salesforce/error.png)
 
-To fix this error, verify that the [!UICONTROL Mapping ID] you provided in [!DNL Salesforce CRM] for your Platform segment is valid and exists within [!DNL Salesforce CRM].
+To fix this error, verify that the **[!UICONTROL Mapping ID]** you provided in [!DNL Salesforce CRM] for your Platform segment is valid and exists within [!DNL Salesforce CRM].
 
 ## Additional resources {#additional-resources}
 
