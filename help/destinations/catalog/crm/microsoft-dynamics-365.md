@@ -8,7 +8,7 @@ description: The Microsoft Dynamics 365 destination allows you to export your ac
 
 ## Overview {#overview}
 
-[!DNL Microsoft Dynamics 365](https://dynamics.microsoft.com/en-us/) is a cloud-based business application platform that combines Enterprise Resource Planning (ERP) and Customer Relationship Management (CRM) along with productivity applications and AI tools, to bring end-to-end smoother and more controlled operations, better growth potential and reduced costs.
+[[!DNL Microsoft Dynamics 365]](https://dynamics.microsoft.com/en-us/) is a cloud-based business application platform that combines Enterprise Resource Planning (ERP) and Customer Relationship Management (CRM) along with productivity applications and AI tools, to bring end-to-end smoother and more controlled operations, better growth potential and reduced costs.
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), which allows you to update identities within a segment into [!DNL Dynamics 365].
 
@@ -87,7 +87,7 @@ Refer to the table below for information about the destination export type and f
 
 ## Connect to the destination {#connect}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
 > To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -124,7 +124,7 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate segments to this destination {#activate}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 > 
 > To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -152,7 +152,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
     * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the [!UICONTROL Attribute name] field. Refer to [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) for a comprehensive list of supported attributes.
     ![Platform UI screenshot showing Target mapping for LastName.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
 
-        > [!IMPORTANT]
+        >[!IMPORTANT]
         >
         > If you have a date or timestamp source field which is mapped to a [!DNL Dynamics 365] [date or timestamp](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) target field, ensure that the mapped value being is not empty. If the value passed is empty you will encounter a *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* error message and the data will not be updated. This is a [!DNL Dynamics 365] limitation.
 
@@ -172,7 +172,7 @@ When performing the [Schedule segment export](../../ui/activate/activate-segment
 
 To do this, select each segment, then enter the corresponding custom field attribute from [!DNL Dynamics 365] in the [!UICONTROL Mapping ID] field.
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
 > The value used for the [!UICONTROL Mapping ID] should exactly match the name of the custom field attribute created within [!DNL Dynamics 365]. See [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) if you need guidance on finding your custom field attributes.
 
