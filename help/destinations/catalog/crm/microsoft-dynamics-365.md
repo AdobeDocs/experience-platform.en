@@ -26,15 +26,15 @@ Before activating data to the [!DNL Dynamics 365] destination, you must have a [
 
 Refer to Adobe's documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
-### Microsoft Dynamics 365 prerequisites {#prerequisites-destination}
+### [!DNL Microsoft Dynamics 365] prerequisites {#prerequisites-destination}
 
 Note the following prerequisites in [!DNL Dynamics 365], in order to export data from Platform to your [!DNL Dynamics 365] account:
 
-#### You need to have a Microsoft Dynamics 365 account {#prerequisites-account}
+#### You need to have a [!DNL Microsoft Dynamics 365] account {#prerequisites-account}
 
 Go to the [!DNL Dynamics 365] [trial](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) page to register and create an account, if you do not have one already.
 
-#### Create field within Dynamics 365 {#prerequisites-custom-field}
+#### Create field within [!DNL Dynamics 365] {#prerequisites-custom-field}
 
 Create the custom field of type `Simple` with field data type as `Single Line of Text` which Experience Platform will use to update the segment status within [!DNL Dynamics 365].
 Refer to the [!DNL Dynamics 365] documentation to [create a field (attribute)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) if you need additional guidance.
@@ -51,7 +51,7 @@ To enable [!DNL Dynamics 365] to access resources you will need to log in with y
 
 You will also need to [create an application user](https://docs.microsoft.com/en-us/power-platform/admin/manage-application-users#create-an-application-user) in [!DNL Azure AD] and associate it with the newly created application.
 
-#### Gather Dynamics 365 credentials {#gather-credentials}
+#### Gather [!DNL Dynamics 365] credentials {#gather-credentials}
 
 Note down the items below before you authenticate to the [!DNL Dynamics 365] CRM destination:
 
@@ -93,7 +93,7 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL Dynamics 365]. Alternatively you can locate it under the CRM category.
+Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL Dynamics 365]. Alternatively you can locate it under the **[!UICONTROL CRM]** category.
 
 ### Authenticate to destination {#authenticate}
 
