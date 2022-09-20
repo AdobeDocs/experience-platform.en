@@ -6,12 +6,12 @@ description: Adobe Campaign Managed Services provides a platform for designing c
 
 ## Overview {#overview}
 
-Adobe Campaign Managed Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. Use Campaign to:
+Adobe Campaign Managed Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. [Get Started with Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
+
+Use Campaign to:
 * Drive personalization and engagement through a single accessible view of the customer,
 * Integrate email, mobile, online and offline channels into the customer journey,
 * Automate the delivery of meaningful and timely messages and offers.
-
-For more information, see [Get Started with Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html).
 
 <!--## Use cases {#use-cases}
 
@@ -31,14 +31,6 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## Prerequisites {#prerequisites}
 
-Note the following prerequisites in order to export data from Platform to your Adobe Campaign instance:
-
-### CDP package installation {#cdp}
-
-The CDP package should be installed on your Campaign instance. This package is installed by Adobe when provisioning your instance, no additional action is required on your side.
-
-### Campaign API project creation {#api}
-
 In order for Campaign to be able to retrieve data from Adobe Experience Platform, you need to create a Campaign API project, and ask Customer Care to add the associated Client ID to an allow list.
 
 >[!NOTE]
@@ -47,13 +39,13 @@ In order for Campaign to be able to retrieve data from Adobe Experience Platform
 
 1. Log in to [Adobe Developer Console](https://console.adobe.io/) and create a new project.
 
-1. Click **[!UICONTROL Add API]** and choose **[!UICONTROL Adobe Campaign]**.
+1. Select **[!UICONTROL Add API]** and choose **[!UICONTROL Adobe Campaign]**.
 
     ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/create-api.png)
 
 1. Generate a key pair.
 
-1. Select the `<Instance Name> - admin` product profile and click **[!UICONTROL Save configured API]**.
+1. Select the `<Instance Name> - admin` product profile and select **[!UICONTROL Save configured API]**.
 
 1. Your API project is created. Note down the **[!UICONTROL Client ID]** displayed in your project. Reach out to Adobe Customer Care and ask them to add your Client ID to an allow list.
 
@@ -94,6 +86,7 @@ Refer to the table below for information about the destination export type and f
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
+
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 ![Sample screenshot showing how to authenticate to the destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
@@ -113,7 +106,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 ### Enable alerts {#enable-alerts}
 
-You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, refer to the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
@@ -133,7 +126,7 @@ Read [Activate audience data to batch profile export destinations](https://exper
 
 ### Map attributes and identities {#map}
 
-Select XDM fields to export with the profiles and map them with the corresponding Adobe Campaign fields.
+Select XDM fields to export with the profiles and map them to the corresponding Adobe Campaign fields.
 
 >[!IMPORTANT]
 >
@@ -144,7 +137,7 @@ Select XDM fields to export with the profiles and map them with the correspondin
     * Select an identifier (For example: the email field) as source identity that uniquely identifies a profile in Adobe Experience Platform and Adobe Campaign.
     * Select all other XDM source profile attribute that need to be exported to Adobe Campaign.
 
-1. Map each field with its target field in Adobe Campaign. Available target fields are determined by the target mapping selected when creating the destination.
+1. Map each field with its target field in Adobe Campaign. Available target fields are determined by the target mapping selected when [creating the destination](#destination-details).
 
 1. Identify mandatory attributes and deduplication keys.
 
@@ -157,19 +150,19 @@ Select XDM fields to export with the profiles and map them with the correspondin
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
-## Exported data / Validate data export {#exported-data
+## Exported data / Validate data export {#exported-data}
 
 Once a destination has been activated, you can access the corresponding export job and exported data in Campaign.
 
 ### Monitor data export jobs {#jobs}
 
-Navigate to the **[!UICONTROL Administration]** / **[!UICONTROL Audit]** / **[!UICONTROL Audience load jobs]** menu to monitor all export jobs activated from Adobe Experience Platform.
+Navigate to the **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Audience load jobs]** menu to monitor all export jobs activated from Adobe Experience Platform.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
 ### Access exported data {#data}
 
-Navigate to the **[!UICONTROL Profile and target]** / **[!UICONTROL List]** / **[!UICONTROL AEP audiences]** menu  to access audiences created after activating a destination.
+Navigate to the **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** menu  to access audiences created after activating a destination.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
