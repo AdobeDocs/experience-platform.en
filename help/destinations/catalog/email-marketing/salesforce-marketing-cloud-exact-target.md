@@ -11,8 +11,8 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) (formerly known as ExactTarget) is a digital marketing suite that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
 >[!IMPORTANT]
-> 
-> Note the difference between this connection and the other [Salesforce Marketing Cloud connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection allows you to export files to a specified storage location, whereas this is an API-based streaming connection.
+>
+>Note the difference between this connection and the other [Salesforce Marketing Cloud connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection allows you to export files to a specified storage location, whereas this is an API-based streaming connection.
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [Salesforce Update Contacts REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html), which allows you to add contacts / update contact data for your business needs after activating them within a new Salesforce segment.
 
@@ -48,7 +48,7 @@ Refer to the [!DNL Salesforce Marketing Cloud] documentation to [create custom f
 
 >[!IMPORTANT]
 >
-> Ensure you create the custom attribute under the "Email Demographics" attribute-set within your [!DNL Salesforce Marketing Cloud] account.
+>Ensure you create the custom attribute under the `Email Demographics` attribute-set within your [!DNL Salesforce Marketing Cloud] account.
 
 Refer to the Adobe Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
@@ -97,7 +97,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
@@ -132,7 +132,7 @@ When you are finished providing details for your destination connection, select 
 ## Activate segments to this destination {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
@@ -142,8 +142,8 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Salesforce Marketing Cloud] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Salesforce Marketing Cloud] destination fields, follow the steps below.
 
 >[!IMPORTANT]
-> 
-> Although your attribute names would be as per your Salesforce account, the mappings for both `contactKey` and `personalEmail.address` are mandatory.
+>
+>Although your attribute names would be as per your Salesforce account, the mappings for both `contactKey` and `personalEmail.address` are mandatory.
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
@@ -180,7 +180,7 @@ To do this, select each segment, then enter the corresponding custom attribute f
 
 >[!IMPORTANT]
 >
-> The value used for the Mapping ID should exactly match the name of the custom attribute created within Salesforce under the "Email Demographics" attribute-set.
+>The value used for the Mapping ID should exactly match the name of the custom attribute created within Salesforce under the "Email Demographics" attribute-set.
 
 An example is shown below:
 ![Platform UI screenshot example showing Schedule segment export.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
