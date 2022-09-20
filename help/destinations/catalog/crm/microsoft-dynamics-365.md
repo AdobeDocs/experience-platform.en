@@ -134,7 +134,7 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL Dynamics 365] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL Dynamics 365] destination fields, follow these steps:
 
-1. In the **[!UICONTROL Mapping]** step, click **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
+1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** category and select `contactId`.
