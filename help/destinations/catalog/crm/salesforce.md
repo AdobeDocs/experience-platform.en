@@ -28,7 +28,7 @@ As a marketer, you can deliver personalized experiences to your users, based on 
 
 Before activating data to the Salesforce CRM destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-### Prerequisites in Salesforce CRM {#prerequisites-destination}
+### Prerequisites in [!DNL Salesforce CRM] {#prerequisites-destination}
 
 Note the following prerequisites in [!DNL Salesforce CRM], in order to export data from Platform to your Salesforce account:
 
@@ -57,7 +57,7 @@ Also ensure that the [scopes](https://help.salesforce.com/s/articleView?id=conne
 
 #### Create custom field within Salesforce {#prerequisites-custom-field}
 
-Create the custom field of type `Text Area Long` which Experience Platform will use to update the segment status within Salesforce CRM. 
+Create the custom field of type `Text Area Long` which Experience Platform will use to update the segment status within [!DNL Salesforce CRM]. 
 Refer to the Salesforce documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&type=5) if you need additional guidance. 
 
 >[!IMPORTANT]
@@ -74,7 +74,7 @@ Refer to the Adobe Experience Platform documentation for [Segment Membership Det
 
 #### Gather Salesforce credentials {#gather-credentials}
 
-Note down the items below before you authenticate to the Salesforce CRM destination:
+Note down the items below before you authenticate to the [!DNL Salesforce CRM] destination:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -130,7 +130,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 *  **[!UICONTROL Client Secret]**: Your Salesforce connected app Consumer Secret.
 *  **[!UICONTROL Username]**: Your Salesforce account username.
 
-If the details provided are valid, the UI displays a **Connected** status with a green check mark, you can then proceed to the next step.
+If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark, you can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
@@ -139,7 +139,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Salesforce ID Type]**: If the identities within your Platform are of type *Contact* select **[!UICONTROL Contact]**. If the identities within your Platform are of type *Lead* select **[!UICONTROL Lead]**.
+*  **[!UICONTROL Salesforce ID Type]**: Select **[!UICONTROL Contact]** if the identities you are looking to export or update are of type *Contact*. Select **[!UICONTROL Lead]** if the identities you are looking to export or update are of type *Lead*.
 
 ### Enable alerts {#enable-alerts}
 
