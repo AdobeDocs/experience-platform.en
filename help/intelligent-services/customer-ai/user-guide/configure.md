@@ -146,7 +146,7 @@ For example, you may want to predict whether a customer purchases a particular p
 
 In order to predict whether a customer will have any event from a given set, you can use the **[!UICONTROL Any of]** option.
 
-For example, you may want to predict whether a customer visits a certain URL or a web page with a particular name. This prediction goal is defined by two conditions:`web.webPageDetails.URL` **starts with** a particular value and `web.webPageDetails.name` **starts with** a particular value.
+For example, you may want to predict whether a customer visits a certain URL or a web page with a particular name. This prediction goal is defined by two conditions: `web.webPageDetails.URL` **starts with** a particular value and `web.webPageDetails.name` **starts with** a particular value.
 
 ![Any of example](../images/user-guide/any-of.png)
 
