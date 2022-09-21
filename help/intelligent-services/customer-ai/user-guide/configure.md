@@ -61,7 +61,7 @@ Provide the required values and then select **[!UICONTROL Next]** to continue.
 
 By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience Events in general, and Consumer Experience Event data to calculate propensity scores. When selecting a dataset, only ones that are compatible with Customer AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
 
-![Select and search for dataset](../images/user-guide/configure-dataset-page.png)
+![Select and search for dataset](../images/user-guide/configure-dataset-page-save-and-exit.png)
 
 After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
 
@@ -234,7 +234,7 @@ The Profile toggle allows Customer AI to export the scoring results into Real-ti
 
 When using Customer AI for the first time you can toggle this feature off until you are satisfied with the model output results. This prevents you from uploading multiple scoring datasets to your Customer Profiles while fine tuning your model. Once you have finished calibrating your model, you can clone the model using the [clone option](#set-up-your-instance) from the **Service instances** page. This allows you to create a copy of your model and toggle profile on.
 
-![Profile toggle](../images/user-guide/advanced-workflow.png)
+![Profile toggle](../images/user-guide/advanced-workflow-save.png)
 
 Once you have your scoring schedule set, prediction exclusions included, and the profile toggle where you want it to be, select **[!UICONTROL Finish]** in the top-right to create your Customer AI instance.
 
@@ -272,11 +272,11 @@ At the top of the Customer AI workspace **insights page**, notice that the detai
 
 When you preview datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
-![The Customer AI workspace with the restricted fields of the preview datasets with restricted schema results highlighted.](../images/user-guide/restricted-dataset-preview.png)
+![The Customer AI workspace with the restricted fields of the preview datasets with restricted schema results highlighted.](../images/user-guide/restricted-dataset-preview-save-and-exit.png)
 
 After you create an instance with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
-![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/information-not-displayed.png)
+![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Next steps {#next-steps}
 
