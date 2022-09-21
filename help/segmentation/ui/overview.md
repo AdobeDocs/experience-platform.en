@@ -204,19 +204,23 @@ IMAGE
 
 | Field | Description |
 | ----- | ----------- | 
-| Name | |
-| Profile count | |
-| Origin | |
+| Name | The name of the audience. |
+| Profile count | The total number of profiles that qualify for the audience. |
+| Origin | The origin of the audience. If this audience was Platform-generated, it will have an origin of Segmentation Service. |
 | Lifecycle status | |
 | Update frequency | |
-| Last updated by | |
-| Created | | 
-| Last updated | |
+| Last updated by | The name of the person who last updated the audience. |
+| Created | The time and date the audience was created. | 
+| Last updated | The time and date the audience was last created. |
 | Access labels | |
 
-Selecting **[!UICONTROL Create Audience]** will take you to the Audience Builder. To learn more about creating audiences, please read the [Audience Builder guide](audiences.md).
+Selecting **[!UICONTROL Create Audience]** will show a popover, letting you choose between composing an audience or building rules.
 
 IMAGE
+
+Selecting **Compose Audiences** takes you to the Audience Builder. To learn more about creating audiences, please read the [Audience Builder guide](./audience-builder.md).
+
+Selecting **Build Rule** takes you to the Segment Builder. To learn more about creating segments, please read the [Segment Builder guide](./segment-builder.md)
 
 ## Audience details {#audience-details}
 
