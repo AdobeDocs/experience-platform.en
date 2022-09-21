@@ -32,7 +32,7 @@ This guide provides a high-level introduction to data collection and how it work
 
 ## Tags, Web SDK, and Mobile SDK
 
-The Platform Web SDK and Platform Mobile SDK collapse and compress all Adobe product libraries into a single development kit for web and mobile platforms respectively. These can be implemented using raw code or using [tags](../tags/home.md) through the Data Collection UI.
+The Platform Web SDK and Platform Mobile SDK collapse and compress all Adobe product libraries into a single development kit for web and mobile platforms respectively. These can be implemented using raw code or using [tags](../tags/home.md) through the Data Collection UI or Adobe Experience Platform UI.
 
 Compressing these libraries speeds up data collection and consolidates operations into a single stream from client-side devices to the Platform Edge Network.
 

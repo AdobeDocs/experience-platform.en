@@ -12,6 +12,8 @@ This guide provides a high-level tutorial of how to send an event through the Ed
 >[!NOTE]
 >
 >You can also opt to install and configure the SDK manually if you don't want to use tags, but the surrounding steps must still be completed as outlined below.
+>
+>All steps involving the Data Collection UI can also be performed in the Experience Platform UI.
 
 ## Prerequisites
 
