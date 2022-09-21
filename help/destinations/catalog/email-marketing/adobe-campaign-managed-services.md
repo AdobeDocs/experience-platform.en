@@ -150,7 +150,7 @@ Select XDM fields to export with the profiles and map them to the corresponding 
 1. Once mapping has been performed, you can review and complete the destionation configuration to start sending data to **[!DNL Campaign]**.
 [Learn how to review and complete destination configuration](/help/destinations/destination-types.md#review).|
 
-<!-->[!NOTE]
+<!--NOTE
 >
 >For Campaign destination, you can run up to jobs simultaneously. Any additional job will enter a queue.
 -->
