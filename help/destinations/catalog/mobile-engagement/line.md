@@ -30,7 +30,8 @@ Go to the [!DNL LINE] [signup](https://account.line.biz/signup) page to register
 
 #### Gather the [!DNL LINE channel access token (long-lived)] from the [!DNL LINE] developer console {#gather-credentials}
 
-* To allow Platform to access [!DNL LINE] resources, you will need the *[!DNL Channel access token (long-lived)]* from the desired [!DNL LINE] *Messaging API* channel.
+To allow Platform to access [!DNL LINE] resources, you will need the *[!DNL Channel access token (long-lived)]* from the desired [!DNL LINE] *Messaging API* channel.
+
 1. Log in with your [!DNL LINE] account to the [[!DNL LINE] Developer console](https://developers.line.biz/console).
 1. Next, access the *[!DNL Providers]* list, then select the *[!DNL Provider]* of interest and finally select the *Messaging API* channel to access its settings. If you are accessing the developer console for the first time follow the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/messaging-api/getting-started/) to complete the steps required to create a provider.
 1. Finally, navigate to the ***[!DNL Channel access token]*** section and copy the ***[!DNL Channel access token (long-lived)]*** value required within [Authenticate to destination](#authenticate) step.
@@ -87,7 +88,7 @@ To configure details for the destination, fill in the required and optional fiel
 ![Platform UI screenshot showing the destination details.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identity this destination in the future.
 * **[!UICONTROL Audience Type]**: Select **[!UICONTROL IDFA]** if the identities you are looking to export are of type *IDFA*. Select **[!UICONTROL UserID]** if the identities you are looking to export are of type *UserID*. Refer to the [Supported identities](#supported-identities) section for more information about the identity types.
 
 ### Enable alerts {#enable-alerts}
@@ -108,7 +109,7 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL LINE] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL LINE] destination fields, follow these steps:
 
-Depending on your target identity the following target identity namespace(s) must be mapped:
+Depending on your source identity the following target identity namespace(s) must be mapped:
 | Target Identity | Source Field | Target Field |
 | --- | --- | --- |
 | UserID | `UserID` | `LineId` |
