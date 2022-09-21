@@ -88,7 +88,7 @@ To configure details for the destination, fill in the required and optional fiel
 ![Platform UI screenshot showing the destination details.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-* **[!UICONTROL Description]**: A description that will help you identity this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Audience Type]**: Select **[!UICONTROL IDFA]** if the identities you are looking to export are of type *IDFA*. Select **[!UICONTROL UserID]** if the identities you are looking to export are of type *UserID*. Refer to the [Supported identities](#supported-identities) section for more information about the identity types.
 
 ### Enable alerts {#enable-alerts}
@@ -115,10 +115,10 @@ Depending on your source identity the following target identity namespace(s) mus
 | UserID | `UserID` | `LineId` |
 | IDFA | `IDFA` | `LineId` |
 
-If your target identify is *UserID* you will need the below:
+If your target identity is *UserID* you will need the below:
 ![Platform UI screenshot example showing the Target mapping when using UserID as a target identity.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
-If your target identify is *IDFA* you will need the below:
+If your target identity is *IDFA* you will need the below:
 ![Platform UI screenshot example showing the Target mapping when using IDFA as a target identity.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## Validate data export {#exported-data}
