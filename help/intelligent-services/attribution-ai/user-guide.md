@@ -200,7 +200,7 @@ Once you have finished defining all necessary touchpoints, scroll up and select 
 
 ## Advanced training and scoring setup
 
-The final page in Attribution AI is the **[!UICONTROL Set options]** page used for setting up training and scoring.
+The final page in Attribution AI is the **[!UICONTROL Advanced]** page used for setting up training and scoring.
 
 ![new page set options](./images/user-guide/advanced_settings_set_options.png)
 
