@@ -62,7 +62,7 @@ In order for Campaign to be able to retrieve data from Adobe Experience Platform
 |phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+|external_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
 {style="table-layout:auto"}
 
@@ -85,14 +85,6 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-### Authenticate to destination {#authenticate}
-
-To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
-
-![Sample screenshot showing how to authenticate to the destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
-
-* **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
-
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
@@ -101,8 +93,8 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Select instance]**: Your Campaign marketing instance.
-* **[!UICONTROL Target mapping]**: Select the target mapping that you are using in Adobe Campaign to send deliveries. [Learn more](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Select instance]**: Your **[!DNL Campaign]** marketing instance.
+* **[!UICONTROL Target mapping]**: Select the target mapping that you are using in **[!DNL Adobe Campaign]** to send deliveries. [Learn more](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 
 ### Enable alerts {#enable-alerts}
 
@@ -126,7 +118,7 @@ Read [Activate audience data to batch profile export destinations](https://exper
 
 ### Map attributes and identities {#map}
 
-Select XDM fields to export with the profiles and map them to the corresponding Adobe Campaign fields.
+Select XDM fields to export with the profiles and map them to the corresponding Adobe Campaign fields.[Learn more on identity and attributes selection for email marketing destinations](overview.md)
 
 >[!IMPORTANT]
 >
@@ -134,21 +126,34 @@ Select XDM fields to export with the profiles and map them to the corresponding 
 
 1. Select source fields:
 
-    * Select an identifier (For example: the email field) as source identity that uniquely identifies a profile in Adobe Experience Platform and Adobe Campaign.
-    * Select all other XDM source profile attribute that need to be exported to Adobe Campaign.
+    * Select an **identifier** (For example: the email field) as source identity that uniquely identifies a profile in Adobe Experience Platform and Adobe Campaign.
+
+    * Select all other **XDM source profile attributes** that need to be exported to Adobe Campaign.
+
+    >[!NOTE]
+    >
+    >The "segmentMembershipStatus" field is a required mapping to reflect segmentMembership status. This field is added by default and cannot be modified or removed.
 
 1. Map each field with its target field in Adobe Campaign. Available target fields are determined by the target mapping selected when [creating the destination](#destination-details).
 
-1. Identify mandatory attributes and deduplication keys.
+1. Identify mandatory attributes and deduplication keys. Note that values in attributes marked as "Mandatory" or "Deduplication key" cannot be null.
 
     * [Mandatory attributes](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) ensure that all profile records contain the selected attribute(s). For example: all exported profiles contain an email address. Recommendation is to set to mandatory both the identity field and the field used as deduplication key.
     * [A deduplication key](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) is a primary key which determines the identity by which users want their profiles to be deduplicated.
 
       >[!IMPORTANT]
       >
-      >Make sure that the deduplication key matches the primary key of the selected target mapping. For example, if you are using the `CustomerID` field as deduplication key, make sure that the field exists both on the source XDM schema and the Adobe Campaign target mapping.
+      >Make sure that the deduplication key attribute's name matches a column name of the selected target mapping.
 
-![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
+    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
+
+1. Once mapping has been performed, you can review and complete the destionation configuration to start sending data to **[!DNL Campaign]**.
+[Learn how to review and complete destination configuration](/help/destinations/destination-types.md#review).|
+
+<!-->[!NOTE]
+>
+>For Campaign destination, you can run up to jobs simultaneously. Any additional job will enter a queue.
+-->
 
 ## Exported data / Validate data export {#exported-data}
 
