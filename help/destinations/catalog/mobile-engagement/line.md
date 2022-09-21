@@ -8,49 +8,42 @@ description: The LINE destination allows you to add profiles to your Platform se
 
 ## Overview {#overview}
 
-[[!DNL LINE]](https://line.me/en/) is a popular communication platform that connects people, services and information and has grown from a chat app into a hub for entertainment, social and day-to-day activities.
+[[!DNL LINE]](https://line.me/en/) is a popular communication platform that connects people, services and information and has grown from a chat app into a hub for entertainment, social, and day-to-day activities.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL LINE] Messaging API](https://developers.line.biz/en/reference/messaging-api/), add profiles to your segment and activate them as connections within [!DNL LINE] for your business needs.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL LINE] Messaging API](https://developers.line.biz/en/reference/messaging-api/). You can activate profiles from your Experience Platform segments as connections within [!DNL LINE] for your business needs.
 
-[!DNL LINE] uses Bearer Tokens as the authentication mechanism to communicate with the [[!DNL LINE] Messaging API]. Instructions to authenticate to your [!DNL LINE] instance are further below, within [Authenticate to destination](#authenticate) section.
+[!DNL LINE] uses Bearer Tokens as the authentication mechanism to communicate with the [!DNL LINE] Messaging API. Instructions to authenticate to your [!DNL LINE] instance are further below, within [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
-As a marketer, I want to target users in a mobile engagement destination, with segments built in [!DNL Adobe Experience Platform]. Additionally, I want to deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] profiles, as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
+As a marketer, you can target users in a mobile engagement destination, with segments built in [!DNL Adobe Experience Platform]. Additionally, you can deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] profiles, as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
 
 ## Prerequisites {#prerequisites}
 
-### Experience Platform prerequisites {#prerequisites-in-experience-platform}
-
-Before activating data to the [!DNL LINE] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
-
-Read [Activate profiles and segments to streaming segment export destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) for instructions on activating audience segments to this destination.
-
-### LINE prerequisites {#prerequisites-destination}
+### [!DNL LINE] prerequisites {#prerequisites-destination}
 
 Note the following prerequisites in [!DNL LINE], in order to export data from Platform to your [!DNL LINE] account:
 
-#### You need to have a LINE account {#prerequisites-account}
+#### You need to have a [!DNL LINE] account {#prerequisites-account}
 
 Go to the [!DNL LINE] [signup](https://account.line.biz/signup) page to register and create an account, if you do not have one already.
 
-#### Gather the LINE channel access token (long-lived) from the LINE developer console {#gather-credentials}
+#### Gather the [!DNL LINE channel access token (long-lived)] from the [!DNL LINE] developer console {#gather-credentials}
 
-* To allow Platform to access [!DNL LINE] resources you will need the *[!DNL Channel access token (long-lived)]* from the desired [!DNL LINE] *Messaging API* channel.
-* Log in with your [!DNL LINE] account to the [[!DNL LINE] Developer console](https://developers.line.biz/console).
-* Next, access the *[!DNL Providers]* list, then select the *[!DNL Provider]* of interest and finally select the *Messaging API* channel to access its settings.
-    * If you are accessing the developer console for the first time please follow the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/messaging-api/getting-started/) to complete the steps required to create a provider.
-* Finally navigate to the ***[!DNL Channel access token]*** section and note down the ***[!DNL Channel access token (long-lived)]*** value required within [Authenticate to destination](#authenticate}) step.
+* To allow Platform to access [!DNL LINE] resources, you will need the *[!DNL Channel access token (long-lived)]* from the desired [!DNL LINE] *Messaging API* channel.
+1. Log in with your [!DNL LINE] account to the [[!DNL LINE] Developer console](https://developers.line.biz/console).
+1. Next, access the *[!DNL Providers]* list, then select the *[!DNL Provider]* of interest and finally select the *Messaging API* channel to access its settings. If you are accessing the developer console for the first time follow the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/messaging-api/getting-started/) to complete the steps required to create a provider.
+1. Finally, navigate to the ***[!DNL Channel access token]*** section and copy the ***[!DNL Channel access token (long-lived)]*** value required within [Authenticate to destination](#authenticate) step.
 
 | Credential | Description | Example |
 | --- | --- | --- |
 | `[!DNL Channel access token (long-lived)]` | Your [!DNL LINE Channel access token (long-lived)]. | `aaa2112XSMWqLXR7..........nyilFU=` |
 
-Refer to the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/messaging-api/getting-started/) for guidance.
+Refer to the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/messaging-api/getting-started/) for guidance on creating a channel or adding a channel to your existing [!DNL LINE] account through the [!DNL LINE] developers console.
 
 ## Supported identities {#supported-identities}
 
-[!DNL LINE] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL LINE] supports the update and export of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 | Target Identity | Description | Considerations |
 |---|---|---|
@@ -84,9 +77,9 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 ![Platform UI screenshot showing how to authenticate.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Fill in the required fields below.
-* **[!UICONTROL Bearer token]**: Your [[!DNL LINE Channel access token (long-lived)] from the LINE developer console](#gather-credentials).
+* **[!UICONTROL Bearer token]**: Your [!DNL LINE Channel access token (long-lived)] from the [!DNL LINE] developer console. Refer to the [gather credentials](#gather-credentials) section.
 
-If the details provided are valid, the UI displays a **Connected** status with a green check mark. You can then proceed to the next step.
+If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
@@ -95,7 +88,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Audience Type]**: If the identities in Platform are of type *IDFA* select **[!UICONTROL IDFA]**. If the identities in Platform are of type *UserID* select **[!UICONTROL UserID]**. Refer to [Supported identities](#supported-identities) if you need guidance.
+* **[!UICONTROL Audience Type]**: Select **[!UICONTROL IDFA]** if the identities you are looking to export are of type *IDFA*. Select **[!UICONTROL UserID]** if the identities you are looking to export are of type *UserID*. Refer to the [Supported identities](#supported-identities) section for more information about the identity types.
 
 ### Enable alerts {#enable-alerts}
 
@@ -115,23 +108,31 @@ Read [Activate profiles and segments to streaming segment export destinations](.
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL LINE] destination, you need to go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL LINE] destination fields, follow these steps:
 
-The following target identity namespace(s) must be mapped:
-* **UserID** must be mapped as a target field using **Target field** > **[!UICONTROL Select identity namespace]** > **LineId**
+Depending on your target identity the following target identity namespace(s) must be mapped:
+| Target Identity | Source Field | Target Field |
+| --- | --- | --- |
+| UserID | `UserID` | `LineId` |
+| IDFA | `IDFA` | `LineId` |
 
-* An example is shown below:
-![Platform UI screenshot example showing the Target mapping.](../../assets/catalog/mobile-engagement/line/mappings.png)
+If your target identify is *UserID* you will need the below:
+![Platform UI screenshot example showing the Target mapping when using UserID as a target identity.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+
+If your target identify is *IDFA* you will need the below:
+![Platform UI screenshot example showing the Target mapping when using IDFA as a target identity.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## Validate data export {#exported-data}
 
-For each successful execution the [!DNL LINE] destination creates a new audience within [!DNL LINE] using the selected segments name.
+Upon a successful data export out of Experience Platform, the [!DNL LINE] destination creates a new audience within [!DNL LINE] using the selected segment name.
 
 To validate that you have correctly set up the destination, follow the steps below:
 
-1. Log in to the [Manager console](https://manager.line.biz/).
+1. In [!DNL LINE], log in to the [Manager console](https://manager.line.biz/).
 
 1. Next, navigate to **[!UICONTROL Data Controls]** > **[!UICONTROL Audiences]** and check the name matching the selected segment within the **[!UICONTROL Audience name]** column.
 
 1. The updated volume would match the count within the segment.
+
+1. The *Type* column will mention **[!UICONTROL UserID]** if the identities you exported are of type *UserID*. Similarly, The *Type* column will mention **[!UICONTROL Mobile ad Id]** if the identities you exported are of type *IDFA*.
 
 An example setup within [!DNL LINE] is shown below:
 ![LINE UI screenshot showing the audience volume.](../../assets/catalog/mobile-engagement/line/audience-volume.png)
