@@ -12,7 +12,7 @@ description: The Microsoft Dynamics 365 destination allows you to export your ac
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), which allows you to update identities within a segment into [!DNL Dynamics 365].
 
-[!DNL Dynamics 365] uses OAuth 2 with Authorization Grant as the authentication mechanism to communicate with the [!DNL Contact Entity Reference API]. Instructions to authenticate to your [!DNL Dynamics 365] instance are further below, within [Authenticate to destination](#authenticate) section.
+[!DNL Dynamics 365] uses OAuth 2 with Authorization Grant as the authentication mechanism to communicate with the [!DNL Contact Entity Reference API]. Instructions to authenticate to your [!DNL Dynamics 365] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
@@ -44,12 +44,12 @@ An example setup within [!DNL Dynamics 365] is shown below:
 
 #### Register an application and application user within Azure Active Directory {#prerequisites-app-user}
 
-To enable [!DNL Dynamics 365] to access resources you will need to log in with your [!DNL Azure Account] to [[!DNL Azure Active Directory]](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal) and create the below:
-* Create an [!DNL Azure AD] application
-* Service principal
+To enable [!DNL Dynamics 365] to access resources you will need to log in with your [!DNL Azure Account] to [[!DNL Azure Active Directory]](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal) and create the following:
+* An [!DNL Azure Active Directory] application
+* A Service principal
 * An application secret
 
-You will also need to [create an application user](https://docs.microsoft.com/en-us/power-platform/admin/manage-application-users#create-an-application-user) in [!DNL Azure AD] and associate it with the newly created application.
+You will also need to [create an application user](https://docs.microsoft.com/en-us/power-platform/admin/manage-application-users#create-an-application-user) in [!DNL Azure Active Directory] and associate it with the newly created application.
 
 #### Gather [!DNL Dynamics 365] credentials {#gather-credentials}
 
@@ -57,12 +57,12 @@ Note down the items below before you authenticate to the [!DNL Dynamics 365] CRM
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| `Client ID` | The [!DNL Dynamics 365] Client ID for your [!DNL Azure AD] application. Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) for guidance. | `ababbaba-abab-baba-acac-acacacacacac` |
-| `Client Secret` | The [!DNL Dynamics 365] Client Secret for your [!DNL Azure AD] application. You would be using option #2 within the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options). | `abcde~abcdefghijklmnopqrstuvwxyz12345678` for guidance.|
-| `Tenant ID` | The [!DNL Dynamics 365] Tenant ID for your [!DNL Azure AD] application. Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) for guidance.  | `1234567-aaaa-12ab-ba21-1234567890` |
+| `Client ID` | The [!DNL Dynamics 365] Client ID for your [!DNL Azure Active Directory] application. Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) for guidance. | `ababbaba-abab-baba-acac-acacacacacac` |
+| `Client Secret` | The [!DNL Dynamics 365] Client Secret for your [!DNL Azure Active Directory] application. You would be using option #2 within the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options). | `abcde~abcdefghijklmnopqrstuvwxyz12345678` for guidance.|
+| `Tenant ID` | The [!DNL Dynamics 365] Tenant ID for your [!DNL Azure Active Directory] application. Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) for guidance.  | `1234567-aaaa-12ab-ba21-1234567890` |
 | `Environment URL` | Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) for guidance.| If your [!DNL Dynamics 365] domain is as below, you need the highlighted value.<br> *`org57771b33`.crm.dynamics.com* |
 
-## Guardrails
+## Guardrails {#guardrails}
 
 The [Requests limits and allocations](https://docs.microsoft.com/en-us/power-platform/admin/api-request-limits-allocations) page details the [!DNL Dynamics 365] API limits associated with your [!DNL Dynamics 365] license. You need to ensure that your data and payload are within these constraints.
 
@@ -101,12 +101,12 @@ To authenticate to the destination, select **[!UICONTROL Connect to destination]
 ![Platform UI screenshot showing how to authenticate.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
 Fill in the required fields below. Refer to the [Gather Dynamics 365 credentials](#gather-credentials) section for any guidance.
-* **[!UICONTROL Client ID]**: The [!DNL Dynamics 365] Client ID for your [!DNL Azure AD] application.
-* **[!UICONTROL Client Secret]**: The [!DNL Dynamics 365] Client Secret for your [!DNL Azure AD] application.
-* **[!UICONTROL Tenant ID]**: The [!DNL Dynamics 365] Tenant ID for your [!DNL Azure AD] application. 
+* **[!UICONTROL Client ID]**: The [!DNL Dynamics 365] Client ID for your [!DNL Azure Active Directory] application.
+* **[!UICONTROL Tenant ID]**: The [!DNL Dynamics 365] Tenant ID for your [!DNL Azure Active Directory] application. 
+* **[!UICONTROL Client Secret]**: The [!DNL Dynamics 365] Client Secret for your [!DNL Azure Active Directory] application.
 * **[!UICONTROL Environment URL]**: Your [!DNL Dynamics 365] Environment URL.
 
-If the details provided are valid, the UI displays a **Connected** status with a green check mark. You can then proceed to the next step.
+If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
