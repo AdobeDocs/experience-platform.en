@@ -11,6 +11,10 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 
 The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to schedule a dataset expiration. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as complete.
 
+>[!WARNING]
+>
+>If a dataset is set to expire, you must manually change any dataflows that may be ingesting data into that dataset so that your downstream workflows are not negatively affected.
+
 This document covers how to schedule and manage dataset expirations in the Platform UI.
 
 ## Schedule a dataset expiration
