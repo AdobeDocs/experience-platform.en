@@ -79,6 +79,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
 * [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
 * [[!UICONTROL Audience overlap]](#audience-overlap)
+* [[!UICONTROL Audience overlap report]](#audience-overlap-report)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Scheduled activations]](#scheduled-activations)
@@ -141,12 +142,13 @@ This widget enables you to optimize your segmentation strategy by visualizing th
 
 ![The Audience overlap widget.](../images/segments/audience-overlap.png)
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+This widget tabularizes the audience overlap data for a specific segment. The report provides an ordered list of audiences ranked by the highest or lowest overlap percentages for your chosen segment. 
 
-<!-- ![The Audience overlap report widget.]() -->
+![The Audience overlap report widget.]()
+
+Use the audience overlap analysis to build new, high-performance segments. High percentage overlaps enable you to prevent sending the same audience to different destinations and suppress them. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
 
 <!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 

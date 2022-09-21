@@ -117,6 +117,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audiences mapped to destination status]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Audiences size]](#audiences-size)
 * [[!UICONTROL Audience overlap by merge policy]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL Audience overlap report]](#audience-overlap-report)
 
 ### [!UICONTROL Profile count] {#profile-count}
 
@@ -296,11 +297,14 @@ The visualization allows you to monitor the overall health of audiences within A
 
 <!-- ![The Audiences change trend widget.]() -->
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
-<!-- ![The Audiences overlap report widget.]() -->
+This widget tabularizes the audience overlap data from all available segments filtered by merge policy. The report provides an ordered list of audiences ranked by the highest or lowest overlap percentages across all available segments. 
+
+![The Audiences overlap report widget.]()
+
+Use this analysis to build new, high-performance segments. High percentage overlaps enable you to prevent sending the same audience to different destinations and suppress them. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
+
 <!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
 
 ### [!UICONTROL Audiences mapped to destination status] {#audiences-mapped-to-destination-status}
