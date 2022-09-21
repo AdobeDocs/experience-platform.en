@@ -36,7 +36,7 @@ When it comes to the publishing flow, there are four basic states that a library
 * [[!UICONTROL Approved]](#approved)
 * [[!UICONTROL Published]](#published)
 
-These four states are represented as columns within the **[!UICONTROL Publishing Flow]** tab in the Data Collection UI.
+These four states are represented as columns within the **[!UICONTROL Publishing Flow]** tab.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -106,7 +106,7 @@ What is included in the upstream depends on the current stage of the library. Fo
 
 ![](./images/approval-workflow/upstream.png)
 
-When you are editing a library in the Data Collection UI, all resources that are inherited from the upstream are represented in the **[!UICONTROL Resources Upstream]** section. To view these resources, select the expand tab below the section heading.
+When editing a library in the UI, all resources that are inherited from the upstream are represented in the **[!UICONTROL Resources Upstream]** section. To view these resources, select the expand tab below the section heading.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 
