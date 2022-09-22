@@ -50,17 +50,17 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 The [!UICONTROL Select data] step appears, providing you with an interface to configure your [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping], and [!UICONTROL Schema name].
 
-| something | Description |
+| Property | Description |
 | --- | --- |
-| Adobe Campaign instance |
-| Target mapping |
-| Schema name |
+| Adobe Campaign instance | The name of the Adobe Campaign environment instance that you are using. |
+| Target mapping | The technical objects used by Campaign in order to deliver messages, and contain all the technical settings required to send deliveries. |
+| Schema name | The name of the schema entity that you are bringing to Platform. Options include Delivery Log and Tracking Log. |
 
-![An interface where you can configure your Adobe Campaign instance, target mapping, and schema name.](../../../../images/tutorials/create/campaign/)
+![An interface where you can configure your Adobe Campaign instance, target mapping, and schema name.](../../../../images/tutorials/create/campaign/select-data.png)
 
 Once you have provided values for your Campaign instance, target mapping, and schema name, the screen updates to display a preview of your schema as well as a sample dataset. When finished, select **[!UICONTROL Next]**.
 
-![A preview of your schema hierarchy as well as a sample of your dataset]
+![A preview of your schema hierarchy as well as a sample of your dataset](../../../../images/tutorials/create/campaign/preview.png)
 
 ### Use an existing dataset
 
@@ -70,13 +70,13 @@ To use an existing dataset, select **[!UICONTROL Existing dataset]**. You can ei
 
 With a dataset selected, provide a name for your dataflow and an optional description.
 
-![existing-dataset]
+![existing-dataset](../../../../images/tutorials/create/campaign/existing-dataset.png)
 
 ### Use a new dataset
 
 To use a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu. When finished, select **[!UICONTROL Next]**.
 
-![new-dataset]
+![new-dataset](../../../../images/tutorials/create/campaign/new-dataset.png)
 
 ### Enable alerts
 
@@ -84,7 +84,7 @@ You can enable alerts to receive notifications on the status of your dataflow. S
 
 When you are finished providing details to your dataflow, select **[!UICONTROL Next]**.
 
-![A selection of different alert types that you can enable for your dataflow.]
+![A selection of different alert types that you can enable for your dataflow.](../../../../images/tutorials/create/campaign/alerts.png)
 
 ### Map data fields to an XDM schema
 
@@ -94,7 +94,7 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
-![mapping]
+![mapping](../../../../images/tutorials/create/campaign/mapping.png)
 
 ### Review your dataflow
 
@@ -105,4 +105,4 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![review]
+![review](../../../../images/tutorials/create/campaign/review.png)
