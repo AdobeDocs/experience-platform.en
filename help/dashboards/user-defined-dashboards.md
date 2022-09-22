@@ -31,9 +31,18 @@ The [!UICONTROL Create dashboard] dialog appears. Enter a human-friendly, descri
 
 The newly created blank dashboard appears with your chosen name in the top left corner of the view.
 
-## Create a widget
+## Create a widget {#create-widget}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_udd_maxwidgets"
+>title="Maximum number of widgets"
+>abstract="User-defined dashboards support up to ten widgets. After you have added ten widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray."
 
 From your new dashboard view, select **[!UICONTROL Add new widget]** to begin the widget creation process.
+
+>[!IMPORTANT]
+>
+>User-defined dashboards support up to ten widgets. After you have added ten widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray.
 
 ![The new empty dashboard with Add new widget highlighted.](./images/user-defined-dashboards/add-new-widget.png)
 
