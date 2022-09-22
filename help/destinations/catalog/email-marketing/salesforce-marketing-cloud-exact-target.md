@@ -201,7 +201,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Monitor the segment summary and ensure that the count of profiles corresponds to the count created within the segment.
 ![Platform UI screenshot example showing Segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
 
-1. Log in to the Salesforce Marketing Cloud website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the segment have been added.
+1. Log in to the [!DNL Salesforce Marketing Cloud](https://mc.exacttarget.com/) website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the segment have been added.
 ![Salesforce Marketing Cloud UI screenshot showing the Contacts page with profiles used in the segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
 1. To check if any profiles have been updated, navigate to the **[!DNL Email]** page and verify if the attribute values for the profile from the segment have been updated. If successful you can see that each segment status in [!Salesforce Marketing Cloud] was updated with the corresponding segment status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [segment scheduling](#schedule-segment-export-example) step.
