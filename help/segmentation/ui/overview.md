@@ -188,39 +188,43 @@ Schedules can currently only be created using the API. For detailed steps on cre
 
 ## Audiences {#audiences}
 
-Select the **Audiences** tab to see a list of all the audiences for your organization.
+Select the **[!UICONTROL Audiences]** tab to see a list of all the audiences for your organization.
 
-IMAGE.
+![A list of audiences for your organization.](../images/ui/overview/list-audiences.png)
 
 By default, this view lists information about the audiences including the name, profile count, origin, created date, and last modified date.
 
-You can select the ![Customize table]() icon to change which fields are displayed.
+You can select the ![Customize table](../images/ui/overview/customize-table.png) icon to change which fields are displayed.
 
-IMAGE
+NEED TO CREATE IMAGE
 
 A popover appears, listing all the fields that can be displayed within the table.
 
-IMAGE
+![The attributes that can be displayed for the browse Audiences section.](../images/ui/overview/customize-table-attributes.png)
 
 | Field | Description |
 | ----- | ----------- | 
 | Name | The name of the audience. |
 | Profile count | The total number of profiles that qualify for the audience. |
 | Origin | The origin of the audience. If this audience was Platform-generated, it will have an origin of Segmentation Service. |
-| Lifecycle status | |
-| Update frequency | |
+| Lifecycle status | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`.  |
+| Update frequency | A value that states how often the audience's data is updated. Possible values for this field include `On Demand`, `Scheduled`, and `Continuous`. |
 | Last updated by | The name of the person who last updated the audience. |
 | Created | The time and date the audience was created. | 
 | Last updated | The time and date the audience was last created. |
-| Access labels | |
+| Access labels | The access labels for the audience. Access labels allow you to categorize datasets and fields according to usage policies that apply to that data. These labels can be applied at any time, providing flexibility in how you choose to govern data. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
 
-Selecting **[!UICONTROL Create Audience]** will show a popover, letting you choose between composing an audience or building rules.
+You can select **[!UICONTROL Create Audience]** to create an audience. 
 
-IMAGE
+![The create audience button is highlighted, showing you where to select to create an audience.](../images/ui/overview/create-audience.png)
 
-Selecting **Compose Audiences** takes you to the Audience Builder. To learn more about creating audiences, please read the [Audience Builder guide](./audience-builder.md).
+A popover appears, letting you choose between composing an audience or building rules.
 
-Selecting **Build Rule** takes you to the Segment Builder. To learn more about creating segments, please read the [Segment Builder guide](./segment-builder.md)
+![A popover that displays the two types of audiences you can create.](../images/ui/overview/create-audience-type.png)
+
+Selecting **[!UICONTROL Compose Audiences]** takes you to the Audience Builder. To learn more about creating audiences, please read the [Audience Builder guide](./audience-builder.md).
+
+Selecting **[!UICONTROL Build Rule]** takes you to the Segment Builder. To learn more about creating segments, please read the [Segment Builder guide](./segment-builder.md)
 
 ## Audience details {#audience-details}
 
