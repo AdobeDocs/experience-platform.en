@@ -92,6 +92,10 @@ The [!UICONTROL Mapping] step appears, providing you with an interface to map th
 
 Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases. Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapper interface and calculated fields, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
+>[!IMPORTANT]
+>
+>When mapping your source fields to target XDM fields, you must ensure that you map your designated primary identity field to its appropriate target XDM field.
+
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
 ![A mapping tree with four source data fields mapped to their corresponding XDM schema fields.](../../../../images/tutorials/create/campaign/mapping.png)
