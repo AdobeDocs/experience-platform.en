@@ -8,15 +8,15 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 
 ## Overview {#overview}
 
-[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) (formerly known as ExactTarget) is a digital marketing suite that allows you to build and customize journeys for visitors and customers to personalize their experience.
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) (formerly known as [!DNL ExactTarget]) is a digital marketing suite that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
 >[!IMPORTANT]
 >
->Note the difference between this connection and the other [Salesforce Marketing Cloud connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection allows you to export files to a specified storage location, whereas this is an API-based streaming connection.
+>Note the difference between this connection and the other [[!DNL Salesforce Marketing Cloud] connection](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) that exists within the Email marketing catalog section. The other Salesforce Marketing Cloud connection allows you to export files to a specified storage location, whereas this is an API-based streaming connection.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, which allows you to add contacts / update contact data for your business needs after activating them within a new Salesforce segment.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, which allows you to add contacts / update contact data for your business needs after activating them within a new [!DNL Salesforce Marketing Cloud] segment.
 
-[!DNL Salesforce Marketing Cloud] uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the Salesforce REST API. Instructions to authenticate to your Salesforce instance are further below, in the [Authenticate to destination](#authenticate) section.
+[!DNL Salesforce Marketing Cloud] uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the [!DNL Salesforce Marketing Cloud] API. Instructions to authenticate to your [!DNL Salesforce Marketing Cloud] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
 ## Use cases {#use-cases}
 
@@ -32,23 +32,23 @@ The sales department of a home rental platform wants to broadcast a marketing em
 
 Before activating data to the [!DNL Salesforce Marketing Cloud] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
 
-### Prerequisites in Salesforce {#prerequisites-destination}
+### Prerequisites in [!DNL Salesforce Marketing Cloud] {#prerequisites-destination}
 
-Note the following prerequisites in Salesforce, in order to export data from Platform to your [!DNL Salesforce Marketing Cloud] account:
+Note the following prerequisites in order to export data from Platform to your [!DNL Salesforce Marketing Cloud] account:
 
-#### You need to have a Salesforce account {#prerequisites-account}
+#### You need to have a [!DNL Salesforce Marketing Cloud] account {#prerequisites-account}
 
-Go to the Salesforce [trial](https://www.salesforce.com/in/form/signup/freetrial-sales/) page to register and create a Salesforce account, if you do not have one already.
+Reach out to your [!DNL Salesforce Account Executive] to subscribe to the [!DNL Salesforce Marketing Cloud Account Engagement] product if you do not have it already.
 
-#### Create custom field within Salesforce {#prerequisites-custom-field}
+#### Create custom field within [!DNL Salesforce Marketing Cloud] {#prerequisites-custom-field}
 
-You must create a custom attribute of the type `Text Area Long`, which Experience Platform will use to update the segment status within Salesforce Marketing Cloud. In the workflow to activate segments to the destination, in the **[Segment schedule](#schedule-segment-export-example)** step, you will use the custom attribute as **[!UICONTROL Mapping ID]** for each segment you activate.
+You must create a custom attribute of the type `Text Area Long`, which Experience Platform will use to update the segment status within [!DNL Salesforce Marketing Cloud]. In the workflow to activate segments to the destination, in the **[Segment schedule](#schedule-segment-export-example)** step, you will use the custom attribute as **[!UICONTROL Mapping ID]** for each segment you activate.
 
 Refer to the [!DNL Salesforce Marketing Cloud] documentation to [create custom fields](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need additional guidance.
 
 >[!IMPORTANT]
 >
->Ensure you create the custom attribute under the `Email Demographics` attribute-set within your [!DNL Salesforce Marketing Cloud] account.
+> Ensure you create the custom attribute under the `Email Demographics` attribute-set within your [!DNL Salesforce Marketing Cloud] account.
 
 Refer to the Adobe Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
@@ -58,21 +58,21 @@ Note down the items below before you authenticate to the [!DNL Salesforce Market
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| <ul><li>[!DNL Salesforce Marketing Cloud] prefix</li></ul> | See [[!DNL Salesforce Marketing Cloud domain prefix]](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul>|
-|<ul><li>Client ID</li><li>Client Secret</li></ul> | Refer to the [Salesforce documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) if you need additional guidance. | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
+| <ul><li>[!DNL Salesforce Marketing Cloud] prefix</li></ul> | See [[!DNL Salesforce Marketing Cloud domain prefix]](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) for additional guidance. | <ul><li>If your domain is as below, you need the highlighted value.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul>|
+|<ul><li>Client ID</li><li>Client Secret</li></ul> | Refer to the [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) if you need additional guidance. | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
 
 {style="table-layout:auto"}
 
-## Limits in Salesforce {#limits}
+## Limits in [!DNL Salesforce Marketing Cloud] {#limits}
 * Salesforce imposes certain [rate limits](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting.html).
-    * Refer to the [Salesforce documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting-errors.html) to address any probable limits that you might encounter and reduce errors during execution.
+    * Refer to the [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting-errors.html) to address any probable limits that you might encounter and reduce errors during execution.
     * Refer to the [[!DNL Salesforce Marketing Cloud] Engagement Pricing](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) page to *Download the Full Edition Comparison Chart* as a pdf which details the limits imposed by your plan.
     * The [API overview](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) page details additional limits.
-    * Refer [here](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&text=As%20has%20been%20added%20in,interacting%20with%20the%20REST%2DAPI) for a page which collates these details.
+    * Refer [here](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits) for a page which collates these details.
 * The count of *custom fields allowed per object* varies according to your Salesforce Edition.
-    * Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5) for additional guidance.
-    * If you have reached the limit defined for *custom fields allowed per object* within Salesforce you will need to
-        * Remove older custom fields before adding new custom fields in Salesforce. 
+    * Refer to the [!DNL Salesforce] [documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5) for additional guidance.
+    * If you have reached the limit defined for *custom fields allowed per object* within [!DNL Salesforce Marketing Cloud] you will need to
+        * Remove older custom fields before adding new custom fields in [!DNL Salesforce Marketing Cloud]. 
         * Update or remove any destinations in Platform which use these older custom field names as the value provided for **[!UICONTROL Mapping ID]** during the [segment scheduling](#schedule-segment-export-example) step.
 
 ## Supported identities {#supported-identities}
@@ -81,7 +81,7 @@ Note down the items below before you authenticate to the [!DNL Salesforce Market
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-| contactKey |Salesforce Contact Key. Refer to the [Salesforce documentation](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5) if you need additional guidance.|Mandatory|
+| contactKey |[!DNL Salesforce Marketing Cloud] Contact Key. Refer to the [!DNL Salesforce Marketing Cloud] [documentation](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5) if you need additional guidance.|Mandatory|
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -110,10 +110,10 @@ To authenticate to the destination, fill in the required fields and select **[!U
 ![Platform UI screenshot showing how to authenticate to Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
 *  **[!UICONTROL Subdomain]**: Your [!DNL Salesforce Marketing Cloud] domain prefix. For example if your domain is *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, you need the highlighted value.
-*  **[!UICONTROL Client ID]**: Your Salesforce Client ID.
-*  **[!UICONTROL Client Secret]**: Your Salesforce Client Secret.
+*  **[!UICONTROL Client ID]**: Your [!DNL Salesforce Marketing Cloud] Client ID.
+*  **[!UICONTROL Client Secret]**: Your [!DNL Salesforce Marketing Cloud] Client Secret.
 
-If the details provided are valid, the UI displays a **Connected** status with a green check mark, you can then proceed to the next step.
+If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark, you can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
@@ -143,7 +143,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 
 >[!IMPORTANT]
 >
->Although your attribute names would be as per your Salesforce account, the mappings for both `contactKey` and `personalEmail.address` are mandatory.
+>Although your attribute names would be as per your [!DNL Salesforce Marketing Cloud] account, the mappings for both `contactKey` and `personalEmail.address` are mandatory.
 
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
@@ -160,7 +160,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
         |---|---|---|
         |`contactKey`|`salesforceContactKey`| Yes |
 
-    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the **[!UICONTROL Attribute name]** field. Refer to [[!DNL Salesforce REST API] documentation](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) for a list of supported attributes. Also note that the destination uses the [Salesforce Search Attribute-Set Definitions REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to retrieve attributes defined within Salesforce for your contacts and specific to your account.
+    * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the **[!UICONTROL Attribute name]** field. Refer to [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) for a list of supported attributes. Also note that the destination uses the [Salesforce Search Attribute-Set Definitions REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) to retrieve attributes defined within Salesforce for your contacts and specific to your account.
     ![Platform UI screenshot showing Target mapping.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/target-mapping-custom.png)
 
     * For instance, depending on the values you want to update, add the following mapping between your XDM profile schema and your [!DNL Salesforce Marketing Cloud] instance:
@@ -218,8 +218,8 @@ When checking a dataflow run, you might encounter the following error message: `
 
 ![Platform UI screenshot showing error.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
 
-To fix this error, verify that the **[!UICONTROL Mapping ID]** that you provided in [!DNL Salesforce Marketing Cloud] for your Platform segment is valid and exists within [!DNL Salesforce].
+To fix this error, verify that the **[!UICONTROL Mapping ID]** that you provided in [!DNL Salesforce Marketing Cloud] for your Platform segment is valid and exists within [!DNL Salesforce Marketing Cloud].
 
 ## Additional resources {#additional-resources}
 
-* [Salesforce developer portal](https://developer.salesforce.com/)
+* [!DNL Salesforce Marketing Cloud API's](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
