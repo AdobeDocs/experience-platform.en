@@ -15,7 +15,7 @@ Data Prep is an Adobe Experience Platform service that allows you to map, transf
 >* [Data Prep mapping functions](../../data-prep/functions.md)
 >* [Handling data formats with Data Prep](../../data-prep/data-handling.md)
 
-This guide covers how to map your data within the UI. To follow along with the steps, start the process of creating a datastream up to (and including) the [basic configuration step](./overview.md#create).
+This guide covers how to map your data within the Data Collection UI. To follow along with the steps, start the process of creating a datastream up to (and including) the [basic configuration step](./overview.md#create).
 
 For a quick demonstration of the Data Prep for Data Collection process, refer to the following video:
 
@@ -196,4 +196,4 @@ Once the required fields count reaches zero and you are satisfied with your mapp
 
 ## Next steps
 
-This guide covered how to map your data to XDM when setting up a datastream in the UI. If you were following general datastreams tutorial, you can now return to the step on [viewing datastream details](./overview.md).
+This guide covered how to map your data to XDM when setting up a datastream in the Data Collection UI. If you were following general datastreams tutorial, you can now return to the step on [viewing datastream details](./overview.md).

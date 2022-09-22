@@ -8,13 +8,13 @@ exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 
 A datastream represents the server-side configuration when implementing the Adobe Experience Platform Web and Mobile SDKs. While the [configure command](../fundamentals/configuring-the-sdk.md) in the SDK controls things that must be handled on the client (such as the `edgeDomain`), datastreams handle all other configurations for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the datastream. This allows you to update the server-side configuration without having to make code changes on your website. 
 
-This document covers the steps for configuring a datastream in the UI. 
+This document covers the steps for configuring a datastream in the Data Collection UI. 
 
 ## Access the [!UICONTROL Datastreams] workspace
 
-You can create and manage datastreams in the Data Collection UI or Experience Platform UI by selecting **[!UICONTROL Datastreams]** in the left navigation.
+You can create and manage datastreams in the Data Collection UI by selecting **[!UICONTROL Datastreams]** in the left navigation.
 
-![Datastreams tab in the UI](../images/datastreams/overview/datastreams-tab.png)
+![Datastreams tab in the Data Collection UI](../images/datastreams/overview/datastreams-tab.png)
 
 The [!UICONTROL Datastreams] tab displays a list of existing datastreams, including their friendly name, ID, and last modified date. Select the name of of a datastream to [view its details and configure services](#view-details).
 
@@ -100,7 +100,7 @@ This service controls whether and how data is sent to Adobe Audience Manager. Al
 
 >[!IMPORTANT]
 >
->When enabling a datastream for Platform, take note of the Platform sandbox that you are currently using, as displayed in the top ribbon of the UI.
+>When enabling a datastream for Platform, take note of the Platform sandbox that you are currently using, as displayed in the top ribbon of the Data Collection UI.
 >
 >![Selected sandbox](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -169,4 +169,4 @@ The main page of the [!UICONTROL Datastreams] workspace reappears with the new d
 
 ## Next steps
 
-This guide covered how to manage datastreams in the UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../collection/e2e.md#install).
+This guide covered how to manage datastreams in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../collection/e2e.md#install).
