@@ -33,9 +33,9 @@ In order to do this, you must configure roles, resources, and policies.
 
 You will:
 
-* [Label the roles for your users]{#label-roles}: Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
-* [Label your resources (schema fields and segments)]{#label-resources}: Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and segments.
-* [Create the policy that will link them together]{#policy}: Create a policy to link the labels on your resources to the labels in your role denying access to schema fields and segments. This will deny access to the schema field and segment in all sandboxes for users who do not have matching labels.
+* [Label the roles for your users](#label-roles): Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
+* [Label your resources (schema fields and segments)](#label-resources): Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and segments.
+* [Create the policy that will link them together](#policy): Create a policy to link the labels on your resources to the labels in your role denying access to schema fields and segments. This will deny access to the schema field and segment in all sandboxes for users who do not have matching labels.
 
 ## Permissions
 
