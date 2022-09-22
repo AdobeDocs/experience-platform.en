@@ -162,7 +162,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**, you will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 
-1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** category and select `crmID`.
+1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** or **[!UICONTROL Select Attributes]** category and select `crmID`.
 ![Platform UI screenshot example for Source mapping.](../../assets/catalog/crm/salesforce/source-mapping.png)
 
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** category and select `SalesforceId`.
