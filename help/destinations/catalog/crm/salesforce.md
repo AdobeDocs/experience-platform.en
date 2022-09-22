@@ -9,8 +9,9 @@ exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 ## Overview {#overview}
 
 [[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) is a popular Customer Relationship Management (CRM) platform and supports the below:
+
 * [Leads](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - A lead is the name of a person or company who may (or may not) be interested in the products or services you sell.
-* [Contacts](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - A contact is an individual with whom one of your representatives has established a relationship and has been qualified as a potential customer.	 
+* [Contacts](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - A contact is an individual with whom one of your representatives has established a relationship and has been qualified as a potential customer.     
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Salesforce composite API]](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm), which supports both types of profiles described above.
 
@@ -20,7 +21,7 @@ When [activating segments](#activate), you can select between either leads or co
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to Salesforce CRM, to display in the users’ feeds as soon as segments and profiles are updated in Adobe Experience Platform.
+As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to Salesforce CRM, to display in the users' feeds as soon as segments and profiles are updated in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -184,8 +185,8 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
     | XDM Profile Schema | [!DNL Salesforce CRM] Instance | Notes |
     | --- | --- | --- |
     |`person.name.lastName`|`LastName`| `Required`. Last name of the contact up to 80 characters. |    
-    |`person.name.firstName`|`FirstName`| The contact’s first name up to 40 characters. |
-    |`personalEmail.address`|`Email`| The contact’s email address. |
+    |`person.name.firstName`|`FirstName`| The contact's first name up to 40 characters. |
+    |`personalEmail.address`|`Email`| The contact's email address. |
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -197,8 +198,8 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
     | XDM Profile Schema | [!DNL Salesforce CRM] Instance | Notes |
     | --- | --- | --- |
     |`person.name.lastName`|`LastName`| `Required`. Last name of the contact up to 80 characters. |    
-    |`b2b.companyName`|`Company`| `Required`. The lead’s company. |
-    |`personalEmail.address`|`Email`| The contact’s email address. |
+    |`b2b.companyName`|`Company`| `Required`. The lead's company. |
+    |`personalEmail.address`|`Email`| The contact's email address. |
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-leads.png)    
