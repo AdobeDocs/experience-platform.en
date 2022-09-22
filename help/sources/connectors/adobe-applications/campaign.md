@@ -27,19 +27,19 @@ Before you can create a source connection to bring your Campaign v8 to Experienc
 
 Log in to your Campaign v8 instance through the Client Console. Under the [!DNL Explorer] tab, select [!DNL Administration] and then select [!DNL Configuration]. Next, select [!DNL Data schemas] and then apply the `broadLog` filter for name or label. In the list that appears, select the recipient delivery logs source schema with the name `broadLogRcp`.
 
-![step one explorer](./images/campaign/explorer.png)
+![The Adobe Campaign v8 client console with Explorer tab selected, the Administration, Configuration, and Data schemas nodes expanded and filtering set to "broad".](./images/campaign/explorer.png)
 
 Next, select the **Data** tab.
 
-![data tab](./images/campaign/data.png)
+![The Adobe Campaign v8 client console with the data tab selected.](./images/campaign/data.png)
 
 Right-click in the data panel to open the contextual menu. From here, select **Configure list...**
 
-![configure](./images/campaign/configure.png)
+![The Adobe Campaign v8 client console with the contextual menu open and the Configure list option selected.](./images/campaign/configure.png)
 
 The list configuration window appears, providing you with an interface where you can add any desired fields to the pre-existing list to view the data in the data panel. 
 
-![list configuration](./images/campaign/list-configuration.png)
+![A list of configurations for recipient delivery logs that can be added for viewing.](./images/campaign/list-configuration.png)
 
 Now you can view your recipient delivery logs, including the configuration fields added in the previous step.
 
@@ -47,7 +47,7 @@ Now you can view your recipient delivery logs, including the configuration field
 >
 >You can repeat the same steps, but filter for `tracking` to view your tracking log data.
 
-![](./images/campaign/recipient-delivery-logs.png)
+![The recipient delivery logs displayed with information on its last modified name, delivery channel, internal delivery name, and label.](./images/campaign/recipient-delivery-logs.png)
 
 ### Create a schema {#create-a-schema}
 

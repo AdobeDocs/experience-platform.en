@@ -70,13 +70,13 @@ To use an existing dataset, select **[!UICONTROL Existing dataset]**. You can ei
 
 With a dataset selected, provide a name for your dataflow and an optional description.
 
-![existing-dataset](../../../../images/tutorials/create/campaign/existing-dataset.png)
+![An interface displaying the existing dataset option.](../../../../images/tutorials/create/campaign/existing-dataset.png)
 
 ### Use a new dataset
 
 To use a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu. When finished, select **[!UICONTROL Next]**.
 
-![new-dataset](../../../../images/tutorials/create/campaign/new-dataset.png)
+![An interface displaying the new dataset option.](../../../../images/tutorials/create/campaign/new-dataset.png)
 
 ### Enable alerts
 
@@ -94,7 +94,7 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
-![mapping](../../../../images/tutorials/create/campaign/mapping.png)
+![A mapping tree with four source data fields mapped to their corresponding XDM schema fields.](../../../../images/tutorials/create/campaign/mapping.png)
 
 ### Review your dataflow
 
@@ -105,7 +105,7 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![review](../../../../images/tutorials/create/campaign/review.png)
+![A review page displaying connection and dataset information.](../../../../images/tutorials/create/campaign/review.png)
 
 ### Monitor your dataset activity
 
@@ -113,17 +113,17 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 To start viewing your dataset activity, select **[!UICONTROL Dataflows]** in the sources catalog.
 
-![dataflow](../../../../images/tutorials/create/campaign/dataflows.png)
+![The sources catalog page with the dataflows header tab selected.](../../../../images/tutorials/create/campaign/dataflows.png)
 
 Next, select the target dataset from the list of dataflows that appear.
 
-![target-dataset](../../../../images/tutorials/create/campaign/target-dataset.png)
+![A list of existing dataflows with the Adobe Campaign Delivery Logs target dataset selected.](../../../../images/tutorials/create/campaign/target-dataset.png)
 
 The dataset activity page appears. From here, you can see information on the performance of your dataflow, including rate of ingestion, successful batches, and failed batches. 
 
 This page also provides you with an interface to update the metadata description of your dataflow, enable partial ingestion and error diagnostics, as well as add new data to your dataset.
 
-![dataset-activity](../../../../images/tutorials/create/campaign/dataset-activity.png)
+![An interface with graphs representing the ingestion rate of a selected dataset.](../../../../images/tutorials/create/campaign/dataset-activity.png)
 
 ## Next steps
 
