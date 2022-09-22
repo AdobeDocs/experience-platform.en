@@ -1,15 +1,11 @@
 ---
 description: This configuration allows you to indicate basic information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
-title: (Beta) File-based destination configuration options for Destination SDK
+title: File-based destination configuration options for Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
 ---
-# (Beta) File-based destination configuration {#destination-configuration}
+# File-based destination configuration {#destination-configuration}
 
 ## Overview {#overview}
-
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 This configuration allows you to indicate essential information for your file-based destination, like your destination name, category, description, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
 

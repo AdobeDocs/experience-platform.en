@@ -12,12 +12,12 @@ The authentication configuration that you select determines how Experience Platf
 Adobe Experience Platform Destination SDK supports several authentication types:
 
 * [Bearer authentication](#bearer)
-* [(Beta) Amazon S3 authentication](#s3)
-* [(Beta) Azure Blob Storage](#blob)
-* [(Beta) Azure Data Lake Storage](#adls)
-* [(Beta) Google Cloud Storage](#gcs)
-* [(Beta) SFTP with SSH key](#sftp-ssh)
-* [(Beta) SFTP with password](#sftp-password)
+* [Amazon S3 authentication](#s3)
+* [Azure Blob Storage](#blob)
+* [Azure Data Lake Storage](#adls)
+* [Google Cloud Storage](#gcs)
+* [SFTP with SSH key](#sftp-ssh)
+* [SFTP with password](#sftp-password)
 * [OAuth 2 with authorization code](#oauth2)
 * [OAUth 2 with password grant](#oauth2)
 * [OAuth 2 with client credentials grant](#oauth2)
@@ -43,13 +43,9 @@ To set up bearer type authentication for your destination, configure the `custom
 ]
 ```
 
-## (Beta) [!DNL Amazon S3] authentication {#s3}
+## [!DNL Amazon S3] authentication {#s3}
 
 [!DNL Amazon S3] authentication is supported for file-based destinations in Experience Platform.
-
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 To set up Amazon S3 authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -61,13 +57,9 @@ To set up Amazon S3 authentication for your destination, configure the `customer
 ]
 ```
 
-## (Beta) [!DNL Azure Blob Storage] {#blob}
+## [!DNL Azure Blob Storage] {#blob}
 
 [!DNL Azure Blob Storage] authentication is supported for file-based destinations in Experience Platform.
-
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 To set up [!DNL Azure Blob] authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -79,13 +71,9 @@ To set up [!DNL Azure Blob] authentication for your destination, configure the `
 ]
 ```
 
-## (Beta) [!DNL Azure Data Lake Storage] {#adls}
+## [!DNL Azure Data Lake Storage] {#adls}
 
 [!DNL Azure Data Lake Storage] authentication is supported for file-based destinations in Experience Platform.
-
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 To set up [!DNL Azure Data Lake Storage] (ADLS) authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -97,13 +85,9 @@ To set up [!DNL Azure Data Lake Storage] (ADLS) authentication for your destinat
 ]
 ```
 
-## (Beta) [!DNL Google Cloud Storage] {#gcs}
+## [!DNL Google Cloud Storage] {#gcs}
 
 [!DNL Google Cloud Storage] authentication is supported for file-based destinations in Experience Platform.
-
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -114,13 +98,9 @@ To set up [!DNL Azure Data Lake Storage] (ADLS) authentication for your destinat
 ```
 
 
-## (Beta) [!DNL SFTP] authentication with [!DNL SSH] key {#sftp-ssh}
+## [!DNL SFTP] authentication with [!DNL SSH] key {#sftp-ssh}
 
 [!DNL SFTP] authentication with [!DNL SSH] key is supported for file-based destinations in Experience Platform.
-
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 To set up SFTP authentication with SSH key for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
@@ -132,13 +112,9 @@ To set up SFTP authentication with SSH key for your destination, configure the `
 ]
 ```
 
-## (Beta) [!DNL SFTP] authentication with password {#sftp-password}
+## [!DNL SFTP] authentication with password {#sftp-password}
 
 [!DNL SFTP] authentication with password is supported for file-based destinations in Experience Platform.
-
->[!IMPORTANT]
->
->File-based destination support in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 To set up SFTP authentication with password for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
