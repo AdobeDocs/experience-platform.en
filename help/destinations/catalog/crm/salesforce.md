@@ -68,8 +68,8 @@ Refer to the Salesforce documentation to [create custom fields](https://help.sal
 >[!NOTE]
 >
 >* Objects in Salesforce are restricted to 25 External fields, see [Custom Field Attributes](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5).
->* This restriction implies you will only be able to have at a maximum 25 Experience Platform segment memberships active at any time. 
->* If you have reached this limit within Salesforce, you will need to remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new **[!UICONTROL Mapping ID]** can be used.
+>* This restriction implies that you can only have a maximum of 25 Experience Platform segment memberships active at any time. 
+>* If you have reached this limit within Salesforce, you must to remove the custom attribute from Salesforce that were used to store the segment status against older segments within Experience Platform before a new **[!UICONTROL Mapping ID]** can be used.
 
 Refer to the Adobe Experience Platform documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on segment statuses.
 
@@ -88,7 +88,7 @@ Salesforce balances transaction loads by imposing request, rate and timeout limi
 
 >[!IMPORTANT]
 >
->When [activating segments](#activate) you will have to select between either *Contact* or *Lead* types. You will need to ensure that your segments have the appropriate data mapping according to the type selected.
+>When [activating segments](#activate) you must select between either *Contact* or *Lead* types. You need to ensure that your segments have the appropriate data mapping according to the type selected.
 
 ## Supported identities {#supported-identities}
 
@@ -96,7 +96,7 @@ Salesforce balances transaction loads by imposing request, rate and timeout limi
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-| `SalesforceId` | The [!DNL Salesforce CRM] identifier for the contact or lead identities you will export or update through your segment.|Mandatory|
+| `SalesforceId` | The [!DNL Salesforce CRM] identifier for the contact or lead identities that you export or update through your segment.|Mandatory|
 
 ## Export type and frequency {#export-type-frequency}
 
