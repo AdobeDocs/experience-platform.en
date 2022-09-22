@@ -248,7 +248,7 @@ Once you go through the workflow to create an instance and submit the configurat
 
 ![popover showing policy violation](../images/user-guide/policy-violation-popover-cai.png)
 
-The popover provides a specific information about the violation. You can resolve these violations through policy settings and other measures that aren't directly related to the configuration workflow. For example, you could change the labels so that certain fields are allowed to be used for data science purposes. Additionally, you could also modify the model configuration itself so that it doesn't use anything with a label on it. See the documentation to learn more about how to set up [policies](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html)
+The popover provides a specific information about the violation. You can resolve these violations through policy settings and other measures that aren't directly related to the configuration workflow. For example, you could change the labels so that certain fields are allowed to be used for data science purposes. Alternatively, you could also modify the model configuration itself so that it doesn't use anything with a label on it. See the documentation to learn more about how to set up [policies](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html)
 
 ## Attribute-based access control
 
