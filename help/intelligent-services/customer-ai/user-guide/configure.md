@@ -242,7 +242,7 @@ If the instance is created successfully, a prediction run is immediately trigger
 
 By following this section, you have configured an instance of Customer AI and executed a prediction run. Upon the run's successful completion, scored insights automatically populate profiles with predicted scores if the profile toggle is enabled. Please wait up to 24 hours before continuing to the next section of this tutorial.
 
-## Governance policy labels
+## Governance labels
 
 Once you go through the workflow to create an instance and submit the configuration of the model, the [policy enforcement service](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/auto-enforcement.html#data-usage-violation) checks to see if there are any violations. If a policy violation occurs, a popover appears indicating that one or more policies have been violated. This is to ensure that your data operations and marketing actions within Platform are compliant with data usage policies. 
 

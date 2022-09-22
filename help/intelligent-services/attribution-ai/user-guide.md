@@ -256,7 +256,7 @@ Once you have selected your training window, select **[!UICONTROL Finish]** in t
 
 ![setup complete](./images/user-guide/instance_setup_complete.png)
 
-## Governance policy labels
+## Governance labels
 
 Once you go through the workflow to create an instance and submit the configuration of the model, the [policy enforcement service](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/auto-enforcement.html#data-usage-violation) checks to see if there are any violations. If a policy violation occurs, a popover appears indicating that one or more policies have been violated. This is to ensure that your data operations and marketing actions within Platform are compliant with data usage policies. 
 
