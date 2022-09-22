@@ -33,9 +33,9 @@ In order to do this, you must configure roles, resources, and policies.
 
 You will:
 
-* [Label the roles for your users]{#label-roles}: Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
-* [Label your resources (schema fields and segments)]{#label-resources}: Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and segments.
-* [Create the policy that will link them together]{#policy}: Create a policy to link the labels on your resources to the labels in your role denying access to schema fields and segments. This will deny access to the schema field and segment in all sandboxes for users who do not have matching labels.
+* [Label the roles for your users](#label-roles): Use the example of a healthcare provider (ACME Business Group) whose marketing group works with external agencies.
+* [Label your resources (schema fields and segments)](#label-resources): Assign the **[!UICONTROL PHI/ Regulated Health Data]** label to schema resources and segments.
+* [Create the policy that will link them together](#policy): Create a policy to link the labels on your resources to the labels in your role denying access to schema fields and segments. This will deny access to the schema field and segment in all sandboxes for users who do not have matching labels.
 
 ## Permissions
 
@@ -156,7 +156,7 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
->abstract="A "deny access to" policy will deny users access when the criteria is met. When combined with "The following being false" - all users will be denied access unless they meet the matching criteria set.  This type of policy allows you to protect a sensitive resource and only allow access to users who have matching labels. A "permit access to" policy will permit users access when the criteria is met. When combined with "The following being true" - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
+>abstract="A "deny access to" policy will deny users access when the criteria is met. When combined with "The following being false" - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users who have matching labels. A "permit access to" policy will permit users access when the criteria is met. When combined with "The following being true" - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
