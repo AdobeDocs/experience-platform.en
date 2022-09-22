@@ -106,3 +106,28 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
 ![review](../../../../images/tutorials/create/campaign/review.png)
+
+### Monitor your dataset activity
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingested rates and successful and failed batches.
+
+To start viewing your dataset activity, select **[!UICONTROL Dataflows]** in the sources catalog.
+
+![dataflow](../../../../images/tutorials/create/campaign/dataflows.png)
+
+Next, select the target dataset from the list of dataflows that appear.
+
+![target-dataset](../../../../images/tutorials/create/campaign/target-dataset.png)
+
+The dataset activity page appears. From here, you can see information on the performance of your dataflow, including rate of ingestion, successful batches, and failed batches. 
+
+This page also provides you with an interface to update the metadata description of your dataflow, enable partial ingestion and error diagnostics, as well as add new data to your dataset.
+
+![dataset-activity](../../../../images/tutorials/create/campaign/dataset-activity.png)
+
+## Next steps
+
+By following this tutorial, you have successfully created a dataflow to bring your Campaign v8 delivery logs and tracking logs data to Platform. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+
+* [[!DNL Real-time Customer Profile] overview](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] overview](../../../../../data-science-workspace/home.md)

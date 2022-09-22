@@ -13,7 +13,7 @@ The Adobe Campaign Managed Services source allows you to bring Adobe Campaign v8
 
 ## Prerequisites 
 
-Before you can create a source connection to bring your Adobe Campaign Managed Services data to Experience Platform, you must first complete the following prerequisites:
+Before you can create a source connection to bring your Campaign v8 to Experience Platform, you must first complete the following prerequisites:
 
 * [Set up your event log import using the Adobe Campaign client console](#view-delivery-and-tracking-log-data)
 * [Create an XDM ExperienceEvent schema](#create-a-schema)
