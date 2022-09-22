@@ -1,5 +1,5 @@
 ---
-description: Adobe Experience Platform Destination SDK is a set of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The configurations are stored in Experience Platform and can be retrieved via API for additional updates.
+description: Adobe Experience Platform Destination SDK is a set of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint or storage location, based on data and authentication formats of your choice. The configurations are stored in Experience Platform and can be retrieved via API for additional updates.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 ---
@@ -7,9 +7,9 @@ exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 
 ## Overview {#destinations-sdk}
 
-Adobe Experience Platform Destination SDK is a suite of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The configurations are stored in Experience Platform and can be retrieved via API for additional updates.
+Adobe Experience Platform Destination SDK is a suite of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint or storage location, based on data and authentication formats of your choice. The configurations are stored in Experience Platform and can be retrieved via API for additional updates.
 
-The Destination SDK documentation provides instructions for you to use the Adobe Experience Platform Destination SDK to configure, test and release a productized destination integration with Adobe Experience Platform, and have your destination become part of the ever-growing destinations catalog.
+The Destination SDK documentation provides instructions for you to use the Adobe Experience Platform Destination SDK to configure, test and release a productized destination integration with Adobe Experience Platform, and have your destination become part of the ever-growing destinations catalog. By using Destination SDK, you can also create your own custom private destination to export data tailored to your needs.
 
 ![Destinations catalog overview](./assets/destinations-catalog-overview.png)
 
@@ -20,7 +20,7 @@ As a Destination SDK partner, you can benefit from adding your productized desti
 2. Introduce a branded destination card in the Experience Platform destinations catalog for simplified customer setup and awareness.
 3. Be featured as a productized destination integration with Adobe Experience Platform & Real-time Customer Data Platform.
 
-As an Experience Platform customer, you can author an own private custom destination, which can best suit your activation needs.
+As an Experience Platform customer, you can also author an own private custom destination, which can best suit your activation needs.
 
 ![Destination SDK visual diagram](./assets/destination-sdk-visual.png)
 
@@ -44,6 +44,10 @@ Through Destination SDK, Adobe Experience Platform supports real-time integratio
 * Configurable metadata integration to initialize audience setup and data transfer
 * Configurable authentication
 * A suite of testing & validation APIs for you to test and iterate your destination configurations
+
+Through Destination SDK, you can also set up integrations to periodically export files to the storage location of your choice. The real-time integration with Experience Platform supports capabilities like:
+* File export in several supported formats (CSV, Parquet, JSON)
+* Configurable file formatting options, which allow you to structure the format of the exported files to meet your downstream requirements.
 
 Read about the technical requirements on the destinations side in the [integration prerequisites](./integration-prerequisites.md) article.
 
