@@ -144,11 +144,11 @@ This widget enables you to optimize your segmentation strategy by visualizing th
 
 ### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-This widget tabularizes the audience overlap data for a specific segment. A list of five audiences ranked from highest to lowest overlap percentages is provided for the segment chosen from the drop down menu at the top of the screen. For clarity, your chosen segment is listed in the [!UICONTROL SEGMENT A NAME] column. Audience overlap analysis is provided for the second segment listed in the [!UICONTROL SEGMENT B NAME] column. The percentage overlap is provided in the third column to 12 decimal places.
+This widget tabularizes the audience overlap data for a specific segment. A list of five audiences ranked from highest to lowest overlap percentages is provided for the segment chosen from the dropdown menu at the top of the screen. For clarity, your chosen segment is listed in the [!UICONTROL SEGMENT A NAME] column. Audience overlap analysis is provided for the second segment listed in the [!UICONTROL SEGMENT B NAME] column. The percentage overlap is provided in the third column to 12 decimal places.
 
-The audience overlap report helps you to build new, high-performance segments. Observing high percentage overlaps enable you to suppress audiences and prevent sending the same audience to different destinations. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
+The audience overlap report helps you to build new, high-performance segments. Observing high percentage overlaps enables you to suppress audiences and prevent sending the same audience to different destinations. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
 
-Select **[!UICONTROL View more]** to open a full screen dialog that contains more segment overlap data.
+Select **[!UICONTROL View more]** to open a full-screen dialog that contains more segment overlap data.
 
 ![The Audience overlap report widget with View more highlighted .](../images/segments/audience-overlap-report.png)
 

@@ -299,11 +299,11 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-This widget tabularizes the audience overlap data from all available segments filtered by merge policy. A list of five audiences ranked from highest to lowest overlap percentages is provided for the merge policy chosen from the drop down menu at the top of the screen. The two analysed segments are listed in the [!UICONTROL SEGMENT A NAME] and [!UICONTROL SEGMENT B NAME] columns. The percentage overlap is provided in the third column to 12 decimal places.
+This widget tabularizes the audience overlap data from all available segments filtered by merge policy. A list of five audiences ranked from highest to lowest overlap percentages is provided for the merge policy chosen from the dropdown menu at the top of the screen. The two analyzed segments are listed in the [!UICONTROL SEGMENT A NAME] and [!UICONTROL SEGMENT B NAME] columns. The percentage overlap is provided in the third column to 12 decimal places.
 
-The audience overlap report helps you to build new, high-performance segments. Observing high percentage overlaps enable you to suppress audiences and prevent sending the same audience to different destinations. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
+The audience overlap report helps you to build new, high-performance segments. Observing high percentage overlaps enables you to suppress audiences and prevent sending the same audience to different destinations. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
 
-Select **[!UICONTROL View more]** to open a full screen dialog that contains more audience overlap data.
+Select **[!UICONTROL View more]** to open a full-screen dialog that contains more audience overlap data.
 
 ![The Audience overlap report widget with View more highlighted .](../images/profiles/profiles-audience-overlap-report.png)
 
