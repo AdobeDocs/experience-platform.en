@@ -7,7 +7,7 @@ description: Learn how to connect Campaign Managed Services to Platform using th
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Adobe Campaign Managed Cloud Services provides a Managed Services platform for designing cross-channel customer experiences and provides an environment for visual campaign orchestration, real time interaction management and cross channel execution. Visit the [Adobe Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) for more information.
+Adobe Campaign Managed Cloud Services provides a Managed Services platform for designing cross-channel customer experiences and provides an environment for visual campaign orchestration, real time interaction management, and cross-channel execution. Visit the [Adobe Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) for more information.
 
 The Adobe Campaign Managed Services source allows you to bring Adobe Campaign v8 delivery logs and tracking logs data to Adobe Experience Platform.
 
@@ -51,18 +51,17 @@ Now you can view your recipient delivery logs, including the configuration field
 
 ### Create a schema {#create-a-schema}
 
-Next, you must create an XDM ExperienceEvent schema for both delivery logs and tracking logs. You must apply the Campaign Delivery Logs field group to your delivery logs schema and the Campaign Tracking Logs field group to your tracking logs schema. You must also define the `externalID` field as the primary identity of your schema.
+Next, create an XDM ExperienceEvent schema for both delivery logs and tracking logs. You must apply the Campaign Delivery Logs field group to your delivery logs schema and the Campaign Tracking Logs field group to your tracking logs schema. You must also define the `externalID` field as the primary identity of your schema.
 
 >[!NOTE]
 >
->Your XDM ExperienceEvent schema must be Profile-enabled in order to ingest your Campaign data to Real-time Customer Profile.
+>Your XDM ExperienceEvent schema must be Profile-enabled in order to ingest your Campaign data to [!DNL Real-time Customer Profile].
 
 For detailed instructions on how to create a schema, read the guide on [creating an XDM schema in the UI](../../../xdm/tutorials/create-schema-ui.md).
 
 ### Create a dataset {#create-a-dataset}
 
 Finally, you must create a dataset for your schemas. For detailed instructions on how to create a dataset, read the guide on [creating a dataset in the UI](../../../catalog/datasets/user-guide.md).
-
 
 ## Create an Adobe Campaign Managed Services source connection using the Platform UI
 
