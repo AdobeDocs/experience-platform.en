@@ -254,6 +254,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
 ### Unknown errors encountered while pushing events to the destination {#unknown-errors}
+
 When checking a dataflow run, if you obtain the following error message: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
 
 ![Platform UI screenshot showing error.](../../assets/catalog/crm/salesforce/error.png)
