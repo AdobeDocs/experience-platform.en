@@ -144,11 +144,27 @@ This widget enables you to optimize your segmentation strategy by visualizing th
 
 ### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-This widget tabularizes the audience overlap data for a specific segment. The report provides an ordered list of audiences ranked by the highest or lowest overlap percentages for your chosen segment. 
+The audience overlap report helps you to build new, high-performance segments. Observing high percentage overlaps enable you to suppress audiences and prevent sending the same audience to different destinations. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
 
-![The Audience overlap report widget.]()
+This widget tabularizes the audience overlap data for a specific segment. A list of five audiences ranked from highest to lowest overlap percentages is provided for the segment chosen from the drop down menu at the top of the screen. For clarity, your chosen segment is listed in the [!UICONTROL SEGMENT A NAME] column. Audience overlap analysis is provided for the second segment listed in the [!UICONTROL SEGMENT B NAME] column. The percentage overlap is provided in the third column to 12 decimal places.
 
-Use the audience overlap analysis to build new, high-performance segments. High percentage overlaps enable you to prevent sending the same audience to different destinations and suppress them. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
+Select **[!UICONTROL View more]** to open a full screen dialog that contains more segment overlap data.
+
+![The Audience overlap report widget with View more highlighted .](../images/segments/audience-overlap-report.png)
+
+The Audience overlap report dialog appears. This dialog can contain up to six columns of information regarding the overlap. Select the settings icon (![The settings icon.](../images/segments/settings-icon.png)) to remove or add columns from the table.
+
+>[!NOTE]
+>
+>Select the [!UICONTROL Overlapping] column header to change the ranking of results between highest/lowest or lowest/highest.
+
+![The Audience overlap report dialog.](../images/segments/audience-overlap-report-dialog.png)
+
+Select a row from the report to open a Venn diagram of the overlap analysis. Hover over a section of the Venn diagram to see the profile count in a dialog.
+
+![The Audience overlap report dialog with a Venn diagram and a row highlighted.](../images/segments/audience-overlap-report-dialog-venn.png)
+
+Select **[!UICONTROL Close]** to return to the [!UICONTROL Segments] dashboard.
 
 <!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
