@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Segment Match FAQ
 description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
+exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
 ---
 # [!DNL Segment Match] frequently asked questions
 
