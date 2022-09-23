@@ -5,7 +5,11 @@ description: This guide provides sample HTTP requests and responses for the vari
 ---
 # Alert Subscriptions API Endpoint
 
-Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. The notification content is the same for in-Platform alerts and email alerts. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/). 
+Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. The notification content is the same for in-Platform alerts and email alerts. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+
+>[!IMPORTANT]
+>
+>To receive email alerts you must first enable this setting within the UI. See the documentation for [instructions on how to enable email alerts](../../observability/alerts/ui.md#enable-email-alerts).
 
 The table below explains the supported alert types for different types of queries: 
 
@@ -69,21 +73,39 @@ A successful response returns an HTTP 200 status and the `alerts` array with pag
             "id": "query_service_flow_run_start-dcf7b4be-ccd7-4c73-ae0c-a4bb34a40adada84",
             "status": "enabled",
             "alertType": "start",
-            "_links":{}
+            "_links":{
+                "self": {…},
+                "subscribe": {…},
+                "patch_status": {…},
+                "get_list_of_subscribers_by_alert_type": {…},
+                "delete": {…}
+            }
         },
         {
             "assetId": "0ca168f4-e46b-4f7f-be6a-bdc386271b4a",
             "id": "query_service_flow_run_success-dcf7b4be-ccd7-4c73-ae0c-a4bb34a40adada84",
             "status": "enabled",
             "alertType": "success",
-            "_links":{}
+            "_links":{
+                "self": {…},
+                "subscribe": {…},
+                "patch_status": {…},
+                "get_list_of_subscribers_by_alert_type": {…},
+                "delete": {…}
+            }
         },
         {
             "assetId": "700d43d9-3b99-4d4c-8dbb-29c911c0e0df",
             "id": "query_service_flow_run_start-75da972a-e859-47a5-934c-629904daa1ef",
             "status": "enabled",
             "alertType": "start",
-            "_links":{}
+            "_links":{
+                "self": {…},
+                "subscribe": {…},
+                "patch_status": {…},
+                "get_list_of_subscribers_by_alert_type": {…},
+                "delete": {…}
+            }
         }
     ], 
     "_page": {
