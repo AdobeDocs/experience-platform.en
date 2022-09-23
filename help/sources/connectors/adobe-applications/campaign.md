@@ -33,7 +33,7 @@ Next, select the **Data** tab.
 
 ![The Adobe Campaign v8 client console with the data tab selected.](./images/campaign/data.png)
 
-Right-click in the data panel to open the contextual menu. From here, select **Configure list...**
+Right-click/keystroke in the data panel to open the contextual menu. From here, select **Configure list...**
 
 ![The Adobe Campaign v8 client console with the contextual menu open and the Configure list option selected.](./images/campaign/configure.png)
 
