@@ -16,6 +16,10 @@ For more information on how to configure a datastream in the UI, see the [config
 
 ## Handling sensitive data in datastreams {#sensitive}
 
+>[!IMPORTANT]
+>
+>The content of this document is not legal advice and is not meant to substitute for legal advice. Please consult with your company's legal department for advice concerning the handling of sensitive data. 
+
 Legal regulations and organizational policies are increasing restrictions on how sensitive customer data can be collected and used. This includes healthcare related information which pertains to regulations like the Health Insurance Portability and Accountability Act (HIPAA).
 
 Datastreams employ three methods for securely handling sensitive data:
