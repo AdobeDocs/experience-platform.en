@@ -240,7 +240,7 @@ For more information on Platform-generated audiences, please read the [segment s
 
 On the top, there is a summary of the audience and details about the dataset the audience is saved in.
 
-IMAGE
+![The provided details for an externally generated audience.](../images/ui/overview/externally-generated-audience.png)
 
 The **[!UICONTROL Audience summary]** section provides information such as the ID, name, description, and details of the attributes.
 
