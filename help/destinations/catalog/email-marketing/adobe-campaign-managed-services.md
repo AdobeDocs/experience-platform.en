@@ -13,21 +13,22 @@ Use Campaign to:
 * Integrate email, mobile, online and offline channels into the customer journey,
 * Automate the delivery of meaningful and timely messages and offers.
 
-<!--## Use cases {#use-cases}
+Keep in mind the following guardrails when using the Adobe Campaign Managed Services connection:
 
-To help you better understand how and when you should use the *YourDestination* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+* A maximum of 50 segments can be activated for the destination,
+* For each segment, you can add up to 20 fields to map with Adobe Campaign,
+* Data retention on Azure blob storage Data Landing Zone (DLZ) : 7 day,
+* The activation frequency is 3 hours minimum.
 
-### Use case #1 {#use-case-1}
+>[!NOTE]
+>
+>You can run up to jobs simultaneously. Any additional job will enter a queue.
 
-*For mobile messaging platforms:*
+## Use cases {#use-cases}
 
-*A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
+To help you better understand how and when you should use the Adobe Campaign Manage Service destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #2 {#use-case-2}
-
-*For social network platforms:*
-
-*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YourDestination, to display ads in their customers' social media feeds.*-->
+A sport attire company wants to launch a cross-channel marketing campaign from their Campaign V8 instance to target a specific segment stored in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -57,12 +58,12 @@ In order for Campaign to be able to retrieve data from Adobe Experience Platform
 
 |Target Identity|Description|Considerations|
 |---|---|---|
+|external_id|Custom user IDs|Select this target identity when your source identity is a custom namespace. We recommend using this identity and mapping it to the ID in your Campaign instance that represents customer (loyalty_ID, account_ID, customer_ID...)|
 |ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|external_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
 {style="table-layout:auto"}
 
@@ -120,10 +121,6 @@ Read [Activate audience data to batch profile export destinations](https://exper
 
 Select XDM fields to export with the profiles and map them to the corresponding Adobe Campaign fields.[Learn more on identity and attributes selection for email marketing destinations](overview.md)
 
->[!IMPORTANT]
->
->You can add up to 20 fields to map with Adobe Campaign.
-
 1. Select source fields:
 
     * Select an **identifier** (For example: the email field) as source identity that uniquely identifies a profile in Adobe Experience Platform and Adobe Campaign.
@@ -147,17 +144,12 @@ Select XDM fields to export with the profiles and map them to the corresponding 
 
     ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
-1. Once mapping has been performed, you can review and complete the destionation configuration to start sending data to **[!DNL Campaign]**.
-[Learn how to review and complete destination configuration](/help/destinations/destination-types.md#review).|
-
-<!--NOTE
->
->For Campaign destination, you can run up to jobs simultaneously. Any additional job will enter a queue.
--->
+1. Once mapping has been performed, you can review and complete the destination configuration to start sending data to **[!DNL Campaign]**.
+[Learn how to review and complete destination configuration](/help/destinations/destination-types.md#review).
 
 ## Exported data / Validate data export {#exported-data}
 
-Once a destination has been activated, you can access the corresponding export job and exported data in Campaign.
+Once a destination has been activated, you can access the corresponding job and exported data in Campaign.
 
 ### Monitor data export jobs {#jobs}
 
@@ -174,4 +166,3 @@ Navigate to the **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
-
