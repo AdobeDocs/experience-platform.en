@@ -1,6 +1,6 @@
 ---
 title: User-Agent Client Hints 
-description: 
+description: Learn how User-Agent Client Hints work in Web SDK
 keywords: user-agent;client hints; string; user-agent string; low entropy; high entropy 
 ---
 
@@ -43,7 +43,7 @@ Adobe Experience Cloud solutions utilize the [!DNL User-Agent] strings in variou
 * Adobe Analytics utilizes the [!DNL User-Agent] string to create reports that describe the distributions of operating systems, browsers, and devices used to visit a website.
 * Adobe Audience Manager and Adobe Target qualify end-users for segmentation and personalization campaigns, based on the information provided by the [!DNL User-Agent] string.
 
-## User-Agent Client Hints {#ua-ch}
+## Introducing User-Agent Client Hints {#ua-ch}
 
 In recent years, site owners and marketing vendors have used [!DNL User-Agent] strings along with other information included in request headers to create digital fingerprints. These fingerprints can be used as a means of identifying users without their knowledge.
 
@@ -68,9 +68,9 @@ Additional Chromium-based browsers support the Client Hints API, such as:
 * [!DNL Opera for Android]
 * [!DNL Samsung Internet]
 
-## Client hints functionality {#functionality}
+## Categories {#categories}
 
-There are two categories of client hints:
+There are two categories of User-Agent Client Hints:
 
 * [Low entropy client hints](#low-entropy)
 * [High entropy client hints](#high-entropy)
@@ -81,7 +81,7 @@ Low entropy client hints include basic information which cannot be used to finge
 
 Low entropy client hints are enabled by default in Web SDK, and are passed on every request.
 
-|HTTP header|JavaScript|Included in User-Agent| Included in client hints|
+|HTTP header|JavaScript|Included in User-Agent by default| Included in client hints by default|
 |---|---|---|---|
 |`Sec-CH-UA`|`brands`|Yes|Yes|
 |`Sec-CH-UA-Platform`|`platform`|Yes|Yes|
@@ -91,7 +91,7 @@ Low entropy client hints are enabled by default in Web SDK, and are passed on ev
 
 High entropy client hints are more detailed information about the client device, such as platform version, architecture, model, bitness (64 bit or 32 bit platforms), or full operating system version. This information could potentially be used in fingerprinting.
 
-|HTTP header|JavaScript|User-Agent| Client Hint|
+|HTTP header|JavaScript|Included in User-Agent by default| Included in Client Hints by default|
 |---|---|---|---|
 |`Sec-CH-UA-Platform-Version`|`platformVersion`|Yes|No|
 |`Sec-CH-UA-Arc`|`architecture`|Yes|No|
@@ -101,9 +101,38 @@ High entropy client hints are more detailed information about the client device,
 
 High entropy client hints are disabled by default in Web SDK. To enable them you must manually configure the Web SDK to request high entropy client hints.
 
->[!IMPORTANT]
->
->Reports from Adobe Experience Cloud solutions which rely on high entropy client hints will not work if high entropy client hints are disabled.
+## High entropy client hints impact on Experience Cloud solutions {#impact-in-experience-cloud-solutions}
+
+Some Adobe Experience Cloud solutions rely on information included in high entropy client hints when generating reports.
+
+If high entropy client hints are disabled in your environment, the Adobe Analytics and Audience Manager reports and traits described below will not work.
+
+### Adobe Analytics reports relying on high entropy client hints {#analytics}
+
+The following Adobe Analytics reports will not work while high entropy client hints are disabled.
+
+* [Browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
+* [Browser type](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
+* [Operating system](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
+* [Operating system types](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
+* [Mobile dimensions](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+
+### Audience Manager traits relying on high entropy client hints {#aam}
+
+If your Audience Manager traits use any of the following properties, you must enable high entropy client hints. Otherwise, the traits will stop working.
+
+* Operating system version
+* Device model
+* Device manufacturer
+* Device vendor
+
+## Enabling high entropy client hints {#enabling-high-entropy-client-hints}
+
+To enable high entropy client hints on your Web SDK deployment, you must include the additional `highEntropyUserAgentHints` context option, as described in the [configuration documentation](configuring-the-sdk.md#context), alongside your existing configuration.
+
+For example, to retrieve high entropy client hints from web properties, your configuration would look like this:
+
+`context: ["highEntropyUserAgentHints", "web"]`
 
 ## Example {#example}
 
@@ -167,4 +196,3 @@ Below is an example of the JSON object that is returned by the [!DNL Client Hint
    "platformVersion":"12.2.1"
 }
 ```
-
