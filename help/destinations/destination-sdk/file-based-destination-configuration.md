@@ -597,6 +597,10 @@ This section refers to the UI elements in the configuration above that Adobe sho
 
 ## Destination delivery {#destination-delivery}
 
+The destination delivery section indicates where exactly the exported data will go and what authentication rule will be used in the location where the data will land. You are required to specify one or more `destinationServerId`s where the data will be delivered and and authentication rule. In most cases, the authentication rule that you will use is `CUSTOMER_AUTHENTICATION`.
+
+The `deliveryMatchers` section is optional and can be used if you are specifying multiple `destinationServerId`s. If that is the case, the `deliveryMatchers` section indicates how the exported data should be split between the various destination servers.
+
 ```json
  "destinationDelivery":[
       {
@@ -645,7 +649,15 @@ Through the `audienceTemplateId`, this section also ties together this configura
 
 ## Schema configuration in the mapping step {#schema-configuration}
 
+Adobe Experience Platform Destination SDK supports partner-defined schemas. A partner-defined schema allows users to map profile attributes and identities to custom schemas defined by destination partners, similar to the [streaming destinations](destination-configuration.md#schema-configuration) workflow.
+
 Use the parameters in `schemaConfig` to enable the mapping step of the destination activation workflow. By using the parameters described below, you can determine if Experience Platform users can map profile attributes and/or identities to your file-based destination.
+
+You can create static, hardcoded schema fields or you can specify a dynamic schema that Experience Platform should connect to in order to dynamically retrieve and populate fields in the target schema of the mapping workflow. The target schema is shown in the screenshot below. 
+
+![Screenshot highlighting the target schema fields in the mapping step of the activation workflow.](/help/destinations/destination-sdk/assets/target-schema-fields.png)
+
+### Static hardcoded schema field configuration
 
 ```json
 "schemaConfig":{
@@ -677,16 +689,14 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 ### Dynamic schema configuration in the mapping step {#dynamic-schema-configuration}
 
-Adobe Experience Platform Destination SDK supports partner-defined schemas. A partner-defined schema allows users to map profile attributes and identities to custom schemas defined by destination partners, similar to the [streaming destinations](destination-configuration.md#schema-configuration) workflow.
-
-Use the parameters in  `dynamicSchemaConfig` to define your own schema that Platform profile attributes and/or identities can be mapped to.
+Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own schema that Platform profile attributes and/or identities can be mapped to.
 
 ```json
 "schemaConfig":{
    "dynamicSchemaConfig":{
       "dynamicEnum": {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"{{destinationServerId}}",
+         "destinationServerId":"2aa8a809-c4ae-4f66-bb02-12df2e0a2279",
          "value": "Schema Name",
          "responseFormat": "SCHEMA"
       }
@@ -702,7 +712,7 @@ Use the parameters in  `dynamicSchemaConfig` to define your own schema that Plat
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
-|`destinationServerId` | String | The `instanceId` of the [destination server configuration](./destination-server-api.md) used for this destination. |
+|`destinationServerId` | String | The `instanceId` of the [destination server configuration](./destination-server-api.md) that you created for your dynamic schema. This destination server includes the HTTP endpoint which Experience Platform will call to retrieve the dynamic schema used to populate target fields. |
 |`authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via any of the following methods: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [Credentials](./credentials-configuration-api.md) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
 |`value`|String|The name of the schema to be displayed in the Experience Platform user interface, in the mapping step.|
 |`responseFormat`|String|Always set to `SCHEMA` when defining a custom schema.|
