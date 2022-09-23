@@ -9,7 +9,7 @@ exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 # Define enum fields in the UI {#enum}
 
 >[!CONTEXTUALHELP]
->id="platform_xdm_enumsuggestedvalue"
+>id="platform_xdm_enum_suggestedvalue"
 >title="Enums and suggested values"
 >abstract="An enum constrains a string field to only allow data that matches a predefined set of values to be ingested. Alternatively, you can define a set of suggested values for the field that do not restrict ingestion, but instead define the attributes that you can choose from in segmentation. See the documentation for more information."
 
