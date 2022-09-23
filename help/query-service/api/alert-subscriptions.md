@@ -452,7 +452,21 @@ A successful response returns HTTP status 200 and the `items` array with details
                 }
             }
         }
-    ]
+    ], "_page": {
+            "orderby": "-created",
+            "page": 1,
+            "count": 26,
+            "pageSize": 50
+        },
+    "_links": {
+        "next": {
+            "href": "https://platform-int.adobe.io/data/foundation/query/queries/alert-subscriptions?orderby=-created&page=2"
+        },
+        "prev": {
+            "href": "https://platform-int.adobe.io/data/foundation/query/queries/alert-subscriptions?orderby=-created&page=0"
+        }
+    },
+    "version": 1
 }
 ```
 
