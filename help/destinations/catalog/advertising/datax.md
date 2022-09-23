@@ -19,18 +19,7 @@ DataX is an aggregate Verizon Media/Yahoo infrastructure that hosts various comp
 
 This is a unique identifier in Yahoo DataX and it is a mandatory field for setting up data exports to this destination. If you don't know this ID, contact your Yahoo Data X account manager.
 
-**Rate Limit**
-
-DataX is rate-limited per the quota limits for taxonomy and audience posts outlined in the [DataX documentation](https://developer.verizonmedia.com/datax/guide/rate-limits/).
-
-
-|Error Code | Error Message | Description|
-|---------|----------|---------|
-| 429 Too many requests | Rate Limit exceeded per hour **(Limit: 100)** | Number of requests allowed in an hour per provider.|
-
-{style="table-layout:auto"}
-
-**Taxonomy Metadata**
+**Taxonomy metadata**
 
 The Taxonomy resource defines an extension over the Base DataX Metadata structure
 
@@ -54,6 +43,21 @@ The Taxonomy resource defines an extension over the Base DataX Metadata structur
 ```
 
 Read more about [Taxonomy Metadata](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) in the DataX developer documentation.
+
+## Rate limits and guardrails {#rate-limits-guardrails}
+
+>[!IMPORTANT]
+>
+>When activating segments to the Yahoo/DataX destination, it is recommended to activate less than 100 segments in one activation dataflow. Rate limiting errors can be returned by the destination when activating more than 100 segments. If you need to activate more segments, create a new destination on the same account.
+
+DataX is rate-limited per the quota limits for taxonomy and audience posts outlined in the [DataX documentation](https://developer.verizonmedia.com/datax/guide/rate-limits/).
+
+
+|Error Code | Error Message | Description|
+|---------|----------|---------|
+| 429 Too many requests | Rate Limit exceeded per hour **(Limit: 100)** | Number of requests allowed in an hour per provider.|
+
+{style="table-layout:auto"}
 
 ## Supported identities {#supported-identities}
 
