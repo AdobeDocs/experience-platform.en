@@ -42,7 +42,7 @@ The **Exclude** block allows you to exclude either specified sub-audiences or at
 
 To add an **Exclude** block, select the **+** icon, followed by **Exclude**.
 
-IMAGE TO BE MADE
+![The Exclude option is selected.](../images/ui/audience-builder/add-exclude-block.png)
 
 The **Exclude** block is added. When this block is selected, details about the exclusion appear in the right rail. This includes the block's label and exclusion type. You can either exclude by audience or by attribute.
 
@@ -52,7 +52,7 @@ The **Exclude** block is added. When this block is selected, details about the e
 
 If you exclude by audience, you can select which audiences you want to exclude from the new audience by selecting **[!UICONTROL Add Audience]**.
 
-IMAGE TO ADD
+![The Add audience button is selected, which lets you choose which audience you want to exclude.](../images/ui/audience-builder/add-excluded-audience.png)
 
 A list of audiences appears, where you can select the audiences you want to exclude from your new audience. Select **[!UICONTROL Add]** to add them to your exclude block.
 
@@ -74,7 +74,7 @@ The **Join** block allows you to add in external audiences from datasets that ha
 
 To dd a **Join** block, select the **+** icon, followed by **Join**.
 
-IMAGE TO ADD
+![The Join option is selected.](../images/ui/audience-builder/add-join-block.png)
 
 When you select the block, details about the join are shown in the right rail, including the block's label and the option to add audiences to the enrichment dataset.
 
@@ -86,7 +86,7 @@ After selecting **Add Audience**, a list of audiences appears. Select the audien
 
 Your selected audiences now appear within the right rail, when the **Join** block is selected. 
 
-IMAGE TO ADD
+![The audiences that were added as part of the Join are shown.](../images/ui/audience-builder/selected-audiences.png)
 
 ## Rank {#rank-block}
 
@@ -94,7 +94,7 @@ The **Rank** block allows you to rank and sort the audiences before your new aud
 
 To add a **Rank** block, select the **+** icon, followed by **Rank**.
 
-IMAGE TO ADD
+![The Rank option is selected.](../images/ui/audience-builder/add-rank-block.png)
 
 When you select the block, details about the ranking are shown in the right rail, including the block's label, the attribute to rank by, the ranking order, as well as a toggle for limiting the number of profiles to rank.
 
@@ -112,7 +112,7 @@ After selecting the attribute to rank the audience by, you can select the order 
 
 Additionally, you can limit the number of audiences returned by enabling the **[!UICONTROL Add profile limit]** toggle. When this toggle is enabled, you can set the maximum number of audiences returned within the **[!UICONTROL Included profiles]** field.
 
-IMAGE TO ADD
+![The Add profile limit toggle is highlighted, which lets you limit the number of audiences returned.](../images/ui/audience-builder/add-profile-limit.png)
 
 ## Split {#split-block}
 
@@ -120,7 +120,7 @@ The **Split** block allows you to split your new audience into various sub-audie
 
 To add a **Split** block, select the **+** icon, followed by **Split**.
 
-IMAGE TO ADD
+![The Split option is selected.](../images/ui/audience-builder/add-split-block.png)
 
 ### Split by percentage {#split-percentage}
 
@@ -128,7 +128,7 @@ When splitting by percentage, the audiences will be randomly split, based on the
 
 For example, you could have three paths, each with a differing percentage of profiles.
 
-IMAGE TO ADD
+![The breakdown in number of saved audiences and percentages is shown.](../images/ui/audience-builder/percentages.png)
 
 Additionally, you can mark one of the split audiences to be the control group.
 
@@ -144,10 +144,10 @@ A list of profile attributes appears, where you can select the attribute type yo
 
 ![A list of attributes is shown.](../images/ui/audience-builder/select-attribute.png)
 
-After selecting the attribute to split the audience by, you can choose which profiles will belong to which sub-audience by adding the values within the **Values** field.
+After selecting the attribute to split the audience by, you can choose which profiles will belong to which sub-audience by adding the values within the **[!UICONTROL Values]** field.
 
-IMAGE TO MARKUP
+![The values you want to split the attributes by are added.](../images/ui/audience-builder/attribute-split-values.png)
 
-Additionally, you can enable the **Other profiles** toggle to create a sub-audience that comprises of all the non-selected profiles.
+Additionally, you can enable the **[!UICONTROL Other profiles]** toggle to create a sub-audience that comprises of all the non-selected profiles.
 
-IMAGE TO MARKUP
+![The Other profiles toggle is highlighted.](../images/ui/audience-builder/attribute-split-other-profiles.png)

@@ -196,7 +196,7 @@ By default, this view lists information about the audiences including the name, 
 
 You can select the ![Customize table](../images/ui/overview/customize-table.png) icon to change which fields are displayed.
 
-NEED TO CREATE IMAGE
+![The customize table button is highlighted. Selecting this button allows you to customize the fields that are displayed on the Audiences browse page.](../images/ui/overview/select-customize-table.png)
 
 A popover appears, listing all the fields that can be displayed within the table.
 
