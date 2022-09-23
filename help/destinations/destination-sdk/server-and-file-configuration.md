@@ -11,11 +11,15 @@ exl-id: 56434e36-0458-45d9-961d-f6505de998f7
 >
 >The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
-This page details all server configuration options for your file-based destination servers and instructs you how to set up various file configuration options for users exporting files from Experience Platform to your destination.
+This page details all server configuration options for your file-based destination servers and shows how to set up various file configuration options for users exporting files from Experience Platform to your destination.
 
 The server and file configuration specs for file-based destinations can be configured in Adobe Experience Platform Destination SDK via the `/destination-servers` endpoint. Read [Destination server API endpoint operations](./destination-server-api.md) for a complete list of operations you can perform on the endpoint.
 
+The sections below include destination server specs specific to each supported batch destination type in Destination SDK.
+
 ## File-based Amazon S3 destination server spec {#s3-example}
+
+The sample below shows a correct destination server configuration for an Amazon S3 destination.
 
 ```json
 {
@@ -50,6 +54,8 @@ The server and file configuration specs for file-based destinations can be confi
 {style="table-layout:auto"}
 
 ## File-based SFTP destination server spec {#sftp-example}
+
+The sample below shows a correct destination server configuration for an SFTP destination.
 
 ```json
 {
@@ -89,6 +95,8 @@ The server and file configuration specs for file-based destinations can be confi
 
 ## File-based [!DNL Azure Data Lake Storage] ([!DNL ADLS]) destination server spec {#adls-example}
 
+The sample below shows a correct destination server configuration for an [!DNL Azure Data Lake Storage] destination.
+
 ```json
 {
    "name":"ADLS destination server",
@@ -116,6 +124,8 @@ The server and file configuration specs for file-based destinations can be confi
 {style="table-layout:auto"}
 
 ## File-based [!DNL Azure Blob Storage] destination server spec {#blob-example}
+
+The sample below shows a correct destination server configuration for an [!DNL Azure Blob Storage] destination.
 
 ```json
 {
@@ -151,6 +161,8 @@ The server and file configuration specs for file-based destinations can be confi
 
 ## File-based [!DNL Data Landing Zone] ([!DNL DLZ]) destination server spec {#dlz-example}
 
+The sample below shows a correct destination server configuration for a [!DNL Data Landing Zone] ([!DNL DLZ]) destination.
+
 ```json
 {
    "name":"DLZ destination server",
@@ -179,6 +191,8 @@ The server and file configuration specs for file-based destinations can be confi
 {style="table-layout:auto"}
 
 ## File-based [!DNL Google Cloud Storage] destination server spec {#gcs-example}
+
+The sample below shows a correct destination server configuration for a [!DNL Google Cloud Storage] destination.
 
 ```json
 {
@@ -218,7 +232,7 @@ This section describes the file formatting settings for the exported `CSV` files
 
 >[!NOTE]
 >
->CSV options are only supported when exporting CSV files. The `fileConfigurations` section is not mandatory when setting up a new destination server. If you don't pass any values in the API call for the CSV options, the default ones from the table below will be used.
+>CSV options are only supported when exporting CSV files. The `fileConfigurations` section is not mandatory when setting up a new destination server. If you don't pass any values in the API call for the CSV options, the default ones from the [reference table further below](#file-formatting-reference-and-example) will be used.
 
 ### File configurations with CSV options and the `templatingStrategy` set to `NONE`  {#file-configuration-templating-none}
 
@@ -328,11 +342,11 @@ In the configuration example below, none of the CSV options are fixed. The `valu
   }
 ```
 
-### Complete reference of file formatting options and examples {#file-formatting-reference-and-example}
+### Complete reference and examples for supported file formatting options {#file-formatting-reference-and-example}
 
 >[!TIP]
 >
->The CSV file formatting options described below are also documented in the [Apache Spark guide for CSV files](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). 
+>The CSV file formatting options described below are also documented in the [Apache Spark guide for CSV files](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). The descriptions used below are taken from the Apache Spark guide.
 
 Below is a complete reference of all available file formatting options in Destination SDK, alongside output examples for each option.
 

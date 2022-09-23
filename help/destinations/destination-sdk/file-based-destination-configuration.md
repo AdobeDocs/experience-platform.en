@@ -1,5 +1,5 @@
 ---
-description: This configuration allows you to indicate basic information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
+description: This configuration allows you to indicate essential information for your file-based destination, like your destination name, category, description, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
 title: File-based destination configuration options for Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
 ---
@@ -7,13 +7,15 @@ exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
 
 ## Overview {#overview}
 
-This configuration allows you to indicate essential information for your file-based destination, like your destination name, category, description, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
+This configuration allows you to indicate essential information for your file-based destination, like your destination name, category, description, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination. You can also use this configuration to display options related to the file type, file format, or compression settings of your exported files.
 
-This configuration also connects the other configurations required for your destination to work - destination server and audience metadata - to this one. Read how you can reference the two configurations in a [section further below](./destination-configuration.md#connecting-all-configurations).
+This configuration also connects the other configurations required for your destination to work - destination server and audience metadata - to this one. Read how you can reference the two configurations in a [section further below](./file-based-destination-configuration.md#connecting-all-configurations).
 
 You can configure the functionality described in this document by using the `/authoring/destinations` API endpoint. Read [Destinations API endpoint operations](./destination-configuration-api.md) for a complete list of operations you can perform on the endpoint.
 
 ## Amazon S3 destination configuration example {#batch-example-configuration}
+
+Below is an example of a private custom Amazon S3 destination created through the `/destinations` configuration endpoint.
 
 ```json
 {
@@ -358,9 +360,9 @@ When you configure the SFTP with SSH key authentication type, users are required
 
 Use this section to ask users to fill in custom fields, specific to your destination, when connecting to the destination in the Experience Platform UI.
 
-In the example below, `customerDataFields` requires users to enter a name for their destination and provide an [!DNL Amazon S3] bucket name and folder path, as well as a compression type, file format, and several other file export options.
+In the example below, `customerDataFields` requires users to enter a name for their destination and provide an [!DNL Amazon S3] bucket name and folder path, as well as a compression type, file format, and several other file formatting options.
 
-You can access and use the customer inputs from customer data fields in templating. Use the macro `{{customerData.name}}`. For example, if you ask users to input an Amazon S3 bucket field, with the name `bucket`, you can access it in templating by using the macro `{{customerData.bucket}}`. View an example of how a customer data field is used in the [destination server configuration](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
+You can access and use the customer inputs from customer data fields in templating. Use the macro `{{customerData.exampleName}}`. For example, if you ask users to input an Amazon S3 bucket field, with the name `bucket`, you can access it in templating by using the macro `{{customerData.bucket}}`. View an example of how a customer data field is used in the [destination server configuration](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[
@@ -548,6 +550,10 @@ You can access and use the customer inputs from customer data fields in templati
       }
 ```
 
+>[!TIP]
+>
+>All the file formatting configurations listed in the example above are described at length in the [file formatting configuration](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) section.
+
 |Parameter | Type | Description|
 |---------|----------|------|
 |`name` | String | Provide a name for the custom field you are introducing. |
@@ -568,7 +574,7 @@ This section refers to the UI elements in the configuration above that Adobe sho
 ```json
 "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/YOURDESTINATION-en",
-      "category":"S3",
+      "category":"cloudStorage",
       "iconUrl":"https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
       "connectionType":"S3",
       "flowRunsSupported":true,
@@ -581,7 +587,7 @@ This section refers to the UI elements in the configuration above that Adobe sho
 |---------|----------|------|
 |`documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en`. Note that this link works only after Adobe sets your destination live and the documentation is published. |
 |`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
-|`iconUrl`|String|The URL where you hosted the icon to be displayed in the destinations catalog card.|
+|`iconUrl`|String|The URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](/help/destinations/destination-sdk/submit-destination.md#logo).  |
 |`connectionType` | String | The type of connection, depending on the destination. Supported values: <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul>|
 |`flowRunsSupported`|Boolean| Indicates whether the destination connection is included in the [flow runs UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard). When setting this to `true`: <ul><li>The **[!UICONTROL Last dataflow run date]** and **[!UICONTROL Last dataflow run status]** are displayed in the destination browse page.</li><li>The **[!UICONTROL Dataflow runs]** and **[!UICONTROL Activation data]** tabs are displayed in the destination view page.</li></ul>|
 |`monitoringSupported`|Boolean|Indicates whether the destination connection is included in the [monitoring UI](../ui/destinations-workspace.md#browse). When setting this to `true`, the **[!UICONTROL View in monitoring]** option is displayed in the destination browse page.| 
@@ -710,7 +716,7 @@ The parameters in this section determine which identities your destination accep
 
 ```json
 "identityNamespaces": {
-        "adobe_id": {
+        "crm_id": {
             "acceptsAttributes": true,
             "acceptsCustomNamespaces": true
         },
@@ -726,9 +732,9 @@ You must indicate which [!DNL Platform] identities customers are able to export 
 Identity namespaces do not require a 1-to-1 correspondence between [!DNL Platform] and your destination.
 For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or they can map the same [!DNL Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
 
-## Batch configuration {#batch-configuration}
+## Batch configuration - File naming and export scheduling {#batch-configuration}
 
-This section refers to the file export settings in the configuration above that Adobe should use for your destination in the Adobe Experience Platform user interface.
+This section refers to the file naming and export scheduling settings that will be displayed for your destination in the Adobe Experience Platform user interface. The values that you set up here are surfaced in the [Schedule segment export](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) step of the file-based destinations activation workflow. 
 
 ```json
 "batchConfig":{
@@ -786,7 +792,10 @@ This section refers to the file export settings in the configuration above that 
 
 Use file name configuration macros to define what the exported file names should include. The macros in the table below describe elements found in the UI in the [file name configuration](../ui/activate-batch-profile-destinations.md#file-names) screen.
 
-As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well.
+
+>[!TIP]
+> 
+>As a best practice, you should always include the `SEGMENT_ID` macro in your exported file names. Segment IDs are unique, so including them in the file name is the best way to ensure that file names are unique as well. 
 
 |Macro|UI label|Description|Example|
 |---|---|---|---|
@@ -839,7 +848,7 @@ You can use the `backfillHistoricalProfileData` parameter in the destinations co
 
 ## How this configuration connects all necessary information for your destination {#connecting-all-configurations}
 
-Some of your destination settings must be configured through the [destination server](./server-and-file-configuration.md) or the [audience metadata configuration](./audience-metadata-management.md). The destination configuration described here connects all these settings by referencing the two other configurations as follows:
+Some of your destination settings must be configured through the [destination server](./server-and-file-configuration.md) or the [audience metadata configuration](./audience-metadata-management.md) endpoints. The destination configuration described here connects all these settings by referencing the two other configurations as follows:
 
-* Use the `destinationServerId` to reference the destination server and template configuration set up for your destination.
+* Use the `destinationServerId` to reference the destination server and file template configuration set up for your destination.
 * Use the `audienceMetadataId` to reference the audience metadata configuration set up for your destination.
