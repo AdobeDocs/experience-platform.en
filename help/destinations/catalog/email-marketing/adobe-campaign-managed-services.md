@@ -13,12 +13,14 @@ Use Campaign to:
 * Integrate email, mobile, online and offline channels into the customer journey,
 * Automate the delivery of meaningful and timely messages and offers.
 
-Keep in mind the following guardrails when using the Adobe Campaign Managed Services connection:
-
-* A maximum of 50 segments can be activated for the destination,
-* For each segment, you can add up to 20 fields to map to Adobe Campaign,
-* Data retention on Azure blob storage Data Landing Zone (DLZ) : 7 day,
-* The activation frequency is 3 hours minimum.
+>[!IMPORTANT]
+>
+>Keep in mind the following guardrails when using the Adobe Campaign Managed Services connection:
+>
+>* A maximum of 50 segments can be [activated](#activate) for the destination,
+>* For each segment, you can add up to 20 fields to [map](#map) to Adobe Campaign,
+>* Data retention on Azure Blob storage Data Landing Zone (DLZ) : 7 day,
+>* The activation frequency is 3 hours minimum.
 
 ## Use cases {#use-cases}
 
