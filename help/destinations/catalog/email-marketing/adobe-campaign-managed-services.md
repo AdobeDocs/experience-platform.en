@@ -16,7 +16,7 @@ Use Campaign to:
 Keep in mind the following guardrails when using the Adobe Campaign Managed Services connection:
 
 * A maximum of 50 segments can be activated for the destination,
-* For each segment, you can add up to 20 fields to map with Adobe Campaign,
+* For each segment, you can add up to 20 fields to map to Adobe Campaign,
 * Data retention on Azure blob storage Data Landing Zone (DLZ) : 7 day,
 * The activation frequency is 3 hours minimum.
 
