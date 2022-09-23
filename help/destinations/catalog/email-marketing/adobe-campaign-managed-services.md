@@ -20,15 +20,13 @@ Keep in mind the following guardrails when using the Adobe Campaign Managed Serv
 * Data retention on Azure blob storage Data Landing Zone (DLZ) : 7 day,
 * The activation frequency is 3 hours minimum.
 
->[!NOTE]
->
->You can run up to jobs simultaneously. Any additional job will enter a queue.
-
 ## Use cases {#use-cases}
 
 To help you better understand how and when you should use the Adobe Campaign Manage Service destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
-A sport attire company wants to launch a cross-channel marketing campaign from their Campaign V8 instance to target a specific segment stored in Adobe Experience Platform.
+A sport attire company wants to launch a cross-channel marketing campaign from their Campaign V8 instance to target a specific segment stored in Adobe Experience Platform. Once messages have been sent, they want Adobe Campaign delivery and tracking logs to be sent over to Adobe Experience Platform.
+
+To complete this use case, they need to integrate their Campaign instance with both Adobe Campaign Managed Service destination and source connections. [Learn more on Adobe Campaign integration with Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
 ## Prerequisites {#prerequisites}
 
