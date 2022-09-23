@@ -11,7 +11,7 @@ exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
 >title="Enums and suggested values"
->abstract="An enum constrains a string field to only allow data that matches a predefined set of values to be ingested. Alternatively, you can define a set of suggested values for the field that do not restrict ingestion, but instead define the attributes that you can choose from in segmentation. If you have multiple schemas that share a field belonging to a common class or field group, and you define different enums or suggested values for that field between each schema, those values are merged and appended in the union schema."
+>abstract="An **Enum** constrains a string field to only allow data that matches a predefined set of values to be ingested. Each constraint can be assigned a **Display name** that populates attribute dropdowns in the Segmentation UI. **Suggested values** for a field do not restrict ingestion and only determine the display names shown in Segmentation. If you have multiple schemas that share a field belonging to a common class or field group, and you define different enums or suggested values for that field between each schema, those values are merged and appended in the union schema."
 
 In Experience Data Model (XDM), a string field can be given a predefined set of accepted or suggested values to better control what values are ingested into that field or how it will behave in segmentation.
 
