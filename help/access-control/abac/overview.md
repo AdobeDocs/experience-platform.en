@@ -14,7 +14,7 @@ Attribute-based access control is a capability of Adobe Experience Platform that
 
 This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
 
-Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 ## Attribute-based access control terminology
 
@@ -56,7 +56,7 @@ Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product
 
 For more information on access control, see the [access control overview](../home.md).
 
-### Destinations
+### Destinations {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
@@ -66,6 +66,14 @@ As an administrator, you can use attribute-based access control functionalities 
   * In the activation process, users may be required to select segments they want to activate to a destination. As an administrator, you can provision users in your organization to only see segments that are labelled with labels that users have access to, and segments that do not contain any labels.
 * Configure user access to view specific fields in the activation process, based on role, permissions, and labels;
   * In the activation process, users may be required to select fields they want to activate to a destination. As an administrator, you can provision users in your organization to only see fields that are labelled with labels that users have access to, and fields that do not contain any labels.
+
+>[!IMPORTANT]
+>
+>In summary, keep in mind the following implications when working with destinations and attribute-based access control:
+>
+>* You can only activate segments that you have permission to access and view in the [segment browse view](/help/segmentation/ui/overview.md#browse) and [select segment step](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) of the activation workflow.
+>* In the [mapping step of the activation workflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), you can only view and select for activation the fields that you have access permission to.
+>* When you are looking to activate additional segments to an existing destination where you do not have access to all the fields that are mapped for export, the activation workflow will be blocked for you. 
 
 For more information on [!DNL Destinations], refer to the [[!DNL Destinations] overview](../../destinations/home.md).
 
