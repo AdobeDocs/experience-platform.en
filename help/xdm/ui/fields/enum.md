@@ -9,7 +9,7 @@ exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 # Define enums and suggested values in the UI {#enums-and-suggested-values}
 
 >[!CONTEXTUALHELP]
->id="platform_xdm_enumsuggestedvalue"
+>id="platform_xdm_enum_suggestedvalue"
 >title="Enums and suggested values"
 >abstract="An enum constrains a string field to only allow data that matches a predefined set of values to be ingested. Alternatively, you can define a set of suggested values for the field that do not restrict ingestion, but instead define the attributes that you can choose from in segmentation. If you have multiple schemas that share a field belonging to a common class or field group, and you define different enums or suggested values for that field between each schema, those values are merged and appended in the union schema."
 
