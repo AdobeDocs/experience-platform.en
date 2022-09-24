@@ -482,6 +482,37 @@ To return the value for any setting, use `SET [property key]` without a `propert
 
 The sub-sections below cover the PostgreSQL commands supported by Query Service.
 
+### ANALYZE TABLE
+
+The `ANALYZE TABLE` command computes statistics for a table on the accelerated store. The statistics are calculated on executed CTAS or ITAS queries for a given table on accelerated store.
+
+The following SQL queries show examples of computing statistics for the table on accelerated store.
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+The following is a list of statistical functions that are available for computation with the `ANALYZE TABLE` command:-
+
+| Name | Description |
+|---|---|
+| field  | The name of the field.  |
+| data-type | The enumerate JSON data type. |
+| count | The number of rows that contain a non-null value for this field. |
+| distinct-count | The number of unique or distinct values in this field |
+| missing | The number of rows that have a null value for this field. |
+| max | The maximum ...  |
+| min | The minimum ... |
+| mean | The average ...  |
+| stdev | The standard deviation of ... |
+
+<!--
+Q) why is field and data-type in the same table as statistical functions?
+Q) what does 'this field' mean?
+Q) what does 'The name of the field.' mean?
+Q) can you provide an example of these in use? 
+-->
+
 ### BEGIN
 
 The `BEGIN` command, or alternatively the `BEGIN WORK` or `BEGIN TRANSACTION` command, initiates a transaction block. Any statements that are inputted after the begin command will be executed in a single transaction until an explicit COMMIT or ROLLBACK command is given. This command is the same as `START TRANSACTION`.
