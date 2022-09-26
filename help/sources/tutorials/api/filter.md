@@ -98,16 +98,18 @@ A successful response returns the connection specifications for [!DNL Google Big
 | `attributes.filterAtSource.columnNameEscapeChar` | Determines the character to use to escape columns. |
 | `attributes.filterAtSource.valueEscapeChar` | |
 
+{style="table-layout:auto"}
+
 #### Comparison operators
 
-| Operator | Description | Example |
-| --- | --- | --- |
-| `==` | Filters by whether the property equals the provided value. | `property=title==test` |
-| `!=` | Filters by whether the property does not equal the provided value. | `property=title!=test` |
-| `<` | Filters by whether the property is less than the provided value. | `property=version<5` |
-| `>` | Filters by whether the property is greater than the provided value. | `property=version>5` |
-| `<=` | Filters by whether the property is less than or equal to the provided value. | `property=version<=5` |
-| `>=` | Filters by whether the property is greater than or equal to the provided value. | `property=version>=5` |
+| Operator | Description |
+| --- | --- |
+| `==` | Filters by whether the property equals the provided value. |
+| `!=` | Filters by whether the property does not equal the provided value. |
+| `<` | Filters by whether the property is less than the provided value. |
+| `>` | Filters by whether the property is greater than the provided value. |
+| `<=` | Filters by whether the property is less than or equal to the provided value. |
+| `>=` | Filters by whether the property is greater than or equal to the provided value. |
 
 {style="table-layout:auto"}
 
