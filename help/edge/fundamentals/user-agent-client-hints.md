@@ -40,7 +40,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 Adobe Experience Cloud solutions utilize the [!DNL User-Agent] strings in various ways.
 
-* Adobe Analytics utilizes the [!DNL User-Agent] string to create reports that describe the distributions of operating systems, browsers, and devices used to visit a website.
+* Adobe Analytics utilizes the [!DNL User-Agent] string to augment and derive additional information related to operating systems, browsers, and devices used to visit a website.
 * Adobe Audience Manager and Adobe Target qualify end-users for segmentation and personalization campaigns, based on the information provided by the [!DNL User-Agent] string.
 
 ## Introducing User-Agent Client Hints {#ua-ch}
@@ -105,7 +105,7 @@ High entropy client hints are disabled by default in Web SDK. To enable them you
 
 Some Adobe Experience Cloud solutions rely on information included in high entropy client hints when generating reports.
 
-If high entropy client hints are disabled in your environment, the Adobe Analytics and Audience Manager reports and traits described below will not work.
+If you do not enable high entropy client hints in your environment, the Adobe Analytics and Audience Manager reports and traits described below will not work.
 
 ### Adobe Analytics reports relying on high entropy client hints {#analytics}
 
