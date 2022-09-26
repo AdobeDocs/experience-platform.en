@@ -34,13 +34,19 @@ All data in transit though the Edge Network is is conducted over secure, encrypt
 
 ### Data governance {#governance}
 
-Datastreams leverage Experience Platform's built-in data governance capabilities to prevent data from being sent to non-HIPAA-ready services. In Platform, you can apply [sensitive data usage labels](../../data-governance/labels/reference.md#sensitive) to schemas and fields containing data that your organization deems sensitive. Specifically, the `RHD` label is used to denote protected health information (PHI).
+Datastreams leverage Experience Platform's built-in data governance capabilities to prevent sensitive data from being sent to non-HIPAA-ready services. By labeling specific fields that contain sensitive data in your datastream schemas, you can take granular control over which data fields can be used for specific purposes.
+
+The following video provides a brief overview of how data usage restrictions are configured and enforced for datastreams in the UI:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
+
+In Platform, you can apply [sensitive data usage labels](../../data-governance/labels/reference.md#sensitive) to schemas and fields containing data that your organization deems sensitive. For example, the `RHD` label is used to denote protected health information (PHI), and the `S1` label represents geolocation data.
 
 >[!NOTE]
 >
 >For details on how to apply data usage labels within the [!UICONTROL Schemas] tab in the Platform UI or Data Collection UI, see the [schema labeling tutorial](../../xdm/tutorials/labels.md).
 
-When creating a new datastream, if the selected schema contains an `RHD` label, the datastream can only be configured to send that data to HIPAA-ready destinations. Currently, the only HIPAA-ready destination supported by datastreams is Adobe Experience Platform. Other destination services including Adobe Target, Adobe Analytics, Adobe Audience Manager, event forwarding, and edge destinations are disabled for datastreams containing sensitive labels.
+When creating a new datastream, if the selected schema contains sensitive labels, the datastream can only be configured to send that data to HIPAA-ready destinations. Currently, the only HIPAA-ready destination supported by datastreams is Adobe Experience Platform. Other destination services including Adobe Target, Adobe Analytics, Adobe Audience Manager, event forwarding, and edge destinations are disabled for datastreams containing sensitive labels.
 
 If a schema is being used in an existing datastream with non-HIPAA-ready services, attempting to add a sensitive label to the schema results in a policy violation message and the action is prevented. The message specifies which datastream triggered the violation and suggests to remove any non-HIPAA-ready services from the datastream to resolve the issue.
 
