@@ -6,13 +6,13 @@ title: Learn how to use Destination SDK to configure file formatting options for
 
 ## Overview {#overview}
 
-Destination SDK allows you to extensively adjust the formatting and compression options of your exported files, to match any downstream requirements in your data ingestion location. 
+Destination SDK allows you to extensively adjust the formatting and compression options of your exported files, to match any downstream requirements in your storage location. 
 
 This page describes how to use Destination SDK to configure file formatting options for file-based destinations.
 
-Adobe recommends that you read the following documentation as well:
+Adobe recommends that you read the following documentation as well before proceeding:
 
-* The individual file formatting options are documented individually in the [File formatting configuration](../../server-and-file-configuration.md#file-configuration) section.
+* The individual file formatting options are documented individually in the [file formatting configuration](../../server-and-file-configuration.md#file-configuration) section.
 * Complete steps to [configure a file-based destination](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) using Destination SDK.
 
 ## Prerequisites {#prerequisites}
@@ -62,7 +62,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
   "fileConfigurations": {
     "compression": {
       "templatingStrategy": "PEBBLE_V1",
-      "value": "{% if customerData.compression is empty %}NONE{% else %}{{customerData.compression}}{% endif %}"
+      "value": "{% if customerData contains 'compression' and customerData.compression is not empty %}{{customerData.compression}}{% else %}NONE{% endif %}"
     },
     "fileType": {
       "templatingStrategy": "PEBBLE_V1",
@@ -71,23 +71,23 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
     "csvOptions": {
       "sep": {
         "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData.delimiter is not empty %}{{customerData.delimiter}}{% else %},{% endif %}"
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'delimiter' %}{{customerData.csvOptions.delimiter}}{% else %},{% endif %}"
       },
       "quote": {
         "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData.quote is not empty %}{{customerData.quote}}{% else %}\\u0000{% endif %}"
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'quote' %}{{customerData.csvOptions.quote}}{% else %}\"{% endif %}"
       },
       "escape": {
         "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData.escape is not empty %}{{customerData.escape}}{% else %}\\{% endif %}"
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'escape' %}{{customerData.csvOptions.escape}}{% else %}\\{% endif %}"
       },
       "nullValue": {
         "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData.nullValue is not empty %}{{customerData.nullValue}}{% else %}null{% endif %}"
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'nullValue' %}{{customerData.csvOptions.nullValue}}{% else %}null{% endif %}"
       },
       "emptyValue": {
         "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData.emptyValue is not empty %}{{customerData.emptyValue}}{% else %}{% endif %}"
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
       }
     }
   }
@@ -99,7 +99,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TIP]
 >
->**Verify the Experience Platform UI**. As you configure the file formatting options with the configurations demonstrated in the sections below, you should check the Experience Platform UI for how these are rendered.
+>**Verify the Experience Platform UI**. As you configure the file formatting options with the configurations demonstrated in the sections below, you should check the Experience Platform UI for how these options are rendered.
 
 After adding the desired file formatting options to the destination server and file formatting configuration in the previous step, you can now use the `/destinations` API endpoint to add the desired fields as customer data fields to the destination configuration.
 
@@ -691,6 +691,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ```
 
 A successful response returns the destination configuration, including the unique identifier (`instanceId`) of the configuration.
+
+## Known limitations {#known-limitations}
+
+Certain combinations of file formatting options can lead to undesired file export results. 
+
+
 
 ## Next steps {#next-steps}
 
