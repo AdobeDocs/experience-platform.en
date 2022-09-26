@@ -48,7 +48,7 @@ Read more about [Taxonomy Metadata](https://developer.verizonmedia.com/datax/gui
 
 >[!IMPORTANT]
 >
->When activating more than 100 segments to [!DNL Verizon Media/Yahoo DataX], you might receive rate limiting errors from the destination. When activating segments to the [!DNL Yahoo/DataX] destination, it is recommended to activate less than 100 segments in one activation dataflow. If you need to activate more segments, create a new destination on the same account.
+>When activating more than 100 segments to [!DNL Verizon Media/Yahoo DataX], you might receive rate limiting errors from the destination. When activating segments to this destination, try to activate less than 100 segments in one activation dataflow. If you need to activate more segments, create a new destination on the same account.
 
 [!DNL DataX] is rate-limited per the quota limits for taxonomy and audience posts outlined in the [DataX documentation](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
