@@ -38,7 +38,7 @@ From the [!UICONTROL Widget library], select any widget from the list of availab
 
 ### In-use label {#in-use-label}
 
-Widgets already added to a dashboard have an [!UICONTROL In-use] label attached to them when viewed in the widget library. This label highlights widgets that have already been added to your dashboard to avoid duplication although you can still add the same widget more than once should you wish.
+Widgets already added to a dashboard have an [!UICONTROL In-use] label attached to them when viewed in the widget library. This label highlights widgets that have already been added to your dashboard to avoid duplication. Although, you can still add the same widget more than once should you wish.
 
 ![The widget library with the in-use label highlighted.](../images/customization/in-use-label.png)
 
