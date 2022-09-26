@@ -694,9 +694,33 @@ A successful response returns the destination configuration, including the uniqu
 
 ## Known limitations {#known-limitations}
 
-Certain combinations of file formatting options can lead to undesired file export results. 
+A certain combination of file formatting options can lead to undesired file export results. 
+Adobe recommends against selecting the following combination of CSV options: 
+
+```
+
+nullValue -> ""
+quote -> "
+emptyValue -> ""
+
+```
+
+In this case, consider the export of a file the values below: 
 
 
+firstname | lastname | country| state|
+---------|----------|---------|--------|
+ Michael | Rose | USA | NY |
+ James | Smith |  | null | 
+
+This would result in an output as shown below. Notice how the null value from the table is incorrectly exported as an escaped quote. 
+
+```csv
+
+Michael,Rose,USA,NY 
+James,Smith,"","\"\""
+
+```
 
 ## Next steps {#next-steps}
 
