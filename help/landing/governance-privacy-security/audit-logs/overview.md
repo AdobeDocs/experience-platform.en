@@ -29,9 +29,11 @@ The following table outlines which actions on which resources are recorded by au
 | --- | --- |
 | [Access control policy (attribute based access control)](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Account (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Attribution AI instance](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li></ul> |
 | [Audit logs](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Export</li></ul> |
 | [Class](../../../xdm/schema/composition.md#class) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Computed attribute](../../../profile/computed-attributes/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Customer AI instance](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li></ul> |
 | [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-time Customer Profile](../../../profile/home.md)</li><li>Disable for Profile</li><li>Add data</li><li>Delete batch</li></ul> |
 | [Data types](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Destination](../../../destinations/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset Activate</li><li>Dataset Remove</li><li>Profile Activate</li><li>Profile Remove</li></ul> |
