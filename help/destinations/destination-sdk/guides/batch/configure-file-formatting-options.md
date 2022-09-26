@@ -10,14 +10,14 @@ Destination SDK allows you to extensively adjust the formatting and compression 
 
 This page describes how to use Destination SDK to configure file formatting options for file-based destinations.
 
-Adobe recommends that you read the following documentation as well before proceeding:
-
-* The individual file formatting options are documented individually in the [file formatting configuration](../../server-and-file-configuration.md#file-configuration) section.
-* Complete steps to [configure a file-based destination](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) using Destination SDK.
-
 ## Prerequisites {#prerequisites}
 
 Before advancing to the steps outlined below, please read the [Destination SDK getting started](../../getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
+
+Adobe also recommends that you read and familiarize yourself with the following documentation before proceeding:
+
+* Every available file formatting option is documented at length in the [file formatting configuration](../../server-and-file-configuration.md#file-configuration) section.
+* Complete steps to [configure a file-based destination](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) using Destination SDK.
 
 ## Create a server and file configuration {#create-server-file-configuration}
 
@@ -105,15 +105,15 @@ After adding the desired file formatting options to the destination server and f
 
 >[!IMPORTANT]
 >
->This step is not mandatory and it only determines which of the file formatting options should be surfaced to users in the Experience Platform UI.
+>This step is not mandatory and it only determines which of the file formatting options should be surfaced to users in the Experience Platform UI. If you do not set up file formatting options as customer data fields, the file exports will proceed with the default values configured in the [server and file configuration](#create-server-file-configuration).
 
 Within this step, you can group the displayed options in any order you desire, you can create custom groupings, dropdown fields, and conditional groupings based on the selected file types. All these settings are shown in the recording and in the sections further below.
 
 ![Screen recording showing various file formatting options for batch files.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-options.gif)
 
-### Order the file formatting options
+### Order the file formatting options {#ordering}
 
-The order in which you add the file formatting options as customer data fields in the destination configuration is reflected in the UI. For example, the configuration below is reflected accordingly in the UI, with the options showing up in the order Delimiter, Quote Character, Escape Character, Empty Value, Null Value.
+The order in which you add the file formatting options as customer data fields in the destination configuration is reflected in the UI. For example, the configuration below is reflected accordingly in the UI, with the options showing up in the order **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]**.
 
 ![Image showing the order of file formatting options in the Experience Platform UI.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-order.png)
 
@@ -236,9 +236,11 @@ The order in which you add the file formatting options as customer data fields i
 
 ```
 
-### Group the file formatting options
+### Group the file formatting options {#grouping}
 
-You can group several file formatting options within one section. To do this, use `"type": "object"` to create the group, and collect the desired file formatting options within a `properties` parameter, as shown in the example below. 
+You can group several file formatting options within one section. When setting up the connection to the destination in the UI, the user can see and benefit from a visual grouping of similar fields. 
+
+To do this, use `"type": "object"` to create the group, and collect the desired file formatting options within a `properties` parameter, as shown in the example below, where the grouping **[!UICONTROL CSV Options]** is highlighted. 
 
 ```json
         {
@@ -274,9 +276,41 @@ You can group several file formatting options within one section. To do this, us
 
 ![Image showing the CSV options grouping in the UI.](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-grouping.png)
 
-### Create conditional file formatting options
+### Create dropdown selectors for the file formatting options {#dropdown-selectors}
 
-You can create conditional file formatting options, which appear in the activation workflow only when the user selects a certain file type for export. For example, the configuration below creates a conditional grouping for CSV file options. The CSV file options are displayed only when the user selects CSV as the desired file type for export. To set a field as conditional, use the `conditional` parameter as shown below:
+For situations where you want to allow users to select between several options, for example which character should be used to delimit the fields in CSV files, you can add dropdown fields to the UI. 
+
+To do this, use the `namedEnum` object as shown below and configure a `default` value for the options that the user can select.
+
+```json
+
+{
+   "name": "delimiter",
+   "type": "string",
+   "title": "Delimiter",
+   "description": "Select your Delimiter",
+   "namedEnum": [
+   {
+      "name": "Comma (,)",
+      "value": ","
+   },
+   {
+      "name": "Tab (\\t)",
+      "value": "\t"
+   }
+   ],
+   "default": ","
+},
+
+```
+
+![Screen recording showing an example of dropdown selectors created with the configuration shown above.](/help/destinations/destination-sdk/assets/guides/batch/dropdown-options-file-formatting.gif)
+
+### Create conditional file formatting options {#conditional-options}
+
+You can create conditional file formatting options, which are displayed in the activation workflow only when the user selects a certain file type for export. For example, the configuration below creates a conditional grouping for CSV file options. The CSV file options are displayed only when the user selects CSV as the desired file type for export. 
+
+To set a field as conditional, use the `conditional` parameter as shown below:
 
 ```json
             "conditional": {
@@ -431,43 +465,13 @@ In a wider context, you can see the `conditional` field being used in the destin
 
 ```
 
-Below you can see the resulting UI screen, based on the configuration above:
+Below, you can see the resulting UI screen, based on the configuration above. When the user selects the file type CSV, additional file formatting options referring to the CSV file type are displayed in the UI.
 
 ![Screen recording showing the conditional file formatting option for CSV files.](/help/destinations/destination-sdk/assets/guides/batch/conditional-file-formatting.gif)
 
-### Create dropdown selectors for the file formatting options
-
-For situations where you want to allow users to select between several options, for example which character should be used to delimit the fields in CSV files, you can add dropdown fields to the UI. 
-
-To do this, use the `namedEnum` object as shown below and configure a `default` value for the options that the user can select.
-
-```json
-
-{
-   "name": "delimiter",
-   "type": "string",
-   "title": "Delimiter",
-   "description": "Select your Delimiter",
-   "namedEnum": [
-   {
-      "name": "Comma (,)",
-      "value": ","
-   },
-   {
-      "name": "Tab (\\t)",
-      "value": "\t"
-   }
-   ],
-   "default": ","
-},
-
-```
-
-![Screen recording showing an example of dropdown selectors created with the configuration shown above.](/help/destinations/destination-sdk/assets/guides/batch/dropdown-options-file-formatting.gif)
-
 ### Complete API request which includes all options shown above
 
-The API request below combines all the options demonstrated in the sections above.
+The API request below combines in one configuration all the options described in the sections above.
 
 **Request**
 
@@ -705,13 +709,14 @@ emptyValue -> ""
 
 ```
 
-In this case, consider the export of a file the values below: 
+To exemplify the limitation, consider the export of a file with the values below: 
 
+|firstname | lastname | country| state|
+|---------|----------|---------|--------|
+| Michael | Rose | USA | NY |
+| James | Smith |  | null | 
 
-firstname | lastname | country| state|
----------|----------|---------|--------|
- Michael | Rose | USA | NY |
- James | Smith |  | null | 
+{style="table-layout:auto"}
 
 This would result in an output as shown below. Notice how the null value from the table is incorrectly exported as an escaped quote. 
 
