@@ -311,7 +311,7 @@ In the configuration example below, none of the CSV options are fixed. The `valu
   "fileConfigurations": {
     "compression": {
       "templatingStrategy": "PEBBLE_V1",
-      "value": "{% if customerData.compression is empty %}NONE{% else %}{{customerData.compression}}{% endif %}"
+      "value": "{% if customerData contains 'compression' and customerData.compression is not empty %}{{customerData.compression}}{% else %}NONE{% endif %}"
     },
     "fileType": {
       "templatingStrategy": "PEBBLE_V1",
@@ -320,23 +320,23 @@ In the configuration example below, none of the CSV options are fixed. The `valu
     "csvOptions": {
       "sep": {
         "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData.delimiter is not empty %}{{customerData.delimiter}}{% else %},{% endif %}"
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'delimiter' %}{{customerData.csvOptions.delimiter}}{% else %},{% endif %}"
       },
       "quote": {
         "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData.quote is not empty %}{{customerData.quote}}{% else %}\\u0000{% endif %}"
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'quote' %}{{customerData.csvOptions.quote}}{% else %}\"{% endif %}"
       },
       "escape": {
         "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData.escape is not empty %}{{customerData.escape}}{% else %}\\{% endif %}"
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'escape' %}{{customerData.csvOptions.escape}}{% else %}\\{% endif %}"
       },
       "nullValue": {
         "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData.nullValue is not empty %}{{customerData.nullValue}}{% else %}null{% endif %}"
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'nullValue' %}{{customerData.csvOptions.nullValue}}{% else %}null{% endif %}"
       },
       "emptyValue": {
         "templatingStrategy": "PEBBLE_V1",
-        "value": "{% if customerData.emptyValue is not empty %}{{customerData.emptyValue}}{% else %}{% endif %}"
+        "value": "{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
       }
     }
   }
@@ -356,7 +356,7 @@ Below is a complete reference of all available file formatting options in Destin
 |`compression.value`|Optional|Compression codec to use when saving data to file. Supported values: `none`, `bzip2`, `gzip`, `lz4`, and `snappy`.|`none`|-|-|
 |`fileType.value`|Optional|Specifies the output file format. Supported values: `csv`, `parquet`, and `json`.|`csv`|-|-|
 |`csvOptions.quote.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping quoted values where the separator can be part of the value.|`null`|-|-|
-|`csvOptions.quoteAll.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates whether all values should always be enclosed in quotes. Default is to only escape values containing a quote character.|`false`| `quoteAll`:`false` --> `male,John,"TestLastName"`|`quoteAll`:`true` -->`"male","Omer","TestLastName"`|
+|`csvOptions.quoteAll.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates whether all values should always be enclosed in quotes. Default is to only escape values containing a quote character.|`false`| `quoteAll`:`false` --> `male,John,"TestLastName"`|`quoteAll`:`true` -->`"male","John","TestLastName"`|
 |`csvOptions.escape.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping quotes inside an already quoted value.|`\`|`"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"`|`"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"`|
 |`csvOptions.escapeQuotes.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates whether values containing quotes should always be enclosed in quotes. Default is to escape all values containing a quote character.|`true`|-|-|
 |`csvOptions.header.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates whether to write the names of columns as the first line.|`true`|-|-|
