@@ -19,6 +19,7 @@ Here is an example of what a [!DNL User-Agent] string looks like on a request co
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36`
 ```
+
 |Field|Value|
 |---|---|
 |Software name| Chrome |
