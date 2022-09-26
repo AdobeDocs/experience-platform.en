@@ -9,6 +9,11 @@ exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## v0.19.0 (September 19, 2022)
+
+- Updated to support `at.js` v2.10.0
+- Added cross-domain tracking support.
+
 ## v0.18.0 (June 1, 2022)
 
 - Updated to support `at.js` v2.9.0
