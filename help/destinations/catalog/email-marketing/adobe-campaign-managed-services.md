@@ -26,9 +26,16 @@ Use Campaign to:
 
 To help you better understand how and when you should use the Adobe Campaign Manage Service destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
-A sport attire company wants to launch a cross-channel marketing campaign from their Campaign V8 instance to target a specific segment stored in Adobe Experience Platform. Once messages have been sent, they want Adobe Campaign delivery and tracking logs to be sent over to Adobe Experience Platform.
+Adobe Experience Platform creates a customer profile that incorporates information like the identity graph, behavioral data from analytics, merges offline and online data etc. With this integration, you can augment the segmentation capabilities that are already existing within Adobe Campaign with those Adobe Experience Platform powered audiences, and you can hence activate that data in Campaign.
 
-To complete this use case, they need to integrate their Campaign instance with both Adobe Campaign Managed Cloud Service destination and source connections. [Learn more on Adobe Campaign integration with Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
+For example, a sports attire company wants to leverage the Adobe Experience Platform powered smart segments and activate them using Adobe Campaign to reach out to their customer base across the different channels supported by Adobe Campaign. 
+
+Once the messages are sent, they want to enhance the customer profile in Adobe Experience platform with experience data from Adobe Campaign such as sends, open and clicks.
+
+The result is cross channel campaigns that are more consistent across the Adobe Experience cloud ecosystem and a rich customer profile that is quickly adapting and learning.
+
+[Learn more on Adobe Campaign integration with Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
+
 
 ## Prerequisites {#prerequisites}
 
