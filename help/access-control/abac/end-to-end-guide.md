@@ -7,7 +7,7 @@ hidefromtoc: true
 ---
 # Attribute-based access control end-to-end guide
 
-Attribute-based access control is an Adobe Experience Platform feature that gives privacy conscious brands greater flexibility to manage user access. Access to the individual objects such as schema fields and segments can be granted/denied with policies based on the attributes of the object and the role. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Access to the individual objects such as schema fields and segments can be granted/denied with policies based on the attributes of the object and the role. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
 
 
 This functionality allows you to categorize schema fields, segments, and so on with labels that define organizational or data usage scopes. In Adobe Journey Optimizer, you can apply these same labels to journeys and offers. In parallel, administrators can define access policies surrounding XDM schema fields and better manage which users or groups (internal, external, or third-party users) can access those fields.
