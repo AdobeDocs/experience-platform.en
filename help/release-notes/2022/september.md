@@ -36,6 +36,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| Audience Manager segment population impact on Real-time Customer Profile | Audience Manager segment population sizes have a direct impact on profile numbers when you first send an Audience Manager segment to Platform using the Audience Manager source. This means that selecting all segments can potentially lead to Profile overages that exceeds your license usage entitlement. For more information, read the [Audience Manager source overview](../../sources/connectors/adobe-applications/audience-manager.md). For information on your license usage, read the documentation on [using the license usage dashboard](../../dashboards/guides/license-usage.md). |
+| Audience Manager segment population impact on Real-time Customer Profile | The ingestion of sizeable Audience Manager segment populations has a direct impact on your total profile count when you first send an Audience Manager segment to Platform using the Audience Manager source. This means that selecting all segments can potentially lead to a Profile count in excess of your license usage entitlement. For more information, read the [Audience Manager source overview](../../sources/connectors/adobe-applications/audience-manager.md). For information on your license usage, read the documentation on [using the license usage dashboard](../../dashboards/guides/license-usage.md). |
 
 To learn more about sources, read the [sources overview](../../sources/home.md).
