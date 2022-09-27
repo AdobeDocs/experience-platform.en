@@ -7,7 +7,7 @@ description: This tutorial covers steps on how to retry failed dataflow runs usi
 
 >[!IMPORTANT]
 >
->You can only retry dataflow runs for dataflow runs that have failed.
+>Support for retrying failed dataflow runs is available to batch sources. You can only retry dataflow runs that have failed.
 
 This tutorial covers steps on how to retry failed dataflow runs using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
