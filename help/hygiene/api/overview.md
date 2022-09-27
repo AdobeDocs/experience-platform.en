@@ -45,6 +45,10 @@ A dataset expiration is a time-delayed "delete a dataset" action. By creating a 
 
 The Data Hygiene API allows you delete all records associated with a consumer identity across one or all datasets. All data hygiene tasks that delete consumer identities are repesented by a construct called a work order. See the [work order endpoint guide](./workorder.md) for details on working with consumer deletes in the API.
 
+## Quota
+
+Your organization is limited to a predetermined monthly job quota for each type of data hygiene operation, which can vary depending on licensing. See the [quota endpoint guide](./quota.md) for details on viewing the current quota status of your data hygiene processes.
+
 ## Next steps
 
 This guide covered how to manage data hygiene requests using API calls. For information on how to perform these actions in the Platform UI, see the [data hygiene UI guide](../ui/overview.md).
