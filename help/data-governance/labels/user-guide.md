@@ -100,7 +100,12 @@ You can add labels directly to a schema or fields within that schema. Any fields
 
 See the tutorial on [managing schema-level labels](../../xdm/tutorials/labels.md) for more information.
 
-## Manage custom labels
+## Manage custom labels {#manage-custom-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_createlabels"
+>title="Create labels"
+>abstract="Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Platform provides a standard set of labels for you to use, but you can also create custom labels that are specific to your organization."
 
 You can create your own custom usage labels within the **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI. Select **[!UICONTROL Policies]** in the left-navigation, then select **[!UICONTROL Labels]** to view a list of existing labels. From here, select **[!UICONTROL Create label]**.
 
