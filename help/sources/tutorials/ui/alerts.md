@@ -48,6 +48,14 @@ Select the alerts you would like to subscribe to and then select **[!UICONTROL N
 
 ![select-alerts](../../images/tutorials/alerts/select-alerts.png)
 
+If you have previously subscribed to the following alert type, you will no longer receive alerts as this alert has been deprecated:
+
+| I/O Event subscription | Alert rule | Description |
+| --- | --- | --- |
+| Source Flow Run Delays, Failures and Errors | Lack of Ingestion | This alert sends you a message if ingestion is delayed by more than seven hours and no data gets ingested to Platform. |
+
+{style="table-layout:auto"}
+
 See the following guides for detailed steps on creating a sources dataflow in the UI:
 
 * [Advertising](./dataflow/advertising.md)
