@@ -38,9 +38,9 @@ The following table outlines the key Query Service entitlements based on how the
 
 ## Access control
 
-Access control for Experience Platform is administered through the [Adobe Admin Console](https://adminconsole.adobe.com/) where product profiles link users with permissions and sandboxes. See the [access control overview](../access-control/home.md) for more information. 
+Access control for Experience Platform is administered through the [Adobe Admin Console](https://adminconsole.adobe.com/) where product profiles link users with permissions and sandboxes. See the [access control overview](../../access-control/home.md) for more information. 
 
-In order to use Query Service, the [!DNL Manage Queries] permission must be enabled within admin console. This permission allows users to execute ad hoc and batch queries. Detailed instructions for requesting access to the product profile [!DNL Manage Queries] permission have been outlined in the [manage permissions for a product profile](../access-control/ui/permissions.md) and [manage users for a product profile](../access-control/ui/users.md) documents.
+In order to use Query Service, the [!DNL Manage Queries] permission must be enabled within admin console. This permission allows users to execute ad hoc and batch queries. Detailed instructions for requesting access to the product profile [!DNL Manage Queries] permission have been outlined in the [manage permissions for a product profile](../../access-control/ui/permissions.md) and [manage users for a product profile](../../access-control/ui/users.md) documents.
 
 After purchasing the [!DNL Data Distiller] add-on, the [!DNL Write Dataset] permission must be granted. This permission allows [!DNL Data Distiller] users to execute batch queries.
 
@@ -55,8 +55,8 @@ The following table outlines the effects of the [!DNL Manage Queries] permission
 
 ## Sandbox support
 
-Sandboxes are virtual partitions within a single instance of Experience Platform. Each Platform instance supports multiple productions and non-production sandboxes, each maintaining its own library of Platform resources. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandboxes. For more information on sandboxes, see the [sandboxes overview](../sandboxes/home.md). All Query Service entitlements are shared across all sandboxes
+Sandboxes are virtual partitions within a single instance of Experience Platform. Each Platform instance supports multiple productions and non-production sandboxes, each maintaining its own library of Platform resources. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandboxes. For more information on sandboxes, see the [sandboxes overview](../../sandboxes/home.md). All Query Service entitlements are shared across all sandboxes
 
 ## Next steps
 
-By reading this document you should have a better understanding of the different packaging types and query execution capabilities available in Query Service. To learn more about Query Service, such as well-known industry use cases, please read the [use case documentation](./use-cases/abandoned-browse.md). For more general information, visit the [Query Service overview](./home.md).
+By reading this document you should have a better understanding of the different packaging types and query execution capabilities available in Query Service. To learn more about Query Service, such as well-known industry use cases, please read the [use case documentation](../use-cases/abandoned-browse.md). For more general information, visit the [Query Service overview](../home.md).
