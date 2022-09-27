@@ -7,7 +7,8 @@ hidefromtoc: true
 ---
 # Attribute-based access control end-to-end guide
 
-Attribute-based access control is an Adobe Experience Platform feature that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+Attribute-based access control is an Adobe Experience Platform feature that gives privacy conscious brands greater flexibility to manage user access. Access to the individual objects such as schema fields and segments can be granted/denied with policies based on the attributes of the object and the role. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+
 
 This functionality allows you to categorize schema fields, segments, and so on with labels that define organizational or data usage scopes. In Adobe Journey Optimizer, you can apply these same labels to journeys and offers. In parallel, administrators can define access policies surrounding XDM schema fields and better manage which users or groups (internal, external, or third-party users) can access those fields.
 
@@ -66,6 +67,10 @@ Next, select **[!UICONTROL Labels]** and then select **[!UICONTROL Add Labels]**
 A list of all labels in your organization appears. Select **[!UICONTROL RHD]** to add the label for **[!UICONTROL PHI/Regulated Health Data]**. Allow for a few moments for a blue check mark to appear beside the label, and then select **[!UICONTROL Save]**.
 
 ![Image showing the RHD label being selected and saved](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
+
+>[!NOTE]
+>
+>When adding an organization group to a role, all users in that group will be added to the role. Any changes to the organization group (users removed or added) will be automatically updated within the role.
 
 ## Apply labels to schema fields {#label-resources}
 
