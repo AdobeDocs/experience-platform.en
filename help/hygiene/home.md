@@ -49,11 +49,11 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 ### Consumer deletions
 
-The following takes place when a [consumer deletion request](./ui/delete-consumer.md) is created:
+The following takes place when a [consumer delete request](./ui/delete-consumer.md) is created:
 
 | Stage | Time after request submission | Description |
 | --- | --- | --- |
-| Request is submitted | 0 hours | A data steward or privacy analyist submits a consumer deletion request. The request is visible in the [!UICONTROL Data Hygiene UI] after it has been submitted. |
+| Request is submitted | 0 hours | A data steward or privacy analyist submits a consumer delete request. The request is visible in the [!UICONTROL Data Hygiene UI] after it has been submitted. |
 | Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
 | Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
 | Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |

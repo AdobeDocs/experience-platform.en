@@ -2,8 +2,6 @@
 title: Delete Consumer Records
 description: Learn how to delete consumer records in the Adobe Experience Platform UI.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-hide: true
-hidefromtoc: true
 ---
 # Delete consumer records
 
@@ -132,7 +130,7 @@ You are asked to confirm the list of identities whose data you want to delete. S
 
 ![Image showing the confirmation dialog](../images/ui/delete-consumer/confirm-request.png)
 
-After the request is submitted, a work order is created and appears on the [!UICONTROL Consumer] tab of the [!UICONTROL Data Hygiene] workspace. From here, you can monitor the work order's status as it processes the request. Most consumer deletion work orders will take several days to complete.
+After the request is submitted, a work order is created and appears on the [!UICONTROL Consumer] tab of the [!UICONTROL Data Hygiene] workspace. From here, you can monitor the work order's status as it processes the request. Most consumer delete work orders will take several days to complete.
 
 ## Next steps
 
