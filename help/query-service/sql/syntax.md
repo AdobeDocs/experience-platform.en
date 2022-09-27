@@ -496,22 +496,15 @@ The following is a list of statistical functions that are available for computat
 
 | Name | Description |
 |---|---|
-| field  | The name of the field.  |
-| data-type | The enumerate JSON data type. |
+| field  | The name of the column in a table.  |
+| data-type | The type of data acceptable in each column. |
 | count | The number of rows that contain a non-null value for this field. |
 | distinct-count | The number of unique or distinct values in this field |
 | missing | The number of rows that have a null value for this field. |
-| max | The maximum ...  |
-| min | The minimum ... |
-| mean | The average ...  |
-| stdev | The standard deviation of ... |
-
-<!--
-Q) why is field and data-type in the same table as statistical functions?
-Q) what does 'this field' mean?
-Q) what does 'The name of the field.' mean?
-Q) can you provide an example of these in use? 
--->
+| max | The maximum of the analyzed table.  |
+| min | The minimum of the analyzed table. |
+| mean | The average of the analyzed table.  |
+| stdev | The standard deviation of the analyzed table. |
 
 ### BEGIN
 
