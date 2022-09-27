@@ -12,10 +12,10 @@ The authentication configuration that you select determines how Experience Platf
 Adobe Experience Platform Destination SDK supports several authentication types:
 
 * [Bearer authentication](#bearer)
-* [Amazon S3 authentication](#s3)
-* [Azure Blob Storage](#blob)
-* [Azure Data Lake Storage](#adls)
-* [Google Cloud Storage](#gcs)
+* [[!DNL Amazon S3] authentication](#s3)
+* [[!DNL Azure Blob] Storage](#blob)
+* [[!DNL Azure Data Lake Storage]](#adls)
+* [[!DNL Google Cloud Storage]](#gcs)
 * [SFTP with SSH key](#sftp-ssh)
 * [SFTP with password](#sftp-password)
 * [OAuth 2 with authorization code](#oauth2)
@@ -47,7 +47,7 @@ To set up bearer type authentication for your destination, configure the `custom
 
 [!DNL Amazon S3] authentication is supported for file-based destinations in Experience Platform.
 
-To set up Amazon S3 authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
+To set up [!DNL Amazon S3] authentication for your destination, configure the `customerAuthenticationConfigurations` parameter in the `/destinations` endpoint as shown below:
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -130,7 +130,7 @@ To set up SFTP authentication with password for your destination, configure the 
 
 [!DNL OAuth 2] authentication is supported for streaming destinations in Experience Platform.
 
-For information how to set up the various supported OAuth 2 flows, as well as for custom OAuth 2 support, read the Destination SDK documentation on [OAuth 2 authentication](./oauth2-authentication.md).
+For information how to set up the various supported [!DNL OAuth 2] flows, as well as for custom [!DNL OAuth 2] support, read the Destination SDK documentation on [[!DNL OAuth 2] authentication](./oauth2-authentication.md).
 
 
 ## When to use the `/credentials` API endpoint {#when-to-use}

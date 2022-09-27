@@ -23,7 +23,7 @@ Adobe also recommends that you read and familiarize yourself with the following 
 
 Start by using the `/destination-server` endpoint to determine which file formatting configuration options you want to set up for the exported files.
 
-Below is an example of a destination server configuration for an Amazon S3 destination, with several file formatting options selected.
+Below is an example of a destination server configuration for an [!DNL Amazon S3] destination, with several file formatting options selected.
 
 >[!TIP]
 >
@@ -105,7 +105,7 @@ After adding the desired file formatting options to the destination server and f
 
 >[!IMPORTANT]
 >
->This step is not mandatory and it only determines which of the file formatting options should be surfaced to users in the Experience Platform UI. If you do not set up file formatting options as customer data fields, the file exports will proceed with the default values configured in the [server and file configuration](#create-server-file-configuration).
+>This step is optional and it only determines which of the file formatting options should be surfaced to users in the Experience Platform UI. If you do not set up file formatting options as customer data fields, the file exports will proceed with the default values configured in the [server and file configuration](#create-server-file-configuration).
 
 Within this step, you can group the displayed options in any order you desire, you can create custom groupings, dropdown fields, and conditional groupings based on the selected file types. All these settings are shown in the recording and in the sections further below.
 
@@ -151,14 +151,14 @@ The order in which you add the file formatting options as customer data fields i
                     "description": "Select your Quote character",
                     "type": "string",
                     "isRequired": false,
-                    "default": "",
+                    "default": "\u0000",
                     "namedEnum": [
                         {
                             "name": "Double Quotes (\")",
                             "value": "\""
                         },
                         {
-                            "name":"Null Character ()",
+                            "name":"Null Character (\u0000)",
                             "value": ""
                         }
                     ],
@@ -343,6 +343,11 @@ In a wider context, you can see the `conditional` field being used in the destin
             "title": "CSV Options",
             "description": "Select your CSV options",
             "type": "object",
+            "conditional": {
+                "field": "fileType",
+                "operator": "EQUALS",
+                "value": "CSV"
+            },            
             "properties": [
                 {
                     "name": "delimiter",
@@ -377,8 +382,8 @@ In a wider context, you can see the `conditional` field being used in the destin
                             "value": "\""
                         },
                         {
-                            "name":"Null Character ()",
-                            "value": ""
+                            "name":"Null Character (\u0000)",
+                            "value": "\u0000"
                         }
                     ],
                     "readOnly": false,
@@ -455,12 +460,7 @@ In a wider context, you can see the `conditional` field being used in the destin
             ],
             "isRequired": false,
             "readOnly": false,
-            "hidden": false,
-            "conditional": {
-                "field": "fileType",
-                "operator": "EQUALS",
-                "value": "CSV"
-            }
+            "hidden": false
         }
 
 ```

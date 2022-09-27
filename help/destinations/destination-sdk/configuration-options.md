@@ -7,12 +7,12 @@ exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
 
 ## Overview {#overview}
 
-The destinations service in Adobe Experience Platform uses configuration endpoints for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination platforms, send custom messages, export custom files and activate profile data across the digital ecosystem. The configurations used in Adobe Experience Platform Destination SDK are:
+The destinations service in Adobe Experience Platform uses configuration endpoints for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination platforms, send custom messages, export custom files, and activate profile data across the digital ecosystem. The configurations used in Adobe Experience Platform Destination SDK are:
 
-* **Destination configuration**: Contains basic information about your destination. This configuration includes the identity types that your destination can support, the desired format of exported files, and various UI attributes for your destination card in the Adobe Experience Platform user interface.
-* **Server, file, and template specs**: Ties together information about your server specs and the templating used by Adobe to deliver payloads to your destination. This configuration also includes the supported file formatting and compression formats for your destination.
-  * **Server specs**: A template that stores your endpoint details.
-  * **File specs**: A template that includes the file formatting and compression options for your batch destination.
+* **Destination configuration**: Contains basic information about your destination. This configuration includes the identity types that your destination can support, the desired format of exported files (for file-based destinations), and various UI attributes for your destination card in the Adobe Experience Platform user interface.
+* **Server, file, and template specs**: Ties together information about your server specs and the templating used by Adobe to deliver payloads to your destination. For file-based destinations, this configuration also includes the supported file formatting and compression formats for your destination.
+  * **Server specs**: A configuration template that contains information about the storage location or HTTP endpoint where data is sent to."
+  * **File specs**: A configuration template that includes the file formatting and compression options for your batch destination.
   * **Template specs**: In this template, you can define how to transform profile attribute fields between XDM schema and the format that your platform supports. For in-depth information about supported templating languages, message formats, and the information required by Adobe to set up the integration with your platform, read [Message format](./message-format.md).
 * **Authentication configuration**: These settings define how Adobe Experience Platform users connect to your destination.
 * **Audience metadata configuration**: This configuration endpoint allows you to configure how audiences/segments are programmatically created, updated, or deleted in your destination. For batch destinations, it allows you to set up a notification whenever files are successfully delivered to your destination.
