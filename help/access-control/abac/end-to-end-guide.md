@@ -119,6 +119,10 @@ Repeat the above steps with **[!UICONTROL Insulin <50]**.
 
 Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global, and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
+>[!NOTE]
+>
+>A "deny policy" is created to grant access to sensitive resources because the role grants the permission to the subjects. The written policy in example **denies** your access if you are missing the necessary labels.
+
 To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
 ![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
