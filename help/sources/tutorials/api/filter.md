@@ -7,7 +7,7 @@ description: This tutorial covers the steps on how to filter data at the source 
 
 >[!IMPORTANT]
 >
->Support for filtering row-level data for a source is currently only available for the [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md) source.
+>Support for filtering row-level data for a source is currently only available for the [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md) and [[!DNL Snowflake]](../../connectors/databases/snowflake.md) sources.
 
 This tutorial provides steps on how to filter row-level data for a source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -90,13 +90,12 @@ A successful response returns the connection specifications for [!DNL Google Big
 
 | Property | Description |
 | --- | --- |
-| `attributes.filterAtSource` |
 | `attributes.filterAtSource.enabled` | Determines whether the queried source supports filtering for row-level data. |
 | `attributes.filterAtSource.queryLanguage` | Determines the query language that the queried source supports. |
 | `attributes.filterAtSource.logicalOperators` | Determines the logical operators that you can use to filter row-level data for your source.|
 | `attributes.filterAtSource.comparisonOperators` | Determines comparison operators that you can use to filter row-level data for your source. See the table below for more information on comparison operators. |
 | `attributes.filterAtSource.columnNameEscapeChar` | Determines the character to use to escape columns. |
-| `attributes.filterAtSource.valueEscapeChar` | |
+| `attributes.filterAtSource.valueEscapeChar` | Determines how values will be surrounded when writing an SQL query. |
 
 {style="table-layout:auto"}
 
@@ -110,6 +109,8 @@ A successful response returns the connection specifications for [!DNL Google Big
 | `>` | Filters by whether the property is greater than the provided value. |
 | `<=` | Filters by whether the property is less than or equal to the provided value. |
 | `>=` | Filters by whether the property is greater than or equal to the provided value. |
+| `like` | Filters by being used in a `WHERE` clause to search for a specified pattern. |
+| `in` | Filters by whether the property is within a specified range. |
 
 {style="table-layout:auto"}
 
@@ -500,6 +501,8 @@ You can omit the initial `fnApply` for scenarios that only require one condition
 
 ### Using the operator `in`
 
+See the sample payload below for an example of the operator `in`.
+
 ```json
 {
   "type": "PQL",
@@ -531,6 +534,8 @@ You can omit the initial `fnApply` for scenarios that only require one condition
 ```
 
 ### Example with nested conditions
+
+See the sample payload below for an example of complex nested conditions.
 
 ```json
 {
