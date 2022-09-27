@@ -18,9 +18,9 @@ To use Destination SDK, make sure that you meet the technical and partnership pr
 
 ## Technical prerequisites for batch destinations {#batch-prerequisites}
 
-1. You have a destination location hosted on Amazon S3, Azure Blob, Azure Data Lake Storage, SFTP, Google Cloud, or a private Data Landing Zone, where you can receive files exported out of Experience Platform.
+1. You have a destination location hosted on [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], SFTP, [!DNL Google Cloud], or a private [!DNL Data Landing Zone], where you can receive files exported out of Experience Platform.
 2. Your destination platform can ingest files in the format configured via the [file formatting options](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) in Destination SDK for batch destinations.
-3. (Optional) You have a segment create/update/delete API or API endpoint for programmatic metadata management.
+3. (Optional) You have a segment create/retrieve/update/delete (CRUD) API or API endpoint for programmatic metadata management.
 
 ## Partnership prerequisites {#partnership-prerequisites}
 
