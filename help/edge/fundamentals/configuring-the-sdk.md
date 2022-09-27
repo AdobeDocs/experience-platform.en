@@ -148,9 +148,9 @@ For example, if an element on your web page has an ID of `container`, whose defa
 
 ### `targetMigrationEnabled` {#targetMigrationEnabled}
 
-This option is useful when migrating individual pages from [!DNL at.js] to Web SDK.
+This option should be used when migrating individual pages from [!DNL at.js] to Web SDK.
 
-Use this option to enable the Web SDK to read and write the legacy `mbox` and `mboxEdgeCluster` that are used by [!DNL at.js]. This helps you keep the visitor profile while moving from a page that uses the Web SDK to a page that uses the [!DNL at.js] library.
+Use this option to enable the Web SDK to read and write the legacy `mbox` and `mboxEdgeCluster` cookies that are used by [!DNL at.js]. This helps you keep the visitor profile while moving from a page that uses the Web SDK to a page that uses the [!DNL at.js] library and vice versa.
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
@@ -188,7 +188,9 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 
 {style="table-layout:auto"}
 
-If true, the SDK reads and sets old AMCV cookies. This option helps with transitioning to using Adobe Experience Platform Web SDK while some parts of the site might still use Visitor.js. If Visitor API is defined on the page, the SDK queries Visitor API for the ECID. This option enables you to dual-tag pages with the Adobe Experience Platform Web SDK and still have the same ECID.
+If true, the SDK reads and sets old AMCV cookies. This option helps with transitioning to using Adobe Experience Platform Web SDK while some parts of the site might still use Visitor.js.
+
+If Visitor API is defined on the page, the SDK queries Visitor API for the ECID. This option enables you to dual-tag pages with the Adobe Experience Platform Web SDK and still have the same ECID.
 
 ### `thirdPartyCookiesEnabled`
 

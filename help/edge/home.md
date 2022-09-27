@@ -68,7 +68,10 @@ This means you can use Web SDK on a page and leave the existing libraries on the
 
 ### at.js to Web SDK migration considerations {#considerations}
 
-When migrating pages that use at.js to Web SDK, make sure to enable the [`targetMigrationEnabled`](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)configuration option in Web SDK before you begin the migration. This helps you keep the visitor profile while moving from a page that uses the Web SDK to a page that uses the [!DNL at.js] library.
+Before migrating pages that use [!DNL at.js] to Web SDK, make sure to enable the following Web SDK configuration options. This ensures the visitor profile is kept while navigating from pages with [!DNL at.js ] to pages using Web SDK.
+
+* [`targetMigrationEnabled`](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)
+* [`idMigrationEnabled`](fundamentals/configuring-the-sdk.md#id-migration-enabled) 
 
 >[!IMPORTANT]
 >
