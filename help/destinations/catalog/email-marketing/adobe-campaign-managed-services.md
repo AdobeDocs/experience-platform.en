@@ -1,12 +1,12 @@
 ---
-title: Adobe Campaign Managed Services connection
-description: Adobe Campaign Managed Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. 
+title: Adobe Campaign Managed Cloud Services connection
+description: Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. 
 ---
-# Adobe Campaign Managed Services connection {#adobe-campaign-managed-services}
+# Adobe Campaign Managed Cloud Services connection {#adobe-campaign-managed-services}
 
 ## Overview {#overview}
 
-Adobe Campaign Managed Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. [Get Started with Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
+Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. [Get Started with Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Use Campaign to:
 * Drive personalization and engagement through a single accessible view of the customer,
@@ -15,7 +15,7 @@ Use Campaign to:
 
 >[!IMPORTANT]
 >
->Keep in mind the following guardrails when using the Adobe Campaign Managed Services connection:
+>Keep in mind the following guardrails when using the Adobe Campaign Managed Cloud Services connection:
 >
 >* A maximum of 50 segments can be [activated](#activate) for the destination,
 >* For each segment, you can add up to 20 fields to [map](#map) to Adobe Campaign,
@@ -28,7 +28,7 @@ To help you better understand how and when you should use the Adobe Campaign Man
 
 A sport attire company wants to launch a cross-channel marketing campaign from their Campaign V8 instance to target a specific segment stored in Adobe Experience Platform. Once messages have been sent, they want Adobe Campaign delivery and tracking logs to be sent over to Adobe Experience Platform.
 
-To complete this use case, they need to integrate their Campaign instance with both Adobe Campaign Managed Service destination and source connections. [Learn more on Adobe Campaign integration with Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
+To complete this use case, they need to integrate their Campaign instance with both Adobe Campaign Managed Cloud Service destination and source connections. [Learn more on Adobe Campaign integration with Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
 ## Prerequisites {#prerequisites}
 
@@ -54,7 +54,7 @@ In order for Campaign to be able to retrieve data from Adobe Experience Platform
 
 ## Supported identities {#supported-identities}
 
-*Adobe Campaign Managed Services* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+*Adobe Campaign Managed Cloud Services* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
