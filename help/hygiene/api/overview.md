@@ -33,13 +33,17 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 This document provides an example API call to demonstrate how to format your requests. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/api-guide.md#sample-api) in the getting started guide for Experience Platform APIs.
 
-<!-- ## Work orders
-
-A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
-
 ## Dataset expirations
 
 A dataset expiration is a time-delayed "delete a dataset" action. By creating a dataset expiration, you are specifying a future time at which that dataset should be deleted. See the [dataset expiration endpoint guide](./dataset-expiration.md) for details on scheduling dataset expirations in the API.
+
+## Consumer deletes
+
+>[!NOTE]
+>
+>Consumer deletes are only available for organizations that have purchased Adobe Healthcare Shield or Privacy Sheild.
+
+The Data Hygiene API allows you delete all records associated with a consumer identity across one or all datasets. All data hygiene tasks that delete consumer identities are repesented by a construct called a work order. See the [work order endpoint guide](./workorder.md) for details on working with consumer deletes in the API.
 
 ## Next steps
 

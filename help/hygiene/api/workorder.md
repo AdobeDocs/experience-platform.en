@@ -2,22 +2,20 @@
 title: Work order API Endpoint
 description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for consumer identities.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
 ---
 # Work order endpoint
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Healthcare Shield.
+>Consumer delete requests are currently only available for organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
 
-The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for consumer identities in Adobe Experience Platform.
+The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage consumer delete requests in Adobe Experience Platform.
 
 ## Getting started
 
 The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [overview](./overview.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Delete identities {#delete-identities}
+## Delete consumers {#delete-consumers}
 
 You can delete one or more consumer identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
 
@@ -75,7 +73,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns the details of the identity deletion.
+A successful response returns the details of the consumer delete.
 
 ```json
 {
@@ -95,7 +93,7 @@ A successful response returns the details of the identity deletion.
 | Property | Description |
 | --- | --- |
 | `workorderId` | The ID of the deletion order. This can be used to look up the status of the deletion later. |
-| `orgId` | Your organization's ID. |
+| `orgId` | Your organization ID. |
 | `batchId` | The ID of the batch this deletion order is associated with, used for debugging purposes. Multiple deletion orders are bundled together into a batch to be processed by downstream services. |
 | `bundleOrdinal` | The order in which this deletion order was received when it was bundled into a batch for downstream processing. Used for debugging purposes. |
 | `payloadByteSize` | The size, in bytes, of the list of identities that were provided in the request payload that created this deletion order. |
@@ -107,9 +105,9 @@ A successful response returns the details of the identity deletion.
 
 {style="table-layout:auto"}
 
-## List the statuses of all identity deletions {#list}
+## List the statuses of all consumer deletes {#list}
 
-You can list the statuses of all identity deletions by making a GET request.
+You can list the statuses of all consumer deletes by making a GET request.
 
 **API format**
 
@@ -190,9 +188,9 @@ A successful response returns the details of all delete operations, including th
 
 {style="table-layout:auto"}
 
-## Retrieve the status of an identity deletion (#lookup)
+## Retrieve the status of an consumer delete (#lookup)
 
-After sending a request to [delete an identity](#delete-identities), you can check on its status using a GET request.
+After sending a request to [delete an identity](#delete-consumers), you can check on its status using a GET request.
 
 **API format**
 
@@ -202,7 +200,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | The `workorderId` of the identity deletion you are looking up. |
+| `{WORK_ORDER_ID}` | The `workorderId` of the consumer delete you are looking up. |
 
 {style="table-layout:auto"}
 
@@ -239,7 +237,7 @@ A successful response returns the details of the delete operation, including its
 | Property | Description |
 | --- | --- |
 | `workorderId` | The ID of the deletion order. This can be used to look up the status of the deletion later. |
-| `orgId` | Your organization's ID. |
+| `orgId` | Your organization ID. |
 | `batchId` | The ID of the batch this deletion order is associated with, used for debugging purposes. Multiple deletion orders are bundled together into a batch to be processed by downstream services. |
 | `bundleOrdinal` | The order in which this deletion order was received when it was bundled into a batch for downstream processing. Used for debugging purposes. |
 | `payloadByteSize` | The size, in bytes, of the list of identities that were provided in the request payload that created this deletion order. |
