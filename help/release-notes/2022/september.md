@@ -9,8 +9,35 @@ description: The September 2022 release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Identity Service](#identity-service)
 - [Sources](#sources)
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up models specific to a company's needs using business-level configurations without the need for data science expertise.
+
+### Attribution AI
+
+Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+
+| Feature | Description |
+| --- | --- |
+| Save Draft Instance | This new feature enables marketing analysts to save model configuration as a draft instance during configurations and continue to edit the draft until completion before training and scoring. Scenarios where this feature is helpful include, but are not limited to, when users have multiple fields to define in the configuration workflow that they are not able to complete in one go or when one or more dataset statistics (such as column completeness) take time to be processed before they become available. Read the [Attribution AI user guide](../../intelligent-services/attribution-ai/user-guide.md) to learn more. |
+| Governance policies | After users submit to create an instance through the configuration workflow, the new policy enforcement service checks whether there are any policy violations of data usage and displays the details in a popover. It ensures that data operations and marketing actions are compliant with the data usage policies configured on Adobe Experience Platform. |
+
+For more information on Attribution AI, the [Attribution AI overview](../../intelligent-services/attribution-ai/overview.md). For information on data governance policies, read the [policies overview](../../data-governance/policies/overview.md).
+
+### Customer AI
+
+Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
+
+| Feature | Description |
+| --- | --- |
+| Save Draft Instance | This new feature enables marketing analysts to save model configuration as a draft instance during configurations and continue to edit the draft until completion before training and scoring. Scenarios where this feature is helpful include, but are not limited to, when users have multiple fields to define in the configuration workflow that they are not able to complete in one go or when one or more dataset statistics (such as column completeness) take time to be processed before they become available. Read the [Customer AI user guide](../../intelligent-services/customer-ai/user-guide/configure.md) to learn more.|
+| Governance policies | After users submit to create an instance through the configuration workflow, the new policy enforcement service checks whether there are any policy violations of data usage and displays the details in a popover. It ensures that data operations and marketing actions are compliant with the data usage policies configured on Adobe Experience Platform. |
+
+For more information on Customer AI, read the [Customer AI overview](../../intelligent-services/customer-ai/overview.md). For information on data governance policies, read the [policies overview](../../data-governance/policies/overview.md).
 
 ## Identity Service {#identity-service}
 
