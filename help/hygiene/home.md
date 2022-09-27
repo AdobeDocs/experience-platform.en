@@ -32,7 +32,7 @@ The [!UICONTROL Data Hygiene] UI is built on top of the Data Hygiene API, whose 
 
 Consumer delete and dataset expiration requests each have their own processing timelines and provide transparency updates at key points in their respective workflows. Refer to the sections below for details on each job type.
 
-### Dataset expirations
+### Dataset expirations {#dataset-expiration-transparency}
 
 The following takes place when a [dataset expiration request](./ui/dataset-expiration.md) is created:
 
