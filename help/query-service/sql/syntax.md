@@ -499,7 +499,7 @@ The following is a list of statistical calculations that are available after usi
 | `field`  | The name of the column in a table.  |
 | `data-type` | The acceptable type of data for each column. |
 | `count` | The number of rows that contain a non-null value for this field. |
-| `distinct-count` | The number of unique or distinct values for this field |
+| `distinct-count` | The number of unique or distinct values for this field. |
 | `missing` | The number of rows that have a null value for this field. |
 | `max` | The maximum value from the analyzed table.  |
 | `min` | The minimum value from the analyzed table. |
