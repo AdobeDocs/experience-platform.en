@@ -55,8 +55,6 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-
-
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
