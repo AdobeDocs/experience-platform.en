@@ -59,4 +59,6 @@ On the details page of the dataset expiration, the right rail shows controls to 
 
 ## Next steps
 
-This document covered how to schedule dataset expirations in the Experience Platform UI. To learn how to schedule dataset expirations using the Data Hygiene API, refer to the [dataset expiration endpoint guide](../api/dataset-expiration.md).
+This document covered how to schedule dataset expirations in the Experience Platform UI. For information on how to perform other data hygiene tasks in the UI, refer to the [data hygiene UI overview](./overview.md).
+
+To learn how to schedule dataset expirations using the Data Hygiene API, refer to the [dataset expiration endpoint guide](../api/dataset-expiration.md).

@@ -47,7 +47,7 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 
 {style="table-layout:auto"}
 
-### Consumer deletions
+### Consumer deletes {#consumer-delete-transparency}
 
 The following takes place when a [consumer delete request](./ui/delete-consumer.md) is created:
 

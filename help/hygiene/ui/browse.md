@@ -27,7 +27,7 @@ The list only shows work orders for one category at a time. Select **[!UICONTROL
 
 >[!IMPORTANT]
 >
->Consumer deletions are only available for organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
+>Consumer deletes are only available for organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
 
 Select the funnel icon (![Image of the funnel icon](../images/ui/browse/funnel-icon.png)) to view a list of filters for the displayed work orders.
 
