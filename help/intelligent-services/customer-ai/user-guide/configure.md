@@ -288,6 +288,6 @@ The following video is designed to support your understanding of the configurati
 
 >[!IMPORTANT]
 >
-> The following video is of date. For the most up-to-date information refer to the documentation.
+> The following video is out of date. For the most up-to-date information refer to the documentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
