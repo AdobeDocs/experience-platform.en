@@ -14,7 +14,7 @@ Updates to existing features in Adobe Experience Platform:
 
 ## Identity Service {#identity-service}
 
-Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
+Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each customer to appear to have multiple "identities".
 
 Adobe Experience Platform Identity Service helps you gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
@@ -22,7 +22,7 @@ Adobe Experience Platform Identity Service helps you gain a better view of your 
 
 | Feature | Description |
 | --- | --- |
-| Support for dataset deletion | Identity Service now supports dataset deletion when requesting through the Catalog Service API, UI, or Data Hygiene. Read the guide on [deleting datasets in the UI](../../catalog/datasets/user-guide.md#delete-a-dataset) for more information. |
+| Support for dataset deletion | Identity Service now supports dataset deletion when requesting through the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), UI, or Data Hygiene. Read the guide on [deleting datasets in the UI](../../catalog/datasets/user-guide.md#delete-a-dataset) for more information. |
 
 To learn more about Identity Service, read the [Identity Service overview](../../identity-service/home.md).
 
