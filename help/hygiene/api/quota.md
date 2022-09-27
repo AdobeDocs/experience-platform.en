@@ -1,8 +1,6 @@
 ---
 title: Quota API Endpoint
 description: The /quota endpoint in the Data Hygiene API allows you to monitor your data hygiene usage against your organization's monthly quota limits for each job type.
-hide: true
-hidefromtoc: true
 ---
 # Quota endpoint
 
@@ -68,7 +66,7 @@ A successful response returns the details of your data hygiene quotas.
       "name": "deleteIdentityWorkOrderQuota",
       "description": "The number of Consumer Delete Work Order requests for the organization for this month.",
       "consumed": 390,
-      "quota": 2000000
+      "quota": 10000
     },
     {
       "name": "fieldUpdateWorkOrderQuota",
