@@ -10,7 +10,7 @@ feature: Queries
 
 - [Query Service overview](home.md)
 - [Guardrails for Query Service](guardrails.md)
-- Data distiller {#data-distiller}
+- Data Distiller {#data-distiller}
   - [Licence usage](data-distiller/licence-usage.md)
 - Get started {#get-started}
   - [Prerequisites](get-started/prerequisites.md)
