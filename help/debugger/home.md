@@ -13,7 +13,7 @@ The Adobe Experience Platform Debugger extension for [Chrome](https://chrome.goo
 
 You can use Platform Debugger with the other Adobe activation solutions to perform the following:
 
-1. Use [tags](../tags/home.md) in the Data Collection UI to insert code that activates [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html) products on your pages. 
+1. Use [tags](../tags/home.md) to insert code that activates [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html) products on your pages. 
 1. Use the [**[!UICONTROL Auditor]** tab](./auditor/overview.md) in Platform Debugger to test your implementations. 
 1. Use event-based and solution-specific tools in Platform Debugger to debug issues found by Auditor or to examine other information about your implementations.
 
