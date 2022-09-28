@@ -11,7 +11,7 @@ This guide shows you how to manage permissions for data collection features.
 
 ## Getting started
 
-In order to configure access control for data collection, you must have administrator privileges for an organization that has a product integration with Adobe Experience Platform Data Collection. The minimum role that can grant or withdraw permissions is a product profile administrator. Other administrator roles that can manage permissions are product administrators (can manage all profiles within a product) and system administrators (no restrictions). See the article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) in the Adobe Enterprise administration guide for more information.
+In order to configure access control for data collection, you must have administrator privileges for an organization that has a product integration with Adobe Experience Platform Data Collection. The minimum role that can grant or withdraw permissions is a **product profile administrator**. Other administrator roles that can manage permissions are **product administrators** (can manage all profiles within a product) and **system administrators** (no restrictions). See the article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) in the Adobe Enterprise administration guide for more information.
 
 This guide assumes you are familiar with basic Admin Console concepts like product profiles and how they grant product permissions to individual users and groups. For more information, see the [Admin Console user guide](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
@@ -131,4 +131,4 @@ For more information on managing users for a product profile, see the [Admin Con
 
 ## Next steps
 
-This guide covered the available permissions for the Data Collection UI and how to manage them through Admin Console. For more information on managing permissions for other Adobe Experience Platform capabilities, refer to the [access control documentation](../access-control/home.md).
+This guide covered the available permissions for Data Collection and how to manage them through Admin Console. For more information on managing permissions for other Adobe Experience Platform capabilities, refer to the [access control documentation](../access-control/home.md).
