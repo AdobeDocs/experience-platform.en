@@ -8,6 +8,7 @@ description: The September 2022 release notes for Adobe Experience Platform.
 
 New features in Adobe Experience Platform:
 
+- [Attribute-based access control](#abac)
 - [Data hygiene](#data-hygiene)
 - [[!UICONTROL Privacy Console]](#privacy-console)
 
@@ -19,6 +20,23 @@ Updates to existing features in Adobe Experience Platform:
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Sources](#sources)
+
+## Attribute-based access control {#abac}
+
+>[!IMPORTANT]
+>
+>Attribute-based access control will be enabled starting October 2022. If you would like to be an early adopter, please contact your Adobe representative.
+
+Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+
+Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD),personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+
+| Feature | Description |
+| --- | --- |
+| Attribute-based access control | Attribute-based access control allows you to label Experience Data Model (XDM) schema fields and segments with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies covering XDM schema fields and segments to better manage the access given to users or groups of users (internal, external, or third-party users). For more information, see the [attribute-based access control overview](../../access-control/abac/overview.md). |
+| Permissions | Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. Through Permissions, you can create and manage roles, assign the desired resource permissions for these roles, and build policies to leverage labels and define which user roles have access to specific Platform resources. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the [Permissions UI guide](../../access-control/abac/ui/browse.md). |
+
+For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). For a comprehensive guide on the attribute-based access control workflow, read the [attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
 
 ## Data hygiene {#data-hygiene}
 
@@ -166,5 +184,9 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | --- | --- |
 | Audience Manager segment population impact on Real-time Customer Profile | The ingestion of sizeable Audience Manager segment populations has a direct impact on your total profile count when you first send an Audience Manager segment to Platform using the Audience Manager source. This means that selecting all segments can potentially lead to a Profile count in excess of your license usage entitlement. For more information, read the [Audience Manager source overview](../../sources/connectors/adobe-applications/audience-manager.md). For information on your license usage, read the documentation on [using the license usage dashboard](../../dashboards/guides/license-usage.md). |
+| Support for Adobe Campaign Managed Cloud Service | Use the Adobe Campaign Managed Cloud Service source to bring your Adobe Campaign v8.4 delivery and tracking logs data to Experience Platform. Read the guide on [creating an Adobe Campaign Managed Cloud Service source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/campaign.md) for more information. | 
+| API support for on-demand ingestion for batch sources | Use on-demand ingestion to create ad hoc flow runs for a given dataflow with the [!DNL Flow Service] API. Flow runs created must be set to one-time ingestion. For more information, read the guide on [creating a flow run for on-demand ingestion using the API](../../sources/tutorials/api/on-demand-ingestion.md) for more information. |
+| API support for retrying failed dataflow runs for batch sources | Use the `re-trigger` operation to retry your failed dataflow through the API. Read the guide on [retrying failed dataflow runs using the API](../../sources/tutorials/api/retry-flows.md) for more information. |
+| API support for filtering row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources | Use logical and comparison operators to filter row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources. Read the guide on filtering data for a source using the API for more information. |
 
 To learn more about sources, read the [sources overview](../../sources/home.md).
