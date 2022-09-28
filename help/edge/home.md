@@ -70,15 +70,17 @@ This means you can use Web SDK on a page and leave the existing libraries on the
 
 Before migrating pages that use [!DNL at.js] to Web SDK, make sure to enable the following Web SDK configuration options. This ensures the visitor profile is kept while navigating from pages with [!DNL at.js ] to pages using Web SDK.
 
+* [`idMigrationEnabled`](fundamentals/configuring-the-sdk.md#id-migration-enabled)
 * [`targetMigrationEnabled`](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)
-* [`idMigrationEnabled`](fundamentals/configuring-the-sdk.md#id-migration-enabled) 
+
 
 >[!IMPORTANT]
 >
->[Redirect offers](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) are not currently supported when migrating from at.js to Web SDK.
+>The following Target features are not supported when migrating from at.js to Web SDK:
+> * [Redirect offers](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en)
+> * [CNAME and cross-domain support](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/?lang=en)
 
-
-
+After migrating from at.js to Web SDK, you should remove the `targetMigrationEnabled` option from your configuration.
 
 
 
