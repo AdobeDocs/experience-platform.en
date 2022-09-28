@@ -61,7 +61,7 @@ Provide the required values and then select **[!UICONTROL Next]** to continue.
 
 By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience Events in general, and Consumer Experience Event data to calculate propensity scores. When selecting a dataset, only ones that are compatible with Customer AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
 
-![Select and search for dataset](../images/user-guide/configure-dataset-page-save-and-exit.png)
+![Select and search for dataset](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
 
@@ -280,7 +280,7 @@ At the top of the Customer AI workspace **insights page**, notice that the detai
 
 When you preview datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
-![The Customer AI workspace with the restricted fields of the preview datasets with restricted schema results highlighted.](../images/user-guide/restricted-dataset-preview-save-and-exit.png)
+![The Customer AI workspace with the restricted fields of the preview datasets with restricted schema results highlighted.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
 After you create an instance with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
