@@ -66,7 +66,7 @@ The dataset preview contains data such as the last update time, source schema, a
 
 Select **[!UIControl Save]** to save your drafts as you move along the workflow. You can also save draft model configurations and move to the next step in the workflow. Use **[!UICONTROL Save and continue]** to create and save drafts during model configurations .This is particularly useful when you have to define many fields in the configuration workflow.
 
-![Save and exit](./images/user-guide/aai-save-save-&-exit.png)
+![The Create workflow of the Data Science Services Attribution AI tab with Save and Save and continue highlighted.](./images/user-guide/aai-save-save-&-exit.png)
 
 ### Dataset completeness {#dataset-completeness}
 
