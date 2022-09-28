@@ -298,6 +298,7 @@ A successful response returns the details of the dataflow specification responsi
   "version": "1.0",
   "attributes": {
     "isSourceFlow": true,
+    "flacValidationSupported": true,
     "frequency": "batch",
     "notification": {
       "category": "sources",
@@ -475,16 +476,21 @@ A successful response returns the details of the dataflow specification responsi
         "type": "object",
         "description": "defines various params required for creating flow run.",
         "properties": {
+          "startTime": {
+            "type": "integer",
+            "description": "An integer that defines the start time of the run. The value is represented in Unix epoch time."
+          },
           "windowStartTime": {
             "type": "integer",
-            "description": "The start time for the dataflow in epoch time."
+            "description": "An integer that defines the start time of the window against which data is to be pulled. The value is represented in Unix epoch time."
           },
           "windowEndTime": {
             "type": "integer",
-            "description": "The end time for the dataflow in epoch time."
+            "description": "An integer that defines the end time of the window against which data is to be pulled.  The value is represented in Unix epoch time."
           }
         },
         "required": [
+          "startTime",
           "windowStartTime",
           "windowEndTime"
         ]

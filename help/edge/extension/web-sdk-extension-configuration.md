@@ -1,17 +1,17 @@
 ---
 title: Configure the Adobe Experience Platform Web SDK Extension
-description: How to configure the Adobe Experience Platform Web SDK tag extension in the Data Collection UI.
+description: How to configure the Adobe Experience Platform Web SDK tag extension in the UI.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
 ---
 # Configure the Adobe Experience Platform Web SDK extension
 
 The Adobe Experience Platform Web SDK tag extension sends data to Adobe Experience Cloud from web properties through the Adobe Experience Platform Edge Network. The extension allows you to stream data into Platform, synchronize identities, process customer consent signals, and automatically collect context data.
 
-This document covers how to configure the extension in the Data Collection UI.
+This document covers how to configure the extension in the UI.
 
 ## Getting started
 
-If the Platform Web SDK extension has already been installed for a property, open the property in the Data Collection UI and select the **[!UICONTROL Extensions]** tab. Under the Platform Web SDK, select **[!UICONTROL Configure]**.
+If the Platform Web SDK extension has already been installed for a property, open the property in the UI and select the **[!UICONTROL Extensions]** tab. Under the Platform Web SDK, select **[!UICONTROL Configure]**.
 
 ![](../images/extension/overview/configure.png)
 
