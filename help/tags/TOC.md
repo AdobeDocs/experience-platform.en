@@ -13,7 +13,7 @@ solution: Data Collection
 * Getting started {#get-started}
   * [Quickstart guide](./quick-start/quick-start.md)
   * [Implementation guides](./quick-start/implementation-guides.md)
-* Data Collection UI {#ui}
+* UI guides {#ui}
   * [Overview](./ui/managing-resources/overview.md)
   * Extensions {#extensions}
     * [Overview](./ui/managing-resources/extensions/overview.md)
@@ -56,7 +56,6 @@ solution: Data Collection
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
   * [User permissions](./ui/administration/user-permissions.md)
-  * [Manage permissions](./ui/administration/manage-permissions.md)
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
   * Adobe extensions {#adobe}
@@ -194,6 +193,7 @@ solution: Data Collection
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
 * Release notes {#release-notes}
   * [Latest](./release-notes/current.md)
+  * [2021 release notes](./release-notes/2021.md)
   * [2020 release notes](./release-notes/2020.md)
   * [2019 release notes](./release-notes/2019.md)
   * [2018 release notes](./release-notes/2018.md)

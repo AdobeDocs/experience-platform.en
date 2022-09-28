@@ -8,17 +8,13 @@ exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 
 A datastream represents the server-side configuration when implementing the Adobe Experience Platform Web and Mobile SDKs. While the [configure command](../fundamentals/configuring-the-sdk.md) in the SDK controls things that must be handled on the client (such as the `edgeDomain`), datastreams handle all other configurations for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the datastream. This allows you to update the server-side configuration without having to make code changes on your website. 
 
-This document covers the steps for configuring a datastream in the Data Collection UI. 
-
->[!NOTE]
->
->Your organization must be provisioned for this feature in order to access it in the UI. Please fill out the following [form](https://adobe.ly/websdkaccess) to request the necessary access. To manage datastreams, your user account must be added to a product profile for tags in [!DNL Adobe Experience Platform].
+This document covers the steps for configuring a datastream in the UI. 
 
 ## Access the [!UICONTROL Datastreams] workspace
 
-You can create and manage datastreams in the Data Collection UI by selecting **[!UICONTROL Datastreams]** in the left navigation.
+You can create and manage datastreams in the Data Collection UI or Experience Platform UI by selecting **[!UICONTROL Datastreams]** in the left navigation.
 
-![Datastreams tab in the Data Collection UI](../images/datastreams/overview/datastreams-tab.png)
+![Datastreams tab in the UI](../images/datastreams/overview/datastreams-tab.png)
 
 The [!UICONTROL Datastreams] tab displays a list of existing datastreams, including their friendly name, ID, and last modified date. Select the name of of a datastream to [view its details and configure services](#view-details).
 
@@ -104,7 +100,7 @@ This service controls whether and how data is sent to Adobe Audience Manager. Al
 
 >[!IMPORTANT]
 >
->When enabling a datastream for Platform, take note of the Platform sandbox that you are currently using, as displayed in the top ribbon of the Data Collection UI.
+>When enabling a datastream for Platform, take note of the Platform sandbox that you are currently using, as displayed in the top ribbon of the UI.
 >
 >![Selected sandbox](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -115,12 +111,12 @@ This service controls whether and how data is sent to Adobe Experience Platform.
 ![Adobe Experience Platform settings block](../images/datastreams/overview/platform-config.png)
 
 | Setting | Description |
-| --- | --- |
+|---| --- |
 | [!UICONTROL Event Dataset] | **(Required)** Select the Platform dataset that customer event data will be streamed to. This schema must use the [XDM ExperienceEvent class](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Profile Dataset] | Select the Platform dataset that customer attribute data will be sent to. This schema must use the [XDM Individual Profile class](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Select this checkbox to enable Offer Decisioning for a Platform Web SDK implementation. See the guide on [using Offer Decisioning with the Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md) for more implementation details. For more information on Offer Decisioning capabilities, refer to the [Adobe Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html). |
 | [!UICONTROL Edge Segmentation] | Select this checkbox to enable [edge segmentation](../../segmentation/ui/edge-segmentation.md) for this datastream. When the SDK sends data through an edge-segmentation-enabled datastream, any updated segment memberships for the profile in question are sent back in the response.<br><br>This option can be used in combination with [!UICONTROL Personalization Destinations] for [next-page personalization use cases](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Personalization Destinations] | When used in combination with the [!UICONTROL Edge Segmentation] checkbox, this option allows the datastream to connect to personalization engines like Adobe Target. Refer to the destinations documentation for specific steps on [configuring personalization destinations](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Personalization Destinations] | When enabling this after enabling the [!UICONTROL Edge Segmentation] checkbox, this option allows the datastream to connect to personalization destinations, such as [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md). Refer to the destinations documentation for specific steps on [configuring personalization destinations](../../destinations/ui/configure-personalization-destinations.md). |
 
 ### Adobe Target settings {#target}
 
@@ -173,4 +169,4 @@ The main page of the [!UICONTROL Datastreams] workspace reappears with the new d
 
 ## Next steps
 
-This guide covered how to manage datastreams in the Data Collection UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../rtcdp-connections/e2e.md#install).
+This guide covered how to manage datastreams in the UI. For more information on how to install and configure the Web SDK after setting up a datastream, refer to the [Data Collection E2E guide](../../collection/e2e.md#install).

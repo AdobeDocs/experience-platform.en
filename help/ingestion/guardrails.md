@@ -2,6 +2,7 @@
 keywords: Experience Platform;troubleshooting;guardrails;guidelines;
 title: Guardrails for Data Ingestion
 description: This document provides guidance on guardrails for data ingestion in Adobe Experience Platform
+exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
 ---
 # Guardrails for Data Ingestion
 
@@ -26,7 +27,7 @@ The following table outlines guardrails to consider when using the [streaming in
 | Type of ingestion | Guidelines | Notes |
 | --- | --- | --- |
 | Streaming ingestion | <ul><li>The maximum record size is 1 MB, with the recommended size being 10 KB.</li><li>You can process 20000 requests per second to Profile in under one minute.</li><li>You can process up to 20000 requests per second to data lake in under 15 minutes.</li></ul>| Use the batch ingestion API if you require a higher data throughput. |
-| Streaming sources | <ul><li>The maximum record size is 1 MB, with the recommended size being 10 KB.</li><li>Streaming sources support between 4000 to 5000 requests per second upon the creation of a new source connection.</li><li>You can process between 4000 and 5000 requests per second to data lake.</li></ul> | Streaming sources such as [!DNL Kafka], [!DNL Azure Event Hubs], and [!DNL Amazon Kinesis] do not use the [!DNL Data Collection Core Service] (DCCS) route and can have different throughput limits. See the [sources overview](../sources/home.md) for a catalog of sources you can use for data ingestion. |
+| Streaming sources | <ul><li>The maximum record size is 1 MB, with the recommended size being 10 KB.</li><li>Streaming sources support between 4000 to 5000 requests per second upon the creation of a new source connection. **Note**: It can take up to 30 minutes for streaming data to be completely processed to data lake.</li><li>You can process between 4000 and 5000 requests per second to data lake. **Note**: It can take up to 30 minutes for streaming data to be completely processed to data lake.</li></ul> | Streaming sources such as [!DNL Kafka], [!DNL Azure Event Hubs], and [!DNL Amazon Kinesis] do not use the [!DNL Data Collection Core Service] (DCCS) route and can have different throughput limits. See the [sources overview](../sources/home.md) for a catalog of sources you can use for data ingestion. |
 
 ## Next steps
 

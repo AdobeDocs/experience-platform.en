@@ -90,13 +90,13 @@ Yes! Tags now support mobile properties and configuration for the new Adobe Expe
 
 ## Why is the UI saying there was an error loading my account?
 
-If you receive a message saying that there was an error loading your account, it means that your account does not belong to any product profiles for tags. See the guide on [managing permissions](./ui/administration/manage-permissions.md) to learn how to configure a product profile in Adobe Admin Console to grant access to the Data Collection UI.
+If you receive a message saying that there was an error loading your account, it means that your account does not belong to any product profiles for tags. See the guide on [managing permissions](../collection/permissions.md) to learn how to configure a product profile in Adobe Admin Console to grant access to Data Collection features in the UI.
 
 ## Why can't I add any properties in the UI?
 
-If you cannot create any new properties when logged in to the Data Collection UI, it means that your account does not belong to a product profile that has the Manage Properties right.
+If you cannot create any new properties when logged in to the UI, it means that your account does not belong to a product profile that has the Manage Properties right.
 
-See the guide on [managing permissions](./ui/administration/manage-permissions.md) to learn how to configure a product profile in Adobe Admin Console to grant the Manage Properties right. For more information on the different rights for tags, see the overview on [user permissions for tags](./ui/administration/user-permissions.md).
+See the guide on [managing permissions](../collection/permissions.md) to learn how to configure a product profile in Adobe Admin Console to grant the Manage Properties right. For more information on the different rights for tags, see the overview on [user permissions for tags](./ui/administration/user-permissions.md).
 
 ## What if I have other questions?
 
