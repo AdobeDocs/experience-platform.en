@@ -150,6 +150,8 @@ For more information on data collection in Platform, please see the [data collec
 
 **New or updated documentation**
 
+| Documentation | Description |
+| ----------- | ----------- |
 | Destinations Flow Service API documentation| The [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) was updated to include guidance on how to perform operations on file-based destinations. Operations for streaming destinations will be added at a later time. |
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
