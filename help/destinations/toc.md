@@ -100,6 +100,7 @@ feature: Destinations
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Salesforce CRM connection](./catalog/crm/salesforce.md)
+        * [Outreach connection](catalog/crm/outreach.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
@@ -111,6 +112,7 @@ feature: Destinations
     * Email marketing destinations {#email-marketing}
         * [Email marketing destinations overview](./catalog/email-marketing/overview.md)
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
+        * [Adobe Campaign Managed Services connection](./catalog/email-marketing/adobe-campaign-managed-services.md)
         * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
         * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
