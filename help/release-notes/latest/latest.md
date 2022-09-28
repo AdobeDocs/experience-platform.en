@@ -31,7 +31,7 @@ Updates to existing features in Adobe Experience Platform:
 
 Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
 
-Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD),personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD), personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 | Feature | Description |
 | --- | --- |
@@ -58,7 +58,7 @@ Refer to the following documentation to get started with data hygiene:
 
 ## [!UICONTROL Privacy Console] {#privacy-console}
 
-The [!UICONTROL Privacy Console] tab in the Experience Platform UI provides a dashboard view of key insights from privacy-related features such as [data subject requests from Privacy Service], [data hygiene work orders], and [audit logs]. The console also provides several in-product use case guides to help guide you through common privacy workflows.
+The [!UICONTROL Privacy Console] tab in the Experience Platform UI provides a dashboard view of key insights from privacy-related features such as [data subject requests from Privacy Service](../../privacy-service/home.md), [data hygiene work orders](../../hygiene/home.md), and [audit logs](../../landing/governance-privacy-security/audit-logs/overview.md). The console also provides several in-product use case guides to help guide you through common privacy workflows.
 
 See the [Privacy Console overview](../../landing/governance-privacy-security/privacy-console.md) for more information on the feature.
 
