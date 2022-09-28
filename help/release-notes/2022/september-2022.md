@@ -31,7 +31,7 @@ Updates to existing features in Adobe Experience Platform:
 
 Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
 
-Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD),personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD), personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 | Feature | Description |
 | --- | --- |
@@ -58,7 +58,7 @@ Refer to the following documentation to get started with data hygiene:
 
 ## [!UICONTROL Privacy Console] {#privacy-console}
 
-The [!UICONTROL Privacy Console] tab in the Experience Platform UI provides a dashboard view of key insights from privacy-related features such as [data subject requests from Privacy Service], [data hygiene work orders], and [audit logs]. The console also provides several in-product use case guides to help guide you through common privacy workflows.
+The [!UICONTROL Privacy Console] tab in the Experience Platform UI provides a dashboard view of key insights from privacy-related features such as [data subject requests from Privacy Service](../../privacy-service/home.md), [data hygiene work orders](../../hygiene/home.md), and [audit logs](../../landing/governance-privacy-security/audit-logs/overview.md). The console also provides several in-product use case guides to help guide you through common privacy workflows.
 
 See the [Privacy Console overview](../../landing/governance-privacy-security/privacy-console.md) for more information on the feature.
 
@@ -212,6 +212,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Support for Adobe Campaign Managed Cloud Service | Use the Adobe Campaign Managed Cloud Service source to bring your Adobe Campaign v8.4 delivery and tracking logs data to Experience Platform. Read the guide on [creating an Adobe Campaign Managed Cloud Service source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/campaign.md) for more information. | 
 | API support for on-demand ingestion for batch sources | Use on-demand ingestion to create ad hoc flow runs for a given dataflow with the [!DNL Flow Service] API. Flow runs created must be set to one-time ingestion. For more information, read the guide on [creating a flow run for on-demand ingestion using the API](../../sources/tutorials/api/on-demand-ingestion.md) for more information. |
 | API support for retrying failed dataflow runs for batch sources | Use the `re-trigger` operation to retry your failed dataflow through the API. Read the guide on [retrying failed dataflow runs using the API](../../sources/tutorials/api/retry-flows.md) for more information. |
-| API support for filtering row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources | Use logical and comparison operators to filter row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources. Read the guide on filtering data for a source using the API for more information. |
+| API support for filtering row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources | Use logical and comparison operators to filter row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources. Read the guide on [filtering data for a source using the API](../../sources/tutorials/api/filter.md) for more information. |
 
 To learn more about sources, read the [sources overview](../../sources/home.md).
