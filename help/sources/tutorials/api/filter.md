@@ -125,18 +125,16 @@ In the example below, conditions are applied to only select data that equal the 
   "type": "PQL",
   "format": "pql/json",
   "value": {
-        "nodeType": "fnApply",
-        "fnName": "=",
-        "params": [
-          {
-            "nodeType": "fieldLookup",
-            "fieldName": "city"
-          },
-          {
-            "nodeType": "literal",
-            "value": "DDN"
-          }
-        ]
+    "nodeType": "fnApply",
+    "fnName": "=",
+    "params": [
+      {
+        "nodeType": "fieldLookup",
+        "fieldName": "city"
+      },
+      {
+        "nodeType": "literal",
+        "value": "DDN"
       }
     ]
   }
@@ -271,132 +269,48 @@ A successful request returns the following response.
       }
     ]
   },
-  "data": [
+ "data": [
     {
-      "CITY": "DDN",
-      "LASTNAME": "Sharma",
-      "JOINEDDATE": "2020-04-22T00:00:00",
-      "LONGITUDE": 980.222,
-      "CREATEDAT": "2020-04-22T17:19:33",
-      "FIRSTNAME": "Gaurav",
-      "POSTG": false,
-      "HEIGHT": "175",
-      "CREATEDATTS": "2020-04-22T17:19:33",
-      "ISEMPLOYED": true,
-      "LATITUDE": 123.89,
-      "AGE": "30"
+        "CITY": "MZN",
+        "LASTNAME": "Jain",
+        "JOINEDDATE": "2022-06-22T00:00:00",
+        "LONGITUDE": 1000.222,
+        "CREATEDAT": "2022-06-22T17:19:33",
+        "FIRSTNAME": "Shivam",
+        "POSTG": true,
+        "HEIGHT": "169",
+        "CREATEDATTS": "2022-06-22T17:19:33",
+        "ISEMPLOYED": true,
+        "LATITUDE": 2000.89,
+        "AGE": "25"
     },
     {
-      "CITY": "MZN",
-      "LASTNAME": "Jain",
-      "JOINEDDATE": "2022-06-22T00:00:00",
-      "LONGITUDE": 1000.222,
-      "CREATEDAT": "2022-06-22T17:19:33",
-      "FIRSTNAME": "Shivam",
-      "POSTG": true,
-      "HEIGHT": "169",
-      "CREATEDATTS": "2022-06-22T17:19:33",
-      "ISEMPLOYED": true,
-      "LATITUDE": 2000.89,
-      "AGE": "25"
+        "CITY": "MUM",
+        "LASTNAME": "Kreet",
+        "JOINEDDATE": "2022-09-07T00:00:00",
+        "LONGITUDE": 10500.01,
+        "CREATEDAT": "2022-09-07T17:19:33",
+        "FIRSTNAME": "Rakul",
+        "POSTG": true,
+        "HEIGHT": "155",
+        "CREATEDATTS": "2022-09-07T17:19:33",
+        "ISEMPLOYED": false,
+        "LATITUDE": 2500.89,
+        "AGE": "42"
     },
     {
-      "CITY": "MUM",
-      "LASTNAME": "Kreet",
-      "JOINEDDATE": "2022-09-07T00:00:00",
-      "LONGITUDE": 10500.01,
-      "CREATEDAT": "2022-09-07T17:19:33",
-      "FIRSTNAME": "Rakul",
-      "POSTG": true,
-      "HEIGHT": "155",
-      "CREATEDATTS": "2022-09-07T17:19:33",
-      "ISEMPLOYED": false,
-      "LATITUDE": 2500.89,
-      "AGE": "42"
-    },
-    {
-      "CITY": "OHI",
-      "LASTNAME": "Ericson",
-      "JOINEDDATE": "2021-10-12T00:00:00",
-      "LONGITUDE": 400.254,
-      "CREATEDAT": "2021-10-12T17:19:33",
-      "FIRSTNAME": "Joshua",
-      "POSTG": false,
-      "HEIGHT": "180",
-      "CREATEDATTS": "2021-10-12T17:19:33",
-      "ISEMPLOYED": false,
-      "LATITUDE": 5001.89,
-      "AGE": "18"
-    },
-    {
-      "CITY": "PUD",
-      "LASTNAME": "Jacob",
-      "JOINEDDATE": "2022-06-22T00:00:00",
-      "LONGITUDE": 1000.222,
-      "CREATEDAT": "2022-06-22T17:19:33",
-      "FIRSTNAME": "Hazel",
-      "POSTG": true,
-      "HEIGHT": "159",
-      "CREATEDATTS": "2022-06-22T17:19:33",
-      "ISEMPLOYED": true,
-      "LATITUDE": 2000.89,
-      "AGE": "29"
-    },
-    {
-      "CITY": "IRS",
-      "LASTNAME": "Pool",
-      "JOINEDDATE": "2021-01-01T00:00:00",
-      "LONGITUDE": 2100.222,
-      "CREATEDAT": "2021-02-01T17:19:33",
-      "FIRSTNAME": "Tommy",
-      "POSTG": true,
-      "HEIGHT": "155",
-      "CREATEDATTS": "2021-01-01T17:19:33",
-      "ISEMPLOYED": false,
-      "LATITUDE": 1200.89,
-      "AGE": "69"
-    },
-    {
-      "CITY": "OKL",
-      "LASTNAME": "Kent",
-      "JOINEDDATE": "2020-04-22T00:00:00",
-      "LONGITUDE": 980.222,
-      "CREATEDAT": "2021-04-22T17:19:33",
-      "FIRSTNAME": "Megan",
-      "POSTG": true,
-      "HEIGHT": "175",
-      "CREATEDATTS": "2021-04-22T17:19:33",
-      "ISEMPLOYED": false,
-      "LATITUDE": 123.89,
-      "AGE": "30"
-    },
-    {
-      "CITY": "JPN",
-      "LASTNAME": "Chess",
-      "JOINEDDATE": "2022-09-13T00:00:00",
-      "LONGITUDE": 980.222,
-      "CREATEDAT": "2022-09-13T19:20:33",
-      "FIRSTNAME": "Koil",
-      "POSTG": true,
-      "HEIGHT": "175",
-      "CREATEDATTS": "2022-09-13T19:19:33",
-      "ISEMPLOYED": false,
-      "LATITUDE": 123.89,
-      "AGE": "37"
-    },
-    {
-      "CITY": "MAN",
-      "LASTNAME": "Lee",
-      "JOINEDDATE": "2022-09-14T00:00:00",
-      "LONGITUDE": 1000.222,
-      "CREATEDAT": "2022-09-14T05:02:33",
-      "FIRSTNAME": "Denzel",
-      "POSTG": true,
-      "HEIGHT": "185",
-      "CREATEDATTS": "2022-09-14T05:02:33",
-      "ISEMPLOYED": true,
-      "LATITUDE": 123.89,
-      "AGE": "16"
+        "CITY": "MAN",
+        "LASTNAME": "Lee",
+        "JOINEDDATE": "2022-09-14T00:00:00",
+        "LONGITUDE": 1000.222,
+        "CREATEDAT": "2022-09-14T05:02:33",
+        "FIRSTNAME": "Denzel",
+        "POSTG": true,
+        "HEIGHT": "185",
+        "CREATEDATTS": "2022-09-14T05:02:33",
+        "ISEMPLOYED": true,
+        "LATITUDE": 123.89,
+        "AGE": "16"
     }
   ]
 }
@@ -499,7 +413,7 @@ You can omit the initial `fnApply` for scenarios that only require one condition
 }
 ```
 
-### Using the operator `in`
+### Using the `in` operator
 
 See the sample payload below for an example of the operator `in`.
 
@@ -525,6 +439,54 @@ See the sample payload below for an example of the operator `in`.
               "Ramen",
               "John"
             ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+### Using the `isNull` operator
+
+See the sample payload below for an example of the operator `isNull`.
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "isNull",
+    "params": [
+      {
+        "nodeType": "fieldLookup",
+        "fieldName": "complaint_type"
+      }
+    ]
+  }
+}
+```
+
+### Using the `NOT` operator
+
+See the sample payload below for an example of the operator `NOT`.
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "NOT",
+    "params": [
+      {
+        "nodeType": "fnApply",
+        "fnName": "isNull",
+        "params": [
+          {
+            "nodeType": "fieldLookup",
+            "fieldName": "complaint_type"
           }
         ]
       }
