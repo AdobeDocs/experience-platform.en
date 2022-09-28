@@ -8,15 +8,15 @@ exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 ---
 # Data Collection overview
 
-Adobe Experience Platform Data Collection provides a suite of technologies that allow you to collect customer experience data from client-side sources, and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations in seconds.
+Adobe Experience Platform provides a suite of technologies that allow you to collect customer experience data from client-side sources, and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations in seconds.
 
-Data Collection is supported for the following client-side sources:
+Data collection is supported for the following client-side sources:
 
 * Web-based applications
 * Native mobile applications
 * Over-the-top (OTT) applications
 
-Data Collection focuses on the discoverability and accessibility of ingested datasets, encompassing the following:
+Data collection focuses on the discoverability and accessibility of ingested datasets, encompassing the following:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tags](../tags/home.md)
@@ -28,13 +28,13 @@ Data Collection focuses on the discoverability and accessibility of ingested dat
 * [Experience Data Model (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-This guide provides a high-level introduction to Data Collection and how it works to send data to Adobe Experience Cloud products and non-Adobe applications through the Platform Edge Network.
+This guide provides a high-level introduction to data collection and how it works to send data to Adobe Experience Cloud products and non-Adobe applications through the Platform Edge Network.
 
 ## Tags, Web SDK, and Mobile SDK
 
 The Platform Web SDK and Platform Mobile SDK collapse and compress all Adobe product libraries into a single development kit for web and mobile platforms respectively. These can be implemented using raw code or using [tags](../tags/home.md) through the Data Collection UI.
 
-Compressing these libraries speeds up Data Collection and consolidates operations into a single stream from client-side devices to the Platform Edge Network.
+Compressing these libraries speeds up data collection and consolidates operations into a single stream from client-side devices to the Platform Edge Network.
 
 ![Tags, Web SDK, Mobile SDK](./images/home/tags-sdks.png)
 
@@ -62,8 +62,8 @@ In addition, datastreams are integrated with several Platform capabilities that 
 
 ## Next steps
 
-This document provided a high-level overview of how Data Collection works to automate the process of sending your collected customer experience data to Adobe products and third-party destinations.
+This document provided a high-level overview of how data collection works to automate the process of sending your collected customer experience data to Adobe products and third-party destinations.
 
-![Data Collection framework](./images/home/collection.png)
+![Data collection framework](./images/home/collection.png)
 
 For more information on the general workflow involved in sending event data through the Edge Network, refer to the [end-to-end overview](./e2e.md).
