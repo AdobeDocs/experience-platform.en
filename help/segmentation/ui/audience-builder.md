@@ -4,8 +4,14 @@ solution: Experience Platform
 title: Audiences UI Guide
 topic-legacy: ui guide
 description: The Audience Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing audiences for your organization.
+hide: true
+hidefromtoc: true
 ---
 # Audience Builder UI guide
+
+>[!IMPORTANT]
+>
+>The Audience Builder is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 The Audience Builder provides a workspace to build and edit audiences, using blocks that are used to represent different actions.
 
@@ -25,7 +31,7 @@ After selecting **[!UICONTROL Add Audience]**, a list of audiences appears. Sele
 
 ![A list of audiences appears. You can select which audience you want to add from this dialog.](../images/ui/audience-builder/select-audience.png)
 
-Your selected audiences now appear within the right rail, when the **[!UICONTROL Audience]** block is selected. From here, you can change the merge type of the combined audiences.
+Your selected audiences now appear within the right rail when the **[!UICONTROL Audience]** block is selected. From here, you can change the merge type of the combined audiences.
 
 ![The possible merge types for the audiences are highlighted.](../images/ui/audience-builder/merge-types.png)
 
@@ -83,7 +89,7 @@ After selecting **[!UICONTROL Add Audience]**, a list of audiences appears. Sele
 
 ![A list of audiences appears. You can select which audience you want to add from this dialog.](../images/ui/audience-builder/select-audience.png)
 
-Your selected audiences now appear within the right rail, when the **[!UICONTROL Join]** block is selected. 
+Your selected audiences now appear within the right rail when the **[!UICONTROL Join]** block is selected. 
 
 ![The audiences that were added as part of the Join are shown.](../images/ui/audience-builder/selected-audiences.png)
 

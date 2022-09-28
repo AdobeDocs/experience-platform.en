@@ -188,6 +188,10 @@ Schedules can currently only be created using the API. For detailed steps on cre
 
 ## Audiences {#audiences}
 
+>[!IMPORTANT]
+>
+>The audiences functionality is currently in limited beta and is not available to all users. The documentation and the functionality are subject to change.
+
 Select the **[!UICONTROL Audiences]** tab to see a list of all the audiences for your organization.
 
 ![A list of audiences for your organization.](../images/ui/overview/list-audiences.png)
