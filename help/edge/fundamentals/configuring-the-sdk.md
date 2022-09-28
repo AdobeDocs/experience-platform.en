@@ -38,15 +38,26 @@ There are many options that can be set during configuration. All options can be 
 
 Your assigned configuration ID, which links the SDK to the appropriate accounts and configuration. When configuring multiple instances within a single page, you must configure a different `edgeConfigId` for each instance.
 
-### `context`
+### `context` {#context}
 
 | **Type**         | **Required** | **Default Value**                                  |
 | ---------------- | ------------ | -------------------------------------------------- |
-| Array of Strings | No           | `["web", "device", "environment", "placeContext"]` |
+| Array of Strings | No           | `["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]` |
 
 {style="table-layout:auto"}
 
 Indicates which context categories to collect automatically as described in [Automatic Information](../data-collection/automatic-information.md). If this configuration is not specified, all categories are used by default.
+
+>[!IMPORTANT]
+>
+>All context properties, with the exception of `highEntropyUserAgentHints`, are enabled by default. If you specified context properties manually in your Web SDK configuration, you must enable all context properties to continue collecting the needed information.
+
+To enable [high entropy client hints](user-agent-client-hints.md#enabling-high-entropy-client-hints) on your Web SDK deployment, you must include the additional `highEntropyUserAgentHints` context option, alongside your existing configuration.
+
+For example, to retrieve high entropy client hints from web properties, your configuration would look like this:
+
+`context: ["highEntropyUserAgentHints", "web"]`
+
 
 ### `debugEnabled`
 
