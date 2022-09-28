@@ -41,7 +41,7 @@ Example usage:
 module.exports = function(…) { … }
 ```
 
-## `exports`
+## `exports` {#exports-variable}
 
 A free variable named `exports` is available which allows you to export the module's API.
 
