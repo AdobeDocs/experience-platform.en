@@ -335,6 +335,10 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
     "click": "Mouse Click",
     "addCart": "Add to Cart",
     "checkout": "Cart Checkout"
+  },
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out",
+    "media.ping": "Media ping"
   }
 }
 ```
@@ -344,10 +348,11 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 | `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
+| `xdm:sourceProperty` | The path to the specific property whose details you want to modify.The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
 | `xdm:title` | The new title you wish to display for this field, written in Title Case. |
 | `xdm:description` | An optional description can be added along with the title. |
-| `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` determines the list of suggested values for the field in the [!DNL Experience Platform] UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a PATCH request to the field's parent resource.  |
+| `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` can be used to add suggested values for the field in the Segmentation UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a PATCH request to the field's parent resource. |
+| `meta:excludeMetaEnum` | If the field indicated by `xdm:sourceProperty` is a string field that has existing suggested values provided under a `meta:enum` field, you can include this object in a friendly name descriptor to exclude some or all of these values from segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
 
 {style="table-layout:auto"}
 

@@ -36,7 +36,7 @@ In Adobe Experience Platform, create your schema.
 
 1. Give the schema a name and short description.
 
-1. You can add the “ExperienceEvent web details” field group by selecting **[!UICONTROL Add]** next to **[!UICONTROL Field Groups]**. 
+1. You can add the "ExperienceEvent web details" field group by selecting **[!UICONTROL Add]** next to **[!UICONTROL Field Groups]**. 
 
     >[!NOTE]
     >
@@ -48,13 +48,13 @@ For more information about schemas, see [Experience Data Model (XDM) System Help
 
 ## Create an event forwarding property
 
-In the Data Collection UI create a property of type "Edge."
+In the **[!UICONTROL Tags]** workspace, create a property of type **[!UICONTROL Edge]**.
 
 1. Select **[!UICONTROL New Property]**. 
 
 1. Name the property. 
 
-1. Choose the “Edge” platform type.
+1. Choose the "Edge" platform type.
 
 1. Select **[!UICONTROL Save]**.
 
@@ -65,22 +65,18 @@ note of the environment IDs. If the Adobe Org used in the datastream differs fro
 
 To create your datastream in Adobe Experience Platform, use the Environment ID generated when you created the event forwarding property.
 
-1. Use the link in the left rail of the Data Collection UI to open the datastreams interface.
-
-1. Select **[!UICONTROL Datastreams]**.
+1. Select **[!UICONTROL Datastreams]** in the left navigation.
 
 1. Name the configuration and provide an optional description. 
     The description helps to identify configurations in a list of several configurations. 
 
 1. Select **[!UICONTROL Save]**.
 
-
-
 ## Enable event forwarding
 
 Next, configure Edge Network to send data to event forwarding, and to other Adobe products.
 
-1. In the datastreams UI, select the property you created.
+1. In the **[!UICONTROL Datastreams]** workspace, select the property you created.
 
 1. Select the Development, Production, or Staging environment.
 
@@ -96,23 +92,15 @@ After configuring, make note of the Environment IDs for the new property.
 
 ## Configure the Platform Web SDK extension to send data to the datastream created previously
 
-Create your property in the Data Collection UI, then use the Adobe Experience Platform Web SDK extension to configure it.
+Create your property in the **[!UICONTROL Tags]** workspace, then navigate to **[!UICONTROL Extensions]** and select the Experience Platform Web SDK extension from the catalog to configure and install it.
 
-1. Name the property.
-
-    You can have multiple instances of Alloy. For example, you might have different pre- and post-paywall tracking properties.
-
-1. Select the Org ID.
-
-1. Select the Edge Domain.
-
-See the [Web SDK extension documentation](../../extensions/web/sdk/overview.md) for more configuration options.
+See the [Web SDK extension documentation](../../extensions/web/sdk/overview.md) for details on configuration options.
 
 ## Create a tag rule to send data to Platform Web SDK
 
 After the above is in place, build data definitions, rules, and so on, that use event forwarding and tags, but that need only a single request from the page.
 
-Create a page load rule using the Platform Web SDK extension and the “Send Event” action type:
+Create a page load rule using the Platform Web SDK extension and the "Send Event" action type:
 
 1. Open the **[!UICONTROL Rules]** tab, then select **[!UICONTROL Create New Rule]**.
 
