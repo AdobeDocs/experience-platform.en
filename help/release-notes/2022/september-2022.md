@@ -17,6 +17,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Audit logs](#audit-logs)
 - [Data collection](#data-collection)
+- [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Sources](#sources)
@@ -136,7 +137,7 @@ For more information on data collection in Platform, please see the [data collec
 
 **New or updated documentation**
 
-| Destinations Flow Service API documentation| Use the new [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) to perform operations on file-based destinations. Operations for streaming destinations will be added at a later time. |
+| Destinations Flow Service API documentation| The [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) was updated to include guidance on how to perform operations on file-based destinations. Operations for streaming destinations will be added at a later time. |
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
