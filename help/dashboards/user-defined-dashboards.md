@@ -3,11 +3,7 @@ title: User-defined Dashboards
 description: Learn how to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 ---
-# User-defined dashboards (Beta)
-
->[!IMPORTANT]
->
->The user-defined dashboards feature is in beta. Its features and documentation are subject to change.
+# User-defined dashboards
 
 Adobe Experience Platform Dashboards helps you to expedite insights and customize visualization through the user-defined dashboards feature. This feature enables you to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization.
 
