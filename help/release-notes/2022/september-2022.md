@@ -18,6 +18,7 @@ Updates to existing features in Adobe Experience Platform:
 - [Audit logs](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Data collection](#data-collection)
+- [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Query Service](#query-service)
@@ -31,7 +32,7 @@ Updates to existing features in Adobe Experience Platform:
 
 Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
 
-Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD),personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD), personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 | Feature | Description |
 | --- | --- |
@@ -46,9 +47,9 @@ Adobe Experience Platform provides a robust set of tools to manage large, compli
 
 Adobe Experience Platform's data hygiene capabilities allow you to cleanse your data by scheduling automated dataset expirations and programmatically deleting consumer data by identity.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Consumer delete capabilities are only available to organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
+>Data hygiene capabilities are only available to organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
 
 Refer to the following documentation to get started with data hygiene:
 
@@ -58,7 +59,7 @@ Refer to the following documentation to get started with data hygiene:
 
 ## [!UICONTROL Privacy Console] {#privacy-console}
 
-The [!UICONTROL Privacy Console] tab in the Experience Platform UI provides a dashboard view of key insights from privacy-related features such as [data subject requests from Privacy Service], [data hygiene work orders], and [audit logs]. The console also provides several in-product use case guides to help guide you through common privacy workflows.
+The [!UICONTROL Privacy Console] tab in the Experience Platform UI provides a dashboard view of key insights from privacy-related features such as [data subject requests from Privacy Service](../../privacy-service/home.md), [data hygiene work orders](../../hygiene/home.md), and [audit logs](../../landing/governance-privacy-security/audit-logs/overview.md). The console also provides several in-product use case guides to help guide you through common privacy workflows.
 
 See the [Privacy Console overview](../../landing/governance-privacy-security/privacy-console.md) for more information on the feature.
 
@@ -109,6 +110,9 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 | Feature | Description |
 | --- | --- |
 | In-use label  | When viewed in the widget library, the in-use label easily identifies the presence of existing widgets in your dashboard. This makes it easy to avoid the duplication although you can still add the same widget more than once should you wish. |
+| User-defined dashboards | User-defined dashboards help to expedite insights and customize visualizations by enabling you to build and manage custom dashboards. With user-defined dashboards you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization. Read the [feature guide](../../dashboards/user-defined-dashboards.md) to learn more. |
+| Customer Data Platform Insights Data Model | The Customer Data Platform (CDP) Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create CDP reports for your marketing and key performance indicator use cases. These insights can then be used as custom widgets for your user-defined dashboards. Read the [CDP Insights Data Model feature guide](../../dashboards/cdp-insights-data-model.md) to learn more. |
+| Audience overlap report widget | This widget is available for both for both [!UICONTROL Profiles] and [!UICONTROL Segments] dashboards. The report provides an ordered list of audiences ranked by the highest or lowest overlap percentages for your chosen segment. From the [!UICONTROL Profiles] dashboard you can filter and view your audience overlap by merge policy from all available segments. The [!UICONTROL Segments] dashboards allows you to filter the audience overlap by a specific segment.<br>Use this analysis to build new, high-performance segments and avoid sending the same audience to different destinations. The report also helps to identify hidden insights to improve segmentation or locate unique profiles to pursue. |
 
 For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
 
@@ -121,10 +125,39 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | Feature | Description |
 | --- | --- |
 | Left navigation integration in the Platform UI | All capabilities that were previously exclusive to the Data Collection UI (including tags, event forwarding, and datastreams) are now also available through the left navigation in Experience Platform, under the category **[!UICONTROL Data Collection]**. This eliminates the need to switch between UIs when working with data collection capabilities in Platform.|
+| User attribution in tags and event forwarding | When listing available [!UICONTROL Properties] in tags and event forwarding, each listed property now shows when it was last updated, and which user made the update. |
 
 {style="table-layout:auto"}
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+| Destination SDK| Destination SDK now provides full support for partners and customers creating batch (or file-based) productized or private destinations. Read the following documentation pages for more information: <ul><li>[Destination SDK Overview](/help/destinations/destination-sdk/overview.md)</li><li>[Configure a file-based destination](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configure file formatting options for file-based destinations](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Test your file-based destinations](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul>|
+
+{style="table-layout:auto"}
+
+**New or updated destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | The [!DNL Salesforce CRM] destination has been updated to support both contacts and leads updates, as well as performance improvements for faster updates. |
+
+{style="table-layout:auto"}
+
+**New or updated documentation**
+
+| Documentation | Description |
+| ----------- | ----------- |
+| Destinations Flow Service API documentation| The [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) was updated to include guidance on how to perform operations on file-based destinations. Operations for streaming destinations will be added at a later time. |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -212,6 +245,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Support for Adobe Campaign Managed Cloud Service | Use the Adobe Campaign Managed Cloud Service source to bring your Adobe Campaign v8.4 delivery and tracking logs data to Experience Platform. Read the guide on [creating an Adobe Campaign Managed Cloud Service source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/campaign.md) for more information. | 
 | API support for on-demand ingestion for batch sources | Use on-demand ingestion to create ad hoc flow runs for a given dataflow with the [!DNL Flow Service] API. Flow runs created must be set to one-time ingestion. For more information, read the guide on [creating a flow run for on-demand ingestion using the API](../../sources/tutorials/api/on-demand-ingestion.md) for more information. |
 | API support for retrying failed dataflow runs for batch sources | Use the `re-trigger` operation to retry your failed dataflow through the API. Read the guide on [retrying failed dataflow runs using the API](../../sources/tutorials/api/retry-flows.md) for more information. |
-| API support for filtering row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources | Use logical and comparison operators to filter row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources. Read the guide on filtering data for a source using the API for more information. |
+| API support for filtering row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources | Use logical and comparison operators to filter row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources. Read the guide on [filtering data for a source using the API](../../sources/tutorials/api/filter.md) for more information. |
 
 To learn more about sources, read the [sources overview](../../sources/home.md).
