@@ -163,7 +163,15 @@ The following table outlines how the UI behaves based on different combinations 
 | **[!UICONTROL Manage Sources]** On | In addition to the functions included in **[!UICONTROL View Sources]**, grants access to **[!UICONTROL Connect Source]** option in **[!UICONTROL Catalog]** and to **[!UICONTROL Select Data]** option in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** also allows you to enable or disable **[!UICONTROL DataFlows]** and edit their schedules. |
 | **[!UICONTROL View Sources]** Off and **[!UICONTROL Manage Sources]** Off | Revoke all access to sources. |
 
-For more information about the available permissions granted through the Admin Console, including those four sources, see the [access control overview](../access-control/home.md).
+For more information about the available permissions granted through Adobe Permissions, read the [access control overview](../access-control/home.md).
+
+### Attribute-based access control for sources
+
+Attribute-based access control in Adobe Experience Platform allows administrators to control access to specific objects and/or capabilities based on attributes. 
+
+With attribute-based access control, you can apply mapping configurations to fields that you have permissions to. Furthermore, you cannot ingest data to a dataset if you do not have access to all fields in the dataset.
+
+For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).
 
 ## Terms and conditions {#terms-and-conditions}
 

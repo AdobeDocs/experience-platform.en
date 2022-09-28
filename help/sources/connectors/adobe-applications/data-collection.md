@@ -8,9 +8,9 @@ exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
 
 Adobe Experience Platform provides a suite of technologies that allow you to collect customer experience data from client-side sources, and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations in seconds.
 
-The sources integration of Adobe Data Collection allows you to access your Data Collection Experience Edge data, including Data Prep for Data Collection, as well as improved support for warnings, through the sources catalog.
+The sources integration of Adobe Experience Platform Data Collection allows you to access your data on the Edge Network, including Data Prep for Data Collection, as well as improved support for warnings, through the sources catalog.
 
-## Use the sources workspace to access Adobe Data Collection
+## Use the sources workspace to access Data Collection
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
 
@@ -26,7 +26,7 @@ A datastream is a configuration that tells the Edge Network where you want your 
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-For comprehensive steps on how to use the Data Collection UI, see the [data collection end-to-end overview](../../../collection/e2e.md).
+For comprehensive steps on how to configure data collection in the UI, see the [data collection end-to-end overview](../../../collection/e2e.md).
 
 ## Next steps
 

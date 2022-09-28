@@ -38,7 +38,24 @@ For detailed information, see the [destination types and categories overview](./
 
 The destinations functionality in Platform works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, see [Access control in Adobe Experience Platform](../access-control/home.md) and scroll down to the bottom of the page.
 
+The following table outlines the permissions and permission combinations required to perform certain actions on destinations:
+
+| Permission level | Description |
+| ---- | ----|
+| **[!UICONTROL Manage Destinations]** | To connect to destinations, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** | To activate segments to destinations, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). |
+
+{style="table-layout:auto"}
+
 For more information about access controls, see the [Access control user guide](../access-control/ui/overview.md).
+
+### Attribute-based access control for destinations {#attribute-based-access}
+
+Attribute-based access control in Adobe Experience Platform allows administrators to control access to specific objects and/or capabilities based on attributes. 
+
+With attribute-based access control, you can apply mapping configurations to fields that you have permissions to. Furthermore, you cannot export data to a destination if you do not have access to all fields in the dataset.
+
+For more information on how destinations work with attribute-based access controls, read the [attribute-based access control overview](../access-control/abac/overview.md#destinations).
 
 ## Data Governance restrictions on activating data to destinations {#data-governance}
 
@@ -58,7 +75,7 @@ For more information about selecting marketing actions in the create destination
 * [Email marketing destinations](./catalog/email-marketing/overview.md)
 * [Social destinations](./catalog/social/overview.md)
 
-For more information about data policy violations in the segment activation workflow, see the Review step in the following guides:
+For more information about data policy violations in the segment activation workflow, see the **[!UICONTROL Review]** step in the following guides:
 
 * [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md#review)
 * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md#review)
