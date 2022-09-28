@@ -204,15 +204,15 @@ A popover appears, listing all the fields that can be displayed within the table
 
 | Field | Description |
 | ----- | ----------- | 
-| Name | The name of the audience. |
-| Profile count | The total number of profiles that qualify for the audience. |
-| Origin | The origin of the audience. If this audience was Platform-generated, it will have an origin of Segmentation Service. |
-| Lifecycle status | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`.  |
-| Update frequency | A value that states how often the audience's data is updated. Possible values for this field include `On Demand`, `Scheduled`, and `Continuous`. |
-| Last updated by | The name of the person who last updated the audience. |
-| Created | The time and date the audience was created. | 
-| Last updated | The time and date the audience was last created. |
-| Access labels | The access labels for the audience. Access labels allow you to categorize datasets and fields according to usage policies that apply to that data. These labels can be applied at any time, providing flexibility in how you choose to govern data. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Name] | The name of the audience. |
+| [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. |
+| [!UICONTROL Origin] | The origin of the audience. If this audience was Platform-generated, it will have an origin of Segmentation Service. |
+| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`.  |
+| [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include `On Demand`, `Scheduled`, and `Continuous`. |
+| [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
+| [!UICONTROL Created] | The time and date the audience was created. | 
+| [!UICONTROL Last updated] | The time and date the audience was last created. |
+| [!UICONTROL Access labels] | The access labels for the audience. Access labels allow you to categorize datasets and fields according to usage policies that apply to that data. These labels can be applied at any time, providing flexibility in how you choose to govern data. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
 
 You can select **[!UICONTROL Create Audience]** to create an audience. 
 
@@ -228,9 +228,9 @@ Selecting **[!UICONTROL Build Rule]** takes you to the Segment Builder. To learn
 
 ## Audience details {#audience-details}
 
-To see more details about a specific audience, select an audience's name within the Audiences tab.
+To see more details about a specific audience, select an audience's name within the [!UICONTROL Audiences] tab.
 
-The audience details page appears. This page differs in details, depending on whether the audience was generated with Adobe Experience Platform or from an external source, such as Audience Orchestration.
+The audience details page appears. This page differs in details depending on whether the audience was generated with Adobe Experience Platform or from an external source such as Audience Orchestration.
 
 ### Platform-generated audience
 
@@ -238,13 +238,21 @@ For more information on Platform-generated audiences, please read the [segment s
 
 ### Externally generated audience
 
-On the top, there is a summary of the audience and details about the dataset the audience is saved in.
+On the top of the audience details page, there is a summary of the audience and details about the dataset the audience is saved in.
 
 ![The provided details for an externally generated audience.](../images/ui/overview/externally-generated-audience.png)
 
 The **[!UICONTROL Audience summary]** section provides information such as the ID, name, description, and details of the attributes.
 
 The **[!UICONTROL Dataset details]** section provides information such as the name, description, table name, source, and schema. You can select **[!UICONTROL View dataset]** to see more information about the dataset.
+
+| Field | Description |
+| ----- | ----------- |
+| [!UICONTROL Name] | The name of the dataset. |
+| [!UICONTROL Description] | The description of the dataset. |
+| [!UICONTROL Table name] | The table name of the dataset. |
+| [!UICONTROL Source] | The source of the dataset. For externally generated audiences, this value will be **Schema**. |
+| [!UICONTROL Schema] | The type of XDM schema that the dataset corresponds to. |
 
 To learn more about datasets, please read the [dataset overview](../../catalog/datasets/overview.md).
 
