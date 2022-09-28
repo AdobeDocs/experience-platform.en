@@ -197,13 +197,11 @@ feature: Destinations
             * [View detailed activation results](./destination-sdk/file-based-destination-results-api.md)
             * [Validate templatized customer fields](./destination-sdk/file-based-render-template-api.md)
     * Guides {#guides}
-      * Streaming {#streaming}
-        * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
-      * Batch {#batch} 
-        * [Configure file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+      * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
       * [Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
       * Configure file-based destinations {#configure-file-based-destinations}
+        * [Configure file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)        
         * [Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
         * [Configure an Amazon S3 destination with custom file name and formatting options](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
         * [Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
