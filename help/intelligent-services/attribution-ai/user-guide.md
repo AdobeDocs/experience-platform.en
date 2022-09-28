@@ -64,7 +64,7 @@ Selecting the info icon ![info icon](./images/user-guide/info-icon.png) next to 
 
 The dataset preview contains data such as the last update time, source schema, and a preview of the first ten columns.
 
-You can save your drafts as you move along the workflow using the **[!UICONTROL Save]** button. You can also save draft model configurations and move to the next step in the workflow using the **[!UICONTROL Save and continue]** button. This feature enables you to create and save drafts during model configurations and is particularly useful when you have to define many fields in the configuration workflow.
+Select **[!UIControl Save]** to save your drafts as you move along the workflow. You can also save draft model configurations and move to the next step in the workflow. Use **[!UICONTROL Save and continue]** to create and save drafts during model configurations .This is particularly useful when you have to define many fields in the configuration workflow.
 
 ![Save and exit](./images/user-guide/aai-save-save-&-exit.png)
 
