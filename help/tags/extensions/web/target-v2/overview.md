@@ -25,13 +25,13 @@ To configure the extension, open the Extensions tab, hover over the extension, a
 
 ### at.js settings
 
-All of your at.js settings, with the exception of the Timeout, are automatically retrieved from your at.js configuration in the Target UI. The extension only retrieves settings from the Target UI when it is first added, so all settings should be managed in the Data Collection UI if additional updates are needed.
+All of your at.js settings, with the exception of the Timeout, are automatically retrieved from your at.js configuration in the Target UI. The extension only retrieves settings from the Target UI when it is first added, so all settings should be managed in the UI if additional updates are needed.
 
 The following configuration options are available:
 
 #### Client Code
 
-The client code is Target’s account identifier. This should almost always be left as the default value. It can be changed using data elements.
+The client code is Target's account identifier. This should almost always be left as the default value. It can be changed using data elements.
 
 #### Organization ID
 
@@ -127,8 +127,8 @@ Here are some things to keep in mind when using the pre-hiding snippet:
   * When the page load response has been received
   * When the page load request times out
   * When the snippet itself times out
-* The "Fire Page Load Request” action should be used on all pages using the pre-hiding snippet to minimize the duration of the pre-hiding.
-* Body hiding must also be enabled in the Page Load Request action in the Page Load rule you use for Target in the Data Collection UI; otherwise, all Page Loads remain hidden for the timeout period.
+* The "Fire Page Load Request" action should be used on all pages using the pre-hiding snippet to minimize the duration of the pre-hiding.
+* Body hiding must also be enabled in the Page Load Request action in the Page Load rule you use for Target; otherwise, all Page Loads remain hidden for the timeout period.
 
 The pre-hiding code snippet is as follows and can be minified. The configurable options are at the end:
 
