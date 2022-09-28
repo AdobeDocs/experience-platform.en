@@ -29,7 +29,7 @@ If you are copying a rule or a data element, in the copy dialog you may use the 
 
 >[!NOTE]
 >
->In the Data Collection UI, it is not possible to copy resources to another Property if one Property is configured for extension development and the other Property is not.
+>It is not possible to copy resources to another property if one property is configured for extension development and the other property is not.
 
 Once you've configured the behavior you want, select **[!UICONTROL Copy]**.
 
