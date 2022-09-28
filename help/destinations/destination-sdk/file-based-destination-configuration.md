@@ -721,7 +721,7 @@ Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own sc
 
 ### Required mappings {#required-mappings}
 
-Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users will be able to view but not modify when they set up a connection to your destination.
+Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users will be able to view but not modify when they set up a connection to your destination. See below an example of a schema configuration with required mappings and what it looks like in the UI. 
 
 ```json
 
@@ -748,7 +748,7 @@ Within the schema configuration, you have the option of adding required (or pred
 
 ![Image of the required mappings in the UI activation flow.](/help/destinations/destination-sdk/assets/required-mappings.png)
 
-Use the parameters described in the table below if you would like to add required mappings in the activation workflow.
+Use the parameters described in the table below if you would like to add required mappings in the activation workflow for your destination.
 
 |Parameter | Type | Description|
 |---------|----------|------|
