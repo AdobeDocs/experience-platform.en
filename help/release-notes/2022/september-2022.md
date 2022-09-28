@@ -24,7 +24,7 @@ Updates to existing features in Adobe Experience Platform:
 
 Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
 
-Adobe Experience Platform's data hygiene capabilities allow you to cleanse your data through scheduled dataset deletions and programmatically deleting consumer data by identity.
+Adobe Experience Platform's data hygiene capabilities allow you to cleanse your data by scheduling automated dataset expirations and programmatically deleting consumer data by identity.
 
 >[!NOTE]
 >
