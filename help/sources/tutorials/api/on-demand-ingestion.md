@@ -12,7 +12,7 @@ exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 
 Flow runs represent an instance of flow execution. For example, if a flow is scheduled to run hourly at 9:00 AM, 10:00 AM, and 11:00 AM, then you would have three instances of a flow run. Flow runs are specific to your particular organization.
 
-On-demand ingestion provides you with the capability to create a flow run against a given dataflow. This allows your users to create a flow run, based on given parameters and create an ingestion cycle, without service tokens.
+On-demand ingestion provides you with the capability to create a flow run against a given dataflow. This allows your users to create a flow run, based on given parameters and create an ingestion cycle, without service tokens. Support for on-demand ingestion is available only for batch sources.
 
 This tutorial covers the steps on how to use on-demand ingestion and create a flow run using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
