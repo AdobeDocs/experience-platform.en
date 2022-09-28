@@ -16,7 +16,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Audit logs](#audit-logs)
-- [!DNL Dashboards](#dashboards)
+- [[!DNL Dashboards]](#dashboards)
 - [Data collection](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
