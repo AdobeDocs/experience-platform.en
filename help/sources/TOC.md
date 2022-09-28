@@ -188,6 +188,7 @@ feature: Sources
   - [Monitor dataflows](tutorials/api/monitor.md)
   - [Update accounts](tutorials/api/update.md)
   - [Update dataflows](tutorials/api/update-dataflows.md)
+  - [Retry failed dataflow runs](tutorials/api/retry-flows.md)
   - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
