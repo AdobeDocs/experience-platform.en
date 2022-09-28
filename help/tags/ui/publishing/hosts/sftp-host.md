@@ -9,7 +9,7 @@ exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
-Adobe Experience Platform allows you to deliver tag library builds to a secured SFTP server that you host, giving you greater control over how your builds are stored and managed. This guide covers how to set up an SFTP host for a tag property in the Data Collection UI.
+Adobe Experience Platform allows you to deliver tag library builds to a secured SFTP server that you host, giving you greater control over how your builds are stored and managed. This guide covers how to set up an SFTP host for a tag property in the Experience Platform UI or Data Collection UI.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ For more detailed information, refer to the following Medium article on [how to 
 
 ## Create an SFTP host {#create}
 
-In the Data Collection UI, select **[!UICONTROL Hosts]** in the left navigation, followed by **[!UICONTROL Add Host]**.
+Select **[!UICONTROL Hosts]** in the left navigation, followed by **[!UICONTROL Add Host]**.
 
 ![Image showing the Add Host button being selected in the UI](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
