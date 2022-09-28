@@ -87,6 +87,18 @@ The following alert rules are specific to [destinations](../../destinations/home
 
 {style="table-layout:auto"}
 
+## Query Service
+
+The following alert rules are specific to [Query Service](../../query-service/home.md):
+
+| I/O Event subscription | Alert rule | Description |
+| --- | --- | --- |
+| Query Service ad hoc info | Query Service ad hoc success | This alert triggers when an ad hoc schema job completes successfully. |
+| Query Service ad hoc delays, failures and errors | Query Service ad hoc failure | This alert triggers when a ad hoc schema job fails. |
+| Query Service scheduled query info | Query Service scheduled query start | This alert triggers when a scheduled query starts running. |
+| Query Service scheduled query info | Query Service scheduled query success | This alert triggers when a scheduled query job completes successfully. |
+| Query Service scheduled query delays, failures and errors | query service scheduled query failure | This alert triggers when a scheduled query job fails. |
+
 <!-- (Definitions to be added once available)
 | Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
 | No Ingestion Activity in Past 24 Hours | This alert triggers when no new data has been ingested in the last 24-hour period. | N/A | 1 day | 1 day |
