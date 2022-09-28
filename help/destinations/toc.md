@@ -112,6 +112,7 @@ feature: Destinations
     * Email marketing destinations {#email-marketing}
         * [Email marketing destinations overview](./catalog/email-marketing/overview.md)
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
+        * [Adobe Campaign Managed Services connection](./catalog/email-marketing/adobe-campaign-managed-services.md)
         * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
         * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
