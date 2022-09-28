@@ -13,7 +13,7 @@ solution: Data Collection
 * Getting started {#get-started}
   * [Quickstart guide](./quick-start/quick-start.md)
   * [Implementation guides](./quick-start/implementation-guides.md)
-* Data Collection UI {#ui}
+* UI guides {#ui}
   * [Overview](./ui/managing-resources/overview.md)
   * Extensions {#extensions}
     * [Overview](./ui/managing-resources/extensions/overview.md)
