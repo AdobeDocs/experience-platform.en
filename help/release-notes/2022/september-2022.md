@@ -114,6 +114,32 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
 
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+| Destination SDK| Destination SDK now provides full support for partners and customers creating batch (or file-based) productized or private destinations. Read the following documentation pages for more information: <ul><li>[Destination SDK Overview](/help/destinations/destination-sdk/overview.md)</li><li>Configure a file-based destination</li><li>Configure file formatting options for file-based destinations</li><li>[Test your file-based destinations](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul>|
+
+{style="table-layout:auto"}
+
+**New or updated destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | The [!DNL Salesforce CRM] destination has been updated to support both contacts and leads updates, as well as performance improvements for faster updates. |
+
+{style="table-layout:auto"}
+
+**New or updated documentation**
+
+| Destinations Flow Service API documentation| Use the new [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) to perform operations on file-based destinations. Operations for streaming destinations will be added at a later time. |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
 ## Experience Data Model (XDM) {#xdm}
 
 XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
