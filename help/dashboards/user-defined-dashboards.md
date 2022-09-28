@@ -3,11 +3,7 @@ title: User-defined Dashboards
 description: Learn how to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 ---
-# User-defined dashboards (Beta)
-
->[!IMPORTANT]
->
->The user-defined dashboards feature is in beta. Its features and documentation are subject to change.
+# User-defined dashboards
 
 Adobe Experience Platform Dashboards helps you to expedite insights and customize visualization through the user-defined dashboards feature. This feature enables you to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization.
 
@@ -36,13 +32,13 @@ The newly created blank dashboard appears with your chosen name in the top left 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Maximum number of widgets"
->abstract="User-defined dashboards support up to ten widgets. After you have added 10 widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray."
+>abstract="User-defined dashboards support up to ten widgets. After you have added ten widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray."
 
 From your new dashboard view, select **[!UICONTROL Add new widget]** to begin the widget creation process.
 
 >[!IMPORTANT]
 >
->User-defined dashboards support up to ten widgets. After you have added 10 widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray.
+>User-defined dashboards support up to ten widgets. After you have added ten widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray.
 
 ![The new empty dashboard with Add new widget highlighted.](./images/user-defined-dashboards/add-new-widget.png)
 
