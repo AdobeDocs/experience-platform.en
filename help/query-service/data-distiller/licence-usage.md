@@ -8,7 +8,7 @@ The Adobe Experience Platform user interface (UI) provides a dashboard through w
 
 For detailed instructions on how to access and interact with the license usage dashboard in the UI, as well as to learn more about the available metrics displayed in the dashboard, please visit the [license usage dashboard guide](../../dashboards/guides/license-usage.md).
 
-For an overview of all of the dashboard features within Experience Platform, please begin by reading the [dashboards overview](../../dashboards/home.md).
+Please read the [dashboards overview](../../dashboards/home.md) for a summary of all the dashboard features within Experience Platform.
 
 ## Widgets {#widgets}
 
