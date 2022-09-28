@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;campaign;campaign managed services
-title: Create an Adobe Campaign Managed Services source connection using Platform UI
-description: Learn how to connect Adobe Experience Platform to Adobe Campaign Managed Services using Platform UI.
+title: Create an Adobe Campaign Managed Cloud Services source connection using Platform UI
+description: Learn how to connect Adobe Experience Platform to Adobe Campaign Managed Cloud Services using Platform UI.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 ---
-# Create an Adobe Campaign Managed Services source connection using Platform UI
+# Create an Adobe Campaign Managed Cloud Services source connection using Platform UI
 
-This tutorial provides steps to create a source connection to bring your Adobe Campaign Managed Services data to Adobe Experience Platform.
+This tutorial provides steps to create a source connection to bring your Adobe Campaign Managed Cloud Services data to Adobe Experience Platform.
 
 ## Getting started
 
@@ -18,15 +18,15 @@ This guide requires a working understanding of the following components of Exper
     * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [Sandboxes](../../../../../sandboxes/home.md): Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Connect Adobe Campaign Managed Services to Platform
+## Connect Adobe Campaign Managed Cloud Services to Platform
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. You can also use the search bar to narrow down the displayed sources.
 
-Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Adobe Campaign Managed Services]** and then select **[!UICONTROL Add data]**.
+Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Adobe Campaign Managed Cloud Services]** and then select **[!UICONTROL Add data]**.
 
-![The sources catalog displaying the Adobe Campaign Managed Services card.](../../../../images/tutorials/create/campaign/catalog.png)
+![The sources catalog displaying the Adobe Campaign Managed Cloud Services card.](../../../../images/tutorials/create/campaign/catalog.png)
 
 ### Select data {#select-data}
 
