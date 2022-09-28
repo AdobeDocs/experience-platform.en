@@ -46,9 +46,9 @@ Adobe Experience Platform provides a robust set of tools to manage large, compli
 
 Adobe Experience Platform's data hygiene capabilities allow you to cleanse your data by scheduling automated dataset expirations and programmatically deleting consumer data by identity.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Consumer delete capabilities are only available to organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
+>Data hygiene capabilities are only available to organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
 
 Refer to the following documentation to get started with data hygiene:
 
@@ -121,6 +121,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | Feature | Description |
 | --- | --- |
 | Left navigation integration in the Platform UI | All capabilities that were previously exclusive to the Data Collection UI (including tags, event forwarding, and datastreams) are now also available through the left navigation in Experience Platform, under the category **[!UICONTROL Data Collection]**. This eliminates the need to switch between UIs when working with data collection capabilities in Platform.|
+| User attribution in tags and event forwarding | When listing available [!UICONTROL Properties] in tags and event forwarding, each listed property now shows when it was last updated, and which user made the update. |
 
 {style="table-layout:auto"}
 
