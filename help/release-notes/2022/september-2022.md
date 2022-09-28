@@ -13,8 +13,8 @@ New features in Adobe Experience Platform:
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Audit logs](#audit-logs)
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [Audit logs](#audit-logs)
 - [Data collection](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
