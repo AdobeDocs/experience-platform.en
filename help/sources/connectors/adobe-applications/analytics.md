@@ -76,7 +76,3 @@ These fields are not marked as identities. Instead, the same identities are copi
 * `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
 
 In the identity map, if ECID is present, it is marked as the primary identity for the event. In this case, AAID may be based on ECID due to the [Identity Service grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Otherwise, AAID is marked as the primary identity for the event. AACUSTOMID is never marked as the Primary ID for the event. However, if AACUSTOMID is present, then AAID is based on AACUSTOMID due to the Experience Cloud order of operations.
-
-### Customer Journey Analytics and Primary ID
-
-For Customer Journey Analytics, the definition of Primary ID is only important if you decide to use the Primary ID as the Person ID. However, this is not mandatory. You may choose some other identity column as the Person ID.
