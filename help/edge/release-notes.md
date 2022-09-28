@@ -14,18 +14,18 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
+* Added support for Page by Page Full Migration. The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
 * Added configurable support for [high entropy User-Agent Client Hints](fundamentals/user-agent-client-hints.md#high-entropy). 
-* Added duplicated namespace validation for the `getIdentity` command.
-* Added duplicated decision scope validation for the `sendEvent` command.
 * Added support for the new `applyResponse` command. This enables hybrid personalization via the [Edge Network Server API](../server-api/overview.md).
 * QA mode links now work across multiple pages.
-* Added support for [!DNL at.js] and Web SDK mixed mode. The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
 
 **Fixes and improvements**
 
 * Fixed an issue where personalization click tracking metrics were not updated when link tracking was disabled.
 * Updated commands to throw a validation error when unknown options are specified.
-* The `_experience.decisioning.propositionEventType` property is now populated when automatically sending display and interaction personalization events. 
+* The `_experience.decisioning.propositionEventType` property is now populated when automatically sending display and interaction personalization events.
+* Added duplicated namespace validation for the `getIdentity` command.
+* Added duplicated decision scope validation for the `sendEvent` command.
 
 ## Version 2.12.0 - June 29, 2022
 
