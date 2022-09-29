@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes September 2022
-description: The September 2022 release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes
+description: The latest release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
