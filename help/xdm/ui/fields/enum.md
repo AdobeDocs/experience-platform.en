@@ -43,7 +43,7 @@ Select **[!UICONTROL Enums and Suggested Values]**, then select **[!UICONTROL Su
 
 ![Image showing the Suggested Values option selected in the UI](../../images/ui/fields/enum/suggested-add-row.png)
 
-Under the **[!UICONTROL Display Name]** column, provide a human-friendly name for the value as you want it to appear in the Segmentation UI. To add more suggested values, select **[!UICONTROL Add row]** again and repeat the process as needed. To remove a previously added row, select the delete icon (![Image of the delete icon](../../images/ui/fields/enum/remove-icon.png)) next to the row in question.
+Under the **[!UICONTROL Display Name]** column, provide a human-friendly name for the value as you want it to appear in the Segmentation UI. To add more suggested values, select **[!UICONTROL Add row]** again and repeat the process as needed. To remove a previously added row, select ![the delete icon](../../images/ui/fields/enum/remove-icon.png) next to the row in question.
 
 When finished, select **[!UICONTROL Apply]** to apply the changes to the schema.
 
@@ -55,15 +55,15 @@ When finished, select **[!UICONTROL Apply]** to apply the changes to the schema.
 
 ### Manage suggested values for standard fields
 
-Some fields from standard XDM components contain their own suggested values, such as `eventType` from the [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). When using these fields in your schemas, you can use the available toggles to control which existing suggested values are to be used.
+Some fields from standard XDM components contain their own suggested values, such as `eventType` from the [[!UICONTROL XDM ExperienceEvent] class](../../classes/experienceevent.md). While you can create additional suggested values for a standard field, you cannot modify or remove any suggested values that are not defined by your organization. When viewing a standard field in the UI, its suggested values are displayed but are read-only.
 
 ![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/suggested-standard.png)
 
-Similar to custom fields, select **[!UICONTROL Add row]** to add your own suggested values for standard fields.
+To add new suggested values for a standard field, select **[!UICONTROL Add row]**. To remove a suggested value that was previously added by your organization, select ![the delete icon](../../images/ui/fields/enum/remove-icon.png) next to the row in question.
 
-![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/suggested-standard.png)
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/suggested-standard-add.png)
 
-### Removing suggested values for standard fields
+<!-- ### Removing suggested values for standard fields
 
 Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
@@ -73,7 +73,7 @@ For example, consider a profile schema where the a suggested value for the stand
 
 In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields.
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
 ## Evolution rules for enums and suggested values {#evolution}
 
@@ -103,6 +103,13 @@ If referencing the same custom field path in different field groups:
 
 * Any additional suggested values are **APPENDED** in the union.
 * If the same additional suggested value is defined in more than one schema, those values are **MERGED** in the union. In other words, the same suggested value will not appear twice after merging.
+
+## Validation limitations
+
+Due to current system limitations, there are two cases where an enum is not validated by the system during ingestion:
+
+1. The enum is defined on an [array field](./array.md).
+1. The enum is defined more than one level deep in the schema hierarchy.
 
 ## Next steps
 

@@ -63,11 +63,11 @@ Alternatively, you can define a string field that does not contain an `enum` arr
 
 Since the string does not have an `enum` array to define constraints, its `meta:enum` property can be extended to include new values.
 
-## Manage suggested values for standard fields
+<!-- ## Manage suggested values for standard fields
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard).
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
 
-### Add suggested values {#add-suggested-standard}
+## Add suggested values to a standard field {#add-suggested-standard}
 
 To extend the `meta:enum` of a standard string field, you can create a [friendly name descriptor](../api/descriptors.md#friendly-name) for the field in question in a particular schema.
 
@@ -144,7 +144,7 @@ After applying the descriptor, the Schema Registry responds with the following w
 >}
 >```
 
-### Remove suggested values {#remove-suggested-standard}
+<!-- ### Remove suggested values {#remove-suggested-standard}
 
 If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
@@ -204,7 +204,7 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-```
+``` -->
 
 ## Manage suggested values for a custom field {#suggested-custom}
 
