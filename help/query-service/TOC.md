@@ -9,7 +9,7 @@ feature: Queries
 # Adobe Experience Platform Query Service {#query}
 
 - [Query Service overview](home.md)
-- [Query Service packaging](data-distiller/packages.md)
+- [Query Service packaging](packages.md)
 - [Guardrails for Query Service](guardrails.md)
 - Data Distiller {#data-distiller}
   - [Licence usage](data-distiller/licence-usage.md)
