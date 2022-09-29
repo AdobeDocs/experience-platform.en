@@ -9,7 +9,7 @@ In data collection tags, [rules](./rules.md) control the behavior of the resourc
 
 >[!NOTE]
 >
->This document covers how to manage rule components in the Reactor API. For details on how to interact with rules and rule components in the Data Collection UI, please refer to the [UI guide](../../ui/managing-resources/rules.md).
+>This document covers how to manage rule components in the Reactor API. For details on how to interact with rules and rule components in the UI, please refer to the [UI guide](../../ui/managing-resources/rules.md).
 
 Rule components have three basic types:
 
