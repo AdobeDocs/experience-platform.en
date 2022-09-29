@@ -7,10 +7,6 @@ exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
->The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
-
 This page describes how to use Destination SDK to configure an [!DNL Azure Data Lake Storage] destination with custom [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
 
 This page shows all the configuration options available for Azure Data Lake Storage destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.

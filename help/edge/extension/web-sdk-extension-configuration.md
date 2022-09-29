@@ -13,15 +13,15 @@ This document covers how to configure the extension in the UI.
 
 If the Platform Web SDK extension has already been installed for a property, open the property in the UI and select the **[!UICONTROL Extensions]** tab. Under the Platform Web SDK, select **[!UICONTROL Configure]**.
 
-![](../images/extension/overview/configure.png)
+![](../assets/extension/overview/configure.png)
 
 If you have not installed the extension yet, select the **[!UICONTROL Catalog]** tab. From the list of available extensions, find the Platform Web SDK extension and select **[!UICONTROL Install]**.
 
-![](../images/extension/overview/install.png)
+![](../assets/extension/overview/install.png)
 
 In both cases, you arrive at the configuration page for the Platform Web SDK. The sections below explain the extension's configuration options.
 
-![](../images/extension/overview/config-screen.png)
+![](../assets/extension/overview/config-screen.png)
 
 ## General configuration options
 
@@ -50,7 +50,7 @@ See the guide on [datastreams](../datastreams/overview.md) for more information.
 
 ## [!UICONTROL Privacy]
 
-![](../images/extension/overview/privacy.png)
+![](../assets/extension/overview/privacy.png)
 
 The [!UICONTROL Privacy] section allows you to configure how the SDK handles user consent signals from your website. Specifically, it allows you to select the default level of consent that is assumed of a user if no other explicit consent preference has been provided. The default consent level is not saved to the user's profile. The following table breaks down what each option entails:
 
@@ -65,7 +65,7 @@ Use Out or Pending if you require explicit user consent for your business operat
 
 ## [!UICONTROL Identity]
 
-![](../images/extension/overview/identity.png)
+![](../assets/extension/overview/identity.png)
 
 ### [!UICONTROL Migrate ECID from VisitorAPI]
 
@@ -77,13 +77,13 @@ This option enables the SDK to attempt to store a user identifier in a third-par
 
 ## [!UICONTROL Personalization]
 
-![](../images/extension/overview/personalization.png)
+![](../assets/extension/overview/personalization.png)
 
 If you would like to hide certain parts if your site while personalized content is loaded, you can specify the elements to hide in the prehiding style editor. You can then copy the default prehiding snippet provided to you and paste it inside the `<head>`element of your HTML site. 
 
 ## [!UICONTROL Data Collection]
 
-![](../images/extension/overview/data-collection.png)
+![](../assets/extension/overview/data-collection.png)
 
 ### [!UICONTROL Callback function]
 
@@ -99,7 +99,7 @@ By default, the SDK collects certain context data regarding device, web, environ
 
 ## [!UICONTROL Advanced Settings]
 
-![](../images/extension/overview/advanced-settings.png)
+![](../assets/extension/overview/advanced-settings.png)
 
 ### [!UICONTROL Edge base path]
 
