@@ -1,8 +1,8 @@
 ---
-title: Monitor Query Service License Usage
+title: Monitor Batch Query License Usage
 description: The Adobe Experience Platform UI provides a dashboard through which you can view important information about your organization's Data Distiller license usage. 
 ---
-# Monitor Query Service license usage {#monitor-license-usage}
+# Monitor batch query license usage {#monitor-license-usage}
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your organization's Query Service license usage.
 
