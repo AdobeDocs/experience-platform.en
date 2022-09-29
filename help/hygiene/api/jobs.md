@@ -9,7 +9,7 @@ exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 
 >[!IMPORTANT]
 >
->The Data Hygiene API is currently in a beta. The functionality outlined in this document is subject to change.
+>This endpoint represents the beta functionality for consumer deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead.
 
 The Data Hygiene API allows you to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform.
 

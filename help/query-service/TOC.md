@@ -10,6 +10,9 @@ feature: Queries
 
 - [Query Service overview](home.md)
 - [Guardrails for Query Service](guardrails.md)
+- Data Distiller {#data-distiller}
+  - [Query Service packaging](data-distiller/packages.md)
+  - [Licence usage](data-distiller/licence-usage.md)
 - Get started {#get-started}
   - [Prerequisites](get-started/prerequisites.md)
 - Use cases {#use-cases}
@@ -24,6 +27,7 @@ feature: Queries
   - [Connection parameters](api/connection-parameters.md)
   - [Scheduled queries](api/scheduled-queries.md)
   - [Runs for scheduled queries](api/runs-scheduled-queries.md)
+  - [Query alerts](api/alert-subscriptions.md)
   - [Query templates](api/query-templates.md)
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
@@ -52,6 +56,7 @@ feature: Queries
   - [Spark SQL functions](sql/spark-sql-functions.md)
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
+  - [Dataset samples](sql/dataset-samples.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
   - [SSL modes](./clients/ssl-modes.md)
