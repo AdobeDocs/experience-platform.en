@@ -26,6 +26,7 @@ feature: Queries
   - [Connection parameters](api/connection-parameters.md)
   - [Scheduled queries](api/scheduled-queries.md)
   - [Runs for scheduled queries](api/runs-scheduled-queries.md)
+  - [Query alerts](api/alert-subscriptions.md)
   - [Query templates](api/query-templates.md)
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
@@ -54,11 +55,13 @@ feature: Queries
   - [Spark SQL functions](sql/spark-sql-functions.md)
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
+  - [Dataset samples](sql/dataset-samples.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
   - [SSL modes](./clients/ssl-modes.md)
   - [Aqua Data Studio](clients/aqua-data-studio.md)
   - [Db Visualizer](./clients/dbvisulaizer.md)
+  - [Jupyter Notebook](clients//jupyter-notebook.md)
   - [Looker](clients/looker.md)
   - [Postico](clients/postico.md)
   - [Power BI](clients/power-bi.md)

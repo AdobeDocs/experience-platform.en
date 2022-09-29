@@ -19,7 +19,7 @@ Version 1.0.x of the extension is a beta. This extension has not been fully test
 
 ## Installation
 
-To install the extension, navigate to the extension catalog in the Data Collection UI and select **Google Data Layer**. 
+To install the extension, navigate to the extension catalog in the Experience Platform UI or Data Collection UI and select **Google Data Layer**. 
 
 Once installed, the extension creates or accesses a data layer every time the tag library loads on your website.      
 

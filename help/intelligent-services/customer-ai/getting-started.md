@@ -42,6 +42,12 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the Experience Platform troubleshooting guide.
 
+## Access control {#access-control}
+
+When using access control, the **View Customer AI** and **Manage Customer AI** privileges grant access to different functionalities of Customer AI. The **Manage Customer AI** permission lets you **create**,**update**, **delete**, **enable**, or **disable** an instance while **View Customer AI** lets you read or view it. The **create**, **update** and **delete** actions are recorded by audit logs.
+
+See the documentation to learn [assigning permissions for access control](../../../help/access-control/home.md) or how to [use audit logs to monitor access and activity](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+
 ## Next steps
 
 Once you have completed the steps outlined in the document above, visit the [Input and Output](./input-output.md) documentation. This document give a brief overview of what types of data are used and produced in Customer AI.

@@ -48,7 +48,6 @@ Use the check boxes to the left of the segment names to select the segments that
 >id="platform_destinations_activate_schedule"
 >title="Schedule"
 >abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
->additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="Learn more in documentation"
 
 [!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
 
@@ -215,7 +214,6 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 >id="platform_destinations_activate_mandatorykey"
 >title="About mandatory attributes"
 >abstract="Select the XDM schema attributes that all exported profiles should include. Profiles without the mandatory key are not exported to the destination. Not selecting a mandatory key exports all qualified profiles regardless of their attributes."
->additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Learn more in documentation"
 
 A mandatory attribute is a user-enabled checkbox which ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.​
 
@@ -231,7 +229,6 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >id="platform_destinations_activate_deduplicationkey"
 >title="About deduplication keys"
 >abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
->additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Learn more in documentation"
 
 A deduplication key is a user-defined primary key which determines the identity by which users want their profiles to be deduplicated.​
 

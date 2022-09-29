@@ -19,7 +19,7 @@ If a field name does not follow this convention, the field name must be wrapped 
 Additionally, if a field name is **any** of the following reserved keywords, it must be wrapped with `${}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
 ```
 
 Data within sub-fields can be accessed by using the dot notation. For example, if there was a `name` object, to access the `firstName` field, use `name.firstName`.
@@ -120,7 +120,6 @@ The following tables list all supported mapping functions, including sample expr
 | zone_date_to_zone | Converts a date from one timezone to another timezone. | <ul><li>DATE: **Required** The date that you are trying to convert.</li><li>ZONE: **Required** The timezone that you are trying to convert the date to.</li></ul> | zone_date_to_zone​(DATE, ZONE) | `zone_date_to_utc​(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style="table-layout:auto"}
-​
 
 ### Hierarchies - Objects {#objects}
 

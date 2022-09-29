@@ -82,7 +82,7 @@ The event triggers if the volume is raised or lowered. See the [Options](#option
 
 #### Orientation Change
 
-The event triggers if the device’s orientation changes. You must specify the duration that the orientation must change for in order to trigger the event. There are no settings for this event type.
+The event triggers if the device's orientation changes. You must specify the duration that the orientation must change for in order to trigger the event. There are no settings for this event type.
 
 #### Zoom Change
 
@@ -102,7 +102,7 @@ If the element is an anchor tag (`<a>`) to linked content, you can also specify 
 
 When you use link delay, Platform actually prevents the browser from navigating off the page. It then performs a JavaScript redirect to the original destination after the specified timeout. This is especially dangerous when when your page markup has `<a>` tags where the intended functionality does not actually navigate the user away from the page. If you cannot solve your problem in any other way, you should be extremely precise with your selector definition so that this event will trigger exactly where you need it and nowhere else.
 
-The default link delay value is 100 milliseconds. Please note that tags will always wait for the amount of time specified and is not connected to the execution of the rule’s actions in any way. It is possible that the delay will force the user to wait longer than is necessary, and also possible that the delay will not be long enough for all the rule’s actions to successfully complete. Longer delays provide more time for rule execution but also worsen the user experience.
+The default link delay value is 100 milliseconds. Please note that tags will always wait for the amount of time specified and is not connected to the execution of the rule's actions in any way. It is possible that the delay will force the user to wait longer than is necessary, and also possible that the delay will not be long enough for all the rule's actions to successfully complete. Longer delays provide more time for rule execution but also worsen the user experience.
 
 To enact the delay it is necessary to provide both the selected element that triggers the event, and the specific amount of time before the event is triggered.
 
@@ -236,11 +236,11 @@ console.log(event);
 return true;
 ```
 
-Run the rule in a browser and inspect the logged event object in the browser’s console. Once you understand what information is available, you can use it for programmatic decisioning within your custom code.
+Run the rule in a browser and inspect the logged event object in the browser's console. Once you understand what information is available, you can use it for programmatic decisioning within your custom code.
 
 *Condition Sequencing*
 
-When the “Run rule components in sequence” option from property settings is enabled you can have subsequent rule components wait while your condition performs an asynchronous task.
+When the "Run rule components in sequence" option from property settings is enabled you can have subsequent rule components wait while your condition performs an asynchronous task.
 
 When the condition returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), the next condition in the rule will not execute until the returned promise is resolved. If the promise is rejected, tags considers that condition as failed and no further conditions or actions from that rule will be executed.
 
@@ -301,11 +301,11 @@ The following value comparison operators are available:
 
 **Is True:** The condition returns true if the value is a boolean with the value of true. The value you provide is not converted to a boolean if it is any other type. Any value other than a boolean with the value of true results in the condition returning false.
 
-**Is Truthy:** The condition returns true if the value is true after being converted to a boolean. See [MDN’s Truthy documentation](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) for examples of truthy values.
+**Is Truthy:** The condition returns true if the value is true after being converted to a boolean. See [MDN's Truthy documentation](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) for examples of truthy values.
 
 **Is False:** The condition returns true if the value is a boolean with the value of false. The value you provide is not converted to a boolean if it is any other type. Any value other than a boolean with the value of false results in the condition returning false.
 
-**Is Falsy:** The condition returns true if the value is false after being converted to a boolean. See [MDN’s Falsy documentation](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) for examples of falsy values.
+**Is Falsy:** The condition returns true if the value is false after being converted to a boolean. See [MDN's Falsy documentation](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) for examples of falsy values.
 
 #### Variable
 
@@ -345,14 +345,14 @@ Configure the number of times the visitor must view the page before the action i
 
 #### Sessions
 
-Trigger the action if the user’s number of sessions meets the specified criteria.
+Trigger the action if the user's number of sessions meets the specified criteria.
 
 1. Select whether the number of sessions must be greater than, equal to, or less than the specified value.
 1. Specify the number of sessions that determines whether the condition is met.
 
 #### Time On Site
 
-Trigger the action if the user’s number of sessions meets the specified criteria.
+Trigger the action if the user's number of sessions meets the specified criteria.
 
 Configure how long the visitor must be on the site before the action is triggered.
 
@@ -361,9 +361,9 @@ Configure how long the visitor must be on the site before the action is triggere
 
 #### Traffic Source
 
-Trigger the action if the user’s number of sessions meets the specified criteria.
+Trigger the action if the user's number of sessions meets the specified criteria.
 
-Specify the source of the visitor’s traffic that must be true for the action to be triggered.
+Specify the source of the visitor's traffic that must be true for the action to be triggered.
 
 1. Specify the traffic source.
 1. (Optional) Enable Regex if this is a regular expression.
@@ -422,25 +422,25 @@ Select one or more of the following operating systems:
 
 Select the screen resolution visitors must use on their devices for the action to be triggered.
 
-1. Select whether the screen resolution width of the visitor’s device must be greater than, equal to, or less than the specified value.
+1. Select whether the screen resolution width of the visitor's device must be greater than, equal to, or less than the specified value.
 1. Specify the number of pixels required for the screen resolution width.
-1. Select whether the screen resolution height of the visitor’s device must be greater than, equal to, or less than the specified value.
+1. Select whether the screen resolution height of the visitor's device must be greater than, equal to, or less than the specified value.
 1. Specify the number of pixels required for the screen resolution height.
 
 #### Window Size
 
 Select the window size visitors must use on their devices for the action to be triggered.
 
-1. Select whether the window size width of the visitor’s device must be greater than, equal to, or less than the specified value.
+1. Select whether the window size width of the visitor's device must be greater than, equal to, or less than the specified value.
 1. Specify the number of pixels required for the window size width.
-1. Select whether the window size height of the visitor’s device must be greater than, equal to, or less than the specified value.
+1. Select whether the window size height of the visitor's device must be greater than, equal to, or less than the specified value.
 1. Specify the number of pixels required for the window size height.
 
 ### URL
 
 #### Domain
 
-Specify the visitor’s domain.
+Specify the visitor's domain.
 
 #### Hash
 
@@ -560,7 +560,7 @@ When JavaScript is selected as the language, a variable named `event` will autom
 console.log(event);
 ```
 
-Run the rule in a browser and inspect the logged event object in the browser’s console. After you understand what information is available, you can use it for programmatic decisioning within your custom code, send a piece of the `event` object to a server, and so on.
+Run the rule in a browser and inspect the logged event object in the browser's console. After you understand what information is available, you can use it for programmatic decisioning within your custom code, send a piece of the `event` object to a server, and so on.
 
 ### Custom Code action processing
 
@@ -582,7 +582,7 @@ The validator used in the tags code editor is designed to identify issues with d
 
 #### Action sequencing
 
-When the “Run rule components in sequence” option from property settings is enabled you can have subsequent rule components wait while your action performs an asynchronous task.  This works differently for JavaScript and HTML custom code.
+When the "Run rule components in sequence" option from property settings is enabled you can have subsequent rule components wait while your action performs an asynchronous task.  This works differently for JavaScript and HTML custom code.
 
 *JavaScript*
 
@@ -662,7 +662,7 @@ Any constant string value that can be then referenced in actions or conditions.
 
 Custom JavaScript can be entered into the UI by selecting  Open Editor and inserting code into the editor window.
 
-A return statement is necessary in the editor window in order to indicate what value should be used as the data element value. If a return statement is not included or the value `null` or `undefined` is returned, the data element’s default value will be used as the data element value.
+A return statement is necessary in the editor window in order to indicate what value should be used as the data element value. If a return statement is not included or the value `null` or `undefined` is returned, the data element's default value will be used as the data element value.
 
 **Example:**
 
@@ -682,7 +682,7 @@ console.log(event);
 return true;
 ```
 
-Run the rule in a browser and inspect the logged event object in the browser’s console. Once you understand what information is available under the various rules that may use your data element, you can use it for programmatic decisioning within your custom code or return a piece of the `event` object as the data element’s value.
+Run the rule in a browser and inspect the logged event object in the browser's console. Once you understand what information is available under the various rules that may use your data element, you can use it for programmatic decisioning within your custom code or return a piece of the `event` object as the data element's value.
 
 ### DOM attribute
 
@@ -702,7 +702,7 @@ Get the value of:
 
 Any available JavaScript object or variable can be referenced using the path field.
 
-Tag data elements can be used to capture your markup JavaScript variables or object properties. These values can then be used within your extensions or custom rules by referencing the tag data elements. If the source of the data changes, it is only necessary to update the reference to the source within the Data Collection UI.
+Tag data elements can be used to capture your markup JavaScript variables or object properties. These values can then be used within your extensions or custom rules by referencing the tag data elements. If the source of the data changes, it is only necessary to update the reference to the source.
 
 In the example below, the markup contains a JavaScript variable called `Page_Name`.
 
@@ -713,9 +713,9 @@ In the example below, the markup contains a JavaScript variable called `Page_Nam
 </script>
 ```
 
-When you create the data element in the Data Collection UI, simply provide the path to that variable.
+When you create the data element, simply provide the path to that variable.
 
-If you use a data collector object as party of your data layer, use dot notation in the path to reference the object and property you want to capture into the data element, like `_myData.pageName`, or `digitalData.pageName`, and so on.
+If you use a data collector object as part of your data layer, use dot notation in the path to reference the object and property you want to capture into the data element, like `_myData.pageName`, or `digitalData.pageName`, and so on.
 
 #### Example:
 
@@ -801,7 +801,7 @@ You can select one of the following page attributes to use in your data element:
 
 Specify a single URL parameter in the URL Parameter field.
 
-Only the name section is necessary and any special designators like “?” or “=“ should be omitted
+Only the name section is necessary and any special designators like "?" or "=" should be omitted
 
 #### Example:
 
@@ -809,7 +809,7 @@ Only the name section is necessary and any special designators like “?” or �
 
 ### Random number
 
-Use this data element to generate a random number. It’s often used for sampling data or creating IDs, such as a Hit ID. The random number can slso be used to obfuscate or salt sensitive data. Some examples might include:
+Use this data element to generate a random number. It's often used for sampling data or creating IDs, such as a Hit ID. The random number can slso be used to obfuscate or salt sensitive data. Some examples might include:
 
 * Generate a Hit ID
 * Concatenate the number to a user token or timestamp to ensure uniqueness
