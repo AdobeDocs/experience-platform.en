@@ -111,8 +111,6 @@ Due to current system limitations, there are two cases where an enum is not vali
 1. The enum is defined on an [array field](./array.md).
 1. The enum is defined more than one level deep in the schema hierarchy.
 
-These limitations will be lifted in a future release.
-
 ## Next steps
 
 This guide covered how to define enums and suggested values for string fields in the the UI. For information on how to manage enums and suggested values using the Schema Registry API, refer to the following [tutorial](../../tutorials/suggested-values.md).
