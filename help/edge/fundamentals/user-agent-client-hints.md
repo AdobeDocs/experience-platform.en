@@ -110,13 +110,7 @@ If you do not enable high entropy client hints in your environment, the Adobe An
 
 ### Adobe Analytics reports relying on high entropy client hints {#analytics}
 
-The following Adobe Analytics reports will not work while high entropy client hints are disabled.
-
-* [Browser](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
-* [Browser type](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [Operating system](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [Operating system types](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [Mobile dimensions](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+The [Operating system](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) dimension includes opertating system version which is stored as a high entropy client hint. If high entropy clients hints is not enabled, operating system version may be inaccurate for hits collected from Chromium browsers.
 
 ### Audience Manager traits relying on high entropy client hints {#aam}
 
