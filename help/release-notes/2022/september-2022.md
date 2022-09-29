@@ -73,7 +73,7 @@ Attribution AI is used to attribute credits to touchpoints leading to conversion
 
 | Feature | Description |
 | --- | --- |
-| Save Draft Instance | This new feature enables marketing analysts to save model configuration as a draft instance during configurations and continue to edit the draft until completion before training and scoring. Scenarios where this feature is helpful include, but are not limited to, when users have multiple fields to define in the configuration workflow that they are not able to complete in one go or when one or more dataset statistics (such as column completeness) take time to be processed before they become available. Read the [Attribution AI user guide](../../intelligent-services/attribution-ai/user-guide.md) to learn more. |
+| Save Draft Instance | This new feature enables marketing analysts to save a model configuration as a draft instance and continue to edit it until it is complete prior to training and scoring. Scenarios where this feature is helpful include, when a user has multiple fields to define in the workflow but cannot complete it due to time constraints. Another scenario is when one or more dataset statistics are being processed and not yet available. Read the [Attribution AI user guide](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) to learn more.|
 | Governance policies | After users submit to create an instance through the configuration workflow, the new policy enforcement service checks whether there are any policy violations of data usage and displays the details in a popover. It ensures that data operations and marketing actions are compliant with the data usage policies configured on Adobe Experience Platform. |
 
 For more information on Attribution AI, the [Attribution AI overview](../../intelligent-services/attribution-ai/overview.md). For information on data governance policies, read the [policies overview](../../data-governance/policies/overview.md).
@@ -84,7 +84,7 @@ Customer AI available in Real-time Customer Data Platform, is used to generate c
 
 | Feature | Description |
 | --- | --- |
-| Save Draft Instance | This new feature enables marketing analysts to save model configuration as a draft instance during configurations and continue to edit the draft until completion before training and scoring. Scenarios where this feature is helpful include, but are not limited to, when users have multiple fields to define in the configuration workflow that they are not able to complete in one go or when one or more dataset statistics (such as column completeness) take time to be processed before they become available. Read the [Customer AI user guide](../../intelligent-services/customer-ai/user-guide/configure.md) to learn more.|
+| Save Draft Instance |  This new feature enables marketing analysts to save a model configuration as a draft instance and continue to edit it until it is complete prior to training and scoring. Scenarios where this feature is helpful include, when a user has multiple fields to define in the workflow but cannot complete it due to time constraints. Another scenario is when one or more dataset statistics are being processed and not yet available. Read the [Customer AI user guide](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) to learn more.|
 | Governance policies | After users submit to create an instance through the configuration workflow, the new policy enforcement service checks whether there are any policy violations of data usage and displays the details in a popover. It ensures that data operations and marketing actions are compliant with the data usage policies configured on Adobe Experience Platform. |
 
 For more information on Customer AI, read the [Customer AI overview](../../intelligent-services/customer-ai/overview.md). For information on data governance policies, read the [policies overview](../../data-governance/policies/overview.md).
@@ -110,6 +110,9 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 | Feature | Description |
 | --- | --- |
 | In-use label  | When viewed in the widget library, the in-use label easily identifies the presence of existing widgets in your dashboard. This makes it easy to avoid the duplication although you can still add the same widget more than once should you wish. |
+| User-defined dashboards | User-defined dashboards help to expedite insights and customize visualizations by enabling you to build and manage custom dashboards. With user-defined dashboards you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization. Read the [feature guide](../../dashboards/user-defined-dashboards.md) to learn more. |
+| Customer Data Platform Insights Data Model | The Customer Data Platform (CDP) Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create CDP reports for your marketing and key performance indicator use cases. These insights can then be used as custom widgets for your user-defined dashboards. Read the [CDP Insights Data Model feature guide](../../dashboards/cdp-insights-data-model.md) to learn more. |
+| Audience overlap report widget | This widget is available for both for both [!UICONTROL Profiles] and [!UICONTROL Segments] dashboards. The report provides an ordered list of audiences ranked by the highest or lowest overlap percentages for your chosen segment. From the [!UICONTROL Profiles] dashboard you can filter and view your audience overlap by merge policy from all available segments. The [!UICONTROL Segments] dashboards allows you to filter the audience overlap by a specific segment.<br>Use this analysis to build new, high-performance segments and avoid sending the same audience to different destinations. The report also helps to identify hidden insights to improve segmentation or locate unique profiles to pursue. |
 
 For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
 
@@ -117,14 +120,19 @@ For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] ove
 
 Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
 
-**Updated features**
+**New or updated features**
 
 | Feature | Description |
 | --- | --- |
 | Left navigation integration in the Platform UI | All capabilities that were previously exclusive to the Data Collection UI (including tags, event forwarding, and datastreams) are now also available through the left navigation in Experience Platform, under the category **[!UICONTROL Data Collection]**. This eliminates the need to switch between UIs when working with data collection capabilities in Platform.|
 | User attribution in tags and event forwarding | When listing available [!UICONTROL Properties] in tags and event forwarding, each listed property now shows when it was last updated, and which user made the update. |
+|[[!DNL User-Agent Client Hints] in Web SDK](../../edge/fundamentals/user-agent-client-hints.md)|The Web SDK now supports [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Client hints allow website owners to access much of the same information available in the [!DNL User-Agent] string, but in a more privacy-preserving way.|
+|[Web SDK page-by-page migration](../../edge/home.md#migrating-to-web-sdk)| You can now migrate your existing web properties from other Experience Cloud libraries, such as [!DNL at.js], to Web SDK, one page at a time. This enables a phased approach to Web SDK migration, without the need of migrating all your pages at once.|
 
 {style="table-layout:auto"}
+
+<!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
+-->
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
 
