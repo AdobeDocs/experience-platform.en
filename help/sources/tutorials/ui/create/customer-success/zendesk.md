@@ -27,7 +27,7 @@ In order to access your [!DNL Zendesk] account on Platform, you must provide val
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Host | The unique domain specific to your account created during the registration process. | `https://yoursubdomain.zendesk.com`|
+| Subdomain | The unique domain specific to your account created during the registration process. | `yoursubdomain`|
 | Access token | Zendesk API token. |`0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 For more information on authenticating your [!DNL Zendesk] source, see the [[!DNL Zendesk] source overview](../../../../connectors/customer-success/zendesk.md).
