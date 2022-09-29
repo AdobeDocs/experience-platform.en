@@ -7,10 +7,6 @@ exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
->The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
-
 This page describes how to use Destination SDK to configure an [!DNL Azure Blob Storage] destination with custom [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
 
 This page shows all the configuration options available for Azure Blob Storage destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.

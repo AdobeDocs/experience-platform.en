@@ -7,10 +7,6 @@ exl-id: 56434e36-0458-45d9-961d-f6505de998f7
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
->The functionality to configure and submit file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
-
 This page details all server configuration options for your file-based destination servers and shows how to set up various file configuration options for users exporting files from Experience Platform to your destination.
 
 The server and file configuration specs for file-based destinations can be configured in Adobe Experience Platform Destination SDK via the `/destination-servers` endpoint. Read [Destination server API endpoint operations](./destination-server-api.md) for a complete list of operations you can perform on the endpoint.
