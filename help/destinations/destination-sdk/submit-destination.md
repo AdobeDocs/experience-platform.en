@@ -35,8 +35,8 @@ You can find detailed information about each item in the sections below:
 
 Provide a description of the use cases that your destination solves for Experience Platform customers. Your descriptions can be similar to use cases from existing partners:
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Create audiences from your customer lists, people who’ve visited your site or people who have already interacted with your content on Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX APIs are available for advertisers that want to target a specific audience group keyed off email addresses in Verizon Media (VMG) can quickly create a new segment and push the desired audience group using VMG’s near-real-time API.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX APIs are available for advertisers that want to target a specific audience group keyed off email addresses in Verizon Media (VMG) can quickly create a new segment and push the desired audience group using VMG's near-real-time API.
 
 ## Test results after using the test destination API
 
@@ -222,7 +222,7 @@ Provide the ID of the publish request for your destination. For information on h
 
 If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination. As part of the submission process, provide the pull request (PR) for your destination documentation.
 
-## Logo for your destination
+## Logo for your destination {#logo}
 
 The destinations catalog includes a logo for each destination card. In your submission email, include an image with the logo for your destination.
 

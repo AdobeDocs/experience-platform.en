@@ -90,6 +90,9 @@ All tables within the Experience Platform user interface are keyboard-accessible
 * When a row is selected or in focus, using **Enter** on the row provides details in the right rail.
 * When a row is selected or in focus, use **arrow keys** to move through each item in the row.
 * Use **Enter** to select an item in the row. Users with screen readers are alerted if a new window must open.
+* When you zoom to 200% or more, you can see the **rail inspector** icon as the right rail collapses to provide more viewing space for the table.
+
+![The rail inspector icon in focus when a user zooms to 200%.](images/rail-inspector.png)
 
 ### Browse table keyboard accessibility
 
