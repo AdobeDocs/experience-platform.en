@@ -11,7 +11,7 @@ Adobe Experience Platform Web SDK supports the ability to declare customer IDs a
 
 Choose your namespaces from the [Identity Service Namespaces](../../identity/../identity-service/namespaces.md) to indicate the context to which an identity relates, by using the values in the Identity Symbol column:
 
-![View of the Namespaces UI](../images/identity/edge_namespaceUI_identity-symbol.png)
+![View of the Namespaces UI](../assets/identity/edge_namespaceUI_identity-symbol.png)
 
 As an Audience Manager customer, all your existing Data Sources that use ID Type: Cross-Device automatically have a corresponding Identity Namespace. To find the corresponding Identity Namespace for your Audience Manager Data Source, log into Adobe Experience Platform and navigate to the Identities section.
 
