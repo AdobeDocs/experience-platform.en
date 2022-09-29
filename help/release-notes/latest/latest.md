@@ -18,6 +18,7 @@ Updates to existing features in Adobe Experience Platform:
 - [Audit logs](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Data collection](#data-collection)
+- [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Query Service](#query-service)
@@ -129,6 +130,34 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 {style="table-layout:auto"}
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+| Destination SDK| Destination SDK now provides full support for partners and customers creating batch (or file-based) productized or private destinations. Read the following documentation pages for more information: <ul><li>[Destination SDK Overview](/help/destinations/destination-sdk/overview.md)</li><li>[Configure a file-based destination](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configure file formatting options for file-based destinations](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Test your file-based destinations](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul>|
+
+{style="table-layout:auto"}
+
+**New or updated destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | The [!DNL Salesforce CRM] destination has been updated to support both contacts and leads updates, as well as performance improvements for faster updates. |
+
+{style="table-layout:auto"}
+
+**New or updated documentation**
+
+| Documentation | Description |
+| ----------- | ----------- |
+| Destinations Flow Service API documentation| The [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) was updated to include guidance on how to perform operations on file-based destinations. Operations for streaming destinations will be added at a later time. |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
