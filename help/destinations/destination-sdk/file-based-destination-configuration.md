@@ -725,7 +725,7 @@ Within the schema configuration, you have the option of adding required (or pred
 
 ```json
 
-    "requiredMappingsOnly": true,
+    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
     "requiredMappings": [
       {
         "destination": "ppid", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
@@ -733,7 +733,7 @@ Within the schema configuration, you have the option of adding required (or pred
         "primaryKeyRequired": true
       },
       {
-        "sourceType": "text/plain",
+        "sourceType": "text/x.schema-path",
         "source": "metadata.segment.alias",
         "destination": "list_id" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
       },
@@ -748,6 +748,14 @@ Within the schema configuration, you have the option of adding required (or pred
 
 ![Image of the required mappings in the UI activation flow.](/help/destinations/destination-sdk/assets/required-mappings.png)
 
+>[!NOTE]
+>
+>Currently supported combinations of required mappings are: 
+>* You can configure a required source field and a required destination field. In this case, users cannot edit or select any of the two fields and can only view the selection.
+>* You can configure a required destination field only. In this case, users will be allowed to select a source field to map to the destination.
+>
+> Configuring a required source field only is currently *not* supported.
+
 Use the parameters described in the table below if you would like to add required mappings in the activation workflow for your destination.
 
 |Parameter | Type | Description|
@@ -755,7 +763,7 @@ Use the parameters described in the table below if you would like to add require
 |`requiredMappingsOnly`|Boolean|Indicates if users are be able to map other attributes and identities in the activation flow, *apart from* the required mappings that you define.|
 |`requiredMappings.mandatoryRequired`|Boolean| Set to true if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 |`requiredMappings.primaryKeyRequired`|Boolean| Set to true if this field must be used as a deduplication key in file exports to your destination. Read more about [deduplication keys](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
-|`requiredMappings.sourceType`|String| Used when you configure a source field as required. Indicates what type of field the source field is. Available options are: <ul><li>`"text/plain"` when the source field is a predefined XDM attribute</li><li>`"text/x.aep-xl"` when the source field is a function, for example if you need a condition to be met on the source field side. For more information about supported functions, read the [Data Prep](/help/data-prep/api/functions.md) documentation.</li></ul>|
+|`requiredMappings.sourceType`|String| Used when you configure a source field as required. Indicates what type of field the source field is. Available options are: <ul><li>`"text/x.schema-path"` when the source field is a predefined XDM attribute</li><li>`"text/x.aep-xl"` when the source field is a function, for example if you need a condition to be met on the source field side. For more information about supported functions, read the [Data Prep](/help/data-prep/api/functions.md) documentation.</li></ul>|
 |`requiredMappings.source`|String|Indicates what the required source field should be.|
 |`requiredMappings.destination`|String|Indicates what the required destination field should be.|
 
