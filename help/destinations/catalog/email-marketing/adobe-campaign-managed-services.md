@@ -6,7 +6,7 @@ description: Adobe Campaign Managed Cloud Services provides a platform for desig
 
 >[!IMPORTANT]
 >
->This integration works with Adobe Campaign version 8.4 or higher. Version 8.4 is scheduled to release on September 30,2022.
+>This integration works with [Adobe Campaign version 8.4 or higher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1).
 
 ## Overview {#overview}
 
