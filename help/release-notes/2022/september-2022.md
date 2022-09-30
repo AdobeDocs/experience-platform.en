@@ -10,7 +10,6 @@ New features in Adobe Experience Platform:
 
 - [Attribute-based access control](#abac)
 - [Data hygiene](#data-hygiene)
-- [[!UICONTROL Privacy Console]](#privacy-console)
 
 Updates to existing features in Adobe Experience Platform:
 
@@ -49,19 +48,13 @@ Adobe Experience Platform's data hygiene capabilities allow you to cleanse your 
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities are only available to organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
+>Data hygiene capabilities are only available to organizations that have purchased Adobe Healthcare Shield.
 
 Refer to the following documentation to get started with data hygiene:
 
 - [Data hygiene overview](../../hygiene/home.md): Learn the basics about Platform's data hygiene capabilities.
 - [[!UICONTROL Data Hygiene] UI guide](../../hygiene/ui/overview.md): Learn how to schedule dataset expirations and consumer delete requests within the Platform user interface.
 - [Data Hygiene API guide](../../hygiene/api/overview.md): All data hygiene activities that you can perform in the UI can also be programmatically 
-
-## [!UICONTROL Privacy Console] {#privacy-console}
-
-The [!UICONTROL Privacy Console] tab in the Experience Platform UI provides a dashboard view of key insights from privacy-related features such as [data subject requests from Privacy Service](../../privacy-service/home.md), [data hygiene work orders](../../hygiene/home.md), and [audit logs](../../landing/governance-privacy-security/audit-logs/overview.md). The console also provides several in-product use case guides to help guide you through common privacy workflows.
-
-See the [Privacy Console overview](../../landing/governance-privacy-security/privacy-console.md) for more information on the feature.
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
