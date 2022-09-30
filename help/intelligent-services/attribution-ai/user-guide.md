@@ -64,6 +64,10 @@ Selecting the info icon ![info icon](./images/user-guide/info-icon.png) next to 
 
 The dataset preview contains data such as the last update time, source schema, and a preview of the first ten columns.
 
+Select **[!UICONTROL Save]** to save your drafts as you move along the workflow. You can also save draft model configurations and move to the next step in the workflow. Use **[!UICONTROL Save and continue]** to create and save drafts during model configurations. The feature enables you to create and save drafts of the model configuration and is particularly useful when you have to define many fields in the configuration workflow.
+
+![The Create workflow of the Data Science Services Attribution AI tab with Save and Save and continue highlighted.](./images/user-guide/aai-save-save-&-exit.png)
+
 ### Dataset completeness {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
@@ -86,7 +90,7 @@ You can now join multiple datasets to one another based on the identity map (fie
 
 To select an identity, select the underlined value located in the identity column. The select an identity popover appears.
 
-![select same namespace](./images/user-guide/aai-identity-map.png)
+![select same namespace](./images/user-guide/aai-identity-map-save-and-exit.png)
 
 In the event that more than one identity is available within a namespace, make sure to select the correct identity field for your use case. For example, two email identities are available within the email namespace, a work and personal email. Depending on the use case, a personal email is more likely to be filled in and be more useful in individual predictions. This means you would select `EMAIL (personalEmail.address)` as your identity.
 
@@ -102,7 +106,7 @@ In the event that more than one identity is available within a namespace, make s
 
 After you have finished selecting and adding datasets, the **Map** configuration step appears. Attribution AI requires that you map the Media channel field for each dataset you selected in the previous step. This is because without the Media channel mapping between datasets, insights derived from Attribution AI may not show up properly making the insights page difficult to interpret. Although only the Media channel is required, it is highly recommended that you map some of the optional fields such as Media action, Campaign name, Campaign group, and Campaign tag. Doing so allows Attribution AI to provide clearer insights and optimal results.
 
-![mapping](./images/user-guide/mapping.png)
+![mapping](./images/user-guide/mapping-save-&-exit.png)
 
 ## Defining events {#define-events}
 
@@ -192,13 +196,13 @@ You can add additional touchpoints by selecting **Add touchpoint** and repeating
 
 Once you have finished defining all necessary touchpoints, scroll up and select **Next** in the top-right corner to proceed to the final step.
 
-![finished define](./images/user-guide/define_event_next.png)
+![finished define](./images/user-guide/define_event_save_and_exit.png)
 
 ## Advanced training and scoring setup
 
 The final page in Attribution AI is the **[!UICONTROL Advanced]** page used for setting up training and scoring.
 
-![new page advanced](./images/user-guide/advanced_settings.png)
+![new page set options](./images/user-guide/advanced_settings_set_options.png)
 
 ### Schedule training
 
@@ -292,7 +296,7 @@ When you preview datasets with restricted schema on the **[!UICONTROL Create ins
 
 After you create an instance with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
-![The Attribution AI workspace with the restricted fields of the instance results highlighted.](./images/user-guide/information-not-displayed.png)
+![The Attribution AI workspace with the restricted fields of the instance results highlighted.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Next steps
 

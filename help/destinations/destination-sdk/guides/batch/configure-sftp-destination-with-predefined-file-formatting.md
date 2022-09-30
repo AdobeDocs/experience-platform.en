@@ -7,10 +7,6 @@ exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
 
 ## Overview {#overview}
 
->[!IMPORTANT]
->
->The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
-
 This page describes how to use Destination SDK to configure an SFTP destination with predefined, default [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
 
 This page shows all the configuration options available for SFTP destinations. You can edit the configurations shown in the steps below or delete certain parts of the configurations, as needed.

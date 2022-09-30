@@ -61,7 +61,7 @@ Provide the required values and then select **[!UICONTROL Next]** to continue.
 
 By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience Events in general, and Consumer Experience Event data to calculate propensity scores. When selecting a dataset, only ones that are compatible with Customer AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. Use the search option to quickly find the datasets you're interested in.
 
-![Select and search for dataset](../images/user-guide/configure-dataset-page.png)
+![Select and search for dataset](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
 
@@ -72,6 +72,10 @@ Selecting the info icon ![info icon](../images/user-guide/info-icon.png) next to
 ![Select and search for dataset](../images/user-guide/dataset-info.png)
 
 The dataset preview contains data such as the last update time, source schema, and a preview of the first ten columns.
+
+Select **[!UICONTROL Save]** to save your drafts as you move along the workflow. You can also save draft model configurations and move to the next step in the workflow. Use **[!UICONTROL Save and continue]** to create and save drafts during model configurations. The feature enables you to create and save drafts of the model configuration and is particularly useful when you have to define many fields in the configuration workflow.
+
+![The Create workflow of the Data Science Services Customer AI tab with Save and Save and continue highlighted.](../images/user-guide/cai-save-and-exit.png)
 
 ### Dataset completeness {#dataset-completeness}
 
@@ -230,7 +234,7 @@ The Profile toggle allows Customer AI to export the scoring results into Real-ti
 
 When using Customer AI for the first time you can toggle this feature off until you are satisfied with the model output results. This prevents you from uploading multiple scoring datasets to your Customer Profiles while fine tuning your model. Once you have finished calibrating your model, you can clone the model using the [clone option](#set-up-your-instance) from the **Service instances** page. This allows you to create a copy of your model and toggle profile on.
 
-![Profile toggle](../images/user-guide/advanced-workflow.png)
+![Profile toggle](../images/user-guide/advanced-workflow-save.png)
 
 Once you have your scoring schedule set, prediction exclusions included, and the profile toggle where you want it to be, select **[!UICONTROL Finish]** in the top-right to create your Customer AI instance.
 
@@ -276,11 +280,11 @@ At the top of the Customer AI workspace **insights page**, notice that the detai
 
 When you preview datasets with restricted schema on the **[!UICONTROL Create instance workflow]** page, a warning appears to let you know that [!UICONTROL Due to access restrictions, certain information isn't displayed in the dataset preview.]
 
-![The Customer AI workspace with the restricted fields of the preview datasets with restricted schema results highlighted.](../images/user-guide/restricted-dataset-preview.png)
+![The Customer AI workspace with the restricted fields of the preview datasets with restricted schema results highlighted.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
 After you create an instance with restricted information and proceed to the **[!UICONTROL Define goal]** step, a warning is displayed at the top: [!UICONTROL Due to access restrictions, certain information isn't displayed in the configuration.]
 
-![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/information-not-displayed.png)
+![The Customer AI workspace with the restricted fields of the service instance results highlighted.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## Next steps {#next-steps}
 

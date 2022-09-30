@@ -6,10 +6,6 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 ---
 # Manage policies
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
 Policies are statements that bring attributes together to establish permissible and impermissible actions. Policies can either be local or global, and can override other policies.
 
 ## Create a new policy
