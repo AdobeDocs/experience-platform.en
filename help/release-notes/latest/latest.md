@@ -49,7 +49,7 @@ Adobe Experience Platform's data hygiene capabilities allow you to cleanse your 
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities are only available to organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
+>Data hygiene capabilities are only available to organizations that have purchased Adobe Healthcare Shield.
 
 Refer to the following documentation to get started with data hygiene:
 
