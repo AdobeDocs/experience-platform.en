@@ -719,6 +719,61 @@ Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own sc
 
 {style="table-layout:auto"}
 
+### Required mappings {#required-mappings}
+
+Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view but not modify when they set up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination in the exported files. See below two examples of a schema configuration with required mappings and what these look like in the mapping step of the [activate data to batch destinations workflow](/help/destinations/ui/activate-batch-profile-destinations.md). 
+
+```json
+
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      }
+    ] 
+
+```
+
+![Image of the required mappings in the UI activation flow.](/help/destinations/destination-sdk/assets/required-mappings-1.png)
+
+```json
+
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      }
+    ] 
+
+```
+
+![Image of the required mappings in the UI activation flow.](/help/destinations/destination-sdk/assets/required-mappings-2.png)
+
+>[!NOTE]
+>
+>Currently supported combinations of required mappings are: 
+>* You can configure a required source field and a required destination field. In this case, users cannot edit or select any of the two fields and can only view the selection.
+>* You can configure a required destination field only. In this case, users will be allowed to select a source field to map to the destination.
+>
+> Configuring a required source field only is currently *not* supported.
+
+Use the parameters described in the table below if you would like to add required mappings in the activation workflow for your destination.
+
+|Parameter | Type | Description|
+|---------|----------|------|
+|`requiredMappingsOnly`|Boolean|Indicates if users are be able to map other attributes and identities in the activation flow, *apart from* the required mappings that you define.|
+|`requiredMappings.mandatoryRequired`|Boolean| Set to true if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+|`requiredMappings.primaryKeyRequired`|Boolean| Set to true if this field must be used as a deduplication key in file exports to your destination. Read more about [deduplication keys](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+|`requiredMappings.sourceType`|String| Used when you configure a source field as required. Use `"text/x.schema-path"`,  which indicates that the source field is a predefined XDM attribute|
+|`requiredMappings.source`|String|Indicates what the required source field should be.|
+|`requiredMappings.destination`|String|Indicates what the required destination field should be.|
+
+{style="table-layout:auto"}
+
 ## Identities and attributes {#identities-and-attributes}
 
 The parameters in this section determine which identities your destination accepts. This configuration also populates the target identities and attributes in the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the Experience Platform user interface, where users map identities and attributes from their XDM schemas to the schema in your destination.
