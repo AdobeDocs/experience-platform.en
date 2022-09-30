@@ -111,7 +111,7 @@ Next, select the **[!UICONTROL Profile dataset]** toggle to enable your dataset 
 
 ### Enable alerts
 
-You can enable alerts to receive notifications on the status of your dataflow. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to sources alerts using the UI](../alerts.md).
+You can enable alerts to receive notifications on the status of your dataflow. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to sources alerts using the UI](../../alerts.md).
 
 When you are finished providing details to your dataflow, select **[!UICONTROL Next]**.
 
