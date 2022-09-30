@@ -721,21 +721,21 @@ Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own sc
 
 ### Required mappings {#required-mappings}
 
-Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users will be able to view but not modify when they set up a connection to your destination. See below an example of a schema configuration with required mappings and what it looks like in the UI. 
+Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view but not modify when they set up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination in the exported files. See below an example of a schema configuration with required mappings and what it looks like in the mapping step of the [activate data to batch destinations workflow](/help/destinations/ui/activate-batch-profile-destinations.md). 
 
 ```json
 
     "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
     "requiredMappings": [
       {
-        "destination": "ppid", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
+        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
         "mandatoryRequired": true,
         "primaryKeyRequired": true
       },
       {
         "sourceType": "text/x.schema-path",
-        "source": "metadata.segment.alias",
-        "destination": "list_id" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
       },
       {
         "sourceType": "text/x.aep-xl",
