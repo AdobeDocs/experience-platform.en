@@ -9,7 +9,6 @@ description: The September 2022 release notes for Adobe Experience Platform.
 New features in Adobe Experience Platform:
 
 - [Attribute-based access control](#abac)
-- [Data hygiene](#data-hygiene)
 
 Updates to existing features in Adobe Experience Platform:
 
@@ -17,6 +16,7 @@ Updates to existing features in Adobe Experience Platform:
 - [Audit logs](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Data collection](#data-collection)
+- [Data hygiene](#data-hygiene)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
@@ -39,22 +39,6 @@ Through attribute-based access control, administrators of your organization can 
 | Permissions | Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. Through Permissions, you can create and manage roles, assign the desired resource permissions for these roles, and build policies to leverage labels and define which user roles have access to specific Platform resources. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the [Permissions UI guide](../../access-control/abac/ui/browse.md). |
 
 For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). For a comprehensive guide on the attribute-based access control workflow, read the [attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
-
-## Data hygiene {#data-hygiene}
-
-Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
-
-Adobe Experience Platform's data hygiene capabilities allow you to cleanse your data by scheduling automated dataset expirations and programmatically deleting consumer data by identity.
-
->[!IMPORTANT]
->
->Data hygiene capabilities are only available to organizations that have purchased Adobe Healthcare Shield.
-
-Refer to the following documentation to get started with data hygiene:
-
-- [Data hygiene overview](../../hygiene/home.md): Learn the basics about Platform's data hygiene capabilities.
-- [[!UICONTROL Data Hygiene] UI guide](../../hygiene/ui/overview.md): Learn how to schedule dataset expirations and consumer delete requests within the Platform user interface.
-- [Data Hygiene API guide](../../hygiene/api/overview.md): All data hygiene activities that you can perform in the UI can also be programmatically 
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -129,6 +113,27 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
 
+## Data hygiene {#data-hygiene}
+
+Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
+
+Adobe Experience Platform's data hygiene capabilities allow you to cleanse your data by scheduling automated dataset expirations and programmatically deleting consumer data by identity.
+
+>[!IMPORTANT]
+>
+>Data hygiene capabilities are only available to organizations that have purchased Adobe Healthcare Shield.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Updated UI workflows | The workflows for [scheduling dataset expirations](../../hygiene/ui/dataset-expiration.md) and [deleting consumer data](../../hygiene/ui/delete-consumer.md) have been streamlined in the UI.  |
+| Quota API endpoint | You can now retrieve quota information for your organization's data hygiene processes by calling the [`/quota` endpoint](../../hygiene/api/quota.md).  |
+
+{style="table-layout:auto"}
+
+For more information on Platform's data hygiene capabilities, refer to the [data hygiene overview](../../hygiene/home.md).
+
 ## [!DNL Destinations] {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
@@ -145,7 +150,7 @@ For more information on data collection in Platform, please see the [data collec
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. [Get Started with Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Note that this integration works with [Adobe Campaign version 8.4 or higher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1).|
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. [Get Started with Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Note that this integration works with [Adobe Campaign version 8.4 or higher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | The [!DNL Salesforce CRM] destination has been updated to support both contacts and leads updates, as well as performance improvements for faster updates. |
 
 {style="table-layout:auto"}
@@ -226,7 +231,7 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 | Feature | Description |
 | --- | --- |
 | Alert subscription API | Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/). See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. |
-| Dataset samples | Query Service dataset samples enable you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy. See the [dataset samples guide](../../query-service/sql/dataset-samples.md) to learn more.|
+| Dataset samples | Query Service dataset samples enable you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy. See the [dataset samples guide](../../query-service/sql/dataset-samples.md) to learn more. |
 
 For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
 
