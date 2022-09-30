@@ -16,7 +16,6 @@ Updates to existing features in Adobe Experience Platform:
 - [Audit logs](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Data collection](#data-collection)
-- [Data hygiene](#data-hygiene)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
@@ -112,27 +111,6 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 -->
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
-
-## Data hygiene {#data-hygiene}
-
-Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
-
-Adobe Experience Platform's data hygiene capabilities allow you to cleanse your data by scheduling automated dataset expirations and programmatically deleting consumer data by identity.
-
->[!IMPORTANT]
->
->Data hygiene capabilities are only available to organizations that have purchased Adobe Healthcare Shield.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Updated UI workflows | The workflows for [scheduling dataset expirations](../../hygiene/ui/dataset-expiration.md) and [deleting consumer data](../../hygiene/ui/delete-consumer.md) have been streamlined in the UI.  |
-| Quota API endpoint | You can now retrieve quota information for your organization's data hygiene processes by calling the [`/quota` endpoint](../../hygiene/api/quota.md).  |
-
-{style="table-layout:auto"}
-
-For more information on Platform's data hygiene capabilities, refer to the [data hygiene overview](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
