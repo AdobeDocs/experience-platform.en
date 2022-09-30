@@ -721,32 +721,37 @@ Use the parameters in  `dynamicSchemaConfig` to dynamically retrieve your own sc
 
 ### Required mappings {#required-mappings}
 
-Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view but not modify when they set up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination in the exported files. See below an example of a schema configuration with required mappings and what it looks like in the mapping step of the [activate data to batch destinations workflow](/help/destinations/ui/activate-batch-profile-destinations.md). 
+Within the schema configuration, you have the option of adding required (or predefined) mappings. These are mappings that users are able to view but not modify when they set up a connection to your destination. For example, you can enforce the email address field to always be sent to the destination in the exported files. See below two examples of a schema configuration with required mappings and what these look like in the mapping step of the [activate data to batch destinations workflow](/help/destinations/ui/activate-batch-profile-destinations.md). 
 
 ```json
 
-    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
     "requiredMappings": [
       {
         "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
         "mandatoryRequired": true,
         "primaryKeyRequired": true
-      },
-      {
-        "sourceType": "text/x.schema-path",
-        "source": "personalEmail.address",
-        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
-      },
-      {
-        "sourceType": "text/x.aep-xl",
-        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
-        "destination": "delete"
       }
     ] 
 
 ```
 
-![Image of the required mappings in the UI activation flow.](/help/destinations/destination-sdk/assets/required-mappings.png)
+![Image of the required mappings in the UI activation flow.](/help/destinations/destination-sdk/assets/required-mappings-1.png)
+
+```json
+
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      }
+    ] 
+
+```
+
+![Image of the required mappings in the UI activation flow.](/help/destinations/destination-sdk/assets/required-mappings-2.png)
 
 >[!NOTE]
 >
@@ -763,7 +768,7 @@ Use the parameters described in the table below if you would like to add require
 |`requiredMappingsOnly`|Boolean|Indicates if users are be able to map other attributes and identities in the activation flow, *apart from* the required mappings that you define.|
 |`requiredMappings.mandatoryRequired`|Boolean| Set to true if this field must be a mandatory attribute which should always be present in file exports to your destination. Read more about [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 |`requiredMappings.primaryKeyRequired`|Boolean| Set to true if this field must be used as a deduplication key in file exports to your destination. Read more about [deduplication keys](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
-|`requiredMappings.sourceType`|String| Used when you configure a source field as required. Indicates what type of field the source field is. Available options are: <ul><li>`"text/x.schema-path"` when the source field is a predefined XDM attribute</li><li>`"text/x.aep-xl"` when the source field is a function, for example if you need a condition to be met on the source field side. For more information about supported functions, read the [Data Prep](/help/data-prep/api/functions.md) documentation.</li></ul>|
+|`requiredMappings.sourceType`|String| Used when you configure a source field as required. Use `"text/x.schema-path"`,  which indicates that the source field is a predefined XDM attribute|
 |`requiredMappings.source`|String|Indicates what the required source field should be.|
 |`requiredMappings.destination`|String|Indicates what the required destination field should be.|
 
