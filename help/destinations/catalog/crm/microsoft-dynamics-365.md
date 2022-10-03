@@ -16,7 +16,7 @@ This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) 
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to [!DNL Dynamics 365], to display in the users’ feeds as soon as segments and profiles are updated in Adobe Experience Platform.
+As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build segments from your offline data and send these segments to [!DNL Dynamics 365], to display in the users' feeds as soon as segments and profiles are updated in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -205,6 +205,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
 ### Unknown errors encountered while pushing events to destination {#unknown-errors}
+
 When checking a dataflow run, if you obtain the following error message: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
 ![Platform UI screenshot showing Bad request error.](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
