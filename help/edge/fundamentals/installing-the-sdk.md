@@ -8,7 +8,7 @@ exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
 
 There are three supported ways to use Adobe Experience Platform Web SDK:
 
-1. The preferred way to use Adobe Experience Platform Web SDK is via the Data Collection UI.
+1. The preferred way to use Adobe Experience Platform Web SDK is via the Data Collection UI or Experience Platform UI.
 1. Adobe Experience Platform Web SDK is also available on a content delivery network (CDN) for you to use.
 1. Use the NPM library which exports EcmaScript 5 and EcmaScript 2015 (ES6) modules.
 

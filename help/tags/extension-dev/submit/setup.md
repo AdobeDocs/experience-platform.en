@@ -35,7 +35,9 @@ This program is for consulting firms that help Adobe customers make the most of 
 >
 >Currently your corporate email can only be used in one partner program at a time, so you will need to use a different corporate email as the registered contact for each of the programs.
 
-Once your company is in the Exchange Partner program, you can request access to Adobe Solutions by signing in to the [Exchange Partner Site](https://partners.adobe.com/exchangeprogram/experiencecloud) and following the steps below. If you already have an Experience Cloud Account and access to solutions, but you do not have access to the Data Collection UI in Adobe Experience Platform, please see the [instructions for setting up groups and users](../../ui/administration/user-permissions.md).
+Once your company is in the Exchange Partner program, you can request access to Adobe Solutions by signing in to the [Exchange Partner Site](https://partners.adobe.com/exchangeprogram/experiencecloud) and following the steps below.
+
+If you have an Experience Cloud Account require access the Data Collection UI and Experience Platform UI, please see the [data collection permissions  guide](../../../collection/permissions.md).
 
 ## For independent developers
 

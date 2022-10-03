@@ -1,15 +1,11 @@
 ---
 description: Learn how to use Destination SDK to configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration.
-title: (Beta) Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration.
+title: Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration.
 exl-id: effbd218-3a7c-4986-9fba-f5727a21e480
 ---
-# (Beta) Configure an [!DNL Azure Blob Storage] destination with custom file formatting options and custom file name configuration
+# Configure an [!DNL Azure Blob Storage] destination with custom file formatting options and custom file name configuration
 
 ## Overview {#overview}
-
->[!IMPORTANT]
->
->The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 This page describes how to use Destination SDK to configure an [!DNL Azure Blob Storage] destination with custom [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
 
