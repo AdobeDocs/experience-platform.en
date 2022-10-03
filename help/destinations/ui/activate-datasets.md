@@ -4,74 +4,91 @@ type: Tutorial
 description: Learn how to activate datasets from Adobe Experience Platform to your preferred cloud storage location.
 
 ---
-# Activate datasets to cloud storage destinations
+# Activate datasets to destinations
 
->[!IMPORTANT]
-> 
->To activate datasets, you need the INSERT REQUIRED PERMISSIONS **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage or email marketing location, such as Amazon S3, SFTP locations, or Oracle Eloqua.
 
-## Overview {#overview}
+## Activate segments or export data
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform streaming profile-based destinations, such as Amazon Kinesis.
+Difference between exporting datasets and exporting segments. If you are looking to activate *segments* to cloud storage of email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
+
+You could export datasets instead of segments when you want to have a full set of data, not filtered by segments. 
 
 ## Prerequisites {#prerequisites}
 
-To activate data to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+To export datasets to cloud storage destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+
+### Required permissions {#permissions}
+
+To activate datasets, you need the INSERT REQUIRED PERMISSIONS **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+When browsing the destinations catalog, you should see an **[!UICONTROL Activate]** control for a destination. This means that you have the necessary permissions to export datasets and that the destination supports exporting datasets.
 
 ## Select your destination {#select-destination}
 
+To select the destination where to export datasets: 
+
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Image showing the destination catalog tab.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+    ![Image showing the destination catalog tab.](/help/destinations/assets/ui/activate-datasets/catalog-tab.png)
 
-1. Select **[!UICONTROL Activate segments]** on the card corresponding to the destination where you want to activate your segments, as shown in the image below.
+2. Select **[!UICONTROL Activate]** on the card corresponding to the destination where you want to export datasets, as shown in the image below.
 
-    ![Image highlighting the activate segments control in the destinations catalog tab.](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+    ![Image highlighting the activate control in the destinations catalog tab.](/help/destinations/assets/ui/activate-datasets/activate-button.png)
 
-1. Select the destination connection that you want to use to activate your segments, then select **[!UICONTROL Next]**.
+3. Select **[!UICONTROL Data type Datasets]** and select the destination connection where you want to export datasets, then select **[!UICONTROL Next]**.
 
-    ![Image showing a selection of two destinations that you can connect to.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+  >[!TIP]
+  > 
+  >If you want to set up a new destination to export datasets, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow. 
 
-1. Move to the next section to [select your segments](#select-segments).
+  ![Image showing a selection of two destinations that you can connect to.](/help/destinations/assets/ui/activate-datasets/select-datatype-datasets.png)
 
-## Select your segments {#select-segments}
+4. Move to the next section to [select your segments](#select-segments).
 
-Use the check boxes to the left of the segment names to select the segments that you want to activate to the destination, then select **[!UICONTROL Next]**.
+## Select your datasets {#select-datasets}
 
-![Image highlighting the checkboxes selection in the Select segments step of the activation workflow.](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+Use the check boxes to the left of the dataset names to select the datasets that you want to export to the destination, then select **[!UICONTROL Next]**.
 
-## Select profile attributes {#select-attributes}
+![Image highlighting the checkboxes selection in the Select datasets step of the activation workflow.](/help/destinations/assets/ui/activate-datasets/select-datasets.png)
 
-In the **[!UICONTROL Mapping]** step, select the profile attributes that you want to send to the target destination.
+## Schedule dataset export {#scheduling}
 
->[!NOTE]
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="File export options for datasets"
+>abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export."
+
+Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of the dataset, and subsequent files are incremental additions to the dataset since the previous export.
+
+>[!IMPORTANT]
 >
-> Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+>The first exported incremental file includes all existing data in the dataset, functioning as a backfill.
 
-File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
-* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
-* If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
+![Image of the UI with the Export incremental files toggle selected.](/help/destinations/assets/ui/activate-datasets/export-incremental-datasets.png)
 
-![Image showing the prefilled, recommended attributes in the mapping step.](../assets/ui/activate-streaming-profile-destinations/attributes-default.png) 
-
-1. In the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]**.
+1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
-    ![Image highlighting the Add new field control in the mapping step.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+    * **[!UICONTROL Daily]**: schedule incremental file exports once a day, every day, at the time you specify.
+    * **[!UICONTROL Hourly]**: schedule incremental file exports every 3, 6, 8, or 12 hours.
 
-1. Select the arrow to the right of the **[!UICONTROL Schema field]** entry.
+2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-    ![Image highlighting the how to select a source field in the mapping step.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
-1. In the **[!UICONTROL Select field]** page, select the XDM attributes that you want to send to the destination, then choose **[!UICONTROL Select]**.
+      >[!IMPORTANT]
+      >
+      >The last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10th.
 
-    ![Image showing a selection of XDM fields that you can select as source fields.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+4. Select **[!UICONTROL Next]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
 
-
-1. To add more mappings, repeat steps 1 to 3, then select **[!UICONTROL Next]**.
+>[!NOTE] 
+> 
+>For dataset exports, the files have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for examples of exported files.
 
 ## Review {#review}
 
-On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
+On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start exporting datasets to the destination.
 
 >[!IMPORTANT]
 >
@@ -81,47 +98,29 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
-![Image showing the review step of the activation workflow.](../assets/ui/activate-streaming-profile-destinations/review.png)
+![Image showing the review step of the dataset export workflow.](/help/destinations/assets/ui/activate-datasets/review.png)
 
-## Verify segment activation {#verify}
+## Verify successful dataset export {#verify}
 
-Your exported [!DNL Experience Platform] data lands in your target destination in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
+For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. The default file format is:
+`<destinationName>_dataset<datasetID>_<timestamp-yyyymmddhhmmss>.csv`
 
-```json
-{
-  "person": {
-    "email": "yourstruly@adobe.com"
-  },
-  "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
-      },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
-      }
-    }
-  },
-  "identityMap": {
-    "ecid": [
-      {
-        "id": "14575006536349286404619648085736425115"
-      },
-      {
-        "id": "66478888669296734530114754794777368480"
-      }
-    ],
-    "email_lc_sha256": [
-      {
-        "id": "655332b5fa2aea4498bf7a290cff017cb4"
-      },
-      {
-        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
-      }
-    ]
-  }
-}
+For example, if you selected daily export and file type json, the files you would receive on three consecutive days could look like this:
 
+```console
+Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220408061804.csv
+Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220409052200.csv
+Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220410061130.csv
 ```
+
+In another example, if you selected hourly export every four hours and file type parquet, the files you would receive in three consecutive exports could look like this:
+
+```console
+Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220408061804.csv
+Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220409052200.csv
+Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220410061130.csv
+```
+
+### Sample dataset files
+
+The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) or [.json file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
