@@ -10,8 +10,8 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ## Version 1.4.0 - October 3, 2022
 
 * Added AEP Assurance debugging support for Web SDK hybrid implementations.
-* Support multiple tabs within the same AEP Assurance session.
-* Fix issue where users cannot switch profiles after logging in.
+* Added support multiple tabs within the same AEP Assurance session.
+* Fixed issue where users cannot switch profiles after logging in.
 * Added error message when enabling Target Trace fails.
 * Updated dependencies.
 
