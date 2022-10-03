@@ -18,6 +18,11 @@ Before continuing with this document, you should have a good understanding of th
 
 * **Batch queries**: For executing `INSERT TABLE AS SELECT` and `CREATE TABLE AS SELECT` queries to clean, shape, manipulate, and enrich data. The results of these queries **are stored** on the data lake. The metric for measuring the consumption of this functionality is computational hours.
 
+>[!IMPORTANT]
+>
+>To ensure that each query for a Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource utilization by assigning concurrency slots to each query. Queries are put into a queue based on concurrency slots then wait in the queue until enough concurrency slots are available.
+>There are a maximum of four concurrent query slots available at any given time.
+
 The illustration below summarizes how Query Service capabilities are currently packaged and licensed:
 
 ![A diagram to explain the distribution and packaging of Query Service capabilities in relation to licencing.](./images/guardrails/query-capabilities.png)
