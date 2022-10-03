@@ -9,8 +9,8 @@ Adobe Experience Platform Dashboards helps you to expedite insights and customiz
 
 >[!IMPORTANT]
 >
->To ensure that each query for a Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource utilization by assigning concurrency slots to each query. Queries are put into a queue based on concurrency slots then wait in the queue until enough concurrency slots are available.
->There are a maximum of four concurrent query slots available at any given time.
+>To ensure that each query for a Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
