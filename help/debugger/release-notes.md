@@ -11,7 +11,8 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 
 * Added AEP Assurance debugging support for Web SDK hybrid implementations.
 * Added support multiple tabs within the same AEP Assurance session.
-* Fixed issue where users cannot switch profiles after logging in.
+* Fixed issue where users cannot switch profiles/organizations after logging in.
+  * For some accounts, logging out and logging back in is required to switch organizations.
 * Added error message when enabling Target Trace fails.
 * Updated dependencies.
 
