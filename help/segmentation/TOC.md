@@ -24,6 +24,7 @@ feature: Segments
     - [Streaming segmentation](api/streaming-segmentation.md)
 - Segmentation UI {#ui}
     - [Overview](ui/overview.md)
+    - [Audience Builder](ui/audience-builder.md)
     - [Segment dashboard](ui/segment-dashboard.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Edge segmentation](ui/edge-segmentation.md)

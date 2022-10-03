@@ -1,13 +1,13 @@
 ---
-title: Dataset Expirations API Endpoint
+title: Dataset Expiration API Endpoint
 description: The /ttl endpoint in the Data Hygiene API allows you to programmatically schedule dataset expirations in Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 ---
-# Dataset expirations endpoint
+# Dataset expiration endpoint
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Healthcare Shield.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Healthcare Shield.
 
 The `/ttl` endpoint in the Data Hygiene API allows you to schedule expiration dates for datasets in Adobe Experience Platform.
 
@@ -49,7 +49,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?page=1&size=50 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -62,38 +62,43 @@ A successful response lists the resulting dataset expirations. The following exa
 
 ```json
 {
-  "results": [
+  "totalRecords": 3,
+  "ttlDetails": [
     {
-      "ttlId": "SDfba908e9fb2e427ab4275d20465631d7",
-      "datasetId": "62799c3e1151781b63ccaa28",
-      "imsOrg": "{ORG_ID}",
-      "status": "cancelled",
-      "expiry": "2022-05-09T22:57:05.531024Z",
-      "updatedAt": "2022-05-09T22:57:05.531025Z",
-      "updatedBy": "{USER_ID}"
+      "status": "completed",
+      "workorderId": "SDc17a9501345c4997878c1383c475a77b",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "f440ac301c414bf1b6ba419162866346",
+      "expiry": "2021-07-07T13:14:15Z",
+      "updatedAt": "2021-07-07T13:14:15Z",
+      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     },
     {
-      "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-      "datasetId": "62759f2ede9e601b63a2ee14",
-      "imsOrg": "{ORG_ID}",
       "status": "pending",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "{USER_ID}"
+      "workorderId": "SD8ef60b33dbed444fb81861cced5da10b",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "80f0d38820a74879a2c5be82e38b1a94",
+      "expiry": "2099-02-02T00:00:00Z",
+      "updatedAt": "2021-02-02T13:00:00Z",
+      "updatedBy": "John Q. Public <jqp@example.com> 93220281bad34ed0@AdobeId"
+    },
+    {
+      "status": "pending",
+      "workorderId": "SD2140ad4eaf1f47a1b24c05cce53e303e",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "9e63f9b25896416ba811657678b4fcb7",
+      "expiry": "2099-01-01T00:00:00Z",
+      "updatedAt": "2021-01-01T13:00:00Z",
+      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     }
-  ],
-  "current_page": 1,
-  "total_pages": 36,
-  "total_count": 886
+  ]
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `results` | Contains the details of the returned dataset expirations. For more details on the properties of a dataset expiration, see the response section for making a [lookup call](#lookup). |
-| `current_page` | The current page of listed results. |
-| `total_pages` | The total number of pages in the response. |
-| `total_count` | The total number of dataset expirations in the response. |
+| `totalRecords` | The count of dataset expirations that matched the listing call's parameters. |
+| `ttlDetails` | Contains the details of the returned dataset expirations. For more details on the properties of a dataset expiration, see the response section for making a [lookup call](#lookup). |
 
 {style="table-layout:auto"}
 
@@ -104,20 +109,22 @@ You can lookup a dataset expiration through a GET request.
 **API format**
 
 ```http
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{TTL_ID}` | The ID of the dataset expiration that you want to look up. |
+| `{DATASET_ID}` | The ID of the dataset whose expiration you want to look up. |
 
 {style="table-layout:auto"}
 
 **Request**
 
+The following request looks up the expiration details for dataset `62759f2ede9e601b63a2ee14`:
+
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -130,110 +137,71 @@ A successful response returns the details of the dataset expiration.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
     "datasetId": "62759f2ede9e601b63a2ee14",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
     "expiry": "2023-12-31T23:59:59Z",
     "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}"
+    "updatedBy": "{USER_ID}",
+    "displayName": "Example Dataset Expiration Request",
+    "description": "A dataset expiration request that will execute at the end of 2023"
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `ttlId` | The ID of the dataset expiration. |
+| `workorderId` | The ID of the dataset expiration. |
 | `datasetId` | The ID of the dataset that this expiration applies to. |
 | `imsOrg` | Your organization's ID. |
 | `status` | The current status of the dataset expiration. |
 | `expiry` | The scheduled date and time when the dataset will be deleted. |
 | `updatedAt` | A timestamp of when the expiration was last updated. |
 | `updatedBy` | The user who last updated the expiration. |
+| `displayName` | The display name for the expiration request. |
+| `description` | A description for the expiration request. |
 
 {style="table-layout:auto"}
 
-## Create a dataset expiration {#create}
+### Catalog expiry tags
 
-You can create an expiration date for a dataset through a POST request.
+When using the [Catalog API](../../catalog/api/getting-started.md) to look up dataset details, if the dataset has an active expiration it will be listed under `tags.adobe/hygiene/ttl`.
 
-**API format**
-
-```http
-POST /ttl
-```
-
-**Request**
-
-The following request schedules a dataset `5b020a27e7040801dedbf46e` for deletion at the end of 2022 (Greenwich Mean Time).
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/ttl \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "datasetId": "5b020a27e7040801dedbf46e",
-        "expiry": "2022-12-31T23:59:59Z"
-      }'
-```
-
-| Property | Description |
-| --- | --- |
-| `datasetId` | The ID of the dataset that you want to schedule an expiration date for. |
-| `expiry` | An ISO 8601 timestamp for when the dataset will be deleted. |
-
-{style="table-layout:auto"}
-
-**Response**
-
-A successful response returns the details of the dataset expiration, with HTTP status 200 (OK) if a pre-existing expiration was updated, or 201 (Created) if there was no pre-existing expiration.
+The following JSON represents a truncated response for a dataset's details from Catalog, which an expiration value of `32503680000000`. The tag's value  encodes the expiry as an integer number of milliseconds since the beginning of the Unix epoch.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "{ORG_ID}",
-    "status": "pending",
-    "expiry": "2032-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "{USER_ID}"
+  "63212313c308d51b997858ba": {
+    "name": "TTL Test Dataset",
+    "description": "A piecrust promise, made to be broken",
+    "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
+    "sandboxId": "8dc51b90-d0f9-11e9-b164-ed6a398c8b35",
+    "tags": {
+      "adobe/hygiene/ttl": [ "32503680000000" ],
+      ...
+    },
+    ...
+  }
 }
 ```
 
-| Property | Description |
-| --- | --- |
-| `ttlId` | The ID of the dataset expiration. |
-| `datasetId` | The ID of the dataset that this expiration applies to. |
-| `imsOrg` | Your organization's ID. |
-| `status` | The current status of the dataset expiration. |
-| `expiry` | The scheduled date and time when the dataset will be deleted. |
-| `updatedAt` | A timestamp of when the expiration was last updated. |
-| `updatedBy` | The user who last updated the expiration. |
+## Create or update a dataset expiration {#create-or-update}
 
-{style="table-layout:auto"}
-
-## Update a dataset expiration {#update}
-
-You can update a dataset expiration through a PUT request.
+You can create or update an expiration date for a dataset through a PUT request.
 
 **API format**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{TTL_ID}` | The ID of the dataset expiration that you want to modify. |
-
-{style="table-layout:auto"}
+| `{DATASET_ID}` | The ID of the dataset that you want to schedule an expiration for. | 
 
 **Request**
 
-The following request updates the expiration for dataset `5b020a27e7040801dedbf46e` so it expires at the end of 2023 (Greenwich Mean Time).
+The following request schedules a dataset `5b020a27e7040801dedbf46e` for deletion at the end of 2022 (Greenwich Mean Time). If no existing expiration is found for the dataset, a new expiration is created. If the dataset already has a pending expiration, that expiration is updated with the new `expiry` value.
 
 ```shell
 curl -X PUT \
@@ -244,35 +212,41 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2023-12-31T23:59:59Z"
+        "expiry": "2022-12-31T23:59:59Z",
+        "displayName": "Example Expiration Request",
+        "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
       }'
 ```
 
 | Property | Description |
 | --- | --- |
 | `expiry` | An ISO 8601 timestamp for when the dataset will be deleted. |
+| `displayName` | A display name for the expiration request. |
+| `description` | An optional description for the expiration request. |
 
 {style="table-layout:auto"}
 
 **Response**
 
-A successful response returns the details of the updated expiration.
+A successful response returns the details of the dataset expiration, with HTTP status 200 (OK) if a pre-existing expiration was updated, or 201 (Created) if there was no pre-existing expiration.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "62759f2ede9e601b63a2ee14",
+    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "datasetId": "5b020a27e7040801dedbf46e",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}"
+    "expiry": "2032-12-31T23:59:59Z",
+    "updatedAt": "2022-05-09T22:38:40.393115Z",
+    "updatedBy": "{USER_ID}",
+    "displayName": "Example Expiration Request",
+    "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `ttlId` | The ID of the dataset expiration. |
+| `workorderId` | The ID of the dataset expiration. |
 | `datasetId` | The ID of the dataset that this expiration applies to. |
 | `imsOrg` | Your organization's ID. |
 | `status` | The current status of the dataset expiration. |
@@ -286,25 +260,29 @@ A successful response returns the details of the updated expiration.
 
 You can cancel a dataset expiration by making a DELETE request.
 
+>[!NOTE]
+>
+>Only dataset expirations that have a status of `pending` can be canceled. Attempting to cancel an expiration that has executed or is already canceled returns an HTTP 404 error.
+
 **API format**
 
 ```http
-DELETE /ttl/{TTL_ID}
+DELETE /ttl/{EXPIRATION_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{TTL_ID}` | The ID of the dataset expiration that you want to cancel. |
+| `{EXPIRATION_ID}` | The `workorderId` of the dataset expiration that you want to cancel. |
 
 {style="table-layout:auto"}
 
 **Request**
 
-The following request updates the expiration for dataset `5b020a27e7040801dedbf46e` so it expires at the end of 2023 (Greenwich Mean Time).
+The following request cancels a dataset expiration with ID `SD5cfd7a11b25543a9bcd9ef647db3d8df`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD5cfd7a11b25543a9bcd9ef647db3d8df \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -313,45 +291,21 @@ curl -X DELETE \
 
 **Response**
 
-A successful response returns the details of the dataset expiration, with its `status` attribute now set to `cancelled`.
+A successful response returns HTTP status 204 (No Content), and the expiration's `status` attribute is set to `cancelled`.
 
-```json
-{
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "62759f2ede9e601b63a2ee14",
-    "imsOrg": "{ORG_ID}",
-    "status": "cancelled",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T23:47:30.071186Z",
-    "updatedBy": "{USER_ID}"
-}
-```
+## Retrieve the expiration status history of a dataset
 
-| Property | Description |
-| --- | --- |
-| `ttlId` | The ID of the dataset expiration. |
-| `datasetId` | The ID of the dataset that this expiration applies to. |
-| `imsOrg` | Your organization's ID. |
-| `status` | The current status of the dataset expiration. |
-| `expiry` | The scheduled date and time when the dataset will be deleted. |
-| `updatedAt` | A timestamp of when the expiration was last updated. |
-| `updatedBy` | The user who last updated the expiration. |
-
-{style="table-layout:auto"}
-
-## Retrieve the history of a dataset expiration
-
-You can look up the history of a specific dataset expiration by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable).
+You can look up the expiration status history of a specific dataset by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable).
 
 **API format**
 
 ```http
-GET /ttl/{TTL_ID}?include=history
+GET /ttl/{DATASET_ID}?include=history
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{TTL_ID}` | The ID of the dataset expiration whose history you want to look up. |
+| `{DATASET_ID}` | The ID of the dataset whose expiration history you want to look up. |
 
 {style="table-layout:auto"}
 
@@ -359,7 +313,7 @@ GET /ttl/{TTL_ID}?include=history
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e?include=history \
+  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -372,8 +326,12 @@ A successful response returns the details of the dataset expiration, with a `his
 
 ```json
 {
-  "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+  "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
   "datasetId": "62759f2ede9e601b63a2ee14",
+  "datasetName": "Example Dataset",
+  "sandboxName": "prod",
+  "displayName": "Expiration Request 123",
+  "description": "Expiration Request 123 Description",
   "imsOrg": "{ORG_ID}",
   "status": "cancelled",
   "expiry": "2022-05-09T23:47:30.071186Z",
@@ -404,8 +362,12 @@ A successful response returns the details of the dataset expiration, with a `his
 
 | Property | Description |
 | --- | --- |
-| `ttlId` | The ID of the dataset expiration. |
+| `workorderId` | The ID of the dataset expiration. |
 | `datasetId` | The ID of the dataset that this expiration applies to. |
+| `datasetName` | The display name for the dataset this expiration applies to. |
+| `sandboxName` | The name of the sandbox that the target dataset is located under. |
+| `displayName` | The display name for the expiration request. |
+| `description` | A description for the expiration request. |
 | `imsOrg` | Your organization's ID. |
 | `history` | Lists the history of updates for the expiration as an array of objects, with each object containing the `status`, `expiry`, `updatedAt`, and `updatedBy` attributes for the expiration at the time of the update. |
 
@@ -421,8 +383,11 @@ The following table outlines the available query parameters when [listing datase
 | --- | --- | --- |
 | `size` | An integer between 1 and 100 that indicates the maximum number of expirations to return. Defaults to 25. | `size=50` |
 | `page` | An integer that indicates which page of expirations to return. | `page=3` |
+| `orgId` | Matches datasets expirations whose organization ID matches that of the parameter. This value defaults to that of the `x-gw-ims-org-id` headers, and is ignored unless the request supplies a service token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `status` | A comma-separated list of statuses. When included, the response matches dataset expirations whose current status is among those listed. | `status=pending,cancelled` |
 | `author` | Matches expirations whose `created_by` is a match for the search string. If the search string begins with `LIKE` or `NOT LIKE`, the remainder is treated as an SQL search pattern. Otherwise, the entire search string is treated as a literal string that must exactly match the entire content of a `created_by` field. | `author=LIKE %john%` |
+| `sandboxName` | Matches dataset expirations whose sandbox name exactly matches the argument. Defaults to the sandbox name in the request's `x-sandbox-name` header. Use `sandboxName=*` to include dataset expirations from all sandboxes. | `sandboxName=dev1` |
+| `datasetId` | Matches expirations that apply to specific dataset. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `createdDate` | Matches expirations that were created in the 24-hour window starting at the stated time.<br><br>Note that dates without a time (like `2021-12-07`) represent the datetime at the beginning of that day. Thus, `createdDate=2021-12-07` refers to any expiration created on 7 December 2021, from `00:00:00` through `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
 | `createdFromDate` | Matches expirations that were created at, or after, the indicated time. | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | Matches expirations that were created at, or before, the indicated time. | `createdToDate=2021-12-07T23:59:59.999999999Z` |

@@ -114,7 +114,7 @@ A type definition is an object used to describe an event, condition, action, or 
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Optional)</em></td>
-      <td>When provided, the <code>displayName</code> will be listed under the <code>categoryName</code> within the Data Collection UI. All types with the same <code>categoryName</code> will be listed under the same category. For example, if your extension provided a <code>keyUp</code> event type and a <code>keyDown</code> event type and they both had a <code>categoryName</code> of <code>Keyboard</code>, both event types would be listed under the Keyboard category while the user is selecting from the list of available event types when building a rule. The value of <code>categoryName</code> should be human-readable.</td>
+      <td>When provided, the <code>displayName</code> will be listed under the <code>categoryName</code> within the UI. All types with the same <code>categoryName</code> will be listed under the same category. For example, if your extension provided a <code>keyUp</code> event type and a <code>keyDown</code> event type and they both had a <code>categoryName</code> of <code>Keyboard</code>, both event types would be listed under the Keyboard category while the user is selecting from the list of available event types when building a rule. The value of <code>categoryName</code> should be human-readable.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>
