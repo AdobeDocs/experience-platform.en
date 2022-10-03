@@ -46,10 +46,10 @@ Refer to the [[!DNL LINE] documentation](https://developers.line.biz/en/docs/mes
 
 [!DNL LINE] supports the update and export of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-| Target Identity | Description | Considerations |
-|---|---|---|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|UserID| Identifier for the LINE contact.|Select the UserID target identity when your source identity is UserID. |
+| Target Identity | Description |
+|---|---|
+|ID for Advertisers(IFAs)| Select the ID for Advertisers(IFAs) target identity when the source identities are IFA *(Apple ID for Advertisers)* or GAID *(Google Advertising ID) namespaces.|
+|LINE User IDs| Select the UserID target identity when the source identities are LINE User IDs. |
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -89,7 +89,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Audience Type]**: Select **[!UICONTROL IDFA]** if the identities you are looking to export are of type *IDFA*. Select **[!UICONTROL UserID]** if the identities you are looking to export are of type *UserID*. Refer to the [Supported identities](#supported-identities) section for more information about the identity types.
+* **[!UICONTROL Audience Type]**: Select **[!UICONTROL ID for Advertisers(IFAs)]** if the identities you are looking to export are of type *ID for Advertisers(IFAs)*. Select **[!UICONTROL LINE user IDs]** if the identities you are looking to export are of type *LINE User IDs*. Refer to the [Supported identities](#supported-identities) section for more information about the identity types.
 
 ### Enable alerts {#enable-alerts}
 
@@ -112,14 +112,14 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 Depending on your source identity the following target identity namespace(s) must be mapped:
 | Target Identity | Source Field | Target Field |
 | --- | --- | --- |
-| UserID | `UserID` | `LineId` |
-| IDFA | `IDFA` | `LineId` |
+| ID for Advertisers(IFAs) | `IDFA` or `GAID` | `LineId` |
+| LINE user IDs | `UserID` | `LineId` |
 
-If your target identity is *UserID* you will need the below:
-![Platform UI screenshot example showing the Target mapping when using UserID as a target identity.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+If your target identities are *LINE user ID's* you will need the below:
+![Platform UI screenshot example showing the Target mapping when using LINE User IDs for target identities.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
-If your target identity is *IDFA* you will need the below:
-![Platform UI screenshot example showing the Target mapping when using IDFA as a target identity.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+If your target identity is *ID for Advertisers(IFAs)* you will need the below:
+![Platform UI screenshot example showing the Target mapping when using ID for Advertisers(IFAs) for target identities.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## Validate data export {#exported-data}
 
