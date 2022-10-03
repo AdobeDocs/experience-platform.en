@@ -7,10 +7,6 @@ exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
 ---
 # Access control policies endpoint
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
 Access control policies are statements that bring attributes together to establish permissible and impermissible actions. These policies can either be local or global, and can override other policies. The `/policies` endpoint in the attribute-based access control API allows you to programmatically manage policies, including information on the rules that govern them as well as their respective subject conditions.
 
 >[!IMPORTANT]
