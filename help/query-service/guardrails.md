@@ -62,6 +62,8 @@ The tables below provide the recommended guardrail limits and descriptions for q
 
 {style="table-layout:auto"}
 
+## Dashboards insights generated with queries {#dashboard-insights}
+
 To ensure that each query for a Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
 
 ## Next steps
