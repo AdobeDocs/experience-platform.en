@@ -125,6 +125,7 @@ feature: Destinations
         * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
         * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
         * [Braze connection](./catalog/mobile-engagement/braze.md)
+        * [Line connection](./catalog/mobile-engagement/line.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)

@@ -103,6 +103,7 @@ The table below outlines the parameters that are typically required to connect t
 >[!NOTE]
 >
 >When connecting to a host using non-expiring credentials, it is still necessary to use all the parameters listed in the [!UICONTROL EXPIRING CREDENTIALS] section except for the password and username.
+>The format for entering your username and password uses colon separated values as seen in this example `username:{your_username}` and `password:{password_string}`.
 
 | Parameter | Description |
 |---|---|

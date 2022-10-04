@@ -110,6 +110,8 @@ Widgets can be re-arranged and resized while in this workspace. Select **[!UICON
 
 ![The user-defined dashboard with a custom widget and the save button highlighted.](./images/user-defined-dashboards/user-defined-dashboard.png)
 
+To ensure that each query for a Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
+
 ## Next steps
 
 By reading this document you have a better understanding of how to create a custom dashboard and how to create, edit, and update custom widgets for that dashboard.
