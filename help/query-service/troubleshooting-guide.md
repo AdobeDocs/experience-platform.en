@@ -87,7 +87,7 @@ One or more of the following solutions are recommended in case of queries timing
 No. Query Service has an autoscaling capability that ensures concurrent queries do not have any noticeable impact on the performance of the service.
 +++
 
-###  Can I use reserved keywords as a column name?
+### Can I use reserved keywords as a column name?
 
 +++Answer
 There are certain reserved keywords that cannot be used as column name such as, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. If you want to use these keywords, then you must escape these columns.
