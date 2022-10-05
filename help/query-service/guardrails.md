@@ -69,7 +69,7 @@ The table below provides the recommended guardrail limits and description
 
 | Guardrail| Limit | Limit type | Description |
 |---|---|---|---|
-| Query concurrency | 4  | Hard | To ensure that queries on aggregated data via the reporting API (including queries that enhance data models such as the Real-Time CDP data models) have enough resources to execute efficiently, the reporting API tracks resource utilization by assigning concurrency slots to each query. The system puts queries into a queue and waits until concurrency slots become available or they can be served from the cache. A maximum of four concurrent query slots are available at any given time.<br>If you access the reporting API through a BI tool and need more concurrency, an additional BI server is required. |
+| Query concurrency | 4  | Hard | To ensure that queries on aggregated data via the reporting API (including queries that enhance data models such as the Real-Time CDP data models) have enough resources to execute efficiently, the reporting API tracks resource utilization by assigning concurrency slots to each query. The system puts queries into a queue and waits until concurrency slots become available or they can be served from the cache. A maximum of four concurrent query slots are available at any given time.<br>If you access the reporting API through a BI tool and need more concurrency, a BI server is required. |
 
 
 ## Next steps
