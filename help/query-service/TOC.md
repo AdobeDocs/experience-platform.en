@@ -33,6 +33,7 @@ feature: Queries
   - [UI overview](ui/overview.md)
   - [Query Editor user guide](ui/user-guide.md)
   - [Query templates](ui/query-templates.md)
+  - [Query logs](ui/query-logs.md)
   - [Using Query Service credentials](ui/credentials.md)
   - [Generating datasets from query results](ui/create-datasets.md)
 - Best practices {#best-practices}
