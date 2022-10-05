@@ -8,11 +8,13 @@ description: Learn how to activate datasets from Adobe Experience Platform to yo
 
 This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage or email marketing location, such as Amazon S3, SFTP locations, or Oracle Eloqua.
 
-## Activate segments or export data
+## When to activate segments or export datasets
 
-Difference between exporting datasets and exporting segments. If you are looking to activate *segments* to cloud storage of email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
+Some destinations in the Experience Platform destinations catalog support both segment activation and dataset export. 
+* Consider activating segments when you want your data structured by audience interests or qualifications. 
+* On the other hand, consider dataset exports when you are looking to export raw dataset data, which is not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science tasks, etc.
 
-You could export datasets instead of segments when you want to have a full set of data, not filtered by segments. 
+If you are looking to export datasets, this document has all the information you need. If you are looking to activate segments to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Prerequisites {#prerequisites}
 
@@ -20,9 +22,9 @@ To export datasets to cloud storage destinations, you must have successfully [co
 
 ### Required permissions {#permissions}
 
-To activate datasets, you need the INSERT REQUIRED PERMISSIONS **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+To activate datasets, you need the INSERT REQUIRED PERMISSIONS **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate and Manage Datasets]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-When browsing the destinations catalog, you should see an **[!UICONTROL Activate]** control for a destination. This means that you have the necessary permissions to export datasets and that the destination supports exporting datasets.
+When browsing the destinations catalog, you should see an **[!UICONTROL Activate]** or an **[!UICONTROL Export datasets]** control for a destination. This means that you have the necessary permissions to export datasets and that the destination supports exporting datasets.
 
 ## Select your destination {#select-destination}
 
@@ -32,7 +34,7 @@ To select the destination where to export datasets:
     
     ![Image showing the destination catalog tab.](/help/destinations/assets/ui/activate-datasets/catalog-tab.png)
 
-2. Select **[!UICONTROL Activate]** on the card corresponding to the destination where you want to export datasets, as shown in the image below.
+2. Select **[!UICONTROL Activate]** or **[!UICONTROL Export datasets]** on the card corresponding to the destination where you want to export datasets, as shown in the image below.
 
     ![Image highlighting the activate control in the destinations catalog tab.](/help/destinations/assets/ui/activate-datasets/activate-button.png)
 
@@ -44,7 +46,7 @@ To select the destination where to export datasets:
 
   ![Image showing a selection of two destinations that you can connect to.](/help/destinations/assets/ui/activate-datasets/select-datatype-datasets.png)
 
-4. Move to the next section to [select your segments](#select-segments).
+4. Proceed to the next section to [select your datasets](#select-datasets) for export.
 
 ## Select your datasets {#select-datasets}
 
@@ -59,7 +61,9 @@ Use the check boxes to the left of the dataset names to select the datasets that
 >title="File export options for datasets"
 >abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export."
 
-Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of the dataset, and subsequent files are incremental additions to the dataset since the previous export.
+In the **[!UICONTROL Scheduling]** step, you can set a start date as well as an export cadence for your dataset exports.
+
+Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of the dataset and subsequent files are incremental additions to the dataset since the previous export.
 
 >[!IMPORTANT]
 >
@@ -74,11 +78,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
-
-      >[!IMPORTANT]
-      >
-      >The last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10th.
+3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. 
 
 4. Select **[!UICONTROL Next]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
 
@@ -90,6 +90,8 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start exporting datasets to the destination.
 
+<!--
+
 >[!IMPORTANT]
 >
 >In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
@@ -98,14 +100,16 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
+-->
+
 ![Image showing the review step of the dataset export workflow.](/help/destinations/assets/ui/activate-datasets/review.png)
 
 ## Verify successful dataset export {#verify}
 
-For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. The default file format is:
+For email marketing destinations and cloud storage destinations, Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. The default file format is:
 `<destinationName>_dataset<datasetID>_<timestamp-yyyymmddhhmmss>.csv`
 
-For example, if you selected daily export and file type json, the files you would receive on three consecutive days could look like this:
+For example, if you selected a daily export and the file type `.json`, the files that you would receive on three consecutive days could look like this:
 
 ```console
 Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220408061804.csv
@@ -113,7 +117,7 @@ Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220409052200.csv
 Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220410061130.csv
 ```
 
-In another example, if you selected hourly export every four hours and file type parquet, the files you would receive in three consecutive exports could look like this:
+In another example, if you selected an hourly export every four hours and the file type `.parquet`, the files that you would receive in three consecutive exports could look like this:
 
 ```console
 Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220408061804.csv
@@ -121,6 +125,6 @@ Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220409052200.csv
 Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220410061130.csv
 ```
 
-### Sample dataset files
+### Sample dataset files {#sample-fil}
 
-The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) or [.json file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
+The presence of these files in your storage location is confirmation of successful export. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) or [.json file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes xxxx. 
