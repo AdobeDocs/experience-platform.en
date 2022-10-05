@@ -120,7 +120,7 @@ POST /sourceConnections
 
 **Request**
 
-In the example below, regular expression is used in the file path to specify ingestion of all files that have `premium` in  their name.
+In the example below, regular expression is used in the file path to specify ingestion of all CSV files that have `premium` in their name.
 
 ```shell
 curl -X POST \
