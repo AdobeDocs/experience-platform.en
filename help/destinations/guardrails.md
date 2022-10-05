@@ -4,24 +4,24 @@ title: Default guardrails for activation data
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Learn about the default use and rate limits with regard to activation behavior.
+description: Learn more about the data activation default usage and rate limits.
 ---
 # Guardrails for activation data
 
-This page provides default use and rate limits with regard to activation behavior. When reviewing the following guardrails, it is assumed that you have correctly connected to destinations.
+This page provides default usage and rate limits with regard to activation behavior. When reviewing the following guardrails, it is assumed that you have correctly [connected to destinations](/help/destinations/ui/connect-destination.md).
 
 >[!NOTE]
 >
 >* Most customers do not exceed these default limits. If you would like to learn about custom limits, please contact your customer care representative.
 >* The limits outlined in this document are constantly being improved. Please check back regularly for updates.
->* Depending on individual downstream limitations, some destinations might have tighter guardrails than the ones documented on this page. Make sure to also check the documentation page of the destination you are connecting and activating data to. 
+>* Depending on individual downstream limitations, some destinations might have tighter guardrails than the ones documented on this page. Make sure to also check the [catalog](/help/destinations/catalog/overview.md) page of the destination you are connecting and activating data to. 
 
 ## Limit types {#limit-types}
 
 There are two types of default limits within this document:
 
 * **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance.
-* **Hard limit:** A hard limit provides an absolute maximum.
+* **Hard limit:** A hard limit provides an absolute maximum. The Experience Platform UI or API does not allow you to go beyond this limit, or an error is returned if you go beyond this limit.
 
 
 ## Activation limits {#activation-limits}
@@ -48,17 +48,17 @@ The guardrails below apply to activation through [streaming destinations](/help/
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Number of activations (HTTP messages with profile exports) per second | N/A | - | There is currently no limit to the number of messages per second sent from Experience Platform to partner destinations' API endpoints. <br> Any limits or latencies are dictated by the endpoint where Experience Platform is sending data. Make sure to also check the documentation page of the destination you are connecting and activating data to. |
+|Number of activations (HTTP messages with profile exports) per second | N/A | - | There is currently no limit to the number of messages per second sent from Experience Platform to partner destinations' API endpoints. <br> Any limits or latencies are dictated by the endpoint where Experience Platform is sending data. Make sure to also check the [catalog](/help/destinations/catalog/overview.md) page of the destination you are connecting and activating data to. |
 
 {style="table-layout:auto"}
 
 ### Batch (file-based) activation {#batch-file-based-activation}
 
-The guardrails below apply to activation through [batch file-based destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
+The guardrails below apply to activation through [batch (file-based) destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|Activation frequency | One daily full export or more frequent incremental exports every 3, 6, 8, 12 hour increments | Hard| Read the [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentation sections for more information about the frequency increments for batch exports.|
+|Activation frequency | One daily full export or more frequent incremental exports every 3, 6, 8, or 12 hours. | Hard| Read the [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentation sections for more information about the frequency increments for batch exports.|
 |Maximum number of segments that can pe exported at a given hour | 100 | Soft | The recommendation is to add a maximum of 100 segments to batch destination dataflows. |
 |Maximum number of rows (records) per file to activate | 5 million | Hard| Adobe Experience Platform automatically splits the exported files at 5 million records (rows) per file. Each row represents one profile. Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`. For more information, read the [scheduling section](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) of the activate batch destinations tutorial.|
 
@@ -71,7 +71,7 @@ The guardrails below apply to the [ad-hoc activation](/help/destinations/api/ad-
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | Segments activated per ad-hoc activation job | 80 | Hard| Currently, each ad-hoc activation job can activate up to 80 segments. Attempting to activate more than 80 segments per job will cause the job to fail. This behavior is subject to change in future releases.|
-| Concurrent ad-hoc activation jobs | 1 | Hard| Do not run more than one concurrent ad-hoc activation job per segment.|
+| Concurrent ad-hoc activation jobs per segment | 1 | Hard| Do not run more than one concurrent ad-hoc activation job per segment.|
 
 {style="table-layout:auto"}
 
