@@ -71,7 +71,7 @@ The video below also demonstrates the steps to configure a Marketo destination a
 >
 >The video does not entirely reflect current capability. For the most up-to-date information, please refer to the guide linked above. The following parts of the video are outdated:
 > 
->* The destination card that you should use in the Experience Platform UI is **[!UICONTROL Marketo V2]**
+>* The destination card that you should use in the Experience Platform UI is **[!UICONTROL Marketo V2]**.
 >* The video does not show the new **[!UICONTROL Person creation]** selector field in the connect to destination workflow.
 >* The two limitations called out in the video do not apply anymore. You can now map many other profile attribute fields in addition to the segment membership information that was supported at the time the video was recorded. You can also export segment members to Marketo who do not yet exist in your Marketo static lists, and these will be added to the lists.
 >* In the **[!UICONTROL Schedule segment step]** of the activation workflow, in Marketo V1, you needed to manually add a **[!UICONTROL Mapping ID]** to successfully export data to Marketo. This manual step is not required anymore in Marketo V2.
