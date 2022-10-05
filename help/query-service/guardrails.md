@@ -43,6 +43,7 @@ The tables below provide the recommended guardrail limits and descriptions for q
 | **Guardrail**| **Limit** | **Limit type** | **Description** |
 |---|---|---|---|
 | Maximum execution time  | 10 minutes  | Hard  | This defines the maximum output time for an ad-hoc SQL query. Exceeding the time limit to return a result throws the error code 53400.  |
+| Session limit | As specified in the application product description.<br>+5 (with every additional pack purchased)| Hard | This defines how many sessions can be created concurrently for a particular organization. If the concurrency limit is exceeded, the user receives a `Session Limit Reached` error. |
 | Query concurrency | <ul><li>As specified in the application product description.</li><li>+1 (with every additional ad hoc query user add-on SKU pack purchased)</li></ul> | Hard | This defines how many queries can be executed concurrently for a particular organization. If the concurrency limit is exceeded, the queries are queued.  |
 | Client connector and result output Limit | Client Connector<ul><li>Query UI (100 rows)</li><li>Third-party client (50,000)</li><li>[!DNL PostgresSQL] client (50,000)</li></ul> | Hard | The result of a query can be received through the following means:<ul><li>Query Service UI</li><li>Third-party client</li><li>[!DNL PostgresSQL] client</li></ul>Note: Adding a limitation to the output count may return results faster. For example, `LIMIT 5`, `LIMIT 10`, and so on. |
 | Results returned via | Client UI  | N/A  | This defines how the results are made available to the users. |
@@ -62,9 +63,16 @@ The tables below provide the recommended guardrail limits and descriptions for q
 
 {style="table-layout:auto"}
 
-## Dashboards insights generated with queries {#dashboard-insights}
+## Reporting insights {#reporting-insights}
 
-To ensure that each query for a Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
+The table below provides the recommended guardrail limits and description
+
+**insights**
+
+| **Guardrail**| **Limit** | **Limit type** | **Description** |
+|---|---|---|---|
+| Query concurrency | 4  | Hard | To ensure that queries on aggregated data via the reporting API (including queries that enhance data models such as the Real-Time CDP data models) have enough resources to execute efficiently, the reporting API tracks resource utilization by assigning concurrency slots to each query. The system puts queries into a queue and waits until concurrency slots become available or they can be served from the cache. A maximum of four concurrent queries slots are available at any given time.<br>If you access the reporting API through a BI tool and need more concurrency, an additional BI server is required. |
+
 
 ## Next steps
 
