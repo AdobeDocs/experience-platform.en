@@ -34,16 +34,22 @@ No. Turning off the auto-complete feature is not currently supported by the edit
 One potential cause is the auto-complete feature. The feature processes certain metadata commands that can occasionally slow the editor during query editing.
 +++
 
-### Can I use Postman for the Query Service API?
+### Can I use [!DNL Postman] for the Query Service API?
 
 +++Answer
-Yes, you can visualize and interact with all Adobe API services using Postman (a free, third-party application). Watch the [Postman setup guide](https://video.tv.adobe.com/v/28832) for step-by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with Postman. See the official documentation for [guidance on starting, running, and sharing Postman collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Yes, you can visualize and interact with all Adobe API services using [!DNL Postman] (a free, third-party application). Watch the [[!DNL Postman] setup guide](https://video.tv.adobe.com/v/28832) for step-by-step instructions on how to set up a project in Adobe Developer Console and acquire all the necessary credentials for use with [!DNL Postman]. See the official documentation for [guidance on starting, running, and sharing [!DNL Postman] collections](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Is there a limit to the maximum number of rows returned from a query through the UI?
 
 +++Answer
 Yes, Query Service internally applies a limit of 50,000 rows unless an explicit limit is specified externally. See the guidance on [interactive query execution](./best-practices/writing-queries.md#interactive-query-execution) for more details.
++++
+
+### Can I use queries to update rows?
+
++++Answer
+In batch queries, updating a row inside the dataset is not supported.
 +++
 
 ### Is there a data size limit for the resulting output from a query?
@@ -79,6 +85,12 @@ One or more of the following solutions are recommended in case of queries timing
 
 +++Answer
 No. Query Service has an autoscaling capability that ensures concurrent queries do not have any noticeable impact on the performance of the service.
++++
+
+###  Can I use reserved keywords as a column name?
+
++++Answer
+There are certain reserved keywords that cannot be used as column name such as, `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. If you want to use these keywords, then you must escape these columns.
 +++
 
 ### How do I find a column name from a hierarchical dataset?
