@@ -92,7 +92,7 @@ The dropdown menu within the widget allows you to select the account scoring mod
 
 ### Predictive scoring top influential factors {#predictive-scoring-top-influential-factors}
 
-The [!UICONTROL Predictive scoring top influential factors] widget helps you to understand what the most significant factors are that drive the scores for each propensity bucket.
+The [!UICONTROL Predictive scoring top influential factors] widget helps you to understand the most significant factors that drive the scores for each propensity bucket.
 
 This widget shows the top influential factors for each of the high, medium, and low propensity buckets. A bar for each influential factor indicates the percentage of the account profiles in that propensity bucket that contains the specific influential factor.
 
@@ -102,4 +102,4 @@ The dropdown menu within the widget allows you to select the account scoring mod
 
 ## Next steps
 
-By following this document you should now be able to locate the [!UICONTROL Account Profiles] dashboard. You should also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.
+By following this document, you should now know how to locate the [!UICONTROL Account Profiles] dashboard. You should also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.
