@@ -80,15 +80,23 @@ This widget uses a colour coded bar chart to illustrate the count of profiles ad
 
 ### Predictive scoring distribution {#predictive-scoring-distribution}
 
-This widget displays the total number of account profiles for each data model in a single metric and uses a donut and bar chart to illustrate the propensity to buy scores for each account profile. 
+The [!UICONTROL Predictive scoring distribution] widget shows the score distribution of all account profiles to help you understand the health of your sales pipeline at a glance. The scoring data is conveyed through a donut chart and a column chart.
 
-The donut chart represents the proportion of your total account profiles with a high, medium and low propensity to buy using color coded sections. The key provides colour coding information for the different propensity catchments that make up the charts. Further breakdown of account profile's propensity to buy is provided by a bar chart. Each bar visualizes the total number of account profiles by their propensity to buy score. Scoring brackets are divided into increments of five percentiles. Individual account profile counts are displayed in a dialog when the cursor hovers over the respective section of the donut chart or bar chart.
+<!-- Lis comments:
+ The donut chart shows the the number of account profiles in each of the high, medium and low propensity buckets. The column chart shows the number of account profiles in each of the 20 5-point-increment buckets.
+
+The dropdown selector at the top left allows you to select the account scoring model for both predictive scoring distribution widget and predictive scoring top influential factors widget. -->
+
+The donut chart illustrates the proportion of your total account profiles in each of the high, medium and low propensity to buy buckets. The key provides more details on the color coded sections including the scoring bucket ranges and the number of account profiles in that range.
+
+Further breakdown of account profile's propensity to buy is provided by a bar chart. Each bar visualizes the total number of account profiles by their propensity to buy score. Scoring brackets are divided into increments of five percentiles. 
+
+<!-- inaccurate:
+Individual account profile counts are displayed in a dialog when the cursor hovers over the respective section of the donut chart or bar chart. -->
 
 The data model used for analysis is selected from the widget dropdown. 
 
 ![The Predictive scoring distribution widget.](../images/account-profiles/predictive-scoring-distribution.png)
-
-The widget helps you understand the relative health of your conversion pipeline at a glance. The bell curve represents the suggested optimal distribution for the buying propensity of your account profiles.
 
 ### Predictive scoring top influential factors {#predictive-scoring-top-influential-factors}
 
