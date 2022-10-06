@@ -4,7 +4,7 @@ title: Guardrails for Query Service
 description: This document provides information on usage limits for Query Service data to help you optimize your query use.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
 ---
-# Guardrails for Query Service data
+# Guardrails for Query Service
 
 Guardrails are thresholds that provide guidance for data and system usage, performance optimization, and avoidance of errors or unexpected results in Adobe Experience Platform.
 
@@ -17,10 +17,6 @@ Before continuing with this document, you should have a good understanding of th
 * **Ad hoc queries**: For executing `SELECT` queries to explore, experiment, and validate data where the results of the queries **are not stored** on the data lake.
 
 * **Batch queries**: For executing `INSERT TABLE AS SELECT` and `CREATE TABLE AS SELECT` queries to clean, shape, manipulate, and enrich data. The results of these queries **are stored** on the data lake. The metric for measuring the consumption of this functionality is computational hours.
-
->[!IMPORTANT]
->
->To ensure that each query for a Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
 
 The illustration below summarizes how Query Service capabilities are currently packaged and licensed:
 
@@ -65,6 +61,10 @@ The tables below provide the recommended guardrail limits and descriptions for q
 | Results returned via | Dataset | N/A | This defines how the results are made available to the users. |
 
 {style="table-layout:auto"}
+
+## Dashboards insights generated with queries {#dashboard-insights}
+
+To ensure that each query for a Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
 
 ## Next steps
 
