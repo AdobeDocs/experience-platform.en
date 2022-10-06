@@ -54,10 +54,9 @@ If you select the **[!UICONTROL Basic authentication]** type to connect to your 
 * **[!UICONTROL Host]**: The address of your SFTP storage location;
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
 * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
-* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
-  * Example: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. See below an example of a correctly formatted PGP key, with the middle part shortened for brevity.
+* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
 
-    ![PGP key](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 If you select the **[!UICONTROL SFTP with SSH key]** authentication type to connect to your SFTP location:

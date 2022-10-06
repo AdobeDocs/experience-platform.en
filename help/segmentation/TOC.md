@@ -13,6 +13,7 @@ feature: Segments
 - Segmentation API {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
+    - [Audiences](api/audiences.md)
     - [Edge segmentation](api/edge-segmentation.md)
     - [Export jobs](api/export-jobs.md)
     - [Previews and estimates](api/previews-and-estimates.md)
@@ -23,6 +24,7 @@ feature: Segments
     - [Streaming segmentation](api/streaming-segmentation.md)
 - Segmentation UI {#ui}
     - [Overview](ui/overview.md)
+    - [Audience Builder](ui/audience-builder.md)
     - [Segment dashboard](ui/segment-dashboard.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Edge segmentation](ui/edge-segmentation.md)

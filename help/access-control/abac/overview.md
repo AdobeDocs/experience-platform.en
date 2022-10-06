@@ -6,15 +6,11 @@ exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 ---
 # Attribute-based access control overview
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
 Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
 
 This functionality allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies surrounding XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments.
 
-Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to sensitive personal data (SPD), personally identifiable information (PII) and customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 ## Attribute-based access control terminology
 
@@ -27,8 +23,8 @@ Attribute-based access control involves the following components:
 | Permissions | Permissions include the ability to view and/or use Platform features, such as creating sandboxes, defining schemas, and managing datasets. |
 | Permission sets | Permission sets represent a group of permissions that an administrator can apply to a role. An administrator can assign permission sets to a role, instead of assigning individual permissions. This allows you to create custom roles from a pre-defined role that contains a group of permissions. |
 | Policies | Policies are statements that bring attributes together to establish permissible and impermissible actions. Policies can either be local or global, and can override other policies. |
-| Resource | A resource is the asset or object that a subject can or cannot access. Resources can be files, applications, servers, or even APIs. |
-| Roles | Roles define the access that an administrator, a specialist, or an end-user has to resources in your organization. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need. |
+| Resource | A resource is the asset or object that a subject can or cannot access. Resources can be segments or schema fields. |
+| Roles | Roles are ways to categorize the types of users that are interacting with your Platform instance and are building blocks of access control policies. In a role-based access control environment, user access provisioning is group through common responsibilities and needs. A role has a given set of permissions and members of your organization can be assigned to one or more roles, depending on the scope of view or write access they need. |
 | Subject | A subject is the user requesting access to a resource to perform an action. |
 | User groups | User groups are multiple users that have been grouped together and have the access to execute the same functions. |
 
@@ -56,7 +52,7 @@ Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product
 
 For more information on access control, see the [access control overview](../home.md).
 
-### Destinations
+### Destinations {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
@@ -66,6 +62,14 @@ As an administrator, you can use attribute-based access control functionalities 
   * In the activation process, users may be required to select segments they want to activate to a destination. As an administrator, you can provision users in your organization to only see segments that are labelled with labels that users have access to, and segments that do not contain any labels.
 * Configure user access to view specific fields in the activation process, based on role, permissions, and labels;
   * In the activation process, users may be required to select fields they want to activate to a destination. As an administrator, you can provision users in your organization to only see fields that are labelled with labels that users have access to, and fields that do not contain any labels.
+
+>[!IMPORTANT]
+>
+>In summary, keep in mind the following implications when working with destinations and attribute-based access control:
+>
+>* You can only activate segments that you have permission to access and view in the [segment browse view](/help/segmentation/ui/overview.md#browse) and [select segment step](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) of the activation workflow.
+>* In the [mapping step of the activation workflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), you can only view and select for activation the fields that you have access permission to.
+>* When you are looking to activate additional segments to an existing destination where you do not have access to all the fields that are mapped for export, the activation workflow will be blocked for you. 
 
 For more information on [!DNL Destinations], refer to the [[!DNL Destinations] overview](../../destinations/home.md).
 

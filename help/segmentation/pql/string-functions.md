@@ -241,6 +241,10 @@ The following PQL query determines, without being case sensitive, if the person'
 person.name.matches("(?i)^John")
 ```
 
+>[!NOTE]
+>
+>If you are using regular expression functions such as `\w`, you **must** escape the backslash character. So, instead of writing just `\w`, you must include an extra backslash and write `\\w`.
+
 ## Regular expression group
 
 The `regexGroup` function is used to extract specific information, based on the regular expression provided.
@@ -256,8 +260,12 @@ The `regexGroup` function is used to extract specific information, based on the 
 The following PQL query is used to extract the domain name from an email address.
 
 ```sql
-emailAddress.regexGroup("@(\w+)", 1)
+emailAddress.regexGroup("@(\\w+)", 1)
 ```
+
+>[!NOTE]
+>
+>If you are using regular expression functions such as `\w`, you **must** escape the backslash character. So, instead of writing just `\w`, you must include an extra backslash and write `\\w`.
 
 ## Next steps
 

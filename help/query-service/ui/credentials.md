@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;query;query editor;Query Editor;Query editor;
 solution: Experience Platform
-title: Query Service UI Guide
+title: Query Service Credentials Guide
 topic-legacy: guide
 description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
@@ -103,6 +103,7 @@ The table below outlines the parameters that are typically required to connect t
 >[!NOTE]
 >
 >When connecting to a host using non-expiring credentials, it is still necessary to use all the parameters listed in the [!UICONTROL EXPIRING CREDENTIALS] section except for the password and username.
+>The format for entering your username and password uses colon separated values as seen in this example `username:{your_username}` and `password:{password_string}`.
 
 | Parameter | Description |
 |---|---|
