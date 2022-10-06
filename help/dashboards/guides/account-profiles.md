@@ -82,31 +82,23 @@ This widget uses a colour coded bar chart to illustrate the count of profiles ad
 
 The [!UICONTROL Predictive scoring distribution] widget shows the score distribution of all account profiles to help you understand the health of your sales pipeline at a glance. The scoring data is conveyed through a donut chart and a column chart.
 
-<!-- Lis comments:
- The donut chart shows the the number of account profiles in each of the high, medium and low propensity buckets. The column chart shows the number of account profiles in each of the 20 5-point-increment buckets.
+The donut chart illustrates the proportion of your total account profiles in each of the high, medium, and low propensity to buy buckets. The key provides more details on the color-coded sections including the scoring bucket ranges and the number of account profiles in that range.
 
-The dropdown selector at the top left allows you to select the account scoring model for both predictive scoring distribution widget and predictive scoring top influential factors widget. -->
+The column chart provides a more granular scoring breakdown. Each column shows the number of account profiles in each of the 20 five-point-increment buckets.
 
-The donut chart illustrates the proportion of your total account profiles in each of the high, medium and low propensity to buy buckets. The key provides more details on the color coded sections including the scoring bucket ranges and the number of account profiles in that range.
-
-Further breakdown of account profile's propensity to buy is provided by a bar chart. Each bar visualizes the total number of account profiles by their propensity to buy score. Scoring brackets are divided into increments of five percentiles. 
-
-<!-- inaccurate:
-Individual account profile counts are displayed in a dialog when the cursor hovers over the respective section of the donut chart or bar chart. -->
-
-The data model used for analysis is selected from the widget dropdown. 
+The dropdown menu within the widget allows you to select the account scoring model.
 
 ![The Predictive scoring distribution widget.](../images/account-profiles/predictive-scoring-distribution.png)
 
 ### Predictive scoring top influential factors {#predictive-scoring-top-influential-factors}
 
-This widget provides a single metric for the number of account profiles in your data model by low, medium, and high propensity to buy. Each propensity category is divided into a ranked bar chart of influential factors for that category. These influential factors explain the scoring of the account profiles and why they were placed into that category. The most frequently occurring factors that effect propensity to buy are listed at the top of the chart. When the cursor hovers over a section of the bar chart, the count of account profiles contained in each influential factor are displayed in a dialog.
+The [!UICONTROL Predictive scoring top influential factors] widget helps you to understand what the most significant factors are that drive the scores for each propensity bucket.
 
-The data model used for analysis is selected from the widget dropdown below the title.
+This widget shows the top influential factors for each of the high, medium, and low propensity buckets. A bar for each influential factor indicates the percentage of the account profiles in that propensity bucket that contains the specific influential factor.
+
+The dropdown menu within the widget allows you to select the account scoring model.
 
 ![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-This widget helps you understand at a glance, which influential factors are commonly associated with a high, medium, and low propensity to buy among your account profiles.
 
 ## Next steps
 
