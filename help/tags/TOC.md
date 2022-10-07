@@ -106,6 +106,9 @@ solution: Data Collection
     * Common Analytics Plugins {#plugins}
       * [Overview](./extensions/web/plugins/overview.md)
       * [Release notes](./extensions/web/plugins/release-notes.md)
+    * Common Web SDK Plugins {#web-sdk-plugins}
+      * [Overview](./extensions/web/web-sdk-plugins/overview.md)
+      * [Release notes](./extensions/web/web-sdk-plugins/release-notes.md)
     * Core {#core}
       * [Overview](./extensions/web/core/overview.md)
       * [Event forwarding](./extensions/web/core/event-forwarding.md)
