@@ -4,15 +4,19 @@ type: Tutorial
 description: Learn how to activate datasets from Adobe Experience Platform to your preferred cloud storage location.
 
 ---
-# Activate datasets to destinations
+# (Beta) Activate datasets to destinations
+
+>[!IMPORTANT]
+>
+>The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 
 This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage or email marketing location, such as Amazon S3, SFTP locations, or Oracle Eloqua.
 
 ## When to activate segments or export datasets
 
-Some destinations in the Experience Platform destinations catalog support both segment activation and dataset export. 
+Some destinations in the Experience Platform catalog support both segment activation and dataset export. 
 * Consider activating segments when you want your data structured by audience interests or qualifications. 
-* On the other hand, consider dataset exports when you are looking to export raw dataset data, which is not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science tasks, etc.
+* On the other hand, consider dataset exports when you are looking to export raw dataset data, which is not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science tasks, to satisfy compliance requirements, and many other use cases.
 
 If you are looking to export datasets, this document has all the information you need. If you are looking to activate segments to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
 
