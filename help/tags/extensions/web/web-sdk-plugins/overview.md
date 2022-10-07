@@ -6,7 +6,7 @@ description: Learn about the Common Web SDK Plugins tag extension in Adobe Exper
 
 >[!IMPORTANT]
 >
->The extension is intended to be used with the Adobe Experience Platform Web SDK extension. To see information on the version intended to be used with AppMeasurement, see this link.
+>The extension is intended to be used with the Adobe Experience Platform Web SDK extension. To see information on the version intended to be used with AppMeasurement, refer to the overview on the [Common Analytics Plugins extension](../plugins/overview.md).
 
 This document covers how to configure the Web SDK Plugins tag extension and use it to augment the [Adobe Experience Platform Web SDK extension](../sdk/overview.md).
 
