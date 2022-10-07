@@ -11,7 +11,8 @@ feature: Access Control
 * [Access control overview](home.md)
 * Attribute-based access control {#abac}
   * [Overview](abac/overview.md)
-  * [Permissions] {#permissions-ui}
+  * [End-to-end guide](abac/end-to-end-guide.md)
+  * Permissions {#permissions-ui}
     * [Browse](abac/ui/browse.md)
     * [Labels](abac/ui/labels.md)
     * [Permissions](abac/ui/permissions.md)

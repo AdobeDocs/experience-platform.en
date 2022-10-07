@@ -27,7 +27,7 @@ In order to access your [!DNL Zendesk] account on Platform, you must provide val
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Host | The unique domain specific to your account created during the registration process. | `https://yoursubdomain.zendesk.com`|
+| Subdomain | The unique domain specific to your account created during the registration process. | `yoursubdomain`|
 | Access token | Zendesk API token. |`0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 For more information on authenticating your [!DNL Zendesk] source, see the [[!DNL Zendesk] source overview](../../../../connectors/customer-success/zendesk.md).
@@ -91,10 +91,6 @@ In the Platform UI, select **[!UICONTROL Datasets]** from the left navigation to
 Next, select the dataflow run ID of the dataflow that you want to view to see specific details about that dataflow run.
 
 ![Dataflow page](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
-
-To see details around your schema, select **[!UICONTROL Data governance]**.
-
-![Zendesk schema](../../../../images/tutorials/create/zendesk/dataset-governance.png)
 
 Finally, select **[!UICONTROL Preview dataset]** to display the data that was ingested.
 

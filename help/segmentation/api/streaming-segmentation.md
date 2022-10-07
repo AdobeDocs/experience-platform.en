@@ -418,15 +418,11 @@ For most instances, streaming segmentation unqualification happens in real-time.
 
 ### What data does streaming segmentation work on?
 
-Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+Streaming segmentation works on all data that was ingested using a streaming source. Segments ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation. Events streamed into the system with a timestamp older than 24 hours will be processed in the subsequent batch job.
 
 ### How are segments defined as batch or streaming segmentation?
 
 A segment is defined as either batch or streaming segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment can be found in the [streaming segmentation query types section](#query-types).
-
-### Can a user define a segment as batch or streaming segmentation?
-
-At this time, the user cannot define whether a segment is evaluated using batch or streaming ingestion, as the system will automatically determine which method the segment will be evaluated with. 
 
 ### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
 

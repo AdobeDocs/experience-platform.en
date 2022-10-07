@@ -6,6 +6,25 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 ---
 # Custom personalization connection {#custom-personalization-connection} 
 
+## Destination changelog {#changelog}
+
+With the beta release of the enhanced **[!UICONTROL Custom personalization]** destination connector, you might be seeing two **[!UICONTROL Custom personalization]** cards in the destinations catalog.
+
+The **[!UICONTROL Custom Personalization With Attributes]** connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the **[!UICONTROL Custom Personalization]**, the **[!UICONTROL Custom Personalization With Attributes]** connector adds an optional [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to your custom personalization destination, enabling attribute-based same-page and next-page personalization.
+
+>[!IMPORTANT]
+>
+>Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization With Attributes]** destination requires you to use the [Edge Network Server API](/help/server-api/overview.md) for data collection. Furthermore, all the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
+>
+>If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Server API in two ways:
+>
+> * Add a server-side integration which retrieves attributes via the Server API.
+> * Update your client-side configuration with a custom Javascript code to retrieve attributes via the Server API.
+>
+> If you do not follow the requirements above, personalization will be based on segment membership only, identical to the experience offered by the **[!UICONTROL Custom Personalization]** connector.
+
+![Image of the two Custom personalization destination cards in a side-by-side view.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
+
 ## Overview {#overview}
 
 This destination provides a way to retrieve segment information from Adobe Experience Platform to external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites.
@@ -24,7 +43,7 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 ## Use cases {#use-cases}
 
-The [!DNL Custom personalization connection] enables you to use your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), while also leveraging Experience Platform Edge Network data collection & segmentation capabilities, to power a deeper customer personalization experience.
+The [!DNL Custom Personalization Connection] enables you to use your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), as well as proprietary systems (for example, in-house CMS), while also leveraging Experience Platform Edge Network data collection & segmentation capabilities, to power a deeper customer personalization experience.
 
 The use cases described below include both site personalization and targeted on-site advertising.
 
@@ -68,6 +87,12 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 *  **[!UICONTROL Description]**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
 *  **[!UICONTROL Integration alias]**: This value is sent to the Experience Platform Web SDK as a JSON object name. 
 *  **[!UICONTROL Datastream ID]**: This determines in which Data Collection datastream the segments will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. See [Configuring a datastream](../../../edge/datastreams/overview.md) for more details.
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 
@@ -122,11 +147,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -137,6 +162,37 @@ alloy("sendEvent", {
   });
 ```
 
+### Example response for [!UICONTROL Custom Personalization With Attributes]
+
+When using **[!UICONTROL Custom Personalization With Attributes]**, the API response will look similar to the example below.
+
+The difference between **[!UICONTROL Custom Personalization With Attributes]** and **[!UICONTROL Custom Personalization]** is the inclusion of the `attributes` section in the API response.
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## Data usage and governance {#data-usage-governance}
 

@@ -1,8 +1,6 @@
 ---
-keywords: Experience Platform;home;popular topics;Analytics Source Connector;analytics;Analytics
-solution: Experience Platform
+keywords: Experience Platform;home;popular topics;Analytics Source Connector;analytics;Analytics;AAID;
 title: Adobe Analytics Source Connector for Report-Suite Data
-topic-legacy: overview
 description: This document provides an overview of Analytics and describes the use-cases for Analytics data.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 ---
@@ -54,3 +52,27 @@ The expected latency for Analytics Data on Platform is outlined in the table bel
 ## Primary identifiers in [!DNL Analytics] data
 
 Every hit from the [!DNL Analytics] source connector contains a primary identifier that is dependant on whether an ECID or an AAID exists. If there is an ECID, the ECID is designated as the primary identifier. If there is an AAID, then the AAID is designated as the primary.
+
+The following table provides more information on identity fields in your [!DNL Analytics] data.
+
+| Identity field | Description |
+| --- | --- |
+| AAID | The AAID is the primary device identifier in Adobe Analytics and is guaranteed to exist on every event that is passed through the [!DNL Analytics] source. The AAID is sometimes referred to as the *Legacy Analytics ID* or as the `s_vi` cookie ID. Despite this, an AAID is created even if the `s_vi` cookie is not present. The  AAID is represented by the `post_visid_high` and `post_visid_low` columns in [[!DNL Analytics] data feeds](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). On any given event, the AAID field contains a single identity which may be one of the several different types described in the [order of operations for [!DNL Analytics] IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **Note**: Within an entire report suite, an AAID may contain a mix of types across events.|
+| ECID | The ECID (Experience Cloud ID) is a separate device identifier field, which is populated in Adobe Analytics when [!DNL Analytics] is implemented using the Experience Cloud Identity Service. The ECID is sometimes also referred to as MCID (Marketing Cloud ID). If an ECID exists on an event, the AAID may be based on ECID depending on whether the Analytics [grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) is configured. The ECID is represented by the `mcvisid` in Analytics data feeds. For more information on ECID, see the [ECID overview](../../../identity-service/ecid.md). For information on how ECID works with [!DNL Analytics], see the document on [Analytics and Experience Cloud ID Requests](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=en). |
+| AACUSTOMID | The AACUSTOMID is a separate identifier field which is populated in Adobe Analytics based on  the use of the `s.VisitorID` variable in the [!DNL Analytics] implementation. The AACUSTOMID is represented by the `cust_visid` column in [[!DNL Analytics] data feeds](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). If the AACUSTOMID is present, then the AAID will be based on the AACUSTOMID because the AACUSTOMID trumps all other identifiers as defined by the [order of operations for [!DNL Analytics] IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
+
+### How the [!DNL Analytics] source treats identities
+
+The [!DNL Analytics] source passes these identities to Experience Platform in XDM form as:
+
+* `endUserIDs._experience.aaid.id`
+* `endUserIDs._experience.mcid.id`
+* `endUserIDs._experience.aacustomid.id`
+
+These fields are not marked as identities. Instead, the same identities are copied into XDM’s `identityMap` as key-value pairs:
+
+* `{ “key”: “AAID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
+* `{ “key”: “ECID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
+* `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
+
+In the identity map, if ECID is present, it is marked as the primary identity for the event. In this case, AAID may be based on ECID due to the [Identity Service grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Otherwise, AAID is marked as the primary identity for the event. AACUSTOMID is never marked as the Primary ID for the event. However, if AACUSTOMID is present, then AAID is based on AACUSTOMID due to the Experience Cloud order of operations.

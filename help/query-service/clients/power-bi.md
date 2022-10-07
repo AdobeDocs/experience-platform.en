@@ -48,6 +48,10 @@ For the **[!DNL Server]** field in Power BI, enter the value for the host found 
 
 The **[!DNL Database]** field can be either "all" or a dataset table name. For example, `prod:all`.
 
+>[!IMPORTANT]
+>
+>Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See the documentation on the[`FLATTEN` feature](../best-practices/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database.
+
 ![The Power BI dashboard with the server and database input fields highlighted.](../images/clients/power-bi/postgresql-database-dialog.png)
 
 ### Data Connectivity mode

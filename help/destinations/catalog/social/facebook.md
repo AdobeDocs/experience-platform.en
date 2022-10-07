@@ -24,7 +24,7 @@ An online retailer wants to reach existing customers through social platforms an
 
 ### Use case #2
 
-An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses. 
+An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses.
 
 To target them across social media, they can onboard the customer data from their CRM into Adobe Experience Platform, using the email addresses as identifiers.
 
@@ -84,7 +84,6 @@ There are two methods to activate phone numbers in [!DNL Facebook]:
 >
 >Phone numbers ingested into the `Phone` namespace cannot be activated in [!DNL Facebook].
 
-
 ## Email hashing requirements {#email-hashing-requirements}
 
 You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
@@ -118,7 +117,7 @@ Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], ma
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
 The video below also demonstrates the steps to configure a [!DNL Facebook] destination and activate segments. 
 
@@ -126,15 +125,33 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
 
 >[!NOTE]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the [destination configuration tutorial](../../ui/connect-destination.md). 
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the [destination configuration tutorial](../../ui/connect-destination.md).
 
-### Connection parameters {#parameters}
+### Authenticate to destination {#authenticate}
 
-While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+1. Find the Facebook destination in the destination catalog and select **[!UICONTROL Set Up]**.
+2. Select **[!UICONTROL Connect to destination]**. 
+  ![Authenticate to Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. Enter your Facebook credentials and select **Log In**.
+
+### Fill in destination details {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_facebook_accountid"
+>title="Account ID"
+>abstract="Your Facebook Ad Account ID. You can find this ID in your Facebook Ads Manager account. When entering this ID, always prefix it with `act_`."
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Account ID]**: your [!DNL Facebook Ad Account ID]. You can find this ID in your [!DNL Facebook Ads Manager] account. When entering this ID, always prefix it with `act_`.
+* **[!UICONTROL Account ID]**: Your [!DNL Facebook Ad Account ID]. You can find this ID in your [!DNL Facebook Ads Manager] account. When entering this ID, always prefix it with `act_`.
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
 ## Activate segments to this destination {#activate}
 
@@ -142,7 +159,6 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origin of audience"
 >abstract="Choose how the customer data in the segment was originally collected. The data will be displayed in Facebook when a user is targeted by the segment"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

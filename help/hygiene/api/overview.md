@@ -7,9 +7,9 @@ exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Shield for Healthcare.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Healthcare Shield.
 
-The Data Hygiene API allows you to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform, as well as schedule time-to-live (TTL) protocols for datasets. This guide covers the prerequisite steps to using the API and provides links to more endpoint-specific documentation.
+The Data Hygiene API allows you to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform, as well as schedule expiration dates for datasets. This guide covers the prerequisite steps to using the API and provides links to more endpoint-specific documentation.
 
 ## Getting started
 
@@ -33,13 +33,17 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 This document provides an example API call to demonstrate how to format your requests. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/api-guide.md#sample-api) in the getting started guide for Experience Platform APIs.
 
-<!-- ## Work orders
+## Dataset expirations
 
-A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
+A dataset expiration is a time-delayed "delete a dataset" action. By creating a dataset expiration, you are specifying a future time at which that dataset should be deleted. See the [dataset expiration endpoint guide](./dataset-expiration.md) for details on scheduling dataset expirations in the API.
 
-## Time to live (TTL) for datasets
+## Consumer deletes
 
-A dataset TTL is a time-delayed "delete a dataset" action. By creating a TTL, you are specifying a future time at which that dataset should be deleted. See the [dataset TTL endpoint guide](./ttl.md) for details on scheduling dataset TTLs in the API.
+The Data Hygiene API allows you delete all records associated with a consumer identity across one or all datasets. All data hygiene tasks that delete consumer identities are repesented by a construct called a work order. See the [work order endpoint guide](./workorder.md) for details on working with consumer deletes in the API.
+
+## Quota
+
+Your organization is limited to a predetermined monthly job quota for each type of data hygiene operation, which can vary depending on licensing. See the [quota endpoint guide](./quota.md) for details on viewing the current quota status of your data hygiene processes.
 
 ## Next steps
 

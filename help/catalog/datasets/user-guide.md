@@ -21,7 +21,13 @@ This user guide requires a working understanding of the following components of 
 *   [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 *   [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
 
-## View datasets
+## View datasets {#view-datasets}
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_negative_numbers"
+>title="Negative numbers in dataset activity"
+>abstract="Negative numbers in ingested records means that a user has deleted certain batches in a selected time range."
+>text="Learn more in documentation"
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
 
@@ -131,7 +137,7 @@ A confirmation box appears. Select **[!UICONTROL Delete]** to confirm the deleti
 
 ## Delete a Profile-enabled dataset
 
-If a dataset is enabled for [!DNL Profile], deleting that dataset through the UI will delete it from both the Data Lake and the Profile store within Platform. 
+If a dataset is enabled for Profile, deleting that dataset through the UI will delete it from data lake, Identity Service, and the Profile store within Platform.
 
 You can delete a dataset from the [!DNL Profile] store only (leaving the data in the Data Lake) using the Real-time Customer Profile API. For more information, see the [profile system jobs API endpoint guide](../../profile/api/profile-system-jobs.md).
 

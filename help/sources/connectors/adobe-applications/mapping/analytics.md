@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;Analytics mapping fields;analy
 solution: Experience Platform
 title: Mapping Fields for the Adobe Analytics Source Connector
 topic-legacy: overview
-description: Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions in order to be successfully mapped.
+description: Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source. Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions in order to be successfully mapped.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 ---
 # Analytics field mappings
 
-Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions in order to be successfully mapped.
+Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics source. Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions in order to be successfully mapped.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -180,9 +180,9 @@ The following table includes columns that show the name of the Analytics field (
 | ip | environment.ipV4 | string | The IP Address, based on the HTTP header of the image request. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | boolean | The version of JavaScript used. |
 | mcvisid_high + mcvisid_low | identityMap | object | The Experience Cloud Visitor ID. |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | The Experience Cloud Visitor ID. |
-| mcvisid_high | endUserIDs._experience.mcid.primary | boolean | The Experience Cloud Visitor ID. |
-| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | The Experience Cloud Visitor ID. |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | The Experience Cloud ID (ECID) is also known as MCID and sometimes used in namespaces. |
+| mcvisid_high | endUserIDs._experience.mcid.primary | boolean | The Experience Cloud ID (ECID) is also known as MCID and sometimes used in namespaces. |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | The Experience Cloud ID (ECID) is also known as MCID and sometimes used in namespaces. |
 | mcvisid_low | identityMap | object | The Experience Cloud Visitor ID. |
 | sdid_high + sdid_low | _experience.target.supplementalDataID | string | Hit Stitching ID. The analytics field sdid_high and sdid_low is the supplemental data id used to stitch two (or more) incoming hits together. |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | string | Mobile Services beacon proximity. |

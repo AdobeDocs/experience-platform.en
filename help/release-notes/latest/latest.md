@@ -1,27 +1,24 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: May 25, 2022**
+**Release date: September 28, 2022**
 
 New features in Adobe Experience Platform:
 
 - [Attribute-based access control](#abac)
-- [Data hygiene](#hygiene)
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Alerts](#alerts)
-- [Audit Logs](#audit-logs)
-- [Dashboards](#dashbaords)
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [Audit logs](#audit-logs)
+- [[!DNL Dashboards]](#dashboards)
 - [Data collection](#data-collection)
-- [Data Governance](#data-governance)
-- [Data Prep](#data-prep)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+- [Identity Service](#identity-service)
 - [Query Service](#query-service)
 - [Sources](#sources)
 
@@ -29,50 +26,44 @@ Updates to existing features in Adobe Experience Platform:
 
 >[!IMPORTANT]
 >
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+>Attribute-based access control will be enabled starting October 2022. If you would like to be an early adopter, please contact your Adobe representative.
 
-Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
+Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
 
-Through attribute-based access control, administrators of your organization can control users’ access to both sensitive personal data (SPD) and personally identifiable information (PII) across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
-
-| Feature | Description |
-| --- | --- |
-| Attribute-based access control | Attribute-based access control allows you to label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies covering XDM schema fields and better manage the access given to users or groups of users (internal, external, or third-party users). Additionally, attribute-based access control allows administrators to manage access to specific segments. For more information, see the [attribute-based access control overview](../../access-control/abac/overview.md). |
-| Permissions | Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. Through Permissions, you can create and manage roles, as well as assign the desired resource permissions for these roles. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the [Permissions UI guide](../../access-control/abac/ui/browse.md). |
-
-For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md).
-
-## Data hygiene {#hygiene}
-
-Experience Platform provides a suite of data hygiene capabilities that allow you manage your stored data through programmatic deletions of consumer records and datasets. Using either the [!UICONTROL Data Hygiene] workspace in the UI or through calls to the Data Hygiene API, you can manage your data stores to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
-
->[!IMPORTANT]
->
->Data hygiene capabilities are currently only available for organizations that have purchased the Adobe Shield for Healthcare add-on offering.
-
-**New features**
+Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD), personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
 | Feature | Description |
 | --- | --- |
-| Time to live (TTL) for datasets | [Schedule TTLs](../../hygiene/ui/ttl.md) for Platform datasets.  |
+| Attribute-based access control | Attribute-based access control allows you to label Experience Data Model (XDM) schema fields and segments with labels that define organizational or data usage scopes. In parallel, administrators can use the user and role administration interface to define access policies covering XDM schema fields and segments to better manage the access given to users or groups of users (internal, external, or third-party users). For more information, see the [attribute-based access control overview](../../access-control/abac/overview.md). |
+| Permissions | Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. Through Permissions, you can create and manage roles, assign the desired resource permissions for these roles, and build policies to leverage labels and define which user roles have access to specific Platform resources. Permissions also allow you to manage the labels, sandboxes, and users associated with a specific role. For more information, see the [Permissions UI guide](../../access-control/abac/ui/browse.md). |
 
-{style="table-layout:auto"}
+For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). For a comprehensive guide on the attribute-based access control workflow, read the [attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
 
-For more information on audit logs in Platform, refer to the [data hygiene overview](../../hygiene/home.md).
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
-## Alerts {#alerts}
+AI/ML services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up models specific to a company's needs using business-level configurations without the need for data science expertise.
 
-Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+### Attribution AI
 
-**Updated features**
+Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 
-| Feature | Alert rule | Description |
-| --- | --- | --- |
-| New alert rule | Skippage rate exceeds threshold | You can now use the alert to receive notifications when your sources dataflow exceeds the identities thresholds. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
+| Feature | Description |
+| --- | --- |
+| Save Draft Instance | This new feature enables marketing analysts to save a model configuration as a draft instance and continue to edit it until it is complete prior to training and scoring. Scenarios where this feature is helpful include, when a user has multiple fields to define in the workflow but cannot complete it due to time constraints. Another scenario is when one or more dataset statistics are being processed and not yet available. Read the [Attribution AI user guide](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) to learn more.|
+| Governance policies | After users submit to create an instance through the configuration workflow, the new policy enforcement service checks whether there are any policy violations of data usage and displays the details in a popover. It ensures that data operations and marketing actions are compliant with the data usage policies configured on Adobe Experience Platform. |
 
-{style="table-layout:auto"}
+For more information on Attribution AI, the [Attribution AI overview](../../intelligent-services/attribution-ai/overview.md). For information on data governance policies, read the [policies overview](../../data-governance/policies/overview.md).
 
-For more information on alerts, see the [[!DNL Observability Insights] overview](../../observability/home.md).
+### Customer AI
+
+Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
+
+| Feature | Description |
+| --- | --- |
+| Save Draft Instance |  This new feature enables marketing analysts to save a model configuration as a draft instance and continue to edit it until it is complete prior to training and scoring. Scenarios where this feature is helpful include, when a user has multiple fields to define in the workflow but cannot complete it due to time constraints. Another scenario is when one or more dataset statistics are being processed and not yet available. Read the [Customer AI user guide](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) to learn more.|
+| Governance policies | After users submit to create an instance through the configuration workflow, the new policy enforcement service checks whether there are any policy violations of data usage and displays the details in a popover. It ensures that data operations and marketing actions are compliant with the data usage policies configured on Adobe Experience Platform. |
+
+For more information on Customer AI, read the [Customer AI overview](../../intelligent-services/customer-ai/overview.md). For information on data governance policies, read the [policies overview](../../data-governance/policies/overview.md).
 
 ## Audit Logs {#audit-logs}
 
@@ -82,102 +73,45 @@ Experience Platform allows you to audit user activity for various services and c
 
 | Feature | Name | Description |
 | --- | --- | --- |
-| Resources added | <ul><li> Access control policy </li><li> Role </li><li> Audit logs </li><li> Work order </li><li> Identity namespace </li><li> Identity graph </li><li> Query </li><li> Dataset </li><li> Source data flow </li></ul> | Audit log resources are recorded automatically as the activity occurs. If the feature is enabled you do not need to manually enable log collection. |
+| Resources added | <ul><li>Attribution AI instance</li><li>Customer AI instance</li><li>Datastream</li></ul> | Audit log resources are recorded automatically as the activity occurs. If the feature is enabled you do not need to manually enable log collection. |
 
 {style="table-layout:auto"}
 
-For more information on audit logs in Platform, refer to the [audit logs overview](../../landing/governance-privacy-security/audit-logs/overview.md).
+For more information on the different resource-specific event types tracked by audit logs in Platform, refer to the [audit logs overview](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Dashboards {#dashboards}
+## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform provides multiple dashboards through which you can view important information about your organization’s data, as captured during daily snapshots.
-
-### Profiles dashboards
-
-The profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. 
-
-**Updated features**
+Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
 
 | Feature | Description |
 | --- | --- |
-|  Audience overlap by merge policy widget  | This widget displays the visual crossover of segment definitions and allows you to optimize segmentation strategy by studying similarities between your segment definitions. |
-|  Profiles count change trend by identity widget  | This widgets helps you to manage your destination activation needs by demonstrating the growth pattern of profiles filtered by the required identity. |
+| In-use label  | When viewed in the widget library, the in-use label easily identifies the presence of existing widgets in your dashboard. This makes it easy to avoid the duplication although you can still add the same widget more than once should you wish. |
+| User-defined dashboards | User-defined dashboards help to expedite insights and customize visualizations by enabling you to build and manage custom dashboards. With user-defined dashboards you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization. Read the [feature guide](../../dashboards/user-defined-dashboards.md) to learn more. |
+| Customer Data Platform Insights Data Model | The Customer Data Platform (CDP) Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create CDP reports for your marketing and key performance indicator use cases. These insights can then be used as custom widgets for your user-defined dashboards. Read the [CDP Insights Data Model feature guide](../../dashboards/cdp-insights-data-model.md) to learn more. |
+| Audience overlap report widget | This widget is available for both for both [!UICONTROL Profiles] and [!UICONTROL Segments] dashboards. The report provides an ordered list of audiences ranked by the highest or lowest overlap percentages for your chosen segment. From the [!UICONTROL Profiles] dashboard you can filter and view your audience overlap by merge policy from all available segments. The [!UICONTROL Segments] dashboards allows you to filter the audience overlap by a specific segment.<br>Use this analysis to build new, high-performance segments and avoid sending the same audience to different destinations. The report also helps to identify hidden insights to improve segmentation or locate unique profiles to pursue. Read the respective [profiles](../../dashboards/guides/profiles.md#audience-overlap-report) and [segments](../../dashboards/guides/segments.md#audience-overlap-report) widget guides to learn more. |
 
-{style="table-layout:auto"}
-
-For more information on profiles, please see the [profiles dashboard documentation](../../dashboards/guides/profiles.md).
-
-### Destinations dashboards
-
-The destinations dashboard displays a snapshot of the destinations that your organization has enabled within Experience Platform. 
-
-| Feature | Description |
-| --- | --- |
-| Activated audiences by destination widget | This widget helps you to understand at a glance, the value of your destinations based on the number of audiences activated. It also provides easy access to more detailed information on your segments that have been mapped to the destination. |
-
-{style="table-layout:auto"}
-
-For more information on destinations, please see the [destinations dashboard documentation](../../dashboards/guides/destinations.md).
-
-### Segments dashboards
-
-The segment dashboard provides a user interface through which you can view important information about your segments, as captured during a daily snapshot.
-
-**Updated features**
-
-| Feature | Description |
-| --- | --- |
-|  Audience overlap widget  |  This widget enables you to optimize your segmentation strategy by visualizing the similarities in the results of your segment definitions.  |
-
-{style="table-layout:auto"}
-
-For more information on segments, please see the [segments dashboard documentation](../../dashboards/guides/segments.md).
+For more information on [!DNL Dashboards], please see the [[!DNL Dashboards] overview](../../dashboards/home.md).
 
 ## Data collection {#data-collection}
 
-Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
 
-**New features**
+**New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Copy datastreams | [Create a copy of an existing datastream](../../edge/datastreams/overview.md#copy) and adjust its configuration as necessary, avoiding the need to start from scratch. |
-| Import datastream mapping rules | When setting up Data Prep for Data Collection, you can [import the mapping rules of an existing datastream](../../edge/datastreams/data-prep.md#import-mapping) instead of configuring every field mapping manually. |
-| Datasteam mapping support for Mobile SDK | You can now configure Data Prep for Data Collection on datastreams intended for use with the Experience Platform Mobile SDK. |
-| Datasteam mapping support for XDM objects | Map XDM objects in addition to data-layer objects when [configuring Data Prep for Data Collection](../../edge/datastreams/data-prep.md#select-data). |
-| Integration with dataflows | Use the sources catalog in Platform to access your data on Platform Edge Network, including Data Prep for Data Collection and improved support for Data Prep warnings. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
+| Left navigation integration in the Platform UI | All capabilities that were previously exclusive to the Data Collection UI (including tags, event forwarding, and datastreams) are now also available through the left navigation in Experience Platform, under the category **[!UICONTROL Data Collection]**. This eliminates the need to switch between UIs when working with data collection capabilities in Platform.|
+| User attribution in tags and event forwarding | When listing available [!UICONTROL Properties] in tags and event forwarding, each listed property now shows when it was last updated, and which user made the update. |
+| [[!DNL Snap Conversions API] extension](https://exchange.adobe.com/apps/ec/108550) for event forwarding | You can now send data to the [!DNL Snapchat Conversions API] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. For more information on how to authenticate and use the API, refer to the [[!DNL Snapchat Marketing API] documentation](https://marketingapi.snapchat.com/docs/conversion.html). |
+|[[!DNL User-Agent Client Hints] in Web SDK](../../edge/fundamentals/user-agent-client-hints.md)|The Web SDK now supports [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Client hints allow website owners to access much of the same information available in the [!DNL User-Agent] string, but in a more privacy-preserving way.|
+|[Web SDK page-by-page migration](../../edge/home.md#migrating-to-web-sdk)| You can now migrate your existing web properties from other Experience Cloud libraries, such as [!DNL at.js], to Web SDK, one page at a time. This enables a phased approach to Web SDK migration, without the need of migrating all your pages at once.|
+
+{style="table-layout:auto"}
+
+<!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
+-->
 
 For more information on data collection in Platform, please see the [data collection overview](../../collection/home.md).
-
-## Data Governance {#governance}
-
-Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
-
-**New features**
-
-| Feature | Description | 
-| ------- | ----------- |
-| Consent policy enforcement (limited availability) | If your organization has purchased the Adobe Shield for Healthcare add-on offering, you can now [create consent policies](../../data-governance/policies/user-guide.md#consent-policy) to automatically [enforce customer consents and preferences in segment participation](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation). |
-
-{style="table-layout:auto"}
-
-See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
-
-**Updated features**
-
-| Feature | Description | 
-| ------- | ----------- |
-| Attribute-based access control in [!DNL Data Prep] | You will now only be able to map attributes that you have access to. Attributes that you do not have access to can not be used in pass-through mappings and calculated fields. For more information, see [attribute-based access control in [!DNL Data Prep]](../../data-prep/home.md). **Note**: Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released. |
-| Localized data errors | [!DNL Data Prep] now localizes all transformation errors to the attribute level (previously at the row level). Dataflows will now ingest partial rows filled with columns that do not have any transformation errors, instead of ignoring the full rows. |
-| Stream upserts to [!DNL Profile Service] | Stream upserts with [!DNL Data Prep] to send partial row updates to Profile Service using the [[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md), or [[!DNL HTTP API]](../../sources/connectors/streaming/http.md) source. See the guide on [streaming upserts](../../data-prep/upserts.md) for more information. |
-
-{style="table-layout:auto"}
-
-For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -187,56 +121,100 @@ For more information on [!DNL Data Prep], please see the [[!DNL Data Prep] overv
 
 | Feature | Description |
 | ----------- | ----------- |
-| Export latest profile qualifications [after daily segment evaluation](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | You can now schedule a full file export, once or daily, with the latest profile qualifications, after the daily segment evaluation is complete. |
-| Optional datastream ID for [Adobe Target destinations](../../destinations/catalog/personalization/adobe-target-connection.md) | To enable Adobe Target personalization for users who cannot implement the Experience Platform Web SDK, the datastream ID selection is now optional when configuring Adobe Target destinations. When not using a datastream, segments exported from Experience Platform to Target will only support next-session personalization, while edge segmentation is disabled, along with all [use cases](../../destinations/ui/configure-personalization-destinations.md) that depend on edge segmentation. |
+| Destination SDK| Destination SDK now provides full support for partners and customers creating batch (or file-based) productized or private destinations. Read the following documentation pages for more information: <ul><li>[Destination SDK Overview](/help/destinations/destination-sdk/overview.md)</li><li>[Configure a file-based destination](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Configure file formatting options for file-based destinations](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[Test your file-based destinations](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul>|
 
 {style="table-layout:auto"}
+
+**New or updated destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. [Get Started with Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Note that this integration works with [Adobe Campaign version 8.4 or higher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
+| [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | The [!DNL Salesforce CRM] destination has been updated to support both contacts and leads updates, as well as performance improvements for faster updates. |
+
+{style="table-layout:auto"}
+
+**New or updated documentation**
+
+| Documentation | Description |
+| ----------- | ----------- |
+| Destinations Flow Service API documentation| The [Destinations API reference documentation](https://developer.adobe.com/experience-platform-apis/references/destinations/) was updated to include guidance on how to perform operations on file-based destinations. Operations for streaming destinations will be added at a later time. |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
 XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| UI support for enums and suggested values | In addition to enums that enable data validation, you can now [add or remove suggested values](../../xdm/ui/fields/enum.md) for standard or custom string fields so that Platform users have a friendly list of values to select from when creating segments. |
+
 **New XDM components**
 
 | Component type | Name | Description |
 | --- | --- | --- |
-| Field group | [[!UICONTROL Change set]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/changeset.schema.json) | Captures row-level changes to and from datasets. This field group can be employed by any class. |
-| Field group | [[!UICONTROL Reference keys]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-reference-keys.schema.json) | Captures reference keys for ExperienceEvent schemas, allowing you to build relationships with schemas based on other classes. |
+| Field group | [[!UICONTROL AJO Classification Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | Properties of a specific element that was interacted with which caused the proposition event to be triggered. |
+| Field group | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | Tracks media interactions over time. |
+| Field group | [[!UICONTROL Media details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | Tracks media details information. |
+| Field group | [[!UICONTROL Adobe CJM ExperienceEvent - Surfaces]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Describes surfaces for Experience Events in Adobe Journey Optimizer. |
 
 {style="table-layout:auto"}
 
 **Updated XDM components**
 
-| Component type | Name | Update description |
+| Component type | Name | Description |
 | --- | --- | --- |
-| Behavior | [[!UICONTROL Time-series Schema]](https://github.com/surbhi114/xdm/blob/master/components/behaviors/time-series.schema.json) | Updated `eventType` to include several new event types related to media and a web-channel inbound use case for Adobe Journey Optimizer. |
-| Global schema | [[!UICONTROL Destination]](https://github.com/tumulurik/xdm/blob/master/schemas/destinations/destination.schema.json) | Removed enum values from `xdm:destinationCategory`. |
-| Field group | [[!UICONTROL Record Status]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/record-status.schema.json) | Updated field group status from `experimental` to `stable`. |
-| Field group | (Several) | Several B2B field groups have been updated so that certain ID fields are deprecated in favor of key-type fields that use the [[!UICONTROL B2B Source]](../../xdm/data-types/b2b-source.md) data type. The previous ID fields will be deprecated in a future update. Refer to the following [pull request](https://github.com/adobe/xdm/pull/1533/files#diff-720c0bb1d1cbaf622f5656c2a4b62d35830c75f6563794da72a280a6a520fbc1) for a full list of changes to the affected field groups. |
-| Data type | [[!UICONTROL Browser details]](https://github.com/liljenback/xdm/blob/master/components/datatypes/browserdetails.schema.json) | Added a new field `xdm:userAgentClientHints` which captures contextual information about the user agent interacting with the browser. |
-| Data type | [[!UICONTROL Media information]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/media.schema.json) | Added an `xdm:playhead` field to capture the playhead time for a piece of media content. Fixed pattern validation for `xdm:videoSegment`. |
-| Data type | [[!UICONTROL Rating]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/external/iptc/rating.schema.json) | `iptc4xmpExt:RatingSourceLink` is no longer a required field. |
+| Behavior | [[!UICONTROL Time series]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>Added values for `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>Removed values for `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
+| Field group | (Multiple) | [Updated several field descriptions](https://github.com/adobe/xdm/pull/1628/files) across Journey Orchestration components. |
+| Field group | (Multiple) | [Updated the titles for several Adobe Workfront components](https://github.com/adobe/xdm/pull/1634/files) for consistency. |
+| Field group | [[!UICONTROL AJO Classification Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | Updated the namespaces of several fields to `xdm`. |
+| Field group | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Added a new field, `isReadSegmentTriggerStartEvent`. |
+| Field group | [[!UICONTROL Forecasted Weathers]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Changed the `xdm:uvIndex` field to an integer type, and added the `xdm` namespace to several fields in which is was missing. |
+| Field group | [[!UICONTROL Media details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` and `xdm:implementationDetails` have been removed from the field group. |
+| Data type | (Multiple) | [Updated several media property names](https://github.com/adobe/xdm/pull/1626/files) across several data types for consistency. |
+| Data type | [[!UICONTROL Implementation details]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | Added known names for flutter. |
+| Data type | [[!UICONTROL Point of interest details]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | The data type can now accept a list of metadata key-value pairs associated with the point of interest. |
+| Data type | [[!UICONTROL Proposition Action]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] has bee renamed to [!UICONTROL Proposition Action]. |
+| Data type | [[!UICONTROL Proposition Event Type]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] has been renamed to [!UICONTROL Proposition Action]. |
+| (Multiple) | (Multiple) | Experimental properties have been [stabilized across all B2B components](https://github.com/adobe/xdm/pull/1617/files). |
+| (Multiple) | (Multiple) | Adobe Journey Optimizer entities have been [stabilized](https://github.com/adobe/xdm/pull/1625/files). |
+| (Multiple) | (Multiple) | The namespaces of certain fields across several experimental components have been [updated for consistency](https://github.com/adobe/xdm/pull/1626/files). |
 
 {style="table-layout:auto"}
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
-## Query Service {#query-service}
+## Identity Service {#identity-service}
 
-Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL data lake]. You can join any datasets from the [!DNL data lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each customer to appear to have multiple "identities".
+
+Adobe Experience Platform Identity Service helps you gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
 **Updated features**
 
 | Feature | Description |
 | --- | --- |
-| Query Service audit log integration  | The Query Service audit log integration provides records of query-related user actions for the purpose of troubleshooting or adherence to corporate data stewardship policies and regulatory requirements. See the [audit log integration documentation](../../query-service/data-governance/audit-log-guide.md) for comprehensive information |
-| ALTER TABLE SQL construct  | Use SQL to set primary identities in an ad hoc dataset. Query Service allows you to mark dataset columns as either primary or secondary identities directly through SQL using the `ALTER TABLE` command. |
+| Support for dataset deletion | Identity Service now supports dataset deletion when requesting through the [Catalog Service API](https://developer.adobe.com/experience-platform-apis/references/catalog/), UI, or Data Hygiene. Read the guide on [deleting datasets in the UI](../../catalog/datasets/user-guide.md#delete-a-dataset) for more information. |
 
-{style="table-layout:auto"}
+To learn more about Identity Service, read the [Identity Service overview](../../identity-service/home.md).
 
-For more information on Query Service capabilities, see the [Query Service overview](../../query-service/home.md)
+## Query Service {#query-service}
 
-<!--For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md).-->
+Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Alert subscription API | Adobe Experience Platform Query Service allows you to subscribe to alerts for both ad hoc and scheduled queries. Alerts can be received by email, within the Platform UI, or both. Currently, query alerts can only be subscribed to using the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| Dataset samples | Query Service dataset samples enable you to conduct exploratory queries on big data with greatly reduced processing time at the cost of query accuracy. See the [dataset samples guide](../../query-service/sql/dataset-samples.md) to learn more. |
+
+For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
+
+<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
 
 ## Sources {#sources}
 
@@ -244,13 +222,14 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
+**Updated features**
+
 | Feature | Description |
 | --- | --- |
-| Attribute-based access control in sources | You can now manage and control access to individual source fields and attributes during ingestion. **Note**: Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.  |
-| Beta release of [!DNL Zendesk] source | Use the [!DNL Zendesk] source to ingest user, agent, and organization data from your [!DNL Zendesk] instance for [!DNL Profile] enrichment. See the [[!DNL Zendesk] source overview](../../sources/connectors/customer-success/zendesk.md) for more information. |
-| Support for Adobe Data Collection | Use the sources catalog in Platform to access your data on Platform Edge Network, including Data Prep for Data Collection and improved support for Data Prep warnings. See the [Adobe Data Collection source overview](../../sources/connectors/adobe-applications/data-collection.md) for more information. |
-| Support for ingesting files with `ISO-8859-1` encoding | Use the `encoding` parameter to ingest `ISO-8859-1` encoded files with a cloud storage source to Platform using the [!DNL Flow Service] API. See the guide on [creating a cloud storage source connection](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
+| Audience Manager segment population impact on Real-time Customer Profile | The ingestion of sizeable Audience Manager segment populations has a direct impact on your total profile count when you first send an Audience Manager segment to Platform using the Audience Manager source. This means that selecting all segments can potentially lead to a Profile count in excess of your license usage entitlement. For more information, read the [Audience Manager source overview](../../sources/connectors/adobe-applications/audience-manager.md). For information on your license usage, read the documentation on [using the license usage dashboard](../../dashboards/guides/license-usage.md). |
+| Support for Adobe Campaign Managed Cloud Service | Use the Adobe Campaign Managed Cloud Service source to bring your Adobe Campaign v8.4 delivery and tracking logs data to Experience Platform. Read the guide on [creating an Adobe Campaign Managed Cloud Service source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/campaign.md) for more information. | 
+| API support for on-demand ingestion for batch sources | Use on-demand ingestion to create ad hoc flow runs for a given dataflow with the [!DNL Flow Service] API. Flow runs created must be set to one-time ingestion. For more information, read the guide on [creating a flow run for on-demand ingestion using the API](../../sources/tutorials/api/on-demand-ingestion.md) for more information. |
+| API support for retrying failed dataflow runs for batch sources | Use the `re-trigger` operation to retry your failed dataflow through the API. Read the guide on [retrying failed dataflow runs using the API](../../sources/tutorials/api/retry-flows.md) for more information. |
+| API support for filtering row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources | Use logical and comparison operators to filter row-level data for the [!DNL Google BigQuery] and [!DNL Snowflake] sources. Read the guide on [filtering data for a source using the API](../../sources/tutorials/api/filter.md) for more information. |
 
-{style="table-layout:auto"}
-
-To learn more about sources, see the [sources overview](../../sources/home.md).
+To learn more about sources, read the [sources overview](../../sources/home.md).

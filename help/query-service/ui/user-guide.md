@@ -56,7 +56,33 @@ To minimize your development time, it is recommended that you develop your queri
 
 - **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete will recognize fields in that table. 
 
-![Image](../images/ui/query-editor/tables-auto.png)
+![The Query Editor command line interface displaying drop down suggestions.](../images/ui/query-editor/tables-auto.png)
+
+### Auto-complete UI configurational toggle {#auto-complete}
+
+The [!DNL Query Editor] automatically suggests potential SQL keywords along with table or column details for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point by selecting the [!UICONTROL Syntax auto-complete] toggle to the top right of the Query Editor.
+
+The auto-complete configuration setting is per user and remembered for the consecutive logins for that user.
+
+![Query Editor with the syntax auto-complete toggle highlighted.](../images/ui/query-editor/auto-complete-toggle.png)
+
+Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the author when editing queries.
+
+When you use the toggle to enable the auto-complete feature, recommended suggestions for table and column names as well as SQL keywords become available after a short pause. A success message in the console beneath the Query Editor indicates the feature is active. 
+
+If you disable the auto-complete feature, a page refresh is required for the feature to take effect. A confirmation dialog appears with three options when you disable the [!UICONTROL Syntax auto-complete] toggle :
+
+- [!UICONTROL Cancel]
+- [!UICONTROL Save changes and refresh]
+- [!UICONTROL Refresh without saving changes]
+
+>[!IMPORTANT]
+>
+>If you are writing or editing a query when disabling this feature, you must save any changes to your query before refreshing the page or all progress will be lost.  
+
+![The confirmation dialog to disable the auto-complete feature.](../images/ui/query-editor/confirmation-dialog.png)
+
+Select the appropriate option to disable the auto-complete feature.
 
 ### Error detection {#error-detection}
 
@@ -129,6 +155,10 @@ You can delete a schedule by selecting **[!UICONTROL Delete a schedule]**.
 ### Saving queries {#saving-queries}
 
 [!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, select **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the **[!UICONTROL Query Details]** panel.
+
+>[!NOTE]
+>
+>Queries named and saved in using the Query Editor are available as templates within the Query dashboard [!UICONTROL Browse] tab. See the [templates documentation](./query-templates.md) for more information.
 
 ### How to find previous queries {#previous-queries}
 
