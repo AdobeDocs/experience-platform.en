@@ -1,9 +1,9 @@
 ---
-title: Web SDK Plugins Extension Overview
-description: Learn about the Web SDK Plugins tag extension in Adobe Experience Platform.
+title: Common Web SDK Plugins Extension Overview
+description: Learn about the Common Web SDK Plugins tag extension in Adobe Experience Platform.
 exl-id: 
 ---
-# Web SDK Plugins extension overview
+# Common Web SDK Plugins extension overview
 
 >[!NOTE]
 >
@@ -15,13 +15,13 @@ exl-id:
 
 Use this reference for information about configuring the Web SDK Plugins extension, and the options available when using this extension to augment the [!DNL Adobe Experience Platform Web SDK] Extension.
 
-## Configure the Web SDK Plugins extension
+## Configure the Common Web SDK Plugins extension
 
 This section provides a reference for the options available when configuring the Web SDK Plugins extension.
 
 >[!IMPORTANT]
 >
->The Web SDK Plugins extension is intended to augment the [!DNL Adobe Experience Platform Web SDK] extension, however, you do not need to have it installed for the extension to work as expected.
+>The Common Web SDK Plugins extension is intended to augment the [!DNL Adobe Experience Platform Web SDK] extension, however, you do not need to have it installed for the extension to work as expected.
 
 No additional configuration is required at the extension level.
 
@@ -29,9 +29,9 @@ No additional configuration is required at the extension level.
 
 Unlike the AppMeasurement counterpart, no configuration is necessary to initialize or add a plug-in to your library outside of using the native data elements that are provided. See below for additional information on each data element.
 
-## Web SDK Plugins extension data elements
+## Common Web SDK Plugins extension data elements
 
-The Web SDK Plugins extension provides the following data elements:
+The Common Web SDK Plugins extension provides the following data elements:
 
 * [getAndPersistValue](#getAndPersistValue)
 * [getGeoCoordinates](#getGeoCoordinates)
