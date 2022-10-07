@@ -27,7 +27,6 @@ feature: Queries
   - [Connection parameters](api/connection-parameters.md)
   - [Scheduled queries](api/scheduled-queries.md)
   - [Runs for scheduled queries](api/runs-scheduled-queries.md)
-  - [Query alerts](api/alert-subscriptions.md)
   - [Query templates](api/query-templates.md)
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
