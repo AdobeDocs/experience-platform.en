@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Dashboards Help
 breadcrumb-title: Dashboards Guide
-user-guide-description: Visualize Experience Platform data on customizable dashboards.
+user-guide-description: Learn about Experience Platform Dashboards and how to visualize data on customizable dashboards.
 feature: Dashboards
 ---
 
