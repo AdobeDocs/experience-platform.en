@@ -64,6 +64,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567",
           "deltaColumn": {
@@ -76,6 +77,7 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
+| `params.startTime` | An integer that defines the start time of the run. The value is represented in unix epoch time. |
 | `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
 | `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. |
@@ -164,6 +166,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567"
       }
@@ -173,6 +176,7 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
+| `params.startTime` | An integer that defines the start time of the run. The value is represented in unix epoch time. |
 | `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
 | `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
 
