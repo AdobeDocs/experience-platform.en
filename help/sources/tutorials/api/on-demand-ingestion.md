@@ -64,6 +64,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567",
           "deltaColumn": {
@@ -76,9 +77,10 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
+| `params.startTime` | An integer that defines the start time of the run. The value is represented in unix epoch time. |
 | `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
 | `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
-| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. |
+| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 
 **Response**
@@ -87,37 +89,20 @@ A successful response returns the details of the newly created flow run, includi
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567",
-        "deltaColumn": {
-            "name": "DOB"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
-        }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | Property | Description |
 | --- | --- |
 | `id` | The ID of the newly created flow run. See the guide on [retrieving flow specifications](../api/collect/database-nosql.md#specs) for more information on table-based run specifications. |
+| `etag` | The resource version of the flow run. |
+<!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
 | `createdBy` | The organization ID of the user who created the flow run. |
@@ -133,7 +118,7 @@ A successful response returns the details of the newly created flow run, includi
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 | `etag` | The resource version of the flow run. |
-| `metrics` | This property displays a status summary for the flow run. |
+| `metrics` | This property displays a status summary for the flow run. | -->
 
 ## Create a flow run for a file-based source
 
@@ -164,6 +149,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567"
       }
@@ -173,6 +159,7 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
+| `params.startTime` | An integer that defines the start time of the run. The value is represented in unix epoch time. |
 | `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
 | `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
 
@@ -183,49 +170,19 @@ A successful response returns the details of the newly created flow run, includi
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567"
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `id` | The ID of the newly created flow run. See the guide on [retrieving flow specifications](../api/collect/cloud-storage.md#specs) for more information on file-based run specifications. |
-| `createdAt` | The unix timestamp that designates when the flow run was created. |
-| `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
-| `createdBy` | The organization ID of the user who created the flow run. |
-| `updatedBy` | The organization ID of the user who last updated the flow run. |
-| `createdClient` | The application client that created the flow run. |
-| `updatedClient` | The application client that last updated the flow run. |
-| `sandboxId` | The ID of the sandbox that contains the flow run. |
-| `sandboxName` | The name of the sandbox that contains the flow run. |
-| `imsOrgId` | The organization ID. |
-| `flowId` | The ID of the flow in which the flow run is created against. |
-| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
-| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `id` | The ID of the newly created flow run. See the guide on [retrieving flow specifications](../api/collect/database-nosql.md#specs) for more information on table-based run specifications. |
 | `etag` | The resource version of the flow run. |
-| `metrics` | This property displays a status summary for the flow run. |
-
 
 ## Monitor your flow runs
 
