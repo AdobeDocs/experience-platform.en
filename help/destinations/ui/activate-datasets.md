@@ -15,7 +15,7 @@ This article explains the workflow required to export [datasets](/help/catalog/d
 ## When to activate segments or export datasets
 
 Some destinations in the Experience Platform catalog support both segment activation and dataset export. 
-* Consider activating segments when you want your data structured by audience interests or qualifications. 
+* Consider activating segments when you want your data structured into profiles grouped by audience interests or qualifications. 
 * On the other hand, consider dataset exports when you are looking to export raw dataset data, which is not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science tasks, to satisfy compliance requirements, and many other use cases.
 
 If you are looking to export datasets, this document has all the information you need. If you are looking to activate segments to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
@@ -67,7 +67,7 @@ Use the check boxes to the left of the dataset names to select the datasets that
 
 In the **[!UICONTROL Scheduling]** step, you can set a start date as well as an export cadence for your dataset exports.
 
-Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of the dataset and subsequent files are incremental additions to the dataset since the previous export.
+The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export where the first file is a full snapshot of the dataset and subsequent files are incremental additions to the dataset since the previous export.
 
 >[!IMPORTANT]
 >
@@ -82,7 +82,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. 
+3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Note that in the beta version of the feature, it is not possible to set an end data for the exports. For more information, view the [known limitations](#known-limitations) section.
 
 4. Select **[!UICONTROL Next]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
 
@@ -110,15 +110,23 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Verify successful dataset export {#verify}
 
-For email marketing destinations and cloud storage destinations, Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. The default file format is:
+When exporting datasets, Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. The default file format is:
 `<destinationName>_dataset<datasetID>_<timestamp-yyyymmddhhmmss>.csv`
 
-For example, if you selected a daily export and the file type `.json`, the files that you would receive on three consecutive days could look like this:
+Experience Platform creates a folder structure in the storage location you specified, where it will deposit exported dataset files. 
+
+```
+https://your-aws-bucket/testbucket/61008328d507a618a3a2a356/exportTime=20210913220707/part-00000-tid-5271363778445977593-ddb8f635-d35d-49df-9a12-0150c6a4cc9b-4-1-c000.snappy.parquet
+```
+
+/datasetID/exportTime/actualFile(s)
+
+For example, if you selected a daily export and the file type `.json`, the files and the folder structure that you would receive on three consecutive days could look like this:
 
 ```console
-Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220408061804.csv
-Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220409052200.csv
-Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220410061130.csv
+/61008328d507a618a3a2a356/exportTime=20221120184500/part-00000-tid-5271363778445977593-ddb8f635-d35d-49df-9a12-0150c6a4cc9b-4-1-c000.snappy.json
+/61008328d507a618a3a2a356/exportTime=20221121184500/part-00000-tid-5271363778445977593-ddb8f635-d35d-49df-9a12-0150c6a4cc9b-4-1-c000.snappy.json
+/61008328d507a618a3a2a356/exportTime=20221121184500/part-00000-tid-5271363778445977593-ddb8f635-d35d-49df-9a12-0150c6a4cc9b-4-1-c000.snappy.json
 ```
 
 In another example, if you selected an hourly export every four hours and the file type `.parquet`, the files that you would receive in three consecutive exports could look like this:
@@ -129,6 +137,19 @@ Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220409052200.csv
 Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220410061130.csv
 ```
 
+Alongside these files, Experience Platform also deposits a manifest file for each export in the storage location. 
+
 ### Sample dataset files {#sample-fil}
 
 The presence of these files in your storage location is confirmation of successful export. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) or [.json file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes xxxx. 
+
+## Known limitations {#known-limitations}
+
+Keep in mind the following limitations:
+
+* There is currently a single permission that includes Manage and Activate permissions on datasets. These controls will be split up in the future to miror whats in Profile Activation
+* Currently, you can only export incremental files and an end date cannot be selected for your dataset exports. 
+* Exported filenames are currently not customizable
+* Currently, you cannot unmap any datasets that you map to an export flow.
+* The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations.
+* Monitoring numbers -- need to clarify monitoring known limitations
