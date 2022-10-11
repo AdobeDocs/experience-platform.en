@@ -64,6 +64,7 @@ Note down the items below before you authenticate to the [!DNL Salesforce Market
 {style="table-layout:auto"}
 
 ## Limits in [!DNL Salesforce Marketing Cloud] {#limits}
+
 * Salesforce imposes certain [rate limits](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting.html).
     * Refer to the [!DNL Salesforce Marketing Cloud] [documentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rate-limiting-errors.html) to address any probable limits that you might encounter and reduce errors during execution.
     * Refer to the [[!DNL Salesforce Marketing Cloud] Engagement Pricing](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) page to *Download the Full Edition Comparison Chart* as a pdf which details the limits imposed by your plan.
@@ -204,7 +205,7 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Log in to the [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/) website. Then navigate to the **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** page and check if the profiles from the segment have been added.
 ![Salesforce Marketing Cloud UI screenshot showing the Contacts page with profiles used in the segment.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
-1. To check if any profiles have been updated, navigate to the **[!DNL Email]** page and verify if the attribute values for the profile from the segment have been updated. If successful you can see that each segment status in [!Salesforce Marketing Cloud] was updated with the corresponding segment status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [segment scheduling](#schedule-segment-export-example) step.
+1. To check if any profiles have been updated, navigate to the **[!UICONTROL Email]** page and verify if the attribute values for the profile from the segment have been updated. If successful, you can see that each segment status in [!DNL Salesforce Marketing Cloud] was updated with the corresponding segment status from Platform, based on the **[!UICONTROL Mapping ID]** value provided in the [segment scheduling](#schedule-segment-export-example) step.
 ![Salesforce Marketing Cloud UI screenshot showing the selected Contacts Email page with updated segment statuses.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
 
 ## Data usage and governance {#data-usage-governance}
@@ -214,6 +215,7 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
 
 ### Unknown errors encountered while pushing events to Salesforce Marketing Cloud {#unknown-errors}
+
 When checking a dataflow run, you might encounter the following error message: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
 
 ![Platform UI screenshot showing error.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
@@ -222,4 +224,4 @@ To fix this error, verify that the **[!UICONTROL Mapping ID]** that you provided
 
 ## Additional resources {#additional-resources}
 
-* [!DNL Salesforce Marketing Cloud API's](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
+* [[!DNL Salesforce Marketing Cloud] APIs](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
