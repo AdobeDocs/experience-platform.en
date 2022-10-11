@@ -94,7 +94,7 @@ The following video extension objects are to be included:
 
 >[!TIP]
 >
->For those who might not want to provision multiple eVars or props for each video element, there is an alternative method. Data element values can be concatenated within the Data Collection UI. Next they are parsed into classification reports using the Classification Rule Builder Tool. See the [Classification Rule Builder Tool](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) documentation for more information. Finally, they are applied as a segment in Analysis Workspace.
+>For those who might not want to provision multiple eVars or props for each video element, data element values are concatenated as an alternative method. Next they are parsed into classification reports using the Classification Rule Builder Tool. See the [Classification Rule Builder Tool](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) documentation for more information. Finally, they are applied as a segment in Analysis Workspace.
 >
 >To do this, create a new data element called something like "Video MetaData" and program it to pull in all the video data elements (listed above) and concatenate them together.
 

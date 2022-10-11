@@ -130,7 +130,7 @@ The following table outlines the schema fields in the raw scores example output:
 | commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city: San Jose |
 | customerProfile (Object) | False | Identity details of the user used to build the model. |
 | identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
-| id (String) | True | Identity ID of the user such as cookie ID or AAID or MCID etc. <br> **Example:** 17348762725408656344688320891369597404 |
+| id (String) | True | Identity ID of the user such as cookie ID, Adobe Analytics ID (AAID), or Experience Cloud ID (ECID, also known as MCID or as visitor ID) etc. <br> **Example:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
 | touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by | touchpoint occurrence or timestamp. |
 | touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |

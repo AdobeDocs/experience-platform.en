@@ -9,7 +9,10 @@ feature: Queries
 # Adobe Experience Platform Query Service {#query}
 
 - [Query Service overview](home.md)
-- [Guardrails for Query Service](guardrails.md)
+- [Query Service packaging](packages.md)
+- [Query Service guardrails](guardrails.md)
+- Data Distiller {#data-distiller}
+  - [Licence usage](data-distiller/licence-usage.md)
 - Get started {#get-started}
   - [Prerequisites](get-started/prerequisites.md)
 - Use cases {#use-cases}
@@ -52,11 +55,13 @@ feature: Queries
   - [Spark SQL functions](sql/spark-sql-functions.md)
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
+  - [Dataset samples](sql/dataset-samples.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
   - [SSL modes](./clients/ssl-modes.md)
   - [Aqua Data Studio](clients/aqua-data-studio.md)
   - [Db Visualizer](./clients/dbvisulaizer.md)
+  - [Jupyter Notebook](clients//jupyter-notebook.md)
   - [Looker](clients/looker.md)
   - [Postico](clients/postico.md)
   - [Power BI](clients/power-bi.md)

@@ -5,13 +5,13 @@ description: Adobe Experience Platform provides a dashboard through which you ca
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 ---
-# Segments dashboard {#segment-dashboard}
+# [!UICONTROL Segments] dashboard {#segment-dashboard}
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your segments, as captured during a daily snapshot. This guide outlines how to access and work with the segments dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
 
 For an overview of all of the Adobe Experience Platform Segmentation Service features within the Platform user interface, please visit the [Segmentation Service UI guide](../../segmentation/ui/overview.md).
 
-## Segment dashboard data
+## [!UICONTROL Segments] dashboard data
 
 The segment dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile store in Experience Platform. The snapshot does not include any event (time series) data. 
 
@@ -21,7 +21,7 @@ The attribute data in the snapshot shows the data exactly as it appears at the s
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
-## Exploring the segment dashboard
+## Explore the [!UICONTROL Segments] dashboard {#explore}
 
 To navigate to the [!UICONTROL Segments] dashboard within the Platform UI, select **[!UICONTROL Segments]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
@@ -29,13 +29,21 @@ To navigate to the [!UICONTROL Segments] dashboard within the Platform UI, selec
 >
 >If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Segments] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with segmentation.
 
-![](../images/segments/dashboard-overview.png)
+![The Segments dashboard Overview tab.](../images/segments/dashboard-overview.png)
 
-### Modifying the [!UICONTROL Segments] dashboard
+### Modify the [!UICONTROL Segments] dashboard {#modify}
 
 You can modify the appearance of the [!UICONTROL Segments] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the **[!UICONTROL Widget library]** to explore available widgets and create custom widgets for your organization. 
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [Widget library overview](../customize/widget-library.md) documentation to learn more.
+
+### Add widgets {#add-widget}
+
+Select **[!UICONTROL Add widget]** to navigate to the widget library and see a list of the available widgets to add to your dashboard.
+
+![The Segments dashboard overview with Add widget highlighted.](../images/segments/segments-overview-add-widget.png)
+
+From the widget library, you can browse the selection of standard and custom segment widgets.For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets). 
 
 ## Select a segment
 
@@ -47,15 +55,15 @@ To choose a different segment, select the dropdown next to the segment name or u
 >
 >Only segments with a profile count above zero are displayed in the list of selectable segments.
 
-![](../images/segments/change-segment.png)
+![The Segments dashboard overview with the global segment dropdown menu highlighted.](../images/segments/change-segment.png)
 
-![](../images/segments/select-segment-dialog.png)
+![The Select segment dialog that displays all available segments.](../images/segments/select-segment-dialog.png)
 
 ## Widgets and metrics
 
 The segments dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. 
 
-The date and time of the most recent snapshot is displayed at the top of the [!UICONTROL Overview] tab next to the segment dropdown. All widget data is accurate as of that date and time. The timestamp of the snapshot is provided in UTC; it is not in the timezone of the individual user or organization.
+The date and time of the most recent snapshot are displayed at the top of the [!UICONTROL Overview] tab next to the segment dropdown. All widget data is accurate as of that date and time. The timestamp of the snapshot is provided in UTC; it is not in the timezone of the individual user or organization.
 
 ![The Segments Overview tab with a widget timestamp highlighted.](../images/segments/widget-timestamp.png)
 
@@ -71,6 +79,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
 * [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
 * [[!UICONTROL Audience overlap]](#audience-overlap)
+* [[!UICONTROL Audience overlap report]](#audience-overlap-report)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Scheduled activations]](#scheduled-activations)
@@ -86,7 +95,7 @@ The **[!UICONTROL Audience size]** widget displays the total number of merged pr
 
 For more information on fragments and merged profiles, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
-![](../images/segments/audience-size.png)
+![The Segments dashboard overview with the Audience size widget highlighted.](../images/segments/audience-size.png)
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
@@ -99,7 +108,7 @@ The **[!UICONTROL Audience size trend]** widget provides a line graph illustrati
 
 This widget also includes the automatic [!UICONTROL Captions] feature where a machine learning model analyzes the chart and segment data and automatically generates captions to describe the key trends and important events. Select **[!UICONTROL Captions]** to open the automatic captions dialog. 
 
-![The segments overview displays the Audience size trend widget.](../images/segments/audience-size-trend-captions.png)
+![The Segments overview displays the Audience size trend widget.](../images/segments/audience-size-trend-captions.png)
 
 The automatic captions dialog opens providing insights on your data. 
 
@@ -133,14 +142,33 @@ This widget enables you to optimize your segmentation strategy by visualizing th
 
 ![The Audience overlap widget.](../images/segments/audience-overlap.png)
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+This widget tabularizes the audience overlap data for a specific segment. A list of five audiences ranked from highest to lowest overlap percentages is provided for the segment chosen from the dropdown menu at the top of the screen. For clarity, your chosen segment is listed in the [!UICONTROL SEGMENT A NAME] column. Audience overlap analysis is provided for the second segment listed in the [!UICONTROL SEGMENT B NAME] column. The percentage overlap is provided in the third column accurate to twelve decimal places.
 
-<!-- ![The Audience overlap report widget.]() -->
+The audience overlap report helps you to build new, high-performance segments. Observing high percentage overlaps enables you to suppress audiences and prevent sending the same audience to different destinations. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
 
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
+Select **[!UICONTROL View more]** to open a full-screen dialog that contains more segment overlap data.
+
+![The Audience overlap report widget with View more highlighted .](../images/segments/audience-overlap-report.png)
+
+The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. Select the settings icon (![The settings icon.](../images/segments/settings-icon.png)) to remove or add columns from the table.
+
+![The Audience overlap report dialog.](../images/segments/audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Select the **[!UICONTROL Overlapping]** column header to change the ranking of results between highest to lowest or lowest to highest.
+
+To download the entire report in PDF format, select the options menu (**`...`**) followed by **[!UICONTROL Download]**.
+
+![The Audience overlap report dialog with the ellipses and Download option highlighted.](../images/segments/segments-audience-overlap-report-dialog-download.png)
+
+Select a row from the report to open a Venn diagram of the overlap analysis. Hover over a section of the Venn diagram to see the profile count in a dialog.
+
+![The Audience overlap report dialog with a Venn diagram and a row highlighted.](../images/segments/audience-overlap-report-dialog-venn.png)
+
+Select **[!UICONTROL Close]** to return to the [!UICONTROL Segments] dashboard.
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 
@@ -157,7 +185,7 @@ If a customer interacts with your brand on more than one channel, multiple ident
 
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
-![](../images/segments/identity-overlap.png)
+![The Segments dashboard overview with the Identity overlap widget highlighted.](../images/segments/identity-overlap.png)
 
 ### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
@@ -170,7 +198,7 @@ The **[!UICONTROL Profiles by identity]** widget displays the breakdown of ident
 
 Select **[!UICONTROL Captions]** to open the automatic captions dialog.
 
-![The profiles by identity captions dialog.](../images/segments/profiles-by-identity.png)
+![The Profiles by identity captions dialog.](../images/segments/profiles-by-identity.png)
 
 A machine learning model automatically generates data insights by analyzing the overall distribution and key dimensions of the data.
 

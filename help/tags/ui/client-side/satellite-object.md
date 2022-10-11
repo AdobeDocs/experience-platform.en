@@ -45,7 +45,7 @@ In the example provided, if a data element exists with a matching name, the data
 
 >[!NOTE]
 >
->You can use percent (`%`) syntax to reference variables for many form fields in the Data Collection UI, reducing the need to call `_satellite.getVar()`. For example, using `%product%` will access the value of the product data element or custom variable.
+>You can use percent (`%`) syntax to reference variables for many form fields in your tag implementation, reducing the need to call `_satellite.getVar()`. For example, using `%product%` will access the value of the product data element or custom variable.
 
 When an event triggers a rule, you can pass the rule's corresponding `event` object into `_satellite.getVar()` like so:
 

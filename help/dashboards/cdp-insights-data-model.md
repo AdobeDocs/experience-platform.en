@@ -3,13 +3,9 @@ title: Customer Data Platform (CDP) Insights Data Model
 description: Learn how to use SQL queries from CDP Insights Data Models to customize your own CDP reports for your marketing and KPI use cases.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 ---
-# (Beta) Customer Data Platform (CDP) Insights Data Model
+# Customer Data Platform (CDP) Insights Data Model
 
->[!IMPORTANT]
->
->The CDP Insights Data Models feature is in beta. Its features and documentation are subject to change.
-
-The Customer Data Platform (CDP) Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your used-defined dashboards.
+The Customer Data Platform (CDP) Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards.
 
 ## Prerequisites
 
@@ -57,7 +53,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 #### The Single identity profiles use case
 
-The logic used for the [!UICONTROL Single identity profiles] widget provides a count of your organization’s profiles that only have one type of ID type that creates their identity. See the[[!UICONTROL Single identity profiles] widget documentation](./guides/profiles.md#single-identity-profiles) for more information.
+The logic used for the [!UICONTROL Single identity profiles] widget provides a count of your organization's profiles that only have one type of ID type that creates their identity. See the[[!UICONTROL Single identity profiles] widget documentation](./guides/profiles.md#single-identity-profiles) for more information.
 
 The SQL that generates the [!UICONTROL Single identity profiles] widget is seen in the collapsible section below.
 
@@ -210,7 +206,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### Most used destinations use case
 
-The logic used in the [!UICONTROL Most used destinations] widget lists your organization’s most used destinations according to the number of segments mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the [[!UICONTROL Most used destinations] widget](./guides/destinations.md#most-used-destinations) for more information.
+The logic used in the [!UICONTROL Most used destinations] widget lists your organization's most used destinations according to the number of segments mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the [[!UICONTROL Most used destinations] widget](./guides/destinations.md#most-used-destinations) for more information.
 
 The SQL that generates the [!UICONTROL Most used destinations] widget is seen in the collapsible section below.
 

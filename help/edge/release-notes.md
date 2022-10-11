@@ -10,6 +10,23 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](extension/web-sdk-ext-release-notes.md).
 
+## Version 2.13.0 - September 28, 2022
+
+**New features**
+
+* Added support for [Page by Page Full Migration](home.md#migrating-to-web-sdk). The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
+* Added configurable support for [high entropy User-Agent Client Hints](fundamentals/user-agent-client-hints.md#high-entropy). 
+* Added support for the new `applyResponse` command. This enables hybrid personalization via the [Edge Network Server API](../server-api/overview.md).
+* QA mode links now work across multiple pages.
+
+**Fixes and improvements**
+
+* Fixed an issue where personalization click tracking metrics were not updated when link tracking was disabled.
+* Updated commands to throw a validation error when unknown options are specified.
+* The `_experience.decisioning.propositionEventType` property is now populated when automatically sending display and interaction personalization events.
+* Added duplicated namespace validation for the `getIdentity` command.
+* Added duplicated decision scope validation for the `sendEvent` command.
+
 ## Version 2.12.0 - June 29, 2022
 
 * Change the requests to the Edge Network to use the `cluster` cookie location hint as part of the URL. This ensures that users who change their location (e.g. through a VPN or driving with mobile devices, etc) mid session hit the same edge and have the same personalization profile. 

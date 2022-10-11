@@ -14,6 +14,7 @@ feature: Sources
     - [Analytics Classifications source](connectors/adobe-applications/classifications.md)
     - [Analytics source](connectors/adobe-applications/analytics.md)
     - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
+    - [Adobe Campaign Managed Cloud Services source](connectors/adobe-applications/campaign.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
     - Field mappings {#mapping}
@@ -28,7 +29,7 @@ feature: Sources
       - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
       - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
-    - [Google AdWords connector](connectors/advertising/ads.md)
+    - [Google Ads connector](connectors/advertising/ads.md)
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
   - Cloud storage {#cloud-storage}
@@ -97,7 +98,7 @@ feature: Sources
 - API tutorials {#api-tutorials}
   - Create a base connection {#create}
     - Advertising {#advertising}
-      - [Google AdWords](tutorials/api/create/advertising/ads.md)
+      - [Google Ads](tutorials/api/create/advertising/ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
     - Cloud storage {#cloud-storage}
@@ -184,9 +185,11 @@ feature: Sources
     - [Collect protocol data](tutorials/api/collect/protocols.md)
     - [Collect streaming data](tutorials/api/collect/streaming.md)
   - [On-demand ingestion](tutorials/api/on-demand-ingestion.md)
+  - [Filter data at the source level](tutorials/api/filter.md)
   - [Monitor dataflows](tutorials/api/monitor.md)
   - [Update accounts](tutorials/api/update.md)
   - [Update dataflows](tutorials/api/update-dataflows.md)
+  - [Retry failed dataflow runs](tutorials/api/retry-flows.md)
   - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
@@ -195,11 +198,11 @@ feature: Sources
       - [Adobe Analytics (report-suite data)](tutorials/ui/create/adobe-applications/analytics.md)
       - [Adobe Analytics (classifications data)](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
-      - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
+      - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
     - Advertising {#advertising}
-      - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+      - [Google Ads](tutorials/ui/create/advertising/ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
     - Cloud storage {#cloud-storage}
@@ -278,7 +281,6 @@ feature: Sources
     - [Marketing automation connection dataflow](tutorials/ui/dataflow/marketing-automation.md)
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
-  - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
   - [Update accounts](tutorials/ui/update.md)

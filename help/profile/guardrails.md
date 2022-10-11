@@ -104,6 +104,7 @@ The guardrails outlined in this section refer to the number and nature of segmen
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
 | Segments per sandbox | 4000 | Soft | An organization can have more than 4000 segments in total, as long as there are less than 4000 segments in each individual sandbox. Attempting to create additional segments may affect system performance.|
+| Edge segments per sandbox | 150 | Soft | An organization can have more than 150 edge segments in total, as long as there are less than 150 edge segments in each individual sandbox. Attempting to create additional edge segments may affect system performance. | 
 | Streaming segments per sandbox | 500 | Soft | An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments may affect system performance.|
 | Batch segments per sandbox | 4000 | Soft | An organization can have more than 4000 batch segments in total, as long as there are less than 4000 batch segments in each individual sandbox. Attempting to create additional batch segments may affect system performance.|
 
@@ -133,7 +134,7 @@ In this document, there are several guardrails that refer to "profile fragments.
 
 ### Merge policies {#merge-policies}
 
-When bringing data together from multiple sources, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. To learn more about merge policies, begin by reading the [merge policies overview](merge-policies/overview.md).
+When bringing data together from multiple sources, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts the merge policy determines which information to include in the profile for the individual. A maximum of five (5) merge policies is allowed per organization. To learn more about merge policies, please read the [merge policies overview](merge-policies/overview.md).
 
 ### Adobe Analytics report suite datasets in Platform {#aa-datasets}
 
