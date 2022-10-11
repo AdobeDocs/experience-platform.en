@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Query Service Guide
-user-guide-description: Use standard SQL to query data in Platform Data Lake.
+user-guide-description: Use standard SQL to query data in Experience Platform Data Lake.
 feature: Queries
 ---
 
