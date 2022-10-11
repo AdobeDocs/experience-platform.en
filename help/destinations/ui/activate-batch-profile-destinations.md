@@ -207,6 +207,12 @@ For profile-based destinations, you must select the profile attributes that you 
 >
 > Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
+>[!IMPORTANT] 
+>
+>Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
+>
+>![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
