@@ -155,7 +155,7 @@ The following documentation provides further resources on understanding Data Pre
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="Create filter rules"
->abstract="Define row and column level filtering rules when sending data to Real-time Customer Profile. Use row-level filtering to apply conditions and dictate which data to **include for Profile ingestion**. Use column-level filtering to select the columns of data that you want to **exclude for Profile ingestion**. Filtering rules do not apply to data sent to data lake."
+>abstract="Define row and column-level filtering rules when sending data to Real-time Customer Profile. Use row-level filtering to apply conditions and dictate which data to **include for Profile ingestion**. Use column-level filtering to select the columns of data that you want to **exclude for Profile ingestion**. Filtering rules do not apply to data sent to data lake."
 
 >[!IMPORTANT]
 >
