@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Observability Insights Guide
-user-guide-description: Monitor Experience Platform activities by using statistical metrics and event notifications.
+user-guide-description: Use statistical metrics and event notifications to monitor Experience Platform activities.
 feature: Observability
 ---
 
