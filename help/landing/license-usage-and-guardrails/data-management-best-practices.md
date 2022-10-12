@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data management;license entitlement;licensing;best practices
 title: Data Management License Entitlement Best Practices
-description: This document outlines best practices to follow and tools you can use to better manage your license entitlements with Adobe Experience Platform.
+description: Learn about best practices and tools you can use to better manage your license entitlements with Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 ---
 # Data management license entitlement best practices 
@@ -48,7 +48,7 @@ The availability of these metrics and the specific definition of each of these m
 
 ## License usage dashboard
 
-The Adobe Experience Platform UI provides a dashboard through which you can view a snapshot of your organization’s license-related data for Platform. The data in the dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. The snapshot is neither an approximation nor a sample of data, and the dashboard is not updating in real-time.
+The Adobe Experience Platform UI provides a dashboard through which you can view a snapshot of your organization's license-related data for Platform. The data in the dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. The snapshot is neither an approximation nor a sample of data, and the dashboard is not updating in real-time.
 
 For more information, see the guide on [using the license usage dashboard on Platform UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
