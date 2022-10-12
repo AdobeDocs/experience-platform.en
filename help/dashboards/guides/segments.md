@@ -79,6 +79,7 @@ To learn more about each of the available standard widgets, select the name of a
 * [[!UICONTROL Audience size change trend]](#audience-size-change-trend)
 * [[!UICONTROL Audience size trend by identity]](#audience-size-trend-by-identity)
 * [[!UICONTROL Audience overlap]](#audience-overlap)
+* [[!UICONTROL Audience overlap report]](#audience-overlap-report)
 * [[!UICONTROL Identity overlap]](#identity-overlap)
 * [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 * [[!UICONTROL Scheduled activations]](#scheduled-activations)
@@ -141,14 +142,33 @@ This widget enables you to optimize your segmentation strategy by visualizing th
 
 ![The Audience overlap widget.](../images/segments/audience-overlap.png)
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL Audience overlap report] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+This widget tabularizes the audience overlap data for a specific segment. A list of five audiences ranked from highest to lowest overlap percentages is provided for the segment chosen from the dropdown menu at the top of the screen. For clarity, your chosen segment is listed in the [!UICONTROL SEGMENT A NAME] column. Audience overlap analysis is provided for the second segment listed in the [!UICONTROL SEGMENT B NAME] column. The percentage overlap is provided in the third column accurate to twelve decimal places.
 
-<!-- ![The Audience overlap report widget.]() -->
+The audience overlap report helps you to build new, high-performance segments. Observing high percentage overlaps enables you to suppress audiences and prevent sending the same audience to different destinations. They also help you identify hidden insights that might help with better segmentation. Low percentage overlap helps to locate unique profiles to pursue.
 
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
+Select **[!UICONTROL View more]** to open a full-screen dialog that contains more segment overlap data.
+
+![The Audience overlap report widget with View more highlighted .](../images/segments/audience-overlap-report.png)
+
+The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. Select the settings icon (![The settings icon.](../images/segments/settings-icon.png)) to remove or add columns from the table.
+
+![The Audience overlap report dialog.](../images/segments/audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>Select the **[!UICONTROL Overlapping]** column header to change the ranking of results between highest to lowest or lowest to highest.
+
+To download the entire report in PDF format, select the options menu (**`...`**) followed by **[!UICONTROL Download]**.
+
+![The Audience overlap report dialog with the ellipses and Download option highlighted.](../images/segments/segments-audience-overlap-report-dialog-download.png)
+
+Select a row from the report to open a Venn diagram of the overlap analysis. Hover over a section of the Venn diagram to see the profile count in a dialog.
+
+![The Audience overlap report dialog with a Venn diagram and a row highlighted.](../images/segments/audience-overlap-report-dialog-venn.png)
+
+Select **[!UICONTROL Close]** to return to the [!UICONTROL Segments] dashboard.
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
 

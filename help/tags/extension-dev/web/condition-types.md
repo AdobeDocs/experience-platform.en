@@ -23,7 +23,7 @@ This document covers how to define condition types for a web extension in Adobe 
 
 Condition types typically consist of the following:
 
-1. A [view](./views.md) shown within the Data Collection UI that allows users to modify settings for the condition.
+1. A [view](./views.md) shown within the Experience Platform UI and Data Collection UI that allows users to modify settings for the condition.
 2. A library module emitted within the tag runtime library to interpret the settings and evaluate a condition.
 
 A condition-type library module has one goal: evaluate whether something is true or false. What it evaluates is up to you.
