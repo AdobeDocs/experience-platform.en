@@ -26,7 +26,10 @@ Note the following prerequisites in [!DNL LINE], in order to export data from Pl
 
 #### You need to have a [!DNL LINE] account {#prerequisites-account}
 
-Go to the [!DNL LINE] [signup](https://account.line.biz/signup) page to register and create an account, if you do not have one already.
+You need to register and create a [!DNL LINE] account, if you do not have one already. To create an account:
+
+1. Navigate to the [!DNL LINE] [acount login](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) page
+2. Select **[!UICONTROL Create an account]**.
 
 #### Gather the [!DNL LINE channel access token (long-lived)] from the [!DNL LINE] developer console {#gather-credentials}
 
