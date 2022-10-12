@@ -1,20 +1,22 @@
 ---
-title: Activate datasets to cloud storage destinations
+title: Export datasets to cloud storage destinations
 type: Tutorial
-description: Learn how to activate datasets from Adobe Experience Platform to your preferred cloud storage location.
+description: Learn how to export datasets from Adobe Experience Platform to your preferred cloud storage location.
 
 ---
-# (Beta) Activate datasets to destinations
+# (Beta) Export datasets to destinations
 
 >[!IMPORTANT]
 >
->The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
+>* The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
+>* This functionality is only available to customers who have purchased the xxxxxx package. Please contact your Adobe representative for more information. 
 
-This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage or email marketing location, such as Amazon S3, SFTP locations, or Oracle Eloqua.
+This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage or email marketing location, such as Amazon S3, SFTP locations, or Google Cloud Storage.
 
 ## When to activate segments or export datasets
 
 Some destinations in the Experience Platform catalog support both segment activation and dataset export. 
+
 * Consider activating segments when you want your data structured into profiles grouped by audience interests or qualifications. 
 * On the other hand, consider dataset exports when you are looking to export raw dataset data, which is not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science tasks, to satisfy compliance requirements, and many other use cases.
 
@@ -26,7 +28,7 @@ To export datasets to cloud storage destinations, you must have successfully [co
 
 ### Required permissions {#permissions}
 
-To activate datasets, you need the INSERT REQUIRED PERMISSIONS **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate and Manage Datasets]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+To export datasets, you need the INSERT REQUIRED PERMISSIONS **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate and Manage Datasets]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 When browsing the destinations catalog, you should see an **[!UICONTROL Activate]** or an **[!UICONTROL Export datasets]** control for a destination. This means that you have the necessary permissions to export datasets and that the destination supports exporting datasets.
 
