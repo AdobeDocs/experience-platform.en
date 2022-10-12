@@ -2,6 +2,8 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;alert;
 title: Alert Subscriptions API Endpoint
 description: This guide provides sample HTTP requests and responses for the various API calls you can make to the alert subscriptions endpoint with the Query Service API.
+hide: true
+hidefromtoc: true
 ---
 # Alert Subscriptions API Endpoint
 
