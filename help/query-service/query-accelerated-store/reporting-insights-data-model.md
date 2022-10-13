@@ -4,9 +4,9 @@ description: Learn how to build a reporting insights data model through Query Se
 ---
 # Query accelerated store reporting insights 
 
-The query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. Typically, data is processed at a regular intervals (for example, on an hourly or daily basis) where aggregate views are created and reported upon. The analysis of these reports generated from an aggregated data derives insights intended to improve business performance. The query accelerated store enables optimized data processing as only the required query data is retrieved.
+The query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. Typically, data is processed at regular intervals (for example, on an hourly or daily basis) where aggregate views are created and reported upon. The analysis of these reports generated from aggregated data derives insights intended to improve business performance. The query accelerated store enables optimized data processing as only the required query data is retrieved.
 
-The query accelerated store also allows you to build on existing Real-time Customer Data Platform data models to engage with or embed your reporting insights into a reporting/visualization framework. Real-time CDP offers Profiles, Segments, and Destinations pre-configured insight dashboards.  This document guides you through the process of creating your reporting insights data model for use with the Adobe stateless API and demonstrates how to extend Real-time CDP data models . 
+The query accelerated store also allows you to build on existing Real-time Customer Data Platform data models to engage with or embed your reporting insights into a reporting/visualization framework. Real-time CDP offers Profiles, Segments, and Destinations as pre-configured insight dashboards. This document guides you through the process of creating your reporting insights data model for use with a stateless Adobe API and demonstrates how to extend Real-time CDP data models.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ This tutorial uses an example of building an audience insight data model. If you
 
 <!-- Q) Which Platform API? -->
 
-<!-- Q) Why do users have a data model fro the start? -->
+<!-- Q) Why do users have a data model from the start? -->
 
 At the outset, you have an initial data model from your sources (potentially from your advertiser platform API). Create a reporting insights model as described in the image below where one dataset gets the upper and lower bounds of audience match.
 
@@ -32,17 +32,15 @@ At the outset, you have an initial data model from your sources (potentially fro
 
 ![An entity relational diagram (ERD) of the audience insight user model.](../images/query-accelerated-store/audience-insight-user-model.png)
 
-In this example, the `externalaudiencereach` table/dataset is based on an ID and tracks the lower and upper bounds for match count. The `externalaudiencemapping` dimension table/dataset maps the external ID to a destination and segment on Platform. The one or more identities in one or more segments make up the destination. These are then used to target the audience using one or more advertiser platforms. 
-
-<!-- MY NOTE:  Reporting is the process of organizing data into summaries. Insights is the result of exploring data and reports in order to extract meaningful information to improve business performance.  -->
+In this example, the `externalaudiencereach` table/dataset is based on an ID and tracks the lower and upper bounds for match count. The `externalaudiencemapping` dimension table/dataset maps the external ID to a destination and segment on Platform. One or more identities in one or more segments are used to activate the destination. This destination is then used to target the audience using one or more advertising platforms. 
 
 ## Create a model for reporting insights with Data Distiller
 
-Next, use the SQL command `ACCOUNT=acp_query_batch and TYPE=QSACCEL` to create a reporting insight model. Then use Query Service to create an `AudienceInsight.AudienceModel` schema for the `audienceinsight` database.
+Next, create a reporting insight model (`audienceinsight` in this example) and use the SQL command `ACCOUNT=acp_query_batch and TYPE=QSACCEL` to ensure it is created on the accelerated store. Then use Query Service to create an `audienceinsight.audiencemodel` schema for the `audienceinsight` database.
 
 >[!NOTE]
 >
->The Data Distiller SKU is required for the `ACCOUNT=acp_query_batch` command. Without it a regular data model is created on the data lake.
+>The Data Distiller SKU is required for the `ACCOUNT=acp_query_batch` command. Without it, a regular data model is created on the data lake.
 
 ```sql
 CREATE database audienceinsight WITH (TYPE=QSACCEL, ACCOUNT=acp_query_batch);
@@ -52,7 +50,7 @@ CREATE schema audienceinsight.audiencemodel;
 
 ## Create tables, relationships, and populate data
 
-The following SQL example demonstrates how to create tables and establish relationships between them.
+Now that you have created your `audienceinsight` reporting insight model, create the `externalaudiencereach` and `externalaudiencemapping` tables and establish relationships between them. Next, use the `ALTER TABLE` command to add a foreign key constraint between the tables and define a relationship. The following SQL example demonstrates how to do this.
 
 ```sql
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencereach
@@ -69,7 +67,6 @@ WITH ( DISTRIBUTION = REPLICATE ) AS
          cast(null as int)  ext_custom_audience_id
    WHERE false;
  
- 
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencemapping
 WITH ( DISTRIBUTION = REPLICATE ) AS
 SELECT cast(null as int) segment_id,
@@ -82,11 +79,11 @@ ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audien
 
 The relationship between the fact and dimension tables is been formed on successful completion of both `ALTER TABLE` commands.
 
-Next, use the `SHOW datagroups;` command to return a list of dataset(s) on the accelerated store from the  `audienceinsight.audiencemodel`. Your tabulated results should be similar to the example provided below.
+After the statements have run, use the `SHOW datagroups;` command to return a list of dataset(s) on the accelerated store from the  `audienceinsight.audiencemodel`. Your tabulated results should be similar to the example provided below.
 
 >[!IMPORTANT]
 >
->Items must be on the accelerated store to be shared with other models in the accelerated store. Only data in the accelerated store is accessible from the Query Service stateless API `POST /data/foundation/query/accelerated-queries`
+>Items must be on the accelerated store to be shared with other models in the accelerated store. Only data in the accelerated store is accessible from the Query Service stateless API `POST /data/foundation/query/accelerated-queries`.
 
 <!-- https://platform-int.adobe.io/data/foundation/query -->
 
@@ -99,7 +96,9 @@ Next, use the `SHOW datagroups;` command to return a list of dataset(s) on the a
 
 ## Query the reporting insight data model
 
-Use Query Service to query the `audiencemodel.externalaudiencereach` reporting insight data model. An example query can be seen below.
+Use Query Service to query the `audiencemodel.externalaudiencereach` dimension table. An example query can be seen below.
+
+<!-- Q) what does this query / returned data show? -->
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -133,11 +132,9 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Extend your data model with the Real-time CDP insights data model
 
-You can extend your audience model with additional details to give a richer dimension table. For example, you can map the segment name and destination name to the external audience identifier. To do this, use Query Service to create or refresh a new dataset and add it to the audience model that combines segments and destinations with external identity. The diagram below illustrates the concept of this data model extension.
+You can extend your audience model with additional details to create a richer dimension table. For example, you can map the segment name and destination name to the external audience identifier. To do this, use Query Service to create or refresh a new dataset and add it to the audience model that combines segments and destinations with an external identity. The diagram below illustrates the concept of this data model extension.
 
 ![An ERD diagram linking the CDP insight data model and the Query accelerated store model.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
-
-<!-- In case we want to extend the audience model with some additional details like mapping the segment name and destination name to the external audience identifier. Using query service to create/refresh a new dataset/table and add it to the audience model that combines segments and destinations with external identity to give a richer dimension table.  -->
 
 ## Use CDP dimension tables to extend your reporting insights model
 
@@ -170,7 +167,9 @@ Use the `SHOW datagroups;` command to confirm the creation of the additional `ex
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach      | true           | 4485c610-7424-4ed6-8317-eed0991b9727
 ```
 
-## Run queries on your extended accelerated store reporting insights data model
+## Query your extended accelerated store reporting insights data model
+
+<!-- Q) why? What does this do /show? -->
 
 Now that the CDP insight data models have been joined to your `audienceinsight` data model, it is ready to be queried.
 
@@ -211,7 +210,7 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 ## Visualize your data with user-defined dashboards
 
-Now that you have created your custom data model you are ready to visualize your data with user-defined dashboards. Your custom data model can be found from the list of available data models in the user-defined dashboard workspace. See the [user-defined dashboard guide](../dashboards/user-defined-dashboards.md) for guidance on how to utilize your custom data model.
+Now that you have created your custom data model you are ready to visualize your data with user-defined dashboards. Your custom data model can be found from the list of available data models in the user-defined dashboard workspace. See the [user-defined dashboard guide](../../dashboards/user-defined-dashboards.md) for guidance on how to utilize your custom data model.
 
 The image below provides an example of the possible custom visualisations using your reporting insights data model.
 
