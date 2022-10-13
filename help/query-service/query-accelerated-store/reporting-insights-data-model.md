@@ -4,33 +4,35 @@ description: Learn how to build a reporting insights data model through Query Se
 ---
 # Query accelerated store reporting insights 
 
-The query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. Typically, data is processed at a regular intervals (for example, on an hourly or daily basis) where aggregate views are created and reported upon.These derived insights intended to improve business performance are generated from an aggregated view of your data. The query accelerated store enables optimized data processing as only the required query data is retrieved.
+The query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. Typically, data is processed at a regular intervals (for example, on an hourly or daily basis) where aggregate views are created and reported upon. The analysis of these reports generated from an aggregated data derives insights intended to improve business performance. The query accelerated store enables optimized data processing as only the required query data is retrieved.
 
-Real-time Customer Data Platform offers the pre-configured Profiles, Segments, and Destinations insight dashboards. The query accelerated store  allows you to build on these existing data models to engage with or embed your reporting insights into a reporting/visualization framework. This document guides you through the creation process of your reporting insights data model for use with the Adobe stateless API. 
+The query accelerated store also allows you to build on existing Real-time Customer Data Platform data models to engage with or embed your reporting insights into a reporting/visualization framework. Real-time CDP offers Profiles, Segments, and Destinations pre-configured insight dashboards.  This document guides you through the process of creating your reporting insights data model for use with the Adobe stateless API and demonstrates how to extend Real-time CDP data models . 
 
 ## Prerequisites
 
-This tutorial uses user-defined dashboards to visualized data from your custom data model within the Platform UI. Please see the [user-defined dashboards documentation](../../dashboards/user-defined-dashboards.md) to learn more about this feature.
+This tutorial uses user-defined dashboards to visualize data from your custom data model within the Platform UI. Please see the [user-defined dashboards documentation](../../dashboards/user-defined-dashboards.md) to learn more about this feature.
 
 ## Getting started
 
-The Data Distiller SKU is required to build a custom data model for your reporting insights that extend the Real-time CDP data models and use data held by Adobe Experience Platform. Please see the [packaging](../packages.md) and guardrails documentation for information concerning [licensing](../data-distiller/licence-usage.md) and [limits of the Data Distiller SKU](../guardrails.md#query-accelerated-store). If you do not have the Data Distiller SKU please contact your Adobe administrator for more information.
+The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-time CDP data models that hold enriched Platform data. Please see the [packaging](../packages.md) and guardrails documentation for information concerning [licensing](../data-distiller/licence-usage.md) and [limits of the Data Distiller SKU](../guardrails.md#query-accelerated-store). If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
 
 ## Build a reporting insights data model
 
-This document uses an example of building an Audience Insight data model. If you use one or more advertiser platform to reach your audience, you can use the Platform API to get an approximate match count of your audience.
+This tutorial uses an example of building an audience insight data model. If you use one or more advertiser platforms to reach your audience, you can use the Platform API to get an approximate match count of your audience.
 
-<!-- Which Platform API? -->
+<!-- Q) Which Platform API? -->
 
-To begin with, you have a data model and from your sources (advertiser platform API). One {WHAT?} will get the upper and lower bounds of audience match. Create a reporting insights model as described in the image below.
+<!-- Q) Why do users have a data model fro the start? -->
+
+At the outset, you have an initial data model from your sources (potentially from your advertiser platform API). Create a reporting insights model as described in the image below where one dataset gets the upper and lower bounds of audience match.
+
+<!-- Q) One {WHAT?} will get the upper and lower bounds of audience match? Dataset? -->
+
+<!-- Q) Why "Create a reporting insights model as described in the image below."? -->
 
 ![An entity relational diagram (ERD) of the audience insight user model.](../images/query-accelerated-store/audience-insight-user-model.png)
 
-The `ExternalAudienceReach` table/dataset is based on an ID and tracks the lower and upper bounds for match count.
-
-<!-- Q) What ID specifically? -->
-
-The `externalAudienceMapping` dimension table/dataset maps the external ID to a destination and segment on Platform. The one or more identities in one or more segments make up the destination. These are then used to target the audience using one or more advertiser platforms. 
+In this example, the `externalaudiencereach` table/dataset is based on an ID and tracks the lower and upper bounds for match count. The `externalaudiencemapping` dimension table/dataset maps the external ID to a destination and segment on Platform. The one or more identities in one or more segments make up the destination. These are then used to target the audience using one or more advertiser platforms. 
 
 <!-- MY NOTE:  Reporting is the process of organizing data into summaries. Insights is the result of exploring data and reports in order to extract meaningful information to improve business performance.  -->
 
