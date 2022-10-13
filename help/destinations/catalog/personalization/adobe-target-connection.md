@@ -8,7 +8,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 
 >[!IMPORTANT]
 >
->A current known limitation is that segments can only be exported to Adobe Target from your Experience Platform *production sandbox*. Activating segments from other or from multiple sandboxes is currently not supported.
+>A currently known limitation is that segments can only be exported to Adobe Target from your Experience Platform *production sandbox*. Activating segments from other or from multiple sandboxes is currently not supported.
 
 ## Destination changelog {#changelog}
 
