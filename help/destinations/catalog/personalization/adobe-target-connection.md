@@ -6,15 +6,12 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 ---
 # Adobe Target connection {#adobe-target-connection}
 
->[!IMPORTANT]
->
->A currently known limitation is that segments can only be exported to Adobe Target from your Experience Platform *production sandbox*. Activating segments from other or from multiple sandboxes is currently not supported.
-
 ## Destination changelog {#changelog}
 
-With the beta release of the enhanced Adobe Target V2 destination connector, you might now be seeing two Adobe Target cards in the destinations catalog.
-
-The Adobe Target V2 destination connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the Adobe V1 card, the Target V2 connector adds a [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to Adobe Target, enabling attribute-based same-page and next-page personalization.
+>[!IMPORTANT]
+>
+>With the beta release of the enhanced Adobe Target V2 destination connector, you might be seeing two Adobe Target cards in the destinations catalog.
+>The Adobe Target V2 destination connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the Adobe V1 card, the Target V2 connector adds a [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to Adobe Target, enabling attribute-based same-page and next-page personalization.
 
 ![Image of the two Adobe Target destination cards in a side-by-side view.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
 
@@ -25,8 +22,6 @@ Adobe Target is an application that provides real-time, AI-powered personalizati
 Adobe Target is a personalization connection in the Adobe Experience Platform destinations catalog.
 
 ## Prerequisites {#prerequisites}
-
-Note the following prerequisites in Experience Platform and Adobe Target, in order to successfully activate segments to the destination.
 
 ### Datastream ID {#datastream-id}
 
@@ -91,7 +86,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
     
 |No datastream selected|Datastream selected|
 |---|---|
-|<ul><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are not supported.</li><li>You can share segments to the Adobe Target connection only for the production sandbox.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul>|<ul><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are supported.</li><li>Segment sharing is supported for other sandboxes.</li></ul>|
+|<ul><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are not supported.</li><li>You can share segments to the Adobe Target connection only for the *default production sandbox*.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul>|<ul><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/configure-personalization-destinations.md) are supported.</li><li>Segment sharing is supported for other sandboxes.</li></ul>|
 
 ### Enable alerts {#enable-alerts}
 
