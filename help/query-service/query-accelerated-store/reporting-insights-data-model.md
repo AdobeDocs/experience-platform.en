@@ -77,9 +77,9 @@ SELECT cast(null as int) segment_id,
 ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audience_id) REFERENCES externalaudiencemapping (ext_custom_audience_id) NOT enforced;
 ```
 
-The relationship between the fact and dimension tables is been formed on successful completion of both `ALTER TABLE` commands.
+The relationship between the fact and dimension tables is been formed on the successful completion of both `ALTER TABLE` commands.
 
-After the statements have run, use the `SHOW datagroups;` command to return a list of dataset(s) on the accelerated store from the  `audienceinsight.audiencemodel`. Your tabulated results should be similar to the example provided below.
+After the statements have run, use the `SHOW datagroups;` command to return a list of the available datasets on the accelerated store from the `audienceinsight.audiencemodel`. Your tabulated results should be similar to the example provided below.
 
 >[!IMPORTANT]
 >
@@ -138,7 +138,7 @@ You can extend your audience model with additional details to create a richer di
 
 ## Use CDP dimension tables to extend your reporting insights model
 
-Use Query Service to add key descriptive attributes from the enriched CDP dimension datasets to the `audienceinsight` data model and establish a relationship between your fact table and new dimension table. The SQL below demonstrates how to integrate existing dimension tables to your reporting insights data model.
+Use Query Service to add key descriptive attributes from the enriched CDP dimension datasets to the `audienceinsight` data model and establish a relationship between your fact table and the new dimension table. The SQL below demonstrates how to integrate existing dimension tables into your reporting insights data model.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
@@ -210,8 +210,8 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 ## Visualize your data with user-defined dashboards
 
-Now that you have created your custom data model you are ready to visualize your data with user-defined dashboards. Your custom data model can be found from the list of available data models in the user-defined dashboard workspace. See the [user-defined dashboard guide](../../dashboards/user-defined-dashboards.md) for guidance on how to utilize your custom data model.
+Now that you have created your custom data model you are ready to visualize your data with user-defined dashboards. Your custom data model can be found in the list of available data models in the user-defined dashboard workspace. See the [user-defined dashboard guide](../../dashboards/user-defined-dashboards.md) for guidance on how to utilize your custom data model.
 
-The image below provides an example of the possible custom visualisations using your reporting insights data model.
+The image below provides an example of the possible custom visualizations using your reporting insights data model.
 
 ![A unique widget created from the new reporting insights data model.](../images/query-accelerated-store/user-defined-dashboard-widget.png)
