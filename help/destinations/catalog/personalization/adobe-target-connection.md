@@ -6,12 +6,15 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 ---
 # Adobe Target connection {#adobe-target-connection}
 
-## Destination changelog {#changelog}
-
 >[!IMPORTANT]
 >
->With the beta release of the enhanced Adobe Target V2 destination connector, you might be seeing two Adobe Target cards in the destinations catalog.
->The Adobe Target V2 destination connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the Adobe V1 card, the Target V2 connector adds a [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to Adobe Target, enabling attribute-based same-page and next-page personalization.
+>A current known limitation is that segments can only be exported to Adobe Target from your Experience Platform *production sandbox*. Activating segments from other or from multiple sandboxes is currently not supported.
+
+## Destination changelog {#changelog}
+
+With the beta release of the enhanced Adobe Target V2 destination connector, you might now be seeing two Adobe Target cards in the destinations catalog.
+
+The Adobe Target V2 destination connector is currently in beta and only available to a select number of customers. In addition to the functionality provided by the Adobe V1 card, the Target V2 connector adds a [mapping step](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) to the activation workflow, which allows you to map profile attributes to Adobe Target, enabling attribute-based same-page and next-page personalization.
 
 ![Image of the two Adobe Target destination cards in a side-by-side view.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
 
