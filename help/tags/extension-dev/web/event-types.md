@@ -21,7 +21,7 @@ This document covers how to define event types for a web extension in Adobe Expe
 
 Event types are defined by extensions and typically consist of the following:
 
-1. A [view](./views.md) shown within the Data Collection UI that allows users to modify settings for the event.
+1. A [view](./views.md) shown within the Experience Platform UI and Data Collection UI that allows users to modify settings for the event.
 2. A library module emitted within the tag runtime library to interpret the settings and watch for a certain activity to occur.
 
 `module.exports` accept both the `settings` and `trigger` parameters. This enables customization of the event-type.

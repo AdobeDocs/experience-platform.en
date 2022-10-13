@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Destinations Guide
-user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and more.
 description: This document lists the table of contents for Adobe Experience Platform destinations
 feature: Destinations
 ---
@@ -112,7 +112,7 @@ feature: Destinations
     * Email marketing destinations {#email-marketing}
         * [Email marketing destinations overview](./catalog/email-marketing/overview.md)
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
-        * [Adobe Campaign Managed Services connection](./catalog/email-marketing/adobe-campaign-managed-services.md)
+        * [Adobe Campaign Managed Cloud Services connection](./catalog/email-marketing/adobe-campaign-managed-services.md)
         * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
         * [(API) Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
@@ -125,6 +125,7 @@ feature: Destinations
         * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
         * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
         * [Braze connection](./catalog/mobile-engagement/braze.md)
+        * [Line connection](./catalog/mobile-engagement/line.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
@@ -167,9 +168,9 @@ feature: Destinations
     * Destination SDK functionality {#functionality}
       * [Configuration options](./destination-sdk/configuration-options.md)
       * [Streaming destination configuration](./destination-sdk/destination-configuration.md)
-      * [(Beta) File-based destination configuration](./destination-sdk/file-based-destination-configuration.md)
+      * [File-based destination configuration](./destination-sdk/file-based-destination-configuration.md)
       * [Streaming destinations server and template specs](./destination-sdk/server-and-template-configuration.md)
-      * [(Beta) File-based destinations server and file specs](./destination-sdk/server-and-file-configuration.md)
+      * [File-based destinations server and file specs](./destination-sdk/server-and-file-configuration.md)
       * [Message format](./destination-sdk/message-format.md)
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
       * Authentication {#authentication}
@@ -199,15 +200,16 @@ feature: Destinations
             * [Validate templatized customer fields](./destination-sdk/file-based-render-template-api.md)
     * Guides {#guides}
       * [Use Destination SDK to configure a streaming destination](./destination-sdk/configure-destination-instructions.md)
-      * [(Beta) Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [Use Destination SDK to configure a file-based destination](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Submit for review a destination authored in Destination SDK](./destination-sdk/submit-destination.md)
       * Configure file-based destinations {#configure-file-based-destinations}
-        * [(Beta) Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-        * [(Beta) Configure an Amazon S3 destination with custom file name and formatting options](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-        * [(Beta) Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-        * [(Beta) Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-        * [(Beta) Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-        * [(Beta) Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+        * [Configure file formatting options](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)        
+        * [Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+        * [Configure an Amazon S3 destination with custom file name and formatting options](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+        * [Configure an Azure Blob Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+        * [Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+        * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+        * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
     * Reference {#reference}
       * [Rate limiting and retry policy for streaming destinations](./destination-sdk/rate-limiting-retry-policy.md)
       * [Supported transformation functions](./destination-sdk/supported-functions.md)

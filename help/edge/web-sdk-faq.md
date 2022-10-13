@@ -76,7 +76,7 @@ Alloy is the code name for Adobe Experience Platform Web SDK. It is used within 
 
 ## Do customers need to buy Adobe Experience Platform to use the [!DNL Web SDK]?
 
-No. Any Adobe Digital Experience customer can use the Adobe Experience Platform Web SDK free of charge. Customers who wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas, datasets, identity namespaces, and datastreams in the Adobe Experience Platform Data Collection UI.
+No. Any Adobe Digital Experience customer can use the Adobe Experience Platform Web SDK free of charge. Customers who wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas, datasets, identity namespaces, and datastreams in the Data Collection UI or Experience Platform UI.
 
 For more information on configuring these permissions see our documentation on [data collection permissions management](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
@@ -129,7 +129,7 @@ No. You can download the `alloy.js` file yourself.
 
 However:
 
-* Adobe Experience Platform Web SDK requires something called a Datastream ID so the edge network can identify the stream and determine what to do with the data. This ID is created within Experience Platform. This doesn't mean you have to use the Data Collection UI to create properties or deploy the JavaScript code, but you do need to use tags to create a configuration ID.
+* Adobe Experience Platform Web SDK requires something called a Datastream ID so the edge network can identify the stream and determine what to do with the data. This ID is created within Experience Platform. This doesn't mean you have to use the UI to create properties or deploy the JavaScript code, but you do need to use tags to create a configuration ID.
 
 * Tags are not only the best available tag and SDK manager, it makes it very easy to deploy `alloy.js` and map data to XDM schemas. If you decide not to use tags, you will have to manage deploying `alloy.js`, eventing, and mapping your data into XDM before sending it. This is a _much_ more difficult process than using tags.
 
@@ -137,7 +137,7 @@ However:
 
 ## What is event forwarding?
 
-If you use our SDKs and send XDM to the Experience Edge, these new features event forwarding allows you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as “data collection as a service”. This will be available for a cost, as well as being bundled as part of Adobe Experience Platform.
+If you use our SDKs and send XDM to the Experience Edge, these new features event forwarding allows you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as "data collection as a service". This will be available for a cost, as well as being bundled as part of Adobe Experience Platform.
 
 ## What is a CNAME or First Party Domain and why does it matter?
 

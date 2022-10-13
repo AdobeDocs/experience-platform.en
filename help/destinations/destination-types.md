@@ -63,7 +63,7 @@ The video below runs you through the particularities of the two types of destina
 
 ## Extensions {#extensions}
 
-Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the Data Collection UI. 
+Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the UI. 
 
 >[!TIP]
 >
@@ -77,7 +77,7 @@ Tag extensions forward raw event data to several types of destinations. Think of
 
 As a marketer, you could use a combination of connections and extensions to address your use cases.
 
-Connections are useful when it’s necessary to leverage a complete centralized customer profile or a customer segment for activation. For example, use connections if you are joining behavioral data from an analytics system with uploaded CRM data to qualify a user for a given segment before delivering a personalized message to that user.
+Connections are useful when it's necessary to leverage a complete centralized customer profile or a customer segment for activation. For example, use connections if you are joining behavioral data from an analytics system with uploaded CRM data to qualify a user for a given segment before delivering a personalized message to that user.
 
 Extensions are helpful when event data is used to trigger an action, or to conduct segmentation in an external environment. For example, if behavioral data needs to be forwarded to an external system without being joined to other data sources on file for a given user.
 

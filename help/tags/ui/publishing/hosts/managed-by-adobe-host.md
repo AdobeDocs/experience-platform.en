@@ -82,9 +82,9 @@ As the table above indicates, browser caching is not supported on development an
 
 Cache-control headers are only applied for the main library build. Any sub-resources below the main library are always considered net-new, and therefore there is no need to cache them on the browser.
 
-## Using Adobe-managed hosting in the Data Collection UI
+## Using Adobe-managed hosting in the UI
 
-When you first create a property in the [Data Collection UI](https://experience.adobe.com/#/data-collection/), an Adobe-managed host is automatically created for you. All available environments that have immediately usable properties are also assigned to the Adobe-managed host by default.
+When you first create a property in the Platform UI or Data Collection UI, an Adobe-managed host is automatically created for you. All available environments that have immediately usable properties are also assigned to the Adobe-managed host by default.
 
 >[!NOTE]
 >
