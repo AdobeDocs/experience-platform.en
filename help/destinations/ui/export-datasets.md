@@ -38,11 +38,11 @@ To select the destination where to export datasets:
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Image showing the destination catalog tab.](/help/destinations/assets/ui/activate-datasets/catalog-tab.png)
+    ![Image showing the destination catalog tab.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
 2. Select **[!UICONTROL Activate]** or **[!UICONTROL Export datasets]** on the card corresponding to the destination where you want to export datasets, as shown in the image below.
 
-    ![Image highlighting the activate control in the destinations catalog tab.](/help/destinations/assets/ui/activate-datasets/activate-button.png)
+    ![Image highlighting the activate control in the destinations catalog tab.](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
 3. Select **[!UICONTROL Data type Datasets]** and select the destination connection where you want to export datasets, then select **[!UICONTROL Next]**.
 
@@ -50,7 +50,7 @@ To select the destination where to export datasets:
   > 
   >If you want to set up a new destination to export datasets, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow. 
 
-  ![Image showing a selection of two destinations that you can connect to.](/help/destinations/assets/ui/activate-datasets/select-datatype-datasets.png)
+  ![Image showing a selection of two destinations that you can connect to.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
 4. Proceed to the next section to [select your datasets](#select-datasets) for export.
 
@@ -58,7 +58,7 @@ To select the destination where to export datasets:
 
 Use the check boxes to the left of the dataset names to select the datasets that you want to export to the destination, then select **[!UICONTROL Next]**.
 
-![Image highlighting the checkboxes selection in the Select datasets step of the activation workflow.](/help/destinations/assets/ui/activate-datasets/select-datasets.png)
+![Image highlighting the checkboxes selection in the Select datasets step of the activation workflow.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## Schedule dataset export {#scheduling}
 
@@ -75,7 +75,7 @@ The **[!UICONTROL Export incremental files]** option is automatically selected. 
 >
 >The first exported incremental file includes all existing data in the dataset, functioning as a backfill.
 
-![Image of the UI with the Export incremental files toggle selected.](/help/destinations/assets/ui/activate-datasets/export-incremental-datasets.png)
+![Image of the UI with the Export incremental files toggle selected.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
@@ -108,7 +108,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 -->
 
-![Image showing the review step of the dataset export workflow.](/help/destinations/assets/ui/activate-datasets/review.png)
+![Image showing the review step of the dataset export workflow.](/help/destinations/assets/ui/export-datasets/review.png)
 
 ## Verify successful dataset export {#verify}
 

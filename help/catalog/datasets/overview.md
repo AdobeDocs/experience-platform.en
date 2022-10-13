@@ -55,7 +55,7 @@ The following is a list of downstream services that use datasets for various ope
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These audiences can then be exported to their own datasets within the [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Uses machine learning and artificial intelligence to uncover insights in large datasets.
 * [Adobe Experience Platform Query Service](../../query-service/home.md): Allows you to use standard SQL to query data in [!DNL Experience Platform], joining any datasets within the [!DNL Data Lake] and capturing query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or [!DNL Real-time Customer Profile].
-* [Adobe Experience Platform Destinations Service](../../destinations/home.md): Allows you to [export datasets](/help/destinations/ui/activate-datasets.md) to your desired cloud storage or email marketing destinations, for reporting or data science activities.
+* [Adobe Experience Platform Destinations Service](../../destinations/home.md): Allows you to [export datasets](/help/destinations/ui/export-datasets.md) to your desired cloud storage or email marketing destinations, for reporting or data science activities.
 
 ## Next steps
 

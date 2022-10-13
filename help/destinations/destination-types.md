@@ -65,7 +65,7 @@ The video below runs you through the particularities of the two types of destina
 
 Use dataset export destinations to export raw dataset data to cloud storage locations. 
 
-Read more about how to [export datasets](/help/destinations/ui/activate-datasets.md).
+Read more about how to [export datasets](/help/destinations/ui/export-datasets.md).
 
 ## Extensions {#extensions}
 
