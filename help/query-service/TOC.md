@@ -34,6 +34,7 @@ feature: Queries
   - [Query templates](ui/query-templates.md)
   - [Using Query Service credentials](ui/credentials.md)
   - [Generating datasets from query results](ui/create-datasets.md)
+- [Monitor queries](monitor-queries.md)
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
