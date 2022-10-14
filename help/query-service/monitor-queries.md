@@ -13,7 +13,7 @@ The [!UICONTROL Scheduled Queries] tab provides an overview of the top  Browse e
 
 {Describe the columns}
 
-| Column name  | Description  |
+| Column | Description  |
 |---|---|
 | Name |   |
 | Template |   |
