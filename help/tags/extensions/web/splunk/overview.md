@@ -53,13 +53,13 @@ Select **Extensions** in the left navigation. Under **Installed**, select **Conf
 
 ![Configure button for the Splunk extension being selected in the UI](../../../images/extensions/splunk/configure.png)
 
-Under **[!UICONTROL Splunk Token]**, enter your [!DNL Event Collector Token] value. For **[!UICONTROL SiteURL]**, enter your Splunk platform instance address and port. When finished, select **[!UICONTROL Save]**.
+For **[!UICONTROL HTTP Event Collector URL]**, enter your Splunk platform instance address and port. Under **[!UICONTROL Access Token]**, enter your [!DNL Event Collector Token] value. When finished, select **[!UICONTROL Save]**.
 
 ![Configuration options filled out in the UI](../../../images/extensions/splunk/input.png)
 
 ## Configure an event forwarding rule {#config_rule}
 
-Start creating a new event forwarding rule [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When selecting the actions for the rule, select the [!UICONTROL Splunk] extension, then select the [!UICONTROL Create Event] action type.
+Start creating a new event forwarding rule [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When selecting the actions for the rule, select the [!UICONTROL Splunk] extension, then select the [!UICONTROL Create Event] action type. Additional controls appear to further configure the Splunk Event.
 
 ![Define Action Configuration](../../../images/extensions/splunk/action-configurations.png)
 
@@ -67,13 +67,13 @@ The next step is to map the Splunk event properties to data elements that you ha
 
 | API Key | Description |
 | --- | --- |
-| `event`<br><br>**(REQUIRED)** | The name of the event to be sent to Splunk. Event data can be assigned to the `event` key within the JSON object in the HTTP request, or it can be raw text. The `event` key is at the same level within the JSON event packet as the metadata keys. Within the `event` key-value curly brackets, the data can be in any form you require (such as a string, a number, another JSON object, and so on). |
-| `host` | The hostname of the client from which you are sending data. |
-| `source` | The source value to assign to the event data. For example, if you are sending data from an app you are developing, set this key to the name of the app. |
-| `sourcetype` | The source type to assign to the event data. |
-| `index` | The name of the event data's index. The index you specify here must be within the list of allowed indexes if the token has the indexes parameter set. |
-| `time` | The event time. The default time format is UNIX time (in the format `<sec>.<ms>`) and depends on your local timezone. For example, `1433188255.500` indicates 1433188255 seconds and 500 milliseconds after epoch, or Monday, June 1, 2015, at 7:50:55 PM GMT. |
-| `fields` | Specifies a JSON object that contains explicit custom fields to be defined at index time.  The `fields` key isn't applicable to raw data<br><br>Requests containing the "fields" property must be sent to the `/collector/event` endpoint, or else they will not be indexed. For more information, see the Splunk documentation on [indexed field extractions](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Event]<br><br>**(REQUIRED)** | Indicate how you want to provide the event data. Event data can be assigned to the `event` key within the JSON object in the HTTP request, or it can be raw text. The `event` key is at the same level within the JSON event packet as the metadata keys. Within the `event` key-value curly brackets, the data can be in any form you require (such as a string, a number, another JSON object, and so on). |
+| [!UICONTROL Host] | The hostname of the client from which you are sending data. |
+| [!UICONTROL Source Type] | The source type to assign to the event data. |
+| [!UICONTROL Source] | The source value to assign to the event data. For example, if you are sending data from an app you are developing, set this key to the name of the app. |
+| [!UICONTROL Index] | The name of the event data's index. The index you specify here must be within the list of allowed indexes if the token has the indexes parameter set. |
+| [!UICONTROL Time] | The event time. The default time format is UNIX time (in the format `<sec>.<ms>`) and depends on your local timezone. For example, `1433188255.500` indicates 1433188255 seconds and 500 milliseconds after epoch, or Monday, June 1, 2015, at 7:50:55 PM GMT. |
+| [!UICONTROL Fields] | Specify a raw JSON object or a set of key-value pairs that contain explicit custom fields to be defined at index time.  The `fields` key isn't applicable to raw data.<br><br>Requests containing the `fields` property must be sent to the `/collector/event` endpoint, or else they will not be indexed. For more information, see the Splunk documentation on [indexed field extractions](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Validate data within Splunk {#validate}
 
