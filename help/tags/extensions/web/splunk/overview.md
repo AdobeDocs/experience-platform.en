@@ -33,7 +33,7 @@ You must also have the following technical values to configure the extension:
 * The Splunk platform instance address and port for your organization. A platform instance address and port will typically have the following format: `mysplunkserver.example.com:443`.
   >[!IMPORTANT]
   >
-  > Splunk endpoints referenced within event forwarding should only use port ``443``. Non-standard ports are currently not supported in event forwarding implementations.
+  > Splunk endpoints referenced within event forwarding should only use port `443`. Non-standard ports are currently not supported in event forwarding implementations.
 
 ## Install the Splunk extension {#install}
 
@@ -57,33 +57,34 @@ Under **[!UICONTROL Splunk Token]**, enter your [!DNL Event Collector Token] val
 
 ![Configuration options filled out in the UI](../../../images/extensions/splunk/input.png)
 
-## Configure an Event Forwarding rule {config_rule}
+## Configure an event forwarding rule {#config_rule}
 
-1. After configuring the conditions under which the rule would execute, define the Event Forwarding [Rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html)
-![Define Rule](../../../images/extensions/splunk/rule.png)
+Start creating a new event forwarding rule [rule](../../../ui/managing-resources/rules.md) and configure its conditions as desired. When selecting the actions for the rule, select the [!UICONTROL Splunk] extension, then select the [!UICONTROL Create Event] action type.
 
-1. Also complete the associated [Action Configurations](https://experienceleague.adobe.com/docs/platform-learn/data-collection/event-forwarding/set-up-a-datastream.html).
 ![Define Action Configuration](../../../images/extensions/splunk/action-configurations.png)
 
-1. Map the data elements, The supported optional mappings based on the input event data that can be set up are given below. Refer to the [Splunk documentation](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/FormateventsforHTTPEventCollector#Event_metadata) for further details.
+The next step is to map the Splunk event properties to data elements that you have previously created. The supported optional mappings based on the input event data that can be set up are given below. Refer to the [Splunk documentation](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/FormateventsforHTTPEventCollector#Event_metadata) for further details.
 
-    | API Key | Connector Field | Description | Mandatory |
-    |---|---|---|---|
-    | ``event`` | ``event`` | The event value contains the name of the Event to be sent to Splunk. Event data can be assigned to the "event" key within the JSON object in the HTTP request, or it can be raw text. The "event" key is at the same level within the JSON event packet as the metadata keys. Within the "event" key-value curly brackets, the data can be in whatever format you want: a string, a number, another JSON object, and so on.| Yes |
-    | ``host`` | ``host`` |The host value to assign to the event data. This key is typically the hostname of the client from which you're sending data.||
-    | ``source`` | ``source`` |The source value to assign to the event data. For example, if you're sending data from an app you're developing, set this key to the name of the app.||
-    | ``sourcetype`` | ``sourcetype`` |The sourcetype value to assign to the event data.||
-    | ``index`` | ``index`` |The name of the index by which the event data is to be indexed. The index you specify here must be within the list of allowed indexes if the token has the indexes parameter set.||
-    | ``time`` | ``time`` |The event time. The default time format is UNIX time format, in the format `<sec>.<ms>` and depends on your local timezone. For example, 1433188255.500 indicates 1433188255 seconds and 500 milliseconds after epoch, or Monday, June 1, 2015, at 7:50:55 PM GMT.||
-    | ``fields`` | ``fields`` |The fields key isn't applicable to raw data. This key specifies a JSON object that contains explicit custom fields to be defined at index time. Requests containing the "fields" property must be sent to the /collector/event endpoint, or else they aren't indexed. For more information, see [Indexed field extractions](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC).||
+| API Key | Description |
+| --- | --- |
+| `event`<br><br>**(REQUIRED)** | The name of the event to be sent to Splunk. Event data can be assigned to the `event` key within the JSON object in the HTTP request, or it can be raw text. The `event` key is at the same level within the JSON event packet as the metadata keys. Within the `event` key-value curly brackets, the data can be in any form you require (such as a string, a number, another JSON object, and so on). |
+| `host` | The hostname of the client from which you are sending data. |
+| `source` | The source value to assign to the event data. For example, if you are sending data from an app you are developing, set this key to the name of the app. |
+| `sourcetype` | The source type to assign to the event data. |
+| `index` | The name of the event data's index. The index you specify here must be within the list of allowed indexes if the token has the indexes parameter set. |
+| `time` | The event time. The default time format is UNIX time (in the format `<sec>.<ms>`) and depends on your local timezone. For example, `1433188255.500` indicates 1433188255 seconds and 500 milliseconds after epoch, or Monday, June 1, 2015, at 7:50:55 PM GMT. |
+| `fields` | Specifies a JSON object that contains explicit custom fields to be defined at index time.  The `fields` key isn't applicable to raw data<br><br>Requests containing the "fields" property must be sent to the `/collector/event` endpoint, or else they will not be indexed. For more information, see the Splunk documentation on [indexed field extractions](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Validate data within Splunk {#validate}
 
-* After triggering the execution of your event forwarding rule, validate whether the event sent to the Splunk API is displayed as expected in the Splunk UI. If the event collection and [!DNL Adobe Experience Platform] integration were successful, you will see events within the Splunk console as follows:
+After creating and executing the event forwarding rule, validate whether the event sent to the Splunk API is displayed as expected in the Splunk UI. If the event collection and Experience Platform integration were successful, you will see events within the Splunk console like so:
 
-![](../../../images/extensions/splunk/splunk-data.png)
+![Event data appearing in the Splunk UI during validation](../../../images/extensions/splunk/splunk-data.png)
 
-## Additional resources {#additional-resources}
+## Next steps
+
+This document covered how to install and configure the Splunk event forwarding extension in the UI. For more information on collecting event data in Splunk, refer to the official documentation:
+
 * [Set up and use HTTP Event Collector in Splunk Web ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
 * [Set up authentication with tokens](https://docs.splunk.com/Documentation/Splunk/8.2.5/Security/Setupauthenticationwithtokens#Prerequisites_for_activating_tokens)
-* [Troubleshoot HTTP Event Collector](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector) which also lists a compendium of [possible error codes](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes).
+* [Troubleshoot HTTP Event Collector](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector) (also lists a compendium of [possible error codes](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes))
