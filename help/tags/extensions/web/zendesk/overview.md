@@ -4,7 +4,7 @@ description: Zendesk event forwarding extension for Adobe Experience Platform.
 ---
 # [!DNL Zendesk] Events API extension overview
 
-[Zendesk](https://www.zendesk.com) is a customer service solution and sales tool. The Zendesk [event forwarding](../../../ui/event-forwarding/overview.md) extension leverages the [!DNL Zendesk Events API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) to send events from the Adobe Experience Platform Edge Network to Zendesk for further processing. You can use the extension to collect customer profile interactions for use in downstream analysis and action.
+[Zendesk](https://www.zendesk.com) is a customer service solution and sales tool. The Zendesk [event forwarding](../../../ui/event-forwarding/overview.md) extension leverages the [[!DNL Zendesk Events API]](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) to send events from the Adobe Experience Platform Edge Network to Zendesk for further processing. You can use the extension to collect customer profile interactions for use in downstream analysis and action.
 
 This document covers how to install and configure the extension in the UI.
 
@@ -73,7 +73,7 @@ These data elements should be mapped as referenced below.
 
 >[!NOTE]
 >
->Refer to the [!DNL Zendesk Events API documentation](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) for additional guidance on event properties.
+>Refer to the [[!DNL Zendesk Events API] documentation](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) for additional guidance on event properties.
 
 ### `profile` keys
 
