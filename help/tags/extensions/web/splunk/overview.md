@@ -47,7 +47,7 @@ Once you have selected or created the desired property, navigate to **Extensions
 
 >[!IMPORTANT]
 >
->Depending on your implementation needs, you may need to create create a schema, data elements, and a dataset before configuring the extension.
+>Depending on your implementation needs, you may need to create create a schema, data elements, and a dataset before configuring the extension. Please review all the configuration steps before starting in order to determine which entities you need to set up for your use case.
 
 Select **Extensions** in the left navigation. Under **Installed**, select **Configure** on the Splunk Extension.
 
