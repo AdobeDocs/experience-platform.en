@@ -124,6 +124,8 @@ solution: Data Collection
     * [!DNL YouTube] video tracking extension {#youtube}
       * [Overview](./extensions/web/youtube/overview.md)
       * [Release notes](./extensions/web/youtube/release-notes.md)
+    * [!DNL Zendesk] Events API extension {#zendesk}
+      * [Overview](./extensions/web/zendesk/overview.md)
   * [Third-party extensions](./extensions/3rd-party-extensions.md)
 * Extension development {#extension-dev}
   * [Overview](./extension-dev/overview.md)

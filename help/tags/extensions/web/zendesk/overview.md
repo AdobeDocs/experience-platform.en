@@ -71,6 +71,10 @@ These data elements should be mapped as referenced below.
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+>
+>Refer to the [!DNL Zendesk Events API documentation](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) for additional guidance on event properties.
+
 ### `profile` keys
 
 `profile` is a JSON object that represents the user that triggered the event. The following keys can be referenced within the `profile` object when mapping to data elements:
@@ -79,56 +83,59 @@ These data elements should be mapped as referenced below.
 | --- | --- | --- | --- | --- | --- |
 | `source` | String | `arc.event.xdm._extconndev.profile_source` | The product or service associated with the profile, such as `Support`, `CompanyName`, or `Chat`. | Yes | (N/A) |
 | `type` | String | `arc.event.xdm._extconndev.profile_type` | The product or service associated with the profile. For example, *Support*, *CompanyName*, or *Chat* | Yes | Profile type length must not exceed 40 characters. |
-| `name` | String | `arc.event.xdm._extconndev.name` | Name of the person from the profile | No | (N/A) |
-| `user_id` | String | `arc.event.xdm._extconndev.user_id` | Person's user id in Zendesk. | No | (N/A) |
-| `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | An array containing at least on identifier. Each identifier consists of a type and a value. | Yes | Refer to the [documentation](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array). All fields and values must be unique. |
-| `attributes` | Object | `arc.event.xdm._extconndev.attrbutes` | An object contaning user-defined properties about the person. | No | Refer to the [documentation](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes). |
+| `name` | String | `arc.event.xdm._extconndev.name` | The name of the person from the profile | No | (N/A) |
+| `user_id` | String | `arc.event.xdm._extconndev.user_id` | The person's user ID in Zendesk. | No | (N/A) |
+| `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | An array containing at least one identifier. Each identifier consists of a type and a value. | Yes | Refer to the [Zendesk documentation](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array) for more information on the `identifiers` array. All fields and values must be unique. |
+| `attributes` | Object | `arc.event.xdm._extconndev.attrbutes` | An object containing user-defined properties about the person. | No | Refer to the [Zendesk documentation](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes) for more information on profile attributes. |
 
 {style="table-layout:auto"}
 
->[!NOTE]
->
->Refer to the [!DNL Zendesk Events API documentation](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) for additional guidance on event properties.
-
 ## Validate data within Zendesk {#validate}
-* If the event collection and Adobe Experience Platform integration are successful, then the events within the Zendesk console should appear as referenced below. This indicates a successful integration.
+
+If the event collection and Adobe Experience Platform integration are successful, then the events within the Zendesk console should appear as shown below. This indicates a successful integration.
+
+Profiles:
+
 ![Zendesk Profiles page](../../../images/extensions/zendesk/zendesk-profiles.png)
+
+Events:
+
 ![Zendesk Events page](../../../images/extensions/zendesk/zendesk-events.png)
 
+## Request limits {#limits}
+
+Based on the account type, the Zendesk [!DNL Events API] can handle the following number of requests per minute:
+
+| [!DNL Account Type] | Requests per minute |
+| --- | --- |
+|[!DNL Team] | 250 |
+|[!DNL Growth] | 250 |
+|[!DNL Professional] | 500 |
+|[!DNL Enterprise] | 750 |
+|[!DNL Enterprise Plus] | 1000 |
+
+Refer to the [Zendesk documentation](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#:~:text=API%20requests%20made%20by%20Zendesk%20apps%20are%20subject,sources%20for%20the%20account%2C%20including%20internal%20product%20requests.) for more information on these limits.
+
 ## Errors and troubleshooting {#errors-and-troubleshooting}
-While using or configuring the *Zendesk Event Forwarding Extension* the errors below might be returned by the Zendesk Events API:
 
-### API / Error Status Codes {#api-status-codes}
+While using or configuring the extension, the errors below might be returned by the Zendesk Events API:
 
- | Error Code | Description | Resolution | Example | 
+| Error Code | Description | Resolution | Example |
 |---|---|---|---|
-| 400 |**Invalid profile length:** This error occurs when the lenght of a profile attribute contains more than 40 characters|Limit the length of the profile attribute data to a maximum of 40 characters|`{"error": [{"code":"InvalidProfileTypeLength","title": "Profile type length > 40 chars"}]}`|
-| 401 |**Route not found:** This error occurs when an invalid domain has been supplied|Verify that a valid domain is supplied in `{subdomain}.zendesk.com` format|`{"error": [{"description": "No route found for host {subdomain}.zendesk.com","title": "RouteNotFound"}]}`|
-| 401 |**Invalid or Missing Authentication:** This error occurs when access the token is invalid, missing, or expired|Verify that access token is valid and has not expired|`{"error": [{"code":"MissingOrInvalidAuthentication","title": "Invalid or Missing Authentication"}]}`|
-| 403 | **Insufficient permissions:** This error occurs when sufficient permissions to access the resource are not provided| Validate that the required permissions have been provided|`{"error": [{"code":"PermissionDenied","title": "Insufficient permisssions to perform operation"}]}`|
-| 429 | **Too Many Requests:** This error occurs when the endpoint object record limit has been exceeded|Reference the per minute API limitation section below|`{"error": [{"code":"TooManyRequests","title": "Too Many Requests"}]}`|
+| 400 |**Invalid profile length:** This error occurs when the length of a profile attribute contains more than 40 characters. | Limit the length of the profile attribute data to a maximum of 40 characters. | `{"error": [{"code":"InvalidProfileTypeLength","title": "Profile type length > 40 chars"}]}` |
+| 401 |**Route not found:** This error occurs when an invalid domain has been supplied. | Verify that a valid domain is supplied in the following format: `{subdomain}.zendesk.com` | `{"error": [{"description": "No route found for host {subdomain}.zendesk.com","title": "RouteNotFound"}]}` |
+| 401 | **Invalid or Missing Authentication:** This error occurs when access the token is invalid, missing, or expired. | Verify that access token is valid and has not expired. |`{"error": [{"code":"MissingOrInvalidAuthentication","title": "Invalid or Missing Authentication"}]}` |
+| 403 | **Insufficient permissions:** This error occurs when sufficient permissions to access the resource are not provided. | Validate that the required permissions have been provided. |`{"error": [{"code":"PermissionDenied","title": "Insufficient permisssions to perform operation"}]}`|
+| 429 | **Too Many Requests:** This error occurs when the endpoint object record limit has been exceeded. |Refer to the section above on [request limits](#limits) for details on per-limit thresholds. |`{"error": [{"code":"TooManyRequests","title": "Too Many Requests"}]}`|
 
-## Additional resources {#additional-resources}
-* The Zendesk Event Forwarding extension interacts with the following APIs
-  * [Zendesk Events API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/)
-  * [Zendesk Profiles API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/#profile-object)
-  * [Zendesk API](https://developer.zendesk.com/api-reference/)
-* Refer to [Getting Started with Events](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/) as a starting point.
+## Next steps
+
+This document covered how to install and configure the Zendesk event forwarding extension in the UI. For more information on collecting event data in Zendesk, refer to the official documentation:
+
+* [Getting Started with Events](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
+* [Zendesk Events API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/)
 * [About the Events API](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
 * [Anatomy of an event](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
+* [Zendesk Profiles API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/#profile-object)
 * [About the Profiles API](https://developer.zendesk.com/documentation/custom-data/profiles/about-the-profiles-api/)
 * [Anatomy of a profile](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/)
-
-
-### Limits {#limits}
-Based on the account type, the Zendesk [!DNL Events API] can handle the following number of requests per minute.
-
-| [!DNL Account Type] | [!DNL Events API] requests per minute |
-|----|---|
-|[!DNL Team] | 250|
-|[!DNL Growth] | 250|
-|[!DNL Professional]  | 500|
-|[!DNL Enterprise]  | 750   |
-|[!DNL Enterprise Plus] |  1000 |
-
-The limits as defined by Zendesk are available [here](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#:~:text=API%20requests%20made%20by%20Zendesk%20apps%20are%20subject,sources%20for%20the%20account%2C%20including%20internal%20product%20requests.).
