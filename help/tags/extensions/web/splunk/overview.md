@@ -65,7 +65,7 @@ Start creating a new event forwarding rule [rule](../../../ui/managing-resources
 
 The next step is to map the Splunk event properties to data elements that you have previously created. The supported optional mappings based on the input event data that can be set up are given below. Refer to the [Splunk documentation](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/FormateventsforHTTPEventCollector#Event_metadata) for further details.
 
-| API Key | Description |
+| Field name | Description |
 | --- | --- |
 | [!UICONTROL Event]<br><br>**(REQUIRED)** | Indicate how you want to provide the event data. Event data can be assigned to the `event` key within the JSON object in the HTTP request, or it can be raw text. The `event` key is at the same level within the JSON event packet as the metadata keys. Within the `event` key-value curly brackets, the data can be in any form you require (such as a string, a number, another JSON object, and so on). |
 | [!UICONTROL Host] | The hostname of the client from which you are sending data. |
