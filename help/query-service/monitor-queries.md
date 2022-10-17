@@ -8,13 +8,15 @@ Adobe Experience Platform provides improved visibility for the status of all que
 
 ## [!UICONTROL Scheduled Queries] 
 
-The [!UICONTROL Scheduled Queries] tab provides a top level overview of the executed and scheduled queries. The workspace contains all your CTAS and ITAS queries that are either scheduled to run, or have been executed at least once. Run details can be found for all scheduled queries as well as error codes and messages for failed queries.
+<!-- THe query schedule browse -->
+
+The [!UICONTROL Scheduled Queries] tab provides an overview of the executed and scheduled queries. The workspace contains all your CTAS and ITAS queries that are either scheduled to run or have been executed at least once. Run details can be found for all scheduled queries as well as error codes and messages for failed queries.
 
 To navigate to the [!UICONTROL Scheduled Queries] tab, select **[!UICONTROL Queries]** from the left navigation bar followed by **[!UICONTROL Scheduled Queries]**
 
 ![The Scheduled Queries tab in the Queries workspace.](./images/monitor-queries/scheduled-queries.png)
 
-The table below provides a description of each available column.
+The table below describes each available column.
 
 >[!NOTE]
 >
@@ -23,7 +25,7 @@ The table below provides a description of each available column.
 | Column | Description  |
 |---|---|
 | Name | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. |
-| Template | The template name of the query. Select the template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked wth a hyphen and there is no ability to redirect to the Query Editor to view the query. |
+| Template | The template name of the query. Select a template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked with a hyphen and there is no ability to redirect to the Query Editor to view the query. |
 | SQL | A snippet of the SQL query.  |
 | Run frequency | This is the cadence at which your query is set to run. There are currently two values `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
 | Created by | The name of the user who created the query. |
@@ -41,21 +43,17 @@ You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your nee
 
 ![The Customize table settings icon.](./images/monitor-queries/customze-table-settings-icon.png)
 
-Toggle the relevant check boxes to remove or add a table column, select **[!UICONTROL Apply]** to confirm your choices.
+Toggle the relevant checkboxes to remove or add a table column, and select **[!UICONTROL Apply]** to confirm your choices.
 
 ![The Customize table settings dialog.](./images/monitor-queries/customize-table-dialog.png)
 
 >[!NOTE]
 >
->Any query was created through the UI becomes a named template as part of the creation process was created. The template column holds the name. if {it} was created through the API then the template column is blank. 
-
-<!-- >[!IMPORTANT]
->
-> -->
+>Any query that was created through the UI becomes a named template as part of the creation process. The template name is seen in the template column. If the query was created through the API then the template column is blank. 
 
 ### Subscribe to alerts {#alert-subscription}
 
-You can subscribe to alerts from the [!UICONTROL Scheduled Queries] tab. Select the alert notification icon (![An alert icon.](./images/monitor-queries/alerts-icon.png)) next to the query name to open the [!UICONTROL Alerts] dialog. The [!UICONTROL Alerts] dialogue allows to you subscribe to an alert based on the status of the query. The three available options are start, success, or failure. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
+You can subscribe to alerts from the [!UICONTROL Scheduled Queries] tab. Select the alert notification icon (![An alert icon.](./images/monitor-queries/alerts-icon.png)) next to a query name to open the [!UICONTROL Alerts] dialog. The [!UICONTROL Alerts] dialog subscribes to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: start, success, and failure. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
 
 ![The alert subscriptions dialog.](./images/monitor-queries/alert-subscription-dialog.png)
 
@@ -67,7 +65,7 @@ You can filter queries based on run frequency. From the [!UICONTROL Scheduled Qu
 
 ![The scheduled queries tab with the filter icon highlighted.](./images/monitor-queries/filter-queries.png)
 
-Select either the **[!UICONTROL Scheduled]** or **[!UICONTROL Run once]** run frequency filter check boxes to filter the list of queries.
+Select either the **[!UICONTROL Scheduled]** or **[!UICONTROL Run once]** run frequency filter checkboxes to filter the list of queries.
 
 >[!NOTE]
 >
@@ -77,9 +75,15 @@ Select either the **[!UICONTROL Scheduled]** or **[!UICONTROL Run once]** run fr
 
 Once you have enabled your filter criteria, select **[!UICONTROL Hide Filters]** to close the filter panel.
 
-## Query runs
+## Query runs Schedule details
 
-Select the query name to navigate to the [!UICONTROL Query runs] page. This view provides a list of all the runs executed as part of that scheduled query. This information is provided in a five column table. Each row denotes a query execution. 
+<!-- The schedule details screen. -->
+
+Select a query name to navigate to the schedule details page. This view provides a list of all the runs executed as part of that scheduled query. The information provided includes the start and end time, status, and dataset used. 
+
+![The schedule details page.](./images/monitor-queries/schedule-details.png)
+
+This information is provided in a five-column table. Each row denotes a query execution. 
 
 | Column name  | Description  |
 |---|---|
@@ -89,32 +93,26 @@ Select the query name to navigate to the [!UICONTROL Query runs] page. This view
 | Status | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`. |
 | Dataset | The dataset involved in the execution. |
 
-Select a table row to view query information in the details panel. The details panel contains XXXX
+### Run details
 
-![] ()
+<!-- The run details screen. -->
 
-### Query run overview
+<!-- Below does not work in staging. -->
 
-Select the query run ID to navigate to the [!UICONTROL Query run overview].
+Select a query run ID to navigate to the run details page and view query information. 
 
-![The Query run overview screen with the run details highlighted.] ()
+![The schedule details screen with a run ID highlighted.](./images/monitor-queries/navigate-to-run-details.png)
 
-{breakdown the info provided}
+This view provides information on individual runs for this scheduled query and a more detailed breakdown of the run status. This page also includes the client information and details of any errors that caused the query to fail. The query status section provides the error code and error message should the query have failed. 
 
-{mention that you can copy the SQL to clipboard}
+<!-- PLACEHOLDER IMAGE BELOW -->
 
-![The Query run overview screen with copy to clipboard icon highlighted] ()
+![The run details screen with the overview section highlighted.](./images/monitor-queries/query-run-details.png)
 
-### Query errors
+You can copy the query SQL to your clipboard from this view. Select the copy icon in the top right of the SQL snippet to copy the query. A popup message confirms that the code has been copied.
 
-{Describe the breakdown of query errors that caused the run to fail. list of errors adn error code.}
+<!-- PLACEHOLDER IMAGE BELOW -->
 
-![Query run details view wit teh query errors highlighted.] ()
-
-Select [!UICONTROL Scheduled Queries] to return to the [!UICONTROL Schedules] tab.
-
-## Run details
-
-Gives more information on a particular run.
+![The run details screen with the SQL copy icon highlighted.](./images/monitor-queries/copy-sql.png)
 
 
