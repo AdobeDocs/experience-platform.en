@@ -22,7 +22,7 @@ The table below provides a description of each available column.
 
 | Column | Description  |
 |---|---|
-| Name | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. |
+| Name | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. |
 | Template | The template name of the query. Select the template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked wth a hyphen and there is no ability to redirect to the Query Editor to view the query. |
 | SQL | A snippet of the SQL query.  |
 | Run frequency | This is the cadence at which your query is set to run. There are currently two values `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
@@ -33,11 +33,11 @@ The table below provides a description of each available column.
 
 >[!TIP]
 >
->If you navigate away from the [!UICONTROL Scheduled Queries] tab, you can select [!UICONTROL Queries] to return to the [!UICONTROL Templates] tab from the Query Editor 
+>If you navigate away to the Query Editor, you can select **[!UICONTROL Queries]** to return to the [!UICONTROL Templates] tab from the Query Editor 
 
-### Customize sheduled queries table settings
+### Customize table settings for scheduled queries 
 
-Select the settings icon (![A settings icon.](./images/monitor-queries/settings-icon.png)) to open the Customize table settings dialog and edit available columns.
+You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your needs. Select the settings icon (![A settings icon.](./images/monitor-queries/settings-icon.png)) to open the [!UICONTROL Customize table] settings dialog and edit available columns.
 
 ![The Customize table settings icon.](./images/monitor-queries/customze-table-settings-icon.png)
 
