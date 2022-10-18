@@ -59,12 +59,14 @@ These data elements should be mapped as referenced below.
 
 ### `event` keys
 
-`event` is a JSON object that represents the event triggered by the user. The following keys can be referenced within the `event` object when mapping to data elements:
+`event` is a JSON object that represents the event triggered by the user. Refer to the Zendesk document on the [anatomy of an event](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/) for details on the properties captured by the `event` object.
+
+The following keys can be referenced within the `event` object when mapping to data elements:
 
 | `event` key | Type | Platform path | Description | Mandatory | Limits |
 | --- | --- | --- | --- | --- | --- |
 | `source` | String | `arc.event.xdm._extconndev.event_source`  |  The application which sent the event.  |  Yes  |  Do not use `Zendesk` as a value as it is a protected source name for Zendesk standard events. Attempts to use it will result in an error.<br>Value length must not exceed 40 characters. |
-| `type` | String | `arc.event.xdm._extconndev.event_type` | The event name. | Yes | Value length must not exceed 40 characters. |
+| `type` | String | `arc.event.xdm._extconndev.event_type` | A name for the event type. You can use this field to denote different kinds of events for a given source. For example, you can create one set of events for user logins and another for shopping carts. | Yes | Value length must not exceed 40 characters. |
 | `description` | String | `arc.event.xdm._extconndev.description` | A description for the event. | No | (N/A) |
 | `created_at` | String | `arc.event.xdm.timestamp` | An ISO-8601 timestamp reflecting the time the event was created. | No | (N/A) |
 | `properties` | Object | `arc.event.xdm._extconndev.EventProperties` | A custom JSON object with details about the event. | Yes | (N/A) |
@@ -77,12 +79,14 @@ These data elements should be mapped as referenced below.
 
 ### `profile` keys
 
-`profile` is a JSON object that represents the user that triggered the event. The following keys can be referenced within the `profile` object when mapping to data elements:
+`profile` is a JSON object that represents the user that triggered the event. Refer to the Zendesk document on the [anatomy of a profile](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/) for details on the properties captured by the `profile` object.
+
+The following keys can be referenced within the `profile` object when mapping to data elements:
 
 | `profile` key | Type | Platform path | Description | Mandatory | Limits |
 | --- | --- | --- | --- | --- | --- |
 | `source` | String | `arc.event.xdm._extconndev.profile_source` | The product or service associated with the profile, such as `Support`, `CompanyName`, or `Chat`. | Yes | (N/A) |
-| `type` | String | `arc.event.xdm._extconndev.profile_type` | The product or service associated with the profile. For example, *Support*, *CompanyName*, or *Chat* | Yes | Profile type length must not exceed 40 characters. |
+| `type` | String | `arc.event.xdm._extconndev.profile_type` | A name for the profile type. You can use this field to create different kinds of profiles for a given source. For example, you can create one set of company profiles for customers and another for employees. | Yes | Profile type length must not exceed 40 characters. |
 | `name` | String | `arc.event.xdm._extconndev.name` | The name of the person from the profile | No | (N/A) |
 | `user_id` | String | `arc.event.xdm._extconndev.user_id` | The person's user ID in Zendesk. | No | (N/A) |
 | `identifiers` | Array | `arc.event.xdm._extconndev.identifiers` | An array containing at least one identifier. Each identifier consists of a type and a value. | Yes | Refer to the [Zendesk documentation](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array) for more information on the `identifiers` array. All fields and values must be unique. |
@@ -114,6 +118,8 @@ Based on the account type, the Zendesk [!DNL Events API] can handle the followin
 |[!DNL Enterprise] | 750 |
 |[!DNL Enterprise Plus] | 1000 |
 
+{style="table-layout:auto"}
+
 Refer to the [Zendesk documentation](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#:~:text=API%20requests%20made%20by%20Zendesk%20apps%20are%20subject,sources%20for%20the%20account%2C%20including%20internal%20product%20requests.) for more information on these limits.
 
 ## Errors and troubleshooting {#errors-and-troubleshooting}
@@ -127,6 +133,8 @@ While using or configuring the extension, the errors below might be returned by 
 | 401 | **Invalid or Missing Authentication:** This error occurs when access the token is invalid, missing, or expired. | Verify that access token is valid and has not expired. |`{"error": [{"code":"MissingOrInvalidAuthentication","title": "Invalid or Missing Authentication"}]}` |
 | 403 | **Insufficient permissions:** This error occurs when sufficient permissions to access the resource are not provided. | Validate that the required permissions have been provided. |`{"error": [{"code":"PermissionDenied","title": "Insufficient permisssions to perform operation"}]}`|
 | 429 | **Too Many Requests:** This error occurs when the endpoint object record limit has been exceeded. |Refer to the section above on [request limits](#limits) for details on per-limit thresholds. |`{"error": [{"code":"TooManyRequests","title": "Too Many Requests"}]}`|
+
+{style="table-layout:auto"}
 
 ## Next steps
 
