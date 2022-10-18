@@ -40,11 +40,11 @@ To select the destination where to export datasets:
     
     ![Image showing the destination catalog tab.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-2. Select **[!UICONTROL Activate]** or **[!UICONTROL Export datasets]** on the card corresponding to the destination where you want to export datasets, as shown in the image below.
+1. Select **[!UICONTROL Activate]** or **[!UICONTROL Export datasets]** on the card corresponding to the destination where you want to export datasets, as shown in the image below.
 
     ![Image highlighting the activate control in the destinations catalog tab.](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-3. Select **[!UICONTROL Data type Datasets]** and select the destination connection where you want to export datasets, then select **[!UICONTROL Next]**.
+1. Select **[!UICONTROL Data type Datasets]** and select the destination connection where you want to export datasets, then select **[!UICONTROL Next]**.
 
   >[!TIP]
   > 
@@ -52,7 +52,7 @@ To select the destination where to export datasets:
 
   ![Image showing a selection of two destinations that you can connect to.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
-4. Proceed to the next section to [select your datasets](#select-datasets) for export.
+1. Proceed to the next section to [select your datasets](#select-datasets) for export.
 
 ## Select your datasets {#select-datasets}
 
