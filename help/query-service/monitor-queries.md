@@ -27,7 +27,7 @@ The table below describes each available column.
 | Name | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. |
 | Template | The template name of the query. Select a template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked with a hyphen and there is no ability to redirect to the Query Editor to view the query. |
 | SQL | A snippet of the SQL query.  |
-| Run frequency | This is the cadence at which your query is set to run. There are currently two values `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
+| Run frequency | This is the cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
 | Created by | The name of the user who created the query. |
 | Created | The timestamp when the query was created, in UTC format.  |
 | Last run timestamp | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule.  |
@@ -53,7 +53,7 @@ Toggle the relevant checkboxes to remove or add a table column, and select **[!U
 
 ### Subscribe to alerts {#alert-subscription}
 
-You can subscribe to alerts from the [!UICONTROL Scheduled Queries] tab. Select the alert notification icon (![An alert icon.](./images/monitor-queries/alerts-icon.png)) next to a query name to open the [!UICONTROL Alerts] dialog. The [!UICONTROL Alerts] dialog subscribes to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: start, success, and failure. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
+You can subscribe to alerts from the [!UICONTROL Scheduled Queries] tab. Select the alert notification icon (![An alert icon.](./images/monitor-queries/alerts-icon.png)) next to a query name to open the [!UICONTROL Alerts] dialog. The [!UICONTROL Alerts] dialog subscribes to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: `start`, `success`, and `failure`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
 
 ![The alert subscriptions dialog.](./images/monitor-queries/alert-subscription-dialog.png)
 
@@ -69,7 +69,7 @@ Select either the **[!UICONTROL Scheduled]** or **[!UICONTROL Run once]** run fr
 
 >[!NOTE]
 >
->Any executed query that has been executed but not scheduled qualifies as Run once.
+>Any query that has been executed but not scheduled qualifies as [!UICONTROL Run once].
 
 ![The scheduled queries tab with the filter sidebar highlighted.](./images/monitor-queries/filter-sidebar.png)
 
