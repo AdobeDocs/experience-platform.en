@@ -63,7 +63,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your [!DNL Bing Ads CID].
+*  **[!UICONTROL Account ID]**: Your [!DNL Bing Ads Customer ID] (CID). Your CID is an integer, found in the URL when you log into [!DNL Microsoft Advertising]. 
 
 ### Enable alerts {#enable-alerts}
 
