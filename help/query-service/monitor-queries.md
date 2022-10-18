@@ -81,7 +81,7 @@ Once you have enabled your filter criteria, select **[!UICONTROL Hide Filters]**
 
 Select a query name to navigate to the schedule details page. This view provides a list of all the runs executed as part of that scheduled query. The information provided includes the start and end time, status, and dataset used. 
 
-![The schedule details page.](./images/monitor-queries/schedule-details.png)
+![The schedule details page.](./images/monitor-queries/schedule-details.png) 
 
 This information is provided in a five-column table. Each row denotes a query execution. 
 
@@ -93,26 +93,29 @@ This information is provided in a five-column table. Each row denotes a query ex
 | Status | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`. |
 | Dataset | The dataset involved in the execution. |
 
+Details of the query being scheduled can be seen in the properties sidebar. This panel includes the initial query ID, client type, template name, query SQL, and cadence of the schedule.
+
+![The schedule details page with the properties panel highlighted.](./images/monitor-queries/properties-panel.png)
+
 ### Run details
-
-<!-- The run details screen. -->
-
-<!-- Below does not work in staging. -->
 
 Select a query run ID to navigate to the run details page and view query information. 
 
 ![The schedule details screen with a run ID highlighted.](./images/monitor-queries/navigate-to-run-details.png)
 
-This view provides information on individual runs for this scheduled query and a more detailed breakdown of the run status. This page also includes the client information and details of any errors that caused the query to fail. The query status section provides the error code and error message should the query have failed. 
-
-<!-- PLACEHOLDER IMAGE BELOW -->
+This view provides information on individual runs for this scheduled query and a more detailed breakdown of the run status. This page also includes the client information and details of any errors that caused the query to fail. 
 
 ![The run details screen with the overview section highlighted.](./images/monitor-queries/query-run-details.png)
 
-You can copy the query SQL to your clipboard from this view. Select the copy icon in the top right of the SQL snippet to copy the query. A popup message confirms that the code has been copied.
+The query status section provides the error code and error message should the query have failed. 
 
-<!-- PLACEHOLDER IMAGE BELOW -->
+![The run details screen with the errors section highlighted.](./images/monitor-queries/failed-query.png)
+
+You can copy the query SQL to your clipboard from this view. Select the copy icon in the top right of the SQL snippet to copy the query. A popup message confirms that the code has been copied.
 
 ![The run details screen with the SQL copy icon highlighted.](./images/monitor-queries/copy-sql.png)
 
+Select **[!UICONTROL Query]** to return to the schedule details screen, or **[!UICONTROL Scheduled Queries]** to return to the [!UICONTROL Scheduled Queries] tab.
+
+![The run details screen with Query highlighted.](./images/monitor-queries/return-navigation.png)
 
