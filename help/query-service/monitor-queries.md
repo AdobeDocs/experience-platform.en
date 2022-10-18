@@ -45,11 +45,11 @@ You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your nee
 
 Toggle the relevant checkboxes to remove or add a table column, and select **[!UICONTROL Apply]** to confirm your choices.
 
-![The Customize table settings dialog.](./images/monitor-queries/customize-table-dialog.png)
-
 >[!NOTE]
 >
 >Any query that was created through the UI becomes a named template as part of the creation process. The template name is seen in the template column. If the query was created through the API then the template column is blank. 
+
+![The Customize table settings dialog.](./images/monitor-queries/customize-table-dialog.png)
 
 ### Subscribe to alerts {#alert-subscription}
 
