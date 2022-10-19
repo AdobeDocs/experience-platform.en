@@ -23,6 +23,7 @@ feature: Web SDK
   * [User-Agent Client Hints](fundamentals/user-agent-client-hints.md)
 * Datastreams {#datastreams}
   * [Overview](./datastreams/overview.md)
+  * [Configure a datastream](./datastreams/configure.md)
   * [Data Prep for Data Collection](./datastreams/data-prep.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
