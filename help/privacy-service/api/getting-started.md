@@ -30,7 +30,7 @@ The steps for generating these values are covered in detail below.
 
 Go to [Adobe Developer Console](https://developer.adobe.com/console) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in the Developer Console documentation.
 
-Once you have created a new project, select **[!UICONTROL Add to Project]** and choose  **[!UICONTROL API]** from the dropdown menu.
+Once you have created a new project, select **[!UICONTROL Add to Project]** and choose **[!UICONTROL API]** from the dropdown menu.
 
 ![The API option being selected from the [!UICONTROL Add to Project] dropdown from the project details page in Developer Console](../images/api/getting-started/add-api-button.png)
 
@@ -46,7 +46,7 @@ The key pair is automatically generated and a ZIP file containing a private key 
 
 ![The generated keypair shown in the UI, whose values are automatically downloaded by the browser](../images/api/getting-started/key-pair-generated.png)
 
-The final configuration step is to select the product profiles that this integration will inherit its permissions from. If you select more than one profile, their permissions sets will be amalgamated for the integration.
+The final configuration step is to select the product profiles that this integration will inherit its permissions from. If you select more than one profile, their permission sets will be combined for the integration.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ When finished, select **[!UICONTROL Save configured API]**.
 
 Once the API has been added to the project, the project page reappears on the **Privacy Service API overview** page. From here, scroll down to the **[!UICONTROL Service Account (JWT)]** section, which provides the following access credentials that are required in all calls to the Privacy Service API:
 
-* **[!UICONTROL CLIENT ID]**: The Client ID is the required `{API_KEY}` for that must be provided in the `x-api-key` header.
+* **[!UICONTROL CLIENT ID]**: The Client ID is the required `{API_KEY}` that must be provided in the `x-api-key` header.
 * **[!UICONTROL ORGANIZATION ID]**: The Organization ID is the `{ORG_ID}` value that must be used in the `x-gw-ims-org-id` header.
 
 ![The Client ID and Organization ID values as they appear on the project overview page after the API has been configured](../images/api/getting-started/jwt-credentials.png)
@@ -77,7 +77,7 @@ A new access token is generated, and a button to copy the token to your clipboar
 
 ## Reading sample API calls
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/api-guide.md#sample-api) in the getting started guide for Platform APIs.
+Each endpoint guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/api-guide.md#sample-api) in the getting started guide for Platform APIs.
 
 ## Next steps
 
