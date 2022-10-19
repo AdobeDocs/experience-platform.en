@@ -6,13 +6,13 @@ exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 ---
 # Getting started with the Privacy Service API
 
-This guide provides an introduction to the core concepts you need to know before attempting to make calls to the Privacy Service API.
+This guide provides an introduction to the core concepts you need to know before attempting to make calls to the Adobe Experience Platform Privacy Service API.
 
 ## Prerequisites
 
-This guide requires a working understanding the following features:
+This guide requires a working understanding of [Privacy Service](../home.md) and how it allows you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
 
-* [Adobe Experience Platform Privacy Service](../home.md): Provides a RESTful API and user interface that allow you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
+In order to create access credentials for the API, an administrator within your organization must have previously set up product profiles for Privacy Service within Adobe Admin Console. The product profile you assign to an API integration determines what permissions that integration has when accessing Privacy Service capabilities. See the guide on [managing Privacy Service permissions](../permissions.md) for more information.
 
 ## Gather values for required headers
 
@@ -22,62 +22,58 @@ In order to make calls to the Privacy Service API, you must first gather your ac
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-This involves obtaining developer permissions for Adobe Experience Platform in Adobe Admin Console, and then generating the credentials in Adobe Developer Console.
-
-### Gain developer access to Experience Platform
-
-To gain developer access to [!DNL Platform], follow the beginning steps in the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Once you arrive at the step "Generate access credentials in Adobe Developer Console", return to this tutorial to generate the credentials specific to Privacy Service.
-
-### Generate access credentials
-
-Using Adobe Developer Console, you must generate the following three access credentials:
-
-* `{ORG_ID}`
-* `{API_KEY}`
-* `{ACCESS_TOKEN}`
-
-Your `{ORG_ID}` and `{API_KEY}` only need to be generated once and can be reused in future API calls. However, your `{ACCESS_TOKEN}` is temporary and must be regenerated every 24 hours.
+These values are generated using [Adobe Developer Console](https://developer.adobe.com/console). Your `{ORG_ID}` and `{API_KEY}` only need to be generated once and can be reused in future API calls. However, your `{ACCESS_TOKEN}` is temporary and must be regenerated every 24 hours.
 
 The steps for generating these values are covered in detail below.
 
-#### One-time setup
+### One-time setup
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
+Go to [Adobe Developer Console](https://developer.adobe.com/console) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in the Developer Console documentation.
 
-Once you have created a new project, select **[!UICONTROL Add API]** on the **[!UICONTROL Project Overview]** screen.
+Once you have created a new project, select **[!UICONTROL Add to Project]** and choose  **[!UICONTROL API]** from the dropdown menu.
 
-![](../images/api/getting-started/add-api-button.png)
+![The API option being selected from the [!UICONTROL Add to Project] dropdown from the project details page in Developer Console](../images/api/getting-started/add-api-button.png)
 
-The **[!UICONTROL Add an API]** screen appears. Select **[!UICONTROL Privacy Service API]** from the list of available APIs before selecting **[!UICONTROL Next]**.
+The **[!UICONTROL Add an API]** screen appears. Select **[!UICONTROL Experience Cloud]** to narrow the list of available APIs, then select the card for **[!UICONTROL Privacy Service API]** before selecting **[!UICONTROL Next]**.
 
-![](../images/api/getting-started/add-privacy-service-api.png)
+![The Privacy Service API card being selected from the list of available APIs](../images/api/getting-started/add-privacy-service-api.png)
 
-The **[!UICONTROL Configure API]** screen appears. Select the option to **[!UICONTROL Generate a key pair]**, then select **[!UICONTROL Generate keypair]** in the bottom-right corner.
+The **[!UICONTROL Configure API]** screen appears. Select the option to **[!UICONTROL Generate a key pair]**, then select **[!UICONTROL Generate keypair]**.
 
-![](../images/api/getting-started/generate-key-pair.png)
+![The [!UICONTROL Generate a key pair] option being selected on the [!UICONTROL Configure API] screen](../images/api/getting-started/generate-key-pair.png)
 
-The key pair is automatically generated, and a ZIP file containing a private key and a public certificate are downloaded to your local machine (to be used in a later step). Select **[!UICONTROL Save configured API]** to complete the configuration.
+The key pair is automatically generated and a ZIP file containing a private key and a public certificate are downloaded by your browser (to be used in a later step). Select **[!UICONTROL Next]** to continue.
 
-![](../images/api/getting-started/key-pair-generated.png)
+![The generated keypair shown in the UI, whose values are automatically downloaded by the browser](../images/api/getting-started/key-pair-generated.png)
+
+The final configuration step is to select the product profiles that this integration will inherit its permissions from. If you select more than one profile, their permissions sets will be amalgamated for the integration.
+
+>[!NOTE]
+>
+>Product profiles and the granular permissions they assign are configured by administrators through Adobe Admin Console. See the guide on [Privacy Service permissions](../permissions.md) for more information.
+
+When finished, select **[!UICONTROL Save configured API]**.
+
+![A single product profile being selected from the list before saving the configuration](../images/api/getting-started/select-product-profiles.png)
 
 Once the API has been added to the project, the project page reappears on the **Privacy Service API overview** page. From here, scroll down to the **[!UICONTROL Service Account (JWT)]** section, which provides the following access credentials that are required in all calls to the Privacy Service API:
 
-* **[!UICONTROL CLIENT ID]**: The Client ID is the required `{API_KEY}` for that must be provided in the x-api-key header.
-* **[!UICONTROL ORGANIZATION ID]**: The Organization ID is the `{ORG_ID}` value that must be used in the x-gw-ims-org-id header.
+* **[!UICONTROL CLIENT ID]**: The Client ID is the required `{API_KEY}` for that must be provided in the `x-api-key` header.
+* **[!UICONTROL ORGANIZATION ID]**: The Organization ID is the `{ORG_ID}` value that must be used in the `x-gw-ims-org-id` header.
 
-![](../images/api/getting-started/jwt-credentials.png)
+![The Client ID and Organization ID values as they appear on the project overview page after the API has been configured](../images/api/getting-started/jwt-credentials.png)
 
-#### Authentication for each session
+### Authentication for each session
 
 The final required credential you must gather is your `{ACCESS_TOKEN}`, which is used in the Authorization header. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using [!DNL Platform] APIs.
 
 To generate a new `{ACCESS_TOKEN}`, open the previously downloaded private key and paste its contents into the text box beside **[!UICONTROL Generate access token]** before selecting **[!UICONTROL Generate Token]**.
 
-![](../images/api/getting-started/paste-private-key.png)
+![The previously generated access token being pasted on the project's overview page, with the [!UICONTROL Generate Token] button being selected after](../images/api/getting-started/paste-private-key.png)
 
 A new access token is generated, and a button to copy the token to your clipboard is provided. This value is used for the required Authorization header, and must be provided in the format `Bearer {ACCESS_TOKEN}`.
 
-![](../images/api/getting-started/generated-access-token.png)
+![The generated access token being copied from the UI](../images/api/getting-started/generated-access-token.png)
 
 ## Reading sample API calls
 
