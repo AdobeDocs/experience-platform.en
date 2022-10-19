@@ -15,9 +15,15 @@ Use the [!DNL Pega Connector for S3] connecton in Adobe Experience Platform to c
 
 ## Use cases 
 
-To help you better understand how and when you should use the [!DNL  Pega Connector for S3] destination, here are sample use case that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL  Pega Connector for S3] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-A marketer wants up to date profile data in Adobe Customer Data Platform available in Pega Customer Decision Hub which enhances the Pega next-best-action decisioning process both for engagement policies as well as predictors in Adaptive Models.
+### Use case 1
+
+A marketer wants up-to-date profile data in Adobe Customer Data Platform available in Pega Customer Decision Hub that enhances the Pega next-best-action decisioning process both for engagement policies as well as predictors in Adaptive Models.
+
+### Use case 2
+
+A marketer wants to setup Pega Customer Decision Hub with profile data loaded from Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
