@@ -1,37 +1,23 @@
 ---
-title: Self-service template // Replace with the name of destination
-description: Use this template to create public documentation for your destination in the Adobe Experience Platform catalog. // Replace with the paragraph in the Overview section
+title: Pega Connector for S3
+description: Use the Pega Connector for S3 in Adobe Experience Platform to export full and/or incremental profile data to Amazon S3 cloud storage. 
 ---
 
-# YourDestination connection {#your-destination}
-
-*As you go through this template, replace or delete all the paragraphs in italics (starting with this one).*
-
-*Start by updating the metadata (title and description) at the top of the page. Please ignore all instances of UICONTROL on this page. This is a tag that helps our machine translation processes correctly translate the page into the multiple languages that we support. We will add tags to your documentation after you submit it.*
+# Pega Connector for S3
 
 ## Overview {#overview}
 
-*Provide a short overview of your company, including the value it provides to customers. Include a link to your product documentation homepage, for further reading.*
+Use the [!DNL Pega Connector for S3] connecton in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], data jobs can be scheduled to import profiles from S3 storage to update Customer profile data source. This helps setup intitial export of profile data and sync up new profiles from Adobe Experience Platform into Pega Customer Decision Hub.  With up to date profile data in Customer Decision Hub enhances the Pega next-best-action decisioning process both for engagement policies as well as predictors in Adaptive Models.
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *YourDestination* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates, for example `support@YourDestination.com`.*
+>This documentation page was created by Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
 
-## Use cases {#use-cases}
+## Use cases 
 
-To help you better understand how and when you should use the *YourDestination* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL  Pega Connector for S3] destination, here are sample use case that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1 {#use-case-1}
-
-*For mobile messaging platforms:*
-
-*A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
-
-### Use case #2 {#use-case-2}
-
-*For social network platforms:*
-
-*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YourDestination, to display ads in their customers' social media feeds.*
+A marketer wants up to date profile data in Adobe Customer Data Platform available in Pega Customer Decision Hub which enhances the Pega next-best-action decisioning process both for engagement policies as well as predictors in Adaptive Models.
 
 ## Prerequisites {#prerequisites}
 
