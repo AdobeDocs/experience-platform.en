@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
-user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
+user-guide-description: Ingest data from a variety of sources. Learn how to structure, label, and enhance already ingested data.
 feature: Sources
 ---
 
@@ -281,7 +281,6 @@ feature: Sources
     - [Marketing automation connection dataflow](tutorials/ui/dataflow/marketing-automation.md)
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
-  - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
   - [Update accounts](tutorials/ui/update.md)

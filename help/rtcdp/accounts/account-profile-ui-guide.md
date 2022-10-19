@@ -46,8 +46,6 @@ To learn more about lead to account matching, please refer to the [Lead to accou
 
 To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigation. 
 
-![Select Profiles in left navigation](images/b2b-account-browse.png)
-
 On the **[!UICONTROL Browse]** tab, you can explore account profiles using an account ID from a connected enterprise source or by entering source details directly.
 
 ![Use account ID to explore profiles](images/b2b-account-browse-by.png)
@@ -66,9 +64,9 @@ This opens the **[!UICONTROL Select source]** dialog, where you can select a sou
 
 To learn more about connecting enterprise sources, please refer to the [sources overview](../sources/sources-overview.md).
 
-![Select source workflow](images/b2b-account-select-source.png)
-
 You can choose a source by selecting the radio button next to the connection name, and then use **[!UICONTROL Select]** to return to the [!UICONTROL Browse] tab.
+
+![Select source workflow](images/b2b-account-select-source.png)
 
 With a source selected, you must now enter an **[!UICONTROL Account ID]** related to the source. For example, selecting a Salesforce source would require you to enter an account ID from the Salesforce instance in order to view the account profile tied to that ID.
 

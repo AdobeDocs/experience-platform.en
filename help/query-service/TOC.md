@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Query Service Guide
-user-guide-description: Use standard SQL to query data in Platform Data Lake.
+user-guide-description: Use standard SQL to query data within the data lake in Experience Platform.
 feature: Queries
 ---
 
@@ -10,7 +10,7 @@ feature: Queries
 
 - [Query Service overview](home.md)
 - [Query Service packaging](packages.md)
-- [Guardrails for Query Service](guardrails.md)
+- [Query Service guardrails](guardrails.md)
 - Data Distiller {#data-distiller}
   - [Licence usage](data-distiller/licence-usage.md)
 - Get started {#get-started}
@@ -27,7 +27,6 @@ feature: Queries
   - [Connection parameters](api/connection-parameters.md)
   - [Scheduled queries](api/scheduled-queries.md)
   - [Runs for scheduled queries](api/runs-scheduled-queries.md)
-  - [Query alerts](api/alert-subscriptions.md)
   - [Query templates](api/query-templates.md)
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)

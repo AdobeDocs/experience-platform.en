@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Destinations Guide
-user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and more.
 description: This document lists the table of contents for Adobe Experience Platform destinations
 feature: Destinations
 ---
@@ -126,6 +126,7 @@ feature: Destinations
         * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
         * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
         * [Braze connection](./catalog/mobile-engagement/braze.md)
+        * [Line connection](./catalog/mobile-engagement/line.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
