@@ -22,3 +22,9 @@ The following work items and their corresponding attributes are eligible for inc
 * Task
 * Operational Task (Issues)
 * User
+
+The Workfront source streams all new updates to these attributes and backfills up to one year of historical change events. Once your Workfront data is in a Platform dataset, you can utilize [Query Service](../../../query-service/home.md) and other tools to further analyze or join your work-related data with other datasets as needed.
+
+## Connect Workfront to Platform using the UI
+
+For detailed instructions on how to bring your Workfront data to Platform, read the guide on [creating a source connection to bring your Workfront data to Platform](../../tutorials/ui/create/adobe-applications/workfront.md).
