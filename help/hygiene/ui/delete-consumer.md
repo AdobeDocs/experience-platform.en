@@ -7,7 +7,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 
 >[!IMPORTANT]
 >
->Consumer delete requests are only available for organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Healthcare Shield.
 
 The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-time Customer Profile.
 

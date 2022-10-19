@@ -7,7 +7,7 @@ exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 
 >[!IMPORTANT]
 >
->Consumer delete requests are currently only available for organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Healthcare Shield.
 
 The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage consumer delete requests in Adobe Experience Platform.
 

@@ -9,7 +9,7 @@ exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
-Deleting a resource is a permanent removal of that resource from Adobe Experience Platform. If you still want the resource to appear in the Data Collection UI, but not be in your tag library, see [Remove Resources from a Library](remove-resources-from-library.md).
+Deleting a resource is a permanent removal of that resource from Adobe Experience Platform. If you want to remove a resource from a specific tag library, but still want that resource to be available for use in other libraries, see the guide on [removing resources from a library](remove-resources-from-library.md).
 
 You can delete data elements, rules, extensions, hosts, environments, and properties. Once deleted, these resources are not recoverable.
 

@@ -10,7 +10,7 @@ A datastream represents the server-side configuration when implementing the Adob
 
 You can create and manage datastreams by selecting **[!UICONTROL Datastreams]** in the left navigation within the Adobe Experience Platform UI or Data Collection UI.
 
-![Datastreams tab in the Data Collection UI](../images/datastreams/overview/datastreams-tab.png)
+![Datastreams tab in the UI](../assets/datastreams/overview/datastreams-tab.png)
 
 For more information on how to configure a datastream in the UI, see the [configuration guide](./configure.md).
 

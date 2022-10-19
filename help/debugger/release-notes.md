@@ -7,11 +7,14 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
-<!-- ## Version 1.4.0 - August 24, 2022
+## Version 1.4.0 - October 3, 2022
 
-* Added support for Web SDK hybrid implementation.
+* Added AEP Assurance debugging support for Web SDK hybrid implementations.
+* Added support multiple tabs within the same AEP Assurance session.
+* Fixed issue where users cannot switch profiles/organizations after logging in.
+  * For some accounts, logging out and logging back in is required to switch organizations.
 * Added error message when enabling Target Trace fails.
-* Updated dependencies. -->
+* Updated dependencies.
 
 ## Version 1.3.3 - June 20, 2022
 

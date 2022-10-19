@@ -7,7 +7,7 @@ exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 
 >[!IMPORTANT]
 >
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Healthcare Shield.
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Healthcare Shield.
 
 The `/ttl` endpoint in the Data Hygiene API allows you to schedule expiration dates for datasets in Adobe Experience Platform.
 

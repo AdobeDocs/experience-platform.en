@@ -8,7 +8,7 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 
 >[!IMPORTANT]
 >
->The **[!UICONTROL Export file now]** option in Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
+>The **[!UICONTROL Export file now]** option in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 >Contact your Adobe representative for access to this functionality.
 
 >[!IMPORTANT]

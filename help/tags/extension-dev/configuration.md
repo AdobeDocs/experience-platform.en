@@ -1,6 +1,6 @@
 ---
 title: Extension Configuration
-description: Learn how to configure a tag extension to gather global settings from a user in the Data Collection UI of Adobe Experience Platform.
+description: Learn how to configure a tag extension to gather global settings from a user in the Adobe Experience Platform UI or Data Collection UI.
 exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
 ---
 # Extension configuration

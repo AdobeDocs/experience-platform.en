@@ -11,6 +11,10 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 >abstract="When a data hygiene request is sent to the system, a work order is created to execute the requested task. In other words, a work order represents a specific data hygiene process, which includes its current status and other related details. Each work order is automatically assigned its own unique ID upon creation."
 >text="See the data hygiene UI guide to learn more."
 
+>[!IMPORTANT]
+>
+>Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased Adobe Healthcare Shield.
+
 When a data hygiene request is sent to the system, a work order is created to execute the requested task. A work order represents a specific data hygiene process, such as a scheduled dataset expiration, which includes its current status and other related details.
 
 This guide covers how to view and manage existing work orders in the Adobe Experience Platform UI.
@@ -24,10 +28,6 @@ When you first access the **[!UICONTROL Data Hygiene]** workspace in the UI, a l
 The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of consumer delete tasks, and **[!UICONTROL Dataset]** to view a list of scheduled dataset expirations.
 
 ![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png)
-
->[!IMPORTANT]
->
->Consumer deletes are only available for organizations that have purchased Adobe Healthcare Shield or Privacy Shield.
 
 Select the funnel icon (![Image of the funnel icon](../images/ui/browse/funnel-icon.png)) to view a list of filters for the displayed work orders.
 
