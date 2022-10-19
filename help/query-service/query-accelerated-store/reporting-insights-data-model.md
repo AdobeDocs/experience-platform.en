@@ -18,7 +18,7 @@ The Data Distiller SKU is required to build a custom data model for your reporti
 
 ## Build a reporting insights data model
 
-This tutorial uses an example of building an audience insight data model. If you use one or more advertiser platforms to reach your audience, you can use the advertiser's platform API to get an approximate match count of your audience.
+This tutorial uses an example of building an audience insight data model. If you use one or more advertiser platforms to reach your audience, you can use the advertiser's API to get an approximate match count of your audience.
 
 At the outset, you have an initial data model from your sources (potentially from your advertiser platform API). To make an aggregated view of your raw data, create a reporting insights model as described in the image below. This allows for one dataset to get the upper and lower bounds of the audience match.
 
@@ -69,13 +69,13 @@ SELECT cast(null as int) segment_id,
 ALTER TABLE externalaudiencereach ADD  CONSTRAINT FOREIGN KEY (ext_custom_audience_id) REFERENCES externalaudiencemapping (ext_custom_audience_id) NOT enforced;
 ```
 
-The relationship between the fact and dimension tables is been formed on the successful completion of both `ALTER TABLE` commands.
+After the successful execution of both `ALTER TABLE` commands, the relationship between the fact and dimension tables is formed.
 
-After the statements have run, use the `SHOW datagroups;` command to return a list of the available datasets on the accelerated store from the `audienceinsight.audiencemodel`. Your tabulated results should be similar to the example provided below.
+Once the statements have run, use the `SHOW datagroups;` command to return a list of the available datasets on the accelerated store from the `audienceinsight.audiencemodel`. Your tabulated results should be similar to the example provided below.
 
 >[!IMPORTANT]
 >
->Only data in the accelerated store is accessible from the Query Service stateless API `POST /data/foundation/query/accelerated-queries`.
+>Only data in the accelerated store is accessible from the Query Service stateless API endpoint `POST /data/foundation/query/accelerated-queries`.
 
 ```console
     Database     |    Schema     | GroupType |      ChildType       |        ChildName        | PhysicalParent |               ChildId               
@@ -196,7 +196,7 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 ## Visualize your data with user-defined dashboards
 
-Now that you have created your custom data model you are ready to visualize your data with custom queries and user-defined dashboards. 
+Now that you have created your custom data model, you are ready to visualize your data with custom queries and user-defined dashboards. 
 
 The following SQL provides a breakdown of the match count by audiences in a destination and a breakdown of each destination of audiences by segment.
 
