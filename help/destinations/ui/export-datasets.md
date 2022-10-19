@@ -9,13 +9,13 @@ description: Learn how to export datasets from Adobe Experience Platform to your
 >[!IMPORTANT]
 >
 >* The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
->* This functionality is only available to customers who have purchased the xxxxxx package. Please contact your Adobe representative for more information. 
+>* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information. 
 
 This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage or email marketing location, such as Amazon S3, SFTP locations, or Google Cloud Storage.
 
-## When to activate segments or export datasets
+## When to activate segments or export datasets {#when-to-activate-segments-or-activate-datasets}
 
-Some destinations in the Experience Platform catalog support both segment activation and dataset export. 
+Some file-based destinations in the Experience Platform catalog support both segment activation and dataset export. 
 
 * Consider activating segments when you want your data structured into profiles grouped by audience interests or qualifications. 
 * On the other hand, consider dataset exports when you are looking to export raw dataset data, which is not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science tasks, to satisfy compliance requirements, and many other use cases.
@@ -28,7 +28,7 @@ To export datasets to cloud storage destinations, you must have successfully [co
 
 ### Required permissions {#permissions}
 
-To export datasets, you need the INSERT REQUIRED PERMISSIONS **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate and Manage Datasets]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+To export datasets, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, and **[!UICONTROL Activate and Manage Datasets without Mapping]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 When browsing the destinations catalog, you should see an **[!UICONTROL Activate]** or an **[!UICONTROL Export datasets]** control for a destination. This means that you have the necessary permissions to export datasets and that the destination supports exporting datasets.
 
@@ -90,38 +90,29 @@ The **[!UICONTROL Export incremental files]** option is automatically selected. 
 
 >[!NOTE] 
 > 
->For dataset exports, the files have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for examples of exported files.
+>For dataset exports, the file names have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for examples of exported files.
 
 ## Review {#review}
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start exporting datasets to the destination.
 
-<!--
-
->[!IMPORTANT]
->
->In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
- 
-![Image showing a data policy violation in the review step.](../assets/common/data-policy-violation.png)
-
-If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
-
--->
-
 ![Image showing the review step of the dataset export workflow.](/help/destinations/assets/ui/export-datasets/review.png)
 
 ## Verify successful dataset export {#verify}
 
-When exporting datasets, Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. The default file format is:
+When exporting datasets, Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. 
+
+Experience Platform creates a folder structure in the storage location you specified, where it will deposit the exported dataset files. A new folder is created for each export time.
+
+`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMMSS`
+
+The default file format is:
 `<destinationName>_dataset<datasetID>_<timestamp-yyyymmddhhmmss>.csv`
 
-Experience Platform creates a folder structure in the storage location you specified, where it will deposit exported dataset files. 
-
-```
+```console
 https://your-aws-bucket/testbucket/61008328d507a618a3a2a356/exportTime=20210913220707/part-00000-tid-5271363778445977593-ddb8f635-d35d-49df-9a12-0150c6a4cc9b-4-1-c000.snappy.parquet
 ```
 
-/datasetID/exportTime/actualFile(s)
 
 For example, if you selected a daily export and the file type `.json`, the files and the folder structure that you would receive on three consecutive days could look like this:
 
@@ -143,7 +134,7 @@ Alongside these files, Experience Platform also deposits a manifest file for eac
 
 ### Sample dataset files {#sample-files}
 
-The presence of these files in your storage location is confirmation of successful export. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) or [.json file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes xxxx. 
+The presence of these files in your storage location is confirmation of successful export. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) or [.json file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv).
 
 ## Remove dataset from destination {#remove-dataset}
 
@@ -173,8 +164,8 @@ To remove a dataset from an existing dataflow, follow the steps below:
 
 Keep in mind the following limitations:
 
-* There is currently a single permission that includes Manage and Activate permissions on datasets. These controls will be split up in the future to miror whats in Profile Activation
+* There is currently a single permission that includes Manage and Activate permissions on datasets. These controls will be split up in the future into more granular permissions.
 * Currently, you can only export incremental files and an end date cannot be selected for your dataset exports. 
 * Exported filenames are currently not customizable
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
-* Monitoring numbers -- need to clarify monitoring known limitations
+* Monitoring numbers for dataset exports are currently mixed with numbers for profile exports so do not reflect the true export situation.
