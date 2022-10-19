@@ -4,19 +4,19 @@ description: Connect your client-side Experience Platform SDK integration with A
 ---
 # Configure a datastream
 
-This document covers the steps for configuring a [datastream](./overview.md) in the Data Collection UI. 
+This document covers the steps for configuring a [datastream](./overview.md) in the UI. 
 
 ## Access the [!UICONTROL Datastreams] workspace
 
-You can create and manage datastreams in the Data Collection UI by selecting **[!UICONTROL Datastreams]** in the left navigation.
+You can create and manage datastreams in the Data Collection UI or Experience Platform UI by selecting **[!UICONTROL Datastreams]** in the left navigation.
 
 ![Datastreams tab in the Data Collection UI](../images/datastreams/overview/datastreams-tab.png)
 
 The [!UICONTROL Datastreams] tab displays a list of existing datastreams, including their friendly name, ID, and last modified date. Select the name of a datastream to [view its details and configure services](#view-details).
 
-Select the ellipsis icon (**...**) for a particular datastream to reveal more options. Select **[!UICONTROL Edit]** to update the [basic configuration](#configure) for the datastream, or select **[!UICONTROL Delete]** to remove the datastream.
+Select the "more" icon (**...**) for a particular datastream to reveal more options. Select **[!UICONTROL Edit]** to update the [basic configuration](#configure) for the datastream, or select **[!UICONTROL Delete]** to remove the datastream.
 
-![Options to edit or delete and existing datastream](../images/datastreams/overview/edit-datastream.png)
+![Options to edit or delete an existing datastream](../images/datastreams/overview/edit-datastream.png)
 
 ## Create a new datastream {#create}
 
@@ -37,9 +37,9 @@ Select **[!UICONTROL Advanced Options]** to reveal additional controls to config
 | Setting | Description |
 | --- | --- |
 | [!UICONTROL Geo Location] | Determines whether GPS lookups occur based on the user's IP address. The default setting **[!UICONTROL None]** disables any GPS lookups, while the **[!UICONTROL City]** setting provides GPS coordinates to two decimal places.|
-| [!UICONTROL First Party ID Cookie] | When enabled, this setting tells the [!DNL Edge Network] to refer to a specified cookie when looking up a [first-party device ID](../identity/first-party-device-ids.md), rather than looking up this value in the Identity Map.<br><br>When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored.|
+| [!UICONTROL First Party ID Cookie] | When enabled, this setting tells the Edge Network to refer to a specified cookie when looking up a [first-party device ID](../identity/first-party-device-ids.md), rather than looking up this value in the Identity Map.<br><br>When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored.|
 | [!UICONTROL Third Party ID Sync] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. When enabled, this setting lets you specify which container of ID syncs is run for this datastream.|
-|[!UICONTROL Access Type]|Defines the authentication type that the [!DNL Edge Network] accepts for the datastream. <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the [!DNL Edge Network] accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the [!DNL Edge Network] only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the [!DNL Edge Network]. </li></ul>|
+|[!UICONTROL Access Type]|Defines the authentication type that the Edge Network accepts for the datastream. <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the Edge Network] </li></ul>|
 
 From here, if you are configuring your datastream for Experience Platform, follow the tutorial on [Data Prep for Data Collection](./data-prep.md) to map your data to a Platform event schema before returning to this guide. Otherwise, select **[!UICONTROL Save]** and continue to the next section.
 
@@ -96,7 +96,7 @@ This service controls whether and how data is sent to Adobe Audience Manager. Al
 
 >[!IMPORTANT]
 >
->When enabling a datastream for Platform, take note of the Platform sandbox that you are currently using, as displayed in the top ribbon of the Data Collection UI.
+>When enabling a datastream for Platform, take note of the Platform sandbox that you are currently using, as displayed in the top ribbon of the UI.
 >
 >![Selected sandbox](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -110,9 +110,10 @@ This service controls whether and how data is sent to Adobe Experience Platform.
 |---| --- |
 | [!UICONTROL Event Dataset] | **(Required)** Select the Platform dataset that customer event data will be streamed to. This schema must use the [XDM ExperienceEvent class](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL Profile Dataset] | Select the Platform dataset that customer attribute data will be sent to. This schema must use the [XDM Individual Profile class](../../xdm/classes/individual-profile.md). |
-| [!UICONTROL Offer Decisioning] | Select this checkbox to enable Offer Decisioning for a Platform Web SDK implementation. See the guide on [using Offer Decisioning with the Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md) for more implementation details. For more information on Offer Decisioning capabilities, refer to the [Adobe Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html). |
+| [!UICONTROL Offer Decisioning] | Select this checkbox to enable Offer Decisioning for a Platform Web SDK implementation. See the guide on [using Offer Decisioning with the Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md) for more implementation details.<br><br>For more information on Offer Decisioning capabilities, refer to the [Adobe Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html). |
 | [!UICONTROL Edge Segmentation] | Select this checkbox to enable [edge segmentation](../../segmentation/ui/edge-segmentation.md) for this datastream. When the SDK sends data through an edge-segmentation-enabled datastream, any updated segment memberships for the profile in question are sent back in the response.<br><br>This option can be used in combination with [!UICONTROL Personalization Destinations] for [next-page personalization use cases](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Personalization Destinations] | When enabling this after enabling the [!UICONTROL Edge Segmentation] checkbox, this option allows the datastream to connect to personalization destinations, such as [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md). Refer to the destinations documentation for specific steps on [configuring personalization destinations](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Personalization Destinations] | When enabling this after enabling the [!UICONTROL Edge Segmentation] checkbox, this option allows the datastream to connect to personalization destinations, such as [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md).<br><br>Refer to the destinations documentation for specific steps on [configuring personalization destinations](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Adobe Journey Optimizer] | Select this checkbox to enable [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) for this datastream. <br><br> Enabling this option allows the datastream to return personalized content from web and app-based inbound campaigns in [!DNL Adobe Journey Optimizer]. This option requires [!UICONTROL Edge Segmentation] to be active. If [!UICONTROL Edge Segmentation] is unchecked, this option is greyed out. |
 
 ### Adobe Target settings {#target}
 
