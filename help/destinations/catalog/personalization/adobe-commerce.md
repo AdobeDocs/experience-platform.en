@@ -10,7 +10,7 @@ description: Learn how Adobe Commerce and Real-Time CDP merchants can personaliz
 > 
 >The **[!UICONTROL Adobe Commerce]** connector is in beta and only available to a select number of customers.
 
-The Adobe Commerce destination connector lets you select one or more Experience Platform segments to activate to your Adobe Commerce account to deliver a dynamic personalized experience for your shoppers. Within Adobe Commerce, you can then select those Adobe Experience Platform segments to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You also can display hero banners and modify product pricing through promotional offers, all customized to Adobe Experience Platform segments.
+The [!DNL Adobe Commerce] destination connector lets you select one or more Experience Platform segments to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those Adobe Experience Platform segments to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You also can display hero banners and modify product pricing through promotional offers, all customized to Adobe Experience Platform segments.
 
 <!--## Use cases {#use-cases}
 
@@ -30,7 +30,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for select beta customers who have purchased Real-time CDP Prime or Ultimate and Adobe Commerce.
+This extension is available in the destinations catalog for select beta customers who have purchased Real-time CDP Prime or Ultimate and Adobe Commerce.
 
 Beta customers should have access to:
 
@@ -40,11 +40,11 @@ Beta customers should have access to:
 
 In Experience Platform, create the following:
 
-- [Schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html). The schema you create represents the data you plan to ingest from Adobe Commerce. [Learn more](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html) about how to create a schema that contains Commerce-specific field groups.
-- [Dataset](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/user-guide.html#create). A dataset is a storage and management construct for a collection of data. You need to create this dataset from the schema you created above.
-- [Datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html#create). ID that allows data to flow from Adobe Experience Platform to other Adobe DX products. This ID must be associated to a specific website within your specific Adobe Commerce instance. When you create this datastream, specify the XDM schema you created above.
+- [Schema](../../../xdm/schema/composition.md). The schema you create represents the data you plan to ingest from Adobe Commerce. [Learn more](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html) about how to create a schema that contains Commerce-specific field groups.
+- [Dataset](../../../catalog/datasets/user-guide.md#create). A dataset is a storage and management construct for a collection of data. You need to create this dataset from the schema you created above.
+- [Datastream](../../../edge/datastreams/overview.md#create). ID that allows data to flow from Adobe Experience Platform to other Adobe DX products. This ID must be associated to a specific website within your specific Adobe Commerce instance. When you create this datastream, specify the XDM schema you created above.
 
-After you complete the prerequisits, connect to the Commerce destination.
+After you complete the prerequisites, connect to the [!DNL Commerce] destination.
 
 ## Connect to the destination {#connect}
 
@@ -52,7 +52,7 @@ After you complete the prerequisits, connect to the Commerce destination.
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to the Adobe Commerce destination:
+To connect to the [!DNL Adobe Commerce] destination:
 
 1. In the [Platform interface](https://experience.adobe.com/platform/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 1. Select **[!UICONTROL Personalization]**.
@@ -74,21 +74,21 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to the Commerce destination {#activate}
+## Activate segments to the [!DNL Commerce] destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read [Activate profiles and segments to profile request destinations](../../ui/activate-profile-request-destinations.md) for instructions on activating audience segments to the Commerce destination.
+Read [Activate profiles and segments to profile request destinations](../../ui/activate-profile-request-destinations.md) for instructions on activating audience segments to the [!DNL Commerce] destination.
 
-## Next steps in Adobe Commerce
+## Next steps in [!DNL Adobe Commerce]
 
-Now that you have configured the Commerce destination within Experience Platform, you need to configure the Commerce Admin to import the Real-time CDP segments you created. See the [Commerce documentation](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) to learn more.
+Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to configure the [!DNL Commerce Admin] to import the Real-time CDP segments you created. See the [[!DNL Commerce] documentation](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) to learn more.
 
 ## Validate data export {#exported-data}
 
-After you activate Real-Time CDP segments to your Adobe Commerce account, you will see those segments available in the Admin when you create a Cart Price Rule:
+After you activate Real-Time CDP segments to your [!DNL Adobe Commerce] account, you will see those segments available in the [!DNL Admin] when you create a Cart Price Rule:
 
 ![Adobe Commerce Admin](../../assets/catalog/personalization/adobe-commerce/rtcdp-in-admin.png)
 
