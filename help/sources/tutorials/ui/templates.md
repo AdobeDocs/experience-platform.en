@@ -27,9 +27,23 @@ A pop-up window appears presenting you with the option to browse templates or us
 
 ### Authentication
 
-#### Create a new account
+The authentication step appears, prompting you to either create a new account or use an existing an account.
 
-#### Create an existing account
+#### New account
+
+To create a new account, select **[!UICONTROL New account]**, provide your source connection details and account authentication credentials, and then select **[!UICONTROL Connect to source]**.
+
+![The authentication page for a new account with source connection details and account authentication credentials.]
+
+#### Existing account
+
+To use an existing account, select [!UICONTROL Existing account and then select the account that you want to use from the list that appears.
+
+![The selection page for an existing account with a list of existing accounts you can access.]
 
 ### Select templates
+
+### Preview data
+
+### Review assets
 
