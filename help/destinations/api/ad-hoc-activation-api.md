@@ -119,6 +119,10 @@ The segment export job ID is in the `id` property, as shown below.
 
 Adobe Experience Platform runs scheduled segmentation jobs once every 24 hours. The ad-hoc activation API runs based on the latest segmentation results.
 
+>[!IMPORTANT]
+>
+>Note the following one-time constraint: Before running an ad-hoc activation job, make sure that at least 20 minutes have passed from the moment that the segment was first activated according to the schedule you set in [Step 3 - Create activation flow in the Platform UI](#activation-flow). 
+
 Before running an ad-hoc activation job, make sure the scheduled segment export job for your segments has finished. See [destination dataflow monitoring](../../dataflows/ui/monitor-destinations.md) for information on how to monitor the status of activation flows. For example, if your activation dataflow shows a **[!UICONTROL Processing]** status, wait for it to finish before running the ad-hoc activation job.
 
 Once the segment export job has completed, you can trigger the activation.

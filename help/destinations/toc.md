@@ -100,6 +100,7 @@ feature: Destinations
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Salesforce CRM connection](./catalog/crm/salesforce.md)
+        * [Microsoft Dynamics 365 connection](./catalog/crm/microsoft-dynamics-365.md)
         * [Outreach connection](catalog/crm/outreach.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
