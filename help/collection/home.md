@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Learn about the various technologies involved with collect data on customer experiences in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 ---
-# Data Collection overview
+# Data collection overview
 
 Adobe Experience Platform provides a suite of technologies that allow you to collect customer experience data from client-side sources, and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations in seconds.
 
