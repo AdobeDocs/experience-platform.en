@@ -14,7 +14,7 @@ This tutorial uses user-defined dashboards to visualize data from your custom da
 
 ## Getting started
 
-The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-time CDP data models that hold enriched Platform data. Please see the [packaging](../packages.md) and guardrails documentation for information concerning [licensing](../data-distiller/licence-usage.md) and [limits of the Data Distiller SKU](../guardrails.md#query-accelerated-store). If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-time CDP data models that hold enriched Platform data. Please see the [packaging](../packages.md), [guardrails](](../guardrails.md#query-accelerated-store)), and [licensing](../data-distiller/licence-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
 
 ## Build a reporting insights data model
 
@@ -122,11 +122,11 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 You can extend your audience model with additional details to create a richer dimension table. For example, you can map the segment name and destination name to the external audience identifier. To do this, use Query Service to create or refresh a new dataset and add it to the audience model that combines segments and destinations with an external identity. The diagram below illustrates the concept of this data model extension.
 
-![An ERD diagram linking the CDP insight data model and the Query accelerated store model.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![An ERD diagram linking the Real-time CDP insight data model and the Query accelerated store model.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## Create dimension tables to extend your reporting insights model
 
-Use Query Service to add key descriptive attributes from the enriched CDP dimension datasets to the `audienceinsight` data model and establish a relationship between your fact table and the new dimension table. The SQL below demonstrates how to integrate existing dimension tables into your reporting insights data model.
+Use Query Service to add key descriptive attributes from the enriched Real-time CDP dimension datasets to the `audienceinsight` data model and establish a relationship between your fact table and the new dimension table. The SQL below demonstrates how to integrate existing dimension tables into your reporting insights data model.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
@@ -157,7 +157,7 @@ Use the `SHOW datagroups;` command to confirm the creation of the additional `ex
 
 ## Query your extended accelerated store reporting insights data model
 
-Now that the CDP insight data models have been joined to your `audienceinsight` data model, it is ready to be queried. The following SQL shows all the datagroups available on the query accelerated store.
+Now that the `audienceinsight` data model has been augmented, it is ready to be queried. The following SQL shows the list of mapped destinations and segments.
 
 ```sql
 SELECT a.ext_custom_audience_id,
