@@ -82,7 +82,7 @@ The guardrails below apply to activation through [edge personalization destinati
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 |Maximum number of [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations | 10 | Soft | You can set up dataflows to 10 Custom personalization destinations per sandbox.|
-|Maximum number of attributes mapped to a personalization destination | 20 | Hard | A maximum of 20 attributes can be mapped in a dataflow to a personalization destination.|
+|Maximum number of attributes mapped to a personalization destination per sandbox | 20 | Hard | A maximum of 20 attributes can be mapped in a dataflow to a personalization destination, per sandbox.|
 |Maximum number of segments mapped to a single [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Soft | You can activate a maximum of 50 segments in an activation flow to a single Adobe Target destination.|
 
 {style="table-layout:auto"}
