@@ -7,7 +7,7 @@ description: Use the Pega Connector for S3 in Adobe Experience Platform to expor
 
 ## Overview {#overview}
 
-Use the [!DNL Pega Connector for S3] connecton in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], data jobs can be scheduled to import profiles from S3 storage to update Customer profile data source. This helps setup intitial export of profile data and sync up new profiles from Adobe Experience Platform into Pega Customer Decision Hub.  With up to date profile data in Customer Decision Hub enhances the Pega next-best-action decisioning process both for engagement policies as well as predictors in Adaptive Models.
+Use the [!DNL Pega Connector for S3] connecton in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], data jobs can be scheduled to import profiles from S3 storage to update Customer profile data source. This helps setup intitial export of profile data and also help sync up new profiles added from Adobe Experience Platform into Pega Customer Decision Hub.  With up to date profile data in Customer Decision Hub enhances the Pega next-best-action decisioning process both for engagement policies as well as predictors in Adaptive Models.
 
 >[!IMPORTANT]
 >
@@ -27,14 +27,11 @@ A marketer wants to setup Pega Customer Decision Hub with profile data loaded fr
 
 ## Prerequisites {#prerequisites}
 
-*Add information in this section about anything that customers need to be aware of before starting to set up the destination in the Adobe Experience Platform user interface. This can be about:*
+Before you can use this destination to export data out of Adobe Experience Platform and import profiles into Pega [!DNL Pega Customer Decision Hub], make sure you complete the following prerequisites
 
-* *needing to be added to an allow list*
-* *requirements for email hashing*
-* *any account specifics on your side*
-* *how to obtain an API key to connect to your platform*
-
-*You can link out to your relevant documentation if that would be useful to customers.*
+* Configure [!DNL Amazon S3] bucket and the folder path to be used for export and import of data fles.
+* Configure the [!DNL Amazon S3] access key and [!DNL Amazon S3] secret key: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account.
+* Make sure your [!DNL Pega Customer Decision Hub] instance is upgraded to version 8.8 or higher. 
 
 ## Supported identities {#supported-identities}
 
