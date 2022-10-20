@@ -48,7 +48,7 @@ After selecting a product profile, you can use the **[!UICONTROL Permissions]** 
 
 ![Image showing the permissions tab for a product profile Admin Console](./images/permissions/users-permissions-tabs.png)
 
-### Edit permissions for the product profile {#edit-permissions}
+### Edit permissions for the profile {#edit-permissions}
 
 On the **[!UICONTROL Permissions]** tab, select any of the displayed permission categories to access the permission editing view.
 
@@ -68,7 +68,7 @@ The product profile view reappears with the added permissions reflected.
 
 ![Image showing the added permissions for the product profile](./images/permissions/permissions-added.png)
 
-### Assign users to the product profile {#assign-users}
+### Assign users to the profile {#assign-users}
 
 To assign users to the product profile (and grant them the profile's configured permissions), select the **[!UICONTROL Users]** tab, followed by **[!UICONTROL Add user]**.
 
@@ -76,8 +76,20 @@ To assign users to the product profile (and grant them the profile's configured 
 
 For more information on managing users for a product profile, see the [Admin Console documentation](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
 
+### Migrate legacy API credentials to the profile {#migrate-tech-accounts}
+
+>[!NOTE]
+>
+>This section only applies to existing API credentials that were created before Privacy Service permissions were integrated into Adobe Admin Console. For new credentials, product profiles (and their permissions) are assigned through [Adobe Developer Console projects](https://developer.adobe.com/developer-console/docs/guides/projects/) instead.<br><br>See the section on [assigning product profiles to a project](./api/getting-started.md#product-profiles) in the Privacy Service API getting started guide for more information.
+
+To migrate legacy API credentials to the product profile, select **[!UICONTROL API Credentials]**, followed by **[!UICONTROL Add API Credentials]**.
+
+![[!UICONTROL Add API Credentials] being selected in Admin Console, under the [!UICONTROL API Credentials] tab for a product profile](./images/permissions/api-credentials.png)
+
+Choose the desired Developer Console projects from the list, then select **[!UICONTROL Save]** to add them to the product profile. All API calls that use the credentials from these projects will inherit the granular permissions granted by the product profile.
+
 ## Next steps
 
 This guide covered the available permissions for Privacy Service and how to manage them through Admin Console.
 
-For steps on how to create an API integration after setting up product profiles, see the [getting started guide for the Privacy Service API](./api/getting-started.md). For more information on managing permissions for other Adobe Experience Platform capabilities, refer to the [access control documentation](../access-control/home.md).
+For steps on how to create a new API integration after setting up product profiles, see the [getting started guide for the Privacy Service API](./api/getting-started.md). For more information on managing permissions for other Adobe Experience Platform capabilities, refer to the [access control documentation](../access-control/home.md).

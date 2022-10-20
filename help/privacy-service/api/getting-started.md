@@ -34,6 +34,8 @@ Once you have created a new project, select **[!UICONTROL Add to Project]** and 
 
 ![The API option being selected from the [!UICONTROL Add to Project] dropdown from the project details page in Developer Console](../images/api/getting-started/add-api-button.png)
 
+#### Select an API and generate a keypair {#keypair}
+
 The **[!UICONTROL Add an API]** screen appears. Select **[!UICONTROL Experience Cloud]** to narrow the list of available APIs, then select the card for **[!UICONTROL Privacy Service API]** before selecting **[!UICONTROL Next]**.
 
 ![The Privacy Service API card being selected from the list of available APIs](../images/api/getting-started/add-privacy-service-api.png)
@@ -46,11 +48,13 @@ The key pair is automatically generated and a ZIP file containing a private key 
 
 ![The generated keypair shown in the UI, whose values are automatically downloaded by the browser](../images/api/getting-started/key-pair-generated.png)
 
+#### Assign permissions through product profiles {#product-profiles}
+
 The final configuration step is to select the product profiles that this integration will inherit its permissions from. If you select more than one profile, their permission sets will be combined for the integration.
 
 >[!NOTE]
 >
->Product profiles and the granular permissions they assign are configured by administrators through Adobe Admin Console. See the guide on [Privacy Service permissions](../permissions.md) for more information.
+>Product profiles and the granular permissions they provide are created and managed by administrators through Adobe Admin Console. See the guide on [Privacy Service permissions](../permissions.md) for more information.
 
 When finished, select **[!UICONTROL Save configured API]**.
 
@@ -65,15 +69,26 @@ Once the API has been added to the project, the project page reappears on the **
 
 ### Authentication for each session
 
-The final required credential you must gather is your `{ACCESS_TOKEN}`, which is used in the Authorization header. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using [!DNL Platform] APIs.
+The final required credential you must gather is your `{ACCESS_TOKEN}`, which is used in the Authorization header. Unlike the values for `{API_KEY}` and `{ORG_ID}`, a new token must be generated every 24 hours to continue using the API.
 
-To generate a new `{ACCESS_TOKEN}`, open the previously downloaded private key and paste its contents into the text box beside **[!UICONTROL Generate access token]** before selecting **[!UICONTROL Generate Token]**.
+In general, there are two methods of generating an access token:
+
+* [Generate the token manually](#manual-token) for testing and development.
+* [Automate token generation](#auto-token) for API integrations.
+
+#### Generate a token manually {#manual-token}
+
+To manually generate a new `{ACCESS_TOKEN}`, open the previously downloaded private key and paste its contents into the text box beside **[!UICONTROL Generate access token]** before selecting **[!UICONTROL Generate Token]**.
 
 ![The previously generated access token being pasted on the project's overview page, with the [!UICONTROL Generate Token] button being selected after](../images/api/getting-started/paste-private-key.png)
 
 A new access token is generated, and a button to copy the token to your clipboard is provided. This value is used for the required Authorization header, and must be provided in the format `Bearer {ACCESS_TOKEN}`.
 
 ![The generated access token being copied from the UI](../images/api/getting-started/generated-access-token.png)
+
+#### Automate token generation {#auto-token}
+
+You can generate new access tokens for automated processes by sending a JSON Web Token (JWT) through a POST request to Adobe Identity Management Service (IMS). See the Developer Console document on [JWT authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/) for detailed steps.
 
 ## Reading sample API calls
 
