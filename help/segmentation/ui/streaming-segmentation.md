@@ -101,7 +101,7 @@ Streaming segmentation works on all data that was ingested using a streaming sou
 
 A segment is defined as either batch or streaming segmentation based on a combination of query type and event history duration. A list of which segments will be evaluated as a streaming segment can be found in the [streaming segmentation query types section](#query-types).
 
-Please note that you **cannot** have both a segment that contains both an `inSegment` expression and a direct single-event chain qualify for streaming segmentation. If you want to have this segment qualify for streaming segmentation, you should make the direct single-event chain its own segment.
+Please note that if a segment contains both an `inSegment` expression and a direct single-event chain, it cannot qualify for streaming segmentation. If you want to have this segment qualify for streaming segmentation, you should make the direct single-event chain its own segment.
 
 ### Why does the number of "total qualified" segments keep increasing while the number under "Last X days" remains at zero within the segment details section?
 
