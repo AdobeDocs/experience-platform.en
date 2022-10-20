@@ -81,9 +81,12 @@ Auto-generated dataflows are enabled by default. Select the ellipses (`...`) bes
 
 A preview page appears allowing you to inspect the mapping relationship between your source data fields and your target schema fields. Once you have viewed your dataflow's mappings. Select **[!UICONTROL Got it.]**
 
-![The mapping preview window.](../../images/tutorials/templates/preview-mapping.png)
+![The mapping preview window.](../../images/tutorials/templates/preview-mappings.png)
 
 You can update your dataflows at any time after execution. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Update dataflow]**. You are then taken to the sources workflow page where you can update your dataflow details, including settings for partial ingestion, error diagnostics, and alert notifications, as well as your dataflow's mapping.
 
 ![A dropdown window with the update dataflows option selected.](../../images/tutorials/templates/update.png)
 
+## Next steps
+
+By following this tutorial, you have now created dataflows, as well as assets like schemas, datasets, and identity namespaces using templates. For general information on sources, visit the [sources overview](../../home.md).
