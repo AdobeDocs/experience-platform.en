@@ -90,7 +90,7 @@ The **[!UICONTROL Export incremental files]** option is automatically selected. 
 
 >[!NOTE] 
 > 
->For dataset exports, the file names have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for examples of exported files.
+>For dataset exports, the file names have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for more information and examples of exported files.
 
 ## Review {#review}
 
@@ -102,39 +102,15 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 When exporting datasets, Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. 
 
-Experience Platform creates a folder structure in the storage location you specified, where it will deposit the exported dataset files. A new folder is created for each export time.
+Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. A new folder is created for each export time, following the pattern below:
 
-`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMMSS`
+`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
-The default file format is:
-`<destinationName>_dataset<datasetID>_<timestamp-yyyymmddhhmmss>.csv`
-
-```console
-https://your-aws-bucket/testbucket/61008328d507a618a3a2a356/exportTime=20210913220707/part-00000-tid-5271363778445977593-ddb8f635-d35d-49df-9a12-0150c6a4cc9b-4-1-c000.snappy.parquet
-```
-
-
-For example, if you selected a daily export and the file type `.json`, the files and the folder structure that you would receive on three consecutive days could look like this:
-
-```console
-/61008328d507a618a3a2a356/exportTime=20221120184500/part-00000-tid-5271363778445977593-ddb8f635-d35d-49df-9a12-0150c6a4cc9b-4-1-c000.snappy.json
-/61008328d507a618a3a2a356/exportTime=20221121184500/part-00000-tid-5271363778445977593-ddb8f635-d35d-49df-9a12-0150c6a4cc9b-4-1-c000.snappy.json
-/61008328d507a618a3a2a356/exportTime=20221121184500/part-00000-tid-5271363778445977593-ddb8f635-d35d-49df-9a12-0150c6a4cc9b-4-1-c000.snappy.json
-```
-
-In another example, if you selected an hourly export every four hours and the file type `.parquet`, the files that you would receive in three consecutive exports could look like this:
-
-```console
-Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220408061804.csv
-Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220409052200.csv
-Amazon_S3_dataset12341e18-abcd-49c2-836d-123c88e76c39_20220410061130.csv
-```
-
-Alongside these files, Experience Platform also deposits a manifest file for each export in the storage location. 
+The default file format is randomly generated and ensures that exported file names are unique.
 
 ### Sample dataset files {#sample-files}
 
-The presence of these files in your storage location is confirmation of successful export. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) or [.json file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv).
+The presence of these files in your storage location is confirmation of successful export. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) or [.json file](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
 ## Remove dataset from destination {#remove-dataset}
 
@@ -162,10 +138,10 @@ To remove a dataset from an existing dataflow, follow the steps below:
 
 ## Known limitations {#known-limitations}
 
-Keep in mind the following limitations:
+Keep in mind the following limitations for the beta release of dataset exports:
 
-* There is currently a single permission that includes Manage and Activate permissions on datasets. These controls will be split up in the future into more granular permissions.
+* There is currently a single permission (**[!UICONTROL Activate and Manage Datasets without Mapping]**) that includes manage and activate permissions on datasets. These controls will be split up in the future into more granular permissions.
 * Currently, you can only export incremental files and an end date cannot be selected for your dataset exports. 
 * Exported filenames are currently not customizable
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
-* Monitoring numbers for dataset exports are currently mixed with numbers for profile exports so do not reflect the true export situation.
+* Monitoring numbers for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.

@@ -98,8 +98,7 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Destinations] | [!UICONTROL Manage Destinations] | Access to read, create, edit, and disable destinations. |
 | [!DNL Destinations] | [!UICONTROL View Destinations] | Read-only access to available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **[!UICONTROL Browse]** tab. |
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Ability to activate data to active destinations that have been created. This permission requires either "View Destinations" or "Manage [!UICONTROL Destinations"] to be granted to the user who will activate destinations. |
-| [!DNL Destinations] | [!UICONTROL Activate Destination without Mapping] | Ability to activate data to active destinations that have been created, but not edit any mappings in the mapping step of the activation workflow. This permission requires either "View Destinations" or "Manage [!UICONTROL Destinations"] to be granted to the user who will activate destinations. |
-| [!DNL Destinations] | [!UICONTROL Manage and Activate Datasets] | Ability to read, create, edit, and disable datasets. Ability to also activate data to active datasets that have been created. |
+| [!DNL Destinations] | [!UICONTROL Manage and Activate Datasets without Mapping] | Ability to read, create, edit, and disable dataset export flows. Ability to also activate data to active datasets that have been created. |
 | [!DNL Destinations] | [!UICONTROL Destination Authoring] | Ability to author destinations using [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
