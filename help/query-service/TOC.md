@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Query Service Guide
-user-guide-description: Use standard SQL to query data in Platform Data Lake.
+user-guide-description: Use standard SQL to query data within the data lake in Experience Platform.
 feature: Queries
 ---
 
@@ -27,7 +27,6 @@ feature: Queries
   - [Connection parameters](api/connection-parameters.md)
   - [Scheduled queries](api/scheduled-queries.md)
   - [Runs for scheduled queries](api/runs-scheduled-queries.md)
-  - [Query alerts](api/alert-subscriptions.md)
   - [Query templates](api/query-templates.md)
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
@@ -35,6 +34,8 @@ feature: Queries
   - [Query templates](ui/query-templates.md)
   - [Using Query Service credentials](ui/credentials.md)
   - [Generating datasets from query results](ui/create-datasets.md)
+- [Query accelerated store]{#query-accelerated-store}
+  - [Reporting insights data model](query-accelerated-store/reporting-insights-data-model.md)
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
