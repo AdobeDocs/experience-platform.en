@@ -156,7 +156,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 >title="Configure file name"
 >abstract="For file-based destinations, a unique file name is generated per segment. Use the file name editor to create and edit a unique file name or keep the default name."
 
-The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
+For most destinations, the default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files. Note that some destination developers might select to have different default file names
 
 Select the pencil icon to open a modal window and edit the file names. File names are limited to 255 characters.
 
@@ -172,6 +172,13 @@ In the file name editor, you can select different components to add to the file 
 
 The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
 
+
+|File name option | Description |
+|---------|----------|
+| A1 | B1 |
+| A2 | B2 |
+| A3 | B3 |
+
 * **[!UICONTROL Segment name]**: You can append the segment name to the file name.
 * **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
 * **[!UICONTROL Custom text]**: Add custom text to the file names.
@@ -185,6 +192,10 @@ Select **[!UICONTROL Apply changes]** to confirm your selection.
 Once you have finished configuring all your segments, select **[!UICONTROL Next]** to continue.
 
 ## Select profile attributes {#select-attributes}
+
+>[!IMPORTANT] 
+> 
+>Beta callout for improved mapping step
 
 For profile-based destinations, you must select the profile attributes that you want to send to the target destination.
 
