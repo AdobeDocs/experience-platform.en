@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Overview
 breadcrumb-title: Experience Platform overview
-user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real time.
+user-guide-description: Learn how Experience Platform can deliver personalized experiences to your customers in real time.
 ---
 
 # Adobe Experience Platform overview {#landing}
@@ -34,11 +34,11 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Language support](documentation/language-support.md)
 * Application services built on Platform {#ecosystem}
   * [Overview](application-services.md)
-  * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-  * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-  * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
   * [Real-time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
+  * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+  * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+  * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
   * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Governance, privacy, and security {#governance-privacy-security}
   * [Overview](./governance-privacy-security/overview.md)

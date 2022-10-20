@@ -6,13 +6,14 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 ---
 # Manage labels
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
 Labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Platform, or as soon as data becomes available for use in Platform.
 
-## Create a new label
+## Create a new label {#create-new-label}
+
+>[!CONTEXTUALHELP]
+>id="platform_abac_labelusage"
+>title="Label usage"
+>abstract="You can use custom labels to apply data governance and access control configurations to your data."
 
 >[!NOTE]
 >

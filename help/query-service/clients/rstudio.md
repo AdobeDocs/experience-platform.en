@@ -14,7 +14,7 @@ This document walks through the steps for connecting [!DNL RStudio] with Adobe E
 >
 > This guide assumes you already have access to [!DNL RStudio] and are familiar with how to use it. More information about [!DNL RStudio] can be found in the [official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/).
 > 
-> Additionally, to use RStudio with Query Service, you need to install the PostgreSQL JDBC 4.2 Driver. You can download the JDBC Driver from the [PostgreSQL official site](https://jdbc.postgresql.org/download.html).
+> Additionally, to use RStudio with Query Service, you need to install the PostgreSQL JDBC 4.2 Driver. You can download the JDBC Driver from the [PostgreSQL official site](https://jdbc.postgresql.org/download/).
 
 ## Create a [!DNL Query Service] connection in the [!DNL RStudio] interface
 

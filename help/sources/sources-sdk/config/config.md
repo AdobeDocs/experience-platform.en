@@ -1,23 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Configuration options in Sources SDK
+title: Configuration options in Self-Serve Sources (Batch SDK)
 topic-legacy: overview
-description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
-hide: true
-hidefromtoc: true
+description: This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
 ---
-# Configuration options in Sources SDK
+# Configuration options in Self-Serve Sources (Batch SDK)
 
->[!IMPORTANT]
->
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
-
-This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
+This document provides an overview of the configurations you need to prepare in order to use Self-Serve Sources (Batch SDK).
 
 ## Connection specification
 
-Connection specifications return a source's connector properties. They include authentication specifications related to creating the base and source connections and a fixed connection specification ID that is assigned to a particular source. Connection specifications are tenant and IMS Organization agnostic. A typical connection specification contains basic information on a given source, as well as three distinct sections: `authSpec`, `sourceSpec`, and `exploreSpec`.
+Connection specifications return a source's connector properties. They include authentication specifications related to creating the base and source connections and a fixed connection specification ID that is assigned to a particular source. Connection specifications are tenant and organization agnostic. A typical connection specification contains basic information on a given source, as well as three distinct sections: `authSpec`, `sourceSpec`, and `exploreSpec`.
 
 | Specs | Description |
 | --- | --- |

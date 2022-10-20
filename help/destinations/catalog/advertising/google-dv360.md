@@ -50,7 +50,8 @@ Refer to the table below for information about the destination export type and f
 
 >[!NOTE]
 >
->Allow-listing is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Platform. Please ensure the allow-listing process described below has been completed by Google before creating a destination.
+>Allow-listing is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Platform. Please ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
+>The exception to this rule is for [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
 
 Before creating the [!DNL Google Display & Video 360] destination in Platform, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
 

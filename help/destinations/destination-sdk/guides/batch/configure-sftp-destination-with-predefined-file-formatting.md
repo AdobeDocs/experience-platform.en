@@ -1,15 +1,11 @@
 ---
 description: Learn how to use Destination SDK to configure an SFTP destination with predefined file formatting options and custom file name configuration.
-title: (Beta) Configure an SFTP destination with predefined file formatting options and custom file name configuration.
+title: Configure an SFTP destination with predefined file formatting options and custom file name configuration.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
 ---
-# (Beta) Configure an SFTP destination with predefined file formatting options and custom file name configuration
+# Configure an SFTP destination with predefined file formatting options and custom file name configuration
 
 ## Overview {#overview}
-
->[!IMPORTANT]
->
->The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 This page describes how to use Destination SDK to configure an SFTP destination with predefined, default [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
 
@@ -113,10 +109,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }

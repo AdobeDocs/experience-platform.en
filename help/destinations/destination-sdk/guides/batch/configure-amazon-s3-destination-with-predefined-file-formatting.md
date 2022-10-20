@@ -1,15 +1,11 @@
 ---
 description: Learn how to use Destination SDK to configure an Amazon S3 destination with predefined file formatting options and custom file name configuration.
-title: (Beta) Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration.
+title: Configure an Amazon S3 destination with predefined file formatting options and custom file name configuration.
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
 ---
-# (Beta) Configure an [!DNL Amazon S3] destination with predefined file formatting options and custom file name configuration
+# Configure an [!DNL Amazon S3] destination with predefined file formatting options and custom file name configuration
 
 ## Overview {#overview}
-
->[!IMPORTANT]
->
->The functionality to configure file-based destinations using Adobe Experience Platform Destination SDK is currently in Beta. The documentation and functionality are subject to change.
 
 This page describes how to use Destination SDK to configure an Amazon S3 destination with predefined, default [file formatting options](../../server-and-file-configuration.md#file-configuration) and a custom [file name configuration](../../file-based-destination-configuration.md#file-name-configuration).
 
@@ -112,10 +108,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }

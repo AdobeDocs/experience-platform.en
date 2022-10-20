@@ -12,9 +12,10 @@ feature: Data Hygiene
 * Data Hygiene UI {#ui}
   * [Overview](./ui/overview.md)
   * [Browse existing work orders](./ui/browse.md)
-  * [Manage time to live (TTL) for datasets](./ui/ttl.md)
+  * [Manage dataset expirations](./ui/dataset-expiration.md)
   * [Delete consumer records](./ui/delete-consumer.md)
 * Data Hygiene API {#api}
   * [Overview](./api/overview.md)
-  * [Dataset time to live (TTL)](./api/ttl.md)
-  * [Consumer delete jobs](./api/jobs.md)
+  * [Dataset expirations](./api/dataset-expiration.md)
+  * [Consumer deletes](./api/workorder.md)
+  * [Quota](./api/quota.md)

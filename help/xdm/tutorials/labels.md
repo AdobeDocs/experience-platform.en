@@ -27,7 +27,12 @@ This guide requires a working understanding of the following components of Adobe
   * [Schema Editor](../ui/overview.md): Learn how to create and manage schemas and other resources in the Platform UI.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Provides the infrastructure for enforcing data usage restrictions on Platform operations, using policies that define which marketing actions can (or cannot) be performed on labeled data.
 
-## Select a schema or field to add labels to
+## Select a schema or field to add labels to {#select-schema-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_editgovernancelabels"
+>title="Edit governance labels"
+>abstract="Apply a label to a schema field to indicate the usage policies that apply to the data contained in that specific field."
 
 To start adding labels, you must first [select an existing schema to edit](../ui/resources/schemas.md#edit) or [create a new schema](../ui/resources/schemas.md#create) to view its structure in the Schema Editor.
 

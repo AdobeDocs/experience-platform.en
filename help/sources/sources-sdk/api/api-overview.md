@@ -1,23 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Sources SDK API Guide (Beta)
+title: Self-Serve Sources (Batch SDK) API Guide
 topic-legacy: overview
 description: This document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the Flow Service API.
-hide: true
-hidefromtoc: true
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
 ---
-# Sources SDK API Guide (Beta)
-
->[!IMPORTANT]
->
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+# Self-Serve Sources (Batch SDK) API Guide
 
 This document provides an overview of the process of creating a new source, including steps on how to write and submit a new connection specification using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Platform. The service provides a user interface and RESTful API that lets you set up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
 
-The [!DNL Flow Service] API provides several endpoints that allow you to programmatically manage the connection and flow specifications for a new source that you are integrating through Sources SDK.
+The [!DNL Flow Service] API provides several endpoints that allow you to programmatically manage the connection and flow specifications for a new source that you are integrating through Self-Serve Sources (Batch SDK).
 
 ## Create a new connection specification
 
@@ -45,4 +39,4 @@ To submit your source for integration to Experience Platform, you must first com
 
 ## Next steps
 
-To begin using the [!DNL Flow Service] API and create a new source through Sources SDK, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
+To begin using the [!DNL Flow Service] API and create a new source through Self-Serve Sources (Batch SDK), read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.

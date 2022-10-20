@@ -50,6 +50,23 @@ The following metrics are available for lead to account matching profile enrichm
 | **[!UICONTROL Last successful run]** | Indicates the date and time of the last successful lead to account matching job run. |
 | **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the lead to account matching job. |
 
+## Predictive lead and account scoring profile enrichment {#predictive-lead-to-account-scoring}
+
+The [!UICONTROL Predictive lead and account scoring] dashboard shows the basic metrics and daily job-run status specific to the [Predictive lead and account scoring](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) profile enrichment. 
+
+![Predictive lead and account scoring profile enrichment](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+The following metrics are available for predictive lead and account scoring profile enrichment jobs:
+
+| Metric | Description |
+| --------- | ---------- |
+| **[!UICONTROL Job start]** | Indicates the start date and time of the predictive lead and account scoring job run. |
+| **[!UICONTROL Processing time]** | The total time taken for the job to complete. |
+| **[!UICONTROL Score name]** | The score name of the job. |
+| **[!UICONTROL Profile type]** | The type of the score: <ul><li>Person</li><li>Account</li></ul>. |
+| **[!UICONTROL Job type]** | The type of the job:<ul><li>Scoring</li><li>Training</li>. |
+| **[!UICONTROL Status]** | Indicates the status (successful, failed, or processing) of the predictive lead and account scoring job. |
+
 ## UI controls {#ui-controls}
 
 This section describes various user interface (UI) options in the monitoring interface, which allow you to filter the metrics that are displayed on the page.
@@ -73,3 +90,4 @@ By following this tutorial, you can now successfully monitor and understand metr
 * [Related accounts in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Related accounts tab in the Account profile UI guide](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [Lead to account matching in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Predictive lead and account scoring in Real-time CDP B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

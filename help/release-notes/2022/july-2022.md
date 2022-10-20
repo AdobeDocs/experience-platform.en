@@ -171,15 +171,10 @@ Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edi
 
 | Feature | Description |
 | --- | --- |
-| Lead to account matching | Lead to account matching enables you to join known person profiles to account profiles. You can then segment and target data in a B2B context such as accounts or opportunities. The daily-run jobs use both deterministic and probabilistic factors to match person profiles that are not already associated to any account to a best-matched account. You can then decide whether to include such matches in your segment definitions |
+| Lead to account matching | Lead to account matching enables you to join known person profiles to account profiles. You can then segment and target data in a B2B context such as accounts or opportunities. The daily-run jobs use both deterministic and probabilistic factors to match person profiles that are not already associated to any account to a best-matched account. You can then decide whether to include such matches in your segment definitions. <br><br>For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). For instructions on how to configure lead to account matching, see the [Account profile UI guide](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).</li>|
+|Predictive lead and account scoring | Predictive Lead and Account Scoring uses a tree-based (random forest/gradient boosting) machine learning method which involves learning from and predicting for the opportunity stage conversion events, and aggregating person activities onto the account level to produce the account scores. Top influential factors are also available at both the aggregate and the unit level to help B2B marketers better understand what elements drove the scores. <br><br>For more information, see the document on [predictive lead and account scoring](../../rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md). For information on how to manage your scores, see the guide on [managing predictive lead and account scoring in Real-time Customer Data Platform, B2B Edition.](../../rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) |
 
-For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
-
-For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
-
-For instructions on how to configure lead to account matching, see the [Account profile UI guide](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
-
-To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md).
+For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md). To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md).
 
 ## Real-time Customer Profile {#profile}
 
