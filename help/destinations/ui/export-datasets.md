@@ -106,7 +106,7 @@ Experience Platform creates a folder structure in the storage location you speci
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
-The default file format is randomly generated and ensures that exported file names are unique.
+The default file name is randomly generated and ensures that exported file names are unique.
 
 ### Sample dataset files {#sample-files}
 
