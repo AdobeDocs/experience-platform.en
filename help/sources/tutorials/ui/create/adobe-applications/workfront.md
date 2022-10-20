@@ -27,13 +27,37 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Adobe Workfront]** and then select **[!UICONTROL Add data]**.
 
-![The sources catalog with the Adobe Workfront source highlighted.]
+![The sources catalog with the Adobe Workfront source highlighted.](../../../../images/tutorials/create/workfront/catalog.png)
 
 ## Select data
 
+The [!UICONTROL Select data] step appears. Here, you must provide values for your Workfront subdomain and Datalane. Your Workfront subdomain is the same URL that you use to access your Workfront instance, for example `https://acme.workfront.com/`, while your datalane represents the workfront environment that you want to use.
+
+Once you have added your subdomain and datalane, select **[!UICONTROL Next]**.
+
+<!-- Need to add info on data lane -->
+
+![The select data page with placeholder values for subdomain and datalane.](../../../../images/tutorials/create/workfront/select-data.png)
+
 ## Provide dataflow details
 
+The dataflow detail step allows you to provide a name and an optional description for your dataflow. During this step, you can also subscribe to alerts to receive notifications regarding the status of your dataflow. For more information on alerts, visit the tutorial on [subscribing to alerts in the sources UI](../../alerts.md).
+
+Once you have provided your dataflow details and configured your desired alert settings, select **[!UICONTROL Next]**.
+
+![The dataflow details page with information on dataflow name, description, and alert notifications](../../../../images/tutorials/create/workfront/dataflow-details.png)
+
 ## Review
+
+The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
+
+* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+
+Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
+
+![The review page summarizing connection information.](../../../../images/tutorials/create/workfront/review.png)
+
 
 ## Appendix
 
@@ -45,13 +69,17 @@ During setup, a schema named Workfront Change Events from Flow is created.
 
 | Schema field | Description |
 | --- | --- |
-| `timestamp` |
-| `_workfront.objectType` |
-| `_workfront.objectID` |
-| `_workfront.created` |
-| `_workfront.deleted` |
-| `_worfkront.updated` |
-| `_workfront.completed` |
-| `_workfront.parentObjectType` |
-| `_workfront.parentID` |
-| `_workfront.customData` |
+| `timestamp` | The time in which the selected event occurred. The timestamp is represented in GTM timezone. |
+| `_workfront.objectType` | The object type. Available values can include `project`, `task`, `portfolio`, and others, depending on the object that was changed or created. |
+| `_workfront.objectID` | The ID that corresponds to the object type. |
+| `_workfront.created` | This value is set to `1` if the event represents an object creation. |
+| `_workfront.deleted` | This value is set to `1` if the object is deleted. |
+| `_worfkront.updated` | This value is set to `1` if the object is updated. |
+| `_workfront.completed` | This value is set to `1` if the object is marked as completed. |
+| `_workfront.parentObjectType` | (Optional) The object type that corresponds to the parent of the object. |
+| `_workfront.parentID` | The ID of the parent object. |
+| `_workfront.customData` | A map of all custom form fields and values populated during the event. |
+
+>[!IMPORTANT]
+>
+>Only attributes that have changed or created as part of an event are populated. For example, if the only change to an object was its name, then the only fields that will be populated are:<ul><li>`timestamp`</li><li>`_workfront.update (=1)`</li><li>`_workfront.objectType`</li><li>`_workfront.objectID`</li><li>`_workfront.objectName`</li></ul>
