@@ -35,8 +35,6 @@ The [!UICONTROL Select data] step appears. Here, you must provide values for you
 
 Once you have added your subdomain and datalane, select **[!UICONTROL Next]**.
 
-<!-- Need to add info on data lane -->
-
 ![The select data page with placeholder values for subdomain and datalane.](../../../../images/tutorials/create/workfront/select-data.png)
 
 ## Provide dataflow details
@@ -45,7 +43,7 @@ The dataflow detail step allows you to provide a name and an optional descriptio
 
 Once you have provided your dataflow details and configured your desired alert settings, select **[!UICONTROL Next]**.
 
-![The dataflow details page with information on dataflow name, description, and alert notifications](../../../../images/tutorials/create/workfront/dataflow-details.png)
+![The dataflow details page with information on dataflow name, description, and alert notifications](../../../../images/tutorials/create/workfront/dataflow-detail.png)
 
 ## Review
 
@@ -60,6 +58,8 @@ Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow s
 
 
 ## Appendix
+
+The following sections provide additional information on the Workfront source.
 
 ### Workfront Change Event Schema
 
@@ -82,4 +82,4 @@ During setup, a schema named Workfront Change Events from Flow is created.
 
 >[!IMPORTANT]
 >
->Only attributes that have changed or created as part of an event are populated. For example, if the only change to an object was its name, then the only fields that will be populated are:<ul><li>`timestamp`</li><li>`_workfront.update (=1)`</li><li>`_workfront.objectType`</li><li>`_workfront.objectID`</li><li>`_workfront.objectName`</li></ul>
+>Only attributes that have changed or created as part of an event are populated. For example, if you only change the name of the object, then the only fields that will be populated are:<ul><li>`timestamp`</li><li>`_workfront.update (=1)`</li><li>`_workfront.objectType`</li><li>`_workfront.objectID`</li><li>`_workfront.objectName`</li></ul>
