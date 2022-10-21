@@ -29,7 +29,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 ## Use templates in the Platform UI
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that can be used to create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
@@ -43,7 +43,7 @@ A pop-up window appears presenting you with the option to browse templates or us
 
 ### Authentication
 
-The authentication step appears, prompting you to either create a new account or use an existing an account.
+The authentication step appears, prompting you to either create a new account or use an existing account.
 
 #### Existing account
 
@@ -53,7 +53,7 @@ To use an existing account, select [!UICONTROL Existing account] and then select
 
 #### New account
 
-To create a new account, select **[!UICONTROL New account]**,  and then provide your source connection details and account authentication credentials. When finished, select **[!UICONTROL Connect to source]** and allow some time for the new connection to establish.
+To create a new account, select **[!UICONTROL New account]**, and then provide your source connection details and account authentication credentials. When finished, select **[!UICONTROL Connect to source]** and allow some time for the new connection to establish.
 
 ![The authentication page for a new account with source connection details and account authentication credentials.](../../images/tutorials/templates/new-account.png)
 
@@ -67,7 +67,7 @@ The preview window appears allowing you to explore and inspect sample data from 
 
 ![The preview sample data window.](../../images/tutorials/templates/preview-sample-data.png)
 
-Next, select the template that you would like to use from the list. You can select multiple templates and create multiple dataflows at once. However, a template can only be used once per account. Once you have selected your templates, select **[!UICONTROL Finish]** and allow for a few moments for the assets to generate.
+Next, select the template that you would like to use from the list. You can select multiple templates and create multiple dataflows at once. However, a template can only be used once per account. Once you have selected your templates, select **[!UICONTROL Finish]** and allow a few moments for the assets to generate.
 
 ![The list of templates with the Opportunity Contact Role template selected.](../../images/tutorials/templates/select-template.png)
  
@@ -83,7 +83,7 @@ A preview page appears allowing you to inspect the mapping relationship between 
 
 ![The mapping preview window.](../../images/tutorials/templates/preview-mappings.png)
 
-You can update your dataflows at any time after execution. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Update dataflow]**. You are then taken to the sources workflow page where you can update your dataflow details, including settings for partial ingestion, error diagnostics, and alert notifications, as well as your dataflow's mapping.
+You can update your dataflows at any time after execution. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Update dataflow]**. You are taken to the sources workflow page where you can update your dataflow details, including settings for partial ingestion, error diagnostics, and alert notifications, as well as your dataflow's mapping.
 
 ![A dropdown window with the update dataflows option selected.](../../images/tutorials/templates/update.png)
 
