@@ -3,7 +3,7 @@ title: Pega Profile Export Connector
 description: Use the Pega Profile Export Connector for S3 in Adobe Experience Platform to export full and/or incremental profile data to Amazon S3 cloud storage. 
 ---
 
-# Pega Connector for S3
+# Pega Profile Export Connector
 
 ## Overview {#overview}
 
