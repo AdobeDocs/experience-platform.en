@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;
 title: Create an Adobe Workfront source connection in the UI
-description: 
+description: This tutorial provides steps to create an Adobe Workfront source connection to bring your Workfront data to Adobe Experience Platform using the user interface.
 ---
 # Create an Adobe Workfront source connection in the UI
 
-This tutorial provides steps for creating an Adobe Workfront source connection in the UI to bring Adobe Workfront data into Adobe Experience Platform.
+This tutorial provides steps to create an Adobe Workfront source connection to bring your Workfront data to Adobe Experience Platform using the user interface.
 
 ## Getting started
 
@@ -56,7 +56,6 @@ Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow s
 
 ![The review page summarizing connection information.](../../../../images/tutorials/create/workfront/review.png)
 
-
 ## Appendix
 
 The following sections provide additional information on the Workfront source.
@@ -83,3 +82,7 @@ During setup, a schema named Workfront Change Events from Flow is created.
 >[!IMPORTANT]
 >
 >Only attributes that have changed or created as part of an event are populated. For example, if you only change the name of the object, then the only fields that will be populated are:<ul><li>`timestamp`</li><li>`_workfront.update (=1)`</li><li>`_workfront.objectType`</li><li>`_workfront.objectID`</li><li>`_workfront.objectName`</li></ul>
+
+## Next steps
+
+By following this tutorial, you now have created a dataflow to bring your data from Workfront to Experience Platform. You can now use services such as [Query Service](../../../../../query-service/home.md) to run further analysis on your data. For more information on Workfront, read the [Workfront overview](../../../../connectors/adobe-applications/workfront.md).
