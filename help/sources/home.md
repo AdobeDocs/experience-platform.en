@@ -24,10 +24,12 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 
 - [Adobe Audience Manager source overview](connectors/adobe-applications/audience-manager.md)
 - [Create an Adobe Audience Manager source connection in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics Classifications Data source connection overview](connectors/adobe-applications/classifications.md)
+- [Adobe Analytics Classifications Data source overview](connectors/adobe-applications/classifications.md)
 - [Create an Adobe Analytics Classifications Data source connection in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics Report Suite Data source connection overview](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics Report Suite Data source overview](connectors/adobe-applications/analytics.md)
 - [Create an Adobe Analytics source connection in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Adobe Campaign Managed Cloud Services source overview](connectors/adobe-applications/campaign.md)
+- [Create an Adobe Campaign Managed Cloud Services source connection in the UI](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Adobe Data Collection source overview](connectors/adobe-applications/data-collection.md)
 - [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] source overview](connectors/adobe-applications/marketo/marketo.md)
@@ -164,7 +166,15 @@ The following table outlines how the UI behaves based on different combinations 
 | **[!UICONTROL Manage Sources]** On | In addition to the functions included in **[!UICONTROL View Sources]**, grants access to **[!UICONTROL Connect Source]** option in **[!UICONTROL Catalog]** and to **[!UICONTROL Select Data]** option in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** also allows you to enable or disable **[!UICONTROL DataFlows]** and edit their schedules. |
 | **[!UICONTROL View Sources]** Off and **[!UICONTROL Manage Sources]** Off | Revoke all access to sources. |
 
-For more information about the available permissions granted through the Admin Console, including those four sources, see the [access control overview](../access-control/home.md).
+For more information about the available permissions granted through Adobe Permissions, read the [access control overview](../access-control/home.md).
+
+### Attribute-based access control for sources
+
+Attribute-based access control in Adobe Experience Platform allows administrators to control access to specific objects and/or capabilities based on attributes. 
+
+With attribute-based access control, you can apply mapping configurations to fields that you have permissions to. Furthermore, you cannot ingest data to a dataset if you do not have access to all fields in the dataset.
+
+For more information on attribute-based access control, read the [attribute-based access control overview](../access-control/abac/overview.md).
 
 ## Terms and conditions {#terms-and-conditions}
 

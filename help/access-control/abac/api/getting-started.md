@@ -6,10 +6,6 @@ exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
 ---
 # Getting started with the attribute-based access control
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
 This developer guide provides steps to help you use the attribute-based access control to manage roles, products, permission categories, and permission sets in Adobe Experience Platform, and includes sample API calls for performing various operations.
 
 ## Reading sample API calls

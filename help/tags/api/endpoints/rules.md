@@ -9,7 +9,7 @@ In the context of data collection tags, rules control the behavior of the resour
 
 >[!NOTE]
 >
->This document covers how to manage rules in the Reactor API. For information on how to interact with rules in the Data Collection UI, refer to the [UI guide](../../ui/managing-resources/rules.md).
+>This document covers how to manage rules in the Reactor API. For information on how to interact with rules in the UI, refer to the [UI guide](../../ui/managing-resources/rules.md).
 
 A rule belongs to exactly one [property](./properties.md). A property can have many rules.
 

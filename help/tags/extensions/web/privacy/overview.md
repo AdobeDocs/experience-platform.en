@@ -11,7 +11,7 @@ exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
 
 The Adobe Privacy tag extension allows you to collect and remove user IDs assigned to end users by Adobe solutions on client-side devices. Collected IDs can then be sent to [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) to access or delete the related individual's personal data in supported Adobe Experience Cloud applications.
 
-This guide covers how to install and configure the Adobe Privacy extension in the Data Collection UI.
+This guide covers how to install and configure the Adobe Privacy extension in the Experience Platform UI or Data Collection UI.
 
 >[!NOTE]
 >
@@ -19,7 +19,7 @@ This guide covers how to install and configure the Adobe Privacy extension in th
 
 ## Install and configure the extension
 
-In the Data Collection UI, select **[!UICONTROL Extensions]** in the left navigation, followed by the **[!UICONTROL Catalog]** tab. Use the search bar to narrow down the list of available extensions until you locate Adobe Privacy. Select **[!UICONTROL Install]** to continue.
+Select **[!UICONTROL Extensions]** in the left navigation, followed by the **[!UICONTROL Catalog]** tab. Use the search bar to narrow down the list of available extensions until you locate Adobe Privacy. Select **[!UICONTROL Install]** to continue.
 
 ![Install the extension](../../../images/extensions/privacy/install.png)
 
@@ -65,7 +65,7 @@ When using the Adobe Privacy tag extension, you must provide the required callba
 
 ### Define a data element to handle identities
 
-In the Data Collection UI, start the process of creating a new data element by selecting **[!UICONTROL Data Elements]** in the left navigation, followed by **[!UICONTROL Add Data Element]**. Once you are on the configuration screen, select **[!UICONTROL Core]** for the extension and **[!UICONTROL Custom Code]** for the data element type. From here, select **[!UICONTROL Open Editor]** in the right panel.
+Start the process of creating a new data element by selecting **[!UICONTROL Data Elements]** in the left navigation, followed by **[!UICONTROL Add Data Element]**. Once you are on the configuration screen, select **[!UICONTROL Core]** for the extension and **[!UICONTROL Custom Code]** for the data element type. From here, select **[!UICONTROL Open Editor]** in the right panel.
 
 ![Select data element type](../../../images/extensions/privacy/data-element-type.png)
 
@@ -105,4 +105,4 @@ After you install the extension, you can disable or delete it. Select **[!UICONT
 
 ## Next steps
 
-This guide covered the use of the Adobe Privacy tag extension in the Data Collection UI. For more information on the functionalities provided by the extension, including examples of how to employ it using raw code, see the [Privacy JavaScript Library overview](../../../../privacy-service/js-library.md) in the Privacy Service documentation.
+This guide covered the use of the Adobe Privacy tag extension in the UI. For more information on the functionalities provided by the extension, including examples of how to employ it using raw code, see the [Privacy JavaScript Library overview](../../../../privacy-service/js-library.md) in the Privacy Service documentation.

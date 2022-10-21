@@ -104,6 +104,7 @@ The guardrails outlined in this section refer to the number and nature of segmen
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
 | Segments per sandbox | 4000 | Soft | An organization can have more than 4000 segments in total, as long as there are less than 4000 segments in each individual sandbox. Attempting to create additional segments may affect system performance.|
+| Edge segments per sandbox | 150 | Soft | An organization can have more than 150 edge segments in total, as long as there are less than 150 edge segments in each individual sandbox. Attempting to create additional edge segments may affect system performance. | 
 | Streaming segments per sandbox | 500 | Soft | An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments may affect system performance.|
 | Batch segments per sandbox | 4000 | Soft | An organization can have more than 4000 batch segments in total, as long as there are less than 4000 batch segments in each individual sandbox. Attempting to create additional batch segments may affect system performance.|
 
@@ -137,6 +138,4 @@ When bringing data together from multiple sources, merge policies are the rules 
 
 ### Adobe Analytics report suite datasets in Platform {#aa-datasets}
 
-A maximum of one (1) Adobe Analytics report suite dataset should be enabled for Profile. This is a soft limit, meaning that you are able to enable more than one Analytics dataset for Profile, but it is not recommended as it may have unintended consequences for your data. This is due to the differences between Experience Data Model (XDM) schemas, which provide the semantic structure for data in Experience Platform and allow for consistency in data interpretation, and the customizable nature of eVars and conversion variables in Adobe Analytics. 
-
-For example, in Adobe Analytics a single organization may have multiple report suites. If report suite A designates eVar 4 as "internal search term" and report suite B designates eVar 4 as "referring domain", these values will both be ingested into the same field in Profile, causing confusion and degrading data quality.
+Multiple report suites can be enabled for Profile as long as all data conflicts are resolved. You can use the Data Prep functionality to resolve data conflicts across eVars, Lists, and Props. To learn more about how to use the Data Prep functionality, please read the [Adobe Analytics connector UI guide](../sources/tutorials/ui/create/adobe-applications/analytics.md). 

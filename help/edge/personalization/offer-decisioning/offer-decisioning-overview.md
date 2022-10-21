@@ -59,7 +59,7 @@ To enable Offer Decisioning, perform the following steps:
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through the [Data Collection UI](https://experience.adobe.com/#/data-collection/). See the [tags quick start guide](../../../tags/quick-start/quick-start.md)) for more information.
+1. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through the UI. See the [tags quick start guide](../../../tags/quick-start/quick-start.md)) for more information.
 1. [Configure the SDK](../../fundamentals/configuring-the-sdk.md) for Offer Decisioning. Additional Offer Decisioning specific steps are provided below.
 
    * Install the standalone SDK
