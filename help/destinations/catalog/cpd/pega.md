@@ -54,8 +54,6 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-![Amazon S3 profile-based export type](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
-
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
