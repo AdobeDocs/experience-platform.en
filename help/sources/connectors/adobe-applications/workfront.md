@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;
-title: Create an Adobe Workfront source connection in the UI
-description: 
+title: Adobe Workfront Source
+description: Adobe Workfront is a marketing work management application that helps you manage the entire lifecycle of work in one place. Workfront includes reporting and analytics tools that you can use to better understand and optimize the flow of work in your organization. 
 ---
 # Adobe Workfront source
 
