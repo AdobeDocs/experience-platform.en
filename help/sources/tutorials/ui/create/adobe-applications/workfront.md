@@ -21,7 +21,7 @@ This tutorial requires a working understanding of the following components of Ex
 
 ## Create a Workfront source connection in the UI
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that can be used to create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. You can also use the search bar to narrow down the displayed sources.
 
@@ -81,7 +81,7 @@ During setup, a schema named Workfront Change Events from Flow is created.
 
 >[!IMPORTANT]
 >
->Only attributes that have changed or created as part of an event are populated. For example, if you only change the name of the object, then the only fields that will be populated are:<ul><li>`timestamp`</li><li>`_workfront.update (=1)`</li><li>`_workfront.objectType`</li><li>`_workfront.objectID`</li><li>`_workfront.objectName`</li></ul>
+>Only attributes that have changed or have been created as part of an event are populated. For example, if you only change the name of the object, then the only fields that will be populated are:<ul><li>`timestamp`</li><li>`_workfront.update (=1)`</li><li>`_workfront.objectType`</li><li>`_workfront.objectID`</li><li>`_workfront.objectName`</li></ul>
 
 ## Next steps
 

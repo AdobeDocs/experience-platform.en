@@ -7,7 +7,7 @@ description: Adobe Workfront is a marketing work management application that hel
 
 Adobe Workfront is a marketing work management application that helps you manage the entire lifecycle of work in one place. Workfront includes reporting and analytics tools that you can use to better understand and optimize the flow of work in your organization. 
 
-The Workfront integration to the Adobe Experience Platform sources catalog allows you to bring your Workfront data into Experience Platform and perform use cases such as:
+The Workfront integration with the Adobe Experience Platform sources catalog allows you to bring your Workfront data into Experience Platform and perform use cases such as:
 
 * Combine work records with third-party data.
 * Apply historical and time-series analytics on work records.
