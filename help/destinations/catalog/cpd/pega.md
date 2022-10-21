@@ -31,7 +31,8 @@ Before you can use this destination to export data out of Adobe Experience Platf
 
 * Configure [!DNL Amazon S3] bucket and the folder path to be used for export and import of data fles.
 * Configure the [!DNL Amazon S3] access key and [!DNL Amazon S3] secret key: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account.
-* Make sure your [!DNL Pega Customer Decision Hub] instance is upgraded to version 8.8 or higher. 
+* To successfully connect and export data to your [!DNL Amazon S3] storage location, create an Identity and Access Management (IAM) user for [!DNL Platform] in [!DNL Amazon S3] and assign permissions such as `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
+* Make sure your [!DNL Pega Customer Decision Hub] instance is upgraded to 8.8 version or higher. 
 
 ## Supported identities {#supported-identities}
 
