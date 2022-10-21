@@ -6,7 +6,9 @@ description: Learn how to build a reporting insights data model through Query Se
 
 The query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. Typically, data is processed at regular intervals (for example, on an hourly or daily basis) where aggregate views are created and reported upon. The analysis of these reports generated from aggregated data derives insights intended to improve business performance. The query accelerated store provides a cache service, concurrency, an interactive experience, and a stateless API. However, it assumes the data is preprocessed and optimized for aggregated querying and not for raw data querying.
 
-The query accelerated store allows you to build a custom data model and/or extend on existing Real-time Customer Data Platform data models. You can then engage with or embed your reporting insights into a reporting/visualization framework of your choice. The Real-time CDP data model from Adobe Experience Platform provides insights on profiles, segments, and destinations and enables the Real-time CDP insight dashboards. This document guides you through the process of creating your reporting insights data model and also how to extend Real-time CDP data models as needed.
+The query accelerated store allows you to build a custom data model and/or extend on existing Real-Time Customer Data Platform data models. You can then engage with or embed your reporting insights into a reporting/visualization framework of your choice. Please see the Real-Time Customer Data Platform Insights Data Model documentation to learn how to [customize your SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases](../../dashboards/cdp-insights-data-model.md).
+
+The Real-Time CDP data model from Adobe Experience Platform provides insights on profiles, segments, and destinations and enables the Real-Time CDP insight dashboards. This document guides you through the process of creating your reporting insights data model and also how to extend Real-Time CDP data models as needed.
 
 ## Prerequisites
 
@@ -14,7 +16,7 @@ This tutorial uses user-defined dashboards to visualize data from your custom da
 
 ## Getting started
 
-The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-time CDP data models that hold enriched Platform data. Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/licence-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to build a custom data model for your reporting insights and to extend the Real-Time CDP data models that hold enriched Platform data. Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/licence-usage.md) documentation that relates to the Data Distiller SKU. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
 
 ## Build a reporting insights data model
 
@@ -118,15 +120,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## Extend your data model with the Real-time CDP insights data model
+## Extend your data model with the Real-Time CDP insights data model
 
 You can extend your audience model with additional details to create a richer dimension table. For example, you can map the segment name and destination name to the external audience identifier. To do this, use Query Service to create or refresh a new dataset and add it to the audience model that combines segments and destinations with an external identity. The diagram below illustrates the concept of this data model extension.
 
-![An ERD diagram linking the Real-time CDP insight data model and the Query accelerated store model.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![An ERD diagram linking the Real-Time CDP insight data model and the Query accelerated store model.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## Create dimension tables to extend your reporting insights model
 
-Use Query Service to add key descriptive attributes from the enriched Real-time CDP dimension datasets to the `audienceinsight` data model and establish a relationship between your fact table and the new dimension table. The SQL below demonstrates how to integrate existing dimension tables into your reporting insights data model.
+Use Query Service to add key descriptive attributes from the enriched Real-Time CDP dimension datasets to the `audienceinsight` data model and establish a relationship between your fact table and the new dimension table. The SQL below demonstrates how to integrate existing dimension tables into your reporting insights data model.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
