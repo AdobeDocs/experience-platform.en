@@ -7,7 +7,7 @@ title: (Alpha) Create a sources dataflow using templates in the UI
 
 >[!IMPORTANT]
 >
->Templates are in Alpha and is currently only supported by the [[!DNL Marketo Engage] source](./connectors/adobe-applications/marketo/marketo.md). The documentation and functionalities are subject to change.
+>Templates are in Alpha and is currently only supported by the [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md). The documentation and functionalities are subject to change.
 
 Adobe Experience Platform provides pre-configured templates that you can use to accelerate your data ingestion process. Templates include auto-generated assets such as schemas, datasets, mapping rules, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform.
 
@@ -17,7 +17,7 @@ With templates, you can:
 * Minimize errors that can occur during the manual data ingestion process.
 * Update auto-generated assets at any point to suit your use cases.
 
-The following tutorial provides steps on how to use templates in the Platform UI using the [[!DNL Marketo Engage] source](./connectors/adobe-applications/marketo/marketo.md).
+The following tutorial provides steps on how to use templates in the Platform UI using the [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md).
 
 ## Getting Started
 
