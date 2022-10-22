@@ -121,6 +121,18 @@ If selecting a value from this list of enums, the value will be outlined with a 
 
 ![A warning that is displayed if you are inserting a value that is not part of the enum list.](../images/ui/segment-builder/enum-warning.png)
 
+If you are creating multiple values, you can add all of them at once by using the bulk upload. Select the ![plus icon]() to show the **[!UICONTROL Add values in bulk]** popover.
+
+IMAGE
+
+On the **[!UICONTROL Add values in bulk]** popover, you can either upload a CSV or TSV file or manually insert comma separated values. 
+
+IMAGE
+
+Please note that there is a maximum of 100 values allowed. If you exceed this amount, you will need to remove some values before adding more.
+
+IMAGE
+
 ### Adding audiences
 
 You can drag and drop an audience from the **[!UICONTROL Audience]** tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment rule.
