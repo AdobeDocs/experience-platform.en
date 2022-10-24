@@ -6,7 +6,9 @@ description: Learn how to build a reporting insights data model through Query Se
 
 The query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. Typically, data is processed at regular intervals (for example, on an hourly or daily basis) where aggregate views are created and reported upon. The analysis of these reports generated from aggregated data derives insights intended to improve business performance. The query accelerated store provides a cache service, concurrency, an interactive experience, and a stateless API. However, it assumes the data is preprocessed and optimized for aggregated querying and not for raw data querying.
 
-The query accelerated store allows you to build a custom data model and/or extend on existing Adobe Real-Time Customer Data Platform data models. You can then engage with or embed your reporting insights into a reporting/visualization framework of your choice. The Real-Time CDP data model from Adobe Experience Platform provides insights on profiles, segments, and destinations and enables the Real-Time CDP insight dashboards. This document guides you through the process of creating your reporting insights data model and also how to extend Real-Time CDP data models as needed.
+The query accelerated store allows you to build a custom data model and/or extend on existing Adobe Real-Time Customer Data Platform data models. You can then engage with or embed your reporting insights into a reporting/visualization framework of your choice. Please see the Real-Time Customer Data Platform Insights Data Model documentation to learn how to [customize your SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases](../../dashboards/cdp-insights-data-model.md).
+
+The Real-Time CDP data model from Adobe Experience Platform provides insights on profiles, segments, and destinations and enables the Real-Time CDP insight dashboards. This document guides you through the process of creating your reporting insights data model and also how to extend Real-Time CDP data models as needed.
 
 ## Prerequisites
 
