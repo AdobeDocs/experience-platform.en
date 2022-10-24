@@ -10,7 +10,7 @@ Create a live outbound connection to [!DNL Google Cloud Storage] to periodically
 
 >[!IMPORTANT]
 >
->This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Cloud Storage] connection, contact your Adobe representative and provide your [!DNL IMS Organization ID].
+>This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Cloud Storage] connection, contact your Adobe representative and provide your [!DNL Organization ID].
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -23,27 +23,21 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-## Prerequisites {#prerequisites}
+## Prerequisite setup for connecting your [!DNL Google Cloud Storage] account {#prerequisites}
 
-### Allow-listing {#allow-listing}
+In order to connect Platform to [!DNL Google Cloud Storage], you must first enable interoperability for your [!DNL Google Cloud Storage] account. To access the interoperability setting, open [!DNL Google Cloud Platform] and select **[!UICONTROL Settings]** from the **[!UICONTROL Cloud Storage]** option in the navigation panel.
 
->[!NOTE]
->
->The allow list is mandatory before setting up your first [!DNL Google Cloud Storage] destination in Platform. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
+![Google Cloud Platform dashboard with Cloud Storage and Settings highlighted.](/help/sources/images/tutorials/create/google-cloud-storage/nav.png)
 
->[!IMPORTANT]
->
->Google has simplified the process to connect external audience management platforms to Google Ad Manager 360. You can now go through the process to link to Google Ad Manager 360 in a self-service manner. Read [Segments from data management platforms](https://support.google.com/admanager/answer/3289669?hl=en) in the Google documentation. You should have the IDs listed below at hand.
+The **[!UICONTROL Settings]** page appears. From here, you can see information regarding your [!DNL Google] project ID and details about your [!DNL Google Cloud Storage] account. To access interoperability settings, select **[!UICONTROL Interoperability]** from the top header.
 
-* **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
-* **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.
-* **Network code**: This is your [!DNL Google Ad Manager] network identifier, found under **[!UICONTROL Admin > Global settings]** in the Google interface, as well as in the URL.
-* **Audience Link ID**: This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]), also found under **[!UICONTROL Admin > Global settings]** in the Google interface.
-* Your account type. DFP by Google or AdX buyer.
+![The Interoperability tab highlighted in the Google Cloud Platform dashboard.](/help/sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
-## (Beta) Export datasets {#export-datasets}
+The **[!UICONTROL Interoperability]** page contains information on authentication, access keys, and the default project associated with your service account. To generate a new access key ID and a secret access key for your service account, select **[!UICONTROL Create a Key for a Service Account]**.
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read .....
+![The Create a key for a service account control highlighted in the Google Cloud Platform dashboard.](/help/sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+
+You can use your newly generated access key ID and secret access key to connect your [!DNL Google Cloud Storage] account to Platform.
 
 ## Connect to the destination {#connect}
 
@@ -57,8 +51,8 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Access key ID]**: A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform.
-* **[!UICONTROL Secret access key]**: A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform.
+* **[!UICONTROL Access key ID]**: A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. For information on how to obtain this value, read the [prerequisites](#prerequisites) section above.
+* **[!UICONTROL Secret access key]**: A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. For information on how to obtain this value, read the [prerequisites](#prerequisites) section above.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
 
 ![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -88,10 +82,18 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
+### Scheduling
+
+In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your Google Cloud Storage destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
+
 ### Map attributes and identities {#map}
 
-*Add information about supported mappings between source and target fields in the Mapping step of the activation workflow. Your destination might support exporting profile attributes, identity namespaces, or both. Some fields might be mandatory. Target attributes might be predefined or custom. Call out the important caveats and use examples, preferably with screenshots. Two examples of destination pages which you can use as reference are:*
+In the **[!UICONTROL Mapping]** step, you can select which attribute and identity fields to export for your profiles. You can also select to change the headings in the exported file to any friendly name that you wish. For more information, view the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate batch destinations UI tutorial.
 
-## Exported data {#exported-data}
+## (Beta) Export datasets {#export-datasets}
 
-To verify if data has been exported successfully, check your [!DNL Google Cloud Storage] bucket and make sure the exported files contain the expected profile populations.
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+
+## Validate successful data export {#exported-data}
+
+To verify if data has been exported successfully, check your [!DNL Google Cloud Storage] bucket and make sure that the exported files contain the expected profile populations.
