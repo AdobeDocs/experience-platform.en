@@ -32,7 +32,7 @@ This document provides a tutorial for defining a relationship between two schema
 
 >[!NOTE]
 >
->For steps on how to create a many-to-one relationship in Real-time Customer Data Platform B2B Edition, see the guide on [creating B2B relationships](./relationship-b2b.md).
+>For steps on how to create a many-to-one relationship in Adobe Real-Time Customer Data Platform B2B Edition, see the guide on [creating B2B relationships](./relationship-b2b.md).
 
 ## Getting started
 
