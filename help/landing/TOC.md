@@ -34,7 +34,7 @@ user-guide-description: Learn how Experience Platform can deliver personalized e
   * [Language support](documentation/language-support.md)
 * Application services built on Platform {#ecosystem}
   * [Overview](application-services.md)
-  * [Real-time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+  * [Adobe Real-Time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
