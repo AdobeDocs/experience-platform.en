@@ -2,6 +2,8 @@
 keywords: Experience Platform;home;popular topics; 
 description: Adobe Experience Platform provides pre-configured templates that you can use to accelerate your data ingestion process. Templates include auto-generated assets such as schemas, datasets, mapping rules, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform.
 title: (Alpha) Create a sources dataflow using templates in the UI
+hide: true
+hidefromtoc: true
 ---
 # (Alpha) Create a sources dataflow using templates in the UI
 
@@ -27,7 +29,13 @@ This tutorial requires a working understanding of the following components of Ex
 * [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Use templates in the Platform UI
+## Use templates in the Platform UI {#use-templates-in-the-platform-ui}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_templates_accounttype"
+>title="Select business type"
+>abstract="Select the appropriate business type for your use case. Your access may vary depending on your Real-Time Customer Data Platform subscription account."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html" text="Real-Time CDP overview"
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that can be used to create an account.
 
@@ -71,7 +79,12 @@ Next, select the template that you would like to use from the list. You can sele
 
 ![The list of templates with the Opportunity Contact Role template selected.](../../images/tutorials/templates/select-template.png)
  
-### Review assets
+### Review assets {#review-assets}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_templates_review"
+>title="Review your auto-generated assets"
+>abstract="It can take up to five minutes to generate all assets. If you choose to leave the page, you will get a notification to return once the assets are completed. You can review the assets once they are generated and make additional configurations to your dataflow at any time."
 
 The [!UICONTROL Review template assets] page displays the assets auto-generated as part of your template. In this page, you can view the auto-generated schemas, datasets, identity namespaces, and dataflows associated with your source connection.
 
