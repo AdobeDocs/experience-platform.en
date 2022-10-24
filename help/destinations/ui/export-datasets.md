@@ -1,26 +1,26 @@
 ---
-title: Export datasets to cloud storage destinations
+title: (Beta) Export Datasets to Cloud Storage Destinations
 type: Tutorial
 description: Learn how to export datasets from Adobe Experience Platform to your preferred cloud storage location.
 
 ---
-# (Beta) Export datasets to destinations
+# (Beta) Export datasets to cloud storage destinations
 
 >[!IMPORTANT]
 >
 >* The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 >* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information. 
 
-This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage or email marketing location, such as Amazon S3, SFTP locations, or Google Cloud Storage.
+This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage or email marketing location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
 ## When to activate segments or export datasets {#when-to-activate-segments-or-activate-datasets}
 
 Some file-based destinations in the Experience Platform catalog support both segment activation and dataset export. 
 
 * Consider activating segments when you want your data structured into profiles grouped by audience interests or qualifications. 
-* On the other hand, consider dataset exports when you are looking to export raw dataset data, which is not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science tasks, to satisfy compliance requirements, and many other use cases.
+* Alternatively, consider dataset exports when you are looking to export raw dataset data, which is not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science tasks, to satisfy compliance requirements, and many other use cases.
 
-If you are looking to export datasets, this document has all the information you need. If you are looking to activate segments to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
+This document contains all the information necessary to export datasets. If you want to activate segments to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Prerequisites {#prerequisites}
 
@@ -30,35 +30,35 @@ To export datasets to cloud storage destinations, you must have successfully [co
 
 To export datasets, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, and **[!UICONTROL Activate and Manage Datasets without Mapping]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-When browsing the destinations catalog, you should see an **[!UICONTROL Activate]** or an **[!UICONTROL Export datasets]** control for a destination. This means that you have the necessary permissions to export datasets and that the destination supports exporting datasets.
+To ensure that you have the necessary permissions to export datasets and that the destination supports exporting datasets, browse the destinations catalog. If a destination has an **[!UICONTROL Activate]** or an **[!UICONTROL Export datasets]** control, then you have the appropriate permissions.
 
 ## Select your destination {#select-destination}
 
-To select the destination where to export datasets: 
+Follow the instructions to select a destination where you can export your datasets:
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Image showing the destination catalog tab.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
+    ![Destination catalog tab with Catalog control highlighted.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-1. Select **[!UICONTROL Activate]** or **[!UICONTROL Export datasets]** on the card corresponding to the destination where you want to export datasets, as shown in the image below.
+2. Select **[!UICONTROL Activate]** or **[!UICONTROL Export datasets]** on the card corresponding to the destination that you want to export datasets to.
 
-    ![Image highlighting the activate control in the destinations catalog tab.](/help/destinations/assets/ui/export-datasets/activate-button.png)
+    ![Destination catalog tab with Activate control highlighted.](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-1. Select **[!UICONTROL Data type Datasets]** and select the destination connection where you want to export datasets, then select **[!UICONTROL Next]**.
+3. Select **[!UICONTROL Data type Datasets]** and select the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
   >[!TIP]
   > 
   >If you want to set up a new destination to export datasets, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow. 
 
-  ![Image showing a selection of two destinations that you can connect to.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
+  ![Destination activation workflow with Datasets control highlighted.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
-1. Proceed to the next section to [select your datasets](#select-datasets) for export.
+4. The **[!UICONTROL Select datasets]** view appears. Proceed to the next section to [select your datasets](#select-datasets) for export.
 
 ## Select your datasets {#select-datasets}
 
 Use the check boxes to the left of the dataset names to select the datasets that you want to export to the destination, then select **[!UICONTROL Next]**.
 
-![Image highlighting the checkboxes selection in the Select datasets step of the activation workflow.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
+![Dataset export workflow showing the Select datasets step where you can select which datasets to export.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## Schedule dataset export {#scheduling}
 
@@ -75,12 +75,12 @@ The **[!UICONTROL Export incremental files]** option is automatically selected. 
 >
 >The first exported incremental file includes all existing data in the dataset, functioning as a backfill.
 
-![Image of the UI with the Export incremental files toggle selected.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
+![Dataset export workflow showing the scheduling step.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
-    * **[!UICONTROL Daily]**: schedule incremental file exports once a day, every day, at the time you specify.
-    * **[!UICONTROL Hourly]**: schedule incremental file exports every 3, 6, 8, or 12 hours.
+    * **[!UICONTROL Daily]**: Schedule incremental file exports once a day, every day, at the time you specify.
+    * **[!UICONTROL Hourly]**: Schedule incremental file exports every 3, 6, 8, or 12 hours.
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
@@ -96,7 +96,7 @@ The **[!UICONTROL Export incremental files]** option is automatically selected. 
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start exporting datasets to the destination.
 
-![Image showing the review step of the dataset export workflow.](/help/destinations/assets/ui/export-datasets/review.png)
+![Dataset export workflow showing the review step.](/help/destinations/assets/ui/export-datasets/review.png)
 
 ## Verify successful dataset export {#verify}
 
@@ -110,7 +110,7 @@ The default file name is randomly generated and ensures that exported file names
 
 ### Sample dataset files {#sample-files}
 
-The presence of these files in your storage location is confirmation of successful export. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) or [.json file](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+The presence of these files in your storage location is confirmation of a successful export. To understand how the exported files are structured, you can download a sample [.parquet file](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) or [.json file](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
 ## Remove dataset from destination {#remove-dataset}
 
@@ -118,7 +118,7 @@ To remove a dataset from an existing dataflow, follow the steps below:
 
 1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
 
-    ![Browse destinations](../assets/ui/export-datasets/browse-dataset-connections.png)
+    ![Destination browse view with a destination connection shown and the rest blurred out.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
     >[!TIP] 
     > 
@@ -126,15 +126,15 @@ To remove a dataset from an existing dataflow, follow the steps below:
 
 1. From the **[!UICONTROL Activation data]** column, select the datasets control to view all datasets mapped to this export dataflow.
 
-    ![Select datasets control to view all datasets mapped to dataflow](../assets/ui/export-datasets/go-to-datasets-data.png)
+    ![The available datasets navigation option highlighted in the Activation data column.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. The **[!UICONTROL Activation data]** page for the destination appears. Select **[!UICONTROL Remove dataset]** in the right rail to trigger the remove dataset confirmation dialog. 
+2. The **[!UICONTROL Activation data]** page for the destination appears. Select **[!UICONTROL Remove dataset]** in the right rail to trigger the remove dataset confirmation dialog. 
 
-    ![Select Remove dataset control in the right rail.](../assets/ui/export-datasets/remove-dataset-control.png)
+    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/remove-dataset-control.png)
 
-1. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
+3. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
 
-    ![Confirm dataset removal from dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
+    ![Dialog showing the Confirm dataset removal option from the dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
 ## Known limitations {#known-limitations}
 
@@ -142,6 +142,6 @@ Keep in mind the following limitations for the beta release of dataset exports:
 
 * There is currently a single permission (**[!UICONTROL Activate and Manage Datasets without Mapping]**) that includes manage and activate permissions on datasets. These controls will be split up in the future into more granular permissions.
 * Currently, you can only export incremental files and an end date cannot be selected for your dataset exports. 
-* Exported filenames are currently not customizable
+* Exported filenames are currently not customizable.
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring numbers for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.

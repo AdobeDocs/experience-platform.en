@@ -48,9 +48,9 @@ Before you can send audience data to a destination, you must set up a connection
 
 The first step in connecting to a destination is to authenticate to the destination platform. 
 
-Depending on the destination that you are connecting to, you might be taken to the destination partner's page to authenticate, or you might be asked to input authentication credentials directly in the Platform workflow. Below is an example of required input to authenticate to an Amazon S3 destination. Detailed instructions about the required input is provided in each destination documentation page (see the authentication section for [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) and for [Facebook](/help/destinations/catalog/social/facebook.md#authenticate)).
+Depending on the destination that you are connecting to, you might be taken to the destination partner's page to authenticate, or you might be asked to input authentication credentials directly in the Platform workflow. Below is an example of required input to authenticate to an [!DNL Amazon S3] destination. Detailed instructions about the required input is provided in each destination documentation page (see the authentication section for [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) and for [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
-**Amazon S3 required and optional authentication parameters**
+**[!DNL Amazon S3] required and optional authentication parameters**
 
 ![Image showing the required and optional input parameters when authenticating to an Amazon S3 destination.](../assets/ui/connect-destinations/authenticate-amazon-s3-example.png)
 
@@ -58,17 +58,17 @@ Depending on the destination that you are connecting to, you might be taken to t
 
 If you have already set up authentication to the destination, you can continue with the existing account or you can set up a new account. 
 
-Depending on the destination that you are connecting to, you might be asked to input different types of connection parameters. For example, when connecting to an Amazon S3 destination, you are asked to provide details regarding the Amazon S3 bucket name and folder path where files will be deposited. Below are two examples of required inputs for an Amazon S3 destination and a Trade Desk destination. Detailed instructions about the required input is provided in each destination documentation page.
+Depending on the destination that you are connecting to, you might be asked to input different types of connection parameters. For example, when connecting to an [!DNL Amazon S3] destination, you are asked to provide details regarding the [!DNL Amazon S3] bucket name and folder path where files will be deposited. Below are two examples of required inputs for an [!DNL Amazon S3] destination and a [!DNL Trade Desk] destination. Detailed instructions about the required input is provided in each destination documentation page.
 
 >[!IMPORTANT]
 >
->The images below are used for illustration purposes only. The destination connection details vary between destinations. For detailed information about the connection details for your destination, read the **Connect to the destination** section in each [destination catalog](../catalog/overview.md) page (for example, [Google Customer Match](../catalog/advertising/google-customer-match.md#connect), [Trade Desk](/help/destinations/catalog/advertising/tradedesk.md#connect), or [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)).
+>The images below are used for illustration purposes only. The destination connection details vary between destinations. For detailed information about the connection details for your destination, read the **Connect to the destination** section in each [destination catalog](../catalog/overview.md) page (for example, [[!DNL Google Customer Match]](../catalog/advertising/google-customer-match.md#connect), [[!DNL Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md#connect), or [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details)).
 
-**Amazon S3 required and optional input parameters**
+**[!DNL Amazon S3] required and optional input parameters**
 
 ![Image showing the required and optional input parameters when connecting to an Amazon S3 destination.](../assets/ui/connect-destinations/connect-destination-amazons3-example.png)
 
-**The Trade Desk required and optional input parameters**
+**[!DNL The Trade Desk] required and optional input parameters**
 
 ![Image showing the required and optional input parameters when connecting to a Trade Desk destination.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
@@ -80,7 +80,7 @@ For file-based destinations, you can configure various settings related to how t
 
 ### Set up destination connection for segment activation or dataset exports {#segment-activation-or-dataset-exports}
 
-Some file-based destinations support segment activation as well as dataset exports. For those destinations, you can select if you are creating a connection which will enable you to activate segments or export datasets.
+Some file-based destinations support segment activation as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to activate segments or export datasets.
 
 ![Image showing the data type selection control which allows users to select between segment activation and dataset exports.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
@@ -88,17 +88,17 @@ Some file-based destinations support segment activation as well as dataset expor
 
 1. (Optional) Select the destination dataflow alerts that you want to subscribe to. You can subscribe to alerts when creating a dataflow to receive alert messages regarding the status, success, or failure of your flow run. The available alerts differ based on the destination type (file-based or streaming) that you are connecting to. Read [Subscribe to in-context destination alerts](alerts.md) for detailed information on destination dataflow alerts.
 
-   ![UI image showing the in-context destination alerts subscription options.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
+   ![The Configure new destination dialog with the in-context destination alerts subscription options highlighted.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
 2. Select **[!UICONTROL Next]**.
 
-   ![Image showing the Next control highlighted, allowing the user to proceed to the next step in the workflow, to select any marketing actions for the connection.](../assets/ui/connect-destinations/next.png)
+   ![The Configure new destination dialog with the Next control highlighted, allowing the user to proceed to the next step in the workflow.](../assets/ui/connect-destinations/next.png)
 
 ## Select marketing actions {#select-marketing-actions}
 
 1. Select the marketing actions applicable to the data that you want to export to the destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [data usage policies overview](../../data-governance/policies/overview.md) page.
 
-   ![Image highlighting the available marketing actions and showing the available controls to complete the Connect to destination workflow.](../assets/ui/connect-destinations/governance.png)
+   ![The Configure new destination dialog with the available marketing actions highlighted. The available controls to complete the Connect to destination workflow are also highlighted.](../assets/ui/connect-destinations/governance.png)
 
 2. Select **[!UICONTROL Save & Exit]** to save the destination configuration, or select **[!UICONTROL Next]** to proceed to the audience data [activation flow](activation-overview.md).
 
