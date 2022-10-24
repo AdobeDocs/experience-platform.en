@@ -58,7 +58,7 @@ In addition, datastreams are integrated with several Platform capabilities that 
 
 >[!NOTE]
 >
->Event forwarding is a paid feature that is only included as part of the Real-Time Customer Data Platform Connections offering.
+>Event forwarding is a paid feature that is only included as part of the Adobe Real-Time Customer Data Platform Connections offering.
 
 ## Next steps
 
