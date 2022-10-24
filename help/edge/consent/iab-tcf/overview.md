@@ -1,7 +1,7 @@
 ---
 title: IAB TCF 2.0 Support in the Adobe Experience Platform Web SDK
 description: Learn how to support IAB TCF 2.0 consent preferences using the Adobe Experience Platform Web SDK
-keywords: consent;setConsent;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0;Real-Time CDP;Real-time Customer Data Profile
+keywords: consent;setConsent;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 ---
 # IAB TCF 2.0 support in the Adobe Experience Platform Web SDK

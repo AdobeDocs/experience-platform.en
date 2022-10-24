@@ -18,7 +18,7 @@ The following document outlines Data Science Workspace permissions and access to
 
 Why am I only seeing the Services tab?
 
-- Your organization may only be entitled to Adobe Real-Time Customer Data Platform (RTCDP) which includes the Customer AI AI/ML Service.
+- Your organization may only be entitled to Adobe Real-Time Customer Data Platform (Real-Time CDP) which includes the Customer AI AI/ML Service.
 
 If you are unable to see any of the **Data Science** tabs and wish to utilize Data Science Workspace features, contact your company administrator to check if you have an Adobe Experience Platform Intelligence license.
 
@@ -53,7 +53,7 @@ In order to use Data Science Workspace, the "Manage Data Science Workspace" perm
 
 | Permission | Enabled | Disabled |
 |---|---|---|
-| Manage Data Science Workspace | Provides access to all services in Data Science Workspace. | API and UI access to all services within Data Science Workspace is disabled. While disabled, selecting the **Notebooks**, **Models**, and **Services** pages is prevented. <li>Access to **Services** may still be available through Adobe Real-Time Customer Data Platform (RTCDP).</li> |
+| Manage Data Science Workspace | Provides access to all services in Data Science Workspace. | API and UI access to all services within Data Science Workspace is disabled. While disabled, selecting the **Notebooks**, **Models**, and **Services** pages is prevented. <li>Access to **Services** may still be available through Adobe Real-Time Customer Data Platform (Real-Time CDP).</li> |
 
 ## Sandbox support
 
