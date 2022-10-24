@@ -20,15 +20,15 @@ The [!DNL Query Editor] enables you to write and execute queries without using a
 
 ![A zoomed in view of the [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
-## Browse {#browse}
+## Templates {#browse}
 
-The **[!UICONTROL Browse]** tab shows queries saved by users in your organization. It is useful to think of these as query projects, as queries saved here may still be under construction. Queries displayed on the **[!UICONTROL Browse]** tab also display as run queries in the **[!UICONTROL Log]** tab if they have been previously executed by [!DNL Query Service].
+The **[!UICONTROL Templates]** tab shows queries saved by users in your organization. It is useful to think of these as query projects, as queries saved here may still be under construction. Queries displayed on the **[!UICONTROL Templates]** tab also display as run queries in the **[!UICONTROL Log]** tab if they have been previously executed by [!DNL Query Service].
 
-![A zoomed in view of the Queries dashboard Browse tab displaying several saved queries.](../images/ui/overview/browse.png)
+![A zoomed in view of the Queries dashboard Templates tab displaying several saved queries.](../images/ui/overview/templates.png)
 
 | Column | Description |
 | --- | --- |
-| **[!UICONTROL Name]** | The query name created by the user. You can select on the name to open the query in the [!DNL Query Editor]. You can also use the search bar to search on the Name of a query. Searches are case sensitive. |
+| **[!UICONTROL Name]** | The name field is either the query name created by the user or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API then the name of the query is a snippet of the initial SQL used to create the query. You can select the query name to open the query in the [!DNL Query Editor]. You can also use the search bar to search for the [!UICONTROL Name] of a query. Searches are case sensitive. |
 | **[!UICONTROL SQL]** | The first few characters of the SQL query. Hovering over the code displays the full query. |
 | **[!UICONTROL Modified by]** | The last user who modified the query. Any user in your organization with access to [!DNL Query Service] can modify queries. |
 | **[!UICONTROL Last modified]** | The date and time of the last modification to the query, in the browser's time zone. |
