@@ -40,11 +40,11 @@ Follow the instructions to select a destination where you can export your datase
     
     ![Destination catalog tab with Catalog control highlighted.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-2. Select **[!UICONTROL Activate]** or **[!UICONTROL Export datasets]** on the card corresponding to the destination that you want to export datasets to.
+1. Select **[!UICONTROL Activate]** or **[!UICONTROL Export datasets]** on the card corresponding to the destination that you want to export datasets to.
 
     ![Destination catalog tab with Activate control highlighted.](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-3. Select **[!UICONTROL Data type Datasets]** and select the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
+1. Select **[!UICONTROL Data type Datasets]** and select the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
   >[!TIP]
   > 
@@ -52,7 +52,7 @@ Follow the instructions to select a destination where you can export your datase
 
   ![Destination activation workflow with Datasets control highlighted.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
-4. The **[!UICONTROL Select datasets]** view appears. Proceed to the next section to [select your datasets](#select-datasets) for export.
+1. The **[!UICONTROL Select datasets]** view appears. Proceed to the next section to [select your datasets](#select-datasets) for export.
 
 ## Select your datasets {#select-datasets}
 
@@ -128,11 +128,11 @@ To remove a dataset from an existing dataflow, follow the steps below:
 
     ![The available datasets navigation option highlighted in the Activation data column.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-2. The **[!UICONTROL Activation data]** page for the destination appears. Select **[!UICONTROL Remove dataset]** in the right rail to trigger the remove dataset confirmation dialog. 
+1. The **[!UICONTROL Activation data]** page for the destination appears. Select **[!UICONTROL Remove dataset]** in the right rail to trigger the remove dataset confirmation dialog. 
 
     ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/remove-dataset-control.png)
 
-3. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
+1. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
 
     ![Dialog showing the Confirm dataset removal option from the dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
