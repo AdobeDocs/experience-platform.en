@@ -15,7 +15,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Data Prep]](#data-prep)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Real-time Customer Data Platform B2B Edition](#B2B)
+- [Real-Time Customer Data Platform B2B Edition](#B2B)
 - [Sources](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
@@ -183,7 +183,7 @@ For more information on [!DNL Intelligent Services], please see the [[!DNL Intel
 
 ### Customer AI
 
-Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
+Customer AI available in Real-Time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
 
 **Updated features**
 
@@ -194,9 +194,9 @@ Customer AI available in Real-time Customer Data Platform, is used to generate c
 
 For more information on [!DNL Intelligent Services], please see the [[!DNL Intelligent Services] overview](../../intelligent-services/home.md).
 
-## Real-time Customer Data Platform B2B Edition {#B2B}
+## Real-Time Customer Data Platform B2B Edition {#B2B}
 
-Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+Built on Real-Time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
 **Updated features**
 
@@ -204,7 +204,7 @@ Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edi
 | --- | --- |
 | Support for `isDeleted` functionality | All [!DNL Marketo] datasets except `Activities` now support the `isDeleted` mapping. The new mapping is automatically added to your existing B2B dataflows. You can use the `isDeleted` mapping to filter out records that have been deleted so that your data in the [!DNL Data Lake] is consistent with your source data. See the [[!DNL Marketo] mapping fields guide](../../sources/connectors/adobe-applications/mapping/marketo.md) for more information on `isDeleted`. |
 
-To learn more about Real-time Customer Data Platform B2B Edition, see the [B2B overview](../../rtcdp/b2b-overview.md).
+To learn more about Real-Time Customer Data Platform B2B Edition, see the [B2B overview](../../rtcdp/b2b-overview.md).
 
 ## Sources {#sources}
 

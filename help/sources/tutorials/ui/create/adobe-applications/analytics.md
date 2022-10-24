@@ -52,7 +52,7 @@ Multiple in-bound connections can be made to bring multiple report suites into t
 
 >[!NOTE]
 >
->Data from multiple report suites can be enabled for Real-time Customer Data Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning.
+>Data from multiple report suites can be enabled for Real-time Customer Profile only if there are no data conflicts, such as two custom properties (eVars, lists and props) that have different meaning.
 
 To create an [!DNL Analytics] source connection, select a report suite and then select **[!UICONTROL Next]** to proceed.
 
