@@ -42,7 +42,7 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 >[!IMPORTANT]
 >
->The report suites listed on this page may come from various regions. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform cross regions. Please ensure this is permitted by your company.
+>The report suites listed on report suites screen may come from various regions. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform cross regions. Please ensure this is permitted by your company.
 
 The **[!UICONTROL Analytics source add data]** step provides you with a list of [!DNL Analytics] report suite data to create a source connection with. 
 
