@@ -41,7 +41,7 @@ When you license Experience Platform, you are provided with license usage entitl
 
 The [!DNL Profile Richness] metric varies depending on the licensing that you purchased. There are two calculations for [!DNL Profile Richness] available:
 
-* The sum of all production data stored within Real-time Customer Data Platform (i.e., Profile Service and Identity Service) at any point in time, divided by the [!DNL Addressable Audience];
+* The sum of all production data stored within Adobe Real-Time Customer Data Platform (i.e., Profile Service and Identity Service) at any point in time, divided by the [!DNL Addressable Audience];
 * The sum of all data stored within Platform (including, but not limited to the [!DNL Data Lake], Profile Service, and Identity Service) at any point in time and any data that you stream through (instead of storing within) Platform in the past 12 months, divided by the [!DNL Addressable Audience].
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased.
