@@ -1,29 +1,21 @@
 ---
 title: Data Landing Zone Source destination
-description: Google Ad Manager 360 is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
-exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
+description: Learn how to connect to Data Landing Zone to activate segments and export datasets. 
 ---
 # (Beta) Data Landing Zone Source destination
 
-## Overview {#overview}
-
 >[!IMPORTANT]
 >
->This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Data Landing Zone] connection, contact your Adobe representative and provide your [!DNL IMS Organization ID].
+>This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Data Landing Zone] connection, contact your Adobe representative and provide your [!DNL Organization ID].
 
-[!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you to access a secure, cloud-based file storage facility to bring files into Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Platform Products and Services license. All customers of Platform and its application services such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. You can read and write file(s) to your container through [!DNL Azure Storage Explorer] or your command-line interface.
 
-[!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms at rest and in transit. SAS-based authentication allows you to securely access your [!DNL Data Landing Zone] container through a public internet connection. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross-region setups for your network. Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
+## Overview {#overview}
 
-## Supported identities {#supported-identities}
+[!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you access to a secure, cloud-based file storage facility to export files out of Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Platform Products and Services license. All customers of Platform and its application services such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. You can read and write file(s) to your container through [!DNL Azure Storage Explorer] or your command-line interface.
 
-[!DNL This integration] supports the activation of identities described in the table below.
+[!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms at rest and in transit. SAS-based authentication allows you to securely access your [!DNL Data Landing Zone] container through a public internet connection. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross-region setups for your network. 
 
-|Target Identity|Description|Considerations|
-|---|---|---|
-|PPID|[!DNL Publisher provided ID]|Select this target identity to send audiences to [!DNL Google Ad Manager 360]|
-
-{style="table-layout:auto"}
+Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -36,23 +28,37 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-## Prerequisites {#prerequisites}
+## Manage the contents of your [!DNL Data Landing Zone]
 
-### Allow-listing {#allow-listing}
+You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. 
 
->[!NOTE]
+In the [!DNL Azure Storage Explorer] UI, select the connection icon in the left-navigation. The **Select Resource** window appears, providing you with options to connect to. Select **[!DNL Blob container]** to connect to [!DNL Data Landing Zone].
+
+![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+
+Next, select **Shared access signature URL (SAS)** as your connection method, and then select **Next**.
+
+![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+
+After selecting your connection method, you must next provide a **display name** and the **[!DNL Blob] container SAS URL** that corresponds with your [!DNL Data Landing Zone] container.
+
+>[!TIP]
 >
->The allow list is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
+>You can retrieve your [!DNL Data Landing Zone] credentials from the sources catalog in the Platform UI.
 
->[!IMPORTANT]
->
->Google has simplified the process to connect external audience management platforms to Google Ad Manager 360. You can now go through the process to link to Google Ad Manager 360 in a self-service manner. Read [Segments from data management platforms](https://support.google.com/admanager/answer/3289669?hl=en) in the Google documentation. You should have the IDs listed below at hand.
+Provide your [!DNL Data Landing Zone] SAS URL and then select **Next**
 
-* **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
-* **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.
-* **Network code**: This is your [!DNL Google Ad Manager] network identifier, found under **[!UICONTROL Admin > Global settings]** in the Google interface, as well as in the URL.
-* **Audience Link ID**: This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]), also found under **[!UICONTROL Admin > Global settings]** in the Google interface.
-* Your account type. DFP by Google or AdX buyer.
+![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+
+The **Summary** window appears, providing you with an overview of your settings, including information on your [!DNL Blob] endpoint and permissions. When ready, select **Connect**.
+
+![summary](/help/sources/images/tutorials/create/dlz/summary.png)
+
+A successful connection updates your [!DNL Azure Storage Explorer] UI with your [!DNL Data Landing Zone] container.
+
+![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+
+With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can now start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, you need to establish a connection to the
 
 ## Connect to the destination {#connect}
 
@@ -66,10 +72,11 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Access key ID]**: A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform.
-* **[!UICONTROL Secret access key]**: A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform.
+NEED to find out the required fields to connect to DLZ
 
-For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] source overview](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
+* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
+
+![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -77,12 +84,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
-* **[!UICONTROL Bucket name]**: Enter the name of the [!DNL Google Cloud Storage] bucket to be used by this destination.
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
-*  **[!UICONTROL Account ID]**: Fill in your Audience Link ID with [!DNL Google].
-*  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
-   * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
-   * Use `AdX buyer` for [!DNL Google AdX]
 
 ### Enable alerts {#enable-alerts}
 
@@ -98,18 +100,18 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
-In the identity mapping step, you can see the following pre-populated mappings:
+### Scheduling
 
-|Pre-populated mapping | Description |
-|---------|----------|
-| `ECID` -> `ppid` | This is the only user-editable pre-populated mapping. You can select any of your attributes or identity namespaces from Platform and map them to `ppid`. |
-| `metadata.segment.alias` -> `list_id` | Maps Experience Platform segment names to segment IDs in the Google platform. |
-| `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Tells the Google platform when to remove disqualified users from segments. |
+In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Google Cloud Storage] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
 
-These mappings are required by [!DNL Google Ad Manager 360] and are automatically created by Adobe Experience Platform for all [!DNL Google Ad Manager 360] connections.
+### Map attributes and identities {#map}
 
-![UI image showing the mapping step for Google Ad Manager 360.](../../assets/catalog/advertising/google-ad-manager-360/ad-manager-360-mapping.png)
+In the **[!UICONTROL Mapping]** step, you can select which attribute and identity fields to export for your profiles. You can also select to change the headers in the exported file to any friendly name that you wish. For more information, view the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate batch destinations UI tutorial.
 
-## Exported data {#exported-data}
+## (Beta) Export datasets {#export-datasets}
 
-To verify if data has been exported successfully, check your [!DNL Google Cloud Storage] bucket and make sure the exported files contain the expected profile populations.
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+
+## Validate successful data export {#exported-data}
+
+To verify if data has been exported successfully, check your [!DNL Google Cloud Storage] bucket and make sure that the exported files contain the expected profile populations.

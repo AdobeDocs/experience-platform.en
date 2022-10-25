@@ -4,13 +4,13 @@ description: Learn how to connect to Google Cloud Storage and activate segments 
 ---
 # (Beta) [!DNL Google Cloud Storage] connection
 
-## Overview {#overview}
-
-Create a live outbound connection to [!DNL Google Cloud Storage] to periodically export CSV data files from Adobe Experience Platform into your own buckets.
-
 >[!IMPORTANT]
 >
 >This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Cloud Storage] connection, contact your Adobe representative and provide your [!DNL Organization ID].
+
+## Overview {#overview}
+
+Create a live outbound connection to [!DNL Google Cloud Storage] to periodically export CSV data files from Adobe Experience Platform into your own buckets.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -84,7 +84,7 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 ### Scheduling
 
-In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your Google Cloud Storage destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
+In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Google Cloud Storage] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
 
 ### Map attributes and identities {#map}
 

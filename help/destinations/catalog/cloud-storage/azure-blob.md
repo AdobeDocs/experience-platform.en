@@ -84,6 +84,10 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
+## (Beta) Export datasets {#export-datasets}
+
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+
 ## Exported data {#exported-data}
 
 For [!DNL Azure Blob Storage] destinations, [!DNL Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.

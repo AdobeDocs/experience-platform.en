@@ -1,37 +1,16 @@
 ---
-title: (Beta) [!DNL Google Ad Manager 360] connection
-description: Google Ad Manager 360 is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
-exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
+title: (Beta) [!DNL Azure Data Lake Storage Gen2] connection
+description: Learn how to connect to Azure Data Lake Storage Gen2 to activate segments and export datasets.
 ---
-# (Beta) [!DNL Google Ad Manager 360] connection
-
-## Overview {#overview}
-
-The [!DNL Google Ad Manager 360] connection enables batch upload for [!DNL publisher provided identifiers] (PPID) into [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage].
-
-For more details on how publisher provided identifiers work in Google Ad Manager 360, see the [official Google documentation](https://support.google.com/admanager/answer/2880055?hl=en).
+# (Beta) [!DNL Azure Data Lake Storage Gen2] connection
 
 >[!IMPORTANT]
 >
->This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Ad Manager 360] connection, contact your Adobe representative and provide your [!DNL IMS Organization ID].
+>This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Azure Data Lake Storage Gen2] connection, contact your Adobe representative and provide your [!DNL Organization ID].
 
-The [!DNL Google Ad Manager 360] destination exports [!DNL CSV] files to your [!DNL Google Cloud Storage] bucket. Once you've exported the [!DNL CSV] files, you must import them into your [!DNL Google Ad Manager 360] account.
+## Overview {#overview}
 
-## Destination specifics {#specifics}
-
-Note the following details that are specific to [!DNL Google Ad Manager 360] destinations.
-
-* Activated audiences are created programmatically in the Google platform and populated in the CSV file.
-
-## Supported identities {#supported-identities}
-
-[!DNL This integration] supports the activation of identities described in the table below.
-
-|Target Identity|Description|Considerations|
-|---|---|---|
-|PPID|[!DNL Publisher provided ID]|Select this target identity to send audiences to [!DNL Google Ad Manager 360]|
-
-{style="table-layout:auto"}
+Read this page to learn to create a live outbound connection to your [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2]) data lake to periodically export data files from Experience Platform.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -46,22 +25,6 @@ Refer to the table below for information about the destination export type and f
 
 ## Prerequisites {#prerequisites}
 
-### Allow-listing {#allow-listing}
-
->[!NOTE]
->
->The allow list is mandatory before setting up your first [!DNL Google Ad Manager] destination in Platform. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
-
->[!IMPORTANT]
->
->Google has simplified the process to connect external audience management platforms to Google Ad Manager 360. You can now go through the process to link to Google Ad Manager 360 in a self-service manner. Read [Segments from data management platforms](https://support.google.com/admanager/answer/3289669?hl=en) in the Google documentation. You should have the IDs listed below at hand.
-
-* **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
-* **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
-* **Network code**: This is your [!DNL Google Ad Manager] network identifier, found under **[!UICONTROL Admin > Global settings]** in the Google interface, as well as in the URL.
-* **Audience Link ID**: This is a specific identifier associated with your [!DNL Google Ad Manager] network (not your [!DNL Network code]), also found under **[!UICONTROL Admin > Global settings]** in the Google interface.
-* Your account type. DFP by Google or AdX buyer.
-
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
@@ -74,10 +37,15 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Access key ID]**: A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform.
-* **[!UICONTROL Secret access key]**: A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform.
+* **[!UICONTROL URL]**: The endpoint for ADLS Gen2. The endpoint pattern is: `https://<accountname>.dfs.core.windows.net`.
+* **[!UICONTROL Tenant]**: The tenant information that contains your application.
+* **[!UICONTROL Service principal ID]**: The application's client ID.
+* **[!UICONTROL Service principal key]**: The application's key.
+* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
 
-For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] source overview](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
+![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+For more information about these values, read the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] source overview](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
 ### Fill in destination details {#destination-details}
 
@@ -85,12 +53,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
-* **[!UICONTROL Bucket name]**: Enter the name of the [!DNL Google Cloud Storage] bucket to be used by this destination.
 * **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
-*  **[!UICONTROL Account ID]**: Fill in your Audience Link ID with [!DNL Google].
-*  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
-   * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
-   * Use `AdX buyer` for [!DNL Google AdX]
 
 ### Enable alerts {#enable-alerts}
 
@@ -106,18 +69,18 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
-In the identity mapping step, you can see the following pre-populated mappings:
+### Scheduling
 
-|Pre-populated mapping | Description |
-|---------|----------|
-| `ECID` -> `ppid` | This is the only user-editable pre-populated mapping. You can select any of your attributes or identity namespaces from Platform and map them to `ppid`. |
-| `metadata.segment.alias` -> `list_id` | Maps Experience Platform segment names to segment IDs in the Google platform. |
-| `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Tells the Google platform when to remove disqualified users from segments. |
+In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Google Cloud Storage] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
 
-These mappings are required by [!DNL Google Ad Manager 360] and are automatically created by Adobe Experience Platform for all [!DNL Google Ad Manager 360] connections.
+### Map attributes and identities {#map}
 
-![UI image showing the mapping step for Google Ad Manager 360.](../../assets/catalog/advertising/google-ad-manager-360/ad-manager-360-mapping.png)
+In the **[!UICONTROL Mapping]** step, you can select which attribute and identity fields to export for your profiles. You can also select to change the headers in the exported file to any friendly name that you wish. For more information, view the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate batch destinations UI tutorial.
 
-## Exported data {#exported-data}
+## (Beta) Export datasets {#export-datasets}
 
-To verify if data has been exported successfully, check your [!DNL Google Cloud Storage] bucket and make sure the exported files contain the expected profile populations.
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+
+## Validate successful data export {#exported-data}
+
+To verify if data has been exported successfully, check your [!DNL Google Cloud Storage] bucket and make sure that the exported files contain the expected profile populations.
