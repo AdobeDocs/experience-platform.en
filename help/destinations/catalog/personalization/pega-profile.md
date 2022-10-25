@@ -1,6 +1,6 @@
 ---
 title: Pega Profile Connector
-description: Use the Pega Profile Connector for S3 in Adobe Experience Platform to export full and/or incremental profile data to Amazon S3 cloud storage. 
+description: Use the Pega Profile Connector for S3 in Adobe Experience Platform to export full and/or incremental profile data to Amazon S3 cloud storage. In Pega Customer Decision Hub, Data jobs can be scheduled in Customer Profile Designer to import profile data periodically from Amazon S3 storage. 
 ---
 
 # Pega Profile Connector
@@ -109,4 +109,4 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 ## Exported data {#exported-data}
 
-For [!DNL Amazon S3] destinations, [!DNL Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
+For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
