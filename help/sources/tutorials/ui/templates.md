@@ -116,3 +116,15 @@ You can use the schema editor view to make updates to your auto-generated schema
 ## Next steps
 
 By following this tutorial, you have now created dataflows, as well as assets like schemas, datasets, and identity namespaces using templates. For general information on sources, visit the [sources overview](../../home.md).
+
+## Appendix
+
+The following section provides additional information regarding templates.
+
+### Use the notifications panel to return to the review page
+
+Templates are supported by Adobe Experience Platform alerts and you can use the notifications panel to receive updates on the status of your assets and also to navigate back to the review page. 
+
+Select the notification icon the top header of Platform UI and then select the status alert to see the assets that you want to review.
+
+![The notifications panel in Platform UI with a notification alerting a failed dataflow highlighted.](../../images/tutorials/templates/notifications.png)
