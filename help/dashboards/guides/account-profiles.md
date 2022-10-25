@@ -11,7 +11,7 @@ For an overview of all of the features within the account profile user interface
 
 ## Getting started
 
-You must be entitled to [Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) in order to access the B2B [!UICONTROL Account Profiles] dashboard. 
+You must be entitled to [Adobe Real-Time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) in order to access the B2B [!UICONTROL Account Profiles] dashboard. 
 
 ## Account profiles data
 
@@ -39,7 +39,7 @@ Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL
 
 ![The Account Profiles browse tab with results displayed and the Profile ID highlighted.](../images/account-profiles/account-profiles-browse-tab.png)
 
-The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
+The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
 
 ## The [!UICONTROL Account Profiles] [!UICONTROL Overview] {#overview}
 
@@ -57,6 +57,8 @@ To learn more about each of the available standard widgets, select the name of a
 
 * [Total accounts by industry](#total-accounts-by-industry)
 * [Account profiles added](#account-profiles-added)
+* [Predictive scoring distribution](#predictive-scoring-distribution)
+* [Predictive scoring top influential factors](#predictive-scoring-top-influential-factors)
 
 ### Total accounts by industry {#total-accounts-by-industry}
 
@@ -76,6 +78,28 @@ This widget uses a colour coded bar chart to illustrate the count of profiles ad
 
 ![The Account profiles added widget.](../images/account-profiles/accounts-profiles-added-widget.png)
 
+### Predictive scoring distribution {#predictive-scoring-distribution}
+
+The [!UICONTROL Predictive scoring distribution] widget shows the score distribution of all account profiles to help you understand the health of your sales pipeline at a glance. The scoring data is conveyed through a donut chart and a column chart.
+
+The donut chart illustrates the proportion of your total account profiles in each of the high, medium, and low propensity to buy buckets. The key provides more details on the color-coded sections including the scoring bucket ranges and the number of account profiles in that range.
+
+The column chart provides a more granular scoring breakdown. Each column shows the number of account profiles in each of the 20 five-point-increment buckets.
+
+The dropdown menu within the widget allows you to select the account scoring model.
+
+![The Predictive scoring distribution widget.](../images/account-profiles/predictive-scoring-distribution.png)
+
+### Predictive scoring top influential factors {#predictive-scoring-top-influential-factors}
+
+The [!UICONTROL Predictive scoring top influential factors] widget helps you to understand the most significant factors that drive the scores for each propensity bucket.
+
+This widget shows the top influential factors for each of the high, medium, and low propensity buckets. A bar for each influential factor indicates the percentage of the account profiles in that propensity bucket that contains the specific influential factor.
+
+The dropdown menu within the widget allows you to select the account scoring model.
+
+![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
 ## Next steps
 
-By following this document you should now be able to locate the [!UICONTROL Account Profiles] dashboard. You should also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.
+By following this document, you should now know how to locate the [!UICONTROL Account Profiles] dashboard. You should also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.

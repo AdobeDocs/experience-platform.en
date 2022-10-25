@@ -39,7 +39,7 @@ This means that when you republish an older library:
 
 * The way that development and staging environments calculate what is upstream does not change
 
-Consider the scenario when you roll back because of a problem with a specific rule. The rule revision that is now in production might, for example, be three revisions old.  When you view that rule in the Data Collection UI to fix it, it still reflects the latest changes saved rather than what is currently in production.
+Consider the scenario when you roll back because of a problem with a specific rule. The rule revision that is now in production might, for example, be three revisions old.  When you view that rule in the UI to fix it, it still reflects the latest changes saved rather than what is currently in production.
 
 For this reason, Platform notifies you that a property is in a republished state as a reminder that what you're seeing in the Data Collection user interface is a little farther removed from Production than usual. This notification is dismissible and appears once per browser session the first time you view the property.
 

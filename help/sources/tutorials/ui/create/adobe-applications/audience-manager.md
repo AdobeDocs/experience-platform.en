@@ -1,10 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;Audience manager source connector;Audience Manager;audience manager connector
-solution: Experience Platform
-title: Create an Adobe Audience Manager  Source Connection in the UI
-topic-legacy: overview
-type: Tutorial
-description: This tutorial walks you through the steps to create a source connectors for Adobe Audience Manager to bring in Consumer Experience Event data into Platform using the user interface.
+title: Create an Adobe Audience Manager Source Connection in the UI
+description: This tutorial walks you through the steps to create a source connection for Adobe Audience Manager to bring in Consumer Experience Event data into Platform using the user interface.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
 ---
 # Create an Adobe Audience Manager source connection in the UI
@@ -13,11 +10,19 @@ This tutorial walks you through the steps to create a source connector for Adobe
 
 ## Create a source connection with Adobe Audience Manager
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
-Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Adobe Audience Manager]** and then select **[!UICONTROL Configure]**.
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
+
+Under [!UICONTROL Adobe Application], select **[!UICONTROL Adobe Audience Manager]** and then select **[!UICONTROL Set up]**.
 
 ![catalog](../../../../images/tutorials/create/aam/catalog.png)
+
+### Select traits and segments
+
+>[!NOTE]
+>
+>You cannot ingest regional data from the Audience Manager source to Experience Platform. If you have Analytics use cases that require regional data, then please use the [Analytics source connector](../adobe-applications/analytics.md).
 
 The [!UICONTROL Select traits and segments] step appears, providing you with an interactive interface to explore and select your traits, segments, and data.
 

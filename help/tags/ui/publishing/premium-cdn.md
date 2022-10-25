@@ -13,11 +13,11 @@ When you use an [Adobe-managed host](./hosts/managed-by-adobe-host.md) to delive
 
 To account for this, tags in Experience Platform provides a premium CDN feature which allows you to deliver content to these special regions.
 
-Premium CDN support is a paid feature, and must be purchased by your organization in order to enable and use it. This guide covers how to configure and use this feature in the Data Collection UI after it has been purchased.
+Premium CDN support is a paid feature, and must be purchased by your organization in order to enable and use it. This guide covers how to configure and use this feature in the Experience Platform UI or Data Collection UI after it has been purchased.
 
 ## Enable premium CDN for your organization
 
-Premium CDN is enabled at the company level. Once your organization has purchased the premium CDN feature, an Adobe administrator will enable for your company in the Data Collection UI.
+Premium CDN is enabled at the company level. Once your organization has purchased the premium CDN feature, an Adobe administrator will enable the feature in the UI for your company.
 
 ## Rebuild and install tag libraries with updated embed codes
 

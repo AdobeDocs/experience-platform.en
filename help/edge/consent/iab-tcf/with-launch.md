@@ -58,7 +58,7 @@ This custom code does two things:
 * Value: "%IAB TCF Consent String%"
 * GDPR Applies: "%IAB TCF Consent GDPR%"
 
-![IAB Set Consent Action](../../images/consent/iab-tcf/with-launch/iab-action.png)
+![IAB Set Consent Action](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
@@ -117,4 +117,4 @@ When events are triggered after the initial Experience Event, the two data eleme
 
 ## Next steps
 
-Now that you have learned how to use IAB TCF 2.0 with the Platform Web SDK extension, you can also choose to integrate with other Adobe solutions such as Adobe Analytics or Real-time Customer Data platform. See the [IAB Transparency & Consent Framework 2.0 overview](./overview.md) for more information.
+Now that you have learned how to use IAB TCF 2.0 with the Platform Web SDK extension, you can also choose to integrate with other Adobe solutions such as Adobe Analytics or Adobe Real-Time Customer Data Platform. See the [IAB Transparency & Consent Framework 2.0 overview](./overview.md) for more information.

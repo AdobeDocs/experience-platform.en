@@ -44,7 +44,7 @@ The Common Analytics Plugins extension provides the following actions:
 >
 >While this action is easier to implement, Adobe Consulting does not recommend that you use this action as it increases the weight of the plugin.
 
-In this action, you are able to select each plugin you want to include in your implementation and save the changes. Select as many or as few as you intend to use during the implementation. Links to documentation on how to use each plugin and a brief description are provided in the Analytics [Plug-ins overview](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html).
+In this action, you are able to select each plugin you want to include in your implementation and save the changes. Select as many or as few as you intend to use during the implementation.
 
 ### Initialize Plugin
 
@@ -52,36 +52,17 @@ These actions initialize the specific plugin you intend to use individually. To 
 
 ## Common Analytics Plugins extension data elements
 
-This section describes the data elements available in the Common Analytics Plugins extension.
+The following data elements are available in the Common Analytics Plugins extension, which leverage tag capabilities to set up and configure their corresponding plugins in Analytics:
 
-### getGeoCoordinates
+* `getGeoCoordinates`
+* `getNewRepeat`
+* `getPageName`
+* `getResponsiveLayout`
+* `getTimeParting`
+* `getTimeSinceLastVisit`
+* `getVisitDuration`
+* `getVisitNum`
 
-Allows users to leverage the native Data Collection UI in Adobe Experience Platform to set up and configure the getGeoCoordinates plugin. 
-
-### getNewRepeat
-
-Allows users to leverage the native Data Collection UI to set up and configure the getNewRepeat plugin. 
-
-### getPageName
-
-Allows users to leverage the native Data Collection UI to set up and configure the getPageName plugin. 
-
-### getResponsiveLayout
-
-Allows users to leverage the native Data Collection UI to set up and configure the getResponsiveLayout plugin. 
-
-### getTimeParting
-
-Allows users to leverage the native Data Collection UI to set up and configure the getTimeParting plugin. 
-
-### getTimeSinceLastVisit
-
-Allows users to leverage the native Data Collection UI to set up and configure the getTimeSinceLastVisit plugin. 
-
-### getVisitDuration
-
-Allows users to leverage the native Data Collection UI to set up and configure the getVisitDuration plugin. 
-
-### getVisitNum
-
-Allows users to leverage the native Data Collection UI to set up and configure the getVisitNum plugin.
+>[!NOTE]
+>
+>For more information on the above plugins, please consult the [Analytics documentation](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html).

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data management;license entitlement;licensing;best practices
 title: Data Management License Entitlement Best Practices
-description: This document outlines best practices to follow and tools you can use to better manage your license entitlements with Adobe Experience Platform.
+description: Learn about best practices and tools you can use to better manage your license entitlements with Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 ---
 # Data management license entitlement best practices 
@@ -41,14 +41,14 @@ When you license Experience Platform, you are provided with license usage entitl
 
 The [!DNL Profile Richness] metric varies depending on the licensing that you purchased. There are two calculations for [!DNL Profile Richness] available:
 
-* The sum of all production data stored within Real-time Customer Data Platform (i.e., Profile Service and Identity Service) at any point in time, divided by the [!DNL Addressable Audience];
+* The sum of all production data stored within Adobe Real-Time Customer Data Platform (i.e., Profile Service and Identity Service) at any point in time, divided by the [!DNL Addressable Audience];
 * The sum of all data stored within Platform (including, but not limited to the [!DNL Data Lake], Profile Service, and Identity Service) at any point in time and any data that you stream through (instead of storing within) Platform in the past 12 months, divided by the [!DNL Addressable Audience].
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased.
 
 ## License usage dashboard
 
-The Adobe Experience Platform UI provides a dashboard through which you can view a snapshot of your organization’s license-related data for Platform. The data in the dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. The snapshot is neither an approximation nor a sample of data, and the dashboard is not updating in real-time.
+The Adobe Experience Platform UI provides a dashboard through which you can view a snapshot of your organization's license-related data for Platform. The data in the dashboard is displayed exactly as it appears at the specific point in time when the snapshot was taken. The snapshot is neither an approximation nor a sample of data, and the dashboard is not updating in real-time.
 
 For more information, see the guide on [using the license usage dashboard on Platform UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
 
