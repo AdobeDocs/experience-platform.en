@@ -22,8 +22,8 @@ To begin learning more about a specific [!DNL Platform] service, return to the [
 
 Adobe has built multiple application services on top of Experience Platform. You can find documentation for these services in their own guides, linked below:
 
-* [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
-* [[!DNL Real-time Customer Data Platform (Real-time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
+* [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html) 
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)

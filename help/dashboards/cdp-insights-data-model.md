@@ -1,23 +1,23 @@
 ---
-title: Customer Data Platform (CDP) Insights Data Model
-description: Learn how to use SQL queries from CDP Insights Data Models to customize your own CDP reports for your marketing and KPI use cases.
+title: Real-Time Customer Data Platform Insights Data Model
+description: Learn how to use SQL queries with the Real-Time Customer Data Platform Insights Data Models to customize your own Real-Time CDP reports for your marketing and KPI use cases.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 ---
-# Customer Data Platform (CDP) Insights Data Model
+# Real-Time Customer Data Platform Insights Data Model
 
-The Customer Data Platform (CDP) Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards.
+The Real-Time Customer Data Platform Insights Data Model feature exposes the data models and SQL that powers the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards. See the query accelerated store reporting insights documnetation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../query-service/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Prerequisites
 
 This guide requires a working understanding of the [user-defined dashboards feature](./user-defined-dashboards.md). Please read the documentation before continuing with this guide.
 
-## CDP insight reports and use cases
+## Real-Time CDP insight reports and use cases
 
-CDP reporting provides insights into your profile data and its relationship with segments and destinations. Various star schema models were developed to answer a variety of common marketing use cases and each data model can support several use cases.
+Real-Time CDP reporting provides insights into your profile data and its relationship with segments and destinations. Various star schema models were developed to answer a variety of common marketing use cases and each data model can support several use cases.
 
 >[!IMPORTANT]
 >
->The data used for CDP reporting is accurate for a chosen merge policy and from the most recent daily snapshot.
+>The data used for Real-Time CDP reporting is accurate for a chosen merge policy and from the most recent daily snapshot.
 
 ### Profile model {#profile-model}
 

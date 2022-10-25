@@ -17,16 +17,16 @@ The Destination SDK documentation provides instructions for you to use the Adobe
 
 >[!IMPORTANT]
 >
-> This functionality to create private custom destinations is available only to [Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
+> This functionality to create private custom destinations is available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
 As a Destination SDK partner, you can benefit from adding your productized destination to the [Experience Platform catalog](/help/destinations/catalog/overview.md):
 1. Standardize integration configurations across customers with pre-configured parameters and simplify the setup experience for customers.
 2. Introduce a branded destination card in the Experience Platform destinations catalog for simplified customer setup and awareness.
-3. Be featured as a productized destination integration with Adobe Experience Platform & Real-time Customer Data Platform.
+3. Be featured as a productized destination integration with Adobe Experience Platform & Adobe Real-Time Customer Data Platform.
 
 As an Experience Platform customer, you can also author an own private custom destination, which can best suit your activation needs.
 
-![An overview diagram showing how destination developers interact with Destination SDK and how Real-time CDP customers benefit from productized and private destinations.](./assets/destination-sdk-visual.png)
+![An overview diagram showing how destination developers interact with Destination SDK and how Real-Time CDP customers benefit from productized and private destinations.](./assets/destination-sdk-visual.png)
 
 ## Types of integrations supported {#supported-integration-types}
 

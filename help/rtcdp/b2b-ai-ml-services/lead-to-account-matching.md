@@ -1,10 +1,10 @@
 ---
-title: Lead to account matching in Real-time CDP B2B
+title: Lead to account matching in Real-Time CDP B2B
 type: Documentation
 description: An overview and more information about the lead to account matching feature in Experience Platform CDP B2B.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 ---
-# Lead to account matching in Real-time CDP B2B
+# Lead to account matching in Real-Time CDP B2B
 
 ## Overview {#overview}
 
