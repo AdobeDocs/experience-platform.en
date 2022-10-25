@@ -1,13 +1,13 @@
 ---
-title: Pega Profile Export Connector
-description: Use the Pega Profile Export Connector for S3 in Adobe Experience Platform to export full and/or incremental profile data to Amazon S3 cloud storage. 
+title: Pega Profile Connector
+description: Use the Pega Profile Connector for S3 in Adobe Experience Platform to export full and/or incremental profile data to Amazon S3 cloud storage. 
 ---
 
-# Pega Profile Export Connector
+# Pega Profile Connector
 
 ## Overview {#overview}
 
-Use the [!DNL Pega Profile Export Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], data jobs can be scheduled to import profiles from S3 storage to update Customer profile data source. This helps setup intitial export of profile data and also help sync up new profiles periodically into Pega Customer Decision Hub.  With up to date profile data in Customer Decision Hub enhances the Pega next-best-action decisioning process both for engagement policies as well as predictors in Adaptive Models.
+Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], data jobs can be scheduled to import profiles from S3 storage to update Customer profile data source. This helps setup intitial export of profile data and also help sync up new profiles periodically into Pega Customer Decision Hub.  With up to date profile data in Customer Decision Hub enhances the Pega next-best-action decisioning process both for engagement policies as well as predictors in Adaptive Models.
 
 >[!IMPORTANT]
 >
@@ -15,7 +15,7 @@ Use the [!DNL Pega Profile Export Connector] in Adobe Experience Platform to cre
 
 ## Use cases 
 
-To help you better understand how and when you should use the [!DNL  Pega Profile Export Connector] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL  Pega Profile Connector] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Use case 1
 
