@@ -56,6 +56,7 @@ feature: Sources
     - [Veeva CRM connector](connectors/crm/veeva.md)
     - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
+    - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
     - [Zendesk connector](connectors/customer-success/zendesk.md)
@@ -124,6 +125,7 @@ feature: Sources
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
+      - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -230,6 +232,7 @@ feature: Sources
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
+      - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
