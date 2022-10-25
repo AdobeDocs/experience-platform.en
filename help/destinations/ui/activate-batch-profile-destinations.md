@@ -384,39 +384,56 @@ Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or emai
 >
 > For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-## Mapping {#mapping}
+## (Beta) Mapping {#mapping}
 
 >[!IMPORTANT] 
 > 
 >Select beta customers can view an improved **[!UICONTROL Mapping]** step which replaces the [Select profile attributes](#select-attributes) step described further above. 
 > 
-> Contact your Adobe representative or Customer Care if you would like access to the beta program.
+> Contact your Adobe representative or Customer Care if you would like access to this beta program.
 
 In this step, you must select the profile attributes that you want to add to the files exported to the target destination. To select profile attributes and identities for export: 
 
 1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new field]**.
     
-    ![Add new field button highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
+    ![Add new field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-2. Select the arrow to the right of the **[!UICONTROL Schema field]** entry.
+1. Select the arrow to the right of the **[!UICONTROL Source field]** entry.
 
-    ![Image highlighting how to select a source field.](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
+    ![Select source field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-3. In the **[!UICONTROL Select field]** page, select the XDM attributes that you want to send to the destination, then choose **[!UICONTROL Select]**.
+1. In the **[!UICONTROL Select source field]** page, select the profile attributes and identities that you want to include in the exported files to the destination, then choose **[!UICONTROL Select]**.
 
-    ![Image showing the various fields available as source fields.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+    >[!TIP] 
+    > 
+    >You can use the search field to narrow down your selection, as shown in the image below
 
-4. To add more mappings, repeat steps one to three.
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
->[!NOTE] 
->
-> Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+
+1. The field you selected for export now appears in the mapping view. If you wish, you can edit the name of the header in the exported file. To do this, select the icon on the target field.
+
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
+
+1. In the **[!UICONTROL Select target field]** page, type in the desired name of the header in your exported file, then choose **[!UICONTROL Select]**.
+
+    ![Modal window showing a typed-in friendly name for a header.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
+
+1. The field you selected for export now appears in the mapping view and shows the edited header in the exported file.
+
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. (Optional) You can select your exported field to be a [mandatory key](#mandatory-keys) or a [deduplication key](#deduplication-keys).
+
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
+
+1. To add more fields for exporting, repeat the steps above.
 
 >[!IMPORTANT] 
 >
 >Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
 >
->![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
