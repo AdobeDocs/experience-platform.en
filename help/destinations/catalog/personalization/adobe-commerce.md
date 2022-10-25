@@ -30,7 +30,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the destinations catalog for select beta customers who have purchased Real-time CDP Prime or Ultimate and Adobe Commerce.
+This extension is available in the destinations catalog for select beta customers who have purchased Real-Time CDP Prime or Ultimate and Adobe Commerce.
 
 Beta customers should have access to:
 
@@ -84,7 +84,7 @@ Read [Activate profiles and segments to profile request destinations](../../ui/a
 
 ## Next steps in [!DNL Adobe Commerce]
 
-Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to configure the [!DNL Commerce Admin] to import the Real-time CDP segments you created. See the [[!DNL Commerce] documentation](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) to learn more.
+Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to configure the [!DNL Commerce Admin] to import the Real-Time CDP segments you created. See the [[!DNL Commerce] documentation](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) to learn more.
 
 ## Validate data export {#exported-data}
 

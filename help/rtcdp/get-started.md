@@ -1,14 +1,14 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Getting Started with Real-time Customer Data Platform
-description: Use this sample scenario as an example when setting up your implementation of Real-time Customer Data Platform.
+keywords: RTCDP;CDP;Real-Time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
+title: Getting Started with Real-Time Customer Data Platform
+description: Use this sample scenario as an example when setting up your implementation of Adobe Real-Time Customer Data Platform.
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 ---
-# Getting started with Real-time Customer Data Platform
+# Getting started with Real-Time Customer Data Platform
 
-This getting started guide leads you through a sample implementation of Real-time Customer Data Platform (Real-time CDP). You can use it as an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
+This getting started guide leads you through a sample implementation of Real-Time Customer Data Platform (Real-Time CDP). You can use it as an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
 
-This example shows the power of Real-time Customer Data Platform, powered by Adobe Experience Platform, to:
+This example shows the power of Real-Time Customer Data Platform, powered by Adobe Experience Platform, to:
 
 * Ingest data from multiple sources
 * Merge them into a single [!DNL real-time customer profile]
@@ -33,7 +33,7 @@ As a result, Luma has the following business objectives:
 
 To meet these goals, the marketing team needs to be able to manage customer data at scale. 
 
-With Real-time CDP, powered by Adobe Experience Platform, Luma’s marketing organization can:  
+With Real-Time CDP, powered by Adobe Experience Platform, Luma’s marketing organization can:  
 
 1. Collect data from disparate platforms and make sure it's available downstream for other marketing activities. 
 1. Create a single, real-time view of their consumers, independent of where data originates.  
@@ -112,7 +112,7 @@ This personalized content helps Sarah find relevant items quickly. This increase
 
 Sarah gets distracted and leaves the site, ending her session. Luma can use her data in Adobe Experience Platform to help bring her back to the site.
 
-Real-time Customer Data Platform, powered by Adobe Experience Platform, is built for customer experience management. It enables organizations to:
+Real-Time Customer Data Platform, powered by Adobe Experience Platform, is built for customer experience management. It enables organizations to:
 
 * Simplify data integration and activation 
 * Govern known and unknown data usage 
@@ -135,7 +135,7 @@ All this data from disparate sources is merged into a single unified customer pr
 
 ## Configuring a data source
 
-Use [!DNL Real-time Customer Data Platform] to bring new sources of data into Platform. Real-time CDP includes a catalog of data sources that can be quickly and easily added to the profile.  
+Use [!DNL Real-Time Customer Data Platform] to bring new sources of data into Platform. Real-Time CDP includes a catalog of data sources that can be quickly and easily added to the profile.  
 
 ![image](assets/luma-source-cat.png)
 
@@ -172,7 +172,7 @@ Luma has many internal policies that restrict the usage of certain kinds of coll
 
 ![](assets/governance-labels.png)
 
-Once data usage labels have been applied, Luma can then use Data Governance to create data usage policies. Data usage policies are rules that describe the kinds of actions that you are allowed to perform on data that contains certain labels. When attempting to perform an action in Real-time CDP that constitutes a policy violation, the action is prevented and an alert is given to show which policy was violated and why.
+Once data usage labels have been applied, Luma can then use Data Governance to create data usage policies. Data usage policies are rules that describe the kinds of actions that you are allowed to perform on data that contains certain labels. When attempting to perform an action in Real-Time CDP that constitutes a policy violation, the action is prevented and an alert is given to show which policy was violated and why.
 
 ## Bringing the data together for a specific customer
 
@@ -187,7 +187,7 @@ All of the profile information Luma has about Sarah displays. This includes her 
 |Identities|Shows the identities that have been linked together in [!DNL Platform] from Sarah's interactions with Luma across channels and devices. Her ECID from the website is displayed. Her identity also includes the ECID from her mobile app, her email ID, a CRM ID from the recently added [!DNL Microsoft Dynamics] dataset, and a loyalty ID passed into Adobe Experience Platform from the Luma loyalty system.|  
 |Events|Shows all of Sarah's interaction data with the Luma brand. This includes the item she just viewed, anything she's viewed in the past, the emails she's received, her interactions with the call center, and what channel and device each of those interactions happened on.|
 
-The Real-time CDP profile reduces the Luma marketing team's workflow from weeks to minutes and unlocks possibilities for personalization based on this 360-degree customer view. The profile merges the behavioral data from when she browsed the site before she signed in, with her existing customer profile, creating a comprehensive view of Sarah. 
+The Real-Time CDP profile reduces the Luma marketing team's workflow from weeks to minutes and unlocks possibilities for personalization based on this 360-degree customer view. The profile merges the behavioral data from when she browsed the site before she signed in, with her existing customer profile, creating a comprehensive view of Sarah. 
 
 The marketing team can use this enhanced, [!DNL Real-time Customer Profile] to better personalize Sarah's experience and increase her brand loyalty with Luma.
 
@@ -228,7 +228,7 @@ When you've added the “Gift Giving Cart Abandoners” segment, you can see rou
 
 Select **[!UICONTROL Send to destinations]**.
 
-In Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
+In Real-Time CDP, Luma can seamlessly act on their audience segments for personalization.  
 Here we see all of the destinations available for Luma to send this destination to, both Adobe and non-Adobe solutions:
 
 ![image](assets/luma-dest.png)
@@ -290,7 +290,7 @@ Thanks to audience suppression capabilities, Sarah will not be targeted with tha
 
 ## Analyzing the profile
 
-Luma marketers use Adobe Experience Platform to look at the gift givers segment on the Real-time CDP Dashboard. They view the results of this initiative over time and see that it's growing. Customers are responding to offers and spending more money.  
+Luma marketers use Adobe Experience Platform to look at the gift givers segment on the Real-Time CDP Dashboard. They view the results of this initiative over time and see that it's growing. Customers are responding to offers and spending more money.  
 
 These insights enable the marketers to take action on this signal, which was fueled by having this data available in CDP and having customers like Sarah attached to the segment.  
 
