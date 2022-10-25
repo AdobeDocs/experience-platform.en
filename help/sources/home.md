@@ -86,6 +86,7 @@ CRM systems provide data that can help build customer relationships, which in tu
 
 Experience Platform provides support for ingesting data from a third-party customer success application. See the following related documents for more information:
 
+- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md)
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md)
 - [[!DNL Zendesk]](connectors/customer-success/zendesk.md)
