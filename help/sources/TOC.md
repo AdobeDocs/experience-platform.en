@@ -17,6 +17,7 @@ feature: Sources
     - [Adobe Campaign Managed Cloud Services source](connectors/adobe-applications/campaign.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
+    - [Workfront source](connectors/adobe-applications/workfront.md)
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
@@ -201,6 +202,7 @@ feature: Sources
       - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+      - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
     - Analytics {#analytics}
