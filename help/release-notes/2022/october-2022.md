@@ -5,3 +5,48 @@ description: The October 2022 release notes for Adobe Experience Platform.
 # Adobe Experience Platform release notes 
 
 **Release date: October 26, 2022**
+
+New features in Adobe Experience Platform:
+
+- [Customer-managed keys](#cmk)
+
+Updates to existing features in Adobe Experience Platform:
+
+- [Data collection](#data-collection)
+- [Experience Data Model (XDM)](#xdm)
+
+## Customer-managed keys {#cmk}
+
+All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can now opt to use your own encryption keys instead, giving you greater control over your data security.
+
+See the overview on [customer-managed keys](../../landing/governance-privacy-security/customer-managed-keys.md) for details on the feature.
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Sensitive data handling for datastreams | Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.  |
+| [!DNL Splunk] extension for event forwarding | You can now send data to [!DNL Splunk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../../tags/extensions/web/splunk/overview.md) for more information. |
+| [!DNL Zendesk] extension for event forwarding | You can now send data to [!DNL Zendesk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../../tags/extensions/web/zendesk/overview.md) for more information. |
+
+{style="table-layout:auto"}
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**Updated XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+| Data type | [[!UICONTROL Session details information]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Updated the `authorized` field from a boolean type to a string. `season` and `episode` have been changed from integers to strings. |
+| Data type | [[!UICONTROL Advertising details information]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` has been renamed to `friendlyName`, and `ID` has been renamed to `name`. |
+| Data type | [[!UICONTROL Error details information]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` has been renamed to `name`. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
