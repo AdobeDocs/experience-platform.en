@@ -19,11 +19,11 @@ To help you better understand how and when you should use the [!DNL  Pega Profil
 
 ### Use case 1
 
-A marketer wants up-to-date profile data in Adobe Customer Data Platform available in Pega Customer Decision Hub that enhances the Pega next-best-action decisioning process both for engagement policies as well as predictors in Adaptive Models.
+A marketer wants to setup Pega Customer Decision Hub with profile data loaded from Adobe Experience Platform.
 
 ### Use case 2
 
-A marketer wants to setup Pega Customer Decision Hub with profile data loaded from Adobe Experience Platform.
+A marketer wants up-to-date profile data in Adobe Customer Data Platform available in Pega Customer Decision Hub that enhances the Pega next-best-action decisioning process both for engagement policies as well as predictors in Adaptive Models.
 
 ## Prerequisites {#prerequisites}
 
