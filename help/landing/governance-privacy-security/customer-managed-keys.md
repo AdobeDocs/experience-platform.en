@@ -1,10 +1,10 @@
 ---
 title: Customer-Managed Keys in Adobe Experience Platform
-description: Learn how to set up your own cryptographic keys for data stored in Adobe Experience Platform.
+description: Learn how to set up your own encryption keys for data stored in Adobe Experience Platform.
 ---
 # Customer-managed keys in Adobe Experience Platform
 
-All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform such as Real-Time Customer Data Platform and Adobe Journey Optimizer, you can opt to use your own cryptographic keys instead, giving you greater control over your data security.
+All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can opt to use your own encryption keys instead, giving you greater control over your data security.
 
 This document covers the process for enabling the customer-managed keys (CMK) feature in Platform.
 
@@ -14,20 +14,24 @@ CMK is included in the Healthcare Shield and the Privacy and Security Shield off
 
 >[!WARNING]
 >
->Once the setup process is complete, you cannot revert to system-managed keys. You are responsible for securely managing your keys to prevent losing access to your data.
+>After setting up CMK, you cannot revert to system-managed keys. You are responsible for securely managing your keys and key vaults within [!DNL Azure] to prevent losing access to your data.
 
 The process is as follows:
 
-1. [Create a [!UICONTROL Microsoft Azure] Key Vault](#create-key-vault), then [generate a cryptographic key](#generate-a-key) (based on your organization's policies) that will ultimately be shared with Adobe.
+1. [Create a [!DNL Microsoft Azure] Key Vault](#create-key-vault), then [generate an encryption key](#generate-a-key) (based on your organization's policies) that will ultimately be shared with Adobe.
 1. Use API calls to [register the CMK app](#register-app) with your [!DNL Azure] tenant.
 1. [Assign the service principal for the CMK app](#assign-to-role) to an appropriate role for the key vault. 
-1. Use API calls to [send your cryptographic key ID to Adobe](#send-to-adobe).
+1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe).
 
-Once the setup process is complete, your organization's data across all sandboxes will be encrypted using your [!DNL Azure] key setup, specific to your [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) and [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) resources. CMK leverages [!DNL Azure]'s [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) to make this possible.
+Once the setup process is complete, all data onboarded into Platform across all sandboxes will be encrypted using your [!DNL Azure] key setup, specific to your [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) and [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) resources. CMK leverages [!DNL Azure]'s [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) to make this possible.
 
 ## Create an [!DNL Azure] Key Vault {#create-key-vault}
 
-CMK only supports keys from a [!UICONTROL Microsoft Azure] Key Vault. To get started, you must work with [!DNL Azure] to create a new enterprise account, or use an existing enterprise account  and follow the steps below to create the Key Vault.
+CMK only supports keys from a [!DNL Microsoft Azure] Key Vault. To get started, you must work with [!DNL Azure] to create a new enterprise account, or use an existing enterprise account  and follow the steps below to create the Key Vault.
+
+>[!IMPORTANT]
+>
+>Only the Premium and Standard service tiers for [!DNL Azure] Key Vault are supported. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] and [!DNL Azure Payments HSM] are not supported. Refer to the [[!DNL Azure] documentation](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) for more information on offered key management services.
 
 >[!NOTE]
 >
@@ -74,8 +78,6 @@ Use the provided form to provide a name for the key, and select **RSA** for the 
 >[!NOTE]
 >
 >Remember the name you provide for the key, as it will be used in later step when [sending the key to Adobe](#send-to-adobe).
->
->The **EC** key type and HSM-backed keys are not supported for this use case.
 
 Use the remaining controls to configure the key you want to generate or import as desired. When finished, select **[!DNL Create]**.
 
@@ -115,11 +117,11 @@ A successful response returns an `applicationRedirectUrl` property, containing t
 
 ```json
 {
-    "id": "acpebae9422Kacpprovisioningbyok",
-    "name": "acpebae9422Kacpprovisioningbyok",
-    "applicationUri": "https://adobe.com/acpebae9422Kacpprovisioningbyok",
+    "id": "byok",
+    "name": "acpebae9422Caepcmkmultitenantapp",
+    "applicationUri": "https://adobe.com/acpebae9422Caepcmkmultitenantapp",
     "applicationId": "e463a445-c6ac-4ca2-b36a-b5146fcf6a52",
-    "applicationRedirectUrl": "https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&client_id=e463a445-c6ac-4ca2-b36a-b5146fcf6a52&redirect_uri=https://adobe.com/acpebae9422Kacpprovisioningbyok&scope=user.read"
+    "applicationRedirectUrl": "https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&client_id=e463a445-c6ac-4ca2-b36a-b5146fcf6a52&redirect_uri=https://adobe.com/acpebae9422Caepcmkmultitenantapp&scope=user.read"
 }
 ```
 
@@ -141,17 +143,17 @@ On the next screen, choose **[!DNL Select members]** to open a dialog in the rig
 
 >[!NOTE]
 >
->If you cannot find your application in the list, then your service principal has not been accepted into your tenant. Please work with your Azure administrator or representative to ensure that you have correct privileges.
+>If you cannot find your application in the list, then your service principal has not been accepted into your tenant. Please work with your [!DNL Azure] administrator or representative to ensure that you have correct privileges.
 
 ## Send your key URI to Adobe {#send-to-adobe}
 
-After installing the CMK app on [!DNL Azure], you can send your cryptographic key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
+After installing the CMK app on [!DNL Azure], you can send your encryption key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
 
 ![Select key](../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 Select the latest version of the key and its details page appears. From here you can optionally configure the permitted operations for the key. At a minimum, the key must be granted the **[!DNL Wrap Key]** and **[!DNL Unwrap Key]** permissions.
 
-The **[!UICONTROL Key Identifier]** field displays the URI identifier for the key. However, you only need a portion of this URI for the next step. Copy the URI value up to and including `vault.azure.net` (for example, `https//adobecmkexample.vault.azure.net`).
+The **[!UICONTROL Key Identifier]** field displays the URI identifier for the key. Copy this URI value for use in the next step.
 
 ![Copy key URL](../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
@@ -166,13 +168,12 @@ curl -X POST \
   -H 'x-api-key: acp_provisioning' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
-        "name": "config1",
+        "name": "Config1",
         "type": "BYOK_CONFIG",
         "imsOrgId": "{ORG_ID}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
-          "keyVaultUri": "https://adobecmkexample.vault.azure.net",
-          "keyName": "adobeCMK-key"
+          "keyVaultIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
         }
       }'
 ```
@@ -182,7 +183,7 @@ curl -X POST \
 | `name` | A name for the configuration. Ensure that you remember this value as it will be required to check the configuration's status at a [later step](#check-status). The value is case-sensitive. |
 | `type` | The configuration type. Must be set to `BYOK_CONFIG`. |
 | `imsOrgId` | Your IMS Organization ID. This must be the same value as provided under the `x-gw-ims-org-id` header. |
-| `configData` | Contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultUri`: The key vault URI that you copied [earlier](#send-to-adobe).</li><li>`keyName`: The name of the key that you created at an [earlier step](#generate-a-key).</li></ul> |
+| `configData` | Contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultIdentifier`: The key vault URI that you copied [earlier](#send-to-adobe).</li></ul> |
 
 **Response**
 
@@ -190,38 +191,21 @@ A successful response returns the details of the configuration job.
 
 ```json
 {
-  "id": "042db66e-3525-4a2b-b9de-703f21294425",
-  "jobType": "CustomerPolicyJob",
-  "workflowType": "BYOK_CONFIG",
-  "status": "CREATED",
-  "currentState": "CALL_PROVISIONING_ENDPOINT",
-  "recoverableState": true,
-  "doRetryCurrentState": true,
-  "retryCount": 3,
-  "retryDelayInSeconds": 5,
-  "jobData": {
-    "x-request-id": "oh6TPkZSgf3DNgHLWm6CezFf0pafIOwZ",
-    "userId": "",
-    "config": {
-      "name": "config1",
-      "type": "BYOK_CONFIG",
-      "status": "NEW",
-      "configData": {
-        "providerType": "AZURE_KEYVAULT",
-        "keyVaultUri": "https://adobecmkexample.vault.azure.net",
-        "keyName": "adobeCMK-key"
-      },
-      "imsOrgId": "{ORG_ID}"
-    }
+  "id": "4df7886b-a122-4391-880b-47888d5c5b92",
+  "config": {
+    "configData": {
+      "keyVaultUri": "https://adobecmkexample.vault.azure.net",
+      "keyVaultKeyIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4",
+      "keyVersion": "7c1d50lo28234cc895534c00d7eb4eb4",
+      "keyName": "Config1",
+      "providerType": "AZURE_KEYVAULT"
+    },
+    "name": "acpcf978863Aaepcmkmultitenantapp",
+    "type": "BYOK_CONFIG",
+    "imsOrgId": "{IMS_ORG}",
+    "status": "NEW"
   },
-  "imsOrgId": "{ORG_ID}",
-  "executionComplete": false,
-  "recovered": false,
-  "timeOutForCurrentStateInMins": 5,
-  "monitorJob": true,
-  "firstJobStateTimestamp": 0,
-  "startTime": 1647624472445,
-  "endTime": 0
+  "status": "CREATED"
 }
 ```
 
@@ -245,27 +229,36 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the status of the job. If the job is still running, its `status` attribute will be set to `RUNNING`. A complete job contains a `status` of `COMPLETED`.
+A successful response returns the status of the job.
 
 ```json
 {
-  "name": "config1",
+  "name": "acpcf978863Aaepcmkmultitenantapp",
   "type": "BYOK_CONFIG",
   "status": "COMPLETED",
   "configData": {
     "keyVaultUri": "https://adobecmkexample.vault.azure.net",
-    "keyName": "adobeCMK-key",
+    "keyVaultKeyIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4",
+    "keyVersion": "7c1d50lo28234cc895534c00d7eb4eb4",
+    "keyName": "Config1",
     "providerType": "AZURE_KEYVAULT"
   },
-  "imsOrgId": "{ORG_ID}",
-  "subscriptionId": "undefined",
-  "id": "282397ed-ab19-47fb-9bf2-057270d401aa",
+  "imsOrgId": "{IMS_ORG}",
+  "subscriptionId": "cf978863-7325-47b1-8fd9-554b9fdb6c36",
+  "id": "4df7886b-a122-4391-880b-47888d5c5b92",
   "rowType": "BYOK_KEY"
 }
 ```
 
+The `status` attribute can have one of four values with the following meanings:
+
+1. `RUNNING`: Validates that Platform has the ability to access the key and key vault.
+1. `UPDATE_EXISTING_RESOURCES`: The system is adding the key vault and key name to the datastores across all sandboxes in your organization.
+1. `COMPLETED`: The key vault and key name have been added to the datastores.
+1. `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.
+
 ## Next steps
 
-By completing the above steps, you have successfully enabled CMK for your organization. All data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. If you want to revoke Platform access to your data, you can disable the key within [!DNL Azure].
+By completing the above steps, you have successfully enabled CMK for your organization. All data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. If you want to revoke Platform access to your data, you can remove the user role associated with the application from the key vault within [!DNL Azure].
 
-After disabling a key, it takes 5-10 minutes for data to no longer by accessible in Platform. When enabling a previously disabled key, it can take anywhere from 45 minutes to 24 hours for data to become available again.
+After disabling access to the application, it takes anywhere from two to 24 hours for data to no longer be accessible in Platform. The same time range applies for data to become available again when re-enabling access to the application.
