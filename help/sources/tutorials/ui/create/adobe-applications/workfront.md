@@ -1,9 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;
-title: Create an Adobe Workfront source connection in the UI
+title: (Beta) Create an Adobe Workfront source connection in the UI
 description: This tutorial provides steps to create an Adobe Workfront source connection to bring your Workfront data to Adobe Experience Platform using the user interface.
 ---
-# Create an Adobe Workfront source connection in the UI
+# (Beta) Create an Adobe Workfront source connection in the UI
+
+>[!NOTE]
+>
+>The Adobe Workfront source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 This tutorial provides steps to create an Adobe Workfront source connection to bring your Workfront data to Adobe Experience Platform using the user interface.
 
