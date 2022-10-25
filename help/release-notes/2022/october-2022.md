@@ -6,14 +6,13 @@ description: The October 2022 release notes for Adobe Experience Platform.
 
 **Release date: October 26, 2022**
 
-New features in Adobe Experience Platform:
-
 - [Customer-managed keys](#cmk)
 
 Updates to existing features in Adobe Experience Platform:
 
 - [Data collection](#data-collection)
 - [Experience Data Model (XDM)](#xdm)
+- [Query Service](#query-service)
 - [Sources](#sources)
 
 ## Customer-managed keys {#cmk}
@@ -51,6 +50,21 @@ XDM is an open-source specification that provides common structures and definiti
 {style="table-layout:auto"}
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
+
+## Query Service {#query-service}
+
+Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Query accelerated reporting insights data model | As part of the Data Distiller SKU, the query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. With the query accelerated store you can build a custom data model and/or extend on existing Adobe Real-Time Customer Data Platform data models to improve your reporting insights and their visualizations. See the [query accelerated store reporting insights document](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) to learn more about this feature.  |
+
+{style="table-layout:auto"}
+
+For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
+New features in Adobe Experience Platform:
 
 ## Sources {#sources}
 
