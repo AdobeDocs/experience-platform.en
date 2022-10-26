@@ -14,7 +14,7 @@ This document walks through the steps for connecting [!DNL RStudio] with Adobe E
 >
 > This guide assumes you already have access to [!DNL RStudio] and are familiar with how to use it. More information about [!DNL RStudio] can be found in the [official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/).
 > 
-> Additionally, to use RStudio with Query Service, you need to install the PostgreSQL JDBC 4.2 Driver. You can download the JDBC Driver from the [PostgreSQL official site](https://jdbc.postgresql.org/download/).
+> Additionally, to use [!DNL RStudio] with Query Service, you need to install the [!DNL PostgreSQL] JDBC 4.2 Driver. You can download the JDBC Driver from the [PostgreSQL official site](https://jdbc.postgresql.org/download/).
 
 ## Create a [!DNL Query Service] connection in the [!DNL RStudio] interface
 
@@ -26,9 +26,9 @@ A pop up appears, showing the **[!DNL Install Packages]** screen. Ensure that **
 
 ![The Install Packages dialog with RJDBC entered into the Packages field and Install highlighted.](../images/clients/rstudio/install-jrdbc.png)
 
-Now that the RJDBC package has been installed, restart RStudio to complete the installation process.
+Now that the RJDBC package has been installed, restart [!DNL RStudio] to complete the installation process.
 
-After RStudio has restarted, you can now connect to Query Service. Select the **[!DNL RJDBC]** package in the **[!DNL Packages]** pane, and enter the following command in the console:
+After [!DNL RStudio] has restarted, you can now connect to Query Service. Select the **[!DNL RJDBC]** package in the **[!DNL Packages]** pane, and enter the following command in the console:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
@@ -48,7 +48,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
-![The console output in RStudio from the connection to Query Service.](../images/clients/rstudio/connection-rjdbc.png)
+![The console output in [!DNL RStudio] from the connection to Query Service.](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Writing queries
 
