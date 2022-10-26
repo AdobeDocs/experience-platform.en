@@ -114,7 +114,8 @@ For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv`
 A successful import of profile data from S3 would insert data in the Pega marketing Customer profile datastore. The imported Customer profile data can be validated in Customer Profile Designer , as shown below.
 ![Image of the UI screen where you can validate Adobe profile data in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-
+In Pega Customer Decision Hub, Data Admins can configure data jobs in Customer Profile Designer to import profile data periodically from S3 as shown below.
+![Image of the UI screen to configure data jobs in Customer Profile Designer](../../assets/catalog/personalization/pega/pega-profile-screen-image1.png)
 
 
 
