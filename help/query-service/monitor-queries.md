@@ -4,7 +4,7 @@ description: Learn how to monitor queries through the Query Service UI.
 ---
 # Monitor queries
 
-Adobe Experience Platform provides improved visibility for the status of all query jobs through the UI. You can now find important information about the status of your query runs, including error messages and codes should they fail, from [!UICONTROL Scheduled Queries] tab. You can also subscribe to alerts through the UI for any of these queries based on their status.
+Adobe Experience Platform provides improved visibility for the status of all query jobs through the UI. From [!UICONTROL Scheduled Queries] tab you can now find important information about your query runs that includes the status, schedule details, and error messages/codes should they fail. You can also subscribe to alerts for queries based on their status through the UI for any of these queries through [!UICONTROL Scheduled Queries] tab.
 
 ## [!UICONTROL Scheduled Queries] 
 
@@ -93,7 +93,7 @@ This information is provided in a five-column table. Each row denotes a query ex
 | Status | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`. |
 | Dataset | The dataset involved in the execution. |
 
-Details of the query being scheduled can be seen in the properties sidebar. This panel includes the initial query ID, client type, template name, query SQL, and cadence of the schedule.
+Details of the query being scheduled can be seen in the [!UICONTROL Properties] panel. This panel includes the initial query ID, client type, template name, query SQL, and cadence of the schedule.
 
 ![The schedule details page with the properties panel highlighted.](./images/monitor-queries/properties-panel.png)
 
