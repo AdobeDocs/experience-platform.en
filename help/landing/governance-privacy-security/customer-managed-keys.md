@@ -59,7 +59,7 @@ Once you arrive at the **[!DNL Review + create]** step, you can review the detai
 
 ![Basic config for the key vault](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Grant Microsoft a firewall exception
+## Configure networking options
 
 If your key vault is configured to restrict public access to certain virtual networks or disable public access entirely, you must grant Microsoft a firewall exception.
 
