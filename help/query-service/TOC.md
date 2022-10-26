@@ -35,6 +35,8 @@ feature: Queries
   - [Using Query Service credentials](ui/credentials.md)
   - [Generating datasets from query results](ui/create-datasets.md)
 - [Monitor queries](monitor-queries.md)
+- Query accelerated store{#query-accelerated-store}
+  - [Reporting insights data model](query-accelerated-store/reporting-insights-data-model.md)
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)

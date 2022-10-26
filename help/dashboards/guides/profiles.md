@@ -45,7 +45,7 @@ Select **[!UICONTROL Add widget]** to navigate to the widget library and see a l
 
 From the widget library you can browse the selection of standard and custom segment widgets.For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
 
-## (Beta) Profile efficacy insights {#profile-efficacy-insights}
+<!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
@@ -57,13 +57,13 @@ The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness o
 
 See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
 
-The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab.
+The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab. -->
 
 ## Browse profiles {#browse-profiles}
 
 The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and segments 
 
-To learn more about the profile viewing capabilities provided in the Platform UI please see the documentation on [browsing profiles in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+To learn more about the profile viewing capabilities provided in the Platform UI please see the documentation on [browsing profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Merge policies {#merge-policies}
 
@@ -354,7 +354,7 @@ As the widget displays the visual crossover of segment definitions, you can opti
 ![The Platform UI Profiles dashboard with the merge policy dropdown and the widget segment dropdowns highlighted.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
-## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
+<!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
 >[!IMPORTANT]
 >
@@ -420,7 +420,7 @@ The three levels of completeness are:
 * Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
 * Low completeness: Profiles have less than 30% of attributes filled.
 
-![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png)
+![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png) -->
 
 ## Next steps
 
