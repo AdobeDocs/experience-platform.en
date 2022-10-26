@@ -26,7 +26,7 @@ For more information on finding your database name, host, port, and login creden
 
 After inserting your credentials, select **[!DNL Connect]** to connect with Query Service.
 
-![The new favorite dialog with connect highlighted.](../images/clients/postico/authentication-details.png)
+![The New Favorite dialog with connect highlighted.](../images/clients/postico/authentication-details.png)
 
 After connecting to Platform, you'll be able to see a list of all the relations previously made with Query Service.
 
