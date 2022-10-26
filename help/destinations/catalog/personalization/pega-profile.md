@@ -107,6 +107,16 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
-## Exported data {#exported-data}
+## Exported data / Validate data export {#exported-data}
 
 For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
+
+A successful import of profile data from S3 would insert data in the Pega marketing Customer profile datastore. The imported Customer profile data can be validated in Customer Profile Designer , as shown below.
+![Image of the UI screen where you can validate Adobe profile data in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
+
+
+
+
+
+
+
