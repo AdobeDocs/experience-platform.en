@@ -6,9 +6,25 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 ---
 # [!DNL Amazon S3] connection {#s3-connection}
 
+## Destination changelog {#changelog}
+
+>[!IMPORTANT]
+>
+>With the beta release of the export datasets functionality and the improved file export functionality, you may now be seeing two [!DNL Amazon S3] cards in the destinations catalog.
+>* If you are already exporting files to the **[!UICONTROL Amazon S3]** destination: Please create new dataflows to the **[!UICONTROL Amazon S3]** destination.
+>* If you have not yet created any dataflows to the **[!UICONTROL Amazon S3]** destination, please use the new **[!UICONTROL Amazon S3]** card to export files to **[!UICONTROL Amazon S3]**.
+
+![Image of the two Marketo destination cards in a side-by-side view.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+
+Improvements in the new Amazon S3 destination card include:
+
+* Dataset exports support
+* Additional file naming options
+* Ability to set custom file headers in your exported files
+
 ## Overview {#overview}
 
-Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets.
+Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export data files from Adobe Experience Platform into your own S3 buckets.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -110,4 +126,4 @@ This destination supports dataset exports. For complete information on how to se
 
 ## Exported data {#exported-data}
 
-For [!DNL Amazon S3] destinations, [!DNL Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
+For [!DNL Amazon S3] destinations, [!DNL Platform] creates a data file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
