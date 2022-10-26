@@ -20,11 +20,11 @@ This document walks through the steps for connecting [!DNL RStudio] with Adobe E
 
 After installing [!DNL RStudio], you need to install the RJDBC package. Go to the **[!DNL Packages]** pane, and select **[!DNL Install]**. 
 
-![](../images/clients/rstudio/install-package.png)
+![The RStudio dashboard with Packages and Install highlighted.](../images/clients/rstudio/install-package.png)
 
 A pop up appears, showing the **[!DNL Install Packages]** screen. Ensure that **[!DNL Repository (CRAN)]** is selected for the **[!DNL Install from]** section. The value for **[!DNL Packages]** should be `RJDBC`. Ensure **[!DNL Install dependencies]** is selected. After confirming all the values are correct, select **[!DNL Install]** to install the packages.
 
-![](../images/clients/rstudio/install-jrdbc.png)
+![The Install Packages dialog with RJDBC entered into the Packages field and Install highlighted.](../images/clients/rstudio/install-jrdbc.png)
 
 Now that the RJDBC package has been installed, restart RStudio to complete the installation process.
 
@@ -48,7 +48,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
-![](../images/clients/rstudio/connection-rjdbc.png)
+![The console output in RStudio from the connection to Query Service.](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Writing queries
 
