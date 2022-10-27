@@ -42,9 +42,11 @@ Next, select **Shared access signature URL (SAS)** as your connection method, an
 
 After selecting your connection method, you must next provide a **display name** and the **[!DNL Blob] container SAS URL** that corresponds with your [!DNL Data Landing Zone] container.
 
->[!TIP]
+>[!IMPORTANT]
 >
->You can retrieve your [!DNL Data Landing Zone] credentials from the sources catalog in the Platform UI.
+>You must use the Platform APIs to retrieve your Data Landing Zone credentials. For complete information, see [Retrieve Data Landing Zone credentials](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=en#retrieve-data-landing-zone-credentials). 
+>
+> To retrieve the credentials and access the exported files, you must replace the query parameter `type=user_drop_zone` with `type=dlz_destination` in any HTTP calls described in the page above.
 
 Provide your [!DNL Data Landing Zone] SAS URL and then select **Next**
 
@@ -58,7 +60,7 @@ A successful connection updates your [!DNL Azure Storage Explorer] UI with your 
 
 ![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can now start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, you need to establish a connection to the
+With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can now start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, you need to establish a connection to the [!DNL Data Landing Zone] destination in the Experience Platform UI, as described in the section below. 
 
 ## Connect to the destination {#connect}
 
@@ -70,13 +72,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
-
-NEED to find out the required fields to connect to DLZ
-
-* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
-
-![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+Because [!DNL Data Landing Zone] is an Adobe-provisioned storage, you do not need to perform any steps to authenticate to the destination.
 
 ### Fill in destination details {#destination-details}
 
@@ -102,7 +98,7 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 ### Scheduling
 
-In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Google Cloud Storage] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
+In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Data Landing Zone] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
 
 ### Map attributes and identities {#map}
 
@@ -114,4 +110,4 @@ This destination supports dataset exports. For complete information on how to se
 
 ## Validate successful data export {#exported-data}
 
-To verify if data has been exported successfully, check your [!DNL Google Cloud Storage] bucket and make sure that the exported files contain the expected profile populations.
+To verify if data has been exported successfully, check your [!DNL Data Landing Zone] storage and make sure that the exported files contain the expected profile populations.

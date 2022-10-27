@@ -1,5 +1,5 @@
 ---
-title: (Beta) [!DNL Google Cloud Storage] connection
+title: (Beta) Google Cloud Storage connection
 description: Learn how to connect to Google Cloud Storage and activate segments or export datasets.
 ---
 # (Beta) [!DNL Google Cloud Storage] connection
@@ -10,7 +10,7 @@ description: Learn how to connect to Google Cloud Storage and activate segments 
 
 ## Overview {#overview}
 
-Create a live outbound connection to [!DNL Google Cloud Storage] to periodically export CSV data files from Adobe Experience Platform into your own buckets.
+Create a live outbound connection to [!DNL Google Cloud Storage] to periodically export data files from Adobe Experience Platform into your own buckets.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -45,7 +45,7 @@ You can use your newly generated access key ID and secret access key to connect 
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In the destination configuration workflow, fill in the fields listed in the two sections below.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](/help/destinations/ui/connect-destination.md). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
 

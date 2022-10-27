@@ -1,5 +1,5 @@
 ---
-title: (Beta) [!DNL Azure Data Lake Storage Gen2] connection
+title: (Beta) Azure Data Lake Storage Gen2 connection
 description: Learn how to connect to Azure Data Lake Storage Gen2 to activate segments and export datasets.
 ---
 # (Beta) [!DNL Azure Data Lake Storage Gen2] connection
@@ -31,21 +31,19 @@ Refer to the table below for information about the destination export type and f
 > 
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In the destination configuration workflow, fill in the fields listed in the two sections below.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](/help/destinations/ui/connect-destination.md). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL URL]**: The endpoint for ADLS Gen2. The endpoint pattern is: `https://<accountname>.dfs.core.windows.net`.
+* **[!UICONTROL URL]**: The endpoint for [!DNL Azure Data Lake Storage Gen2]. The endpoint pattern is: `https://<accountname>.dfs.core.windows.net`.
 * **[!UICONTROL Tenant]**: The tenant information that contains your application.
 * **[!UICONTROL Service principal ID]**: The application's client ID.
 * **[!UICONTROL Service principal key]**: The application's key.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
 
 ![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
-
-For more information about these values, read the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] source overview](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
 ### Fill in destination details {#destination-details}
 
@@ -71,7 +69,7 @@ See [Activate audience data to batch profile export destinations](../../ui/activ
 
 ### Scheduling
 
-In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Google Cloud Storage] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
+In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Azure Data Lake Storage Gen2] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
 
 ### Map attributes and identities {#map}
 
@@ -83,4 +81,4 @@ This destination supports dataset exports. For complete information on how to se
 
 ## Validate successful data export {#exported-data}
 
-To verify if data has been exported successfully, check your [!DNL Google Cloud Storage] bucket and make sure that the exported files contain the expected profile populations.
+To verify if data has been exported successfully, check your [!DNL Azure Data Lake Storage Gen2] storage and make sure that the exported files contain the expected profile populations.
