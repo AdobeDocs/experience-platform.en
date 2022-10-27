@@ -23,6 +23,10 @@ When [defining a new field](./overview.md#define) in the Adobe Experience Platfo
 
 ![Image showing the Enum & Suggested Values option enabled for a string field in the UI](../../images/ui/fields/enum/enum-options-selected.png)
 
+This document covers how to define enums and suggested values in the [!UICONTROL Schemas] UI workspace. For a quick overview on enums and suggested values, including how to configure them in the UI and their downstream effects, watch the following video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
+
 ## Define an enum {#enum}
 
 Select **[!UICONTROL Enums and Suggested Values]**, then select **[!UICONTROL Enums]**. Additional controls appear, allowing you to specify the value constraints for the enum. To add a constraint, select **[!UICONTROL Add row]**.
