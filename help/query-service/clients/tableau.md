@@ -8,7 +8,7 @@ exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
 ---
 # Connect [!DNL Tableau] to Query Service
 
-This document covers the steps for connecting Tableau with Adobe Experience Platform [!DNL Query Service].
+This document covers the steps for connecting [!DNL Tableau] with Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
@@ -16,7 +16,7 @@ This document covers the steps for connecting Tableau with Adobe Experience Plat
 
 To connect [!DNL Tableau] to [!DNL Query Service], open [!DNL Tableau], and in the **[!DNL To a Server]** section select **[!DNL More]** followed by **[!DNL PostgreSQL]** 
 
-![The Tableau dashboard with More and PostgreSQL highlighted.](../images/clients/tableau/open-connection.png)
+![The [!DNL Tableau] dashboard with More and PostgreSQL highlighted.](../images/clients/tableau/open-connection.png)
 
 You can now enter values to connect with Adobe Experience Platform. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
@@ -36,7 +36,7 @@ After filling in all your credentials, select **[!DNL Sign In]** to continue.
 
 You have now connected with Adobe Experience Platform, with a list of your tables displayed on the side.
 
-![A new Tableau dashboard with Query Service tables highlighted in the left panel.](../images/clients/tableau/connected.png)
+![A new [!DNL Tableau] dashboard with Query Service tables highlighted in the left panel.](../images/clients/tableau/connected.png)
 
 ## Next steps
 

@@ -18,7 +18,7 @@ This document covers the steps for connecting [!DNL Postico] with Adobe Experien
 
 To connect [!DNL Postico] to Query Service, open [!DNL Postico] and select **[!DNL New Favorite]**.
 
-![The Postico UI with New Favorite highlighted.](../images/clients/postico/open-postico.png)
+![The [!DNL Postico] UI with New Favorite highlighted.](../images/clients/postico/open-postico.png)
 
 You can now enter values to connect with Adobe Experience Platform. 
 
@@ -30,13 +30,13 @@ After inserting your credentials, select **[!DNL Connect]** to connect with Quer
 
 After connecting to Platform, you'll be able to see a list of all the relations previously made with Query Service.
 
-![A list of connections in the Postico UI.](../images/clients/postico/show-queries.png)
+![A list of connections in the [!DNL Postico] UI.](../images/clients/postico/show-queries.png)
 
 ## Create SQL statements
 
 To create a new SQL query, select and open "SQL Query".
 
-![The Postico UI with the SQL Query shortcut highlighted.](../images/clients/postico/create-query.png)
+![The [!DNL Postico] UI with the SQL Query shortcut highlighted.](../images/clients/postico/create-query.png)
 
 A box appears, and from here you can type in the query you want to execute. When finished, select **[!DNL Execute Statement]** to run the query.
 

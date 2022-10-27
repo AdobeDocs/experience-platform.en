@@ -14,13 +14,13 @@ This document walks through the steps for connecting [!DNL RStudio] with Adobe E
 >
 > This guide assumes you already have access to [!DNL RStudio] and are familiar with how to use it. More information about [!DNL RStudio] can be found in the [official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/).
 > 
-> Additionally, to use [!DNL RStudio] with Query Service, you need to install the [!DNL PostgreSQL] JDBC 4.2 Driver. You can download the JDBC Driver from the [PostgreSQL official site](https://jdbc.postgresql.org/download/).
+> Additionally, to use [!DNL RStudio] with Query Service, you need to install the [!DNL PostgreSQL] JDBC 4.2 Driver. You can download the JDBC Driver from the [[!DNL PostgreSQL] official site](https://jdbc.postgresql.org/download/).
 
 ## Create a [!DNL Query Service] connection in the [!DNL RStudio] interface
 
 After installing [!DNL RStudio], you need to install the RJDBC package. Go to the **[!DNL Packages]** pane, and select **[!DNL Install]**. 
 
-![The RStudio dashboard with Packages and Install highlighted.](../images/clients/rstudio/install-package.png)
+![The [!DNL RStudio] dashboard with Packages and Install highlighted.](../images/clients/rstudio/install-package.png)
 
 A pop up appears, showing the **[!DNL Install Packages]** screen. Ensure that **[!DNL Repository (CRAN)]** is selected for the **[!DNL Install from]** section. The value for **[!DNL Packages]** should be `RJDBC`. Ensure **[!DNL Install dependencies]** is selected. After confirming all the values are correct, select **[!DNL Install]** to install the packages.
 
@@ -34,9 +34,9 @@ After [!DNL RStudio] has restarted, you can now connect to Query Service. Select
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Where {PATH TO THE POSTGRESQL JDBC JAR} represents the path to the PostgreSQL JDBC JAR that was installed on your computer.
+Where `{PATH TO THE POSTGRESQL JDBC JAR}` represents the path to the [!DNL PostgreSQL] JDBC JAR that was installed on your computer.
 
-Now, you can create your connection to Query Service by entering the following command in the console:
+Now, you can create your connection to Query Service. Enter the following command in the console:
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")

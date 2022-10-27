@@ -16,7 +16,7 @@ This document covers the steps for connecting [!DNL Looker] with Adobe Experienc
 
 After logging into [!DNL Looker], select **[!DNL Admin]**, followed by **[!DNL Connections]**.
 
-![The Looker dashboard with Connections highlighted from the Admin dropdown menu.](../images/clients/looker/click-admin-connections.png)
+![The [!DNL Looker] dashboard with Connections highlighted from the Admin dropdown menu.](../images/clients/looker/click-admin-connections.png)
 
 On this page, select **[!DNL New Connection]**.
 
