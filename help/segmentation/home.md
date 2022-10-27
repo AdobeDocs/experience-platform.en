@@ -38,7 +38,7 @@ For information on building segment definitions using the API, see the tutorial 
 >
 >In the event a schema is extended, all future uploads must update newly added fields accordingly. For more information on customizing [!DNL Experience Data Model] (XDM), visit the [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md).
 >
->Additionally, if time-to-live (TTL) is enabled on the dataset, this could affect the membership of the created segment. For more information about TTL and how it can affect segmentation, please read the [Profile Service TTL guide](../profile/apply-ttl.md).
+>Additionally, if an Experience Event expiration value is enabled on the dataset, this could affect the membership of the created segment. Please read the guide on [Experience Event expirations](../profile/event-expirations.md) for more information on how this feature can affect segmentation.
 
 ## Evaluate segments {#evaluate-segments}
 
