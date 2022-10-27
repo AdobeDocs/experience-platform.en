@@ -478,9 +478,9 @@ SET property_key = property_value
 
 To return the value for any setting, use `SET [property key]` without a `property_value`.
 
-## PostgreSQL commands
+## [!DNL PostgreSQL] commands
 
-The sub-sections below cover the PostgreSQL commands supported by Query Service.
+The sub-sections below cover the [!DNL PostgreSQL] commands supported by Query Service.
 
 ### ANALYZE TABLE
 
@@ -671,7 +671,7 @@ More information about the standard SELECT query parameters can be found in the 
 | Parameters | Description|
 | ------ | ------ |
 | `TEMPORARY` or `TEMP` | An optional parameter. If specified, the table that is created will be a temporary table. |
-| `UNLOGGED` | An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | The name of the table to be created. |
 
 **Example**

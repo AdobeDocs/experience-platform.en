@@ -16,7 +16,7 @@ This document covers the steps for connecting [!DNL Tableau] with Adobe Experien
 
 To connect [!DNL Tableau] to [!DNL Query Service], open [!DNL Tableau], and in the **[!DNL To a Server]** section select **[!DNL More]** followed by **[!DNL PostgreSQL]** 
 
-![The [!DNL Tableau] dashboard with More and PostgreSQL highlighted.](../images/clients/tableau/open-connection.png)
+![The [!DNL Tableau] dashboard with More and [!DNL PostgreSQL] highlighted.](../images/clients/tableau/open-connection.png)
 
 You can now enter values to connect with Adobe Experience Platform. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
@@ -26,7 +26,7 @@ Ensure that you have checked the **[!UICONTROL Require SSL]** box before trying 
 >
 >See the [[!DNL Query Service] SSL documentation](./ssl-modes.md) to learn about SSL support for third-party connections to Adobe Experience Platform Query Service, and how to connect using `verify-full` SSL mode.
 
-![The PostgreSQL connection dialog with completed connection details.](../images/clients/tableau/sign-in.png)
+![The [!DNL PostgreSQL] connection dialog with completed connection details.](../images/clients/tableau/sign-in.png)
     
 >[!IMPORTANT]
 >

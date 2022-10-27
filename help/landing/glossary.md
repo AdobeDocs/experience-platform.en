@@ -86,7 +86,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Class**: In Experience Data Model (XDM), a class defines the smallest set of fields used to build a schema and defines the base behavior of the business object that the schema represents.
 
-**Client**: A client is an external tool or application which connects to [!DNL Query Service] via PostgreSQL protocol or HTTP API.
+**Client**: A client is an external tool or application which connects to [!DNL Query Service] via [!DNL PostgreSQL] protocol or HTTP API.
 
 **Collection**: In [!DNL Offer Decisioning], collections are subsets of offers based on pre-defined conditions defined by a marketer, such as category of the offer.
 
@@ -112,11 +112,11 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **C5 contract label**: A `C5` contract data usage label specifies that data cannot be used for cross-site targeting of interest-based content or ads. Interest-based targeting, or personalization, occurs if the following three conditions are met: The data collected on-site is used to make inferences about a user's interest; is used in another context such as on another site or app; and is used to select which content or ads are served based on those inferences.
 
-**C6 contract label**: A `C6` contract data usage label specifies that data cannot be used for on-site ad targeting. On-site ad targeting includes the selection and delivery of advertisements on your organization’s websites, or apps or to measure the delivery and effectiveness of such advertisements. This includes using previously collected on-site data about the users’ interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as selecting an ad or making a purchase.
+**C6 contract label**: A `C6` contract data usage label specifies that data cannot be used for on-site ad targeting. On-site ad targeting includes the selection and delivery of advertisements on your organization's websites, or apps or to measure the delivery and effectiveness of such advertisements. This includes using previously collected on-site data about the users' interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as selecting an ad or making a purchase.
 
-**C7 contract label**: A `C7` contract data usage label specifies that data cannot be used for on-site targeting of content. On-site content targeting includes the selection and delivery of content on your organization’s websites, or apps or to measure the delivery and effectiveness of such content. This includes previously collected information about users’ interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example selecting content.
+**C7 contract label**: A `C7` contract data usage label specifies that data cannot be used for on-site targeting of content. On-site content targeting includes the selection and delivery of content on your organization's websites, or apps or to measure the delivery and effectiveness of such content. This includes previously collected information about users' interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example selecting content.
 
-**C8 contract label**: A `C8` contract data usage label specifies that data cannot be used for measurement of your organization’s websites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
+**C8 contract label**: A `C8` contract data usage label specifies that data cannot be used for measurement of your organization's websites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
 
 **C9 contract label**: A `C9` contract data usage label specifies that data cannot be used in data-science workflows. Some contracts include explicit prohibitions on data used for data science. Sometimes these are phrased in terms that prohibit the use of data for artificial intelligence (AI), machine-learning (ML), or modeling.
 
