@@ -10,7 +10,7 @@ description: Learn how Adobe Commerce and Real-Time CDP merchants can personaliz
 > 
 >The **[!UICONTROL Adobe Commerce]** connector is in beta and only available to a select number of customers.
 
-The [!DNL Adobe Commerce] destination connector lets you select one or more Experience Platform Audiences to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those Experience Platform Audiences to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You also can display hero banners and modify product pricing through promotional offers, all customized to Adobe Experience Platform segments.
+The [!DNL Adobe Commerce] destination connector lets you select one or more Real-Time CDP segments to activate to your [!DNL Adobe Commerce] account to deliver a dynamic personalized experience for your shoppers. Within [!DNL Adobe Commerce], you can then select those Real-Time CDP segments to personalize unique offers in the cart such as 'buy 2 get 1 free,'. You also can display hero banners and modify product pricing through promotional offers, all customized to Adobe Real-Time CDP segments.
 
 <!--## Use cases {#use-cases}
 
@@ -74,7 +74,7 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate audiences to the [!DNL Commerce] destination {#activate}
+## Activate segments to the [!DNL Commerce] destination {#activate}
 
 >[!IMPORTANT]
 > 
@@ -84,11 +84,11 @@ Read [Activate profiles and segments to profile request destinations](../../ui/a
 
 ## Next steps in [!DNL Adobe Commerce]
 
-Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to configure the [!DNL Commerce Admin] to import the Experience Platform Audiences you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) to learn more.
+Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to configure the [!DNL Commerce Admin] to import the Real-Time CDP segments you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) to learn more.
 
 ## Validate data export {#exported-data}
 
-After you activate Experience Platform Audiences to your [!DNL Adobe Commerce] account, you will see those audiences available in the [!DNL Admin] when you create a Cart Price Rule:
+After you activate Real-Time CDP segments to your [!DNL Adobe Commerce] account, you will see those segments available in the [!DNL Admin] when you create a Cart Price Rule:
 
 ![Adobe Commerce Admin](../../assets/catalog/personalization/adobe-commerce/rtcdp-in-admin.png)
 
