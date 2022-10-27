@@ -40,7 +40,9 @@ Compressing these libraries speeds up data collection and consolidates operation
 
 ## Platform Edge Network and datastreams {#edge}
 
-Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using tags, you can set up [datastreams](../edge/datastreams/overview.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
+Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using tags, you can set up [datastreams](../edge/datastreams/overview.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code.
+
+In addition, datastreams are integrated with several Platform capabilities that help ensure that any sensitive data you are sending is handled appropriately with respect to organizational policies and legal regulations. See the section on [handling sensitive data](../edge/datastreams/overview.md#sensitive) in the datastreams documentation for more information.
 
 ![Datastreams and Adobe solutions](./images/home/adobe-solutions.png)
 
@@ -56,7 +58,7 @@ Platform Edge Network is a globally distributed, fast, and reliable network of s
 
 >[!NOTE]
 >
->Event forwarding is a paid feature that is only included as part of the Real-Time Customer Data Platform Connections offering.
+>Event forwarding is a paid feature that is only included as part of the Adobe Real-Time Customer Data Platform Connections offering.
 
 ## Next steps
 
