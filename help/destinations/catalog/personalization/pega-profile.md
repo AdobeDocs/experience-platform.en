@@ -71,6 +71,10 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ### Fill in destination details {#destination-details}
 
+After establishing the authentication connection to the [!DNL Amazon S3], provide the following information for the destination:
+
+![Image of the UI screen showing completed fields for the Pega Profile Connector destination details](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
+
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
 >title="Bucket name"
@@ -82,12 +86,13 @@ To authenticate to the destination, fill in the required fields and select **[!U
 >abstract="Must contain only characters A-Z, a-z, 0-9 and can include the following special characters: `/!-_.'()"^[]+$%.*"`. To create a folder per segment file, insert the macro `/%SEGMENT_NAME%` or `/%SEGMENT_ID%` or `/%SEGMENT_NAME%/%SEGMENT_ID%` into the text field. Macros can only be inserted at the end of the folder path. View macro examples in the documentation."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Use macros to create a folder in your storage location"
 
-To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+To configure details for the destination, fill in the required fields and select **[!UICONTROL Next]**. An asterisk next to a field in the UI indicates that the field is required.
 
 * **[!UICONTROL Name]**: enter a name that will help you identify this destination.
 * **[!UICONTROL Description]**: enter a description of this destination.
 * **[!UICONTROL Bucket name]**: enter the name of the [!DNL Amazon S3] bucket to be used by this destination.
 * **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
+* **[!UICONTROL Compression Type]**: Select compression type as GZIP or NONE.
 
 >[!TIP]
 >
