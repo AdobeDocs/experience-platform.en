@@ -292,7 +292,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Input feature**: An input feature is specified in feature mapping and is used by a machine-learning model to make predictions.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] such as [!DNL Attribution AI] and [!DNL Customer AI] are machine-learning, artificial-intelligence-based models that require Experience Platform (or applications built on top of Platform such as Real-time Customer Data Platform) to run and operate.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] such as [!DNL Attribution AI] and [!DNL Customer AI] are machine-learning, artificial-intelligence-based models that require Experience Platform (or applications built on top of Platform such as Adobe Real-Time Customer Data Platform) to run and operate.
 
 **Interest-based targeting or personalization**: Interest-based targeting, also known as personalization, occurs if the following three conditions are met: 
 
@@ -408,7 +408,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] brings together known and unknown customer data to create trusted customer profiles with simplified integration, intelligent segmentation, and real-time activation across the digital customer journey.
+**Real-Time Customer Data Platform**: Adobe Real-Time Customer Data Platform (Real-Time CDP) brings together known and unknown customer data to create trusted customer profiles with simplified integration, intelligent segmentation, and real-time activation across the digital customer journey.
 
 **Real-time Customer Profile**: Real-time Customer Profile (sometimes called Profile) provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into individual profiles offering actionable, timestamped accounts of every customer interaction.
 

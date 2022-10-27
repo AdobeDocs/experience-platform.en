@@ -33,8 +33,8 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 | Feature | Description |
 | ------- | ----------- |
-| Automated enforcement of data usage policies for [!DNL Real-time Customer Data Platform]| Data usage policies are now enforced in the workflow of activating data to destinations. Data Governance is also embedded and enforced when making changes that affect existing activations (such as changes to dataset labels, merge policies, segment definitions, and others). |
-| Data lineage for enforcement | When a data usage policy is violated in Real-time CDP, the UI displays a notification that contains data lineage information to help the user understand why the policies were violated and what they can do to resolve the violation. |
+| Automated enforcement of data usage policies for [!DNL Real-Time Customer Data Platform]| Data usage policies are now enforced in the workflow of activating data to destinations. Data Governance is also embedded and enforced when making changes that affect existing activations (such as changes to dataset labels, merge policies, segment definitions, and others). |
+| Data lineage for enforcement | When a data usage policy is violated in Real-Time CDP, the UI displays a notification that contains data lineage information to help the user understand why the policies were violated and what they can do to resolve the violation. |
 
 
 **Known issues**
@@ -62,7 +62,7 @@ To learn more about ingesting data into Platform, visit the [Data Ingestion docu
 
 ## Destinations {#destinations}
 
-In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-Time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New destinations**
 
@@ -70,8 +70,8 @@ New destinations are available where you can activate your Adobe Experience Plat
 
 |Destination | Description|
 |--- | ---|
-|Cloud storage destinations | Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files.|
-|Advertising destinations | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display & Video 360.|
+|Cloud storage destinations | Real-Time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files.|
+|Advertising destinations | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Real-Time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display & Video 360.|
 
 To learn more, visit the [destinations overview](../../destinations/home.md)
 
