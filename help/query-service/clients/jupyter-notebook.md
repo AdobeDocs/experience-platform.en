@@ -24,7 +24,7 @@ To acquire the necessary credentials for connecting [!DNL Jupyter Notebook] to E
 
 After you have opened a new [!DNL Jupyter Notebook] web application, select the **[!DNL New]** dropdown followed by **[!DNL Python 3]** to create a new Notebook. The [!DNL Notebook] editor appears.
 
-![The [!DNL Jupiter Notebook] File tab with the [!DNL New dropdown] and [!DNL Python] 3 highlighted.](../images/clients/jupyter-notebook/new-notebook.png)
+![The [!DNL Jupiter Notebook] File tab with the [!DNL New] dropdown and [!DNL Python] 3 highlighted.](../images/clients/jupyter-notebook/new-notebook.png)
 
 On the first line of the [!DNL Notebook] editor, enter the following value: `pip install psycopg2-binary` and select **[!DNL Run]** from the command bar. A success message appears below the input line. 
 

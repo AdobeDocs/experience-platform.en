@@ -86,7 +86,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Class**: In Experience Data Model (XDM), a class defines the smallest set of fields used to build a schema and defines the base behavior of the business object that the schema represents.
 
-**Client**: A client is an external tool or application which connects to [!DNL Query Service] via PostgreSQL protocol or HTTP API.
+**Client**: A client is an external tool or application which connects to [!DNL Query Service] via [!DNL PostgreSQL] protocol or HTTP API.
 
 **Collection**: In [!DNL Offer Decisioning], collections are subsets of offers based on pre-defined conditions defined by a marketer, such as category of the offer.
 
