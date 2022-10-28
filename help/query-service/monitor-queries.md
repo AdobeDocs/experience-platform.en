@@ -53,6 +53,8 @@ Toggle the relevant checkboxes to remove or add a table column. Next, select **[
 
 You can subscribe to alerts from the [!UICONTROL Scheduled Queries] tab. Select the alert notification icon (![An alert icon.](./images/monitor-queries/alerts-icon.png)) next to a query name to open the [!UICONTROL Alerts] dialog. The [!UICONTROL Alerts] dialog subscribes to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: `start`, `success`, and `failure`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
 
+<!-- This dialog will be updated before release. THe image below will need to be updated inline with these changes. -->
+
 ![The alert subscriptions dialog.](./images/monitor-queries/alert-subscription-dialog.png)
 
 <!-- Link to alert subscriptions doc when available -->
