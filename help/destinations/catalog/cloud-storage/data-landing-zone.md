@@ -1,8 +1,8 @@
 ---
-title: Data Landing Zone Source destination
+title: Data Landing Zone destination
 description: Learn how to connect to Data Landing Zone to activate segments and export datasets. 
 ---
-# (Beta) Data Landing Zone Source destination
+# (Beta) Data Landing Zone destination
 
 >[!IMPORTANT]
 >

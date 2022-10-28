@@ -11,16 +11,17 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 >[!IMPORTANT]
 >
 >With the beta release of the export datasets functionality and the improved file export functionality, you may now be seeing two [!DNL Amazon S3] cards in the destinations catalog.
->* If you are already exporting files to the **[!UICONTROL Amazon S3]** destination: Please create new dataflows to the **[!UICONTROL Amazon S3]** destination.
->* If you have not yet created any dataflows to the **[!UICONTROL Amazon S3]** destination, please use the new **[!UICONTROL Amazon S3]** card to export files to **[!UICONTROL Amazon S3]**.
+>* If you are already exporting files to the **[!UICONTROL Amazon S3]** destination: Please create new dataflows to the new **[!UICONTROL Amazon S3 beta]** destination.
+>* If you have not yet created any dataflows to the **[!UICONTROL Amazon S3]** destination, please use the new **[!UICONTROL Amazon S3 beta]** card to export files to **[!UICONTROL Amazon S3]**.
 
-![Image of the two Marketo destination cards in a side-by-side view.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![Image of the two Amazon S3 destination cards in a side-by-side view.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-Improvements in the new Amazon S3 destination card include:
+Improvements in the new [!DNL Amazon S3] destination card include:
 
-* Dataset exports support
-* Additional file naming options
-* Ability to set custom file headers in your exported files
+* Dataset exports support.
+* Additional file naming options.
+* Ability to set custom file headers in your exported files.
+* Ability to customize the formatting of exported CSV data files.
 
 ## Overview {#overview}
 
