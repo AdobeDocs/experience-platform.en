@@ -18,14 +18,14 @@ CMK is included in the Healthcare Shield and the Privacy and Security Shield off
 
 The process is as follows:
 
-1. [Create a [!DNL Microsoft Azure] Key Vault](#create-key-vault), then [generate an encryption key](#generate-a-key) (based on your organization's policies) that will ultimately be shared with Adobe.
-1. Use API calls to [register the CMK app](#register-app) with your [!DNL Azure] tenant.
-1. [Assign the service principal for the CMK app](#assign-to-role) to an appropriate role for the key vault. 
-1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe).
+1. [Configure an [!DNL Microsoft Azure] Key Vault](#create-key-vault) based on your organization's policies, then [generate an encryption key](#generate-a-key) that will ultimately be shared with Adobe.
+1. Use API calls to [set up the CMK app](#register-app) with your [!DNL Azure] tenant. 
+1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe) and start the enablement process for the feature.
+1. [Check the status of the configuration](#check-status) to verify whether CMK has been enabled.
 
-Once the setup process is complete, all data onboarded into Platform across all sandboxes will be encrypted using your [!DNL Azure] key setup, specific to your [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) and [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) resources. To use CMK, you will leverage [!DNL Microsoft Azure] functionality that may be part of their [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+Once the setup process is complete, all data onboarded into Platform across all sandboxes will be encrypted using your [!DNL Azure] key setup. To use CMK, you will leverage [!DNL Microsoft Azure] functionality that may be part of their [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## Create an [!DNL Azure] Key Vault {#create-key-vault}
+## Configure an [!DNL Azure] Key Vault {#create-key-vault}
 
 CMK only supports keys from a [!DNL Microsoft Azure] Key Vault. To get started, you must work with [!DNL Azure] to create a new enterprise account, or use an existing enterprise account  and follow the steps below to create the Key Vault.
 
@@ -59,7 +59,7 @@ Once you arrive at the **[!DNL Review + create]** step, you can review the detai
 
 ![Basic config for the key vault](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Configure networking options
+### Configure networking options
 
 If your key vault is configured to restrict public access to certain virtual networks or disable public access entirely, you must grant Microsoft a firewall exception.
 
@@ -67,7 +67,7 @@ Select **[!DNL Networking]** in the left navigation. Under **[!DNL Firewalls and
 
 ![Basic config for the key vault](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
-## Generate a key {#generate-a-key}
+### Generate a key {#generate-a-key}
 
 Once you have created a key vault, you can generate a new key. Navigate to the **[!DNL Keys]** tab and select **[!DNL Generate/Import]**.
 
@@ -87,7 +87,7 @@ The configured key appears in the list of keys for the vault.
 
 ![Key added](../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
-## Register the CMK app {#register-app}
+## Set up the CMK app {#register-app}
 
 Once you have your key vault configured, the next step is to register for the CMK application that will link to your [!DNL Azure] tenant.
 
@@ -129,7 +129,7 @@ Copy and paste the `applicationRedirectUrl` address into a browser to open an au
 
 ![Accept permission request](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
-## Assign the CMK app to a role {#assign-to-role}
+### Assign the CMK app to a role {#assign-to-role}
 
 After completing the authentication process, navigate back to your [!DNL Azure] Key Vault and select **[!DNL Access control]** in the left navigation. From here, select **[!DNL Add]** followed by **[!DNL Add role assignment]**.
 
@@ -145,7 +145,7 @@ On the next screen, choose **[!DNL Select members]** to open a dialog in the rig
 >
 >If you cannot find your application in the list, then your service principal has not been accepted into your tenant. Please work with your [!DNL Azure] administrator or representative to ensure that you have correct privileges.
 
-## Send your key URI to Adobe {#send-to-adobe}
+## Enable the encryption key configuration on Experience Platform {#send-to-adobe}
 
 After installing the CMK app on [!DNL Azure], you can send your encryption key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
 
@@ -215,7 +215,7 @@ A successful response returns the details of the configuration job.
 
 The job should should complete processing within a few minutes.
 
-### Check the configuration's status {#check-status}
+## Verify the configuration's status {#check-status}
 
 To check the status of the configuration request, you can make a GET request.
 
