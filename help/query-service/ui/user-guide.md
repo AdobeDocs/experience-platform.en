@@ -98,7 +98,7 @@ When errors are detected, you can view the specific error messages by hovering o
 
 Select any saved template from the [!UICONTROL Templates] tab to view it in the Query Editor. The query details panel provides more information and tools to manage the selected query.
 
-![The Query Editor with teh query details panel highlighted.](../images/ui/query-editor/query-details.png)
+![The Query Editor with the query details panel highlighted.](../images/ui/query-editor/query-details.png)
 
 This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and add a schedule to the query. 
 
@@ -110,13 +110,19 @@ This panel also shows useful metadata such as the last time the query was modifi
 >
 >The following is a list of limitations for scheduled queries when using the Query Editor. They do not apply to the [!DNL Query Service] API:<br/>You can only add a schedule to a query that has already been created, saved, and run.<br/>You **cannot** add a schedule to a parameterized query.<br/>Scheduled queries **cannot** contain an anonymous block.
 
-To add a schedule to a query, select **[!UICONTROL Add schedule]**. 
+Schedules are set from the Query Editor. However, only queries that have already been saved as a template can be scheduled. To add a schedule to a query, select a query template from either the [!UICONTROL Templates] tab or the [!UICONTROL Scheduled Queries] tab to navigate to the Query Editor. 
 
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md). 
 
-![The Query Editor with Add schedule highlighted.](../images/ui/query-editor/add-schedule.png)
+When a saved query is accessed from the Query Editor, The [!UICONTROL Schedules] tab appears below the query name. Select **[!UICONTROL Schedules]**. 
 
-The **[!UICONTROL Schedule details]** page appears. On this page, you can choose the frequency of the scheduled query, the dates the scheduled query will run, as well as what dataset to export the query to.
+![The Query Editor with the Schedules tab highlighted.](../images/ui/query-editor/schedule-tab.png)
+
+The schedules workspace appears. Select **[!UICONTROL Add Schedule]** to create a schedule. 
+
+![The Query Editor Schedule workspace with Add schedule highlighted.](../images/ui/query-editor/add-schedule.png)
+
+The schedule details page appears. On this page, you can choose the frequency of the scheduled query, the start and end date, the day of the week the scheduled query will run, as well as what dataset to export the query to.
 
 ![The Schedule details panel highlighted.](../images/ui/query-editor/schedule-details.png)
 
@@ -134,31 +140,27 @@ For the dataset, you have the option to use either an existing dataset or create
 >
 > Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
 
-After confirming all these details, select **[!UICONTROL Save]** to create a schedule.
+After confirming all these details, select **[!UICONTROL Save]** to create a schedule. You are returned to the schedules workspace that displays details of the newly created schedule, including the schedule ID, the schedule itself, and the schedule's output dataset. You can use the schedule ID to look up more information about the runs of the scheduled query itself. To learn more, please read the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
 
-The query details page re-appears, and now shows the details of the newly created schedule, including the schedule ID, the schedule itself, and the schedule's output dataset. You can use the schedule ID to look up more information about the runs of the scheduled query itself. To learn more, please read the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
+![The schedules workspace with the newly created schedule highlighted.](../images/ui/query-editor/schedules-workspace.png)
 
->[!NOTE]
->
-> You can only schedule **one** query template using the UI. If you want to add additional schedules to a query template, you will need to use the API. If a schedule has already been added using the API, you will **not** be able to add additional schedules using the UI. If multiple schedules are already attached to a query template, only the oldest schedule will be displayed. To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md). 
->
-> Additionally, you should refresh the page if you want to ensure you have the latest state for the schedule you are viewing.
+#### Delete or disable a schedule {#delete-schedule}
 
-#### Delete a schedule {#delete-schedule}
+You can delete or disable a schedule from the schedules workspace. You must select a query template from either the [!UICONTROL Templates] tab or the [!UICONTROL Scheduled Queries] tab to navigate to the Query Editor and select **[!UICONTROL Schedule]** to access the schedules workspace. 
 
-You can delete a schedule by selecting **[!UICONTROL Delete a schedule]**.
-
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
-
-![The Query Editor with Disable schedule and Delete schedule highlighted.](../images/ui/query-editor/delete-schedule.png)
+Select a schedule from the rows of available schedules. You can use the toggle to disable or enable the scheduled query.
 
 >[!IMPORTANT]
 >
-> If you want to delete a schedule for a query, you must disable the schedule first.
+>You must disable the schedule before you can delete a schedule for a query.
+
+Select **[!UICONTROL Delete a schedule]** to delete the disabled schedule.
+
+![The schedules workspace with Disable schedule and Delete schedule highlighted.](../images/ui/query-editor/delete-schedule.png)
 
 ### Saving queries {#saving-queries}
 
-[!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, select **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the **[!UICONTROL Query Details]** panel.
+The [!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, select **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the **[!UICONTROL Query Details]** panel.
 
 >[!NOTE]
 >
