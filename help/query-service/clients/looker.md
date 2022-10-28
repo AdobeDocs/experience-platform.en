@@ -16,15 +16,15 @@ This document covers the steps for connecting [!DNL Looker] with Adobe Experienc
 
 After logging into [!DNL Looker], select **[!DNL Admin]**, followed by **[!DNL Connections]**.
 
-![](../images/clients/looker/click-admin-connections.png)
+![The [!DNL Looker] dashboard with Connections highlighted from the Admin dropdown menu.](../images/clients/looker/click-admin-connections.png)
 
 On this page, select **[!DNL New Connection]**.
 
-![](../images/clients/looker/click-new-connection.png)
+![The Connections workspace with New Connection highlighted.](../images/clients/looker/click-new-connection.png)
    
 From here, you can fill out the details for the connection settings.
 
-![](../images/clients/looker/new-connection.png)
+![The Connections settings page for a New Connection.](../images/clients/looker/new-connection.png)
 
 - **[!DNL Name]:** The name of your connection.
 - **[!DNL Dialect]:** The dialect used for the SQL database. [!DNL Query Service] uses **[!DNL PostgreSQL]**.
@@ -41,7 +41,7 @@ For more information on finding your host and port, database name, and login cre
 
 After inputting your connection details, select **[!DNL Test These Settings]** to ensure your credentials work properly. If they do, a message indicating that you can connect will appear below. If your connection is indeed successful, select **[!DNL Add Connection]** to create your connection.
 
-![](../images/clients/looker/click-test-connection.png)
+![The Connections settings page for a New Connection with Test these settings highlighted.](../images/clients/looker/click-test-connection.png)
 
 ## Next steps
 

@@ -20,7 +20,7 @@ For more information about the concepts and features of [!DNL Query Service], se
 
 [!DNL Query Editor] takes a few seconds to initialize and connect to [!DNL Query Service] when it is opened. The console tells you when it is connected, as shown below. If you attempt to run a query before the editor has connected, it delays execution until the connection is complete. 
 
-![Image](../images/ui/query-editor/connect.png)
+![The console output of the Query Editor upon initial connection.](../images/ui/query-editor/connect.png)
 
 ### How queries are run from [!DNL Query Editor] {#run-a-query}
 
@@ -34,13 +34,13 @@ Using [!DNL Query Editor], you can write, execute, and save queries for customer
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Queries]** in the left navigation menu to open the [!DNL Query Service] workspace. Next, select **[!UICONTROL Create Query]** at the top right of the screen to start writing queries. This link is available from any of the pages in the [!DNL Query Service] workspace. 
 
-![Image](../images/ui/query-editor/create-query.png)
+![The Queries workspace overview tab with Create query highlighted.](../images/ui/query-editor/create-query.png)
   
 ### Writing queries {#writing-queries}
 
-[!UICONTROL Query Editor] is organized to make writing queries as easy as possible. The screenshot below shows how the editor appears in the UI, with the **Play** button and SQL entry field highlighted.
+[!UICONTROL Query Editor] is organized to make writing queries as easy as possible. The screenshot below shows how the editor appears in the UI, with the SQL entry field and **Play** highlighted.
 
-![Image](../images/ui/query-editor/editor.png)
+![The Query Editor with the SQL input field and Play highlighted.](../images/ui/query-editor/editor.png)
 
 To minimize your development time, it is recommended that you develop your queries with limits on the rows returned. For example, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. After you have verified that your query produces the expected output, remove the limits and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. 
 
@@ -48,15 +48,15 @@ To minimize your development time, it is recommended that you develop your queri
 
 - **Automatic syntax highlighting:** Makes reading and organizing SQL easier.
 
-![Image](../images/ui/query-editor/syntax-highlight.png)
+![An SQL statement in the Query Editor demonstrating syntax colour highlighting.](../images/ui/query-editor/syntax-highlight.png)
 
 - **SQL keyword auto-complete:** Start typing your query then use the arrow keys to navigate to the desired term and press **Enter**.
 
-![Image](../images/ui/query-editor/syntax-auto.png)
+![A few characters of SQL with the auto complete dropdown menu providing options from the Query Editor.](../images/ui/query-editor/syntax-auto.png)
 
 - **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete will recognize fields in that table. 
 
-![The Query Editor command line interface displaying drop down suggestions.](../images/ui/query-editor/tables-auto.png)
+![The Query Editor input displaying drop down table name suggestions.](../images/ui/query-editor/tables-auto.png)
 
 ### Auto-complete UI configurational toggle {#auto-complete}
 
@@ -88,17 +88,17 @@ Select the appropriate option to disable the auto-complete feature.
 
 [!DNL Query Editor] automatically validates a query as you write it, providing generic SQL validation and specific execution validation. If a red underline appears below the query (as shown in the image below), it represents an error within the query.
 
-![Image](../images/ui/query-editor/syntax-error-highlight.png)
+![The Query Editor input displaying SQL underlined in red to indicate an error.](../images/ui/query-editor/syntax-error-highlight.png)
 
 When errors are detected, you can view the specific error messages by hovering over the SQL code.
 
-![Image](../images/ui/query-editor/linting-error.png)
+![A dialog with an error message.](../images/ui/query-editor/linting-error.png)
 
 ### Query details {#query-details}
 
-While you are viewing a query in [!DNL Query Editor], the **[!UICONTROL Query Details]** panel provides tools to manage the selected query.
+Select any saved template from the [!UICONTROL Templates] tab to view it in the Query Editor. The query details panel provides more information and tools to manage the selected query.
 
-![Image](../images/ui/query-editor/query-details.png)
+![The Query Editor with teh query details panel highlighted.](../images/ui/query-editor/query-details.png)
 
 This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and add a schedule to the query. 
 
@@ -112,11 +112,13 @@ This panel also shows useful metadata such as the last time the query was modifi
 
 To add a schedule to a query, select **[!UICONTROL Add schedule]**. 
 
-![Image](../images/ui/query-editor/add-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![The Query Editor with Add schedule highlighted.](../images/ui/query-editor/add-schedule.png)
 
 The **[!UICONTROL Schedule details]** page appears. On this page, you can choose the frequency of the scheduled query, the dates the scheduled query will run, as well as what dataset to export the query to.
 
-![Image](../images/ui/query-editor/schedule-details.png)
+![The Schedule details panel highlighted.](../images/ui/query-editor/schedule-details.png)
 
 You can choose the following options for **[!UICONTROL Frequency]**:
 
@@ -146,7 +148,9 @@ The query details page re-appears, and now shows the details of the newly create
 
 You can delete a schedule by selecting **[!UICONTROL Delete a schedule]**.
 
-![Image](../images/ui/query-editor/delete-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![The Query Editor with Disable schedule and Delete schedule highlighted.](../images/ui/query-editor/delete-schedule.png)
 
 >[!IMPORTANT]
 >
@@ -178,7 +182,7 @@ To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a
 
 The console provides information on the status and operation of [!DNL Query Service]. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
-![Image](../images/ui/query-editor/console.png)
+![The Console tab of the Query Editor console.](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
@@ -188,7 +192,7 @@ The console provides information on the status and operation of [!DNL Query Serv
 
 After a query has been completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying up to 100 rows. This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial](./create-datasets.md) for instructions on how to generate a dataset from query results in [!DNL Query Editor].
 
-![Image](../images/ui/query-editor/query-results.png)
+![The Results tab of the Query Editor console displaying the results of a query run.](../images/ui/query-editor/query-results.png)
 
 ## Run queries with [!DNL Query Service] tutorial video {#query-tutorial-video}
 
