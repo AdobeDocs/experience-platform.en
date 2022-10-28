@@ -4,6 +4,10 @@ title: (Beta) Configure file formatting options for file-based destinations
 ---
 # (Beta) Configure file formatting options for file-based destinations
 
+>[!IMPORTANT]
+>
+>The file formatting options described in this document are currently available for CSV files only. 
+
 The option to configure various file formatting options for the exported files is available to you when you [connect](/help/destinations/ui/connect-destination.md) to a file-based destination, such as [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect), or [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect). 
 
 You can configure various file formatting options for exported files by using the Experience Platform UI or API. You can modify several properties of the exported files to match the requirements of the file reception system on your side, in order to optimally read and interpret the files received from Experience Platform.
@@ -17,7 +21,7 @@ You can configure various file formatting options for exported files by using th
 >
 >The destination that you are connecting to may not have all these options available. It is up to the destination developer to determine which file formatting options they want to support in their destination. The destination developer can determine which options are available when connecting to the destination. Required options are marked with an asterisk in the Experience Platform UI.
 
-To display the file formatting options, start the [connect to destination]((/help/destinations/ui/connect-destination.md)) workflow and select segments as **File type**. This section describes the file formatting settings available for the exported `CSV` files. 
+To display the file formatting options, start the [connect to destination](/help/destinations/ui/connect-destination.md) workflow and select segments as **File type**. This section describes the file formatting settings available for the exported `CSV` files. 
 
 ![Image showing some of the available file formatting options.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -47,19 +51,21 @@ Example output with **[!UICONTROL Empty string]** selected: `male,,TestLastName`
 
 ### Compression format
 
+Sets which compression codec to use when saving data to file. Supported options are GZIP and NONE.
+
 ### Encoding
 
-Specifies encoding (charset) of saved CSV files. Options are UTF-8 or UTF-16. 
+Not shown in the UI screenshot. Specifies encoding (charset) of saved CSV files. Options are UTF-8 or UTF-16. 
 
 ### Char to escape quote
 
-A flag indicating whether values containing quotes should always be enclosed in quotes.
+Not shown in the UI screenshot. A flag indicating whether values containing quotes should always be enclosed in quotes.
 
 Default is to escape all values containing a quote character.
 
 ### Line separator
 
-Defines the line separator that should be used for writing. Maximum length is 1 character.
+Not shown in the UI screenshot. Defines the line separator that should be used for writing. Maximum length is 1 character.
 
 ### Ignore leading whitespace
 
