@@ -7,7 +7,7 @@ exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
 ---
 # Experience Event expirations
 
-In Adobe Experience Platform, you can configure expiration times for all Experience Events that are ingested into a dataset enabled for [Real-time Customer Profile](./home.md). This lets you automatically remove data from the data lake and Profile Store that is no longer valid or useful for your use cases.
+In Adobe Experience Platform, you can configure expiration times for all Experience Events that are ingested into a dataset enabled for [Real-time Customer Profile](./home.md). This lets you automatically remove data from the Profile Store that is no longer valid or useful for your use cases.
 
 Experience Event expirations cannot be configured through the Platform UI or APIs. Instead, you must contact support in order to enable Experience Event expirations on your required datasets.
 
@@ -19,7 +19,7 @@ Experience Event expirations cannot be configured through the Platform UI or API
 
 After Experience Event expirations have been enabled on a Profile-enabled dataset, Platform automatically applies the expiration values for each captured event in a two-step process:
 
-1. All new data that is ingested into the dataset has the expiration value applied at ingestion time.
+1. All new data that is ingested into the dataset has the expiration value applied at ingestion time based on the event timestamp.
 1. All existing data in the dataset has the expiration value retroactively applied as a one-time backfill system job. Once the expiration value has been placed on the dataset, events that are older than the expiration value will be immediately dropped as soon as the system job runs. All other events will be dropped off as soon as they reach their expiration values from the event timestamp.
 
 >[!WARNING]
