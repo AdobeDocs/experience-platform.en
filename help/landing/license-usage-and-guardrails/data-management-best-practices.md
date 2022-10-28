@@ -82,12 +82,12 @@ Data can be ingested into one or multiple systems in Platform, namely the [!DNL 
 
 ### What data to keep?
 
-You can apply both data ingestion filters and expiration rules (also known as Time-To-Live "TTL") to remove data that has become obsolete for your use cases. Typically, behavioral data (such as Analytics data) consumes significantly more storage than record data (such as CRM data). For example, many Platform users have upwards of up to 90% of profiles being populated by behavioral data alone, in comparison to that of record data. Therefore, managing your behavioral data is critical in ensuring compliance within your license entitlements.
+You can apply both data ingestion filters and expiration rules to remove data that has become obsolete for your use cases. Typically, behavioral data (such as Analytics data) consumes significantly more storage than record data (such as CRM data). For example, many Platform users have upwards of up to 90% of profiles being populated by behavioral data alone, in comparison to that of record data. Therefore, managing your behavioral data is critical in ensuring compliance within your license entitlements.
 
 There are a number of tools that you can leverage to stay within your license usage entitlements:
 
 * [Ingestion filters](#ingestion-filters)
-* [Profile Service TTL](#profile-service)
+* [Profile Store](#profile-service)
 
 ### Ingestion filters {#ingestion-filters}
 
@@ -103,9 +103,7 @@ Ingestion filters allow you to bring in only the data that is needed for your us
 
 {style="table-layout:auto"}
 
-### Profile Service {#profile-service}
-
-The Profile Service TTL (time-to-live) capability allows you to apply TTL on data in the profile store. Doing so allows the system to automatically remove data that has diminished value over time.
+### Profile Store {#profile-service}
 
 The Profile Store is composed of the following components:
 
@@ -118,53 +116,20 @@ The Profile Store is composed of the following components:
 
 {style="table-layout:auto"}
 
+
+
 #### Profile Store Composition Reports
 
-There are a number of reports available to help you understand the composition of the Profile Store. These reports help you make informed decisions about how and where to set your Profile TTLs to better optimize your license usage:
+There are a number of reports available to help you understand the composition of the Profile Store. These reports help you make informed decisions about how and where to set your Experience Event expirations to better optimize your license usage:
 
-* **Dataset Overlap Report API**: Exposes the datasets that contribute the most to your Addressable Audience. You can use this report to identify which [!DNL ExperienceEvent] datasets to set a TTL for. See the tutorial on [generating the dataset overlap report](../../profile/tutorials/dataset-overlap-report.md) for more information.
+* **Dataset Overlap Report API**: Exposes the datasets that contribute the most to your Addressable Audience. You can use this report to identify which [!DNL ExperienceEvent] datasets to set an expiration for. See the tutorial on [generating the dataset overlap report](../../profile/tutorials/dataset-overlap-report.md) for more information.
 * **Identity Overlap Report API**: Exposes the identity namespaces that contribute the most to your Addressable Audience. See the tutorial on [generating the identity overlap report](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) for more information.
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### [!DNL ExperienceEvent] Dataset TTL {#dataset-ttl}
+#### Experience Event expirations {#event-expirations}
 
-You can apply TTL to Profile-enabled datasets to remove behavioral data from the Profile Store that is no longer valuable for your use cases. Once TTL is applied to a Profile-enabled dataset, Platform automatically removes data that is no longer needed through a two-part process:
-
-* All new data moving forward will have the TTL expiration value applied at time of ingestion;
-* All existing data will have the TTL expiration value applied as part of a one-time backfill system job.
-
-You can expect the TTL value on each event to be from the event timestamp. All events older than the TTL expiration value gets immediately dropped as system job runs. All other events get dropped off as they approach the TTL expiration value designated in the event timestamp.
-
-See the following example to help your understanding of [!DNL ExperienceEvent] Dataset TTL.
-
-If you apply a TTL value of 30 days on May 15, then:
-
-* All new events will get a TTL of 30 days applied as they come in; 
-* All existing events that have a timestamp older than April 15 gets immediately deleted by a system job.;
-* Events that have a timestamp after April 15 will get an expiry of their event timestamp + TTL days. So, an event with an April 18 timestamp, will drop off three days after May 15.
-
->[!IMPORTANT]
->
->Once a TTL is applied, any data that is older than the selected TTL number of days will be **permanently** deleted and cannot be restored.
-
-Before applying TTL, you must ensure to keep a lookback window of any segments within the TTL boundary. Otherwise, the segment results may become incorrect after TTL is applied. For example, if you applied a TTL of 30 days for Adobe Analytics data and a TTL of 365 days for In-Store Transactions data, the following segment will create incorrect results:
-
-* Viewed Product Page in the last 60 days followed by an in-store purchase;
-* Add to cart followed by no purchase in the last 60 days.
-
-Conversely, the following will still create correct results:
-
-* Viewed Product Page in the last 14 days followed by an in-store purchase;
-* Viewed a specific help page online in the last 30 days;
-* Purchased a product offline in the last 120 days;
-* Added to cart followed by purchase in the last 14 days.
-
->[!TIP]
->
->For convenience, you can keep the same TTL for all datasets, so that you don't have to worry about the TTL impact across datasets in segmentation logic.
-
-For more information on applying TTL to Profile data, see the documentation on [Profile Service TTL](../../profile/apply-ttl.md).
+This capability allows you to automatically remove behavioral data from a Profile-enabled dataset that is no longer valuable for your use cases. See the overview on [Experience Event expirations](../../profile/event-expirations.md) for details on how this process works once it is enabled for a dataset.
 
 ## Summary of best practices for license usage compliancy {#best-practices}
 
@@ -173,7 +138,7 @@ The following is a list of some recommended best practices that you can follow t
 * Use the [license usage dashboard](../../dashboards/guides/license-usage.md) to track and monitor customer usage trends. This allows you to get ahead of any potential overages that may incur.
 * Configure [ingestion filters](#ingestion-filters) by identifying the events required for your segmentation and personalization use cases. This allows you to send only important events required for your use cases.
 * Ensure that you have only [enabled datasets for profile](#ingestion-filters) that are required for your segmentation and personalization use cases. 
-* Configure an [[!DNL ExperienceEvent] Dataset TTL](#dataset-ttl) for high frequency data like web data.
+* Configure an [Experience Event expiration](#event-expirations) for high-frequency data like web data.
 * Periodically check the [Profile Composition Reports](#profile-store-composition-reports) to understand your Profile Store composition. This allows you to understand the data sources contributing most to your license usage consumption.
 
 ## Feature summary and availability {#feature-summary}
@@ -185,7 +150,7 @@ The following table outlines the list of currently available features at your di
 | Feature | Description |
 | --- | --- |
 | [Enable/Disable Datasets for Profile](../../catalog/datasets/user-guide.md) | Enable or disable dataset ingestion into Profile Service |
-| [!DNL ExperienceEvent] Dataset TTL | Apply a TTL expiry for behavioral datasets in the Profile Store. Please contact your Adobe Support Representative. |
+| [Experience Event expirations](../../profile/event-expirations.md) | Apply an expiration time for all events ingested into a Profile-enabled dataset. Please contact your Adobe Support Representative to enable this feature. |
 | [Adobe Analytics Data Prep filters](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Apply [!DNL Kafka] filters to exclude unnecessary data from ingestion |
 | [Adobe Audience Manager source connector filters](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Apply Audience Manager source connection filters to exclude unnecessary data from ingestion |
 | [Alloy SDK data filters](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Apply Alloy filters to exclude unnecessary data from ingestion |
