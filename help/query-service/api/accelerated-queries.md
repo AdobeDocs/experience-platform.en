@@ -4,7 +4,7 @@ description: Learn how to access to query accelerated store in a stateless manne
 ---
 # Accelerated queries API endpoint
 
-Query Service provides accelerate queries to return results in a shorter period that conventional queries. Data stored and accessed from the query accelerated store returns results typically within 30 seconds and greatly increase the versitility of querying datasets. 
+Query Service provides accelerate queries to return results in a shorter period that conventional queries. Data stored and accessed from the query accelerated store returns results typically within 30 seconds and greatly increase the versatility of querying datasets. 
 
 Before continuing with this guide, ensure that you have read and understood the [Query Service API guide](./getting-started.md) in order to successfully use Query Service API.
 
