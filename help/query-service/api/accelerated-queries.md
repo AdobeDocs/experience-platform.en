@@ -24,40 +24,35 @@ Make a POST request to the `/accelerated-queries` endpoint to create ...
 POST /accelerated-queries
 ```
 
-<!-- are there query parameters? -->
-
-<!-- ### Query parameters
-
-The following is a list of available query parameters for ...
-
-{are they optional/required} -->
-
-
 ### Request
 
 The following request ... for your organization.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+ -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -H 'Content-Type: application/json' \
+ -H 'Accept: application/json' \
  -d '
-{
-  "dbName": "string",
-  "sql": "SELECT * from t1;",
-  "templateId": "123",
-  "name": "string",
-  "description": "string"
-}
+ {
+   "dbName": "prod:qsaccel",
+   "sql": "SELECT * FROM accounts;",
+   "templateId": "5d8228e7-4200-e3de-11e9-7f27416c5f0d",
+   "name": "Sample Accelerated Query",
+   "description": "A sample of an accelerated query."
+ }
 '
 ```
 
 | Property | Description |
 |---|---|
-| `dbName`  | The `dbName` is a combination of the sandbox name and the database name. The value should be in the format of `[sandbox-name]:[dbString]`. The sandbox name is not necessary if you are using a production sandbox. |
-| `sql`  | An SQL statement string. The maximum size allowed is 1000000 characters. |
-| `templateId` | The unique identifier of a query created when a POST request is made to the `/templates` endpoint. |
-| `description` | A comment on the intent of the query to help other users understand its purpose. The maximum size allowed is 1000 bytes.  |
+| `dbName`  | The `dbName` is a combination of the sandbox name and the database name with a `qsaccel` suffix. This required value should be in the format of `[sandbox-name]:[dbString]qsaccel`. The sandbox name is not necessary if you are using a production sandbox. |
+| `sql`  | An SQL statement string. The maximum size allowed is 1000000 characters. Either an SQL statement OR a template ID is required, but not both. Submitting both in a request causes an error. |
+| `templateId` | The unique identifier of a query created when a POST request is made to the `/templates` endpoint. Either a template ID or an SQL statement is required, but not both. Submitting both in a request causes an error. |
+| `description` | An optional comment on the intent of the query to help other users understand its purpose. The maximum size allowed is 1000 bytes.  |
 
 **Response**
 
@@ -114,3 +109,13 @@ A successful response returns HTTP status 200 with ...
   }
 }
 ```
+
+| Property | Description |
+|---|---|
+| `queryId`  |    | 
+| `resultsMeta`  |    | 
+| `_adhoc`  |    | 
+| `_adhoc.type`  |    | 
+| `_adhoc.meta:xdmType`  | This is a system-generated value for the XDM field type. For more information on the available types see the documentation on [available XDM types](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). | 
+| `_adhoc.properties`  |    | 
+| ``  |    | 
