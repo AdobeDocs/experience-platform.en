@@ -64,7 +64,7 @@ The state returned by the [!DNL Edge Network] in the response body is a `Handle`
 | --- | --- | --- |
 | `key` | String | **Required**. The entry name. |
 | `value` | String | *Optional*. The entry value. |
-| `maxAge` | Integer | *Optional* The entry time-to-live (TTL), in seconds. When missing, entries should be stored only for the current session. |
+| `maxAge` | Integer | *Optional* The time (in seconds) until the entry expires. When missing, entries should be stored only for the current session. |
 | `attrs` | `Map<String, String>` | *Optional*. An optional list of entry attributes. For all secure connections with a secure referer HTTP header, the `SameSite` attribute is set to `None`. |
 
 
