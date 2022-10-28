@@ -129,7 +129,7 @@ There are a number of reports available to help you understand the composition o
 
 #### Experience Event expirations {#event-expirations}
 
-The capability allows you to automatically remove behavioral data from a Profile-enabled dataset that is no longer valuable for your use cases. See the overview on [Experience Event expirations](../../profile/event-expirations.md) for details on how this process works once it is enabled for a dataset.
+This capability allows you to automatically remove behavioral data from a Profile-enabled dataset that is no longer valuable for your use cases. See the overview on [Experience Event expirations](../../profile/event-expirations.md) for details on how this process works once it is enabled for a dataset.
 
 ## Summary of best practices for license usage compliancy {#best-practices}
 
