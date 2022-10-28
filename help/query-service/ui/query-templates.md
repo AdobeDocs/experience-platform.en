@@ -19,11 +19,9 @@ You can create query templates through two methods, either by making a POST requ
 
 ### Use the Query Editor to author and save a query as a template
 
-See the documentation for instructions on how to use the Query Editor to [write](./user-guide.md#query-authoring) and [save queries](./user-guide.md#saving-queries). Once you have named and saved your query, it is available to be reused as a query template from the [!UICONTROL Browse] tab.
+See the documentation for instructions on how to use the Query Editor to [write](./user-guide.md#query-authoring) and [save queries](./user-guide.md#saving-queries). Once you have named and saved your query, it is available to be reused as a query template from the [!UICONTROL Templates] tab.
 
 From the Queries workspace of the Platform UI, select **[!UICONTROL Templates]** to display the list of available saved queries.
-
-<!-- This may need updating idf the Schedule are added to a separate Tab -->
 
 ![The queries workspace with the Templates tab highlighted.](../images/ui/query-templates/query-templates.png)
 
@@ -37,7 +35,7 @@ See the documentation for instructions on [how to make a query template](../api/
 
 >[!NOTE]
 >
->Templates created using the API are also visible in the Platform UI Query Service Browse tab.
+>Templates created using the API are also visible in the Platform UI Query Service Templates tab.
 
 ## Next steps
 

@@ -164,11 +164,11 @@ The [!DNL Query Editor] provides a save function that allows you to save a query
 
 >[!NOTE]
 >
->Queries named and saved in using the Query Editor are available as templates within the Query dashboard [!UICONTROL Browse] tab. See the [templates documentation](./query-templates.md) for more information.
+>Queries named and saved in using the Query Editor are available as templates within the Query dashboard [!UICONTROL Templates] tab. See the [templates documentation](./query-templates.md) for more information.
 
 ### How to find previous queries {#previous-queries}
 
-All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the **[!UICONTROL Log]** tab to find query executions. Saved queries are listed in the **[!UICONTROL Browse]** tab. 
+All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the **[!UICONTROL Log]** tab to find query executions. Saved queries are listed in the **[!UICONTROL Templates]** tab. 
 
 See the [Query Service UI overview](./overview.md) for more information. 
 
@@ -178,7 +178,7 @@ See the [Query Service UI overview](./overview.md) for more information.
 
 ## Executing queries using Query Editor {#executing-queries}
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Browse]** tab, and select **Play**. The status of query execution is displayed in the **[!UICONTROL Console]** tab below, and output data is shown in the **[!UICONTROL Results]** tab.
+To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tab, and select **Play**. The status of query execution is displayed in the **[!UICONTROL Console]** tab below, and output data is shown in the **[!UICONTROL Results]** tab.
 
 ### Console {#console}
 

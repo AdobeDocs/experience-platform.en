@@ -87,7 +87,7 @@ No. Query Service has an autoscaling capability that ensures concurrent queries 
 The following steps describe how to display a tabular view of a dataset through the UI, including all nested fields and columns in a flattened form.
 
 - After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left navigation of the UI to navigate to [!UICONTROL Datasets] dashboard.
-- The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
+- The datasets [!UICONTROL Templates] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
 
 ![The Datasets dashboard in the Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
 
