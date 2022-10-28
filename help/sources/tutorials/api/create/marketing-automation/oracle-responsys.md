@@ -1,9 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;oracle;
-title: Create an Oracle Responsys Base Connection Using the Flow Service API
+title: (Beta) Create an Oracle Responsys Base Connection Using the Flow Service API
 description: Learn how to connect Adobe Experience Platform to Oracle Responsys using the Flow Service API.
 ---
-# Create an [!DNL Oracle Responsys] base connection using the [!DNL Flow Service] API
+# (Beta) Create an [!DNL Oracle Responsys] base connection using the [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>The [!DNL Oracle Responsys] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
@@ -24,12 +28,12 @@ In order for [!DNL Flow Service] to connect with [!DNL Oracle Responsys], you mu
 
 | Credential | Description |
 | --- | --- |
-| `endpoint` | The endpoint of your [!DNL Oracle Responsys]. |
-| `clientId` | |
-| `clientSecret` | |
+| `endpoint` | The REST authentication endpoint URL of your [!DNL Oracle Responsys] instance.  |
+| `clientId` | The client ID of your [!DNL Oracle Responsys] instance. |
+| `clientSecret` | The client secret of your [!DNL Oracle Responsys] instance. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The value for the connection specification ID of the [!DNL Oracle Responsys] source is fixed as: `ff4274f2-c9a9-11eb-b8bc-0242ac130003`. |
 
-For more information on authentication credentials for [!DNL Oracle Responsys], see the [[!DNL Oracle Responsys] guide on authentication](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
+For more information on authentication credentials for [!DNL Oracle Responsys], see the [[!DNL Oracle Responsys] guide on authentication](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm).
 
 ### Using Platform APIs
 
@@ -82,9 +86,9 @@ curl -X POST \
 | `name` | The name of your [!DNL Oracle Responsys] base connection. It is recommended to provide a descriptive name as you can use this value to look up your base connection. |
 | `description` | (Optional) A property that you can include to provide supplementary information on your base connection. |
 | `auth.specName` | The authentication type used for the connection. |
-| `auth.params.endpoint` | The endpoint of your [!DNL Oracle Responsys] server.  |
-| `auth.params.clientId` | |
-| `auth.params.clientSecret` | |
+| `auth.params.endpoint` | The REST authentication endpoint URL of your [!DNL Oracle Responsys] server.  |
+| `auth.params.clientId` | The client ID of your [!DNL Oracle Responsys] instance. |
+| `auth.params.clientSecret` | The client secret of your [!DNL Oracle Responsys] instance. |
 | `connectionSpec.id` | The value for the connection specification ID of the [!DNL Oracle Responsys] source is fixed as: `ff4274f2-c9a9-11eb-b8bc-0242ac130003`. |
 
 **Response**

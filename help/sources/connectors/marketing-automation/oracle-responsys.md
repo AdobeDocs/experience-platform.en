@@ -1,9 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;oracle;oracle responsys;responsys
-title: Oracle Responsys Source Overview
+title: (Beta) Oracle Responsys Source Overview
 description: Learn how to connect Oracle Responsys to Adobe Experience Platform using APIs or the user interface.
 ---
-# [!DNL Oracle Responsys] source
+# (Beta) [!DNL Oracle Responsys] source
+
+>[!NOTE]
+>
+>The [!DNL Oracle Responsys] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
