@@ -63,7 +63,7 @@ The video below runs you through the particularities of the two types of destina
 
 ## (Beta) Dataset export destinations {#dataset-export-destinations}
 
-Use dataset export destinations to export raw dataset data to cloud storage locations. 
+Some cloud storage destinations in the destinations catalog support dataset exports. Use these destinations to export raw datasets to cloud storage locations. 
 
 Read more about how to [export datasets](/help/destinations/ui/export-datasets.md).
 
