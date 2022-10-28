@@ -116,7 +116,7 @@ To learn how to add schedules using the API, please read the [scheduled queries 
 
 When a saved query is accessed from the Query Editor, The [!UICONTROL Schedules] tab appears below the query name. Select **[!UICONTROL Schedules]**. 
 
-![The Query Editor with the Schedules tab highlighted.](../images/ui/query-editor/schedule-tab.png)
+![The Query Editor with the Schedules tab highlighted.](../images/ui/query-editor/schedules-tab.png)
 
 The schedules workspace appears. Select **[!UICONTROL Add Schedule]** to create a schedule. 
 
