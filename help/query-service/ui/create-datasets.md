@@ -13,8 +13,6 @@ exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 
 ## Generate datasets from the Adobe Experience Platform user interface
 
-<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
-
 To create datasets from the Adobe Experience Platform user interface (UI), follow these steps:
 
 1. Create a query using a connected client and validate the output. To learn how to write queries using [!DNL Query Editor], read the [!DNL Query Editor] UI guide [on writing queries](./user-guide.md#writing-queries).
