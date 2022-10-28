@@ -172,7 +172,7 @@ The following JSON represents a truncated response for a dataset's details from 
 ```json
 {
   "63212313c308d51b997858ba": {
-    "name": "TTL Test Dataset",
+    "name": "Test Dataset",
     "description": "A piecrust promise, made to be broken",
     "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
     "sandboxId": "8dc51b90-d0f9-11e9-b164-ed6a398c8b35",
