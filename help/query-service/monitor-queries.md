@@ -8,8 +8,6 @@ Adobe Experience Platform provides improved visibility for the status of all que
 
 ## [!UICONTROL Scheduled Queries] 
 
-<!-- THe query schedule browse -->
-
 The [!UICONTROL Scheduled Queries] tab provides an overview of the executed and scheduled queries. The workspace contains all your CTAS and ITAS queries that are either scheduled to run or have been executed at least once. Run details can be found for all scheduled queries as well as error codes and messages for failed queries.
 
 To navigate to the [!UICONTROL Scheduled Queries] tab, select **[!UICONTROL Queries]** from the left navigation bar followed by **[!UICONTROL Scheduled Queries]**
@@ -35,7 +33,7 @@ The table below describes each available column.
 
 >[!TIP]
 >
->If you navigate away to the Query Editor, you can select **[!UICONTROL Queries]** to return to the [!UICONTROL Templates] tab from the Query Editor 
+>If you navigate to the Query Editor, you can select **[!UICONTROL Queries]** to return to the [!UICONTROL Templates] tab.
 
 ### Customize table settings for scheduled queries 
 
@@ -43,7 +41,7 @@ You can adjust the columns on the [!UICONTROL Scheduled Queries] tab to your nee
 
 ![The Customize table settings icon.](./images/monitor-queries/customze-table-settings-icon.png)
 
-Toggle the relevant checkboxes to remove or add a table column, and select **[!UICONTROL Apply]** to confirm your choices.
+Toggle the relevant checkboxes to remove or add a table column. Next, select **[!UICONTROL Apply]** to confirm your choices.
 
 >[!NOTE]
 >
@@ -76,8 +74,6 @@ Select either the **[!UICONTROL Scheduled]** or **[!UICONTROL Run once]** run fr
 Once you have enabled your filter criteria, select **[!UICONTROL Hide Filters]** to close the filter panel.
 
 ## Query runs Schedule details
-
-<!-- The schedule details screen. -->
 
 Select a query name to navigate to the schedule details page. This view provides a list of all the runs executed as part of that scheduled query. The information provided includes the start and end time, status, and dataset used. 
 
