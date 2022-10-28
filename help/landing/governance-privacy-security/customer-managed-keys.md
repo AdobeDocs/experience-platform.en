@@ -4,17 +4,17 @@ description: Learn how to set up your own encryption keys for data stored in Ado
 ---
 # Customer-managed keys in Adobe Experience Platform
 
-All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can opt to use your own encryption keys instead, giving you greater control over your data security.
+Data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can opt to use your own encryption keys instead, giving you greater control over your data security.
 
 This document covers the process for enabling the customer-managed keys (CMK) feature in Platform.
 
 ## Process summary
 
-CMK is included in the Healthcare Shield and the Privacy and Security Shield offerings from Adobe. After your organization purchases one of these offerings, you can begin a one-time process for setting up the feature.
+CMK is included in the Healthcare Shield and the Privacy and Security Shield offerings from Adobe. After your organization purchases a license for one of these offerings, you can begin a one-time process for setting up the feature.
 
 >[!WARNING]
 >
->After setting up CMK, you cannot revert to system-managed keys. You are responsible for securely managing your keys and key vaults within [!DNL Azure] to prevent losing access to your data.
+>After setting up CMK, you cannot revert to system-managed keys. You are responsible for securely managing your keys and providing access to your Key Vault, Key, and CMK app within [!DNL Azure] to prevent losing access to your data.
 
 The process is as follows:
 
@@ -23,7 +23,7 @@ The process is as follows:
 1. [Assign the service principal for the CMK app](#assign-to-role) to an appropriate role for the key vault. 
 1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe).
 
-Once the setup process is complete, all data onboarded into Platform across all sandboxes will be encrypted using your [!DNL Azure] key setup, specific to your [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) and [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) resources. CMK leverages [!DNL Azure]'s [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) to make this possible.
+Once the setup process is complete, all data onboarded into Platform across all sandboxes will be encrypted using your [!DNL Azure] key setup, specific to your [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) and [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) resources. To use CMK, you will leverage [!DNL Microsoft Azure] functionality that may be part of their [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## Create an [!DNL Azure] Key Vault {#create-key-vault}
 
@@ -159,6 +159,10 @@ The **[!UICONTROL Key Identifier]** field displays the URI identifier for the ke
 
 Once you have obtained the key vault URI, you can send it using a POST request to the CMK configuration endpoint.
 
+>[!NOTE]
+>
+>Only the key vault and key name are stored with Adobe, not the key version.
+
 **Request**
 
 ```shell
@@ -259,6 +263,10 @@ The `status` attribute can have one of four values with the following meanings:
 
 ## Next steps
 
-By completing the above steps, you have successfully enabled CMK for your organization. All data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. If you want to revoke Platform access to your data, you can remove the user role associated with the application from the key vault within [!DNL Azure].
+By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into Platform will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. If you want to revoke Platform access to your data, you can remove the user role associated with the application from the key vault within [!DNL Azure].
 
-After disabling access to the application, it takes anywhere from two to 24 hours for data to no longer be accessible in Platform. The same time range applies for data to become available again when re-enabling access to the application.
+After disabling access to the application, it can take anywhere from a few minutes to 24 hours for data to no longer be accessible in Platform. The same time delay applies for data to become available again when re-enabling access to the application.
+
+>[!WARNING]
+>
+>Once the Key Vault, Key, or CMK app is disabled and data is no longer accessible in Platform, any downstream operations related to that data will no longer be possible. Ensure that you understand the downstream impacts of revoking Platform access to your data before you make any changes to your configuration.
