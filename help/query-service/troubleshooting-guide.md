@@ -89,15 +89,15 @@ The following steps describe how to display a tabular view of a dataset through 
 - After logging into Experience Platform, select **[!UICONTROL Datasets]** in the left navigation of the UI to navigate to [!UICONTROL Datasets] dashboard.
 - The datasets [!UICONTROL Browse] tab opens. You can use the search bar to refine the available options. Select a dataset from the list displayed.
 
-![A dataset highlighted in the Platform UI.](./images/troubleshooting/dataset-selection.png)
+![The Datasets dashboard in the Platform UI with the search bar and a dataset highlighted.](./images/troubleshooting/dataset-selection.png)
 
-- The [!UICONTROL Datasets activity] screen appears. Select [!UICONTROL Preview dataset] to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
+- The [!UICONTROL Datasets activity] screen appears. Select **[!UICONTROL Preview dataset]** to open a dialog of the XDM schema and tabular view of flattened data from the selected dataset. More details can be found in the [preview a dataset documentation](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![The XDM schema and tabular view of the flattened data.](./images/troubleshooting/dataset-preview.png)
+![The Dataset activity tab of the Datasets dashboard with Preview dataset highlighted.](./images/troubleshooting/dataset-preview.png)
 
 - Select any field from the schema to display its contents in a flattened column. The name of the column is displayed above its contents on the right side of the page. You should copy this name to use for querying this dataset.
 
-![The column name of a nested dataset highlighted in the UI.](./images/troubleshooting/column-name.png)
+![The XDM schema and tabular view of the flattened data. The column name of a nested dataset is highlighted in the UI.](./images/troubleshooting/column-name.png)
 
 See the documentation for full guidance on [how to work with nested data structures](./best-practices/nested-data-structures.md) using the Query Editor or a third-party client.
 +++
@@ -124,12 +124,12 @@ There can be any number of reasons for a query to be stuck while processing. To 
 - Navigate to [https://www.adobe.com/](https://www.adobe.com/) in your web browser.
 - On the right side of the top navigation bar, select **[!UICONTROL Sign In]**.
 
-![The Adobe website with sign in highlighted.](./images/troubleshooting/adobe-sign-in.png)
+![The Adobe website with Sign in highlighted.](./images/troubleshooting/adobe-sign-in.png)
 
 - Use your Adobe ID and password that is registered with your Adobe license.
 - Select **[!UICONTROL Help & Support]** from the top navigation bar. 
 
-![The top navigation bar dropdown menu with help and support highlighted.](./images/troubleshooting/help-and-support.png)
+![The top navigation bar dropdown menu with Help and support, Enterprise support and Contact us highlighted.](./images/troubleshooting/help-and-support.png)
 
 A dropdown banner appears containing a [!UICONTROL Help and support] section. Select **[!UICONTROL Contact us]** to open the Adobe Customer Care Virtual Assistant, or select **[!UICONTROL Enterprise support]** for dedicated help for large organizations.
 +++

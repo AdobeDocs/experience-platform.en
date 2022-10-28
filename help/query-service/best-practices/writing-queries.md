@@ -200,7 +200,7 @@ After connecting to Query Service, you can see all your available tables on Plat
 
 ### Standard table view
 
-The `\d` command shows the standard PostgreSQL view for listing tables. An example of this command's output can be seen below:
+The `\d` command shows the standard [!DNL PostgreSQL] view for listing tables. An example of this command's output can be seen below:
 
 ```sql
              List of relations
