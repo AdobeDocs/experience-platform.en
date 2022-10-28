@@ -4,7 +4,7 @@ description: Learn how to access to query accelerated store in a stateless manne
 ---
 # Accelerated queries API endpoint
 
-Query Service provides accelerate queries to return results in a shorter period that conventional queries. Data stored and accessed from the query accelerated store returns results typically within 30 seconds and 
+Query Service provides accelerate queries to return results in a shorter period that conventional queries. Data stored and accessed from the query accelerated store returns results typically within 30 seconds and greatly increase the versitility of querying datasets. 
 
 Before continuing with this guide, ensure that you have read and understood the [Query Service API guide](./getting-started.md) in order to successfully use Query Service API.
 
@@ -14,9 +14,9 @@ The Data Distiller SKU is required to use the query accelerated store. Please se
 
 The following sections detail the API calls necessary to access the query accelerated store in a stateless manner through the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
-## Create ...
+## Run an accelerated query
 
-Make a POST request to the `/accelerated-queries` endpoint to create ...
+Make a POST request to the `/accelerated-queries` endpoint to run an accelerated query.
 
 **API format**
 
@@ -30,7 +30,7 @@ POST /accelerated-queries
 >
 >Requests to the `/accelerated-queries` endpoint require either an SQL statement OR a template ID, but not both. Submitting both in a request causes an error.
 
-The following request ... for your organization.
+The following request submits an SQL query in the request body to the accelerated store.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
@@ -49,6 +49,8 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
  }
 '
 ```
+
+This alternate request submits a template ID in the request body to the accelerated store. The SQL from the corresponding template is used to query the accelerated store.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
@@ -70,73 +72,137 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | Property | Description |
 |---|---|
-| `dbName`  | The `dbName` is a combination of the sandbox name and the database name with a `qsaccel` suffix. This required value should be in the format of `[sandbox-name]:[dbString]qsaccel`. The sandbox name is not necessary if you are using a production sandbox. |
+| `dbName`  | The name of the database you are making an accelerated query to. The `dbName` is a combination of the sandbox name and the database name with a `qsaccel` suffix. This required value should be in the format of `[sandbox-name]:[dbString]qsaccel`. The sandbox name is not necessary if you are using a production sandbox. |
 | `sql`  | An SQL statement string. The maximum size allowed is 1000000 characters.  |
-| `templateId` | The unique identifier of a query created when a POST request is made to the `/templates` endpoint. Either a template ID or an SQL statement is required, but not both. Submitting both in a request causes an error. |
+| `templateId` | The unique identifier of a query created and saved as a template when a POST request is made to the `/templates` endpoint. |
 | `description` | An optional comment on the intent of the query to help other users understand its purpose. The maximum size allowed is 1000 bytes.  |
 
 **Response**
 
-A successful response returns HTTP status 200 with ...
+A successful response returns HTTP status 200 with the ad hoc schema created by the query.
 
-<!-- response body needs actual examples -->
+>[!NOTE]
+>
+>The following response has been truncated for brevity.
 
 ```json
 {
-  "queryId": "string",
+  "queryId": "315a0a66-0fbb-4810-bc30-484cea5e0f1e",
   "resultsMeta": {
     "_adhoc": {
-      "type": "string",
-      "meta:xdmType": "string",
+      "type": "object",
+      "meta:xdmType": "object",
       "properties": {
-        "column_name_string_type": {
-          "type": "string",
-          "meta:xdmType": "string",
-          "default": "default_string"
-        },
-        "column_name_integer_type": {
-          "type": "integer",
-          "meta:xdmType": "int,",
-          "maximum": 2147483647,
-          "minimum": -2147483648
-        },
-        "column_name_number_type": {
-          "type": "number",
-          "meta:xdmType": "number",
-          "maximum": "null,",
-          "minimum": {}
-        },
-        "column_name_boolean_type": {
-          "type": "boolean",
-          "meta:xdmType": "boolean"
+                "Units": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Industry_code_NZSIOC": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Industry_name_NZSIOC": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Variable_code": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Variable_name": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Industry_aggregation_NZSIOC": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Value": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Year": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Variable_category": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                },
+                "Industry_code_ANZSIC06": {
+                    "type": "string",
+                    "meta:xdmType": "string",
+                    "default": null
+                }
+            }
         }
-      }
-    }
-  },
+    },
   "results": [
-    {
-      "column_name_string_type": "anystring",
-      "column_name_integer_type": 23,
-      "column_name_number_type": 1.1,
-      "column_name_boolean_type": true
-    }
-  ],
+     {
+            "Units": "Dollars (millions)",
+            "Industry_code_NZSIOC": "CC411",
+            "Industry_name_NZSIOC": "Printing",
+            "Variable_code": "H26",
+            "Variable_name": "Fixed tangible assets",
+            "Industry_aggregation_NZSIOC": "Level 4",
+            "Value": "282",
+            "Year": "2020",
+            "Variable_category": "Financial position",
+            "Industry_code_ANZSIC06": "ANZSIC06 groups C161 and C162"
+        },
+        {
+            "Units": "Dollars (millions)",
+            "Industry_code_NZSIOC": "CC411",
+            "Industry_name_NZSIOC": "Printing",
+            "Variable_code": "H27",
+            "Variable_name": "Additions to fixed assets",
+            "Industry_aggregation_NZSIOC": "Level 4",
+            "Value": "35",
+            "Year": "2020",
+            "Variable_category": "Financial position",
+            "Industry_code_ANZSIC06": "ANZSIC06 groups C161 and C162"
+        },
+        {
+            "Units": "Dollars (millions)",
+            "Industry_code_NZSIOC": "CC411",
+            "Industry_name_NZSIOC": "Printing",
+            "Variable_code": "H28",
+            "Variable_name": "Disposals of fixed assets",
+            "Industry_aggregation_NZSIOC": "Level 4",
+            "Value": "9",
+            "Year": "2020",
+            "Variable_category": "Financial position",
+            "Industry_code_ANZSIC06": "ANZSIC06 groups C161 and C162"
+        },
+        ...
+    ],
   "request": {
-    "dbName": "string",
-    "sql": "SELECT * from t1;",
-    "templateId": "123",
-    "name": "string",
-    "description": "string"
+    "dbName": "prod:qsaccel",
+    "sql": "SELECT * FROM accounts;",
+    "name": "Sample Accelerated Query",
+    "description": "A sample of an accelerated query."
   }
 }
 ```
 
 | Property | Description |
 |---|---|
-| `queryId`  |    | 
+| `queryId`  | The ID value of the query created. | 
 | `resultsMeta`  |    | 
-| `_adhoc`  |    | 
-| `_adhoc.type`  |    | 
-| `_adhoc.meta:xdmType`  | This is a system-generated value for the XDM field type. For more information on the available types see the documentation on [available XDM types](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). | 
-| `_adhoc.properties`  |    | 
-| ``  |    | 
+| `resultsMeta._adhoc`  | An ad-hoc Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset  | 
+| `resultsMeta._adhoc.type`  |    | 
+| `resultsMeta._adhoc.meta:xdmType`  | This is a system-generated value for the XDM field type. For more information on the available types see the documentation on [available XDM types](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). | 
+| `resultsMeta._adhoc.properties`  | These are the column names of the queried dataset. | 
+| `resultsMeta._adhoc.results`  | These are the row names of the queried dataset. They reflect each of the returned columns.  | 
+
+<!-- Q) what is 'resultsMeta'? -->
+<!-- Q) what is `resultsMeta._adhoc.type`? -->
