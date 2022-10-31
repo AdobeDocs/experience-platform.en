@@ -42,7 +42,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the [!UICONTROL Marketing automation] category, select **[!UICONTROL Oracle Responsys]**, and then select **[!UICONTROL Add data]**.
 
-![catalog](../../../../images/tutorials/create/oracle-responsys/catalog.png)
+![The Adobe Experience Platform sources catalog with the Oracle Responsys source highlighted.](../../../../images/tutorials/create/oracle-responsys/catalog.png)
 
 The **[!UICONTROL Connect Oracle Responsys account]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -50,13 +50,13 @@ The **[!UICONTROL Connect Oracle Responsys account]** page appears. On this page
 
 To use an existing account, select the [!DNL Oracle Responsys] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
-![existing](../../../../images/tutorials/create/oracle-responsys/existing.png)
+![The existing account authentication screen for Oracle Responsys.](../../../../images/tutorials/create/oracle-responsys/existing.png)
 
 ### New account
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name, an optional description, and the appropriate values for your [!DNL Oracle Responsys] credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![new](../../../../images/tutorials/create/oracle-eloqua/new.png)
+![The new account authentication screen for Oracle Responsys.](../../../../images/tutorials/create/oracle-eloqua/new.png)
 
 ## Next steps
 
