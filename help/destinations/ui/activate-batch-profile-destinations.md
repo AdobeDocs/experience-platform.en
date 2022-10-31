@@ -10,6 +10,8 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>
+>Some customers participating in the improved file export functionality beta program are seeing the new **[!UICONTROL Mapping]** step as part of their activation workflow to the new cloud storage destinations. Please also note the [known limitations](#known-limitations) as part of the release.
 
 ## Overview {#overview}
 
@@ -451,6 +453,10 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 Selecting identity namespaces for export, as shown in the image below, is currently not supported. Selecting any identity namespaces for export will result in an error in the **[!UICONTROL Review]** step.
 
 ![Unsupported mapping showing identity exports](/help/destinations/assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+
+As a temporary workaround if you need to add identity namespaces to your exported files during the beta, you can either:
+* Use the legacy cloud storage destinations for the dataflows where you want to include identity namespaces in the exports
+* Upload identities as attributes into Experience Platform, to then export them to your cloud storage destinations.
 
 ## Review {#review}
 
