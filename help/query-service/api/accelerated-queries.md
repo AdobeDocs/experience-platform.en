@@ -1,10 +1,10 @@
 ---
 title: Accelerated Queries API Endpoint
-description: Learn how to access to query accelerated store in a stateless manner. This document provides sample HTTP requests and responses for the Query Service accelerated-queries endpoint.
+description: Learn how to access to query accelerated store in a stateless manner to quickly return results based on aggregated data. This document provides sample HTTP requests and responses for the Query Service accelerated-queries endpoint.
 ---
 # Accelerated queries API endpoint
 
-Query Service provides accelerate queries to return results in a shorter period that conventional queries. Data stored and accessed from the query accelerated store returns results typically within 30 seconds and greatly increase the versatility of querying datasets. 
+As part of the Data Distiller SKU, the [Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/) allows you to make stateless queries to the accelerated store. The returned results are based on aggregated data. The decreased latency of results allows for a more interactive exchange of information. The accelerated queries APIs are also used to power [user-defined dashboards](../../dashboards/user-defined-dashboards.md).
 
 Before continuing with this guide, ensure that you have read and understood the [Query Service API guide](./getting-started.md) in order to successfully use Query Service API.
 
@@ -16,7 +16,7 @@ The following sections detail the API calls necessary to access the query accele
 
 ## Run an accelerated query
 
-Make a POST request to the `/accelerated-queries` endpoint to run an accelerated query.
+Make a POST request to the `/accelerated-queries` endpoint to run an accelerated query. The query is either contained directly in the request payload or referenced with a template ID. 
 
 **API format**
 
@@ -197,12 +197,10 @@ A successful response returns HTTP status 200 with the ad hoc schema created by 
 | Property | Description |
 |---|---|
 | `queryId`  | The ID value of the query created. | 
-| `resultsMeta`  |    | 
+| `resultsMeta`  | This object contains the metadata for each column returned in results so users know the name and type of each column. | 
 | `resultsMeta._adhoc`  | An ad-hoc Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset  | 
-| `resultsMeta._adhoc.type`  |    | 
+| `resultsMeta._adhoc.type`  | The data type of the ad hoc schema. | 
 | `resultsMeta._adhoc.meta:xdmType`  | This is a system-generated value for the XDM field type. For more information on the available types see the documentation on [available XDM types](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). | 
 | `resultsMeta._adhoc.properties`  | These are the column names of the queried dataset. | 
 | `resultsMeta._adhoc.results`  | These are the row names of the queried dataset. They reflect each of the returned columns.  | 
 
-<!-- Q) what is 'resultsMeta'? -->
-<!-- Q) what is `resultsMeta._adhoc.type`? -->
