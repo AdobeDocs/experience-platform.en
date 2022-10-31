@@ -14,7 +14,7 @@ This document provides an overview of how to configure your Platform data operat
 
 >[!NOTE]
 >
->This document focuses on processing consent data using the Adobe standard. If you are processing consent data in compliance with the IAB Transparency and Consent Framework (TCF) 2.0, see the guide on [TCF 2.0 support in Real-time Customer Data Platform](../iab/overview.md).
+>This document focuses on processing consent data using the Adobe standard. If you are processing consent data in compliance with the IAB Transparency and Consent Framework (TCF) 2.0, see the guide on [TCF 2.0 support in Adobe Real-Time Customer Data Platform](../iab/overview.md).
 
 ## Prerequisites
 

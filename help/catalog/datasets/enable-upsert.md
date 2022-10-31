@@ -69,6 +69,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
+        "name": "Sample dataset",
+        "description: "A sample dataset with a sample description.",
         "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -243,6 +245,10 @@ A successful PATCH request returns HTTP Status 200 (OK) and an array containing 
 ### Enable the dataset for Profile and upsert {#enable-the-dataset}
 
 An existing dataset can be enabled for Profile and attribute updates using a single PATCH request.
+
+>[!IMPORTANT]
+>
+>When enabling your dataset for Profile, please ensure the schema the dataset is associated with is **also** Profile-enabled. If the schema is not Profile-enabled, the dataset will **not** appear as Profile-enabled within the Platform UI.
 
 **API format**
 

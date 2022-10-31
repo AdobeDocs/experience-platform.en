@@ -66,7 +66,7 @@ The following response returns information on a landing zone, including its corr
 | Property | Description |
 | --- | --- |
 | `containerName` | The name of the landing zone you retrieved. |
-| `containerTTL` | The time-to-live setting applied to your data within the landing zone. Any within a given landing zone is deleted after seven days. |
+| `containerTTL` | The expiration time (in days) applied to your data within the landing zone. Any within a given landing zone is deleted after seven days. |
 
 ## Retrieve [!DNL Data Landing Zone] credentials
 

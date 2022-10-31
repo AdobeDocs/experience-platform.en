@@ -83,7 +83,7 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 
 >[!NOTE]
 >
->If you are using [!DNL Salesforce] as part of Real-time Customer Data Platform B2B Edition, please refer to the [[!DNL Salesforce] field mapping document](../../../connectors/adobe-applications/mapping/salesforce.md) for guidance on mapping [!DNL Salesforce] source fields to their appropriate XDM target fields.
+>If you are using [!DNL Salesforce] as part of Adobe Real-Time Customer Data Platform B2B Edition, please refer to the [[!DNL Salesforce] field mapping document](../../../connectors/adobe-applications/mapping/salesforce.md) for guidance on mapping [!DNL Salesforce] source fields to their appropriate XDM target fields.
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
