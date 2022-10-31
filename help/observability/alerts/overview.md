@@ -79,7 +79,7 @@ With the View Alerts permission, can view received alerts by selecting the the b
 
 >[!NOTE]
 >
-> Select an alert to navigate to the dashboard for more detailed information on why the alert has been triggered.
+> Select an alert to navigate to a related dashboard for more detailed information on why the alert has been triggered.
 
 In addition, the [!UICONTROL Alerts] tab in the UI allows individual users to subscribe to specific alert types, and allows admins to enable or disable alert rules altogether. See the [UI guide](./ui.md) for more information on managing alerts.
 
