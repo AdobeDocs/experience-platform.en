@@ -175,11 +175,14 @@ The destination name and segment ID cannot be removed from file names. In additi
 |File name option | Description |
 |---------|----------|
 | **[!UICONTROL Segment name]** | The name of the exported segment. |
-| **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the segment. |
-| **[!UICONTROL Organization name]** | Your organization name within Experience Platform. |
-| **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the segment. |
 | **[!UICONTROL Date and time]** | Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export. |
 | **[!UICONTROL Custom text]** | Any custom text that you want to add to the file names. |
+| **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+| **[!UICONTROL Destination name]** | The name of the destination dataflow you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+| **[!UICONTROL Organization name]** | Your organization name within Experience Platform. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+| **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the segment. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+
+{style="table-layout:auto"}
 
 Select **[!UICONTROL Apply changes]** to confirm your selection.
 
@@ -390,7 +393,7 @@ Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or emai
 > 
 >Select beta customers can view an improved **[!UICONTROL Mapping]** step which replaces the [Select profile attributes](#select-attributes) step described further above. This new **[!UICONTROL Mapping]** step allows you to edit the headers of exported files to any custom names that you desire.
 > 
-> Contact your Adobe representative or Customer Care if you would like access to this beta program.
+> The functionality and documentation are subject to change. Contact your Adobe representative or Customer Care if you would like access to this beta program.
 
 In this step, you must select the profile attributes that you want to add to the files exported to the target destination. To select profile attributes and identities for export: 
 
@@ -433,15 +436,21 @@ In this step, you must select the profile attributes that you want to add to the
 
 The new **[!UICONTROL Mapping]** page has the following known limitations:
 
->[!IMPORTANT] 
->
->Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
->
->![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
+#### Segment membership attribute cannot be selected through the mapping workflow
+
+Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
+
+![Screen recording showing the segment membership workaround in the mapping step of the activation workflow.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
+
+#### Identity namespaces cannot currently be selected for exports
+
+Selecting identity namespaces for export, as shown in the image below, is currently not supported. Selecting any identity namespaces for export will result in an error in the **[!UICONTROL Review]** step.
+
+![Unsupported mapping showing identity exports](/help/destinations/assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 ## Review {#review}
 
