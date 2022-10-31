@@ -25,7 +25,7 @@ The following table outlines static limits applied to identity data.
 
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
-| Number of identities in a graph | 50 | The limit is applied at the sandbox level. The identity graph will not be updated once the limit is reached. When a graph reaches the limit, Identity Service applies a "first-in, first-out" rule and deletes the oldest identity before adding the newest identity. Deletion is based on timestamp. When identities are deleted, the order of deletion of identity types is as follows: <ol><li>Partner ID</li><li>Cookie ID</li><li>Device ID</li><li>Cross-Device ID</li></ol> |
+| Number of identities in a graph | 50 | The limit is applied at the sandbox level. The identity graph will be updated once the limit is reached. When a graph reaches the limit, Identity Service applies a "first-in, first-out" rule and deletes the oldest identity before adding the newest identity. Deletion is based on the timestamp stored on the identity. When identities are deleted, the order of deletion of identity types is as follows: <ol><li>Partner ID</li><li>Cookie ID</li><li>Device ID</li><li>Cross-Device ID, email address, and phone number</li></ol> |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of graphs | None | There are no limits to the number of identity graphs you can create. |
