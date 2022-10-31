@@ -1,16 +1,16 @@
 ---
-title: Define a Relationship Between Two Schemas in Real-time Customer Data Platform B2B Edition
-description: Learn how to define a many-to-one relationship between two schemas in Real-time Customer Data Platform B2B Edition.
+title: Define a Relationship Between Two Schemas in Real-Time Customer Data Platform B2B Edition
+description: Learn how to define a many-to-one relationship between two schemas in Adobe Real-Time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 ---
-# Define a many-to-one relationship between two schemas in Real-time Customer Data Platform B2B Edition {#relationship-b2b}
+# Define a many-to-one relationship between two schemas in Real-Time Customer Data Platform B2B Edition {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Reference schema"
 >abstract="Select the schema you want to establish a relationship with. Depending on the schema's class, it may also have existing relationships with other entities in the B2B context. See the documentation to learn how B2B schema classes relate to each other."
 
-Real-time Customer Data Platform B2B Edition provides several Experience Data Model (XDM) classes that capture fundamental B2B data entities, including [accounts](../classes/b2b/business-account.md), [opportunities](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md), and more. By building schemas based on these classes and enabling them for use in [Real-time Customer Profile](../../profile/home.md), you can merge data from disparate sources into a unified representation called a union schema.
+Adobe Real-Time Customer Data Platform B2B Edition provides several Experience Data Model (XDM) classes that capture fundamental B2B data entities, including [accounts](../classes/b2b/business-account.md), [opportunities](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md), and more. By building schemas based on these classes and enabling them for use in [Real-time Customer Profile](../../profile/home.md), you can merge data from disparate sources into a unified representation called a union schema.
 
 However, union schemas can only contain fields captured by schemas that share the same class. This is where schema relationships come in. By implementing relationships in your B2B schemas, you can describe how these business entities relate to each other and can include attributes from multiple classes in downstream segmentation use cases.
 
@@ -18,11 +18,11 @@ The following diagram provides an example of how the different B2B classes can r
 
 ![B2B class relationships](../images/tutorials/relationship-b2b/classes.png)
 
-This tutorial covers the steps to define a many-to-one relationship between two schemas in Real-time CDP B2B Edition.
+This tutorial covers the steps to define a many-to-one relationship between two schemas in Real-Time CDP B2B Edition.
 
 >[!NOTE]
 >
->If you are not using Real-time Customer Data Platform B2B Edition or want to create a one-to-one relationship, see the guide on [creating a one-to-one relationship](./relationship-ui.md) instead.
+>If you are not using Real-Time Customer Data Platform B2B Edition or want to create a one-to-one relationship, see the guide on [creating a one-to-one relationship](./relationship-ui.md) instead.
 >
 >This tutorial focuses on how to manually establish relationships between B2B schemas in the Platform UI. If you are bringing in data from a B2B source connection, you can use an auto-generation utility to create the required schemas, identities, and relationships instead. See the sources documentation on B2B namespaces and schemas for more information on [using the auto-generation utility](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -117,4 +117,4 @@ If you view the structure of the destination schema, the relationship marker app
 
 ## Next steps
 
-By following this tutorial, you have successfully created a many-to-one relationship between two schemas using the [!DNL Schema Editor]. Once data has been ingested using datasets based on these schemas and that data has been activated in the Profile data store, you can use attributes from both schemas for multi-class segmentation use cases. See the documentation on Real-time CDP B2B Edition for more information.
+By following this tutorial, you have successfully created a many-to-one relationship between two schemas using the [!DNL Schema Editor]. Once data has been ingested using datasets based on these schemas and that data has been activated in the Profile data store, you can use attributes from both schemas for multi-class segmentation use cases. See the documentation on Real-Time CDP B2B Edition for more information.

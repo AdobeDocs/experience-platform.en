@@ -73,7 +73,7 @@ The next step is to map the Splunk event properties to data elements that you ha
 | [!UICONTROL Source] | The source value to assign to the event data. For example, if you are sending data from an app you are developing, set this key to the name of the app. |
 | [!UICONTROL Index] | The name of the event data's index. The index you specify here must be within the list of allowed indexes if the token has the indexes parameter set. |
 | [!UICONTROL Time] | The event time. The default time format is UNIX time (in the format `<sec>.<ms>`) and depends on your local timezone. For example, `1433188255.500` indicates 1433188255 seconds and 500 milliseconds after epoch, or Monday, June 1, 2015, at 7:50:55 PM GMT. |
-| [!UICONTROL Fields] | Specify a raw JSON object or a set of key-value pairs that contain explicit custom fields to be defined at index time.  The `fields` key isn't applicable to raw data.<br><br>Requests containing the `fields` property must be sent to the `/collector/event` endpoint, or else they will not be indexed. For more information, see the Splunk documentation on [indexed field extractions](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Fields] | Specify a raw JSON object or a set of key-value pairs that contain explicit custom fields to be defined at index time.  The `fields` key isn't applicable to raw data.<br><br>Requests containing the `fields` property must be sent to the `/collector/event` endpoint, or else they will not be indexed. For more information, see the Splunk documentation on [indexed field extractions](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Validate data within Splunk {#validate}
 

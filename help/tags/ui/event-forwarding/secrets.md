@@ -122,6 +122,12 @@ A popover appears informing you that the secret needs to be manually authorized 
 
 A dialog appears that allows you to enter the credentials for your Google account. Follow the prompts to grant event forwarding access to your data under the selected scope. Once the authorization process is complete, the secret is created.
 
+>[!IMPORTANT]
+>
+>If your organization has a re-authentication policy set for Google Cloud applications, the created secrets will not be refreshed successfully after the authentication expires (between 1 and 24 hours depending on the policy configuration).
+>
+>To resolve this issue, sign in to the Google Admin console and navigate to the **[!DNL App access control]** page so you can mark the event forwarding app (Adobe Real-Time CDP Event Forwarding) as [!DNL Trusted]. Refer to the Google documentation on [setting session lengths for Google Cloud services](https://support.google.com/a/answer/9368756) for more information.
+
 ## Edit a secret
 
 After you have created secrets for a property, you can find them listed in the **[!UICONTROL Secrets]** workspace. To edit the details of an existing secret, select its name from the list.

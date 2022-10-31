@@ -34,6 +34,8 @@ feature: Queries
   - [Query templates](ui/query-templates.md)
   - [Using Query Service credentials](ui/credentials.md)
   - [Generating datasets from query results](ui/create-datasets.md)
+- Query accelerated store{#query-accelerated-store}
+  - [Reporting insights data model](query-accelerated-store/reporting-insights-data-model.md)
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Guidance for data asset organization](./best-practices/organize-data-assets.md)
@@ -60,7 +62,7 @@ feature: Queries
   - [Client connections overview](clients/overview.md)
   - [SSL modes](./clients/ssl-modes.md)
   - [Aqua Data Studio](clients/aqua-data-studio.md)
-  - [Db Visualizer](./clients/dbvisulaizer.md)
+  - [DbVisualizer](./clients/dbvisulaizer.md)
   - [Jupyter Notebook](clients//jupyter-notebook.md)
   - [Looker](clients/looker.md)
   - [Postico](clients/postico.md)

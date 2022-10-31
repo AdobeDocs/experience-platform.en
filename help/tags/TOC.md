@@ -123,10 +123,10 @@ solution: Data Collection
       * [Release notes](./extensions/web/google-data-layer/release-notes.md)
     * [!DNL Splunk] {#splunk}
       * [Overview](./extensions/web/splunk/overview.md)
-    * [!DNL YouTube] video tracking extension {#youtube}
+    * [!DNL YouTube] video tracking {#youtube}
       * [Overview](./extensions/web/youtube/overview.md)
       * [Release notes](./extensions/web/youtube/release-notes.md)
-    * [!DNL Zendesk] Events API extension {#zendesk}
+    * [!DNL Zendesk] Events API {#zendesk}
       * [Overview](./extensions/web/zendesk/overview.md)
   * [Third-party extensions](./extensions/3rd-party-extensions.md)
 * Extension development {#extension-dev}
