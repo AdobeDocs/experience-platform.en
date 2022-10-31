@@ -43,7 +43,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!UICONTROL Service principal key]**: The application's key.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64-encoded] string. View an example of a correctly formatted, base64-encoded key in the documentation link below. The middle part is shortened for brevity.
 
-![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted and base64-encrypted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -67,7 +67,7 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
-### Scheduling
+### Scheduling {#scheduling}
 
 In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) for your [!DNL Azure Data Lake Storage Gen2] destination and you can also [configure the name of your exported files](/help/destinations/ui/activate-batch-profile-destinations.md#file-names). 
 

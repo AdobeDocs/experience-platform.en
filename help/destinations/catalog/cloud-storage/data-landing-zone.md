@@ -11,7 +11,7 @@ description: Learn how to connect to Data Landing Zone to activate segments and 
 
 ## Overview {#overview}
 
-[!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you access to a secure, cloud-based file storage facility to export files out of Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Platform Products and Services license. All customers of Platform and its application services such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. You can read and write file(s) to your container through [!DNL Azure Storage Explorer] or your command-line interface.
+[!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Adobe Experience Platform, granting you access to a secure, cloud-based file storage facility to export files out of Platform. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Platform Products and Services license. All customers of Platform and its application services such as [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], and [!DNL Real-time Customer Data Platform] are provisioned with one [!DNL Data Landing Zone] container per sandbox. You can read and write files to your container through [!DNL Azure Storage Explorer] or your command-line interface.
 
 [!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms at rest and in transit. SAS-based authentication allows you to securely access your [!DNL Data Landing Zone] container through a public internet connection. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross-region setups for your network. 
 
@@ -32,7 +32,7 @@ Refer to the table below for information about the destination export type and f
 
 You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. 
 
-In the [!DNL Azure Storage Explorer] UI, select the connection icon in the left-navigation. The **Select Resource** window appears, providing you with options to connect to. Select **[!DNL Blob container]** to connect to [!DNL Data Landing Zone].
+In the [!DNL Azure Storage Explorer] UI, select the connection icon in the left navigation bar. The **Select Resource** window appears, providing you with options to connect to. Select **[!DNL Blob container]** to connect to your [!DNL Data Landing Zone] storage.
 
 ![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
@@ -40,7 +40,7 @@ Next, select **Shared access signature URL (SAS)** as your connection method, an
 
 ![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
-After selecting your connection method, you must next provide a **display name** and the **[!DNL Blob] container SAS URL** that corresponds with your [!DNL Data Landing Zone] container.
+After selecting your connection method, you must provide a **display name** and the **[!DNL Blob] container SAS URL** that corresponds with your [!DNL Data Landing Zone] container.
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ After selecting your connection method, you must next provide a **display name**
 >
 > To retrieve the credentials and access the exported files, you must replace the query parameter `type=user_drop_zone` with `type=dlz_destination` in any HTTP calls described in the page above.
 
-Provide your [!DNL Data Landing Zone] SAS URL and then select **Next**
+Provide your [!DNL Data Landing Zone] SAS URL and then select **Next**.
 
 ![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 

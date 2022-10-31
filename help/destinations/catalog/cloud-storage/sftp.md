@@ -6,13 +6,30 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 ---
 # SFTP connection
 
+## Destination changelog {#changelog}
+
+>[!IMPORTANT]
+>
+>With the beta release of the export datasets functionality and the improved file export functionality, you may now be seeing two [!DNL SFTP] cards in the destinations catalog.
+>* If you are already exporting files to the **[!UICONTROL SFTP]** destination: Please create new dataflows to the new **[!UICONTROL SFTP beta]** destination.
+>* If you have not yet created any dataflows to the **[!UICONTROL SFTP]** destination, please use the new **[!UICONTROL SFTP beta]** card to export files to **[!UICONTROL SFTP]**.
+
+![Image of the two SFTP destination cards in a side-by-side view.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+
+Improvements in the new [!DNL SFTP] destination card include:
+
+* [Dataset export support](/help/destinations/ui/export-datasets.md).
+* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
 ## Overview {#overview}
 
 Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
-> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
+> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL SFTP].
 
 ## Export type and frequency {#export-type-frequency}
 

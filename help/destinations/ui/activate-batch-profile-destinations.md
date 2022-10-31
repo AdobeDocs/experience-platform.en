@@ -176,7 +176,7 @@ The destination name and segment ID cannot be removed from file names. In additi
 |---------|----------|
 | **[!UICONTROL Segment name]** | The name of the exported segment. |
 | **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the segment. |
-| **[!UICONTROL Organization name]** | Your organization ID within Experience Platform. |
+| **[!UICONTROL Organization name]** | Your organization name within Experience Platform. |
 | **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the segment. |
 | **[!UICONTROL Date and time]** | Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export. |
 | **[!UICONTROL Custom text]** | Any custom text that you want to add to the file names. |
@@ -388,7 +388,7 @@ Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or emai
 
 >[!IMPORTANT] 
 > 
->Select beta customers can view an improved **[!UICONTROL Mapping]** step which replaces the [Select profile attributes](#select-attributes) step described further above. 
+>Select beta customers can view an improved **[!UICONTROL Mapping]** step which replaces the [Select profile attributes](#select-attributes) step described further above. This new **[!UICONTROL Mapping]** step allows you to edit the headers of exported files to any custom names that you desire.
 > 
 > Contact your Adobe representative or Customer Care if you would like access to this beta program.
 
@@ -406,7 +406,7 @@ In this step, you must select the profile attributes that you want to add to the
 
     >[!TIP] 
     > 
-    >You can use the search field to narrow down your selection, as shown in the image below
+    >You can use the search field to narrow down your selection, as shown in the image below.
 
     ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
@@ -428,6 +428,10 @@ In this step, you must select the profile attributes that you want to add to the
     ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
 
 1. To add more fields for exporting, repeat the steps above.
+
+### Known limitations {#known-limitations}
+
+The new **[!UICONTROL Mapping]** page has the following known limitations:
 
 >[!IMPORTANT] 
 >

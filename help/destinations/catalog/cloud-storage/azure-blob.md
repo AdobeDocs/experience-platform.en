@@ -6,6 +6,23 @@ exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
 ---
 # [!DNL Azure Blob] connection
 
+## Destination changelog {#changelog}
+
+>[!IMPORTANT]
+>
+>With the beta release of the export datasets functionality and the improved file export functionality, you may now be seeing two [!DNL Azure Blob] cards in the destinations catalog.
+>* If you are already exporting files to the **[!UICONTROL Azure Blob]** destination: Please create new dataflows to the new **[!UICONTROL Azure Blob beta]** destination.
+>* If you have not yet created any dataflows to the **[!UICONTROL Azure Blob]** destination, please use the new **[!UICONTROL Azure Blob beta]** card to export files to **[!UICONTROL Azure Blob]**.
+
+![Image of the two Azure Blob destination cards in a side-by-side view.](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+
+Improvements in the new [!DNL Azure Blob] destination card include:
+
+* [Dataset export support](/help/destinations/ui/export-datasets.md).
+* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
 ## Overview {#overview}
 
 [!DNL Azure Blob] (hereinafter referred to as [!DNL Blob]) is Microsoft's object storage solution for the cloud. This tutorial provides steps for creating a [!DNL Blob] destination using the [!DNL Platform] user interface.
