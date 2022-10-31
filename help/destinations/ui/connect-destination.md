@@ -48,7 +48,7 @@ Before you can send audience data to a destination, you must set up a connection
 
 The first step in connecting to a destination is to authenticate to the destination platform. 
 
-Depending on the destination that you are connecting to, you might be taken to the destination partner's page to authenticate, or you might be asked to input authentication credentials directly in the Platform workflow. Below is an example of required input to authenticate to an [!DNL Amazon S3] destination. Detailed instructions about the required input is provided in each destination documentation page (see the authentication section for [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) and for [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+Depending on the destination that you are connecting to, you might be taken to the destination partner's page to authenticate, or you might be asked to input authentication credentials directly in the Platform workflow. Below is an example of required input to authenticate to an [!DNL Amazon S3] destination. Detailed instructions about the required input is provided in each destination documentation page (see, for example, the authentication section for [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) and for [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 **[!DNL Amazon S3] required and optional authentication parameters**
 
@@ -74,7 +74,7 @@ Depending on the destination that you are connecting to, you might be asked to i
 
 ### Set up file formatting options for exported files {#file-formatting-and-compression-options}
 
-For file-based destinations, you can configure various settings related to how the exported files are formatted and compressed. For more information about all the available formatting and compression options, read THIS PAGE ABOUT FILE FORMATTING OPTIONS.
+For file-based destinations, you can configure various settings related to how the exported files are formatted and compressed. For more information about all the available formatting and compression options, read the [Configure file formatting options for file-based destinations tutorial](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ![Image showing the file type selection and various options for CSV files.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 

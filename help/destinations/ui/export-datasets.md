@@ -9,7 +9,7 @@ description: Learn how to export datasets from Adobe Experience Platform to your
 >[!IMPORTANT]
 >
 >* The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
->* This beta functionality supports the export of 
+>* This beta functionality supports the export of first generation data, as defined in the Real-Time Customer Data Platform [product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information. 
 
 This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
@@ -141,7 +141,7 @@ To remove a dataset from an existing dataflow, follow the steps below:
 
 Keep in mind the following limitations for the beta release of dataset exports:
 
-* There is currently a single permission (**[!UICONTROL Manage and Activate Dataset Destinations]**) that includes manage and activate permissions on dataset destinations. These controls will be split up in the future into more granular permissions.
+* There is currently a single permission (**[!UICONTROL Manage and Activate Dataset Destinations]**) that includes manage and activate permissions on dataset destinations. These controls will be split up in the future into more granular permissions. Review the [required permissions](#permissions) section for a complete list of permissions that you need to export datasets.
 * Currently, you can only export incremental files and an end date cannot be selected for your dataset exports. 
 * Exported filenames are currently not customizable.
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
