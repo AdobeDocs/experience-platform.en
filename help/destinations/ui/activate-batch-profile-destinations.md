@@ -11,7 +11,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >
->Some customers participating in the improved file export functionality beta program are seeing the new **[!UICONTROL Mapping]** step as part of their activation workflow to the new cloud storage destinations. Please also note the [known limitations](#known-limitations) as part of the release.
+>Some customers participating in the improved file export functionality beta program are seeing the new **[!UICONTROL Mapping]** step as part of their activation workflow to the [new beta cloud storage destinations](/help/release-notes/2022/october-2022.md#destinations). Please also note the [known limitations](#known-limitations) as part of the release.
 
 ## Overview {#overview}
 
@@ -474,11 +474,10 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Verify segment activation {#verify}
 
-
-For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
+For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-The files you would receive on three consecutive days could look like this:
+For example, if you selected a daily export frequency, the files you would receive on three consecutive days could look like this:
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
