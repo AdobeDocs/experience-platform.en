@@ -23,7 +23,7 @@ This document covers how to define data element types for a web extension in Ado
 
 Data element types typically consist of the following:
 
-1. A [view](./views.md) shown within the Data Collection UI that allows users to modify settings for the data element.
+1. A [view](./views.md) shown within the Experience Platform UI and Data Collection UI that allows users to modify settings for the data element.
 2. A library module emitted within the tag runtime library to interpret the settings and retrieve pieces of data.
 
 Consider a situation where you want to allow users to retrieve a piece of data from a local storage item named `productName`. Your module may look like this:

@@ -43,7 +43,7 @@ While tags collects event data directly from your site or native mobile applicat
 
 ### Properties {#properties}
 
-Event forwarding maintains its own store of properties separate from tags, which you can view in the Data Collection UI by selecting **[!UICONTROL Event Forwarding]** in the left navigation.
+Event forwarding maintains its own store of properties separate from tags, which you can view in the Experience Platform UI or Data Collection UI by selecting **[!UICONTROL Event Forwarding]** in the left navigation.
 
 ![Event forwarding properties in the Data Collection UI](../../images/ui/event-forwarding/overview/properties.png)
 

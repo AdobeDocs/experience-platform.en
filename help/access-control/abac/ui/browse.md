@@ -6,10 +6,6 @@ exl-id: 39634bde-8858-44a6-b39a-776846654fc1
 ---
 # Permissions guide
 
->[!IMPORTANT]
->
->Attribute-based access control is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
-
 Permissions is the area of Adobe Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. 
 
 With permissions, you can configure:

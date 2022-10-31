@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
-user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
+user-guide-description: Ingest data from a variety of sources. Learn how to structure, label, and enhance already ingested data.
 feature: Sources
 ---
 
@@ -14,8 +14,10 @@ feature: Sources
     - [Analytics Classifications source](connectors/adobe-applications/classifications.md)
     - [Analytics source](connectors/adobe-applications/analytics.md)
     - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
+    - [Adobe Campaign Managed Cloud Services source](connectors/adobe-applications/campaign.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
+    - [Workfront source](connectors/adobe-applications/workfront.md)
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
@@ -54,6 +56,7 @@ feature: Sources
     - [Veeva CRM connector](connectors/crm/veeva.md)
     - [Zoho CRM connector](connectors/crm/zoho.md)
   - Customer success {#customer-success}
+    - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
     - [Zendesk connector](connectors/customer-success/zendesk.md)
@@ -122,6 +125,7 @@ feature: Sources
       - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - [Zoho CRM](tutorials/api/create/crm/zoho.md)
     - Customer success {#customer-success}
+      - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -184,9 +188,11 @@ feature: Sources
     - [Collect protocol data](tutorials/api/collect/protocols.md)
     - [Collect streaming data](tutorials/api/collect/streaming.md)
   - [On-demand ingestion](tutorials/api/on-demand-ingestion.md)
+  - [Filter data at the source level](tutorials/api/filter.md)
   - [Monitor dataflows](tutorials/api/monitor.md)
   - [Update accounts](tutorials/api/update.md)
   - [Update dataflows](tutorials/api/update-dataflows.md)
+  - [Retry failed dataflow runs](tutorials/api/retry-flows.md)
   - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
@@ -195,9 +201,10 @@ feature: Sources
       - [Adobe Analytics (report-suite data)](tutorials/ui/create/adobe-applications/analytics.md)
       - [Adobe Analytics (classifications data)](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
-      - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
+      - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+      - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
     - Analytics {#analytics}
@@ -225,6 +232,7 @@ feature: Sources
       - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
     - Customer Success {#customer-success}
+      - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
@@ -278,7 +286,7 @@ feature: Sources
     - [Marketing automation connection dataflow](tutorials/ui/dataflow/marketing-automation.md)
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
-  - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
+  - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
   - [Update accounts](tutorials/ui/update.md)

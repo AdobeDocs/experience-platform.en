@@ -9,7 +9,7 @@ exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 ---
 # Attribution AI overview
 
-Attribution AI, as part of Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys. 
+Attribution AI, as part of Intelligent Services, is a multi-channel algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers' journeys. 
 
 ## Understanding Attribution AI
 
@@ -32,7 +32,7 @@ Attribution AI can be used to assist with the following example use cases:
 - **Executive reporting**: Allow executives to understand the true incremental impact of marketing, both as a whole and by channel, region, SKU, etc.
 - **Budget allocation**: Inform budget allocation decisions across marketing channel.
 - **Campaign optimization**: Within each channel, understand which campaigns, creatives, and keywords are working better for which SKUs or Geos. This allows you to look at each channel so the marketing team can optimize their tactics.
-- **Full-funnel attribution**: Understand marketing’s impact across the entire customer journey. For example, free account signup to paid conversion and beyond.
+- **Full-funnel attribution**: Understand marketing's impact across the entire customer journey. For example, free account signup to paid conversion and beyond.
 - **Partner evaluations**: Evaluate effectiveness of agencies and partners, based on attribution results.
 
 ### Additional features

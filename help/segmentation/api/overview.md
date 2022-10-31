@@ -13,11 +13,11 @@ The [!DNL Segmentation Service] API provides multiple endpoints that allow you t
 
 To view all available endpoints and CRUD operations, please refer to the [Segmentation Service API reference](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-## Audiences
+<!-- ## Audiences
 
 Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
 
-For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md).
+For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
 
 ## Export jobs
 

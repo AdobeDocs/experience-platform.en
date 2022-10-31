@@ -7,7 +7,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 
 >[!IMPORTANT]
 >
->Schema-based labeling is part of [attribute-based access control](../../access-control/abac/overview.md), which is currently available in a limited release for US-based healthcare customers. This capability will be available to all Real-time Customer Data Platform customers once it is fully released.
+>Schema-based labeling is part of [attribute-based access control](../../access-control/abac/overview.md), which is currently available in a limited release for US-based healthcare customers. This capability will be available to all Adobe Real-Time Customer Data Platform customers once it is fully released.
 
 All data that is brought into Adobe Experience Platform is constrained by Experience Data Model (XDM) schemas. This data may be subject to usage restrictions defined by your organization or by legal regulations. To account for this, the Platform allows you to restrict the usage of certain datasets and fields through the use of [data usage labels](../../data-governance/labels/overview.md).
 
