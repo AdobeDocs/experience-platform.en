@@ -56,7 +56,7 @@ For more information on Attribution AI, the [Attribution AI overview](../../inte
 
 ### Customer AI
 
-Customer AI available in Real-time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
+Customer AI available in Real-Time Customer Data Platform, is used to generate custom propensity scores such as churn and conversion for individual profiles at scale.
 
 | Feature | Description |
 | --- | --- |

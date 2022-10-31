@@ -63,7 +63,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and segments 
 
-To learn more about the profile viewing capabilities provided in the Platform UI please see the documentation on [browsing profiles in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+To learn more about the profile viewing capabilities provided in the Platform UI please see the documentation on [browsing profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
 ## Merge policies {#merge-policies}
 

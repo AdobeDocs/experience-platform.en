@@ -18,7 +18,7 @@ Before continuing with this document, you should have a good understanding of th
 
 * **Batch queries**: For executing `INSERT TABLE AS SELECT` and `CREATE TABLE AS SELECT` queries to clean, shape, manipulate, and enrich data. The results of these queries **are stored** on the data lake. The metric for measuring the consumption of this functionality is computational hours.
 
-* **Query Service users**: Query Service users provided within your current license for Customer Journey Analytics, Adobe Real-time Customer Data Platform, and/or Adobe Journey Optimizer may also be used with Data Distiller. Query Service users are shared between features. 
+* **Query Service users**: Query Service users provided within your current license for Customer Journey Analytics, Adobe Real-Time Customer Data Platform, and/or Adobe Journey Optimizer may also be used with Data Distiller. Query Service users are shared between features. 
 
 * **Ad hoc users**: Ad hoc users are the ones executing ad hoc queries.
 
@@ -78,7 +78,7 @@ The table below provides the recommended guardrail limits and description for th
 
 | Guardrail| Limit | Limit type | Description |
 |---|---|---|---|
-| Query concurrency | 4  | Hard | To ensure that queries on aggregated data via the reporting API (including queries that enhance data models such as the Real-time CDP data models) have the resources to execute efficiently, the reporting API tracks resource utilization by assigning concurrency slots to each query. The system puts queries into a queue and waits until concurrency slots become available or they can be served from the cache. A maximum of four concurrent query slots are available at any given time.<br>If you access the reporting API through a BI tool and need more concurrency, a BI server is required. |
+| Query concurrency | 4  | Hard | To ensure that queries on aggregated data via the reporting API (including queries that enhance data models such as the Real-Time CDP data models) have the resources to execute efficiently, the reporting API tracks resource utilization by assigning concurrency slots to each query. The system puts queries into a queue and waits until concurrency slots become available or they can be served from the cache. A maximum of four concurrent query slots are available at any given time.<br>If you access the reporting API through a BI tool and need more concurrency, a BI server is required. |
 
 {style="table-layout:auto"}
 

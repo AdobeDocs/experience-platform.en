@@ -148,6 +148,47 @@ curl -X POST \
   }'
 ```
 
+### Configure a source connection to ingest data recursively
+
+When creating a source connection, you can use the `recursive` parameter to ingest data from deeply nested folders.
+
+**API format**
+
+```http
+POST /sourceConnections
+```
+
+**Request**
+
+In the example below, the `recursive: true` parameter informs [!DNL Flow Service] to read all subfolders recursively during the ingestion process.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source with recursive ingestion",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/customers/premium/buyers/recursive",
+          "type": "folder",
+          "recursive": true
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
+```
+
 ## Create a target XDM schema {#target-schema}
 
 In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
