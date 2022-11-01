@@ -170,7 +170,7 @@ The [!DNL Query Editor] provides a save function that allows you to save a query
 
 All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the **[!UICONTROL Log]** tab to find query executions. Saved queries are listed in the **[!UICONTROL Templates]** tab. 
 
-See the [Query Service UI overview](./overview.md) for more information. 
+If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides improved visibility through the UI for those query jobs. See the [query monitoring documentation](../monitor-queries.md) for more information. 
 
 >[!NOTE]
 >
