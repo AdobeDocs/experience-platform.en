@@ -23,17 +23,19 @@ Sources in Experience Platform are grouped into the following categories:
 Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, and Adobe Audience Manager. See the following related documents for more information:
 
 - [Adobe Audience Manager source overview](connectors/adobe-applications/audience-manager.md)
-- [Create an Adobe Audience Manager source connection in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
+  - [Create an Adobe Audience Manager source connection in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics Classifications Data source overview](connectors/adobe-applications/classifications.md)
-- [Create an Adobe Analytics Classifications Data source connection in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
+  - [Create an Adobe Analytics Classifications Data source connection in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics Report Suite Data source overview](connectors/adobe-applications/analytics.md)
-- [Create an Adobe Analytics source connection in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
+  - [Create an Adobe Analytics source connection in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Adobe Campaign Managed Cloud Services source overview](connectors/adobe-applications/campaign.md)
-- [Create an Adobe Campaign Managed Cloud Services source connection in the UI](./tutorials/ui/create/adobe-applications/campaign.md)
+  - [Create an Adobe Campaign Managed Cloud Services source connection in the UI](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Adobe Data Collection source overview](connectors/adobe-applications/data-collection.md)
-- [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+  - [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] source overview](connectors/adobe-applications/marketo/marketo.md)
-- [Create a [!DNL Marketo Engage] source connection in the UI](./tutorials/ui/create/adobe-applications/marketo.md)
+  - [Create a [!DNL Marketo Engage] source connection in the UI](./tutorials/ui/create/adobe-applications/marketo.md)
+- [Adobe Workfront source overview](connectors/adobe-applications/workfront.md)
+  - [Create a Workfront source connection in the UI](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Advertising {#advertising}
 
@@ -84,6 +86,7 @@ CRM systems provide data that can help build customer relationships, which in tu
 
 Experience Platform provides support for ingesting data from a third-party customer success application. See the following related documents for more information:
 
+- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md)
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md)
 - [[!DNL Zendesk]](connectors/customer-success/zendesk.md)

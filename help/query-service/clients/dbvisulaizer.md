@@ -32,7 +32,7 @@ Use the search bar or select [!DNL PostgreSQL] from the driver name dropdown lis
 
 From the Database Connection workspace, select the **[!DNL Properties]** tab, followed by the **[!DNL Driver Properties]** from the navigation sidebar.
 
-![The Database Connection workspace with the properties tab highlighted.](../images/clients/dbvisualizer/driver-properties.png)
+![The Database Connection workspace with Properties and Driver Properties highlighted.](../images/clients/dbvisualizer/driver-properties.png)
 
 The driver properties seen in the table below are recommended to enable the use of SSL with DBVisualizer.
 
@@ -51,7 +51,7 @@ The driver properties seen in the table below are recommended to enable the use 
 
 The `PGHOST` and `user` values are taken from your Adobe Experience Platform credentials. To find your credentials, log in to the Platform UI and select **[!UICONTROL Queries]** from the left navigation, followed by **[!UICONTROL Credentials]**. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). 
 
-![Experience Platform Queries Credentials Dashboard with credentials highlighted.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![The Credentials page of the Experience Platform Queries workspace with Credentials and the Expiring Credentials highlighted.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 [!DNL Query Service] also offers non-expiring credentials to allow for a one-time setup with third-party clients. See the documentation for [full instructions on how to generate and use non-expiring credentials](../ui/credentials.md#non-expiring-credentials).
 
@@ -69,7 +69,7 @@ To require a user ID and password-based authentication each time a connection is
 
 In the Connection Authentication panel, check both the **[!DNL Require Userid]** and **[!DNL Require Password]** checkboxes then select **[!DNL Apply]**. 
 
-![The Connection Authentication panel with the Userid and Password checkboxes highlighted.](../images/clients/dbvisualizer/connection-authentication.png)
+![The Authentication panel for [!DNL PostgreSQL] Database Connection with the Require Userid and Password checkboxes highlighted.](../images/clients/dbvisualizer/connection-authentication.png)
 
 ## Connect to Platform
 
@@ -84,11 +84,11 @@ To make a connection, select the **[!DNL Connection]** tab from the Database Con
 
 After you have input all relevant credentials, select **[!DNL Connect]**. 
 
-![The Database Connection workspace with the Connection tab and connect button highlighted.](../images/clients/dbvisualizer/connect.png)
+![The [!DNL PostgreSQL] Database Connection workspace with the Connection tab and connect button highlighted.](../images/clients/dbvisualizer/connect.png)
 
 The [!DNL Connect] dialog appears on the first occasion of the session. 
 
-![The Connect dialog with the database userid and database password text fields are highlighted.](../images/clients/dbvisualizer/connect-dialog.png)
+![The Connect: [!DNL PostgreSQL] dialog with the Database Userid and Database Password text fields highlighted.](../images/clients/dbvisualizer/connect-dialog.png)
 
 Enter your Userid and Password and select **[!DNL Connect]**. A message appears in the log to confirm a successful connection.
 

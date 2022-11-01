@@ -106,6 +106,9 @@ solution: Data Collection
     * Common Analytics Plugins {#plugins}
       * [Overview](./extensions/web/plugins/overview.md)
       * [Release notes](./extensions/web/plugins/release-notes.md)
+    * Common Web SDK Plugins {#web-sdk-plugins}
+      * [Overview](./extensions/web/web-sdk-plugins/overview.md)
+      * [Release notes](./extensions/web/web-sdk-plugins/release-notes.md)
     * Core {#core}
       * [Overview](./extensions/web/core/overview.md)
       * [Event forwarding](./extensions/web/core/event-forwarding.md)
@@ -118,9 +121,13 @@ solution: Data Collection
     * Google Data Layer {#google-data-layer}
       * [Overview](./extensions/web/google-data-layer/overview.md)
       * [Release notes](./extensions/web/google-data-layer/release-notes.md)
-    * [!DNL YouTube] video tracking extension {#youtube}
+    * [!DNL Splunk] {#splunk}
+      * [Overview](./extensions/web/splunk/overview.md)
+    * [!DNL YouTube] video tracking {#youtube}
       * [Overview](./extensions/web/youtube/overview.md)
       * [Release notes](./extensions/web/youtube/release-notes.md)
+    * [!DNL Zendesk] Events API {#zendesk}
+      * [Overview](./extensions/web/zendesk/overview.md)
   * [Third-party extensions](./extensions/3rd-party-extensions.md)
 * Extension development {#extension-dev}
   * [Overview](./extension-dev/overview.md)

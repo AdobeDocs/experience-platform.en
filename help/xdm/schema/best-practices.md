@@ -169,7 +169,7 @@ The second approach would be to use event schemas to represent subscriptions. Th
 **Cons**
 
 * Segmentation becomes more complex for the original intended use case (identifying the status of customers' most recent subscriptions). The segment now needs additional logic to flag the last subscription event for a customer in order to check its status.
-* Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Profile TTL](../../profile/apply-ttl.md) for more information.
+* Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Experience Event expirations](../../profile/event-expirations.md) for more information.
 
 ## Create schemas based on your categorized entities
 
