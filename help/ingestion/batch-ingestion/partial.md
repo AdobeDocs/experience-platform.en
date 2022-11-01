@@ -104,7 +104,7 @@ Now, you can upload data using the **Add data** button, and it will be ingested 
 
 ### Use the "[!UICONTROL Map CSV to XDM schema]" flow {#map-flow}
 
-To use the "[!UICONTROL Map CSV to XDM schema]" flow, follow the listed steps in the [Map a CSV file tutorial](../tutorials/map-a-csv-file.md). Once you reach the **[!UICONTROL Add data]** step, take note of the **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]** fields.
+To use the "[!UICONTROL Map CSV to XDM schema]" flow, follow the listed steps in the [Map a CSV file tutorial](../tutorials/map-csv/overview.md). Once you reach the **[!UICONTROL Add data]** step, take note of the **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]** fields.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
