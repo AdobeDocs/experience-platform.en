@@ -132,7 +132,7 @@ See the documentation on [XDM Experience Event class](../../../../xdm/classes/ex
 
 ## Programs {#programs}
 
-See the documentation on [XDM Business Campaign Details schema field group](../../../../xdm/field-groups/b2b-campaign/details.md) for more information on the XDM Class and XDM Field Group(s).
+Read the [XDM Business Campaign overview](../../../../xdm/classes/b2b/business-campaign.md) for more information on the XDM class. For more information on the XDM field groups, read the [Business Campaign Details schema field group](../../../../xdm/field-groups/b2b-campaign/details.md) documentation.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -163,7 +163,7 @@ See the documentation on [XDM Business Campaign Details schema field group](../.
 
 ## Program memberships {#program-memberships}
 
-See the documentation on [XDM Business Campaign Member Details schema field group](../../../../xdm/field-groups/b2b-campaign-members/details.md) for more information on the XDM Class and XDM Field Group(s).
+Read the [XDM Business Campaign Members overview](../../../../xdm/classes/b2b/business-campaign-members.md) for more information on the XDM class. For more information on the XDM field groups, read the [XDM Business Campaign Member Details schema field group](../../../../xdm/field-groups/b2b-campaign-members/details.md) document.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -196,7 +196,7 @@ See the documentation on [XDM Business Campaign Member Details schema field grou
 
 ## Companies {#companies}
 
-See the documentation on [XDM Business Account class](../../../../xdm/classes/b2b/business-account.md) for more information on the XDM Class and XDM Field Group(s).
+Read the [XDM Business Account details](../../../../xdm/classes/b2b/business-account.md) guide for more information on the XDM class.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -228,7 +228,7 @@ See the documentation on [XDM Business Account class](../../../../xdm/classes/b2
 
 ## Static lists {#static-lists}
 
-See the documentation on [XDM Business Marketing List class](../../../../xdm/classes/b2b/business-marketing-list.md) for more information on the XDM Class and XDM Field Group(s).
+Read the [XDM Business Marketing List class overview](../../../../xdm/classes/b2b/business-marketing-list.md) for more information on the XDM class.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -246,7 +246,7 @@ See the documentation on [XDM Business Marketing List class](../../../../xdm/cla
 
 ## Static list memberships {#static-list-memberships}
 
-See the documentation on [XDM Business Marketing List Members class](../../../../xdm/classes/b2b/business-marketing-list-members.md) for more information on the XDM Class and XDM Field Group(s).
+Read the [XDM Business Marketing List Members class overview](../../../../xdm/classes/b2b/business-marketing-list-members.md) for more information on the XDM Class.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -267,7 +267,7 @@ See the documentation on [XDM Business Marketing List Members class](../../../..
 >
 >The named accounts dataset is only necessary with Marketo's account-based marketing (ABM) feature. If you are not using ABM, then you do not need to set up mappings for named accounts.
 
-See the documentation on [XDM Business Account class](../../../../xdm/classes/b2b/business-account.md) for more information on the XDM Class and XDM Field Group(s).
+Read the [XDM Business Account details](../../../../xdm/classes/b2b/business-account.md) guide for more information on the XDM class and XDM field groups.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -295,7 +295,7 @@ See the documentation on [XDM Business Account class](../../../../xdm/classes/b2
 
 ## Opportunities {#opportunities}
 
-See the documentation on [XDM Business Opportunity class](../../../../xdm/classes/b2b/business-opportunity.md) for more information on the XDM Class and XDM Field Group(s).
+Read the [XDM Business Opportunity overview](../../../../xdm/classes/b2b/business-opportunity.md) for more information on the XDM class and XDM field groups.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -332,7 +332,7 @@ See the documentation on [XDM Business Opportunity class](../../../../xdm/classe
 
 ## Opportunity contact roles {#opportunity-contact-roles}
 
-See the documentation on [XDM Business Opportunity Person Relation class](../../../../xdm/classes/b2b/business-account-person-relation.md) for more information on the XDM Class and XDM Field Group(s).
+Read the [XDM Business Opportunity Person Relation class](../../../../xdm/classes/b2b/business-account-person-relation.md) guide for more information on the XDM class.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -353,7 +353,7 @@ See the documentation on [XDM Business Opportunity Person Relation class](../../
 
 ## Persons {#persons}
 
-See the documentations on [XDM Business Person Details](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) for more information on the XDM Class and XDM Field Group(s). 
+Read the [XDM Business Person Details overview](../../../../xdm/field-groups/profile/business-person-details.md) and [XDM Business Person Components](../../../../xdm/field-groups/profile/business-person-components.md) for more information on the XDM field groups.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
