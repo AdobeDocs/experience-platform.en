@@ -213,7 +213,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | The ID of the XDM schema you are referencing. |
 | `outputSchema.schemaRef.contentType` | Determines the response format of the referenced schema. More information on this field can be found in the [Schema Registry developer guide](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | The source type describes how the value will be extracted from the source to the destination. |
+| `mappings.sourceType` | The source type describes how the value will be extracted from the source to the destination. The source type supports two possible values: <ul><li>`ATTRIBUTE`: The source type `ATTRIBUTE` is used when the input attribute is from a source schema.</li><li>`EXPRESSION`: The source type `EXPRESSION` is used when mapping is using a calculated field.</li></ul> **WARNING**: Incorrectly setting the source type values can render your mapping sets uneditable. |
 | `mappings.source` | The location where you want the data to be mapped from. |
 | `mappings.destination` | The location where you want the data to be mapped to. |
 
