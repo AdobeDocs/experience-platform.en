@@ -53,6 +53,7 @@ user-guide-description: Learn how Experience Platform can deliver personalized e
   * Audit logs {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
   * [Data encryption](./governance-privacy-security/encryption.md)
+  * [Customer-managed keys](./governance-privacy-security/customer-managed-keys.md)
 * License usage and guardrails {#license}
   * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)    
   * [License usage dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)

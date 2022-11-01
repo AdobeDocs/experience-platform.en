@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics; 
-description: Adobe Experience Platform provides pre-configured templates that you can use to accelerate your data ingestion process. Templates include auto-generated assets such as schemas, datasets, mapping rules, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform.
+description: Adobe Experience Platform provides pre-configured templates that you can use to accelerate your data ingestion process. Templates include auto-generated assets such as schemas, datasets, mapping rules, identities, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform.
 title: (Alpha) Create a sources dataflow using templates in the UI
 hide: true
 hidefromtoc: true
@@ -11,11 +11,11 @@ hidefromtoc: true
 >
 >Templates are in Alpha and is currently only supported by the [[!DNL Marketo Engage] source](../../connectors/adobe-applications/marketo/marketo.md). The documentation and functionalities are subject to change.
 
-Adobe Experience Platform provides pre-configured templates that you can use to accelerate your data ingestion process. Templates include auto-generated assets such as schemas, datasets, mapping rules, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform.
+Adobe Experience Platform provides pre-configured templates that you can use to accelerate your data ingestion process. Templates include auto-generated assets such as schemas, datasets, identities, mapping rules, identity namespaces, and dataflows that you can use when bringing in data from a source to Experience Platform.
 
 With templates, you can:
 
-* Reduce time-to-value of ingestion through acceleration of ML-based asset creation.
+* Reduce time-to-value of ingestion through acceleration of templatized asset creation.
 * Minimize errors that can occur during the manual data ingestion process.
 * Update auto-generated assets at any point to suit your use cases.
 
@@ -45,7 +45,12 @@ Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Marketo
 
 ![A catalog of the sources workspace with the Marketo Engage source highlighted.](../../images/tutorials/templates/catalog.png)
 
-A pop-up window appears presenting you with the option to browse templates or use existing schemas and datasets. To use auto-generated assets, select **[!UICONTROL Browse templates]** and then select **[!UICONTROL Select]**.
+A pop-up window appears presenting you with the option to browse templates or use existing schemas and datasets. 
+
+* **Browse templates**: Sources templates auto-creates schemas, identities, datasets, and dataflows with mapping rules for you. You can customize these assets as needed.
+* **Use my existing assets**: Ingest your data using existing datasets and schemas that you created. You can also create new datasets and schemas if needed.
+
+To use auto-generated assets, select **[!UICONTROL Browse templates]** and then select **[!UICONTROL Select]**.
 
 ![A pop-up window with options to browse templates or use existing assets.](../../images/tutorials/templates/browse-templates.png)
 
@@ -77,6 +82,12 @@ The preview window appears allowing you to explore and inspect sample data from 
 
 Next, select the template that you would like to use from the list. You can select multiple templates and create multiple dataflows at once. However, a template can only be used once per account. Once you have selected your templates, select **[!UICONTROL Finish]** and allow a few moments for the assets to generate.
 
+If you select one or partial items from the list of available templates, all B2B schemas and identity namespaces will still be generated to ensure that B2B relationships across schemas are configured correctly.
+
+>[!NOTE]
+>
+>Templates that have already been used will be disabled from selection.
+
 ![The list of templates with the Opportunity Contact Role template selected.](../../images/tutorials/templates/select-template.png)
  
 ### Review assets {#review-assets}
@@ -86,7 +97,7 @@ Next, select the template that you would like to use from the list. You can sele
 >title="Review your auto-generated assets"
 >abstract="It can take up to five minutes to generate all assets. If you choose to leave the page, you will get a notification to return once the assets are completed. You can review the assets once they are generated and make additional configurations to your dataflow at any time."
 
-The [!UICONTROL Review template assets] page displays the assets auto-generated as part of your template. In this page, you can view the auto-generated schemas, datasets, identity namespaces, and dataflows associated with your source connection.
+The [!UICONTROL Review template assets] page displays the assets auto-generated as part of your template. In this page, you can view the auto-generated schemas, datasets, identity namespaces, and dataflows associated with your source connection. It can take up to five minutes to generate all assets. If you choose to leave the page, you will get a notification to return once the assets are completed. You can review the assets once they are generated and make additional configurations to your dataflow at any time.
 
 Auto-generated dataflows are enabled by default. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Preview mappings]** to see the mapping sets created for your dataflow. 
 
@@ -98,8 +109,22 @@ A preview page appears allowing you to inspect the mapping relationship between 
 
 You can update your dataflows at any time after execution. Select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Update dataflow]**. You are taken to the sources workflow page where you can update your dataflow details, including settings for partial ingestion, error diagnostics, and alert notifications, as well as your dataflow's mapping.
 
+You can use the schema editor view to make updates to your auto-generated schema. Visit the guide on [using the schema editor](../../../xdm/tutorials/create-schema-ui.md) for more information.
+
 ![A dropdown window with the update dataflows option selected.](../../images/tutorials/templates/update.png)
 
 ## Next steps
 
 By following this tutorial, you have now created dataflows, as well as assets like schemas, datasets, and identity namespaces using templates. For general information on sources, visit the [sources overview](../../home.md).
+
+## Appendix
+
+The following section provides additional information regarding templates.
+
+### Use the notifications panel to return to the review page
+
+Templates are supported by Adobe Experience Platform alerts and you can use the notifications panel to receive updates on the status of your assets and also to navigate back to the review page. 
+
+Select the notification icon the top header of Platform UI and then select the status alert to see the assets that you want to review.
+
+![The notifications panel in Platform UI with a notification alerting a failed dataflow highlighted.](../../images/tutorials/templates/notifications.png)
