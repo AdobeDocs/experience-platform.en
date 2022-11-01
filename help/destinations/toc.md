@@ -98,7 +98,10 @@ feature: Destinations
         * [Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 connection](./catalog/cloud-storage/amazon-s3.md)
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
+        * [(Beta) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
         * [Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
+        * [(Beta) Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
+        * [(Beta) Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
