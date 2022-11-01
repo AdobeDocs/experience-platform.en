@@ -63,11 +63,6 @@ Use the check boxes to the left of the dataset names to select the datasets that
 
 ## Schedule dataset export {#scheduling}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_datasets_exportoptions"
->title="File export options for datasets"
->abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export."
-
 In the **[!UICONTROL Scheduling]** step, you can set a start date as well as an export cadence for your dataset exports.
 
 The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export where the first file is a full snapshot of the dataset and subsequent files are incremental additions to the dataset since the previous export.
