@@ -80,7 +80,7 @@ The **[!UICONTROL Export incremental files]** option is automatically selected. 
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Note that in the beta version of the feature, it is not possible to set an end date for the exports. For more information, view the [known limitations](#known-limitations) section.
+3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Note that in the beta version of the feature, it is not possible to set an end date for the exports. For more information, view the [known limitations](#known-limitations) section. 
 
 4. Select **[!UICONTROL Next]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
 
