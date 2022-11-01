@@ -6,14 +6,18 @@ title: (Beta) Configure file formatting options for file-based destinations
 
 >[!IMPORTANT]
 >
+>The **[!UICONTROL File formatting options]** functionality in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
+>Contact your Adobe representative for access to this functionality. 
 >The file formatting options described in this document are currently available for CSV files only. 
 
 The option to configure various file formatting options for the exported files is available to you when you [connect](/help/destinations/ui/connect-destination.md) to a file-based destination, such as [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect), or [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect). 
 
-You can configure various file formatting options for exported files by using the Experience Platform UI or API. You can modify several properties of the exported files to match the requirements of the file reception system on your side, in order to optimally read and interpret the files received from Experience Platform.
+You can configure various file formatting options for exported files by using the Experience Platform UI. You can modify several properties of the exported files to match the requirements of the file reception system on your side, in order to optimally read and interpret the files received from Experience Platform.
 
+<!--
 * To configure file formatting options for exported files by using the Experience Platform UI, read this document.
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+-->
 
 ## File formatting configuration {#file-configuration}
 
@@ -55,21 +59,21 @@ Sets which compression codec to use when saving data to file. Supported options 
 
 ### Encoding
 
-Not shown in the UI screenshot. Specifies encoding (charset) of saved CSV files. Options are UTF-8 or UTF-16. 
+*Not shown in the UI screenshot*. Specifies encoding (charset) of saved CSV files. Options are UTF-8 or UTF-16. 
 
 ### Char to escape quote
 
-Not shown in the UI screenshot. A flag indicating whether values containing quotes should always be enclosed in quotes.
+*Not shown in the UI screenshot*. A flag indicating whether values containing quotes should always be enclosed in quotes.
 
 Default is to escape all values containing a quote character.
 
 ### Line separator
 
-Not shown in the UI screenshot. Defines the line separator that should be used for writing. Maximum length is 1 character.
+*Not shown in the UI screenshot*. Defines the line separator that should be used for writing. Maximum length is 1 character.
 
 ### Ignore leading whitespace
 
-Not shown in the UI screenshot. A flag indicating whether or not leading whitespaces from values being exported should be skipped.
+*Not shown in the UI screenshot*. A flag indicating whether or not leading whitespaces from values being exported should be skipped.
 
 Example output with **[!UICONTROL True]** selected: `"male","John","TestLastName"`
 Example output with **[!UICONTROL False]** selected: `" male","John","TestLastName"`
