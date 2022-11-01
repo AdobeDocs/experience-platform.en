@@ -29,7 +29,7 @@ In the Experience Platform UI, select **[!UICONTROL Sources]** in the left navig
 
 The **[!UICONTROL Map CSV XDM schema]** workflow appears, starting on the **[!UICONTROL Dataflow detail]** step.
 
-Select **[!UICONTROL Create a new schema using ML recommendations]**, causing new controls to appear. Choose the appropriate class for CSV data you want to map ([!UICONTROL Profile] or [!UICONTROL ExperienceEvent]), and use the dropdown menu to select the relevant industry for your business. If your organization operates under a [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) model, select the **[!UICONTROL B2B data]** checkbox.
+Select **[!UICONTROL Create a new schema using ML recommendations]**, causing new controls to appear. Choose the appropriate class for the CSV data you want to map ([!UICONTROL Profile] or [!UICONTROL ExperienceEvent]), and use the dropdown menu to select the relevant industry for your business. If your organization operates under a [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) model, select the **[!UICONTROL B2B data]** checkbox.
 
 ![The [!UICONTROL Dataflow detail] step with the ML recommendation option selected. [!UICONTROL Profile] is selected for the class and [!UICONTROL Telecommunications] selected for the industry](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
@@ -44,6 +44,8 @@ You can optionally configure the following additional features for the dataflow:
 | [!UICONTROL Partial ingestion] | When enabled, valid records for new batch data will be ingested within a specified error threshold. This threshold allows you to configure the percentage of acceptable errors before the entire batch fails. |
 | [!UICONTROL Dataflow details] | Provide a name and optional description for the dataflow that will bring the CSV data into Platform. The dataflow is automatically assigned a default name when starting this workflow. Changing the name is optional. |
 | [!UICONTROL Alerts] | Select from a list of [in-product alerts](../../../observability/alerts/overview.md) that you want to receive regarding the status of the dataflow once it has been initiated. |
+
+{style="table-layout:auto"}
 
 When you are finished configuring the dataflow, select **[!UICONTROL Next]**.
 
@@ -75,7 +77,7 @@ Use the field mapping preview to edit existing mappings or remove them entirely.
 
 ### Edit field groups {#edit-field-groups}
 
-The CSV fields are automatically mapped to existing field groups using ML models. If you want to change the field group for any particular CSV field, select **[!UICONTROL Edit]** next to the schema tree.
+The CSV fields are automatically mapped to existing XDM field groups using ML models. If you want to change the field group for any particular CSV field, select **[!UICONTROL Edit]** next to the schema tree.
 
 ![The [!UICONTROL Edit] button being selected next to the schema tree](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
