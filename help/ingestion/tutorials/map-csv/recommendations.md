@@ -8,7 +8,7 @@ description: This tutorial covers how to map a CSV file to an XDM schema using A
 >
 >This feature is currently in beta and your organization may not have access to it yet. The documentation and functionality are subject to change.
 >
->For information on generally available CSV mapping capabilities in Platform, see the document on [mapping a CSV file to an existing schema](./existing.md).
+>For information on generally available CSV mapping capabilities in Platform, see the document on [mapping a CSV file to an existing schema](./existing-schema.md).
 
 In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. You can choose to map to [an existing schema](./existing-schema.md), but if you do not know exactly which schema to use or how it should be structured, you can instead use dynamic recommendations based on machine-learning (ML) models within the Platform UI.
 
