@@ -21,7 +21,7 @@ This tutorial requires a working understanding of the following components of [!
 
 - [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 - [Batch ingestion](../../batch-ingestion/overview.md): The method by which [!DNL Platform] ingests data from user-supplied datafiles.
-- [Adobe Experience Platform Data Prep](../../batch-ingestion/overview.md): A suite of capabilities that allow you to map and transform ingested data to conform to XDM schemas. The documentation on [Data Prep functions](../../../data-prep/functions.md) and [calculated fields](../../../data-prep/calculated-fields.md) are particularly relevant for schema mapping.
+- [Adobe Experience Platform Data Prep](../../batch-ingestion/overview.md): A suite of capabilities that allow you to map and transform ingested data to conform to XDM schemas. The documentation on [Data Prep functions](../../../data-prep/functions.md) is particularly relevant for schema mapping.
 
 This tutorial also requires that you have already created a dataset to ingest your CSV data into. For steps on creating a dataset in the UI, see the [data ingest tutorial](../ingest-batch-data.md).
 
