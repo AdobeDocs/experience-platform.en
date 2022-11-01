@@ -6,9 +6,26 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 ---
 # [!DNL Amazon S3] connection {#s3-connection}
 
+## Destination changelog {#changelog}
+
+>[!IMPORTANT]
+>
+>With the beta release of the export datasets functionality and the improved file export functionality, you may now be seeing two [!DNL Amazon S3] cards in the destinations catalog.
+>* If you are already exporting files to the **[!UICONTROL Amazon S3]** destination: Please create new dataflows to the new **[!UICONTROL Amazon S3 beta]** destination.
+>* If you have not yet created any dataflows to the **[!UICONTROL Amazon S3]** destination, please use the new **[!UICONTROL Amazon S3 beta]** card to export files to **[!UICONTROL Amazon S3]**.
+
+![Image of the two Amazon S3 destination cards in a side-by-side view.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+
+Improvements in the new [!DNL Amazon S3] destination card include:
+
+* [Dataset export support](/help/destinations/ui/export-datasets.md).
+* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
 ## Overview {#overview}
 
-Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets.
+Create a live outbound connection to your [!DNL Amazon S3] storage to periodically export data files from Adobe Experience Platform into your own S3 buckets.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -104,6 +121,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
+## (Beta) Export datasets {#export-datasets}
+
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the [export datasets tutorial](/help/destinations/ui/export-datasets.md).
+
 ## Exported data {#exported-data}
 
-For [!DNL Amazon S3] destinations, [!DNL Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
+For [!DNL Amazon S3] destinations, [!DNL Platform] creates a data file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.

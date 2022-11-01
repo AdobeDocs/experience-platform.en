@@ -13,17 +13,15 @@ exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 
 ## Generate datasets from the Adobe Experience Platform user interface
 
-<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
-
 To create datasets from the Adobe Experience Platform user interface (UI), follow these steps:
 
 1. Create a query using a connected client and validate the output. To learn how to write queries using [!DNL Query Editor], read the [!DNL Query Editor] UI guide [on writing queries](./user-guide.md#writing-queries).
 
-2. In the Platform UI, navigate to **[!UICONTROL Queries]** followed by the **[!UICONTROL Browse]** tab and select the query you have created. For more details on how to view queries that were created and saved for your organization within the Platform UI, read the [[!DNL Query Service] overview](./overview.md#browse).
+2. In the Platform UI, navigate to **[!UICONTROL Queries]** followed by the **[!UICONTROL Templates]** tab and select the query you have created. For more details on how to view queries that were created and saved for your organization within the Platform UI, read the [[!DNL Query Service] overview](./overview.md#browse).
 
 3. In the Query details panel, select **[!UICONTROL Output dataset]**.
 
-    ![The Queries workspace Template tab with Select Output dataset highlighted.](../images/ui/create-datasets/output-dataset.png)
+    ![The Queries workspace Templates tab with Select Output dataset highlighted.](../images/ui/create-datasets/output-dataset.png)
 
 4. In the dialog that appears, enter a dataset name prepended with your LDAP ID. The dataset name does not have to be unique or SQL-safe. Note that the table name for your dataset will be generated based on the dataset name you create here.
 
