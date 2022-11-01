@@ -35,6 +35,7 @@ feature: Destinations
     * [Edit activation dataflows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
     * [Monitor dataflows](./ui/monitor-dataflows.md)
+    * [(Beta) Configure file formatting options for file-based destinations](./ui/batch-destinations-file-formatting-options.md)
     * [Subscribe to in-context destination alerts](ui/alerts.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
