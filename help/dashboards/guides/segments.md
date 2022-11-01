@@ -93,7 +93,7 @@ To learn more about each of the available standard widgets, select the name of a
 
 The **[!UICONTROL Audience size]** widget displays the total number of merged profiles within the selected segment at the time the snapshot was taken. This number is the result of applying the segment merge policy to your Profile data in order to merge profile fragments together to form a single profile for each individual in the segment. 
 
-For more information on fragments and merged profiles, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
+For more information on fragments and merged profiles, refer to the [Real-time Customer Profile overview](../../profile/home.md).
 
 ![The Segments dashboard overview with the Audience size widget highlighted.](../images/segments/audience-size.png)
 
