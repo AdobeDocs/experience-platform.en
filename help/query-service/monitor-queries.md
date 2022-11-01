@@ -2,7 +2,11 @@
 title: Monitor Queries
 description: Learn how to monitor queries through the Query Service UI.
 ---
-# Monitor queries
+# Monitor queries (Limited release)
+
+>[!IMPORTANT]
+>
+>This feature is currently a limited release and only available to a small number of customers.
 
 Adobe Experience Platform provides improved visibility for the status of all query jobs through the UI. From [!UICONTROL Scheduled Queries] tab you can now find important information about your query runs that includes the status, schedule details, and error messages/codes should they fail. You can also subscribe to alerts for queries based on their status through the UI for any of these queries through [!UICONTROL Scheduled Queries] tab.
 
