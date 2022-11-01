@@ -86,7 +86,7 @@ Read [Activate profiles and segments to profile request destinations](../../ui/a
 
 Now that you have configured the [!DNL Commerce] destination within Experience Platform, you need to configure the [!DNL Commerce Admin] to import the Real-Time CDP segments you created. See the [[!DNL Commerce] documentation](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) to learn more.
 
-## Validate data export {#exported-data}
+## Validate audience activation in Commerce {#exported-data}
 
 After you activate Real-Time CDP segments to your [!DNL Adobe Commerce] account, you will see those segments available in the [!DNL Admin] when you create a Cart Price Rule:
 
