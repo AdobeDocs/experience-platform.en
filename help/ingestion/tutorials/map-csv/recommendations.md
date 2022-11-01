@@ -59,7 +59,7 @@ After uploading the file, a sample data section appears that shows the first ten
 
 ![Sample data rows are populated within the workspace](../../images/tutorials/map-csv-recommendations/data-uploaded.png)
 
-## Mapping
+## Configure schema mappings
 
 The ML models are run to generate a new schema based on your dataflow configuration and your uploaded CSV file. When the process is complete, the [!UICONTROL Mapping] step populates to show the mappings for each individual field alongside fully navigable view of the generated schema structure.
 
@@ -87,6 +87,6 @@ When you are finished adjusting the schema recommendations for your source field
 
 ## Next steps
 
-This guide covered how to map a CSV file to an XDM schema using the AI-generated recommendations, and ultimately bring that data into Platform through batch ingestion.
+This guide covered how to map a CSV file to an XDM schema using AI-generated recommendations, allowing you to bring that data into Platform through batch ingestion.
 
 For steps on mapping a CSV file to an existing schema, refer to the [existing schema mapping workflow](./existing-schema.md). For information on streaming data to Platform in real time through prebuilt source connections, refer to the [sources overview](../../../sources/home.md).
