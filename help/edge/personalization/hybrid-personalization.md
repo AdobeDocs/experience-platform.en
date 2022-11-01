@@ -8,7 +8,7 @@ keywords: personalization; hybrid; server api; server-side; hybrid implementatio
 
 ## Overview {#overview}
 
-Hybdrid personalization describes the process of retrieving personalization content server-side, using the [Edge Network Server API](../../..//server-api/overview.md), and rendering it client-side, using the [Web SDK](../../home.md).
+Hybdrid personalization describes the process of retrieving personalization content server-side, using the [Edge Network Server API](../..//server-api/overview.md), and rendering it client-side, using the [Web SDK](../home.md).
 
 You can use hybrid personalization with personalization solutions like Adobe Target or Offer Decisioning, the difference being the contents of the [!UICONTROL Server API] payload.
 
@@ -29,7 +29,7 @@ The flow diagram below describes the order of the steps taken to deliver hybrid 
 
 1. Any existing cookies previously stored by the browser, prefixed with `kndctr_`, are included in the browser request.
 1. The client web browser requests the web page from your application server. 
-1. When the application server receives the page request, it makes a `POST` request to the [Server API interactive data collection endpoint](../../../server-api/interactive-data-collection.md) to fetch personalization content. The `POST` request contains an `event` and a `query`. The cookies from the previous step, if available, are included in the `meta>state>entries` array.
+1. When the application server receives the page request, it makes a `POST` request to the [Server API interactive data collection endpoint](../../server-api/interactive-data-collection.md) to fetch personalization content. The `POST` request contains an `event` and a `query`. The cookies from the previous step, if available, are included in the `meta>state>entries` array.
 1. The Server API returns the personalization content to your application server.
 1. The application server returns an HTML response to the client browser, containing the [identity and cluster cookies](#cookies).
 1. On the client page, the [!DNL Web SDK] `applyResponse` command is called, passing in the headers and body of the [!UICONTROL Server API] response from the previous step.
