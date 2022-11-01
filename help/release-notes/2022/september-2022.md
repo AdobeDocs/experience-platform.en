@@ -214,7 +214,7 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 
 For more information on [!DNL Query Service], please see the [[!DNL Query Service] overview](../../query-service/home.md).
 
-<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
+See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more.
 
 ## Sources {#sources}
 

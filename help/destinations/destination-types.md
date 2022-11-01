@@ -61,6 +61,12 @@ The video below runs you through the particularities of the two types of destina
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
+## (Beta) Dataset export destinations {#dataset-export-destinations}
+
+Some cloud storage destinations in the destinations catalog support dataset exports. Use these destinations to export raw datasets to cloud storage locations. 
+
+Read more about how to [export datasets](/help/destinations/ui/export-datasets.md).
+
 ## Extensions {#extensions}
 
 Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the UI. 
