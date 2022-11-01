@@ -1,6 +1,6 @@
 ---
 title: Map a CSV File to an XDM Schema using AI-Generated Recommendations (Beta)
-description: This tutorial covers how to map a CSV file to an XDM schema using the Adobe Experience Platform user interface.
+description: This tutorial covers how to map a CSV file to an XDM schema using AI-generated recommendations.
 ---
 # Map a CSV file to an XDM schema using AI-generated recommendations (Beta)
 
@@ -29,7 +29,7 @@ In the Experience Platform UI, select **[!UICONTROL Sources]** in the left navig
 
 The **[!UICONTROL Map CSV XDM schema]** workflow appears, starting on the **[!UICONTROL Dataflow detail]** step.
 
-Select **[!UICONTROL Create a new schema using ML recommendations]**, causing new controls to appear. Choose the appropriate class for CSV data you want to map ([!UICONTROL Profile] or [!UICONTROL ExperienceEvent]), and use the dropdown menu to select the relevant industry for your business. If your organization operates on a business-to-business (B2B) model, select the **[!UICONTROL B2B data]** checkbox.
+Select **[!UICONTROL Create a new schema using ML recommendations]**, causing new controls to appear. Choose the appropriate class for CSV data you want to map ([!UICONTROL Profile] or [!UICONTROL ExperienceEvent]), and use the dropdown menu to select the relevant industry for your business. If your organization operates under a [business-to-business (B2B)](../../../xdm/tutorials/relationship-b2b.md) model, select the **[!UICONTROL B2B data]** checkbox.
 
 ![The [!UICONTROL Dataflow detail] step with the ML recommendation option selected. [!UICONTROL Profile] is selected for the class and [!UICONTROL Telecommunications] selected for the industry](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
@@ -45,7 +45,7 @@ You can optionally configure the following additional features for the dataflow:
 | [!UICONTROL Dataflow details] | Provide a name and optional description for the dataflow that will bring the CSV data into Platform. The dataflow is automatically assigned a default name when starting this workflow. Changing the name is optional. |
 | [!UICONTROL Alerts] | Select from a list of [in-product alerts](../../../observability/alerts/overview.md) that you want to receive regarding the status of the dataflow once it has been initiated. |
 
-When finished configuring the dataflow, select **[!UICONTROL Next]**.
+When you are finished configuring the dataflow, select **[!UICONTROL Next]**.
 
 ![The [!UICONTROL Dataflow detail] section is completed](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
 
@@ -83,7 +83,7 @@ A dialog appears, allowing you to edit the display name, data type, and field gr
 
 ![The recommended field group for a source field being changed](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 
-When finished adjusting the schema recommendations for your source fields, select **[!UICONTROL Save]** to apply the changes.
+When you are finished adjusting the schema recommendations for your source fields, select **[!UICONTROL Save]** to apply the changes.
 
 ## Next steps
 

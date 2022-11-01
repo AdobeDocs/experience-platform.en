@@ -22,8 +22,8 @@ feature: Data Ingestion
 - Tutorials {#tutorials}
   - Map a CSV file to XDM {#map-csv}
     - [Overview](./tutorials/map-csv/overview.md)
-    - [Map a CSV file to an existing schema](tutorials/map-csv/existing.md)
-    - [Map a CSV file using AI-generated recommendations](tutorials/map-csv/existing.md)
+    - [Map a CSV file to an existing schema](./tutorials/map-csv/existing-schema.md)
+    - [Map a CSV file using AI-generated recommendations](./tutorials/map-csv/recommendations.md)
   - [Ingest batch data using the UI](tutorials/ingest-batch-data.md)
   - [Create an authenticated streaming connection](tutorials/create-authenticated-streaming-connection.md)
   - [Create a streaming connection (API)](tutorials/create-streaming-connection.md)
