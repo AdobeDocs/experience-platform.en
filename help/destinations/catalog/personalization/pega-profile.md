@@ -7,7 +7,7 @@ description: Use the Pega Profile Connector for S3 in Adobe Experience Platform 
 
 ## Overview {#overview}
 
-Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], data jobs can be scheduled to import profiles from S3 storage to update Customer profile data source. This helps setup intitial export of profile data and also help sync up new profiles periodically into Pega Customer Decision Hub.  Having up to date data in Customer Decision Hub provides a better and updated view of your customer base for Next Best Action decisioning.
+Use the [!DNL Pega Profile Connector] in Adobe Experience Platform to create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export CSV data files from Adobe Experience Platform into your own S3 buckets. In [!DNL Pega Customer Decision Hub], data jobs can be scheduled to import profiles from S3 storage to update Customer profile data source. This helps setup initial export of profile data and also help sync up new profiles periodically into Pega Customer Decision Hub.  Having up to date data in Customer Decision Hub provides a better and updated view of your customer base for Next Best Action decisioning.
 
 >[!IMPORTANT]
 >
