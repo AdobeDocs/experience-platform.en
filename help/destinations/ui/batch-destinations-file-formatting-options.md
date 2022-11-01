@@ -7,7 +7,8 @@ title: (Beta) Configure file formatting options for file-based destinations
 >[!IMPORTANT]
 >
 >The **[!UICONTROL File formatting options]** functionality in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
->Contact your Adobe representative for access to this functionality. 
+>Contact your Adobe representative for access to this functionality.
+> 
 >The file formatting options described in this document are currently available for CSV files only. 
 
 The option to configure various file formatting options for the exported files is available to you when you [connect](/help/destinations/ui/connect-destination.md) to a file-based destination, such as [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect), or [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect). 
